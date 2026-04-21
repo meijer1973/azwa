@@ -13,10 +13,7 @@
         "src/phase0_setup.py"
       ],
       "outputs": [
-        "data/raw/manifest.json",
-        "data/raw/national",
-        "data/raw/regional",
-        "data/raw/municipal"
+        "data/raw/manifest.json"
       ]
     },
     {
@@ -56,9 +53,9 @@
       ]
     },
     {
-      "stage_id": "phase3_document_extractions_top5",
+      "stage_id": "phase3_document_extractions_all_docs",
       "kind": "script",
-      "description": "Generate immutable document extraction JSON for the current top-5 priority documents.",
+      "description": "Generate immutable document extraction JSON for the full curated 18-document corpus.",
       "script": "src/build_document_extractions.py",
       "depends_on": [
         "phase1_document_inventory",
@@ -72,16 +69,29 @@
         "data/extracted/documents/nat_azwa_2025_onderhandelaarsakkoord.json",
         "data/extracted/documents/nat_azwa_2026_cw31_kader_d5_d6.json",
         "data/extracted/documents/reg_flevoland_2023_regioplan_iza.json",
-        "data/extracted/documents/mun_almere_pga_transformatieplan.json"
+        "data/extracted/documents/mun_almere_pga_transformatieplan.json",
+        "data/extracted/documents/nat_azwa_2026_cw31_kamerbrief.json",
+        "data/extracted/documents/nat_azwa_2026_voortgang_kamerbrief.json",
+        "data/extracted/documents/nat_azwa_2025_aanbiedingsbrief.json",
+        "data/extracted/documents/nat_iza_2022_integraal_zorgakkoord.json",
+        "data/extracted/documents/nat_gala_2023_gezond_en_actief_leven.json",
+        "data/extracted/documents/mun_almere_pga_seo_businesscase_2024.json",
+        "data/extracted/documents/reg_flevoland_2023_regiobeeld.json",
+        "data/extracted/documents/nat_vng_azwa_faq_middelen.json",
+        "data/extracted/documents/nat_vng_azwa_faq_uitvoeringscapaciteit.json",
+        "data/extracted/documents/mun_almere_2024_2034_maatschappelijke_agenda.json",
+        "data/extracted/documents/mun_almere_2024_2026_visie_gezondheidsbeleid.json",
+        "data/extracted/documents/mun_almere_sociaal_domein_informatiepagina.json",
+        "data/extracted/documents/mun_almere_sociale_staat_gateway.json"
       ]
     },
     {
-      "stage_id": "phase4_claims_top5",
+      "stage_id": "phase4_claims_all_docs",
       "kind": "script",
-      "description": "Convert top-5 document extractions into append-only claims with explicit relations.",
+      "description": "Convert the full document extraction set into append-only claims with explicit seed relations where available.",
       "script": "src/build_claims_top5.py",
       "depends_on": [
-        "phase3_document_extractions_top5"
+        "phase3_document_extractions_all_docs"
       ],
       "inputs": [
         "config/authority_rules.json",
@@ -94,7 +104,20 @@
         "data/extracted/claims/nat_azwa_2025_onderhandelaarsakkoord.json",
         "data/extracted/claims/nat_azwa_2026_cw31_kader_d5_d6.json",
         "data/extracted/claims/reg_flevoland_2023_regioplan_iza.json",
-        "data/extracted/claims/mun_almere_pga_transformatieplan.json"
+        "data/extracted/claims/mun_almere_pga_transformatieplan.json",
+        "data/extracted/claims/nat_azwa_2026_cw31_kamerbrief.json",
+        "data/extracted/claims/nat_azwa_2026_voortgang_kamerbrief.json",
+        "data/extracted/claims/nat_azwa_2025_aanbiedingsbrief.json",
+        "data/extracted/claims/nat_iza_2022_integraal_zorgakkoord.json",
+        "data/extracted/claims/nat_gala_2023_gezond_en_actief_leven.json",
+        "data/extracted/claims/mun_almere_pga_seo_businesscase_2024.json",
+        "data/extracted/claims/reg_flevoland_2023_regiobeeld.json",
+        "data/extracted/claims/nat_vng_azwa_faq_middelen.json",
+        "data/extracted/claims/nat_vng_azwa_faq_uitvoeringscapaciteit.json",
+        "data/extracted/claims/mun_almere_2024_2034_maatschappelijke_agenda.json",
+        "data/extracted/claims/mun_almere_2024_2026_visie_gezondheidsbeleid.json",
+        "data/extracted/claims/mun_almere_sociaal_domein_informatiepagina.json",
+        "data/extracted/claims/mun_almere_sociale_staat_gateway.json"
       ]
     },
     {
@@ -103,7 +126,7 @@
       "description": "Build the conflict register and current interpretation layer from the claim graph.",
       "script": "src/build_current_interpretation.py",
       "depends_on": [
-        "phase4_claims_top5"
+        "phase4_claims_all_docs"
       ],
       "inputs": [
         "config/claim_resolution_rules.json",

@@ -10,16 +10,139 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[1]
 INVENTORY_PATH = REPO_ROOT / "data" / "extracted" / "document_inventory.json"
 TEXT_DIR = REPO_ROOT / "data" / "intermediate" / "text"
+CHUNKS_DIR = REPO_ROOT / "data" / "intermediate" / "chunks"
+TABLES_DIR = REPO_ROOT / "data" / "intermediate" / "tables"
 OUTPUT_DIR = REPO_ROOT / "data" / "extracted" / "documents"
 
-EXTRACTION_RUN_ID = "phase3_top5_v1"
-TOP5_DOCUMENT_IDS = [
+EXTRACTION_RUN_ID = "phase3_all_docs_v2"
+MANUAL_DOCUMENT_IDS = [
     "nat_azwa_2025_definitief",
     "nat_azwa_2025_onderhandelaarsakkoord",
     "nat_azwa_2026_cw31_kader_d5_d6",
     "reg_flevoland_2023_regioplan_iza",
     "mun_almere_pga_transformatieplan",
 ]
+
+AUTO_SECTION_RULES = {
+    "d5": {
+        "keywords": [
+            "basisfunctionaliteit",
+            "basisfunctionaliteiten",
+            "sociaal verwijzen",
+            "valpreventie",
+            "kansrijke start",
+            "welzijn op recept",
+            "verkennend gesprek",
+            "mentale gezondheidsnetwerken",
+            "samenwerking sociaal domein",
+            "medisch en sociaal domein",
+            "domeinoverstijgend",
+            "beweging naar de voorkant",
+            "passende zorg op de juiste plek",
+        ],
+        "max_items": 3,
+        "base_min_score": 1,
+    },
+    "d6": {
+        "keywords": [
+            "basisinfrastructuur",
+            "inloopvoorzieningen",
+            "lokale teams",
+            "stevige lokale teams",
+            "hechte wijkverbanden",
+            "sociale infrastructuur",
+            "regionale infrastructuur",
+            "laagdrempelige steunpunten",
+            "mentaal gezonde school",
+            "digitale gegevensuitwisselingsorganisatie",
+            "data-infrastructuur",
+            "digitale infrastructuur",
+            "monitoring@home",
+            "regionaal transferpunt",
+            "actueel informatiebeeld",
+            "ggd",
+        ],
+        "max_items": 3,
+        "base_min_score": 1,
+    },
+    "governance_and_finance": {
+        "keywords": [
+            "financier",
+            "middelen",
+            "budget",
+            "spuk",
+            "specifieke uitkering",
+            "transformatiegelden",
+            "transformatiemiddelen",
+            "businesscase",
+            "besparing",
+            "governance",
+            "bestuurlijk",
+            "mandaathouder",
+            "mandaatstructuur",
+            "coalitie",
+            "financiele bijdrage",
+        ],
+        "max_items": 3,
+        "base_min_score": 1,
+    },
+    "timeline_and_status": {
+        "keywords": [
+            "2026",
+            "2027",
+            "2028",
+            "2029",
+            "2030",
+            "2040",
+            "q1",
+            "q4",
+            "uiterlijk",
+            "voorjaar",
+            "mid-term review",
+            "herijken",
+            "landelijke dekking",
+        ],
+        "max_items": 2,
+        "base_min_score": 1,
+    },
+    "monitoring_and_evaluation": {
+        "keywords": [
+            "monitor",
+            "monitoring",
+            "dashboard",
+            "monitoringsplan",
+            "mid-term review",
+            "evaluatie",
+            "effecten",
+            "regioscan",
+            "lerend",
+            "leren",
+            "kpi",
+            "kritische prestatie-indicatoren",
+        ],
+        "max_items": 3,
+        "base_min_score": 1,
+    },
+    "municipal_translation": {
+        "keywords": [
+            "gemeente",
+            "gemeenten",
+            "gemeenteraad",
+            "almere",
+            "lokale",
+            "regionale",
+            "regioplan",
+            "werkagenda",
+            "zorgverzekeraars",
+            "zorg- en welzijnsorganisaties",
+            "welzijn op recept",
+            "voorzorgcirkels",
+            "samen sterker in de wijk",
+        ],
+        "max_items": 3,
+        "base_min_score": 1,
+    },
+}
 
 
 DOCUMENT_SPECS = {
@@ -1513,6 +1636,14 @@ def load_pages(document_id: str) -> dict[int, str]:
     return {page["page_number"]: collapse_whitespace(page["text"]) for page in pages}
 
 
+def load_chunks(document_id: str) -> list[dict]:
+    return json.loads((CHUNKS_DIR / f"{document_id}.json").read_text(encoding="utf-8"))
+
+
+def load_tables(document_id: str) -> list[dict]:
+    return json.loads((TABLES_DIR / f"{document_id}.json").read_text(encoding="utf-8"))
+
+
 def excerpt_from_anchor(text: str, anchor: str, radius: int = 220) -> str:
     normalized_text, original_index_map = build_normalized_index(text)
     normalized_anchor = normalize_ascii(anchor)
@@ -1551,7 +1682,271 @@ def render_entry(document_id: str, section_slug: str, index: int, spec: dict, pa
     }
 
 
-def build_document_payload(document_id: str, inventory_map: dict[str, dict]) -> dict:
+def metadata_payload(inventory: dict) -> dict:
+    return {
+        "document_id": inventory["document_id"],
+        "title": inventory["title"],
+        "publisher": inventory["publisher"],
+        "publication_date": inventory["publication_date"],
+        "document_type": inventory["document_type"],
+        "jurisdiction_level": inventory["jurisdiction_level"],
+        "status": inventory["status"],
+        "source_url": inventory["source_url"],
+        "file_path": inventory["file_path"],
+        "source_classification": inventory["source_classification"],
+        "curation_bucket": inventory["curation_bucket"],
+    }
+
+
+def extraction_scope_payload(inventory: dict) -> dict:
+    return {
+        "contains_d5": inventory["contains_d5"],
+        "contains_d6": inventory["contains_d6"],
+        "contains_structured_table": inventory["contains_structured_tables"],
+        "contains_financial_framework": inventory["contains_financing_logic"],
+        "contains_monitoring_framework": inventory["contains_monitoring_evaluation_logic"],
+        "contains_municipal_implications": inventory["contains_municipal_implications"],
+        "extraction_priority": inventory["extraction_priority"],
+        "traceability_mode": inventory["traceability_mode"],
+    }
+
+
+def truncate_text(text: str, max_chars: int = 520) -> str:
+    text = collapse_whitespace(text)
+    if len(text) <= max_chars:
+        return text
+    trimmed = text[: max_chars - 4].rsplit(" ", 1)[0].strip()
+    return f"{trimmed} ..."
+
+
+def sentence_candidates(text: str) -> list[str]:
+    text = text.replace("â€¢", ". ").replace("•", ". ").replace(" - ", ". ")
+    raw_parts = re.split(r"(?<=[.!?])\s+|\n+", text)
+    candidates: list[str] = []
+    for part in raw_parts:
+        cleaned = collapse_whitespace(part)
+        if not cleaned:
+            continue
+        if len(cleaned) > 420 and ";" in cleaned:
+            subparts = [collapse_whitespace(item) for item in cleaned.split(";") if collapse_whitespace(item)]
+            candidates.extend(subparts)
+            continue
+        candidates.append(cleaned)
+    return candidates
+
+
+def is_noise_candidate(text: str) -> bool:
+    normalized = normalize_ascii(text)
+    if len(normalized) < 45:
+        return True
+    if re.fullmatch(r"pagina \d+ van \d+", normalized):
+        return True
+    if normalized.startswith(("kenmerk ", "kst. ", "bron: ", "retouradres ", "bezoekadres ", "inhoud ")):
+        return True
+    if normalized.startswith("datum ") and " betreft " in normalized:
+        return True
+    if "www.rijksoverheid.nl" in normalized:
+        return True
+    return False
+
+
+def keyword_score(normalized_text: str, keywords: list[str]) -> int:
+    score = 0
+    for keyword in keywords:
+        normalized_keyword = normalize_ascii(keyword)
+        if normalized_keyword in normalized_text:
+            score += 2 if " " in normalized_keyword else 1
+    return score
+
+
+def auto_statement_type(section_name: str, inventory: dict) -> str:
+    if section_name in {"d5", "d6"}:
+        if not inventory[f"contains_{section_name}"]:
+            return "contextual_relevance"
+        if inventory["jurisdiction_level"] != "national":
+            return "contextual_relevance"
+    if inventory["source_classification"] == "supporting_commentary" and section_name != "governance_and_finance":
+        return "contextual_relevance"
+    return "direct_extraction"
+
+
+def build_candidate_pool(document_id: str) -> list[dict]:
+    candidates: list[dict] = []
+
+    for chunk in load_chunks(document_id):
+        section = " / ".join(chunk.get("section_path") or [chunk.get("section_heading") or "Document"])
+        for sentence in sentence_candidates(chunk["text"]):
+            if is_noise_candidate(sentence):
+                continue
+            candidates.append(
+                {
+                    "text": truncate_text(sentence),
+                    "normalized": normalize_ascii(sentence),
+                    "page": chunk.get("page_start"),
+                    "section": section,
+                    "table_id": None,
+                    "source_kind": "chunk",
+                }
+            )
+
+    for table in load_tables(document_id):
+        raw_table = truncate_text(table.get("raw_table", ""), max_chars=700)
+        if not raw_table or is_noise_candidate(raw_table):
+            continue
+        section = " / ".join(table.get("section_path") or ["Document"])
+        candidates.append(
+            {
+                "text": raw_table,
+                "normalized": normalize_ascii(raw_table),
+                "page": table.get("page"),
+                "section": section,
+                "table_id": table["table_id"],
+                "source_kind": "table",
+            }
+        )
+
+    return candidates
+
+
+def min_score_for_section(section_name: str, inventory: dict) -> int:
+    base_score = AUTO_SECTION_RULES[section_name]["base_min_score"]
+    if section_name == "d5" and not inventory["contains_d5"]:
+        return base_score + 1
+    if section_name == "d6" and not inventory["contains_d6"]:
+        return base_score + 1
+    if section_name == "municipal_translation" and not inventory["contains_municipal_implications"]:
+        return base_score + 1
+    return base_score
+
+
+def candidate_sort_key(candidate: dict) -> tuple[int, int, int]:
+    page = candidate.get("page")
+    page_rank = page if isinstance(page, int) else 10_000
+    table_rank = 0 if candidate.get("source_kind") == "chunk" else 1
+    return (-candidate["score"], page_rank, table_rank)
+
+
+def build_auto_section(document_id: str, inventory: dict, section_name: str, candidates: list[dict]) -> dict:
+    rules = AUTO_SECTION_RULES[section_name]
+    scored_candidates: list[dict] = []
+
+    for candidate in candidates:
+        score = keyword_score(candidate["normalized"], rules["keywords"])
+        if score > 0 and section_name == "d5" and inventory["contains_d5"]:
+            score += 2
+        if score > 0 and section_name == "d6" and inventory["contains_d6"]:
+            score += 2
+        if score > 0 and section_name == "governance_and_finance" and inventory["contains_financing_logic"]:
+            score += 1
+        if score > 0 and section_name == "monitoring_and_evaluation" and inventory["contains_monitoring_evaluation_logic"]:
+            score += 1
+        if score > 0 and section_name == "municipal_translation" and inventory["contains_municipal_implications"]:
+            score += 1
+        if score > 0 and candidate["source_kind"] == "table" and section_name in {"governance_and_finance", "timeline_and_status"}:
+            score += 1
+        if score < min_score_for_section(section_name, inventory):
+            continue
+        scored_candidates.append({**candidate, "score": score})
+
+    items: list[dict] = []
+    seen_statements: set[str] = set()
+    for item_index, candidate in enumerate(sorted(scored_candidates, key=candidate_sort_key), start=1):
+        if candidate["normalized"] in seen_statements:
+            continue
+        seen_statements.add(candidate["normalized"])
+        items.append(
+            {
+                "statement_id": f"{document_id}_{section_name}_{len(items) + 1:03d}",
+                "statement_type": auto_statement_type(section_name, inventory),
+                "statement": candidate["text"],
+                "evidence": [
+                    {
+                        "evidence_quote": candidate["text"],
+                        "page": candidate["page"],
+                        "section": candidate["section"],
+                        "table_id": candidate["table_id"],
+                    }
+                ],
+            }
+        )
+        if len(items) >= rules["max_items"]:
+            break
+
+    explicit_reference_present = False
+    if section_name == "d5":
+        explicit_reference_present = inventory["contains_d5"]
+    elif section_name == "d6":
+        explicit_reference_present = inventory["contains_d6"]
+    else:
+        explicit_reference_present = bool(items)
+
+    if items:
+        relevance_note = (
+            f"Auto-extracted {section_name.replace('_', ' ')} evidence from structural chunks and tables for this document."
+        )
+    else:
+        relevance_note = (
+            f"No high-confidence {section_name.replace('_', ' ')} evidence was auto-selected in this extraction pass."
+        )
+
+    return {
+        "explicit_reference_present": explicit_reference_present,
+        "relevance_note": relevance_note,
+        "items": items,
+    }
+
+
+def summary_entry_from_item(document_id: str, summary_field: str, item: dict | None) -> dict | None:
+    if item is None:
+        return None
+    return {
+        "statement_id": f"{document_id}_summary_{summary_field}_001",
+        "statement_type": "source_grounded_summary",
+        "statement": item["statement"],
+        "evidence": item["evidence"],
+    }
+
+
+def first_item(*sections: dict) -> dict | None:
+    for section in sections:
+        items = section.get("items", [])
+        if items:
+            return items[0]
+    return None
+
+
+def build_auto_summary(document_id: str, structured_content: dict) -> dict:
+    d5_item = first_item(structured_content["d5"])
+    d6_item = first_item(structured_content["d6"])
+    finance_item = first_item(structured_content["governance_and_finance"])
+    monitoring_item = first_item(structured_content["monitoring_and_evaluation"])
+    municipal_item = first_item(structured_content["municipal_translation"])
+
+    return {
+        "d5_main_message": summary_entry_from_item(document_id, "d5_main_message", d5_item),
+        "d6_main_message": summary_entry_from_item(document_id, "d6_main_message", d6_item),
+        "combined_d5_d6_logic": summary_entry_from_item(
+            document_id,
+            "combined_d5_d6_logic",
+            first_item(structured_content["d5"], structured_content["d6"], structured_content["governance_and_finance"]),
+        ),
+        "implementation_relevance_for_municipality": summary_entry_from_item(
+            document_id,
+            "implementation_relevance_for_municipality",
+            first_item(
+                structured_content["municipal_translation"],
+                structured_content["governance_and_finance"],
+                structured_content["monitoring_and_evaluation"],
+                structured_content["timeline_and_status"],
+            )
+            or finance_item
+            or monitoring_item
+            or municipal_item,
+        ),
+    }
+
+
+def build_manual_document_payload(document_id: str, inventory_map: dict[str, dict]) -> dict:
     inventory = inventory_map[document_id]
     page_cache = load_pages(document_id)
     spec = DOCUMENT_SPECS[document_id]
@@ -1578,29 +1973,8 @@ def build_document_payload(document_id: str, inventory_map: dict[str, dict]) -> 
         "document_id": document_id,
         "extraction_run_id": EXTRACTION_RUN_ID,
         "generated_on": date.today().isoformat(),
-        "metadata": {
-            "document_id": inventory["document_id"],
-            "title": inventory["title"],
-            "publisher": inventory["publisher"],
-            "publication_date": inventory["publication_date"],
-            "document_type": inventory["document_type"],
-            "jurisdiction_level": inventory["jurisdiction_level"],
-            "status": inventory["status"],
-            "source_url": inventory["source_url"],
-            "file_path": inventory["file_path"],
-            "source_classification": inventory["source_classification"],
-            "curation_bucket": inventory["curation_bucket"],
-        },
-        "extraction_scope": {
-            "contains_d5": inventory["contains_d5"],
-            "contains_d6": inventory["contains_d6"],
-            "contains_structured_table": inventory["contains_structured_tables"],
-            "contains_financial_framework": inventory["contains_financing_logic"],
-            "contains_monitoring_framework": inventory["contains_monitoring_evaluation_logic"],
-            "contains_municipal_implications": inventory["contains_municipal_implications"],
-            "extraction_priority": inventory["extraction_priority"],
-            "traceability_mode": inventory["traceability_mode"],
-        },
+        "metadata": metadata_payload(inventory),
+        "extraction_scope": extraction_scope_payload(inventory),
         "document_level_summary": summary,
         "structured_content": structured_content,
         "quality_notes": {
@@ -1614,11 +1988,46 @@ def build_document_payload(document_id: str, inventory_map: dict[str, dict]) -> 
     }
 
 
+def build_auto_document_payload(document_id: str, inventory_map: dict[str, dict]) -> dict:
+    inventory = inventory_map[document_id]
+    candidates = build_candidate_pool(document_id)
+
+    structured_content = {
+        section_name: build_auto_section(document_id, inventory, section_name, candidates)
+        for section_name in AUTO_SECTION_RULES
+    }
+    summary = build_auto_summary(document_id, structured_content)
+
+    return {
+        "document_id": document_id,
+        "extraction_run_id": EXTRACTION_RUN_ID,
+        "generated_on": date.today().isoformat(),
+        "metadata": metadata_payload(inventory),
+        "extraction_scope": extraction_scope_payload(inventory),
+        "document_level_summary": summary,
+        "structured_content": structured_content,
+        "quality_notes": {
+            "extraction_method": "auto_structural_phase3_all_docs_v2",
+            "limitations": [
+                "The non-manual documents use a conservative keyword-ranked extraction over structural chunks and table candidates.",
+                "Auto-selected statements stay close to source wording, so OCR noise and formatting artefacts may still appear.",
+                "Documents without explicit D5/D6 terminology may surface only contextual relevance rather than direct normative extraction.",
+            ],
+        },
+    }
+
+
+def build_document_payload(document_id: str, inventory_map: dict[str, dict]) -> dict:
+    if document_id in DOCUMENT_SPECS:
+        return build_manual_document_payload(document_id, inventory_map)
+    return build_auto_document_payload(document_id, inventory_map)
+
+
 def main() -> None:
     inventory_map = load_inventory()
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-    for document_id in TOP5_DOCUMENT_IDS:
+    for document_id in inventory_map:
         payload = build_document_payload(document_id, inventory_map)
         output_path = OUTPUT_DIR / f"{document_id}.json"
         output_path.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")

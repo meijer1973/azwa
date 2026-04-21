@@ -11,7 +11,7 @@ CLAIMS_MASTER_PATH = REPO_ROOT / "data" / "extracted" / "claims" / "claims_maste
 RESOLUTION_RULES_PATH = REPO_ROOT / "config" / "claim_resolution_rules.json"
 OUTPUT_DIR = REPO_ROOT / "data" / "extracted" / "claims"
 
-INTERPRETATION_RUN_ID = "phase6_current_interpretation_v1"
+INTERPRETATION_RUN_ID = "phase6_current_interpretation_v2"
 TODAY = date.today().isoformat()
 SUPERCESSION_RELATIONS = {"supersedes", "partially_supersedes", "expires", "postpones"}
 LAYERING_RELATIONS = {"clarifies", "implements", "derives_from", "depends_on", "narrows", "broadens", "repeats"}

@@ -1,10 +1,10 @@
 {
   "municipality_id": "GM0034",
   "municipality_name": "Almere",
-  "view_run_id": "phase7_phase8_views_v1",
+  "view_run_id": "phase7_phase8_views_v2",
   "generated_on": "2026-04-21",
   "as_of_date": "2026-04-21",
-  "source_interpretation_run_id": "phase6_current_interpretation_v1",
+  "source_interpretation_run_id": "phase6_current_interpretation_v2",
   "applicable_d5_items": [
     {
       "item_id": "almere_d5_definition",
@@ -29,23 +29,60 @@
     {
       "item_id": "almere_d5_underbouwd",
       "topic": "d5.basisfunctionaliteiten_onderbouwd",
-      "summary": "Current view combines 2 compatible claims for d5.basisfunctionaliteiten_onderbouwd, led by nat_azwa_2026_cw31_kader_d5_d6: The sheet describes D5 as a way to implement proven effective basisfunctionaliteiten such as sociaal verwijzen and valpreventie on a regional scale.",
+      "summary": "Current view combines 11 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
       "claim_ids": [
+        "clm__nat_gala_2023_gezond_en_actief_leven_d5_003",
+        "clm__nat_gala_2023_gezond_en_actief_leven_d5_002",
+        "clm__nat_gala_2023_gezond_en_actief_leven_d5_001",
+        "clm__nat_iza_2022_integraal_zorgakkoord_d5_002",
+        "clm__nat_iza_2022_integraal_zorgakkoord_d5_001",
         "clm__nat_azwa_2026_cw31_kader_d5_d6_d5_002",
-        "clm__nat_azwa_2026_cw31_kader_d5_d6_d5_001"
+        "clm__nat_azwa_2026_cw31_kader_d5_d6_d5_001",
+        "clm__nat_azwa_2026_voortgang_kamerbrief_d5_001",
+        "clm__reg_flevoland_2023_regiobeeld_d5_003",
+        "clm__reg_flevoland_2023_regiobeeld_d5_002",
+        "clm__reg_flevoland_2023_regiobeeld_d5_001"
       ],
       "source_documents": [
+        {
+          "document_id": "nat_gala_2023_gezond_en_actief_leven",
+          "title": "GALA - Gezond en Actief Leven Akkoord",
+          "jurisdiction_level": "national",
+          "document_type": "agreement",
+          "document_status": "reference"
+        },
+        {
+          "document_id": "nat_iza_2022_integraal_zorgakkoord",
+          "title": "Integraal Zorgakkoord: Samen werken aan gezonde zorg",
+          "jurisdiction_level": "national",
+          "document_type": "agreement",
+          "document_status": "reference"
+        },
         {
           "document_id": "nat_azwa_2026_cw31_kader_d5_d6",
           "title": "CW 3.1 kader basisfunctionaliteiten en basisinfrastructuur D5 en D6",
           "jurisdiction_level": "national",
           "document_type": "framework",
           "document_status": "current"
+        },
+        {
+          "document_id": "nat_azwa_2026_voortgang_kamerbrief",
+          "title": "Kamerbrief inzake voortgang Integraal Zorgakkoord (IZA) en Aanvullend Zorg- en Welzijnsakkoord (AZWA)",
+          "jurisdiction_level": "national",
+          "document_type": "kamerbrief",
+          "document_status": "current"
+        },
+        {
+          "document_id": "reg_flevoland_2023_regiobeeld",
+          "title": "Regiobeeld Flevoland 2023",
+          "jurisdiction_level": "regional",
+          "document_type": "regional_report",
+          "document_status": "reference"
         }
       ],
-      "scope": "national",
-      "confidence": 0.9,
-      "needs_human_review": false
+      "scope": "mixed",
+      "confidence": 0.63,
+      "needs_human_review": true
     },
     {
       "item_id": "almere_d5_workagenda",
@@ -70,12 +107,65 @@
     {
       "item_id": "almere_d5_collaboration",
       "topic": "d5.cross_domain_collaboration",
-      "summary": "Current view combines 2 compatible claims led by reg_flevoland_2023_regioplan_iza. Lower-authority claims clarify or implement the baseline rather than replacing it.",
+      "summary": "Current view combines 3 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
       "claim_ids": [
+        "clm__nat_azwa_2026_voortgang_kamerbrief_d5_003",
         "clm__reg_flevoland_2023_regioplan_iza_d5_002",
-        "clm__mun_almere_pga_transformatieplan_d5_001"
+        "clm__mun_almere_pga_seo_businesscase_2024_d5_002"
       ],
       "source_documents": [
+        {
+          "document_id": "nat_azwa_2026_voortgang_kamerbrief",
+          "title": "Kamerbrief inzake voortgang Integraal Zorgakkoord (IZA) en Aanvullend Zorg- en Welzijnsakkoord (AZWA)",
+          "jurisdiction_level": "national",
+          "document_type": "kamerbrief",
+          "document_status": "current"
+        },
+        {
+          "document_id": "reg_flevoland_2023_regioplan_iza",
+          "title": "Zorgzaam Flevoland 2023 Regioplan IZA Flevoland",
+          "jurisdiction_level": "regional",
+          "document_type": "regional_plan",
+          "document_status": "reference"
+        },
+        {
+          "document_id": "mun_almere_pga_seo_businesscase_2024",
+          "title": "Naar een positief gezond Almere; Beleidstheorie en businesscase transformatieplan",
+          "jurisdiction_level": "municipal",
+          "document_type": "research_report",
+          "document_status": "reference"
+        }
+      ],
+      "scope": "mixed",
+      "confidence": 0.64,
+      "needs_human_review": true
+    },
+    {
+      "item_id": "almere_d5_mental_health",
+      "topic": "d5.mentale_gezondheidsnetwerken",
+      "summary": "Current view combines 5 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
+      "claim_ids": [
+        "clm__nat_iza_2022_integraal_zorgakkoord_d5_003",
+        "clm__nat_azwa_2026_voortgang_kamerbrief_d5_002",
+        "clm__reg_flevoland_2023_regioplan_iza_d5_001",
+        "clm__mun_almere_pga_transformatieplan_d5_001",
+        "clm__mun_almere_pga_seo_businesscase_2024_d5_003"
+      ],
+      "source_documents": [
+        {
+          "document_id": "nat_iza_2022_integraal_zorgakkoord",
+          "title": "Integraal Zorgakkoord: Samen werken aan gezonde zorg",
+          "jurisdiction_level": "national",
+          "document_type": "agreement",
+          "document_status": "reference"
+        },
+        {
+          "document_id": "nat_azwa_2026_voortgang_kamerbrief",
+          "title": "Kamerbrief inzake voortgang Integraal Zorgakkoord (IZA) en Aanvullend Zorg- en Welzijnsakkoord (AZWA)",
+          "jurisdiction_level": "national",
+          "document_type": "kamerbrief",
+          "document_status": "current"
+        },
         {
           "document_id": "reg_flevoland_2023_regioplan_iza",
           "title": "Zorgzaam Flevoland 2023 Regioplan IZA Flevoland",
@@ -89,38 +179,26 @@
           "jurisdiction_level": "municipal",
           "document_type": "implementation_plan",
           "document_status": "current"
-        }
-      ],
-      "scope": "mixed",
-      "confidence": 0.57,
-      "needs_human_review": true
-    },
-    {
-      "item_id": "almere_d5_mental_health",
-      "topic": "d5.mentale_gezondheidsnetwerken",
-      "summary": "Current view is provisional because it rests on contextual or local evidence. The plan highlights Ecosysteem Mentale Gezondheid and Samen Sterker in de Wijk as a model for neighbourhood collaboration around psychosocial problems.",
-      "claim_ids": [
-        "clm__reg_flevoland_2023_regioplan_iza_d5_001"
-      ],
-      "source_documents": [
+        },
         {
-          "document_id": "reg_flevoland_2023_regioplan_iza",
-          "title": "Zorgzaam Flevoland 2023 Regioplan IZA Flevoland",
-          "jurisdiction_level": "regional",
-          "document_type": "regional_plan",
+          "document_id": "mun_almere_pga_seo_businesscase_2024",
+          "title": "Naar een positief gezond Almere; Beleidstheorie en businesscase transformatieplan",
+          "jurisdiction_level": "municipal",
+          "document_type": "research_report",
           "document_status": "reference"
         }
       ],
-      "scope": "regional",
-      "confidence": 0.6,
+      "scope": "mixed",
+      "confidence": 0.61,
       "needs_human_review": true
     },
     {
       "item_id": "almere_d5_health_first",
       "topic": "d5.health_first_shift",
-      "summary": "Current view is provisional because it rests on contextual or local evidence. The local shift is framed as moving from care afterwards toward health first and the right help in the right place.",
+      "summary": "Current view combines 2 compatible claims for d5.health_first_shift, led by mun_almere_pga_transformatieplan: The local shift is framed as moving from care afterwards toward health first and the right help in the right place.",
       "claim_ids": [
-        "clm__mun_almere_pga_transformatieplan_d5_002"
+        "clm__mun_almere_pga_transformatieplan_d5_002",
+        "clm__mun_almere_pga_seo_businesscase_2024_d5_001"
       ],
       "source_documents": [
         {
@@ -129,10 +207,17 @@
           "jurisdiction_level": "municipal",
           "document_type": "implementation_plan",
           "document_status": "current"
+        },
+        {
+          "document_id": "mun_almere_pga_seo_businesscase_2024",
+          "title": "Naar een positief gezond Almere; Beleidstheorie en businesscase transformatieplan",
+          "jurisdiction_level": "municipal",
+          "document_type": "research_report",
+          "document_status": "reference"
         }
       ],
       "scope": "municipal",
-      "confidence": 0.6,
+      "confidence": 0.57,
       "needs_human_review": true
     }
   ],
@@ -140,10 +225,18 @@
     {
       "item_id": "almere_d6_basis",
       "topic": "d6.basisinfrastructuur",
-      "summary": "Current view combines 2 compatible claims led by nat_azwa_2025_definitief. Lower-authority claims clarify or implement the baseline rather than replacing it.",
+      "summary": "Current view combines 10 compatible claims led by nat_azwa_2025_definitief. Lower-authority claims clarify or implement the baseline rather than replacing it.",
       "claim_ids": [
         "clm__nat_azwa_2025_definitief_d6_001",
-        "clm__nat_azwa_2026_cw31_kader_d5_d6_d6_001"
+        "clm__nat_gala_2023_gezond_en_actief_leven_d6_003",
+        "clm__nat_gala_2023_gezond_en_actief_leven_d6_002",
+        "clm__nat_gala_2023_gezond_en_actief_leven_d6_001",
+        "clm__nat_iza_2022_integraal_zorgakkoord_d6_001",
+        "clm__nat_azwa_2026_cw31_kader_d5_d6_d6_001",
+        "clm__nat_azwa_2026_voortgang_kamerbrief_d6_003",
+        "clm__nat_azwa_2026_voortgang_kamerbrief_d6_002",
+        "clm__nat_azwa_2026_voortgang_kamerbrief_d6_001",
+        "clm__nat_azwa_2026_cw31_kamerbrief_d6_001"
       ],
       "source_documents": [
         {
@@ -154,23 +247,53 @@
           "document_status": "current"
         },
         {
+          "document_id": "nat_gala_2023_gezond_en_actief_leven",
+          "title": "GALA - Gezond en Actief Leven Akkoord",
+          "jurisdiction_level": "national",
+          "document_type": "agreement",
+          "document_status": "reference"
+        },
+        {
+          "document_id": "nat_iza_2022_integraal_zorgakkoord",
+          "title": "Integraal Zorgakkoord: Samen werken aan gezonde zorg",
+          "jurisdiction_level": "national",
+          "document_type": "agreement",
+          "document_status": "reference"
+        },
+        {
           "document_id": "nat_azwa_2026_cw31_kader_d5_d6",
           "title": "CW 3.1 kader basisfunctionaliteiten en basisinfrastructuur D5 en D6",
           "jurisdiction_level": "national",
           "document_type": "framework",
           "document_status": "current"
+        },
+        {
+          "document_id": "nat_azwa_2026_voortgang_kamerbrief",
+          "title": "Kamerbrief inzake voortgang Integraal Zorgakkoord (IZA) en Aanvullend Zorg- en Welzijnsakkoord (AZWA)",
+          "jurisdiction_level": "national",
+          "document_type": "kamerbrief",
+          "document_status": "current"
+        },
+        {
+          "document_id": "nat_azwa_2026_cw31_kamerbrief",
+          "title": "Kamerbrief over CW 3.1 kaders voor AZWA onderdelen",
+          "jurisdiction_level": "national",
+          "document_type": "kamerbrief",
+          "document_status": "current"
         }
       ],
       "scope": "national",
-      "confidence": 0.92,
-      "needs_human_review": false
+      "confidence": 0.72,
+      "needs_human_review": true
     },
     {
       "item_id": "almere_d6_local_teams",
       "topic": "d6.local_teams",
-      "summary": "The D6 local structure is concretized through strong local teams in hechte wijkverbanden and regional agreements about ketenaanpak governance by Q1 2026.",
+      "summary": "Current view combines 3 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
       "claim_ids": [
-        "clm__nat_azwa_2025_definitief_d6_002"
+        "clm__nat_azwa_2025_definitief_d6_002",
+        "clm__mun_almere_sociaal_domein_informatiepagina_d6_002",
+        "clm__mun_almere_sociaal_domein_informatiepagina_d6_001"
       ],
       "source_documents": [
         {
@@ -179,20 +302,30 @@
           "jurisdiction_level": "national",
           "document_type": "agreement",
           "document_status": "current"
+        },
+        {
+          "document_id": "mun_almere_sociaal_domein_informatiepagina",
+          "title": "Informatiepagina Sociaal Domein",
+          "jurisdiction_level": "municipal",
+          "document_type": "municipal_info_page",
+          "document_status": "supporting"
         }
       ],
-      "scope": "national",
-      "confidence": 0.93,
-      "needs_human_review": false
+      "scope": "mixed",
+      "confidence": 0.65,
+      "needs_human_review": true
     },
     {
       "item_id": "almere_d6_digital_infra",
       "topic": "d6.digital_and_operational_infrastructure",
-      "summary": "Current view combines 3 compatible claims led by reg_flevoland_2023_regioplan_iza. Lower-authority claims clarify or implement the baseline rather than replacing it.",
+      "summary": "Current view combines 6 compatible claims led by reg_flevoland_2023_regioplan_iza. Lower-authority claims clarify or implement the baseline rather than replacing it.",
       "claim_ids": [
         "clm__reg_flevoland_2023_regioplan_iza_d6_001",
         "clm__mun_almere_pga_transformatieplan_d6_002",
-        "clm__mun_almere_pga_transformatieplan_d6_001"
+        "clm__mun_almere_pga_transformatieplan_d6_001",
+        "clm__mun_almere_pga_seo_businesscase_2024_d6_003",
+        "clm__mun_almere_pga_seo_businesscase_2024_d6_002",
+        "clm__mun_almere_pga_seo_businesscase_2024_d6_001"
       ],
       "source_documents": [
         {
@@ -208,6 +341,13 @@
           "jurisdiction_level": "municipal",
           "document_type": "implementation_plan",
           "document_status": "current"
+        },
+        {
+          "document_id": "mun_almere_pga_seo_businesscase_2024",
+          "title": "Naar een positief gezond Almere; Beleidstheorie en businesscase transformatieplan",
+          "jurisdiction_level": "municipal",
+          "document_type": "research_report",
+          "document_status": "reference"
         }
       ],
       "scope": "mixed",
@@ -217,13 +357,36 @@
     {
       "item_id": "almere_d6_translation",
       "topic": "municipal.implementation_translation",
-      "summary": "Current view combines 5 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
+      "summary": "Current view combines 28 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
       "claim_ids": [
         "clm__nat_azwa_2025_definitief_municipal_translation_002",
         "clm__nat_azwa_2025_definitief_municipal_translation_001",
         "clm__nat_azwa_2026_cw31_kader_d5_d6_municipal_translation_002",
         "clm__nat_azwa_2026_cw31_kader_d5_d6_municipal_translation_001",
-        "clm__reg_flevoland_2023_regioplan_iza_municipal_translation_001"
+        "clm__nat_azwa_2026_voortgang_kamerbrief_municipal_translation_003",
+        "clm__nat_azwa_2026_voortgang_kamerbrief_municipal_translation_002",
+        "clm__nat_azwa_2026_voortgang_kamerbrief_municipal_translation_001",
+        "clm__nat_azwa_2026_cw31_kamerbrief_municipal_translation_001",
+        "clm__reg_flevoland_2023_regioplan_iza_municipal_translation_001",
+        "clm__nat_vng_azwa_faq_uitvoeringscapaciteit_municipal_translation_003",
+        "clm__nat_vng_azwa_faq_uitvoeringscapaciteit_municipal_translation_002",
+        "clm__nat_vng_azwa_faq_uitvoeringscapaciteit_municipal_translation_001",
+        "clm__nat_vng_azwa_faq_middelen_municipal_translation_001",
+        "clm__mun_almere_sociaal_domein_informatiepagina_municipal_translation_003",
+        "clm__mun_almere_sociaal_domein_informatiepagina_municipal_translation_002",
+        "clm__mun_almere_sociaal_domein_informatiepagina_municipal_translation_001",
+        "clm__mun_almere_2024_2034_maatschappelijke_agenda_municipal_translation_003",
+        "clm__mun_almere_2024_2034_maatschappelijke_agenda_municipal_translation_002",
+        "clm__mun_almere_2024_2034_maatschappelijke_agenda_municipal_translation_001",
+        "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_municipal_translation_003",
+        "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_municipal_translation_002",
+        "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_municipal_translation_001",
+        "clm__reg_flevoland_2023_regiobeeld_municipal_translation_003",
+        "clm__reg_flevoland_2023_regiobeeld_municipal_translation_002",
+        "clm__reg_flevoland_2023_regiobeeld_municipal_translation_001",
+        "clm__mun_almere_sociale_staat_gateway_municipal_translation_003",
+        "clm__mun_almere_sociale_staat_gateway_municipal_translation_002",
+        "clm__mun_almere_sociale_staat_gateway_municipal_translation_001"
       ],
       "source_documents": [
         {
@@ -241,16 +404,79 @@
           "document_status": "current"
         },
         {
+          "document_id": "nat_azwa_2026_voortgang_kamerbrief",
+          "title": "Kamerbrief inzake voortgang Integraal Zorgakkoord (IZA) en Aanvullend Zorg- en Welzijnsakkoord (AZWA)",
+          "jurisdiction_level": "national",
+          "document_type": "kamerbrief",
+          "document_status": "current"
+        },
+        {
+          "document_id": "nat_azwa_2026_cw31_kamerbrief",
+          "title": "Kamerbrief over CW 3.1 kaders voor AZWA onderdelen",
+          "jurisdiction_level": "national",
+          "document_type": "kamerbrief",
+          "document_status": "current"
+        },
+        {
           "document_id": "reg_flevoland_2023_regioplan_iza",
           "title": "Zorgzaam Flevoland 2023 Regioplan IZA Flevoland",
           "jurisdiction_level": "regional",
           "document_type": "regional_plan",
           "document_status": "reference"
+        },
+        {
+          "document_id": "nat_vng_azwa_faq_uitvoeringscapaciteit",
+          "title": "Is er rekening gehouden met de benodigde uitvoeringscapaciteit van gemeenten bij het AZWA?",
+          "jurisdiction_level": "national",
+          "document_type": "faq",
+          "document_status": "supporting"
+        },
+        {
+          "document_id": "nat_vng_azwa_faq_middelen",
+          "title": "Welke middelen zijn beschikbaar in het AZWA en hoe worden deze middelen verdeeld?",
+          "jurisdiction_level": "national",
+          "document_type": "faq",
+          "document_status": "supporting"
+        },
+        {
+          "document_id": "mun_almere_sociaal_domein_informatiepagina",
+          "title": "Informatiepagina Sociaal Domein",
+          "jurisdiction_level": "municipal",
+          "document_type": "municipal_info_page",
+          "document_status": "supporting"
+        },
+        {
+          "document_id": "mun_almere_2024_2034_maatschappelijke_agenda",
+          "title": "Maatschappelijke agenda 2024-2034",
+          "jurisdiction_level": "municipal",
+          "document_type": "municipal_policy_summary",
+          "document_status": "supporting"
+        },
+        {
+          "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid",
+          "title": "Visie Gezondheidsbeleid Almere 2024-2026",
+          "jurisdiction_level": "municipal",
+          "document_type": "municipal_policy_summary",
+          "document_status": "supporting"
+        },
+        {
+          "document_id": "reg_flevoland_2023_regiobeeld",
+          "title": "Regiobeeld Flevoland 2023",
+          "jurisdiction_level": "regional",
+          "document_type": "regional_report",
+          "document_status": "reference"
+        },
+        {
+          "document_id": "mun_almere_sociale_staat_gateway",
+          "title": "Sociale staat van Almere",
+          "jurisdiction_level": "municipal",
+          "document_type": "municipal_gateway_page",
+          "document_status": "supporting"
         }
       ],
       "scope": "mixed",
-      "confidence": 0.88,
-      "needs_human_review": false
+      "confidence": 0.6,
+      "needs_human_review": true
     }
   ],
   "local_gaps": [
@@ -263,10 +489,22 @@
         "municipal.almere_initiatives"
       ],
       "supporting_claim_ids": [
+        "clm__nat_gala_2023_gezond_en_actief_leven_d5_003",
+        "clm__nat_gala_2023_gezond_en_actief_leven_d5_002",
+        "clm__nat_gala_2023_gezond_en_actief_leven_d5_001",
+        "clm__nat_iza_2022_integraal_zorgakkoord_d5_002",
+        "clm__nat_iza_2022_integraal_zorgakkoord_d5_001",
         "clm__nat_azwa_2026_cw31_kader_d5_d6_d5_002",
         "clm__nat_azwa_2026_cw31_kader_d5_d6_d5_001",
+        "clm__nat_azwa_2026_voortgang_kamerbrief_d5_001",
+        "clm__reg_flevoland_2023_regiobeeld_d5_003",
+        "clm__reg_flevoland_2023_regiobeeld_d5_002",
+        "clm__reg_flevoland_2023_regiobeeld_d5_001",
         "clm__nat_azwa_2025_definitief_d5_003",
-        "clm__mun_almere_pga_transformatieplan_municipal_translation_001"
+        "clm__mun_almere_pga_transformatieplan_municipal_translation_001",
+        "clm__mun_almere_pga_seo_businesscase_2024_municipal_translation_003",
+        "clm__mun_almere_pga_seo_businesscase_2024_municipal_translation_002",
+        "clm__mun_almere_pga_seo_businesscase_2024_municipal_translation_001"
       ]
     },
     {
@@ -279,13 +517,47 @@
       ],
       "supporting_claim_ids": [
         "clm__nat_azwa_2025_definitief_d6_002",
+        "clm__mun_almere_sociaal_domein_informatiepagina_d6_002",
+        "clm__mun_almere_sociaal_domein_informatiepagina_d6_001",
         "clm__nat_azwa_2025_onderhandelaarsakkoord_municipal_translation_002",
         "clm__nat_azwa_2025_definitief_municipal_translation_002",
         "clm__nat_azwa_2025_definitief_municipal_translation_001",
         "clm__nat_azwa_2026_cw31_kader_d5_d6_municipal_translation_002",
         "clm__nat_azwa_2026_cw31_kader_d5_d6_municipal_translation_001",
+        "clm__nat_azwa_2026_voortgang_kamerbrief_municipal_translation_003",
+        "clm__nat_azwa_2026_voortgang_kamerbrief_municipal_translation_002",
+        "clm__nat_azwa_2026_voortgang_kamerbrief_municipal_translation_001",
+        "clm__nat_azwa_2026_cw31_kamerbrief_municipal_translation_001",
         "clm__reg_flevoland_2023_regioplan_iza_municipal_translation_001",
-        "clm__nat_azwa_2025_onderhandelaarsakkoord_municipal_translation_001"
+        "clm__nat_vng_azwa_faq_uitvoeringscapaciteit_municipal_translation_003",
+        "clm__nat_vng_azwa_faq_uitvoeringscapaciteit_municipal_translation_002",
+        "clm__nat_vng_azwa_faq_uitvoeringscapaciteit_municipal_translation_001",
+        "clm__nat_vng_azwa_faq_middelen_municipal_translation_001",
+        "clm__mun_almere_sociaal_domein_informatiepagina_municipal_translation_003",
+        "clm__mun_almere_sociaal_domein_informatiepagina_municipal_translation_002",
+        "clm__mun_almere_sociaal_domein_informatiepagina_municipal_translation_001",
+        "clm__mun_almere_2024_2034_maatschappelijke_agenda_municipal_translation_003",
+        "clm__mun_almere_2024_2034_maatschappelijke_agenda_municipal_translation_002",
+        "clm__mun_almere_2024_2034_maatschappelijke_agenda_municipal_translation_001",
+        "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_municipal_translation_003",
+        "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_municipal_translation_002",
+        "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_municipal_translation_001",
+        "clm__reg_flevoland_2023_regiobeeld_municipal_translation_003",
+        "clm__reg_flevoland_2023_regiobeeld_municipal_translation_002",
+        "clm__reg_flevoland_2023_regiobeeld_municipal_translation_001",
+        "clm__mun_almere_sociale_staat_gateway_municipal_translation_003",
+        "clm__mun_almere_sociale_staat_gateway_municipal_translation_002",
+        "clm__mun_almere_sociale_staat_gateway_municipal_translation_001",
+        "clm__nat_azwa_2025_onderhandelaarsakkoord_municipal_translation_001",
+        "clm__nat_gala_2023_gezond_en_actief_leven_municipal_translation_003",
+        "clm__nat_gala_2023_gezond_en_actief_leven_municipal_translation_002",
+        "clm__nat_gala_2023_gezond_en_actief_leven_municipal_translation_001",
+        "clm__nat_iza_2022_integraal_zorgakkoord_municipal_translation_003",
+        "clm__nat_iza_2022_integraal_zorgakkoord_municipal_translation_002",
+        "clm__nat_iza_2022_integraal_zorgakkoord_municipal_translation_001",
+        "clm__nat_azwa_2025_aanbiedingsbrief_municipal_translation_003",
+        "clm__nat_azwa_2025_aanbiedingsbrief_municipal_translation_002",
+        "clm__nat_azwa_2025_aanbiedingsbrief_municipal_translation_001"
       ]
     },
     {
@@ -298,6 +570,11 @@
       "supporting_claim_ids": [
         "clm__nat_azwa_2025_definitief_governance_and_finance_003",
         "clm__nat_azwa_2026_cw31_kader_d5_d6_governance_and_finance_001",
+        "clm__reg_flevoland_2023_regioplan_iza_governance_and_finance_002",
+        "clm__nat_vng_azwa_faq_middelen_governance_and_finance_003",
+        "clm__nat_vng_azwa_faq_middelen_governance_and_finance_002",
+        "clm__nat_vng_azwa_faq_middelen_governance_and_finance_001",
+        "clm__mun_almere_pga_seo_businesscase_2024_governance_and_finance_001",
         "clm__nat_azwa_2025_definitief_governance_and_finance_002"
       ]
     },
@@ -312,8 +589,11 @@
       "supporting_claim_ids": [
         "clm__nat_azwa_2025_definitief_monitoring_and_evaluation_001",
         "clm__nat_azwa_2026_cw31_kader_d5_d6_monitoring_and_evaluation_002",
+        "clm__nat_azwa_2026_voortgang_kamerbrief_monitoring_and_evaluation_003",
         "clm__reg_flevoland_2023_regioplan_iza_monitoring_and_evaluation_002",
+        "clm__reg_flevoland_2023_regiobeeld_monitoring_and_evaluation_001",
         "clm__nat_azwa_2025_onderhandelaarsakkoord_monitoring_and_evaluation_002",
+        "clm__nat_gala_2023_gezond_en_actief_leven_monitoring_and_evaluation_001",
         "clm__mun_almere_pga_transformatieplan_monitoring_and_evaluation_001",
         "clm__nat_azwa_2026_cw31_kader_d5_d6_monitoring_and_evaluation_001",
         "clm__nat_azwa_2025_onderhandelaarsakkoord_monitoring_and_evaluation_001"
@@ -332,7 +612,10 @@
       "supporting_claim_ids": [
         "clm__reg_flevoland_2023_regioplan_iza_d6_001",
         "clm__mun_almere_pga_transformatieplan_d6_002",
-        "clm__mun_almere_pga_transformatieplan_d6_001"
+        "clm__mun_almere_pga_transformatieplan_d6_001",
+        "clm__mun_almere_pga_seo_businesscase_2024_d6_003",
+        "clm__mun_almere_pga_seo_businesscase_2024_d6_002",
+        "clm__mun_almere_pga_seo_businesscase_2024_d6_001"
       ]
     },
     {
@@ -347,6 +630,11 @@
       "supporting_claim_ids": [
         "clm__nat_azwa_2025_definitief_governance_and_finance_003",
         "clm__nat_azwa_2026_cw31_kader_d5_d6_governance_and_finance_001",
+        "clm__reg_flevoland_2023_regioplan_iza_governance_and_finance_002",
+        "clm__nat_vng_azwa_faq_middelen_governance_and_finance_003",
+        "clm__nat_vng_azwa_faq_middelen_governance_and_finance_002",
+        "clm__nat_vng_azwa_faq_middelen_governance_and_finance_001",
+        "clm__mun_almere_pga_seo_businesscase_2024_governance_and_finance_001",
         "clm__nat_azwa_2025_definitief_governance_and_finance_002"
       ]
     },
@@ -376,12 +664,25 @@
       ],
       "supporting_claim_ids": [
         "clm__nat_azwa_2025_definitief_timeline_and_status_001",
+        "clm__mun_almere_2024_2034_maatschappelijke_agenda_timeline_and_status_001",
         "clm__nat_azwa_2025_definitief_monitoring_and_evaluation_002",
+        "clm__nat_azwa_2026_voortgang_kamerbrief_monitoring_and_evaluation_001",
         "clm__nat_azwa_2026_cw31_kader_d5_d6_monitoring_and_evaluation_001"
       ]
     }
   ],
   "relevant_regional_documents": [
+    {
+      "document_id": "reg_flevoland_2023_regiobeeld",
+      "title": "Regiobeeld Flevoland 2023",
+      "document_type": "regional_report",
+      "relevant_topics": [
+        "d5.basisfunctionaliteiten_onderbouwd",
+        "monitoring.framework",
+        "municipal.implementation_translation",
+        "timeline.rollout_2030"
+      ]
+    },
     {
       "document_id": "reg_flevoland_2023_regioplan_iza",
       "title": "Zorgzaam Flevoland 2023 Regioplan IZA Flevoland",
@@ -390,7 +691,7 @@
         "d5.cross_domain_collaboration",
         "d5.mentale_gezondheidsnetwerken",
         "d6.digital_and_operational_infrastructure",
-        "finance.regional_funding_path",
+        "finance.d5_d6.funding_instrument",
         "monitoring.framework",
         "municipal.implementation_translation",
         "municipal.role_allocation"
@@ -399,12 +700,43 @@
   ],
   "relevant_municipal_documents": [
     {
+      "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid",
+      "title": "Visie Gezondheidsbeleid Almere 2024-2026",
+      "document_type": "municipal_policy_summary",
+      "relevant_topics": [
+        "municipal.implementation_translation"
+      ]
+    },
+    {
+      "document_id": "mun_almere_2024_2034_maatschappelijke_agenda",
+      "title": "Maatschappelijke agenda 2024-2034",
+      "document_type": "municipal_policy_summary",
+      "relevant_topics": [
+        "municipal.implementation_translation"
+      ]
+    },
+    {
+      "document_id": "mun_almere_pga_seo_businesscase_2024",
+      "title": "Naar een positief gezond Almere; Beleidstheorie en businesscase transformatieplan",
+      "document_type": "research_report",
+      "relevant_topics": [
+        "d5.cross_domain_collaboration",
+        "d5.health_first_shift",
+        "d5.mentale_gezondheidsnetwerken",
+        "d6.digital_and_operational_infrastructure",
+        "finance.d5_d6.funding_instrument",
+        "finance.local_alignment_goal",
+        "finance.regional_funding_path",
+        "municipal.almere_initiatives"
+      ]
+    },
+    {
       "document_id": "mun_almere_pga_transformatieplan",
       "title": "Transformatieplan Positief Gezond Almere",
       "document_type": "implementation_plan",
       "relevant_topics": [
-        "d5.cross_domain_collaboration",
         "d5.health_first_shift",
+        "d5.mentale_gezondheidsnetwerken",
         "d6.digital_and_operational_infrastructure",
         "finance.local_alignment_goal",
         "monitoring.local_learning",
@@ -412,17 +744,97 @@
         "municipal.almere_initiatives",
         "timeline.almere_2029"
       ]
+    },
+    {
+      "document_id": "mun_almere_sociaal_domein_informatiepagina",
+      "title": "Informatiepagina Sociaal Domein",
+      "document_type": "municipal_info_page",
+      "relevant_topics": [
+        "d6.local_teams",
+        "municipal.implementation_translation"
+      ]
+    },
+    {
+      "document_id": "mun_almere_sociale_staat_gateway",
+      "title": "Sociale staat van Almere",
+      "document_type": "municipal_gateway_page",
+      "relevant_topics": [
+        "municipal.implementation_translation"
+      ]
     }
   ],
   "uncertain_items": [
     {
-      "topic": "d5.cross_domain_collaboration",
-      "summary": "Current view combines 2 compatible claims led by reg_flevoland_2023_regioplan_iza. Lower-authority claims clarify or implement the baseline rather than replacing it.",
+      "topic": "d5.basisfunctionaliteiten_onderbouwd",
+      "summary": "Current view combines 11 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
       "claim_ids": [
-        "clm__reg_flevoland_2023_regioplan_iza_d5_002",
-        "clm__mun_almere_pga_transformatieplan_d5_001"
+        "clm__nat_gala_2023_gezond_en_actief_leven_d5_003",
+        "clm__nat_gala_2023_gezond_en_actief_leven_d5_002",
+        "clm__nat_gala_2023_gezond_en_actief_leven_d5_001",
+        "clm__nat_iza_2022_integraal_zorgakkoord_d5_002",
+        "clm__nat_iza_2022_integraal_zorgakkoord_d5_001",
+        "clm__nat_azwa_2026_cw31_kader_d5_d6_d5_002",
+        "clm__nat_azwa_2026_cw31_kader_d5_d6_d5_001",
+        "clm__nat_azwa_2026_voortgang_kamerbrief_d5_001",
+        "clm__reg_flevoland_2023_regiobeeld_d5_003",
+        "clm__reg_flevoland_2023_regiobeeld_d5_002",
+        "clm__reg_flevoland_2023_regiobeeld_d5_001"
       ],
       "source_documents": [
+        {
+          "document_id": "nat_gala_2023_gezond_en_actief_leven",
+          "title": "GALA - Gezond en Actief Leven Akkoord",
+          "jurisdiction_level": "national",
+          "document_type": "agreement",
+          "document_status": "reference"
+        },
+        {
+          "document_id": "nat_iza_2022_integraal_zorgakkoord",
+          "title": "Integraal Zorgakkoord: Samen werken aan gezonde zorg",
+          "jurisdiction_level": "national",
+          "document_type": "agreement",
+          "document_status": "reference"
+        },
+        {
+          "document_id": "nat_azwa_2026_cw31_kader_d5_d6",
+          "title": "CW 3.1 kader basisfunctionaliteiten en basisinfrastructuur D5 en D6",
+          "jurisdiction_level": "national",
+          "document_type": "framework",
+          "document_status": "current"
+        },
+        {
+          "document_id": "nat_azwa_2026_voortgang_kamerbrief",
+          "title": "Kamerbrief inzake voortgang Integraal Zorgakkoord (IZA) en Aanvullend Zorg- en Welzijnsakkoord (AZWA)",
+          "jurisdiction_level": "national",
+          "document_type": "kamerbrief",
+          "document_status": "current"
+        },
+        {
+          "document_id": "reg_flevoland_2023_regiobeeld",
+          "title": "Regiobeeld Flevoland 2023",
+          "jurisdiction_level": "regional",
+          "document_type": "regional_report",
+          "document_status": "reference"
+        }
+      ],
+      "reason": "Current interpretation relies on contextual or lower-authority evidence and should be reviewed before firm local use."
+    },
+    {
+      "topic": "d5.cross_domain_collaboration",
+      "summary": "Current view combines 3 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
+      "claim_ids": [
+        "clm__nat_azwa_2026_voortgang_kamerbrief_d5_003",
+        "clm__reg_flevoland_2023_regioplan_iza_d5_002",
+        "clm__mun_almere_pga_seo_businesscase_2024_d5_002"
+      ],
+      "source_documents": [
+        {
+          "document_id": "nat_azwa_2026_voortgang_kamerbrief",
+          "title": "Kamerbrief inzake voortgang Integraal Zorgakkoord (IZA) en Aanvullend Zorg- en Welzijnsakkoord (AZWA)",
+          "jurisdiction_level": "national",
+          "document_type": "kamerbrief",
+          "document_status": "current"
+        },
         {
           "document_id": "reg_flevoland_2023_regioplan_iza",
           "title": "Zorgzaam Flevoland 2023 Regioplan IZA Flevoland",
@@ -431,20 +843,21 @@
           "document_status": "reference"
         },
         {
-          "document_id": "mun_almere_pga_transformatieplan",
-          "title": "Transformatieplan Positief Gezond Almere",
+          "document_id": "mun_almere_pga_seo_businesscase_2024",
+          "title": "Naar een positief gezond Almere; Beleidstheorie en businesscase transformatieplan",
           "jurisdiction_level": "municipal",
-          "document_type": "implementation_plan",
-          "document_status": "current"
+          "document_type": "research_report",
+          "document_status": "reference"
         }
       ],
       "reason": "Current interpretation relies on contextual or lower-authority evidence and should be reviewed before firm local use."
     },
     {
       "topic": "d5.health_first_shift",
-      "summary": "Current view is provisional because it rests on contextual or local evidence. The local shift is framed as moving from care afterwards toward health first and the right help in the right place.",
+      "summary": "Current view combines 2 compatible claims for d5.health_first_shift, led by mun_almere_pga_transformatieplan: The local shift is framed as moving from care afterwards toward health first and the right help in the right place.",
       "claim_ids": [
-        "clm__mun_almere_pga_transformatieplan_d5_002"
+        "clm__mun_almere_pga_transformatieplan_d5_002",
+        "clm__mun_almere_pga_seo_businesscase_2024_d5_001"
       ],
       "source_documents": [
         {
@@ -453,34 +866,162 @@
           "jurisdiction_level": "municipal",
           "document_type": "implementation_plan",
           "document_status": "current"
-        }
-      ],
-      "reason": "Current interpretation relies on contextual or lower-authority evidence and should be reviewed before firm local use."
-    },
-    {
-      "topic": "d5.mentale_gezondheidsnetwerken",
-      "summary": "Current view is provisional because it rests on contextual or local evidence. The plan highlights Ecosysteem Mentale Gezondheid and Samen Sterker in de Wijk as a model for neighbourhood collaboration around psychosocial problems.",
-      "claim_ids": [
-        "clm__reg_flevoland_2023_regioplan_iza_d5_001"
-      ],
-      "source_documents": [
+        },
         {
-          "document_id": "reg_flevoland_2023_regioplan_iza",
-          "title": "Zorgzaam Flevoland 2023 Regioplan IZA Flevoland",
-          "jurisdiction_level": "regional",
-          "document_type": "regional_plan",
+          "document_id": "mun_almere_pga_seo_businesscase_2024",
+          "title": "Naar een positief gezond Almere; Beleidstheorie en businesscase transformatieplan",
+          "jurisdiction_level": "municipal",
+          "document_type": "research_report",
           "document_status": "reference"
         }
       ],
       "reason": "Current interpretation relies on contextual or lower-authority evidence and should be reviewed before firm local use."
     },
     {
+      "topic": "d5.mentale_gezondheidsnetwerken",
+      "summary": "Current view combines 5 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
+      "claim_ids": [
+        "clm__nat_iza_2022_integraal_zorgakkoord_d5_003",
+        "clm__nat_azwa_2026_voortgang_kamerbrief_d5_002",
+        "clm__reg_flevoland_2023_regioplan_iza_d5_001",
+        "clm__mun_almere_pga_transformatieplan_d5_001",
+        "clm__mun_almere_pga_seo_businesscase_2024_d5_003"
+      ],
+      "source_documents": [
+        {
+          "document_id": "nat_iza_2022_integraal_zorgakkoord",
+          "title": "Integraal Zorgakkoord: Samen werken aan gezonde zorg",
+          "jurisdiction_level": "national",
+          "document_type": "agreement",
+          "document_status": "reference"
+        },
+        {
+          "document_id": "nat_azwa_2026_voortgang_kamerbrief",
+          "title": "Kamerbrief inzake voortgang Integraal Zorgakkoord (IZA) en Aanvullend Zorg- en Welzijnsakkoord (AZWA)",
+          "jurisdiction_level": "national",
+          "document_type": "kamerbrief",
+          "document_status": "current"
+        },
+        {
+          "document_id": "reg_flevoland_2023_regioplan_iza",
+          "title": "Zorgzaam Flevoland 2023 Regioplan IZA Flevoland",
+          "jurisdiction_level": "regional",
+          "document_type": "regional_plan",
+          "document_status": "reference"
+        },
+        {
+          "document_id": "mun_almere_pga_transformatieplan",
+          "title": "Transformatieplan Positief Gezond Almere",
+          "jurisdiction_level": "municipal",
+          "document_type": "implementation_plan",
+          "document_status": "current"
+        },
+        {
+          "document_id": "mun_almere_pga_seo_businesscase_2024",
+          "title": "Naar een positief gezond Almere; Beleidstheorie en businesscase transformatieplan",
+          "jurisdiction_level": "municipal",
+          "document_type": "research_report",
+          "document_status": "reference"
+        }
+      ],
+      "reason": "Current interpretation relies on contextual or lower-authority evidence and should be reviewed before firm local use."
+    },
+    {
+      "topic": "d5.other",
+      "summary": "Current view combines 2 compatible claims for d5.other, led by nat_azwa_2026_cw31_kamerbrief: Basisfunctionaliteiten- en basisinfrastructuur in het zorg- en sociaal domein (AZWA-afspraken D5 en D6) .",
+      "claim_ids": [
+        "clm__nat_azwa_2026_cw31_kamerbrief_d5_001",
+        "clm__nat_azwa_2025_aanbiedingsbrief_d5_001"
+      ],
+      "source_documents": [
+        {
+          "document_id": "nat_azwa_2026_cw31_kamerbrief",
+          "title": "Kamerbrief over CW 3.1 kaders voor AZWA onderdelen",
+          "jurisdiction_level": "national",
+          "document_type": "kamerbrief",
+          "document_status": "current"
+        },
+        {
+          "document_id": "nat_azwa_2025_aanbiedingsbrief",
+          "title": "Kamerbrief aanbieding Aanvullend Zorg- en Welzijnsakkoord (AZWA)",
+          "jurisdiction_level": "national",
+          "document_type": "kamerbrief",
+          "document_status": "reference"
+        }
+      ],
+      "reason": "Current interpretation relies on contextual or lower-authority evidence and should be reviewed before firm local use."
+    },
+    {
+      "topic": "d6.basisinfrastructuur",
+      "summary": "Current view combines 10 compatible claims led by nat_azwa_2025_definitief. Lower-authority claims clarify or implement the baseline rather than replacing it.",
+      "claim_ids": [
+        "clm__nat_azwa_2025_definitief_d6_001",
+        "clm__nat_gala_2023_gezond_en_actief_leven_d6_003",
+        "clm__nat_gala_2023_gezond_en_actief_leven_d6_002",
+        "clm__nat_gala_2023_gezond_en_actief_leven_d6_001",
+        "clm__nat_iza_2022_integraal_zorgakkoord_d6_001",
+        "clm__nat_azwa_2026_cw31_kader_d5_d6_d6_001",
+        "clm__nat_azwa_2026_voortgang_kamerbrief_d6_003",
+        "clm__nat_azwa_2026_voortgang_kamerbrief_d6_002",
+        "clm__nat_azwa_2026_voortgang_kamerbrief_d6_001",
+        "clm__nat_azwa_2026_cw31_kamerbrief_d6_001"
+      ],
+      "source_documents": [
+        {
+          "document_id": "nat_azwa_2025_definitief",
+          "title": "Aanvullend Zorg- en Welzijnsakkoord (AZWA) (Definitief)",
+          "jurisdiction_level": "national",
+          "document_type": "agreement",
+          "document_status": "current"
+        },
+        {
+          "document_id": "nat_gala_2023_gezond_en_actief_leven",
+          "title": "GALA - Gezond en Actief Leven Akkoord",
+          "jurisdiction_level": "national",
+          "document_type": "agreement",
+          "document_status": "reference"
+        },
+        {
+          "document_id": "nat_iza_2022_integraal_zorgakkoord",
+          "title": "Integraal Zorgakkoord: Samen werken aan gezonde zorg",
+          "jurisdiction_level": "national",
+          "document_type": "agreement",
+          "document_status": "reference"
+        },
+        {
+          "document_id": "nat_azwa_2026_cw31_kader_d5_d6",
+          "title": "CW 3.1 kader basisfunctionaliteiten en basisinfrastructuur D5 en D6",
+          "jurisdiction_level": "national",
+          "document_type": "framework",
+          "document_status": "current"
+        },
+        {
+          "document_id": "nat_azwa_2026_voortgang_kamerbrief",
+          "title": "Kamerbrief inzake voortgang Integraal Zorgakkoord (IZA) en Aanvullend Zorg- en Welzijnsakkoord (AZWA)",
+          "jurisdiction_level": "national",
+          "document_type": "kamerbrief",
+          "document_status": "current"
+        },
+        {
+          "document_id": "nat_azwa_2026_cw31_kamerbrief",
+          "title": "Kamerbrief over CW 3.1 kaders voor AZWA onderdelen",
+          "jurisdiction_level": "national",
+          "document_type": "kamerbrief",
+          "document_status": "current"
+        }
+      ],
+      "reason": "Current interpretation relies on contextual or lower-authority evidence and should be reviewed before firm local use."
+    },
+    {
       "topic": "d6.digital_and_operational_infrastructure",
-      "summary": "Current view combines 3 compatible claims led by reg_flevoland_2023_regioplan_iza. Lower-authority claims clarify or implement the baseline rather than replacing it.",
+      "summary": "Current view combines 6 compatible claims led by reg_flevoland_2023_regioplan_iza. Lower-authority claims clarify or implement the baseline rather than replacing it.",
       "claim_ids": [
         "clm__reg_flevoland_2023_regioplan_iza_d6_001",
         "clm__mun_almere_pga_transformatieplan_d6_002",
-        "clm__mun_almere_pga_transformatieplan_d6_001"
+        "clm__mun_almere_pga_transformatieplan_d6_001",
+        "clm__mun_almere_pga_seo_businesscase_2024_d6_003",
+        "clm__mun_almere_pga_seo_businesscase_2024_d6_002",
+        "clm__mun_almere_pga_seo_businesscase_2024_d6_001"
       ],
       "source_documents": [
         {
@@ -496,15 +1037,100 @@
           "jurisdiction_level": "municipal",
           "document_type": "implementation_plan",
           "document_status": "current"
+        },
+        {
+          "document_id": "mun_almere_pga_seo_businesscase_2024",
+          "title": "Naar een positief gezond Almere; Beleidstheorie en businesscase transformatieplan",
+          "jurisdiction_level": "municipal",
+          "document_type": "research_report",
+          "document_status": "reference"
+        }
+      ],
+      "reason": "Current interpretation relies on contextual or lower-authority evidence and should be reviewed before firm local use."
+    },
+    {
+      "topic": "d6.local_teams",
+      "summary": "Current view combines 3 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
+      "claim_ids": [
+        "clm__nat_azwa_2025_definitief_d6_002",
+        "clm__mun_almere_sociaal_domein_informatiepagina_d6_002",
+        "clm__mun_almere_sociaal_domein_informatiepagina_d6_001"
+      ],
+      "source_documents": [
+        {
+          "document_id": "nat_azwa_2025_definitief",
+          "title": "Aanvullend Zorg- en Welzijnsakkoord (AZWA) (Definitief)",
+          "jurisdiction_level": "national",
+          "document_type": "agreement",
+          "document_status": "current"
+        },
+        {
+          "document_id": "mun_almere_sociaal_domein_informatiepagina",
+          "title": "Informatiepagina Sociaal Domein",
+          "jurisdiction_level": "municipal",
+          "document_type": "municipal_info_page",
+          "document_status": "supporting"
+        }
+      ],
+      "reason": "Current interpretation relies on contextual or lower-authority evidence and should be reviewed before firm local use."
+    },
+    {
+      "topic": "finance.d5_d6.funding_instrument",
+      "summary": "Current view combines 7 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
+      "claim_ids": [
+        "clm__nat_azwa_2025_definitief_governance_and_finance_003",
+        "clm__nat_azwa_2026_cw31_kader_d5_d6_governance_and_finance_001",
+        "clm__reg_flevoland_2023_regioplan_iza_governance_and_finance_002",
+        "clm__nat_vng_azwa_faq_middelen_governance_and_finance_003",
+        "clm__nat_vng_azwa_faq_middelen_governance_and_finance_002",
+        "clm__nat_vng_azwa_faq_middelen_governance_and_finance_001",
+        "clm__mun_almere_pga_seo_businesscase_2024_governance_and_finance_001"
+      ],
+      "source_documents": [
+        {
+          "document_id": "nat_azwa_2025_definitief",
+          "title": "Aanvullend Zorg- en Welzijnsakkoord (AZWA) (Definitief)",
+          "jurisdiction_level": "national",
+          "document_type": "agreement",
+          "document_status": "current"
+        },
+        {
+          "document_id": "nat_azwa_2026_cw31_kader_d5_d6",
+          "title": "CW 3.1 kader basisfunctionaliteiten en basisinfrastructuur D5 en D6",
+          "jurisdiction_level": "national",
+          "document_type": "framework",
+          "document_status": "current"
+        },
+        {
+          "document_id": "reg_flevoland_2023_regioplan_iza",
+          "title": "Zorgzaam Flevoland 2023 Regioplan IZA Flevoland",
+          "jurisdiction_level": "regional",
+          "document_type": "regional_plan",
+          "document_status": "reference"
+        },
+        {
+          "document_id": "nat_vng_azwa_faq_middelen",
+          "title": "Welke middelen zijn beschikbaar in het AZWA en hoe worden deze middelen verdeeld?",
+          "jurisdiction_level": "national",
+          "document_type": "faq",
+          "document_status": "supporting"
+        },
+        {
+          "document_id": "mun_almere_pga_seo_businesscase_2024",
+          "title": "Naar een positief gezond Almere; Beleidstheorie en businesscase transformatieplan",
+          "jurisdiction_level": "municipal",
+          "document_type": "research_report",
+          "document_status": "reference"
         }
       ],
       "reason": "Current interpretation relies on contextual or lower-authority evidence and should be reviewed before firm local use."
     },
     {
       "topic": "finance.local_alignment_goal",
-      "summary": "Current view is provisional because it rests on contextual or local evidence. The plan does not set a detailed funding framework, but it does describe a target future balance in which care expenditures and social-domain expenditures are better aligned.",
+      "summary": "Current view combines 2 compatible claims for finance.local_alignment_goal, led by mun_almere_pga_transformatieplan: The plan does not set a detailed funding framework, but it does describe a target future balance in which care expenditures and social-domain expenditures are better aligned.",
       "claim_ids": [
-        "clm__mun_almere_pga_transformatieplan_governance_and_finance_002"
+        "clm__mun_almere_pga_transformatieplan_governance_and_finance_002",
+        "clm__mun_almere_pga_seo_businesscase_2024_governance_and_finance_003"
       ],
       "source_documents": [
         {
@@ -513,6 +1139,494 @@
           "jurisdiction_level": "municipal",
           "document_type": "implementation_plan",
           "document_status": "current"
+        },
+        {
+          "document_id": "mun_almere_pga_seo_businesscase_2024",
+          "title": "Naar een positief gezond Almere; Beleidstheorie en businesscase transformatieplan",
+          "jurisdiction_level": "municipal",
+          "document_type": "research_report",
+          "document_status": "reference"
+        }
+      ],
+      "reason": "Current interpretation relies on contextual or lower-authority evidence and should be reviewed before firm local use."
+    },
+    {
+      "topic": "finance.regional_funding_path",
+      "summary": "Current view combines 4 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
+      "claim_ids": [
+        "clm__nat_azwa_2026_voortgang_kamerbrief_governance_and_finance_003",
+        "clm__nat_azwa_2026_voortgang_kamerbrief_governance_and_finance_002",
+        "clm__nat_vng_azwa_faq_uitvoeringscapaciteit_governance_and_finance_001",
+        "clm__mun_almere_pga_seo_businesscase_2024_governance_and_finance_002"
+      ],
+      "source_documents": [
+        {
+          "document_id": "nat_azwa_2026_voortgang_kamerbrief",
+          "title": "Kamerbrief inzake voortgang Integraal Zorgakkoord (IZA) en Aanvullend Zorg- en Welzijnsakkoord (AZWA)",
+          "jurisdiction_level": "national",
+          "document_type": "kamerbrief",
+          "document_status": "current"
+        },
+        {
+          "document_id": "nat_vng_azwa_faq_uitvoeringscapaciteit",
+          "title": "Is er rekening gehouden met de benodigde uitvoeringscapaciteit van gemeenten bij het AZWA?",
+          "jurisdiction_level": "national",
+          "document_type": "faq",
+          "document_status": "supporting"
+        },
+        {
+          "document_id": "mun_almere_pga_seo_businesscase_2024",
+          "title": "Naar een positief gezond Almere; Beleidstheorie en businesscase transformatieplan",
+          "jurisdiction_level": "municipal",
+          "document_type": "research_report",
+          "document_status": "reference"
+        }
+      ],
+      "reason": "Current interpretation relies on contextual or lower-authority evidence and should be reviewed before firm local use."
+    },
+    {
+      "topic": "governance.national_coordination",
+      "summary": "Current view combines 2 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
+      "claim_ids": [
+        "clm__nat_azwa_2026_voortgang_kamerbrief_governance_and_finance_001",
+        "clm__reg_flevoland_2023_regiobeeld_governance_and_finance_002"
+      ],
+      "source_documents": [
+        {
+          "document_id": "nat_azwa_2026_voortgang_kamerbrief",
+          "title": "Kamerbrief inzake voortgang Integraal Zorgakkoord (IZA) en Aanvullend Zorg- en Welzijnsakkoord (AZWA)",
+          "jurisdiction_level": "national",
+          "document_type": "kamerbrief",
+          "document_status": "current"
+        },
+        {
+          "document_id": "reg_flevoland_2023_regiobeeld",
+          "title": "Regiobeeld Flevoland 2023",
+          "jurisdiction_level": "regional",
+          "document_type": "regional_report",
+          "document_status": "reference"
+        }
+      ],
+      "reason": "Current interpretation relies on contextual or lower-authority evidence and should be reviewed before firm local use."
+    },
+    {
+      "topic": "governance_and_finance.other",
+      "summary": "Current view combines 7 compatible claims for governance_and_finance.other, led by mun_almere_sociaal_domein_informatiepagina: Gemeenten krijgen uiteindelijk één budget vanuit het gemeentefonds om de taken binnen het sociaal domein te financieren.",
+      "claim_ids": [
+        "clm__mun_almere_sociaal_domein_informatiepagina_governance_and_finance_001",
+        "clm__mun_almere_2024_2034_maatschappelijke_agenda_governance_and_finance_002",
+        "clm__mun_almere_2024_2034_maatschappelijke_agenda_governance_and_finance_001",
+        "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_governance_and_finance_002",
+        "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_governance_and_finance_001",
+        "clm__reg_flevoland_2023_regiobeeld_governance_and_finance_003",
+        "clm__reg_flevoland_2023_regiobeeld_governance_and_finance_001"
+      ],
+      "source_documents": [
+        {
+          "document_id": "mun_almere_sociaal_domein_informatiepagina",
+          "title": "Informatiepagina Sociaal Domein",
+          "jurisdiction_level": "municipal",
+          "document_type": "municipal_info_page",
+          "document_status": "supporting"
+        },
+        {
+          "document_id": "mun_almere_2024_2034_maatschappelijke_agenda",
+          "title": "Maatschappelijke agenda 2024-2034",
+          "jurisdiction_level": "municipal",
+          "document_type": "municipal_policy_summary",
+          "document_status": "supporting"
+        },
+        {
+          "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid",
+          "title": "Visie Gezondheidsbeleid Almere 2024-2026",
+          "jurisdiction_level": "municipal",
+          "document_type": "municipal_policy_summary",
+          "document_status": "supporting"
+        },
+        {
+          "document_id": "reg_flevoland_2023_regiobeeld",
+          "title": "Regiobeeld Flevoland 2023",
+          "jurisdiction_level": "regional",
+          "document_type": "regional_report",
+          "document_status": "reference"
+        }
+      ],
+      "reason": "Current interpretation relies on contextual or lower-authority evidence and should be reviewed before firm local use."
+    },
+    {
+      "topic": "monitoring.framework",
+      "summary": "Current view combines 5 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
+      "claim_ids": [
+        "clm__nat_azwa_2025_definitief_monitoring_and_evaluation_001",
+        "clm__nat_azwa_2026_cw31_kader_d5_d6_monitoring_and_evaluation_002",
+        "clm__nat_azwa_2026_voortgang_kamerbrief_monitoring_and_evaluation_003",
+        "clm__reg_flevoland_2023_regioplan_iza_monitoring_and_evaluation_002",
+        "clm__reg_flevoland_2023_regiobeeld_monitoring_and_evaluation_001"
+      ],
+      "source_documents": [
+        {
+          "document_id": "nat_azwa_2025_definitief",
+          "title": "Aanvullend Zorg- en Welzijnsakkoord (AZWA) (Definitief)",
+          "jurisdiction_level": "national",
+          "document_type": "agreement",
+          "document_status": "current"
+        },
+        {
+          "document_id": "nat_azwa_2026_cw31_kader_d5_d6",
+          "title": "CW 3.1 kader basisfunctionaliteiten en basisinfrastructuur D5 en D6",
+          "jurisdiction_level": "national",
+          "document_type": "framework",
+          "document_status": "current"
+        },
+        {
+          "document_id": "nat_azwa_2026_voortgang_kamerbrief",
+          "title": "Kamerbrief inzake voortgang Integraal Zorgakkoord (IZA) en Aanvullend Zorg- en Welzijnsakkoord (AZWA)",
+          "jurisdiction_level": "national",
+          "document_type": "kamerbrief",
+          "document_status": "current"
+        },
+        {
+          "document_id": "reg_flevoland_2023_regioplan_iza",
+          "title": "Zorgzaam Flevoland 2023 Regioplan IZA Flevoland",
+          "jurisdiction_level": "regional",
+          "document_type": "regional_plan",
+          "document_status": "reference"
+        },
+        {
+          "document_id": "reg_flevoland_2023_regiobeeld",
+          "title": "Regiobeeld Flevoland 2023",
+          "jurisdiction_level": "regional",
+          "document_type": "regional_report",
+          "document_status": "reference"
+        }
+      ],
+      "reason": "Current interpretation relies on contextual or lower-authority evidence and should be reviewed before firm local use."
+    },
+    {
+      "topic": "monitoring.local_goal_tracking",
+      "summary": "Current view combines 3 compatible claims for monitoring.local_goal_tracking, led by mun_almere_pga_transformatieplan: The plan also ties those learning and monitoring efforts to the concrete impact goals it wants to reach by 2029.",
+      "claim_ids": [
+        "clm__mun_almere_pga_transformatieplan_monitoring_and_evaluation_002",
+        "clm__mun_almere_pga_seo_businesscase_2024_monitoring_and_evaluation_003",
+        "clm__mun_almere_pga_seo_businesscase_2024_monitoring_and_evaluation_002"
+      ],
+      "source_documents": [
+        {
+          "document_id": "mun_almere_pga_transformatieplan",
+          "title": "Transformatieplan Positief Gezond Almere",
+          "jurisdiction_level": "municipal",
+          "document_type": "implementation_plan",
+          "document_status": "current"
+        },
+        {
+          "document_id": "mun_almere_pga_seo_businesscase_2024",
+          "title": "Naar een positief gezond Almere; Beleidstheorie en businesscase transformatieplan",
+          "jurisdiction_level": "municipal",
+          "document_type": "research_report",
+          "document_status": "reference"
+        }
+      ],
+      "reason": "Current interpretation relies on contextual or lower-authority evidence and should be reviewed before firm local use."
+    },
+    {
+      "topic": "monitoring.other",
+      "summary": "Current view combines 6 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
+      "claim_ids": [
+        "clm__nat_azwa_2026_cw31_kamerbrief_monitoring_and_evaluation_002",
+        "clm__nat_azwa_2026_cw31_kamerbrief_monitoring_and_evaluation_001",
+        "clm__mun_almere_pga_seo_businesscase_2024_monitoring_and_evaluation_001",
+        "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_monitoring_and_evaluation_001",
+        "clm__reg_flevoland_2023_regiobeeld_monitoring_and_evaluation_003",
+        "clm__reg_flevoland_2023_regiobeeld_monitoring_and_evaluation_002"
+      ],
+      "source_documents": [
+        {
+          "document_id": "nat_azwa_2026_cw31_kamerbrief",
+          "title": "Kamerbrief over CW 3.1 kaders voor AZWA onderdelen",
+          "jurisdiction_level": "national",
+          "document_type": "kamerbrief",
+          "document_status": "current"
+        },
+        {
+          "document_id": "mun_almere_pga_seo_businesscase_2024",
+          "title": "Naar een positief gezond Almere; Beleidstheorie en businesscase transformatieplan",
+          "jurisdiction_level": "municipal",
+          "document_type": "research_report",
+          "document_status": "reference"
+        },
+        {
+          "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid",
+          "title": "Visie Gezondheidsbeleid Almere 2024-2026",
+          "jurisdiction_level": "municipal",
+          "document_type": "municipal_policy_summary",
+          "document_status": "supporting"
+        },
+        {
+          "document_id": "reg_flevoland_2023_regiobeeld",
+          "title": "Regiobeeld Flevoland 2023",
+          "jurisdiction_level": "regional",
+          "document_type": "regional_report",
+          "document_status": "reference"
+        }
+      ],
+      "reason": "Current interpretation relies on contextual or lower-authority evidence and should be reviewed before firm local use."
+    },
+    {
+      "topic": "municipal.almere_initiatives",
+      "summary": "Current view combines 4 compatible claims for municipal.almere_initiatives, led by mun_almere_pga_transformatieplan: The plan translates the local agenda into named Almere initiatives such as Voorzorgcirkels, Welzijn op Recept, Leefstijlloket, Samen Sterker in de Wijk, and Opgroeien in een Kansrijke Omgeving.",
+      "claim_ids": [
+        "clm__mun_almere_pga_transformatieplan_municipal_translation_001",
+        "clm__mun_almere_pga_seo_businesscase_2024_municipal_translation_003",
+        "clm__mun_almere_pga_seo_businesscase_2024_municipal_translation_002",
+        "clm__mun_almere_pga_seo_businesscase_2024_municipal_translation_001"
+      ],
+      "source_documents": [
+        {
+          "document_id": "mun_almere_pga_transformatieplan",
+          "title": "Transformatieplan Positief Gezond Almere",
+          "jurisdiction_level": "municipal",
+          "document_type": "implementation_plan",
+          "document_status": "current"
+        },
+        {
+          "document_id": "mun_almere_pga_seo_businesscase_2024",
+          "title": "Naar een positief gezond Almere; Beleidstheorie en businesscase transformatieplan",
+          "jurisdiction_level": "municipal",
+          "document_type": "research_report",
+          "document_status": "reference"
+        }
+      ],
+      "reason": "Current interpretation relies on contextual or lower-authority evidence and should be reviewed before firm local use."
+    },
+    {
+      "topic": "municipal.implementation_translation",
+      "summary": "Current view combines 28 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
+      "claim_ids": [
+        "clm__nat_azwa_2025_definitief_municipal_translation_002",
+        "clm__nat_azwa_2025_definitief_municipal_translation_001",
+        "clm__nat_azwa_2026_cw31_kader_d5_d6_municipal_translation_002",
+        "clm__nat_azwa_2026_cw31_kader_d5_d6_municipal_translation_001",
+        "clm__nat_azwa_2026_voortgang_kamerbrief_municipal_translation_003",
+        "clm__nat_azwa_2026_voortgang_kamerbrief_municipal_translation_002",
+        "clm__nat_azwa_2026_voortgang_kamerbrief_municipal_translation_001",
+        "clm__nat_azwa_2026_cw31_kamerbrief_municipal_translation_001",
+        "clm__reg_flevoland_2023_regioplan_iza_municipal_translation_001",
+        "clm__nat_vng_azwa_faq_uitvoeringscapaciteit_municipal_translation_003",
+        "clm__nat_vng_azwa_faq_uitvoeringscapaciteit_municipal_translation_002",
+        "clm__nat_vng_azwa_faq_uitvoeringscapaciteit_municipal_translation_001",
+        "clm__nat_vng_azwa_faq_middelen_municipal_translation_001",
+        "clm__mun_almere_sociaal_domein_informatiepagina_municipal_translation_003",
+        "clm__mun_almere_sociaal_domein_informatiepagina_municipal_translation_002",
+        "clm__mun_almere_sociaal_domein_informatiepagina_municipal_translation_001",
+        "clm__mun_almere_2024_2034_maatschappelijke_agenda_municipal_translation_003",
+        "clm__mun_almere_2024_2034_maatschappelijke_agenda_municipal_translation_002",
+        "clm__mun_almere_2024_2034_maatschappelijke_agenda_municipal_translation_001",
+        "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_municipal_translation_003",
+        "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_municipal_translation_002",
+        "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_municipal_translation_001",
+        "clm__reg_flevoland_2023_regiobeeld_municipal_translation_003",
+        "clm__reg_flevoland_2023_regiobeeld_municipal_translation_002",
+        "clm__reg_flevoland_2023_regiobeeld_municipal_translation_001",
+        "clm__mun_almere_sociale_staat_gateway_municipal_translation_003",
+        "clm__mun_almere_sociale_staat_gateway_municipal_translation_002",
+        "clm__mun_almere_sociale_staat_gateway_municipal_translation_001"
+      ],
+      "source_documents": [
+        {
+          "document_id": "nat_azwa_2025_definitief",
+          "title": "Aanvullend Zorg- en Welzijnsakkoord (AZWA) (Definitief)",
+          "jurisdiction_level": "national",
+          "document_type": "agreement",
+          "document_status": "current"
+        },
+        {
+          "document_id": "nat_azwa_2026_cw31_kader_d5_d6",
+          "title": "CW 3.1 kader basisfunctionaliteiten en basisinfrastructuur D5 en D6",
+          "jurisdiction_level": "national",
+          "document_type": "framework",
+          "document_status": "current"
+        },
+        {
+          "document_id": "nat_azwa_2026_voortgang_kamerbrief",
+          "title": "Kamerbrief inzake voortgang Integraal Zorgakkoord (IZA) en Aanvullend Zorg- en Welzijnsakkoord (AZWA)",
+          "jurisdiction_level": "national",
+          "document_type": "kamerbrief",
+          "document_status": "current"
+        },
+        {
+          "document_id": "nat_azwa_2026_cw31_kamerbrief",
+          "title": "Kamerbrief over CW 3.1 kaders voor AZWA onderdelen",
+          "jurisdiction_level": "national",
+          "document_type": "kamerbrief",
+          "document_status": "current"
+        },
+        {
+          "document_id": "reg_flevoland_2023_regioplan_iza",
+          "title": "Zorgzaam Flevoland 2023 Regioplan IZA Flevoland",
+          "jurisdiction_level": "regional",
+          "document_type": "regional_plan",
+          "document_status": "reference"
+        },
+        {
+          "document_id": "nat_vng_azwa_faq_uitvoeringscapaciteit",
+          "title": "Is er rekening gehouden met de benodigde uitvoeringscapaciteit van gemeenten bij het AZWA?",
+          "jurisdiction_level": "national",
+          "document_type": "faq",
+          "document_status": "supporting"
+        },
+        {
+          "document_id": "nat_vng_azwa_faq_middelen",
+          "title": "Welke middelen zijn beschikbaar in het AZWA en hoe worden deze middelen verdeeld?",
+          "jurisdiction_level": "national",
+          "document_type": "faq",
+          "document_status": "supporting"
+        },
+        {
+          "document_id": "mun_almere_sociaal_domein_informatiepagina",
+          "title": "Informatiepagina Sociaal Domein",
+          "jurisdiction_level": "municipal",
+          "document_type": "municipal_info_page",
+          "document_status": "supporting"
+        },
+        {
+          "document_id": "mun_almere_2024_2034_maatschappelijke_agenda",
+          "title": "Maatschappelijke agenda 2024-2034",
+          "jurisdiction_level": "municipal",
+          "document_type": "municipal_policy_summary",
+          "document_status": "supporting"
+        },
+        {
+          "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid",
+          "title": "Visie Gezondheidsbeleid Almere 2024-2026",
+          "jurisdiction_level": "municipal",
+          "document_type": "municipal_policy_summary",
+          "document_status": "supporting"
+        },
+        {
+          "document_id": "reg_flevoland_2023_regiobeeld",
+          "title": "Regiobeeld Flevoland 2023",
+          "jurisdiction_level": "regional",
+          "document_type": "regional_report",
+          "document_status": "reference"
+        },
+        {
+          "document_id": "mun_almere_sociale_staat_gateway",
+          "title": "Sociale staat van Almere",
+          "jurisdiction_level": "municipal",
+          "document_type": "municipal_gateway_page",
+          "document_status": "supporting"
+        }
+      ],
+      "reason": "Current interpretation relies on contextual or lower-authority evidence and should be reviewed before firm local use."
+    },
+    {
+      "topic": "timeline.d5_d6_implementation",
+      "summary": "Current view combines 2 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
+      "claim_ids": [
+        "clm__nat_azwa_2025_definitief_timeline_and_status_001",
+        "clm__mun_almere_2024_2034_maatschappelijke_agenda_timeline_and_status_001"
+      ],
+      "source_documents": [
+        {
+          "document_id": "nat_azwa_2025_definitief",
+          "title": "Aanvullend Zorg- en Welzijnsakkoord (AZWA) (Definitief)",
+          "jurisdiction_level": "national",
+          "document_type": "agreement",
+          "document_status": "current"
+        },
+        {
+          "document_id": "mun_almere_2024_2034_maatschappelijke_agenda",
+          "title": "Maatschappelijke agenda 2024-2034",
+          "jurisdiction_level": "municipal",
+          "document_type": "municipal_policy_summary",
+          "document_status": "supporting"
+        }
+      ],
+      "reason": "Current interpretation relies on contextual or lower-authority evidence and should be reviewed before firm local use."
+    },
+    {
+      "topic": "timeline.other",
+      "summary": "Current view combines 9 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
+      "claim_ids": [
+        "clm__nat_vng_azwa_faq_middelen_timeline_and_status_002",
+        "clm__nat_vng_azwa_faq_middelen_timeline_and_status_001",
+        "clm__mun_almere_sociaal_domein_informatiepagina_timeline_and_status_002",
+        "clm__mun_almere_sociaal_domein_informatiepagina_timeline_and_status_001",
+        "clm__mun_almere_2024_2034_maatschappelijke_agenda_timeline_and_status_002",
+        "clm__mun_almere_pga_seo_businesscase_2024_timeline_and_status_002",
+        "clm__mun_almere_pga_seo_businesscase_2024_timeline_and_status_001",
+        "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_timeline_and_status_002",
+        "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_timeline_and_status_001"
+      ],
+      "source_documents": [
+        {
+          "document_id": "nat_vng_azwa_faq_middelen",
+          "title": "Welke middelen zijn beschikbaar in het AZWA en hoe worden deze middelen verdeeld?",
+          "jurisdiction_level": "national",
+          "document_type": "faq",
+          "document_status": "supporting"
+        },
+        {
+          "document_id": "mun_almere_sociaal_domein_informatiepagina",
+          "title": "Informatiepagina Sociaal Domein",
+          "jurisdiction_level": "municipal",
+          "document_type": "municipal_info_page",
+          "document_status": "supporting"
+        },
+        {
+          "document_id": "mun_almere_2024_2034_maatschappelijke_agenda",
+          "title": "Maatschappelijke agenda 2024-2034",
+          "jurisdiction_level": "municipal",
+          "document_type": "municipal_policy_summary",
+          "document_status": "supporting"
+        },
+        {
+          "document_id": "mun_almere_pga_seo_businesscase_2024",
+          "title": "Naar een positief gezond Almere; Beleidstheorie en businesscase transformatieplan",
+          "jurisdiction_level": "municipal",
+          "document_type": "research_report",
+          "document_status": "reference"
+        },
+        {
+          "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid",
+          "title": "Visie Gezondheidsbeleid Almere 2024-2026",
+          "jurisdiction_level": "municipal",
+          "document_type": "municipal_policy_summary",
+          "document_status": "supporting"
+        }
+      ],
+      "reason": "Current interpretation relies on contextual or lower-authority evidence and should be reviewed before firm local use."
+    },
+    {
+      "topic": "timeline.rollout_2030",
+      "summary": "Current view combines 4 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
+      "claim_ids": [
+        "clm__nat_azwa_2025_definitief_timeline_and_status_002",
+        "clm__nat_azwa_2026_voortgang_kamerbrief_timeline_and_status_001",
+        "clm__reg_flevoland_2023_regiobeeld_timeline_and_status_002",
+        "clm__reg_flevoland_2023_regiobeeld_timeline_and_status_001"
+      ],
+      "source_documents": [
+        {
+          "document_id": "nat_azwa_2025_definitief",
+          "title": "Aanvullend Zorg- en Welzijnsakkoord (AZWA) (Definitief)",
+          "jurisdiction_level": "national",
+          "document_type": "agreement",
+          "document_status": "current"
+        },
+        {
+          "document_id": "nat_azwa_2026_voortgang_kamerbrief",
+          "title": "Kamerbrief inzake voortgang Integraal Zorgakkoord (IZA) en Aanvullend Zorg- en Welzijnsakkoord (AZWA)",
+          "jurisdiction_level": "national",
+          "document_type": "kamerbrief",
+          "document_status": "current"
+        },
+        {
+          "document_id": "reg_flevoland_2023_regiobeeld",
+          "title": "Regiobeeld Flevoland 2023",
+          "jurisdiction_level": "regional",
+          "document_type": "regional_report",
+          "document_status": "reference"
         }
       ],
       "reason": "Current interpretation relies on contextual or lower-authority evidence and should be reviewed before firm local use."
@@ -570,10 +1684,18 @@
     {
       "topic": "finance.d5_d6.funding_instrument",
       "historical_claim_ids": [
-        "clm__nat_azwa_2025_onderhandelaarsakkoord_governance_and_finance_001"
+        "clm__nat_azwa_2025_onderhandelaarsakkoord_governance_and_finance_001",
+        "clm__nat_gala_2023_gezond_en_actief_leven_governance_and_finance_003",
+        "clm__nat_gala_2023_gezond_en_actief_leven_governance_and_finance_002",
+        "clm__nat_gala_2023_gezond_en_actief_leven_governance_and_finance_001",
+        "clm__nat_iza_2022_integraal_zorgakkoord_governance_and_finance_002"
       ],
       "superseded_claim_ids": [
-        "clm__nat_azwa_2025_onderhandelaarsakkoord_governance_and_finance_001"
+        "clm__nat_azwa_2025_onderhandelaarsakkoord_governance_and_finance_001",
+        "clm__nat_gala_2023_gezond_en_actief_leven_governance_and_finance_001",
+        "clm__nat_gala_2023_gezond_en_actief_leven_governance_and_finance_002",
+        "clm__nat_gala_2023_gezond_en_actief_leven_governance_and_finance_003",
+        "clm__nat_iza_2022_integraal_zorgakkoord_governance_and_finance_002"
       ],
       "note": "Current wording exists; older or draft wording remains preserved only for traceability."
     },
@@ -588,12 +1710,42 @@
       "note": "Current wording exists; older or draft wording remains preserved only for traceability."
     },
     {
-      "topic": "monitoring.framework",
+      "topic": "finance.regional_funding_path",
       "historical_claim_ids": [
-        "clm__nat_azwa_2025_onderhandelaarsakkoord_monitoring_and_evaluation_002"
+        "clm__nat_iza_2022_integraal_zorgakkoord_governance_and_finance_001"
       ],
       "superseded_claim_ids": [
-        "clm__nat_azwa_2025_onderhandelaarsakkoord_monitoring_and_evaluation_002"
+        "clm__nat_iza_2022_integraal_zorgakkoord_governance_and_finance_001"
+      ],
+      "note": "Current wording exists; older or draft wording remains preserved only for traceability."
+    },
+    {
+      "topic": "monitoring.framework",
+      "historical_claim_ids": [
+        "clm__nat_azwa_2025_onderhandelaarsakkoord_monitoring_and_evaluation_002",
+        "clm__nat_gala_2023_gezond_en_actief_leven_monitoring_and_evaluation_001"
+      ],
+      "superseded_claim_ids": [
+        "clm__nat_azwa_2025_onderhandelaarsakkoord_monitoring_and_evaluation_002",
+        "clm__nat_gala_2023_gezond_en_actief_leven_monitoring_and_evaluation_001"
+      ],
+      "note": "Current wording exists; older or draft wording remains preserved only for traceability."
+    },
+    {
+      "topic": "monitoring.other",
+      "historical_claim_ids": [
+        "clm__nat_gala_2023_gezond_en_actief_leven_monitoring_and_evaluation_003",
+        "clm__nat_gala_2023_gezond_en_actief_leven_monitoring_and_evaluation_002",
+        "clm__nat_iza_2022_integraal_zorgakkoord_monitoring_and_evaluation_003",
+        "clm__nat_iza_2022_integraal_zorgakkoord_monitoring_and_evaluation_002",
+        "clm__nat_iza_2022_integraal_zorgakkoord_monitoring_and_evaluation_001"
+      ],
+      "superseded_claim_ids": [
+        "clm__nat_gala_2023_gezond_en_actief_leven_monitoring_and_evaluation_002",
+        "clm__nat_gala_2023_gezond_en_actief_leven_monitoring_and_evaluation_003",
+        "clm__nat_iza_2022_integraal_zorgakkoord_monitoring_and_evaluation_001",
+        "clm__nat_iza_2022_integraal_zorgakkoord_monitoring_and_evaluation_002",
+        "clm__nat_iza_2022_integraal_zorgakkoord_monitoring_and_evaluation_003"
       ],
       "note": "Current wording exists; older or draft wording remains preserved only for traceability."
     },
@@ -610,10 +1762,28 @@
     {
       "topic": "municipal.implementation_translation",
       "historical_claim_ids": [
-        "clm__nat_azwa_2025_onderhandelaarsakkoord_municipal_translation_001"
+        "clm__nat_azwa_2025_onderhandelaarsakkoord_municipal_translation_001",
+        "clm__nat_gala_2023_gezond_en_actief_leven_municipal_translation_003",
+        "clm__nat_gala_2023_gezond_en_actief_leven_municipal_translation_002",
+        "clm__nat_gala_2023_gezond_en_actief_leven_municipal_translation_001",
+        "clm__nat_iza_2022_integraal_zorgakkoord_municipal_translation_003",
+        "clm__nat_iza_2022_integraal_zorgakkoord_municipal_translation_002",
+        "clm__nat_iza_2022_integraal_zorgakkoord_municipal_translation_001",
+        "clm__nat_azwa_2025_aanbiedingsbrief_municipal_translation_003",
+        "clm__nat_azwa_2025_aanbiedingsbrief_municipal_translation_002",
+        "clm__nat_azwa_2025_aanbiedingsbrief_municipal_translation_001"
       ],
       "superseded_claim_ids": [
-        "clm__nat_azwa_2025_onderhandelaarsakkoord_municipal_translation_001"
+        "clm__nat_azwa_2025_aanbiedingsbrief_municipal_translation_001",
+        "clm__nat_azwa_2025_aanbiedingsbrief_municipal_translation_002",
+        "clm__nat_azwa_2025_aanbiedingsbrief_municipal_translation_003",
+        "clm__nat_azwa_2025_onderhandelaarsakkoord_municipal_translation_001",
+        "clm__nat_gala_2023_gezond_en_actief_leven_municipal_translation_001",
+        "clm__nat_gala_2023_gezond_en_actief_leven_municipal_translation_002",
+        "clm__nat_gala_2023_gezond_en_actief_leven_municipal_translation_003",
+        "clm__nat_iza_2022_integraal_zorgakkoord_municipal_translation_001",
+        "clm__nat_iza_2022_integraal_zorgakkoord_municipal_translation_002",
+        "clm__nat_iza_2022_integraal_zorgakkoord_municipal_translation_003"
       ],
       "note": "Current wording exists; older or draft wording remains preserved only for traceability."
     },
@@ -626,6 +1796,16 @@
       "note": "Only historical wording is currently preserved for this topic."
     },
     {
+      "topic": "timeline.d5_d6_financing_horizon",
+      "historical_claim_ids": [
+        "clm__nat_gala_2023_gezond_en_actief_leven_timeline_and_status_001"
+      ],
+      "superseded_claim_ids": [
+        "clm__nat_gala_2023_gezond_en_actief_leven_timeline_and_status_001"
+      ],
+      "note": "Current wording exists; older or draft wording remains preserved only for traceability."
+    },
+    {
       "topic": "timeline.d5_d6_implementation",
       "historical_claim_ids": [
         "clm__nat_azwa_2025_onderhandelaarsakkoord_timeline_and_status_001"
@@ -636,24 +1816,51 @@
       "note": "Current wording exists; older or draft wording remains preserved only for traceability."
     },
     {
+      "topic": "timeline.other",
+      "historical_claim_ids": [
+        "clm__nat_iza_2022_integraal_zorgakkoord_timeline_and_status_002",
+        "clm__nat_iza_2022_integraal_zorgakkoord_timeline_and_status_001"
+      ],
+      "superseded_claim_ids": [],
+      "note": "Current wording exists; older or draft wording remains preserved only for traceability."
+    },
+    {
       "topic": "timeline.rollout_2030",
       "historical_claim_ids": [
-        "clm__nat_azwa_2025_onderhandelaarsakkoord_timeline_and_status_002"
+        "clm__nat_azwa_2025_onderhandelaarsakkoord_timeline_and_status_002",
+        "clm__nat_gala_2023_gezond_en_actief_leven_timeline_and_status_002"
       ],
       "superseded_claim_ids": [
-        "clm__nat_azwa_2025_onderhandelaarsakkoord_timeline_and_status_002"
+        "clm__nat_azwa_2025_onderhandelaarsakkoord_timeline_and_status_002",
+        "clm__nat_gala_2023_gezond_en_actief_leven_timeline_and_status_002"
       ],
       "note": "Current wording exists; older or draft wording remains preserved only for traceability."
     }
   ],
   "unresolved_conflicts": [
     {
+      "conflict_id": "conflict__d5__basisfunctionaliteiten_onderbouwd",
+      "topic": "d5.basisfunctionaliteiten_onderbouwd",
+      "conflict_type": "localization_overlap",
+      "resolution_status": "parallel_claims",
+      "recommended_resolution_rule": "municipal_documents_cannot_override_national_obligations",
+      "notes": "Current interpretation keeps the higher-authority national baseline and also preserves lower-authority regional or municipal localization claims for Almere."
+    },
+    {
       "conflict_id": "conflict__d5__cross_domain_collaboration",
       "topic": "d5.cross_domain_collaboration",
-      "conflict_type": "implementation_layering",
+      "conflict_type": "localization_overlap",
       "resolution_status": "parallel_claims",
-      "recommended_resolution_rule": "guidance_may_clarify_but_not_override_stronger_norm",
-      "notes": "Current interpretation treats the topic as layered rather than contradictory."
+      "recommended_resolution_rule": "municipal_documents_cannot_override_national_obligations",
+      "notes": "Current interpretation keeps the higher-authority national baseline and also preserves lower-authority regional or municipal localization claims for Almere."
+    },
+    {
+      "conflict_id": "conflict__d5__mentale_gezondheidsnetwerken",
+      "topic": "d5.mentale_gezondheidsnetwerken",
+      "conflict_type": "localization_overlap",
+      "resolution_status": "parallel_claims",
+      "recommended_resolution_rule": "municipal_documents_cannot_override_national_obligations",
+      "notes": "Current interpretation keeps the higher-authority national baseline and also preserves lower-authority regional or municipal localization claims for Almere."
     },
     {
       "conflict_id": "conflict__d6__digital_and_operational_infrastructure",
@@ -662,6 +1869,38 @@
       "resolution_status": "parallel_claims",
       "recommended_resolution_rule": "guidance_may_clarify_but_not_override_stronger_norm",
       "notes": "Current interpretation treats the topic as layered rather than contradictory."
+    },
+    {
+      "conflict_id": "conflict__d6__local_teams",
+      "topic": "d6.local_teams",
+      "conflict_type": "localization_overlap",
+      "resolution_status": "parallel_claims",
+      "recommended_resolution_rule": "municipal_documents_cannot_override_national_obligations",
+      "notes": "Current interpretation keeps the higher-authority national baseline and also preserves lower-authority regional or municipal localization claims for Almere."
+    },
+    {
+      "conflict_id": "conflict__governance__national_coordination",
+      "topic": "governance.national_coordination",
+      "conflict_type": "localization_overlap",
+      "resolution_status": "parallel_claims",
+      "recommended_resolution_rule": "municipal_documents_cannot_override_national_obligations",
+      "notes": "Current interpretation keeps the higher-authority national baseline and also preserves lower-authority regional or municipal localization claims for Almere."
+    },
+    {
+      "conflict_id": "conflict__monitoring__regional_monitoring_plan",
+      "topic": "monitoring.regional_monitoring_plan",
+      "conflict_type": "localization_overlap",
+      "resolution_status": "parallel_claims",
+      "recommended_resolution_rule": "municipal_documents_cannot_override_national_obligations",
+      "notes": "Current interpretation keeps the higher-authority national baseline and also preserves lower-authority regional or municipal localization claims for Almere."
+    },
+    {
+      "conflict_id": "conflict__timeline__flevoland_transformatieagenda",
+      "topic": "timeline.flevoland_transformatieagenda",
+      "conflict_type": "localization_overlap",
+      "resolution_status": "parallel_claims",
+      "recommended_resolution_rule": "municipal_documents_cannot_override_national_obligations",
+      "notes": "Current interpretation keeps the higher-authority national baseline and also preserves lower-authority regional or municipal localization claims for Almere."
     }
   ],
   "items_requiring_political_choice": [
@@ -675,10 +1914,22 @@
         "municipal.almere_initiatives"
       ],
       "supporting_claim_ids": [
+        "clm__nat_gala_2023_gezond_en_actief_leven_d5_003",
+        "clm__nat_gala_2023_gezond_en_actief_leven_d5_002",
+        "clm__nat_gala_2023_gezond_en_actief_leven_d5_001",
+        "clm__nat_iza_2022_integraal_zorgakkoord_d5_002",
+        "clm__nat_iza_2022_integraal_zorgakkoord_d5_001",
         "clm__nat_azwa_2026_cw31_kader_d5_d6_d5_002",
         "clm__nat_azwa_2026_cw31_kader_d5_d6_d5_001",
+        "clm__nat_azwa_2026_voortgang_kamerbrief_d5_001",
+        "clm__reg_flevoland_2023_regiobeeld_d5_003",
+        "clm__reg_flevoland_2023_regiobeeld_d5_002",
+        "clm__reg_flevoland_2023_regiobeeld_d5_001",
         "clm__nat_azwa_2025_definitief_d5_003",
-        "clm__mun_almere_pga_transformatieplan_municipal_translation_001"
+        "clm__mun_almere_pga_transformatieplan_municipal_translation_001",
+        "clm__mun_almere_pga_seo_businesscase_2024_municipal_translation_003",
+        "clm__mun_almere_pga_seo_businesscase_2024_municipal_translation_002",
+        "clm__mun_almere_pga_seo_businesscase_2024_municipal_translation_001"
       ]
     },
     {
@@ -692,6 +1943,8 @@
       ],
       "supporting_claim_ids": [
         "clm__nat_azwa_2025_definitief_d6_002",
+        "clm__mun_almere_sociaal_domein_informatiepagina_d6_002",
+        "clm__mun_almere_sociaal_domein_informatiepagina_d6_001",
         "clm__reg_flevoland_2023_regioplan_iza_municipal_translation_002",
         "clm__mun_almere_pga_transformatieplan_governance_and_finance_001"
       ]
@@ -708,7 +1961,11 @@
       "supporting_claim_ids": [
         "clm__nat_azwa_2025_definitief_governance_and_finance_002",
         "clm__mun_almere_pga_transformatieplan_governance_and_finance_002",
-        "clm__mun_almere_pga_transformatieplan_municipal_translation_001"
+        "clm__mun_almere_pga_seo_businesscase_2024_governance_and_finance_003",
+        "clm__mun_almere_pga_transformatieplan_municipal_translation_001",
+        "clm__mun_almere_pga_seo_businesscase_2024_municipal_translation_003",
+        "clm__mun_almere_pga_seo_businesscase_2024_municipal_translation_002",
+        "clm__mun_almere_pga_seo_businesscase_2024_municipal_translation_001"
       ]
     },
     {
@@ -723,7 +1980,9 @@
       "supporting_claim_ids": [
         "clm__nat_azwa_2025_definitief_monitoring_and_evaluation_001",
         "clm__nat_azwa_2026_cw31_kader_d5_d6_monitoring_and_evaluation_002",
+        "clm__nat_azwa_2026_voortgang_kamerbrief_monitoring_and_evaluation_003",
         "clm__reg_flevoland_2023_regioplan_iza_monitoring_and_evaluation_002",
+        "clm__reg_flevoland_2023_regiobeeld_monitoring_and_evaluation_001",
         "clm__mun_almere_pga_transformatieplan_monitoring_and_evaluation_001",
         "clm__nat_azwa_2026_cw31_kader_d5_d6_monitoring_and_evaluation_001"
       ]

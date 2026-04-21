@@ -18,7 +18,7 @@ MASTER_OUTPUT_PATH = CLAIMS_DIR / "d5_d6_master.json"
 ALMERE_CURRENT_VIEW_PATH = MUNICIPAL_DIR / "almere_current_view.json"
 ALMERE_LOCAL_DECISIONS_PATH = MUNICIPAL_DIR / "almere_local_decisions.json"
 
-MASTER_VIEW_RUN_ID = "phase7_phase8_views_v1"
+MASTER_VIEW_RUN_ID = "phase7_phase8_views_v2"
 TODAY = date.today().isoformat()
 
 
@@ -268,7 +268,7 @@ def build_d5_master(topic_map: dict[str, dict], claim_map: dict[str, dict], docu
             **topic_bundle("d5.ontwikkelagenda", topic_map, claim_map, document_map),
             "known_items": [],
             "coverage_note": (
-                "The current top-5 claim set confirms that a development agenda exists, but it does not yet enumerate the specific ontwikkelagenda 1 items individually."
+                "The current corpus confirms that a development agenda exists, but it does not yet enumerate the specific ontwikkelagenda 1 items individually."
             ),
             "needs_human_review": True,
         },
@@ -276,7 +276,7 @@ def build_d5_master(topic_map: dict[str, dict], claim_map: dict[str, dict], docu
             **topic_bundle("d5.ontwikkelagenda", topic_map, claim_map, document_map),
             "known_items": [],
             "coverage_note": (
-                "The current top-5 claim set does not yet split named items between ontwikkelagenda 1 and deel 2, so this section stays intentionally incomplete."
+                "The current corpus does not yet split named items between ontwikkelagenda 1 and deel 2, so this section stays intentionally incomplete."
             ),
             "needs_human_review": True,
         },

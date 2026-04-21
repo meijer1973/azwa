@@ -49,7 +49,7 @@ The repository is being prepared for a three-layer architecture:
 
 - list stages: `python src/run_pipeline.py --list`
 - evaluate the current end-to-end implemented path: `python src/run_pipeline.py --all`
-- evaluate one stage plus prerequisites: `python src/run_pipeline.py --stage phase4_claims_top5`
+- evaluate one stage plus prerequisites: `python src/run_pipeline.py --stage phase4_claims_all_docs`
 - evaluate one stage and downstream stages: `python src/run_pipeline.py --from-stage phase6_current_interpretation`
 - preview without running scripts: `python src/run_pipeline.py --all --dry-run`
 

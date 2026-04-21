@@ -1,0 +1,84 @@
+{
+  "version": 1,
+  "document_type_to_instrument_type": {
+    "agreement": "agreement",
+    "framework": "framework",
+    "kamerbrief": "kamerbrief",
+    "regional_plan": "regional_plan",
+    "regional_report": "commentary",
+    "implementation_plan": "implementation_plan",
+    "research_report": "commentary",
+    "faq": "faq",
+    "municipal_policy_summary": "commentary",
+    "municipal_info_page": "commentary",
+    "municipal_gateway_page": "commentary"
+  },
+  "instrument_types": {
+    "law": {
+      "authority_weight": 1.0,
+      "can_create_binding_obligation": true,
+      "can_interpret_higher_norm": false,
+      "can_override_higher_norm": true
+    },
+    "decree": {
+      "authority_weight": 0.95,
+      "can_create_binding_obligation": true,
+      "can_interpret_higher_norm": true,
+      "can_override_higher_norm": false
+    },
+    "agreement": {
+      "authority_weight": 0.82,
+      "can_create_binding_obligation": true,
+      "can_interpret_higher_norm": true,
+      "can_override_higher_norm": false
+    },
+    "framework": {
+      "authority_weight": 0.76,
+      "can_create_binding_obligation": false,
+      "can_interpret_higher_norm": true,
+      "can_override_higher_norm": false
+    },
+    "kamerbrief": {
+      "authority_weight": 0.72,
+      "can_create_binding_obligation": false,
+      "can_interpret_higher_norm": true,
+      "can_override_higher_norm": false
+    },
+    "annex": {
+      "authority_weight": 0.74,
+      "can_create_binding_obligation": false,
+      "can_interpret_higher_norm": true,
+      "can_override_higher_norm": false
+    },
+    "regional_plan": {
+      "authority_weight": 0.56,
+      "can_create_binding_obligation": false,
+      "can_interpret_higher_norm": false,
+      "can_override_higher_norm": false
+    },
+    "municipal_policy": {
+      "authority_weight": 0.48,
+      "can_create_binding_obligation": false,
+      "can_interpret_higher_norm": false,
+      "can_override_higher_norm": false
+    },
+    "implementation_plan": {
+      "authority_weight": 0.44,
+      "can_create_binding_obligation": false,
+      "can_interpret_higher_norm": false,
+      "can_override_higher_norm": false
+    },
+    "faq": {
+      "authority_weight": 0.3,
+      "can_create_binding_obligation": false,
+      "can_interpret_higher_norm": false,
+      "can_override_higher_norm": false
+    },
+    "commentary": {
+      "authority_weight": 0.25,
+      "can_create_binding_obligation": false,
+      "can_interpret_higher_norm": false,
+      "can_override_higher_norm": false
+    }
+  }
+}

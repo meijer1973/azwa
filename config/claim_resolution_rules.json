@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "order": 1,
+      "rule_id": "higher_authority_beats_lower_authority",
+      "description": "Higher authority beats lower authority.",
+      "comparison_basis": "authority_weight",
+      "action": "prefer_higher"
+    },
+    {
+      "order": 2,
+      "rule_id": "later_effective_date_beats_earlier_when_authority_equal",
+      "description": "If authority is equal, later effective date beats earlier.",
+      "comparison_basis": "effective_from",
+      "action": "prefer_later"
+    },
+    {
+      "order": 3,
+      "rule_id": "equal_authority_and_date_stays_unresolved",
+      "description": "If authority and effective date are equal, the conflict remains unresolved.",
+      "comparison_basis": "authority_weight_and_effective_from",
+      "action": "mark_unresolved_conflict"
+    },
+    {
+      "order": 4,
+      "rule_id": "guidance_may_clarify_but_not_override_stronger_norm",
+      "description": "Guidance may clarify but may not override a stronger norm.",
+      "comparison_basis": "instrument_type",
+      "action": "allow_clarify_only"
+    },
+    {
+      "order": 5,
+      "rule_id": "municipal_documents_cannot_override_national_obligations",
+      "description": "Municipal documents may localize implementation but cannot override national obligations.",
+      "comparison_basis": "jurisdiction_level",
+      "action": "allow_localize_only"
+    }
+  ],
+  "ambiguity_policy": {
+    "silent_resolution_allowed": false,
+    "human_review_required_when": [
+      "authority_is_unclear",
+      "claims_conflict_without_clear_precedence",
+      "guidance_appears_to_change_higher_order_commitment",
+      "municipal_or_regional_text_is_more_specific_but_not_higher_authority"
+    ]
+  }
+}

@@ -1,0 +1,345 @@
+from __future__ import annotations
+
+import json
+from pathlib import Path
+from shutil import copy2
+
+
+REPO_ROOT = Path(__file__).resolve().parents[1]
+
+
+DOCUMENTS = [
+    {
+        "source_number": 1,
+        "document_id": "nat_azwa_2025_definitief",
+        "title": "Aanvullend Zorg- en Welzijnsakkoord (AZWA) (Definitief)",
+        "short_title": "AZWA definitief",
+        "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
+        "publication_date": "2025-08-31",
+        "document_type": "agreement",
+        "jurisdiction_level": "national",
+        "source_url": "https://www.rijksoverheid.nl/documenten/rapporten/2025/08/31/aanvullend-zorg-en-welzijnsakkoord-azwa",
+        "status": "current",
+        "priority_rank": 1,
+        "selected_source_file": "sources/01-aanvullend-zorg-en-welzijnsakkoord-azwa__PDIZA-1087289TK_B_Aanvullend_Zorg-_en_Welzijnsakkoord_AZWA_.pdf",
+    },
+    {
+        "source_number": 2,
+        "document_id": "nat_azwa_2025_aanbiedingsbrief",
+        "title": "Kamerbrief aanbieding Aanvullend Zorg- en Welzijnsakkoord (AZWA)",
+        "short_title": "Kamerbrief aanbieding AZWA",
+        "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
+        "publication_date": "2025-09-08",
+        "document_type": "kamerbrief",
+        "jurisdiction_level": "national",
+        "source_url": "https://www.rijksoverheid.nl/documenten/kamerstukken/2025/09/08/kamerbrief-over-aanbieding-aanvullend-zorg-en-welzijnsakkoord-azwa",
+        "status": "reference",
+        "priority_rank": 8,
+        "selected_source_file": "sources/02-kamerbrief-over-aanbieding-aanvullend-zorg-en-welzijnsakkoord-azwa__PDIZA-1087289TK_A.pdf",
+    },
+    {
+        "source_number": 3,
+        "document_id": "nat_azwa_2026_cw31_kamerbrief",
+        "title": "Kamerbrief over CW 3.1 kaders voor AZWA onderdelen",
+        "short_title": "Kamerbrief CW 3.1 kaders AZWA",
+        "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
+        "publication_date": "2026-03-10",
+        "document_type": "kamerbrief",
+        "jurisdiction_level": "national",
+        "source_url": "https://www.rijksoverheid.nl/documenten/kamerstukken/2026/03/10/kamerbrief-over-cw3-1-kaders-voor-azwa-onderdelen",
+        "status": "current",
+        "priority_rank": 6,
+        "selected_source_file": "sources/03-kamerbrief-over-cw3-1-kaders-voor-azwa-onderdelen__FEZ-1094401_A.pdf",
+    },
+    {
+        "source_number": 4,
+        "document_id": "nat_azwa_2026_cw31_kader_d5_d6",
+        "title": "CW 3.1 kader basisfunctionaliteiten en basisinfrastructuur D5 en D6",
+        "short_title": "CW 3.1 kader D5/D6",
+        "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
+        "publication_date": "2026-03-10",
+        "document_type": "framework",
+        "jurisdiction_level": "national",
+        "source_url": "https://www.rijksoverheid.nl/documenten/publicaties/2026/03/10/cw-3-1-kader-basisfunctionaliteiten-en-basisinfrastructuur-d5-en-d6",
+        "status": "current",
+        "priority_rank": 3,
+        "selected_source_file": "sources/04-cw-3-1-kader-basisfunctionaliteiten-en-basisinfrastructuur-d5-en-d6__FEZ-1094401_C_CW_3.1_kader_Basisfunctionaliteiten_en_basisinfrastructuur-_D5_en_D6.pdf",
+    },
+    {
+        "source_number": 5,
+        "document_id": "nat_azwa_2026_voortgang_kamerbrief",
+        "title": "Kamerbrief inzake voortgang Integraal Zorgakkoord (IZA) en Aanvullend Zorg- en Welzijnsakkoord (AZWA)",
+        "short_title": "Voortgangsbrief IZA/AZWA",
+        "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
+        "publication_date": "2026-04-09",
+        "document_type": "kamerbrief",
+        "jurisdiction_level": "national",
+        "source_url": "https://www.rijksoverheid.nl/documenten/kamerstukken/2026/04/09/kamerbrief-inzake-voortgang-integraal-zorgakkoord-iza-en-aanvullend-zorg-en-welzijnsakkoord-azwa",
+        "status": "current",
+        "priority_rank": 7,
+        "selected_source_file": "sources/05-kamerbrief-inzake-voortgang-integraal-zorgakkoord-iza-en-aanvullend-zorg-en-welzijnsakkoord-azwa__PDIZA-1095964_A.pdf",
+    },
+    {
+        "source_number": 6,
+        "document_id": "nat_azwa_2025_onderhandelaarsakkoord",
+        "title": "Aanvullend Zorg- en Welzijnsakkoord - onderhandelaarsakkoord",
+        "short_title": "AZWA onderhandelaarsakkoord",
+        "publisher": "VNG",
+        "publication_date": "2025-07-11",
+        "document_type": "agreement",
+        "jurisdiction_level": "national",
+        "source_url": "https://vng.nl/brieven/onderhandelaarsakkoord-aanvullend-zorg-en-welzijnsakkoord-azwa",
+        "status": "reference",
+        "priority_rank": 2,
+        "selected_source_file": "sources/06-onderhandelaarsakkoord-aanvullend-zorg-en-welzijnsakkoord-azwa__PDIZA-1085052_B_Aanvullend_Zorg-_en_Welzijnsakkoord_-_onderhandelaarsakkoord.pdf",
+    },
+    {
+        "source_number": 7,
+        "document_id": "nat_vng_azwa_faq_middelen",
+        "title": "Welke middelen zijn beschikbaar in het AZWA en hoe worden deze middelen verdeeld?",
+        "short_title": "VNG FAQ middelen AZWA",
+        "publisher": "VNG",
+        "publication_date": None,
+        "document_type": "faq",
+        "jurisdiction_level": "national",
+        "source_url": "https://vng.nl/vragen-en-antwoorden/welke-middelen-zijn-beschikbaar-in-het-azwa-en-hoe-worden-deze-middelen-verdeeld",
+        "status": "supporting",
+        "priority_rank": 13,
+        "selected_source_file": "sources/07-welke-middelen-zijn-beschikbaar-in-het-azwa-en-hoe-worden-deze-middelen-verdeeld.html",
+    },
+    {
+        "source_number": 8,
+        "document_id": "nat_vng_azwa_faq_uitvoeringscapaciteit",
+        "title": "Is er rekening gehouden met de benodigde uitvoeringscapaciteit van gemeenten bij het AZWA?",
+        "short_title": "VNG FAQ uitvoeringscapaciteit AZWA",
+        "publisher": "VNG",
+        "publication_date": None,
+        "document_type": "faq",
+        "jurisdiction_level": "national",
+        "source_url": "https://vng.nl/vragen-en-antwoorden/is-er-rekening-gehouden-met-de-benodigde-uitvoeringscapaciteit-van-gemeenten-bij-het-azwa",
+        "status": "supporting",
+        "priority_rank": 14,
+        "selected_source_file": "sources/08-is-er-rekening-gehouden-met-de-benodigde-uitvoeringscapaciteit-van-gemeenten-bij-het-azwa.html",
+    },
+    {
+        "source_number": 9,
+        "document_id": "nat_iza_2022_integraal_zorgakkoord",
+        "title": "Integraal Zorgakkoord: Samen werken aan gezonde zorg",
+        "short_title": "IZA 2022",
+        "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
+        "publication_date": "2022-09-16",
+        "document_type": "agreement",
+        "jurisdiction_level": "national",
+        "source_url": "https://www.rijksoverheid.nl/documenten/rapporten/2022/09/16/integraal-zorgakkoord-samen-werken-aan-gezonde-zorg",
+        "status": "reference",
+        "priority_rank": 9,
+        "selected_source_file": "sources/09-integraal-zorgakkoord-samen-werken-aan-gezonde-zorg__integraal-zorg-akkoord.pdf",
+    },
+    {
+        "source_number": 10,
+        "document_id": "nat_gala_2023_gezond_en_actief_leven",
+        "title": "GALA - Gezond en Actief Leven Akkoord",
+        "short_title": "GALA 2023",
+        "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
+        "publication_date": "2023-01-31",
+        "document_type": "agreement",
+        "jurisdiction_level": "national",
+        "source_url": "https://www.rijksoverheid.nl/documenten/rapporten/2023/01/31/gala-gezond-en-actief-leven-akkoord",
+        "status": "reference",
+        "priority_rank": 10,
+        "selected_source_file": "sources/10-gala-gezond-en-actief-leven-akkoord__gala-gezond-en-actief-leven-akkoord.pdf",
+    },
+    {
+        "source_number": 11,
+        "document_id": "reg_flevoland_2023_regiobeeld",
+        "title": "Regiobeeld Flevoland 2023",
+        "short_title": "Regiobeeld Flevoland 2023",
+        "publisher": "Flever",
+        "publication_date": "2023-07-12",
+        "document_type": "regional_report",
+        "jurisdiction_level": "regional",
+        "source_url": "https://flever.nl/kennisbank/regiobeeld-flevoland-2023/",
+        "status": "reference",
+        "priority_rank": 12,
+        "selected_source_file": "sources/11-regiobeeld-flevoland-2023__Regiobeeld-Flevoland.pdf",
+    },
+    {
+        "source_number": 12,
+        "document_id": "reg_flevoland_2023_regioplan_iza",
+        "title": "Zorgzaam Flevoland 2023 Regioplan IZA Flevoland",
+        "short_title": "Regioplan IZA Flevoland",
+        "publisher": "Zorgzaam Flevoland / Flever",
+        "publication_date": "2023-12-22",
+        "document_type": "regional_plan",
+        "jurisdiction_level": "regional",
+        "source_url": "https://flever.nl/wp-content/uploads/2024/01/Regioplan_IZA_Flevoland_ZorgzaamFlevoland2023.pdf",
+        "status": "reference",
+        "priority_rank": 4,
+        "selected_source_file": "sources/12-regioplan_iza_flevoland_zorgzaamflevoland2023__Regioplan_IZA_Flevoland_ZorgzaamFlevoland2023.pdf",
+    },
+    {
+        "source_number": 13,
+        "document_id": "mun_almere_sociaal_domein_informatiepagina",
+        "title": "Informatiepagina Sociaal Domein",
+        "short_title": "Sociaal domein informatiepagina",
+        "publisher": "Raad van Almere",
+        "publication_date": "2026-03-25",
+        "document_type": "municipal_info_page",
+        "jurisdiction_level": "municipal",
+        "source_url": "https://raadvanalmere.nl/page/informatiepagina-sociaal-domein",
+        "status": "supporting",
+        "priority_rank": 17,
+        "selected_source_file": "sources/13-informatiepagina-sociaal-domein.html",
+    },
+    {
+        "source_number": 14,
+        "document_id": "mun_almere_sociale_staat_gateway",
+        "title": "Sociale staat van Almere",
+        "short_title": "Sociale staat van Almere gateway",
+        "publisher": "Gemeente Almere",
+        "publication_date": None,
+        "document_type": "municipal_gateway_page",
+        "jurisdiction_level": "municipal",
+        "source_url": "https://www.almere.nl/zorg-en-welzijn/sociale-staat-van-almere",
+        "status": "supporting",
+        "priority_rank": 18,
+        "selected_source_file": "sources/14-sociale-staat-van-almere.html",
+    },
+    {
+        "source_number": 15,
+        "document_id": "mun_almere_2024_2034_maatschappelijke_agenda",
+        "title": "Maatschappelijke agenda 2024-2034",
+        "short_title": "Maatschappelijke agenda 2024-2034",
+        "publisher": "Raad van Almere",
+        "publication_date": "2024-06-10",
+        "document_type": "municipal_policy_summary",
+        "jurisdiction_level": "municipal",
+        "source_url": "https://raadvanalmere.nl/article/maatschappelijke-agenda-2024-2034",
+        "status": "supporting",
+        "priority_rank": 15,
+        "selected_source_file": "sources/15-maatschappelijke-agenda-2024-2034.html",
+    },
+    {
+        "source_number": 16,
+        "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid",
+        "title": "Visie Gezondheidsbeleid Almere 2024-2026",
+        "short_title": "Visie gezondheidsbeleid Almere",
+        "publisher": "Raad van Almere",
+        "publication_date": "2024-04-18",
+        "document_type": "municipal_policy_summary",
+        "jurisdiction_level": "municipal",
+        "source_url": "https://raadvanalmere.nl/article/visie-gezondheidsbeleid-almere-2024-2026",
+        "status": "supporting",
+        "priority_rank": 16,
+        "selected_source_file": "sources/16-visie-gezondheidsbeleid-almere-2024-2026.html",
+    },
+    {
+        "source_number": 17,
+        "document_id": "mun_almere_pga_transformatieplan",
+        "title": "Transformatieplan Positief Gezond Almere",
+        "short_title": "PGA transformatieplan",
+        "publisher": "Positief Gezond Almere",
+        "publication_date": "2025-05-01",
+        "document_type": "implementation_plan",
+        "jurisdiction_level": "municipal",
+        "source_url": "https://positiefgezondalmere.nl/over-ons/",
+        "status": "current",
+        "priority_rank": 5,
+        "selected_source_file": "sources/17-over-ons__Transformatieplan_Positief_Gezond_Almere.pdf",
+    },
+    {
+        "source_number": 18,
+        "document_id": "mun_almere_pga_seo_businesscase_2024",
+        "title": "Naar een positief gezond Almere; Beleidstheorie en businesscase transformatieplan",
+        "short_title": "SEO beleidstheorie en businesscase PGA",
+        "publisher": "SEO Economisch Onderzoek",
+        "publication_date": "2024-04-25",
+        "document_type": "research_report",
+        "jurisdiction_level": "municipal",
+        "source_url": "https://www.seo.nl/publicaties/naar-een-positief-gezond-almere-beleidstheorie-en-businesscase-transformatieplan/",
+        "status": "reference",
+        "priority_rank": 11,
+        "selected_source_file": "sources/18-naar-een-positief-gezond-almere-beleidstheorie-en-businesscase-transformatieplan__2021-61-Naar-een-gezond-positief-Almere_Wouter-Vermeulen.pdf",
+    },
+]
+
+
+TRACKED_EMPTY_DIRECTORIES = [
+    "config",
+    "prompts",
+    "tests",
+    "docs",
+    "data/intermediate/text",
+    "data/intermediate/chunks",
+    "data/intermediate/tables",
+    "data/extracted/documents",
+    "data/extracted/claims",
+    "data/extracted/municipal",
+    "data/schemas",
+    "data/logs",
+]
+
+
+def write_gitkeep(directory: Path) -> None:
+    directory.mkdir(parents=True, exist_ok=True)
+    gitkeep = directory / ".gitkeep"
+    gitkeep.write_text("", encoding="utf-8")
+
+
+def main() -> None:
+    raw_root = REPO_ROOT / "data" / "raw"
+    level_dirs = {
+        "national": raw_root / "national",
+        "regional": raw_root / "regional",
+        "municipal": raw_root / "municipal",
+    }
+
+    for directory in level_dirs.values():
+        directory.mkdir(parents=True, exist_ok=True)
+
+    for relative_dir in TRACKED_EMPTY_DIRECTORIES:
+        write_gitkeep(REPO_ROOT / relative_dir)
+
+    manifest_entries = []
+
+    for doc in DOCUMENTS:
+        source_path = REPO_ROOT / doc["selected_source_file"]
+        if not source_path.exists():
+            raise FileNotFoundError(f"Missing source file: {source_path}")
+
+        ext = source_path.suffix.lower()
+        destination_dir = level_dirs[doc["jurisdiction_level"]]
+        destination_path = destination_dir / f"{doc['document_id']}{ext}"
+        copy2(source_path, destination_path)
+
+        manifest_entries.append(
+            {
+                "document_id": doc["document_id"],
+                "title": doc["title"],
+                "short_title": doc["short_title"],
+                "publisher": doc["publisher"],
+                "publication_date": doc["publication_date"],
+                "document_type": doc["document_type"],
+                "jurisdiction_level": doc["jurisdiction_level"],
+                "file_path": destination_path.relative_to(REPO_ROOT).as_posix(),
+                "source_url": doc["source_url"],
+                "status": doc["status"],
+                "priority_rank": doc["priority_rank"],
+                "source_number": doc["source_number"],
+                "selected_source_file": doc["selected_source_file"],
+            }
+        )
+
+    manifest_entries.sort(key=lambda item: item["priority_rank"])
+    manifest_path = raw_root / "manifest.json"
+    manifest_path.write_text(
+        json.dumps(manifest_entries, indent=2, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+    )
+
+    print(f"Wrote {manifest_path.relative_to(REPO_ROOT).as_posix()}")
+    print(f"Prepared {len(manifest_entries)} Phase 0 source documents")
+
+
+if __name__ == "__main__":
+    main()

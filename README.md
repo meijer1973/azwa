@@ -44,3 +44,23 @@ The repository is being prepared for a three-layer architecture:
 1. source-faithful document extraction
 2. append-only normalized claims
 3. computed municipality views, including Almere
+
+## Pipeline Usage
+
+- list stages: `python src/run_pipeline.py --list`
+- evaluate the current end-to-end implemented path: `python src/run_pipeline.py --all`
+- evaluate one stage plus prerequisites: `python src/run_pipeline.py --stage phase4_claims_top5`
+- evaluate one stage and downstream stages: `python src/run_pipeline.py --from-stage phase6_current_interpretation`
+- preview without running scripts: `python src/run_pipeline.py --all --dry-run`
+
+Pipeline runs are logged under `data/logs/pipeline_runs/`.
+
+## Prompt Assets
+
+The reusable extraction and reasoning prompts live in `prompts/`:
+
+- `extract_document.md`
+- `extract_table.md`
+- `extract_claims.md`
+- `resolve_conflicts.md`
+- `build_municipal_view.md`

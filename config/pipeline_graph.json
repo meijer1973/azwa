@@ -1,0 +1,167 @@
+{
+  "version": 1,
+  "default_target": "phase7_phase8_master_views",
+  "stages": [
+    {
+      "stage_id": "phase0_setup",
+      "kind": "script",
+      "description": "Prepare the raw corpus layout and manifest from the selected source files.",
+      "script": "src/phase0_setup.py",
+      "depends_on": [],
+      "inputs": [
+        "sources",
+        "src/phase0_setup.py"
+      ],
+      "outputs": [
+        "data/raw/manifest.json",
+        "data/raw/national",
+        "data/raw/regional",
+        "data/raw/municipal"
+      ]
+    },
+    {
+      "stage_id": "phase1_document_inventory",
+      "kind": "script",
+      "description": "Build the normalized inventory and extraction priority view for all source documents.",
+      "script": "src/build_document_inventory.py",
+      "depends_on": [
+        "phase0_setup"
+      ],
+      "inputs": [
+        "src/build_document_inventory.py"
+      ],
+      "outputs": [
+        "data/extracted/document_inventory.json"
+      ]
+    },
+    {
+      "stage_id": "phase2_structural_extractions",
+      "kind": "script",
+      "description": "Extract text, chunks, and table candidates from the curated Markdown and raw corpus.",
+      "script": "src/build_structural_extractions.py",
+      "depends_on": [
+        "phase0_setup",
+        "phase1_document_inventory"
+      ],
+      "inputs": [
+        "sources markdown canonical",
+        "sources markdown",
+        "sources markdown context",
+        "src/build_structural_extractions.py"
+      ],
+      "outputs": [
+        "data/intermediate/text",
+        "data/intermediate/chunks",
+        "data/intermediate/tables"
+      ]
+    },
+    {
+      "stage_id": "phase3_document_extractions_top5",
+      "kind": "script",
+      "description": "Generate immutable document extraction JSON for the current top-5 priority documents.",
+      "script": "src/build_document_extractions.py",
+      "depends_on": [
+        "phase1_document_inventory",
+        "phase2_structural_extractions"
+      ],
+      "inputs": [
+        "src/build_document_extractions.py"
+      ],
+      "outputs": [
+        "data/extracted/documents/nat_azwa_2025_definitief.json",
+        "data/extracted/documents/nat_azwa_2025_onderhandelaarsakkoord.json",
+        "data/extracted/documents/nat_azwa_2026_cw31_kader_d5_d6.json",
+        "data/extracted/documents/reg_flevoland_2023_regioplan_iza.json",
+        "data/extracted/documents/mun_almere_pga_transformatieplan.json"
+      ]
+    },
+    {
+      "stage_id": "phase4_claims_top5",
+      "kind": "script",
+      "description": "Convert top-5 document extractions into append-only claims with explicit relations.",
+      "script": "src/build_claims_top5.py",
+      "depends_on": [
+        "phase3_document_extractions_top5"
+      ],
+      "inputs": [
+        "config/authority_rules.json",
+        "data/schemas/claim.schema.json",
+        "src/build_claims_top5.py"
+      ],
+      "outputs": [
+        "data/extracted/claims/claims_master.jsonl",
+        "data/extracted/claims/nat_azwa_2025_definitief.json",
+        "data/extracted/claims/nat_azwa_2025_onderhandelaarsakkoord.json",
+        "data/extracted/claims/nat_azwa_2026_cw31_kader_d5_d6.json",
+        "data/extracted/claims/reg_flevoland_2023_regioplan_iza.json",
+        "data/extracted/claims/mun_almere_pga_transformatieplan.json"
+      ]
+    },
+    {
+      "stage_id": "phase6_current_interpretation",
+      "kind": "script",
+      "description": "Build the conflict register and current interpretation layer from the claim graph.",
+      "script": "src/build_current_interpretation.py",
+      "depends_on": [
+        "phase4_claims_top5"
+      ],
+      "inputs": [
+        "config/claim_resolution_rules.json",
+        "src/build_current_interpretation.py"
+      ],
+      "outputs": [
+        "data/extracted/claims/conflict_register.json",
+        "data/extracted/claims/current_interpretation.json"
+      ]
+    },
+    {
+      "stage_id": "phase7_phase8_master_views",
+      "kind": "script",
+      "description": "Generate the D5/D6 master model plus the computed Almere view and decision shell.",
+      "script": "src/build_master_views.py",
+      "depends_on": [
+        "phase6_current_interpretation"
+      ],
+      "inputs": [
+        "src/build_master_views.py"
+      ],
+      "outputs": [
+        "data/extracted/claims/d5_d6_master.json",
+        "data/extracted/municipal/almere_current_view.json"
+      ]
+    },
+    {
+      "stage_id": "phase8_local_decision_shell",
+      "kind": "asset",
+      "description": "Reserve the non-overwritable Almere local decision file for human-entered choices.",
+      "depends_on": [],
+      "outputs": [
+        "data/extracted/municipal/almere_local_decisions.json"
+      ]
+    },
+    {
+      "stage_id": "phase9_prompt_assets",
+      "kind": "asset",
+      "description": "Reusable prompt templates for document extraction, claims, conflict resolution, and municipal views.",
+      "depends_on": [],
+      "outputs": [
+        "prompts/extract_document.md",
+        "prompts/extract_table.md",
+        "prompts/extract_claims.md",
+        "prompts/resolve_conflicts.md",
+        "prompts/build_municipal_view.md"
+      ]
+    },
+    {
+      "stage_id": "phase10_pipeline_orchestration",
+      "kind": "asset",
+      "description": "Pipeline graph, runner, and tests for deterministic stage execution.",
+      "depends_on": [],
+      "outputs": [
+        "config/pipeline_graph.json",
+        "src/run_pipeline.py",
+        "tests/test_pipeline_graph.py"
+      ]
+    }
+  ]
+}

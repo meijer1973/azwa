@@ -1,0 +1,289 @@
+{
+  "interpretation_run_id": "phase6_current_interpretation_v1",
+  "generated_on": "2026-04-21",
+  "as_of_date": "2026-04-21",
+  "source_claim_extraction_runs": [
+    "phase4_top5_claims_v1"
+  ],
+  "conflict_count": 13,
+  "conflicts": [
+    {
+      "conflict_id": "conflict__d5__cross_domain_collaboration",
+      "topic": "d5.cross_domain_collaboration",
+      "claim_ids": [
+        "clm__reg_flevoland_2023_regioplan_iza_d5_002",
+        "clm__mun_almere_pga_transformatieplan_d5_001"
+      ],
+      "conflict_type": "implementation_layering",
+      "resolution_status": "parallel_claims",
+      "recommended_resolution_rule": "guidance_may_clarify_but_not_override_stronger_norm",
+      "impact_on_almere": "Affects which D5 functions and collaboration patterns Almere should treat as current.",
+      "winning_claim_ids": [
+        "clm__reg_flevoland_2023_regioplan_iza_d5_002",
+        "clm__mun_almere_pga_transformatieplan_d5_001"
+      ],
+      "superseded_claim_ids": [],
+      "needs_human_review": true,
+      "notes": "Current interpretation treats the topic as layered rather than contradictory."
+    },
+    {
+      "conflict_id": "conflict__d5__ontwikkelagenda",
+      "topic": "d5.ontwikkelagenda",
+      "claim_ids": [
+        "clm__nat_azwa_2025_definitief_d5_002",
+        "clm__nat_azwa_2025_onderhandelaarsakkoord_d5_001"
+      ],
+      "conflict_type": "precedence_overlap",
+      "resolution_status": "resolved",
+      "recommended_resolution_rule": "later_effective_date_beats_earlier_when_authority_equal",
+      "impact_on_almere": "Affects which D5 functions and collaboration patterns Almere should treat as current.",
+      "winning_claim_ids": [
+        "clm__nat_azwa_2025_definitief_d5_002"
+      ],
+      "superseded_claim_ids": [
+        "clm__nat_azwa_2025_onderhandelaarsakkoord_d5_001"
+      ],
+      "needs_human_review": false,
+      "notes": "Current interpretation retains 1 non-superseded claim(s) for d5.ontwikkelagenda and preserves 1 earlier claim(s) as history."
+    },
+    {
+      "conflict_id": "conflict__d5__regional_workagenda",
+      "topic": "d5.regional_workagenda",
+      "claim_ids": [
+        "clm__nat_azwa_2025_definitief_d5_003",
+        "clm__nat_azwa_2025_onderhandelaarsakkoord_d5_002"
+      ],
+      "conflict_type": "precedence_overlap",
+      "resolution_status": "resolved",
+      "recommended_resolution_rule": "later_effective_date_beats_earlier_when_authority_equal",
+      "impact_on_almere": "Affects which D5 functions and collaboration patterns Almere should treat as current.",
+      "winning_claim_ids": [
+        "clm__nat_azwa_2025_definitief_d5_003"
+      ],
+      "superseded_claim_ids": [
+        "clm__nat_azwa_2025_onderhandelaarsakkoord_d5_002"
+      ],
+      "needs_human_review": false,
+      "notes": "Current interpretation retains 1 non-superseded claim(s) for d5.regional_workagenda and preserves 1 earlier claim(s) as history."
+    },
+    {
+      "conflict_id": "conflict__d6__basisinfrastructuur",
+      "topic": "d6.basisinfrastructuur",
+      "claim_ids": [
+        "clm__nat_azwa_2025_definitief_d6_001",
+        "clm__nat_azwa_2025_onderhandelaarsakkoord_d6_001",
+        "clm__nat_azwa_2026_cw31_kader_d5_d6_d6_001"
+      ],
+      "conflict_type": "supersession",
+      "resolution_status": "resolved",
+      "recommended_resolution_rule": "later_effective_date_beats_earlier_when_authority_equal",
+      "impact_on_almere": "Affects which D6 infrastructure elements Almere should prioritize or localize.",
+      "winning_claim_ids": [
+        "clm__nat_azwa_2025_definitief_d6_001",
+        "clm__nat_azwa_2026_cw31_kader_d5_d6_d6_001"
+      ],
+      "superseded_claim_ids": [
+        "clm__nat_azwa_2025_onderhandelaarsakkoord_d6_001"
+      ],
+      "needs_human_review": false,
+      "notes": "Current interpretation retains 2 non-superseded claim(s) for d6.basisinfrastructuur and preserves 1 earlier claim(s) as history."
+    },
+    {
+      "conflict_id": "conflict__d6__digital_and_operational_infrastructure",
+      "topic": "d6.digital_and_operational_infrastructure",
+      "claim_ids": [
+        "clm__reg_flevoland_2023_regioplan_iza_d6_001",
+        "clm__mun_almere_pga_transformatieplan_d6_002",
+        "clm__mun_almere_pga_transformatieplan_d6_001"
+      ],
+      "conflict_type": "implementation_layering",
+      "resolution_status": "parallel_claims",
+      "recommended_resolution_rule": "guidance_may_clarify_but_not_override_stronger_norm",
+      "impact_on_almere": "Affects which D6 infrastructure elements Almere should prioritize or localize.",
+      "winning_claim_ids": [
+        "clm__reg_flevoland_2023_regioplan_iza_d6_001",
+        "clm__mun_almere_pga_transformatieplan_d6_002",
+        "clm__mun_almere_pga_transformatieplan_d6_001"
+      ],
+      "superseded_claim_ids": [],
+      "needs_human_review": true,
+      "notes": "Current interpretation treats the topic as layered rather than contradictory."
+    },
+    {
+      "conflict_id": "conflict__finance__azwa_macro_framework",
+      "topic": "finance.azwa_macro_framework",
+      "claim_ids": [
+        "clm__nat_azwa_2025_definitief_governance_and_finance_001",
+        "clm__nat_azwa_2025_onderhandelaarsakkoord_governance_and_finance_002",
+        "clm__nat_azwa_2026_cw31_kader_d5_d6_governance_and_finance_002"
+      ],
+      "conflict_type": "precedence_overlap",
+      "resolution_status": "resolved",
+      "recommended_resolution_rule": "later_effective_date_beats_earlier_when_authority_equal",
+      "impact_on_almere": "Affects Almere's funding assumptions, municipal channel, or implementation budget expectations.",
+      "winning_claim_ids": [
+        "clm__nat_azwa_2025_definitief_governance_and_finance_001",
+        "clm__nat_azwa_2026_cw31_kader_d5_d6_governance_and_finance_002"
+      ],
+      "superseded_claim_ids": [
+        "clm__nat_azwa_2025_onderhandelaarsakkoord_governance_and_finance_002"
+      ],
+      "needs_human_review": false,
+      "notes": "Current interpretation retains 2 non-superseded claim(s) for finance.azwa_macro_framework and preserves 1 earlier claim(s) as history."
+    },
+    {
+      "conflict_id": "conflict__finance__d5_d6__funding_instrument",
+      "topic": "finance.d5_d6.funding_instrument",
+      "claim_ids": [
+        "clm__nat_azwa_2025_definitief_governance_and_finance_003",
+        "clm__nat_azwa_2025_onderhandelaarsakkoord_governance_and_finance_001",
+        "clm__nat_azwa_2026_cw31_kader_d5_d6_governance_and_finance_001"
+      ],
+      "conflict_type": "precedence_overlap",
+      "resolution_status": "resolved",
+      "recommended_resolution_rule": "later_effective_date_beats_earlier_when_authority_equal",
+      "impact_on_almere": "Affects Almere's funding assumptions, municipal channel, or implementation budget expectations.",
+      "winning_claim_ids": [
+        "clm__nat_azwa_2025_definitief_governance_and_finance_003",
+        "clm__nat_azwa_2026_cw31_kader_d5_d6_governance_and_finance_001"
+      ],
+      "superseded_claim_ids": [
+        "clm__nat_azwa_2025_onderhandelaarsakkoord_governance_and_finance_001"
+      ],
+      "needs_human_review": false,
+      "notes": "Current interpretation retains 2 non-superseded claim(s) for finance.d5_d6.funding_instrument and preserves 1 earlier claim(s) as history."
+    },
+    {
+      "conflict_id": "conflict__finance__d5_d6__municipal_funding",
+      "topic": "finance.d5_d6.municipal_funding",
+      "claim_ids": [
+        "clm__nat_azwa_2025_definitief_governance_and_finance_002",
+        "clm__nat_azwa_2025_onderhandelaarsakkoord_governance_and_finance_003"
+      ],
+      "conflict_type": "precedence_overlap",
+      "resolution_status": "resolved",
+      "recommended_resolution_rule": "later_effective_date_beats_earlier_when_authority_equal",
+      "impact_on_almere": "Affects Almere's funding assumptions, municipal channel, or implementation budget expectations.",
+      "winning_claim_ids": [
+        "clm__nat_azwa_2025_definitief_governance_and_finance_002"
+      ],
+      "superseded_claim_ids": [
+        "clm__nat_azwa_2025_onderhandelaarsakkoord_governance_and_finance_003"
+      ],
+      "needs_human_review": false,
+      "notes": "Current interpretation retains 1 non-superseded claim(s) for finance.d5_d6.municipal_funding and preserves 1 earlier claim(s) as history."
+    },
+    {
+      "conflict_id": "conflict__monitoring__framework",
+      "topic": "monitoring.framework",
+      "claim_ids": [
+        "clm__nat_azwa_2025_definitief_monitoring_and_evaluation_001",
+        "clm__nat_azwa_2025_onderhandelaarsakkoord_monitoring_and_evaluation_002",
+        "clm__nat_azwa_2026_cw31_kader_d5_d6_monitoring_and_evaluation_002",
+        "clm__reg_flevoland_2023_regioplan_iza_monitoring_and_evaluation_002"
+      ],
+      "conflict_type": "precedence_overlap",
+      "resolution_status": "resolved",
+      "recommended_resolution_rule": "later_effective_date_beats_earlier_when_authority_equal",
+      "impact_on_almere": "Affects the monitoring and evaluation cycle Almere should align with.",
+      "winning_claim_ids": [
+        "clm__nat_azwa_2025_definitief_monitoring_and_evaluation_001",
+        "clm__nat_azwa_2026_cw31_kader_d5_d6_monitoring_and_evaluation_002",
+        "clm__reg_flevoland_2023_regioplan_iza_monitoring_and_evaluation_002"
+      ],
+      "superseded_claim_ids": [
+        "clm__nat_azwa_2025_onderhandelaarsakkoord_monitoring_and_evaluation_002"
+      ],
+      "needs_human_review": false,
+      "notes": "Current interpretation retains 3 non-superseded claim(s) for monitoring.framework and preserves 1 earlier claim(s) as history."
+    },
+    {
+      "conflict_id": "conflict__monitoring__update_2028",
+      "topic": "monitoring.update_2028",
+      "claim_ids": [
+        "clm__nat_azwa_2025_onderhandelaarsakkoord_monitoring_and_evaluation_001",
+        "clm__nat_azwa_2026_cw31_kader_d5_d6_monitoring_and_evaluation_001"
+      ],
+      "conflict_type": "precedence_overlap",
+      "resolution_status": "resolved",
+      "recommended_resolution_rule": "later_effective_date_beats_earlier_when_authority_equal",
+      "impact_on_almere": "Affects the monitoring and evaluation cycle Almere should align with.",
+      "winning_claim_ids": [
+        "clm__nat_azwa_2026_cw31_kader_d5_d6_monitoring_and_evaluation_001"
+      ],
+      "superseded_claim_ids": [
+        "clm__nat_azwa_2025_onderhandelaarsakkoord_monitoring_and_evaluation_001"
+      ],
+      "needs_human_review": false,
+      "notes": "Current interpretation retains 1 non-superseded claim(s) for monitoring.update_2028 and preserves 1 earlier claim(s) as history."
+    },
+    {
+      "conflict_id": "conflict__municipal__implementation_translation",
+      "topic": "municipal.implementation_translation",
+      "claim_ids": [
+        "clm__nat_azwa_2025_definitief_municipal_translation_002",
+        "clm__nat_azwa_2025_definitief_municipal_translation_001",
+        "clm__nat_azwa_2025_onderhandelaarsakkoord_municipal_translation_001",
+        "clm__nat_azwa_2026_cw31_kader_d5_d6_municipal_translation_002",
+        "clm__nat_azwa_2026_cw31_kader_d5_d6_municipal_translation_001",
+        "clm__reg_flevoland_2023_regioplan_iza_municipal_translation_001"
+      ],
+      "conflict_type": "precedence_overlap",
+      "resolution_status": "resolved",
+      "recommended_resolution_rule": "later_effective_date_beats_earlier_when_authority_equal",
+      "impact_on_almere": "Affects how national and regional claims are translated into Almere's local implementation.",
+      "winning_claim_ids": [
+        "clm__nat_azwa_2025_definitief_municipal_translation_002",
+        "clm__nat_azwa_2025_definitief_municipal_translation_001",
+        "clm__nat_azwa_2026_cw31_kader_d5_d6_municipal_translation_002",
+        "clm__nat_azwa_2026_cw31_kader_d5_d6_municipal_translation_001",
+        "clm__reg_flevoland_2023_regioplan_iza_municipal_translation_001"
+      ],
+      "superseded_claim_ids": [
+        "clm__nat_azwa_2025_onderhandelaarsakkoord_municipal_translation_001"
+      ],
+      "needs_human_review": false,
+      "notes": "Current interpretation retains 5 non-superseded claim(s) for municipal.implementation_translation and preserves 1 earlier claim(s) as history."
+    },
+    {
+      "conflict_id": "conflict__timeline__d5_d6_implementation",
+      "topic": "timeline.d5_d6_implementation",
+      "claim_ids": [
+        "clm__nat_azwa_2025_definitief_timeline_and_status_001",
+        "clm__nat_azwa_2025_onderhandelaarsakkoord_timeline_and_status_001"
+      ],
+      "conflict_type": "precedence_overlap",
+      "resolution_status": "resolved",
+      "recommended_resolution_rule": "later_effective_date_beats_earlier_when_authority_equal",
+      "impact_on_almere": "Affects planning milestones and sequencing relevant to Almere.",
+      "winning_claim_ids": [
+        "clm__nat_azwa_2025_definitief_timeline_and_status_001"
+      ],
+      "superseded_claim_ids": [
+        "clm__nat_azwa_2025_onderhandelaarsakkoord_timeline_and_status_001"
+      ],
+      "needs_human_review": false,
+      "notes": "Current interpretation retains 1 non-superseded claim(s) for timeline.d5_d6_implementation and preserves 1 earlier claim(s) as history."
+    },
+    {
+      "conflict_id": "conflict__timeline__rollout_2030",
+      "topic": "timeline.rollout_2030",
+      "claim_ids": [
+        "clm__nat_azwa_2025_definitief_timeline_and_status_002",
+        "clm__nat_azwa_2025_onderhandelaarsakkoord_timeline_and_status_002"
+      ],
+      "conflict_type": "precedence_overlap",
+      "resolution_status": "resolved",
+      "recommended_resolution_rule": "later_effective_date_beats_earlier_when_authority_equal",
+      "impact_on_almere": "Affects planning milestones and sequencing relevant to Almere.",
+      "winning_claim_ids": [
+        "clm__nat_azwa_2025_definitief_timeline_and_status_002"
+      ],
+      "superseded_claim_ids": [
+        "clm__nat_azwa_2025_onderhandelaarsakkoord_timeline_and_status_002"
+      ],
+      "needs_human_review": false,
+      "notes": "Current interpretation retains 1 non-superseded claim(s) for timeline.rollout_2030 and preserves 1 earlier claim(s) as history."
+    }
+  ]
+}

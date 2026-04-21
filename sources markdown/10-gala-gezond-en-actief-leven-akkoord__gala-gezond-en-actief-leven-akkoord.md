@@ -1,0 +1,1265 @@
+# 10-gala-gezond-en-actief-leven-akkoord__gala-gezond-en-actief-leven-akkoord
+- Original file: `10-gala-gezond-en-actief-leven-akkoord__gala-gezond-en-actief-leven-akkoord.pdf`
+- Source URL: https://www.rijksoverheid.nl/documenten/rapporten/2023/01/31/gala-gezond-en-actief-leven-akkoord
+- Converted from: PDF
+- Pages: 53
+
+## Page 1
+
+GALA
+
+Gezond en Actief Leven Akkoord
+
+Gemeenten en GGD’en, zorgverzekeraars en VWS zetten gezamenlijk in op een gezond en actief leven met een stevige sociale basis
+
+Januari 2023
+
+## Page 2
+
+Dit is een uitgave van Ministerie van Volksgezondheid, Welzijn en Sport
+
+versie 1.0 Januari 2023
+
+2 | GALA – Gezond en Actief Leven Akkoord
+
+## Page 3
+
+GALA Gezond en Actief Leven Akkoord
+
+Inhoud
+
+1 Inleiding 4
+
+2 Gemeenten en GGD’en, zorgverzekeraars en VWS bouwen met het GALA een fundament onder het preventiebeleid 8
+
+3 Gezondheidsdoelen en resultaten die we willen behalen 12 a. Terugdringen gezondheidsachterstanden (waaronder Kansrijke Start) 13 b. Een gezonde fysieke leefomgeving die uitnodigt tot bewegen en ontmoeten 15 c. Het versterken van (de verbinding met) de sociale basis 18 d. Een gezonde leefstijl 20 e. Het versterken van de mentale weerbaarheid en mentale gezondheid 24 f. Vitaal ouder worden 26 g. Domeinoverstijgende inzet vanuit een regionale preventie-infrastructuur 28 I. Bouwstenen regionale preventie-infrastructuur 29 II. Werkagenda inrichting ketenaanpakken 31
+
+4 Wat is daarvoor nodig 36 a. Financiën 37 b. Regionale samenwerking 38 c. Agenda en dialoog Health in all policies 39 d. Kennisinfrastructuur 41 e. Monitoring 43 f. Ondersteuningsprogramma 43 g. Governance 44
+
+Bijlage 1 – Samenhang met andere trajecten 47 Bijlage 2 – Werkagenda VNG bij het Integraal Zorg Akkoord (IZA) 49
+
+GALA – Gezond en Actief Leven Akkoord | 3
+
+## Page 4
+
+1
+
+Inleiding GALA
+
+4 | GALA – Gezond en Actief Leven Akkoord
+
+## Page 5
+
+mensen met een handicap, een beperking of een (chronische) ziekte. De voorzieningen die er zijn om mensen te helpen een gezond en actief leven te leiden moeten voor iedereen toegankelijk zijn.
+
+Gezond en actief leven Met het Gezond en Actief leven Akkoord (GALA) bouwen we aan het fundament voor een gerichte lokale en regionale aanpak op het gebied van preventie, gezondheid en sociale basis. Hiervoor maken we afspraken vanuit een gezamenlijke verantwoordelijkheid als rijksoverheid, gemeenten en zorg­ verzekeraars. We doorbreken de schotten en werken domein­ overstijgend vanuit samenhang om zo bij te dragen aan de beweging naar ‘de voorkant’ waarin een gezonde samen­ leving centraal staat. En dat is nodig. De urgentie is groot.
+
+Stip op de horizon De stip op de horizon is een gezonde generatie in 2040, met weerbare, gezonde mensen die kunnen opgroeien, leven, werken en wonen in een gezonde leefomgeving, en waarin sprake is van een sterke sociale basis. Waarin de fysieke en mentale gezondheid vanaf het prille begin, de eerste 1000 dagen, wordt bevorderd en behouden en waar speci­ ale aandacht uitgaat naar mensen in kwetsbare situaties. Hiermee dragen we ook bij aan het betaalbaar houden van het zorgstelsel, zodat mensen die dat nodig hebben kunnen blijven rekenen op zorg. In eerste instantie geven mensen zelf invulling aan een zo gezond mogelijk leven. Waar nodig wordt door gemeenten, rijk en zorgpartijen passende hulp geboden die aansluit op de behoefte en de mogelijkheden van de hulpvrager. Het sociale en publieke domein is de eerst aangewezen plek.
+
+Omdat gezondheidsachterstanden een hardnekkig probleem zijn Mensen in een kwetsbare sociaal economische situatie kampen veelal met armoede, schulden, problemen rondom huisvesting, eenzaamheid of werkloosheid. Deze omstan­ digheden maken dat zij een hoger risico op een slechtere (ervaren) gezondheid hebben. Mensen met een lager opleidingsniveau leven gemiddeld ruim 4 jaar korter en krijgen ruim 14 jaar eerder te maken met een slechter ervaren gezondheid dan hoogopgeleiden2. Daarnaast kunnen taalbarrières of verschillende sociaal-culturele waarden goede zorg in de weg staan. Ook komt het vaker voor dat mensen met een lager opleidingsniveau roken of overge­ wicht hebben, een hoger risico op soa’s, hiv en onbedoelde zwangerschappen hebben en minder vaak vaccinaties halen in het kader van het Rijksvaccinatieprogramma. Daarnaast geldt dat de (mentale) gezondheid van veel mensen onder druk staat in een samenleving die snel verandert en gepaard gaat met grote onzekerheden. Gezondheidsachterstanden zijn maatschappelijk onwenselijk omdat dit een negatieve impact heeft op de kwaliteit van leven van mensen en op de mogelijkheden voor mensen om te participeren in het economisch en maatschappelijk leven.
+
+Omdat ons zorgstelsel onder druk staat Nu al werkt 1 op de 6 werknemers in de zorg en geven we 13 procent van ons nationale inkomen uit aan zorg. De komende decennia neemt de zorgvraag alleen maar ver­ der toe, onder meer vanwege de vergrijzing. Het voorkomen van gezondheidsproblemen (universele en selectieve pre­ ventie), de inzet van (leefstijl)interventies bij hoog risico op ziekte (geïndiceerde preventie) en leefstijl als (onderdeel van de) behandeling (zorggerelateerde preventie) is belangrijk om de kwaliteit, toegankelijkheid en houdbaarheid van het Nederlandse zorgstelsel in de toekomst te kunnen waarbor­ gen. De coronapandemie heeft dit besef ook versterkt.
+
+Omdat onze gezondheid belangrijk is Gezondheid is ons kapitaal, als mens en als samenleving. Uit onderzoek van het CBS blijkt dat gezondheid belangrijk is voor het geluksgevoel. Mensen willen zo lang mogelijk zelfstandig kunnen blijven. Gezondheid vraagt dan ook om een beweging naar het versterken van het normale leven, de weerbaarheid, demedicaliseren en gezondheidsvaardig­ heden. Voor het versterken van de weerbaarheid is het belangrijk om zoveel mogelijk in te zetten op preventie van­ uit de lokale basisvoorzieningen (denk aan: ‘natuurlijke’ vind­ plaatsen als de school, de huisarts en het sociaal wijkteam en sterke verbindingen tussen deze ‘natuurlijke’ vindplaatsen in het medisch, sociaal en fysieke domein.
+
+Overigens levert het voorkomen van zorg ook een belang­ rijke bijdrage aan het klimaatbeleid, omdat de zorgsector verantwoordelijk is voor ongeveer 7 procent van de broeikas­ gassen van Nederland. Inzet op gezondheid en preventie past daarmee ook in het bevorderen van duurzame zorg.
+
+Omdat gezondheid iedereen aangaat Gezondheid is breder dan de afwezigheid van ziekte en klachten. Het idee van ‘positieve gezondheid’1 biedt een bredere kijk op gezondheid. Mensen zijn niet hun aandoe­ ning. Toch focust de zorg daar vaak wel op. De aandacht gaat te vaak uit medische klachten en gezondheidsproblemen, en hoe we die kunnen oplossen. Positieve Gezondheid kiest een andere invalshoek. Het accent ligt niet op ziekte, maar op mensen zelf, op hun veerkracht en op wat hun leven betekenisvol maakt. Gezondheid raakt iedereen, ook de
+
+Gezondheid wordt door veel factoren beïnvloed Het RIVM heeft diverse bepalende factoren benoemd die bijdragen aan gezondheid (zie figuur 1). Ongezond gedrag in een ongezonde leefomgeving is verantwoordelijk voor bijna 20 procent van de ziektelast. Naast leefstijl doen ook stress,
+
+1 Definitie positieve gezondheid: het vermogen van mensen om met de fysieke,
+
+emotionele en sociale levensuitdagingen om te gaan en zoveel mogelijk eigen
+
+regie te voeren (Machteld Huber, www.iph.nl).
+
+2 Bron: www.staatvenz.nl
+
+GALA – Gezond en Actief Leven Akkoord | 5
+
+## Page 6
+
+De urgentie om blijvend in te zetten op het bevorderen van een gezonde leefstijl in een gezonde leefomgeving is hoog. Net als het blijvend inzetten op die factoren die mensen belemmeren om een gezonde keuze te maken.
+
+de fysieke leefomgeving en vele andere factoren ertoe waar het gaat om (de ervaren) gezondheid. Daarbij komt dat de gezonde keuze vaak niet vanzelfsprekend wordt gemaakt, waardoor ongezond gedrag sneller het gevolg is.
+
+Figuur 1 | Brede determinanten van gezondheid3
+
+3 RIVM, Factsheet Impactvolle Determinanten van gezondheid, 2021 (https://www.rivm.nl/sites/default/files/2021-09/012065_TG_Factsheet%20_determinanten.pdf).
+
+VTV staat voor Volksgezondheid Toekomst Verkenning 2018 (RIVM). GBD staat voor Global Burden of Disease 2017 (IMHE, Institute of Health Metrics and Evaluation).
+
+om gezonde keuzes te maken. De overheid heeft een grote rol bij het bevorderen van gezond gedrag in een gezonde leef­omgeving, waarbij de inzet gedifferentieerd wordt en een aparte en toegespitste aanpak vergt voor kwetsbare groepen waarin de grootste stijging van gezondheidswinst te behalen is. Dat vraagt gericht investeren: ongelijk investeren voor meer gelijke kansen (‘Equity in All Policies’).
+
+Daarom aan de slag vanuit een brede blik op preventie Een integrale benadering van preventie is nodig, met aan­ dacht voor achterliggende factoren die invloed hebben op gezondheid. Dat kunnen individuele factoren zijn, maar ook de fysieke en sociale omgeving, zoals de voedselomgeving of een beweegvriendelijke omgeving op school of op het werk, of factoren als bestaanszekerheid. Deze brede blik op gezondheid en het bevorderen van gezondheid noemen we ‘Health in all Policies’: diverse domeinen (publieke gezond­ heid, gezondheidszorg, sociaal domein, fysieke inrichting) dragen bij aan gezondheid van inwoners.
+
+Om te zorgen dat mensen zo lang mogelijk zo gezond mogelijk blijven, loont het om vanaf jonge leeftijd en gedurende de hele levensloop te investeren in gezondheid en een gezonde leefstijl. Dat begint al bij de eerste duizend dagen van het leven die sterk bepalend zijn voor de gezondheid op latere leeftijd. Een kansrijke start voor elk kind is dan ook essentieel. Een gezonde generatie betekent een generatie die niet alleen fysiek gezond is, maar ook mentaal weerbaar is en leeft in een gezonde omgeving.
+
+Dit is met name ook voor het verminderen van gezond­ heidsachterstanden nodig. Ongezondheid is niet alleen de uitkomst van ongezond gedrag, maar vooral ook van een complexe ongelijkheid in de samenleving. Niet iedereen beschikt over de kennis, vaardigheden en mogelijkheden
+
+6 | GALA – Gezond en Actief Leven Akkoord
+
+## Page 7
+
+Beweging naar ‘de voorkant’ Ook als er sprake is van gezondheidsproblemen, is niet altijd (alleen) een medisch antwoord gewenst. Bestaande hulp en zorg is nu niet altijd passend. Er is sprake van versnippering. Hulp is niet altijd gericht op de eigen situatie en de leefomge­ ving van de zorg- of hulpvrager. Om die reden werken we aan een beweging richting beter passende zorg en ondersteuning. We willen terug naar de nabijheid en de menselijke maat vanuit de lokale sociale basis of de sociale infrastructuur, in samenspraak met de inwoners. Het gaat om omzien naar elkaar. Een zogenaamde sociale basis die bestaat uit familie, naasten uit het sociaal netwerk, mantelzorgers, vrijwilligers, het welzijnswerk, burgerinitiatieven (waaronder zelfregie – of zelfhulpgroepen) en andere relevante organisaties die een rol hebben en een individu of een gezin helpt als het nodig is.
+
+Door de toename van het aantal ouderen die zelfstandig wonen zal de druk op de sociale omgeving, waaronder man­ telzorg, toenemen. Daarom is inzet op vitaal ouder worden en langer meedoen, door het versterken van de zelfredzaam­ heid van ouderen van belang.
+
+Leeswijzer In dit document wordt in hoofdstuk 2 toegelicht welke basis er reeds ligt en welke stap we met het GALA zetten. Hoofd­ stuk 3 vormt de kern van het GALA waarin de gezamenlijke doelen, beoogde resultaten en acties zijn opgenomen die VWS, gemeenten en zorgverzekeraars willen ondernemen. Hoofdstuk 4 gaat in op de zaken die daarvoor nodig zijn: de financiën (de brede SPUK), lokale en regionale samen­ werking, landelijk beleid, kennisinfrastructuur, monitoring, ondersteuning en governance.
+
+GALA – Gezond en Actief Leven Akkoord | 7
+
+## Page 8
+
+2
+
+Gemeenten, GGD’en, zorgverzekeraars en VWS bouwen met het gala een fundament onder het preventiebeleid
+
+8 | GALA – Gezond en Actief Leven Akkoord
+
+## Page 9
+
+We bouwen door op wat er is De afgelopen decennia, en in het bijzonder de afgelopen jaren, is er veel in gang gezet op gezondheid, preventie en een sterke sociale basis door het Rijk, door de gemeenten en andere betrokken partijen zoals kennispartners. We bou­ wen hier op voort en leggen de nodige verbindingen. Er zijn gezondheidsdoelen en acties afgesproken in het Nationaal Preventieakkoord (NPA) en de Landelijke Nota Gezondheids­ beleid 2020-2024. In het regeerakkoord zijn de doelen van het NPA nog eens bevestigd en zijn hier ambities met betrekking tot kansrijke start, mentale gezondheid en valpreventie aan toegevoegd . De doelen zijn door gemeenten verder uitge­ werkt in lokale gezondheidsnota’s en lokale preventie– en sportakkoorden (en combinaties daarvan) en in lokale coali­ ties Kansrijke Start. Sinds 2015 werken VNG en Zorgverzeke­ raars Nederland (ZN) vanuit een gezamenlijke werkstructuur samen om de inzet op preventie en gezondheidsbevordering op regionale schaal te organiseren. Preventie, GGZ problema­ tiek en ouderen zijn speerpunten hierbinnen. Deze werkstruc­ tuur vormt de basis van de regionale samenwerking die nodig is en moet worden verstevigd. In eerdere publicaties van de VNG wordt het belang en de noodzakelijke inzet op preven­ tieve gezondheid benadrukt4 evenals in het gezamenlijke pre­ ventiestatement van VNG en ZN. Ook het onlangs afgesloten Integraal Zorgakkoord en het WOZO-programma bieden een basis voor de samenwerking met zorgpartijen.
+
+Een volgende stap is nodig Met alle wetgeving, nota’s en akkoorden en bestaande lokale en regionale werkstructuren ligt er een basis. Nu is een vol­ gende stap nodig. Het bevorderen van een gezond leven vraagt om een domeinoverstijgende, integrale en langjarige aanpak. • Er is meer samenhang en verbinding nodig tussen de verscheidenheid aan programma’s en partijen om men­ sen gezond en vitaal te houden. Dit komt nog niet in alle gemeenten en regio’s voldoende uit de verf. Op landelijke schaal vergt dit ook meer aandacht. • Er is meer helderheid nodig over taken, verantwoorde­ lijkheden en lange termijn doelen die richting geven, met voldoende mogelijkheden voor structurele financiering van aanbod en menskracht. Zo is nog niet overal de inzet en ondersteuning van mantelzorgers op orde en het laag­ drempelige hulpaanbod goed georganiseerd waardoor de inzet van een maatwerkvoorziening (zorg) de enige mogelijkheid is om mensen te kunnen helpen. Daardoor stijgen de kosten. • Er is nog te vaak sprake van versnipperde en tijdelijke initiatieven en financiering. Regionale samenwerkings­ afspraken tussen gemeenten en zorgpartijen komen nog te weinig tot stand. Kansrijke interventies worden onvoldoende snel opgeschaald en het lerend vermogen kan beter. De rol van GGD als regionale kennispartner en adviseur op gezondheidsbeleid wordt niet overal voldoen­ de benut. • Het goed vormgeven van preventiebeleid is complex, vraagt deskundigheid en vereist goede samenwerking tussen veel verschillende spelers uit verschillende be­ leidsdomeinen (o.a. Wmo, Zorgverzekeringswet (Zvw), Jeugdwet) en vergt een lange adem. Er gaat nu veel tijd verloren aan het (steeds weer) projectmatig organiseren van samenwerking in wisselende verbanden. Ook blijkt dat de middelen voor preventie kwetsbaar zijn voor bezuinigingen en incidenteel ingezet worden voor het oplossen van actuele problemen die geen relatie hebben met gezondheid.
+
+Met de Wet maatschappelijke ondersteuning (Wmo) en de Jeugdwet is een brede basis gelegd voor de zorgtaken van gemeenten in het sociaal domein. Gemeenten hebben met de Wmo de wettelijke opdracht en de beleidsruimte gekregen om mensen op maat te kunnen helpen als zij dit zelf niet meer kunnen. Zodat zij weer zelfredzaam zijn en kunnen participeren in de eigen thuissituatie en de maatschappij. Op grond van de Jeugdwet hebben gemeenten de taak beleid te voeren op preventie, jeugdhulp te bieden en te zorgen voor de uitvoering van kinderbeschermingsmaatregelen en jeugdreclassering. De Wet publieke gezondheid (Wpg) geeft gemeenten de opdracht de gezondheid te bewaken, bescher­ men en bevorderen. Er is voorzien in een gemeenschappelijke regeling voor gemeentelijke gezondheidsdiensten (GGD). Elke gemeente moet een GGD in stand houden en bepaalde taken uit de Wpg laten uitvoeren. Daarnaast volgt uit de Wpg dat de gemeente het basistakenpakket jeugdgezondheidszorg uit moet laten voeren. De professionals die dit doen zijn een belangrijke speler in het verbinden en versterken van de jeugdpreventieketen.
+
+4 In de propositie ‘De winst van het Sociaal Domein’ is Gezond Leven een van de
+
+drie speerpunten. In het Koersdocument ‘Van daadkracht naar veerkracht’ heeft
+
+de VNG dit speerpunt nader uitgewerkt en de rol en verantwoordelijkheid van
+
+gemeenten gedefinieerd. Daarbij is aangeven wat er nodig is om met die rol tot
+
+effectieve inzet op preventie te komen. Tot slot is in de position paper ‘Gezonde
+
+Leefomgeving’ het belang van de omgeving voor de gezondheid van mensen
+
+aangegeven. Gemeenten worden hierin aanbevolen gezondheid mee te wegen
+
+bij de keuzes in het fysieke domein.
+
+GALA – Gezond en Actief Leven Akkoord | 9
+
+## Page 10
+
+werken alle GGD’en en de directeuren publieke gezondheid (DPG-en) met elkaar samen en delen zij kennis. Met de onder­ tekening door de GGD-GHOR Nederland benadrukken alle partijen, inclusief de GGD’en, het grote belang van de GGD’en in de regionale samenwerking en de coördinerende rol die de GGD op een aantal thema’s in de regio heeft. GALA en verbinding met andere trajecten Op het terrein van de volksgezondheid worden vanuit ver­ schillende domeinen met andere partijen coalities gesloten om met vereende krachten de beweging ‘naar de voorkant’ verder te brengen. Zonder uitputtend te zijn, springt een aan­ tal in het oog. Het GALA richt zich expliciet op deze voorkant met de focus op gezondheid, preventie en de sociale basis.
+
+In september 2022 is het Integraal Zorgakkoord (IZA) gesloten met onder meer afspraken over het investeren in gezondheid en preventie breed (inclusief sociale basis). Het daarin aangekondigde addendum met afspraken tussen gemeenten, VWS en zorgverzekeraars, zoals afgesproken in het IZA, is verwerkt in het GALA (actie-agenda G en H). Het IZA richt zich in hoofdzaak op de houdbaarheid van het zorgstelsel (invalshoek Zvw).
+
+Met het programma Wonen, Ondersteuning en Zorg voor Ouderen (WOZO) is een beweging gestart om de ondersteu­ ning en zorg voor ouderen toekomstbestendig te organi­ seren. De beweging draagt bij aan de transitie in wonen, ondersteuning en zorg voor ouderen. De eerste actielijn uit het WOZO, vitaal ouder worden, vergt ook acties in het gemeentelijk domein gericht op preventie. Hiervoor zijn afspraken in het GALA opgenomen.
+
+Wat is de meerwaarde van het GALA? • VWS, gemeenten, GGD’en en zorgverzekeraars maken minder vrijblijvende afspraken gericht op de vertaling van landelijke doelen op het gebied van gezondheid en welbevinden naar lande­ lijke, regionale en lokale resultaten. De doelen sluiten aan bij de landelijke gezondheidsdoelen uit het Nationaal Preventieakkoord, de Landelijk Nota Gezondheidsbeleid,het IZA en het WOZO programma. • Het GALA richt zich op alle burgers met specifieke aandacht voor groepen waar de meeste gezond­ heidswinst te behalen is. • Het GALA richt zich op domeinoverstijgende samenwerking en het koppelen van (bestaande) aanpakken, initiatieven, middelen en menskracht. • Zo wordt met het GALA een integrale benadering van het preventiebeleid gestimuleerd en gefaciliteerd (preventie in brede zin: gezonde leefomgeving, sociaal beleid, ook sport en bewegen). Uitgangspunten zijn de Health in all policies gedachte en brede gezondheidsconcepten zoals positieve gezondheid. • Er wordt structureel en geoormerkt budget beschikbaar gesteld zodat gemeenten lange termijn plannen kunnen maken. • VWS, gemeenten en zorgverzekeraars spreken af hoe de regionale samenwerkingsafspraken in alle regio’s per 1 januari 2025 gerealiseerd worden (concretisering IZA-afspraak over regionale preventie-infrastructuur). • VWS, gemeenten, GGD’en en zorgverzekeraars spreken af welke randvoorwaarden en criteria gelden voor inrichting en samenwerking van effectieve ketenaanpakken (concretisering IZA-afspraak).
+
+In het Nationaal Preventieakkoord (NPA) staan afspraken om Nederlanders gezonder te maken door roken, proble­ matisch alcoholgebruik en overgewicht terug te dringen. Het doel is een gezonde generatie in 2040 met inzet op een rookvrije generatie, minder overgewicht en minder overma­ tig alcoholgebruik. Deze thema’s komen (direct of indirect) terug in verschillende programma’s in het GALA en worden vertaald naar lokale inzet.
+
+De GGD’en zijn als regionale gezondheidsdienst een belangrijke partij in het versterken van het regionale gezondheidsbeleid. De GGD adviseert de gemeenten over het gemeentelijk gezondheidsbeleid, zij doet onderzoek in de regio om de gemeenten over de juiste gezondheidsin­ formatie te laten beschikken en zij voert in opdracht van de gemeenten een aantal taken uit. Op grond van de Wpg is de GGD een uitvoeringsdienst in opdracht van de gemeentelijke colleges van burgemeesters en wethouders.
+
+Met de Hervormingsagenda Jeugd wordt gewerkt aan een breed maatschappelijke agenda gericht op het structureel verbeteren van de kwaliteit en beschikbaarheid van jeugd­ hulpverlening en de lange-termijnhoudbaarheid van het jeugdstelsel. Preventie is een belangrijke sleutel. De afspraken in het GALA over onder meer een kansrijke start in de eerste duizend dagen van een kind, een gezonde leefstijl en mentale gezondheid, de aanpak Opgroeien in een Kansrijke Omgeving (OKO) en versterking van de sociale basis dragen hier aan bij. De Jeugdgezondheidszorg is een belangrijke schakel in het verbinden en versterken van de jeugdpreventieketen.
+
+In 2016 heeft Nederland het VN-verdrag Handicap geratifi­ ceerd. Gemeenten hebben de wettelijke plicht gekregen om het verdrag lokaal in te voeren, onder de naam Lokale Inclusie
+
+In het GALA maken de gemeenten met VWS en de zorgver­ zekeraars afspraken over versterking van preventie en de publieke gezondheid. GGD-GHOR Nederland ondertekent het GALA mede, maar is formeel geen zelfstandige partij in de afspraken. De GGD’en voeren immers een deel van de gemeentelijke afspraken in het GALA uit, in opdracht van de betreffende gemeenten. In de Stichting GGD GHOR Nederland
+
+10 | GALA – Gezond en Actief Leven Akkoord
+
+## Page 11
+
+het zo veel mogelijk beperken van de ziektelast én het minimaliseren van maatschappelijke en economische schade. Ervaringen en lessen van de Covid-19 pandemie worden daarbij betrokken en verder uitgebouwd. De versterkingen in de publieke gezondheid en de zorg dragen bij aan zowel individuele als collectieve gezondheid en preventie.
+
+Het programma Toekomstbestendige Arbeidsmarkt Zorg en welzijn (TAZ) beoogt een transitie naar passende en arbeidsbesparende zorg. Met innovatieve werkwijzen, en behoud van medewerkers die gemotiveerd hun werk doen. Voor het GALA zijn met name de partijen die werkzaam zijn in ‘de voorkant’ belangrijk, zoals gemeenten, jeugdgezond­ heidszorg en de eerstelijns zorgpartijen.
+
+Agenda (LIA). Met ondersteuning vanuit het VNG-programma ‘Iedereen doet mee!’ geven gemeenten invulling aan de afspraken uit het VN-verdrag Handicap. De gemeenten werken samen met ervaringsdeskundige inwoners aan een inclusieve samenleving waarin iedereen, met of zonder een handicap, beperking of kwetsbaarheid kan deelnemen aan werk, school, sport en bewegen en cultuur. Daarbij bevorde­ ren gemeenten dat de voorzieningen voor iedereen letterlijk toegankelijk zijn. De gemeenten zorgen dat mensen met een handicap, een beperking of een (chronische) ziekte de zorg en ondersteuning wordt geboden om volwaardig deel te kunnen nemen aan de samenleving. De verbinding met het GALA kan worden gelegd door bij de integrale aanpak gezondheids­ beleid de inclusie-coördinator of de programma-coördinator van ‘iedereen doet mee’ van de gemeente te betrekken.
+
+In november 2022 is de Green Deal ‘Samen werken aan duurzame zorg’ gesloten met afspraken om de klimaat- en milieu-impact van zorg en ondersteuning te verminderen. Eén van de thema’s betreft het bevorderen van gezondheid van patiënten/cliënten en van medewerkers in de zorg. De inzet en afspraken daarvoor sluiten aan bij het GALA.
+
+Het financieel arrangement van het GALA is vervat in een nieuwe Specifieke Uitkering (SPUK) voor gemeenten. In deze SPUK is ook budget opgenomen voor hetgeen van gemeenten wordt verwacht op het domein van sport en bewegen. De bestuurlijke afspraken hierover zijn opgenomen in het Sport­akkoord II. De sportinfrastructuur levert daarmee voor het behalen van de doelen van het GALA een belangrijke bijdrage.
+
+In onderstaande figuur wordt de samenhang weergegeven.
+
+Het beleidsprogramma pandemische paraatheid richt zich op het voorkomen van een mogelijke volgende pandemie,
+
+Sportakkoord II
+
+Gezond en Actief Leven Akkoord (GALA)
+
+Sport en bewegen
+
+Gezondheid en preventie
+
+Uitkering (SPUK)
+
+Sociale basis
+
+Gezondheidsachterstanden
+
+Vitaal ouder worden
+
+Wonen, Ondersteuning en Zorg voor Ouderen (WOZO)
+
+Gezonde leefomgeving
+
+Versterken sociale basis
+
+Preventie in het zorgstelsel
+
+Mentale gezondheid
+
+Landelijke Nota Gezondheidsbeleid Gezonde leefstijl
+
+Participatie en zelfredzaamheid
+
+Nationaal Preventieakkoord ( )
+
+Integraal Zorgakkoord ( )
+
+GALA – Gezond en Actief Leven Akkoord | 11
+
+## Page 12
+
+3
+
+Gezondheidsdoelen en resultaten die we willen behalen
+
+12 | GALA – Gezond en Actief Leven Akkoord
+
+## Page 13
+
+Centrale doelstelling: een gezonde generatie in 2040
+
+3A Terugdringen gezondheids­achter­ standen (waaronder Kansrijke Start)
+
+Het kabinet heeft een gezonde generatie in 2040 met een focus op de jeugd door sport, voeding en bewegen in het regeerakkoord als doel omarmd. Dat betekent dat de Nederlandse jeugd in 2040 de gezondste van de wereld is. Een ambitie waar breed in de samenleving veel draagvlak voor is5, en waarbij meer aandacht is voor preventie en een gezonde leefstijl van jongs af aan. Want kinderen die onge­ zond opgroeien staan veelal op een achterstand. Het ver­ minderen van vermijdbare gezondheidsachterstanden6 vergt dan ook extra aandacht, vanaf de eerste duizend dagen van een kind. Het verminderen van gezondheidsachterstanden is weliswaar apart als doel benoemd, maar snijdt dwars door de overige doelen heen.
+
+Naast de focus op kinderen en jongeren richten we ons met de gezonde generatie ook op volwassenen met onderstaande gemeenschappelijke doelen en op (het behoud van) de vitaliteit van het toenemend aantal ouderen.
+
+VWS, gemeenten, GGD’en en zorgverzekeraars onderschrijven de volgende gemeenschappelijke doelen: a) terugdringen gezondheidsachterstanden
+
+(waaronder Kansrijke Start) b) een gezonde fysieke leefomgeving die uitnodigt tot
+
+bewegen en ontmoeten c) het versterken van (de verbinding met) de sociale basis d) een gezonde leefstijl e) versterking van de mentale weerbaarheid en mentale
+
+gezondheid f) vitaal ouder worden g) domeinoverstijgende inzet vanuit een regionale
+
+preventie-infrastructuur
+
+Elk doel en de beoogde resultaten worden hierna toegelicht. Tevens zijn de acties benoemd die gemeenten, VWS en zorgverzekeraars ondernemen.
+
+Iemand die opgroeit in een gezin met een hoog inkomen en een hoog opleidingsniveau heeft meer kans om langer te leven in een goede gezondheid, dan iemand die opgroeit in een gezin met een laag inkomen en een laag opleidingsniveau. Mensen met een lager opleidingsniveau leven gemiddeld ruim 4 jaar korter en krijgen bovendien ruim 14 jaar eerder te maken met een slechter ervaren gezondheid dan hoog­ opgeleiden7. De aanpak van gezondheidsachterstanden vergt meer dan alleen de inzet op gezondheid. Er is vaak sprake van achterliggende problematiek zoals bestaansonzekerheid, armoede en kansenongelijkheid, een ongezonde leefomge­ ving en zwakke gezondheidsvaardigheden. Mensen met schulden, zonder baan of zorgen over hun woning kunnen het zich niet veroorloven om gezond te leven of hebben hier geen mentale ruimte voor. Een bredere blik op gezondheid en een integrale langdurige aanpak gericht op de wijken en mensen die kampen met gezondheidsachterstanden is nodig met oog voor gezondheidsvaardigheden en cultuursensitivi­ teit. Dit moet een aanpak zijn zich richt op verschillende fac­ toren zoals de financiële situatie, de huisvesting, het sociaal netwerk, onderwijs, de gezinssituatie en de arbeidsmarkt. Om impact te maken bij mensen in kwetsbare sociaal econo­ mische posities is het belangrijk om in beleidsontwikkeling te differentiëren en zo rekening te houden met kansengelijkheid op het bereiken van een goede gezondheid voor iedereen: verschil maken om verschil te verminderen.
+
+De gezamenlijke inzet van rijk en gemeenten is erop gericht om de levensverwachting en het aantal jaren in goed ervaren gezondheid voor mensen met een lage sociaal economische positie te doen toenemen. Het verband tussen maatregelen en wat dit doet voor het verminderen van gezondheids­ achterstanden laat zich moeilijk meten. In de monitoring van het GALA en de SPUK is de vraag hoe hier mee om te gaan, opgenomen. De acties hiervoor zijn opgenomen in hoofd­ stuk 4, paragraaf E over monitoring.
+
+5 www.gezondegeneratie.nl; Brief Initiatiefgroep preventieakkoord aan informa­
+
+teur, mei 2021
+
+6 Coalitieakkoord dec 2021 “Omzien naar elkaar, vooruitkijken naar de toekomst”,
+
+pagina 32
+
+7 Bron: www.staatvenz.nl
+
+GALA – Gezond en Actief Leven Akkoord | 13
+
+## Page 14
+
+Beoogd resultaat: • Elke gemeente heeft een lokale aanpak voor het terugdringen van gezondheidsachterstanden. • VWS agendeert in de beleidskeuzes van andere departementen de gevolgen voor gezondheid en gezondheidsachterstanden waar dit van toepassing is. • In (de opzet van) de monitoring van het GALA en de SPUK wordt de vraag hoe gezondheidsachter­ standen te monitoren, uitgewerkt.
+
+gekeken welke aanvullende maatregelen nodig zijn. • VWS neemt deel aan het Nationaal Programma Leefbaar­ heid en Veiligheid en stelt binnen dit programma kennis en middelen beschikbaar op het gebied van gezondheids­ achterstanden voor de wijkgerichte, integrale aanpak in 20 Stedelijke Focusgebieden. • VWS zet vanuit het Programma Gezonde Groene Leef­ omgeving in op verbetering van de leefomgeving in wijken waar veel mensen wonen met gezondheidsachter­ standen, onder andere met een onderzoeksprogramma vanuit ZonMW. • VWS financiert het kennis- en expertisecentrum Pharos.
+
+Acties gemeenten • Gemeenten ontwikkelen een lokale aanpak voor het terugdringen van gezondheidsachterstanden om kwetsbare groepen te bereiken, waarbij ook wordt gekeken naar de interactie met andere beleidsterreinen. Uitgangspunt is een brede, domein overstijgende aanpak, bijvoorbeeld langs de volgende sporen:
+
+Acties zorgverzekeraars • ZN bespreekt intern op welke wijze de samenwerking tussen zorgverzekeraars en gemeenten ten aanzien van schuldhulpverlening verstevigd kan worden, zodat mensen met een betaalachterstand op de zorgverzekering goed worden ondersteund. • De verzekeraars bepalen, op grond van de afspraken in het IZA, hoe passende zorg specifiek aandacht kan geven aan mensen met gezondheidsachterstanden.
+
+Elk kind verdient een kansrijke start De opgave om gezondheidsachterstanden terug te dringen begint al bij de eerste duizend dagen van een kind aangezien die sterk bepalend zijn voor de gezondheid op latere leeftijd. Daarom is een kansrijke start voor elk kind onbetwist een noodzakelijke voorwaarde voor een gezond leven, zodat (aanstaande) ouders in een kwetsbare situatie vroegtijdig gesignaleerd worden en juiste interventies kunnen worden ingezet. Met het programma Kansrijke Start zijn de afgelopen jaren veel goede stappen gezet. Nu wordt ingezet op het ver­ der versterken, uitbouwen en structureel verankeren van de lokale ketenaanpak kansrijke start, gericht op jonge gezinnen in een kwetsbare positie, op weg naar een gezonde generatie.
+
+− goed toegankelijk (preventie- en zorg)aanbod in de wijk; − stimuleren van gezond gedrag en gezondheidsvaardigheden; − zorgen voor een gezonde leefomgeving en sociale omgeving; − stimuleren dat mensen actief mee kunnen doen aan de maatschappij. • Gemeenten bieden gelijke gezondheidskansen en passen differentiatie toe bij interventies, toegespitst op (wijken met) mensen met gezondheidsachterstanden. De gemeenten die betrokken zijn bij de 20 Stedelijke Focusgebieden van het Nationaal Programma Leefbaarheid en Veiligheid kunnen in de wijkgerichte aanpak het verminderen van gezondheidsachterstanden als thema agenderen.
+
+Beoogd resultaat: Elke gemeente heeft een lokale ketenaanpak kansrijke start, inclusief interventies, en maakt samenwerkings­ afspraken met partners rondom de eerste duizend dagen van een kind.
+
+We willen dat (aanstaande) ouders in een kwetsbare situatie tijdig de juiste zorg en ondersteuning ontvangen, aansluitend op hun hulpbehoefte. De zorg en ondersteuning richt zich primair op het verminderen van risicofactoren die stress ver­ oorzaken, zoals psychische problemen, financiële problemen, relatieproblemen, huisvestingsproblemen en hechtings­ problemen, maar ook het bevorderen van beschermende factoren. Het is ook belangrijk dat deze ouders ondersteund worden met betrekking tot een gezonde leefstijl, omdat gezond eten, geen alcohol tijdens de zwangerschap en bij
+
+Acties VWS • VWS stelt middelen beschikbaar voor de aanpak van gezondheidsachterstanden. Deze middelen, die voorheen bekend stonden als GIDS-gelden, worden met ingang van 2023 via de SPUK verdeeld over alle gemeenten. Bij verdeling van alle middelen in de SPUK wordt rekening gehouden met gemeenten die meer mensen hebben met gezondheidsachterstanden. • Daarnaast zet VWS de financiering van het vernieuwde Stimuleringsprogramma GezondIn voort, om gemeen­ ten te ondersteunen bij het (door)ontwikkelen van hun lokale aanpak. • VWS agendeert bij andere departementen het belang van gezondheidsachterstanden teneinde te zorgen dit belang mee te laten wegen in de besluitvorming. • VWS en SZW hebben de SER gevraagd om een advies te geven over welke aanvullende maatregelen er nodig zijn binnen het sociaal domein, het sociaal zekerheidsstelsel en het arbeidsmarktstelsel om gezondheidsachterstan­ den terug te dringen. Naar aanleiding hiervan wordt
+
+14 | GALA – Gezond en Actief Leven Akkoord
+
+## Page 15
+
+borstvoeding, en niet roken eveneens van belang zijn voor een gezonde start. Daarom is het doel dat elke gemeente in Nederland structureel een lokale ketenaanpak kansrijke start heeft, inclusief interventies. Deze ambitie volgt uit het coalitieakkoord waarin is opgenomen dat het kabinet inzet op een gezonde generatie 2040 en dat Kansrijke Start in iedere gemeente beschikbaar komt. De lokale ketenaanpak kansrijke start moet verder worden versterkt, uitgebouwd en structureel verankerd, op weg naar een gezonde generatie.
+
+binding tussen het medische en sociale domein; − voortzetting ondersteuning landelijke organisatie Nu Niet Zwanger; − het realiseren van een actuele, interactieve leer­ infrastructuur voor lokale coalities en professionals rond de eerste 1000 dagen. • De SPUK-middelen die gemeenten kunnen aanvragen, worden ingezet voor het:
+
+− vormen, versterken en behouden van lokale coalities kansrijke start en; − vaker inzetten van interventies kansrijke start, ten behoeve van (aankomende) gezinnen in een kwetsbare situatie. Het gaat bij voorkeur om erkende interventies zoals opgenomen in loketgezondleven.nl van het RIVM; − maken van regionale samenwerkingsafspraken rondom kansrijke start.
+
+• Het RIVM monitort de voortgang van het actieprogramma Kansrijke Start sinds 2019, zowel kwantitatief (op 15 indi­ catoren) als kwalitatief.
+
+In werkagenda 3G onderdeel II zijn algemene afspraken opge­ nomen over de inrichting van ketenaanpakken. Deze afspraken zijn tevens van toepassing op de ketenaanpak kansrijke start.
+
+3B Een gezonde fysieke leefomgeving die uitnodigt tot bewegen en ontmoeten
+
+De inrichting en vormgeving van de buurt heeft invloed op de gezondheid en leefstijl van de bewoners. Het bepaalt mede in hoeverre mensen bewegen, elkaar ontmoeten, naar voor­ zieningen als de arts en supermarkt kunnen, en activiteiten kunnen ondernemen. Een extra brede galerij bijvoorbeeld zorgt ervoor dat mensen een bankje kunnen neerzetten om elkaar te ontmoeten. De voedselomgeving speelt ook een rol, zoals het aanbod, de beschikbaarheid en betaalbaarheid van voedsel.
+
+Acties gemeenten • Per 2024 heeft elke gemeente een ketenaanpak kans­ rijke start die gericht is op de eerste 1000 dagen van elk kind dat in een kwetsbare situatie zit. Daarvoor maken zij samen met relevante partijen via lokale coalities structurele (keten)afspraken, zodat gezinnen in een kwetsbare situatie vroegtijdig in beeld komen en de zorg en ondersteuning krijgen die ze nodig hebben rondom de eerste 1000 dagen (van -10 maanden tot en met 2 jaar) van kinderen. Het gaat daarbij om partijen als de GGD, partijen uit de geboortezorg, het sociaal domein, de JGZ-uitvoerende partij, de huisarts en de zorgverzekeraar. • Gemeenten zorgen ervoor dat inwoners in de vrucht­ bare leeftijd (die in een kwetsbare situatie verkeren) voldoende regie (kunnen) nemen op hun kinderwens. Voor inwoners in een kwetsbare situatie die ondersteund worden met een erkende interventie bij het nemen van regie op de kinderwens en niet in staat zijn de gewenste anti­conceptie zelf te betalen, dient de gemeente deze kosten op zich te nemen. • Gemeenten zorgen ervoor dat inwoners in de vruchtbare leeftijd (die in een kwetsbare situatie verkeren) in het verlengde van prenatale voorlichting op een laagdrempelige manier preconceptievoorlichting aangeboden krijgen en bekend zijn met de mogelijkheden voor preconceptiezorg (preconceptieconsult). Acties zorgverzekeraars • Zorgverzekeraars zorgen ervoor dat zorgprofessionals uit de geboortezorg optimaal kunnen bijdragen aan een kansrijke start van ieder kind. Hiervoor is het noodzakelijk dat het Zorginstituut duidt welke onderdelen van de ketenaanpak verzekerde zorg betreffen. ZN verzoekt het Zorginstituut om een duiding. Hierbij worden onder meer de vroegsignalering van (aankomende) ouders in kwetsbare situaties, precon­ ceptieconsulten, deelname aan het multidisciplinair overleg (MDO) en meer uren kraamzorg betrokken. Aan de hand van de duiding kunnen afspraken gemaakt worden over de rol van zorgprofessionals bij kansrijke start. Acties VWS • VWS zorgt voor de benodigde ondersteuning via onge­ veer 30 acties zoals die zijn geformuleerd in de vervol­ gaanpak actieprogramma Kansrijke Start, waaronder:
+
+De bereikbaarheid van voorzieningen bepaalt ook de mate van zelfstandigheid van mensen. Met de vergrijzing van de bevolking zijn er steeds meer mensen die te maken krijgen met toenemende beperkingen. Zij worden meer afhankelijk
+
+− het stimuleringsprogramma Kansrijke Start voor lokale coalities; − het project Kansrijke Ontmoetingen gericht op ver­
+
+GALA – Gezond en Actief Leven Akkoord | 15
+
+## Page 16
+
+van de hulp van anderen om de voorzieningen die zij nodig hebben te bereiken. Het Programma Wonen en Zorg voor ouderen8 richt zich op een leefomgeving die uitnodigt tot bewegen en ontmoeten, en zorgt ervoor dat de leefomgeving wordt meegenomen in de gemeentelijke woonzorgvisies en uitvoeringsprogramma’s.
+
+De fysieke leefomgeving kan ook druk geven op de gezond­ heid via onder andere de luchtkwaliteit, geluidsoverlast en infectieziekterisico’s. Klimaatverandering voegt daar nieuwe uitdagingen aan toe.
+
+VWS en gemeenten willen bereiken dat de leefomgeving van mensen in Nederland gezonder wordt en bevordert dat mensen gezonde keuzes maken. Dit gaat in het bijzonder over de leefomgeving van mensen die om verschillende redenen kwetsbaarder zijn voor gezondheidsdreigingen, zoals kinderen, ouderen en mensen met minder mogelijk­ heden om zelf iets aan hun leefomgeving te veranderen. Extra aandacht moet er zijn voor gebieden waar verschillende gezondheidsdreigingen stapelen. We willen de slechtste omgevingen verbeteren (eventueel ten koste van andere maatschappelijke belangen) en overal de ruimtelijke keuzes optimaliseren voor een gezonde leefstijl (zie ook de ambities in de Landelijke nota gezondheidsbeleid9). Voor de voedsel­ omgeving geldt dat het streven van VWS en gemeenten is dat de gezonde keuze ook de makkelijkste keuze is.
+
+Een gezonde fysieke omgeving is van belang om gezond en actief leven te bevorderen, nu en in de toekomst. Gemeenten spelen een belangrijke rol bij de inrichting van de fysieke leefomgeving. In het GALA zijn afspraken opgenomen over het borgen en bevorderen van gezondheidsafwegingen bij het inrichten van de fysieke leefomgeving en over het beter beschermen van inwoners tegen toenemende hitte. Bij die bescherming tegen hitte wordt ook blootstelling aan uv-stra­ ling meegenomen. Naar verwachting leidt klimaatverandering tot meer gezondheidsschade door toenemende blootstelling aan UV-straling. Hitte en UV straling vragen in samenhang aanpassingen in de leefomgeving en in de leefstijl.
+
+Acties gemeenten • Gemeenten zorgen voor de inzet van gezondheidskundige kennis bij hun besluitvorming over de fysieke leefomgeving, zodat de gezonde leefomgeving een plek krijgt in gemeen­ telijke omgevingsplannen en kunnen hierbij gebruik maken van advisering door de GGD. Gemeenten betrekken in ieder geval de aspecten die genoemd zijn in het position paper van de VNG ‘Samen werken aan de gezonde leefomgeving’. • Gemeenten verkennen de mogelijkheid om bij het Schone Lucht Akkoord (SLA) aan te sluiten als dit niet al het geval is.
+
+Gezonde leefomgeving
+
+Beoogd resultaat: • Bij besluitvorming over de fysieke leefomgeving (zoals in omgevingsplannen) wordt gezond­ heidskennis toegepast. Die kennis gaat over gezondheidsbevordering (bijv. uitnodigen tot bewegen en ontmoeten) én over gezondheids­ bescherming (bijv. bescherming geluid- en luchtkwaliteit).
+
+VWS en gemeenten zorgen ervoor dat gezondheid in brede zin geborgd wordt bij het opstellen van omgevingsbeleid. Zo ook in omgevingsvisies, omgevingsplannen en andere belangrijke besluiten. Ze kunnen hiervoor gebruik maken van beschikbare kennis bij het RIVM en GGD’en. Als inspiratie kunnen de verschillende aspecten van gezondheid worden gebruikt, zoals benoemd in het VNG-position paper Samen­ werken aan de gezonde leefomgeving. Samen met de minister van VRO (Volkshuisvesting en Ruimtelijke Ordening) wordt met het Programma Wonen en Zorg voor ouderen ingezet op een leefomgeving die uitnodigt tot bewegen en ontmoeten.
+
+Acties VWS • VWS agendeert bij andere departementen het belang van gezondheid teneinde te zorgen dit belang mee te laten wegen in de besluitvorming over een fysieke gezonde leefomgeving. Dit gebeurt onder andere op het terrein van ruimtelijke ordening, woningbouw, klimaatadaptatie, mobiliteit en de ontwikkeling van het landelijk gebied. VWS onderzoekt of zij andere departementen daarbij kan ondersteunen door bij te dragen aan kwaliteitsnormen of door onderzoeksresultaten beter toepasbaar te maken. • VWS zal een bevoegdheid creëren voor gemeenten voor het weren van ongezonde voedselaanbieders. • VWS ondersteunt de gemeenten en GGD’en bij de invulling van hun taken met het landelijke programma Gezonde Groene Leefomgeving. VWS laat onderzoek doen naar de bijdrage van gezondheidsmaatregelen in de fysieke leefomgeving aan het verbeteren van de gezond­ heid, onder andere door het RIVM en via ZonMw. • Via het Gemeentefonds op basis van de Wet publieke gezondheid ontvangen gemeenten financiële middelen voor bevordering van medische milieukunde en epidemiologie. • Via de brede SPUK kunnen gemeenten een bijdrage aanvragen zodat gewerkt kan worden aan maatregelen in de fysieke leefomgeving die bijdragen aan een gezonde leefstijl met de nadruk op meer beweging. Met deze
+
+8 Gezamenlijk programma van de minister van Volkshuisvesting en Ruimtelijke
+
+Ordening en de minister van Langdurige Zorg en Sport. Wordt naar verwachting
+
+in november 2022 naar de Kamer gestuurd. Het programma is onderdeel van
+
+9 www.rijksoverheid.nl/documenten/rapporten/2020/02/29/gezondheid-breed-
+
+het WOZO programma.
+
+op-de-agenda
+
+16 | GALA – Gezond en Actief Leven Akkoord
+
+## Page 17
+
+Hiermee kun je hoge temperaturen tijdens hittegolven verlagen. Vaak zijn de wijken waar veel kwetsbare mensen wonen ook de wijken die het minst hittebestendig zijn. Verwacht wordt dat klimaatverandering zal bijdragen aan een grotere blootstelling van inwoners aan uv-straling, wat het risico verhoogt op de ontwikkeling van huidkanker in de toekomst. Ook hier zijn voor een goede aanpak zowel maat­ regelen nodig voor de leefomgeving als voor het bevorderen van gezond gedrag.
+
+financiële bijdrage kunnen gemeenten activiteiten organiseren om de samenhang tussen het sociale en fysieke domein te versterken, de fysieke leefomgeving beweegvriendelijker, gezonder en duurzamer te maken en leren werken met datagedreven ontwerpprincipes. Dat kan door het inzetten van iemand die gezondheid meer op de kaart zet bij lokale afwegingen binnen het fysieke domein of door concrete toepassingen zoals een wandelvriendelijke omgeving, speelplaatsen en schaduwrijke (speel)plekken. Het streven is dat minimaal 50% van de gemeenten de bijdrage aanvragen.
+
+Klimaatverandering
+
+We willen bereiken dat mensen die kwetsbaar zijn voor hitte geholpen worden om zo goed mogelijk door hitteperioden heen te komen, in het bijzonder mensen die we niet goed kunnen bereiken via het Nationale Hitteplan. Daarmee willen we oversterfte en ziekte zoveel mogelijk voorkomen. Daar­ naast willen we de bovenmatige blootstelling aan uv-straling terugdringen om huidkanker zoveel mogelijk te voorkomen. Gemeenten kunnen dit verwerken in hun lokaal hitteplan.
+
+Beoogd resultaat: VWS en gemeenten zetten in op meer kennis en maatregelen om (kwetsbare) mensen zo goed mogelijk te beschermen tegen hitte, allergieën, infectieziekten en uv-straling.
+
+Klimaatverandering heeft naar verwachting meerdere gevolgen voor de volksgezondheid. Het gaat dan om directie en indirecte gevolgen van meer hitte, meer droogte, vaker extreem weer en een stijging van de zeespiegel. Gevolgen hiervan zijn bijvoorbeeld hittestress, veranderingen in infectieziekterisico’s, allergieën, en extra druk op de mentale gezondheid. De rijksoverheid en gemeenten werken ter voorbereiding op die verandering samen in de Nationale klimaatadaptatie strategie.
+
+Acties gemeenten • Door klimaatadaptieve maatregelen kan kwetsbaarheid als gevolg van klimaatverandering worden voorkomen. Gemeenten coördineren de inzet van maatregelen in hun gemeente om (kwetsbare) mensen zo goed mogelijk te beschermen tegen hitte, smog en uv-straling. Zij maken daarover afspraken met maatschappelijke partners, zorg­ verzekeraars, bedrijven en inwoners en bereiden de inzet en coördinatie van maatregelen tijdens een hitteperiode voor. Het opstellen van een lokaal hitteplan is daarvoor een geschikt instrument. • Bij besluiten over de inrichting van de fysieke leefomge­ ving worden maatregelen voor de beperking van gezond­ heidsrisico’s tijdens hitteperioden en van bovenmatige blootstelling aan uv-straling meegewogen, zoals de beschikbaarheid van voldoende schaduw, zonwering en aanleggen van meer groen in de stad.
+
+VWS en gemeenten werken samen aan de bescherming van inwoners tegen perioden van hitte en smog én tegen boven­ matige blootstelling aan uv-straling om beter voorbereid te zijn op klimaatverandering. Het gaat hierbij zowel om lange­ termijn- als kortetermijnmaatregelen die zowel betrekking hebben op de bevordering van veranderingen in het fysieke domein als op maatregelen in het sociaal domein.
+
+Nederland zal als gevolg van klimaatverandering steeds vaker te maken krijgen met hittegolven, die naar verwachting ook langer zullen duren en heter zullen zijn. Hittegolven gaan gepaard met een significante toename van zomersmog en van oversterfte en ziekte, die we zoveel mogelijk willen beperken. Bij ziekte en oversterfte gaat het veelal om kwetsbare mensen bij wie andere gezondheidsaandoeningen verergeren tijdens een hitteperiode. Voor een deel kunnen we gebouwen en de leefomgeving in Nederland beter inrichten op hitteperioden, zodat de consequenties minder erg zijn voor inwoners en bezoekers. Daarnaast gaat het om het aanpassen van het gedrag van mensen en het bieden van tijdelijke oplossingen voor de verlichting van hittestress. We spreken wel van de 3G’s: gebouw, gebied en gebruiker. Een voorbeeld hiervan is vergroening in steden door het aanleggen van meer parken of het laten groeien van planten op daken en muren.
+
+Acties VWS • VWS bevordert dat (het voorkomen van) de gezondheidsgevolgen van hitte, allergieën, infectieziekten en bovenmatige blootstelling aan uv-straling en smog een belangrijk deel blijven van de Nationale Adaptatie Strategie en andere relevante beleidsdocumenten voor klimaatadaptatie. • VWS is opdrachtgever van het RIVM voor het voorbereiden en activeren van het Nationaal Hitteplan. Het RIVM doet dat in samenwerking met het KNMI. Via de GGD’en worden gemeenten geïnformeerd over activering van het Nationaal Hitteplan, maar desgewenst kunnen gemeenten ook direct aangesloten worden. Zij ontvangen dan signalering over verwachte hitteperioden en actuele gezondheidskundige informatie over risico’s, risicogroepen en mogelijke maatregelen. • VWS is verantwoordelijk voor de evaluatie van het Nationale Hitteplan en monitoring van gezondheids­ gevolgen van klimaatverandering. Daarnaast bevordert/ financiert VWS onderzoek naar geschikte hittemaatregelen.
+
+GALA – Gezond en Actief Leven Akkoord | 17
+
+## Page 18
+
+VWS wordt opdrachtgever van een meerjarige publieks­ campagne om inwoners te informeren over de risico’s van bovenmatige blootstelling aan uv-straling en adviezen voor gezond zongedrag. VWS doet dat in samenwerking met het Zonkracht Actieplatform (ZAP)10.
+
+3C Versterken van de sociale basis
+
+De sociale basis kan bestaan dankzij de onmisbare inzet van bij de samenleving betrokken inwoners, vrijwilligers en mantelzorgers. Het is nodig de informele zorg te versterken, te ondersteunen en te waarderen. Dit vraagt om erkenning van de mantelzorger en ondersteuning op maat (zoals respijtzorg). In een wijk waar veel sociale samenhang is, is het makkelijker elkaar te ontmoeten en hulp te vragen en te bieden. En waar dit niet het geval is, is actieve ondersteuning noodzakelijk. Aan een mantelzorger, maar ook als vorm van samenlevingsopbouw. Gemeenten en hun partners hebben hierin een sleutelrol om voldoende initiatieven en onder­ steuningsmogelijkheden tot stand te brengen. Als er sprake is van psychosociale klachten (bijvoorbeeld als gevolg van eenzaamheid) waarvoor iemand zich meldt bij de huisarts, kan deze de patiënt doorverwijzen naar een welzijnscoach (‘Welzijn op Recept’). Deze welzijnscoach begeleidt patiënten naar laagdrempelig aanbod in de wijk, waarbij de focus ligt op wat mensen nog kunnen en willen.
+
+Om de gewenste beweging naar de voorkant goed te kunnen maken, is het nodig de sociale basis te versterken. Met meer oog voor de menselijke maat en de nabijheid van ondersteu­ ning en zorg, vanuit de leefwereld of de situatie van de inwo­ ner, gebiedsgericht en domeinoverstijgend. Deze versterking van de sociale basis is des te meer nodig in onzekere tijden waar veel verandert, de sociale samenhang onder druk staat en mensen met financiële zorgen worden geconfronteerd.
+
+In het GALA willen we met name inzetten op de volgende doelen: • verbeteren van de mogelijkheden voor inwoners om elkaar (laagdrempelig) te ontmoeten, zich te ontplooien, te ontspannen en elkaar te helpen. Met het oog op de vergrijzing is er specifieke aandacht voor ouderen. • verbeteren van de mogelijkheden voor laagdrempelige ondersteuningsvormen (zoals zelfregie- of zelfhulp­ groepen) en voorzieningen in de sociale basis (zonder indicatie).
+
+We kiezen voor een brede benadering van de sociale basis. Enerzijds heeft de sociale basis een waarde in zichzelf: het gaat over de gemeenschap en de lokale sociale samenhang in steden, dorpen en wijken. Anderzijds gaat het om een instrumentele benadering: een sterke sociale basis om vanuit preventie, omkijken naar elkaar en lichte ondersteuning het beroep op gespecialiseerde zorg voor een deel overbodig te maken, terug te dringen of te vervangen. Bij kinderen en gezinnen heeft de sociale basis ook een pedagogische functie (it takes a village to raise a child). Dit alles vraagt om intensieve samenwerking tussen het sociale domein, wijkverpleegkun­ dige zorg, huisartsenzorg, jeugdgezondheidszorg en de GGZ.
+
+Beoogd resultaat: Gemeenten faciliteren een sterke lokale sociale basis met een sterke sociale samenhang en laagdrempelige toegankelijke voorzieningen waar mensen op elkaar kunnen terugvallen en meedoen in de samenleving. Dit doen zij met behulp van het opstellen van een beleidsvisie en uitvoeren van maatregelen.
+
+De sociale basis betekent: vrij toegankelijke formele en informele activiteiten en voorzieningen gericht op het elkaar ontmoeten en ondersteunen, ontplooien en ontspannen die zorgen dat mensen kunnen samenleven en meedoen.
+
+Cultuurdeelname (zoals bezoek aan musea of het theater) kan hierin ook van betekenis zijn. Het verbindt mensen met elkaar, vergroot hun veerkracht en draagt bij aan persoonlijke ontwikkeling. De gezondheidseffecten van cultuurdeelname komen steeds meer in de belangstelling te staan sinds de World Health Organisation deze in kaart bracht11. Via het Programma Cultuurparticipatie van het ministerie van OCW wordt cultuurdeelname gestimuleerd voor mensen voor wie dit niet vanzelfsprekend is, waaronder ouderen en mensen met een zorgbehoefte.
+
+10 Partners die deelnemen aan het ZAP zijn: het RIVM, KNMI, het IKNL, het
+
+AMC, het Huidfonds, de NVDV, de Consumentenbond, Stichting Melanoom,
+
+Universiteit Maastricht en KWF
+
+Het versterken van de sociale basis gaat over het omzien naar elkaar in de wijken, buurten en dorpen. Maar ook over het autonoom kunnen leiden van het leven met eigen regie en een netwerk vanuit die basis . Er is meer en betere samen­ werking tussen sociaal domein, wijkverpleegkundige zorg, huisartsenzorg, jeugdgezondheidszorg en GGZ nodig vanuit de sociale basis. De manier waarop dit gebeurt, bijvoorbeeld voor ouderen, is afhankelijk van de lokale situatie. Cultuur­ deelname kan hierin ook van betekenis zijn.
+
+11 What is the evidence on the role of the arts in improving health and well-being?
+
+A scoping review (who.int)
+
+18 | GALA – Gezond en Actief Leven Akkoord
+
+## Page 19
+
+Met de SPUK worden aan gemeenten extra financiële middelen beschikbaar gesteld om het sociaal netwerk en de positie van de mantelzorger verdergaand te versterken. Het doel is om een sterke sociale basis te organiseren waarin mensen omzien naar elkaar en hulpvragen (niet direct zorg gerelateerd) met en voor elkaar oplossen. Ook biedt de SPUK middelen voor een doorverwijzing van de huisarts naar een welzijnscoach. Waar nodig worden mensen naar onder­ steuning in het sociaal domein geleid. Zo wordt passende ondersteuning geboden. In paragraaf 3G, onderdeel II, zijn de randvoorwaarden en criteria en de bestuurlijke afspraken opgenomen voor het succesvol inrichten van deze ketenaan­ pak (Welzijn op recept).
+
+• Gemeenten werken aan het versterken en doorontwikke­ len van hun respijtzorgaanbod om in samenspraak met de mantelzorgers in de periode 2023-2026 het respijt­ zorgaanbod beter aan te laten sluiten op de vraag en behoefte van de mantelzorgers. In het plan van aanpak dat gemeenten in moeten dienen voor de aanvraag van de SPUK wordt dit concreet uitgewerkt. • Gemeenten gaan in regionaal verband via de samenwer­ kingsagenda actief de dialoog aan met zorgverzekeraars en zorgkantoren over een domeinoverstijgend aanbod van zwaardere vormen van respijtzorg om waar passend een aantal pilots te kunnen starten. De resultaten van deze pilots worden benut voor verder beleid. • Gemeenten zetten in op een lokale aanpak eenzaamheid langs de vijf pijlers: bestuurlijk commitment, een sterk netwerk creëren, mensen met gevoelens van eenzaam­ heid zelf betrekken, aan een duurzame aanpak werken en monitoring en evaluatie organiseren.
+
+Uitgangspunten sociale basis • Gemeenten krijgen experimenteerruimte voor lokaal maatwerk. • We gaan uit van vertrouwen en gezamenlijke verant­ woordelijkheid van gemeenten, VWS en zorgverzeke­ raars. We tonen lef en durf om te veranderen, om van elkaar te leren, en maken daarbij gebruik van kans­rijke initiatieven en experimenten. • We streven naar een duurzame aanpak. Dit betekent kijken naar wat (op de lange termijn) werkt. Met de afspraken in het GALA bouwen we verder op wat er al is. • We gaan uit van samenhang vanuit de sociale basis en verbinden relevante thema’s hiermee. Daarmee waken we voor versnippering. • Om te zorgen dat er lokaal een stevige basis van maat­ schappelijk initiatief ontstaat, waardoor mensen met gevoelens van eenzaamheid in alle gemeenten terecht kunnen, committeren VWS en gemeenten zich gezamen­ lijk aan de vijf pijlers van de lokale aanpak eenzaamheid.
+
+Acties gemeenten • Gemeenten versterken nog nadrukkelijker de inzet van de sociale basis en de algemene voorzieningen als passende laagdrempelige maatschappelijke ondersteuning. • Elke gemeente heeft uiterlijk in 2024 een beleidsvisie op de sociale basis, met aandacht voor gebiedsgerichte uit­ voering. Hierin komen in ieder geval de volgende thema’s aan de orde: sociale samenhang of samenlevingsopbouw, mantelzorg, tegengaan van eenzaamheid, inzet en onder­ steuning van vrijwilligerswerk en professionals sociaal domein. Deze thema’s worden binnen de voorwaarden voor toekenning van de middelen verbonden aan de lokale context en de leefomgeving. • Gemeenten gaan in de periode 2023 – 2026 mantel­ zorgers extra ondersteunen bij het uitvoeren van hun zorgtaken. Dit kan bijvoorbeeld door het verbeteren van de toegang tot regelingen en ondersteuningsvormen. Dit kan ook door het versterken van het steunpunt man­ telzorg en het toegankelijker maken van informatie en advies. In het plan van aanpak dat gemeenten in moeten dienen voor de aanvraag van de SPUK wordt dit per gemeente concreet uitgewerkt.
+
+Acties VWS • Het ministerie van VWS faciliteert een brede verkenning naar de waarde van de sociale basis en de aansluiting op de versterking van de lokale beweging naar de ‘voorkant’. Gemeenten, mantelzorgers, vrijwilligers, welzijnswerkers en andere relevante actoren worden actief uitgenodigd om zich hierbij aan te sluiten. • Op basis van de brief ‘mantelzorg en informele zorg’ stelt het ministerie van VWS een uitvoeringsagenda mantelzorg op. Gemeenten, mantelzorgers, vrijwilligers, cliënten en zorgaanbieders worden actief betrokken bij de totstandkoming hiervan. De uitvoeringsagenda is in het eerste kwartaal van 2023 gereed. De afspraken die in deze agenda worden gemaakt gebruiken gemeenten in de vormgeving van het lokale beleid en bij het opstellen van het plan van aanpak voor de SPUK. • Het ministerie van VWS onderzoekt samen met partners of en op welke wijze het mogelijk is de meer complexe respijtvormen op indicatie op te zetten. Beoogd wordt om regionale respijtzorgconsulenten aan te stellen. • Het ministerie van VWS verkent met het ministerie van SZW wat er mogelijk is om de inzetbaarheid op de ar­ beidsmarkt in combinatie met het beroep op mantelzorg toekomstbestendig te maken of te houden. Werkgevers en mantelzorgers worden betrokken bij deze verkenning. • Het ministerie van VWS onderzoekt met het ministerie van OCW wat nodig is om scholen te ondersteunen in de maatschappelijke bewustwording aangaande de inzet van jonge mantelzorgers, het vroegtijdig ‘signaleren’ van jonge mantelzorgers en hen waar nodig hierbij preventief te ondersteunen. • VWS faciliteert op basis van de behoefte de lokale verster­ king van de sociale basis. Bijvoorbeeld met een onder­ steuningsprogramma (gekoppeld aan de eerste actie). • Voor de aanpak eenzaamheid biedt VWS aan gemeenten ondersteuning met adviseurs, een toolkit, inspiratieses­ sies en financiële middelen.
+
+GALA – Gezond en Actief Leven Akkoord | 19
+
+## Page 20
+
+• Wat betreft de cultuurdeelname ondersteunt het Lan­ delijk Kennisinstituut Cultuureducatie en Amateurkunst (LKCA) gemeenten met kennis over effectieve samenwer­ king tussen het cultureel en sociaal domein. Via de SPUK kunnen gemeenten een bijdrage ontvangen voor het inzetten van een buurtsport- en cultuurcoach.
+
+Daarnaast wordt er extra ingezet op het integreren van een gezonde leefstijl als (onderdeel van) de curatieve behan­ deling bij leefstijl-gerelateerde aandoeningen. Dit wordt gedaan door het financieren van een brede leefstijlcoalitie in het veld. Deze leefstijlcoalitie gaat zich o.a. in zetten op onderzoek, richtlijnen, onderwijs, patiënten, bekostiging en implementatie (IZA-afspraak). Ook hierbij wordt ver­ binding met gemeenten gelegd en is er een relatie met de Beweegalliantie.
+
+3D Een gezonde leefstijl
+
+De afspraken uit het Nationaal Preventieakkoord worden onder deze actieagenda voortgezet en waar nodig aange­ scherpt waar het gaat over de rol van gemeenten, VWS, zorgverzekeraars en de onderlinge samenwerking. Veel gemeenten hebben een lokaal preventieakkoord afgesloten met publieke en private partners. Met de afspraken in het GALA kan nadere uitvoering worden gegeven aan enkele specifieke onderwerpen uit het preventieakkoord.
+
+Ongezond gedrag (in een ongezonde leefomgeving) is verantwoordelijk voor bijna 20 procent van de ziektelast. Daarom is het van belang om gezond gedrag en gezonde keuzes te stimuleren vanuit een integrale aanpak.
+
+Met het Nationaal Preventieakkoord gericht op het stoppen met roken, terugdringen van problematisch alcoholgebruik en tegengaan van overgewicht zijn belangrijke ambities gesteld en afspraken gemaakt. In het Regeerakkoord is af­- gesproken dat de doelen van het Nationaal Preventieakkoord leidend blijven, met een focus op de jeugd door sport, voeding en bewegen. De recente cijfers over roken, over­ gewicht, alcoholgebruik, bewegen en mentale gezondheid onder volwassenen en kinderen onderstrepen de urgentie om blijvend in te zetten op de doelen van het Nationaal Preventieakkoord12 en het bevorderen van een integrale aan­ pak van een gezonde leefstijl in een gezonde leefomgeving. Van de Nederlanders van 18 jaar en ouder rookt 20,6%, heeft 50% overgewicht en 14% obesitas, en drinkt 7,3% overmatig alcohol in 202113.
+
+Doelen van het Nationaal Preventieakkoord • Een rookvrije generatie in 2040 waarbij kinderen en zwangere vrouwen niet meer roken en niet meer dan 5% van volwassenen rookt (nu 20%). • 38% van de Nederlanders heeft in 2040 overgewicht ipv de verwachte 62% in 2040 (bedraagt nu 50%). • De Nederlandse bevolking eet en drinkt op een wijze die bijdraagt aan een gezond gewicht en een gezond voedingspatroon, met de Schijf van Vijf als criterium. • 75% van de Nederlandse bevolking voldoet aan de Beweegrichtlijn in 2040. • Een daling van het aantal jongeren dat ooit alcohol heeft gedronken van 45% naar 25%, een daling van het aantal zwangeren dat drinkt van 8,9% naar 4% en een daling van het overmatig en zwaar gebruik van alcohol van 8,9% naar 5%. • 80% van de Nederlanders van 12 jaar en ouder kent de belangrijke (gezondheids)effecten van alcoholgebruik. • 100% naleving van de leeftijdsgrens in 2030 (in 2020: 38%).
+
+Er wordt extra ingezet op bewegen. Meer bewegen in het dagelijks leven en minder zitten levert voor alle lagen van de bevolking, voor alle leeftijden en voor verschillende gezond­ heidsproblemen winst op: zowel voor fysieke problemen (overgewicht, valpreventie) als voor de mentale gezondheid.
+
+Beoogd resultaat: • Voor kinderen en volwassenen met overgewicht of obesitas is passende ondersteuning, begeleiding en zorg toegankelijk. • In 2025 hebben alle gemeenten een netwer­ kaanpak voor kinderen met obesitas. • Er zijn samenwerkingsafspraken tussen gemeenten, zorgverzekeraars en zorgaanbieders gemaakt.
+
+Onder het voorzitterschap van Carl Verheijen is in 2022 de Beweegalliantie gestart. Met de Beweegalliantie kan er meer maatschappelijke aandacht en actie voor bewegen komen. De focus van de Beweegalliantie ligt op betere samenwerking tussen departementen, alliantiepartners en lokale initiatie­ ven en de rol die de leefomgeving, mobiliteit, het werk en de verbinding met de zorgsector hierbij spelen.
+
+12 Gezondheidsenquête 2021, HBSC 2021
+
+Diverse maatregelen uit het Nationaal Preventieakkoord zijn gericht op het voorkómen van overgewicht. Ook is het belangrijk dat de mensen die overgewicht of obesitas hebben
+
+13 Staat voor Volksgezondheid en Zorg
+
+20 | GALA – Gezond en Actief Leven Akkoord
+
+## Page 21
+
+de juiste zorg en ondersteuning krijgen. Een ongezonde leefstijl speelt vaak een rol bij het ontstaan van overge­ wicht, maar er zijn meerdere factoren die afvallen kunnen tegenwerken en het overgewicht daarmee in stand houden. Het kan hierbij gaan om factoren op het (maatschappelijk) sociale vlak, zoals stress en financiële schulden, maar ook medische of biologische factoren. Daarom is voor succesvol overgewichtbeleid een goede verbinding nodig tussen het zorg- en sociaal domein. De gecombineerde leefstijl inter­ ventie voor volwassenen met overgewicht en obesitas (GLI) en het Landelijk model Ketenaanpak voor kinderen met over­ gewicht en obesitas zijn ontwikkeld vanuit dit uitgangspunt.
+
+Acties gemeenten en VWS • Gemeenten en VWS zetten zich in om interventies die bijdragen aan een gezonde omgeving voor kinderen en jongeren landelijk en lokaal te stimuleren. • Er wordt onder meer gewerkt aan een gezonde schoolomgeving, een gezonde sportomgeving, een ge­ zonde buurt en wijk, gezonde vrije tijdsomgeving en een gezonde digitale omgeving. Dit gebeurt via interventies en aanpakken zoals: de JOGG-aanpak, Gezonde School, Gezonde Kinderopvang, Gezonde Buurten, Team:Fit, Gezond UIT. De gemaakte afspraken uit het NPA vormen hiervoor het uitgangspunt. • Voor de uitvoering van de ketenaanpak kinderen met overgewicht en obesitas zijn middelen beschikbaar via de SPUK. De bijbehorende voorwaarden zijn opgenomen in hoofdstuk 3G, onderdeel II.
+
+Aanpak overgewicht en obesitas kinderen Het Zorginstituut Nederland (ZINL) heeft geduid welke onderdelen van de zorg en ondersteuning voor kinderen tot 18 jaar met overgewicht en obesitas onder verzekerde zorg vallen14. Het ZINL heeft zich daarbij o.a. gebaseerd op het Landelijke model Ketenaanpak voor kinderen met overge­ wicht en obesitas. Niet alle onderdelen van het Landelijke model Ketenaanpak voor kinderen met overgewicht en obesitas vallen onder verzekerde zorg. Voor een goed werkende ketenaanpak dient er minimaal aanbod in het sociaal domein te zijn in de volgende catego­ rieën: schuldhulpverlening, opvoedondersteuning, sport- en beweegaanbod, activiteiten op het gebied van gezonde voeding en activiteiten op sociaal-emotionele ontwikkeling. Het beschikbaar stellen van dit aanbod valt grotendeels onder de verantwoordelijkheid van gemeenten. De uitdaging bij het implementeren van een ketenaanpak voor kinderen met overgewicht en obesitas zit vooral in het samenbrengen van alle onderdelen tot een werkende ketenaanpak. Er kan hiervoor gebruik gemaakt worden van de ervaringen die opgedaan zijn bij de diverse experimenten in het land (Limburg, Amsterdam, Arnhem).
+
+Gecombineerde leefstijlinterventie (GLI) – programma’s Volwassenen met overgewicht en obesitas kunnen gebruik maken van een GLI. Een GLI-programma is een leefstijl­ programma voor mensen met overgewicht zoals vergoed onder de Zvw. Regelmatig bewegen is belangrijk voor een effectieve aanpak. De gemeente kan een rol spelen bij het aanbieden danwel toeleiden naar dit beweegaanbod. Een persoon met overgewicht/obesitas kan echter ook andere problemen hebben die eerst of parallel moeten wor­ den geadresseerd, zoals schulden of eenzaamheid. Een goede aansluiting vanuit het brede gemeentelijk domein op het aanbod van de GLI-programma’s is daarom belangrijk. Acties gemeenten en VWS • De Rijksoverheid financiert het Centrum Gezond Leven van het RIVM. Gemeenten kunnen hier terecht voor kennis en ondersteuning over GLI-programma’s. • Voor de inbedding van GLI-programma’s voor volwassenen zijn middelen beschikbaar via de SPUK. De bijbehorende voorwaarden zijn opgenomen in paragraaf 3G, onderdeel II.
+
+Voorkomen en vroegsignalering van middelengebruik (roken, alcohol en drugs)
+
+Beoogd resultaat: • Er wordt actief ingezet op het voorkomen van het gebruik van alcohol, tabak en drugs door jongeren. • Er is netwerksamenwerking voor vroegsignalering alcoholproblematiek.
+
+In actieagenda 3G, onderdeel II, zijn de randvoorwaarden, criteria en bestuurlijke afspraken opgenomen voor het suc­ cesvol inrichten van deze ketenaanpakken. Deze afspraken sluiten aan bij de afspraken in het IZA. Wat betreft de keten­ aanpak overgewicht en obesitas bij kinderen staat in het IZA opgenomen dat zorgverzekeraars en gemeenten uiterlijk op 1 januari 2024 in elke regio starten met het toegankelijk maken van de ketenaanpak in meerdere gemeenten. In het Nationaal Preventieakkoord is afgesproken dat uiterlijk 2030 alle gemeenten een ketenaanpak hebben staan. Met de afspraken in dit akkoord en de beschikbare middelen voor gemeenten om werk te maken van deze ketenaanpak, is de verwachting dat de ambitie uit het Nationaal Preventie­ akkoord eerder behaald kan worden.
+
+14 Ketenaanpak+zorg+en+ondersteuning+voor+kinderen+met+over­
+
+Er wordt gewerkt aan de volgende doelen: - effectieve lokale drugspreventie - voorkomen van middelengebruik onder jongeren - leeftijdsgrens op alcohol - vroegsignalering alcoholproblematiek - terugdringen van roken
+
+gewicht+en+obesitas (5).pdf
+
+GALA – Gezond en Actief Leven Akkoord | 21
+
+## Page 22
+
+Dat wordt gedaan aan de hand van hieronder beschreven maatregelen.
+
+de verslavingszorg, stellen een projectleider aan voor het projectmanagement, voeren de tweejaarlijkse jeugdge­ zondheidsmonitor uit en zetten effectieve interventies in om de gestelde doelen te bereiken.
+
+Acties VWS • VWS subsidieert het Trimbos instituut voor het delen en verzamelen van kennis over OKO. • VWS stelt met de SPUK financiële middelen beschikbaar aan gemeenten. Deze middelen mogen ingezet worden voor:
+
+Effectieve lokale drugspreventie Het verschil in de populariteit van bepaalde drugs tussen ver­ schillende gemeenten is groot. Gemeenten kunnen dan ook veel doen om gericht op lokaal niveau drugsgebruik tegen te gaan. Daarnaast is de verantwoordelijkheid voor het preven­ tie-onderwijs op scholen lokaal belegd. Gemeenten kunnen een belangrijke rol spelen in het zorgen voor wetenschappe­ lijk bewezen effectieve drugspreventie op lokale scholen.
+
+Acties gemeenten • Wanneer de lokale situatie daarom vraagt zetten ge­ meenten een netwerksamenwerking op met relevante partijen om een drugspreventiebeleid op te stellen, waaronder in elk geval de GGD en de verslavingszorg.
+
+− het aanstellen van een projectleider voor het project­ management (planning, coördinatie en budgettering) voor het opzetten en uitvoeren van het programma Opgroeien in een Kansrijke Omgeving en/of het programma Vroegsignalering Alcoholproblematiek; − monitoring van de lokale uitvoering en bijdrage van informatie aan landelijke monitor; − het uitvoeren van interventies, waarbij zoveel mogelijk gebruik gemaakt wordt van interventies uit de data­bank van het Centrum Gezond Leven van het RIVM.
+
+Acties VWS • VWS subsidieert het Trimbos-instituut om kennis op het gebied van lokale drugspreventie te creëren en samen te brengen met als overkoepelend resultaat het Modelplan Lokaal Drugsbeleid. Gemeenten kunnen hiervan gebruik maken.
+
+Voorkomen van middelengebruik onder jongeren Vroeg beginnen met preventie is noodzakelijk zo blijkt uit de cijfers over de leefstijl en gezondheid van jongeren. Zo zijn er nog steeds veel jongeren die op jonge leeftijd beginnen met alcohol drinken, drugs gebruiken of roken.
+
+Leeftijdsgrens op verkoop van alcohol Met de leeftijdsgrens van 18 jaar voor de verkoop van alcohol heeft het Rijk in 2014 een belangrijke norm gesteld voor het gebruik van deze middelen. Een leeftijdsgrens is, samen met andere preventieve activiteiten, een essentieel sluitstuk bij het voorkomen van middelengebruik. Gemeenten zijn verant­ woordelijk voor het toezicht en de handhaving van de leef­ tijdsgrens op alcohol door verstrekkers. Met de Alcoholwet is er ook een verbod op wederverstrekking geïntroduceerd. Ook hebben gemeenten een aantal nieuwe bevoegdheden gekregen, onder meer om overlast gebieden aan te wijzen.
+
+Recente cijfers over naleving laten zien dat jongeren nog steeds gemakkelijk aan alcohol kunnen komen. Om effectief toezicht op en naleving van de leeftijdsgrens te stimuleren zijn de afgelopen jaren diverse instrumenten ontwikkeld, zoals een handreiking en een blauwdruk voor een Preventie en Handhavingsplan voor gemeenten en pilots uitgevoerd. Komende jaren moet deze inzet tot meer resultaat leiden, conform de afspraken uit het Nationaal Preventieakkoord.
+
+Acties VWS • VWS laat onderzoek doen naar het toezicht en de handhaving bij gemeenten. • VWS zorgt voor de verdere verspreiding van instrumen­ ten ter ondersteuning van het toezicht en de handhaving. • VWS blijft onderzoek doen naar de naleving van de leeftijdsgrens.
+
+Met de aanpak Opgroeien in een Kansrijke Omgeving (OKO) kunnen gemeenten op een effectieve manier het gebruik van alcohol, tabak en drugs door jongeren voorkomen en het welbevinden van jongeren verbeteren. Dit kan ook leiden tot minder schoolverzuim en minder druk op de jeugdge­ zondheidszorg en de jeugdzorg. Met OKO werkt iedereen in de gemeente samen aan het vormen van de positieve leefomgeving voor jongeren: thuis (gezin), op school, in de vriendenkring (peergroep) en in de vrije tijd. In elk van deze vier leefomgevingen versterken samenwerkingspartijen de beschermende factoren, pakken ze de risicofactoren aan en bouwen aan een gemeenschap rond de opgroeiende jongeren. Samen doorlopen zij iedere twee jaar de aanpak van OKO; van monitoring naar dialoog, beleidsvorming en uitvoering, met als doel op de lange termijn een gezonde en gelukkige generatie op te laten groeien. Door de data­ gestuurde werkwijze kan het programma regelmatig bijge­ stuurd worden. OKO is een Nederlandse aanpak gebaseerd op het succesvolle IJslandse preventiemodel. In IJsland is het gelukt om in twintig jaar tijd een enorme afname in het middelengebruik onder jongeren te realiseren.
+
+Acties gemeenten • Gemeenten zijn zich bewust van het belang van toezicht op en naleving van de leeftijdsgrens en spannen zich in voor een zo goed mogelijke uitvoering van de beginsel­ plicht tot handhaving en het optimaliseren van het bereik van de handhaving;
+
+Acties gemeenten • Gemeenten zetten een samenwerkingsverband op met relevante stakeholders waaronder in elk geval de GGD en
+
+22 | GALA – Gezond en Actief Leven Akkoord
+
+## Page 23
+
+• Gemeenten kunnen hierbij gebruik maken van de ont­ wikkelde kennis en expertise van het Trimbos-instituut. Bovendien kunnen gemeenten de bestaande onderlinge samenwerkingsvormen bestendigen en eventueel uit­ breiden.
+
+Acties VWS • VWS stelt aan GGD GHOR en Pharos tijdelijk middelen beschikbaar via een subsidie voor een rokenaanpak in achterstandswijken tot en met 2025. VWS stelt sinds 2019 middelen beschikbaar via subsidies ter ondersteuning van gemeenten bij het realiseren van rookvrije omgevingen.
+
+Acties zorgverzekeraars • Zorgverzekeraars zorgen in hun inkoop ervoor dat stop­ pen met roken zorg laagdrempelig beschikbaar is en sluit aan, daar waar implementatie bij zorgverleners nodig is, met hun contractering.
+
+Sport en beweegparticipatie
+
+Vroegsignalering alcoholproblematiek Er wordt preventief veel bereikt door mensen met een (beginnend) alcoholprobleem tijdig te herkennen en snel effectieve hulp te bieden. Zo kan (ernstig) problematisch alcoholgebruik voorkomen worden. Het Samenwerkings­ verband Vroegsignalering Alcoholproblematiek (SVA) heeft hiervoor verschillende laagdrempelige tools ontwikkeld die mensen uit verschillende doelgroepen (zoals jongeren, ouderen, zwangere vrouwen) kunnen helpen bij het signa­ leren en erkennen van problemen met hun alcoholgebruik. Met dit programma wordt een lokaal samenwerkingsverband opgezet en het gebruik van effectieve interventies voor vroeg­signalering gestimuleerd. Door het betrekken van professionals, vrijwilligers en naasten kan het makkelijker worden om problemen adequaat te signaleren, hulp te bie­ den of door te verwijzen naar de juiste hulp. Op deze manier kan voorkomen worden dat mensen uitvallen, ziek worden en niet meer mee kunnen doen in de maatschappij.
+
+Beoogd resultaat: • Gemeenten zetten lokaal extra in op de verbinding tussen sport & bewegen, cultuur, gezondheid & preventie en de sociale basis. • Zo veel mogelijk Nederlanders bereiken met het sport- en beweegaanbod, met als doel sporten en bewegen een vanzelfsprekend onderdeel uit te laten maken van het leven van iedere Nederlander.
+
+Acties gemeenten • Gemeenten zetten een netwerksamenwerking op met relevante partijen om een aanpak voor vroegsignalering uit te voeren, waaronder in elk geval de GGD en de verslavingszorg. Daarvoor wijst de gemeente een projectleider aan, voert monitoringsactiviteiten uit en maakt een plan van aanpak met partners.
+
+Het Rijksbeleid richt zich steeds meer op de verbinding tussen sport& bewegen, cultuur, gezondheid & preventie en de sociale basis. Sport, bewegen en cultuur is goed voor de fysieke en mentale gezondheid, stimuleert ontmoetingen tussen mensen en is ook nog leuk om te doen. Sport en bewegen is altijd een autonome taak van gemeenten geweest.
+
+Acties VWS • VWS stelt financiële middelen beschikbaar aan gemeen­ ten voor de uitvoering van bovengenoemde afspraken met de Regeling SPUK. • VWS subsidieert Trimbos om de kennis op het gebeid van alcoholpreventie etc. op peil te houden. Gemeenten kunnen hiervan gebruik maken.
+
+Sportparticipatie en cultuur Om het beoogde resultaat te realiseren is het van belang ook lokaal integraler te kunnen werken. De buurtsport- en cultuur­coaches werken al jaren op het snijvlak van sport, bewegen en andere domeinen (zorg, onderwijs, welzijn en cultuur). Cultuurdeelname verbindt mensen met elkaar, vergroot hun veerkracht en draagt bij aan persoonlijke ontwikkeling. Het Nationaal Sportakkoord en de lokale sportakkoorden hebben gestimuleerd dat er lokaal samen­ gewerkt wordt tussen verschillende domeinen en lokale partners. Het Nationaal Sportakkoord II maakt naast het GALA specifieke en aanvullende afspraken voor het bereiken van de ambities uit dat akkoord.
+
+Bewegen Op dit moment beweegt meer dan de helft van de Nederlan­ ders te weinig. Om bij te dragen aan een gezonde samen­ leving streven we er naar dat sporten en bewegen in 2040 een vanzelfsprekend onderdeel is van het leven van iedere Nederlander. Sport en bewegen is tegelijkertijd ook belang­ rijk in het bereiken van andere maatschappelijke doelen.
+
+Terugdringen van roken Om het doel van een rookvrije generatie te halen is het belang­ rijk dat extra ingezet wordt op het terugdringen van roken. Acties gemeenten • Gemeenten nemen de rookvrije generatie met concrete doelen en activiteiten op in een lokaal preventieakkoord of hun eigen Nota Gezondheidsbeleid. Gemeenten kunnen bijvoorbeeld het invoeren van rookvrije omge­ vingen stimuleren, het op wijkniveau stoppen met roken ondersteunen en maatschappelijke organisaties zoals kinderboerderijen, beheerde speeltuinen, speelplekken, zwembaden, scoutinggroepen en sportverenigingen stimuleren om rookvrij beleid te voeren. Het Nationaal Preventieakkoord is hierbij een belangrijke leidraad.
+
+GALA – Gezond en Actief Leven Akkoord | 23
+
+## Page 24
+
+Zoals de bijdrage die het kan leveren bij het tegengaan van kansenongelijkheid en eenzaamheid, de mentale gezond­ heid, valpreventie, stoppen met roken en overgewicht. Om bewegen in het dagelijks leven verder te stimuleren, is VWS – onder de vlag van het Preventieakkoord - de Beweegalliantie gestart. In de alliantie gaat VWS met andere departementen en maatschappelijke organisaties aan de slag met het formuleren van ambities en doelstellingen en het maken van afspraken over acties en initiatieven die bijdragen aan de doelstelling dat in 2040 75% van de Nederlanders aan de beweegrichtlijnen voldoet. Uitwisseling van kennis en samenwerking tussen verschillende alliantiepartners is hierbij van groot belang. Naast landelijke acties en initiatieven moet de echte slag op lokaal niveau worden gemaakt. Een aantal gemeenten participeert ook al in de alliantie.
+
+Acties VWS • VWS stelt financiële middelen beschikbaar aan gemeen­ ten voor de uitvoering van de afspraken zoals verwoord in het Sportakkoord II met de Regeling SPUK. • VWS stelt extra middelen beschikbaar voor de Brede Regeling Combinatiefuncties. Hiermee worden ook middelen beschikbaar gesteld voor de inzet van een Sport-Preventie coördinator die de verbinding kan leggen tussen Sportakkoord II, GALA en eventuele andere rijksprogramma’s zoals School en Omgeving, Maatschappelijke Diensttijd en Leefbaarheid en Veiligheid. • Met de recent gestarte Beweegalliantie werkt VWS samen met andere departementen en maatschappelijke organisaties aan afspraken over acties en interventies die gaan bijdragen de doelstelling dat 75% van de Nederlan­ ders in 2040 aan de beweegrichtlijnen voldoet. • VWS subsidieert Vereniging Sport en Gemeenten en Kenniscentrum Sport en Bewegen om de kennis op het gebied van sport en bewegen op peil te houden. Gemeenten kunnen hiervan gebruik maken.
+
+3E Het versterken van de mentale weerbaarheid en mentale gezondheid
+
+Mentale gezondheid en weerbaarheid zijn belangrijke voor­waarden om gezond te leven en gezond op te groeien. Er bestaan al langer zorgen over de mentale gezondheid van de Nederlandse bevolking; zo noemt de Volksgezondheidstoe­ komstverkenning 2020 dit een van de grootste gezondheids­ risico’s voor de toekomst15. Mensen met een goede mentale gezondheid hebben een 15 tot 20 jaar langere levensverwach­ ting dan mensen met een slechte mentale gezondheid, onder meer omdat mensen met een goede mentale gezondheid sneller herstellen van lichamelijke ziekten. Daarmee is er een intrinsieke, maatschappelijk en economische waarde ontstaan om in te zetten op mentale gezondheidsbevordering. De rijksoverheid zet zich onder meer via de aanpak ‘Mentale gezondheid: van ons allemaal’ samen met gemeenten, de doelgroep en stakeholders in voor een mentaal gezond Nederland. Daarbij is met name aandacht voor jongeren en jongvolwassenen, werkenden en inwoners in een kwetsbare sociaaleconomische positie. Het streven is om de mentale
+
+Acties gemeenten We verwachten dat gemeenten bij de uitwerking van hun beleidsplannen over preventieve gezondheid op lokaal niveau ook nadrukkelijk inzetten op het stimuleren van bewegen en het wegnemen van obstakels. Het gaat hierbij om: • de verschillende coördinatoren voor het Sportakkoord II, GALA, IZA en lokale preventie akkoorden en andere programma’s in verbinding met elkaar brengen, waar mogelijk in een vast kernteam. • het maken van de verbinding tussen sport, cultuur & be­ wegen, gezondheid & preventie en sociale basis binnen de soms daartoe al bestaande samenwerkingsverbanden (zoals bij de aanpak van de mentale gezondheid, één tegen eenzaamheid, leefomgeving, valpreventie, stoppen met roken, overgewicht en lokale preventie akkoorden) en hierbij aandacht hebben voor de aansluiting van be­ weegpartijen bij de relevante samenwerkingsverbanden en het wegnemen van eventuele obstakels om meer te gaan bewegen. • een laagdrempelig ondersteuningsaanbod om meer te bewegen in het dagelijks leven en hierbij de functionaris­ sen vanuit de Brede Regeling Combinatiefuncties (zoals de buurtsport- en cultuurcoaches) te benutten die het sport-, beweeg- en cultuuraanbod versterken en mensen naar aanbod toe te leiden. • bij de inrichting van de fysieke leefomgeving ook reke­ ning houden met voldoende mogelijkheden tot laag­ drempelig en dichtbij bewegen in de buurt. • zorgen voor een vindbaar aanbod van beweegprogramma’s voor diverse doelgroepen. • bijdrage aan het verder ontwikkelen van beweeg­ programma’s en (kansrijke) interventies door ervaringen met de implementatie terug te koppelen aan de interven­ tie eigenaar of de GGD. • aansluiten bij (initiatieven en acties van) de Beweeg­ alliantie om gezamenlijk een bijdrage te leveren aan het in beweging brengen van meer Nederlanders. De Beweeg­alliantie verbindt het veld, jaagt initiatieven aan en haalt obstakels weg.
+
+15 Home | Volksgezondheid Toekomst Verkenning
+
+24 | GALA – Gezond en Actief Leven Akkoord
+
+## Page 25
+
+gezondheid bij mensen te versterken, ervoor zorgen dat iedereen mee kan blijven doen en de maatschappelijke kosten en sociale impact van mentale gezondheidsklachten te verminderen. Samen met de doelgroep zelf en de partners uit het veld – waaronder gemeenten – gaat VWS de drie doelen van de aanpak mentale gezondheid die ook onderdeel zijn van het GALA de komende periode verder uitwerken en concretiseren. Dit vanuit het perspectief dat de doelen op lokaal niveau uitgevoerd moeten worden. Beoogd resultaat hiervan zijn handvatten waarmee inwoners van Nederland aan de slag kunnen met hun mentale gezondheid en oog kunnen hebben voor de mentale gezondheid van anderen. In dit akkoord stimuleren we gemeenten om het beleid voor mentale gezondheidsbevordering samen met hun partners en inwoners verder uit te werken. Het inzetten van erkende en/ of kansrijke interventies passend bij de leefomgeving en de lokale situatie staan daarbij centraal.
+
+Beoogd resultaat:
+
+gebruikt in de landelijke aanpak, is leidend voor de invul­ ling en uitwerking van het lokale beleid16. Daarbij worden er kansrijke interventies ingezet, gebaseerd op de facts­ heet van het RIVM, Trimbos-instituut en GGD GHOR NL17. • Gemeenten zetten in op het versterken van de mentale gezondheid van hun inwoners en het bieden van laagdrempelige ondersteuning waar gewenst. Gemeenten besteden bij de uitwerking van hun beleidsplannen aandacht aan het perspectief van mentale gezondheid en maken de verbinding vanuit andere (bestaande) gezondheidsprogramma’s met mentale gezondheid (mental health in all policies). Er wordt gewerkt vanuit de levensloopbenadering (zoals de in de landelijke aanpak opgenomen leefomgevingen school, buurt, werk en online). • Gemeenten dragen zorg voor een goed sluitende (en laagdrempelige) ondersteuning afgestemd op de behoefte van de eigen inwoners. In het bijzonder wordt gekeken naar de groepen jongeren (12-27 jaar) en mensen in een kwetsbare positie (waaronder kwetsbare ouderen en inwoners met een lage sociaal-economische status). • Gemeenten zetten in op samenwerkingsverbanden met goede samenwerkingsafspraken over domeinen heen. Dit kan bijvoorbeeld via de bestaande lokale preventieakkoorden. De samenwerking is mede publiekprivaat ingericht. • Gemeenten dragen bij aan het verbeteren van de samenwerking tussen het sociaal domein, de huisartsenzorg en de GGZ door het versterken van de sociale basis en het mee helpen inrichten van mentale gezondheidscentra in de regio (conform afspraken in het Integraal Zorgakkoord).
+
+Gemeenten integreren mentale gezondheid in hun bredere aanpak gezondheid/preventie, waardoor: • het voor alle inwoners van Nederland gebrui­ kelijker is om te praten over hun mentale gezondheid. Onder meer door cultuur; • alle inwoners van Nederland beter weten waar ze binnen hun gemeenten laagdrempelige onder­ steuning kunnen vinden; • alle inwoners van Nederland weten welke handvatten er zijn om met hun mentale gezondheid aan de slag te gaan.
+
+Acties VWS • VWS faciliteert en ondersteunt gemeenten vanuit de landelijke aanpak ‘Mentale gezondheid: van ons alle­ maal’. Vanuit deze aanpak stimuleert VWS gemeenten om onder meer:
+
+De integrale en lokale inzet door gemeenten op het thema mentale gezondheid is relatief nieuw. Veel gemeenten hebben dit thema mede vanwege de urgentie toegevoegd aan het lokaal preventieakkoord. Uit het onderzoek van het Trimbos-instituut, het RIVM en de GGD GHOR Nederland naar erkende interventies blijkt dat de structuur die voor preventie lokaal is opgebouwd, kan dienen als basis voor de inzet op mentale gezondheid. Denk bijvoorbeeld aan het meenemen van mentale gezondheid als thema binnen de Gezonde School-aanpak. Daarom geven we een impuls aan wat er bijvoorbeeld via de lokale preventieakkoorden al is neergezet.
+
+− in te zetten op beweegactiviteiten, cultuur en andere gezonde activiteiten in de buurt gericht op ontmoe­ ting en zingeving; − aan de slag te gaan om sporten en bewegen voor ouderen te combineren en zo eenzaamheid tegen te gaan (i.s.m. programma Eén tegen Eenzaamheid); − in te zetten op het versterken van de sociale en pedagogische basis ter ondersteuning van de mentale gezondheid van jonge mensen. • Vanuit het Meerjarenprogramma depressiepreventie worden ketenaanpakken ontwikkeld voor de risico­ groepen mantelzorgers, chronisch zieken en patiënten in de huisartsenpraktijk waar ook gemeenten op in kunnen zetten.
+
+16 ‘Mentale gezondheid’ in kaart gebracht - Trimbos-instituut
+
+17 www.trimbos.nl/aanbod/webwinkel/af1995-effectieve-interventies-en-beleid-
+
+Acties gemeenten • Gemeenten ontwikkelen beleid op het gebied van menta­ le gezondheid binnen hun lokale gezondheidsbeleid door gebruik te maken van kansrijke en/of effectieve interven­ ties voor mentale gezondheidsbevordering. Daarnaast sluiten ze aan bij de landelijke aanpak ‘Mentale Gezond­ heid: van ons allemaal’. Het begrippenkader mentale gezondheid van het Trimbos-instituut en RIVM, zoals ook
+
+mentale-gezondheid-en-preventie
+
+GALA – Gezond en Actief Leven Akkoord | 25
+
+## Page 26
+
+te helpen, moeten we de ondersteuning en zorg anders gaan organiseren. Daarbij is het belangrijk om in het bijzonder aan­ dacht te hebben voor ouderen met een migratieachtergrond en ouderen met een lage sociaaleconomische status. Ook is het belangrijk om ons richten op wat ouderen willen, zodat de kwaliteit van leven van alle ouderen geborgd is. Tot het eind.
+
+• VWS stelt financiële middelen beschikbaar aan gemeen­ ten voor de uitvoering van bovengenoemde afspraken met de Regeling SPUK. Voor wat betreft de laatstge­ noemde actie van gemeenten, wordt verwezen naar de financiële afspraken die zijn gemaakt binnen het IZA. • VWS stelt kennis beschikbaar aan gemeenten ter onder­ steuning van het lokale beleid.
+
+Acties zorgverzekeraars • In het IZA zijn integrale afspraken gemaakt om de toe­ gankelijkheid, betaalbaarheid en kwaliteit van de zorg te verbeteren. Ook zijn enkele specifieke afspraken gemaakt om de samenwerking tussen het sociaal domein, de huisartsenzorg en de GGZ te verbeteren. Onder andere door het versterken van de sociale basis en het opzetten van mentale gezondheidscentra waar, in samenwerking met gemeenten en vertegenwoordigers van het sociaal domein, verkennende gesprekken worden gevoerd op verwijzing van de huisarts. Deze afspraken worden de komende maanden verder uitgewerkt met zorgverzeke­ raars, zorgaanbieders, VNG, gemeenten en patiënten­ organisaties.
+
+Samen Vitaal Ouder Worden is de eerste actielijn en belang­ rijke pijler van het WOZO programma. Binnen deze actielijn wordt ten eerste ingezet op het versterken van de eigen regie van ouderen, omzien naar elkaar en passende ondersteuning als dat nodig is. Ten tweede wordt ingezet op een commu­ nicatieaanpak om mensen te stimuleren dat ze zich tijdig voorbereiden op ouder worden en op kennisontwikkeling over reablement. Ten derde wordt ingezet op een stimuleringsre­ geling gericht op het samen wonen tussen jong en oud. Als laatste wordt binnen deze actielijn ingezet op de versterking van vrijwillige inzet middels een vervolg van het programma ’Samen Ouder Worden’. Het WOZO-programma zet een brede maatschappelijke beweging in gang die een omslag wil maken in de organisatie van ondersteuning en zorg en zich daarnaast aanpast op de veranderde voorkeuren van ouderen en daar­ mee de financiële en personele houdbaarheid bevordert. In de Nationale Dementiestrategie is vitaliteit en het langer meedoen van mensen met dementie een belangrijk speerpunt. Dit valt onder het thema ‘Mensen met dementie tellen mee’. Hierbij wordt ingezet op het versterken van het aanbod van zinvolle dagactiviteiten. Daarbij draagt een gezonde leefstijl bij aan het verkleinen van de kans op dementie.
+
+3F Vitaal ouder worden
+
+De afspraken die in het kader van GALA worden gemaakt, richten zich op preventie en vullen vanuit die invalshoek de afspraken uit het WOZO-programma en de Nationale Dementiestrategie aan. Ook de acties onder onderdeel c van de actieagenda ‘Het versterken van de sociale basis’ dragen in belangrijke mate aan bij de doelstelling: vitaal ouder worden.
+
+Iedereen wil oud worden, maar niemand wil oud zijn. Een op de vijf Nederlanders is nu boven de 65 jaar. Dat gaat in 2040 naar één op de vier Nederlanders. Bovendien leven we langer en hebben we soms te maken met een combinatie van chroni­ sche ziekten. Het is een groot goed dat ook ouderen met een combinatie van chronische aandoeningen een goede kwaliteit van leven kunnen behouden. Tegelijkertijd neemt de zorgvraag extra toe.
+
+Versterken uitvoering artikel 5a ‘Ouderengezondheidszorg’ Wet Publieke Gezondheid
+
+Beoogd resultaat: Versterkte uitvoeringspraktijk van artikel 5a van de Wet PG, wat bijdraagt aan het preventiebeleid rond het verminderen van kwetsbaarheid bij ouderen.
+
+Vanwege het groeiend aantal ouderen met een zorgvraag, staat de zorg onder druk op verschillende plekken: de Wmo voor gemeenten; de eerste lijn en medisch specialistische zorg; en de verpleeg(huis)zorg. De mogelijkheden om aan de toe­ nemende vraag te voldoen nemen juist af (door bijvoorbeeld kostenstijging en vergrijzing van de beroepsbevolking).
+
+Belangrijk is dat mensen ook bij het vorderen van de leeftijd zo lang mogelijk vitaal blijven. Vitaal ouder worden gaat over lichamelijke vitaliteit, waar voldoende bewegen en goede voeding aan bijdragen. Maar ook over vitaal blijven op sociaal en mentaal gebied, met een sociaal netwerk waar je deel van uitmaakt en door activiteiten te ondernemen waardoor je je zinvol voelt. Het gaat erom dat mensen, samen met hun naas­ ten, in regie blijven over hun eigen leven. Om bij die eigen regie
+
+Artikel 5a van de Wpg geeft gemeenten opdracht om zorg te dragen voor de uitvoering van de ouderengezondheidszorg. Met het oog op de vergrijzing wordt het steeds belangrijker hoe hier invulling aan gegeven wordt. Daarbij is het zinvol om goed werkende praktijkvoorbeelden in kaart te bren­ gen en deze onder gemeenten te verspreiden. Gemeenten hebben onder andere de taak om de gezondheidstoestand
+
+26 | GALA – Gezond en Actief Leven Akkoord
+
+## Page 27
+
+van ouderen op systematische wijze te volgen, ontwikkelin­ gen te signaleren en de behoefte aan zorg te ramen. Dit zou logischerwijs onderdeel van het regiobeeld kunnen zijn (zie ook paragraaf 3G). Ook is de lokale verbinding tussen de uitvoering van artikel 5a en preventieactiviteiten in het kader van de Wmo en Zvw van belang.
+
+Het is belangrijk dat alle professionals in het sociaal domein en het zorgdomein aandacht hebben voor een gezond voedingspatroon en specifiek het verminderen van onder­ voeding. Informatie over een gezond voedingspatroon en voedingsadviezen zijn te vinden via: https://www.voedings­ centrum.nl/nl/pers/factsheets.aspx
+
+Acties VWS en gemeenten • VWS en gemeenten brengen praktijkvoorbeelden van de wijze waarop artikel 5a van de Wpg wordt ingevuld in kaart en dragen zorg voor de verspreiding van goede voorbeelden.
+
+Gezond voedingspatroon bij ouderen
+
+Beoogd resultaat: Ondervoeding bij ouderen wordt vroegtijdiger gesignaleerd door zorgprofessionals en professionals in het sociaal domein.
+
+Acties gemeenten • Gemeenten dragen bij aan de agendering van gezonde voeding en ondervoeding bij ouderen door hier aandacht voor te hebben in de lokale nota gezondheidsbeleid of in het lokale preventieakkoord. Gemeenten kunnen het the­ ma ondervoeding ook agenderen in regionale overleggen over (kwetsbare) ouderen waar zij bij aansluiten. • Om te stimuleren dat toegangsmedewerkers in het sociaal domein aandacht besteden aan een gezond voedingspatroon en het signaleren van ondervoeding bij ouderen, kunnen gemeenten bijvoorbeeld in de afspraken met aanbieders in het sociaal domein aandacht vragen voor dit thema. • Gemeenten kunnen bijdragen aan de bewustwording bij ouderen en hun mantelzorgers op dit thema door bijvoorbeeld de inzet van de interventie ‘Goed gevoed ouder worden’ en het organiseren van buurttafels waar gezamenlijk gegeten wordt of informatiebijeenkomsten op dit thema.
+
+Voor ouderen18 is gezonde voeding een belangrijke motor om vitaal te blijven. Ondervoeding speelt, naast overgewicht, een belangrijke rol in een afnemende zelfstandigheid. Bij 7-12% van de ouderen die zelfstandig thuis wonen is er sprake van ondervoeding, bij ouderen die gebruik maken van thuiszorg loopt dit percentage op tot 30-40 procent19. Vaak wordt dit niet tijdig gesignaleerd. In onderstaand figuur is een aantal gevolgen van ondervoeding in beeld gebracht.
+
+Acties zorgverzekeraars en zorgkantoren • In de zorginkoop van wijkverpleging kunnen zorgverze­ keraars ruimte geven aan verpleegkundigen om aan­ dacht te geven aan een gezond voedingspatroon en om ondervoeding bij ouderen te signaleren. In de zorginkoop kunnen zorgverzekeraars van de Regionale Ondersteu­ ningsstructuren (ROS’sen) vragen om kennisdeling over dit onderwerp in de eerste lijn te stimuleren. • Om de samenwerking rond gezonde voeding te verster­ ken, kunnen zorgverzekeraars het thema ondervoeding agenderen in de regionale overleggen over (kwetsbare) ouderen waar zij bij aansluiten.
+
+Acties VWS • VWS draagt via een borgingsopdracht aan het Kenniscentrum Ondervoeding tot einde 2023 bij aan het structureel borgen van een landelijke kennisfunctie rond ondervoeding. • In de borgingsopdracht wordt gezorgd voor de ontwikkeling van kennis over effectieve regionale samenwerking in de aanpak van ondervoeding over de domeinen heen.
+
+Bewegen door ouderen
+
+18 Onder ouderen verstaan we in deze paragraaf 70-plussers.
+
+Beoogd resultaat: Er is aandacht voor de specifieke behoeften van ouderen rond bewegen en dit wordt ondersteund met een passend beweegaanbod.
+
+19 Bron: Voedingscentrum (2022), Factsheet Ouderen en voeding.pdf
+
+(voedingscentrum.nl)
+
+GALA – Gezond en Actief Leven Akkoord | 27
+
+## Page 28
+
+Voor ouderen is bewegen net als voor iedereen een belang­ rijk onderdeel van een gezonde levensstijl. Sporten en bewegen is een manier om contacten op te doen, eenzaam­ heid tegen te gaan, een leuke dag te hebben en het helpt om vitaal en mentaal gezond te blijven. Bewegen en sporten dragen bij aan een verminderd beroep op de zorg. Het kan bijdragen aan het voorkomen van een verhoogd valrisico en kan tevens bijdragen aan het verkleinen van de kans op dementie. Juist de groep kwetsbare ouderen, met chroni­ sche aandoeningen en ouderdomsmotoriek, heeft behoefte aan sport- en beweegaanbod afgestemd op hun kunnen. Gemeenten kunnen hier via de buurtsport en -cultuurcoaches en een passend beweegaanbod aan bijdragen.
+
+1,1 miljard euro. Bij gelijkblijvend beleid nemen binnen 10 jaar (2030) de SEH-opnamen van ouderen met een val met 50% toe en verdubbelen de directe medische kosten (2,4 miljard euro). Er is veel bekend over wat werkt in val­preventie en er zijn meerdere kosteneffectieve aanpakken in Nederland beschikbaar. Echter de implementatie daarvan is momenteel te ad hoc, kleinschalig, op projectbasis en niet conform dat wat bekend is wat werkt. Knelpunten zoals onduidelijkheid over wie verantwoordelijk is voor het organiseren of (laten) uitvoeren van valpreventie activiteiten en het ontbreken van een structurele grond voor financiering spelen hierbij een rol. Bovenstaande thema’s op voeding en beweging spelen een belangrijke rol bij het valpreventief aanbod.
+
+In de werkagenda van de ketenaanpakken (3G, onderdeel II) wordt de ketenaanpak nader toegelicht. Ook zijn de rand­ voorwaarden, criteria en de bestuurlijke afspraken opge­ nomen voor het succesvol inrichten van deze ketenaanpak. Hiermee wordt de afspraak in het IZA uitgewerkt.
+
+Acties gemeenten • Gemeenten kunnen bij de acties die genoemd staan bij 3D Een gezonde leefstijl onder het kopje ‘sport en beweegparticipatie’ ook specifiek aandacht hebben voor het stimuleren van bewegen bij ouderen. • Gemeenten kunnen buurtsport- en cultuurcoaches de ruimte geven om een gespecialiseerd aanbod voor ouderen te creëren. Onderdeel van hun werkzaamheden is om ouderen te begeleiden en les te geven aan kwetsbare ouderen.
+
+Acties zorgverzekeraars en zorgkantoren • Zorgverzekeraars kunnen het belang van voldoende bewegen bij ouderen onder de aandacht brengen. • Zorgverzekeraars kunnen doorverwijzen naar het beweeg­aanbod van gemeenten en dragen hieraan bij, bijvoorbeeld door het ondersteunen van activiteiten zoals de Nationale Diabetes Challenge.
+
+3G Domeinoverstijgende inzet vanuit een regionale preventie-infrastructuur
+
+Acties VWS • VWS faciliteert de inzet van buurtsport- en cultuurcoa­ ches via de middelen in de SPUK. Valpreventie bij ouderen
+
+Voor een domeinoverstijgende inzet is samenwerking nodig. Zowel lokaal als ook regionaal. En niet alleen binnen het gemeentelijk domein en het zorgdomein (zoals huisarts, wijkverpleegkundige) op lokaal niveau, maar ook tussen gemeenten en met het zorgdomein op regionaal niveau (zoals met zorgverzekeraars).
+
+Beoogde resultaten: • Het risico op vallen bij ouderen wordt vroegtijdig gesignaleerd in zowel zorgdomein als gemeentelijk domein en wordt ondersteund door laagdrem­ pelige toegang tot valpreventief aanbod. • Jaarlijks komen er minder meer ouderen (65+) op de spoedeisende hulp naar aanleiding van een val.
+
+Invulling bijdrage aan IZA-doelen op basis van een regionale werkstructuur Om de doelen van het IZA te realiseren is voor gemeenten jaarlijks maximaal € 150 mln euro structureel beschikbaar om op basis van concrete regioplannen een bijdrage te kunnen leveren aan het behalen van de IZA-doelen. Langs de weg van regiobeelden en regioplannen wordt een regionale preven­ tie-infrastructuur ingericht en gewerkt aan deze doelstellingen, onder meer op het terrein van de samenwerking tussen de eerste lijn en het gemeentelijk domein, de GGZ en preventie. In bijlage 2 is de werkagenda opgenomen van de VNG waarin op hoofdlijnen is uitgewerkt hoe gemeenten met het IZA aan de slag gaan en hoe de in het IZA toegezegde middelen worden aangevraagd en toegekend. De werkagenda is leidend bij de nog te maken afspraken over het brede IZA-kader over de regioplannen. De basis daarvan is de uitwerking van de
+
+Valongevallen bij ouderen vormen een ernstig en toenemend probleem. Iedere dag belanden er ruim 280 ouderen (65 jaar en ouder) door een val op de Spoedeisende Hulp (SEH). De gevolgen hiervan zijn enorm, zowel in persoonlijk leed als maatschappelijke (zorg)kosten. In 2020 waren de directe medische kosten als gevolg van deze ongevallen
+
+28 | GALA – Gezond en Actief Leven Akkoord
+
+## Page 29
+
+Algemene afspraken • De (regionale) preventie-infrastructuur is onderdeel van de diverse (algemene) afspraken over regionale samenwer­ king, regiobeeld en regioplan opgenomen in IZA (p. 45-50). Deze (algemene) afspraken in het IZA strekken verder, ook wat de gemeentelijke verantwoordelijkheid betreft. • Er is sprake van een (regionale) preventie-infrastructuur zoals bedoeld in het IZA (p. 81) als wordt voldaan aan de zes randvoorwaarden en criteria zoals hieronder beschre­ ven. Indien aan al deze voorwaarden wordt voldaan, komen VWS, VNG en ZN de afspraak van het IZA (p. 81) na dat er per 1 januari 2025 niet vrijblijvende regionale samenwerkingsafspraken zijn gemaakt.
+
+regionale werkstructuur. Die gaat over de taken en functies van deze werkstructuur (inclusief beschikbare budgetten); de mandaatstructuur voor gemeenten en verzekeraars; de governance (tevens in relatie tot het IZA); de landelijke onder­ steuning vanuit VNG en ZN bij het opzetten van de structuur én de relatie tussen de regionale structuur en wat gemeenten in het kader van het GALA aan lokale activiteiten uitvoeren. Ook de andere in het IZA gemaakte afspraken waar gemeenten een rol bij hebben komen terug in de werkagenda. De (financiële) afspraken zijn onderdeel van de voorjaarsbesluitvorming 2023. De middelen zullen – bij parlementaire goedkeuring van het betreffende begrotingswet – aan gemeenten ter beschikking worden gesteld. Gemeenten kunnen de kosten die zij vanaf januari 2023 maken ter uitvoering van de werkagenda meene­ men in hun aanvraag voor het jaar 2023.
+
+Bouwstenen regionale preventieinfrastructuur en inrichting ketenaanpakken In het IZA zijn, in de werkagenda over Gezond leven en preventie, afspraken opgenomen ten aanzien van regionale samenwerking, een regionale preventie-infrastructuur en de inrichting van effectieve ketenaanpakken over de domeinen (Zvw, Wpg, Wmo en Jeugdwet) heen. Deze afspraken zijn in het GALA verder uitgewerkt met bouwstenen voor een regio­ nale preventie-infrastructuur (onderdeel I) en de werkagenda inrichting ketenaanpakken (onderdeel II).
+
+Randvoorwaarden en criteria 1. Regionale werk- en mandaatstructuur • De bestaande regionale samenwerkingsstructuur tussen zorgverzekeraars en gemeenten wordt versterkt. Hier­ voor wordt in elke regio uitgewerkt hoe de onderlinge mandaatstructuur, zoals afgesproken in het IZA op p. 45, tussen gemeenten eruitziet. Daarnaast wordt, indien van toepassing, uitgewerkt welke gemeente de rol als gemandateerde en/of coördinerende gemeente op zich neemt. Hetzelfde geldt voor zorgverzekeraars. • Hierbij wordt ook betrokken welke bevoegdheden de gemandateerde of coördinerende gemeente heeft namens de anderen gemeenten dan wel zorg­ verzekeraars. Er wordt onderscheid gemaakt tussen bestuurlijk en medewerkersniveau. • In de mandaatstructuur van gemeenten is een finan­ ciële regeling opgenomen waarop de gemandateerde gemeente aanspraak kan maken ten dienste van de regionale preventie-infrastructuur. Deze financiële rege­ ling is in beginsel gebaseerd op de brede SPUK waarvoor gemeenten per 2023 een aanvraag kunnen indienen. Tijdpad: 1 juli 2023 (dan is de mandaatstuur volledig ingeregeld)
+
+Beoogde resultaten: • Totstandkoming van een regionale preventieinfrastructuur per 1 januari 2025. • Om uiteindelijk te komen tot een landelijk aanbod van de vijf ketenaanpakken wordt uiterlijk op 1 januari 2024 in elke regio gestart met de inrichting van de vijf ketenaanpakken in zoveel mogelijk gemeenten.
+
+3G onderdeel I Bouwstenen regionale preventie-infrastructuur
+
+2. Regiobeeld gezondheidsbevordering • Gemeenten, zorgverzekeraars en andere regionale par­ tijen stellen op het niveau van de zorgkantoorregio20 een regiobeeld op, zoals bedoeld in het IZA, p. 43-47 en 81. De criteria hiervoor die eind 2022 bestuurlijk zijn vastge­ steld (cf. IZA-afspraak, p. 44), worden hierbij gehanteerd. • Op basis van deze criteria geeft het regiobeeld onder meer inzicht in het aanbod van gezondheidsbevordering, zorg, welzijn en ondersteuning in de regio. Hierbij wordt aandacht besteed aan universele, selectieve, geïndiceerde en zorggerelateerde preventie. • De GGD heeft de taak voor het monitoren van de gezond­ heidssituatie van de bevolking, op grond van artikel 2.2, onder a, van de Wet publieke gezondheid. De GGD doet dit tenminste via de (vierjaarlijkse) gezondheidsmoni­ tors21. Daarom wordt de GGD betrokken bij de totstand­ koming van het regiobeeld.
+
+In hoofdstuk 4b wordt het belang van regionale samenwer­ king tussen zorgverzekeraars en gemeenten op het gebied van gezond leven en preventie beschreven. Hierover zijn eerder ook afspraken gemaakt in het IZA. In deze paragraaf zijn nadere bestuurlijke afspraken opgenomen over taken en verantwoordelijkheden wat betreft deze regionale samenwerking.
+
+20 Voor het regiobeeld kan een afwijkende schaal worden gehanteerd
+
+21 Dit betreft een landelijk afgestemde vragenlijst (RIVM) die de GGD uitzet onder
+
+de bevolking.
+
+GALA – Gezond en Actief Leven Akkoord | 29
+
+## Page 30
+
+A. vaststellen van de gezondheidsdoelen waaraan in de
+
+regio gewerkt gaat worden, mede op basis van het regiobeeld; B. selectie van risicogroepen en patiënten waarvoor
+
+effectieve (keten)aanpakken ingezet worden (bij­ voorbeeld (aankomende) gezinnen in een kwetsbare situatie, mensen met beperkte gezondheidsvaardig­ heden, met psychische kwetsbaarheid, kwetsbare ou­ deren, waaronder ouderen met valrisico, mensen met een rook, gok-, drugs- of alcoholverslaving, kinderen en volwassenen met overgewicht); C. voorgenomen activiteiten voor de populatie als
+
+geheel en voor risicogroepen en patiënten in het bijzonder, waaronder tenminste de ketenaanpakken genoemd in 3G, onderdeel II; D. afspraken over wat regionaal (alle gemeenten) en wat
+
+lokaal (gemeente voor zich) wordt opgepakt/uitgevoerd; E. afspraken over verantwoordelijkheidsverdeling tus­
+
+sen gemeente en zorgverzekeraar; F. concrete uitvoerings-afspraken met hulp- en zorg­
+
+• Bestaande informatie- en databronnen, waaronder de gezondheidsmonitors van de GGD’en, worden benut voor het opstellen van het regiobeeld. • De GGD speelt een rol in het monitoren van de voortgang en de effectiviteit van de aanpak en koppelt hierover terug aan het RIVM om zo bij te dragen aan de landelijke kennisontwikkeling. • Het RIVM fungeert als expertcentrum voor GGD’en en gemeenten door het - desgevraagd - ten behoeve van het regiobeeld inbrengen van kennis, het bijhouden van een landelijke databank met effectieve interventies op het loketgezondleven.nl, het leveren van spiegelinformatie voor regio’s (zie onder andere www.regiobeeld.nl), het uitvoeren van monitorings- en evaluatieonderzoeken, alsmede door het vierjaarlijks uitvoeren van een Volksgezondheid Toe­ komst Verkenning. Hierbij wordt zoveel mogelijk aangeslo­ ten bij de informatiebehoefte in regio’s en gebruik gemaakt van bestaande kennis en data, zoals ook de gemeente­ zorgspiegel waar zorgverzekeraars en gemeenten in de praktijk al gebruik van maken. Het RIVM werkt desgevraagd actief mee aan het verrijken van het via de gemeente­ zorgspiegel gegenereerde beeld en het vereenvoudigen van de aanlevering van relevante data door gemeenten. Tijdpad: 1 juli 2023
+
+verleners over verantwoordelijkheden en taken, waaronder doorverwijzing en coördinatie functies van professionals over de domeinen heen (netwerkstruc­ tuur professionals); G. afspraken over hoe en door wie de uitvoering gecoör­
+
+dineerd wordt; H. afspraken over evaluatie van en rapportage over de
+
+aanpak; I. financiële afspraken. • De GGD wordt betrokken bij de totstandkoming van de regionale afspraken. • De regionale preventieafspraken worden, net als de algemene regiobeelden en -plannen gepubliceerd op www.dejuistezorgopdejuisteplek.nl. Tijdpad: 1 januari 2024
+
+3. Financiële middelen • Voor gemeenten zijn per 2023 SPUK-middelen beschikbaar om de regionale samenwerking te intensiveren en verder vorm te geven. Zie hiervoor hoofdstuk 4, paragraaf a. • Conform afspraak in het IZA werken ZN en VWS, in afstemming met VNG, een voorstel voor de korte en lange termijn uit voor bekostiging van regionale coördi­ natiekosten van zorgverzekeraars en zorgprofessionals en experimenten met kansrijke aanpakken. In het geval dat wordt voorgesteld dat er aanvullende financiering nodig is, kan mogelijk geput worden uit de transitiemiddelen van het IZA. • Uiterlijk 1 april 2023 wordt bestuurlijk besloten over een uitgewerkt korte termijnvoorstel. Tijdpad middelen verzekeraars: in elk geval 2023 t/m 2025
+
+5. Uitvoering regionale preventie afspraken • De regionale preventie afspraken worden uitgevoerd en nagekomen. • Zorgverzekeraars en gemeenten stemmen hun inkoop­ beleid af op de regionale preventieafspraken en houden hier rekening mee in hun inkoop en lokale plannen. Tijdpad: 1 januari 2025
+
+4. Regionale afspraken over preventie en gezondheidsbevordering • Gemeenten, zorgverzekeraars en andere regionale par­ tijen stellen op het niveau van de zorgkantoorregio22 op basis van het regiobeeld (een) regioplan(nen) op, zoals bedoeld in het IZA, p. 43-47 en 81. De criteria die hiervoor eind 2022 bestuurlijk zijn vastgesteld cf. het IZA (p. 44), worden hierbij gehanteerd. · In elke zorgkantoorregio worden regionale afspraken gemaakt over preventie en gezondheidsbevordering, bijvoorbeeld in een regioplan of samenwerkingsagenda. · De volgende onderdelen maken hier minimaal onderdeel van uit:
+
+6. Monitoring • De ontwikkelingen wat betreft de regionale samen­ werking op het gebied van gezondheidsbevordering en preventie (Zvw, Wmo en Wpg) worden in opdracht van VWS per 1 januari 2023, in elk geval voor de duur van 3 jaar, door het RIVM gemonitord. Hierbij vindt afstem­ ming plaats met VNG, ZN en GGD GHOR. Het venster op de samenwerking wordt hierbij betrokken. • Doelstelling en criteria voor de monitoring worden in gezamenlijkheid vastgesteld. • Gemeenten en zorgverzekeraars leveren hiervoor de nodige data aan. Tijdpad: 2023 - 2025
+
+22 Voor het regioplan kan een afwijkende schaal worden gehanteerd.
+
+30 | GALA – Gezond en Actief Leven Akkoord
+
+## Page 31
+
+3G Onderdeel II Werkagenda inrichting ketenaanpakken
+
+bijdrage te leveren aan de inbedding van preventie in de keten. • Gemeenten en zorgverzekeraars spreken elkaar aan in de regio op wederzijdse verantwoordelijkheden en afspra­ ken. Wanneer dat onvoldoende lukt, kunnen VNG en ZN daarbij ondersteunen zoals ook is afgesproken in de werkstructuur voor de regionale samenwerking. Als uit de midterm review blijkt dat gemeenten en/of zorgver­ zekeraars in de regio’s hun rol en verantwoordelijkheid onvoldoende hebben genomen, treden VNG, ZN en VWS in bestuurlijk overleg. Hierbij is VWS aan zet om partijen aan te spreken op het benodigde commitment en zo nodig nadere maatregelen of afspraken voor te stellen.
+
+Randvoorwaarden en criteria 1. Voorfase / ontwikkelfase (randvoorwaarde) Dit is de fase waarin een ketenaanpak wordt ontwikkeld, onderzoek plaatsvindt naar de effectiviteit, vanuit het veld wordt geëxperimenteerd met de aanpak (bijv. op grond van de beleidsregel innovatie van de NZa), etc. De voorfase of ontwikkelfase kan op meerdere wijzen worden doorlopen en hierbij verschilt de rol van gemeenten en zorgverzekeraars. Deze fase is een randvoorwaarde om stap 2 te kunnen doorlopen. Tijdpad: niet van toepassing
+
+Bij ketenaanpakken gericht op preventie en gezondheid over de domeinen (Zvw, Wpg, Wmo en/of Jeugdwet) heen, is sprake van een aanpak die bestaat uit meerdere onderdelen. Afhankelijk van het onderdeel is ofwel de zorgverzekeraar verantwoordelijk, ofwel de gemeente. Ook kan sprake zijn van een gezamenlijke verantwoordelijkheid. Goede afspraken tussen de beide financiers is dus essentieel om tot effectief ketenaanbod te komen, waarbij de verschillende onderdelen van de aanpak aan elkaar verbonden zijn. Hiervoor is het nodig dat (zorg)professionals uit de verschillende domeinen binnen een netwerk met elkaar samenwerken en effectief naar elkaar doorverwijzen. Ketenaanpakken gericht op pre­ ventie en gezondheid komen doorgaans lastig van de grond vanwege het domeinoverstijgende karakter. In deze werk­ agenda maken we afspraken om – uiteindelijk - te komen tot een landelijk dekkend aanbod van de volgende ketenaan­ pakken: kansrijke start, valpreventie bij ouderen, de aanpak overgewicht kinderen, de gecombineerde leefstijlinterventie bij overgewicht en obesitas van volwassen én welzijn op recept. Hierover dienen op regionaal niveau afspraken te worden gemaakt, die op lokaal niveau tot uitvoering komen.
+
+2. ZiNL duiding Zvw-zorg (randvoorwaarde) Er moet helderheid zijn over welke onderdelen van de ketenaanpak verzekerde zorg zijn. Indien dit voor gemeenten of zorgverzekeraars onduidelijk is, kan een duiding van het Zorginstituut hierover helderheid bieden. Ook geeft een duiding richting voor de andere onderdelen uit de ketenaanpak (zie punt 4). Tijdpad: zo spoedig mogelijk
+
+3. Implementatietraject Voor de regionale en lokale implementatie van de keten­ aanpakken is de inzet van veel diverse partijen nodig. VWS organiseert landelijke implementatie-overleggen met het werkveld. Zorgverzekeraars, gemeenten en GGD’en nemen hieraan actief deel. Het implementatie­ traject bestaat uit 2 fasen:
+
+Fase 1 (heden – 1 januari 2024)
+
+− Gericht op voorbereiding op de landelijke en regionale implementatie − Vaststelling landelijke en regionale taken/verantwoordelijkheden van de betrokken uitvoerende partijen − Knelpunten adresseren en zo mogelijk oplossen
+
+Fase 2 (1 januari 2024 – uiterlijk t/m 2025)
+
+− Gericht op ondersteuning bij de regionale en lokale implementatie − Knelpunten in de uitvoering adresseren en zo mogelijk oplossen − (Regionale) kennisuitwisseling.
+
+Algemene afspraken • Voor een ingerichte ketenaanpak kansrijke start, valpreventie bij ouderen, de aanpak overgewicht kinderen, gecombineerde leefstijlinterventie bij overgewicht en obesitas van volwassen én welzijn op recept, zoals bedoeld in het IZA (p. 81), moet zijn voldaan aan de 14 randvoorwaarden en criteria én de ketenaanpakspecifieke afspraken zoals hieronder opgenomen. Indien hieraan wordt voldaan, komen VWS, VNG en ZN de afspraak na dat de bedoelde ketenaanpakken per 1 januari 2024 worden ingericht. • Een dashboard met daarbij geschetst tijdpad is richting­ gevend voor het behalen van de deadline 1 januari 2024. • Het dashboard wordt tot 1 januari 2024 bij elk bestuurlijk overleg tussen VNG, ZN en VWS over de samenwer­ kingsstructuur geagendeerd. Hierbij wordt de voortgang besproken. Het bestuurlijk overleg vervult hierbij een sturende, kaderstellende en faciliterende rol. • De voortgang van de samenwerking en de implementatie van de ketenaanpakken in de regio’s wordt in de periode na 1 januari 2024 geëvalueerd in het licht van een even­ wichtige opstelling tussen partijen in de uitvoering. De eerste peildatum is 1 juli 2024. De tijdpaden die worden voorgesteld voor de fasering per ketenaanpak (zie punt 13), kunnen aan de hand van de evaluatie zo nodig worden aangescherpt. • De IGJ kan vanuit haar reguliere toezichtstaak op de uitvoering van de Wpg de gemeenten stimuleren om hun
+
+GALA – Gezond en Actief Leven Akkoord | 31
+
+## Page 32
+
+dat per 2023 voor zorgverzekeraars middelen binnen de budgettaire kaders beschikbaar komen voor regionale project- en coördinatiekosten van zorgverzekeraars en zorg­ professionals t.b.v. de vijf ketenaanpakken. Hiervoor kan mogelijk geput worden uit de transitiemiddelen van het IZA. Tijdpad: voorjaar 2023 – 1 juli 2023 (claim al eind 2022 gereed)
+
+8. Voorbereiding en afstemming voorgenomen inkoopbeleid Zorgverzekeraars en gemeenten bereiden hun inkoop­ beleid wat betreft de ketenaanpakken voor en stemmen het voorgenomen beleid op regionaal niveau met elkaar af. Dit is voorwaardelijk om regionaal te kunnen starten met een ketenaanpak. Tijdpad: 1 maart 2023
+
+4. Vaststelling landelijke en regionale taken/verantwoor- delijkheden van de betrokken uitvoerende partijen • De taken en verantwoordelijkheden van de partijen die betrokken zijn bij de uitvoering van de aanpak, incl. ge­ meenten, moeten worden vastgesteld. Zowel op landelijk als regionaal niveau. Dit gebeurt binnen fase 1 van de landelijke implementatietrajecten die VWS faciliteert. • De duiding van het Zorginstituut is hierbij het uitgangs­ punt. Het Zorginstituut is bereid bij gesprekken tussen gemeenten en zorgverzekeraars aanwezig te zijn om de beschikbare duidingen toe te lichten en verantwoorde­ lijkheden binnen de keten te verhelderen. • Conform IZA-afspraak adviseert het Zorginstituut op ver­ zoek van zorgverzekeraars en gemeenten welke onderdelen van een ketenaanpak onder verantwoordelijkheid vallen van de zorgverzekeraar (verzekerde zorg), en welke niet (bijv. sociaal/publiek domein). Dit geldt zowel voor nieuwe keten­ aanpakken, als voor ketenaanpakken die al geduid zijn. • Per ketenaanpak wordt vanuit de implementatietrajecten een handreiking (incl. eventueel inkoopmodel) opgesteld met een concrete beschrijving van de uit te voeren onder­ delen van de ketenaanpak in de verschillende domeinen. In opdracht van de landelijke werkgroep kan het Zorginstituut, of een andere partij, penvoerder zijn voor de handreiking. • Dit document wordt tijdens het bestuurlijk overleg VNG, ZN en VWS geagendeerd. Tijdpad: heden – 1 maart 2023 (handreiking in elk geval gereed voor aanpakken die reeds geduid zijn)
+
+5. Besluit VWS over uitbreiding /aanpassing aanspraken VWS dient tijdig een besluit te nemen over eventuele aanpassing van regelgeving (Besluit zorgverzekering), zodat de onderdelen die verzekerde zorg betreffen ook daadwerkelijk (per 1 januari 2024) vanuit de basisverzekering mogen worden vergoed. Dit betreft ook het besluit over of de Zvw-onderdelen van de ketenaanpak onder het eigen risico vallen of niet. Idem voor eventuele juridische drempels die er aan de kant van sociaal domein en/of publiek bestaan om invulling te geven aan de aanpak. Tijdpad: voorjaar 2023
+
+9. Samenwerkingsafspraken regionaal en lokaal • Zorgverzekeraars en gemeenten maken ketenaanpak specifieke samenwerkingsafspraken op regionaal lokaal niveau. De handreiking uit het landelijke implementatie­ traject vormt de basis voor de regionale samenwerkings­ afspraken over de ketenaanpakken. • De deadline hiervoor is 1 april 2023, dus voordat het inkoopbeleid van zorgverzekeraars definitief is. Indien dit niet haalbaar is, dan dient deze stap na publicatie van het inkoopbeleid afgerond te worden. • In de samenwerkingsafspraken is opgenomen welke gemeenten binnen de regio per 1 januari 2024 gaan starten met implementatie van welke ketenaanpak. • Alleen als er samenwerkingsafspraken zijn gemaakt, kan er regionaal/lokaal gestart worden met de ketenaanpakken. Tijdpad: 1 april 2023 10. Inkoopbeleid en gemeentelijke plannen • Zorgverzekeraars nemen de inkoopvoorwaarden (voor zover verzekerde zorg), waaronder de kwaliteitseisen waaraan aanbieders dienen te voldoen, op in hun lan­ delijke inkoopbeleid 2024. De regionale afspraken met gemeenten zijn hierin vertaald. Het inkoopbeleid wordt uiterlijk op 1 april 2023 gepubliceerd. • Gemeenten nemen de regionale afspraken mee in hun lokale plannen en – voor zover van toepassing – het inkoopbeleid 2023 en 2024.23
+
+Tijdpad: 1 april 2023 (voor zorgverzekeraars)
+
+6. Betaaltitel: prestatiebeschrijving en tarieven NZa De NZa heeft eventuele benodigde prestaties en bijbeho­ rende tarieven opgesteld. Ook denkt zij mee met mogelijke andere wijzen van bekostiging, indien dit tot knelpunten leidt in de praktijk. De snelheid waarmee de NZa de tarieven en prestaties gereed kan hebben, is mede afhankelijk van in hoeverre de duiding van het Zorginstituut tot onduidelijk­ heden leidt en de timing van de duiding. Tijdpad: heden – 1 juli 2023 (in elk geval voor de ketenaanpakken die het Zorginstituut in 2022 of eerder heeft geduid)
+
+11. Inkoop onderdelen ketenaanpak • De onderdelen van de ketenaanpak die door het Zorg­ instituut als te verzekerden zorg zijn geduid, worden door de zorgverzekeraar bij de diverse zorgprofessionals inge­ kocht, waarbij wordt voldaan aan de zorgplicht. Het NZa toezichtskader zorgplicht is hierbij leidend. Landelijke dekking is het uitgangspunt. Samenwerkingsafspraken zijn daarvoor voorwaardelijk.
+
+7. Financiële middelen • VWS maakt het mogelijk dat gemeenten financiering ontvangen. Zie hiervoor hoofdstuk 4, paragraaf a. • In relatie tot het korte termijnvoorstel bedoeld onder criterium 3, onderdeel I, onderzoekt VWS de mogelijkheid
+
+23 In de SPUK wordt dit plan van aanpak genoemd.
+
+32 | GALA – Gezond en Actief Leven Akkoord
+
+## Page 33
+
+• VNG stimuleert dat de onderdelen van de ketenaanpak die door het Zorginstituut als ‘niet zijnde Zvw’ zijn geduid en/of als ‘sociaal/publiek domein’ zijn geadviseerd, door gemeenten bij de diverse professionals/instanties wor­ den ingekocht. Landelijke dekking is het uitgangspunt. • Zorgverzekeraars en gemeenten hebben een gezamen­ lijke inspanningsverplichting om ervoor te zorgen dat er voldoende aanbod beschikbaar is om in te kopen (bijv. door benutting van bepaalde (zorg)professionals). In de inkoopcontracten wordt naar elkaar verwezen en deze sluiten op elkaar aan. Hierin zijn afspraken opgenomen over de samenwerking tussen de diverse zorgprofessionals. Tijdpad: vanaf 1-4-2023 (voor 2023 en/of 2024)
+
+12. Opname in polisvoorwaarden Zvw 2024 Zorgverzekeraars nemen de onderdelen van de ketenaanpak­ ken die vallen onder de Zvw op in de polisvoorwaarden 2024. Tijdpad: 12 november 2023
+
+14. Monitoring • Conform afspraak in het IZA financiert VWS de landelijke en regionale monitoring van de invoering en het effect van de inzet op de domeinoverstijgende ketenaanpakken. In 2023 wordt de monitoring verder vormgegeven, mede op basis van diverse bestaande monitors. De inhoud van de ketenaanpak specifieke monitors, worden in gezamenlijkheid vastgesteld. • VWS zorgt ervoor dat opdrachten aan het RIVM geïntegreerd en samengevoegd zijn en dat er per ketenaanpak zoveel mogelijk uniform wordt gemonitord om administratieve lasten te voorkomen. Ook wordt zoveel mogelijk gebruik gemaakt van bestaande datastromen en monitors. • Gemeenten en zorgverzekeraars (via Vektis) leveren hiervoor de benodigde gegevens aan. Hiervoor wordt ook het bestaande venster op de samenwerking benut. Tijdpad: heden – tot uiterlijk 2028 Ketenaanpakspecifieke afspraken In aanvulling op bovenstaande algemene randvoorwaarden en criteria maken gemeenten, zorgverzekeraars en VWS de volgende specifieke afspraken.
+
+Gecombineerde leefstijlinterventie • Zorgverzekeraars zullen de komende jaren de mogelijk­ heid verkennen (bijvoorbeeld met pilots of koploper­ gemeenten) om in de zorgpolissen meer medisch specia­ listen of de bedrijfsarts op te nemen als verwijzer naar de verschillende GLI-programma’s. Hierbij is van belang dat de verwijzer voldoende tijd heeft voor het doen van een goede verwijzing en voldoende zicht heeft op de situatie van de persoon. • VWS stelt in 2022 en 2023 budget beschikbaar voor communicatie over de GLI om bekendheid van de GLI-programma’s onder huisartsen en andere verwijzers te vergroten en om de bereidheid van mensen met over­ gewicht om deel te nemen aan een GLI te stimuleren. • De SPUK-middelen die gemeenten kunnen aanvragen, worden ingezet voor coördinatiekosten om de keten­ aanpak in te richten, met tenminste zorgverzekeraars en relevante (zorg)professionals.
+
+Aanpak overgewicht en obesitas kinderen • Bij het opzetten van een ketenaanpak voor kinderen met overgewicht en obesitas wordt als uitgangspunt gehan­ teerd Het Landelijk Model Ketenaanpak voor kinderen met overgewicht en obesitas.24 • Voor een goed werkende ketenaanpak dient er minimaal aanbod te zijn in de volgende categorieën: schuldhulp­ verlening, opvoedondersteuning, sport- en beweeg­ aanbod, activiteiten op het gebied van gezonde voeding en activiteiten op sociaal-emotionele ontwikkeling.
+
+13. Ketenaanbod toegankelijk • Uitgangspunt is om te komen tot landelijk dekkend toegankelijk ketenaanbod voor alle mensen uit de doel­ groep. Om hiertoe te komen worden de 5 ketenaanpak­ ken in elke gemeente ingericht. Dit betekent niet dat elke gemeente daadwerkelijk zelf ketenaanbod moet hebben binnen de gemeentelijke grenzen. Afspraken, op regio­ naal niveau, met (buur)gemeenten hierover volstaan. • Er is sprake van toegankelijkheid van het ketenaanbod als risico’s vroegtijdig worden gesignaleerd en inwoners op tijd een passend (domeinoverstijgend) aanbod krijgen. Als er sprake is van een zorgbehoefte wordt de inwoner op de juiste plek binnen de keten geholpen (zo nodig wordt naar de juiste professional doorverwezen) en krijgt hij een adequaat (domeinoverstijgend) (zorg)aanbod waar direct of binnen redelijke termijn gebruik van kan worden gemaakt. • Idealiter is hiervan uiterlijk 1 januari 2024 sprake. VNG, ZN en VWS onderschrijven dat dit geen realistische streefdatum is. De uitrol per regio en per gemeente zal verschillen in de tijd. • Afgesproken wordt dat uiterlijk op 1 januari 2024 in elke regio wel wordt gestart met de inrichting van de keten­ aanpak in zoveel mogelijk gemeenten. • Per ketenaanpak verschilt het tijdpad naar volledige toe­ gankelijkheid binnen de regio. Over de fasering in de tijd worden in de implementatietrajecten onder leiding van VWS afspraken gemaakt. Dit voorstel wordt tijdens een bestuurlijk overleg geagendeerd. • Zorgverzekeraars hebben een zorgplicht voor de onder­ delen van de ketenaanpak die te verzekeren zorg betref­ fen. Zorgverzekeraars spannen zich, in samenwerking met gemeenten, maximaal in om tijdens deze fasering te voldoen aan de zorgplicht. De NZa houdt bij het toezicht hierop rekening met bovenstaande afspraken. Tijdpad: 1 januari 2024
+
+24 https://assets-us-01.kc-usercontent.com/d8b6f1f5-816c-005b-1dc1-e363d­
+
+d7ce9a5/a3efa086-7ee8-4e06-b5c9-18992dfb6bff/Landelijk_model_digi­
+
+taal_tcm235-928414.pdf
+
+GALA – Gezond en Actief Leven Akkoord | 33
+
+## Page 34
+
+trajecten in gemeenten waar dit nu nog niet gebeurt en het inkopen van WOR-trajecten; − het aanbod van de onderdelen van de ketenaanpak die geen Zvw-zorg betreffen; − coördinatiekosten om de ketenaanpak binnen de ge­ meente in te richten, met tenminste zorgverzekeraars en relevante (zorg)professionals.
+
+Valpreventie • De ketenaanpak is een aanpak gericht op thuiswonende ouderen van 65 jaar of ouder met een verhoogd valrisico die bestaat uit;
+
+• Over de rol van het RIVM bij de beoordeling van de vari­ anten van de kinder-GLI (een vast programma of een GLI op maat), wordt door VWS, in samenspraak met ZN, RIVM en ZINL, uiterlijk 1 februari 2023 een besluit genomen. • Zorgverzekeraars maken voor 1 maart 2023 samen met de beroepsgroepen afspraken over het waarborgen van de kwaliteit van de centrale zorgverlener (voor zover verzekerde zorg), de kinder-GLI en zorgprofessionals die de kinder-GLI kunnen aanbieden. Dit gaat in elk geval om kwaliteitseisen. ZN heeft hierbij een stimulerende rol. • De Rijksoverheid financiert de landelijke organisatie Kind naar Gezonder Gewicht (onderdeel van JOGG). Gemeen­ ten kunnen hier terecht voor kennis en ondersteuning bij de implementatie van de ketenaanpak voor kinderen met overgewicht en obesitas. • Bij het proces tot het komen van samenwerkingsafspra­ ken wordt in ieder geval de JGZ betrokken. • De SPUK-middelen die gemeenten kunnen aanvragen, worden ingezet voor:
+
+− inzet van gemeentelijke functionarissen (al dan niet via opdracht) voor de uitvoering van het Landelijk mo­ del ketenaanpak voor kinderen met overgewicht en obesitas; − lokale monitoring en evaluatie. Bij de monitoring kan gebruik gemaakt worden van de indicatorenset voor de aanpak Kind naar Gezonder Gewicht (onderdeel van JOGG) die ontwikkeld is door het RIVM;25 − voor een goed werkende ketenaanpak kan het zijn dat er aanvullende leefstijlinterventies nodig zijn die buiten de vergoeding van de Zvw vallen. In dat geval zorgt de gemeente voor de beschikbaarheid van passend aanbod. Hierbij kan gebruik gemaakt worden van de databank Loket Gezond Leven. Welzijn op recept • Welzijn op recept wordt ruim opgevat. Het betreft een werkwijze om mensen met psychosociale klachten te helpen door de samenwerking tussen huisarts, eerstelijns zorgverlener, welzijn en het sociaal domein. Hiermee wordt Welzijn op Recept breder opgevat dan het huidige concept Welzijn op Recept. • Er bestaat geen duiding van Welzijn op Recept door het Zorginstituut. Het door VWS gefinancierde bestaande in­ tegrale inkoopadvies Welzijn op Recept (https://welzijnop­ recept.nl/integraal-inkoopadvies-welzijn-op-recept/) dient als handreiking en is richtinggevend voor de samenwer­ kingsafspraken tussen gemeenten en zorgverzekeraars. • ZN verzoekt het Zorginstituut om een duiding. • De SPUK-middelen die gemeenten kunnen aanvragen, worden ingezet voor:
+
+− het welzijnsaanbod in de wijk verder te versterken zodat het aanbod o.a. met het oog op de groep mensen die met het verder scheiden van wonen en zorg thuis blijft wonen, het opstarten van WOR-
+
+25 Visscher, K., Vroling, H., Spijkerman, A. (2022). Ontwikkeling indicatorenset Kind
+
+− opsporing (risico-inschatting); − screening (valanalyse); − inzet van erkende beweeginterventie zoals op loketgezondleven.nl van het RIVM, zo nodig aangevuld met medicatiebewaking, aanpak visus problemen, aanpak van voetproblemen en schoeisel, aanpassingen huis en omgeving, voedingsinterventie, educatieve interventies, psychologische interventies, medische behandeling van onderliggende ziektes en; actieve begeleiding en doorverwijzing naar structureel beweegaanbod. • Per 2023 krijgt jaarlijks 14% van alle thuiswonende ouderen (65+) een risico-inschatting. Per 2023 volgt jaarlijks 3% van alle thuiswonende ouderen (65+), waarbij verhoogd valrisico is vastgesteld, een erkende valpreventieve beweeginterventie. Dit betreft landelijke percentages. Deze inzet is noodzakelijk om de potentiële besparingen, onder andere binnen de Zvw, te kunnen realiseren. Dit is ook de minimale inzet om te komen tot minder meer druk op de zorg, waaronder SEH-bezoeken naar aanleiding van een val. • Voor gemeenten zijn al per 2023 via de SPUK-middelen beschikbaar om de onderdelen die vallen binnen de gemeentelijke domeinen (zoals een valrisico-inschatting en een valpreventieve beweeginterventie) aan te bieden en de ketenaanpak met zorgverzekeraars op te zetten. • Gezien de kortingen die per 2023 worden toegepast binnen de Zvw en Wlz, en een deel van de potentiële besparingen daadwerkelijk te kunnen realiseren, vragen gemeenten die een SPUK aanvragen, in elk geval midde­ len aan voor valpreventie. • De valrisico-inschatting zal in 2023 door zorgverzeke­ raars vergoed kunnen worden als onderdeel van be­ staande consulten, bijvoorbeeld door wijkverpleging of de huisarts. De organisatie van valpreventie is nog niet overal gerealiseerd, dus de inzet zal beperkt zijn en op het moment voornamelijk voor die mensen met indicatie in de zorg om medicalisering van preventie te voorkomen. • De valanalyse kan in 2023 door zorgverzekeraars vergoed worden voor zover deze wordt uitgevoerd door zorgprofessionals die volgens ZIN de competenties hebben om dit te doen en gedeclareerd worden onder reeds bestaande prestatiecodes. De organisatie van valpreventie is nog niet overal gerealiseerd, dus de inzet zal beperkt zijn en op het moment voornamelijk voor die
+
+naar Gezonder Gewicht: een Delphi-studie.
+
+34 | GALA – Gezond en Actief Leven Akkoord
+
+## Page 35
+
+mensen met indicatie in de zorg om medicalisering van preventie te voorkomen. • Zorgverzekeraars kopen voor 2024 erkende valpreven­ tieve beweeginterventies in voor ouderen die hiervoor in aanmerking komen. • Zorgverzekeraars komen uiterlijk met de betrokken beroepsgroepen tot afspraken over welke beroeps­ groepen onder welke voorwaarden de valanalyse kunnen uitvoeren. Dit kan vervolgens worden opgenomen in het inkoopbeleid voor 2024. • In opdracht van VWS ondersteunt VeiligheidNL samen met het RIVM gemeenten met kennis over hoe de effectieve ketenaanpak kan worden vormgegeven. • De SPUK-middelen die gemeenten kunnen aanvragen, worden ingezet voor:
+
+− het aanbod van de onderdelen van de ketenaanpak die thuis horen in sociaal/publiek domein: • het opsporen van ouderen en het vaststellen van de valrisico van deze groep; • het equiperen en voorlichten van de mantel­ zorgers bij het opsporen en ondersteunen van ouderen met een verhoogd valrisico; • het aanbieden van erkende beweeg­interventies zoals op loketgezondleven.nl van het RIVM; • het gedeeltelijk compenseren van ouderen die een woningaanpassing nodig hebben. − coördinatiekosten om de ketenaanpak binnen de ge­ meente in te richten, met tenminste zorgverzekeraars en relevante (zorg)professionals.
+
+Naast de ketenaanpak valpreventie is er ook ruimte voor het aanbieden van daarop aansluitende beweegactivitei­ ten voor 65-plussers die geen verhoogd valrisico hebben en het aanbieden van andere door het RIVM erkende valpreventieprogramma’s.
+
+Kansrijke start • In paragraaf 3A is aangegeven welke rol gemeenten, zorgverzekeraars en VWS op zich nemen bij de ketenaanpak kansrijke start.
+
+GALA – Gezond en Actief Leven Akkoord | 35
+
+## Page 36
+
+4
+
+Wat is nodig om de resultaten te kunnen halen?
+
+36 | GALA – Gezond en Actief Leven Akkoord
+
+## Page 37
+
+In dit hoofdstuk gaan we in op de zaken die nodig zijn om de doelen te kunnen bereiken:
+
+A.	Financiën B.	Regionale en lokale samenwerking C.	Agenda en dialoog Health in all policies D.	Kennisinfrastructuur E.	Monitoring F Ondersteuningsprogramma G.	Governance
+
+• de (samenhang tussen) de doelen en de afgesproken acties in het GALA. Met speciale aandacht voor de vraag hoe de (wijken met) mensen met gezondheids­ achterstanden te bereiken; • de verbinding met lokale aanpak in het sociale en fysieke domein; • samenwerkingsafspraken binnen de regionale preven­ tie-infrastructuur met zorgverzekeraars en zorgpartijen; • samenwerkingsafspraken met lokale partijen (binnen een preventie- en of sportakkoord waar dit aan de orde is); • de verbinding met de lokale nota gezondheidsbeleid; • de inzet van de advies- en kennisfunctie van de GGD; • de betrokkenheid van bewoners en bewonersinitiatieven.
+
+4A Financiën
+
+De brede SPUK bundelt de middelen rondom programma’s en interventies met overlappende doelstellingen. Gemeenten kunnen zodoende een integrale aanpak ontwikkelen, waarin de doelstellingen van de programma’s en interventies in samenhang worden georganiseerd. Alle gemeenten kun­ nen een aanvraag doen voor (onderdelen van) de SPUK. Voor sommige bestaande regelingen en programma’s bete­ kent dit een wijziging van het type uitkering, namelijk van een decentralisatie-uitkering naar een specifieke uitkering. De SPUK wordt begin 2023 gepubliceerd. Naar verwachting zullen de afspraken over het IZA-budget voor gemeenten tot een wijziging van de SPUK leiden begin 2023, omdat deze middelen daar in worden opgenomen.
+
+De financiering van gemeenten op het thema gezondheids­ bevordering is nu ten dele afhankelijk van tijdelijke, niet-structurele, middelen. De tijdelijkheid van financiering bemoeilijkt het integraal, domeinoverstijgend werken en ontmoedigt het werken aan doelen die slechts op langere termijn te behalen zijn. Juist een integrale, langetermijn­ aanpak is nodig om resultaat te kunnen behalen bij het verkleinen van gezondheidsachterstanden.
+
+Door het aanvragen van de middelen voor een onderdeel binnen de SPUK committeert de aanvragende gemeente zich eraan om de verstrekte middelen in te zetten voor de in het GALA opgenomen activiteiten ten behoeve van de afgesproken doelen. Dit geldt alleen voor de onderdelen die de gemeenten heeft aangevraagd.
+
+De gemeenten zullen niet worden afgerekend op de outcome van deze inspanningen, omdat het behalen van deze outcome van veel factoren afhankelijk is, die veelal ook buiten de invloedsfeer van de gemeente liggen. Er wordt gemonitord op het al dan niet behalen van de beoogde resultaten die zijn afgesproken. Op basis van de monitoring vindt ook het gesprek plaats welke interventies of aanpakken succesvol zijn en welke niet.
+
+Voor de afspraken die opgenomen zijn in het GALA is gekozen om de financiering van verschillende (bestaande en nieuwe) programma’s en aanpakken waarover afspraken zijn gemaakt, te bundelen in één specifieke uitkering (SPUK). Dit betreft het financiële arrangement waarmee de gemeen­ ten geoormerkt geld kunnen aanvragen. In de SPUK worden in elk geval 15 bestaande en nieuwe interventies en aan­ pakken gebundeld. Voor 2023 kunnen gemeenten met een eenvoudige aanvraag middelen ontvangen. Voor de periode 2024 – 2026 dient een plan van aanpak te worden opgesteld waaruit blijkt dat de verschillende interventies en aanpak­ ken hun plek hebben in een samenhangende, integrale blik op het bevorderen van de (positieve) gezondheid van de inwoners.
+
+In de SPUK worden de volgende onderdelen en budgetten opgenomen. Tevens is aangegeven welke middelen structu­ reel zijn. De bedragen zijn afgerond. Voor de exacte bedragen wordt verwezen naar de SPUK.
+
+De verdeling van de SPUK-middelen over gemeenten wordt gebaseerd op inwonertal en het aantal inwoners met gezondheidsachterstanden (gebaseerd op inkomensniveau en opleidingsniveau). Gemeenten worden zodoende in staat gesteld om met prioriteit in te zetten op de inwoners, buurten en wijken waar sprake is van achterstanden. Achterstanden die een nadelige impact hebben op de (ervaren) gezondheid.
+
+Voor het opstellen van een plan van aanpak dienen in elk geval de volgende elementen opgenomen te zijn:
+
+GALA – Gezond en Actief Leven Akkoord | 37
+
+## Page 38
+
+2023 2024 2025 2026 Struct.
+
+1. Sportakkoord 13,0 13,0 13,0 10,0 10,0
+
+2. BRC 26 89,3 89,3 89,3 86,3 86,3
+
+Totaal Sport & Bewegen 102,3 102,3 102,3 96,3 96,3
+
+3. Terugdringen Gezondheidsachterstanden (voorheen via DU GIDS) 27 20,0 20,0 20,0 20,0 20,0
+
+4. Kansrijke Start 28 15,0 16,0 16,0 20,0 20,0
+
+5. Mentale Gezondheid 29 7,0 5,0 5,0
+
+6. Aanpak overgewicht en obesitas 17,5 17,5 17,5
+
+7. Valpreventie 30 51,4 47,4 47,4 48,9 48,9
+
+8. Leefomgeving 10,0 10,0 10,0
+
+2,5 2,5 2,5
+
+9. Opgroeien in een Kansrijke Omgeving & Vroegsignalering
+
+Alcoholproblematiek (10 en 11 samengevoegd)
+
+10. Wijkaanpak sociale basis, inclusief stimuleren woonvormen 36,4 35,9 35,9 26,9
+
+11.	Mantelzorg (Respijtzorg) 10,0 10,0 10,0 9,0 9,0
+
+12.	Een tegen Eenzaamheid (lokale coalities) 10,0 10,0 8,0
+
+13.	Welzijn op Recept (WOR) 5,5 9,5 11,5 13,5
+
+Totaal Gezondheid en Sociale Basis
+
+185,3 183,8 183,8 138,3 97,9
+
+(omzien naar elkaar) alles tot aan maatwerk/WMO
+
+14.	Versterken kennisfunctie GGD’en 2,5 2,5 2,5
+
+15.	Coördinatiekosten regionale aanpak preventie 8,9 7,3 7,3
+
+Totaal algemeen thema 11,4 9,8 9,8 -
+
+IZA-middelen (150 miljoen, deze worden naar verwachting later aan de
+
+150,0 150,0 150,0 150 ,0 150,0
+
+spuk toegevoegd)
+
+Totaal Brede SPUK (inclusief IZA) 449,0 445,9 445,9 3384,66 -
+
+Perspectief na 2026 26 27 28 30
+
+Met de SPUK kunnen gemeenten voor de periode 2023 – 2026 middelen aanvragen voor de afgesproken acties. Het grootste deel van de SPUK-middelen betreft structureel budget. Maar dat geldt niet voor alle onderdelen. Zo is voor de aanpak voor obesitas, mentale gezondheid, eenzaamheid en Welzijn op Recept na 2025 geen geoormerkt geld voor gemeenten beschikbaar. VNG en VWS gaan in 2024 met elkaar in overleg om te bepalen wat het wegvallen van middelen betekent voor de in gang gezette beweging. Deze actie is opgenomen in paragraaf G van dit hoofdstuk.
+
+4B Regionale en lokale samenwerking
+
+26 De reeks bestaat uit middelen afkomstig van de ministeries VWS, OCW en SZW.
+
+27 Gidsgelden werden voorheen verdeeld over 150 gemeenten en worden nu
+
+obv verdeelsleutel (inwoneraantallen, inkomensniveau en opleidingsniveau
+
+(proxy voor gezondheidsachterstanden)) verdeeld over alle gemeenten.
+
+NB deze verdeelsleutel geldt voor alle middelen in de SPUK.
+
+28 De KS middelen startte in 2019 met 3 mln en waren in 2020 en 2021 4,7 mln.
+
+Dit besloeg niet alle gemeenten, maar circa 275 gemeenten. In 2022 is totaal
+
+14 mln. ter beschikking gesteld via mei-, september- en decembercirculaire.
+
+29 Er zijn in 2022 reeds extra middelen (1,1 miljoen) voor mentale gezondheid aan
+
+gemeenten beschikbaar gesteld.
+
+30 Vanaf 2023 wordt er in het Gemeentefonds per jaar 10 miljoen gekort op de
+
+Wmo-uitgaven, oplopend tot 20 miljoen structureel vanaf 2031 (Startnota
+
+Kabinet Rutte-IV, Kamerstuk 35 925, nr. 143).
+
+Domeinoverstijgend en integraal werken Gemeenten zijn op grond van de Wet publieke gezondheid (Wpg) primair verantwoordelijk voor publieke gezondheids­ zorg, inclusief gezondheidsbevordering. Gezondheids­ problemen hebben echter niet altijd hun oorzaak in het gezondheidsdomein, maar kunnen op hele andere terreinen liggen, zoals bestaanszekerheid, werksituatie en leefomstan­ digheden. Dit betekent dat ook de antwoorden op gezond­ heidsvragen in deze domeinen gevonden kunnen worden. Goed gezondheidsbeleid vraagt om een integrale benadering en domeinoverstijgende samenwerking. Dit betekent dat de samenhang met activiteiten die gemeenten vanuit andere wetten ondernemen (o.a. Wet maatschappelijke ondersteu­ ning (Wmo) en Jeugdwet) goed geregeld moet zijn.
+
+38 | GALA – Gezond en Actief Leven Akkoord
+
+## Page 39
+
+Werksituatie
+
+Goede, betaalbare en begrijpelijke zorg 7
+
+10
+
+35 Bestaanszekerheid
+
+Achterliggende
+
+oorzaken van verschillen in
+
+19 Sociaal netwerk, kennis en vaardigheden
+
+ervaren gezondheid
+
+in %
+
+29
+
+Leefomstandigheden
+
+Afbeelding | zie ter illustratie bovenstaand plaatje, ontwikkeld door kennisinstituut Pharos.
+
+Individueel maatwerk Op individueel niveau wordt bepaald hoe zorg en ondersteuning op maat geleverd kan worden. Ieder individu en iedere hulpvraag kan immers weer anders zijn. Daarom zijn er (zorg)professionals nodig die boven de afzonderlijke keten­aanpakken, in samenspraak met de ontvangende cliënt of patiënt, kunnen bepalen welk probleem het eerst een oplossing nodig heeft en hoe losse interventies aan elkaar geknoopt kunnen worden tot een sluitende keten op individueel niveau. Hiervoor zijn er schakels nodig binnen de gemeenten op wijkniveau, bekostigd vanuit de gemeente dan wel de zorgverzekeraar. Een voorbeeld hiervan is de centrale zorgverlener binnen de aanpak overgewicht en obesitas bij kinderen.
+
+Regionale preventie-infrastructuur Samenwerking is ingewikkeld en komt niet altijd vanzelf­ sprekend tot stand. Of het nu binnen of tussen gemeenten is, of met zorgverzekeraars. Hetzelfde geldt overigens ook voor de samenwerking tussen (zorg)professionals. Dit bemoeilijkt landelijke implementatie en opschaling van erkende, én kansrijke, interventies over de domeinen heen. In het IZA is afgesproken dat er per 1 januari 2025 een preventie-in­ frastructuur tot stand moet komen, waarbinnen op basis van een regiobeeld en regioplan structureel wordt samen­ gewerkt en doorverwezen om tot een integraal aanbod te komen. Regionaal samenwerken bevordert de efficiëntie en slagkracht en ondersteuning van veel, met name kleinere, gemeenten en vergemakkelijkt het maken van afspraken met vaak regionaal of landelijk werkende organisaties, zoals de zorgverzekeraars. Daarbij is het belangrijk dat er een wissel­ werking is tussen regionale en lokale plannen en activiteiten.
+
+In paragraaf 3G, onderdeel I, is opgenomen aan welke randvoorwaarden en criteria moet zijn voldaan om te kunnen spreken van een regionale preventie-infrastructuur. Tevens zijn taken en verantwoordelijkheden opgenomen.
+
+4C Agenda en dialoog Health in all policies
+
+Veel regionale samenwerking rondom publieke gezondheidszorg en gezondheidsbevordering vindt momenteel al plaats langs de lijn van de GGD-regio’s. De GGD’en hebben een goede uitgangspositie om te adviseren over bovengemeentelijke samenwerking en partijen aan elkaar te verbinden. Ook kunnen de GGD’en adviseren en ondersteunen in het vertalen van regionale plannen naar de lokale gemeentelijke praktijk. Door de bestaande kennis van het netwerk en de gemeentelijke domeinen kan geadviseerd en ondersteund worden in het verbinden van beleidsdomeinen en het vormen van integrale aanpakken. Hierbij gaat het over randvoorwaarden voor duurzame samenwerking maar ook op inhoud over interventies en de kennis en ervaringen daaromtrent. De GGD-regio’s komen in grote lijnen overeen met de zorgkantoorregio’s. De zorgkantoorregio’s zijn leidend voor de regiobeelden en -plannen die conform afspraken in het IZA worden opgesteld. Daar waar de regio’s verschillen, gaan partijen om tafel om te voorkomen dat er incongruentie ontstaat.
+
+In de inleiding van het GALA is uiteengezet dat de gezond­ heid van mensen door veel determinanten wordt beïnvloed. Persoonsgebonden factoren zoals bloeddruk of cholesterol; leefstijl en gewoonten zoals voeding, roken, stress; en leef-, woon- en werkomstandigheden. In de acties die horen bij
+
+GALA – Gezond en Actief Leven Akkoord | 39
+
+## Page 40
+
+We delen het belang dat verandering nodig is. VWS verkent daarom hoe de ongezonde keuze voor alcohol moeilijker gemaakt kan worden om de doelen om problematisch alcoholgebruik terug te dringen, zoals geformuleerd in het Nationaal Preventieakkoord, dichterbij te brengen. VWS zet programma’s die reeds zijn ingezet, bijvoorbeeld Opgroeien in een Kansrijke Omgeving en Samenwerkingsverband Vroegsignalering Alcoholgebruik voort.
+
+de gezondheidsdoelen over het verminderen van gezond­ heidsachterstanden en een gezonde fysieke leefomgeving die uitnodigt tot bewegen en ontmoeten, is opgenomen dat VWS het belang van gezondheid agendeert bij andere departemen­ ten. Dit heeft als doel dat het belang van gezondheid en de consequenties voor gezondheid van bepaalde beleidskeuzes bekend zijn en worden meegewogen. In deze paragraaf wordt nader toegelicht wat VWS zelf doet aan flankerend beleid en welke acties worden genomen om gezondheid te agenderen bij andere departementen.
+
+Flankerend beleid vanuit VWS Het is een gezamenlijk belang om gezond gedrag te stimu­ leren van alle Nederlanders. Het Rijk neemt hiertoe waar mogelijk effectieve landelijke maatregelen.
+
+Om het gedeeld belang dat kinderen in een rookvrije en nicotine­vrije omgeving kunnen opgroeien te stimuleren voert het Rijk een breed pakket van tabaksontmoedigingsmaat­ regelen door, waaronder de accijnsverhoging op rookwaren zodat een pakje sigaretten € 10,- kost in 2024, zoals afgespro­ ken in het Regeerakkoord. Ook zal het aantal verkooppunten van rookwaren verder worden verminderd en wordt een verhoging van de huidige leeftijdsgrens voor de koop van tabaksproducten naar 21 jaar onderzocht. Het Rijk en een brede coalitie van partijen zetten daarnaast in op het stoppen met roken te stimuleren. Zo wordt een Taskforce Stoppen met Roken opgericht die aan de slag gaat om meer mensen die roken te motiveren een stoppoging te doen.
+
+Agenda en dialoog Health in all policies Het ministerie van VWS is bij diverse dossiers van andere departementen actief betrokken om (de consequenties op) gezondheid in beeld te brengen en onderdeel te maken van de besluitvorming. In het kader hieronder zijn voorbeelden van deze betrokkenheid opgenomen. Een bredere blik op gezondheid en het bevorderen van gezondheid zijn nodig. Een belangrijke behoefte is dát er duidelijkheid komt over wanneer de overheid wel of niet moet kiezen voor de implementatie/invoering van een gezondheids-/ preventiemaatregel bijvoorbeeld in de Zorgverzekeringswet, een bevolkingsonderzoek of vaccinatieprogramma. De staatsecretaris heeft aan het kennisplatform Preventie31, een onafhankelijk platform met experts uit beleid, onderzoek en praktijk die eerder hebben geadviseerd over kennisontwikkeling op het thema preventie, gevraagd een advies uit te brengen hoe de brede kosten en baten van preventie en de budgettaire effecten voor de Rijksbegroting meegenomen kunnen worden in de besluitvorming. Daarbij zal ook nader gevraagd worden in te gaan op het gebruik van de uitkomstmaat QALY (extra levensjaar in goede gezondheid).
+
+In aanvulling op de acties die zijn opgenomen over het agenderen van gezondheid bij andere departementen in de paragrafen over het terugdringen van gezondheidsachterstan­ den en de inrichting van een fysieke gezonde leefomgeving, zijn de volgende acties geformuleerd:
+
+De verleiding tot ongezond eten en drinken is in de fysieke en online omgeving overvloedig aanwezig. Dit wordt ook wel een ‘obesogene leefomgeving’ genoemd. De dagelijkse voedselomgeving moet gezonder. In het Regeerakkoord is afgesproken dat het Rijk de belasting op niet-alcoholische (fris)dranken zal verhogen. Per 2024 wordt de verbruiksbe­ lasting op niet-alcoholische (fris)dranken verhoogd. Dit geldt ook voor het laagste tarief voor bier zodat de accijns over bier niet minder is dan over fris. Mineraalwaters worden uitgezonderd van deze belasting.
+
+Verder is in het Regeerakkoord afgesproken dat wordt verkend hoe we op termijn een suikerbelasting kunnen invoeren en de btw op groente en fruit naar 0% kunnen verlagen. Daarnaast maakt het Rijk bindende afspraken met de industrie over gezondere voedingsmiddelen.
+
+Om de dagelijkse voedselomgeving gezonder te maken, neemt VWS maatregelen in de voedselomgeving. VWS zal een bevoegdheid creëren voor gemeenten voor het weren van ongezonde voedselaanbieders. Ook werkt VWS aan wetgeving tegen kindermarketing van ongezonde voedings­ middelen en wettelijke normen voor levensmiddelen (zoals een maximum zout- of suikergehalte).
+
+Acties VWS • VWS neemt het initiatief om te komen tot een samen­ hangende agenda om gezondheid op diverse beleids­ terreinen te agenderen en tot een integrale afweging te komen van beleidskeuzes waarin gezondheid wordt meegenomen. VWS zal dit in overleg met de Stuurgroep Impact op gezondheid vorm geven. • VWS organiseert met gemeenten rondetafelgesprekken over een dergelijke agenda. • VWS vraagt het kennisplatform Preventie om een advies uit te brengen over de het meenemen van de brede kosten en baten van preventie en de budgettaire effecten voor de Rijksbegroting. • VWS creëert een bevoegdheid voor gemeenten voor het weren van ongezonde voedselaanbieders. • VWS werkt aan wetgeving tegen kindermarketing van ongezonde voedingsmiddelen en wettelijke normen voor levensmiddelen (zoals een maximum zout- of suikergehalte).
+
+Wat betreft alcohol onderschatten we de gevolgen en risico’s van alcoholgebruik voor onszelf én voor onze kinderen.
+
+31 Kennisagenda Preventie: aanbevelingen voor gezonde leefstijl - ZonMw
+
+40 | GALA – Gezond en Actief Leven Akkoord
+
+## Page 41
+
+Voorbeelden van agenderen van gezondheid op andere beleidsterreinen.
+
+• VWS is ook partij bij thema’s in het fysieke domein om de gezondheid via de fysieke leefomgeving positief te beïnvloeden. Het ministerie van VWS heeft inmiddels een vaste plek aan tafel bij de Raad voor de fysieke leefomgeving, waar kabinetsbesluiten op het gebied van de fysieke leefomgeving worden voorbereid. • In het kader van de Nationale Omgevingsvisie (NOVI) heeft VWS het programma Groene en Gezonde Leefomgeving opgezet, samen met collega’s van BZK, IenW en LNV. Met dat programma wil de staatssecretaris overheden betere instrumenten geven om afwegingen te kunnen maken en projecten te stimuleren voor verbetering van de gezonde leefomgeving. • VWS en I&W verkennen samen hoe de relatie tussen gezondheid en mobilteit kan worden versterkt. • Een aantal andere belangrijke nationale beleids­ ontwikkelingen waar VWS op aan sluit zijn: provinciale uitvraag, ruimtelijke ordenings­ brief (voorheen 100-dagenbrief), invoering Omgevingswet, NOVI/NOVEX, Groen in de stad, Nationale Woon en Bouw Agenda, Verstedelijkingsstrategie, Nationaal Programma Landelijk Gebied, Citydeals, klimaatadaptatie en biodiversiteit/natuur-inclusief werken.
+
+4D Kennisinfrastructuur
+
+Data helpen om inzicht te krijgen in de gezondheidssituatie in wijken en regio’s en het voedt de dialoog zodat gemeenten en zorgverzekeraars het juiste kunnen doen en de impact van hun inzet ook kunnen meten. Een stevige kennisbasis is belangrijk om nu en in de toekomst goed onderbouwde keu­ zes te kunnen maken over te nemen interventies en hierin bij te kunnen sturen. De kennisdeling over het gebruik van data en de inzet van erkende interventies en (integrale) aanpakken kan beter. Op dit moment is deze kennis versnipperd (over onderwerpen en over geografische niveaus) en zijn er veel verschillende partijen actief.
+
+• De staatssecretaris van VWS geeft als coördi­ nerend bewindspersoon uitvoering aan de landelijke aanpak ‘Mentale Gezondheid: van ons allemaal’ samen met 3 departementen en 7 bewindspersonen. Dit heeft tot doel om mentale gezondheid mee te nemen op school, op de werkvloer, online en in het armoede­ beleid. Ook wordt cultuur ingezet om mentale gezondheid te verbeteren en mentale gezondheid bespreekbaar te maken. • Samen met OCW zet VWS met het programma ‘Welbevinden op school’ in op het bespreekbaar maken van mentale gezondheid op scholen van primair onderwijs (po), voortgezet onderwijs (vo) en middelbaar beroepsonderwijs (mbo). • OCW werkt met de sectorraden en de VNG aan de opgave uit het IBO Onderwijs-huisvesting, waar het verbeteren van het binnenklimaat in school­ gebouwen een belangrijk onderdeel van is. • Met OCW en SZW werkt VWS samen aan gezonde school maaltijden. • Voor de inzet op bewegen werkt VWS samen met diverse departementen zoals BZK, IenW, SZW en OCW. Een concreet voorbeeld hiervan is de samenwerking met IenW op het gebied van fiets­ stimulering via het programma Kies de fiets. • Samen met de minister voor Armoedebeleid, Participatie en Pensioenen kijkt VWS hoe we, mede in het kader van de ‘Aanpak geldzorgen, armoede en schulden’, regio’s kunnen onder­ steunen met, waar nodig een stevige infrastructuur tussen de eerstelijn en het bredere sociaal domein. De minister van VWS verkent in de uitwerking van het I|A wat er vanuit het zorgdomein nodig is om dit te organiseren en zorgverleners te faciliteren op praktijkniveau. Er lopen verschillende acties, o.a. het Project ‘Financiën in de Spreekkamer’ waar huisartsenpraktijken worden ondersteund bij het signaleren en bespreekbaar maken van geldzorgen en het warm overdragen van patiënten naar schuldhulpverlening. • Met Binnenlandse Zaken werkt VWS aan de Stedelijke Vernieuwingsagenda BZK en het programma Veiligheid en Leefbaarheid waar in de meest kwetsbare gebieden wordt ingezet op integraal beleid en waar VWS een bijdrage levert vanuit gezondheidsperspectief. • De gezondheidssector is één van de door EZK aangewezen topsectoren. Via Health ~ Holland wordt de samenwerking tussen het bedrijfsleven en de wetenschap gestimuleerd en innovatie ondersteund.
+
+De huidige kennisinfrastructuur, waarin de samenwerking en uitwisseling van bestaande kennis tussen gemeenten, de GGD en het RIVM (Centrum Gezond Leven) belangrijke
+
+GALA – Gezond en Actief Leven Akkoord | 41
+
+## Page 42
+
+schakels vormen, verdient versterking. Dit is nodig om bestuurders interventies en aanpakken aan te kunnen reiken die passen bij, of op maat te maken zijn, voor hun lokale situatie. Een integrale aanpak bestaat uit een samenhangend aanbod van (bij voorkeur) erkende interventies, beleid en maatregelen.
+
+Er ligt een logische link tussen gemeenten, GGD en het RIVM. De kennis van de GGD wordt gevoed door de ervaringen van gemeenten bij de implementatie van interventies, en door interactie met het RIVM en andere landelijke kennispartijen. De ervaringen van gemeenten kunnen worden meegenomen bij het doorontwikkelen van interventies en in de lande­ lijke kennisprogrammering. Het gaat hierbij niet alleen om ervaringen en kennis over de interventies zelf, maar ook over de randvoorwaarden om deze duurzaam in te zetten, bijvoorbeeld bestuurlijke borging, financiering, draagvlak en governance in bredere zin.
+
+De komende jaren wordt beoogd de kennisinfrastructuur te versterken zodat de landelijke kennisontwikkeling en kennisdeling beter ten dienste staat van lokale behoeften en lokale ervaringen beter worden meegenomen bij het (door)- ontwikkelen van interventies en aanpakken.
+
+Het RIVM Gezond Leven heeft een taak in het bundelen, delen en doorontwikkelen van kennis over effectieve aanpakken en interventies. Op het Loket Gezond Leven32 van het RIVM is veel en brede informatie te vinden over erkende interventies voor gezondheidsbevordering en over hoe gezondheidsbevordering samenhangend toe te passen is in de lokale praktijk.
+
+Het RIVM schakelt nauw met verschillende landelijke kennisinstellingen die vanuit hun eigen expertise bijdragen aan het bevorderen van gezondheid en preventie, afhan­ kelijk van thema, setting of doelgroep (zoals voeding, sport en bewegen, mensen met gezondheidsachterstanden en mentale gezondheid). Denk aan kennispartijen als Trimbos, het Voedingscentrum, JOGG, Pharos, Rutgers, Veiligheid NL, kenniscentrum Sport en Bewegen, Movisie, NJC, NJI en Academische werkplaatsen publieke gezondheid (AWPG).
+
+Acties VWS • VWS faciliteert dat ontwikkelde kennis over Gezond en Actief leven via de bestaande structuur van het RIVM Gezond Leven wordt verzameld, geïntegreerd en verspreid, en de geïntegreerde kennis terecht komt bij GGD’en en gemeenten. Daarbij gaat het zowel om wetenschappelijke kennis als praktijk- en ervaringskennis, zodat gemeenten en GGD’en met praktijkgerichte kennis preventief kunnen werken aan gezondheid van inwoners; • VWS werkt samen met VNG en gemeenten om landelijke en regionale samenhang tussen verschillende programma’s aan te brengen en versnippering tegen te gaan. Kennispartners en kennisgebruikers weten bij wie ze waarvoor terecht kunnen. • VWS bevordert dat relevant lokaal ontwikkelde praktijk- en ervaringskennis van gemeenten landelijk beschikbaar komt en verrijkt kan worden met wetenschappelijke kennis, en stimuleert ook doorontwikkeling om gezondheid en preventie verder te bevorderen. • VWS zet zich in om de rol- en taakverdeling van kennisorganisaties, ook ten opzichte van elkaar, te verduidelijken en te faciliteren. Dat vormt de basis voor goede samenwerking met respect voor elkaars kennis, expertise en positie. • VWS geeft ZonMw opdracht om bij de programmering van onderzoek, onder de vlag van het zevende preventieprogramma, aandacht te besteden aan de kennisbehoeften van gemeenten en kennis door te ontwikkelen.
+
+De GGD’en hebben van oudsher een belangrijke rol in de dataverzameling en het verschaffen van inzicht in de gezond­ heidssituatie van de bevolking, als ook in de advisering over zinvolle gezondheidsbevorderende interventies. Deze taken zijn vastgelegd in de Wet publieke gezondheid (Wpg). Concreet kan de GGD bijvoorbeeld ingezet worden voor de volgende taken: • het in kaart brengen van de (gezondheids)situatie, via dataverzameling en verbinding met data uit andere domeinen; • het bieden van ondersteuning bij het stellen van lokale beleids- en gezondheidsdoelen en het kiezen van gepaste interventies om deze te behalen; • het monitoren van de voortgang van beleid en aanpak met (erkende) interventies voor de verschillende thema’s, het onderzoeken van de effectiviteit van de (erkende) interventies of landelijke aanpakken in de lokale context en terugkoppeling van deze informatie/kennis naar het landelijk niveau (RIVM); • advisering over bovengemeentelijke samenwerkings­ afspraken in de regioplannen.
+
+32 https://www.loketgezondleven.nl/
+
+Acties gemeenten • Gemeenten maken gebruik van lokale– en regionaal afgestemde – data over de gezondheidssituatie om keuzes te onderbouwen, en schakelen hiervoor (desgewenst) de GGD in. • Gemeenten zorgen voor een stevig opdrachtgeverschap naar de GGD over onderbouwing en totstandkoming aanpakken. • Gemeenten gebruiken - in samenwerking met de GGD - landelijke beschikbare kennis via het RIVM Gezond Leven over integraal werken, planmatig werken en (erkende) interventies of aanpakken en de landelijke kennis op de verschillende thema’s van de thematische kennisinstellingen. • Gemeenten brengen in samenwerking met GGD’en hun ervaringen met toepassen van interventies en aanpakken terug naar landelijk niveau.
+
+42 | GALA – Gezond en Actief Leven Akkoord
+
+## Page 43
+
+• VWS is opdrachtgever en financier van het ondersteunings­team van de VNG. • VWS is opdrachtgever en financier van de landelijke kennisinstituten en ondersteuningsorganisaties.
+
+4E Ondersteunings­ programma
+
+Acties gemeenten • Gemeenten maken heldere afspraken over de totstand­ koming van integrale aanpakken/programma’s. • Gemeenten benutten het tijdelijke integrale ondersteu­ ning­saanbod voor de implementatie van GALA/SPUK thema’s. • Gemeenten nemen deel aan regionale netwerken waarin kennis- en ondersteuningspartijen (afhankelijk van gezondheidsthema) zitten, zoals JOGG, Pharos, etc.
+
+De VNG richt, met de VSG en een deel van bovengenoemde partijen, een ondersteuningsteam in dat laagdrempelig benaderbaar is voor gemeenten. Dit moet fungeren als een centraal punt en vraagbaak voor gemeenten voor het GALA en de SPUK. Dit is een vergelijkbare rol als die het ‘onder­ steuningsteam Lokale Preventieakkoorden’ van de VNG nu heeft en in 2022 afloopt.
+
+4F Monitoring
+
+Functies van het ondersteuningsteam zijn onder andere: • ondersteunen van gemeenten bij het doen van een aanvraag voor de Specifieke uitkering (SPUK); • organiseren van ondersteuning (b.v. kennis, goede voorbeelden, verdiepende bijeenkomsten), om gemeenten te helpen bij het opstellen van het – in de SPUK gevraagde – plan van aanpak voor de jaren 2024 t/m 2026; • het voorzitten van de kerngroep om plannen op de voorwaarden uit de SPUK te beoordelen; • in kaart brengen van knelpunten en actuele ontwikkelingen en hierop acteren; • bijdragen aan de organisatie van regionale kennisnetwerken (waar daar behoefte aan is).
+
+Landelijke, regionale en lokale monitoring is essentieel om te kunnen bepalen in hoeverre de afspraken in dit akkoord in de lokale en regionale praktijk worden uitgevoerd en welk effect ze sorteren. Er is behoefte aan inzicht in: • de ontwikkelingen op het gebied van regionale samenwerking tussen zorgverzekeraars en gemeenten op het gebied van gezondheid en preventie, zowel qua structuur als qua ketenaanpakken waarover afspraken worden gemaakt; • de lokale, regionale en landelijke gezondheidseffecten van de aanpakken, als ook op het dwarsdoorsnijdende thema gezondheidsachterstanden.
+
+De VNG kan deze rol niet alleen vervullen. De VNG moet vooral goed kunnen doorverwijzen en er is een nauwe samenwerking nodig met de regionale GGD’en, het RIVM en de landelijke kennisinstituten en ondersteuningsorganisaties. Denk aan AiG, Pharos, Kenniscentrum Sport en Bewegen, NOC/NSF, Trimbos, Veiligheid NL, NCJ, NJI, Movisie, MIND, LKCA, JOGG.
+
+De uitkomsten op basis van de monitoring kunnen bijdragen aan het maken van goed onderbouwde keuzes op lokaal (en regionaal) niveau en om bij te sturen waar nodig.
+
+Het ondersteuningsteam kan helpen bij het opzetten van regionale netwerken, voor zover deze nog niet bestaan en er behoefte is aan ondersteuning. Voor de lange termijn beogen we dat één van de partijen in de regio, bijvoorbeeld de GGD, die rol als brugfunctie en trekker op kennis en advisering gaat vervullen.
+
+Op dit moment zijn er al diverse monitors ontwikkeld welke relevant zijn voor het GALA en de SPUK. Zo is er onder andere de gemeentezorgspiegel, die gemeenten en zorgverzekeraars benutten bij de regionale samenwerkingsagenda’s, de lan­ delijke monitoring van de gecombineerde leefstijl interventie bij overgewicht en obesitas van volwassenen en de monitor van de aanpak kansrijke start. Ook de opbrengsten van de JOGG-aanpak en van het preventieakkoord worden gemoni­ tord. Het streven is voor alle programma’s vallend onder de SPUK monitoring in te richten. Deze monitoring kan er per programma anders uitzien. Er is echter meer stroomlijning en uniformering in de monitoring nodig, en aandacht voor dwarsdoorsnijdende thema’s als gezondheidsachterstanden. Daarvoor wordt op drie vlakken ingezet.
+
+Acties VWS • VWS werkt samen met het ondersteuningsteam en aangesloten kennisinstellingen en ondersteuningspartij­ en aan een heldere rolverdeling en goede samenwerking tussen de organisaties op landelijk, regionaal en lokaal niveau. Onderdeel daarvan is het opbouwen van een re­ gionaal netwerk van expertise om lokaal te ondersteunen en het maken van afspraken om de toegang tot kennis en ondersteuning op maat in de wijk te ontsluiten.
+
+GALA – Gezond en Actief Leven Akkoord | 43
+
+## Page 44
+
+1. Gemeentelijke inzet De monitoring van de verschillende programma’s die onder de specifieke uitkering worden gefinancierd wordt zodanig ingericht dat de gegevensverstrekking door gemeenten zo min mogelijk lasten met zich meebrengt en data vanuit de verschillende programma’s, waar relevant, op elkaar aansluiten. Bij monitoring wordt ook rekening gehouden met onder andere het kunnen vergelijken met eerdere jaren (bij bestaande programma’s) en kunnen verantwoorden dat (politieke en bestuurlijke) toezeggingen gestand worden gedaan. Gemeenten leveren monitoringsgegevens aan con­ form de voorwaarden van de specifieke uitkering bewegen, gezondheidsbevordering en sociaal domein.
+
+gemeenten bijvoorbeeld de gemeentezorgspiegel om het inzicht in de gezondheidssituatie in wijken en regio’s te ver­ groten. Deze kan nog beter worden benut voor de monitoring van de voortgang van aanpakken en verbonden worden aan andere data. Bij dit alles zijn verschillende partijen betrok­ ken op landelijk, regionaal en lokaal niveau zoals: ZonMw, het RIVM, het NIVEL, academische werkplaatsen, GGD’en, gemeenten en Vektis. De effectiviteit van de aanpakken die deels verzekerde zorg betreffen is al door het Zorginstituut vastgesteld. Daarom komt er geen nieuwe landelijke monito­ ring op gezondheidseffecten van de diverse ketenaanpakken in opdracht van VWS. Uitzondering is de bestaande landelijke monitoring van de gecombineerde leefstijlinterventie bij obesitas en overgewicht van volwassenen, die als eerste specifieke monitor, de effectiviteit wel meet. De gezondheids­ effecten hiervan zijn pas na enkele jaren zichtbaar.
+
+VWS geeft het RIVM opdracht om in samenwerking met de GGD’en en het Mulier Instituut te adviseren hoe bestaande en nieuw te ontwikkelen monitors voor de verschillende deelprogramma’s het beste op elkaar kunnen aansluiten. VWS vraagt tevens advies over het monitoren van bijdra­ gen van GALA en SPUK aan overkoepelende doelen van meer integraal beleid (zoals gezondheidsachterstanden) en domein­overstijgende samenwerking op lokaal of regionaal niveau. Een belangrijk aandachtspunt is om beschikbare kennis en ervaringen van gemeenten en GGD’en zo goed mogelijk te benutten.
+
+Acties VWS • VWS vraagt advies aan het RIVM, GGD’en en het Mulier Instituut over het monitoren van het GALA en de SPUK op zowel overkoepelende als beleidsinhoudelijke doelen van programma’s of aanpakken, en de toepassing in de praktijk van ketenaanpakken. Dit advies wordt in Q2 2023 opgeleverd. • VWS stuurt op het efficiënt en kwalitatief inrichten van monitoring en het aanleveren van gegevens door gemeenten.
+
+Acties gemeenten • Gemeenten verstrekken gegevens over de programma’s conform de voorwaarden van de specifieke uitkering bewegen, gezondheidsbevordering en sociaal domein. • Gemeenten delen hun ervaringen over bijvoorbeeld lokale en regionale samenwerkingen rond gezondheid en preventie. • Gemeenten spannen zich in voor monitoring van hun beleid en integrale aanpak van de thema’s in de SPUK, leren hiervan en sturen bij op basis van de bevindingen.
+
+2. Ontwikkelingen regionale samenwerking Op dit moment gebruiken zorgverzekeraars en gemeenten het ‘Venster op de samenwerking’ om inzicht te geven in de regionale samenwerking binnen de regionale werkstructuur. Dit venster biedt op dit moment onvoldoende informatie over de verschillende regionale aanpakken, welke keten­ aanpakken afspraken zijn gemaakt en de vorderingen per regio. Om effectieve beleidsmiddelen in te kunnen zetten, moet deze monitoring worden verbeterd in samenwerking met gemeenten. VWS geeft het RIVM daarom de opdracht om een landelijke monitoring uit te voeren, in samenwer­ king met ZN en VNG. Hierbij wordt de informatie uit het bestaande venster benut en de verbinding gezocht met andere (ketenaanpak specifieke) monitors van het RIVM. Uitgangspunt is dat de monitoring dienend moet zijn aan de regio’s. Nadere afspraken hierover staan in paragraaf 3G.
+
+4G Governance
+
+Het GALA heeft tot doel om gezamenlijk in te zetten op de beweging naar passende ondersteuning met meer focus op gezondheid in een gezonde leefomgeving. De zogenaamde beweging naar de voorkant. De doelen in het GALA geven richting aan die beweging. De concrete afspraken over de resultaten hebben tot oogmerk om bij te dragen aan het behalen van de gezondheidsdoelen. Naast de impact van de
+
+3. Gezondheidseffecten van aanpakken Gemeenten en zorgverzekeraars kunnen gezamenlijk afspraken maken over de lokale en regionale monitoring van gezondheidseffecten. Gemeenten hebben zelf een verant­ woordelijkheid in het monitoren van hun beleid, program­ ma’s of aanpakken. Door in te zetten op lerende evaluaties, het monitoren van doelen en effecten van interventies, en het intensiever benutten van beschikbare data en ervarings­ kennis kunnen gemeenten hun lokale of regionale beleid of aanpak bijsturen waar nodig. De GGD’en kunnen vanuit hun kennisfunctie hierbij een rol spelen. Er zijn immers al veel gezondheidsdata lokaal en regionaal beschikbaar, naast de gegevens die ook beschikbaar zijn bij gemeenten zelf. Op regionaal niveau gebruiken zorgverzekeraars en
+
+44 | GALA – Gezond en Actief Leven Akkoord
+
+## Page 45
+
+gestelde doelen en acties, is het ook belangrijk om de uit­ voerbaarheid van het GALA en het daarmee samenhangende financiële arrangement (de brede SPUK) de komende jaren onderwerp te laten zijn van het gesprek tussen het ministerie van VWS, het ministerie van Binnenlandse Zaken (BZK) en de VNG. Inclusief de manier waarop dit in beeld wordt gebracht voor de midtermreview in 2024.
+
+Het is belangrijk dat partijen ook in de uitwerking van de afspraken blijven samenwerken, elkaar houden aan de afspraken en zicht houden op de doelen. Het monitoren van de uitvoering van de acties en het bereiken van de gezond­ heidsdoelen is hiervoor essentieel, evenals het gesprek hierover. Dit geldt temeer daar er sprake is van verschillende verantwoordelijkheden en wettelijke verplichtingen van partijen. Waar de verantwoording van de resultaatsver­ plichtingen van VWS en VNG onderdeel is van het politieke bestel waar de Kamer en gemeenteraad toezicht op houden, hebben zorgverzekeraars een wettelijke zorgplicht waar de NZa op toeziet. Om hier voldoende balans in aan te brengen komen VWS, ZN en VNG met dit akkoord tot afspraken met resultaatverplichtingen, die bijdragen aan het gezamenlijk behalen van de doelen en het nakomen van verplichtingen. We houden elkaar scherp op het nakomen van de resultaats­ verplichtingen waar het GALA voor gesloten wordt. Daar­ naast biedt de SPUK de zekerheid dat het budget geoormerkt is en vindt monitoring plaats op de besteding van middelen. Deze monitoring op resultaten biedt ook zicht op de inzet van gemeenten. Voor 2026 zal een voorstel worden uitge­ werkt voor het opnemen van taken en bevoegdheden in wet- en regelgeving. Deze optie is zowel in het licht van de balans van plichten als in het licht van structurele financiering voor de periode na de SPUK, de moeite waard om te verkennen.
+
+• in het Bestuurlijk Overleg wordt de voortgang van de acties besproken, inclusief eventuele knelpunten of blokkades en mogelijke oplossingen; • de uitvoering van de SPUK wordt gemonitord en bespro­ ken. Er wordt tijdig afgesproken of de middelen in de SPUK die structureel beschikbaar zijn, na 2025 worden ondergebracht in een (volgende) SPUK of dat een andere financieringsconstructie de voorkeur verdient. Een be­ langrijk aspect hierbij is de mogelijkheid om een integraal gezondheidsbeleid te kunnen voeren; • VNG en VWS gaan in 2024 met elkaar in overleg om te bepalen wat het wegvallen van middelen in de SPUK na 2025 betekent voor de in gang gezette beweging en het halen van de doelen uit het GALA; • voor 2026 wordt door VWS in samenwerking met VNG en ZN een voorstel uitgewerkt hoe taken en bevoegdheden in wet en regelgeving kunnen worden verankerd, in het licht van de balans van plichten van zorgverzekeraars en gemeenten en tegen de achtergrond van de wens van gemeenten om structurele financiering via het Gemeen­ tefonds te laten verlopen. Het ministerie van BZK wordt hier ook bij betrokken; • VWS, BZK en VNG spreken in de eerste helft van 2023 door over de uitvoerbaarheid van het GALA en het daarmee samenhangende financiële arrangement. Dit gesprek wordt gevoerd binnen de context van de uitvoeringstoets Decentrale Overheden. Hierbij wordt ook besproken hoe dit onderwerp wordt meegenomen in een midterm review in 2024 (aansluitend op de mid­ term review van het IZA). In de midterm review wordt ook meegenomen hoe de implementatie van keten­ aanpakken, zoals die op overgewicht of val­preventie, in de lokale praktijk verloopt.
+
+Om de partijen die niet ondertekenen maar wel betrokken en relevant zijn voor de beweging op gezondheid en preventie in brede zin, aangesloten te houden, worden in ieder geval de volgende activiteiten voorzien: • op regionale schaal worden netwerkbijeenkomsten georganiseerd waar, afhankelijk van het thema, relevante kennis- en uitvoeringspartijen voor worden uitgenodigd; • op landelijke schaal wordt jaarlijks een GALA bijeenkomst georganiseerd waar goede voorbeelden uit de regio en blokkades worden besproken. Hierbij wordt wel bezien, in samenspraak met betrokken partijen, in hoeverre een dergelijke bijeenkomst toegevoegd waarde heeft ten op­ zichte van andere landelijke congressen waar gezondheid centraal staat; • in de ketenaanpakken zijn partijen die noodzakelijk zijn voor de implementatie van de ketenaanpak betrokken.
+
+VWS, gemeenten en zorgverzekeraars spreken het volgende af: • er vindt een aantal malen per jaar een Bestuurlijk Overleg plaats waarin de bewindspersonen van VWS, de delega­ tie van wethouders van de VNG en bestuurders van ZN spreken over de uitvoering van het GALA;
+
+GALA – Gezond en Actief Leven Akkoord | 45
+
+## Page 46
+
+Bijlagen
+
+46 | GALA – Gezond en Actief Leven Akkoord
+
+## Page 47
+
+Bijlage 1 Samenhang GALA met andere trajecten
+
+jaren vergen. Ouderen willen zo lang mogelijk regie houden en thuis blijven wonen. Dit willen partijen goed organiseren en ze willen inspelen op de verdergaande veranderingen in de toekomst. Vitaal ouder worden is de eerste actielijn en belangrijke pijler van het WOZO programma en richt zich op het bevorderen van gezondheid en de zelfredzaamheid van ouderen.
+
+WOZO streeft o.a. de volgende doelen na met deze actielijn: • ouderen zijn in staat om zelf de regie te hebben en leiden met hun netwerk hun leven, passend bij hun cultuur en gewoontes; • nadenken over en voorbereiden op ‘ouder worden’ wordt een vanzelfsprekend onderdeel van het leven; • ouderen kunnen terugvallen op een voldoende groot netwerk omdat het tijdig gelukt is hier -met ondersteu­ ning – in te investeren. Dit leidt onder andere tot meer veerkracht, meer levensgeluk en minder eenzaamheid; • we kijken naar elkaar en iedereen pakt hierin een verant­ woordelijkheid: van buren en naasten tot de overheid en private partijen (= samenredzaamheid); • de leefomgeving is ingericht met de belangrijkste omge­ vingskwaliteiten voor senioren, zoals toegankelijkheid, bereikbaarheid, nabijheid van voorzieningen, kwaliteit leefomgeving en beweegvriendelijk en ontmoeting; • meer informatie en detail worden weergegeven in WOZO.
+
+Samenhang met het IZA In het IZA (p. 80) is de volgende passage opgenomen, waaraan navolging wordt gegeven in het GALA: “Gemeen­ ten zijn – gezien hun brede verantwoordelijkheid in het sociale en preventieve domein – goed in staat om passende en integrale ondersteuning en zorg te bieden aan of organiseren voor (kwetsbare) mensen. Het gaat dan om beleid en aanpakken op diverse onder­ werpen; denk aan gezondheidsachterstanden, mentale gezondheid, aandacht voor leefstijl in een gezonde leefomgeving, de sociale basis (o.a. vrijwilligers­werk, mantelzorgondersteuning en de aanpak van eenzaamheid) en maatwerkvoorzieningen in de ondersteuning van zelfredzaamheid. Met name voor ouderen (en hun mantelzorgers) is de rol van gemeenten op het terrein van volkshuisvesting belangrijk. Dit alles in combinatie met beleidsvorming en maatregelen in het bre­ dere sociaal domein (o.a. bestaanszekerheid en opvoedondersteuning/ jeugdhulp). Daarmee kunnen gemeenten een belangrijke bijdrage leveren aan het voorkomen of uitstellen dat mensen ziek worden, vereenzamen of mentale klachten ontwikkelen, en het beperken van de instroom in (duurdere) zorgvoorzieningen, waaronder de curatieve GGZ. Om deze beweging naar de voorkant kracht bij te zetten maken VWS en gemeenten afspraken in het Gezond en Actief Leven Akkoord (GALA) over gezondheidsdoelen en de inzet hierop.”
+
+Samenhang met het Nationaal Preventieakkoord De doelen van het Nationaal Preventieakkoord op roken, overgewicht en problematisch alcoholgebruik worden voort­ gezet en er wordt toegewerkt naar een Gezonde Generatie in 2040. Hierbij wordt de aanpak verbreed met mentale gezondheid en komt er een extra impuls voor sport en bewe­ gen. Er wordt geïnvesteerd in het intensiveren en uitbreiden van effectieve maatregelen en acties om de doelen dichterbij te brengen. In dit kader heeft het RIVM eerder geconstateerd dat extra inzet nodig is om deze doelen te bereiken. Hierbij is afgesproken dat er ook extra aandacht is voor het verminde­ ren van gezondheidsverschillen en voortbouwen op de lokale preventieakkoorden.
+
+Tevens zijn in het IZA afspraken opgenomen ten aanzien van regionale samenwerking, een regionale preventieinfrastructuur en de inrichting van effectieve ketenaanpakken over de domeinen (Zvw, Wpg, Wmo en Jeugdwet) heen. Deze afspraken zijn zowel op gemeenten als zorgverzekeraars van toepassing en vormen de basis voor de regionale samenwerking die op het terrein van gezond leven en preventie nodig is. Een aantal van deze afspraken behoeft nadere uitwerking, zodat we over en weer weten wat we van elkaar mogen verwachten, waar we elkaar op kunnen aanspreken en gezamenlijk tot een goed werkprogramma voor de komende jaren kunnen komen. In het IZA is afgesproken dat deze uitwerking uiterlijk 15 december 2022 gereed is.
+
+Samenhang met het Sportakkoord II In het Sportakkoord zijn afspraken gemaakt over de ambities, doelen en resultaten op het gebied van Sport en bewegen. Deze afspraken zijn gemaakt tussen het Rijk (VWS), VSG/ VNG, NOC*NSF en POS (Platform Ondernemende Sportaan­ bieders). Het Sportakkoord II bouwt voort op de afspraken uit het Sportakkoord 2018-2022. De SPUK is het financieel arrangement voor het thema Sport, bewegen en cultuur. Het gaat in het Sportakkoord II om afspraken tussen de vier strategische partners over de gestelde ambities zoals in de Kamerbrief (Top)sportbeleid 2022 en verder, Kamerstuk 30234-304. Deze ambities zijn: het behouden en versterken van de vitale sport- en beweegsector, het bevorderen van kansengelijkheid voor deelname aan sport – en beweeg­ activiteiten, het bevorderen van bewegen in het dagelijks
+
+Samenhang WOZO Het programma Wonen, Ondersteunen en Zorg voor Ouderen (WOZO) zet zich in op de brede maatschappelijk beweging gericht op een omslag in de organisatie van onder­ steuning en zorg die zich aanpast op de veranderde voor­ keuren van ouderen en daarmee de financiële en personele houdbaarheid bevordert. Om te bevorderen dat ouderen in de toekomst langer zelfstandig kunnen blijven wonen op een plek waar ze zich thuis voelen, erkennen de samenwerkings­ partners een ontwikkeling die al gaande is maar waarbij de vrijblijvendheid nu voorbij is. De norm wordt: zelf als het kan, thuis als het kan en digitaal als het kan. Het realiseren van deze norm zal de inspanning van vele partijen en meerdere
+
+GALA – Gezond en Actief Leven Akkoord | 47
+
+## Page 48
+
+professionals in de JGZ en een toenemende vraag naar de inzet van de JGZ. Het Rijk, gemeenten en betrokken zorg­ professionals moeten tot een gezamenlijke visie komen over hoe we omgaan met schaarste in personeel en de wijze van zorg en dienstverlening van de JGZ in het licht van dit arbeidsmarktvraagstuk. Om hiertoe te komen richten VWS en VNG een arbeidsmarkttafel JGZ in.
+
+leven en het vergroten van de maatschappelijke waarde van Topsport. Het is van belang om op onderdelen integraal te werken met ander domeinen zoals Sociaal domein, Jeugd, Zorg, Preventie. Zo zijn buurtsport- en cultuurcoaches inzet­ baar om met sport- en bewegen te werken aan valpreventie en wordt de samenwerking tussen de gestelde ambities, doelen en netwerken lokaal vanuit de lokale sportakkoorden en preventieakkoorden gestimuleerd en gefaciliteerd door de SPUK en vastgelegd in het GALA en het Sportakkoord II.
+
+Samenhang met de Hervormingsagenda Jeugd Met de Hervormingsagenda jeugd wordt een aantal ingrij­ pende hervormingen in het stelsel van de jeugdzorg door­ gevoerd om een aantal hardnekkige knelpunten aan te pakken. Om de hulp aan kinderen en gezinnen te verbeteren is het nodig te investeren in de veerkracht van alle kinderen en hun ouders en het versterken van het normale leven. Waarbij een omslag nodig is van een individueel beroep op gespecialiseerde zorg naar inzet vanuit laagdrempelige pre­ ventieve en collectieve basisvoorzieningen. Kinderen komen dan niet meer in de jeugdhulp terecht voor problemen die aanvankelijk bij het gewone opvoeden en opgroeien horen. Daarnaast komen kinderen nu in de jeugdhulp terecht vanwege gezondheids- of sociale problemen van de ouders. Dit vraagt om domeinoverstijgende oplossingen. De ambitie en doelstellingen uit dit GALA om de preventieketen te ver­ sterken en gezondheid en sociaal domein beter te verbinden dragen hier in belangrijke mate aan bij.
+
+Verwachte gespreksthema’s zijn: • samenspraak JGZ-professionals, JGZ-organisaties en gemeenten; • takenpakket en secundaire randvoorwaarden; • opleidingen jeugdarts, arts Maatschappij & Gezondheid met het profiel jeugd, en verpleegkundige. Samenhang met het programma Toekomstbestendige Arbeidsmarkt Zorg en Welzijn (TAZ) Het brede arbeidsmarktbeleid van VWS zoals vorm gegeven in het programma TAZ is erop gericht een transitie in gang te zetten naar passende en arbeidsbesparende zorg waarin het voor zorgverleners goed werken is en vormt daarmee de bodem waarop het andere VWS-beleid kan steunen. Sectorale programma’s als IZA, WOZO, de hervormingsagenda Jeugd en GALA zijn essentieel voor de noodzakelijke transities gericht op houdbare zorg. Deze programma’s bouwen voort op het fundament van TAZ. Tezamen moeten de programma’s leiden tot een arbeidsmarkt in zorg en welzijn waarbinnen met minder meer zorgverleners aan de zorgvraag voldaan kan worden.
+
+Naast de VWS-programma’s wordt met de interdeparte­ mentale aanpak Arbeidsmarktkrapte kabinetsbreed gewerkt aan een arbeidsmarkt die beter bestand is tegen periodes van krapte. Dit programma ziet toe op breed arbeidsmarkt­ beleid waar alle sectoren in principe profijt van kunnen hebben. TAZ, IZA en WOZO dragen alle bij aan de transitie naar passende zorg. Daartoe wordt ingezet op innovatieve werkvormen, ruimte voor leren en ontwikkelen en behoud van medewerkers. Als uitgangspunt geldt sectoroverstijgend waar het kan, specifiek waar het moet. Op deze drie thema’s zet TAZ sectoroverstijgend in. Via IZA, WOZO en GALA wor­ den sectorspecifieke arbeidsmarktknelpunten opgepakt.
+
+Samenhang met de jeugdgezondheidszorg (JGZ) De JGZ-uitvoerders kunnen een grotere rol in spelen in de hele preventieketen voor de jeugd dan dat ze nu al doen in opdracht van gemeenten. Zij zien immers alle kinderen van 0-18 jaar en kunnen, gelet op hun medische achtergrond, hun centrale rol in het sociale domein en hun kennis van de leef- en leeromgeving van het kind helpen de gewenste versnelde beweging naar een gezonde jeugd te realiseren. Door een gezonde levensstijl van jongs af aan te stimuleren, zorgen de JGZ-uitvoerders er mede voor dat minder mensen opgroeien met een gezondheidsachterstand. Door vroegtijdig proble­ men te signaleren, te normaliseren waar mogelijk en door te verwijzen waar nodig, kan de JGZ helpen gezondheids­ problemen te voorkomen en het beroep op de geïndiceerde jeugdzorg terug te dringen. Dit vraagt van gemeenten dat ze bij het uitwerken van hun visie op de preventieketen voor het kind in het lokale domein, ook kijken naar de additionele rol die de JGZ-uitvoerders hierbij kunnen spelen, naast de rol die zij hebben bij het uitvoeren van het basistakenpakket JGZ. Dit kan bijvoorbeeld door de JGZ-uitvoerders in te zetten in een breed wijkteam, een team mentaal op school, een regierol te geven bij de ketenaanpak overgewicht of als uit­ voerder van een interventie in het kader van Kansrijke Start. De JGZ-uitvoerders kunnen de lokale en de rijksoverheid goed helpen de gewenste versnelde beweging naar gezondheid te realiseren. Er is echter een groot tekort aan
+
+48 | GALA – Gezond en Actief Leven Akkoord
+
+## Page 49
+
+Bijlage 2 Werkagenda VNG bij het Integraal Zorg Akkoord (IZA)
+
+Inleiding Voor gemeenten is jaarlijks maximaal € 150 miljoen structu­ reel beschikbaar voor concrete plannen om de IZA-doelen te verwezenlijken, mits gemeenten zich committeren aan het IZA. Deze werkagenda is opgesteld ter onderbouwing van deze beschikbaar gestelde middelen. In deze werkagenda schetst de VNG wat de IZA-partijen van gemeenten mogen verwachten aan inzet ten behoeve van de in het IZA gestelde doelen en gemaakte afspraken.
+
+Inzet IZA-middelen De in de inleiding genoemde IZA-middelen zijn bedoeld voor onderstaande niet-vrijblijvende inzet en activiteiten van gemeenten. Op basis van het IZA moet de regio invulling geven aan de genoemde inzet en activiteiten. In het laatste onderdeel van deze bijlage staat een gedetailleerder overzicht van alle afspraken in het IZA die inzet vragen van gemeenten: • Organisatie en coördinatie van de regionale samen­ werking met zorgverzekeraars, zorgkantoren en zorg­ aanbieders op basis van de regionale samenwerkings­ agenda / het regioplan. • Structurele inzet (organisatie, coördinatie, bemensing) op de netwerksamenwerking van het sociaal domein met in ieder geval de ggz, de eerstelijnszorg en de huisartsenzorg. • Structurele inzet op de coördinatie en organisatie van de in IZA afgesproken domeinoverstijgende keteninter­ venties (waaronder valpreventie bij ouderen, welzijn op recept, aanpak overgewicht bij kinderen, gecombineerde leefstijlinterventie bij volwassenen, kansrijke start). • Inrichten en bemensen van een dekkend netwerk van laagdrempelige steunpunten in de regio voor mensen met psychische kwetsbaarheid. • Regionaal stimuleren van de inzet van e-healthtoepassingen, anonieme hulplijnen en vormen van digitale/hybride zorg. • Extra inzet van gemeenten voortkomend uit het gezamenlijke, aan IZA gekoppelde, regioplan. Deze inzet kan per regio verschillen, afhankelijk van de regionale prioriteiten en keuzes.
+
+NB. Gemeenten dragen er zorg voor dat de inzet van de IZA-middelen niet dubbelt met de andere middelen die door het Rijk specifiek beschikbaar worden gesteld. Dit dient herleid­ baar te zijn bij de verantwoording van de inzet van de middelen.
+
+Verdeling van de middelen De IZA-middelen worden beschikbaar gesteld aan de regio door middel van een SPUK. Met regio wordt in deze context bedoeld de samenwerkingsregio’s uit de werkstructuur voor de regionale samenwerking van ZN en VNG.
+
+M.b.t. de IZA-middelen moet de SPUK worden aangevraagd door één gemeente uit de regio mede namens de andere gemeenten uit de regio. Om dit mogelijk te maken ontwikkelt de VNG samen met gemeenten een regionale mandaat­structuur die aansluit bij de reeds bestaande afspraken over de bestuur­ lijke aanspreekbaarheid in de werkstructuur van ZN en VNG. Deze mandaatstructuur wordt hieronder nader toegelicht.
+
+In de aanvraag voor de SPUK geven gemeenten voor hun regio aan waarvoor de middelen ingezet zullen worden. Hierbij wordt verwezen naar het regioplan; de afspraken in het regioplan over de gemeentelijke inzet vormen de basis voor de SPUK aanvraag. Daarbij wordt aangesloten bij de werkwijze rondom de regioplannen die in het brede IZAkader nog bestuurlijk moet worden vastgesteld.
+
+Uitgangspunten Bij deze werkagenda geldt een aantal uitgangspunten: • De inzet van gemeenten in het kader van het IZA kan zo­ wel lokaal als in samenwerking met andere gemeenten in de samenwerkingsregio plaatsvinden. In de regio­plannen wordt expliciet gemaakt welke inzet lokaal en welke regionaal wordt gepleegd. • Met regio’s wordt hier bedoeld de samenwerkingsregio’s uit de werkstructuur van ZN en VNG voor de regionale samenwerking tussen gemeenten en zorgverzekeraars / zorgkantoren (2019). Bij de uitwerking van de afspraken wordt aangesloten bij deze structuur. • Deze werkagenda ondersteunt en verstevigt de positie van gemeenten in de werkstructuur voor de regionale samenwerking door nadere, niet-vrijblijvende afspra­ ken over de organisatie en de aanspreekbaarheid van gemeenten in de regio (voor hun regionale partners). • In deze werkagenda worden de hoofdlijnen geschetst van wat gemeenten/regio’s gaan doen en waar zij dus op mogen worden aangesproken; de vorm en invulling daarvan is aan de regio’s zelf. Hiermee wordt aangesloten bij de reeds geldende uitgangspunten van de werkstructuur (zie laatste onderdeel van deze bijlage). • In ieder geval tot en met 2026 worden de in de inleiding genoemde middelen door de rijksoverheid beschikbaar gesteld aan de regio’s door middel van een Specifieke Uitkering (SPUK). Het Rijk en de VNG maken rondom de in het IZA afgesproken mid-term review medio 2024 afspraken over hoe de beschikbaar gestelde middelen na 2026 worden uitgekeerd aan gemeenten. • Bij de regionale uitwerking en uitvoering van de afspra­ ken in het IZA wordt zoveel mogelijk aangesloten bij bestaande structuren en werkwijzen, lokaal en regionaal. • De GGD’en hebben een belangrijke kennis- en advies­ functie op het gebied van gezondheidspreventie. De samenwerkingsregio’s zijn niet allemaal geografisch congruent aan de GGD-regio’s. In de samenwerking gaan partijen daar flexibel en pragmatisch mee om. • De rol van zorgaanbieders, cliënt- en patiëntorganisaties en ervaringsdeskundigheid behoeft expliciete aandacht.
+
+GALA – Gezond en Actief Leven Akkoord | 49
+
+## Page 50
+
+Mandaatstructuur De middelen voor de inzet van gemeenten ten behoeve van het IZA worden middels een SPUK uitgekeerd aan de samen­ werkingsregio’s. Dat houdt in dat per regio één gemeente namens de regio de middelen aanvraagt, ontvangt en beheert. Met bestuurlijk mandaat van de andere gemeenten in de regio.
+
+De gemeente die met (bestuurlijk) mandaat van de andere gemeenten in de regio de middelen aanvraagt en beheert, draagt zorg voor een evenwichtige verdeling van de middelen gebaseerd op lokale en regionale inzet op in het regioplan afgesproken acties en activiteiten. Daarnaast zorgt de gemandateerde gemeente voor bekostiging uit de IZAmiddelen van de regionale coördinatie van de samenwerking en van de uitvoering van de afspraken in het regioplan.
+
+Het totaal van de jaarlijks maximaal beschikbare IZAmiddelen bedraagt 150 miljoen euro. Hiervoor wordt dezelfde verdeelsleutel gehanteerd als voor de middelen in de SPUK ten behoeve van het GALA: op basis van inwoneraantal (gebaseerd op inkomensniveau en opleidingsniveau). Het bedrag voor de regio is daarmee de optelsom van het budget voor alle gemeenten in die regio.
+
+Voor de mandaatstructuur in het kader van het IZA kan worden aangesloten bij de Norm voor Opdrachtgever­ schap (NvO) voor jeugdzorg, maatschappelijke opvang en beschermd wonen. In de NvO zijn niet vrijblijvende afspraken opgenomen tussen zowel gemeenten binnen een regio als tussen regio’s onderling. Met de NvO nemen gemeenten de verantwoordelijkheid om regionale samenwerking te verbeteren en het opdrachtgeverschap te versterken, met het oog op een goed functionerend zorglandschap.
+
+Proces van aanvraag SPUK IZA Het aanvraagproces voor de SPUK-middelen ziet er als volgt uit: 1) één gemeente uit de IZA-regio kan namens de andere
+
+gemeenten de aanvraag doen; 2) de aanvraag door de gemandateerde gemeente moet
+
+De gemeenten in de regio zijn met elkaar verantwoorde­ lijk voor het aanwijzen van de gemandateerde gemeente (-bestuurder; hierna mandaathouder) en de inrichting van de mandaatstructuur, waaronder de afspraken over hoe ver­ deling van de middelen in zijn werk gaat. Net als bij de NvO wordt een in een dashboard voor alle regio’s bijgehouden of en hoe deze afspraken zijn vastgesteld.
+
+zijn ondertekend door een bestuurder van de gemeente (wethouder of BM); 3) bij de aanvraag zit een bijlage waarin alle andere ge­
+
+De mandaathouder is voor de andere partijen aanspreekbaar op deze afspraken. De mandaathouder is verantwoordelijk voor de onderlinge afstemming in de regio over de inzet en verdeling van de middelen en voor de terugkoppeling aan de VNG tbv landelijk overleg en monitoring.
+
+meenten in de regio, middels ondertekening door één bestuurder per gemeente, verklaren dat de gemanda­ teerde gemeente namens hen de aanvraag doet. Het VNG bureau maakt een model voor deze bijlage; 4) voor 2023 betreft de aanvraag een aanvraag op hoofdlij­
+
+Alle regio’s maken zo spoedig mogelijk en uiterlijk 30 juni 2023 kenbaar wie mandaathouder is. Pas na bekendmaking kunnen de SPUK-middelen worden uitgekeerd.
+
+nen, waarbij de regio deze werkagenda als uitgangspunt neemt en een reële inschatting maakt van de verwachte kosten in 2023 voor voorbereidende werkzaamheden en eventuele andere activiteiten, zoals benoemd in het laatste onderdeel van deze bijlage. Gemeenten houden er daarbij rekening mee dat verantwoording volgens de SiSa-systematiek moet plaatsvinden over de daadwerke­ lijk gemaakte kosten; 5) uiterlijk 31 december 2023 dient de aangewezen
+
+gemeente, mede namens de andere gemeenten de aanvraag te completeren met: a. regioplan; b. regio-governance: hoe is geregeld dat de aangewezen
+
+Ambtelijk en bestuurlijk netwerk Eveneens aansluitend bij de NvO richt de VNG zowel een ambtelijk als een bestuurlijk netwerk op om de samen­ werking in de regio’s – zowel tussen gemeenten onderling als met de andere partijen in de regio – te ondersteunen. Doel van dit netwerk luidt: ‘het bevorderen van de samen­ werking door uitwisseling van onderwerpen met een regio­ naal, bovenregionaal en landelijk karakter in het kader van de regionale samenwerking’. Alle regio’s worden gevraagd een ambtelijk en bestuurlijk aanspreekpunt af te vaardigen voor het netwerk. Deze aanspreekpunten zijn de aanjagers van de domeinoverstijgende samenwerking.
+
+gemeente gemandateerd is om namens / samen met de andere gemeenten besluiten te kunnen nemen en hoe ziet de regionale sturing er uit; c. Plan van Aanpak waarin voor alle relevante
+
+onderdelen uit het regioplan wordt aangegeven hoe de gemeentelijke inzet er uit ziet en welk budget daarvoor bestemd is. Daarbij wordt ook onderscheid gemaakt tussen regionale en lokale inzet. 6) na beoordeling van de uiteindelijke aanvraag worden de
+
+middelen definitief toegewezen; 7) verantwoording en monitoring vindt plaats via de
+
+mandaatstructuur en het dashboard.
+
+Concreet moet het netwerk leiden tot de volgende resultaten: • vertegenwoordiging van de regio’s in landelijke ambtelijke en bestuurlijke bijeenkomsten; • uitwisselen van goede voorbeelden en geleerde lessen; • ontwikkelen en bevorderen van samenwerkingsafspraken; • een heldere governance waarop gemeenten zowel intern als extern aanspreekbaar zijn. Het netwerk heeft geen besluitvormend karakter, hiervoor is de bestaande
+
+50 | GALA – Gezond en Actief Leven Akkoord
+
+## Page 51
+
+• Samen met zorgaanbieders en verzekeraars, uitwerken van een handreiking die door partijen gebruikt kan wor­ den voor het maken van afspraken over de cruciale zorg en het monitoren van deze afspraken.
+
+governance leidend, o.a. VNG-commissie Zorg, Jeugd en Onderwijs en het VNG bestuur. Voor wat betreft het amb­ telijk netwerk geldt hetzelfde. De GGZ werkgroep en het strategisch afstemmingsoverleg bereiden de bestuurlijke besluitvorming voor.
+
+Regiobeeld en regioplan In het IZA is afgesproken dat partijen in de regio, op basis van een regiobeeld, in een regioplan afspraken maken over hoe zij gaan samenwerken en hoe zij uitvoering gaan geven aan de plannen. Gemeenten zijn daar onderdeel van en worden vertegenwoordigd door de onderling afgesproken (ambte­ lijke en bestuurlijke) regionale aanspreekpunten. Hiervoor kan worden aangesloten bij de reeds bestaande regionale organisatiestructuur in het kader van de werkagenda van ZN en VNG. Op basis van het regioplan maken gemeenten keuzes met betrekking tot welke regionale en lokale inzet nodig is om uitvoering te geven aan de plannen. In het regio­ plan kan worden uitgewerkt wat de precieze rol en functie van de GGD(-en) in de regio is, hoe de samenwerking tussen eventueel niet-congruente GGD’en kan worden gefaciliteerd en hoe de opdrachtverlening vanuit de regio aan de GGD kan worden vormgegeven.
+
+Monitoring Voor de monitoring van de uitvoering van de plannen en de resultaten daarvan wordt aangesloten bij de IZA-governance en de afspraken in het IZA ten aanzien van monitoring.
+
+Daarnaast voeren VNG en ZN jaarlijks het ‘Venster op de regionale samenwerking’ uit, waarin zorgverzekeraars en gemeenten de samenwerking in de regio beoordelen.
+
+Overzicht van voor gemeenten relevante afspraken in het IZA
+
+Samenwerking GGZ – huisartsen – sociaal domein • Ontwikkelen en implementeren gezamenlijke (lokale/ regionale) werkwijze voor mensen met psychische klachten tav ten behoeve van in-, door- en uitstroom. • Structureel organiseren en coördineren van (de uitvoering van) deze werkwijze als onderdeel van de regionale infrastructuur. • Implementatie handreiking cruciale zorg samen met GGZ aanbieders en verzekeraars. • Structurele organisatie en coördinatie van de beschikbaarheid vanuit sociaal domein voor deze werkwijze als onderdeel van de regionale infrastructuur. • Monitoring en signalering van knelpunten in het aanbod / beschikbaarheid zorg. • Monitoring van de effecten van deze werkwijze. • Inrichten en bemensen van laagdrempelige steunpunten waar iedere inwoner toegang tot heeft, ondersteund door sociaalwerkers als onderdeel van de regionale infrastructuur. • Bijdragen aan landelijk dekkend netwerk van digitale lotgenotengroepen (e-communities) • Samen met de huisartsen en de GGZ mentale gezondheidscentra vormgeven. • Maken en coördineren van de regionale samenwerkingsafspraken voortkomend uit de werkagenda en inrichten van regionale voorzieningen of activiteiten. • Implementeren, structureel organiseren en uitvoeren van de werkwijze ‘Verkennend Gesprek’. • Financieren van de inzet van sociaal domein professionals die het verkennend gesprek voeren. • Inregelen en uitvoeren van de consultatiefunctie die wordt ingekocht door de zorgverzekeraar.
+
+Samenwerking eerstelijn • Doorontwikkeling en implementatie handreiking netwerk­- samenwerking en samen indiceren. • Structurele organisatie en coördinatie van deze werkwijze als onderdeel van de regionale infrastructuur. • Structureel organiseren en coördineren van een sterke samenwerking tussen de eerste lijn en het sociaal domein, bijvoorbeeld Welzijn op Recept, als onderdeel van de regionale infrastructuur.
+
+Regionale samenwerking • Structureel organiseren en coördineren33 regio bestuur­ lijk en ambtelijk (onderlinge afstemming en rolverdeling en mandaat). • Initiatief voor opstellen regioplan / -agenda samen met de zorgverzekeraar en zorgkantoor. • Initiatief voor periodiek evalueren regioplan / -agenda. • Periodiek herijken en actualiseren regiobeeld. • Periodiek herijken regioplan / -agenda. • Ondersteuning van partijen in de regio om hun eigen plannen af te stemmen op het regioplan en regiobeeld. • Bevorderen samenwerking tussen partijen in het realiseren van de IZA-doelen. • Rekening houden met regioplannen in de inkoop.
+
+Samenwerking acute zorg en cruciale zorg • Zorgen voor goede voorzieningen en ondersteuning bij sociale problematiek die bijdragen aan het voorkomen van oneigenlijke instroom in de acute zorg.
+
+Ketenaanpakken • Initiëren regionale samenwerkingsafspraken keten­ aanpakken (waaronder kansrijke start, valpreventie bij ouderen, aanpak overgewicht en obesitas bij kinderen, de gecombineerde leefstijlinterventie bij overgewicht van volwassenen, welzijn op recept) en structureel organiseren en coördineren van de inzet van gemeenten in de regio.
+
+33 Met ‘coördineren’ wordt bedoeld structurele borging door continue sturing,
+
+bewaking, aanjagen, etc
+
+GALA – Gezond en Actief Leven Akkoord | 51
+
+## Page 52
+
+E-health en digitale / hybride zorg • Regionale coördinatie op de inzet van e-health toepas­ singen, anonieme hulplijnen en vormen van digitale / hybride zorg. • Het regionaal bevorderen van de inzet en het gebruik van deze vormen van zorg. • Het maken van inhoudelijke passende afspraken in alle contracten met zorgaanbieders over aanbod en inzet van gebruiksvriendelijke hybride zorg, uiterlijk in 2025. En het maken van afspraken over hoe de benodigde transforma­ tie te realiseren.
+
+Kennisfunctie • Inzet van de GGD als kennispartner bij het opstellen, actualiseren en periodiek herijken van het regioplan en regiobeeld. • Door inzet van de kennisfunctie van de GGD, gemeenten ondersteunen bij het opstellen en uitvoeren van een lokaal gemeentelijk plan van aanpak voor preventie in de zorg, leefstijl en gezond leven.
+
+Arbeidsmarkt • Regionaal plan om bredere stages en coschappen - ook in het extramurale domein - te stimuleren plus uitvoering daarvan. • Het regionaal monitoren van ontwikkelingen en knel­ punten in de arbeidsmarkt voor zorg, eerstelijnszorg en de aansluiting op sociaal domein en preventie. • Kritisch kijken naar de regeldruk die zij veroorzaken in het kader van de inkoop en verantwoording, en beperken deze tot het strikt noodzakelijke minimum, o.a. door harmonisering van de eisen die zij stellen.
+
+52 | GALA – Gezond en Actief Leven Akkoord

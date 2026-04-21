@@ -1,0 +1,35 @@
+# 02-kamerbrief-over-aanbieding-aanvullend-zorg-en-welzijnsakkoord-azwa__PDIZA-1087289TK_A
+- Original file: `02-kamerbrief-over-aanbieding-aanvullend-zorg-en-welzijnsakkoord-azwa__PDIZA-1087289TK_A.pdf`
+- Source URL: https://www.rijksoverheid.nl/documenten/kamerstukken/2025/09/08/kamerbrief-over-aanbieding-aanvullend-zorg-en-welzijnsakkoord-azwa
+- Converted from: PDF
+- Pages: 2
+
+## Page 1
+
+> Retouradres Postbus 20350 2500 EJ Den Haag
+
+Bezoekadres Parnassusplein 5 2511 VX Den Haag www.rijksoverheid.nl
+
+De Voorzitter van de Tweede Kamer der Staten-Generaal Postbus 20018 2500 EA DEN HAAG
+
+Kenmerk 4204015-1087289-PDIZA
+
+Bijlage(n) 1
+
+Datum 8 september 2025 Betreft Aanbieding Aanvullend Zorg- en Welzijnsakkoord (AZWA)
+
+Geachte voorzitter, Met gepaste trots kan ik u – mede namens de staatssecretaris Langdurige en Maatschappelijke Zorg en de staatssecretaris Jeugd, Preventie en Sport – vertellen dat ik vandaag samen met ActiZ, De Nederlandse ggz, Federatie Medisch Specialisten, GGD GHOR Nederland, InEen, Landelijke Huisartsenvereniging, MIND, De Nederlandse Federatie van Universitair Medische Centra, Nederlandse Vereniging van Ziekenhuizen, Patiëntenfederatie Nederland, Sociaal Werk Nederland (SWN), Vereniging van Nederlandse Gemeenten (VNG), Verpleegkundigen & Verzorgenden Nederland, Zelfstandige Klinieken Nederland, Zorgverzekeraars Nederland, en Zorgthuisnl het Aanvullend Zorg- en Welzijnsakkoord (AZWA) heb getekend. De Inspectie Gezondheidszorg en Jeugd, de Nederlandse Zorgautoriteit, het Zorginstituut Nederland en de speciaal gezant passende zorg waren ook aanwezig bij het ondertekenmoment. In de afgelopen periode hebben alle partijen het onderhandelaarsakkoord voorgelegd aan hun achterban. Ik ben blij dat de achterbannen positief zijn over het akkoord zodat we nu de uitvoering in gang kunnen gaan zetten. De VNG heeft voorwaardelijk getekend in afwachting van haar definitieve ledenraadpleging in november. Belang van het AZWA Met het AZWA zet ik met partijen in op het gelijkwaardiger toegankelijk maken van passende zorg en ondersteuning, onder andere door het aanpakken van het stijgende arbeidsmarkttekort en met maatregelen om de wachttijden voor de toegang tot zorg voor iedereen binnen de daarvoor geschikte normen te brengen. Daarbij vind ik het belangrijk en nodig dat de zorg- en welzijnssector aantrekkelijk zijn en blijven om in te werken. Partijen en kabinet verbinden zich met het AZWA aan een agenda voor de komende jaren. Het kabinet neemt de verantwoordelijkheid dat de benodigde (financiële) randvoorwaarden passend bij de uitvoering van de afspraken in het akkoord voorhanden zijn. Het AZWA is uniek in Nederland en internationaal, door met een aanzienlijke groep partijen als afspiegeling van het zorg- en welzijnsveld afspraken te maken om samen te werken aan de maatschappelijke opgaven in zorg en welzijn. Het AZWA bouwt voort op het Integraal Zorgakkoord (IZA), in het verlengde het Gezond en Actief Leven Akkoord (GALA), en sluit aan op de afspraken gemaakt in het Hoofdlijnenakkoord Ouderenzorg (HLO).
+
+Pagina 1 van 2
+
+## Page 2
+
+Kenmerk 4204015-1087289-PDIZA
+
+In het bijzonder hecht ik aan de integrale benadering van het AZWA, waarmee we gezamenlijk voortbouwen op het IZA en de samenwerking over medisch en sociaal domein verder versterken en daarmee bijdragen aan de beweging van zorg naar gezondheid en een gezond en actief leven voor iedereen. Dit komt mede tot uiting in het feit dat naast de veertien IZA partijen er drie extra partijen (Mind, SWN en GGD GHOR NL) zijn die dit akkoord ondertekenen. Alleen wanneer we over de verschillende zorg- en welzijnsdomeinen heen met elkaar samenwerken houden we toegang, kwaliteit en betaalbaarheid overeind. Via deze weg wil ik iedereen bedanken die heeft bijgedragen aan de totstandkoming van dit akkoord. Moties in relatie tot AZWA Met de ondertekening van het AZWA geef ik ook invulling aan een aantal moties van uw Kamer. In de motie van het lid De Korte1 wordt verzocht om via een integrale aanpak erop in te zetten dat de registratielast voor professionals, instellingen en patiënten, als tussenstap binnen twee jaar, wordt verminderd naar maximaal 30%. Deze bedoelde versnelling, alsmede een meer integrale aanpak over alle zorgsectoren heen, krijgt mede vorm door de afspraken in het AZWA. Ook wordt met het akkoord invulling gegeven aan motie van het lid Thiadens2, om exclusiecriteria bij zorgaanbieders te schrappen, behalve wanneer dit strikt noodzakelijk is voor zorginhoudelijk te onderbouwen uitzonderingsgevallen. Als laatste reageer ik op twee moties van het lid El Abassi3. De eerste motie verzoekt de regering om de zorgpremie niet te verhogen. De regering gaat niet over de hoogte van de premies van zorgverzekeringen; die worden door zorgverzekeraars vastgesteld. Zorgverzekeraars ontkomen er niet aan om de premie te verhogen als de kosten van de zorg stijgen. De tweede motie verzoekt de regering om de zorgverzekering voor iedereen betaalbaar te houden. Het kabinet laat allereerst de hoogte van de zorgtoeslag automatisch meebewegen met de hoogte van de premie van de zorgverzekering. En het kabinet maakt ook keuzes ten behoeve van een evenwichtig koopkrachtbeeld, waar de kosten van de zorgverzekering een onderdeel van zijn. Als laatste zet het kabinet in op effectieve en efficiënte zorg. Daarom maak ik, namens het kabinet, in het AZWA afspraken met alle betrokken partijen die bijdragen aan het gelijkwaardiger toegankelijk en betaalbaar houden van zorg en welzijn. Ik beschouw beide moties hierbij als afgedaan. Vervolgproces AZWA Ik zie de toekomst met vertrouwen tegemoet. Nu het AZWA definitief is ondertekend beginnen we met de uitvoering van deze afspraken boven op de lopende afspraken. Met partijen zal ik tijdens bestuurlijke overleggen de voortgang bewaken en uw Kamer hierover informeren. Hoogachtend, de minister van Volksgezondheid, Welzijn en Sport, Jan Anthonie Bruijn
+
+1 Kst. 36 725, nr. 29. 2 Kst. 25 424, nr. 744. 3 Kst. 29 689, nr. 1311 en Kst. 29 689, nr. 1313.
+
+Pagina 2 van 2
+
+Pagina 2 van 2

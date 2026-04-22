@@ -56,6 +56,8 @@ class SiteGenerationTests(unittest.TestCase):
         self.assertIn("Bestuurlijk overzicht", html)
         self.assertIn("mogelijke besluitvragen", html)
         self.assertIn("mogelijke opvolgacties", html)
+        self.assertIn('href="almere/index.html"', html)
+        self.assertIn('href="decisions/index.html"', html)
 
     def test_decisions_page_contains_explicit_notice(self) -> None:
         html = DECISIONS_PAGE_PATH.read_text(encoding="utf-8")

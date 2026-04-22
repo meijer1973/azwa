@@ -44,10 +44,6 @@ def relative_link(current_route: str, target_route: str) -> str:
     else:
         target_path = route_to_output_path(target_route)
     relative = posixpath.relpath(str(target_path), start=str(current_path.parent))
-    if relative.endswith("index.html") and not target_route.startswith("/assets/"):
-        relative = relative[: -len("index.html")]
-        if not relative:
-            relative = "./"
     if fragment:
         return f"{relative}#{fragment}"
     return relative
@@ -573,7 +569,7 @@ def build_search_index(home_view: dict, almere_view: dict, decisions: list[dict]
             "aliases": ["start", "overzicht"],
             "themes": [],
             "domains": [],
-            "url": "./",
+            "url": route_to_output_path("/").as_posix(),
             "page_type": "home",
             "page_type_label": "Pagina",
         },
@@ -584,7 +580,7 @@ def build_search_index(home_view: dict, almere_view: dict, decisions: list[dict]
             "aliases": ["gemeente almere", "lokale situatie"],
             "themes": [],
             "domains": ["D5", "D6"],
-            "url": "almere/",
+            "url": route_to_output_path("/almere/").as_posix(),
             "page_type": "almere",
             "page_type_label": "Pagina",
         },
@@ -595,7 +591,7 @@ def build_search_index(home_view: dict, almere_view: dict, decisions: list[dict]
             "aliases": ["besluiten", "bestuurlijke keuzes"],
             "themes": [],
             "domains": ["D5", "D6"],
-            "url": "decisions/",
+            "url": route_to_output_path("/decisions/").as_posix(),
             "page_type": "decisions",
             "page_type_label": "Pagina",
         },
@@ -606,7 +602,7 @@ def build_search_index(home_view: dict, almere_view: dict, decisions: list[dict]
             "aliases": ["acties", "vervolgstappen"],
             "themes": [],
             "domains": ["D5", "D6"],
-            "url": "actions/",
+            "url": route_to_output_path("/actions/").as_posix(),
             "page_type": "actions",
             "page_type_label": "Pagina",
         },
@@ -617,7 +613,7 @@ def build_search_index(home_view: dict, almere_view: dict, decisions: list[dict]
             "aliases": ["monitoring", "overzicht"],
             "themes": [],
             "domains": ["D5", "D6"],
-            "url": "dashboard/",
+            "url": route_to_output_path("/dashboard/").as_posix(),
             "page_type": "dashboard",
             "page_type_label": "Pagina",
         },
@@ -631,7 +627,7 @@ def build_search_index(home_view: dict, almere_view: dict, decisions: list[dict]
                 "aliases": decision["linked_theme_ids"],
                 "themes": decision["linked_theme_ids"],
                 "domains": [decision["linked_domain_label"]],
-                "url": decision["page_url"].lstrip("/"),
+                "url": route_to_output_path(decision["page_url"]).as_posix(),
                 "page_type": "decision",
                 "page_type_label": "Besluitvraag",
             }
@@ -645,7 +641,7 @@ def build_search_index(home_view: dict, almere_view: dict, decisions: list[dict]
                 "aliases": action["linked_theme_ids"],
                 "themes": action["linked_theme_ids"],
                 "domains": [action["linked_domain_label"]],
-                "url": action["page_url"].lstrip("/"),
+                "url": route_to_output_path(action["page_url"]).as_posix(),
                 "page_type": "action",
                 "page_type_label": "Opvolgactie",
             }

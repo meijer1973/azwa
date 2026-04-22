@@ -101,15 +101,23 @@ AUTO_SECTION_RULES = {
             "2040",
             "31 maart",
             "15 juli",
+            "q2",
+            "q3",
             "q1",
             "q4",
+            "tweede kwartaal",
+            "derde kwartaal",
             "uiterlijk",
             "voorjaar",
+            "politieke markt",
+            "gemeenteraadsverkiezingen",
+            "benoeming raad",
+            "afscheid raad",
             "mid-term review",
             "herijken",
             "landelijke dekking",
         ],
-        "max_items": 2,
+        "max_items": 3,
         "base_min_score": 1,
     },
     "monitoring_and_evaluation": {
@@ -1818,10 +1826,33 @@ def build_candidate_pool(document_id: str) -> list[dict]:
             )
 
     for table in load_tables(document_id):
-        raw_table = truncate_text(table.get("raw_table", ""), max_chars=700)
+        raw_table_text = table.get("raw_table", "")
+        section = " / ".join(table.get("section_path") or ["Document"])
+
+        row_candidates = [
+            collapse_whitespace(row)
+            for row in raw_table_text.splitlines()
+            if collapse_whitespace(row)
+        ]
+        for row in row_candidates:
+            normalized_row = normalize_ascii(row)
+            has_timeline_signal = bool(re.search(r"\b(?:19|20)\d{2}\b", normalized_row)) or "|" in row
+            if is_noise_candidate(row) and not has_timeline_signal:
+                continue
+            candidates.append(
+                {
+                    "text": truncate_text(row, max_chars=260),
+                    "normalized": normalized_row,
+                    "page": table.get("page"),
+                    "section": section,
+                    "table_id": table["table_id"],
+                    "source_kind": "table_row",
+                }
+            )
+
+        raw_table = truncate_text(raw_table_text, max_chars=700)
         if not raw_table or is_noise_candidate(raw_table):
             continue
-        section = " / ".join(table.get("section_path") or ["Document"])
         candidates.append(
             {
                 "text": raw_table,

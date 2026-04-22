@@ -623,29 +623,83 @@
       "priority_rank": 23,
       "extraction_priority": "low",
       "inventory_notes": "Official BZK information page for the gemeentefonds cycle; useful to anchor recurring financial moments such as the mei-, september-, and decembercirculaires in a source-backed way."
+    },
+    {
+      "document_id": "nat_sociaalwerknl_financiering_iza_azwa_2025",
+      "source_number": 24,
+      "title": "Financiering IZA en AZWA: hoe zit het precies?",
+      "short_title": "Financiering IZA/AZWA",
+      "publisher": "Sociaal Werk Nederland",
+      "publication_date": "2025-08-05",
+      "document_type": "sector_commentary_page",
+      "jurisdiction_level": "national",
+      "status": "supporting",
+      "source_url": "https://sociaalwerknederland.nl/actueel/financiering-iza-en-azwa-hoe-zit-het-precies",
+      "file_path": "data/raw/national/nat_sociaalwerknl_financiering_iza_azwa_2025.html",
+      "source_format": "html",
+      "traceability_mode": "section_chunk_based",
+      "source_classification": "derivative",
+      "curation_bucket": "context",
+      "contains_d5": true,
+      "contains_d6": true,
+      "contains_structured_tables": false,
+      "contains_financing_logic": true,
+      "contains_governance_logic": true,
+      "contains_monitoring_evaluation_logic": false,
+      "contains_municipal_implications": true,
+      "priority_rank": 24,
+      "extraction_priority": "low",
+      "inventory_notes": "Sector commentary page that summarizes IZA/AZWA financing and mentions regional follow-up timing, including the additional regioplan trajectory; useful for timeline discovery and municipal follow-up, but intentionally treated as lower-authority duiding."
+    },
+    {
+      "document_id": "mun_almere_raad_vergaderschema_2026",
+      "source_number": 25,
+      "title": "Vergaderschema Raad van Almere 2026",
+      "short_title": "Raadskalender 2026",
+      "publisher": "Raad van Almere",
+      "publication_date": null,
+      "document_type": "municipal_schedule_page",
+      "jurisdiction_level": "municipal",
+      "status": "supporting",
+      "source_url": "https://raadvanalmere.nl/page/vergaderschema",
+      "file_path": "data/raw/municipal/mun_almere_raad_vergaderschema_2026.html",
+      "source_format": "html",
+      "traceability_mode": "section_chunk_based",
+      "source_classification": "derivative",
+      "curation_bucket": "context",
+      "contains_d5": false,
+      "contains_d6": false,
+      "contains_structured_tables": false,
+      "contains_financing_logic": false,
+      "contains_governance_logic": true,
+      "contains_monitoring_evaluation_logic": false,
+      "contains_municipal_implications": true,
+      "priority_rank": 25,
+      "extraction_priority": "low",
+      "inventory_notes": "Official Raad van Almere schedule page with political-market, election, and council-transition moments that can anchor local governance timing around later D5/D6 follow-up."
     }
   ],
   "summary": {
-    "document_count": 23,
+    "document_count": 25,
     "priority_counts": {
       "critical": 5,
       "high": 3,
       "medium": 4,
-      "low": 11
+      "low": 13
     },
     "source_classification_counts": {
       "primary": 10,
-      "derivative": 9,
+      "derivative": 11,
       "supporting_commentary": 4
     },
     "topic_signal_counts": {
-      "contains_d5": 6,
-      "contains_d6": 6,
+      "contains_d5": 7,
+      "contains_d6": 7,
       "contains_structured_tables": 6,
-      "contains_financing_logic": 15,
-      "contains_governance_logic": 18,
+      "contains_financing_logic": 16,
+      "contains_governance_logic": 20,
       "contains_monitoring_evaluation_logic": 13,
-      "contains_municipal_implications": 23
+      "contains_municipal_implications": 25
     }
   }
 }

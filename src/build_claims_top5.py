@@ -375,7 +375,29 @@ def classify_governance_and_finance(document_id: str, statement: str) -> tuple[s
 def classify_timeline(document_id: str, statement: str) -> tuple[str, str, str]:
     normalized = normalize_text(statement)
 
-    if contains_any(normalized, "q4 2025", "q1 2026", "voorjaar", "landelijke handreikingen"):
+    if document_id == "mun_almere_raad_vergaderschema_2026" and contains_any(
+        normalized,
+        "politieke markt",
+        "gemeenteraadsverkiezingen",
+        "benoeming raad",
+        "afscheid raad",
+        "besluitvorming",
+    ):
+        return "timeline.local_governance_calendar", "almere_council_milestones", "local_calendar_milestone"
+
+    if contains_any(
+        normalized,
+        "q4 2025",
+        "q1 2026",
+        "q2 2026",
+        "q3 2026",
+        "voorjaar",
+        "landelijke handreikingen",
+        "eerste kwartaal",
+        "tweede kwartaal",
+        "derde kwartaal",
+        "vierde kwartaal",
+    ):
         return "timeline.d5_d6_implementation", "national_milestones", "timeline_commitment"
 
     if "2030" in normalized:

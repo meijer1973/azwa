@@ -81,6 +81,7 @@ TOPIC_LABELS = {
     "timeline.d5_d6_implementation": "implementatielijn D5/D6",
     "timeline.flevoland_transformatieagenda": "Flevolandse transformatieagenda",
     "timeline.implementation_status": "implementatiestatus",
+    "timeline.local_governance_calendar": "lokale bestuurlijke kalender",
     "timeline.other": "overige tijdlijnmomenten",
     "timeline.rollout_2030": "landelijke dekking richting 2030",
     "timeline.almere_2029": "lokale horizon Positief Gezond Almere",
@@ -689,12 +690,18 @@ def document_type_label(document_type: str) -> str:
         "agreement": "akkoord",
         "framework": "kader",
         "kamerbrief": "kamerbrief",
+        "regulation": "regeling",
         "regional_plan": "regionaal plan",
         "regional_report": "regionaal rapport",
         "implementation_plan": "uitvoeringsplan",
         "research_report": "onderzoeksrapport",
+        "program_page": "programmapagina",
+        "subsidy_page": "subsidiepagina",
+        "government_info_page": "overheidsinformatiepagina",
+        "sector_commentary_page": "sectorale duidingspagina",
         "municipal_policy_summary": "gemeentelijke beleidssamenvatting",
         "municipal_info_page": "gemeentelijke informatiepagina",
+        "municipal_schedule_page": "gemeentelijk vergaderschema",
         "municipal_gateway_page": "gemeentelijke verwijspagina",
         "faq": "FAQ",
     }
@@ -728,8 +735,15 @@ def theme_lookup(themes: list[dict]) -> dict[str, dict]:
     return {theme["theme_id"]: theme for theme in themes}
 
 
-def authority_note(claim: dict) -> str | None:
+def authority_note(claim: dict, document: dict | None = None) -> str | None:
     instrument_type = claim.get("instrument_type")
+    document_type = document.get("document_type") if document else None
+    publisher = document.get("publisher") if document else None
+    if document_type == "municipal_schedule_page":
+        return "Officiële lokale planning uit het vergaderschema van de Raad van Almere; relevant als lokaal bestuurlijk moment, niet als landelijke norm."
+    if document_type == "sector_commentary_page":
+        publisher_label = publisher or "deze sectorale duidingsbron"
+        return f"Lagere autoriteit: deze passage is afkomstig uit een sectorale duidingspagina van {publisher_label}."
     if instrument_type == "faq":
         return "Lagere autoriteit: deze passage is afkomstig uit een VNG-FAQ."
     if instrument_type == "commentary":
@@ -759,7 +773,7 @@ def evidence_entries(claim_ids: list[str], claims: dict[str, dict], documents: d
                 "source_url": document["source_url"],
                 "page_url": source_page_url(document),
                 "jurisdiction_level": document["jurisdiction_level"],
-                "authority_note": authority_note(claim),
+                "authority_note": authority_note(claim, document),
                 "needs_human_review": claim.get("human_review_status") == "needs_human_review",
             }
         )
@@ -879,13 +893,13 @@ def topics_for_claim_ids(claim_ids: list[str], claims: dict[str, dict]) -> list[
     return dedupe([claims[claim_id]["topic"] for claim_id in claim_ids if claim_id in claims])
 
 
-def source_notes_for_claim_ids(claim_ids: list[str], claims: dict[str, dict]) -> list[str]:
+def source_notes_for_claim_ids(claim_ids: list[str], claims: dict[str, dict], documents: dict[str, dict]) -> list[str]:
     notes = []
     for claim_id in claim_ids:
         claim = claims.get(claim_id)
         if claim is None:
             continue
-        note = authority_note(claim)
+        note = authority_note(claim, documents.get(claim["source_document_id"]))
         if note:
             notes.append(note)
     return dedupe(notes)
@@ -980,7 +994,9 @@ def reference_timeline_entry_from_spec(
 ) -> dict:
     claim_ids = [claim_id for claim_id in spec["claim_ids"] if claim_id in claims]
     topic_keys = dedupe(spec.get("topic_keys", []) + topics_for_claim_ids(claim_ids, claims))
-    needs_human_review = any(current_topics.get(topic, {}).get("needs_human_review") for topic in topic_keys)
+    needs_human_review = spec.get("force_human_review", False) or any(
+        current_topics.get(topic, {}).get("needs_human_review") for topic in topic_keys
+    )
     entry_id = timeline_anchor(f"{spec['sort_key']}-{spec['entry_key']}")
     return {
         "entry_id": entry_id,
@@ -1001,7 +1017,7 @@ def reference_timeline_entry_from_spec(
         "supporting_claim_ids": claim_ids,
         "topic_keys": topic_keys,
         "source_basis": source_basis_for_claim_ids(claim_ids, claims, documents),
-        "source_notes": source_notes_for_claim_ids(claim_ids, claims),
+        "source_notes": source_notes_for_claim_ids(claim_ids, claims, documents),
         "linked_decisions": related_timeline_models(decision_models, claim_ids, topic_keys, claims, "decision_id"),
         "linked_actions": related_timeline_models(action_models, claim_ids, topic_keys, claims, "action_id"),
         "page_url": f"/timeline/#{entry_id}",

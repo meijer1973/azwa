@@ -309,6 +309,37 @@ ANNOTATIONS = {
             "moments such as the mei-, september-, and decembercirculaires in a source-backed way."
         ),
     },
+    "nat_sociaalwerknl_financiering_iza_azwa_2025": {
+        "source_classification": "derivative",
+        "curation_bucket": "context",
+        "contains_d5": True,
+        "contains_d6": True,
+        "contains_structured_tables": False,
+        "contains_financing_logic": True,
+        "contains_governance_logic": True,
+        "contains_monitoring_evaluation_logic": False,
+        "contains_municipal_implications": True,
+        "inventory_notes": (
+            "Sector commentary page that summarizes IZA/AZWA financing and mentions regional follow-up timing, "
+            "including the additional regioplan trajectory; useful for timeline discovery and municipal follow-up, "
+            "but intentionally treated as lower-authority duiding."
+        ),
+    },
+    "mun_almere_raad_vergaderschema_2026": {
+        "source_classification": "derivative",
+        "curation_bucket": "context",
+        "contains_d5": False,
+        "contains_d6": False,
+        "contains_structured_tables": False,
+        "contains_financing_logic": False,
+        "contains_governance_logic": True,
+        "contains_monitoring_evaluation_logic": False,
+        "contains_municipal_implications": True,
+        "inventory_notes": (
+            "Official Raad van Almere schedule page with political-market, election, and council-transition moments "
+            "that can anchor local governance timing around later D5/D6 follow-up."
+        ),
+    },
 }
 
 

@@ -221,9 +221,21 @@ class SiteGenerationTests(unittest.TestCase):
         self.assertIn("Aanvraagdeadline SPUK transformatiemiddelen voor gemeenten", titles)
         self.assertIn("Uiterste verantwoording over uitgevoerde activiteiten in kalenderjaar 2026", titles)
         self.assertIn("Programmabegroting 2026 aangeboden aan de gemeenteraad", titles)
+        self.assertIn("Gemeenteraadsverkiezingen 2026 in Almere", titles)
+        self.assertIn("Benoeming van de raad 2026-2030", titles)
+        self.assertIn("Aanvullend regioplan volgens Sociaal Werk Nederland in Q3 2026 gereed", titles)
         self.assertIn("Tussentijdse evaluatie van IZA/AZWA", titles)
         self.assertIn("Startpakket sociaal domein en evaluatieperiode", titles)
         self.assertIn("Lokale impacthorizon Positief Gezond Almere", titles)
+
+    def test_timeline_register_is_chronological_within_each_year(self) -> None:
+        register = load_json(TIMELINE_REGISTER_PATH)
+        year_to_sort_keys = {}
+        for entry in register["entries"]:
+            year_to_sort_keys.setdefault(entry["year"], []).append(entry["sort_key"])
+
+        for year, sort_keys in year_to_sort_keys.items():
+            self.assertEqual(sort_keys, sorted(sort_keys), f"Tijdlijn voor {year} is niet chronologisch gesorteerd.")
 
     def test_source_intake_candidates_capture_pipeline_first_timeline_work(self) -> None:
         intake = load_json(SOURCE_INTAKE_CANDIDATES_PATH)
@@ -237,7 +249,8 @@ class SiteGenerationTests(unittest.TestCase):
         self.assertIn("Gemeentelijke begrotingscyclus Almere", subjects)
         self.assertEqual(statuses["nat_dusi_spuk_transformatiemiddelen_2024_2028"], "ingested")
         self.assertEqual(statuses["nat_bzk_gemeentefonds_cyclus"], "ingested")
-        self.assertEqual(statuses["mun_almere_raad_vergaderschema_2026"], "pending")
+        self.assertEqual(statuses["mun_almere_raad_vergaderschema_2026"], "ingested")
+        self.assertEqual(statuses["nat_vng_iza_azwa_wegwijzer_2026"], "pending_replacement")
 
     def test_site_js_reveals_hash_targets_inside_details(self) -> None:
         script = (DIST_DIR / "assets" / "site.js").read_text(encoding="utf-8")

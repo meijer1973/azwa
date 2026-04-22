@@ -37,10 +37,10 @@
   "d6_relevance": "Bevat expliciete D6-passages in de huidige extractie.",
   "linked_claims": [
     {
-      "topic": "d6.basisinfrastructuur",
-      "title": "D6-basisinfrastructuur",
+      "topic": "timeline.other",
+      "title": "overige tijdlijnmomenten",
       "claim_count": 3,
-      "page_url": "/reference/topics/d6-basisinfrastructuur/"
+      "page_url": "/reference/topics/timeline-other/"
     },
     {
       "topic": "municipal.implementation_translation",
@@ -49,10 +49,28 @@
       "page_url": "/reference/topics/municipal-implementation-translation/"
     },
     {
-      "topic": "finance.regional_funding_path",
-      "title": "regionale financieringsroute",
+      "topic": "d5.other",
+      "title": "overige D5-lijn",
       "claim_count": 2,
-      "page_url": "/reference/topics/finance-regional-funding-path/"
+      "page_url": "/reference/topics/d5-other/"
+    },
+    {
+      "topic": "d6.basisinfrastructuur",
+      "title": "D6-basisinfrastructuur",
+      "claim_count": 2,
+      "page_url": "/reference/topics/d6-basisinfrastructuur/"
+    },
+    {
+      "topic": "governance_and_finance.other",
+      "title": "overige governance- en financieringslijn",
+      "claim_count": 2,
+      "page_url": "/reference/topics/governance-and-finance-other/"
+    },
+    {
+      "topic": "monitoring.other",
+      "title": "overige monitoringslijn",
+      "claim_count": 2,
+      "page_url": "/reference/topics/monitoring-other/"
     },
     {
       "topic": "d5.basisfunctionaliteiten_onderbouwd",
@@ -61,28 +79,10 @@
       "page_url": "/reference/topics/d5-basisfunctionaliteiten-onderbouwd/"
     },
     {
-      "topic": "d5.mentale_gezondheidsnetwerken",
-      "title": "mentale gezondheidsnetwerken",
+      "topic": "d6.other",
+      "title": "D6 other",
       "claim_count": 1,
-      "page_url": "/reference/topics/d5-mentale-gezondheidsnetwerken/"
-    },
-    {
-      "topic": "d5.cross_domain_collaboration",
-      "title": "domeinoverstijgende samenwerking",
-      "claim_count": 1,
-      "page_url": "/reference/topics/d5-cross-domain-collaboration/"
-    },
-    {
-      "topic": "governance.national_coordination",
-      "title": "landelijke coordinatie",
-      "claim_count": 1,
-      "page_url": "/reference/topics/governance-national-coordination/"
-    },
-    {
-      "topic": "timeline.other",
-      "title": "overige tijdlijnmomenten",
-      "claim_count": 1,
-      "page_url": "/reference/topics/timeline-other/"
+      "page_url": "/reference/topics/d6-other/"
     }
   ],
   "linked_decisions": [
@@ -126,11 +126,6 @@
       "page_url": "/themes/basisfunctionaliteiten-d5/"
     },
     {
-      "theme_id": "mentale-gezondheid",
-      "title": "Mentale gezondheid",
-      "page_url": "/themes/mentale-gezondheid/"
-    },
-    {
       "theme_id": "basisinfrastructuur-d6",
       "title": "Basisinfrastructuur (D6)",
       "page_url": "/themes/basisinfrastructuur-d6/"
@@ -141,29 +136,17 @@
       "page_url": "/themes/financiering/"
     },
     {
-      "theme_id": "governance-en-regie",
-      "title": "Governance en regie",
-      "page_url": "/themes/governance-en-regie/"
-    },
-    {
       "theme_id": "monitoring-en-leren",
       "title": "Monitoring en leren",
       "page_url": "/themes/monitoring-en-leren/"
+    },
+    {
+      "theme_id": "governance-en-regie",
+      "title": "Governance en regie",
+      "page_url": "/themes/governance-en-regie/"
     }
   ],
   "related_sources": [
-    {
-      "title": "Transformatieplan Positief Gezond Almere",
-      "page_url": "/sources/pga-transformatieplan/"
-    },
-    {
-      "title": "Naar een positief gezond Almere; Beleidstheorie en businesscase transformatieplan",
-      "page_url": "/sources/seo-beleidstheorie-en-businesscase-pga/"
-    },
-    {
-      "title": "Zorgzaam Flevoland 2023 Regioplan IZA Flevoland",
-      "page_url": "/sources/regioplan-iza-flevoland/"
-    },
     {
       "title": "CW 3.1 kader basisfunctionaliteiten en basisinfrastructuur D5 en D6",
       "page_url": "/sources/cw-3-1-kader-d5-d6/"
@@ -171,6 +154,18 @@
     {
       "title": "Aanvullend Zorg- en Welzijnsakkoord (AZWA) (Definitief)",
       "page_url": "/sources/azwa-definitief/"
+    },
+    {
+      "title": "Financiering IZA en AZWA: hoe zit het precies?",
+      "page_url": "/sources/financiering-iza-azwa/"
+    },
+    {
+      "title": "Aanvullend Zorg- en Welzijnsakkoord - onderhandelaarsakkoord",
+      "page_url": "/sources/azwa-onderhandelaarsakkoord/"
+    },
+    {
+      "title": "Transformatieplan Positief Gezond Almere",
+      "page_url": "/sources/pga-transformatieplan/"
     }
   ],
   "structured_signals": {
@@ -178,6 +173,6 @@
     "d5_item_count": 3,
     "d6_item_count": 3,
     "governance_item_count": 3,
-    "timeline_item_count": 2
+    "timeline_item_count": 3
   }
 }

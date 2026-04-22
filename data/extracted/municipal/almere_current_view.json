@@ -29,7 +29,7 @@
     {
       "item_id": "almere_d5_underbouwd",
       "topic": "d5.basisfunctionaliteiten_onderbouwd",
-      "summary": "Current view combines 12 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
+      "summary": "Current view combines 13 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
       "claim_ids": [
         "clm__nat_gala_2023_gezond_en_actief_leven_d5_003",
         "clm__nat_gala_2023_gezond_en_actief_leven_d5_002",
@@ -39,7 +39,8 @@
         "clm__nat_iza_2022_integraal_zorgakkoord_d5_001",
         "clm__nat_azwa_2026_cw31_kader_d5_d6_d5_002",
         "clm__nat_azwa_2026_cw31_kader_d5_d6_d5_001",
-        "clm__nat_azwa_2026_voortgang_kamerbrief_d5_001",
+        "clm__nat_azwa_2026_voortgang_kamerbrief_d5_002",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_d5_002",
         "clm__reg_flevoland_2023_regiobeeld_d5_003",
         "clm__reg_flevoland_2023_regiobeeld_d5_002",
         "clm__reg_flevoland_2023_regiobeeld_d5_001"
@@ -74,6 +75,13 @@
           "document_status": "current"
         },
         {
+          "document_id": "nat_sociaalwerknl_financiering_iza_azwa_2025",
+          "title": "Financiering IZA en AZWA: hoe zit het precies?",
+          "jurisdiction_level": "national",
+          "document_type": "sector_commentary_page",
+          "document_status": "supporting"
+        },
+        {
           "document_id": "reg_flevoland_2023_regiobeeld",
           "title": "Regiobeeld Flevoland 2023",
           "jurisdiction_level": "regional",
@@ -82,7 +90,7 @@
         }
       ],
       "scope": "mixed",
-      "confidence": 0.63,
+      "confidence": 0.61,
       "needs_human_review": true
     },
     {
@@ -110,26 +118,26 @@
       "topic": "d5.cross_domain_collaboration",
       "summary": "Current view combines 5 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
       "claim_ids": [
-        "clm__nat_azwa_2026_voortgang_kamerbrief_d5_003",
         "clm__reg_flevoland_2023_regioplan_iza_d5_002",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_d5_003",
         "clm__mun_almere_pga_seo_businesscase_2024_d5_002",
         "clm__nat_zorgakkoorden_azwa_programmapagina_2025_d5_002",
         "clm__nat_zorgakkoorden_azwa_programmapagina_2025_d5_001"
       ],
       "source_documents": [
         {
-          "document_id": "nat_azwa_2026_voortgang_kamerbrief",
-          "title": "Kamerbrief inzake voortgang Integraal Zorgakkoord (IZA) en Aanvullend Zorg- en Welzijnsakkoord (AZWA)",
-          "jurisdiction_level": "national",
-          "document_type": "kamerbrief",
-          "document_status": "current"
-        },
-        {
           "document_id": "reg_flevoland_2023_regioplan_iza",
           "title": "Zorgzaam Flevoland 2023 Regioplan IZA Flevoland",
           "jurisdiction_level": "regional",
           "document_type": "regional_plan",
           "document_status": "reference"
+        },
+        {
+          "document_id": "nat_sociaalwerknl_financiering_iza_azwa_2025",
+          "title": "Financiering IZA en AZWA: hoe zit het precies?",
+          "jurisdiction_level": "national",
+          "document_type": "sector_commentary_page",
+          "document_status": "supporting"
         },
         {
           "document_id": "mun_almere_pga_seo_businesscase_2024",
@@ -147,27 +155,19 @@
         }
       ],
       "scope": "mixed",
-      "confidence": 0.56,
+      "confidence": 0.5,
       "needs_human_review": true
     },
     {
       "item_id": "almere_d5_mental_health",
       "topic": "d5.mentale_gezondheidsnetwerken",
-      "summary": "Current view combines 4 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
+      "summary": "Current view combines 3 compatible claims for d5.mentale_gezondheidsnetwerken, led by reg_flevoland_2023_regioplan_iza: The plan highlights Ecosysteem Mentale Gezondheid and Samen Sterker in de Wijk as a model for neighbourhood collaboration around psychosocial problems.",
       "claim_ids": [
-        "clm__nat_azwa_2026_voortgang_kamerbrief_d5_002",
         "clm__reg_flevoland_2023_regioplan_iza_d5_001",
         "clm__mun_almere_pga_transformatieplan_d5_001",
         "clm__mun_almere_pga_seo_businesscase_2024_d5_003"
       ],
       "source_documents": [
-        {
-          "document_id": "nat_azwa_2026_voortgang_kamerbrief",
-          "title": "Kamerbrief inzake voortgang Integraal Zorgakkoord (IZA) en Aanvullend Zorg- en Welzijnsakkoord (AZWA)",
-          "jurisdiction_level": "national",
-          "document_type": "kamerbrief",
-          "document_status": "current"
-        },
         {
           "document_id": "reg_flevoland_2023_regioplan_iza",
           "title": "Zorgzaam Flevoland 2023 Regioplan IZA Flevoland",
@@ -191,7 +191,7 @@
         }
       ],
       "scope": "mixed",
-      "confidence": 0.62,
+      "confidence": 0.57,
       "needs_human_review": true
     },
     {
@@ -227,7 +227,7 @@
     {
       "item_id": "almere_d6_basis",
       "topic": "d6.basisinfrastructuur",
-      "summary": "Current view combines 10 compatible claims led by nat_azwa_2025_definitief. Lower-authority claims clarify or implement the baseline rather than replacing it.",
+      "summary": "Current view combines 12 compatible claims led by nat_azwa_2025_definitief. Lower-authority claims clarify or implement the baseline rather than replacing it.",
       "claim_ids": [
         "clm__nat_azwa_2025_definitief_d6_001",
         "clm__nat_gala_2023_gezond_en_actief_leven_d6_003",
@@ -237,8 +237,10 @@
         "clm__nat_azwa_2026_cw31_kader_d5_d6_d6_001",
         "clm__nat_azwa_2026_voortgang_kamerbrief_d6_003",
         "clm__nat_azwa_2026_voortgang_kamerbrief_d6_002",
-        "clm__nat_azwa_2026_voortgang_kamerbrief_d6_001",
-        "clm__nat_azwa_2026_cw31_kamerbrief_d6_001"
+        "clm__nat_azwa_2026_cw31_kamerbrief_d6_001",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_d6_003",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_d6_002",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_d6_001"
       ],
       "source_documents": [
         {
@@ -282,10 +284,17 @@
           "jurisdiction_level": "national",
           "document_type": "kamerbrief",
           "document_status": "current"
+        },
+        {
+          "document_id": "nat_sociaalwerknl_financiering_iza_azwa_2025",
+          "title": "Financiering IZA en AZWA: hoe zit het precies?",
+          "jurisdiction_level": "national",
+          "document_type": "sector_commentary_page",
+          "document_status": "supporting"
         }
       ],
       "scope": "national",
-      "confidence": 0.72,
+      "confidence": 0.65,
       "needs_human_review": true
     },
     {
@@ -357,7 +366,7 @@
     {
       "item_id": "almere_d6_translation",
       "topic": "municipal.implementation_translation",
-      "summary": "Current view combines 43 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
+      "summary": "Current view combines 50 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
       "claim_ids": [
         "clm__nat_wetten_spuk_transformatiemiddelen_regeling_municipal_translation_003",
         "clm__nat_wetten_spuk_transformatiemiddelen_regeling_municipal_translation_002",
@@ -369,11 +378,13 @@
         "clm__nat_azwa_2026_voortgang_kamerbrief_municipal_translation_003",
         "clm__nat_azwa_2026_voortgang_kamerbrief_municipal_translation_002",
         "clm__nat_azwa_2026_voortgang_kamerbrief_municipal_translation_001",
+        "clm__nat_azwa_2026_cw31_kamerbrief_municipal_translation_002",
         "clm__nat_azwa_2026_cw31_kamerbrief_municipal_translation_001",
         "clm__reg_flevoland_2023_regioplan_iza_municipal_translation_001",
         "clm__nat_vng_azwa_faq_uitvoeringscapaciteit_municipal_translation_003",
         "clm__nat_vng_azwa_faq_uitvoeringscapaciteit_municipal_translation_002",
         "clm__nat_vng_azwa_faq_uitvoeringscapaciteit_municipal_translation_001",
+        "clm__nat_vng_azwa_faq_middelen_municipal_translation_002",
         "clm__nat_vng_azwa_faq_middelen_municipal_translation_001",
         "clm__mun_almere_sociaal_domein_informatiepagina_municipal_translation_003",
         "clm__mun_almere_sociaal_domein_informatiepagina_municipal_translation_002",
@@ -384,6 +395,9 @@
         "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_municipal_translation_003",
         "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_municipal_translation_002",
         "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_municipal_translation_001",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_municipal_translation_003",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_municipal_translation_002",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_municipal_translation_001",
         "clm__mun_almere_2024_2034_maatschappelijke_agenda_municipal_translation_003",
         "clm__mun_almere_2024_2034_maatschappelijke_agenda_municipal_translation_002",
         "clm__mun_almere_2024_2034_maatschappelijke_agenda_municipal_translation_001",
@@ -399,6 +413,8 @@
         "clm__mun_almere_sociale_staat_gateway_municipal_translation_003",
         "clm__mun_almere_sociale_staat_gateway_municipal_translation_002",
         "clm__mun_almere_sociale_staat_gateway_municipal_translation_001",
+        "clm__mun_almere_raad_vergaderschema_2026_municipal_translation_002",
+        "clm__mun_almere_raad_vergaderschema_2026_municipal_translation_001",
         "clm__mun_almere_begroting_2026_webpagina_municipal_translation_003",
         "clm__mun_almere_begroting_2026_webpagina_municipal_translation_002",
         "clm__mun_almere_begroting_2026_webpagina_municipal_translation_001"
@@ -482,6 +498,13 @@
           "document_status": "supporting"
         },
         {
+          "document_id": "nat_sociaalwerknl_financiering_iza_azwa_2025",
+          "title": "Financiering IZA en AZWA: hoe zit het precies?",
+          "jurisdiction_level": "national",
+          "document_type": "sector_commentary_page",
+          "document_status": "supporting"
+        },
+        {
           "document_id": "mun_almere_2024_2034_maatschappelijke_agenda",
           "title": "Maatschappelijke agenda 2024-2034",
           "jurisdiction_level": "municipal",
@@ -517,6 +540,13 @@
           "document_status": "supporting"
         },
         {
+          "document_id": "mun_almere_raad_vergaderschema_2026",
+          "title": "Vergaderschema Raad van Almere 2026",
+          "jurisdiction_level": "municipal",
+          "document_type": "municipal_schedule_page",
+          "document_status": "supporting"
+        },
+        {
           "document_id": "mun_almere_begroting_2026_webpagina",
           "title": "Begroting 2026",
           "jurisdiction_level": "municipal",
@@ -547,7 +577,8 @@
         "clm__nat_iza_2022_integraal_zorgakkoord_d5_001",
         "clm__nat_azwa_2026_cw31_kader_d5_d6_d5_002",
         "clm__nat_azwa_2026_cw31_kader_d5_d6_d5_001",
-        "clm__nat_azwa_2026_voortgang_kamerbrief_d5_001",
+        "clm__nat_azwa_2026_voortgang_kamerbrief_d5_002",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_d5_002",
         "clm__reg_flevoland_2023_regiobeeld_d5_003",
         "clm__reg_flevoland_2023_regiobeeld_d5_002",
         "clm__reg_flevoland_2023_regiobeeld_d5_001",
@@ -580,11 +611,13 @@
         "clm__nat_azwa_2026_voortgang_kamerbrief_municipal_translation_003",
         "clm__nat_azwa_2026_voortgang_kamerbrief_municipal_translation_002",
         "clm__nat_azwa_2026_voortgang_kamerbrief_municipal_translation_001",
+        "clm__nat_azwa_2026_cw31_kamerbrief_municipal_translation_002",
         "clm__nat_azwa_2026_cw31_kamerbrief_municipal_translation_001",
         "clm__reg_flevoland_2023_regioplan_iza_municipal_translation_001",
         "clm__nat_vng_azwa_faq_uitvoeringscapaciteit_municipal_translation_003",
         "clm__nat_vng_azwa_faq_uitvoeringscapaciteit_municipal_translation_002",
         "clm__nat_vng_azwa_faq_uitvoeringscapaciteit_municipal_translation_001",
+        "clm__nat_vng_azwa_faq_middelen_municipal_translation_002",
         "clm__nat_vng_azwa_faq_middelen_municipal_translation_001",
         "clm__mun_almere_sociaal_domein_informatiepagina_municipal_translation_003",
         "clm__mun_almere_sociaal_domein_informatiepagina_municipal_translation_002",
@@ -595,6 +628,9 @@
         "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_municipal_translation_003",
         "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_municipal_translation_002",
         "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_municipal_translation_001",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_municipal_translation_003",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_municipal_translation_002",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_municipal_translation_001",
         "clm__mun_almere_2024_2034_maatschappelijke_agenda_municipal_translation_003",
         "clm__mun_almere_2024_2034_maatschappelijke_agenda_municipal_translation_002",
         "clm__mun_almere_2024_2034_maatschappelijke_agenda_municipal_translation_001",
@@ -610,6 +646,8 @@
         "clm__mun_almere_sociale_staat_gateway_municipal_translation_003",
         "clm__mun_almere_sociale_staat_gateway_municipal_translation_002",
         "clm__mun_almere_sociale_staat_gateway_municipal_translation_001",
+        "clm__mun_almere_raad_vergaderschema_2026_municipal_translation_002",
+        "clm__mun_almere_raad_vergaderschema_2026_municipal_translation_001",
         "clm__mun_almere_begroting_2026_webpagina_municipal_translation_003",
         "clm__mun_almere_begroting_2026_webpagina_municipal_translation_002",
         "clm__mun_almere_begroting_2026_webpagina_municipal_translation_001",
@@ -642,8 +680,11 @@
         "clm__nat_vng_azwa_faq_middelen_governance_and_finance_003",
         "clm__nat_vng_azwa_faq_middelen_governance_and_finance_002",
         "clm__nat_vng_azwa_faq_middelen_governance_and_finance_001",
-        "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_governance_and_finance_003",
+        "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_governance_and_finance_002",
         "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_governance_and_finance_001",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_governance_and_finance_003",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_governance_and_finance_002",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_governance_and_finance_001",
         "clm__mun_almere_pga_seo_businesscase_2024_governance_and_finance_001",
         "clm__nat_azwa_2025_definitief_governance_and_finance_002"
       ]
@@ -659,7 +700,6 @@
       "supporting_claim_ids": [
         "clm__nat_azwa_2025_definitief_monitoring_and_evaluation_001",
         "clm__nat_azwa_2026_cw31_kader_d5_d6_monitoring_and_evaluation_002",
-        "clm__nat_azwa_2026_voortgang_kamerbrief_monitoring_and_evaluation_003",
         "clm__reg_flevoland_2023_regioplan_iza_monitoring_and_evaluation_002",
         "clm__reg_flevoland_2023_regiobeeld_monitoring_and_evaluation_001",
         "clm__nat_azwa_2025_onderhandelaarsakkoord_monitoring_and_evaluation_002",
@@ -706,8 +746,11 @@
         "clm__nat_vng_azwa_faq_middelen_governance_and_finance_003",
         "clm__nat_vng_azwa_faq_middelen_governance_and_finance_002",
         "clm__nat_vng_azwa_faq_middelen_governance_and_finance_001",
-        "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_governance_and_finance_003",
+        "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_governance_and_finance_002",
         "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_governance_and_finance_001",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_governance_and_finance_003",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_governance_and_finance_002",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_governance_and_finance_001",
         "clm__mun_almere_pga_seo_businesscase_2024_governance_and_finance_001",
         "clm__nat_azwa_2025_definitief_governance_and_finance_002"
       ]
@@ -738,6 +781,7 @@
       ],
       "supporting_claim_ids": [
         "clm__nat_azwa_2025_definitief_timeline_and_status_001",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_timeline_and_status_001",
         "clm__mun_almere_2024_2034_maatschappelijke_agenda_timeline_and_status_002",
         "clm__mun_almere_2024_2034_maatschappelijke_agenda_timeline_and_status_001",
         "clm__nat_azwa_2025_definitief_monitoring_and_evaluation_002",
@@ -829,6 +873,14 @@
       ]
     },
     {
+      "document_id": "mun_almere_raad_vergaderschema_2026",
+      "title": "Vergaderschema Raad van Almere 2026",
+      "document_type": "municipal_schedule_page",
+      "relevant_topics": [
+        "municipal.implementation_translation"
+      ]
+    },
+    {
       "document_id": "mun_almere_sociaal_domein_informatiepagina",
       "title": "Informatiepagina Sociaal Domein",
       "document_type": "municipal_info_page",
@@ -849,7 +901,7 @@
   "uncertain_items": [
     {
       "topic": "d5.basisfunctionaliteiten_onderbouwd",
-      "summary": "Current view combines 12 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
+      "summary": "Current view combines 13 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
       "claim_ids": [
         "clm__nat_gala_2023_gezond_en_actief_leven_d5_003",
         "clm__nat_gala_2023_gezond_en_actief_leven_d5_002",
@@ -859,7 +911,8 @@
         "clm__nat_iza_2022_integraal_zorgakkoord_d5_001",
         "clm__nat_azwa_2026_cw31_kader_d5_d6_d5_002",
         "clm__nat_azwa_2026_cw31_kader_d5_d6_d5_001",
-        "clm__nat_azwa_2026_voortgang_kamerbrief_d5_001",
+        "clm__nat_azwa_2026_voortgang_kamerbrief_d5_002",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_d5_002",
         "clm__reg_flevoland_2023_regiobeeld_d5_003",
         "clm__reg_flevoland_2023_regiobeeld_d5_002",
         "clm__reg_flevoland_2023_regiobeeld_d5_001"
@@ -894,6 +947,13 @@
           "document_status": "current"
         },
         {
+          "document_id": "nat_sociaalwerknl_financiering_iza_azwa_2025",
+          "title": "Financiering IZA en AZWA: hoe zit het precies?",
+          "jurisdiction_level": "national",
+          "document_type": "sector_commentary_page",
+          "document_status": "supporting"
+        },
+        {
           "document_id": "reg_flevoland_2023_regiobeeld",
           "title": "Regiobeeld Flevoland 2023",
           "jurisdiction_level": "regional",
@@ -907,26 +967,26 @@
       "topic": "d5.cross_domain_collaboration",
       "summary": "Current view combines 5 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
       "claim_ids": [
-        "clm__nat_azwa_2026_voortgang_kamerbrief_d5_003",
         "clm__reg_flevoland_2023_regioplan_iza_d5_002",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_d5_003",
         "clm__mun_almere_pga_seo_businesscase_2024_d5_002",
         "clm__nat_zorgakkoorden_azwa_programmapagina_2025_d5_002",
         "clm__nat_zorgakkoorden_azwa_programmapagina_2025_d5_001"
       ],
       "source_documents": [
         {
-          "document_id": "nat_azwa_2026_voortgang_kamerbrief",
-          "title": "Kamerbrief inzake voortgang Integraal Zorgakkoord (IZA) en Aanvullend Zorg- en Welzijnsakkoord (AZWA)",
-          "jurisdiction_level": "national",
-          "document_type": "kamerbrief",
-          "document_status": "current"
-        },
-        {
           "document_id": "reg_flevoland_2023_regioplan_iza",
           "title": "Zorgzaam Flevoland 2023 Regioplan IZA Flevoland",
           "jurisdiction_level": "regional",
           "document_type": "regional_plan",
           "document_status": "reference"
+        },
+        {
+          "document_id": "nat_sociaalwerknl_financiering_iza_azwa_2025",
+          "title": "Financiering IZA en AZWA: hoe zit het precies?",
+          "jurisdiction_level": "national",
+          "document_type": "sector_commentary_page",
+          "document_status": "supporting"
         },
         {
           "document_id": "mun_almere_pga_seo_businesscase_2024",
@@ -972,21 +1032,13 @@
     },
     {
       "topic": "d5.mentale_gezondheidsnetwerken",
-      "summary": "Current view combines 4 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
+      "summary": "Current view combines 3 compatible claims for d5.mentale_gezondheidsnetwerken, led by reg_flevoland_2023_regioplan_iza: The plan highlights Ecosysteem Mentale Gezondheid and Samen Sterker in de Wijk as a model for neighbourhood collaboration around psychosocial problems.",
       "claim_ids": [
-        "clm__nat_azwa_2026_voortgang_kamerbrief_d5_002",
         "clm__reg_flevoland_2023_regioplan_iza_d5_001",
         "clm__mun_almere_pga_transformatieplan_d5_001",
         "clm__mun_almere_pga_seo_businesscase_2024_d5_003"
       ],
       "source_documents": [
-        {
-          "document_id": "nat_azwa_2026_voortgang_kamerbrief",
-          "title": "Kamerbrief inzake voortgang Integraal Zorgakkoord (IZA) en Aanvullend Zorg- en Welzijnsakkoord (AZWA)",
-          "jurisdiction_level": "national",
-          "document_type": "kamerbrief",
-          "document_status": "current"
-        },
         {
           "document_id": "reg_flevoland_2023_regioplan_iza",
           "title": "Zorgzaam Flevoland 2023 Regioplan IZA Flevoland",
@@ -1013,12 +1065,23 @@
     },
     {
       "topic": "d5.other",
-      "summary": "Current view combines 2 compatible claims for d5.other, led by nat_azwa_2026_cw31_kamerbrief: Basisfunctionaliteiten- en basisinfrastructuur in het zorg- en sociaal domein (AZWA-afspraken D5 en D6) .",
+      "summary": "Current view combines 6 compatible claims for d5.other, led by nat_azwa_2026_voortgang_kamerbrief: Ook is afgesproken dat ten behoeve van deze herijking in 2026 een nieuwe set van criteria wordt vastgesteld voor deze beelden en plannen. Regio’s worden daarbij waar mogelijk ondersteund met landelijk beschikbare data over de nieuw vastgestelde criteria. ...",
       "claim_ids": [
+        "clm__nat_azwa_2026_voortgang_kamerbrief_d5_003",
+        "clm__nat_azwa_2026_voortgang_kamerbrief_d5_001",
+        "clm__nat_azwa_2026_cw31_kamerbrief_d5_002",
         "clm__nat_azwa_2026_cw31_kamerbrief_d5_001",
-        "clm__nat_azwa_2025_aanbiedingsbrief_d5_001"
+        "clm__nat_azwa_2025_aanbiedingsbrief_d5_001",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_d5_001"
       ],
       "source_documents": [
+        {
+          "document_id": "nat_azwa_2026_voortgang_kamerbrief",
+          "title": "Kamerbrief inzake voortgang Integraal Zorgakkoord (IZA) en Aanvullend Zorg- en Welzijnsakkoord (AZWA)",
+          "jurisdiction_level": "national",
+          "document_type": "kamerbrief",
+          "document_status": "current"
+        },
         {
           "document_id": "nat_azwa_2026_cw31_kamerbrief",
           "title": "Kamerbrief over CW 3.1 kaders voor AZWA onderdelen",
@@ -1032,13 +1095,20 @@
           "jurisdiction_level": "national",
           "document_type": "kamerbrief",
           "document_status": "reference"
+        },
+        {
+          "document_id": "nat_sociaalwerknl_financiering_iza_azwa_2025",
+          "title": "Financiering IZA en AZWA: hoe zit het precies?",
+          "jurisdiction_level": "national",
+          "document_type": "sector_commentary_page",
+          "document_status": "supporting"
         }
       ],
       "reason": "Current interpretation relies on contextual or lower-authority evidence and should be reviewed before firm local use."
     },
     {
       "topic": "d6.basisinfrastructuur",
-      "summary": "Current view combines 10 compatible claims led by nat_azwa_2025_definitief. Lower-authority claims clarify or implement the baseline rather than replacing it.",
+      "summary": "Current view combines 12 compatible claims led by nat_azwa_2025_definitief. Lower-authority claims clarify or implement the baseline rather than replacing it.",
       "claim_ids": [
         "clm__nat_azwa_2025_definitief_d6_001",
         "clm__nat_gala_2023_gezond_en_actief_leven_d6_003",
@@ -1048,8 +1118,10 @@
         "clm__nat_azwa_2026_cw31_kader_d5_d6_d6_001",
         "clm__nat_azwa_2026_voortgang_kamerbrief_d6_003",
         "clm__nat_azwa_2026_voortgang_kamerbrief_d6_002",
-        "clm__nat_azwa_2026_voortgang_kamerbrief_d6_001",
-        "clm__nat_azwa_2026_cw31_kamerbrief_d6_001"
+        "clm__nat_azwa_2026_cw31_kamerbrief_d6_001",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_d6_003",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_d6_002",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_d6_001"
       ],
       "source_documents": [
         {
@@ -1093,6 +1165,13 @@
           "jurisdiction_level": "national",
           "document_type": "kamerbrief",
           "document_status": "current"
+        },
+        {
+          "document_id": "nat_sociaalwerknl_financiering_iza_azwa_2025",
+          "title": "Financiering IZA en AZWA: hoe zit het precies?",
+          "jurisdiction_level": "national",
+          "document_type": "sector_commentary_page",
+          "document_status": "supporting"
         }
       ],
       "reason": "Current interpretation relies on contextual or lower-authority evidence and should be reviewed before firm local use."
@@ -1159,12 +1238,28 @@
     },
     {
       "topic": "d6.other",
-      "summary": "Current view combines 2 compatible claims for d6.other, led by nat_zorgakkoorden_azwa_programmapagina_2025: Bijvoorbeeld om samenwerking tussen huisartsen en wijkteams te stimuleren.",
+      "summary": "Current view combines 4 compatible claims for d6.other, led by nat_azwa_2026_voortgang_kamerbrief: Op peildatum 6 maart 2026 zijn er in totaal 180 transformatieplannen die transformatiemiddelen toegekend hebben gekregen. Daarmee zijn de transformatiemiddelen uitgeput. Omdat het bedrag dat samenhangt met het aantal goedgekeurde plannen (totaal 224) ...",
       "claim_ids": [
+        "clm__nat_azwa_2026_voortgang_kamerbrief_d6_001",
+        "clm__nat_azwa_2026_cw31_kamerbrief_d6_002",
         "clm__nat_zorgakkoorden_azwa_programmapagina_2025_d6_002",
         "clm__nat_zorgakkoorden_azwa_programmapagina_2025_d6_001"
       ],
       "source_documents": [
+        {
+          "document_id": "nat_azwa_2026_voortgang_kamerbrief",
+          "title": "Kamerbrief inzake voortgang Integraal Zorgakkoord (IZA) en Aanvullend Zorg- en Welzijnsakkoord (AZWA)",
+          "jurisdiction_level": "national",
+          "document_type": "kamerbrief",
+          "document_status": "current"
+        },
+        {
+          "document_id": "nat_azwa_2026_cw31_kamerbrief",
+          "title": "Kamerbrief over CW 3.1 kaders voor AZWA onderdelen",
+          "jurisdiction_level": "national",
+          "document_type": "kamerbrief",
+          "document_status": "current"
+        },
         {
           "document_id": "nat_zorgakkoorden_azwa_programmapagina_2025",
           "title": "Aanvullend Zorg- en Welzijnsakkoord",
@@ -1194,7 +1289,7 @@
     },
     {
       "topic": "finance.d5_d6.funding_instrument",
-      "summary": "Current view combines 12 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
+      "summary": "Current view combines 15 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
       "claim_ids": [
         "clm__nat_wetten_spuk_transformatiemiddelen_regeling_governance_and_finance_003",
         "clm__nat_wetten_spuk_transformatiemiddelen_regeling_governance_and_finance_002",
@@ -1205,8 +1300,11 @@
         "clm__nat_vng_azwa_faq_middelen_governance_and_finance_003",
         "clm__nat_vng_azwa_faq_middelen_governance_and_finance_002",
         "clm__nat_vng_azwa_faq_middelen_governance_and_finance_001",
-        "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_governance_and_finance_003",
+        "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_governance_and_finance_002",
         "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_governance_and_finance_001",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_governance_and_finance_003",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_governance_and_finance_002",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_governance_and_finance_001",
         "clm__mun_almere_pga_seo_businesscase_2024_governance_and_finance_001"
       ],
       "source_documents": [
@@ -1253,6 +1351,13 @@
           "document_status": "supporting"
         },
         {
+          "document_id": "nat_sociaalwerknl_financiering_iza_azwa_2025",
+          "title": "Financiering IZA en AZWA: hoe zit het precies?",
+          "jurisdiction_level": "national",
+          "document_type": "sector_commentary_page",
+          "document_status": "supporting"
+        },
+        {
           "document_id": "mun_almere_pga_seo_businesscase_2024",
           "title": "Naar een positief gezond Almere; Beleidstheorie en businesscase transformatieplan",
           "jurisdiction_level": "municipal",
@@ -1289,9 +1394,8 @@
     },
     {
       "topic": "finance.regional_funding_path",
-      "summary": "Current view combines 4 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
+      "summary": "Current view combines 3 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
       "claim_ids": [
-        "clm__nat_azwa_2026_voortgang_kamerbrief_governance_and_finance_003",
         "clm__nat_azwa_2026_voortgang_kamerbrief_governance_and_finance_001",
         "clm__nat_vng_azwa_faq_uitvoeringscapaciteit_governance_and_finance_001",
         "clm__mun_almere_pga_seo_businesscase_2024_governance_and_finance_002"
@@ -1323,19 +1427,11 @@
     },
     {
       "topic": "governance.national_coordination",
-      "summary": "Current view combines 2 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
+      "summary": "Current view is provisional because it rests on contextual or local evidence. Onder andere Bestuurlijk Overleg Flevoland (VVT/ZH/HA), Getijde, Positief Ouder Worden, Valpreventie, Zorg in de wijk, (G)OUD, Netwerk Dementie, Almere Durft.",
       "claim_ids": [
-        "clm__nat_azwa_2026_voortgang_kamerbrief_governance_and_finance_002",
         "clm__reg_flevoland_2023_regiobeeld_governance_and_finance_002"
       ],
       "source_documents": [
-        {
-          "document_id": "nat_azwa_2026_voortgang_kamerbrief",
-          "title": "Kamerbrief inzake voortgang Integraal Zorgakkoord (IZA) en Aanvullend Zorg- en Welzijnsakkoord (AZWA)",
-          "jurisdiction_level": "national",
-          "document_type": "kamerbrief",
-          "document_status": "current"
-        },
         {
           "document_id": "reg_flevoland_2023_regiobeeld",
           "title": "Regiobeeld Flevoland 2023",
@@ -1348,13 +1444,16 @@
     },
     {
       "topic": "governance_and_finance.other",
-      "summary": "Current view combines 14 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
+      "summary": "Current view combines 17 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
       "claim_ids": [
+        "clm__nat_azwa_2026_voortgang_kamerbrief_governance_and_finance_003",
+        "clm__nat_azwa_2026_voortgang_kamerbrief_governance_and_finance_002",
+        "clm__nat_azwa_2026_cw31_kamerbrief_governance_and_finance_001",
         "clm__mun_almere_sociaal_domein_informatiepagina_governance_and_finance_001",
         "clm__nat_bzk_gemeentefonds_cyclus_governance_and_finance_003",
         "clm__nat_bzk_gemeentefonds_cyclus_governance_and_finance_002",
         "clm__nat_bzk_gemeentefonds_cyclus_governance_and_finance_001",
-        "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_governance_and_finance_002",
+        "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_governance_and_finance_003",
         "clm__mun_almere_2024_2034_maatschappelijke_agenda_governance_and_finance_002",
         "clm__mun_almere_2024_2034_maatschappelijke_agenda_governance_and_finance_001",
         "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_governance_and_finance_002",
@@ -1366,6 +1465,20 @@
         "clm__mun_almere_begroting_2026_webpagina_governance_and_finance_001"
       ],
       "source_documents": [
+        {
+          "document_id": "nat_azwa_2026_voortgang_kamerbrief",
+          "title": "Kamerbrief inzake voortgang Integraal Zorgakkoord (IZA) en Aanvullend Zorg- en Welzijnsakkoord (AZWA)",
+          "jurisdiction_level": "national",
+          "document_type": "kamerbrief",
+          "document_status": "current"
+        },
+        {
+          "document_id": "nat_azwa_2026_cw31_kamerbrief",
+          "title": "Kamerbrief over CW 3.1 kaders voor AZWA onderdelen",
+          "jurisdiction_level": "national",
+          "document_type": "kamerbrief",
+          "document_status": "current"
+        },
         {
           "document_id": "mun_almere_sociaal_domein_informatiepagina",
           "title": "Informatiepagina Sociaal Domein",
@@ -1420,11 +1533,10 @@
     },
     {
       "topic": "monitoring.framework",
-      "summary": "Current view combines 5 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
+      "summary": "Current view combines 4 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
       "claim_ids": [
         "clm__nat_azwa_2025_definitief_monitoring_and_evaluation_001",
         "clm__nat_azwa_2026_cw31_kader_d5_d6_monitoring_and_evaluation_002",
-        "clm__nat_azwa_2026_voortgang_kamerbrief_monitoring_and_evaluation_003",
         "clm__reg_flevoland_2023_regioplan_iza_monitoring_and_evaluation_002",
         "clm__reg_flevoland_2023_regiobeeld_monitoring_and_evaluation_001"
       ],
@@ -1441,13 +1553,6 @@
           "title": "CW 3.1 kader basisfunctionaliteiten en basisinfrastructuur D5 en D6",
           "jurisdiction_level": "national",
           "document_type": "framework",
-          "document_status": "current"
-        },
-        {
-          "document_id": "nat_azwa_2026_voortgang_kamerbrief",
-          "title": "Kamerbrief inzake voortgang Integraal Zorgakkoord (IZA) en Aanvullend Zorg- en Welzijnsakkoord (AZWA)",
-          "jurisdiction_level": "national",
-          "document_type": "kamerbrief",
           "document_status": "current"
         },
         {
@@ -1495,11 +1600,14 @@
     },
     {
       "topic": "monitoring.other",
-      "summary": "Current view combines 11 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
+      "summary": "Current view combines 14 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
       "claim_ids": [
         "clm__nat_wetten_spuk_transformatiemiddelen_regeling_monitoring_and_evaluation_003",
         "clm__nat_wetten_spuk_transformatiemiddelen_regeling_monitoring_and_evaluation_002",
         "clm__nat_wetten_spuk_transformatiemiddelen_regeling_monitoring_and_evaluation_001",
+        "clm__nat_azwa_2026_voortgang_kamerbrief_monitoring_and_evaluation_003",
+        "clm__nat_azwa_2026_voortgang_kamerbrief_monitoring_and_evaluation_002",
+        "clm__nat_azwa_2026_cw31_kamerbrief_monitoring_and_evaluation_003",
         "clm__nat_azwa_2026_cw31_kamerbrief_monitoring_and_evaluation_002",
         "clm__nat_azwa_2026_cw31_kamerbrief_monitoring_and_evaluation_001",
         "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_monitoring_and_evaluation_001",
@@ -1515,6 +1623,13 @@
           "title": "Regeling specifieke uitkering transformatiemiddelen IZA & AZWA 2024-2028",
           "jurisdiction_level": "national",
           "document_type": "regulation",
+          "document_status": "current"
+        },
+        {
+          "document_id": "nat_azwa_2026_voortgang_kamerbrief",
+          "title": "Kamerbrief inzake voortgang Integraal Zorgakkoord (IZA) en Aanvullend Zorg- en Welzijnsakkoord (AZWA)",
+          "jurisdiction_level": "national",
+          "document_type": "kamerbrief",
           "document_status": "current"
         },
         {
@@ -1591,7 +1706,7 @@
     },
     {
       "topic": "municipal.implementation_translation",
-      "summary": "Current view combines 43 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
+      "summary": "Current view combines 50 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
       "claim_ids": [
         "clm__nat_wetten_spuk_transformatiemiddelen_regeling_municipal_translation_003",
         "clm__nat_wetten_spuk_transformatiemiddelen_regeling_municipal_translation_002",
@@ -1603,11 +1718,13 @@
         "clm__nat_azwa_2026_voortgang_kamerbrief_municipal_translation_003",
         "clm__nat_azwa_2026_voortgang_kamerbrief_municipal_translation_002",
         "clm__nat_azwa_2026_voortgang_kamerbrief_municipal_translation_001",
+        "clm__nat_azwa_2026_cw31_kamerbrief_municipal_translation_002",
         "clm__nat_azwa_2026_cw31_kamerbrief_municipal_translation_001",
         "clm__reg_flevoland_2023_regioplan_iza_municipal_translation_001",
         "clm__nat_vng_azwa_faq_uitvoeringscapaciteit_municipal_translation_003",
         "clm__nat_vng_azwa_faq_uitvoeringscapaciteit_municipal_translation_002",
         "clm__nat_vng_azwa_faq_uitvoeringscapaciteit_municipal_translation_001",
+        "clm__nat_vng_azwa_faq_middelen_municipal_translation_002",
         "clm__nat_vng_azwa_faq_middelen_municipal_translation_001",
         "clm__mun_almere_sociaal_domein_informatiepagina_municipal_translation_003",
         "clm__mun_almere_sociaal_domein_informatiepagina_municipal_translation_002",
@@ -1618,6 +1735,9 @@
         "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_municipal_translation_003",
         "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_municipal_translation_002",
         "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_municipal_translation_001",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_municipal_translation_003",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_municipal_translation_002",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_municipal_translation_001",
         "clm__mun_almere_2024_2034_maatschappelijke_agenda_municipal_translation_003",
         "clm__mun_almere_2024_2034_maatschappelijke_agenda_municipal_translation_002",
         "clm__mun_almere_2024_2034_maatschappelijke_agenda_municipal_translation_001",
@@ -1633,6 +1753,8 @@
         "clm__mun_almere_sociale_staat_gateway_municipal_translation_003",
         "clm__mun_almere_sociale_staat_gateway_municipal_translation_002",
         "clm__mun_almere_sociale_staat_gateway_municipal_translation_001",
+        "clm__mun_almere_raad_vergaderschema_2026_municipal_translation_002",
+        "clm__mun_almere_raad_vergaderschema_2026_municipal_translation_001",
         "clm__mun_almere_begroting_2026_webpagina_municipal_translation_003",
         "clm__mun_almere_begroting_2026_webpagina_municipal_translation_002",
         "clm__mun_almere_begroting_2026_webpagina_municipal_translation_001"
@@ -1716,6 +1838,13 @@
           "document_status": "supporting"
         },
         {
+          "document_id": "nat_sociaalwerknl_financiering_iza_azwa_2025",
+          "title": "Financiering IZA en AZWA: hoe zit het precies?",
+          "jurisdiction_level": "national",
+          "document_type": "sector_commentary_page",
+          "document_status": "supporting"
+        },
+        {
           "document_id": "mun_almere_2024_2034_maatschappelijke_agenda",
           "title": "Maatschappelijke agenda 2024-2034",
           "jurisdiction_level": "municipal",
@@ -1751,6 +1880,13 @@
           "document_status": "supporting"
         },
         {
+          "document_id": "mun_almere_raad_vergaderschema_2026",
+          "title": "Vergaderschema Raad van Almere 2026",
+          "jurisdiction_level": "municipal",
+          "document_type": "municipal_schedule_page",
+          "document_status": "supporting"
+        },
+        {
           "document_id": "mun_almere_begroting_2026_webpagina",
           "title": "Begroting 2026",
           "jurisdiction_level": "municipal",
@@ -1762,9 +1898,10 @@
     },
     {
       "topic": "timeline.d5_d6_implementation",
-      "summary": "Current view combines 3 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
+      "summary": "Current view combines 4 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
       "claim_ids": [
         "clm__nat_azwa_2025_definitief_timeline_and_status_001",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_timeline_and_status_001",
         "clm__mun_almere_2024_2034_maatschappelijke_agenda_timeline_and_status_002",
         "clm__mun_almere_2024_2034_maatschappelijke_agenda_timeline_and_status_001"
       ],
@@ -1777,6 +1914,13 @@
           "document_status": "current"
         },
         {
+          "document_id": "nat_sociaalwerknl_financiering_iza_azwa_2025",
+          "title": "Financiering IZA en AZWA: hoe zit het precies?",
+          "jurisdiction_level": "national",
+          "document_type": "sector_commentary_page",
+          "document_status": "supporting"
+        },
+        {
           "document_id": "mun_almere_2024_2034_maatschappelijke_agenda",
           "title": "Maatschappelijke agenda 2024-2034",
           "jurisdiction_level": "municipal",
@@ -1787,20 +1931,51 @@
       "reason": "Current interpretation relies on contextual or lower-authority evidence and should be reviewed before firm local use."
     },
     {
-      "topic": "timeline.other",
-      "summary": "Current view combines 13 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
+      "topic": "timeline.local_governance_calendar",
+      "summary": "Current view combines 3 compatible claims for timeline.local_governance_calendar, led by mun_almere_raad_vergaderschema_2026: Woensdag 1 april 2026 | Benoeming raad 2026 - 2030",
       "claim_ids": [
+        "clm__mun_almere_raad_vergaderschema_2026_timeline_and_status_003",
+        "clm__mun_almere_raad_vergaderschema_2026_timeline_and_status_002",
+        "clm__mun_almere_raad_vergaderschema_2026_timeline_and_status_001"
+      ],
+      "source_documents": [
+        {
+          "document_id": "mun_almere_raad_vergaderschema_2026",
+          "title": "Vergaderschema Raad van Almere 2026",
+          "jurisdiction_level": "municipal",
+          "document_type": "municipal_schedule_page",
+          "document_status": "supporting"
+        }
+      ],
+      "reason": "Current interpretation relies on contextual or lower-authority evidence and should be reviewed before firm local use."
+    },
+    {
+      "topic": "timeline.other",
+      "summary": "Current view combines 25 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
+      "claim_ids": [
+        "clm__nat_wetten_spuk_transformatiemiddelen_regeling_timeline_and_status_003",
         "clm__nat_wetten_spuk_transformatiemiddelen_regeling_timeline_and_status_001",
+        "clm__nat_azwa_2026_voortgang_kamerbrief_timeline_and_status_003",
+        "clm__nat_azwa_2026_voortgang_kamerbrief_timeline_and_status_002",
         "clm__nat_azwa_2026_voortgang_kamerbrief_timeline_and_status_001",
+        "clm__nat_azwa_2026_cw31_kamerbrief_timeline_and_status_001",
+        "clm__nat_vng_azwa_faq_middelen_timeline_and_status_003",
         "clm__nat_vng_azwa_faq_middelen_timeline_and_status_002",
         "clm__nat_vng_azwa_faq_middelen_timeline_and_status_001",
         "clm__mun_almere_sociaal_domein_informatiepagina_timeline_and_status_001",
+        "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_timeline_and_status_003",
         "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_timeline_and_status_002",
         "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_timeline_and_status_001",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_timeline_and_status_003",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_timeline_and_status_002",
+        "clm__mun_almere_2024_2034_maatschappelijke_agenda_timeline_and_status_003",
+        "clm__mun_almere_pga_seo_businesscase_2024_timeline_and_status_003",
         "clm__mun_almere_pga_seo_businesscase_2024_timeline_and_status_002",
         "clm__mun_almere_pga_seo_businesscase_2024_timeline_and_status_001",
+        "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_timeline_and_status_003",
         "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_timeline_and_status_002",
         "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_timeline_and_status_001",
+        "clm__mun_almere_begroting_2026_webpagina_timeline_and_status_003",
         "clm__mun_almere_begroting_2026_webpagina_timeline_and_status_002",
         "clm__mun_almere_begroting_2026_webpagina_timeline_and_status_001"
       ],
@@ -1815,6 +1990,13 @@
         {
           "document_id": "nat_azwa_2026_voortgang_kamerbrief",
           "title": "Kamerbrief inzake voortgang Integraal Zorgakkoord (IZA) en Aanvullend Zorg- en Welzijnsakkoord (AZWA)",
+          "jurisdiction_level": "national",
+          "document_type": "kamerbrief",
+          "document_status": "current"
+        },
+        {
+          "document_id": "nat_azwa_2026_cw31_kamerbrief",
+          "title": "Kamerbrief over CW 3.1 kaders voor AZWA onderdelen",
           "jurisdiction_level": "national",
           "document_type": "kamerbrief",
           "document_status": "current"
@@ -1838,6 +2020,20 @@
           "title": "Specifieke uitkering transformatiemiddelen IZA & AZWA 2024-2028",
           "jurisdiction_level": "national",
           "document_type": "subsidy_page",
+          "document_status": "supporting"
+        },
+        {
+          "document_id": "nat_sociaalwerknl_financiering_iza_azwa_2025",
+          "title": "Financiering IZA en AZWA: hoe zit het precies?",
+          "jurisdiction_level": "national",
+          "document_type": "sector_commentary_page",
+          "document_status": "supporting"
+        },
+        {
+          "document_id": "mun_almere_2024_2034_maatschappelijke_agenda",
+          "title": "Maatschappelijke agenda 2024-2034",
+          "jurisdiction_level": "municipal",
+          "document_type": "municipal_policy_summary",
           "document_status": "supporting"
         },
         {
@@ -1870,7 +2066,7 @@
       "claim_ids": [
         "clm__nat_wetten_spuk_transformatiemiddelen_regeling_timeline_and_status_002",
         "clm__nat_azwa_2025_definitief_timeline_and_status_002",
-        "clm__nat_azwa_2026_voortgang_kamerbrief_timeline_and_status_002",
+        "clm__reg_flevoland_2023_regiobeeld_timeline_and_status_003",
         "clm__reg_flevoland_2023_regiobeeld_timeline_and_status_002",
         "clm__reg_flevoland_2023_regiobeeld_timeline_and_status_001"
       ],
@@ -1887,13 +2083,6 @@
           "title": "Aanvullend Zorg- en Welzijnsakkoord (AZWA) (Definitief)",
           "jurisdiction_level": "national",
           "document_type": "agreement",
-          "document_status": "current"
-        },
-        {
-          "document_id": "nat_azwa_2026_voortgang_kamerbrief",
-          "title": "Kamerbrief inzake voortgang Integraal Zorgakkoord (IZA) en Aanvullend Zorg- en Welzijnsakkoord (AZWA)",
-          "jurisdiction_level": "national",
-          "document_type": "kamerbrief",
           "document_status": "current"
         },
         {
@@ -1986,12 +2175,10 @@
       "topic": "finance.regional_funding_path",
       "historical_claim_ids": [
         "clm__nat_iza_2022_integraal_zorgakkoord_governance_and_finance_003",
-        "clm__nat_iza_2022_integraal_zorgakkoord_governance_and_finance_002",
         "clm__nat_iza_2022_integraal_zorgakkoord_governance_and_finance_001"
       ],
       "superseded_claim_ids": [
         "clm__nat_iza_2022_integraal_zorgakkoord_governance_and_finance_001",
-        "clm__nat_iza_2022_integraal_zorgakkoord_governance_and_finance_002",
         "clm__nat_iza_2022_integraal_zorgakkoord_governance_and_finance_003"
       ],
       "note": "Current wording exists; older or draft wording remains preserved only for traceability."
@@ -2085,26 +2272,30 @@
     {
       "topic": "timeline.d5_d6_implementation",
       "historical_claim_ids": [
-        "clm__nat_azwa_2025_onderhandelaarsakkoord_timeline_and_status_001"
+        "clm__nat_azwa_2025_onderhandelaarsakkoord_timeline_and_status_001",
+        "clm__nat_iza_2022_integraal_zorgakkoord_timeline_and_status_002"
       ],
       "superseded_claim_ids": [
-        "clm__nat_azwa_2025_onderhandelaarsakkoord_timeline_and_status_001"
+        "clm__nat_azwa_2025_onderhandelaarsakkoord_timeline_and_status_001",
+        "clm__nat_iza_2022_integraal_zorgakkoord_timeline_and_status_002"
       ],
       "note": "Current wording exists; older or draft wording remains preserved only for traceability."
     },
     {
       "topic": "timeline.other",
       "historical_claim_ids": [
+        "clm__nat_gala_2023_gezond_en_actief_leven_timeline_and_status_003",
         "clm__nat_gala_2023_gezond_en_actief_leven_timeline_and_status_001",
-        "clm__nat_iza_2022_integraal_zorgakkoord_timeline_and_status_002",
+        "clm__nat_iza_2022_integraal_zorgakkoord_timeline_and_status_003",
         "clm__nat_iza_2022_integraal_zorgakkoord_timeline_and_status_001",
         "clm__nat_azwa_2025_aanbiedingsbrief_timeline_and_status_001"
       ],
       "superseded_claim_ids": [
         "clm__nat_azwa_2025_aanbiedingsbrief_timeline_and_status_001",
         "clm__nat_gala_2023_gezond_en_actief_leven_timeline_and_status_001",
+        "clm__nat_gala_2023_gezond_en_actief_leven_timeline_and_status_003",
         "clm__nat_iza_2022_integraal_zorgakkoord_timeline_and_status_001",
-        "clm__nat_iza_2022_integraal_zorgakkoord_timeline_and_status_002"
+        "clm__nat_iza_2022_integraal_zorgakkoord_timeline_and_status_003"
       ],
       "note": "Current wording exists; older or draft wording remains preserved only for traceability."
     },
@@ -2137,14 +2328,6 @@
       "notes": "Current interpretation keeps the higher-authority national baseline and also preserves lower-authority regional or municipal localization claims for Almere."
     },
     {
-      "conflict_id": "conflict__d5__mentale_gezondheidsnetwerken",
-      "topic": "d5.mentale_gezondheidsnetwerken",
-      "conflict_type": "localization_overlap",
-      "resolution_status": "parallel_claims",
-      "recommended_resolution_rule": "municipal_documents_cannot_override_national_obligations",
-      "notes": "Current interpretation keeps the higher-authority national baseline and also preserves lower-authority regional or municipal localization claims for Almere."
-    },
-    {
       "conflict_id": "conflict__d6__digital_and_operational_infrastructure",
       "topic": "d6.digital_and_operational_infrastructure",
       "conflict_type": "implementation_layering",
@@ -2155,22 +2338,6 @@
     {
       "conflict_id": "conflict__d6__local_teams",
       "topic": "d6.local_teams",
-      "conflict_type": "localization_overlap",
-      "resolution_status": "parallel_claims",
-      "recommended_resolution_rule": "municipal_documents_cannot_override_national_obligations",
-      "notes": "Current interpretation keeps the higher-authority national baseline and also preserves lower-authority regional or municipal localization claims for Almere."
-    },
-    {
-      "conflict_id": "conflict__governance__national_coordination",
-      "topic": "governance.national_coordination",
-      "conflict_type": "localization_overlap",
-      "resolution_status": "parallel_claims",
-      "recommended_resolution_rule": "municipal_documents_cannot_override_national_obligations",
-      "notes": "Current interpretation keeps the higher-authority national baseline and also preserves lower-authority regional or municipal localization claims for Almere."
-    },
-    {
-      "conflict_id": "conflict__monitoring__regional_monitoring_plan",
-      "topic": "monitoring.regional_monitoring_plan",
       "conflict_type": "localization_overlap",
       "resolution_status": "parallel_claims",
       "recommended_resolution_rule": "municipal_documents_cannot_override_national_obligations",
@@ -2196,7 +2363,8 @@
         "clm__nat_iza_2022_integraal_zorgakkoord_d5_001",
         "clm__nat_azwa_2026_cw31_kader_d5_d6_d5_002",
         "clm__nat_azwa_2026_cw31_kader_d5_d6_d5_001",
-        "clm__nat_azwa_2026_voortgang_kamerbrief_d5_001",
+        "clm__nat_azwa_2026_voortgang_kamerbrief_d5_002",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_d5_002",
         "clm__reg_flevoland_2023_regiobeeld_d5_003",
         "clm__reg_flevoland_2023_regiobeeld_d5_002",
         "clm__reg_flevoland_2023_regiobeeld_d5_001",
@@ -2254,7 +2422,6 @@
       "supporting_claim_ids": [
         "clm__nat_azwa_2025_definitief_monitoring_and_evaluation_001",
         "clm__nat_azwa_2026_cw31_kader_d5_d6_monitoring_and_evaluation_002",
-        "clm__nat_azwa_2026_voortgang_kamerbrief_monitoring_and_evaluation_003",
         "clm__reg_flevoland_2023_regioplan_iza_monitoring_and_evaluation_002",
         "clm__reg_flevoland_2023_regiobeeld_monitoring_and_evaluation_001",
         "clm__mun_almere_pga_transformatieplan_monitoring_and_evaluation_001",

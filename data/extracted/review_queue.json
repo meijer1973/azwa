@@ -4,12 +4,12 @@
   "summary": {
     "blocking": 0,
     "warning": 0,
-    "review": 30,
-    "item_count": 30,
+    "review": 29,
+    "item_count": 29,
     "issue_counts_by_reason": {
-      "authority_unclear": 12,
+      "authority_unclear": 14,
       "municipality_relevance_inferred": 11,
-      "unresolved_conflict": 7
+      "unresolved_conflict": 4
     }
   },
   "items": [
@@ -26,13 +26,13 @@
         "data/extracted/claims/mun_almere_2024_2026_visie_gezondheidsbeleid.json"
       ],
       "related_ids": {
-        "review_claim_count": 8,
+        "review_claim_count": 9,
         "sample_claim_ids": [
           "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_governance_and_finance_001",
           "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_governance_and_finance_002",
           "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_timeline_and_status_001",
           "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_timeline_and_status_002",
-          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_monitoring_and_evaluation_001"
+          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_timeline_and_status_003"
         ]
       },
       "evidence": {},
@@ -51,13 +51,13 @@
         "data/extracted/claims/mun_almere_2024_2034_maatschappelijke_agenda.json"
       ],
       "related_ids": {
-        "review_claim_count": 7,
+        "review_claim_count": 8,
         "sample_claim_ids": [
           "clm__mun_almere_2024_2034_maatschappelijke_agenda_governance_and_finance_001",
           "clm__mun_almere_2024_2034_maatschappelijke_agenda_governance_and_finance_002",
           "clm__mun_almere_2024_2034_maatschappelijke_agenda_timeline_and_status_001",
           "clm__mun_almere_2024_2034_maatschappelijke_agenda_timeline_and_status_002",
-          "clm__mun_almere_2024_2034_maatschappelijke_agenda_municipal_translation_001"
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_timeline_and_status_003"
         ]
       },
       "evidence": {},
@@ -76,7 +76,7 @@
         "data/extracted/claims/mun_almere_begroting_2026_webpagina.json"
       ],
       "related_ids": {
-        "review_claim_count": 8,
+        "review_claim_count": 9,
         "sample_claim_ids": [
           "clm__mun_almere_begroting_2026_webpagina_governance_and_finance_001",
           "clm__mun_almere_begroting_2026_webpagina_governance_and_finance_002",
@@ -101,7 +101,7 @@
         "data/extracted/claims/mun_almere_pga_seo_businesscase_2024.json"
       ],
       "related_ids": {
-        "review_claim_count": 17,
+        "review_claim_count": 18,
         "sample_claim_ids": [
           "clm__mun_almere_pga_seo_businesscase_2024_d5_001",
           "clm__mun_almere_pga_seo_businesscase_2024_d5_002",
@@ -168,6 +168,31 @@
       "severity": "review",
       "check_id": "claim_payload_integrity",
       "reason_code": "authority_unclear",
+      "summary": "mun_almere_raad_vergaderschema_2026 contributes lower-authority claims that still require human review.",
+      "recommended_action": "Keep these claims as contextual support only until a stronger primary source confirms or replaces them.",
+      "document_id": "mun_almere_raad_vergaderschema_2026",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_raad_vergaderschema_2026.json"
+      ],
+      "related_ids": {
+        "review_claim_count": 5,
+        "sample_claim_ids": [
+          "clm__mun_almere_raad_vergaderschema_2026_timeline_and_status_001",
+          "clm__mun_almere_raad_vergaderschema_2026_timeline_and_status_002",
+          "clm__mun_almere_raad_vergaderschema_2026_timeline_and_status_003",
+          "clm__mun_almere_raad_vergaderschema_2026_municipal_translation_001",
+          "clm__mun_almere_raad_vergaderschema_2026_municipal_translation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_007"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "authority_unclear",
       "summary": "mun_almere_sociaal_domein_informatiepagina contributes lower-authority claims that still require human review.",
       "recommended_action": "Keep these claims as contextual support only until a stronger primary source confirms or replaces them.",
       "document_id": "mun_almere_sociaal_domein_informatiepagina",
@@ -186,7 +211,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_007"
+      "review_item_id": "rvw_008"
     },
     {
       "status": "open",
@@ -211,7 +236,7 @@
         "topic_count": 3
       },
       "evidence": {},
-      "review_item_id": "rvw_008"
+      "review_item_id": "rvw_009"
     },
     {
       "status": "open",
@@ -234,7 +259,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_009"
+      "review_item_id": "rvw_010"
     },
     {
       "status": "open",
@@ -257,7 +282,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_010"
+      "review_item_id": "rvw_011"
     },
     {
       "status": "open",
@@ -278,7 +303,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_011"
+      "review_item_id": "rvw_012"
     },
     {
       "status": "open",
@@ -303,7 +328,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_012"
+      "review_item_id": "rvw_013"
     },
     {
       "status": "open",
@@ -318,7 +343,7 @@
         "data/extracted/claims/nat_dusi_spuk_transformatiemiddelen_2024_2028.json"
       ],
       "related_ids": {
-        "review_claim_count": 9,
+        "review_claim_count": 10,
         "sample_claim_ids": [
           "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_governance_and_finance_001",
           "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_governance_and_finance_002",
@@ -328,7 +353,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_013"
+      "review_item_id": "rvw_014"
     },
     {
       "status": "open",
@@ -353,7 +378,7 @@
         "topic_count": 2
       },
       "evidence": {},
-      "review_item_id": "rvw_014"
+      "review_item_id": "rvw_015"
     },
     {
       "status": "open",
@@ -377,7 +402,32 @@
         "topic_count": 2
       },
       "evidence": {},
-      "review_item_id": "rvw_015"
+      "review_item_id": "rvw_016"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "authority_unclear",
+      "summary": "nat_sociaalwerknl_financiering_iza_azwa_2025 contributes lower-authority claims that still require human review.",
+      "recommended_action": "Keep these claims as contextual support only until a stronger primary source confirms or replaces them.",
+      "document_id": "nat_sociaalwerknl_financiering_iza_azwa_2025",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_sociaalwerknl_financiering_iza_azwa_2025.json"
+      ],
+      "related_ids": {
+        "review_claim_count": 15,
+        "sample_claim_ids": [
+          "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_d5_001",
+          "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_d5_002",
+          "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_d5_003",
+          "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_d6_001",
+          "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_d6_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_017"
     },
     {
       "status": "open",
@@ -392,7 +442,7 @@
         "data/extracted/claims/nat_vng_azwa_faq_middelen.json"
       ],
       "related_ids": {
-        "review_claim_count": 6,
+        "review_claim_count": 8,
         "sample_claim_ids": [
           "clm__nat_vng_azwa_faq_middelen_governance_and_finance_001",
           "clm__nat_vng_azwa_faq_middelen_governance_and_finance_002",
@@ -402,14 +452,14 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_016"
+      "review_item_id": "rvw_018"
     },
     {
       "status": "open",
       "severity": "review",
       "check_id": "claim_payload_integrity",
       "reason_code": "municipality_relevance_inferred",
-      "summary": "nat_vng_azwa_faq_middelen contains 3 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
+      "summary": "nat_vng_azwa_faq_middelen contains 5 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
       "recommended_action": "Review these claims before treating them as firm municipal obligations or implementation facts.",
       "document_id": "nat_vng_azwa_faq_middelen",
       "topic": null,
@@ -420,12 +470,14 @@
         "sample_claim_ids": [
           "clm__nat_vng_azwa_faq_middelen_timeline_and_status_001",
           "clm__nat_vng_azwa_faq_middelen_timeline_and_status_002",
-          "clm__nat_vng_azwa_faq_middelen_municipal_translation_001"
+          "clm__nat_vng_azwa_faq_middelen_timeline_and_status_003",
+          "clm__nat_vng_azwa_faq_middelen_municipal_translation_001",
+          "clm__nat_vng_azwa_faq_middelen_municipal_translation_002"
         ],
         "topic_count": 2
       },
       "evidence": {},
-      "review_item_id": "rvw_017"
+      "review_item_id": "rvw_019"
     },
     {
       "status": "open",
@@ -449,7 +501,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_018"
+      "review_item_id": "rvw_020"
     },
     {
       "status": "open",
@@ -472,7 +524,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_019"
+      "review_item_id": "rvw_021"
     },
     {
       "status": "open",
@@ -497,7 +549,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_020"
+      "review_item_id": "rvw_022"
     },
     {
       "status": "open",
@@ -512,7 +564,7 @@
         "data/extracted/claims/reg_flevoland_2023_regiobeeld.json"
       ],
       "related_ids": {
-        "review_claim_count": 14,
+        "review_claim_count": 15,
         "sample_claim_ids": [
           "clm__reg_flevoland_2023_regiobeeld_d5_001",
           "clm__reg_flevoland_2023_regiobeeld_d5_002",
@@ -522,7 +574,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_021"
+      "review_item_id": "rvw_023"
     },
     {
       "status": "open",
@@ -545,7 +597,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_022"
+      "review_item_id": "rvw_024"
     },
     {
       "status": "open",
@@ -568,7 +620,7 @@
         "topic_count": 3
       },
       "evidence": {},
-      "review_item_id": "rvw_023"
+      "review_item_id": "rvw_025"
     },
     {
       "status": "open",
@@ -594,12 +646,12 @@
           "clm__nat_iza_2022_integraal_zorgakkoord_d5_001",
           "clm__nat_azwa_2026_cw31_kader_d5_d6_d5_002",
           "clm__nat_azwa_2026_cw31_kader_d5_d6_d5_001",
-          "clm__nat_azwa_2026_voortgang_kamerbrief_d5_001",
-          "clm__reg_flevoland_2023_regiobeeld_d5_003"
+          "clm__nat_azwa_2026_voortgang_kamerbrief_d5_002",
+          "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_d5_002"
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_024"
+      "review_item_id": "rvw_026"
     },
     {
       "status": "open",
@@ -617,40 +669,15 @@
       "related_ids": {
         "conflict_id": "conflict__d5__cross_domain_collaboration",
         "claim_ids": [
-          "clm__nat_azwa_2026_voortgang_kamerbrief_d5_003",
           "clm__reg_flevoland_2023_regioplan_iza_d5_002",
+          "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_d5_003",
           "clm__mun_almere_pga_seo_businesscase_2024_d5_002",
           "clm__nat_zorgakkoorden_azwa_programmapagina_2025_d5_002",
           "clm__nat_zorgakkoorden_azwa_programmapagina_2025_d5_001"
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_025"
-    },
-    {
-      "status": "open",
-      "severity": "review",
-      "check_id": "interpretation_integrity",
-      "reason_code": "unresolved_conflict",
-      "summary": "Conflict conflict__d5__mentale_gezondheidsnetwerken for topic d5.mentale_gezondheidsnetwerken still needs human review.",
-      "recommended_action": "Resolve or annotate this topic before using it as settled policy guidance for Almere.",
-      "document_id": null,
-      "topic": "d5.mentale_gezondheidsnetwerken",
-      "source_paths": [
-        "data/extracted/claims/conflict_register.json",
-        "data/extracted/claims/current_interpretation.json"
-      ],
-      "related_ids": {
-        "conflict_id": "conflict__d5__mentale_gezondheidsnetwerken",
-        "claim_ids": [
-          "clm__nat_azwa_2026_voortgang_kamerbrief_d5_002",
-          "clm__reg_flevoland_2023_regioplan_iza_d5_001",
-          "clm__mun_almere_pga_transformatieplan_d5_001",
-          "clm__mun_almere_pga_seo_businesscase_2024_d5_003"
-        ]
-      },
-      "evidence": {},
-      "review_item_id": "rvw_026"
+      "review_item_id": "rvw_027"
     },
     {
       "status": "open",
@@ -676,7 +703,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_027"
+      "review_item_id": "rvw_028"
     },
     {
       "status": "open",
@@ -699,53 +726,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_028"
-    },
-    {
-      "status": "open",
-      "severity": "review",
-      "check_id": "interpretation_integrity",
-      "reason_code": "unresolved_conflict",
-      "summary": "Conflict conflict__governance__national_coordination for topic governance.national_coordination still needs human review.",
-      "recommended_action": "Resolve or annotate this topic before using it as settled policy guidance for Almere.",
-      "document_id": null,
-      "topic": "governance.national_coordination",
-      "source_paths": [
-        "data/extracted/claims/conflict_register.json",
-        "data/extracted/claims/current_interpretation.json"
-      ],
-      "related_ids": {
-        "conflict_id": "conflict__governance__national_coordination",
-        "claim_ids": [
-          "clm__nat_azwa_2026_voortgang_kamerbrief_governance_and_finance_002",
-          "clm__reg_flevoland_2023_regiobeeld_governance_and_finance_002"
-        ]
-      },
-      "evidence": {},
       "review_item_id": "rvw_029"
-    },
-    {
-      "status": "open",
-      "severity": "review",
-      "check_id": "interpretation_integrity",
-      "reason_code": "unresolved_conflict",
-      "summary": "Conflict conflict__monitoring__regional_monitoring_plan for topic monitoring.regional_monitoring_plan still needs human review.",
-      "recommended_action": "Resolve or annotate this topic before using it as settled policy guidance for Almere.",
-      "document_id": null,
-      "topic": "monitoring.regional_monitoring_plan",
-      "source_paths": [
-        "data/extracted/claims/conflict_register.json",
-        "data/extracted/claims/current_interpretation.json"
-      ],
-      "related_ids": {
-        "conflict_id": "conflict__monitoring__regional_monitoring_plan",
-        "claim_ids": [
-          "clm__nat_azwa_2026_voortgang_kamerbrief_monitoring_and_evaluation_002",
-          "clm__reg_flevoland_2023_regioplan_iza_monitoring_and_evaluation_001"
-        ]
-      },
-      "evidence": {},
-      "review_item_id": "rvw_030"
     }
   ]
 }

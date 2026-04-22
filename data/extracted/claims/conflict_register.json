@@ -5,7 +5,7 @@
   "source_claim_extraction_runs": [
     "phase4_all_docs_claims_v3"
   ],
-  "conflict_count": 23,
+  "conflict_count": 20,
   "conflicts": [
     {
       "conflict_id": "conflict__d5__basisfunctionaliteiten_onderbouwd",
@@ -19,7 +19,8 @@
         "clm__nat_iza_2022_integraal_zorgakkoord_d5_001",
         "clm__nat_azwa_2026_cw31_kader_d5_d6_d5_002",
         "clm__nat_azwa_2026_cw31_kader_d5_d6_d5_001",
-        "clm__nat_azwa_2026_voortgang_kamerbrief_d5_001",
+        "clm__nat_azwa_2026_voortgang_kamerbrief_d5_002",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_d5_002",
         "clm__reg_flevoland_2023_regiobeeld_d5_003",
         "clm__reg_flevoland_2023_regiobeeld_d5_002",
         "clm__reg_flevoland_2023_regiobeeld_d5_001"
@@ -37,7 +38,8 @@
         "clm__nat_iza_2022_integraal_zorgakkoord_d5_001",
         "clm__nat_azwa_2026_cw31_kader_d5_d6_d5_002",
         "clm__nat_azwa_2026_cw31_kader_d5_d6_d5_001",
-        "clm__nat_azwa_2026_voortgang_kamerbrief_d5_001",
+        "clm__nat_azwa_2026_voortgang_kamerbrief_d5_002",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_d5_002",
         "clm__reg_flevoland_2023_regiobeeld_d5_003",
         "clm__reg_flevoland_2023_regiobeeld_d5_002",
         "clm__reg_flevoland_2023_regiobeeld_d5_001"
@@ -50,8 +52,8 @@
       "conflict_id": "conflict__d5__cross_domain_collaboration",
       "topic": "d5.cross_domain_collaboration",
       "claim_ids": [
-        "clm__nat_azwa_2026_voortgang_kamerbrief_d5_003",
         "clm__reg_flevoland_2023_regioplan_iza_d5_002",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_d5_003",
         "clm__mun_almere_pga_seo_businesscase_2024_d5_002",
         "clm__nat_zorgakkoorden_azwa_programmapagina_2025_d5_002",
         "clm__nat_zorgakkoorden_azwa_programmapagina_2025_d5_001"
@@ -61,34 +63,11 @@
       "recommended_resolution_rule": "municipal_documents_cannot_override_national_obligations",
       "impact_on_almere": "Affects which D5 functions and collaboration patterns Almere should treat as current.",
       "winning_claim_ids": [
-        "clm__nat_azwa_2026_voortgang_kamerbrief_d5_003",
         "clm__reg_flevoland_2023_regioplan_iza_d5_002",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_d5_003",
         "clm__mun_almere_pga_seo_businesscase_2024_d5_002",
         "clm__nat_zorgakkoorden_azwa_programmapagina_2025_d5_002",
         "clm__nat_zorgakkoorden_azwa_programmapagina_2025_d5_001"
-      ],
-      "superseded_claim_ids": [],
-      "needs_human_review": true,
-      "notes": "Current interpretation keeps the higher-authority national baseline and also preserves lower-authority regional or municipal localization claims for Almere."
-    },
-    {
-      "conflict_id": "conflict__d5__mentale_gezondheidsnetwerken",
-      "topic": "d5.mentale_gezondheidsnetwerken",
-      "claim_ids": [
-        "clm__nat_azwa_2026_voortgang_kamerbrief_d5_002",
-        "clm__reg_flevoland_2023_regioplan_iza_d5_001",
-        "clm__mun_almere_pga_transformatieplan_d5_001",
-        "clm__mun_almere_pga_seo_businesscase_2024_d5_003"
-      ],
-      "conflict_type": "localization_overlap",
-      "resolution_status": "parallel_claims",
-      "recommended_resolution_rule": "municipal_documents_cannot_override_national_obligations",
-      "impact_on_almere": "Affects which D5 functions and collaboration patterns Almere should treat as current.",
-      "winning_claim_ids": [
-        "clm__nat_azwa_2026_voortgang_kamerbrief_d5_002",
-        "clm__reg_flevoland_2023_regioplan_iza_d5_001",
-        "clm__mun_almere_pga_transformatieplan_d5_001",
-        "clm__mun_almere_pga_seo_businesscase_2024_d5_003"
       ],
       "superseded_claim_ids": [],
       "needs_human_review": true,
@@ -147,8 +126,10 @@
         "clm__nat_azwa_2026_cw31_kader_d5_d6_d6_001",
         "clm__nat_azwa_2026_voortgang_kamerbrief_d6_003",
         "clm__nat_azwa_2026_voortgang_kamerbrief_d6_002",
-        "clm__nat_azwa_2026_voortgang_kamerbrief_d6_001",
-        "clm__nat_azwa_2026_cw31_kamerbrief_d6_001"
+        "clm__nat_azwa_2026_cw31_kamerbrief_d6_001",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_d6_003",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_d6_002",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_d6_001"
       ],
       "conflict_type": "supersession",
       "resolution_status": "resolved",
@@ -163,14 +144,16 @@
         "clm__nat_azwa_2026_cw31_kader_d5_d6_d6_001",
         "clm__nat_azwa_2026_voortgang_kamerbrief_d6_003",
         "clm__nat_azwa_2026_voortgang_kamerbrief_d6_002",
-        "clm__nat_azwa_2026_voortgang_kamerbrief_d6_001",
-        "clm__nat_azwa_2026_cw31_kamerbrief_d6_001"
+        "clm__nat_azwa_2026_cw31_kamerbrief_d6_001",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_d6_003",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_d6_002",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_d6_001"
       ],
       "superseded_claim_ids": [
         "clm__nat_azwa_2025_onderhandelaarsakkoord_d6_001"
       ],
       "needs_human_review": false,
-      "notes": "Current interpretation retains 10 non-superseded claim(s) for d6.basisinfrastructuur and preserves 1 earlier claim(s) as history."
+      "notes": "Current interpretation retains 12 non-superseded claim(s) for d6.basisinfrastructuur and preserves 1 earlier claim(s) as history."
     },
     {
       "conflict_id": "conflict__d6__digital_and_operational_infrastructure",
@@ -255,8 +238,11 @@
         "clm__nat_vng_azwa_faq_middelen_governance_and_finance_003",
         "clm__nat_vng_azwa_faq_middelen_governance_and_finance_002",
         "clm__nat_vng_azwa_faq_middelen_governance_and_finance_001",
-        "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_governance_and_finance_003",
+        "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_governance_and_finance_002",
         "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_governance_and_finance_001",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_governance_and_finance_003",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_governance_and_finance_002",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_governance_and_finance_001",
         "clm__mun_almere_pga_seo_businesscase_2024_governance_and_finance_001"
       ],
       "conflict_type": "precedence_overlap",
@@ -273,8 +259,11 @@
         "clm__nat_vng_azwa_faq_middelen_governance_and_finance_003",
         "clm__nat_vng_azwa_faq_middelen_governance_and_finance_002",
         "clm__nat_vng_azwa_faq_middelen_governance_and_finance_001",
-        "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_governance_and_finance_003",
+        "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_governance_and_finance_002",
         "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_governance_and_finance_001",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_governance_and_finance_003",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_governance_and_finance_002",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_governance_and_finance_001",
         "clm__mun_almere_pga_seo_businesscase_2024_governance_and_finance_001"
       ],
       "superseded_claim_ids": [
@@ -284,7 +273,7 @@
         "clm__nat_gala_2023_gezond_en_actief_leven_governance_and_finance_003"
       ],
       "needs_human_review": false,
-      "notes": "Current interpretation retains 12 non-superseded claim(s) for finance.d5_d6.funding_instrument and preserves 4 earlier claim(s) as history."
+      "notes": "Current interpretation retains 15 non-superseded claim(s) for finance.d5_d6.funding_instrument and preserves 4 earlier claim(s) as history."
     },
     {
       "conflict_id": "conflict__finance__d5_d6__municipal_funding",
@@ -311,9 +300,7 @@
       "topic": "finance.regional_funding_path",
       "claim_ids": [
         "clm__nat_iza_2022_integraal_zorgakkoord_governance_and_finance_003",
-        "clm__nat_iza_2022_integraal_zorgakkoord_governance_and_finance_002",
         "clm__nat_iza_2022_integraal_zorgakkoord_governance_and_finance_001",
-        "clm__nat_azwa_2026_voortgang_kamerbrief_governance_and_finance_003",
         "clm__nat_azwa_2026_voortgang_kamerbrief_governance_and_finance_001",
         "clm__nat_vng_azwa_faq_uitvoeringscapaciteit_governance_and_finance_001",
         "clm__mun_almere_pga_seo_businesscase_2024_governance_and_finance_002"
@@ -323,48 +310,31 @@
       "recommended_resolution_rule": "later_effective_date_beats_earlier_when_authority_equal",
       "impact_on_almere": "Affects Almere's funding assumptions, municipal channel, or implementation budget expectations.",
       "winning_claim_ids": [
-        "clm__nat_azwa_2026_voortgang_kamerbrief_governance_and_finance_003",
         "clm__nat_azwa_2026_voortgang_kamerbrief_governance_and_finance_001",
         "clm__nat_vng_azwa_faq_uitvoeringscapaciteit_governance_and_finance_001",
         "clm__mun_almere_pga_seo_businesscase_2024_governance_and_finance_002"
       ],
       "superseded_claim_ids": [
         "clm__nat_iza_2022_integraal_zorgakkoord_governance_and_finance_001",
-        "clm__nat_iza_2022_integraal_zorgakkoord_governance_and_finance_002",
         "clm__nat_iza_2022_integraal_zorgakkoord_governance_and_finance_003"
       ],
       "needs_human_review": false,
-      "notes": "Current interpretation retains 4 non-superseded claim(s) for finance.regional_funding_path and preserves 3 earlier claim(s) as history."
-    },
-    {
-      "conflict_id": "conflict__governance__national_coordination",
-      "topic": "governance.national_coordination",
-      "claim_ids": [
-        "clm__nat_azwa_2026_voortgang_kamerbrief_governance_and_finance_002",
-        "clm__reg_flevoland_2023_regiobeeld_governance_and_finance_002"
-      ],
-      "conflict_type": "localization_overlap",
-      "resolution_status": "parallel_claims",
-      "recommended_resolution_rule": "municipal_documents_cannot_override_national_obligations",
-      "impact_on_almere": "Affects coordination and responsibility-setting relevant to Almere.",
-      "winning_claim_ids": [
-        "clm__nat_azwa_2026_voortgang_kamerbrief_governance_and_finance_002",
-        "clm__reg_flevoland_2023_regiobeeld_governance_and_finance_002"
-      ],
-      "superseded_claim_ids": [],
-      "needs_human_review": true,
-      "notes": "Current interpretation keeps the higher-authority national baseline and also preserves lower-authority regional or municipal localization claims for Almere."
+      "notes": "Current interpretation retains 3 non-superseded claim(s) for finance.regional_funding_path and preserves 2 earlier claim(s) as history."
     },
     {
       "conflict_id": "conflict__governance_and_finance__other",
       "topic": "governance_and_finance.other",
       "claim_ids": [
+        "clm__nat_iza_2022_integraal_zorgakkoord_governance_and_finance_002",
+        "clm__nat_azwa_2026_voortgang_kamerbrief_governance_and_finance_003",
+        "clm__nat_azwa_2026_voortgang_kamerbrief_governance_and_finance_002",
+        "clm__nat_azwa_2026_cw31_kamerbrief_governance_and_finance_001",
         "clm__nat_azwa_2025_aanbiedingsbrief_governance_and_finance_001",
         "clm__mun_almere_sociaal_domein_informatiepagina_governance_and_finance_001",
         "clm__nat_bzk_gemeentefonds_cyclus_governance_and_finance_003",
         "clm__nat_bzk_gemeentefonds_cyclus_governance_and_finance_002",
         "clm__nat_bzk_gemeentefonds_cyclus_governance_and_finance_001",
-        "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_governance_and_finance_002",
+        "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_governance_and_finance_003",
         "clm__mun_almere_2024_2034_maatschappelijke_agenda_governance_and_finance_002",
         "clm__mun_almere_2024_2034_maatschappelijke_agenda_governance_and_finance_001",
         "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_governance_and_finance_002",
@@ -380,11 +350,14 @@
       "recommended_resolution_rule": "later_effective_date_beats_earlier_when_authority_equal",
       "impact_on_almere": "Affects how Almere should interpret the current policy picture.",
       "winning_claim_ids": [
+        "clm__nat_azwa_2026_voortgang_kamerbrief_governance_and_finance_003",
+        "clm__nat_azwa_2026_voortgang_kamerbrief_governance_and_finance_002",
+        "clm__nat_azwa_2026_cw31_kamerbrief_governance_and_finance_001",
         "clm__mun_almere_sociaal_domein_informatiepagina_governance_and_finance_001",
         "clm__nat_bzk_gemeentefonds_cyclus_governance_and_finance_003",
         "clm__nat_bzk_gemeentefonds_cyclus_governance_and_finance_002",
         "clm__nat_bzk_gemeentefonds_cyclus_governance_and_finance_001",
-        "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_governance_and_finance_002",
+        "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_governance_and_finance_003",
         "clm__mun_almere_2024_2034_maatschappelijke_agenda_governance_and_finance_002",
         "clm__mun_almere_2024_2034_maatschappelijke_agenda_governance_and_finance_001",
         "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_governance_and_finance_002",
@@ -396,10 +369,11 @@
         "clm__mun_almere_begroting_2026_webpagina_governance_and_finance_001"
       ],
       "superseded_claim_ids": [
-        "clm__nat_azwa_2025_aanbiedingsbrief_governance_and_finance_001"
+        "clm__nat_azwa_2025_aanbiedingsbrief_governance_and_finance_001",
+        "clm__nat_iza_2022_integraal_zorgakkoord_governance_and_finance_002"
       ],
       "needs_human_review": false,
-      "notes": "Current interpretation retains 14 non-superseded claim(s) for governance_and_finance.other and preserves 1 earlier claim(s) as history."
+      "notes": "Current interpretation retains 17 non-superseded claim(s) for governance_and_finance.other and preserves 2 earlier claim(s) as history."
     },
     {
       "conflict_id": "conflict__monitoring__framework",
@@ -409,7 +383,6 @@
         "clm__nat_azwa_2025_onderhandelaarsakkoord_monitoring_and_evaluation_002",
         "clm__nat_gala_2023_gezond_en_actief_leven_monitoring_and_evaluation_001",
         "clm__nat_azwa_2026_cw31_kader_d5_d6_monitoring_and_evaluation_002",
-        "clm__nat_azwa_2026_voortgang_kamerbrief_monitoring_and_evaluation_003",
         "clm__reg_flevoland_2023_regioplan_iza_monitoring_and_evaluation_002",
         "clm__reg_flevoland_2023_regiobeeld_monitoring_and_evaluation_001"
       ],
@@ -420,7 +393,6 @@
       "winning_claim_ids": [
         "clm__nat_azwa_2025_definitief_monitoring_and_evaluation_001",
         "clm__nat_azwa_2026_cw31_kader_d5_d6_monitoring_and_evaluation_002",
-        "clm__nat_azwa_2026_voortgang_kamerbrief_monitoring_and_evaluation_003",
         "clm__reg_flevoland_2023_regioplan_iza_monitoring_and_evaluation_002",
         "clm__reg_flevoland_2023_regiobeeld_monitoring_and_evaluation_001"
       ],
@@ -429,7 +401,7 @@
         "clm__nat_gala_2023_gezond_en_actief_leven_monitoring_and_evaluation_001"
       ],
       "needs_human_review": false,
-      "notes": "Current interpretation retains 5 non-superseded claim(s) for monitoring.framework and preserves 2 earlier claim(s) as history."
+      "notes": "Current interpretation retains 4 non-superseded claim(s) for monitoring.framework and preserves 2 earlier claim(s) as history."
     },
     {
       "conflict_id": "conflict__monitoring__other",
@@ -443,6 +415,9 @@
         "clm__nat_iza_2022_integraal_zorgakkoord_monitoring_and_evaluation_003",
         "clm__nat_iza_2022_integraal_zorgakkoord_monitoring_and_evaluation_002",
         "clm__nat_iza_2022_integraal_zorgakkoord_monitoring_and_evaluation_001",
+        "clm__nat_azwa_2026_voortgang_kamerbrief_monitoring_and_evaluation_003",
+        "clm__nat_azwa_2026_voortgang_kamerbrief_monitoring_and_evaluation_002",
+        "clm__nat_azwa_2026_cw31_kamerbrief_monitoring_and_evaluation_003",
         "clm__nat_azwa_2026_cw31_kamerbrief_monitoring_and_evaluation_002",
         "clm__nat_azwa_2026_cw31_kamerbrief_monitoring_and_evaluation_001",
         "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_monitoring_and_evaluation_001",
@@ -460,6 +435,9 @@
         "clm__nat_wetten_spuk_transformatiemiddelen_regeling_monitoring_and_evaluation_003",
         "clm__nat_wetten_spuk_transformatiemiddelen_regeling_monitoring_and_evaluation_002",
         "clm__nat_wetten_spuk_transformatiemiddelen_regeling_monitoring_and_evaluation_001",
+        "clm__nat_azwa_2026_voortgang_kamerbrief_monitoring_and_evaluation_003",
+        "clm__nat_azwa_2026_voortgang_kamerbrief_monitoring_and_evaluation_002",
+        "clm__nat_azwa_2026_cw31_kamerbrief_monitoring_and_evaluation_003",
         "clm__nat_azwa_2026_cw31_kamerbrief_monitoring_and_evaluation_002",
         "clm__nat_azwa_2026_cw31_kamerbrief_monitoring_and_evaluation_001",
         "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_monitoring_and_evaluation_001",
@@ -477,26 +455,7 @@
         "clm__nat_iza_2022_integraal_zorgakkoord_monitoring_and_evaluation_003"
       ],
       "needs_human_review": false,
-      "notes": "Current interpretation retains 11 non-superseded claim(s) for monitoring.other and preserves 5 earlier claim(s) as history."
-    },
-    {
-      "conflict_id": "conflict__monitoring__regional_monitoring_plan",
-      "topic": "monitoring.regional_monitoring_plan",
-      "claim_ids": [
-        "clm__nat_azwa_2026_voortgang_kamerbrief_monitoring_and_evaluation_002",
-        "clm__reg_flevoland_2023_regioplan_iza_monitoring_and_evaluation_001"
-      ],
-      "conflict_type": "localization_overlap",
-      "resolution_status": "parallel_claims",
-      "recommended_resolution_rule": "municipal_documents_cannot_override_national_obligations",
-      "impact_on_almere": "Affects the monitoring and evaluation cycle Almere should align with.",
-      "winning_claim_ids": [
-        "clm__nat_azwa_2026_voortgang_kamerbrief_monitoring_and_evaluation_002",
-        "clm__reg_flevoland_2023_regioplan_iza_monitoring_and_evaluation_001"
-      ],
-      "superseded_claim_ids": [],
-      "needs_human_review": false,
-      "notes": "Current interpretation keeps the higher-authority national baseline and also preserves lower-authority regional or municipal localization claims for Almere."
+      "notes": "Current interpretation retains 14 non-superseded claim(s) for monitoring.other and preserves 5 earlier claim(s) as history."
     },
     {
       "conflict_id": "conflict__monitoring__update_2028",
@@ -539,6 +498,7 @@
         "clm__nat_azwa_2026_voortgang_kamerbrief_municipal_translation_003",
         "clm__nat_azwa_2026_voortgang_kamerbrief_municipal_translation_002",
         "clm__nat_azwa_2026_voortgang_kamerbrief_municipal_translation_001",
+        "clm__nat_azwa_2026_cw31_kamerbrief_municipal_translation_002",
         "clm__nat_azwa_2026_cw31_kamerbrief_municipal_translation_001",
         "clm__nat_azwa_2025_aanbiedingsbrief_municipal_translation_003",
         "clm__nat_azwa_2025_aanbiedingsbrief_municipal_translation_002",
@@ -547,6 +507,7 @@
         "clm__nat_vng_azwa_faq_uitvoeringscapaciteit_municipal_translation_003",
         "clm__nat_vng_azwa_faq_uitvoeringscapaciteit_municipal_translation_002",
         "clm__nat_vng_azwa_faq_uitvoeringscapaciteit_municipal_translation_001",
+        "clm__nat_vng_azwa_faq_middelen_municipal_translation_002",
         "clm__nat_vng_azwa_faq_middelen_municipal_translation_001",
         "clm__mun_almere_sociaal_domein_informatiepagina_municipal_translation_003",
         "clm__mun_almere_sociaal_domein_informatiepagina_municipal_translation_002",
@@ -557,6 +518,9 @@
         "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_municipal_translation_003",
         "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_municipal_translation_002",
         "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_municipal_translation_001",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_municipal_translation_003",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_municipal_translation_002",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_municipal_translation_001",
         "clm__mun_almere_2024_2034_maatschappelijke_agenda_municipal_translation_003",
         "clm__mun_almere_2024_2034_maatschappelijke_agenda_municipal_translation_002",
         "clm__mun_almere_2024_2034_maatschappelijke_agenda_municipal_translation_001",
@@ -572,6 +536,8 @@
         "clm__mun_almere_sociale_staat_gateway_municipal_translation_003",
         "clm__mun_almere_sociale_staat_gateway_municipal_translation_002",
         "clm__mun_almere_sociale_staat_gateway_municipal_translation_001",
+        "clm__mun_almere_raad_vergaderschema_2026_municipal_translation_002",
+        "clm__mun_almere_raad_vergaderschema_2026_municipal_translation_001",
         "clm__mun_almere_begroting_2026_webpagina_municipal_translation_003",
         "clm__mun_almere_begroting_2026_webpagina_municipal_translation_002",
         "clm__mun_almere_begroting_2026_webpagina_municipal_translation_001"
@@ -591,11 +557,13 @@
         "clm__nat_azwa_2026_voortgang_kamerbrief_municipal_translation_003",
         "clm__nat_azwa_2026_voortgang_kamerbrief_municipal_translation_002",
         "clm__nat_azwa_2026_voortgang_kamerbrief_municipal_translation_001",
+        "clm__nat_azwa_2026_cw31_kamerbrief_municipal_translation_002",
         "clm__nat_azwa_2026_cw31_kamerbrief_municipal_translation_001",
         "clm__reg_flevoland_2023_regioplan_iza_municipal_translation_001",
         "clm__nat_vng_azwa_faq_uitvoeringscapaciteit_municipal_translation_003",
         "clm__nat_vng_azwa_faq_uitvoeringscapaciteit_municipal_translation_002",
         "clm__nat_vng_azwa_faq_uitvoeringscapaciteit_municipal_translation_001",
+        "clm__nat_vng_azwa_faq_middelen_municipal_translation_002",
         "clm__nat_vng_azwa_faq_middelen_municipal_translation_001",
         "clm__mun_almere_sociaal_domein_informatiepagina_municipal_translation_003",
         "clm__mun_almere_sociaal_domein_informatiepagina_municipal_translation_002",
@@ -606,6 +574,9 @@
         "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_municipal_translation_003",
         "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_municipal_translation_002",
         "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_municipal_translation_001",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_municipal_translation_003",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_municipal_translation_002",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_municipal_translation_001",
         "clm__mun_almere_2024_2034_maatschappelijke_agenda_municipal_translation_003",
         "clm__mun_almere_2024_2034_maatschappelijke_agenda_municipal_translation_002",
         "clm__mun_almere_2024_2034_maatschappelijke_agenda_municipal_translation_001",
@@ -621,6 +592,8 @@
         "clm__mun_almere_sociale_staat_gateway_municipal_translation_003",
         "clm__mun_almere_sociale_staat_gateway_municipal_translation_002",
         "clm__mun_almere_sociale_staat_gateway_municipal_translation_001",
+        "clm__mun_almere_raad_vergaderschema_2026_municipal_translation_002",
+        "clm__mun_almere_raad_vergaderschema_2026_municipal_translation_001",
         "clm__mun_almere_begroting_2026_webpagina_municipal_translation_003",
         "clm__mun_almere_begroting_2026_webpagina_municipal_translation_002",
         "clm__mun_almere_begroting_2026_webpagina_municipal_translation_001"
@@ -638,7 +611,7 @@
         "clm__nat_iza_2022_integraal_zorgakkoord_municipal_translation_003"
       ],
       "needs_human_review": false,
-      "notes": "Current interpretation retains 43 non-superseded claim(s) for municipal.implementation_translation and preserves 10 earlier claim(s) as history."
+      "notes": "Current interpretation retains 50 non-superseded claim(s) for municipal.implementation_translation and preserves 10 earlier claim(s) as history."
     },
     {
       "conflict_id": "conflict__timeline__d5_d6_financing_horizon",
@@ -666,6 +639,8 @@
       "claim_ids": [
         "clm__nat_azwa_2025_definitief_timeline_and_status_001",
         "clm__nat_azwa_2025_onderhandelaarsakkoord_timeline_and_status_001",
+        "clm__nat_iza_2022_integraal_zorgakkoord_timeline_and_status_002",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_timeline_and_status_001",
         "clm__mun_almere_2024_2034_maatschappelijke_agenda_timeline_and_status_002",
         "clm__mun_almere_2024_2034_maatschappelijke_agenda_timeline_and_status_001"
       ],
@@ -675,34 +650,49 @@
       "impact_on_almere": "Affects planning milestones and sequencing relevant to Almere.",
       "winning_claim_ids": [
         "clm__nat_azwa_2025_definitief_timeline_and_status_001",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_timeline_and_status_001",
         "clm__mun_almere_2024_2034_maatschappelijke_agenda_timeline_and_status_002",
         "clm__mun_almere_2024_2034_maatschappelijke_agenda_timeline_and_status_001"
       ],
       "superseded_claim_ids": [
-        "clm__nat_azwa_2025_onderhandelaarsakkoord_timeline_and_status_001"
+        "clm__nat_azwa_2025_onderhandelaarsakkoord_timeline_and_status_001",
+        "clm__nat_iza_2022_integraal_zorgakkoord_timeline_and_status_002"
       ],
       "needs_human_review": false,
-      "notes": "Current interpretation retains 3 non-superseded claim(s) for timeline.d5_d6_implementation and preserves 1 earlier claim(s) as history."
+      "notes": "Current interpretation retains 4 non-superseded claim(s) for timeline.d5_d6_implementation and preserves 2 earlier claim(s) as history."
     },
     {
       "conflict_id": "conflict__timeline__other",
       "topic": "timeline.other",
       "claim_ids": [
+        "clm__nat_wetten_spuk_transformatiemiddelen_regeling_timeline_and_status_003",
         "clm__nat_wetten_spuk_transformatiemiddelen_regeling_timeline_and_status_001",
+        "clm__nat_gala_2023_gezond_en_actief_leven_timeline_and_status_003",
         "clm__nat_gala_2023_gezond_en_actief_leven_timeline_and_status_001",
-        "clm__nat_iza_2022_integraal_zorgakkoord_timeline_and_status_002",
+        "clm__nat_iza_2022_integraal_zorgakkoord_timeline_and_status_003",
         "clm__nat_iza_2022_integraal_zorgakkoord_timeline_and_status_001",
+        "clm__nat_azwa_2026_voortgang_kamerbrief_timeline_and_status_003",
+        "clm__nat_azwa_2026_voortgang_kamerbrief_timeline_and_status_002",
         "clm__nat_azwa_2026_voortgang_kamerbrief_timeline_and_status_001",
+        "clm__nat_azwa_2026_cw31_kamerbrief_timeline_and_status_001",
         "clm__nat_azwa_2025_aanbiedingsbrief_timeline_and_status_001",
+        "clm__nat_vng_azwa_faq_middelen_timeline_and_status_003",
         "clm__nat_vng_azwa_faq_middelen_timeline_and_status_002",
         "clm__nat_vng_azwa_faq_middelen_timeline_and_status_001",
         "clm__mun_almere_sociaal_domein_informatiepagina_timeline_and_status_001",
+        "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_timeline_and_status_003",
         "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_timeline_and_status_002",
         "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_timeline_and_status_001",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_timeline_and_status_003",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_timeline_and_status_002",
+        "clm__mun_almere_2024_2034_maatschappelijke_agenda_timeline_and_status_003",
+        "clm__mun_almere_pga_seo_businesscase_2024_timeline_and_status_003",
         "clm__mun_almere_pga_seo_businesscase_2024_timeline_and_status_002",
         "clm__mun_almere_pga_seo_businesscase_2024_timeline_and_status_001",
+        "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_timeline_and_status_003",
         "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_timeline_and_status_002",
         "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_timeline_and_status_001",
+        "clm__mun_almere_begroting_2026_webpagina_timeline_and_status_003",
         "clm__mun_almere_begroting_2026_webpagina_timeline_and_status_002",
         "clm__mun_almere_begroting_2026_webpagina_timeline_and_status_001"
       ],
@@ -711,28 +701,41 @@
       "recommended_resolution_rule": "higher_authority_beats_lower_authority",
       "impact_on_almere": "Affects planning milestones and sequencing relevant to Almere.",
       "winning_claim_ids": [
+        "clm__nat_wetten_spuk_transformatiemiddelen_regeling_timeline_and_status_003",
         "clm__nat_wetten_spuk_transformatiemiddelen_regeling_timeline_and_status_001",
+        "clm__nat_azwa_2026_voortgang_kamerbrief_timeline_and_status_003",
+        "clm__nat_azwa_2026_voortgang_kamerbrief_timeline_and_status_002",
         "clm__nat_azwa_2026_voortgang_kamerbrief_timeline_and_status_001",
+        "clm__nat_azwa_2026_cw31_kamerbrief_timeline_and_status_001",
+        "clm__nat_vng_azwa_faq_middelen_timeline_and_status_003",
         "clm__nat_vng_azwa_faq_middelen_timeline_and_status_002",
         "clm__nat_vng_azwa_faq_middelen_timeline_and_status_001",
         "clm__mun_almere_sociaal_domein_informatiepagina_timeline_and_status_001",
+        "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_timeline_and_status_003",
         "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_timeline_and_status_002",
         "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_timeline_and_status_001",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_timeline_and_status_003",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_timeline_and_status_002",
+        "clm__mun_almere_2024_2034_maatschappelijke_agenda_timeline_and_status_003",
+        "clm__mun_almere_pga_seo_businesscase_2024_timeline_and_status_003",
         "clm__mun_almere_pga_seo_businesscase_2024_timeline_and_status_002",
         "clm__mun_almere_pga_seo_businesscase_2024_timeline_and_status_001",
+        "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_timeline_and_status_003",
         "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_timeline_and_status_002",
         "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_timeline_and_status_001",
+        "clm__mun_almere_begroting_2026_webpagina_timeline_and_status_003",
         "clm__mun_almere_begroting_2026_webpagina_timeline_and_status_002",
         "clm__mun_almere_begroting_2026_webpagina_timeline_and_status_001"
       ],
       "superseded_claim_ids": [
         "clm__nat_azwa_2025_aanbiedingsbrief_timeline_and_status_001",
         "clm__nat_gala_2023_gezond_en_actief_leven_timeline_and_status_001",
+        "clm__nat_gala_2023_gezond_en_actief_leven_timeline_and_status_003",
         "clm__nat_iza_2022_integraal_zorgakkoord_timeline_and_status_001",
-        "clm__nat_iza_2022_integraal_zorgakkoord_timeline_and_status_002"
+        "clm__nat_iza_2022_integraal_zorgakkoord_timeline_and_status_003"
       ],
       "needs_human_review": false,
-      "notes": "Current interpretation retains 13 non-superseded claim(s) for timeline.other and preserves 4 earlier claim(s) as history."
+      "notes": "Current interpretation retains 25 non-superseded claim(s) for timeline.other and preserves 5 earlier claim(s) as history."
     },
     {
       "conflict_id": "conflict__timeline__rollout_2030",
@@ -741,7 +744,7 @@
         "clm__nat_wetten_spuk_transformatiemiddelen_regeling_timeline_and_status_002",
         "clm__nat_azwa_2025_definitief_timeline_and_status_002",
         "clm__nat_azwa_2025_onderhandelaarsakkoord_timeline_and_status_002",
-        "clm__nat_azwa_2026_voortgang_kamerbrief_timeline_and_status_002",
+        "clm__reg_flevoland_2023_regiobeeld_timeline_and_status_003",
         "clm__reg_flevoland_2023_regiobeeld_timeline_and_status_002",
         "clm__reg_flevoland_2023_regiobeeld_timeline_and_status_001"
       ],
@@ -752,7 +755,7 @@
       "winning_claim_ids": [
         "clm__nat_wetten_spuk_transformatiemiddelen_regeling_timeline_and_status_002",
         "clm__nat_azwa_2025_definitief_timeline_and_status_002",
-        "clm__nat_azwa_2026_voortgang_kamerbrief_timeline_and_status_002",
+        "clm__reg_flevoland_2023_regiobeeld_timeline_and_status_003",
         "clm__reg_flevoland_2023_regiobeeld_timeline_and_status_002",
         "clm__reg_flevoland_2023_regiobeeld_timeline_and_status_001"
       ],

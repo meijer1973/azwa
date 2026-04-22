@@ -28,7 +28,7 @@
     "priority_rank": 19,
     "extraction_priority": "low",
     "inventory_notes": "Official DUS-I implementation page with concrete application and accountability deadlines for transformatiemiddelen; useful for timeline and municipal follow-up, but not itself the strongest norm.",
-    "document_type_label": "subsidy page",
+    "document_type_label": "subsidiepagina",
     "source_classification_label": "afgeleide bron"
   },
   "summary": "Deze bron bevat vooral context of lokale vertaling die relevant is voor Almere, zonder zelf de landelijke D5/D6-basistekst te zijn.",
@@ -36,6 +36,12 @@
   "d5_relevance": "Geen duidelijke D5-passages in de huidige extractie.",
   "d6_relevance": "Geen duidelijke D6-passages in de huidige extractie.",
   "linked_claims": [
+    {
+      "topic": "timeline.other",
+      "title": "overige tijdlijnmomenten",
+      "claim_count": 3,
+      "page_url": "/reference/topics/timeline-other/"
+    },
     {
       "topic": "municipal.implementation_translation",
       "title": "lokale vertaling in openbare stukken",
@@ -47,12 +53,6 @@
       "title": "bekostigingsroute D5/D6",
       "claim_count": 2,
       "page_url": "/reference/topics/finance-d5-d6-funding-instrument/"
-    },
-    {
-      "topic": "timeline.other",
-      "title": "overige tijdlijnmomenten",
-      "claim_count": 2,
-      "page_url": "/reference/topics/timeline-other/"
     },
     {
       "topic": "governance_and_finance.other",
@@ -126,8 +126,8 @@
       "page_url": "/sources/azwa-definitief/"
     },
     {
-      "title": "Aanvullend Zorg- en Welzijnsakkoord - onderhandelaarsakkoord",
-      "page_url": "/sources/azwa-onderhandelaarsakkoord/"
+      "title": "Financiering IZA en AZWA: hoe zit het precies?",
+      "page_url": "/sources/financiering-iza-azwa/"
     }
   ],
   "structured_signals": {
@@ -135,6 +135,6 @@
     "d5_item_count": 0,
     "d6_item_count": 0,
     "governance_item_count": 3,
-    "timeline_item_count": 2
+    "timeline_item_count": 3
   }
 }

@@ -1,0 +1,829 @@
+from __future__ import annotations
+
+import html
+import json
+import posixpath
+from pathlib import Path, PurePosixPath
+from string import Template
+
+
+REPO_ROOT = Path(__file__).resolve().parents[1]
+DATA_DIR = REPO_ROOT / "data" / "site"
+DIST_DIR = REPO_ROOT / "dist"
+TEMPLATE_PATH = REPO_ROOT / "templates" / "base.html"
+TAXONOMY_PATH = REPO_ROOT / "config" / "site_taxonomy.json"
+ASSETS_DIR = REPO_ROOT / "assets"
+
+
+def load_json(path: Path) -> dict:
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def split_route_fragment(route: str) -> tuple[str, str]:
+    if "#" not in route:
+        return route, ""
+    base_route, fragment = route.split("#", 1)
+    return base_route or "/", fragment
+
+
+def route_to_output_path(route: str) -> PurePosixPath:
+    route, _ = split_route_fragment(route)
+    if route == "/":
+        return PurePosixPath("index.html")
+    normalized = route.strip("/")
+    return PurePosixPath(normalized) / "index.html"
+
+
+def relative_link(current_route: str, target_route: str) -> str:
+    target_route, fragment = split_route_fragment(target_route)
+    current_path = route_to_output_path(current_route)
+    if target_route.startswith("/assets/"):
+        target_path = PurePosixPath(target_route.lstrip("/"))
+    elif target_route == "/search-index.json":
+        target_path = PurePosixPath("search-index.json")
+    else:
+        target_path = route_to_output_path(target_route)
+    relative = posixpath.relpath(str(target_path), start=str(current_path.parent))
+    if relative.endswith("index.html") and not target_route.startswith("/assets/"):
+        relative = relative[: -len("index.html")]
+        if not relative:
+            relative = "./"
+    if fragment:
+        return f"{relative}#{fragment}"
+    return relative
+
+
+def root_prefix(route: str) -> str:
+    path = route_to_output_path(route)
+    depth = len(path.parts) - 1
+    return "./" if depth == 0 else "../" * depth
+
+
+def ensure_parent(path: Path) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+
+
+def write_text(path: Path, content: str) -> None:
+    ensure_parent(path)
+    path.write_text(content, encoding="utf-8")
+
+
+def esc(value: str | None) -> str:
+    return html.escape(value or "")
+
+
+def render_navigation(current_route: str, navigation: list[dict]) -> str:
+    links = []
+    for item in navigation:
+        url = item["url"]
+        active = current_route == url or (url != "/" and current_route.startswith(url))
+        classes = "site-nav__link"
+        if active:
+            classes += " site-nav__link--active"
+        links.append(
+            f'<a class="{classes}" data-priority="{esc(item["priority"])}" href="{esc(relative_link(current_route, url))}">{esc(item["label"])}</a>'
+        )
+    return "".join(links)
+
+
+def render_breadcrumbs(current_route: str, crumbs: list[tuple[str, str]]) -> str:
+    if not crumbs:
+        return ""
+    parts = []
+    for label, url in crumbs[:-1]:
+        parts.append(f'<a href="{esc(relative_link(current_route, url))}">{esc(label)}</a>')
+    parts.append(f"<span>{esc(crumbs[-1][0])}</span>")
+    return '<nav class="breadcrumbs" aria-label="Broodkruimelpad">' + " / ".join(parts) + "</nav>"
+
+
+def page_intro(title: str, summary: str, meta_items: list[str], notice: str | None = None) -> str:
+    meta_html = "".join(f'<span class="page-meta__item">{esc(item)}</span>' for item in meta_items if item)
+    notice_html = f'<div class="notice">{esc(notice)}</div>' if notice else ""
+    return (
+        notice_html
+        + '<header class="page-header">'
+        + f'<h1 class="page-header__title">{esc(title)}</h1>'
+        + f'<p class="page-header__summary">{esc(summary)}</p>'
+        + f'<div class="page-meta">{meta_html}</div>'
+        + "</header>"
+    )
+
+
+def render_tag_row(tags: list[str], review_note: str | None = None) -> str:
+    tag_html = "".join(f'<span class="tag">{esc(tag)}</span>' for tag in tags if tag)
+    if review_note:
+        tag_html += f'<span class="tag tag--review">{esc(review_note)}</span>'
+    return f'<div class="tag-row">{tag_html}</div>' if tag_html else ""
+
+
+def issue_type_label(issue_type: str) -> str:
+    labels = {
+        "decision": "besluitvraag",
+        "action": "opvolgactie",
+        "dependency": "afhankelijkheid",
+        "risk": "risico",
+    }
+    return labels.get(issue_type, issue_type)
+
+
+def render_card(title: str, body: str, meta: list[str] | None = None, footer: str | None = None, href: str | None = None) -> str:
+    title_html = f'<h3 class="card__title"><a href="{esc(href)}">{esc(title)}</a></h3>' if href else f'<h3 class="card__title">{esc(title)}</h3>'
+    meta_html = ""
+    if meta:
+        meta_html = "".join(f'<div class="card__meta">{esc(item)}</div>' for item in meta if item)
+    footer_html = f'<div class="card__footer">{footer}</div>' if footer else ""
+    return f'<article class="card">{title_html}<p>{body}</p>{meta_html}{footer_html}</article>'
+
+
+def render_summary_boxes(items: list[dict]) -> str:
+    blocks = []
+    for item in items:
+        blocks.append(
+            '<article class="summary-box">'
+            + f'<span class="summary-box__metric">{esc(str(item["metric"]))}</span>'
+            + f'<h3 class="card__title">{esc(item["title"])}</h3>'
+            + f'<p>{esc(item["summary"])}</p>'
+            + "</article>"
+        )
+    return '<div class="summary-grid">' + "".join(blocks) + "</div>"
+
+
+def render_document_refs(document_refs: list[dict]) -> str:
+    if not document_refs:
+        return '<div class="empty-state">Geen bronverwijzingen beschikbaar.</div>'
+    items = []
+    for ref in document_refs:
+        items.append(
+            "<li>"
+            + f'<strong><a href="{esc(ref["source_url"])}">{esc(ref["title"])}</a></strong><br>'
+            + f'<span class="list-meta">{esc(ref["publisher"])} | {esc(ref["publication_date"] or "datum onbekend")} | {esc(ref["jurisdiction_level"])}</span><br>'
+            + f'<span class="list-meta">Relevante onderwerpen: {esc(", ".join(ref.get("topics", [])))}</span>'
+            + "</li>"
+        )
+    return '<ul class="stack-list">' + "".join(items) + "</ul>"
+
+
+def render_evidence_refs(evidence_refs: list[dict]) -> str:
+    if not evidence_refs:
+        return '<div class="empty-state">Geen bronverwijzingen beschikbaar.</div>'
+    items = []
+    for evidence in evidence_refs:
+        note = f'<br><span class="list-meta">{esc(evidence["authority_note"])}</span>' if evidence.get("authority_note") else ""
+        items.append(
+            "<li>"
+            + f'<strong><a href="{esc(evidence["source_url"])}">{esc(evidence["document_title"])}</a></strong><br>'
+            + f'<span class="list-meta">{esc(evidence["publisher"])} | {esc(evidence["publication_date"] or "datum onbekend")} | {esc(evidence["topic_label"])}</span>'
+            + note
+            + "</li>"
+        )
+    return '<ul class="stack-list">' + "".join(items) + "</ul>"
+
+
+def render_decision_card(current_route: str, decision: dict) -> str:
+    tags = [decision["status"], decision["linked_domain_label"]]
+    body = (
+        f"{esc(decision['decision_question'])}<br>"
+        f'<span class="list-meta">Waarom nodig: {esc(decision["why_decision_required"])}</span><br>'
+        f'<span class="list-meta">Volgende formele stap: {esc(decision["next_formal_step"])}</span><br>'
+        f'<span class="list-meta">Gevolg bij uitblijven: {esc(decision["consequences_of_non_decision"])}</span>'
+    )
+    footer = render_tag_row(tags, decision.get("review_note"))
+    return render_card(
+        decision["title"],
+        body,
+        meta=[decision["responsible_level"]],
+        footer=footer,
+        href=relative_link(current_route, decision["page_url"]),
+    )
+
+
+def render_action_card(current_route: str, action: dict) -> str:
+    tags = [action["status"], action["linked_domain_label"]]
+    body = (
+        f"{esc(action['action_statement'])}<br>"
+        f'<span class="list-meta">Beoogd resultaat: {esc(action["intended_outcome"])}</span><br>'
+        f'<span class="list-meta">Volgende mijlpaal: {esc(action["next_milestone"])}</span><br>'
+        f'<span class="list-meta">Gevolg bij uitblijven: {esc(action["consequences_if_not_followed_up"])}</span>'
+    )
+    footer = render_tag_row(tags)
+    return render_card(
+        action["title"],
+        body,
+        meta=[action["owner"]],
+        footer=footer,
+        href=relative_link(current_route, action["page_url"]),
+    )
+
+
+def render_home(route: str, home_view: dict) -> str:
+    sections = [
+        '<section class="section"><h2>Bestuurlijk overzicht</h2>'
+        + f'<div class="notice">{esc(home_view["executive_summary"])}</div></section>',
+        '<section class="section"><h2>Huidige besluitvragen</h2><div class="card-grid">'
+        + "".join(render_decision_card(route, item) for item in home_view["top_decisions"])
+        + "</div></section>",
+        '<section class="section"><h2>Huidige opvolgacties</h2><div class="card-grid">'
+        + "".join(render_action_card(route, item) for item in home_view["top_actions"])
+        + "</div></section>",
+        '<section class="section"><h2>Huidige implementatiestatus</h2>'
+        + render_summary_boxes(home_view["implementation_status_blocks"])
+        + "</section>",
+        '<section class="section"><h2>Belangrijkste risico\'s en afhankelijkheden</h2><div class="card-grid">'
+        + "".join(
+            render_card(
+                item["title"],
+                esc(item["summary"]),
+                meta=[item["linked_domain"]],
+                href=relative_link(route, item["page_url"]),
+            )
+            for item in home_view["key_risks"] + home_view["key_dependencies"]
+        )
+        + "</div></section>",
+        '<section class="section"><h2>Nabije tijdlijn</h2><ul class="stack-list">'
+        + "".join(
+            "<li>"
+            + f'<strong>{esc(item["date_label"])} - {esc(item["title"])}</strong><br>'
+            + f'<span class="list-meta">{esc(item["linked_domain"])}</span><br>'
+            + esc(item["summary"])
+            + "</li>"
+            for item in home_view["near_term_timeline"]
+        )
+        + "</ul></section>",
+        '<section class="section"><h2>Strategische thema\'s</h2><div class="card-grid">'
+        + "".join(
+            render_card(
+                item["title"],
+                esc(item["summary"]),
+                meta=[
+                    f'{item["linked_decision_count"]} besluitvragen',
+                    f'{item["linked_action_count"]} opvolgacties',
+                ],
+                href=relative_link(route, item["page_url"]),
+            )
+            for item in home_view["featured_themes"]
+        )
+        + "</div></section>",
+        '<section class="section"><h2>Recente wijzigingen in de bronbasis</h2><ul class="stack-list">'
+        + "".join(
+            "<li>"
+            + f'<strong><a href="{esc(item["source_url"])}">{esc(item["title"])}</a></strong><br>'
+            + f'<span class="list-meta">{esc(item["publication_date"])} | {esc(item["document_type"])}</span>'
+            + "</li>"
+            for item in home_view["recent_changes"]
+        )
+        + "</ul></section>",
+        '<section class="section"><h2>Ondersteunende navigatie</h2><div class="card-grid">'
+        + "".join(
+            render_card(item["label"], "Secundaire toegang voor naslag en bronverwijzing.", href=relative_link(route, item["url"]))
+            for item in home_view["supporting_navigation"]
+        )
+        + "</div></section>",
+    ]
+    return "".join(sections)
+
+
+def render_almere(route: str, almere_view: dict) -> str:
+    sections = [
+        '<section class="section" id="huidig-beeld"><h2>Huidig bestuurlijk beeld</h2>'
+        + f'<div class="notice">{esc(almere_view["current_picture"])}</div></section>',
+        '<section class="section" id="verwachte-verantwoordelijkheden"><h2>Wat Almere naar verwachting moet organiseren</h2><ul class="stack-list">'
+        + "".join(
+            "<li>"
+            + f'<strong>{esc(item["title"])}</strong><br>'
+            + esc(item["summary"])
+            + "</li>"
+            for item in almere_view["expected_municipal_responsibilities"]
+        )
+        + "</ul></section>",
+        '<section class="section" id="wat-al-in-beeld-is"><h2>Wat in de huidige bronbasis al zichtbaar is</h2><ul class="stack-list">'
+        + "".join(
+            "<li>"
+            + f'<strong>{esc(item["title"])}</strong><br>'
+            + esc(item["summary"])
+            + "</li>"
+            for item in almere_view["current_local_state"]
+        )
+        + "</ul></section>",
+        '<section class="section" id="lokale-hiaten"><h2>Belangrijkste hiaten</h2><ul class="stack-list">'
+        + "".join(
+            "<li>"
+            + f'<strong>{esc(item["title"])}</strong><br>'
+            + esc(item["summary"])
+            + "</li>"
+            for item in almere_view["local_gaps"]
+        )
+        + "</ul></section>",
+        '<section class="section" id="leiding-en-regie"><h2>Wat bestuurlijke regie vraagt</h2><ul class="stack-list">'
+        + "".join(f"<li>{esc(item)}</li>" for item in almere_view["leadership_requirements"])
+        + "</ul></section>",
+        '<section class="section"><h2>Huidige besluitvragen</h2><div class="card-grid">'
+        + "".join(render_decision_card(route, item) for item in almere_view["current_decisions"])
+        + "</div></section>",
+        '<section class="section"><h2>Huidige opvolgacties</h2><div class="card-grid">'
+        + "".join(render_action_card(route, item) for item in almere_view["current_actions"])
+        + "</div></section>",
+        '<section class="section" id="externe-afhankelijkheden"><h2>Externe afhankelijkheden</h2><ul class="stack-list">'
+        + "".join(
+            "<li>"
+            + f'<strong>{esc(item["title"])}</strong><br>'
+            + esc(item["summary"])
+            + "<br>"
+            + f'<span class="list-meta">Volgende stap: {esc(item["next_step"])}</span>'
+            + "</li>"
+            for item in almere_view["external_dependencies"]
+        )
+        + "</ul></section>",
+        '<section class="section" id="onzekerheden"><h2>Ondersteunende bronverwijzing</h2>'
+        + render_evidence_refs(almere_view["evidence_refs"])
+        + "</section>",
+    ]
+    return "".join(sections)
+
+
+def render_decisions_index(route: str, decisions: list[dict]) -> str:
+    grouped: dict[str, list[dict]] = {
+        "open_decisions": [],
+        "partly_resolved": [],
+        "blocked": [],
+        "awaiting_clarification": [],
+    }
+    for item in decisions:
+        grouped[item["status_group"]].append(item)
+
+    labels = {
+        "open_decisions": "Open besluitvragen",
+        "partly_resolved": "Gedeeltelijk ingevulde besluitvragen",
+        "blocked": "Geblokkeerde besluitvragen",
+        "awaiting_clarification": "Besluitvragen die wachten op verduidelijking",
+    }
+    sections = []
+    for key, title in labels.items():
+        items = grouped[key]
+        if not items:
+            continue
+        sections.append(
+            f'<section class="section"><h2>{esc(title)}</h2><div class="card-grid">'
+            + "".join(render_decision_card(route, item) for item in items)
+            + "</div></section>"
+        )
+    return "".join(sections)
+
+
+def render_actions_index(route: str, actions: list[dict]) -> str:
+    grouped: dict[str, list[dict]] = {
+        "not_started": [],
+        "in_preparation": [],
+        "underway": [],
+        "blocked": [],
+    }
+    for item in actions:
+        grouped[item["status_group"]].append(item)
+
+    labels = {
+        "not_started": "Nog niet gestarte opvolgacties",
+        "in_preparation": "Opvolgacties in voorbereiding",
+        "underway": "Lopende uitwerking zichtbaar",
+        "blocked": "Opvolgacties die geblokkeerd zijn door afhankelijkheden",
+    }
+    sections = []
+    for key, title in labels.items():
+        items = grouped[key]
+        if not items:
+            continue
+        sections.append(
+            f'<section class="section"><h2>{esc(title)}</h2><div class="card-grid">'
+            + "".join(render_action_card(route, item) for item in items)
+            + "</div></section>"
+        )
+    return "".join(sections)
+
+
+def render_dashboard(route: str, dashboard_view: dict) -> str:
+    rows = []
+    for row in dashboard_view["rows"]:
+        theme_value = ", ".join(row["linked_theme_ids"]) if row["linked_theme_ids"] else ""
+        rows.append(
+            "<tr "
+            + 'data-dashboard-row '
+            + f'data-type="{esc(row["issue_type"])}" '
+            + f'data-domain="{esc(row["linked_domain"])}" '
+            + f'data-status="{esc(row["status"])}" '
+            + f'data-theme="{esc(theme_value)}">'
+            + f'<td>{esc(row["title"])}</td>'
+            + f'<td>{esc(issue_type_label(row["issue_type"]))}</td>'
+            + f'<td>{esc(row["linked_domain"])}</td>'
+            + f'<td>{esc(row["status"])}</td>'
+            + f'<td>{esc(row["owner"])}</td>'
+            + f'<td>{esc(row["next_milestone"])}</td>'
+            + f'<td>{esc(row["dependencies"])}</td>'
+            + f'<td>{esc(row["consequences_of_non_follow_up"])}</td>'
+            + f'<td><a href="{esc(relative_link(route, row["linked_page_url"]))}">Open</a></td>'
+            + "</tr>"
+        )
+    return (
+        '<section class="section"><h2>Filters</h2><div class="filters">'
+        + '<label><span class="search-label">Type</span><select class="filter-select" data-dashboard-filter="type"><option value="">Alles</option><option value="decision">Besluitvraag</option><option value="action">Opvolgactie</option><option value="dependency">Afhankelijkheid</option><option value="risk">Risico</option></select></label>'
+        + '<label><span class="search-label">Domein</span><select class="filter-select" data-dashboard-filter="domain"><option value="">Alles</option><option value="D5">D5</option><option value="D6">D6</option><option value="D5 en D6">D5 en D6</option></select></label>'
+        + '<label><span class="search-label">Status</span><select class="filter-select" data-dashboard-filter="status"><option value="">Alles</option><option value="open">open</option><option value="gedeeltelijk">gedeeltelijk</option><option value="geblokkeerd">geblokkeerd</option><option value="wacht">wacht op duiding</option><option value="voorbereiding">voorbereiding</option></select></label>'
+        + '<label><span class="search-label">Thema</span><select class="filter-select" data-dashboard-filter="theme"><option value="">Alles</option><option value="basisfunctionaliteiten-d5">Basisfunctionaliteiten (D5)</option><option value="basisinfrastructuur-d6">Basisinfrastructuur (D6)</option><option value="governance-en-regie">Governance en regie</option><option value="financiering">Financiering</option><option value="monitoring-en-leren">Monitoring en leren</option></select></label>'
+        + "</div></section>"
+        + '<section class="section"><h2>Bestuurlijk overzicht</h2><table class="data-table"><thead><tr><th>Issue</th><th>Type</th><th>Domein</th><th>Status</th><th>Eigenaar</th><th>Volgende mijlpaal</th><th>Afhankelijkheden</th><th>Gevolg bij uitblijven</th><th>Link</th></tr></thead><tbody>'
+        + "".join(rows)
+        + '</tbody></table><div id="dashboard-empty-state" class="empty-state" hidden>Geen resultaten voor de huidige filterselectie.</div></section>'
+    )
+
+
+def render_detail_page(route: str, model: dict, page_type: str) -> str:
+    sections = [
+        '<section class="section"><h2>'
+        + ("Besluitvraag" if page_type == "decision" else "Opvolgactie")
+        + "</h2><div class=\"notice\">"
+        + esc(model["scope_note"])
+        + "</div></section>"
+    ]
+
+    if page_type == "decision":
+        sections.extend(
+            [
+                f'<section class="section"><h2>Besluitvraag</h2><p>{esc(model["decision_question"])}</p></section>',
+                f'<section class="section"><h2>Huidige werkrichting</h2><p>{esc(model["current_working_direction"])}</p></section>',
+                f'<section class="section"><h2>Waarom dit bestuurlijk relevant is</h2><p>{esc(model["why_it_matters_for_leadership"])}</p></section>',
+                '<section class="section"><h2>Huidige beleidsbasis</h2>' + render_document_refs(model["policy_basis"]) + "</section>",
+                f'<section class="section"><h2>Huidige situatie in Almere</h2><p>{esc(model["current_situation_almere"]["summary"])}</p></section>',
+                '<section class="section"><h2>Mogelijke opties op basis van de huidige bronbasis</h2><ul class="stack-list">'
+                + "".join(
+                    "<li>"
+                    + f'<strong>{esc(option["title"])}</strong><br>'
+                    + f'{esc(option["summary"])}'
+                    + "</li>"
+                    for option in model["options"]
+                )
+                + "</ul></section>",
+                '<section class="section"><h2>Vergelijking van opties</h2><table class="data-table"><thead><tr><th>Optie</th><th>Bestuurlijke duidelijkheid</th><th>Afhankelijkheid van anderen</th><th>Statuscontext</th></tr></thead><tbody>'
+                + "".join(
+                    "<tr>"
+                    + f'<td>{esc(next(option["title"] for option in model["options"] if option["option_id"] == item["option_id"]))}</td>'
+                    + f'<td>{esc(item["bestuurlijke_duidelijkheid"])}</td>'
+                    + f'<td>{esc(item["afhankelijkheid_van_anderen"])}</td>'
+                    + f'<td>{esc(item["huidige_statuscontext"])}</td>'
+                    + "</tr>"
+                    for item in model["option_comparison"]
+                )
+                + "</tbody></table></section>",
+                f'<section class="section"><h2>Gevolgen als geen besluit volgt</h2><p>{esc(model["consequences_of_non_decision"])}</p></section>',
+                '<section class="section"><h2>Afhankelijkheden en randvoorwaarden</h2><ul class="stack-list">'
+                + "".join(
+                    "<li>"
+                    + f'<strong>{esc(dep["title"])}</strong><br>'
+                    + esc(dep["summary"])
+                    + "</li>"
+                    for dep in model["dependencies"]
+                )
+                + "</ul></section>",
+                f'<section class="section"><h2>Volgende formele stap</h2><p>{esc(model["next_formal_step"])}</p></section>',
+                '<section class="section"><h2>Bronbasis</h2>' + render_evidence_refs(model["supporting_evidence"]) + "</section>",
+            ]
+        )
+    else:
+        sections.extend(
+            [
+                f'<section class="section"><h2>Opvolgactie</h2><p>{esc(model["action_statement"])}</p></section>',
+                f'<section class="section"><h2>Waarom bestuurlijke actie nodig is</h2><p>{esc(model["why_leadership_action_required"])}</p></section>',
+                f'<section class="section"><h2>Beoogd resultaat</h2><p>{esc(model["intended_outcome"])}</p></section>',
+                f'<section class="section"><h2>Huidige status</h2><p>{esc(model["current_status_detail"])}</p></section>',
+                f'<section class="section"><h2>Eigenaar en deelnemers</h2><p>{esc(model["owner"])}</p><p class="muted">Betrokkenen: {esc(", ".join(model["participants"]))}</p></section>',
+                '<section class="section"><h2>Afhankelijkheden</h2><ul class="stack-list">'
+                + "".join(
+                    "<li>"
+                    + f'<strong>{esc(dep["title"])}</strong><br>'
+                    + esc(dep["summary"])
+                    + "</li>"
+                    for dep in model["dependencies"]
+                )
+                + "</ul></section>",
+                '<section class="section"><h2>Voorgestelde volgorde</h2><ol>'
+                + "".join(f"<li>{esc(step)}</li>" for step in model["proposed_sequence"])
+                + "</ol></section>",
+                f'<section class="section"><h2>Beoogd opleverproduct</h2><p>{esc(model["expected_deliverable"])}</p></section>',
+                '<section class="section"><h2>Tijd en mijlpalen</h2><ul class="stack-list">'
+                + "".join(
+                    "<li>"
+                    + f'<strong>{esc(item["label"])}</strong><br>'
+                    + esc(item["value"])
+                    + "</li>"
+                    for item in model["timing_and_milestones"]
+                )
+                + "</ul></section>",
+                f'<section class="section"><h2>Gevolgen als de actie niet wordt opgepakt</h2><p>{esc(model["consequences_if_not_followed_up"])}</p></section>',
+                '<section class="section"><h2>Bronbasis</h2>' + render_evidence_refs(model["supporting_evidence"]) + "</section>",
+            ]
+        )
+    return "".join(sections)
+
+
+def render_placeholder(route: str, title: str) -> str:
+    return (
+        '<section class="section"><h2>Deze sectie volgt in een volgende bouwstap</h2>'
+        + "<p>De navigatiestructuur is al aanwezig, maar de inhoudelijke uitwerking van deze sectie wordt in een volgende repo-fase gegenereerd.</p>"
+        + '<p><a href="' + esc(relative_link(route, "/")) + '">Terug naar Start</a></p></section>'
+    )
+
+
+def render_page(
+    route: str,
+    title: str,
+    summary: str,
+    content: str,
+    navigation: list[dict],
+    site_info: dict,
+    as_of_date: str,
+    generated_on: str,
+    body_class: str,
+    crumbs: list[tuple[str, str]] | None = None,
+    notice: str | None = None,
+) -> str:
+    template = Template(TEMPLATE_PATH.read_text(encoding="utf-8"))
+    return template.substitute(
+        lang=site_info["language"],
+        page_title=f"{title} | {site_info['site_title']}",
+        page_description=summary,
+        stylesheet_url=relative_link(route, "/assets/site.css"),
+        script_url=relative_link(route, "/assets/site.js"),
+        search_index_url=relative_link(route, "/search-index.json"),
+        site_root=root_prefix(route),
+        home_url=relative_link(route, "/"),
+        site_title=site_info["site_title"],
+        scope_statement=site_info["scope_statement"],
+        navigation=render_navigation(route, navigation),
+        breadcrumbs=render_breadcrumbs(route, crumbs or []),
+        page_intro=page_intro(title, summary, [f"Peildatum {as_of_date}", f"Gegenereerd {generated_on}"], notice=notice),
+        content=content,
+        as_of_date=as_of_date,
+        generated_on=generated_on,
+        body_class=body_class,
+    )
+
+
+def build_search_index(home_view: dict, almere_view: dict, decisions: list[dict], actions: list[dict], dashboard_view: dict) -> list[dict]:
+    index = [
+        {
+            "title": "Start",
+            "subtitle": "Bestuurlijk overzicht",
+            "summary": home_view["executive_summary"],
+            "aliases": ["start", "overzicht"],
+            "themes": [],
+            "domains": [],
+            "url": "./",
+            "page_type": "home",
+            "page_type_label": "Pagina",
+        },
+        {
+            "title": "Almere",
+            "subtitle": "Huidig gemeentelijk beeld",
+            "summary": almere_view["current_picture"],
+            "aliases": ["gemeente almere", "lokale situatie"],
+            "themes": [],
+            "domains": ["D5", "D6"],
+            "url": "almere/",
+            "page_type": "almere",
+            "page_type_label": "Pagina",
+        },
+        {
+            "title": "Besluitvragen",
+            "subtitle": "Overzicht van mogelijke besluitvragen",
+            "summary": "Machine-gegenereerde mogelijke besluitvragen op basis van de huidige openbare bronbasis.",
+            "aliases": ["besluiten", "bestuurlijke keuzes"],
+            "themes": [],
+            "domains": ["D5", "D6"],
+            "url": "decisions/",
+            "page_type": "decisions",
+            "page_type_label": "Pagina",
+        },
+        {
+            "title": "Opvolgacties",
+            "subtitle": "Overzicht van mogelijke opvolgacties",
+            "summary": "Machine-gegenereerde mogelijke opvolgacties op basis van de huidige openbare bronbasis.",
+            "aliases": ["acties", "vervolgstappen"],
+            "themes": [],
+            "domains": ["D5", "D6"],
+            "url": "actions/",
+            "page_type": "actions",
+            "page_type_label": "Pagina",
+        },
+        {
+            "title": "Dashboard",
+            "subtitle": "Executief monitoringsbeeld",
+            "summary": "Scanbare tabel met besluitvragen, opvolgacties, afhankelijkheden en risico's.",
+            "aliases": ["monitoring", "overzicht"],
+            "themes": [],
+            "domains": ["D5", "D6"],
+            "url": "dashboard/",
+            "page_type": "dashboard",
+            "page_type_label": "Pagina",
+        },
+    ]
+    for decision in decisions:
+        index.append(
+            {
+                "title": decision["title"],
+                "subtitle": decision["decision_question"],
+                "summary": decision["why_decision_required"],
+                "aliases": decision["linked_theme_ids"],
+                "themes": decision["linked_theme_ids"],
+                "domains": [decision["linked_domain_label"]],
+                "url": decision["page_url"].lstrip("/"),
+                "page_type": "decision",
+                "page_type_label": "Besluitvraag",
+            }
+        )
+    for action in actions:
+        index.append(
+            {
+                "title": action["title"],
+                "subtitle": action["action_statement"],
+                "summary": action["current_status_detail"],
+                "aliases": action["linked_theme_ids"],
+                "themes": action["linked_theme_ids"],
+                "domains": [action["linked_domain_label"]],
+                "url": action["page_url"].lstrip("/"),
+                "page_type": "action",
+                "page_type_label": "Opvolgactie",
+            }
+        )
+    return index
+
+
+def copy_assets() -> None:
+    for asset_name in ("site.css", "site.js"):
+        source_path = ASSETS_DIR / asset_name
+        target_path = DIST_DIR / "assets" / asset_name
+        write_text(target_path, source_path.read_text(encoding="utf-8"))
+
+
+def main() -> None:
+    navigation = load_json(TAXONOMY_PATH)["navigation"]
+    site_info = load_json(TAXONOMY_PATH)["site"]
+    home_view = load_json(DATA_DIR / "site_home_view.json")
+    almere_view = load_json(DATA_DIR / "site_almere_view.json")
+    dashboard_view = load_json(DATA_DIR / "dashboard_view.json")
+    decisions = [load_json(path) for path in sorted((DATA_DIR / "decision_view_models").glob("*.json"))]
+    actions = [load_json(path) for path in sorted((DATA_DIR / "action_view_models").glob("*.json"))]
+
+    copy_assets()
+    write_text(DIST_DIR / ".nojekyll", "")
+
+    pages = [
+        (
+                "/",
+                render_page(
+                    "/",
+                    "Start",
+                    "Compact bestuurlijk overzicht voor Almere op basis van de huidige AZWA D5/D6-bronbasis.",
+                    render_home("/", home_view),
+                    navigation,
+                    site_info,
+                    home_view["as_of_date"],
+                    home_view["generated_on"],
+                    "page-home",
+                    crumbs=[("Start", "/")],
+                ),
+            ),
+        (
+            "/almere/",
+            render_page(
+                "/almere/",
+                "Almere",
+                "Huidig gemeentelijk beeld, hiaten, afhankelijkheden en bestuurlijke vervolgvragen voor Almere.",
+                render_almere("/almere/", almere_view),
+                navigation,
+                site_info,
+                almere_view["as_of_date"],
+                almere_view["generated_on"],
+                "page-almere",
+                crumbs=[("Start", "/"), ("Almere", "/almere/")],
+            ),
+        ),
+        (
+            "/decisions/",
+            render_page(
+                "/decisions/",
+                "Besluitvragen",
+                "Machine-gegenereerde mogelijke besluitvragen op basis van de huidige openbare bronbasis.",
+                render_decisions_index("/decisions/", decisions),
+                navigation,
+                site_info,
+                home_view["as_of_date"],
+                home_view["generated_on"],
+                "page-decisions",
+                crumbs=[("Start", "/"), ("Besluitvragen", "/decisions/")],
+                notice="Deze pagina toont mogelijke besluitvragen op basis van de huidige bronbasis. Dit zijn geen vastgestelde gemeentelijke besluiten.",
+            ),
+        ),
+        (
+            "/actions/",
+            render_page(
+                "/actions/",
+                "Opvolgacties",
+                "Machine-gegenereerde mogelijke opvolgacties op basis van de huidige openbare bronbasis.",
+                render_actions_index("/actions/", actions),
+                navigation,
+                site_info,
+                home_view["as_of_date"],
+                home_view["generated_on"],
+                "page-actions",
+                crumbs=[("Start", "/"), ("Opvolgacties", "/actions/")],
+                notice="Deze pagina toont mogelijke opvolgacties op basis van de huidige bronbasis. Dit zijn geen vastgestelde opdrachten.",
+            ),
+        ),
+        (
+            "/dashboard/",
+            render_page(
+                "/dashboard/",
+                "Dashboard",
+                "Scanbaar bestuurlijk overzicht van besluitvragen, opvolgacties, afhankelijkheden en risico's.",
+                render_dashboard("/dashboard/", dashboard_view),
+                navigation,
+                site_info,
+                dashboard_view["as_of_date"],
+                dashboard_view["generated_on"],
+                "page-dashboard",
+                crumbs=[("Start", "/"), ("Dashboard", "/dashboard/")],
+            ),
+        ),
+    ]
+
+    for decision in decisions:
+        pages.append(
+            (
+                decision["page_url"],
+                render_page(
+                    decision["page_url"],
+                    decision["title"],
+                    decision["decision_question"],
+                    render_detail_page(decision["page_url"], decision, "decision"),
+                    navigation,
+                    site_info,
+                    decision["as_of_date"],
+                    home_view["generated_on"],
+                    "page-decision-detail",
+                    crumbs=[("Start", "/"), ("Besluitvragen", "/decisions/"), (decision["title"], decision["page_url"])],
+                ),
+            )
+        )
+
+    for action in actions:
+        pages.append(
+            (
+                action["page_url"],
+                render_page(
+                    action["page_url"],
+                    action["title"],
+                    action["action_statement"],
+                    render_detail_page(action["page_url"], action, "action"),
+                    navigation,
+                    site_info,
+                    action["as_of_date"],
+                    home_view["generated_on"],
+                    "page-action-detail",
+                    crumbs=[("Start", "/"), ("Opvolgacties", "/actions/"), (action["title"], action["page_url"])],
+                ),
+            )
+        )
+
+    for route, title in (
+        ("/themes/", "Thema's"),
+        ("/timeline/", "Tijdlijn"),
+        ("/reference/", "Referentie"),
+        ("/sources/", "Bronnen"),
+    ):
+        pages.append(
+            (
+                route,
+                render_page(
+                    route,
+                    title,
+                    f"{title} worden in een volgende bouwstap inhoudelijk uitgewerkt.",
+                    render_placeholder(route, title),
+                    navigation,
+                    site_info,
+                    home_view["as_of_date"],
+                    home_view["generated_on"],
+                    "page-placeholder",
+                    crumbs=[("Start", "/"), (title, route)],
+                ),
+            )
+        )
+
+    for route, content in pages:
+        output_path = DIST_DIR / route_to_output_path(route)
+        write_text(output_path, content)
+
+    search_index = build_search_index(home_view, almere_view, decisions, actions, dashboard_view)
+    write_text(DIST_DIR / "search-index.json", json.dumps(search_index, indent=2, ensure_ascii=False) + "\n")
+
+    print(f"Wrote {len(pages)} HTML pages to {DIST_DIR.relative_to(REPO_ROOT).as_posix()}")
+    print(f"Wrote {len(search_index)} search index entries")
+
+
+if __name__ == "__main__":
+    main()

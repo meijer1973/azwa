@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "default_target": "phase11_quality_control",
+  "default_target": "phase13_site_render",
   "stages": [
     {
       "stage_id": "phase0_setup",
@@ -154,24 +154,6 @@
       ]
     },
     {
-      "stage_id": "phase11_quality_control",
-      "kind": "script",
-      "description": "Validate extraction integrity, surface review-heavy items, and write the review queue plus QC report.",
-      "script": "src/build_quality_control.py",
-      "depends_on": [
-        "phase7_phase8_master_views",
-        "phase8_local_decision_shell"
-      ],
-      "inputs": [
-        "src/build_quality_control.py",
-        "src/build_current_interpretation.py"
-      ],
-      "outputs": [
-        "data/extracted/qc_report.json",
-        "data/extracted/review_queue.json"
-      ]
-    },
-    {
       "stage_id": "phase8_local_decision_shell",
       "kind": "asset",
       "description": "Reserve the non-overwritable Almere local decision file for human-entered choices.",
@@ -202,6 +184,70 @@
         "config/pipeline_graph.json",
         "src/run_pipeline.py",
         "tests/test_pipeline_graph.py"
+      ]
+    },
+    {
+      "stage_id": "phase11_quality_control",
+      "kind": "script",
+      "description": "Validate extraction integrity, surface review-heavy items, and write the review queue plus QC report.",
+      "script": "src/build_quality_control.py",
+      "depends_on": [
+        "phase7_phase8_master_views",
+        "phase8_local_decision_shell"
+      ],
+      "inputs": [
+        "src/build_quality_control.py",
+        "src/build_current_interpretation.py"
+      ],
+      "outputs": [
+        "data/extracted/qc_report.json",
+        "data/extracted/review_queue.json"
+      ]
+    },
+    {
+      "stage_id": "phase12_site_view_models",
+      "kind": "script",
+      "description": "Build Dutch executive site view models from the claim layer, Almere view, and review guidance.",
+      "script": "src/build_site_view_models.py",
+      "depends_on": [
+        "phase11_quality_control"
+      ],
+      "inputs": [
+        "config/site_taxonomy.json",
+        "src/build_site_view_models.py"
+      ],
+      "outputs": [
+        "data/site/site_home_view.json",
+        "data/site/site_almere_view.json",
+        "data/site/dashboard_view.json",
+        "data/site/site_manifest.json",
+        "data/site/decision_view_models",
+        "data/site/action_view_models"
+      ]
+    },
+    {
+      "stage_id": "phase13_site_render",
+      "kind": "script",
+      "description": "Render the static executive site, search index, and public assets for GitHub Pages deployment.",
+      "script": "src/render_site.py",
+      "depends_on": [
+        "phase12_site_view_models"
+      ],
+      "inputs": [
+        "assets/site.css",
+        "assets/site.js",
+        "src/render_site.py",
+        "templates/base.html"
+      ],
+      "outputs": [
+        "dist/index.html",
+        "dist/almere/index.html",
+        "dist/decisions/index.html",
+        "dist/actions/index.html",
+        "dist/dashboard/index.html",
+        "dist/search-index.json",
+        "dist/assets/site.css",
+        "dist/assets/site.js"
       ]
     }
   ]

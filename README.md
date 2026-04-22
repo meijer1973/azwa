@@ -7,11 +7,15 @@ This repository contains the AZWA / D5-D6 source corpus and the working material
 - `data/raw/`: Phase 0 corpus used by the pipeline, organized into `national`, `regional`, and `municipal`
 - `data/intermediate/`: structural extraction outputs such as text, chunks, and tables
 - `data/extracted/`: document JSON, claim outputs, municipality views, QC report, and review queue
+- `data/site/`: derived site view models for the public executive publication layer
 - `data/schemas/`: JSON schema and validation assets
 - `data/logs/`: run logs and extraction diagnostics
 - `config/`: authority rules, pipeline settings, and resolution logic
 - `prompts/`: reusable LLM extraction and review prompts
 - `src/`: pipeline scripts and application code
+- `templates/`: HTML templates for the static site renderer
+- `assets/`: CSS and JavaScript assets for the public site
+- `dist/`: generated static site output for local preview and GitHub Pages deployment
 - `tests/`: automated checks
 - `docs/`: process notes and implementation documentation
 
@@ -49,13 +53,19 @@ The repository is being prepared for a three-layer architecture:
 
 - list stages: `python src/run_pipeline.py --list`
 - evaluate the current end-to-end implemented path: `python src/run_pipeline.py --all`
+- render the current public site and its prerequisites: `python src/run_pipeline.py --stage phase13_site_render`
 - evaluate one stage plus prerequisites: `python src/run_pipeline.py --stage phase4_claims_all_docs`
 - evaluate one stage and downstream stages: `python src/run_pipeline.py --from-stage phase6_current_interpretation`
 - preview without running scripts: `python src/run_pipeline.py --all --dry-run`
 
 Pipeline runs are logged under `data/logs/pipeline_runs/`.
 
-The current default pipeline target is the QC layer, which writes:
+The current default pipeline target is the static public-site render layer, which writes:
+
+- `data/site/...`
+- `dist/...`
+
+The QC outputs remain available upstream in:
 
 - `data/extracted/qc_report.json`
 - `data/extracted/review_queue.json`
@@ -69,3 +79,13 @@ The reusable extraction and reasoning prompts live in `prompts/`:
 - `extract_claims.md`
 - `resolve_conflicts.md`
 - `build_municipal_view.md`
+
+## Public Site Layer
+
+The repository now includes a machine-generated Dutch executive site for Almere:
+
+- derived view models are written to `data/site/`
+- the static renderer writes HTML, assets, and `search-index.json` to `dist/`
+- the public wording around besluitvragen and opvolgacties is deliberately careful: these are possible follow-up items based on the current public source base, unless the source base itself shows a settled agreement
+
+GitHub Pages deployment is handled through `.github/workflows/deploy-pages.yml`.

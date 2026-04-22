@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="$lang">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>$page_title</title>
+    <meta name="description" content="$page_description">
+    <link rel="stylesheet" href="$stylesheet_url">
+    <script>
+      window.AZWA_SITE_ROOT = "$site_root";
+      window.AZWA_SEARCH_INDEX_URL = "$search_index_url";
+    </script>
+    <script defer src="$script_url"></script>
+  </head>
+  <body class="$body_class">
+    <a class="skip-link" href="#main-content">Direct naar inhoud</a>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <div class="site-brand">
+          <a href="$home_url" class="site-brand__link">$site_title</a>
+          <p class="site-brand__scope">$scope_statement</p>
+        </div>
+        <div class="site-tools">
+          <label class="search-label" for="site-search">Zoeken</label>
+          <input id="site-search" class="search-input" type="search" placeholder="Zoek in besluitvragen, acties en pagina's" autocomplete="off">
+          <div id="search-results" class="search-results" hidden></div>
+        </div>
+      </div>
+      <nav class="site-nav" aria-label="Hoofdnavigatie">
+        $navigation
+      </nav>
+    </header>
+    <main id="main-content" class="page-shell">
+      $breadcrumbs
+      $page_intro
+      $content
+    </main>
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <p class="site-footer__meta">Peildatum: $as_of_date</p>
+        <p class="site-footer__meta">Gegenereerd op: $generated_on</p>
+        <p class="site-footer__meta">$scope_statement</p>
+      </div>
+    </footer>
+  </body>
+</html>

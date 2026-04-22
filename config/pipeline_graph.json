@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "default_target": "phase7_phase8_master_views",
+  "default_target": "phase11_quality_control",
   "stages": [
     {
       "stage_id": "phase0_setup",
@@ -151,6 +151,24 @@
       "outputs": [
         "data/extracted/claims/d5_d6_master.json",
         "data/extracted/municipal/almere_current_view.json"
+      ]
+    },
+    {
+      "stage_id": "phase11_quality_control",
+      "kind": "script",
+      "description": "Validate extraction integrity, surface review-heavy items, and write the review queue plus QC report.",
+      "script": "src/build_quality_control.py",
+      "depends_on": [
+        "phase7_phase8_master_views",
+        "phase8_local_decision_shell"
+      ],
+      "inputs": [
+        "src/build_quality_control.py",
+        "src/build_current_interpretation.py"
+      ],
+      "outputs": [
+        "data/extracted/qc_report.json",
+        "data/extracted/review_queue.json"
       ]
     },
     {

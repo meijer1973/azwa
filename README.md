@@ -6,7 +6,7 @@ This repository contains the AZWA / D5-D6 source corpus and the working material
 
 - `data/raw/`: Phase 0 corpus used by the pipeline, organized into `national`, `regional`, and `municipal`
 - `data/intermediate/`: structural extraction outputs such as text, chunks, and tables
-- `data/extracted/`: document JSON, claim outputs, and municipality views
+- `data/extracted/`: document JSON, claim outputs, municipality views, QC report, and review queue
 - `data/schemas/`: JSON schema and validation assets
 - `data/logs/`: run logs and extraction diagnostics
 - `config/`: authority rules, pipeline settings, and resolution logic
@@ -54,6 +54,11 @@ The repository is being prepared for a three-layer architecture:
 - preview without running scripts: `python src/run_pipeline.py --all --dry-run`
 
 Pipeline runs are logged under `data/logs/pipeline_runs/`.
+
+The current default pipeline target is the QC layer, which writes:
+
+- `data/extracted/qc_report.json`
+- `data/extracted/review_queue.json`
 
 ## Prompt Assets
 

@@ -159,10 +159,14 @@ def build_conflict_entry(
         recommended_rule = rule_ids["later_effective_date_beats_earlier_when_authority_equal"]
     elif has_historical and current_claims:
         conflict_type = "precedence_overlap"
-        resolution_status = "resolved"
         top_current = sort_claims(current_claims)[0]
         historical_claims = [claim for claim in topic_claims if claim["validity_status"] == "historical"]
         recommended_rule = pairwise_precedence_rule(top_current, historical_claims[0], rule_ids)
+        resolution_status = (
+            "needs_human_review"
+            if recommended_rule == rule_ids["equal_authority_and_date_stays_unresolved"]
+            else "resolved"
+        )
     elif has_local_layer:
         conflict_type = "localization_overlap"
         resolution_status = "parallel_claims"

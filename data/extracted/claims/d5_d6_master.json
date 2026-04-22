@@ -1,7 +1,7 @@
 {
   "view_run_id": "phase7_phase8_views_v2",
-  "generated_on": "2026-04-21",
-  "as_of_date": "2026-04-21",
+  "generated_on": "2026-04-22",
+  "as_of_date": "2026-04-22",
   "source_interpretation_run_id": "phase6_current_interpretation_v2",
   "source_claim_extraction_runs": [
     "phase4_all_docs_claims_v2"
@@ -1242,6 +1242,14 @@
       "conflict_type": "localization_overlap",
       "resolution_status": "parallel_claims",
       "recommended_resolution_rule": "municipal_documents_cannot_override_national_obligations",
+      "notes": "Current interpretation keeps the higher-authority national baseline and also preserves lower-authority regional or municipal localization claims for Almere."
+    },
+    {
+      "conflict_id": "conflict__timeline__other",
+      "topic": "timeline.other",
+      "conflict_type": "precedence_overlap",
+      "resolution_status": "needs_human_review",
+      "recommended_resolution_rule": "equal_authority_and_date_stays_unresolved",
       "notes": "Current interpretation keeps the higher-authority national baseline and also preserves lower-authority regional or municipal localization claims for Almere."
     }
   ]

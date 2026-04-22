@@ -132,6 +132,26 @@ def parse_html_markdown(markdown_text: str) -> list[dict]:
                 }
             )
 
+    def should_skip_line(line: str) -> bool:
+        stripped = line.strip()
+        if not stripped:
+            return False
+        if line.startswith("- Original file:") or line.startswith("- Source URL:") or line.startswith("- Converted from:"):
+            return True
+        if stripped.startswith(("Laatst bewerkt op:", "###### Pagina delen:", "###### Tags:")):
+            return True
+        if "Ga terug naar de overzichtspagina" in stripped:
+            return True
+        if "Ga direct naar het overzicht van de beleidsterreinen" in stripped:
+            return True
+        if "Scroll naar beneden voor een overzicht van de informatiepagina's" in stripped:
+            return True
+        if stripped in {"---", "â–¼", "▼"}:
+            return True
+        if "searchbytag?search=" in stripped:
+            return True
+        return False
+
     for line in markdown_text.splitlines():
         if line.startswith("#"):
             if seen_first_heading:
@@ -144,7 +164,7 @@ def parse_html_markdown(markdown_text: str) -> list[dict]:
                 heading_stack.pop()
             heading_stack.append((level, heading))
         elif seen_first_heading:
-            if line.startswith("- Original file:") or line.startswith("- Source URL:") or line.startswith("- Converted from:"):
+            if should_skip_line(line):
                 continue
             current_lines.append(line)
 
@@ -154,12 +174,60 @@ def parse_html_markdown(markdown_text: str) -> list[dict]:
     return sections
 
 
+def is_structural_heading_block(block: str) -> bool:
+    stripped = block.strip()
+    if not stripped:
+        return True
+    if stripped in {"Inhoud", "Woordenlijst", "Voorwoord"}:
+        return True
+    if re.fullmatch(r"H\d+\s+.+", stripped):
+        return True
+    if re.fullmatch(r"\d+\s+\|\s+.+", stripped):
+        return True
+    return False
+
+
+def looks_like_bullet_list(block: str) -> bool:
+    lines = [line.strip() for line in block.splitlines() if line.strip()]
+    if len(lines) < 3:
+        return False
+    bullet_lines = sum(1 for line in lines if re.match(r"^[-*•]\s+", line))
+    return bullet_lines >= 3 and bullet_lines >= max(3, len(lines) // 2)
+
+
+def looks_like_numeric_series_block(block: str) -> bool:
+    if is_structural_heading_block(block) or looks_like_bullet_list(block):
+        return False
+
+    compact = " ".join(line.strip() for line in block.splitlines() if line.strip())
+    year_tokens = len(re.findall(r"\b(?:19|20)\s?\d{2}\b", compact))
+    percent_tokens = len(re.findall(r"\b\d+(?:[.,]\d+)?\s*%\b", compact))
+    number_tokens = len(re.findall(r"\b\d+(?:[.,]\d+)?\b", compact))
+    all_caps_tokens = len(re.findall(r"\b[A-Z][A-Z0-9+&/\-]{2,}\b", compact))
+
+    if year_tokens >= 2 and number_tokens >= 4:
+        return True
+    if percent_tokens >= 2:
+        return True
+    if len(compact) <= 80 and number_tokens >= 4:
+        return True
+    if len(compact) <= 90 and all_caps_tokens >= 2 and number_tokens >= 2:
+        return True
+    return False
+
+
 def looks_like_table_block(block: str) -> bool:
     if not block.strip():
+        return False
+    if is_structural_heading_block(block):
+        return False
+    if looks_like_bullet_list(block):
         return False
     if re.search(r"\b[Tt]abel\b", block):
         return True
     if "Jaartal" in block:
+        return True
+    if looks_like_numeric_series_block(block):
         return True
     lines = [line.strip() for line in block.splitlines() if line.strip()]
     digit_lines = sum(1 for line in lines if re.search(r"\d", line))
@@ -169,13 +237,19 @@ def looks_like_table_block(block: str) -> bool:
 
 def is_table_anchor(block: str) -> bool:
     lowered = block.lower()
-    return "jaartal" in lowered or bool(re.search(r"\b[tT]abel\b", block))
+    return "jaartal" in lowered or bool(re.search(r"\b[tT]abel\b", block)) or looks_like_numeric_series_block(block)
 
 
 def is_table_continuation(block: str) -> bool:
+    if is_structural_heading_block(block):
+        return False
+    if looks_like_bullet_list(block):
+        return False
     if looks_like_table_block(block):
         return True
-    if len(block) <= 80 and not block.rstrip().endswith((".", ":", ";")):
+    if len(block) <= 80 and re.fullmatch(r"[A-Z0-9 +%&/\-.,()]+", block.strip()):
+        return True
+    if len(block) <= 80 and not block.rstrip().endswith((".", ":", ";")) and re.search(r"[\d%]", block):
         return True
     if len(block) <= 120 and re.search(r"\d", block):
         return True

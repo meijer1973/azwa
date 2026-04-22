@@ -4,7 +4,7 @@
   "as_of_date": "2026-04-22",
   "source_interpretation_run_id": "phase6_current_interpretation_v2",
   "source_claim_extraction_runs": [
-    "phase4_all_docs_claims_v2"
+    "phase4_all_docs_claims_v3"
   ],
   "d5": {
     "definition": {
@@ -45,11 +45,12 @@
     },
     "basisfunctionaliteiten_onderbouwd": {
       "topic": "d5.basisfunctionaliteiten_onderbouwd",
-      "summary": "Current view combines 11 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
+      "summary": "Current view combines 12 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
       "claim_ids": [
         "clm__nat_gala_2023_gezond_en_actief_leven_d5_003",
         "clm__nat_gala_2023_gezond_en_actief_leven_d5_002",
         "clm__nat_gala_2023_gezond_en_actief_leven_d5_001",
+        "clm__nat_iza_2022_integraal_zorgakkoord_d5_003",
         "clm__nat_iza_2022_integraal_zorgakkoord_d5_002",
         "clm__nat_iza_2022_integraal_zorgakkoord_d5_001",
         "clm__nat_azwa_2026_cw31_kader_d5_d6_d5_002",
@@ -65,6 +66,7 @@
         "te komen tot een landelijk dekkend aanbod van de volgende ketenaan­ pakken: kansrijke start, valpreventie bij ouderen, de aanpak overgewicht kinderen, de gecombineerde leefstijlinterventie bij overgewicht en obesitas van volwassen én welzijn op recept.",
         "Structurele inzet op de coördinatie en organisatie van de in IZA afgesproken domeinoverstijgende keteninter­ venties (waaronder valpreventie bij ouderen, welzijn op recept, aanpak overgewicht bij kinderen, gecombineerde leefstijlinterventie bij volwassenen, kansrijke start).",
         "Het Zorginstituut kan op verzoek ook welzijn op recept en kansrijke start duiden.",
+        "ingang van 1 januari 2024 in ieder geval de volgende ketenaanpakken in: Kansrijke start, valpreventie bij ouderen, aanpak overgewicht en obesitas bij kinderen, de gecombineerde leefstijlinterventie bij overgewicht van volwassenen en welzijn op recept. Hierover worden uiterlijk 15 december 2022 in een addendum bij zowel het IZA als het GALA nadere bestuurlijke afspraken gemaakt. VWS en NZa zijn verantwoordelijk voor de daarvoor benodigde tijdige aanpassing van de relevante regelgeving. Duidingen van het Zorginstituut zijn randvoorwaardelijk voor het kunnen maken van nadere bestuurlijke afspraken en het tijdig inrichten van de ketenaanpakken. Voor valpreventie, de gecombineerde ...",
         "ingang van 1 januari 2024 in ieder geval de volgende ketenaanpakken in: Kansrijke start, valpreventie bij ouderen, aanpak overgewicht en obesitas bij kinderen, de gecombineerde leefstijlinterventie bij overgewicht van volwassenen en welzijn op recept.",
         "The sheet describes D5 as a way to implement proven effective basisfunctionaliteiten such as sociaal verwijzen and valpreventie on a regional scale.",
         "The D5 objective is to strengthen care-social cooperation so people get equal access to the care and support they need, with sociaal verwijzen named as an example.",
@@ -241,9 +243,8 @@
       },
       {
         "topic": "d5.mentale_gezondheidsnetwerken",
-        "summary": "Current view combines 5 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
+        "summary": "Current view combines 4 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
         "claim_ids": [
-          "clm__nat_iza_2022_integraal_zorgakkoord_d5_003",
           "clm__nat_azwa_2026_voortgang_kamerbrief_d5_002",
           "clm__reg_flevoland_2023_regioplan_iza_d5_001",
           "clm__mun_almere_pga_transformatieplan_d5_001",
@@ -251,20 +252,12 @@
         ],
         "historical_claim_ids": [],
         "statements": [
-          "Deze werkgroep defini­ eert de scope van de knelpunten die worden verstaan onder ‘domeinoverstijgende bekostiging’ en werkt in ieder geval oplossingen uit voor: (i.) financieren van zowel betalingen als investeringen alsook het verdelen van baten die in een ander domein vallen in het algemeen en (ii.) multidisci­ plinair overleg, coördinatie, levensloopregeling, medica­ tieadvies ggz en indien nodig respectievelijk voor zo ver nog niet geregeld voor verkennend gesprek en consultatie (iii.) projectleiders ...",
           "Om de doelstellingen en ambities uit het IZA te behalen is daarom gerichter gestuurd op mentale gezondheidsnetwerken (MGN), zorgcoördinatie (ZC) en spreiding en concentratie (S&C), omdat transformatieplannen op deze onderwerpen noodzakelijk zijn voor het laten slagen van de ambities op dit gebied.",
           "The plan highlights Ecosysteem Mentale Gezondheid and Samen Sterker in de Wijk as a model for neighbourhood collaboration around psychosocial problems.",
           "The plan explicitly aims for better cooperation between informal care, the social domain, and the medical domain, supported by initiatives such as Voorzorgcirkels, Welzijn op Recept, and Samen Sterker in de Wijk.",
           "Voorzorgcirkels Samen Sterker in de Wijk Welzijn op Recept"
         ],
         "source_documents": [
-          {
-            "document_id": "nat_iza_2022_integraal_zorgakkoord",
-            "title": "Integraal Zorgakkoord: Samen werken aan gezonde zorg",
-            "jurisdiction_level": "national",
-            "document_type": "agreement",
-            "document_status": "reference"
-          },
           {
             "document_id": "nat_azwa_2026_voortgang_kamerbrief",
             "title": "Kamerbrief inzake voortgang Integraal Zorgakkoord (IZA) en Aanvullend Zorg- en Welzijnsakkoord (AZWA)",
@@ -295,7 +288,7 @@
           }
         ],
         "scope": "mixed",
-        "confidence": 0.61,
+        "confidence": 0.62,
         "needs_human_review": true
       },
       {
@@ -448,16 +441,14 @@
     "governance_requirements": [
       {
         "topic": "d6.local_teams",
-        "summary": "Current view combines 3 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
+        "summary": "Current view combines 2 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
         "claim_ids": [
           "clm__nat_azwa_2025_definitief_d6_002",
-          "clm__mun_almere_sociaal_domein_informatiepagina_d6_002",
           "clm__mun_almere_sociaal_domein_informatiepagina_d6_001"
         ],
         "historical_claim_ids": [],
         "statements": [
           "The D6 local structure is concretized through strong local teams in hechte wijkverbanden and regional agreements about ketenaanpak governance by Q1 2026.",
-          "- De houdbaarheid van de Wmo, waaronder de toekomst van de huishoudelijk hulp en de invoering van de inkomensafhankelijke bijdrage; - De transformatie van de jeugdzorg, waaronder de vorming van Stevige Lokale Teams in de wijken (0-100) en de gevolgen van het landelijke voorstel over de reikwijdte van de Jeugdwet; - De actualisatie van de Nota Gezondheidsbeleid (deze loopt af in 2026); - De inrichting en borging van de taken die voortkomen uit de zorgakkoorden (IZA, GALA, AZWA, HLO) en de toekomst van Positief Gezond Almere; - De toekomstige inrichting van het Sociaal Ontwikkelbedrijf; - Participatiewet in balans: menselijker en eenvoudiger maken van de Participatiewet; - De invoering ...",
           "- De transformatie van de jeugdzorg, waaronder de vorming van Stevige Lokale Teams in de wijken (0-100) en de gevolgen van het landelijke voorstel over de reikwijdte van de Jeugdwet;"
         ],
         "source_documents": [
@@ -477,7 +468,7 @@
           }
         ],
         "scope": "mixed",
-        "confidence": 0.65,
+        "confidence": 0.7,
         "needs_human_review": true
       },
       {
@@ -634,14 +625,14 @@
           "Gemeenten moeten zich realiseren dat implementatie vraagt om regie, samenwerking en afstemming.",
           "Ja, bij het AZWA is nadrukkelijk rekening gehouden met de uitvoeringscapaciteit van gemeenten.",
           "Dit past goed bij het karakter van de SPUKS en is herkenbaar voor gemeenten.",
+          "Hoewel gemeenten nu dus verantwoordelijk zijn voor de uitvoering, worden de meeste wetten en regels nog steeds op landelijk niveau vastgesteld.",
+          "De gemeenteraad heeft invloed op de wijze waarop én de mate waarin deze taken worden uitgevoerd.",
           "Gemeenten krijgen uiteindelijk één budget vanuit het gemeentefonds om de taken binnen het sociaal domein te financieren.",
-          "**[← Ga terug naar de overzichtspagina](/page/waar-gaat-de-gemeenteraad-over)",
-          "Op deze pagina's leest u ook meer over de invloed van de gemeenteraad, de financiën en lokale, regionale en landelijke samenwerkingspartners.",
           "Deze agenda legt de nadruk op het benutten van bestaande sociale bewegingen, het verbeteren van de samenwerking tussen de gemeente, inwoners en partners, en een wijkgerichte aanpak om specifieke lokale behoeften aan te pakken.",
           "De gemeente Almere heeft een nieuwe Maatschappelijke agenda voor de periode 2024-2034 ontwikkeld, gericht op het verbeteren van de sociale staat van de stad en het bevorderen van de brede welvaart van de inwoners.",
           "De gemeenteraad van Almere bespreekt deze Maatschappelijke agenda omdat ze richting en structuur biedt voor de sociale projecten en beleidsvorming voor de komende tien jaar.",
-          "Ook de samenwerking tussen verschillende zorg- en welzijnsdomeinen krijgt extra aandacht, om de zorg toegankelijker en veerkrachtiger te maken voor de groeiende en veranderende bevolking van Almere.",
           "**Gezond Almere 2024-2026: Een nieuwe visie op welzijn en zorg**",
+          "[###### Gemeenschappelijke regeling Gemeentelijke Gezondheidsdienst Flevoland 2023 2024-01-24](/article/gemeenschappelijke-regeling-gemeentelijke-gezondheidsdienst-flevoland-2023) [###### GGD Flevoland 2023-07-07](/article/ggd-flevoland) [###### Maatschappelijk verantwoorden: JGZ Almere 2023-05-26](/article/maatschappelijk-verantwoorden:-jgz-almere) [###### McDon't in Oosterwold 2023-05-17](/article/mcdon't-in-oosterwold) [###### Huisartsenzorg (gesprekstafel) 2022-10-07](/article/huisartsenzorg-(gesprekstafel))",
           "De Gemeente Almere heeft een nieuwe visie op het gezondheidsbeleid voor 2024-2026 ontwikkeld, waarbij de nadruk ligt op preventie, integratie van gezondheid in alle beleidsterreinen en het bieden van de juiste zorg op de juiste plek.",
           "De gemeenten Urk en Almere hebben in verhouding minder groen dan de andere Flevolandse gemeenten.",
           "Jeugd Onder andere Samen sterker in de wijk, ONE, samenwerkingsagenda Gemeente.",
@@ -793,16 +784,15 @@
         "clm__nat_azwa_2025_onderhandelaarsakkoord_governance_and_finance_001",
         "clm__nat_gala_2023_gezond_en_actief_leven_governance_and_finance_003",
         "clm__nat_gala_2023_gezond_en_actief_leven_governance_and_finance_002",
-        "clm__nat_gala_2023_gezond_en_actief_leven_governance_and_finance_001",
-        "clm__nat_iza_2022_integraal_zorgakkoord_governance_and_finance_002"
+        "clm__nat_gala_2023_gezond_en_actief_leven_governance_and_finance_001"
       ],
       "statements": [
         "The financing form for social-domain resources is to be chosen through a dedicated process with VNG and the fund managers under the Financiele-verhoudingswet.",
         "The policy instrument is a bestuurlijke afspraak between care and social-domain parties, with the funding instrument to be chosen through VNG, the fund managers, and VWS under the Financiele-verhoudingswet.",
         "The plan itself says the ambitions still need concrete budgets and that financing may come from SPUK GALA, SPUK IZA, and transformatiemiddelen.",
-        "Hierbij is de keuze gemaakt om middelen met een lokaal doel te verstrekken via de brede SPUK en middelen met een regionaal doel via de SPUK IZA.",
         "Voor 2026 is afgesproken dat de extra middelen die beschikbaar komen (50 miljoen voor 2026 vanuit het AZWA en 18 miljoen vanuit het HLO), worden verstrekt via de bestaande SPUKS.",
         "Het betreft de Regeling specifieke uitkering sport en bewegen, gezondheidsbevordering, cultuurparticipatie en de sociale basis 2023–2026 (verder: brede SPUK) die is opgesteld voor de uitvoering van het GALA en Sportakkoord II, en de Regeling specifieke uitkering IZA-doelen 2023–2026 (verder: SPUK IZA).",
+        "Via IZA SPUK/GALA SPUK. Voor 2026 is afgesproken dat de extra middelen die beschikbaar komen (50 miljoen voor 2026 vanuit het AZWA en 18 miljoen vanuit het HLO), worden verstrekt via de bestaande SPUKS. Het betreft de Regeling specifieke uitkering sport en bewegen, gezondheidsbevordering, cultuurparticipatie en de sociale basis 2023–2026 (verder: brede SPUK) die is opgesteld voor de uitvoering van het GALA en Sportakkoord II, en de Regeling specifieke uitkering IZA-doelen 2023–2026 (verder: SPUK IZA). Hierbij is de keuze gemaakt om middelen met een lokaal doel te verstrekken via de brede SPUK en middelen met een regionaal doel via de SPUK IZA. Dit past goed bij het karakter van de SPUKS ...",
         "Zo is er een specifieke uitkering voor gemeenten die bestemd is voor de IZA-doelen en kan de gemeente Almere ook beschikken over middelen uit de specifieke uitkering (SPUK) uit het Gezond en Actief Leven Akkoord (GALA)."
       ],
       "source_documents": [
@@ -876,18 +866,20 @@
       "summary": "Current view combines 4 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
       "claim_ids": [
         "clm__nat_azwa_2026_voortgang_kamerbrief_governance_and_finance_003",
-        "clm__nat_azwa_2026_voortgang_kamerbrief_governance_and_finance_002",
+        "clm__nat_azwa_2026_voortgang_kamerbrief_governance_and_finance_001",
         "clm__nat_vng_azwa_faq_uitvoeringscapaciteit_governance_and_finance_001",
         "clm__mun_almere_pga_seo_businesscase_2024_governance_and_finance_002"
       ],
       "historical_claim_ids": [
+        "clm__nat_iza_2022_integraal_zorgakkoord_governance_and_finance_003",
+        "clm__nat_iza_2022_integraal_zorgakkoord_governance_and_finance_002",
         "clm__nat_iza_2022_integraal_zorgakkoord_governance_and_finance_001"
       ],
       "statements": [
-        "Transformatieplannen en -middelen Om impactvolle transformaties, zoals de implementatie van passende zorg, te stimuleren zijn bij de totstandkoming van het IZA afspraken gemaakt over transformatiemiddelen.",
         "Voor Digizo.nu vindt bestuurlijk overleg plaats over het vervolg na 2026, aangezien de financiering vanuit de IZAtransformatiemiddelen na 2026 eindigt.",
+        "om deze afspraken te realiseren voor eind 2028 in de gezamenlijke intensiveringsagenda digitale en hybride zorg. De afspraken worden door verschillende instrumenten ondersteund, zoals via ZonMw programma’s, Zorg voor Innoveren, de Vliegwielcoalitie en Digizo.nu. Voor Digizo.nu vindt bestuurlijk overleg plaats over het vervolg na 2026, aangezien de financiering vanuit de IZAtransformatiemiddelen na 2026 eindigt. Ook worden gezamenlijke keuzes gemaakt voor herinrichting zorgpaden, de inrichtingsprincipes voor Zorg en Medische Service Centra en de integratie (en bekostiging) van gezondheids- en zorgapps in zorgprocessen en -paden. Monitor Digitale Zorg De Monitor Digitale Zorg 2025 wordt ...",
         "Daarnaast zijn er extra middelen beschikbaar gesteld om gemeenten in staat te stellen hun rol goed te vervullen.",
-        "Pijler 4 beoogt een betere doorstroom in de keten en het netwerk. De pijler bevat twee maatregelen die de gemeente Almere uit de Transformatiemiddelen IZA wil bekostigen: een regionaal transferpunt en een gezamenlijke ouderenafdeling. Tabel 3.5 bevat de beleidstheorie voor deze projecten. Tabel 3.5 Beleidstheorie voor Pijler 4 Regionaal transferpunt Gezamenlijke ouderenafdeling Input PM PM"
+        "Pijler 4 beoogt een betere doorstroom in de keten en het netwerk. De pijler bevat twee maatregelen die de gemeente Almere uit de Transformatiemiddelen IZA wil bekostigen: een regionaal transferpunt en een gezamenlijke ouderenafdeling. Tabel 3.5 bevat de beleidstheorie voor deze projecten. Tabel 3.5 Beleidstheorie voor Pijler 4"
       ],
       "source_documents": [
         {
@@ -952,9 +944,10 @@
   "timeline": {
     "national_milestones": {
       "topic": "timeline.d5_d6_implementation",
-      "summary": "Current view combines 2 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
+      "summary": "Current view combines 3 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
       "claim_ids": [
         "clm__nat_azwa_2025_definitief_timeline_and_status_001",
+        "clm__mun_almere_2024_2034_maatschappelijke_agenda_timeline_and_status_002",
         "clm__mun_almere_2024_2034_maatschappelijke_agenda_timeline_and_status_001"
       ],
       "historical_claim_ids": [
@@ -962,7 +955,8 @@
       ],
       "statements": [
         "The landelijk kader for D5 is to be fixed in BO IZA/AZWA in Q4 2025, with governance and further elaboration in Q1 2026.",
-        "[###### Voorjaarsnota 2027-2030, inclusief Eerste financiële kwartaalrapportage 2026 2026-04-16](/article/voorjaarsnota-2027-2030,-inclusief-eerste-financiele-kwartaalrapportage-2026)"
+        "[###### Voorjaarsnota 2027-2030, inclusief Eerste financiële kwartaalrapportage 2026 2026-04-16](/article/voorjaarsnota-2027-2030,-inclusief-eerste-financiele-kwartaalrapportage-2026)",
+        "[###### Politiek Vragenuur 16 april 2026 2026-04-17](/article/politiek-vragenuur-16-april-2026) [###### Politiek Vragenuur 9 april 2026 2026-04-10](/article/politiek-vragenuur-9-april-2026) [###### Voorjaarsnota 2027-2030, inclusief Eerste financiële kwartaalrapportage 2026 2026-04-16](/article/voorjaarsnota-2027-2030,-inclusief-eerste-financiele-kwartaalrapportage-2026)"
       ],
       "source_documents": [
         {
@@ -981,7 +975,7 @@
         }
       ],
       "scope": "mixed",
-      "confidence": 0.65,
+      "confidence": 0.59,
       "needs_human_review": true
     },
     "rollout_2030": {
@@ -989,18 +983,17 @@
       "summary": "Current view combines 4 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
       "claim_ids": [
         "clm__nat_azwa_2025_definitief_timeline_and_status_002",
-        "clm__nat_azwa_2026_voortgang_kamerbrief_timeline_and_status_001",
+        "clm__nat_azwa_2026_voortgang_kamerbrief_timeline_and_status_002",
         "clm__reg_flevoland_2023_regiobeeld_timeline_and_status_002",
         "clm__reg_flevoland_2023_regiobeeld_timeline_and_status_001"
       ],
       "historical_claim_ids": [
-        "clm__nat_azwa_2025_onderhandelaarsakkoord_timeline_and_status_002",
-        "clm__nat_gala_2023_gezond_en_actief_leven_timeline_and_status_002"
+        "clm__nat_azwa_2025_onderhandelaarsakkoord_timeline_and_status_002"
       ],
       "statements": [
         "The agreement aims for landelijke dekking of the known basisfunctionaliteiten by 2030, while local-team aansluiting in hechte wijkverbanden must be in place by Q4 2028.",
         "Voor de basisfunctionaliteiten (zoals valpreventie en sociaal verwijzen) is in het AZWA afgesproken om een versnelling te maken in de implementatie en toe te werken naar een landelijke dekking van de (nu bekende) basisfunctionaliteiten in 2030.",
-        "2021 2022 2023 2024 2025 2026 2027 2028 2029 2030 2031 2032",
+        "2015 2016 2017 2018 2019 2020 2021 2022 1000 Jonger dan 25 jaar 25 tot 35 jaar 35 tot 45 jaar 0 2021 2022 2023 2024 2025 2026 2027 2028 2029 2030 2031 2032 45 tot 55 jaar 55 jaar of ouder",
         "2015 2016 2017 2018 2019 2020 2021 2022 2023 2024 2025 2026 2027 2028 2029 2030"
       ],
       "source_documents": [
@@ -1037,7 +1030,7 @@
         "clm__nat_azwa_2026_cw31_kader_d5_d6_timeline_and_status_001"
       ],
       "historical_claim_ids": [
-        "clm__nat_gala_2023_gezond_en_actief_leven_timeline_and_status_001"
+        "clm__nat_gala_2023_gezond_en_actief_leven_timeline_and_status_002"
       ],
       "statements": [
         "The CW 3.1 sheet gives a phased financing horizon from 2026 to 2031 for the D5/D6 package."
@@ -1057,26 +1050,17 @@
     },
     "regional_transformation_timing": {
       "topic": "timeline.flevoland_transformatieagenda",
-      "summary": "Current view combines 3 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
+      "summary": "Current view combines 2 compatible claims for timeline.flevoland_transformatieagenda, led by reg_flevoland_2023_regioplan_iza: The plan expects the definite transformatieagenda by the end of the second quarter and sets up kwartiermakers for the fundamental work tracks.",
       "claim_ids": [
-        "clm__nat_azwa_2026_voortgang_kamerbrief_timeline_and_status_002",
         "clm__reg_flevoland_2023_regioplan_iza_timeline_and_status_002",
         "clm__reg_flevoland_2023_regioplan_iza_timeline_and_status_001"
       ],
       "historical_claim_ids": [],
       "statements": [
-        "Herijking regio- en ROAZ-beelden en plannen In het Bestuurlijk Overleg IZA/AZWA van 28 januari 2026 is afgesproken de regiobeelden en regioplannen en de beelden en plannen van de regio’s van het Regionaal overleg acute zorgketen (ROAZ) in 2028 te herijken en dit hierna vijfjaarlijks te doen.",
         "The plan expects the definite transformatieagenda by the end of the second quarter and sets up kwartiermakers for the fundamental work tracks.",
         "In the first and second quarter of 2024 the workgroups are expected to move toward a concrete transformatieagenda."
       ],
       "source_documents": [
-        {
-          "document_id": "nat_azwa_2026_voortgang_kamerbrief",
-          "title": "Kamerbrief inzake voortgang Integraal Zorgakkoord (IZA) en Aanvullend Zorg- en Welzijnsakkoord (AZWA)",
-          "jurisdiction_level": "national",
-          "document_type": "kamerbrief",
-          "document_status": "current"
-        },
         {
           "document_id": "reg_flevoland_2023_regioplan_iza",
           "title": "Zorgzaam Flevoland 2023 Regioplan IZA Flevoland",
@@ -1085,8 +1069,8 @@
           "document_status": "reference"
         }
       ],
-      "scope": "mixed",
-      "confidence": 0.83,
+      "scope": "regional",
+      "confidence": 0.81,
       "needs_human_review": false
     },
     "almere_local_horizon": {
@@ -1152,7 +1136,6 @@
       ],
       "supporting_claim_ids": [
         "clm__nat_azwa_2025_definitief_d6_002",
-        "clm__mun_almere_sociaal_domein_informatiepagina_d6_002",
         "clm__mun_almere_sociaal_domein_informatiepagina_d6_001",
         "clm__nat_azwa_2025_onderhandelaarsakkoord_municipal_translation_002"
       ]
@@ -1234,22 +1217,6 @@
       "conflict_type": "localization_overlap",
       "resolution_status": "parallel_claims",
       "recommended_resolution_rule": "municipal_documents_cannot_override_national_obligations",
-      "notes": "Current interpretation keeps the higher-authority national baseline and also preserves lower-authority regional or municipal localization claims for Almere."
-    },
-    {
-      "conflict_id": "conflict__timeline__flevoland_transformatieagenda",
-      "topic": "timeline.flevoland_transformatieagenda",
-      "conflict_type": "localization_overlap",
-      "resolution_status": "parallel_claims",
-      "recommended_resolution_rule": "municipal_documents_cannot_override_national_obligations",
-      "notes": "Current interpretation keeps the higher-authority national baseline and also preserves lower-authority regional or municipal localization claims for Almere."
-    },
-    {
-      "conflict_id": "conflict__timeline__other",
-      "topic": "timeline.other",
-      "conflict_type": "precedence_overlap",
-      "resolution_status": "needs_human_review",
-      "recommended_resolution_rule": "equal_authority_and_date_stays_unresolved",
       "notes": "Current interpretation keeps the higher-authority national baseline and also preserves lower-authority regional or municipal localization claims for Almere."
     }
   ]

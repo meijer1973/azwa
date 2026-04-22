@@ -52,12 +52,16 @@ ANNOTATIONS = {
         "curation_bucket": "canonical",
         "contains_d5": False,
         "contains_d6": False,
-        "contains_structured_tables": True,
+        "contains_structured_tables": False,
         "contains_financing_logic": True,
         "contains_governance_logic": True,
         "contains_monitoring_evaluation_logic": True,
         "contains_municipal_implications": True,
-        "inventory_notes": "Regional IZA implementation plan with strong governance, monitoring, and Almere relevance.",
+        "inventory_notes": (
+            "Regional IZA implementation plan with strong governance, monitoring, and Almere relevance; "
+            "it contains structured visuals, but not stable table evidence we currently want to treat as "
+            "table-bearing for downstream extraction."
+        ),
     },
     "mun_almere_pga_transformatieplan": {
         "source_classification": "primary",
@@ -148,12 +152,15 @@ ANNOTATIONS = {
         "curation_bucket": "canonical",
         "contains_d5": False,
         "contains_d6": False,
-        "contains_structured_tables": True,
+        "contains_structured_tables": False,
         "contains_financing_logic": False,
         "contains_governance_logic": False,
         "contains_monitoring_evaluation_logic": False,
         "contains_municipal_implications": True,
-        "inventory_notes": "Regional baseline evidence report for needs, pressures, and context rather than normative policy content.",
+        "inventory_notes": (
+            "Regional baseline evidence report for needs, pressures, and context rather than normative policy "
+            "content; the current corpus behaves as narrative/regional evidence, not as a reliable table source."
+        ),
     },
     "nat_vng_azwa_faq_middelen": {
         "source_classification": "supporting_commentary",

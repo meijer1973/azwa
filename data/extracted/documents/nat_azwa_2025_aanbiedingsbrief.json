@@ -1,7 +1,7 @@
 {
   "document_id": "nat_azwa_2025_aanbiedingsbrief",
-  "extraction_run_id": "phase3_all_docs_v2",
-  "generated_on": "2026-04-21",
+  "extraction_run_id": "phase3_all_docs_v3",
+  "generated_on": "2026-04-22",
   "metadata": {
     "document_id": "nat_azwa_2025_aanbiedingsbrief",
     "title": "Kamerbrief aanbieding Aanvullend Zorg- en Welzijnsakkoord (AZWA)",
@@ -112,9 +112,23 @@
       ]
     },
     "timeline_and_status": {
-      "explicit_reference_present": false,
-      "relevance_note": "No high-confidence timeline and status evidence was auto-selected in this extraction pass.",
-      "items": []
+      "explicit_reference_present": true,
+      "relevance_note": "Auto-extracted timeline and status evidence from structural chunks and tables for this document.",
+      "items": [
+        {
+          "statement_id": "nat_azwa_2025_aanbiedingsbrief_timeline_and_status_001",
+          "statement_type": "direct_extraction",
+          "statement": "De Voorzitter van de Tweede Kamer der Staten-Generaal Postbus 20018 2500 EA DEN HAAG Kenmerk 4204015-1087289-PDIZA Bijlage(n) 1 Datum 8 september 2025 Betreft Aanbieding Aanvullend Zorg- en Welzijnsakkoord (AZWA)",
+          "evidence": [
+            {
+              "evidence_quote": "De Voorzitter van de Tweede Kamer der Staten-Generaal Postbus 20018 2500 EA DEN HAAG Kenmerk 4204015-1087289-PDIZA Bijlage(n) 1 Datum 8 september 2025 Betreft Aanbieding Aanvullend Zorg- en Welzijnsakkoord (AZWA)",
+              "page": 1,
+              "section": "Page 1",
+              "table_id": "nat_azwa_2025_aanbiedingsbrief_table_001"
+            }
+          ]
+        }
+      ]
     },
     "monitoring_and_evaluation": {
       "explicit_reference_present": false,
@@ -168,7 +182,7 @@
     }
   },
   "quality_notes": {
-    "extraction_method": "auto_structural_phase3_all_docs_v2",
+    "extraction_method": "auto_structural_phase3_all_docs_v3",
     "limitations": [
       "The non-manual documents use a conservative keyword-ranked extraction over structural chunks and table candidates.",
       "Auto-selected statements stay close to source wording, so OCR noise and formatting artefacts may still appear.",

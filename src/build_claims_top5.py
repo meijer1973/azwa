@@ -14,7 +14,7 @@ AUTHORITY_RULES_PATH = REPO_ROOT / "config" / "authority_rules.json"
 CLAIM_SCHEMA_PATH = REPO_ROOT / "data" / "schemas" / "claim.schema.json"
 OUTPUT_DIR = REPO_ROOT / "data" / "extracted" / "claims"
 
-CLAIM_EXTRACTION_RUN_ID = "phase4_all_docs_claims_v2"
+CLAIM_EXTRACTION_RUN_ID = "phase4_all_docs_claims_v3"
 RELATION_SEED_DOCUMENT_IDS = [
     "nat_azwa_2025_definitief",
     "nat_azwa_2025_onderhandelaarsakkoord",

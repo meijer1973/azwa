@@ -14,7 +14,7 @@ CHUNKS_DIR = REPO_ROOT / "data" / "intermediate" / "chunks"
 TABLES_DIR = REPO_ROOT / "data" / "intermediate" / "tables"
 OUTPUT_DIR = REPO_ROOT / "data" / "extracted" / "documents"
 
-EXTRACTION_RUN_ID = "phase3_all_docs_v2"
+EXTRACTION_RUN_ID = "phase3_all_docs_v3"
 MANUAL_DOCUMENT_IDS = [
     "nat_azwa_2025_definitief",
     "nat_azwa_2025_onderhandelaarsakkoord",
@@ -247,6 +247,7 @@ DOCUMENT_SPECS = {
                                 "page": 32,
                                 "section": "D5 main section",
                                 "anchor": "basisfunctionaliteiten als sociaal verwijzen en valpreventie",
+                                "table_id": "nat_azwa_2025_definitief_table_001",
                             }
                         ],
                     },
@@ -551,6 +552,7 @@ DOCUMENT_SPECS = {
                                 "page": 68,
                                 "section": "D5 summary",
                                 "anchor": "De basisfunctionaliteiten laagdrempelige steunpunten EPA",
+                                "table_id": "nat_azwa_2025_onderhandelaarsakkoord_table_001",
                             }
                         ],
                     },
@@ -921,11 +923,13 @@ DOCUMENT_SPECS = {
                                 "page": 1,
                                 "section": "Financiele gevolgen",
                                 "anchor": "Jaartal 202 6",
+                                "table_id": "nat_azwa_2026_cw31_kader_d5_d6_table_001",
                             },
                             {
                                 "page": 1,
                                 "section": "Financiele gevolgen",
                                 "anchor": "203 1 Basisfunctionaliteit",
+                                "table_id": "nat_azwa_2026_cw31_kader_d5_d6_table_001",
                             },
                         ],
                     },
@@ -943,6 +947,7 @@ DOCUMENT_SPECS = {
                                 "page": 1,
                                 "section": "Financiele gevolgen",
                                 "anchor": "Jaartal 202 6",
+                                "table_id": "nat_azwa_2026_cw31_kader_d5_d6_table_001",
                             }
                         ],
                     }
@@ -1745,6 +1750,22 @@ def is_noise_candidate(text: str) -> bool:
         return True
     if normalized.startswith("datum ") and " betreft " in normalized:
         return True
+    if normalized.startswith(("laatst bewerkt op:", "raadsnummer:", "onderwerpen binnen het sociaal domein")):
+        return True
+    if normalized.startswith(("informatie over deze onderwerpen volgt op een later moment", "de informatiepagina's over deze onderwerpen worden op een later moment toegevoegd")):
+        return True
+    if "ga terug naar de overzichtspagina" in normalized:
+        return True
+    if "ga direct naar het overzicht van de beleidsterreinen" in normalized:
+        return True
+    if "scroll naar beneden voor een overzicht van de informatiepagina's" in normalized:
+        return True
+    if "op deze pagina's leest u ook meer over de invloed van de gemeenteraad" in normalized:
+        return True
+    if "/page/" in text or "#subonderwerpen" in text or "searchbytag?search=" in text:
+        return True
+    if text.lstrip().startswith(("**[", "[beleid ", "[ga direct", "[informatiepagina ")):
+        return True
     if "www.rijksoverheid.nl" in normalized:
         return True
     return False
@@ -1978,7 +1999,7 @@ def build_manual_document_payload(document_id: str, inventory_map: dict[str, dic
         "document_level_summary": summary,
         "structured_content": structured_content,
         "quality_notes": {
-            "extraction_method": "manual_curated_phase3_top5_v1",
+            "extraction_method": "manual_curated_phase3_top5_v2",
             "limitations": [
                 "Summary statements are source-grounded syntheses rather than verbatim document sentences.",
                 "Where a source does not explicitly use D5/D6 language, related items are marked as contextual_relevance.",
@@ -2007,7 +2028,7 @@ def build_auto_document_payload(document_id: str, inventory_map: dict[str, dict]
         "document_level_summary": summary,
         "structured_content": structured_content,
         "quality_notes": {
-            "extraction_method": "auto_structural_phase3_all_docs_v2",
+            "extraction_method": "auto_structural_phase3_all_docs_v3",
             "limitations": [
                 "The non-manual documents use a conservative keyword-ranked extraction over structural chunks and table candidates.",
                 "Auto-selected statements stay close to source wording, so OCR noise and formatting artefacts may still appear.",

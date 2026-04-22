@@ -4,39 +4,36 @@
   "as_of_date": "2026-04-22",
   "summary": {
     "blocking": 0,
-    "warning": 2,
-    "review": 33,
-    "review_queue_item_count": 35,
+    "warning": 0,
+    "review": 26,
+    "review_queue_item_count": 26,
     "document_count": 18,
-    "master_claim_count": 187,
+    "master_claim_count": 186,
     "interpretation_topic_count": 41,
     "issue_counts_by_reason": {
       "authority_unclear": 8,
-      "extraction_noise_detected": 1,
       "municipality_relevance_inferred": 11,
-      "table_content_not_promoted": 4,
-      "table_extraction_missing": 2,
-      "unresolved_conflict": 9
+      "unresolved_conflict": 7
     }
   },
   "checks": [
     {
       "check_id": "document_payload_integrity",
       "description": "Document extraction metadata, evidence, page/section traceability, and table references.",
-      "status": "warn",
-      "issue_count": 6,
+      "status": "pass",
+      "issue_count": 0,
       "blocking_issue_count": 0,
-      "warning_issue_count": 2,
-      "review_issue_count": 4
+      "warning_issue_count": 0,
+      "review_issue_count": 0
     },
     {
       "check_id": "claim_payload_integrity",
       "description": "Per-document claim outputs, review-heavy contextual claims, and suspicious extraction noise.",
       "status": "warn",
-      "issue_count": 20,
+      "issue_count": 19,
       "blocking_issue_count": 0,
       "warning_issue_count": 0,
-      "review_issue_count": 20
+      "review_issue_count": 19
     },
     {
       "check_id": "claim_master_integrity",
@@ -51,10 +48,10 @@
       "check_id": "interpretation_integrity",
       "description": "Conflict register and current interpretation consistency.",
       "status": "warn",
-      "issue_count": 9,
+      "issue_count": 7,
       "blocking_issue_count": 0,
       "warning_issue_count": 0,
-      "review_issue_count": 9
+      "review_issue_count": 7
     },
     {
       "check_id": "view_integrity",

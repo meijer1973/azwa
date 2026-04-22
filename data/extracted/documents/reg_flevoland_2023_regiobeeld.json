@@ -1,7 +1,7 @@
 {
   "document_id": "reg_flevoland_2023_regiobeeld",
-  "extraction_run_id": "phase3_all_docs_v2",
-  "generated_on": "2026-04-21",
+  "extraction_run_id": "phase3_all_docs_v3",
+  "generated_on": "2026-04-22",
   "metadata": {
     "document_id": "reg_flevoland_2023_regiobeeld",
     "title": "Regiobeeld Flevoland 2023",
@@ -18,7 +18,7 @@
   "extraction_scope": {
     "contains_d5": false,
     "contains_d6": false,
-    "contains_structured_table": true,
+    "contains_structured_table": false,
     "contains_financial_framework": false,
     "contains_monitoring_framework": false,
     "contains_municipal_implications": true,
@@ -176,20 +176,20 @@
               "evidence_quote": "2015 2016 2017 2018 2019 2020 2021 2022 2023 2024 2025 2026 2027 2028 2029 2030",
               "page": 24,
               "section": "Page 24",
-              "table_id": null
+              "table_id": "reg_flevoland_2023_regiobeeld_table_014"
             }
           ]
         },
         {
           "statement_id": "reg_flevoland_2023_regiobeeld_timeline_and_status_002",
           "statement_type": "direct_extraction",
-          "statement": "2021 2022 2023 2024 2025 2026 2027 2028 2029 2030 2031 2032",
+          "statement": "2015 2016 2017 2018 2019 2020 2021 2022 1000 Jonger dan 25 jaar 25 tot 35 jaar 35 tot 45 jaar 0 2021 2022 2023 2024 2025 2026 2027 2028 2029 2030 2031 2032 45 tot 55 jaar 55 jaar of ouder",
           "evidence": [
             {
-              "evidence_quote": "2021 2022 2023 2024 2025 2026 2027 2028 2029 2030 2031 2032",
+              "evidence_quote": "2015 2016 2017 2018 2019 2020 2021 2022 1000 Jonger dan 25 jaar 25 tot 35 jaar 35 tot 45 jaar 0 2021 2022 2023 2024 2025 2026 2027 2028 2029 2030 2031 2032 45 tot 55 jaar 55 jaar of ouder",
               "page": 59,
               "section": "Page 59",
-              "table_id": null
+              "table_id": "reg_flevoland_2023_regiobeeld_table_046"
             }
           ]
         }
@@ -287,7 +287,7 @@
     }
   },
   "quality_notes": {
-    "extraction_method": "auto_structural_phase3_all_docs_v2",
+    "extraction_method": "auto_structural_phase3_all_docs_v3",
     "limitations": [
       "The non-manual documents use a conservative keyword-ranked extraction over structural chunks and table candidates.",
       "Auto-selected statements stay close to source wording, so OCR noise and formatting artefacts may still appear.",

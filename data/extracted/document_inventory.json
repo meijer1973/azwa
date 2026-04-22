@@ -1,6 +1,6 @@
 {
   "inventory_version": 1,
-  "generated_on": "2026-04-21",
+  "generated_on": "2026-04-22",
   "source_manifest": "data/raw/manifest.json",
   "documents": [
     {
@@ -102,14 +102,14 @@
       "curation_bucket": "canonical",
       "contains_d5": false,
       "contains_d6": false,
-      "contains_structured_tables": true,
+      "contains_structured_tables": false,
       "contains_financing_logic": true,
       "contains_governance_logic": true,
       "contains_monitoring_evaluation_logic": true,
       "contains_municipal_implications": true,
       "priority_rank": 4,
       "extraction_priority": "critical",
-      "inventory_notes": "Regional IZA implementation plan with strong governance, monitoring, and Almere relevance."
+      "inventory_notes": "Regional IZA implementation plan with strong governance, monitoring, and Almere relevance; it contains structured visuals, but not stable table evidence we currently want to treat as table-bearing for downstream extraction."
     },
     {
       "document_id": "mun_almere_pga_transformatieplan",
@@ -318,14 +318,14 @@
       "curation_bucket": "canonical",
       "contains_d5": false,
       "contains_d6": false,
-      "contains_structured_tables": true,
+      "contains_structured_tables": false,
       "contains_financing_logic": false,
       "contains_governance_logic": false,
       "contains_monitoring_evaluation_logic": false,
       "contains_municipal_implications": true,
       "priority_rank": 12,
       "extraction_priority": "medium",
-      "inventory_notes": "Regional baseline evidence report for needs, pressures, and context rather than normative policy content."
+      "inventory_notes": "Regional baseline evidence report for needs, pressures, and context rather than normative policy content; the current corpus behaves as narrative/regional evidence, not as a reliable table source."
     },
     {
       "document_id": "nat_vng_azwa_faq_middelen",
@@ -506,7 +506,7 @@
     "topic_signal_counts": {
       "contains_d5": 5,
       "contains_d6": 5,
-      "contains_structured_tables": 8,
+      "contains_structured_tables": 6,
       "contains_financing_logic": 10,
       "contains_governance_logic": 14,
       "contains_monitoring_evaluation_logic": 11,

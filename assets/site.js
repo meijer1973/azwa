@@ -193,9 +193,36 @@
     }
   }
 
+  function revealHashTarget() {
+    if (!window.location.hash) {
+      return;
+    }
+
+    var targetId = decodeURIComponent(window.location.hash.slice(1));
+    if (!targetId) {
+      return;
+    }
+
+    var target = document.getElementById(targetId);
+    if (!target) {
+      return;
+    }
+
+    var current = target;
+    while (current) {
+      if (current.tagName === "DETAILS") {
+        current.open = true;
+      }
+      current = current.parentElement;
+    }
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     initSearch();
     initDashboardFilters();
     initIssueFilters();
+    revealHashTarget();
   });
+
+  window.addEventListener("hashchange", revealHashTarget);
 })();

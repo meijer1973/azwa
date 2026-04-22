@@ -25,6 +25,7 @@ DOCUMENTS_DIR = EXTRACTED_DIR / "documents"
 HOME_VIEW_PATH = SITE_DIR / "site_home_view.json"
 ALMERE_SITE_VIEW_PATH = SITE_DIR / "site_almere_view.json"
 DASHBOARD_VIEW_PATH = SITE_DIR / "dashboard_view.json"
+TIMELINE_REGISTER_PATH = SITE_DIR / "timeline_register.json"
 TIMELINE_VIEW_PATH = SITE_DIR / "site_timeline_view.json"
 THEMES_VIEW_PATH = SITE_DIR / "site_themes_view.json"
 REFERENCE_VIEW_PATH = SITE_DIR / "site_reference_view.json"
@@ -36,7 +37,7 @@ THEME_DIR = SITE_DIR / "theme_view_models"
 REFERENCE_TOPIC_DIR = SITE_DIR / "reference_topic_view_models"
 SOURCE_VIEW_DIR = SITE_DIR / "source_view_models"
 
-SITE_RUN_ID = "phase14_site_views_v1"
+SITE_RUN_ID = "phase15_site_views_v1"
 TODAY = date.today().isoformat()
 
 
@@ -298,6 +299,250 @@ ACTION_BLUEPRINTS = [
     },
 ]
 
+TIMELINE_DOCUMENT_SPECS = [
+    {
+        "document_id": "nat_iza_2022_integraal_zorgakkoord",
+        "summary": "IZA legt het regionale samenwerkingsspoor vast waar latere D5/D6-uitwerking voor gemeenten en regio's op voortbouwt.",
+        "linked_domain": "D5 en D6",
+        "relation_type": "legt basis",
+        "consequence_for_almere": "Maakt zichtbaar dat Almere zich in regionale en lokale uitwerking moet verhouden tot het bredere IZA-spoor.",
+    },
+    {
+        "document_id": "nat_gala_2023_gezond_en_actief_leven",
+        "summary": "GALA verbindt landelijke gezondheidsdoelen aan regionale en lokale uitvoering, waaronder ketenaanpakken die later ook in D5 terugkomen.",
+        "linked_domain": "D5 en D6",
+        "relation_type": "verbreedt",
+        "consequence_for_almere": "Onderstreept dat landelijke doelen rond gezondheid en preventie lokaal herkenbaar gemaakt moeten worden.",
+    },
+    {
+        "document_id": "nat_azwa_2025_definitief",
+        "summary": "Het definitieve AZWA brengt D5 en D6 expliciet in de landelijke bestuurlijke lijn, inclusief werkagenda's, governance en evaluatiemomenten.",
+        "linked_domain": "D5 en D6",
+        "relation_type": "stelt vast",
+        "consequence_for_almere": "Vanaf dit moment is er een duidelijke nationale basis waar Almere zich bestuurlijk toe moet verhouden.",
+    },
+    {
+        "document_id": "nat_azwa_2025_aanbiedingsbrief",
+        "summary": "De aanbiedingsbrief plaatst het akkoord formeel in het parlementaire en bestuurlijke vervolgspoor.",
+        "linked_domain": "D5 en D6",
+        "relation_type": "formaliseert",
+        "consequence_for_almere": "Markeert dat de landelijke afspraken niet alleen inhoudelijk maar ook bestuurlijk worden doorgezet.",
+    },
+    {
+        "document_id": "nat_azwa_2026_cw31_kader_d5_d6",
+        "summary": "CW 3.1 werkt de ordening van basisfunctionaliteiten en basisinfrastructuur verder uit en maakt de D5/D6-kaders concreter.",
+        "linked_domain": "D5 en D6",
+        "relation_type": "werkt uit",
+        "consequence_for_almere": "Geeft Almere en Flevoland een concreter referentiekader voor lokale en regionale vertaling.",
+    },
+    {
+        "document_id": "nat_azwa_2026_voortgang_kamerbrief",
+        "summary": "De voortgangsbrief beschrijft de implementatiestand en scherpt het bestuurlijke beeld rond D5, D6 en monitoring verder aan.",
+        "linked_domain": "D5 en D6",
+        "relation_type": "verduidelijkt",
+        "consequence_for_almere": "Geeft richting aan welke onderdelen voor Almere bestuurlijk nog explicitering vragen.",
+    },
+]
+
+TIMELINE_REFERENCE_SPECS = [
+    {
+        "entry_key": "d5_landelijk_kader_q4_2025",
+        "date_label": "Q4 2025",
+        "sort_key": "2025-12-31",
+        "date_granularity": "quarter",
+        "title": "Landelijk D5-kader vaststellen in BO IZA/AZWA",
+        "summary": "In de akkoordtekst staat dat het landelijk D5-kader uiterlijk in Q4 2025 wordt vastgesteld en daarna periodiek wordt herijkt.",
+        "linked_domain": "D5",
+        "relation_type": "besluitmoment",
+        "entry_type": "toekomstige beleidsstap",
+        "consequence_for_almere": "Bepaalt welk landelijk referentiekader Almere gebruikt voor lokale en regionale vertaling van D5.",
+        "claim_ids": [
+            "clm__nat_azwa_2025_definitief_timeline_and_status_001"
+        ],
+        "topic_keys": [
+            "timeline.d5_d6_implementation"
+        ],
+        "timeline_note": "Expliciete tijdverwijzing in de nationale akkoordtekst.",
+    },
+    {
+        "entry_key": "d5_governance_q1_2026",
+        "date_label": "Q1 2026",
+        "sort_key": "2026-03-31",
+        "date_granularity": "quarter",
+        "title": "Governance voor beheer van de gereedschapskist uitwerken",
+        "summary": "In de akkoordtekst staat dat VNG, ZN en VWS uiterlijk in Q1 2026 de governance voor beheer van de gereedschapskist en verdere uitwerking uitwerken.",
+        "linked_domain": "D5",
+        "relation_type": "uitwerking",
+        "entry_type": "beleidsuitwerking",
+        "consequence_for_almere": "Geeft meer duidelijkheid over de landelijke werkwijze waarmee Almere D5-onderdelen bestuurlijk moet volgen en vertalen.",
+        "claim_ids": [
+            "clm__nat_azwa_2025_definitief_timeline_and_status_001"
+        ],
+        "topic_keys": [
+            "timeline.d5_d6_implementation"
+        ],
+        "timeline_note": "Expliciete tijdverwijzing in de nationale akkoordtekst.",
+    },
+    {
+        "entry_key": "d6_regie_q1_2026",
+        "date_label": "Q1 2026",
+        "sort_key": "2026-03-31",
+        "date_granularity": "quarter",
+        "title": "Regionale afspraken over D6-structuur en regie bij ketenaanpakken",
+        "summary": "In de akkoordtekst staat dat uiterlijk in Q1 2026 afspraken worden gemaakt over regionale structuurversterking, regie en aansluiting van stevige lokale teams.",
+        "linked_domain": "D6",
+        "relation_type": "uitwerking",
+        "entry_type": "beleidsuitwerking",
+        "consequence_for_almere": "Raakt direct aan de vraag hoe Almere lokale teams, wijkverbanden en bestuurlijke regie publiek en bestuurlijk positioneert.",
+        "claim_ids": [
+            "clm__nat_azwa_2025_definitief_d6_002"
+        ],
+        "topic_keys": [
+            "d6.local_teams",
+            "timeline.rollout_2030"
+        ],
+        "timeline_note": "Expliciete tijdverwijzing in de nationale akkoordtekst.",
+    },
+    {
+        "entry_key": "mid_term_review_begin_2027",
+        "date_label": "begin 2027",
+        "sort_key": "2027-01-01",
+        "date_granularity": "period",
+        "title": "Tussentijdse evaluatie van IZA/AZWA",
+        "summary": "De huidige interpretatielaag houdt vast aan een tussentijds evaluatiemoment begin 2027 waarin afspraken, middeleninzet en bestuurlijke accenten kunnen worden aangescherpt.",
+        "linked_domain": "D5 en D6",
+        "relation_type": "evaluatie",
+        "entry_type": "toekomstig evaluatiemoment",
+        "consequence_for_almere": "Kan leiden tot bijstelling van afspraken en vraagt dus dat Almere uiterlijk dan een navolgbaar lokaal beeld heeft van voortgang en keuzes.",
+        "claim_ids": [
+            "clm__nat_azwa_2025_definitief_monitoring_and_evaluation_002",
+            "clm__nat_azwa_2026_voortgang_kamerbrief_monitoring_and_evaluation_001"
+        ],
+        "topic_keys": [
+            "monitoring.mid_term_review"
+        ],
+        "timeline_note": "Huidige lijn uit de interpretatielaag, gebaseerd op twee nationale bronnen.",
+    },
+    {
+        "entry_key": "decision_2028_before_july_2027",
+        "date_label": "voor 1 juli 2027",
+        "sort_key": "2027-07-01",
+        "date_granularity": "deadline",
+        "title": "Bestuurlijke besluitvorming over koers richting 2028",
+        "summary": "De huidige interpretatielaag houdt vast aan besluitvorming voor 1 juli 2027 over 2028, inclusief mogelijke aanpassingen van afspraken of middeleninzet.",
+        "linked_domain": "D5 en D6",
+        "relation_type": "besluitmoment",
+        "entry_type": "toekomstig besluitmoment",
+        "consequence_for_almere": "Dit is een logisch ijkpunt waarop Almere de eigen lijn naast landelijke keuzes moet leggen en waar nodig lokale besluitvorming voorbereidt.",
+        "claim_ids": [
+            "clm__nat_azwa_2025_definitief_monitoring_and_evaluation_002"
+        ],
+        "topic_keys": [
+            "monitoring.mid_term_review"
+        ],
+        "timeline_note": "Expliciete deadline in de nationale akkoordtekst.",
+    },
+    {
+        "entry_key": "startpakket_2027_2028",
+        "date_label": "2027-2028",
+        "sort_key": "2027-07-02",
+        "date_granularity": "period",
+        "title": "Startpakket sociaal domein en evaluatieperiode",
+        "summary": "De huidige interpretatielaag houdt vast aan een tweejarig startpakket voor 2027-2028 om maatregelen uit te werken en te evalueren, met een route naar structurele financiering.",
+        "linked_domain": "D5 en D6",
+        "relation_type": "financieringsvenster",
+        "entry_type": "toekomstige financieringsstap",
+        "consequence_for_almere": "Maakt zichtbaar dat lokale keuzes over inzet, eigenaarschap en verantwoording tijdig voorbereid moeten zijn voordat het financieringsvenster opent.",
+        "claim_ids": [
+            "clm__nat_azwa_2025_definitief_governance_and_finance_002"
+        ],
+        "topic_keys": [
+            "finance.d5_d6.municipal_funding"
+        ],
+        "timeline_note": "Expliciete meerjarige verwijzing in de nationale akkoordtekst.",
+    },
+    {
+        "entry_key": "update_2028",
+        "date_label": "2028",
+        "sort_key": "2028-01-01",
+        "date_granularity": "year",
+        "title": "Actualisatie van basisfunctionaliteiten",
+        "summary": "De huidige interpretatielaag houdt vast aan een actualisatie van de basisfunctionaliteiten in 2028 op basis van monitoring en evaluatie.",
+        "linked_domain": "D5",
+        "relation_type": "actualisatie",
+        "entry_type": "toekomstige beleidsstap",
+        "consequence_for_almere": "Nieuwe landelijke duiding kan lokale prioritering, publieke verantwoording en de keuze van interventies opnieuw raken.",
+        "claim_ids": [
+            "clm__nat_azwa_2026_cw31_kader_d5_d6_monitoring_and_evaluation_001"
+        ],
+        "topic_keys": [
+            "monitoring.update_2028"
+        ],
+        "timeline_note": "Huidige lijn uit CW 3.1 en de interpretatielaag.",
+    },
+    {
+        "entry_key": "d6_q4_2028_local_teams",
+        "date_label": "Q4 2028",
+        "sort_key": "2028-10-01",
+        "date_granularity": "quarter",
+        "title": "Aansluiting van lokale teams in hechte wijkverbanden overal gereed",
+        "summary": "De nationale akkoordtekst zegt dat de aansluiting van stevige lokale teams in hechte wijkverbanden uiterlijk in Q4 2028 overal gereed moet zijn.",
+        "linked_domain": "D6",
+        "relation_type": "implementatiehorizon",
+        "entry_type": "toekomstige uitvoeringshorizon",
+        "consequence_for_almere": "Legt een duidelijke landelijke eindhorizon onder de lokale vraag hoe Almere D6-structuur en wijkverbanden bestuurlijk en publiek zichtbaar maakt.",
+        "claim_ids": [
+            "clm__nat_azwa_2025_definitief_timeline_and_status_002"
+        ],
+        "topic_keys": [
+            "timeline.rollout_2030",
+            "d6.local_teams"
+        ],
+        "timeline_note": "Expliciete horizon in de nationale akkoordtekst.",
+    },
+    {
+        "entry_key": "almere_impact_2029",
+        "date_label": "2029",
+        "sort_key": "2029-01-01",
+        "date_granularity": "year",
+        "title": "Lokale impacthorizon Positief Gezond Almere",
+        "summary": "Het lokale transformatieplan koppelt leren en monitoring aan concrete impactdoelen die Almere in 2029 wil bereiken.",
+        "linked_domain": "D5 en D6",
+        "relation_type": "lokale horizon",
+        "entry_type": "lokale uitvoeringshorizon",
+        "consequence_for_almere": "Maakt zichtbaar dat Almere naast landelijke termijnen ook een eigen lokale resultaatshorizon heeft waar keuzes en monitoring op moeten aansluiten.",
+        "claim_ids": [
+            "clm__mun_almere_pga_transformatieplan_timeline_and_status_001",
+            "clm__mun_almere_pga_transformatieplan_monitoring_and_evaluation_002"
+        ],
+        "topic_keys": [
+            "timeline.almere_2029",
+            "monitoring.local_goal_tracking"
+        ],
+        "timeline_note": "Lokale horizon uit het transformatieplan; nuttig voor bestuurlijke planning maar geen landelijke norm.",
+    },
+    {
+        "entry_key": "rollout_2030",
+        "date_label": "2030",
+        "sort_key": "2030-01-01",
+        "date_granularity": "year",
+        "title": "Landelijke dekking van bekende basisfunctionaliteiten",
+        "summary": "De huidige interpretatielaag houdt vast aan de landelijke horizon om met de bekende basisfunctionaliteiten naar dekking in 2030 toe te werken.",
+        "linked_domain": "D5",
+        "relation_type": "landelijke horizon",
+        "entry_type": "toekomstige uitvoeringshorizon",
+        "consequence_for_almere": "Geeft de langste horizon voor lokale en regionale uitwerking en maakt zichtbaar dat huidige keuzes onderdeel zijn van een meerjarige landelijke route.",
+        "claim_ids": [
+            "clm__nat_azwa_2025_definitief_timeline_and_status_002",
+            "clm__nat_azwa_2026_voortgang_kamerbrief_timeline_and_status_002"
+        ],
+        "topic_keys": [
+            "timeline.rollout_2030"
+        ],
+        "timeline_note": "Huidige lijn uit nationale bronnen en de interpretatielaag.",
+    },
+]
+
 
 def load_json(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
@@ -349,6 +594,10 @@ def document_payload_map() -> dict[str, dict]:
 
 def current_interpretation_topics() -> list[dict]:
     return load_json(CURRENT_INTERPRETATION_PATH)["topics"]
+
+
+def current_topic_lookup(entries: list[dict]) -> dict[str, dict]:
+    return {entry["topic"]: entry for entry in entries}
 
 
 def theme_definitions() -> list[dict]:
@@ -566,55 +815,155 @@ def timeline_anchor(seed: str) -> str:
     return f"tijdlijn-{slugify(seed)}"
 
 
-def document_timeline_entry(
-    document_id: str,
-    documents: dict[str, dict],
-    summary: str,
-    linked_domain: str,
-    relation_type: str,
-    consequence_for_almere: str,
-) -> dict:
-    document = documents[document_id]
-    entry_id = timeline_anchor(f"{document['publication_date']}-{document_id}")
+def timeline_year(sort_key: str) -> str:
+    return sort_key[:4]
+
+
+def timeline_temporal_status(sort_key: str, as_of_date: str = TODAY) -> str:
+    if sort_key < as_of_date:
+        return "verstreken referentie"
+    if sort_key[:4] == as_of_date[:4]:
+        return "lopende periode"
+    return "toekomstige referentie"
+
+
+def timeline_entry_type_label(value: str) -> str:
+    labels = {
+        "bronmoment": "brondocument",
+        "toekomstige beleidsstap": "beleidsstap",
+        "beleidsuitwerking": "beleidsuitwerking",
+        "toekomstig evaluatiemoment": "evaluatiemoment",
+        "toekomstig besluitmoment": "besluitmoment",
+        "toekomstige financieringsstap": "financieringsstap",
+        "toekomstige uitvoeringshorizon": "uitvoeringshorizon",
+        "lokale uitvoeringshorizon": "lokale horizon",
+    }
+    return labels.get(value, value)
+
+
+def timeline_document_ref(document: dict, topics: list[str] | None = None) -> dict:
     return {
-        "entry_id": entry_id,
-        "date_label": document["publication_date"],
+        "document_id": document["document_id"],
         "title": document["title"],
-        "summary": summary,
-        "linked_domain": linked_domain,
-        "relation_type": relation_type,
-        "consequence_for_almere": consequence_for_almere,
-        "entry_type": "bronmoment",
+        "publisher": document["publisher"],
+        "publication_date": document["publication_date"],
+        "document_type": document["document_type"],
+        "jurisdiction_level": document["jurisdiction_level"],
+        "status": document["status"],
         "source_url": document["source_url"],
-        "source_label": f"{document['publisher']} ({document['document_type']})",
-        "page_url": f"/timeline/#{entry_id}",
-        "sort_key": document["publication_date"],
+        "page_url": source_page_url(document),
+        "topics": topics or [],
     }
 
 
-def milestone_timeline_entry(
-    date_label: str,
-    title: str,
-    summary: str,
-    linked_domain: str,
-    relation_type: str,
-    consequence_for_almere: str,
-    sort_key: str,
-) -> dict:
-    entry_id = timeline_anchor(f"{sort_key}-{title}")
+def topics_for_claim_ids(claim_ids: list[str], claims: dict[str, dict]) -> list[str]:
+    return dedupe([claims[claim_id]["topic"] for claim_id in claim_ids if claim_id in claims])
+
+
+def source_notes_for_claim_ids(claim_ids: list[str], claims: dict[str, dict]) -> list[str]:
+    notes = []
+    for claim_id in claim_ids:
+        claim = claims.get(claim_id)
+        if claim is None:
+            continue
+        note = authority_note(claim)
+        if note:
+            notes.append(note)
+    return dedupe(notes)
+
+
+def source_basis_for_claim_ids(claim_ids: list[str], claims: dict[str, dict], documents: dict[str, dict]) -> list[dict]:
+    return document_refs_from_claim_ids(claim_ids, claims, documents)
+
+
+def related_timeline_models(
+    models: list[dict],
+    claim_ids: list[str],
+    topic_keys: list[str],
+    claims: dict[str, dict],
+    id_key: str,
+) -> list[dict]:
+    claim_set = set(claim_ids)
+    topic_set = set(topic_keys)
+    related: list[dict] = []
+    for model in models:
+        model_claim_ids = [claim_id for claim_id in model.get("supporting_claim_ids", []) if claim_id in claims]
+        model_topics = set(topics_for_claim_ids(model_claim_ids, claims))
+        if claim_set.intersection(model_claim_ids) or topic_set.intersection(model_topics):
+            related.append(
+                {
+                    id_key: model[id_key],
+                    "title": model["title"],
+                    "status": model["status"],
+                    "page_url": model["page_url"],
+                }
+            )
+    related.sort(key=lambda item: item["title"])
+    return related
+
+
+def document_timeline_entry_from_spec(spec: dict, documents: dict[str, dict]) -> dict:
+    document = documents[spec["document_id"]]
+    entry_id = timeline_anchor(f"{document['publication_date']}-{document['document_id']}")
     return {
         "entry_id": entry_id,
-        "date_label": date_label,
-        "title": title,
-        "summary": summary,
-        "linked_domain": linked_domain,
-        "relation_type": relation_type,
-        "consequence_for_almere": consequence_for_almere,
-        "entry_type": "mijlpaal",
-        "source_url": None,
-        "source_label": "Afgeleid uit de huidige interpretatielaag",
+        "year": timeline_year(document["publication_date"]),
+        "date_label": document["publication_date"],
+        "date_granularity": "date",
+        "sort_key": document["publication_date"],
+        "temporal_status": timeline_temporal_status(document["publication_date"]),
+        "title": document["title"],
+        "summary": spec["summary"],
+        "linked_domain": spec["linked_domain"],
+        "relation_type": spec["relation_type"],
+        "entry_type": "bronmoment",
+        "entry_type_label": timeline_entry_type_label("bronmoment"),
+        "consequence_for_almere": spec["consequence_for_almere"],
+        "timeline_note": "Bronmoment in de beleidslijn.",
+        "needs_human_review": False,
+        "source_basis": [timeline_document_ref(document)],
+        "source_notes": [],
+        "linked_decisions": [],
+        "linked_actions": [],
         "page_url": f"/timeline/#{entry_id}",
-        "sort_key": sort_key,
+    }
+
+
+def reference_timeline_entry_from_spec(
+    spec: dict,
+    claims: dict[str, dict],
+    documents: dict[str, dict],
+    current_topics: dict[str, dict],
+    decision_models: list[dict],
+    action_models: list[dict],
+) -> dict:
+    claim_ids = [claim_id for claim_id in spec["claim_ids"] if claim_id in claims]
+    topic_keys = dedupe(spec.get("topic_keys", []) + topics_for_claim_ids(claim_ids, claims))
+    needs_human_review = any(current_topics.get(topic, {}).get("needs_human_review") for topic in topic_keys)
+    entry_id = timeline_anchor(f"{spec['sort_key']}-{spec['entry_key']}")
+    return {
+        "entry_id": entry_id,
+        "year": timeline_year(spec["sort_key"]),
+        "date_label": spec["date_label"],
+        "date_granularity": spec["date_granularity"],
+        "sort_key": spec["sort_key"],
+        "temporal_status": timeline_temporal_status(spec["sort_key"]),
+        "title": spec["title"],
+        "summary": spec["summary"],
+        "linked_domain": spec["linked_domain"],
+        "relation_type": spec["relation_type"],
+        "entry_type": spec["entry_type"],
+        "entry_type_label": timeline_entry_type_label(spec["entry_type"]),
+        "consequence_for_almere": spec["consequence_for_almere"],
+        "timeline_note": spec["timeline_note"],
+        "needs_human_review": needs_human_review,
+        "supporting_claim_ids": claim_ids,
+        "topic_keys": topic_keys,
+        "source_basis": source_basis_for_claim_ids(claim_ids, claims, documents),
+        "source_notes": source_notes_for_claim_ids(claim_ids, claims),
+        "linked_decisions": related_timeline_models(decision_models, claim_ids, topic_keys, claims, "decision_id"),
+        "linked_actions": related_timeline_models(action_models, claim_ids, topic_keys, claims, "action_id"),
+        "page_url": f"/timeline/#{entry_id}",
     }
 
 
@@ -1209,105 +1558,82 @@ def build_recent_changes(document_payloads: dict[str, dict], documents: dict[str
     return entries[:5]
 
 
-def timeline_entries(documents: dict[str, dict]) -> list[dict]:
+def build_timeline_register(
+    documents: dict[str, dict],
+    claims: dict[str, dict],
+    current_topics: list[dict],
+    decision_models: list[dict],
+    action_models: list[dict],
+) -> dict:
+    current_topic_map = current_topic_lookup(current_topics)
     entries = [
-        document_timeline_entry(
-            "nat_iza_2022_integraal_zorgakkoord",
-            documents,
-            "IZA legt het regionale samenwerkingsspoor vast waar latere D5/D6-uitwerking voor gemeenten en regio's op voortbouwt.",
-            "D5 en D6",
-            "legt basis",
-            "Maakt zichtbaar dat Almere zich in regionale en lokale uitwerking moet verhouden tot het bredere IZA-spoor.",
-        ),
-        document_timeline_entry(
-            "nat_gala_2023_gezond_en_actief_leven",
-            documents,
-            "GALA verbindt landelijke gezondheidsdoelen aan regionale en lokale uitvoering, waaronder ketenaanpakken die later ook in D5 terugkomen.",
-            "D5 en D6",
-            "verbreedt",
-            "Onderstreept dat landelijke doelen rond gezondheid en preventie lokaal herkenbaar gemaakt moeten worden.",
-        ),
-        document_timeline_entry(
-            "nat_azwa_2025_definitief",
-            documents,
-            "Het definitieve AZWA brengt D5 en D6 expliciet in de landelijke bestuurlijke lijn, inclusief werkagenda's, governance en evaluatiemomenten.",
-            "D5 en D6",
-            "stelt vast",
-            "Vanaf dit moment is er een duidelijke nationale basis waar Almere zich bestuurlijk toe moet verhouden.",
-        ),
-        document_timeline_entry(
-            "nat_azwa_2025_aanbiedingsbrief",
-            documents,
-            "De aanbiedingsbrief plaatst het akkoord formeel in het parlementaire en bestuurlijke vervolgspoor.",
-            "D5 en D6",
-            "formaliseert",
-            "Markeert dat de landelijke afspraken niet alleen inhoudelijk maar ook bestuurlijk worden doorgezet.",
-        ),
-        document_timeline_entry(
-            "nat_azwa_2026_cw31_kader_d5_d6",
-            documents,
-            "CW 3.1 werkt de ordening van basisfunctionaliteiten en basisinfrastructuur verder uit en maakt de D5/D6-kaders concreter.",
-            "D5 en D6",
-            "werkt uit",
-            "Geeft Almere en Flevoland een concreter referentiekader voor lokale en regionale vertaling.",
-        ),
-        document_timeline_entry(
-            "nat_azwa_2026_voortgang_kamerbrief",
-            documents,
-            "De voortgangsbrief beschrijft de implementatiestand en scherpt het bestuurlijke beeld rond D5, D6 en monitoring verder aan.",
-            "D5 en D6",
-            "verduidelijkt",
-            "Geeft richting aan welke onderdelen voor Almere bestuurlijk nog explicitering vragen.",
-        ),
-        milestone_timeline_entry(
-            "begin 2027",
-            "Tussentijds evaluatiemoment",
-            "In de landelijke bronbasis staat een tussentijds evaluatiemoment voorzien waarmee afspraken kunnen worden aangescherpt of bijgesteld.",
-            "D5 en D6",
-            "evalueert",
-            "Kan leiden tot bijstelling van afspraken, middeleninzet en bestuurlijke accenten.",
-            "2027-01-01",
-        ),
-        milestone_timeline_entry(
-            "voor 1 juli 2027",
-            "Besluitvorming richting 2028",
-            "Voor de verdere koers richting 2028 is bestuurlijke besluitvorming voorzien op basis van monitoring en voortgang.",
-            "D5 en D6",
-            "besluit",
-            "Geeft een bestuurlijk moment waarop Almere de eigen lijn naast de landelijke koers moet leggen.",
-            "2027-07-01",
-        ),
-        milestone_timeline_entry(
-            "2028",
-            "Actualisatie van basisfunctionaliteiten",
-            "De bronbasis verwijst naar een actualisatie op basis van monitoring en evaluatie in 2028.",
-            "D5",
-            "actualiseert",
-            "Nieuwe landelijke duiding kan lokale keuzes of publieke verantwoording opnieuw raken.",
-            "2028-01-01",
-        ),
-        milestone_timeline_entry(
-            "2030",
-            "Landelijke dekking van bekende basisfunctionaliteiten",
-            "De landelijke inzet werkt toe naar bredere dekking van de bekende basisfunctionaliteiten vanaf 2030.",
-            "D5",
-            "werkt toe naar",
-            "Geeft de langere horizon voor lokale en regionale uitwerking.",
-            "2030-01-01",
-        ),
+        document_timeline_entry_from_spec(spec, documents)
+        for spec in TIMELINE_DOCUMENT_SPECS
     ]
+    entries.extend(
+        reference_timeline_entry_from_spec(spec, claims, documents, current_topic_map, decision_models, action_models)
+        for spec in TIMELINE_REFERENCE_SPECS
+    )
     entries.sort(key=lambda item: (item["sort_key"], item["title"]))
-    return entries
 
+    year_counts: dict[str, dict[str, int]] = defaultdict(lambda: {"entries": 0, "future": 0, "documents": 0})
+    for entry in entries:
+        year_counts[entry["year"]]["entries"] += 1
+        if entry["entry_type"] == "bronmoment":
+            year_counts[entry["year"]]["documents"] += 1
+        if entry["temporal_status"] == "toekomstige referentie":
+            year_counts[entry["year"]]["future"] += 1
 
-def build_timeline_view(documents: dict[str, dict]) -> dict:
-    entries = timeline_entries(documents)
+    years = [
+        {
+            "year": year,
+            "entry_count": year_counts[year]["entries"],
+            "future_count": year_counts[year]["future"],
+            "document_count": year_counts[year]["documents"],
+            "page_url": f"/timeline/#jaar-{year}",
+        }
+        for year in sorted(year_counts.keys())
+    ]
+
     return {
-        "view_run_id": SITE_RUN_ID,
+        "register_run_id": SITE_RUN_ID,
         "generated_on": TODAY,
         "as_of_date": TODAY,
-        "title": "Tijdlijn",
+        "default_open_year": TODAY[:4],
         "entries": entries,
+        "years": years,
+    }
+
+
+def build_timeline_view(timeline_register: dict) -> dict:
+    grouped_entries: dict[str, list[dict]] = defaultdict(list)
+    for entry in timeline_register["entries"]:
+        grouped_entries[entry["year"]].append(entry)
+
+    year_groups = []
+    for year in sorted(grouped_entries.keys(), reverse=True):
+        entries = grouped_entries[year]
+        year_groups.append(
+            {
+                "year": year,
+                "anchor_id": f"jaar-{year}",
+                "default_open": year == timeline_register["default_open_year"],
+                "entry_count": len(entries),
+                "future_count": sum(1 for entry in entries if entry["temporal_status"] == "toekomstige referentie"),
+                "document_count": sum(1 for entry in entries if entry["entry_type"] == "bronmoment"),
+                "entries": entries,
+            }
+        )
+
+    return {
+        "view_run_id": SITE_RUN_ID,
+        "generated_on": timeline_register["generated_on"],
+        "as_of_date": timeline_register["as_of_date"],
+        "title": "Tijdlijn",
+        "default_open_year": timeline_register["default_open_year"],
+        "year_summaries": timeline_register["years"],
+        "year_groups": year_groups,
+        "entries": timeline_register["entries"],
     }
 
 
@@ -1319,6 +1645,7 @@ def build_home_view(
     review_queue: dict,
     document_payloads: dict[str, dict],
     documents: dict[str, dict],
+    timeline_register: dict,
 ) -> dict:
     implementation_status_blocks = [
         {
@@ -1374,7 +1701,7 @@ def build_home_view(
         "concretisering van D5 en D6, regie en governance, financiering en monitoring. "
         "De landelijke basis is zichtbaar, maar een deel van de lokale doorvertaling is in openbare Almere-documenten nog niet expliciet."
     )
-    near_term_timeline = [entry for entry in timeline_entries(documents) if entry["sort_key"] >= "2025-01-01"][:6]
+    near_term_timeline = [entry for entry in timeline_register["entries"] if entry["sort_key"] >= "2025-01-01"][:6]
 
     return {
         "view_run_id": SITE_RUN_ID,
@@ -2167,6 +2494,7 @@ def main() -> None:
 
     decision_models = build_decision_models(almere_view, claims, documents, themes)
     action_models = build_action_models(almere_view, claims, documents, decision_models)
+    timeline_register = build_timeline_register(documents, claims, current_topics, decision_models, action_models)
     theme_models = build_theme_models(themes, current_topics, almere_view, decision_models, action_models, claims, documents)
     source_models = build_source_view_models(documents, document_payloads, claims, decision_models, action_models, themes)
     reference_topic_models = build_reference_topic_models(current_topics, themes, decision_models, action_models, claims, documents)
@@ -2178,10 +2506,11 @@ def main() -> None:
         review_queue,
         document_payloads,
         documents,
+        timeline_register,
     )
     almere_site_view = build_almere_site_view(almere_view, decision_models, action_models, review_queue, claims, documents)
     dashboard_view = build_dashboard_view(almere_view, decision_models, action_models)
-    timeline_view = build_timeline_view(documents)
+    timeline_view = build_timeline_view(timeline_register)
     themes_view = build_themes_view(theme_models)
     reference_view = build_reference_view(reference_topic_models, source_models)
     sources_view = build_sources_view(source_models)
@@ -2190,6 +2519,7 @@ def main() -> None:
     write_json(HOME_VIEW_PATH, home_view)
     write_json(ALMERE_SITE_VIEW_PATH, almere_site_view)
     write_json(DASHBOARD_VIEW_PATH, dashboard_view)
+    write_json(TIMELINE_REGISTER_PATH, timeline_register)
     write_json(TIMELINE_VIEW_PATH, timeline_view)
     write_json(THEMES_VIEW_PATH, themes_view)
     write_json(REFERENCE_VIEW_PATH, reference_view)
@@ -2215,6 +2545,7 @@ def main() -> None:
     print(f"Wrote {HOME_VIEW_PATH.relative_to(REPO_ROOT).as_posix()}")
     print(f"Wrote {ALMERE_SITE_VIEW_PATH.relative_to(REPO_ROOT).as_posix()}")
     print(f"Wrote {DASHBOARD_VIEW_PATH.relative_to(REPO_ROOT).as_posix()}")
+    print(f"Wrote {TIMELINE_REGISTER_PATH.relative_to(REPO_ROOT).as_posix()}")
     print(f"Wrote {TIMELINE_VIEW_PATH.relative_to(REPO_ROOT).as_posix()}")
     print(f"Wrote {THEMES_VIEW_PATH.relative_to(REPO_ROOT).as_posix()}")
     print(f"Wrote {REFERENCE_VIEW_PATH.relative_to(REPO_ROOT).as_posix()}")

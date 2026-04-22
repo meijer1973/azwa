@@ -186,6 +186,15 @@ def render_link_pills(current_route: str, items: list[dict]) -> str:
     return '<div class="tag-row tag-row--links">' + "".join(links) + "</div>"
 
 
+def render_inline_links(current_route: str, items: list[dict]) -> str:
+    if not items:
+        return ""
+    return ", ".join(
+        f'<a href="{esc(relative_link(current_route, item["page_url"]))}">{esc(item["title"])}</a>'
+        for item in items
+    )
+
+
 def render_document_refs(current_route: str, document_refs: list[dict]) -> str:
     if not document_refs:
         return '<div class="empty-state">Geen bronverwijzingen beschikbaar.</div>'
@@ -657,27 +666,94 @@ def render_detail_page(route: str, model: dict, page_type: str) -> str:
 
 
 def render_timeline(route: str, timeline_view: dict) -> str:
-    return (
-        '<section class="section"><h2>Beleidsmomenten en mijlpalen</h2><ul class="stack-list">'
-        + "".join(
-            "<li id=\""
-            + esc(item["entry_id"])
-            + "\">"
-            + f'<strong>{esc(item["date_label"])} - {esc(item["title"])}</strong><br>'
-            + f'<span class="list-meta">{esc(item["linked_domain"])} | {esc(item["relation_type"])}</span><br>'
-            + esc(item["summary"])
-            + "<br>"
-            + f'<span class="list-meta">Gevolg voor Almere: {esc(item["consequence_for_almere"])}</span>'
-            + (
-                "<br>"
-                + f'<span class="list-meta">Bron: <a href="{esc(item["source_url"])}">{esc(item["source_label"])}</a></span>'
-                if item.get("source_url")
-                else f'<br><span class="list-meta">{esc(item["source_label"])}</span>'
+    year_boxes = [
+        {
+            "metric": item["entry_count"],
+            "title": item["year"],
+            "summary": f'{item["future_count"]} toekomstige referentie(s), {item["document_count"]} brondocument(en).',
+            "page_url": item["page_url"],
+        }
+        for item in sorted(timeline_view["year_summaries"], key=lambda entry: entry["year"], reverse=True)
+    ]
+
+    year_sections = []
+    for year_group in timeline_view["year_groups"]:
+        entries_html = []
+        for item in year_group["entries"]:
+            tags = [
+                item["entry_type_label"],
+                item["linked_domain"],
+                item["relation_type"],
+                item["temporal_status"],
+            ]
+            if item.get("needs_human_review"):
+                tags.append("menselijke duiding")
+            source_links = render_inline_links(route, item.get("source_basis", []))
+            decision_links = render_inline_links(route, item.get("linked_decisions", []))
+            action_links = render_inline_links(route, item.get("linked_actions", []))
+            notes_html = ""
+            if item.get("timeline_note") or item.get("source_notes"):
+                notes = []
+                if item.get("timeline_note"):
+                    notes.append(item["timeline_note"])
+                notes.extend(item.get("source_notes", []))
+                notes_html = '<p class="list-meta">' + " ".join(esc(note) for note in notes) + "</p>"
+
+            entries_html.append(
+                '<article class="timeline-entry" id="'
+                + esc(item["entry_id"])
+                + '"><div class="timeline-entry__header">'
+                + f'<p class="timeline-entry__date">{esc(item["date_label"])}</p>'
+                + f'<h3 class="timeline-entry__title">{esc(item["title"])}</h3>'
+                + render_tag_row(route, tags)
+                + "</div>"
+                + f'<p>{esc(item["summary"])}</p>'
+                + f'<p class="timeline-entry__impact"><strong>Gevolg voor Almere:</strong> {esc(item["consequence_for_almere"])}</p>'
+                + notes_html
+                + (
+                    f'<p class="list-meta"><strong>Bronbasis:</strong> {source_links}</p>'
+                    if source_links
+                    else ""
+                )
+                + (
+                    f'<p class="list-meta"><strong>Gekoppelde besluitvragen:</strong> {decision_links}</p>'
+                    if decision_links
+                    else ""
+                )
+                + (
+                    f'<p class="list-meta"><strong>Gekoppelde opvolgacties:</strong> {action_links}</p>'
+                    if action_links
+                    else ""
+                )
+                + "</article>"
             )
-            + "</li>"
-            for item in timeline_view["entries"]
+
+        summary_text = (
+            f'{year_group["entry_count"]} moment(en), '
+            f'{year_group["future_count"]} toekomstig, '
+            f'{year_group["document_count"]} brondocument(en)'
         )
-        + "</ul></section>"
+        open_attr = " open" if year_group["default_open"] else ""
+        year_sections.append(
+            f'<details class="timeline-year" id="{esc(year_group["anchor_id"])}"{open_attr}>'
+            + '<summary class="timeline-year__summary">'
+            + f'<span class="timeline-year__title">{esc(year_group["year"])}</span>'
+            + f'<span class="timeline-year__meta">{esc(summary_text)}</span>'
+            + "</summary>"
+            + '<div class="timeline-year__body">'
+            + "".join(entries_html)
+            + "</div></details>"
+        )
+
+    return (
+        '<section class="section"><h2>Jaaroverzicht</h2>'
+        + '<div class="notice">De tijdlijn groepeert bronmomenten, toekomstige beleidsstappen en uitvoeringshorizons per jaar. '
+        + f'Het jaar {esc(timeline_view["default_open_year"])} staat standaard open.</div>'
+        + render_summary_boxes(route, year_boxes)
+        + "</section>"
+        + '<section class="section"><h2>Beleidsmomenten en vervolgreferenties</h2>'
+        + "".join(year_sections)
+        + "</section>"
     )
 
 

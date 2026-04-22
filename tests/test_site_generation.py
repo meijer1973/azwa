@@ -11,6 +11,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 HOME_VIEW_PATH = REPO_ROOT / "data" / "site" / "site_home_view.json"
 ALMERE_VIEW_PATH = REPO_ROOT / "data" / "site" / "site_almere_view.json"
 DASHBOARD_VIEW_PATH = REPO_ROOT / "data" / "site" / "dashboard_view.json"
+TIMELINE_REGISTER_PATH = REPO_ROOT / "data" / "site" / "timeline_register.json"
 TIMELINE_VIEW_PATH = REPO_ROOT / "data" / "site" / "site_timeline_view.json"
 THEMES_VIEW_PATH = REPO_ROOT / "data" / "site" / "site_themes_view.json"
 REFERENCE_VIEW_PATH = REPO_ROOT / "data" / "site" / "site_reference_view.json"
@@ -50,6 +51,7 @@ class SiteGenerationTests(unittest.TestCase):
         self.assertTrue(HOME_VIEW_PATH.exists())
         self.assertTrue(ALMERE_VIEW_PATH.exists())
         self.assertTrue(DASHBOARD_VIEW_PATH.exists())
+        self.assertTrue(TIMELINE_REGISTER_PATH.exists())
         self.assertTrue(TIMELINE_VIEW_PATH.exists())
         self.assertTrue(THEMES_VIEW_PATH.exists())
         self.assertTrue(REFERENCE_VIEW_PATH.exists())
@@ -160,6 +162,27 @@ class SiteGenerationTests(unittest.TestCase):
         self.assertIn("2025-08-31", html)
         self.assertIn("2026-04-09", html)
         self.assertIn("begin 2027", html)
+        self.assertIn('class="timeline-year"', html)
+        self.assertIn('id="jaar-2026" open', html)
+        self.assertIn('id="jaar-2027"', html)
+        self.assertIn("../sources/azwa-definitief/index.html", html)
+        self.assertIn("../actions/mogelijke-opvolgactie-monitoringsaanpak-voor-almere-afstemmen/index.html", html)
+
+    def test_timeline_register_contains_future_references(self) -> None:
+        register = load_json(TIMELINE_REGISTER_PATH)
+        titles = {entry["title"] for entry in register["entries"]}
+        years = {year["year"] for year in register["years"]}
+        self.assertIn("2026", years)
+        self.assertIn("2027", years)
+        self.assertIn("2030", years)
+        self.assertIn("Tussentijdse evaluatie van IZA/AZWA", titles)
+        self.assertIn("Startpakket sociaal domein en evaluatieperiode", titles)
+        self.assertIn("Lokale impacthorizon Positief Gezond Almere", titles)
+
+    def test_site_js_reveals_hash_targets_inside_details(self) -> None:
+        script = (DIST_DIR / "assets" / "site.js").read_text(encoding="utf-8")
+        self.assertIn("function revealHashTarget()", script)
+        self.assertIn('current.tagName === "DETAILS"', script)
 
     def test_deploy_workflow_runs_tests_before_build(self) -> None:
         workflow = DEPLOY_WORKFLOW_PATH.read_text(encoding="utf-8")

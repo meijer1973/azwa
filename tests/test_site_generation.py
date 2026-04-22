@@ -165,8 +165,15 @@ class SiteGenerationTests(unittest.TestCase):
         self.assertIn('class="timeline-year"', html)
         self.assertIn('id="jaar-2026" open', html)
         self.assertIn('id="jaar-2027"', html)
+        self.assertIn('class="timeline-entry"', html)
+        self.assertIn("Meer informatie", html)
+        self.assertIn("Meicirculaire gemeentefonds 2026 verwacht", html)
+        self.assertIn("BO IZA/AZWA kiest inzet van doorbraakmiddelen", html)
+        self.assertIn("https://www.rijksoverheid.nl/onderwerpen/financien-gemeenten-en-provincies/gemeentefonds", html)
         self.assertIn("../sources/azwa-definitief/index.html", html)
         self.assertIn("../actions/mogelijke-opvolgactie-monitoringsaanpak-voor-almere-afstemmen/index.html", html)
+        self.assertLess(html.index('id="jaar-2026" open'), html.index('id="jaar-2027"'))
+        self.assertLess(html.index('id="jaar-2027"'), html.index('id="jaar-2025"'))
 
     def test_timeline_register_contains_future_references(self) -> None:
         register = load_json(TIMELINE_REGISTER_PATH)
@@ -178,6 +185,8 @@ class SiteGenerationTests(unittest.TestCase):
         self.assertIn("Tussentijdse evaluatie van IZA/AZWA", titles)
         self.assertIn("Startpakket sociaal domein en evaluatieperiode", titles)
         self.assertIn("Lokale impacthorizon Positief Gezond Almere", titles)
+        self.assertIn("Meicirculaire gemeentefonds 2026 verwacht", titles)
+        self.assertIn("Transformatieplannen uiterlijk in 2026 indienen", titles)
 
     def test_site_js_reveals_hash_targets_inside_details(self) -> None:
         script = (DIST_DIR / "assets" / "site.js").read_text(encoding="utf-8")

@@ -189,10 +189,14 @@ def render_link_pills(current_route: str, items: list[dict]) -> str:
 def render_inline_links(current_route: str, items: list[dict]) -> str:
     if not items:
         return ""
-    return ", ".join(
-        f'<a href="{esc(relative_link(current_route, item["page_url"]))}">{esc(item["title"])}</a>'
-        for item in items
-    )
+    rendered = []
+    for item in items:
+        if item.get("page_url"):
+            href = relative_link(current_route, item["page_url"])
+        else:
+            href = item["source_url"]
+        rendered.append(f'<a href="{esc(href)}">{esc(item["title"])}</a>')
+    return ", ".join(rendered)
 
 
 def render_document_refs(current_route: str, document_refs: list[dict]) -> str:
@@ -670,10 +674,10 @@ def render_timeline(route: str, timeline_view: dict) -> str:
         {
             "metric": item["entry_count"],
             "title": item["year"],
-            "summary": f'{item["future_count"]} toekomstige referentie(s), {item["document_count"]} brondocument(en).',
-            "page_url": item["page_url"],
+            "summary": f'{item["future_count"]} komende of toekomstige stap(pen), {item["document_count"]} brondocument(en).',
+            "page_url": f'/timeline/#{item["anchor_id"]}',
         }
-        for item in sorted(timeline_view["year_summaries"], key=lambda entry: entry["year"], reverse=True)
+        for item in timeline_view["year_groups"]
     ]
 
     year_sections = []
@@ -700,13 +704,17 @@ def render_timeline(route: str, timeline_view: dict) -> str:
                 notes_html = '<p class="list-meta">' + " ".join(esc(note) for note in notes) + "</p>"
 
             entries_html.append(
-                '<article class="timeline-entry" id="'
+                '<details class="timeline-entry" id="'
                 + esc(item["entry_id"])
-                + '"><div class="timeline-entry__header">'
+                + '"><summary class="timeline-entry__summary">'
+                + '<div class="timeline-entry__summary-main">'
                 + f'<p class="timeline-entry__date">{esc(item["date_label"])}</p>'
                 + f'<h3 class="timeline-entry__title">{esc(item["title"])}</h3>'
-                + render_tag_row(route, tags)
                 + "</div>"
+                + '<span class="timeline-entry__toggle">Meer informatie</span>'
+                + "</summary>"
+                + '<div class="timeline-entry__body">'
+                + render_tag_row(route, tags)
                 + f'<p>{esc(item["summary"])}</p>'
                 + f'<p class="timeline-entry__impact"><strong>Gevolg voor Almere:</strong> {esc(item["consequence_for_almere"])}</p>'
                 + notes_html
@@ -725,12 +733,12 @@ def render_timeline(route: str, timeline_view: dict) -> str:
                     if action_links
                     else ""
                 )
-                + "</article>"
+                + "</div></details>"
             )
 
         summary_text = (
             f'{year_group["entry_count"]} moment(en), '
-            f'{year_group["future_count"]} toekomstig, '
+            f'{year_group["future_count"]} komende/toekomstige stap(pen), '
             f'{year_group["document_count"]} brondocument(en)'
         )
         open_attr = " open" if year_group["default_open"] else ""

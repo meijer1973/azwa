@@ -437,8 +437,8 @@ a:hover {
 
 .timeline-entry {
   border-top: 1px solid var(--surface-strong);
-  padding-top: 1rem;
   margin-top: 1rem;
+  padding-top: 0.8rem;
 }
 
 .timeline-entry:first-child {
@@ -446,8 +446,31 @@ a:hover {
   margin-top: 0;
 }
 
-.timeline-entry__header {
-  margin-bottom: 0.5rem;
+.timeline-entry__summary {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+  cursor: pointer;
+  list-style: none;
+}
+
+.timeline-entry__summary::-webkit-details-marker {
+  display: none;
+}
+
+.timeline-entry__summary-main {
+  min-width: 0;
+}
+
+.timeline-entry__toggle {
+  color: var(--muted);
+  font-size: 0.92rem;
+  white-space: nowrap;
+}
+
+.timeline-entry__body {
+  padding-top: 0.7rem;
 }
 
 .timeline-entry__date {

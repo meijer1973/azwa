@@ -36,8 +36,9 @@ ACTION_DIR = SITE_DIR / "action_view_models"
 THEME_DIR = SITE_DIR / "theme_view_models"
 REFERENCE_TOPIC_DIR = SITE_DIR / "reference_topic_view_models"
 SOURCE_VIEW_DIR = SITE_DIR / "source_view_models"
+TIMELINE_CURATION_PATH = REPO_ROOT / "config" / "timeline_curation.json"
 
-SITE_RUN_ID = "phase15_site_views_v1"
+SITE_RUN_ID = "phase16_site_views_v1"
 TODAY = date.today().isoformat()
 
 
@@ -612,6 +613,10 @@ def site_meta() -> dict:
     return load_json(SITE_TAXONOMY_PATH)["site"]
 
 
+def timeline_curation() -> dict:
+    return load_json(TIMELINE_CURATION_PATH)
+
+
 def humanize_identifier(value: str) -> str:
     cleaned = value.replace(".", " ").replace("_", " ").replace("-", " ").strip()
     if not cleaned:
@@ -823,7 +828,7 @@ def timeline_temporal_status(sort_key: str, as_of_date: str = TODAY) -> str:
     if sort_key < as_of_date:
         return "verstreken referentie"
     if sort_key[:4] == as_of_date[:4]:
-        return "lopende periode"
+        return "komende stap"
     return "toekomstige referentie"
 
 
@@ -856,6 +861,20 @@ def timeline_document_ref(document: dict, topics: list[str] | None = None) -> di
     }
 
 
+def timeline_source_ref(source: dict) -> dict:
+    return {
+        "title": source["title"],
+        "publisher": source["publisher"],
+        "publication_date": source.get("publication_date"),
+        "document_type": source.get("document_type", "reference"),
+        "jurisdiction_level": source.get("jurisdiction_level", "national"),
+        "status": source.get("status", "reference"),
+        "source_url": source["source_url"],
+        "topics": source.get("topics", []),
+        **({"page_url": source["page_url"]} if source.get("page_url") else {}),
+    }
+
+
 def topics_for_claim_ids(claim_ids: list[str], claims: dict[str, dict]) -> list[str]:
     return dedupe([claims[claim_id]["topic"] for claim_id in claim_ids if claim_id in claims])
 
@@ -874,6 +893,10 @@ def source_notes_for_claim_ids(claim_ids: list[str], claims: dict[str, dict]) ->
 
 def source_basis_for_claim_ids(claim_ids: list[str], claims: dict[str, dict], documents: dict[str, dict]) -> list[dict]:
     return document_refs_from_claim_ids(claim_ids, claims, documents)
+
+
+def timeline_counts_as_future(entry: dict) -> bool:
+    return entry["temporal_status"] in {"komende stap", "toekomstige referentie"}
 
 
 def related_timeline_models(
@@ -899,6 +922,24 @@ def related_timeline_models(
                 }
             )
     related.sort(key=lambda item: item["title"])
+    return related
+
+
+def timeline_models_by_ids(models: list[dict], ids: list[str], id_key: str) -> list[dict]:
+    lookup = {model[id_key]: model for model in models}
+    related = []
+    for item_id in ids:
+        model = lookup.get(item_id)
+        if model is None:
+            continue
+        related.append(
+            {
+                id_key: model[id_key],
+                "title": model["title"],
+                "status": model["status"],
+                "page_url": model["page_url"],
+            }
+        )
     return related
 
 
@@ -965,6 +1006,70 @@ def reference_timeline_entry_from_spec(
         "linked_actions": related_timeline_models(action_models, claim_ids, topic_keys, claims, "action_id"),
         "page_url": f"/timeline/#{entry_id}",
     }
+
+
+def external_timeline_entry_from_spec(
+    spec: dict,
+    decision_models: list[dict],
+    action_models: list[dict],
+) -> dict:
+    entry_id = timeline_anchor(f"{spec['sort_key']}-{spec['entry_key']}")
+    return {
+        "entry_id": entry_id,
+        "year": timeline_year(spec["sort_key"]),
+        "date_label": spec["date_label"],
+        "date_granularity": spec["date_granularity"],
+        "sort_key": spec["sort_key"],
+        "temporal_status": timeline_temporal_status(spec["sort_key"]),
+        "title": spec["title"],
+        "summary": spec["summary"],
+        "linked_domain": spec["linked_domain"],
+        "relation_type": spec["relation_type"],
+        "entry_type": spec["entry_type"],
+        "entry_type_label": timeline_entry_type_label(spec["entry_type"]),
+        "consequence_for_almere": spec["consequence_for_almere"],
+        "timeline_note": spec["timeline_note"],
+        "needs_human_review": spec.get("needs_human_review", False),
+        "topic_keys": spec.get("topic_keys", []),
+        "source_basis": [timeline_source_ref(item) for item in spec.get("source_basis", [])],
+        "source_notes": spec.get("source_notes", []),
+        "linked_decisions": timeline_models_by_ids(
+            decision_models,
+            spec.get("linked_decision_ids", []),
+            "decision_id",
+        ),
+        "linked_actions": timeline_models_by_ids(
+            action_models,
+            spec.get("linked_action_ids", []),
+            "action_id",
+        ),
+        "page_url": f"/timeline/#{entry_id}",
+    }
+
+
+def ordered_timeline_years(years: list[str], current_year: str) -> list[str]:
+    future_years = sorted((year for year in years if year > current_year))
+    past_years = sorted((year for year in years if year < current_year), reverse=True)
+    ordered: list[str] = []
+    if current_year in years:
+        ordered.append(current_year)
+    ordered.extend(future_years)
+    ordered.extend(past_years)
+    return ordered
+
+
+def ordered_timeline_entries(entries: list[dict], as_of_date: str) -> list[dict]:
+    if not entries:
+        return []
+    year = entries[0]["year"]
+    current_year = as_of_date[:4]
+    if year == current_year:
+        future_entries = sorted((entry for entry in entries if entry["sort_key"] >= as_of_date), key=lambda entry: (entry["sort_key"], entry["title"]))
+        past_entries = sorted((entry for entry in entries if entry["sort_key"] < as_of_date), key=lambda entry: (entry["sort_key"], entry["title"]), reverse=True)
+        return future_entries + past_entries
+    if year > current_year:
+        return sorted(entries, key=lambda entry: (entry["sort_key"], entry["title"]))
+    return sorted(entries, key=lambda entry: (entry["sort_key"], entry["title"]), reverse=True)
 
 
 def review_summary_for_reason(reason_code: str) -> str:
@@ -1566,13 +1671,18 @@ def build_timeline_register(
     action_models: list[dict],
 ) -> dict:
     current_topic_map = current_topic_lookup(current_topics)
+    curation = timeline_curation()
     entries = [
         document_timeline_entry_from_spec(spec, documents)
-        for spec in TIMELINE_DOCUMENT_SPECS
+        for spec in curation["document_entries"]
     ]
     entries.extend(
         reference_timeline_entry_from_spec(spec, claims, documents, current_topic_map, decision_models, action_models)
-        for spec in TIMELINE_REFERENCE_SPECS
+        for spec in curation["claim_entries"]
+    )
+    entries.extend(
+        external_timeline_entry_from_spec(spec, decision_models, action_models)
+        for spec in curation.get("external_entries", [])
     )
     entries.sort(key=lambda item: (item["sort_key"], item["title"]))
 
@@ -1581,7 +1691,7 @@ def build_timeline_register(
         year_counts[entry["year"]]["entries"] += 1
         if entry["entry_type"] == "bronmoment":
             year_counts[entry["year"]]["documents"] += 1
-        if entry["temporal_status"] == "toekomstige referentie":
+        if timeline_counts_as_future(entry):
             year_counts[entry["year"]]["future"] += 1
 
     years = [
@@ -1611,15 +1721,15 @@ def build_timeline_view(timeline_register: dict) -> dict:
         grouped_entries[entry["year"]].append(entry)
 
     year_groups = []
-    for year in sorted(grouped_entries.keys(), reverse=True):
-        entries = grouped_entries[year]
+    for year in ordered_timeline_years(list(grouped_entries.keys()), timeline_register["default_open_year"]):
+        entries = ordered_timeline_entries(grouped_entries[year], timeline_register["as_of_date"])
         year_groups.append(
             {
                 "year": year,
                 "anchor_id": f"jaar-{year}",
                 "default_open": year == timeline_register["default_open_year"],
                 "entry_count": len(entries),
-                "future_count": sum(1 for entry in entries if entry["temporal_status"] == "toekomstige referentie"),
+                "future_count": sum(1 for entry in entries if timeline_counts_as_future(entry)),
                 "document_count": sum(1 for entry in entries if entry["entry_type"] == "bronmoment"),
                 "entries": entries,
             }
@@ -1701,7 +1811,9 @@ def build_home_view(
         "concretisering van D5 en D6, regie en governance, financiering en monitoring. "
         "De landelijke basis is zichtbaar, maar een deel van de lokale doorvertaling is in openbare Almere-documenten nog niet expliciet."
     )
-    near_term_timeline = [entry for entry in timeline_register["entries"] if entry["sort_key"] >= "2025-01-01"][:6]
+    past_entries = [entry for entry in timeline_register["entries"] if entry["sort_key"] < TODAY]
+    future_entries = [entry for entry in timeline_register["entries"] if entry["sort_key"] >= TODAY]
+    near_term_timeline = past_entries[-2:] + future_entries[:4]
 
     return {
         "view_run_id": SITE_RUN_ID,

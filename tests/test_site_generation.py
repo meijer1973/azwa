@@ -273,7 +273,8 @@ class SiteGenerationTests(unittest.TestCase):
     def test_deploy_workflow_runs_tests_before_build(self) -> None:
         workflow = DEPLOY_WORKFLOW_PATH.read_text(encoding="utf-8")
         self.assertIn('python -m unittest discover -s tests -p "test_*.py"', workflow)
-        self.assertIn("python src/run_pipeline.py --stage phase13_site_render", workflow)
+        self.assertIn("python src/build_site_view_models.py", workflow)
+        self.assertIn("python src/render_site.py", workflow)
 
     def test_search_index_covers_overviews_and_detail_pages(self) -> None:
         search_index = load_json(SEARCH_INDEX_PATH)

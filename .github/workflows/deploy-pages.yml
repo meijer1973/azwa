@@ -33,8 +33,11 @@ jobs:
       - name: Run site generation tests
         run: python -m unittest discover -s tests -p "test_*.py"
 
-      - name: Build static site
-        run: python src/run_pipeline.py --stage phase13_site_render
+      - name: Build site view models
+        run: python src/build_site_view_models.py
+
+      - name: Render static site
+        run: python src/render_site.py
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

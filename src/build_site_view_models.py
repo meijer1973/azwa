@@ -15,6 +15,7 @@ MUNICIPAL_DIR = EXTRACTED_DIR / "municipal"
 
 ALMERE_VIEW_PATH = MUNICIPAL_DIR / "almere_current_view.json"
 CLAIMS_MASTER_PATH = CLAIMS_DIR / "claims_master.jsonl"
+CURRENT_INTERPRETATION_PATH = CLAIMS_DIR / "current_interpretation.json"
 INVENTORY_PATH = EXTRACTED_DIR / "document_inventory.json"
 REVIEW_QUEUE_PATH = EXTRACTED_DIR / "review_queue.json"
 SITE_TAXONOMY_PATH = REPO_ROOT / "config" / "site_taxonomy.json"
@@ -25,17 +26,26 @@ HOME_VIEW_PATH = SITE_DIR / "site_home_view.json"
 ALMERE_SITE_VIEW_PATH = SITE_DIR / "site_almere_view.json"
 DASHBOARD_VIEW_PATH = SITE_DIR / "dashboard_view.json"
 TIMELINE_VIEW_PATH = SITE_DIR / "site_timeline_view.json"
+THEMES_VIEW_PATH = SITE_DIR / "site_themes_view.json"
+REFERENCE_VIEW_PATH = SITE_DIR / "site_reference_view.json"
+SOURCES_VIEW_PATH = SITE_DIR / "site_sources_view.json"
 SITE_MANIFEST_PATH = SITE_DIR / "site_manifest.json"
 DECISION_DIR = SITE_DIR / "decision_view_models"
 ACTION_DIR = SITE_DIR / "action_view_models"
+THEME_DIR = SITE_DIR / "theme_view_models"
+REFERENCE_TOPIC_DIR = SITE_DIR / "reference_topic_view_models"
+SOURCE_VIEW_DIR = SITE_DIR / "source_view_models"
 
-SITE_RUN_ID = "phase12_site_views_v1"
+SITE_RUN_ID = "phase14_site_views_v1"
 TODAY = date.today().isoformat()
 
 
 TOPIC_LABELS = {
     "d5.definition": "D5-definitie",
     "d5.basisfunctionaliteiten_onderbouwd": "onderbouwde D5-basisfunctionaliteiten",
+    "d5.implementation_enablers": "randvoorwaarden voor D5-uitvoering",
+    "d5.ontwikkelagenda": "D5-ontwikkelagenda",
+    "d5.other": "overige D5-lijn",
     "d5.regional_workagenda": "regionale/lokale D5-werkagenda",
     "d5.cross_domain_collaboration": "domeinoverstijgende samenwerking",
     "d5.mentale_gezondheidsnetwerken": "mentale gezondheidsnetwerken",
@@ -43,16 +53,33 @@ TOPIC_LABELS = {
     "d6.basisinfrastructuur": "D6-basisinfrastructuur",
     "d6.local_teams": "stevige lokale teams en wijkverbanden",
     "d6.digital_and_operational_infrastructure": "digitale en operationele infrastructuur",
+    "finance.azwa_macro_framework": "macrokader voor AZWA-financiering",
     "finance.d5_d6.funding_instrument": "bekostigingsroute D5/D6",
     "finance.d5_d6.municipal_funding": "gemeentelijke middelen D5/D6",
     "finance.local_alignment_goal": "lokale financiele aansluiting",
+    "finance.regional_funding_path": "regionale financieringsroute",
+    "governance.local_coalition": "lokale coalitie en samenwerking",
+    "governance.national_coordination": "landelijke coordinatie",
     "governance.regional_coordination": "regionale coordinatie",
+    "governance_and_finance.other": "overige governance- en financieringslijn",
+    "monitoring.d5_operational_monitoring": "operationele D5-monitoring",
     "monitoring.framework": "monitoringskader",
     "monitoring.local_learning": "lokaal leren en bijsturen",
+    "monitoring.local_goal_tracking": "lokale doelvolging",
+    "monitoring.mid_term_review": "tussentijdse evaluatie",
+    "monitoring.other": "overige monitoringslijn",
+    "monitoring.regional_monitoring_plan": "regionaal monitoringsplan",
     "monitoring.update_2028": "actualisatiecyclus 2028",
+    "municipal.almere_context": "Almeerse context",
     "municipal.role_allocation": "rolverdeling en regie",
     "municipal.implementation_translation": "lokale vertaling in openbare stukken",
     "municipal.almere_initiatives": "Almeerse initiatieven",
+    "municipal.local_structure": "lokale structuur",
+    "timeline.d5_d6_financing_horizon": "financieringshorizon D5/D6",
+    "timeline.d5_d6_implementation": "implementatielijn D5/D6",
+    "timeline.flevoland_transformatieagenda": "Flevolandse transformatieagenda",
+    "timeline.implementation_status": "implementatiestatus",
+    "timeline.other": "overige tijdlijnmomenten",
     "timeline.rollout_2030": "landelijke dekking richting 2030",
     "timeline.almere_2029": "lokale horizon Positief Gezond Almere",
 }
@@ -320,6 +347,10 @@ def document_payload_map() -> dict[str, dict]:
     return payloads
 
 
+def current_interpretation_topics() -> list[dict]:
+    return load_json(CURRENT_INTERPRETATION_PATH)["topics"]
+
+
 def theme_definitions() -> list[dict]:
     return load_json(SITE_TAXONOMY_PATH)["themes"]
 
@@ -332,8 +363,98 @@ def site_meta() -> dict:
     return load_json(SITE_TAXONOMY_PATH)["site"]
 
 
+def humanize_identifier(value: str) -> str:
+    cleaned = value.replace(".", " ").replace("_", " ").replace("-", " ").strip()
+    if not cleaned:
+        return value
+    return cleaned[0].upper() + cleaned[1:]
+
+
 def topic_label(topic: str) -> str:
-    return TOPIC_LABELS.get(topic, topic)
+    return TOPIC_LABELS.get(topic, humanize_identifier(topic))
+
+
+def topic_slug(topic: str) -> str:
+    return slugify(topic.replace(".", "-"))
+
+
+def topic_page_url(topic: str) -> str:
+    return f"/reference/topics/{topic_slug(topic)}/"
+
+
+def theme_page_url(theme_id: str) -> str:
+    return f"/themes/{theme_id}/"
+
+
+def source_page_url(document: dict) -> str:
+    short_title = document.get("short_title") or document["title"]
+    return f"/sources/{slugify(short_title)}/"
+
+
+def domain_for_topic(topic: str) -> str:
+    if topic.startswith("d5."):
+        return "D5"
+    if topic.startswith("d6."):
+        return "D6"
+    if topic.startswith(("finance.", "governance.", "monitoring.", "timeline.", "municipal.")):
+        return "D5 en D6"
+    return "overig"
+
+
+def status_label_for_topic(entry: dict) -> str:
+    if entry["current_claim_ids"] and not entry["needs_human_review"]:
+        return "huidige lijn zonder extra review"
+    if entry["current_claim_ids"] and entry["needs_human_review"]:
+        return "huidige lijn met menselijke duiding"
+    if entry["historical_claim_ids"]:
+        return "historische of verdrongen lijn"
+    return "geen actuele lijn geselecteerd"
+
+
+def confidence_label(score: float) -> str:
+    if score >= 0.85:
+        return "hoog"
+    if score >= 0.6:
+        return "middel"
+    return "voorzichtig"
+
+
+def source_classification_label(document: dict) -> str:
+    mapping = {
+        "primary": "primaire bron",
+        "derivative": "afgeleide bron",
+        "commentary": "toelichtende bron",
+        "supporting_commentary": "toelichtende bron",
+    }
+    value = document.get("source_classification", "bron")
+    return mapping.get(value, humanize_identifier(value).lower())
+
+
+def document_type_label(document_type: str) -> str:
+    mapping = {
+        "agreement": "akkoord",
+        "framework": "kader",
+        "kamerbrief": "kamerbrief",
+        "regional_plan": "regionaal plan",
+        "regional_report": "regionaal rapport",
+        "implementation_plan": "uitvoeringsplan",
+        "research_report": "onderzoeksrapport",
+        "municipal_policy_summary": "gemeentelijke beleidssamenvatting",
+        "municipal_info_page": "gemeentelijke informatiepagina",
+        "municipal_gateway_page": "gemeentelijke verwijspagina",
+        "faq": "FAQ",
+    }
+    return mapping.get(document_type, humanize_identifier(document_type).lower())
+
+
+def section_statement(section: dict) -> str | None:
+    items = section.get("items") or []
+    if items:
+        return items[0]["statement"]
+    relevance_note = section.get("relevance_note")
+    if relevance_note:
+        return relevance_note
+    return None
 
 
 def theme_ids_for_topics(topics: list[str], themes: list[dict]) -> list[str]:
@@ -382,6 +503,7 @@ def evidence_entries(claim_ids: list[str], claims: dict[str, dict], documents: d
                 "publisher": document["publisher"],
                 "publication_date": document["publication_date"],
                 "source_url": document["source_url"],
+                "page_url": source_page_url(document),
                 "jurisdiction_level": document["jurisdiction_level"],
                 "authority_note": authority_note(claim),
                 "needs_human_review": claim.get("human_review_status") == "needs_human_review",
@@ -418,6 +540,7 @@ def document_refs_from_claim_ids(claim_ids: list[str], claims: dict[str, dict], 
             "jurisdiction_level": document["jurisdiction_level"],
             "status": document["status"],
             "source_url": document["source_url"],
+            "page_url": source_page_url(document),
             "topics": [topic_label(claim["topic"])],
         }
 
@@ -1052,7 +1175,7 @@ def build_featured_themes(decisions: list[dict], actions: list[dict], themes: li
                 "summary": theme["summary"],
                 "linked_decision_count": linked_decision_count,
                 "linked_action_count": linked_action_count,
-                "page_url": f"/dashboard/?theme={theme_id}",
+                "page_url": theme_page_url(theme_id),
                 "decision_page_url": f"/decisions/?theme={theme_id}",
                 "action_page_url": f"/actions/?theme={theme_id}",
             }
@@ -1519,7 +1642,420 @@ def build_dashboard_view(
     }
 
 
-def build_site_manifest(decisions: list[dict], actions: list[dict]) -> dict:
+def build_theme_models(
+    themes: list[dict],
+    current_topics: list[dict],
+    almere_view: dict,
+    decision_models: list[dict],
+    action_models: list[dict],
+    claims: dict[str, dict],
+    documents: dict[str, dict],
+) -> list[dict]:
+    theme_topics: defaultdict[str, list[dict]] = defaultdict(list)
+    for topic_entry in current_topics:
+        for theme_id in theme_ids_for_topics([topic_entry["topic"]], themes):
+            theme_topics[theme_id].append(topic_entry)
+
+    theme_models: list[dict] = []
+    for theme in themes:
+        theme_id = theme["theme_id"]
+        linked_decisions = [decision for decision in decision_models if theme_id in decision["linked_theme_ids"]]
+        linked_actions = [action for action in action_models if theme_id in action["linked_theme_ids"]]
+        topic_entries = sorted(theme_topics.get(theme_id, []), key=lambda item: topic_label(item["topic"]))
+        claim_ids = dedupe(
+            [claim_id for entry in topic_entries for claim_id in entry["current_claim_ids"] + entry["historical_claim_ids"]]
+        )
+        source_basis = [
+            {
+                **ref,
+                "page_url": source_page_url(documents[ref["document_id"]]),
+            }
+            for ref in document_refs_from_claim_ids(claim_ids, claims, documents)
+        ]
+
+        relevant_items = []
+        for item in almere_view["applicable_d5_items"] + almere_view["applicable_d6_items"]:
+            if theme_id not in theme_ids_for_topics([item["topic"]], themes):
+                continue
+            relevant_items.append(
+                {
+                    "topic": item["topic"],
+                    "title": topic_label(item["topic"]),
+                    "scope_label": scope_label(item["scope"]),
+                    "needs_human_review": item["needs_human_review"],
+                }
+            )
+
+        current_interpretation = [
+            {
+                "topic": entry["topic"],
+                "title": topic_label(entry["topic"]),
+                "status": status_label_for_topic(entry),
+                "confidence_label": confidence_label(entry["confidence"]),
+                "needs_human_review": entry["needs_human_review"],
+                "page_url": topic_page_url(entry["topic"]),
+            }
+            for entry in topic_entries
+        ]
+
+        almere_implications = []
+        for gap in almere_view["local_gaps"]:
+            if theme_id in theme_ids_for_topics(gap["based_on_topics"], themes):
+                almere_implications.append(
+                    {
+                        "title": GAP_LABELS[gap["gap_id"]]["title"],
+                        "summary": GAP_LABELS[gap["gap_id"]]["summary"],
+                        "page_url": "/almere/#lokale-hiaten",
+                    }
+                )
+        for uncertain in almere_view["uncertain_items"]:
+            if theme_id in theme_ids_for_topics([uncertain["topic"]], themes):
+                almere_implications.append(
+                    {
+                        "title": f"Menselijke duiding bij {topic_label(uncertain['topic'])}",
+                        "summary": "De huidige interpretatielaag markeert dit onderwerp voor extra menselijke duiding.",
+                        "page_url": "/almere/#menselijke-duiding",
+                    }
+                )
+        almere_implications = almere_implications[:6]
+
+        dependencies = []
+        seen_dependency_ids: set[str] = set()
+        for model in linked_decisions + linked_actions:
+            for dependency in model["dependencies"]:
+                if dependency["dependency_id"] in seen_dependency_ids:
+                    continue
+                seen_dependency_ids.add(dependency["dependency_id"])
+                dependencies.append(
+                    {
+                        "title": dependency["title"],
+                        "summary": dependency["summary"],
+                        "page_url": "/almere/#externe-afhankelijkheden",
+                    }
+                )
+
+        related_reference_topics = [
+            {
+                "topic": entry["topic"],
+                "title": topic_label(entry["topic"]),
+                "status": status_label_for_topic(entry),
+                "page_url": topic_page_url(entry["topic"]),
+            }
+            for entry in topic_entries
+        ]
+
+        theme_models.append(
+            {
+                "theme_id": theme_id,
+                "title": theme["title"],
+                "summary": theme["summary"],
+                "page_url": theme_page_url(theme_id),
+                "linked_decision_count": len(linked_decisions),
+                "linked_action_count": len(linked_actions),
+                "linked_decisions": [
+                    {"title": item["title"], "status": item["status"], "page_url": item["page_url"]}
+                    for item in linked_decisions
+                ],
+                "linked_actions": [
+                    {"title": item["title"], "status": item["status"], "page_url": item["page_url"]}
+                    for item in linked_actions
+                ],
+                "relevant_d5_d6_items": relevant_items,
+                "current_interpretation": current_interpretation,
+                "almere_implications": almere_implications,
+                "dependencies": dependencies,
+                "source_basis": source_basis[:8],
+                "related_reference_topics": related_reference_topics,
+            }
+        )
+
+    return theme_models
+
+
+def build_themes_view(theme_models: list[dict]) -> dict:
+    return {
+        "view_run_id": SITE_RUN_ID,
+        "generated_on": TODAY,
+        "as_of_date": TODAY,
+        "title": "Thema's",
+        "themes": theme_models,
+    }
+
+
+def build_reference_topic_models(
+    current_topics: list[dict],
+    themes: list[dict],
+    decision_models: list[dict],
+    action_models: list[dict],
+    claims: dict[str, dict],
+    documents: dict[str, dict],
+) -> list[dict]:
+    topic_models: list[dict] = []
+    for entry in sorted(current_topics, key=lambda item: topic_label(item["topic"])):
+        claim_ids = dedupe(entry["current_claim_ids"] + entry["historical_claim_ids"])
+        linked_theme_ids = theme_ids_for_topics([entry["topic"]], themes)
+        linked_decisions = [
+            decision
+            for decision in decision_models
+            if set(decision["supporting_claim_ids"]) & set(claim_ids)
+            or any(theme_id in decision["linked_theme_ids"] for theme_id in linked_theme_ids)
+        ]
+        linked_actions = [
+            action
+            for action in action_models
+            if set(action["supporting_claim_ids"]) & set(claim_ids)
+            or any(theme_id in action["linked_theme_ids"] for theme_id in linked_theme_ids)
+        ]
+        source_basis = [
+            {
+                **ref,
+                "page_url": source_page_url(documents[ref["document_id"]]),
+            }
+            for ref in document_refs_from_claim_ids(claim_ids, claims, documents)
+        ]
+        related_topics = []
+        for candidate in current_topics:
+            if candidate["topic"] == entry["topic"]:
+                continue
+            if not set(theme_ids_for_topics([candidate["topic"]], themes)) & set(linked_theme_ids):
+                continue
+            related_topics.append(
+                {
+                    "topic": candidate["topic"],
+                    "title": topic_label(candidate["topic"]),
+                    "page_url": topic_page_url(candidate["topic"]),
+                }
+            )
+
+        definition = (
+            f"Voor {topic_label(entry['topic'])} zijn {len(entry['current_claim_ids'])} actuele claim(s) "
+            f"en {len(entry['historical_claim_ids'])} historische claim(s) beschikbaar in de huidige referentielaag."
+        )
+        topic_models.append(
+            {
+                "topic_id": entry["topic"],
+                "slug": topic_slug(entry["topic"]),
+                "page_url": topic_page_url(entry["topic"]),
+                "title": topic_label(entry["topic"]),
+                "definition": definition,
+                "status": status_label_for_topic(entry),
+                "linked_domain": domain_for_topic(entry["topic"]),
+                "linked_theme_ids": linked_theme_ids,
+                "linked_themes": [
+                    {
+                        "theme_id": theme_id,
+                        "title": theme_lookup(themes)[theme_id]["title"],
+                        "page_url": theme_page_url(theme_id),
+                    }
+                    for theme_id in linked_theme_ids
+                ],
+                "linked_decisions": [
+                    {"title": item["title"], "status": item["status"], "page_url": item["page_url"]}
+                    for item in linked_decisions[:6]
+                ],
+                "linked_actions": [
+                    {"title": item["title"], "status": item["status"], "page_url": item["page_url"]}
+                    for item in linked_actions[:6]
+                ],
+                "source_basis": source_basis[:8],
+                "timeline_notes": [
+                    {
+                        "date_label": ref["publication_date"] or "datum onbekend",
+                        "title": ref["title"],
+                        "status": ref["status"],
+                        "page_url": ref["page_url"],
+                    }
+                    for ref in source_basis[:6]
+                ],
+                "related_topics": related_topics[:6],
+                "current_claim_count": len(entry["current_claim_ids"]),
+                "historical_claim_count": len(entry["historical_claim_ids"]),
+                "needs_human_review": entry["needs_human_review"],
+                "confidence_label": confidence_label(entry["confidence"]),
+            }
+        )
+    return topic_models
+
+
+def build_reference_view(reference_topics: list[dict], source_models: list[dict]) -> dict:
+    grouped_topics: defaultdict[str, list[dict]] = defaultdict(list)
+    for topic in reference_topics:
+        grouped_topics[topic["linked_domain"]].append(topic)
+
+    publishers: Counter[str] = Counter(source["metadata"]["publisher"] for source in source_models)
+    return {
+        "view_run_id": SITE_RUN_ID,
+        "generated_on": TODAY,
+        "as_of_date": TODAY,
+        "title": "Referentie",
+        "topic_count": len(reference_topics),
+        "domain_groups": {
+            domain: topics
+            for domain, topics in sorted(grouped_topics.items())
+        },
+        "publishers": [
+            {"publisher": publisher, "document_count": count}
+            for publisher, count in publishers.most_common(6)
+        ],
+        "featured_topics": reference_topics[:8],
+    }
+
+
+def source_summary(document: dict, payload: dict | None) -> str:
+    if payload is None:
+        return "Deze bron is opgenomen in de corpusinventaris, maar heeft nog geen nadere sitesamenvatting gekregen."
+    scope = payload["extraction_scope"]
+    if scope["contains_d5"] and scope["contains_d6"]:
+        return "Deze bron bevat expliciete informatie over zowel D5 als D6 en wordt in de huidige site gebruikt voor bestuurlijke duiding en traceerbaarheid."
+    if scope["contains_d5"]:
+        return "Deze bron draagt vooral bij aan de D5-lijn en de vertaling daarvan naar uitvoering en bestuurlijke duiding."
+    if scope["contains_d6"]:
+        return "Deze bron draagt vooral bij aan de D6-lijn en de randvoorwaarden voor uitvoering."
+    if scope["contains_municipal_implications"]:
+        return "Deze bron bevat vooral context of lokale vertaling die relevant is voor Almere, zonder zelf de landelijke D5/D6-basistekst te zijn."
+    return "Deze bron biedt aanvullende context binnen de huidige bronbasis."
+
+
+def source_contribution(document: dict) -> str:
+    if document["jurisdiction_level"] == "national" and document["status"] == "current":
+        return "Deze bron draagt bij aan de actuele landelijke bestuurlijke lijn."
+    if document["jurisdiction_level"] == "regional":
+        return "Deze bron laat zien hoe landelijke lijnen regionaal in Flevoland worden vertaald."
+    if document["jurisdiction_level"] == "municipal":
+        return "Deze bron laat zien welke lokale vertaling of context in Almere openbaar zichtbaar is."
+    return "Deze bron geeft aanvullende bestuurlijke context voor de huidige corpuslijn."
+
+
+def relevance_note_for_section(section: dict, label: str) -> str:
+    if section.get("explicit_reference_present"):
+        return f"Bevat expliciete {label}-passages in de huidige extractie."
+    items = section.get("items") or []
+    if items:
+        return f"Bevat vooral contextuele of afgeleide signalen die aan {label} raken."
+    return f"Geen duidelijke {label}-passages in de huidige extractie."
+
+
+def build_source_view_models(
+    documents: dict[str, dict],
+    document_payloads: dict[str, dict],
+    claims: dict[str, dict],
+    decision_models: list[dict],
+    action_models: list[dict],
+    themes: list[dict],
+) -> list[dict]:
+    claims_by_document: defaultdict[str, list[dict]] = defaultdict(list)
+    for claim in claims.values():
+        claims_by_document[claim["source_document_id"]].append(claim)
+
+    source_models: list[dict] = []
+    for document in sorted(documents.values(), key=lambda item: (item["publication_date"] or "", item["title"]), reverse=True):
+        payload = document_payloads.get(document["document_id"])
+        document_claims = claims_by_document.get(document["document_id"], [])
+        claim_ids = [claim["claim_id"] for claim in document_claims]
+        topic_counts = Counter(claim["topic"] for claim in document_claims)
+        theme_ids = dedupe(
+            theme_id
+            for claim in document_claims
+            for theme_id in theme_ids_for_topics([claim["topic"]], themes)
+        )
+        linked_decisions = [
+            {"title": item["title"], "status": item["status"], "page_url": item["page_url"]}
+            for item in decision_models
+            if set(item["supporting_claim_ids"]) & set(claim_ids)
+        ]
+        linked_actions = [
+            {"title": item["title"], "status": item["status"], "page_url": item["page_url"]}
+            for item in action_models
+            if set(item["supporting_claim_ids"]) & set(claim_ids)
+        ]
+
+        extraction_scope = payload["extraction_scope"] if payload else {}
+        d5_section = (payload or {}).get("structured_content", {}).get("d5", {})
+        d6_section = (payload or {}).get("structured_content", {}).get("d6", {})
+
+        source_models.append(
+            {
+                "source_id": document["document_id"],
+                "slug": slugify(document.get("short_title") or document["title"]),
+                "page_url": source_page_url(document),
+                "metadata": {
+                    **document,
+                    "document_type_label": document_type_label(document["document_type"]),
+                    "source_classification_label": source_classification_label(document),
+                },
+                "summary": source_summary(document, payload),
+                "what_changed_or_added": source_contribution(document),
+                "d5_relevance": relevance_note_for_section(d5_section, "D5"),
+                "d6_relevance": relevance_note_for_section(d6_section, "D6"),
+                "linked_claims": [
+                    {
+                        "topic": topic,
+                        "title": topic_label(topic),
+                        "claim_count": count,
+                        "page_url": topic_page_url(topic),
+                    }
+                    for topic, count in topic_counts.most_common(8)
+                ],
+                "linked_decisions": linked_decisions,
+                "linked_actions": linked_actions,
+                "linked_themes": [
+                    {
+                        "theme_id": theme_id,
+                        "title": theme_lookup(themes)[theme_id]["title"],
+                        "page_url": theme_page_url(theme_id),
+                    }
+                    for theme_id in theme_ids
+                ],
+                "related_sources": [],
+                "structured_signals": {
+                    "contains_structured_table": extraction_scope.get("contains_structured_table", False),
+                    "d5_item_count": len(d5_section.get("items", [])),
+                    "d6_item_count": len(d6_section.get("items", [])),
+                    "governance_item_count": len((payload or {}).get("structured_content", {}).get("governance_and_finance", {}).get("items", [])),
+                    "timeline_item_count": len((payload or {}).get("structured_content", {}).get("timeline_and_status", {}).get("items", [])),
+                },
+            }
+        )
+
+    theme_sets = {model["source_id"]: {item["theme_id"] for item in model["linked_themes"]} for model in source_models}
+    for model in source_models:
+        overlaps = []
+        for candidate in source_models:
+            if candidate["source_id"] == model["source_id"]:
+                continue
+            overlap_count = len(theme_sets[model["source_id"]] & theme_sets[candidate["source_id"]])
+            if overlap_count == 0 and candidate["metadata"]["publisher"] != model["metadata"]["publisher"]:
+                continue
+            overlaps.append((overlap_count, candidate["metadata"]["publication_date"] or "", candidate))
+        overlaps.sort(key=lambda item: (item[0], item[1], item[2]["metadata"]["title"]), reverse=True)
+        model["related_sources"] = [
+            {
+                "title": candidate["metadata"]["title"],
+                "page_url": candidate["page_url"],
+            }
+            for _, _, candidate in overlaps[:5]
+        ]
+
+    return source_models
+
+
+def build_sources_view(source_models: list[dict]) -> dict:
+    return {
+        "view_run_id": SITE_RUN_ID,
+        "generated_on": TODAY,
+        "as_of_date": TODAY,
+        "title": "Bronnen",
+        "sources": source_models,
+    }
+
+
+def build_site_manifest(
+    decisions: list[dict],
+    actions: list[dict],
+    themes: list[dict],
+    reference_topics: list[dict],
+    sources: list[dict],
+) -> dict:
     pages = [
         {
             "page_type": "home",
@@ -1551,6 +2087,26 @@ def build_site_manifest(decisions: list[dict], actions: list[dict]) -> dict:
             "title": "Tijdlijn",
             "url": "/timeline/",
         },
+        {
+            "page_type": "themes",
+            "title": "Thema's",
+            "url": "/themes/",
+        },
+        {
+            "page_type": "reference",
+            "title": "Referentie",
+            "url": "/reference/",
+        },
+        {
+            "page_type": "reference_topics",
+            "title": "Onderwerpen",
+            "url": "/reference/topics/",
+        },
+        {
+            "page_type": "sources",
+            "title": "Bronnen",
+            "url": "/sources/",
+        },
     ]
     pages.extend(
         {
@@ -1568,6 +2124,30 @@ def build_site_manifest(decisions: list[dict], actions: list[dict]) -> dict:
         }
         for item in actions
     )
+    pages.extend(
+        {
+            "page_type": "theme_detail",
+            "title": item["title"],
+            "url": item["page_url"],
+        }
+        for item in themes
+    )
+    pages.extend(
+        {
+            "page_type": "reference_topic_detail",
+            "title": item["title"],
+            "url": item["page_url"],
+        }
+        for item in reference_topics
+    )
+    pages.extend(
+        {
+            "page_type": "source_detail",
+            "title": item["metadata"]["title"],
+            "url": item["page_url"],
+        }
+        for item in sources
+    )
     return {
         "site_run_id": SITE_RUN_ID,
         "generated_on": TODAY,
@@ -1578,6 +2158,7 @@ def build_site_manifest(decisions: list[dict], actions: list[dict]) -> dict:
 
 def main() -> None:
     almere_view = load_json(ALMERE_VIEW_PATH)
+    current_topics = current_interpretation_topics()
     review_queue = load_json(REVIEW_QUEUE_PATH)
     claims = claim_map()
     documents = document_map()
@@ -1586,6 +2167,9 @@ def main() -> None:
 
     decision_models = build_decision_models(almere_view, claims, documents, themes)
     action_models = build_action_models(almere_view, claims, documents, decision_models)
+    theme_models = build_theme_models(themes, current_topics, almere_view, decision_models, action_models, claims, documents)
+    source_models = build_source_view_models(documents, document_payloads, claims, decision_models, action_models, themes)
+    reference_topic_models = build_reference_topic_models(current_topics, themes, decision_models, action_models, claims, documents)
     home_view = build_home_view(
         almere_view,
         decision_models,
@@ -1598,27 +2182,49 @@ def main() -> None:
     almere_site_view = build_almere_site_view(almere_view, decision_models, action_models, review_queue, claims, documents)
     dashboard_view = build_dashboard_view(almere_view, decision_models, action_models)
     timeline_view = build_timeline_view(documents)
-    site_manifest = build_site_manifest(decision_models, action_models)
+    themes_view = build_themes_view(theme_models)
+    reference_view = build_reference_view(reference_topic_models, source_models)
+    sources_view = build_sources_view(source_models)
+    site_manifest = build_site_manifest(decision_models, action_models, theme_models, reference_topic_models, source_models)
 
     write_json(HOME_VIEW_PATH, home_view)
     write_json(ALMERE_SITE_VIEW_PATH, almere_site_view)
     write_json(DASHBOARD_VIEW_PATH, dashboard_view)
     write_json(TIMELINE_VIEW_PATH, timeline_view)
+    write_json(THEMES_VIEW_PATH, themes_view)
+    write_json(REFERENCE_VIEW_PATH, reference_view)
+    write_json(SOURCES_VIEW_PATH, sources_view)
     write_json(SITE_MANIFEST_PATH, site_manifest)
 
     DECISION_DIR.mkdir(parents=True, exist_ok=True)
     ACTION_DIR.mkdir(parents=True, exist_ok=True)
+    THEME_DIR.mkdir(parents=True, exist_ok=True)
+    REFERENCE_TOPIC_DIR.mkdir(parents=True, exist_ok=True)
+    SOURCE_VIEW_DIR.mkdir(parents=True, exist_ok=True)
     for model in decision_models:
         write_json(DECISION_DIR / f"{model['decision_id']}.json", model)
     for model in action_models:
         write_json(ACTION_DIR / f"{model['action_id']}.json", model)
+    for model in theme_models:
+        write_json(THEME_DIR / f"{model['theme_id']}.json", model)
+    for model in reference_topic_models:
+        write_json(REFERENCE_TOPIC_DIR / f"{model['slug']}.json", model)
+    for model in source_models:
+        write_json(SOURCE_VIEW_DIR / f"{model['slug']}.json", model)
 
     print(f"Wrote {HOME_VIEW_PATH.relative_to(REPO_ROOT).as_posix()}")
     print(f"Wrote {ALMERE_SITE_VIEW_PATH.relative_to(REPO_ROOT).as_posix()}")
     print(f"Wrote {DASHBOARD_VIEW_PATH.relative_to(REPO_ROOT).as_posix()}")
     print(f"Wrote {TIMELINE_VIEW_PATH.relative_to(REPO_ROOT).as_posix()}")
+    print(f"Wrote {THEMES_VIEW_PATH.relative_to(REPO_ROOT).as_posix()}")
+    print(f"Wrote {REFERENCE_VIEW_PATH.relative_to(REPO_ROOT).as_posix()}")
+    print(f"Wrote {SOURCES_VIEW_PATH.relative_to(REPO_ROOT).as_posix()}")
     print(f"Wrote {SITE_MANIFEST_PATH.relative_to(REPO_ROOT).as_posix()}")
-    print(f"Wrote {len(decision_models)} decision view models and {len(action_models)} action view models")
+    print(
+        f"Wrote {len(decision_models)} decision view models, {len(action_models)} action view models, "
+        f"{len(theme_models)} theme view models, {len(reference_topic_models)} reference topic view models, "
+        f"and {len(source_models)} source view models"
+    )
 
 
 if __name__ == "__main__":

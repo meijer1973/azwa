@@ -14,6 +14,9 @@ TEMPLATE_PATH = REPO_ROOT / "templates" / "base.html"
 TAXONOMY_PATH = REPO_ROOT / "config" / "site_taxonomy.json"
 ASSETS_DIR = REPO_ROOT / "assets"
 TIMELINE_VIEW_PATH = DATA_DIR / "site_timeline_view.json"
+THEMES_VIEW_PATH = DATA_DIR / "site_themes_view.json"
+REFERENCE_VIEW_PATH = DATA_DIR / "site_reference_view.json"
+SOURCES_VIEW_PATH = DATA_DIR / "site_sources_view.json"
 
 
 def load_json(path: Path) -> dict:
@@ -132,12 +135,21 @@ def issue_type_label(issue_type: str) -> str:
     return labels.get(issue_type, issue_type)
 
 
-def render_card(title: str, body: str, meta: list[str] | None = None, footer: str | None = None, href: str | None = None) -> str:
-    title_html = f'<h3 class="card__title"><a href="{esc(href)}">{esc(title)}</a></h3>' if href else f'<h3 class="card__title">{esc(title)}</h3>'
+def render_card(
+    title: str,
+    body: str,
+    meta: list[str] | None = None,
+    footer: str | None = None,
+    href: str | None = None,
+    whole_card: bool = False,
+) -> str:
+    title_html = f'<h3 class="card__title"><a href="{esc(href)}">{esc(title)}</a></h3>' if href and not whole_card else f'<h3 class="card__title">{esc(title)}</h3>'
     meta_html = ""
     if meta:
         meta_html = "".join(f'<div class="card__meta">{esc(item)}</div>' for item in meta if item)
     footer_html = f'<div class="card__footer">{footer}</div>' if footer else ""
+    if href and whole_card:
+        return f'<a class="card card--link" href="{esc(href)}">{title_html}<p>{body}</p>{meta_html}{footer_html}</a>'
     return f'<article class="card">{title_html}<p>{body}</p>{meta_html}{footer_html}</article>'
 
 
@@ -174,14 +186,15 @@ def render_link_pills(current_route: str, items: list[dict]) -> str:
     return '<div class="tag-row tag-row--links">' + "".join(links) + "</div>"
 
 
-def render_document_refs(document_refs: list[dict]) -> str:
+def render_document_refs(current_route: str, document_refs: list[dict]) -> str:
     if not document_refs:
         return '<div class="empty-state">Geen bronverwijzingen beschikbaar.</div>'
     items = []
     for ref in document_refs:
+        target = relative_link(current_route, ref["page_url"]) if ref.get("page_url") else ref["source_url"]
         items.append(
             "<li>"
-            + f'<strong><a href="{esc(ref["source_url"])}">{esc(ref["title"])}</a></strong><br>'
+            + f'<strong><a href="{esc(target)}">{esc(ref["title"])}</a></strong><br>'
             + f'<span class="list-meta">{esc(ref["publisher"])} | {esc(ref["publication_date"] or "datum onbekend")} | {esc(ref["jurisdiction_level"])}</span><br>'
             + f'<span class="list-meta">Relevante onderwerpen: {esc(", ".join(ref.get("topics", [])))}</span>'
             + "</li>"
@@ -189,15 +202,21 @@ def render_document_refs(document_refs: list[dict]) -> str:
     return '<ul class="stack-list">' + "".join(items) + "</ul>"
 
 
-def render_evidence_refs(evidence_refs: list[dict]) -> str:
+def render_evidence_refs(current_route: str, evidence_refs: list[dict]) -> str:
     if not evidence_refs:
         return '<div class="empty-state">Geen bronverwijzingen beschikbaar.</div>'
     items = []
+    seen: set[tuple[str, str]] = set()
     for evidence in evidence_refs:
+        dedupe_key = (evidence["document_id"], evidence["topic_label"])
+        if dedupe_key in seen:
+            continue
+        seen.add(dedupe_key)
+        target = relative_link(current_route, evidence["page_url"]) if evidence.get("page_url") else evidence["source_url"]
         note = f'<br><span class="list-meta">{esc(evidence["authority_note"])}</span>' if evidence.get("authority_note") else ""
         items.append(
             "<li>"
-            + f'<strong><a href="{esc(evidence["source_url"])}">{esc(evidence["document_title"])}</a></strong><br>'
+            + f'<strong><a href="{esc(target)}">{esc(evidence["document_title"])}</a></strong><br>'
             + f'<span class="list-meta">{esc(evidence["publisher"])} | {esc(evidence["publication_date"] or "datum onbekend")} | {esc(evidence["topic_label"])}</span>'
             + note
             + "</li>"
@@ -318,7 +337,12 @@ def render_home(route: str, home_view: dict) -> str:
         + "</ul></section>",
         '<section class="section"><h2>Ondersteunende navigatie</h2><div class="card-grid">'
         + "".join(
-            render_card(item["label"], "Secundaire toegang voor naslag en bronverwijzing.", href=relative_link(route, item["url"]))
+            render_card(
+                item["label"],
+                "Secundaire toegang voor naslag en bronverwijzing.",
+                href=relative_link(route, item["url"]),
+                whole_card=True,
+            )
             for item in home_view["supporting_navigation"]
         )
         + "</div></section>",
@@ -405,7 +429,7 @@ def render_almere(route: str, almere_view: dict) -> str:
         )
         + "</ul></section>",
         '<section class="section" id="onzekerheden"><h2>Ondersteunende bronverwijzing</h2>'
-        + render_evidence_refs(almere_view["evidence_refs"])
+        + render_evidence_refs(route, almere_view["evidence_refs"])
         + "</section>",
     ]
     return "".join(sections)
@@ -527,7 +551,7 @@ def render_detail_page(route: str, model: dict, page_type: str) -> str:
                 f'<section class="section"><h2>Besluitvraag</h2><p>{esc(model["decision_question"])}</p></section>',
                 f'<section class="section"><h2>Huidige werkrichting</h2><p>{esc(model["current_working_direction"])}</p></section>',
                 f'<section class="section"><h2>Waarom dit bestuurlijk relevant is</h2><p>{esc(model["why_it_matters_for_leadership"])}</p></section>',
-                '<section class="section"><h2>Huidige beleidsbasis</h2>' + render_document_refs(model["policy_basis"]) + "</section>",
+                '<section class="section"><h2>Huidige beleidsbasis</h2>' + render_document_refs(route, model["policy_basis"]) + "</section>",
                 f'<section class="section"><h2>Huidige situatie in Almere</h2><p>{esc(model["current_situation_almere"]["summary"])}</p></section>',
                 '<section class="section"><h2>Mogelijke opties op basis van de huidige bronbasis</h2><ul class="stack-list">'
                 + "".join(
@@ -594,7 +618,7 @@ def render_detail_page(route: str, model: dict, page_type: str) -> str:
                 )
                 + "</section>"
             )
-        sections.append('<section class="section"><h2>Bronbasis</h2>' + render_evidence_refs(model["supporting_evidence"]) + "</section>")
+        sections.append('<section class="section"><h2>Bronbasis</h2>' + render_evidence_refs(route, model["supporting_evidence"]) + "</section>")
     else:
         sections.extend(
             [
@@ -626,7 +650,7 @@ def render_detail_page(route: str, model: dict, page_type: str) -> str:
                 )
                 + "</ul></section>",
                 f'<section class="section"><h2>Gevolgen als de actie niet wordt opgepakt</h2><p>{esc(model["consequences_if_not_followed_up"])}</p></section>',
-                '<section class="section"><h2>Bronbasis</h2>' + render_evidence_refs(model["supporting_evidence"]) + "</section>",
+                '<section class="section"><h2>Bronbasis</h2>' + render_evidence_refs(route, model["supporting_evidence"]) + "</section>",
             ]
         )
     return "".join(sections)
@@ -652,6 +676,298 @@ def render_timeline(route: str, timeline_view: dict) -> str:
             )
             + "</li>"
             for item in timeline_view["entries"]
+        )
+        + "</ul></section>"
+    )
+
+
+def render_themes_index(route: str, themes_view: dict) -> str:
+    return (
+        '<section class="section"><h2>Strategische thema\'s</h2><div class="card-grid">'
+        + "".join(
+            render_card(
+                theme["title"],
+                theme["summary"],
+                footer=render_link_pills(
+                    route,
+                    [
+                        {"label": f'{theme["linked_decision_count"]} besluitvragen', "href": f'/decisions/?theme={theme["theme_id"]}'},
+                        {"label": f'{theme["linked_action_count"]} opvolgacties', "href": f'/actions/?theme={theme["theme_id"]}'},
+                    ],
+                ),
+                href=relative_link(route, theme["page_url"]),
+            )
+            for theme in themes_view["themes"]
+        )
+        + "</div></section>"
+    )
+
+
+def render_theme_detail(route: str, theme: dict) -> str:
+    return (
+        '<section class="section"><h2>Themasamenvatting</h2><div class="notice">'
+        + esc(theme["summary"])
+        + "</div></section>"
+        + '<section class="section"><h2>Relevante D5/D6-onderdelen</h2><ul class="stack-list">'
+        + "".join(
+            "<li>"
+            + f'<strong>{esc(item["title"])}</strong><br>'
+            + f'<span class="list-meta">{esc(item["scope_label"])}</span>'
+            + ("<br><span class=\"list-meta\">Menselijke duiding blijft nodig.</span>" if item["needs_human_review"] else "")
+            + "</li>"
+            for item in theme["relevant_d5_d6_items"]
+        )
+        + "</ul></section>"
+        + '<section class="section"><h2>Huidige interpretatie</h2><ul class="stack-list">'
+        + "".join(
+            "<li>"
+            + f'<strong><a href="{esc(relative_link(route, item["page_url"]))}">{esc(item["title"])}</a></strong><br>'
+            + f'<span class="list-meta">{esc(item["status"])} | betrouwbaarheid {esc(item["confidence_label"])}</span>'
+            + ("<br><span class=\"list-meta\">Menselijke duiding gemarkeerd in de referentielaag.</span>" if item["needs_human_review"] else "")
+            + "</li>"
+            for item in theme["current_interpretation"]
+        )
+        + "</ul></section>"
+        + '<section class="section"><h2>Implicaties voor Almere</h2><ul class="stack-list">'
+        + "".join(
+            "<li>"
+            + f'<strong><a href="{esc(relative_link(route, item["page_url"]))}">{esc(item["title"])}</a></strong><br>'
+            + esc(item["summary"])
+            + "</li>"
+            for item in theme["almere_implications"]
+        )
+        + "</ul></section>"
+        + '<section class="section"><h2>Gekoppelde besluitvragen</h2><ul class="stack-list">'
+        + "".join(
+            "<li>"
+            + f'<strong><a href="{esc(relative_link(route, item["page_url"]))}">{esc(item["title"])}</a></strong><br>'
+            + f'<span class="list-meta">{esc(item["status"])}</span>'
+            + "</li>"
+            for item in theme["linked_decisions"]
+        )
+        + "</ul></section>"
+        + '<section class="section"><h2>Gekoppelde opvolgacties</h2><ul class="stack-list">'
+        + "".join(
+            "<li>"
+            + f'<strong><a href="{esc(relative_link(route, item["page_url"]))}">{esc(item["title"])}</a></strong><br>'
+            + f'<span class="list-meta">{esc(item["status"])}</span>'
+            + "</li>"
+            for item in theme["linked_actions"]
+        )
+        + "</ul></section>"
+        + '<section class="section"><h2>Afhankelijkheden</h2><ul class="stack-list">'
+        + "".join(
+            "<li>"
+            + f'<strong><a href="{esc(relative_link(route, item["page_url"]))}">{esc(item["title"])}</a></strong><br>'
+            + esc(item["summary"])
+            + "</li>"
+            for item in theme["dependencies"]
+        )
+        + "</ul></section>"
+        + '<section class="section"><h2>Bronbasis</h2>'
+        + render_document_refs(route, theme["source_basis"])
+        + "</section>"
+        + '<section class="section"><h2>Gerelateerde referentieonderwerpen</h2><ul class="stack-list">'
+        + "".join(
+            "<li>"
+            + f'<strong><a href="{esc(relative_link(route, item["page_url"]))}">{esc(item["title"])}</a></strong><br>'
+            + f'<span class="list-meta">{esc(item["status"])}</span>'
+            + "</li>"
+            for item in theme["related_reference_topics"]
+        )
+        + "</ul></section>"
+    )
+
+
+def render_reference(route: str, reference_view: dict) -> str:
+    sections = [
+        '<section class="section"><h2>Hoe deze naslag te gebruiken</h2><div class="notice">Gebruik deze laag voor begrippen, bronsporen en onderwerpsoverzicht. Besluitvragen en opvolgacties blijven leidend voor bestuurlijke opvolging.</div></section>',
+        '<section class="section"><h2>Onderwerpsoverzicht</h2><div class="card-grid">'
+        + "".join(
+            render_card(
+                domain,
+                f'{len(topics)} onderwerp(en) in deze groep.',
+                footer=render_link_pills(route, [{"label": topic["title"], "href": topic["page_url"]} for topic in topics[:4]]),
+                href=relative_link(route, "/reference/topics/"),
+            )
+            for domain, topics in reference_view["domain_groups"].items()
+        )
+        + "</div></section>",
+        '<section class="section"><h2>Uitgelichte onderwerpen</h2><div class="card-grid">'
+        + "".join(
+            render_card(
+                topic["title"],
+                topic["definition"],
+                meta=[topic["status"], topic["linked_domain"]],
+                href=relative_link(route, topic["page_url"]),
+                whole_card=True,
+            )
+            for topic in reference_view["featured_topics"]
+        )
+        + "</div></section>",
+        '<section class="section"><h2>Belangrijkste bronhouders</h2><ul class="stack-list">'
+        + "".join(
+            "<li>"
+            + f'<strong>{esc(item["publisher"])}</strong><br>'
+            + f'<span class="list-meta">{esc(str(item["document_count"]))} bron(nen) in de huidige referentielaag</span>'
+            + "</li>"
+            for item in reference_view["publishers"]
+        )
+        + "</ul></section>",
+    ]
+    return "".join(sections)
+
+
+def render_reference_topics_index(route: str, topics: list[dict]) -> str:
+    return (
+        '<section class="section"><h2>Onderwerpen</h2><div class="card-grid">'
+        + "".join(
+            render_card(
+                topic["title"],
+                topic["definition"],
+                meta=[topic["status"], topic["linked_domain"]],
+                href=relative_link(route, topic["page_url"]),
+                whole_card=True,
+            )
+            for topic in topics
+        )
+        + "</div></section>"
+    )
+
+
+def render_reference_topic_detail(route: str, topic: dict) -> str:
+    return (
+        '<section class="section"><h2>Definitie</h2><div class="notice">'
+        + esc(topic["definition"])
+        + "</div></section>"
+        + f'<section class="section"><h2>Status</h2><p>{esc(topic["status"])}. Betrouwbaarheidsniveau: {esc(topic["confidence_label"])}.</p></section>'
+        + '<section class="section"><h2>Gekoppelde thema\'s</h2><ul class="stack-list">'
+        + "".join(
+            "<li>"
+            + f'<strong><a href="{esc(relative_link(route, item["page_url"]))}">{esc(item["title"])}</a></strong>'
+            + "</li>"
+            for item in topic["linked_themes"]
+        )
+        + "</ul></section>"
+        + '<section class="section"><h2>Gekoppelde besluitvragen</h2><ul class="stack-list">'
+        + "".join(
+            "<li>"
+            + f'<strong><a href="{esc(relative_link(route, item["page_url"]))}">{esc(item["title"])}</a></strong><br>'
+            + f'<span class="list-meta">{esc(item["status"])}</span>'
+            + "</li>"
+            for item in topic["linked_decisions"]
+        )
+        + "</ul></section>"
+        + '<section class="section"><h2>Gekoppelde opvolgacties</h2><ul class="stack-list">'
+        + "".join(
+            "<li>"
+            + f'<strong><a href="{esc(relative_link(route, item["page_url"]))}">{esc(item["title"])}</a></strong><br>'
+            + f'<span class="list-meta">{esc(item["status"])}</span>'
+            + "</li>"
+            for item in topic["linked_actions"]
+        )
+        + "</ul></section>"
+        + '<section class="section"><h2>Bronbasis</h2>'
+        + render_document_refs(route, topic["source_basis"])
+        + "</section>"
+        + '<section class="section"><h2>Tijdlijnnotities</h2><ul class="stack-list">'
+        + "".join(
+            "<li>"
+            + f'<strong>{esc(item["date_label"])} - <a href="{esc(relative_link(route, item["page_url"]))}">{esc(item["title"])}</a></strong><br>'
+            + f'<span class="list-meta">{esc(item["status"])}</span>'
+            + "</li>"
+            for item in topic["timeline_notes"]
+        )
+        + "</ul></section>"
+        + '<section class="section"><h2>Gerelateerde onderwerpen</h2><ul class="stack-list">'
+        + "".join(
+            "<li>"
+            + f'<strong><a href="{esc(relative_link(route, item["page_url"]))}">{esc(item["title"])}</a></strong>'
+            + "</li>"
+            for item in topic["related_topics"]
+        )
+        + "</ul></section>"
+    )
+
+
+def render_sources_index(route: str, sources_view: dict) -> str:
+    return (
+        '<section class="section"><h2>Bronnenoverzicht</h2><div class="card-grid">'
+        + "".join(
+            render_card(
+                source["metadata"]["title"],
+                source["summary"],
+                meta=[
+                    source["metadata"]["publisher"],
+                    source["metadata"]["publication_date"] or "datum onbekend",
+                    source["metadata"]["document_type_label"],
+                    source["metadata"]["source_classification_label"],
+                ],
+                href=relative_link(route, source["page_url"]),
+                whole_card=True,
+            )
+            for source in sources_view["sources"]
+        )
+        + "</div></section>"
+    )
+
+
+def render_source_detail(route: str, source: dict) -> str:
+    metadata = source["metadata"]
+    return (
+        '<section class="section"><h2>Metadata</h2><ul class="stack-list">'
+        + "<li>"
+        + f'<strong>Uitgever</strong><br>{esc(metadata["publisher"])}'
+        + "</li><li>"
+        + f'<strong>Publicatiedatum</strong><br>{esc(metadata["publication_date"] or "datum onbekend")}'
+        + "</li><li>"
+        + f'<strong>Type bron</strong><br>{esc(metadata["document_type_label"])} | {esc(metadata["source_classification_label"])}'
+        + "</li><li>"
+        + f'<strong>Originele bron</strong><br><a href="{esc(metadata["source_url"])}">{esc(metadata["source_url"])}</a>'
+        + "</li></ul></section>"
+        + f'<section class="section"><h2>Korte samenvatting</h2><div class="notice">{esc(source["summary"])}</div></section>'
+        + f'<section class="section"><h2>Wat deze bron toevoegt</h2><p>{esc(source["what_changed_or_added"])}</p></section>'
+        + f'<section class="section"><h2>D5-relevantie</h2><p>{esc(source["d5_relevance"])}</p></section>'
+        + f'<section class="section"><h2>D6-relevantie</h2><p>{esc(source["d6_relevance"])}</p></section>'
+        + '<section class="section"><h2>Extractiesignalen</h2><ul class="stack-list">'
+        + f'<li><strong>Gestructureerde tabel</strong><br>{esc("ja" if source["structured_signals"]["contains_structured_table"] else "nee")}</li>'
+        + f'<li><strong>D5-items</strong><br>{esc(str(source["structured_signals"]["d5_item_count"]))}</li>'
+        + f'<li><strong>D6-items</strong><br>{esc(str(source["structured_signals"]["d6_item_count"]))}</li>'
+        + f'<li><strong>Governance/financiering-items</strong><br>{esc(str(source["structured_signals"]["governance_item_count"]))}</li>'
+        + f'<li><strong>Tijdlijn/status-items</strong><br>{esc(str(source["structured_signals"]["timeline_item_count"]))}</li>'
+        + "</ul></section>"
+        + '<section class="section"><h2>Gekoppelde claims</h2><ul class="stack-list">'
+        + "".join(
+            "<li>"
+            + f'<strong><a href="{esc(relative_link(route, item["page_url"]))}">{esc(item["title"])}</a></strong><br>'
+            + f'<span class="list-meta">{esc(str(item["claim_count"]))} claim(s)</span>'
+            + "</li>"
+            for item in source["linked_claims"]
+        )
+        + "</ul></section>"
+        + '<section class="section"><h2>Gekoppelde besluitvragen en acties</h2><ul class="stack-list">'
+        + "".join(
+            "<li>"
+            + f'<strong><a href="{esc(relative_link(route, item["page_url"]))}">{esc(item["title"])}</a></strong><br>'
+            + f'<span class="list-meta">{esc(item["status"])}</span>'
+            + "</li>"
+            for item in source["linked_decisions"] + source["linked_actions"]
+        )
+        + "</ul></section>"
+        + '<section class="section"><h2>Gekoppelde thema\'s</h2><ul class="stack-list">'
+        + "".join(
+            "<li>"
+            + f'<strong><a href="{esc(relative_link(route, item["page_url"]))}">{esc(item["title"])}</a></strong>'
+            + "</li>"
+            for item in source["linked_themes"]
+        )
+        + "</ul></section>"
+        + '<section class="section"><h2>Gerelateerde bronnen</h2><ul class="stack-list">'
+        + "".join(
+            "<li>"
+            + f'<strong><a href="{esc(relative_link(route, item["page_url"]))}">{esc(item["title"])}</a></strong>'
+            + "</li>"
+            for item in source["related_sources"]
         )
         + "</ul></section>"
     )
@@ -707,6 +1023,10 @@ def build_search_index(
     actions: list[dict],
     dashboard_view: dict,
     timeline_view: dict,
+    themes_view: dict,
+    reference_view: dict,
+    reference_topics: list[dict],
+    sources_view: dict,
 ) -> list[dict]:
     index = [
         {
@@ -775,6 +1095,39 @@ def build_search_index(
             "page_type": "timeline",
             "page_type_label": "Pagina",
         },
+        {
+            "title": "Thema's",
+            "subtitle": "Strategische thema's",
+            "summary": "Themagewijs overzicht van bestuurlijke lijnen, besluitvragen en opvolgacties.",
+            "aliases": ["thema", "strategische thema's"],
+            "themes": [],
+            "domains": ["D5", "D6"],
+            "url": route_to_output_path("/themes/").as_posix(),
+            "page_type": "themes",
+            "page_type_label": "Pagina",
+        },
+        {
+            "title": "Referentie",
+            "subtitle": "Naslag en onderwerpsoverzicht",
+            "summary": "Naslaglaag met onderwerpen, bronhouders en begripsmatige koppelingen.",
+            "aliases": ["naslag", "onderwerpen", "referentie"],
+            "themes": [],
+            "domains": ["D5", "D6"],
+            "url": route_to_output_path("/reference/").as_posix(),
+            "page_type": "reference",
+            "page_type_label": "Pagina",
+        },
+        {
+            "title": "Bronnen",
+            "subtitle": "Bronindex",
+            "summary": "Volledige index van bronpagina's en documentdetails die aan de site ten grondslag liggen.",
+            "aliases": ["bronbasis", "documenten", "bronnen"],
+            "themes": [],
+            "domains": ["D5", "D6"],
+            "url": route_to_output_path("/sources/").as_posix(),
+            "page_type": "sources",
+            "page_type_label": "Pagina",
+        },
     ]
     for decision in decisions:
         index.append(
@@ -804,6 +1157,48 @@ def build_search_index(
                 "page_type_label": "Opvolgactie",
             }
         )
+    for theme in themes_view["themes"]:
+        index.append(
+            {
+                "title": theme["title"],
+                "subtitle": "Strategisch thema",
+                "summary": theme["summary"],
+                "aliases": [theme["theme_id"]],
+                "themes": [theme["theme_id"]],
+                "domains": ["D5", "D6"],
+                "url": route_to_output_path(theme["page_url"]).as_posix(),
+                "page_type": "theme",
+                "page_type_label": "Thema",
+            }
+        )
+    for topic in reference_topics:
+        index.append(
+            {
+                "title": topic["title"],
+                "subtitle": topic["status"],
+                "summary": topic["definition"],
+                "aliases": [topic["topic_id"]],
+                "themes": topic["linked_theme_ids"],
+                "domains": [topic["linked_domain"]],
+                "url": route_to_output_path(topic["page_url"]).as_posix(),
+                "page_type": "reference_topic",
+                "page_type_label": "Onderwerp",
+            }
+        )
+    for source in sources_view["sources"]:
+        index.append(
+            {
+                "title": source["metadata"]["title"],
+                "subtitle": source["metadata"]["publisher"],
+                "summary": source["summary"],
+                "aliases": [source["source_id"], source["metadata"].get("short_title", "")],
+                "themes": [item["theme_id"] for item in source["linked_themes"]],
+                "domains": [],
+                "url": route_to_output_path(source["page_url"]).as_posix(),
+                "page_type": "source",
+                "page_type_label": "Bron",
+            }
+        )
     return index
 
 
@@ -821,8 +1216,14 @@ def main() -> None:
     almere_view = load_json(DATA_DIR / "site_almere_view.json")
     dashboard_view = load_json(DATA_DIR / "dashboard_view.json")
     timeline_view = load_json(TIMELINE_VIEW_PATH)
+    themes_view = load_json(THEMES_VIEW_PATH)
+    reference_view = load_json(REFERENCE_VIEW_PATH)
+    sources_view = load_json(SOURCES_VIEW_PATH)
     decisions = [load_json(path) for path in sorted((DATA_DIR / "decision_view_models").glob("*.json"))]
     actions = [load_json(path) for path in sorted((DATA_DIR / "action_view_models").glob("*.json"))]
+    theme_models = [load_json(path) for path in sorted((DATA_DIR / "theme_view_models").glob("*.json"))]
+    reference_topics = [load_json(path) for path in sorted((DATA_DIR / "reference_topic_view_models").glob("*.json"))]
+    source_models = [load_json(path) for path in sorted((DATA_DIR / "source_view_models").glob("*.json"))]
 
     copy_assets()
     write_text(DIST_DIR / ".nojekyll", "")
@@ -920,6 +1321,66 @@ def main() -> None:
                 crumbs=[("Start", "/"), ("Tijdlijn", "/timeline/")],
             ),
         ),
+        (
+            "/themes/",
+            render_page(
+                "/themes/",
+                "Thema's",
+                "Strategisch overzicht van de hoofdthema's, gekoppelde besluitvragen en opvolgacties.",
+                render_themes_index("/themes/", themes_view),
+                navigation,
+                site_info,
+                themes_view["as_of_date"],
+                themes_view["generated_on"],
+                "page-themes",
+                crumbs=[("Start", "/"), ("Thema's", "/themes/")],
+            ),
+        ),
+        (
+            "/reference/",
+            render_page(
+                "/reference/",
+                "Referentie",
+                "Naslaglaag met onderwerpen, bronhouders en koppelingen naar de bestuurlijke site-onderdelen.",
+                render_reference("/reference/", reference_view),
+                navigation,
+                site_info,
+                reference_view["as_of_date"],
+                reference_view["generated_on"],
+                "page-reference",
+                crumbs=[("Start", "/"), ("Referentie", "/reference/")],
+            ),
+        ),
+        (
+            "/reference/topics/",
+            render_page(
+                "/reference/topics/",
+                "Onderwerpen",
+                "Volledige index van onderwerpen in de huidige referentielaag.",
+                render_reference_topics_index("/reference/topics/", reference_topics),
+                navigation,
+                site_info,
+                reference_view["as_of_date"],
+                reference_view["generated_on"],
+                "page-reference-topics",
+                crumbs=[("Start", "/"), ("Referentie", "/reference/"), ("Onderwerpen", "/reference/topics/")],
+            ),
+        ),
+        (
+            "/sources/",
+            render_page(
+                "/sources/",
+                "Bronnen",
+                "Volledige index van de bronnen die aan de huidige site en claimlaag ten grondslag liggen.",
+                render_sources_index("/sources/", sources_view),
+                navigation,
+                site_info,
+                sources_view["as_of_date"],
+                sources_view["generated_on"],
+                "page-sources",
+                crumbs=[("Start", "/"), ("Bronnen", "/sources/")],
+            ),
+        ),
     ]
 
     for decision in decisions:
@@ -960,25 +1421,78 @@ def main() -> None:
             )
         )
 
-    for route, title in (
-        ("/themes/", "Thema's"),
-        ("/reference/", "Referentie"),
-        ("/sources/", "Bronnen"),
-    ):
+    for theme in theme_models:
+        pages.append(
+            (
+                theme["page_url"],
+                render_page(
+                    theme["page_url"],
+                    theme["title"],
+                    theme["summary"],
+                    render_theme_detail(theme["page_url"], theme),
+                    navigation,
+                    site_info,
+                    themes_view["as_of_date"],
+                    themes_view["generated_on"],
+                    "page-theme-detail",
+                    crumbs=[("Start", "/"), ("Thema's", "/themes/"), (theme["title"], theme["page_url"])],
+                ),
+            )
+        )
+
+    for topic in reference_topics:
+        pages.append(
+            (
+                topic["page_url"],
+                render_page(
+                    topic["page_url"],
+                    topic["title"],
+                    topic["definition"],
+                    render_reference_topic_detail(topic["page_url"], topic),
+                    navigation,
+                    site_info,
+                    reference_view["as_of_date"],
+                    reference_view["generated_on"],
+                    "page-reference-topic-detail",
+                    crumbs=[("Start", "/"), ("Referentie", "/reference/"), ("Onderwerpen", "/reference/topics/"), (topic["title"], topic["page_url"])],
+                ),
+            )
+        )
+
+    for source in source_models:
+        pages.append(
+            (
+                source["page_url"],
+                render_page(
+                    source["page_url"],
+                    source["metadata"]["title"],
+                    source["summary"],
+                    render_source_detail(source["page_url"], source),
+                    navigation,
+                    site_info,
+                    sources_view["as_of_date"],
+                    sources_view["generated_on"],
+                    "page-source-detail",
+                    crumbs=[("Start", "/"), ("Bronnen", "/sources/"), (source["metadata"]["title"], source["page_url"])],
+                ),
+            )
+        )
+
+    for route, title in (("/reference/glossary/", "Begrippenlijst"),):
         pages.append(
             (
                 route,
                 render_page(
                     route,
                     title,
-                    f"{title} worden in een volgende bouwstap inhoudelijk uitgewerkt.",
-                    render_placeholder(route, title),
+                    "De begrippenlijst volgt uit de onderwerpenset van de referentielaag.",
+                    render_reference_topics_index(route, reference_topics),
                     navigation,
                     site_info,
-                    home_view["as_of_date"],
+                    reference_view["as_of_date"],
                     home_view["generated_on"],
-                    "page-placeholder",
-                    crumbs=[("Start", "/"), (title, route)],
+                    "page-reference-glossary",
+                    crumbs=[("Start", "/"), ("Referentie", "/reference/"), (title, route)],
                 ),
             )
         )
@@ -987,8 +1501,32 @@ def main() -> None:
         output_path = DIST_DIR / route_to_output_path(route)
         write_text(output_path, content)
 
-    search_index = build_search_index(home_view, almere_view, decisions, actions, dashboard_view, timeline_view)
+    search_index = build_search_index(
+        home_view,
+        almere_view,
+        decisions,
+        actions,
+        dashboard_view,
+        timeline_view,
+        themes_view,
+        reference_view,
+        reference_topics,
+        sources_view,
+    )
     write_text(DIST_DIR / "search-index.json", json.dumps(search_index, indent=2, ensure_ascii=False) + "\n")
+    write_text(
+        DIST_DIR / "site-build.json",
+        json.dumps(
+            {
+                "generated_on": home_view["generated_on"],
+                "page_count": len(pages),
+                "search_index_entries": len(search_index),
+            },
+            indent=2,
+            ensure_ascii=False,
+        )
+        + "\n",
+    )
 
     print(f"Wrote {len(pages)} HTML pages to {DIST_DIR.relative_to(REPO_ROOT).as_posix()}")
     print(f"Wrote {len(search_index)} search index entries")

@@ -1,0 +1,247 @@
+{
+  "theme_id": "financiering",
+  "title": "Financiering",
+  "summary": "Bekostigingsroutes, inzet van middelen en bestuurlijke keuzes over financiele verdeling.",
+  "page_url": "/themes/financiering/",
+  "linked_decision_count": 1,
+  "linked_action_count": 1,
+  "linked_decisions": [
+    {
+      "title": "Mogelijke besluitvraag: verdeling van beschikbare middelen over D5 en D6",
+      "status": "geblokkeerd door afhankelijkheid",
+      "page_url": "/decisions/mogelijke-besluitvraag-verdeling-van-beschikbare-middelen-over-d5-en-d6/"
+    }
+  ],
+  "linked_actions": [
+    {
+      "title": "Mogelijke opvolgactie: inzet van middelen en eigenaarschap vastleggen",
+      "status": "geblokkeerd door afhankelijkheid",
+      "page_url": "/actions/mogelijke-opvolgactie-inzet-van-middelen-en-eigenaarschap-vastleggen/"
+    }
+  ],
+  "relevant_d5_d6_items": [],
+  "current_interpretation": [
+    {
+      "topic": "finance.d5_d6.funding_instrument",
+      "title": "bekostigingsroute D5/D6",
+      "status": "huidige lijn met menselijke duiding",
+      "confidence_label": "middel",
+      "needs_human_review": true,
+      "page_url": "/reference/topics/finance-d5-d6-funding-instrument/"
+    },
+    {
+      "topic": "finance.d5_d6.municipal_funding",
+      "title": "gemeentelijke middelen D5/D6",
+      "status": "huidige lijn zonder extra review",
+      "confidence_label": "hoog",
+      "needs_human_review": false,
+      "page_url": "/reference/topics/finance-d5-d6-municipal-funding/"
+    },
+    {
+      "topic": "finance.local_alignment_goal",
+      "title": "lokale financiele aansluiting",
+      "status": "huidige lijn met menselijke duiding",
+      "confidence_label": "voorzichtig",
+      "needs_human_review": true,
+      "page_url": "/reference/topics/finance-local-alignment-goal/"
+    },
+    {
+      "topic": "finance.azwa_macro_framework",
+      "title": "macrokader voor AZWA-financiering",
+      "status": "huidige lijn zonder extra review",
+      "confidence_label": "hoog",
+      "needs_human_review": false,
+      "page_url": "/reference/topics/finance-azwa-macro-framework/"
+    },
+    {
+      "topic": "finance.regional_funding_path",
+      "title": "regionale financieringsroute",
+      "status": "huidige lijn met menselijke duiding",
+      "confidence_label": "middel",
+      "needs_human_review": true,
+      "page_url": "/reference/topics/finance-regional-funding-path/"
+    }
+  ],
+  "almere_implications": [
+    {
+      "title": "Lokale verdeling van middelen nog niet expliciet zichtbaar",
+      "summary": "De landelijke bekostigingsroute is zichtbaar, maar de huidige bronbasis laat nog geen expliciete Almeerse keuze zien over verdeling van middelen, eigenaarschap en prioritering.",
+      "page_url": "/almere/#lokale-hiaten"
+    },
+    {
+      "title": "Menselijke duiding bij bekostigingsroute D5/D6",
+      "summary": "De huidige interpretatielaag markeert dit onderwerp voor extra menselijke duiding.",
+      "page_url": "/almere/#menselijke-duiding"
+    },
+    {
+      "title": "Menselijke duiding bij lokale financiele aansluiting",
+      "summary": "De huidige interpretatielaag markeert dit onderwerp voor extra menselijke duiding.",
+      "page_url": "/almere/#menselijke-duiding"
+    },
+    {
+      "title": "Menselijke duiding bij regionale financieringsroute",
+      "summary": "De huidige interpretatielaag markeert dit onderwerp voor extra menselijke duiding.",
+      "page_url": "/almere/#menselijke-duiding"
+    }
+  ],
+  "dependencies": [
+    {
+      "title": "Landelijke keuze voor bekostigingsroute en inzet van middelen",
+      "summary": "De uiteindelijke route voor inzet en verstrekking van D5/D6-middelen is afhankelijk van landelijke afspraken tussen VNG, fondsbeheerders en VWS.",
+      "page_url": "/almere/#externe-afhankelijkheden"
+    }
+  ],
+  "source_basis": [
+    {
+      "document_id": "nat_azwa_2026_voortgang_kamerbrief",
+      "title": "Kamerbrief inzake voortgang Integraal Zorgakkoord (IZA) en Aanvullend Zorg- en Welzijnsakkoord (AZWA)",
+      "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
+      "publication_date": "2026-04-09",
+      "document_type": "kamerbrief",
+      "jurisdiction_level": "national",
+      "status": "current",
+      "source_url": "https://www.rijksoverheid.nl/documenten/kamerstukken/2026/04/09/kamerbrief-inzake-voortgang-integraal-zorgakkoord-iza-en-aanvullend-zorg-en-welzijnsakkoord-azwa",
+      "page_url": "/sources/voortgangsbrief-iza-azwa/",
+      "topics": [
+        "regionale financieringsroute"
+      ]
+    },
+    {
+      "document_id": "nat_azwa_2026_cw31_kader_d5_d6",
+      "title": "CW 3.1 kader basisfunctionaliteiten en basisinfrastructuur D5 en D6",
+      "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
+      "publication_date": "2026-03-10",
+      "document_type": "framework",
+      "jurisdiction_level": "national",
+      "status": "current",
+      "source_url": "https://www.rijksoverheid.nl/documenten/publicaties/2026/03/10/cw-3-1-kader-basisfunctionaliteiten-en-basisinfrastructuur-d5-en-d6",
+      "page_url": "/sources/cw-3-1-kader-d5-d6/",
+      "topics": [
+        "bekostigingsroute D5/D6",
+        "macrokader voor AZWA-financiering"
+      ]
+    },
+    {
+      "document_id": "nat_azwa_2025_definitief",
+      "title": "Aanvullend Zorg- en Welzijnsakkoord (AZWA) (Definitief)",
+      "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
+      "publication_date": "2025-08-31",
+      "document_type": "agreement",
+      "jurisdiction_level": "national",
+      "status": "current",
+      "source_url": "https://www.rijksoverheid.nl/documenten/rapporten/2025/08/31/aanvullend-zorg-en-welzijnsakkoord-azwa",
+      "page_url": "/sources/azwa-definitief/",
+      "topics": [
+        "bekostigingsroute D5/D6",
+        "gemeentelijke middelen D5/D6",
+        "macrokader voor AZWA-financiering"
+      ]
+    },
+    {
+      "document_id": "nat_azwa_2025_onderhandelaarsakkoord",
+      "title": "Aanvullend Zorg- en Welzijnsakkoord - onderhandelaarsakkoord",
+      "publisher": "VNG",
+      "publication_date": "2025-07-11",
+      "document_type": "agreement",
+      "jurisdiction_level": "national",
+      "status": "reference",
+      "source_url": "https://vng.nl/brieven/onderhandelaarsakkoord-aanvullend-zorg-en-welzijnsakkoord-azwa",
+      "page_url": "/sources/azwa-onderhandelaarsakkoord/",
+      "topics": [
+        "bekostigingsroute D5/D6",
+        "gemeentelijke middelen D5/D6",
+        "macrokader voor AZWA-financiering"
+      ]
+    },
+    {
+      "document_id": "mun_almere_pga_transformatieplan",
+      "title": "Transformatieplan Positief Gezond Almere",
+      "publisher": "Positief Gezond Almere",
+      "publication_date": "2025-05-01",
+      "document_type": "implementation_plan",
+      "jurisdiction_level": "municipal",
+      "status": "current",
+      "source_url": "https://positiefgezondalmere.nl/over-ons/",
+      "page_url": "/sources/pga-transformatieplan/",
+      "topics": [
+        "lokale financiele aansluiting"
+      ]
+    },
+    {
+      "document_id": "mun_almere_pga_seo_businesscase_2024",
+      "title": "Naar een positief gezond Almere; Beleidstheorie en businesscase transformatieplan",
+      "publisher": "SEO Economisch Onderzoek",
+      "publication_date": "2024-04-25",
+      "document_type": "research_report",
+      "jurisdiction_level": "municipal",
+      "status": "reference",
+      "source_url": "https://www.seo.nl/publicaties/naar-een-positief-gezond-almere-beleidstheorie-en-businesscase-transformatieplan/",
+      "page_url": "/sources/seo-beleidstheorie-en-businesscase-pga/",
+      "topics": [
+        "bekostigingsroute D5/D6",
+        "lokale financiele aansluiting",
+        "regionale financieringsroute"
+      ]
+    },
+    {
+      "document_id": "reg_flevoland_2023_regioplan_iza",
+      "title": "Zorgzaam Flevoland 2023 Regioplan IZA Flevoland",
+      "publisher": "Zorgzaam Flevoland / Flever",
+      "publication_date": "2023-12-22",
+      "document_type": "regional_plan",
+      "jurisdiction_level": "regional",
+      "status": "reference",
+      "source_url": "https://flever.nl/wp-content/uploads/2024/01/Regioplan_IZA_Flevoland_ZorgzaamFlevoland2023.pdf",
+      "page_url": "/sources/regioplan-iza-flevoland/",
+      "topics": [
+        "bekostigingsroute D5/D6"
+      ]
+    },
+    {
+      "document_id": "nat_gala_2023_gezond_en_actief_leven",
+      "title": "GALA - Gezond en Actief Leven Akkoord",
+      "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
+      "publication_date": "2023-01-31",
+      "document_type": "agreement",
+      "jurisdiction_level": "national",
+      "status": "reference",
+      "source_url": "https://www.rijksoverheid.nl/documenten/rapporten/2023/01/31/gala-gezond-en-actief-leven-akkoord",
+      "page_url": "/sources/gala-2023/",
+      "topics": [
+        "bekostigingsroute D5/D6"
+      ]
+    }
+  ],
+  "related_reference_topics": [
+    {
+      "topic": "finance.d5_d6.funding_instrument",
+      "title": "bekostigingsroute D5/D6",
+      "status": "huidige lijn met menselijke duiding",
+      "page_url": "/reference/topics/finance-d5-d6-funding-instrument/"
+    },
+    {
+      "topic": "finance.d5_d6.municipal_funding",
+      "title": "gemeentelijke middelen D5/D6",
+      "status": "huidige lijn zonder extra review",
+      "page_url": "/reference/topics/finance-d5-d6-municipal-funding/"
+    },
+    {
+      "topic": "finance.local_alignment_goal",
+      "title": "lokale financiele aansluiting",
+      "status": "huidige lijn met menselijke duiding",
+      "page_url": "/reference/topics/finance-local-alignment-goal/"
+    },
+    {
+      "topic": "finance.azwa_macro_framework",
+      "title": "macrokader voor AZWA-financiering",
+      "status": "huidige lijn zonder extra review",
+      "page_url": "/reference/topics/finance-azwa-macro-framework/"
+    },
+    {
+      "topic": "finance.regional_funding_path",
+      "title": "regionale financieringsroute",
+      "status": "huidige lijn met menselijke duiding",
+      "page_url": "/reference/topics/finance-regional-funding-path/"
+    }
+  ]
+}

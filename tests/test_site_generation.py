@@ -16,6 +16,7 @@ TIMELINE_VIEW_PATH = REPO_ROOT / "data" / "site" / "site_timeline_view.json"
 THEMES_VIEW_PATH = REPO_ROOT / "data" / "site" / "site_themes_view.json"
 REFERENCE_VIEW_PATH = REPO_ROOT / "data" / "site" / "site_reference_view.json"
 SOURCES_VIEW_PATH = REPO_ROOT / "data" / "site" / "site_sources_view.json"
+SOURCE_INTAKE_CANDIDATES_PATH = REPO_ROOT / "data" / "raw" / "source_intake_candidates.json"
 DECISION_DIR = REPO_ROOT / "data" / "site" / "decision_view_models"
 ACTION_DIR = REPO_ROOT / "data" / "site" / "action_view_models"
 THEME_DIR = REPO_ROOT / "data" / "site" / "theme_view_models"
@@ -52,6 +53,7 @@ class SiteGenerationTests(unittest.TestCase):
         self.assertTrue(ALMERE_VIEW_PATH.exists())
         self.assertTrue(DASHBOARD_VIEW_PATH.exists())
         self.assertTrue(TIMELINE_REGISTER_PATH.exists())
+        self.assertTrue(SOURCE_INTAKE_CANDIDATES_PATH.exists())
         self.assertTrue(TIMELINE_VIEW_PATH.exists())
         self.assertTrue(THEMES_VIEW_PATH.exists())
         self.assertTrue(REFERENCE_VIEW_PATH.exists())
@@ -167,13 +169,18 @@ class SiteGenerationTests(unittest.TestCase):
         self.assertIn('id="jaar-2027"', html)
         self.assertIn('class="timeline-entry"', html)
         self.assertIn("Meer informatie", html)
-        self.assertIn("Meicirculaire gemeentefonds 2026 verwacht", html)
-        self.assertIn("BO IZA/AZWA kiest inzet van doorbraakmiddelen", html)
-        self.assertIn("https://www.rijksoverheid.nl/onderwerpen/financien-gemeenten-en-provincies/gemeentefonds", html)
         self.assertIn("../sources/azwa-definitief/index.html", html)
         self.assertIn("../actions/mogelijke-opvolgactie-monitoringsaanpak-voor-almere-afstemmen/index.html", html)
         self.assertLess(html.index('id="jaar-2026" open'), html.index('id="jaar-2027"'))
         self.assertLess(html.index('id="jaar-2027"'), html.index('id="jaar-2025"'))
+        self.assertLess(
+            html.index("2026-03-10"),
+            html.index("2026-03-31"),
+        )
+        self.assertLess(
+            html.index("2026-03-31"),
+            html.index("2026-04-09"),
+        )
 
     def test_timeline_register_contains_future_references(self) -> None:
         register = load_json(TIMELINE_REGISTER_PATH)
@@ -185,8 +192,15 @@ class SiteGenerationTests(unittest.TestCase):
         self.assertIn("Tussentijdse evaluatie van IZA/AZWA", titles)
         self.assertIn("Startpakket sociaal domein en evaluatieperiode", titles)
         self.assertIn("Lokale impacthorizon Positief Gezond Almere", titles)
-        self.assertIn("Meicirculaire gemeentefonds 2026 verwacht", titles)
-        self.assertIn("Transformatieplannen uiterlijk in 2026 indienen", titles)
+
+    def test_source_intake_candidates_capture_pipeline_first_timeline_work(self) -> None:
+        intake = load_json(SOURCE_INTAKE_CANDIDATES_PATH)
+        titles = {entry["title"] for entry in intake["candidate_sources"]}
+        subjects = {entry["subject"] for entry in intake["candidate_timeline_items"]}
+        self.assertIn("Specifieke uitkering transformatiemiddelen IZA & AZWA 2024-2028", titles)
+        self.assertIn("Vergaderschema Raad van Almere", titles)
+        self.assertIn("Aanvulling regioplan", subjects)
+        self.assertIn("Gemeentelijke begrotingscyclus Almere", subjects)
 
     def test_site_js_reveals_hash_targets_inside_details(self) -> None:
         script = (DIST_DIR / "assets" / "site.js").read_text(encoding="utf-8")

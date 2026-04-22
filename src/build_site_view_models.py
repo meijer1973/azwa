@@ -1059,17 +1059,7 @@ def ordered_timeline_years(years: list[str], current_year: str) -> list[str]:
 
 
 def ordered_timeline_entries(entries: list[dict], as_of_date: str) -> list[dict]:
-    if not entries:
-        return []
-    year = entries[0]["year"]
-    current_year = as_of_date[:4]
-    if year == current_year:
-        future_entries = sorted((entry for entry in entries if entry["sort_key"] >= as_of_date), key=lambda entry: (entry["sort_key"], entry["title"]))
-        past_entries = sorted((entry for entry in entries if entry["sort_key"] < as_of_date), key=lambda entry: (entry["sort_key"], entry["title"]), reverse=True)
-        return future_entries + past_entries
-    if year > current_year:
-        return sorted(entries, key=lambda entry: (entry["sort_key"], entry["title"]))
-    return sorted(entries, key=lambda entry: (entry["sort_key"], entry["title"]), reverse=True)
+    return sorted(entries, key=lambda entry: (entry["sort_key"], entry["title"]))
 
 
 def review_summary_for_reason(reason_code: str) -> str:
@@ -1679,10 +1669,6 @@ def build_timeline_register(
     entries.extend(
         reference_timeline_entry_from_spec(spec, claims, documents, current_topic_map, decision_models, action_models)
         for spec in curation["claim_entries"]
-    )
-    entries.extend(
-        external_timeline_entry_from_spec(spec, decision_models, action_models)
-        for spec in curation.get("external_entries", [])
     )
     entries.sort(key=lambda item: (item["sort_key"], item["title"]))
 

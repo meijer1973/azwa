@@ -1,0 +1,103 @@
+{
+  "generated_on": "2026-04-22",
+  "status": "pending_ingestion",
+  "notes": [
+    "Deze bronnen zijn nog geen onderdeel van de formele pijplijn.",
+    "Voeg nieuwe tijdlijnmomenten pas toe aan de publieke site nadat de onderliggende bron is gedownload, in manifest/raw is opgenomen en door extractie, claims en interpretatie is gegaan."
+  ],
+  "candidate_sources": [
+    {
+      "proposed_document_id": "nat_zorgakkoorden_azwa_programmapagina_2026",
+      "title": "Aanvullend Zorg- en Welzijnsakkoord",
+      "source_url": "https://www.zorgakkoorden.nl/programmas/aanvullend-zorg-en-welzijnsakkoord",
+      "publisher": "Zorgakkoorden.nl (VWS)",
+      "source_type_guess": "programmapagina",
+      "reason": "Praktische AZWA-programmapagina met nieuws, downloads en verwijzingen naar vervolgstappen.",
+      "priority": "high"
+    },
+    {
+      "proposed_document_id": "nat_dusi_spuk_transformatiemiddelen_2024_2028",
+      "title": "Specifieke uitkering transformatiemiddelen IZA & AZWA 2024-2028",
+      "source_url": "https://www.dus-i.nl/subsidies/specifieke-uitkeringen-spuk/specifieke-uitkering-transformatiemiddelen-iza",
+      "publisher": "DUS-I",
+      "source_type_guess": "subsidiepagina",
+      "reason": "Bevat concrete aanvraag- en verantwoordingsdeadlines voor gemeenten.",
+      "priority": "critical"
+    },
+    {
+      "proposed_document_id": "nat_wetten_spuk_transformatiemiddelen_regeling",
+      "title": "Regeling specifieke uitkering transformatiemiddelen IZA & AZWA 2024-2028",
+      "source_url": "https://wetten.overheid.nl/BWBR0049737/",
+      "publisher": "Wetten.nl",
+      "source_type_guess": "regeling",
+      "reason": "Juridische grondslag voor subsidievoorwaarden, termijnen en verantwoordingsregels.",
+      "priority": "critical"
+    },
+    {
+      "proposed_document_id": "nat_vng_iza_azwa_wegwijzer_2026",
+      "title": "VNG Wegwijzer IZA / AZWA",
+      "source_url": "https://vng.nl/onderwerpen/integraal-zorgakkoord-iza",
+      "publisher": "VNG",
+      "source_type_guess": "onderwerppagina",
+      "reason": "Gemeentelijke wegwijzer met praktische toelichting en mogelijk termijnaanduidingen.",
+      "priority": "high"
+    },
+    {
+      "proposed_document_id": "nat_sociaalwerknl_financiering_iza_azwa_2025",
+      "title": "Financiering IZA en AZWA: hoe zit het precies?",
+      "source_url": "https://sociaalwerknederland.nl/actueel/financiering-iza-en-azwa-hoe-zit-het-precies",
+      "publisher": "Sociaal Werk Nederland",
+      "source_type_guess": "nieuwsduiding",
+      "reason": "Noemt concreet dat de aanvulling op het regioplan in het derde kwartaal van 2026 gereed moet zijn.",
+      "priority": "medium"
+    },
+    {
+      "proposed_document_id": "mun_almere_begroting_2026_webpagina",
+      "title": "Begroting 2026",
+      "source_url": "https://www.almere.nl/bestuur-en-organisatie/financien/begroting",
+      "publisher": "Gemeente Almere",
+      "source_type_guess": "gemeentelijke informatiepagina",
+      "reason": "Handig als startpunt voor de lokale begrotingscyclus en bestuurlijke besluitmomenten.",
+      "priority": "medium"
+    },
+    {
+      "proposed_document_id": "mun_almere_raad_vergaderschema_2026",
+      "title": "Vergaderschema Raad van Almere",
+      "source_url": "https://raadvanalmere.nl/page/vergaderschema",
+      "publisher": "Raad van Almere",
+      "source_type_guess": "vergaderschema",
+      "reason": "Kan later worden gebruikt om bestuurlijke lokale besluitmomenten te koppelen aan de tijdlijn.",
+      "priority": "medium"
+    }
+  ],
+  "candidate_timeline_items": [
+    {
+      "date_label": "30 september 2026",
+      "subject": "Aanvulling regioplan",
+      "meaning": "Regio's moeten hun IZA-regioplan hebben aangevuld met de specifieke uitwerking van AZWA (D5/D6).",
+      "source_hint": "Sociaal Werk Nederland noemt gereed in derde kwartaal 2026; exacte bron nog via pijplijn valideren.",
+      "status": "pending_source_ingestion"
+    },
+    {
+      "date_label": "30 september 2026",
+      "subject": "Subsidietijdvak DUS-I",
+      "meaning": "Mogelijk sluitmoment voor subsidie- of SPUK-gerelateerde aanvraagvensters in 2026.",
+      "source_hint": "Eerst via DUS-I en regeling juridisch valideren; nog niet publiceerbaar.",
+      "status": "pending_source_ingestion"
+    },
+    {
+      "date_label": "oktober 2026",
+      "subject": "Gemeentelijke begrotingscyclus Almere",
+      "meaning": "Moment waarop lokale financiële vertaling richting 2027 bestuurlijk zichtbaar kan worden.",
+      "source_hint": "Zoek later exacte lokale data in Almere-bronnen en/of raadsvergaderschema.",
+      "status": "pending_source_ingestion"
+    },
+    {
+      "date_label": "november 2026",
+      "subject": "Monitoringsrapportage IZA/AZWA",
+      "meaning": "Mogelijke eerste gecombineerde voortgangsmonitor richting Tweede Kamer.",
+      "source_hint": "Eerst valideren via officiële bron.",
+      "status": "pending_source_ingestion"
+    }
+  ]
+}

@@ -13,6 +13,7 @@ TEXT_DIR = REPO_ROOT / "data" / "intermediate" / "text"
 CHUNKS_DIR = REPO_ROOT / "data" / "intermediate" / "chunks"
 TABLES_DIR = REPO_ROOT / "data" / "intermediate" / "tables"
 MARKDOWN_DIRECTORIES = [
+    REPO_ROOT / "data" / "intermediate" / "source_markdown",
     REPO_ROOT / "sources markdown canonical",
     REPO_ROOT / "sources markdown",
     REPO_ROOT / "sources markdown context",

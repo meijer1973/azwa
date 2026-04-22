@@ -309,6 +309,37 @@ ANNOTATIONS = {
             "moments such as the mei-, september-, and decembercirculaires in a source-backed way."
         ),
     },
+    "nat_vng_gezond_en_actief_leven_2026": {
+        "source_classification": "derivative",
+        "curation_bucket": "context",
+        "contains_d5": True,
+        "contains_d6": True,
+        "contains_structured_tables": False,
+        "contains_financing_logic": True,
+        "contains_governance_logic": True,
+        "contains_monitoring_evaluation_logic": True,
+        "contains_municipal_implications": True,
+        "inventory_notes": (
+            "Current VNG subject page for IZA, GALA, and AZWA support for municipalities; it is a better active "
+            "replacement for the earlier dead VNG topic URL and helps trace practical municipal support signals."
+        ),
+    },
+    "nat_vng_ledenbrief_onderhandelaarsakkoord_azwa_2025": {
+        "source_classification": "derivative",
+        "curation_bucket": "context",
+        "contains_d5": True,
+        "contains_d6": True,
+        "contains_structured_tables": True,
+        "contains_financing_logic": True,
+        "contains_governance_logic": True,
+        "contains_monitoring_evaluation_logic": False,
+        "contains_municipal_implications": True,
+        "inventory_notes": (
+            "VNG members letter on the AZWA negotiation agreement, including municipal framing, financing, and a "
+            "clear Q3 2026 regioplan timing reference; lower-authority than national norm text but stronger than "
+            "sector commentary."
+        ),
+    },
     "nat_sociaalwerknl_financiering_iza_azwa_2025": {
         "source_classification": "derivative",
         "curation_bucket": "context",

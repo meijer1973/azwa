@@ -16,6 +16,7 @@ TIMELINE_VIEW_PATH = REPO_ROOT / "data" / "site" / "site_timeline_view.json"
 THEMES_VIEW_PATH = REPO_ROOT / "data" / "site" / "site_themes_view.json"
 REFERENCE_VIEW_PATH = REPO_ROOT / "data" / "site" / "site_reference_view.json"
 SOURCES_VIEW_PATH = REPO_ROOT / "data" / "site" / "site_sources_view.json"
+SITE_MANIFEST_PATH = REPO_ROOT / "data" / "site" / "site_manifest.json"
 SOURCE_INTAKE_CANDIDATES_PATH = REPO_ROOT / "data" / "raw" / "source_intake_candidates.json"
 DECISION_DIR = REPO_ROOT / "data" / "site" / "decision_view_models"
 ACTION_DIR = REPO_ROOT / "data" / "site" / "action_view_models"
@@ -223,7 +224,7 @@ class SiteGenerationTests(unittest.TestCase):
         self.assertIn("Programmabegroting 2026 aangeboden aan de gemeenteraad", titles)
         self.assertIn("Gemeenteraadsverkiezingen 2026 in Almere", titles)
         self.assertIn("Benoeming van de raad 2026-2030", titles)
-        self.assertIn("Aanvullend regioplan volgens Sociaal Werk Nederland in Q3 2026 gereed", titles)
+        self.assertIn("VNG-ledenbrief noemt aanvullend regioplan gereed in Q3 2026", titles)
         self.assertIn("Tussentijdse evaluatie van IZA/AZWA", titles)
         self.assertIn("Startpakket sociaal domein en evaluatieperiode", titles)
         self.assertIn("Lokale impacthorizon Positief Gezond Almere", titles)
@@ -237,6 +238,14 @@ class SiteGenerationTests(unittest.TestCase):
         for year, sort_keys in year_to_sort_keys.items():
             self.assertEqual(sort_keys, sorted(sort_keys), f"Tijdlijn voor {year} is niet chronologisch gesorteerd.")
 
+    def test_site_manifest_has_no_fallback_topic_titles_for_d6(self) -> None:
+        manifest = load_json(SITE_MANIFEST_PATH)
+        titles = {page["title"] for page in manifest["pages"]}
+        self.assertNotIn("D6 other", titles)
+        self.assertNotIn("D6 regional coordination", titles)
+        self.assertIn("overige D6-lijn", titles)
+        self.assertIn("regionale coördinatie voor D6", titles)
+
     def test_source_intake_candidates_capture_pipeline_first_timeline_work(self) -> None:
         intake = load_json(SOURCE_INTAKE_CANDIDATES_PATH)
         titles = {entry["title"] for entry in intake["candidate_sources"]}
@@ -245,11 +254,15 @@ class SiteGenerationTests(unittest.TestCase):
         self.assertIn("Specifieke uitkering transformatiemiddelen IZA & AZWA 2024-2028", titles)
         self.assertIn("Gemeentefonds", titles)
         self.assertIn("Vergaderschema Raad van Almere", titles)
+        self.assertIn("Gezond en actief leven", titles)
+        self.assertIn("Ledenbrief onderhandelaarsakkoord AZWA", titles)
         self.assertIn("Aanvulling regioplan", subjects)
         self.assertIn("Gemeentelijke begrotingscyclus Almere", subjects)
         self.assertEqual(statuses["nat_dusi_spuk_transformatiemiddelen_2024_2028"], "ingested")
         self.assertEqual(statuses["nat_bzk_gemeentefonds_cyclus"], "ingested")
         self.assertEqual(statuses["mun_almere_raad_vergaderschema_2026"], "ingested")
+        self.assertEqual(statuses["nat_vng_gezond_en_actief_leven_2026"], "ingested")
+        self.assertEqual(statuses["nat_vng_ledenbrief_onderhandelaarsakkoord_azwa_2025"], "ingested")
         self.assertEqual(statuses["nat_vng_iza_azwa_wegwijzer_2026"], "pending_replacement")
 
     def test_site_js_reveals_hash_targets_inside_details(self) -> None:

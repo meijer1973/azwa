@@ -42,6 +42,17 @@ class PipelineGraphTests(unittest.TestCase):
         for output in prompt_stage["outputs"]:
             self.assertTrue((REPO_ROOT / output).exists(), f"Missing prompt asset: {output}")
 
+    def test_pipeline_inputs_cover_manifest_raw_and_timeline_curation(self) -> None:
+        phase1_inputs = set(self.stage_map["phase1_document_inventory"]["inputs"])
+        phase2_inputs = set(self.stage_map["phase2_structural_extractions"]["inputs"])
+        phase12_inputs = set(self.stage_map["phase12_site_view_models"]["inputs"])
+
+        self.assertIn("data/raw/manifest.json", phase1_inputs)
+        self.assertIn("data/raw/national", phase2_inputs)
+        self.assertIn("data/raw/regional", phase2_inputs)
+        self.assertIn("data/raw/municipal", phase2_inputs)
+        self.assertIn("config/timeline_curation.json", phase12_inputs)
+
 
 if __name__ == "__main__":
     unittest.main()

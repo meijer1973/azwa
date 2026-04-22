@@ -162,14 +162,22 @@ class SiteGenerationTests(unittest.TestCase):
     def test_timeline_page_starts_before_2027(self) -> None:
         html = TIMELINE_PAGE_PATH.read_text(encoding="utf-8")
         self.assertIn("2025-08-31", html)
+        self.assertIn("2025-10-09", html)
+        self.assertIn("2025-11-13", html)
+        self.assertIn("2026-04-01", html)
+        self.assertIn("2026-05-31", html)
         self.assertIn("2026-04-09", html)
         self.assertIn("begin 2027", html)
+        self.assertIn("2027-03-31", html)
+        self.assertIn("2027-07-15", html)
         self.assertIn('class="timeline-year"', html)
         self.assertIn('id="jaar-2026" open', html)
         self.assertIn('id="jaar-2027"', html)
         self.assertIn('class="timeline-entry"', html)
         self.assertIn("Meer informatie", html)
         self.assertIn("../sources/azwa-definitief/index.html", html)
+        self.assertIn("../sources/regeling-spuk-transformatiemiddelen/index.html", html)
+        self.assertIn("../sources/gemeentefonds-cyclus/index.html", html)
         self.assertIn("../actions/mogelijke-opvolgactie-monitoringsaanpak-voor-almere-afstemmen/index.html", html)
         self.assertLess(html.index('id="jaar-2026" open'), html.index('id="jaar-2027"'))
         self.assertLess(html.index('id="jaar-2027"'), html.index('id="jaar-2025"'))
@@ -179,7 +187,27 @@ class SiteGenerationTests(unittest.TestCase):
         )
         self.assertLess(
             html.index("2026-03-31"),
+            html.index("2026-04-01"),
+        )
+        self.assertLess(
+            html.index("2026-04-01"),
             html.index("2026-04-09"),
+        )
+        self.assertLess(
+            html.index("2026-04-09"),
+            html.index("2026-05-31"),
+        )
+        self.assertLess(
+            html.index("begin 2027"),
+            html.index("2027-03-31"),
+        )
+        self.assertLess(
+            html.index("2027-03-31"),
+            html.index("2027-07-01"),
+        )
+        self.assertLess(
+            html.index("2027-07-01"),
+            html.index("2027-07-15"),
         )
 
     def test_timeline_register_contains_future_references(self) -> None:
@@ -189,6 +217,10 @@ class SiteGenerationTests(unittest.TestCase):
         self.assertIn("2026", years)
         self.assertIn("2027", years)
         self.assertIn("2030", years)
+        self.assertIn("Meicirculaire gemeentefonds 2026 verwacht", titles)
+        self.assertIn("Aanvraagdeadline SPUK transformatiemiddelen voor gemeenten", titles)
+        self.assertIn("Uiterste verantwoording over uitgevoerde activiteiten in kalenderjaar 2026", titles)
+        self.assertIn("Programmabegroting 2026 aangeboden aan de gemeenteraad", titles)
         self.assertIn("Tussentijdse evaluatie van IZA/AZWA", titles)
         self.assertIn("Startpakket sociaal domein en evaluatieperiode", titles)
         self.assertIn("Lokale impacthorizon Positief Gezond Almere", titles)
@@ -196,11 +228,16 @@ class SiteGenerationTests(unittest.TestCase):
     def test_source_intake_candidates_capture_pipeline_first_timeline_work(self) -> None:
         intake = load_json(SOURCE_INTAKE_CANDIDATES_PATH)
         titles = {entry["title"] for entry in intake["candidate_sources"]}
+        statuses = {entry["proposed_document_id"]: entry["ingestion_status"] for entry in intake["candidate_sources"]}
         subjects = {entry["subject"] for entry in intake["candidate_timeline_items"]}
         self.assertIn("Specifieke uitkering transformatiemiddelen IZA & AZWA 2024-2028", titles)
+        self.assertIn("Gemeentefonds", titles)
         self.assertIn("Vergaderschema Raad van Almere", titles)
         self.assertIn("Aanvulling regioplan", subjects)
         self.assertIn("Gemeentelijke begrotingscyclus Almere", subjects)
+        self.assertEqual(statuses["nat_dusi_spuk_transformatiemiddelen_2024_2028"], "ingested")
+        self.assertEqual(statuses["nat_bzk_gemeentefonds_cyclus"], "ingested")
+        self.assertEqual(statuses["mun_almere_raad_vergaderschema_2026"], "pending")
 
     def test_site_js_reveals_hash_targets_inside_details(self) -> None:
         script = (DIST_DIR / "assets" / "site.js").read_text(encoding="utf-8")

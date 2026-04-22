@@ -36,6 +36,13 @@
       "consequence_for_almere": "Geeft Almere en Flevoland een concreter referentiekader voor lokale en regionale vertaling."
     },
     {
+      "document_id": "nat_wetten_spuk_transformatiemiddelen_regeling",
+      "summary": "De formele SPUK-regeling zet de subsidievoorwaarden, aanvraagroute en verantwoordingslogica voor transformatiemiddelen in het IZA/AZWA-spoor juridisch neer.",
+      "linked_domain": "D5 en D6",
+      "relation_type": "juridiseert",
+      "consequence_for_almere": "Maakt zichtbaar dat de subsidie- en verantwoordingsmomenten niet alleen praktisch, maar ook formeel zijn vastgelegd."
+    },
+    {
       "document_id": "nat_azwa_2026_voortgang_kamerbrief",
       "summary": "De voortgangsbrief beschrijft de implementatiestand en scherpt het bestuurlijke beeld rond D5, D6 en monitoring verder aan.",
       "linked_domain": "D5 en D6",
@@ -44,6 +51,44 @@
     }
   ],
   "claim_entries": [
+    {
+      "entry_key": "almere_begroting_aanbieding_2025",
+      "date_label": "2025-10-09",
+      "sort_key": "2025-10-09",
+      "date_granularity": "date",
+      "title": "Programmabegroting 2026 aangeboden aan de gemeenteraad",
+      "summary": "De openbare Almere-begrotingspagina meldt dat het college de Programmabegroting 2026 op 9 oktober 2025 aan de gemeenteraad heeft aangeboden.",
+      "linked_domain": "D5 en D6",
+      "relation_type": "lokaal begrotingsmoment",
+      "entry_type": "beleidsuitwerking",
+      "consequence_for_almere": "Markeert het lokale bestuurlijke moment waarop financiële keuzes voor 2026, inclusief sociaal en gezondheidsbeleid, formeel in beeld kwamen.",
+      "claim_ids": [
+        "clm__mun_almere_begroting_2026_webpagina_municipal_translation_001"
+      ],
+      "topic_keys": [
+        "municipal.implementation_translation"
+      ],
+      "timeline_note": "Lokaal begrotingsmoment uit de officiële Almere-pagina; bruikbaar als bestuurlijke context, niet als landelijke norm."
+    },
+    {
+      "entry_key": "almere_begroting_vaststelling_2025",
+      "date_label": "2025-11-13",
+      "sort_key": "2025-11-13",
+      "date_granularity": "date",
+      "title": "Programmabegroting 2026 vastgesteld door de gemeenteraad",
+      "summary": "De openbare Almere-begrotingspagina meldt dat de gemeenteraad op 13 november 2025 met de begroting heeft ingestemd.",
+      "linked_domain": "D5 en D6",
+      "relation_type": "lokaal besluitmoment",
+      "entry_type": "beleidsuitwerking",
+      "consequence_for_almere": "Laat zien wanneer de financiële basis voor 2026 lokaal bestuurlijk is bekrachtigd.",
+      "claim_ids": [
+        "clm__mun_almere_begroting_2026_webpagina_municipal_translation_002"
+      ],
+      "topic_keys": [
+        "municipal.implementation_translation"
+      ],
+      "timeline_note": "Lokaal besluitmoment uit de officiële Almere-pagina; relevant voor de bestuurlijke context rond uitvoeringsruimte."
+    },
     {
       "entry_key": "d5_landelijk_kader_q4_2025",
       "date_label": "Q4 2025",
@@ -103,6 +148,26 @@
       "timeline_note": "Expliciete tijdverwijzing in de nationale akkoordtekst."
     },
     {
+      "entry_key": "meicirculaire_gemeentefonds_2026_verwacht",
+      "date_label": "mei 2026 (verwacht)",
+      "sort_key": "2026-05-31",
+      "date_granularity": "month",
+      "title": "Meicirculaire gemeentefonds 2026 verwacht",
+      "summary": "De officiële gemeentefonds-pagina van BZK zegt dat gemeenten via circulaires in mei, september en december worden geïnformeerd over omvang en verdeling van het gemeentefonds.",
+      "linked_domain": "D5 en D6",
+      "relation_type": "financieel ijkpunt",
+      "entry_type": "toekomstige financieringsstap",
+      "consequence_for_almere": "Een logisch bestuurlijk toetsmoment om te zien hoe landelijke financiële ontwikkeling zich verhoudt tot lokale uitvoeringsruimte voor D5/D6.",
+      "claim_ids": [
+        "clm__nat_bzk_gemeentefonds_cyclus_governance_and_finance_001"
+      ],
+      "topic_keys": [
+        "finance.local_alignment_goal",
+        "governance_and_finance.other"
+      ],
+      "timeline_note": "Pipeline-backed via de officiële gemeentefonds-pagina; dit blijft een verwacht 2026-moment totdat de feitelijke meicirculaire 2026 als bron is ingelezen."
+    },
+    {
       "entry_key": "mid_term_review_begin_2027",
       "date_label": "begin 2027",
       "sort_key": "2027-01-01",
@@ -122,6 +187,48 @@
         "timeline.d5_d6_implementation"
       ],
       "timeline_note": "Huidige lijn uit de interpretatielaag, gebaseerd op twee nationale bronnen."
+    },
+    {
+      "entry_key": "spuk_aanvraagdeadline_2027",
+      "date_label": "31 maart 2027",
+      "sort_key": "2027-03-31",
+      "date_granularity": "date",
+      "title": "Aanvraagdeadline SPUK transformatiemiddelen voor gemeenten",
+      "summary": "De formele SPUK-regeling bepaalt dat een specifieke uitkering uiterlijk op 31 maart 2027 wordt aangevraagd; de DUS-I-uitvoeringspagina bevestigt dezelfde termijn.",
+      "linked_domain": "D5 en D6",
+      "relation_type": "aanvraagdeadline",
+      "entry_type": "toekomstige financieringsstap",
+      "consequence_for_almere": "Geeft een harde uiterste datum voor regionale of gemeentelijke besluitvorming als Almere via een penvoerder of deelnemende gemeente wil aansluiten op een transformatieplan.",
+      "claim_ids": [
+        "clm__nat_wetten_spuk_transformatiemiddelen_regeling_timeline_and_status_001",
+        "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_timeline_and_status_001"
+      ],
+      "topic_keys": [
+        "timeline.other",
+        "finance.d5_d6.funding_instrument"
+      ],
+      "timeline_note": "De regeling bevat de formele uiterste aanvraagdatum; de DUS-I-pagina bevestigt deze termijn in de uitvoeringsinformatie."
+    },
+    {
+      "entry_key": "spuk_verantwoording_2027",
+      "date_label": "15 juli 2027",
+      "sort_key": "2027-07-15",
+      "date_granularity": "date",
+      "title": "Uiterste verantwoording over uitgevoerde activiteiten in kalenderjaar 2026",
+      "summary": "De DUS-I-uitvoeringspagina meldt dat gemeenten de informatie voor de verantwoording uiterlijk op 15 juli na afloop van het uitvoeringsjaar aanleveren.",
+      "linked_domain": "D5 en D6",
+      "relation_type": "verantwoordingsdeadline",
+      "entry_type": "toekomstige financieringsstap",
+      "consequence_for_almere": "Maakt zichtbaar dat bestuurlijke en administratieve voorbereiding niet ophoudt bij de aanvraag, maar ook een jaarlijkse verantwoordingscyclus vraagt.",
+      "claim_ids": [
+        "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_timeline_and_status_002"
+      ],
+      "topic_keys": [
+        "timeline.other",
+        "monitoring.other",
+        "finance.d5_d6.funding_instrument"
+      ],
+      "timeline_note": "Uitvoeringsinformatie van DUS-I; het gaat om een jaarlijks terugkerend moment na ieder uitvoeringsjaar."
     },
     {
       "entry_key": "decision_2028_before_july_2027",

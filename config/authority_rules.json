@@ -4,10 +4,14 @@
     "agreement": "agreement",
     "framework": "framework",
     "kamerbrief": "kamerbrief",
+    "regulation": "regulation",
     "regional_plan": "regional_plan",
     "regional_report": "commentary",
     "implementation_plan": "implementation_plan",
     "research_report": "commentary",
+    "program_page": "commentary",
+    "subsidy_page": "commentary",
+    "government_info_page": "commentary",
     "faq": "faq",
     "municipal_policy_summary": "commentary",
     "municipal_info_page": "commentary",
@@ -22,6 +26,12 @@
     },
     "decree": {
       "authority_weight": 0.95,
+      "can_create_binding_obligation": true,
+      "can_interpret_higher_norm": true,
+      "can_override_higher_norm": false
+    },
+    "regulation": {
+      "authority_weight": 0.93,
       "can_create_binding_obligation": true,
       "can_interpret_higher_norm": true,
       "can_override_higher_norm": false

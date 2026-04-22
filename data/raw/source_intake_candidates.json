@@ -1,8 +1,9 @@
 {
   "generated_on": "2026-04-22",
-  "status": "pending_ingestion",
+  "status": "active_intake_and_ingestion",
   "notes": [
-    "Deze bronnen zijn nog geen onderdeel van de formele pijplijn.",
+    "Nieuwe webbronnen worden pas publiek op de tijdlijn gebruikt nadat ze via raw, manifest, extractie, claims en interpretatie door de formele pijplijn zijn gegaan.",
+    "Deze intake bevat nu zowel al-ingelezen bronnen als nog open kandidaten, zodat zichtbaar blijft welke tijdlijnsporen nog verdere broninname vragen.",
     "Voeg nieuwe tijdlijnmomenten pas toe aan de publieke site nadat de onderliggende bron is gedownload, in manifest/raw is opgenomen en door extractie, claims en interpretatie is gegaan."
   ],
   "candidate_sources": [
@@ -13,7 +14,8 @@
       "publisher": "Zorgakkoorden.nl (VWS)",
       "source_type_guess": "programmapagina",
       "reason": "Praktische AZWA-programmapagina met nieuws, downloads en verwijzingen naar vervolgstappen.",
-      "priority": "high"
+      "priority": "high",
+      "ingestion_status": "ingested"
     },
     {
       "proposed_document_id": "nat_dusi_spuk_transformatiemiddelen_2024_2028",
@@ -22,7 +24,8 @@
       "publisher": "DUS-I",
       "source_type_guess": "subsidiepagina",
       "reason": "Bevat concrete aanvraag- en verantwoordingsdeadlines voor gemeenten.",
-      "priority": "critical"
+      "priority": "critical",
+      "ingestion_status": "ingested"
     },
     {
       "proposed_document_id": "nat_wetten_spuk_transformatiemiddelen_regeling",
@@ -31,7 +34,18 @@
       "publisher": "Wetten.nl",
       "source_type_guess": "regeling",
       "reason": "Juridische grondslag voor subsidievoorwaarden, termijnen en verantwoordingsregels.",
-      "priority": "critical"
+      "priority": "critical",
+      "ingestion_status": "ingested"
+    },
+    {
+      "proposed_document_id": "nat_bzk_gemeentefonds_cyclus",
+      "title": "Gemeentefonds",
+      "source_url": "https://www.rijksoverheid.nl/onderwerpen/financien-gemeenten-en-provincies/gemeentefonds",
+      "publisher": "Ministerie van Binnenlandse Zaken en Koninkrijksrelaties",
+      "source_type_guess": "informatiepagina",
+      "reason": "Officiële bron voor de circulairecyclus in mei, september en december en daarmee relevant voor de meicirculaire-logica.",
+      "priority": "high",
+      "ingestion_status": "ingested"
     },
     {
       "proposed_document_id": "nat_vng_iza_azwa_wegwijzer_2026",
@@ -40,7 +54,8 @@
       "publisher": "VNG",
       "source_type_guess": "onderwerppagina",
       "reason": "Gemeentelijke wegwijzer met praktische toelichting en mogelijk termijnaanduidingen.",
-      "priority": "high"
+      "priority": "high",
+      "ingestion_status": "pending"
     },
     {
       "proposed_document_id": "nat_sociaalwerknl_financiering_iza_azwa_2025",
@@ -49,7 +64,8 @@
       "publisher": "Sociaal Werk Nederland",
       "source_type_guess": "nieuwsduiding",
       "reason": "Noemt concreet dat de aanvulling op het regioplan in het derde kwartaal van 2026 gereed moet zijn.",
-      "priority": "medium"
+      "priority": "medium",
+      "ingestion_status": "pending"
     },
     {
       "proposed_document_id": "mun_almere_begroting_2026_webpagina",
@@ -58,7 +74,8 @@
       "publisher": "Gemeente Almere",
       "source_type_guess": "gemeentelijke informatiepagina",
       "reason": "Handig als startpunt voor de lokale begrotingscyclus en bestuurlijke besluitmomenten.",
-      "priority": "medium"
+      "priority": "medium",
+      "ingestion_status": "ingested"
     },
     {
       "proposed_document_id": "mun_almere_raad_vergaderschema_2026",
@@ -67,7 +84,8 @@
       "publisher": "Raad van Almere",
       "source_type_guess": "vergaderschema",
       "reason": "Kan later worden gebruikt om bestuurlijke lokale besluitmomenten te koppelen aan de tijdlijn.",
-      "priority": "medium"
+      "priority": "medium",
+      "ingestion_status": "pending"
     }
   ],
   "candidate_timeline_items": [

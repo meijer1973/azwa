@@ -25,6 +25,7 @@
         "phase0_setup"
       ],
       "inputs": [
+        "data/raw/manifest.json",
         "src/build_document_inventory.py"
       ],
       "outputs": [
@@ -41,6 +42,10 @@
         "phase1_document_inventory"
       ],
       "inputs": [
+        "data/raw/manifest.json",
+        "data/raw/national",
+        "data/raw/regional",
+        "data/raw/municipal",
         "sources markdown canonical",
         "sources markdown",
         "sources markdown context",
@@ -214,6 +219,7 @@
       ],
       "inputs": [
         "config/site_taxonomy.json",
+        "config/timeline_curation.json",
         "src/build_site_view_models.py"
       ],
       "outputs": [

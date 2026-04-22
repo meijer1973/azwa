@@ -2,6 +2,8 @@ from __future__ import annotations
 
 import json
 import re
+from html import unescape
+from html.parser import HTMLParser
 from pathlib import Path
 
 
@@ -19,6 +21,10 @@ MARKDOWN_DIRECTORIES = [
 
 def load_manifest() -> list[dict]:
     return json.loads(MANIFEST_PATH.read_text(encoding="utf-8"))
+
+
+def source_file_path(entry: dict) -> Path:
+    return REPO_ROOT / entry["file_path"]
 
 
 def locate_markdown_source(entry: dict) -> Path:
@@ -43,6 +49,21 @@ def locate_markdown_source(entry: dict) -> Path:
     raise FileNotFoundError(f"No markdown source found for {entry['document_id']}")
 
 
+def locate_structural_source(entry: dict) -> tuple[str, Path]:
+    source_path = source_file_path(entry)
+    source_format = source_path.suffix.lower()
+
+    if source_format == ".pdf":
+        return "markdown_pdf", locate_markdown_source(entry)
+
+    try:
+        return "markdown_html", locate_markdown_source(entry)
+    except FileNotFoundError:
+        if source_format == ".html" and source_path.exists():
+            return "raw_html", source_path
+        raise
+
+
 def clean_lines(lines: list[str]) -> list[str]:
     cleaned = [line.rstrip() for line in lines]
     while cleaned and not cleaned[0].strip():
@@ -55,6 +76,12 @@ def clean_lines(lines: list[str]) -> list[str]:
 def normalize_text(text: str) -> str:
     lines = clean_lines(text.splitlines())
     return "\n".join(lines).strip()
+
+
+def normalize_inline_text(text: str) -> str:
+    text = unescape(text).replace("\xa0", " ")
+    text = re.sub(r"\s+", " ", text)
+    return text.strip()
 
 
 def split_long_text(text: str, target_size: int = 1800) -> list[str]:
@@ -172,6 +199,194 @@ def parse_html_markdown(markdown_text: str) -> list[dict]:
         flush_section()
 
     return sections
+
+
+def title_from_html(html_text: str) -> str | None:
+    match = re.search(r"<title>(.*?)</title>", html_text, flags=re.IGNORECASE | re.DOTALL)
+    if not match:
+        return None
+    return normalize_inline_text(match.group(1))
+
+
+def should_skip_html_block(text: str) -> bool:
+    stripped = normalize_inline_text(text)
+    if not stripped:
+        return True
+    if stripped.startswith("- ") and stripped.count("- ") >= 3 and not any(token in stripped for token in (".", ":", ";")):
+        return True
+    if stripped.startswith(("Laatst bewerkt op:", "Pagina delen", "Tags:")):
+        return True
+    if "Ga terug naar de overzichtspagina" in stripped:
+        return True
+    if "Ga direct naar het overzicht van de beleidsterreinen" in stripped:
+        return True
+    if "Scroll naar beneden voor een overzicht van de informatiepagina's" in stripped:
+        return True
+    if stripped in {"Menu", "Zoek opnieuw", "Documenten zoeken", "Lees voor"}:
+        return True
+    return False
+
+
+class RawHTMLSectionParser(HTMLParser):
+    SKIP_TAGS = {"script", "style", "noscript", "svg"}
+    BLOCK_TAGS = {"p", "li", "dd", "dt", "blockquote", "summary"}
+    NON_SUBSTANTIVE_HEADINGS = {
+        "menu",
+        "service",
+        "over deze site",
+        "deel deze pagina",
+        "hoort bij",
+        "primaire navigatie",
+        "berichten over uw buurt",
+        "dienstverlening",
+        "beleid regelgeving",
+        "contactgegevens overheden",
+        "alle onderwerpen",
+        "zie ook",
+        "contact met de gemeente",
+        "bezoekadres",
+        "postadres",
+        "volg ons",
+        "inhoudsopgave",
+    }
+
+    def __init__(self, document_title: str | None) -> None:
+        super().__init__(convert_charrefs=False)
+        self.document_title = document_title
+        self.sections: list[dict] = []
+        self.heading_stack: list[tuple[int, str]] = []
+        self.current_lines: list[str] = []
+        self.skip_depth = 0
+        self.heading_level: int | None = None
+        self.heading_buffer: list[str] = []
+        self.block_tag: str | None = None
+        self.block_prefix = ""
+        self.block_buffer: list[str] = []
+
+    def current_section_path(self) -> list[str]:
+        if self.heading_stack:
+            return [heading for _, heading in self.heading_stack]
+        if self.document_title:
+            return [self.document_title]
+        return ["Document"]
+
+    def flush_section(self) -> None:
+        if self.heading_stack and self.heading_stack[-1][1].strip().lower() in self.NON_SUBSTANTIVE_HEADINGS:
+            self.current_lines = []
+            return
+        section_text = normalize_text("\n".join(self.current_lines))
+        if section_text:
+            self.sections.append(
+                {
+                    "section_path": self.current_section_path(),
+                    "text": section_text,
+                    "char_count": len(section_text),
+                }
+            )
+        self.current_lines = []
+
+    def append_block(self, text: str) -> None:
+        cleaned = normalize_inline_text(text)
+        if should_skip_html_block(cleaned):
+            return
+        if self.block_prefix:
+            cleaned = f"{self.block_prefix}{cleaned}"
+        self.current_lines.append(cleaned)
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        lower_tag = tag.lower()
+        if lower_tag in self.SKIP_TAGS:
+            self.skip_depth += 1
+            return
+        if self.skip_depth:
+            return
+        if re.fullmatch(r"h[1-6]", lower_tag):
+            self.flush_section()
+            self.heading_level = int(lower_tag[1])
+            self.heading_buffer = []
+            return
+        if lower_tag in self.BLOCK_TAGS:
+            self.block_tag = lower_tag
+            self.block_prefix = "- " if lower_tag == "li" else ""
+            self.block_buffer = []
+            return
+        if lower_tag == "br":
+            if self.heading_level is not None:
+                self.heading_buffer.append("\n")
+            elif self.block_tag is not None:
+                self.block_buffer.append("\n")
+
+    def handle_endtag(self, tag: str) -> None:
+        lower_tag = tag.lower()
+        if lower_tag in self.SKIP_TAGS:
+            self.skip_depth = max(0, self.skip_depth - 1)
+            return
+        if self.skip_depth:
+            return
+        if self.heading_level is not None and lower_tag == f"h{self.heading_level}":
+            heading = normalize_inline_text("".join(self.heading_buffer))
+            if heading:
+                while self.heading_stack and self.heading_stack[-1][0] >= self.heading_level:
+                    self.heading_stack.pop()
+                self.heading_stack.append((self.heading_level, heading))
+            self.heading_level = None
+            self.heading_buffer = []
+            return
+        if self.block_tag is not None and lower_tag == self.block_tag:
+            self.append_block("".join(self.block_buffer))
+            self.block_tag = None
+            self.block_prefix = ""
+            self.block_buffer = []
+
+    def handle_data(self, data: str) -> None:
+        if self.skip_depth:
+            return
+        if self.heading_level is not None:
+            self.heading_buffer.append(data)
+        elif self.block_tag is not None:
+            self.block_buffer.append(data)
+
+    def close(self) -> list[dict]:
+        super().close()
+        self.flush_section()
+        return self.sections
+
+
+def parse_raw_html(html_text: str, document_title: str | None) -> list[dict]:
+    parser = RawHTMLSectionParser(document_title or title_from_html(html_text))
+    parser.feed(html_text)
+    return parser.close()
+
+
+def strip_html_tags(html_fragment: str) -> str:
+    text = re.sub(r"(?is)<(script|style|noscript)[^>]*>.*?</\1>", " ", html_fragment)
+    text = re.sub(r"(?i)<br\s*/?>", "\n", text)
+    text = re.sub(r"(?s)<[^>]+>", " ", text)
+    return normalize_text(text)
+
+
+def parse_raw_html_tables(html_text: str, document_title: str | None) -> list[dict]:
+    tables: list[dict] = []
+    section_path = [document_title or title_from_html(html_text) or "Document"]
+    for table_html in re.findall(r"(?is)<table[^>]*>(.*?)</table>", html_text):
+        rows = []
+        for row_html in re.findall(r"(?is)<tr[^>]*>(.*?)</tr>", table_html):
+            cells = [
+                normalize_inline_text(strip_html_tags(cell_html))
+                for cell_html in re.findall(r"(?is)<t[hd][^>]*>(.*?)</t[hd]>", row_html)
+            ]
+            cells = [cell for cell in cells if cell]
+            if cells:
+                rows.append(" | ".join(cells))
+        raw_table = normalize_text("\n".join(rows))
+        if raw_table:
+            tables.append(
+                {
+                    "section_path": section_path,
+                    "raw_table": raw_table,
+                }
+            )
+    return tables
 
 
 def is_structural_heading_block(block: str) -> bool:
@@ -347,14 +562,25 @@ def build_pdf_outputs(entry: dict, markdown_path: Path, markdown_text: str) -> t
     return text_payload, chunks, tables
 
 
-def build_html_outputs(entry: dict, markdown_path: Path, markdown_text: str) -> tuple[dict, list[dict], list[dict]]:
-    sections = parse_html_markdown(markdown_text)
+def build_html_outputs(entry: dict, source_path: Path, source_text: str, source_kind: str) -> tuple[dict, list[dict], list[dict]]:
+    if source_kind == "raw_html":
+        sections = parse_raw_html(source_text, entry.get("title"))
+        extracted_tables = parse_raw_html_tables(source_text, entry.get("title"))
+        extraction_method = "raw_html_v1"
+        source_markdown_path = None
+    else:
+        sections = parse_html_markdown(source_text)
+        extracted_tables = []
+        extraction_method = "markdown_html_v1"
+        source_markdown_path = source_path.relative_to(REPO_ROOT).as_posix()
+
     text_payload = {
         "document_id": entry["document_id"],
         "source_file_path": entry["file_path"],
-        "source_markdown_path": markdown_path.relative_to(REPO_ROOT).as_posix(),
+        "source_markdown_path": source_markdown_path,
+        "source_content_path": source_path.relative_to(REPO_ROOT).as_posix(),
         "source_format": "html",
-        "extraction_method": "markdown_html_v1",
+        "extraction_method": extraction_method,
         "section_count": len(sections),
         "sections": sections,
     }
@@ -395,6 +621,23 @@ def build_html_outputs(entry: dict, markdown_path: Path, markdown_text: str) -> 
                 )
                 table_index += 1
 
+    seen_tables = {table["raw_table"] for table in tables}
+    for extracted_table in extracted_tables:
+        if extracted_table["raw_table"] in seen_tables:
+            continue
+        tables.append(
+            {
+                "document_id": entry["document_id"],
+                "table_id": f"{entry['document_id']}_table_{table_index:03d}",
+                "page": None,
+                "section_path": extracted_table["section_path"],
+                "table_label": extract_table_label(extracted_table["raw_table"]),
+                "raw_table": extracted_table["raw_table"],
+                "table_type_guess": guess_table_type(extracted_table["raw_table"]),
+            }
+        )
+        table_index += 1
+
     return text_payload, chunks, tables
 
 
@@ -407,14 +650,14 @@ def main() -> None:
     manifest = load_manifest()
 
     for entry in manifest:
-        markdown_path = locate_markdown_source(entry)
-        markdown_text = markdown_path.read_text(encoding="utf-8", errors="ignore")
-        source_format = Path(entry["file_path"]).suffix.lower()
+        source_kind, source_path = locate_structural_source(entry)
+        source_text = source_path.read_text(encoding="utf-8", errors="ignore")
+        source_format = source_file_path(entry).suffix.lower()
 
         if source_format == ".pdf":
-            text_payload, chunks, tables = build_pdf_outputs(entry, markdown_path, markdown_text)
+            text_payload, chunks, tables = build_pdf_outputs(entry, source_path, source_text)
         else:
-            text_payload, chunks, tables = build_html_outputs(entry, markdown_path, markdown_text)
+            text_payload, chunks, tables = build_html_outputs(entry, source_path, source_text, source_kind)
 
         write_json(TEXT_DIR / f"{entry['document_id']}.json", text_payload)
         write_json(CHUNKS_DIR / f"{entry['document_id']}.json", chunks)

@@ -21,22 +21,22 @@
     },
     {
       "year": "2025",
-      "entry_count": 3,
+      "entry_count": 5,
       "future_count": 0,
       "document_count": 2,
       "page_url": "/timeline/#jaar-2025"
     },
     {
       "year": "2026",
-      "entry_count": 4,
-      "future_count": 0,
-      "document_count": 2,
+      "entry_count": 6,
+      "future_count": 1,
+      "document_count": 3,
       "page_url": "/timeline/#jaar-2026"
     },
     {
       "year": "2027",
-      "entry_count": 3,
-      "future_count": 3,
+      "entry_count": 5,
+      "future_count": 5,
       "document_count": 0,
       "page_url": "/timeline/#jaar-2027"
     },
@@ -67,9 +67,9 @@
       "year": "2026",
       "anchor_id": "jaar-2026",
       "default_open": true,
-      "entry_count": 4,
-      "future_count": 0,
-      "document_count": 2,
+      "entry_count": 6,
+      "future_count": 1,
+      "document_count": 3,
       "entries": [
         {
           "entry_id": "tijdlijn-2026-03-10-nat-azwa-2026-cw31-kader-d5-d6",
@@ -234,6 +234,41 @@
           "page_url": "/timeline/#tijdlijn-2026-03-31-d6-regie-q1-2026"
         },
         {
+          "entry_id": "tijdlijn-2026-04-01-nat-wetten-spuk-transformatiemiddelen-regeling",
+          "year": "2026",
+          "date_label": "2026-04-01",
+          "date_granularity": "date",
+          "sort_key": "2026-04-01",
+          "temporal_status": "verstreken referentie",
+          "title": "Regeling specifieke uitkering transformatiemiddelen IZA & AZWA 2024-2028",
+          "summary": "De formele SPUK-regeling zet de subsidievoorwaarden, aanvraagroute en verantwoordingslogica voor transformatiemiddelen in het IZA/AZWA-spoor juridisch neer.",
+          "linked_domain": "D5 en D6",
+          "relation_type": "juridiseert",
+          "entry_type": "bronmoment",
+          "entry_type_label": "brondocument",
+          "consequence_for_almere": "Maakt zichtbaar dat de subsidie- en verantwoordingsmomenten niet alleen praktisch, maar ook formeel zijn vastgelegd.",
+          "timeline_note": "Bronmoment in de beleidslijn.",
+          "needs_human_review": false,
+          "source_basis": [
+            {
+              "document_id": "nat_wetten_spuk_transformatiemiddelen_regeling",
+              "title": "Regeling specifieke uitkering transformatiemiddelen IZA & AZWA 2024-2028",
+              "publisher": "Wetten.nl / Ministerie van Volksgezondheid, Welzijn en Sport",
+              "publication_date": "2026-04-01",
+              "document_type": "regulation",
+              "jurisdiction_level": "national",
+              "status": "current",
+              "source_url": "https://wetten.overheid.nl/BWBR0049737/",
+              "page_url": "/sources/regeling-spuk-transformatiemiddelen/",
+              "topics": []
+            }
+          ],
+          "source_notes": [],
+          "linked_decisions": [],
+          "linked_actions": [],
+          "page_url": "/timeline/#tijdlijn-2026-04-01-nat-wetten-spuk-transformatiemiddelen-regeling"
+        },
+        {
           "entry_id": "tijdlijn-2026-04-09-nat-azwa-2026-voortgang-kamerbrief",
           "year": "2026",
           "date_label": "2026-04-09",
@@ -267,6 +302,59 @@
           "linked_decisions": [],
           "linked_actions": [],
           "page_url": "/timeline/#tijdlijn-2026-04-09-nat-azwa-2026-voortgang-kamerbrief"
+        },
+        {
+          "entry_id": "tijdlijn-2026-05-31-meicirculaire-gemeentefonds-2026-verwacht",
+          "year": "2026",
+          "date_label": "mei 2026 (verwacht)",
+          "date_granularity": "month",
+          "sort_key": "2026-05-31",
+          "temporal_status": "komende stap",
+          "title": "Meicirculaire gemeentefonds 2026 verwacht",
+          "summary": "De officiële gemeentefonds-pagina van BZK zegt dat gemeenten via circulaires in mei, september en december worden geïnformeerd over omvang en verdeling van het gemeentefonds.",
+          "linked_domain": "D5 en D6",
+          "relation_type": "financieel ijkpunt",
+          "entry_type": "toekomstige financieringsstap",
+          "entry_type_label": "financieringsstap",
+          "consequence_for_almere": "Een logisch bestuurlijk toetsmoment om te zien hoe landelijke financiële ontwikkeling zich verhoudt tot lokale uitvoeringsruimte voor D5/D6.",
+          "timeline_note": "Pipeline-backed via de officiële gemeentefonds-pagina; dit blijft een verwacht 2026-moment totdat de feitelijke meicirculaire 2026 als bron is ingelezen.",
+          "needs_human_review": true,
+          "supporting_claim_ids": [
+            "clm__nat_bzk_gemeentefonds_cyclus_governance_and_finance_001"
+          ],
+          "topic_keys": [
+            "finance.local_alignment_goal",
+            "governance_and_finance.other"
+          ],
+          "source_basis": [
+            {
+              "document_id": "nat_bzk_gemeentefonds_cyclus",
+              "title": "Gemeentefonds",
+              "publisher": "Ministerie van Binnenlandse Zaken en Koninkrijksrelaties",
+              "publication_date": "2026-01-26",
+              "document_type": "government_info_page",
+              "jurisdiction_level": "national",
+              "status": "supporting",
+              "source_url": "https://www.rijksoverheid.nl/onderwerpen/financien-gemeenten-en-provincies/gemeentefonds",
+              "page_url": "/sources/gemeentefonds-cyclus/",
+              "topics": [
+                "overige governance- en financieringslijn"
+              ]
+            }
+          ],
+          "source_notes": [
+            "Lagere autoriteit: deze passage is afkomstig uit een toelichtende of samenvattende bron."
+          ],
+          "linked_decisions": [
+            {
+              "decision_id": "dec_budget_verdeling",
+              "title": "Mogelijke besluitvraag: verdeling van beschikbare middelen over D5 en D6",
+              "status": "geblokkeerd door afhankelijkheid",
+              "page_url": "/decisions/mogelijke-besluitvraag-verdeling-van-beschikbare-middelen-over-d5-en-d6/"
+            }
+          ],
+          "linked_actions": [],
+          "page_url": "/timeline/#tijdlijn-2026-05-31-meicirculaire-gemeentefonds-2026-verwacht"
         }
       ]
     },
@@ -274,8 +362,8 @@
       "year": "2027",
       "anchor_id": "jaar-2027",
       "default_open": false,
-      "entry_count": 3,
-      "future_count": 3,
+      "entry_count": 5,
+      "future_count": 5,
       "document_count": 0,
       "entries": [
         {
@@ -362,6 +450,81 @@
             }
           ],
           "page_url": "/timeline/#tijdlijn-2027-01-01-mid-term-review-begin-2027"
+        },
+        {
+          "entry_id": "tijdlijn-2027-03-31-spuk-aanvraagdeadline-2027",
+          "year": "2027",
+          "date_label": "31 maart 2027",
+          "date_granularity": "date",
+          "sort_key": "2027-03-31",
+          "temporal_status": "toekomstige referentie",
+          "title": "Aanvraagdeadline SPUK transformatiemiddelen voor gemeenten",
+          "summary": "De formele SPUK-regeling bepaalt dat een specifieke uitkering uiterlijk op 31 maart 2027 wordt aangevraagd; de DUS-I-uitvoeringspagina bevestigt dezelfde termijn.",
+          "linked_domain": "D5 en D6",
+          "relation_type": "aanvraagdeadline",
+          "entry_type": "toekomstige financieringsstap",
+          "entry_type_label": "financieringsstap",
+          "consequence_for_almere": "Geeft een harde uiterste datum voor regionale of gemeentelijke besluitvorming als Almere via een penvoerder of deelnemende gemeente wil aansluiten op een transformatieplan.",
+          "timeline_note": "De regeling bevat de formele uiterste aanvraagdatum; de DUS-I-pagina bevestigt deze termijn in de uitvoeringsinformatie.",
+          "needs_human_review": true,
+          "supporting_claim_ids": [
+            "clm__nat_wetten_spuk_transformatiemiddelen_regeling_timeline_and_status_001",
+            "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_timeline_and_status_001"
+          ],
+          "topic_keys": [
+            "timeline.other",
+            "finance.d5_d6.funding_instrument"
+          ],
+          "source_basis": [
+            {
+              "document_id": "nat_wetten_spuk_transformatiemiddelen_regeling",
+              "title": "Regeling specifieke uitkering transformatiemiddelen IZA & AZWA 2024-2028",
+              "publisher": "Wetten.nl / Ministerie van Volksgezondheid, Welzijn en Sport",
+              "publication_date": "2026-04-01",
+              "document_type": "regulation",
+              "jurisdiction_level": "national",
+              "status": "current",
+              "source_url": "https://wetten.overheid.nl/BWBR0049737/",
+              "page_url": "/sources/regeling-spuk-transformatiemiddelen/",
+              "topics": [
+                "overige tijdlijnmomenten"
+              ]
+            },
+            {
+              "document_id": "nat_dusi_spuk_transformatiemiddelen_2024_2028",
+              "title": "Specifieke uitkering transformatiemiddelen IZA & AZWA 2024-2028",
+              "publisher": "Dienst Uitvoering Subsidies aan Instellingen",
+              "publication_date": "2025-09-26",
+              "document_type": "subsidy_page",
+              "jurisdiction_level": "national",
+              "status": "supporting",
+              "source_url": "https://www.dus-i.nl/subsidies/specifieke-uitkeringen-spuk/specifieke-uitkering-transformatiemiddelen-iza",
+              "page_url": "/sources/dus-i-spuk-transformatiemiddelen/",
+              "topics": [
+                "overige tijdlijnmomenten"
+              ]
+            }
+          ],
+          "source_notes": [
+            "Lagere autoriteit: deze passage is afkomstig uit een toelichtende of samenvattende bron."
+          ],
+          "linked_decisions": [
+            {
+              "decision_id": "dec_budget_verdeling",
+              "title": "Mogelijke besluitvraag: verdeling van beschikbare middelen over D5 en D6",
+              "status": "geblokkeerd door afhankelijkheid",
+              "page_url": "/decisions/mogelijke-besluitvraag-verdeling-van-beschikbare-middelen-over-d5-en-d6/"
+            }
+          ],
+          "linked_actions": [
+            {
+              "action_id": "act_middelen_en_eigenaarschap_vastleggen",
+              "title": "Mogelijke opvolgactie: inzet van middelen en eigenaarschap vastleggen",
+              "status": "geblokkeerd door afhankelijkheid",
+              "page_url": "/actions/mogelijke-opvolgactie-inzet-van-middelen-en-eigenaarschap-vastleggen/"
+            }
+          ],
+          "page_url": "/timeline/#tijdlijn-2027-03-31-spuk-aanvraagdeadline-2027"
         },
         {
           "entry_id": "tijdlijn-2027-07-01-decision-2028-before-july-2027",
@@ -492,6 +655,67 @@
             }
           ],
           "page_url": "/timeline/#tijdlijn-2027-07-02-startpakket-2027-2028"
+        },
+        {
+          "entry_id": "tijdlijn-2027-07-15-spuk-verantwoording-2027",
+          "year": "2027",
+          "date_label": "15 juli 2027",
+          "date_granularity": "date",
+          "sort_key": "2027-07-15",
+          "temporal_status": "toekomstige referentie",
+          "title": "Uiterste verantwoording over uitgevoerde activiteiten in kalenderjaar 2026",
+          "summary": "De DUS-I-uitvoeringspagina meldt dat gemeenten de informatie voor de verantwoording uiterlijk op 15 juli na afloop van het uitvoeringsjaar aanleveren.",
+          "linked_domain": "D5 en D6",
+          "relation_type": "verantwoordingsdeadline",
+          "entry_type": "toekomstige financieringsstap",
+          "entry_type_label": "financieringsstap",
+          "consequence_for_almere": "Maakt zichtbaar dat bestuurlijke en administratieve voorbereiding niet ophoudt bij de aanvraag, maar ook een jaarlijkse verantwoordingscyclus vraagt.",
+          "timeline_note": "Uitvoeringsinformatie van DUS-I; het gaat om een jaarlijks terugkerend moment na ieder uitvoeringsjaar.",
+          "needs_human_review": true,
+          "supporting_claim_ids": [
+            "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_timeline_and_status_002"
+          ],
+          "topic_keys": [
+            "timeline.other",
+            "monitoring.other",
+            "finance.d5_d6.funding_instrument"
+          ],
+          "source_basis": [
+            {
+              "document_id": "nat_dusi_spuk_transformatiemiddelen_2024_2028",
+              "title": "Specifieke uitkering transformatiemiddelen IZA & AZWA 2024-2028",
+              "publisher": "Dienst Uitvoering Subsidies aan Instellingen",
+              "publication_date": "2025-09-26",
+              "document_type": "subsidy_page",
+              "jurisdiction_level": "national",
+              "status": "supporting",
+              "source_url": "https://www.dus-i.nl/subsidies/specifieke-uitkeringen-spuk/specifieke-uitkering-transformatiemiddelen-iza",
+              "page_url": "/sources/dus-i-spuk-transformatiemiddelen/",
+              "topics": [
+                "overige tijdlijnmomenten"
+              ]
+            }
+          ],
+          "source_notes": [
+            "Lagere autoriteit: deze passage is afkomstig uit een toelichtende of samenvattende bron."
+          ],
+          "linked_decisions": [
+            {
+              "decision_id": "dec_budget_verdeling",
+              "title": "Mogelijke besluitvraag: verdeling van beschikbare middelen over D5 en D6",
+              "status": "geblokkeerd door afhankelijkheid",
+              "page_url": "/decisions/mogelijke-besluitvraag-verdeling-van-beschikbare-middelen-over-d5-en-d6/"
+            }
+          ],
+          "linked_actions": [
+            {
+              "action_id": "act_middelen_en_eigenaarschap_vastleggen",
+              "title": "Mogelijke opvolgactie: inzet van middelen en eigenaarschap vastleggen",
+              "status": "geblokkeerd door afhankelijkheid",
+              "page_url": "/actions/mogelijke-opvolgactie-inzet-van-middelen-en-eigenaarschap-vastleggen/"
+            }
+          ],
+          "page_url": "/timeline/#tijdlijn-2027-07-15-spuk-verantwoording-2027"
         }
       ]
     },
@@ -776,7 +1000,7 @@
       "year": "2025",
       "anchor_id": "jaar-2025",
       "default_open": false,
-      "entry_count": 3,
+      "entry_count": 5,
       "future_count": 0,
       "document_count": 2,
       "entries": [
@@ -849,6 +1073,124 @@
           "linked_decisions": [],
           "linked_actions": [],
           "page_url": "/timeline/#tijdlijn-2025-09-08-nat-azwa-2025-aanbiedingsbrief"
+        },
+        {
+          "entry_id": "tijdlijn-2025-10-09-almere-begroting-aanbieding-2025",
+          "year": "2025",
+          "date_label": "2025-10-09",
+          "date_granularity": "date",
+          "sort_key": "2025-10-09",
+          "temporal_status": "verstreken referentie",
+          "title": "Programmabegroting 2026 aangeboden aan de gemeenteraad",
+          "summary": "De openbare Almere-begrotingspagina meldt dat het college de Programmabegroting 2026 op 9 oktober 2025 aan de gemeenteraad heeft aangeboden.",
+          "linked_domain": "D5 en D6",
+          "relation_type": "lokaal begrotingsmoment",
+          "entry_type": "beleidsuitwerking",
+          "entry_type_label": "beleidsuitwerking",
+          "consequence_for_almere": "Markeert het lokale bestuurlijke moment waarop financiële keuzes voor 2026, inclusief sociaal en gezondheidsbeleid, formeel in beeld kwamen.",
+          "timeline_note": "Lokaal begrotingsmoment uit de officiële Almere-pagina; bruikbaar als bestuurlijke context, niet als landelijke norm.",
+          "needs_human_review": true,
+          "supporting_claim_ids": [
+            "clm__mun_almere_begroting_2026_webpagina_municipal_translation_001"
+          ],
+          "topic_keys": [
+            "municipal.implementation_translation"
+          ],
+          "source_basis": [
+            {
+              "document_id": "mun_almere_begroting_2026_webpagina",
+              "title": "Begroting 2026",
+              "publisher": "Gemeente Almere",
+              "publication_date": null,
+              "document_type": "municipal_info_page",
+              "jurisdiction_level": "municipal",
+              "status": "supporting",
+              "source_url": "https://www.almere.nl/bestuur-en-organisatie/financien/begroting",
+              "page_url": "/sources/begroting-2026-almere/",
+              "topics": [
+                "lokale vertaling in openbare stukken"
+              ]
+            }
+          ],
+          "source_notes": [
+            "Lagere autoriteit: deze passage is afkomstig uit een toelichtende of samenvattende bron."
+          ],
+          "linked_decisions": [
+            {
+              "decision_id": "dec_d6_regiemodel",
+              "title": "Mogelijke besluitvraag: regiemodel voor D6 en lokale teams",
+              "status": "wacht op verduidelijking",
+              "page_url": "/decisions/mogelijke-besluitvraag-regiemodel-voor-d6-en-lokale-teams/"
+            }
+          ],
+          "linked_actions": [
+            {
+              "action_id": "act_d6_lokale_structuur_verduidelijken",
+              "title": "Mogelijke opvolgactie: lokale D6-structuur bestuurlijk verduidelijken",
+              "status": "in voorbereiding",
+              "page_url": "/actions/mogelijke-opvolgactie-lokale-d6-structuur-bestuurlijk-verduidelijken/"
+            }
+          ],
+          "page_url": "/timeline/#tijdlijn-2025-10-09-almere-begroting-aanbieding-2025"
+        },
+        {
+          "entry_id": "tijdlijn-2025-11-13-almere-begroting-vaststelling-2025",
+          "year": "2025",
+          "date_label": "2025-11-13",
+          "date_granularity": "date",
+          "sort_key": "2025-11-13",
+          "temporal_status": "verstreken referentie",
+          "title": "Programmabegroting 2026 vastgesteld door de gemeenteraad",
+          "summary": "De openbare Almere-begrotingspagina meldt dat de gemeenteraad op 13 november 2025 met de begroting heeft ingestemd.",
+          "linked_domain": "D5 en D6",
+          "relation_type": "lokaal besluitmoment",
+          "entry_type": "beleidsuitwerking",
+          "entry_type_label": "beleidsuitwerking",
+          "consequence_for_almere": "Laat zien wanneer de financiële basis voor 2026 lokaal bestuurlijk is bekrachtigd.",
+          "timeline_note": "Lokaal besluitmoment uit de officiële Almere-pagina; relevant voor de bestuurlijke context rond uitvoeringsruimte.",
+          "needs_human_review": true,
+          "supporting_claim_ids": [
+            "clm__mun_almere_begroting_2026_webpagina_municipal_translation_002"
+          ],
+          "topic_keys": [
+            "municipal.implementation_translation"
+          ],
+          "source_basis": [
+            {
+              "document_id": "mun_almere_begroting_2026_webpagina",
+              "title": "Begroting 2026",
+              "publisher": "Gemeente Almere",
+              "publication_date": null,
+              "document_type": "municipal_info_page",
+              "jurisdiction_level": "municipal",
+              "status": "supporting",
+              "source_url": "https://www.almere.nl/bestuur-en-organisatie/financien/begroting",
+              "page_url": "/sources/begroting-2026-almere/",
+              "topics": [
+                "lokale vertaling in openbare stukken"
+              ]
+            }
+          ],
+          "source_notes": [
+            "Lagere autoriteit: deze passage is afkomstig uit een toelichtende of samenvattende bron."
+          ],
+          "linked_decisions": [
+            {
+              "decision_id": "dec_d6_regiemodel",
+              "title": "Mogelijke besluitvraag: regiemodel voor D6 en lokale teams",
+              "status": "wacht op verduidelijking",
+              "page_url": "/decisions/mogelijke-besluitvraag-regiemodel-voor-d6-en-lokale-teams/"
+            }
+          ],
+          "linked_actions": [
+            {
+              "action_id": "act_d6_lokale_structuur_verduidelijken",
+              "title": "Mogelijke opvolgactie: lokale D6-structuur bestuurlijk verduidelijken",
+              "status": "in voorbereiding",
+              "page_url": "/actions/mogelijke-opvolgactie-lokale-d6-structuur-bestuurlijk-verduidelijken/"
+            }
+          ],
+          "page_url": "/timeline/#tijdlijn-2025-11-13-almere-begroting-vaststelling-2025"
         },
         {
           "entry_id": "tijdlijn-2025-12-31-d5-landelijk-kader-q4-2025",
@@ -1154,6 +1496,124 @@
       "page_url": "/timeline/#tijdlijn-2025-09-08-nat-azwa-2025-aanbiedingsbrief"
     },
     {
+      "entry_id": "tijdlijn-2025-10-09-almere-begroting-aanbieding-2025",
+      "year": "2025",
+      "date_label": "2025-10-09",
+      "date_granularity": "date",
+      "sort_key": "2025-10-09",
+      "temporal_status": "verstreken referentie",
+      "title": "Programmabegroting 2026 aangeboden aan de gemeenteraad",
+      "summary": "De openbare Almere-begrotingspagina meldt dat het college de Programmabegroting 2026 op 9 oktober 2025 aan de gemeenteraad heeft aangeboden.",
+      "linked_domain": "D5 en D6",
+      "relation_type": "lokaal begrotingsmoment",
+      "entry_type": "beleidsuitwerking",
+      "entry_type_label": "beleidsuitwerking",
+      "consequence_for_almere": "Markeert het lokale bestuurlijke moment waarop financiële keuzes voor 2026, inclusief sociaal en gezondheidsbeleid, formeel in beeld kwamen.",
+      "timeline_note": "Lokaal begrotingsmoment uit de officiële Almere-pagina; bruikbaar als bestuurlijke context, niet als landelijke norm.",
+      "needs_human_review": true,
+      "supporting_claim_ids": [
+        "clm__mun_almere_begroting_2026_webpagina_municipal_translation_001"
+      ],
+      "topic_keys": [
+        "municipal.implementation_translation"
+      ],
+      "source_basis": [
+        {
+          "document_id": "mun_almere_begroting_2026_webpagina",
+          "title": "Begroting 2026",
+          "publisher": "Gemeente Almere",
+          "publication_date": null,
+          "document_type": "municipal_info_page",
+          "jurisdiction_level": "municipal",
+          "status": "supporting",
+          "source_url": "https://www.almere.nl/bestuur-en-organisatie/financien/begroting",
+          "page_url": "/sources/begroting-2026-almere/",
+          "topics": [
+            "lokale vertaling in openbare stukken"
+          ]
+        }
+      ],
+      "source_notes": [
+        "Lagere autoriteit: deze passage is afkomstig uit een toelichtende of samenvattende bron."
+      ],
+      "linked_decisions": [
+        {
+          "decision_id": "dec_d6_regiemodel",
+          "title": "Mogelijke besluitvraag: regiemodel voor D6 en lokale teams",
+          "status": "wacht op verduidelijking",
+          "page_url": "/decisions/mogelijke-besluitvraag-regiemodel-voor-d6-en-lokale-teams/"
+        }
+      ],
+      "linked_actions": [
+        {
+          "action_id": "act_d6_lokale_structuur_verduidelijken",
+          "title": "Mogelijke opvolgactie: lokale D6-structuur bestuurlijk verduidelijken",
+          "status": "in voorbereiding",
+          "page_url": "/actions/mogelijke-opvolgactie-lokale-d6-structuur-bestuurlijk-verduidelijken/"
+        }
+      ],
+      "page_url": "/timeline/#tijdlijn-2025-10-09-almere-begroting-aanbieding-2025"
+    },
+    {
+      "entry_id": "tijdlijn-2025-11-13-almere-begroting-vaststelling-2025",
+      "year": "2025",
+      "date_label": "2025-11-13",
+      "date_granularity": "date",
+      "sort_key": "2025-11-13",
+      "temporal_status": "verstreken referentie",
+      "title": "Programmabegroting 2026 vastgesteld door de gemeenteraad",
+      "summary": "De openbare Almere-begrotingspagina meldt dat de gemeenteraad op 13 november 2025 met de begroting heeft ingestemd.",
+      "linked_domain": "D5 en D6",
+      "relation_type": "lokaal besluitmoment",
+      "entry_type": "beleidsuitwerking",
+      "entry_type_label": "beleidsuitwerking",
+      "consequence_for_almere": "Laat zien wanneer de financiële basis voor 2026 lokaal bestuurlijk is bekrachtigd.",
+      "timeline_note": "Lokaal besluitmoment uit de officiële Almere-pagina; relevant voor de bestuurlijke context rond uitvoeringsruimte.",
+      "needs_human_review": true,
+      "supporting_claim_ids": [
+        "clm__mun_almere_begroting_2026_webpagina_municipal_translation_002"
+      ],
+      "topic_keys": [
+        "municipal.implementation_translation"
+      ],
+      "source_basis": [
+        {
+          "document_id": "mun_almere_begroting_2026_webpagina",
+          "title": "Begroting 2026",
+          "publisher": "Gemeente Almere",
+          "publication_date": null,
+          "document_type": "municipal_info_page",
+          "jurisdiction_level": "municipal",
+          "status": "supporting",
+          "source_url": "https://www.almere.nl/bestuur-en-organisatie/financien/begroting",
+          "page_url": "/sources/begroting-2026-almere/",
+          "topics": [
+            "lokale vertaling in openbare stukken"
+          ]
+        }
+      ],
+      "source_notes": [
+        "Lagere autoriteit: deze passage is afkomstig uit een toelichtende of samenvattende bron."
+      ],
+      "linked_decisions": [
+        {
+          "decision_id": "dec_d6_regiemodel",
+          "title": "Mogelijke besluitvraag: regiemodel voor D6 en lokale teams",
+          "status": "wacht op verduidelijking",
+          "page_url": "/decisions/mogelijke-besluitvraag-regiemodel-voor-d6-en-lokale-teams/"
+        }
+      ],
+      "linked_actions": [
+        {
+          "action_id": "act_d6_lokale_structuur_verduidelijken",
+          "title": "Mogelijke opvolgactie: lokale D6-structuur bestuurlijk verduidelijken",
+          "status": "in voorbereiding",
+          "page_url": "/actions/mogelijke-opvolgactie-lokale-d6-structuur-bestuurlijk-verduidelijken/"
+        }
+      ],
+      "page_url": "/timeline/#tijdlijn-2025-11-13-almere-begroting-vaststelling-2025"
+    },
+    {
       "entry_id": "tijdlijn-2025-12-31-d5-landelijk-kader-q4-2025",
       "year": "2025",
       "date_label": "Q4 2025",
@@ -1385,6 +1845,41 @@
       "page_url": "/timeline/#tijdlijn-2026-03-31-d6-regie-q1-2026"
     },
     {
+      "entry_id": "tijdlijn-2026-04-01-nat-wetten-spuk-transformatiemiddelen-regeling",
+      "year": "2026",
+      "date_label": "2026-04-01",
+      "date_granularity": "date",
+      "sort_key": "2026-04-01",
+      "temporal_status": "verstreken referentie",
+      "title": "Regeling specifieke uitkering transformatiemiddelen IZA & AZWA 2024-2028",
+      "summary": "De formele SPUK-regeling zet de subsidievoorwaarden, aanvraagroute en verantwoordingslogica voor transformatiemiddelen in het IZA/AZWA-spoor juridisch neer.",
+      "linked_domain": "D5 en D6",
+      "relation_type": "juridiseert",
+      "entry_type": "bronmoment",
+      "entry_type_label": "brondocument",
+      "consequence_for_almere": "Maakt zichtbaar dat de subsidie- en verantwoordingsmomenten niet alleen praktisch, maar ook formeel zijn vastgelegd.",
+      "timeline_note": "Bronmoment in de beleidslijn.",
+      "needs_human_review": false,
+      "source_basis": [
+        {
+          "document_id": "nat_wetten_spuk_transformatiemiddelen_regeling",
+          "title": "Regeling specifieke uitkering transformatiemiddelen IZA & AZWA 2024-2028",
+          "publisher": "Wetten.nl / Ministerie van Volksgezondheid, Welzijn en Sport",
+          "publication_date": "2026-04-01",
+          "document_type": "regulation",
+          "jurisdiction_level": "national",
+          "status": "current",
+          "source_url": "https://wetten.overheid.nl/BWBR0049737/",
+          "page_url": "/sources/regeling-spuk-transformatiemiddelen/",
+          "topics": []
+        }
+      ],
+      "source_notes": [],
+      "linked_decisions": [],
+      "linked_actions": [],
+      "page_url": "/timeline/#tijdlijn-2026-04-01-nat-wetten-spuk-transformatiemiddelen-regeling"
+    },
+    {
       "entry_id": "tijdlijn-2026-04-09-nat-azwa-2026-voortgang-kamerbrief",
       "year": "2026",
       "date_label": "2026-04-09",
@@ -1418,6 +1913,59 @@
       "linked_decisions": [],
       "linked_actions": [],
       "page_url": "/timeline/#tijdlijn-2026-04-09-nat-azwa-2026-voortgang-kamerbrief"
+    },
+    {
+      "entry_id": "tijdlijn-2026-05-31-meicirculaire-gemeentefonds-2026-verwacht",
+      "year": "2026",
+      "date_label": "mei 2026 (verwacht)",
+      "date_granularity": "month",
+      "sort_key": "2026-05-31",
+      "temporal_status": "komende stap",
+      "title": "Meicirculaire gemeentefonds 2026 verwacht",
+      "summary": "De officiële gemeentefonds-pagina van BZK zegt dat gemeenten via circulaires in mei, september en december worden geïnformeerd over omvang en verdeling van het gemeentefonds.",
+      "linked_domain": "D5 en D6",
+      "relation_type": "financieel ijkpunt",
+      "entry_type": "toekomstige financieringsstap",
+      "entry_type_label": "financieringsstap",
+      "consequence_for_almere": "Een logisch bestuurlijk toetsmoment om te zien hoe landelijke financiële ontwikkeling zich verhoudt tot lokale uitvoeringsruimte voor D5/D6.",
+      "timeline_note": "Pipeline-backed via de officiële gemeentefonds-pagina; dit blijft een verwacht 2026-moment totdat de feitelijke meicirculaire 2026 als bron is ingelezen.",
+      "needs_human_review": true,
+      "supporting_claim_ids": [
+        "clm__nat_bzk_gemeentefonds_cyclus_governance_and_finance_001"
+      ],
+      "topic_keys": [
+        "finance.local_alignment_goal",
+        "governance_and_finance.other"
+      ],
+      "source_basis": [
+        {
+          "document_id": "nat_bzk_gemeentefonds_cyclus",
+          "title": "Gemeentefonds",
+          "publisher": "Ministerie van Binnenlandse Zaken en Koninkrijksrelaties",
+          "publication_date": "2026-01-26",
+          "document_type": "government_info_page",
+          "jurisdiction_level": "national",
+          "status": "supporting",
+          "source_url": "https://www.rijksoverheid.nl/onderwerpen/financien-gemeenten-en-provincies/gemeentefonds",
+          "page_url": "/sources/gemeentefonds-cyclus/",
+          "topics": [
+            "overige governance- en financieringslijn"
+          ]
+        }
+      ],
+      "source_notes": [
+        "Lagere autoriteit: deze passage is afkomstig uit een toelichtende of samenvattende bron."
+      ],
+      "linked_decisions": [
+        {
+          "decision_id": "dec_budget_verdeling",
+          "title": "Mogelijke besluitvraag: verdeling van beschikbare middelen over D5 en D6",
+          "status": "geblokkeerd door afhankelijkheid",
+          "page_url": "/decisions/mogelijke-besluitvraag-verdeling-van-beschikbare-middelen-over-d5-en-d6/"
+        }
+      ],
+      "linked_actions": [],
+      "page_url": "/timeline/#tijdlijn-2026-05-31-meicirculaire-gemeentefonds-2026-verwacht"
     },
     {
       "entry_id": "tijdlijn-2027-01-01-mid-term-review-begin-2027",
@@ -1503,6 +2051,81 @@
         }
       ],
       "page_url": "/timeline/#tijdlijn-2027-01-01-mid-term-review-begin-2027"
+    },
+    {
+      "entry_id": "tijdlijn-2027-03-31-spuk-aanvraagdeadline-2027",
+      "year": "2027",
+      "date_label": "31 maart 2027",
+      "date_granularity": "date",
+      "sort_key": "2027-03-31",
+      "temporal_status": "toekomstige referentie",
+      "title": "Aanvraagdeadline SPUK transformatiemiddelen voor gemeenten",
+      "summary": "De formele SPUK-regeling bepaalt dat een specifieke uitkering uiterlijk op 31 maart 2027 wordt aangevraagd; de DUS-I-uitvoeringspagina bevestigt dezelfde termijn.",
+      "linked_domain": "D5 en D6",
+      "relation_type": "aanvraagdeadline",
+      "entry_type": "toekomstige financieringsstap",
+      "entry_type_label": "financieringsstap",
+      "consequence_for_almere": "Geeft een harde uiterste datum voor regionale of gemeentelijke besluitvorming als Almere via een penvoerder of deelnemende gemeente wil aansluiten op een transformatieplan.",
+      "timeline_note": "De regeling bevat de formele uiterste aanvraagdatum; de DUS-I-pagina bevestigt deze termijn in de uitvoeringsinformatie.",
+      "needs_human_review": true,
+      "supporting_claim_ids": [
+        "clm__nat_wetten_spuk_transformatiemiddelen_regeling_timeline_and_status_001",
+        "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_timeline_and_status_001"
+      ],
+      "topic_keys": [
+        "timeline.other",
+        "finance.d5_d6.funding_instrument"
+      ],
+      "source_basis": [
+        {
+          "document_id": "nat_wetten_spuk_transformatiemiddelen_regeling",
+          "title": "Regeling specifieke uitkering transformatiemiddelen IZA & AZWA 2024-2028",
+          "publisher": "Wetten.nl / Ministerie van Volksgezondheid, Welzijn en Sport",
+          "publication_date": "2026-04-01",
+          "document_type": "regulation",
+          "jurisdiction_level": "national",
+          "status": "current",
+          "source_url": "https://wetten.overheid.nl/BWBR0049737/",
+          "page_url": "/sources/regeling-spuk-transformatiemiddelen/",
+          "topics": [
+            "overige tijdlijnmomenten"
+          ]
+        },
+        {
+          "document_id": "nat_dusi_spuk_transformatiemiddelen_2024_2028",
+          "title": "Specifieke uitkering transformatiemiddelen IZA & AZWA 2024-2028",
+          "publisher": "Dienst Uitvoering Subsidies aan Instellingen",
+          "publication_date": "2025-09-26",
+          "document_type": "subsidy_page",
+          "jurisdiction_level": "national",
+          "status": "supporting",
+          "source_url": "https://www.dus-i.nl/subsidies/specifieke-uitkeringen-spuk/specifieke-uitkering-transformatiemiddelen-iza",
+          "page_url": "/sources/dus-i-spuk-transformatiemiddelen/",
+          "topics": [
+            "overige tijdlijnmomenten"
+          ]
+        }
+      ],
+      "source_notes": [
+        "Lagere autoriteit: deze passage is afkomstig uit een toelichtende of samenvattende bron."
+      ],
+      "linked_decisions": [
+        {
+          "decision_id": "dec_budget_verdeling",
+          "title": "Mogelijke besluitvraag: verdeling van beschikbare middelen over D5 en D6",
+          "status": "geblokkeerd door afhankelijkheid",
+          "page_url": "/decisions/mogelijke-besluitvraag-verdeling-van-beschikbare-middelen-over-d5-en-d6/"
+        }
+      ],
+      "linked_actions": [
+        {
+          "action_id": "act_middelen_en_eigenaarschap_vastleggen",
+          "title": "Mogelijke opvolgactie: inzet van middelen en eigenaarschap vastleggen",
+          "status": "geblokkeerd door afhankelijkheid",
+          "page_url": "/actions/mogelijke-opvolgactie-inzet-van-middelen-en-eigenaarschap-vastleggen/"
+        }
+      ],
+      "page_url": "/timeline/#tijdlijn-2027-03-31-spuk-aanvraagdeadline-2027"
     },
     {
       "entry_id": "tijdlijn-2027-07-01-decision-2028-before-july-2027",
@@ -1633,6 +2256,67 @@
         }
       ],
       "page_url": "/timeline/#tijdlijn-2027-07-02-startpakket-2027-2028"
+    },
+    {
+      "entry_id": "tijdlijn-2027-07-15-spuk-verantwoording-2027",
+      "year": "2027",
+      "date_label": "15 juli 2027",
+      "date_granularity": "date",
+      "sort_key": "2027-07-15",
+      "temporal_status": "toekomstige referentie",
+      "title": "Uiterste verantwoording over uitgevoerde activiteiten in kalenderjaar 2026",
+      "summary": "De DUS-I-uitvoeringspagina meldt dat gemeenten de informatie voor de verantwoording uiterlijk op 15 juli na afloop van het uitvoeringsjaar aanleveren.",
+      "linked_domain": "D5 en D6",
+      "relation_type": "verantwoordingsdeadline",
+      "entry_type": "toekomstige financieringsstap",
+      "entry_type_label": "financieringsstap",
+      "consequence_for_almere": "Maakt zichtbaar dat bestuurlijke en administratieve voorbereiding niet ophoudt bij de aanvraag, maar ook een jaarlijkse verantwoordingscyclus vraagt.",
+      "timeline_note": "Uitvoeringsinformatie van DUS-I; het gaat om een jaarlijks terugkerend moment na ieder uitvoeringsjaar.",
+      "needs_human_review": true,
+      "supporting_claim_ids": [
+        "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_timeline_and_status_002"
+      ],
+      "topic_keys": [
+        "timeline.other",
+        "monitoring.other",
+        "finance.d5_d6.funding_instrument"
+      ],
+      "source_basis": [
+        {
+          "document_id": "nat_dusi_spuk_transformatiemiddelen_2024_2028",
+          "title": "Specifieke uitkering transformatiemiddelen IZA & AZWA 2024-2028",
+          "publisher": "Dienst Uitvoering Subsidies aan Instellingen",
+          "publication_date": "2025-09-26",
+          "document_type": "subsidy_page",
+          "jurisdiction_level": "national",
+          "status": "supporting",
+          "source_url": "https://www.dus-i.nl/subsidies/specifieke-uitkeringen-spuk/specifieke-uitkering-transformatiemiddelen-iza",
+          "page_url": "/sources/dus-i-spuk-transformatiemiddelen/",
+          "topics": [
+            "overige tijdlijnmomenten"
+          ]
+        }
+      ],
+      "source_notes": [
+        "Lagere autoriteit: deze passage is afkomstig uit een toelichtende of samenvattende bron."
+      ],
+      "linked_decisions": [
+        {
+          "decision_id": "dec_budget_verdeling",
+          "title": "Mogelijke besluitvraag: verdeling van beschikbare middelen over D5 en D6",
+          "status": "geblokkeerd door afhankelijkheid",
+          "page_url": "/decisions/mogelijke-besluitvraag-verdeling-van-beschikbare-middelen-over-d5-en-d6/"
+        }
+      ],
+      "linked_actions": [
+        {
+          "action_id": "act_middelen_en_eigenaarschap_vastleggen",
+          "title": "Mogelijke opvolgactie: inzet van middelen en eigenaarschap vastleggen",
+          "status": "geblokkeerd door afhankelijkheid",
+          "page_url": "/actions/mogelijke-opvolgactie-inzet-van-middelen-en-eigenaarschap-vastleggen/"
+        }
+      ],
+      "page_url": "/timeline/#tijdlijn-2027-07-15-spuk-verantwoording-2027"
     },
     {
       "entry_id": "tijdlijn-2028-01-01-update-2028",

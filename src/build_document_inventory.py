@@ -234,6 +234,81 @@ ANNOTATIONS = {
         "contains_municipal_implications": True,
         "inventory_notes": "Gateway page that should eventually be replaced by the linked underlying reports.",
     },
+    "nat_dusi_spuk_transformatiemiddelen_2024_2028": {
+        "source_classification": "derivative",
+        "curation_bucket": "context",
+        "contains_d5": False,
+        "contains_d6": False,
+        "contains_structured_tables": False,
+        "contains_financing_logic": True,
+        "contains_governance_logic": True,
+        "contains_monitoring_evaluation_logic": True,
+        "contains_municipal_implications": True,
+        "inventory_notes": (
+            "Official DUS-I implementation page with concrete application and accountability deadlines for "
+            "transformatiemiddelen; useful for timeline and municipal follow-up, but not itself the strongest norm."
+        ),
+    },
+    "nat_wetten_spuk_transformatiemiddelen_regeling": {
+        "source_classification": "primary",
+        "curation_bucket": "canonical",
+        "contains_d5": False,
+        "contains_d6": False,
+        "contains_structured_tables": False,
+        "contains_financing_logic": True,
+        "contains_governance_logic": True,
+        "contains_monitoring_evaluation_logic": True,
+        "contains_municipal_implications": True,
+        "inventory_notes": (
+            "Formal regulation for SPUK transformatiemiddelen and therefore the strongest source in this repo "
+            "for application windows, funding conditions, and accountability logic."
+        ),
+    },
+    "nat_zorgakkoorden_azwa_programmapagina_2025": {
+        "source_classification": "derivative",
+        "curation_bucket": "context",
+        "contains_d5": True,
+        "contains_d6": True,
+        "contains_structured_tables": False,
+        "contains_financing_logic": True,
+        "contains_governance_logic": True,
+        "contains_monitoring_evaluation_logic": False,
+        "contains_municipal_implications": True,
+        "inventory_notes": (
+            "Official AZWA program page that aggregates updates, references, and practical follow-up material; "
+            "useful for traceability and timeline discovery rather than as a standalone norm."
+        ),
+    },
+    "mun_almere_begroting_2026_webpagina": {
+        "source_classification": "derivative",
+        "curation_bucket": "context",
+        "contains_d5": False,
+        "contains_d6": False,
+        "contains_structured_tables": False,
+        "contains_financing_logic": True,
+        "contains_governance_logic": True,
+        "contains_monitoring_evaluation_logic": False,
+        "contains_municipal_implications": True,
+        "inventory_notes": (
+            "Official Almere budget page that exposes local budget-cycle milestones and can later anchor "
+            "municipal timing around financing and council decision moments."
+        ),
+    },
+    "nat_bzk_gemeentefonds_cyclus": {
+        "source_classification": "derivative",
+        "curation_bucket": "context",
+        "contains_d5": False,
+        "contains_d6": False,
+        "contains_structured_tables": False,
+        "contains_financing_logic": True,
+        "contains_governance_logic": False,
+        "contains_monitoring_evaluation_logic": False,
+        "contains_municipal_implications": True,
+        "inventory_notes": (
+            "Official BZK information page for the gemeentefonds cycle; useful to anchor recurring financial "
+            "moments such as the mei-, september-, and decembercirculaires in a source-backed way."
+        ),
+    },
 }
 
 

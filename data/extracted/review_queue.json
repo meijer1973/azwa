@@ -4,10 +4,10 @@
   "summary": {
     "blocking": 0,
     "warning": 0,
-    "review": 26,
-    "item_count": 26,
+    "review": 30,
+    "item_count": 30,
     "issue_counts_by_reason": {
-      "authority_unclear": 8,
+      "authority_unclear": 12,
       "municipality_relevance_inferred": 11,
       "unresolved_conflict": 7
     }
@@ -68,6 +68,31 @@
       "severity": "review",
       "check_id": "claim_payload_integrity",
       "reason_code": "authority_unclear",
+      "summary": "mun_almere_begroting_2026_webpagina contributes lower-authority claims that still require human review.",
+      "recommended_action": "Keep these claims as contextual support only until a stronger primary source confirms or replaces them.",
+      "document_id": "mun_almere_begroting_2026_webpagina",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_begroting_2026_webpagina.json"
+      ],
+      "related_ids": {
+        "review_claim_count": 8,
+        "sample_claim_ids": [
+          "clm__mun_almere_begroting_2026_webpagina_governance_and_finance_001",
+          "clm__mun_almere_begroting_2026_webpagina_governance_and_finance_002",
+          "clm__mun_almere_begroting_2026_webpagina_governance_and_finance_003",
+          "clm__mun_almere_begroting_2026_webpagina_timeline_and_status_001",
+          "clm__mun_almere_begroting_2026_webpagina_timeline_and_status_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_003"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "authority_unclear",
       "summary": "mun_almere_pga_seo_businesscase_2024 contributes lower-authority claims that still require human review.",
       "recommended_action": "Keep these claims as contextual support only until a stronger primary source confirms or replaces them.",
       "document_id": "mun_almere_pga_seo_businesscase_2024",
@@ -86,7 +111,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_003"
+      "review_item_id": "rvw_004"
     },
     {
       "status": "open",
@@ -108,10 +133,10 @@
           "clm__mun_almere_pga_seo_businesscase_2024_d6_001",
           "clm__mun_almere_pga_seo_businesscase_2024_d6_002"
         ],
-        "topic_count": 4
+        "topic_count": 5
       },
       "evidence": {},
-      "review_item_id": "rvw_004"
+      "review_item_id": "rvw_005"
     },
     {
       "status": "open",
@@ -136,7 +161,7 @@
         "topic_count": 4
       },
       "evidence": {},
-      "review_item_id": "rvw_005"
+      "review_item_id": "rvw_006"
     },
     {
       "status": "open",
@@ -161,7 +186,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_006"
+      "review_item_id": "rvw_007"
     },
     {
       "status": "open",
@@ -186,7 +211,7 @@
         "topic_count": 3
       },
       "evidence": {},
-      "review_item_id": "rvw_007"
+      "review_item_id": "rvw_008"
     },
     {
       "status": "open",
@@ -209,7 +234,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_008"
+      "review_item_id": "rvw_009"
     },
     {
       "status": "open",
@@ -232,7 +257,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_009"
+      "review_item_id": "rvw_010"
     },
     {
       "status": "open",
@@ -253,7 +278,57 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_010"
+      "review_item_id": "rvw_011"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "authority_unclear",
+      "summary": "nat_bzk_gemeentefonds_cyclus contributes lower-authority claims that still require human review.",
+      "recommended_action": "Keep these claims as contextual support only until a stronger primary source confirms or replaces them.",
+      "document_id": "nat_bzk_gemeentefonds_cyclus",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_bzk_gemeentefonds_cyclus.json"
+      ],
+      "related_ids": {
+        "review_claim_count": 6,
+        "sample_claim_ids": [
+          "clm__nat_bzk_gemeentefonds_cyclus_governance_and_finance_001",
+          "clm__nat_bzk_gemeentefonds_cyclus_governance_and_finance_002",
+          "clm__nat_bzk_gemeentefonds_cyclus_governance_and_finance_003",
+          "clm__nat_bzk_gemeentefonds_cyclus_municipal_translation_001",
+          "clm__nat_bzk_gemeentefonds_cyclus_municipal_translation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_012"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "authority_unclear",
+      "summary": "nat_dusi_spuk_transformatiemiddelen_2024_2028 contributes lower-authority claims that still require human review.",
+      "recommended_action": "Keep these claims as contextual support only until a stronger primary source confirms or replaces them.",
+      "document_id": "nat_dusi_spuk_transformatiemiddelen_2024_2028",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_dusi_spuk_transformatiemiddelen_2024_2028.json"
+      ],
+      "related_ids": {
+        "review_claim_count": 9,
+        "sample_claim_ids": [
+          "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_governance_and_finance_001",
+          "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_governance_and_finance_002",
+          "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_governance_and_finance_003",
+          "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_timeline_and_status_001",
+          "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_timeline_and_status_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_013"
     },
     {
       "status": "open",
@@ -278,7 +353,7 @@
         "topic_count": 2
       },
       "evidence": {},
-      "review_item_id": "rvw_011"
+      "review_item_id": "rvw_014"
     },
     {
       "status": "open",
@@ -302,7 +377,7 @@
         "topic_count": 2
       },
       "evidence": {},
-      "review_item_id": "rvw_012"
+      "review_item_id": "rvw_015"
     },
     {
       "status": "open",
@@ -327,7 +402,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_013"
+      "review_item_id": "rvw_016"
     },
     {
       "status": "open",
@@ -350,7 +425,7 @@
         "topic_count": 2
       },
       "evidence": {},
-      "review_item_id": "rvw_014"
+      "review_item_id": "rvw_017"
     },
     {
       "status": "open",
@@ -374,7 +449,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_015"
+      "review_item_id": "rvw_018"
     },
     {
       "status": "open",
@@ -397,7 +472,32 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_016"
+      "review_item_id": "rvw_019"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "authority_unclear",
+      "summary": "nat_zorgakkoorden_azwa_programmapagina_2025 contributes lower-authority claims that still require human review.",
+      "recommended_action": "Keep these claims as contextual support only until a stronger primary source confirms or replaces them.",
+      "document_id": "nat_zorgakkoorden_azwa_programmapagina_2025",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_zorgakkoorden_azwa_programmapagina_2025.json"
+      ],
+      "related_ids": {
+        "review_claim_count": 8,
+        "sample_claim_ids": [
+          "clm__nat_zorgakkoorden_azwa_programmapagina_2025_d5_001",
+          "clm__nat_zorgakkoorden_azwa_programmapagina_2025_d5_002",
+          "clm__nat_zorgakkoorden_azwa_programmapagina_2025_d6_001",
+          "clm__nat_zorgakkoorden_azwa_programmapagina_2025_d6_002",
+          "clm__nat_zorgakkoorden_azwa_programmapagina_2025_monitoring_and_evaluation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_020"
     },
     {
       "status": "open",
@@ -422,7 +522,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_017"
+      "review_item_id": "rvw_021"
     },
     {
       "status": "open",
@@ -445,7 +545,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_018"
+      "review_item_id": "rvw_022"
     },
     {
       "status": "open",
@@ -468,7 +568,7 @@
         "topic_count": 3
       },
       "evidence": {},
-      "review_item_id": "rvw_019"
+      "review_item_id": "rvw_023"
     },
     {
       "status": "open",
@@ -499,7 +599,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_020"
+      "review_item_id": "rvw_024"
     },
     {
       "status": "open",
@@ -519,11 +619,13 @@
         "claim_ids": [
           "clm__nat_azwa_2026_voortgang_kamerbrief_d5_003",
           "clm__reg_flevoland_2023_regioplan_iza_d5_002",
-          "clm__mun_almere_pga_seo_businesscase_2024_d5_002"
+          "clm__mun_almere_pga_seo_businesscase_2024_d5_002",
+          "clm__nat_zorgakkoorden_azwa_programmapagina_2025_d5_002",
+          "clm__nat_zorgakkoorden_azwa_programmapagina_2025_d5_001"
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_021"
+      "review_item_id": "rvw_025"
     },
     {
       "status": "open",
@@ -548,7 +650,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_022"
+      "review_item_id": "rvw_026"
     },
     {
       "status": "open",
@@ -569,13 +671,12 @@
           "clm__reg_flevoland_2023_regioplan_iza_d6_001",
           "clm__mun_almere_pga_transformatieplan_d6_002",
           "clm__mun_almere_pga_transformatieplan_d6_001",
-          "clm__mun_almere_pga_seo_businesscase_2024_d6_003",
           "clm__mun_almere_pga_seo_businesscase_2024_d6_002",
           "clm__mun_almere_pga_seo_businesscase_2024_d6_001"
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_023"
+      "review_item_id": "rvw_027"
     },
     {
       "status": "open",
@@ -598,7 +699,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_024"
+      "review_item_id": "rvw_028"
     },
     {
       "status": "open",
@@ -621,7 +722,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_025"
+      "review_item_id": "rvw_029"
     },
     {
       "status": "open",
@@ -644,7 +745,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_026"
+      "review_item_id": "rvw_030"
     }
   ]
 }

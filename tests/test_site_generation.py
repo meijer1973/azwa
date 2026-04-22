@@ -11,6 +11,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 HOME_VIEW_PATH = REPO_ROOT / "data" / "site" / "site_home_view.json"
 ALMERE_VIEW_PATH = REPO_ROOT / "data" / "site" / "site_almere_view.json"
 DASHBOARD_VIEW_PATH = REPO_ROOT / "data" / "site" / "dashboard_view.json"
+TIMELINE_VIEW_PATH = REPO_ROOT / "data" / "site" / "site_timeline_view.json"
 DECISION_DIR = REPO_ROOT / "data" / "site" / "decision_view_models"
 ACTION_DIR = REPO_ROOT / "data" / "site" / "action_view_models"
 DIST_DIR = REPO_ROOT / "dist"
@@ -19,7 +20,9 @@ ALMERE_PAGE_PATH = DIST_DIR / "almere" / "index.html"
 DECISIONS_PAGE_PATH = DIST_DIR / "decisions" / "index.html"
 ACTIONS_PAGE_PATH = DIST_DIR / "actions" / "index.html"
 DASHBOARD_PAGE_PATH = DIST_DIR / "dashboard" / "index.html"
+TIMELINE_PAGE_PATH = DIST_DIR / "timeline" / "index.html"
 SEARCH_INDEX_PATH = DIST_DIR / "search-index.json"
+DEPLOY_WORKFLOW_PATH = REPO_ROOT / ".github" / "workflows" / "deploy-pages.yml"
 
 
 def load_json(path: Path) -> dict | list:
@@ -36,6 +39,7 @@ class SiteGenerationTests(unittest.TestCase):
         self.assertTrue(HOME_VIEW_PATH.exists())
         self.assertTrue(ALMERE_VIEW_PATH.exists())
         self.assertTrue(DASHBOARD_VIEW_PATH.exists())
+        self.assertTrue(TIMELINE_VIEW_PATH.exists())
         self.assertGreater(len(list(DECISION_DIR.glob("*.json"))), 0)
         self.assertGreater(len(list(ACTION_DIR.glob("*.json"))), 0)
 
@@ -46,6 +50,7 @@ class SiteGenerationTests(unittest.TestCase):
             DECISIONS_PAGE_PATH,
             ACTIONS_PAGE_PATH,
             DASHBOARD_PAGE_PATH,
+            TIMELINE_PAGE_PATH,
             SEARCH_INDEX_PATH,
         ]:
             self.assertTrue(path.exists(), f"Missing rendered output: {path}")
@@ -60,17 +65,46 @@ class SiteGenerationTests(unittest.TestCase):
         self.assertIn('href="decisions/index.html"', html)
         self.assertIn('href="almere/index.html#landelijke-basis-zichtbaar"', html)
         self.assertIn('href="almere/index.html#menselijke-duiding"', html)
+        self.assertIn('href="timeline/index.html#', html)
+        self.assertIn('href="decisions/index.html?theme=', html)
+        self.assertIn('href="actions/index.html?theme=', html)
+        self.assertIn('href="dashboard/index.html?theme=', html)
 
     def test_decisions_page_contains_explicit_notice(self) -> None:
         html = DECISIONS_PAGE_PATH.read_text(encoding="utf-8")
         self.assertIn("mogelijke besluitvragen", html)
         self.assertIn("geen vastgestelde gemeentelijke besluiten", html)
+        self.assertIn('id="issue-filter-status"', html)
+        self.assertIn('data-issue-card="decision"', html)
 
     def test_almere_page_contains_review_section(self) -> None:
         html = ALMERE_PAGE_PATH.read_text(encoding="utf-8")
         self.assertIn('id="menselijke-duiding"', html)
         self.assertIn("Menselijke duiding en reviewpunten", html)
         self.assertIn("lagere autoriteit vraagt menselijke duiding", html)
+        self.assertIn('href="index.html#review-authority-unclear"', html)
+        self.assertIn('id="review-unresolved-conflict"', html)
+
+    def test_decision_cards_link_review_tags_to_detail_sections(self) -> None:
+        html = INDEX_PATH.read_text(encoding="utf-8")
+        self.assertIn('#menselijke-duiding">Menselijke duiding nodig:', html)
+
+        detail_pages = list(DECISION_DIR.glob("*.json"))
+        self.assertTrue(detail_pages)
+        detail_html = (DIST_DIR / "decisions" / "mogelijke-besluitvraag-regiemodel-voor-d6-en-lokale-teams" / "index.html").read_text(encoding="utf-8")
+        self.assertIn('id="menselijke-duiding"', detail_html)
+        self.assertIn("Bronnen die extra duiding vragen", detail_html)
+
+    def test_timeline_page_starts_before_2027(self) -> None:
+        html = TIMELINE_PAGE_PATH.read_text(encoding="utf-8")
+        self.assertIn("2025-08-31", html)
+        self.assertIn("2026-04-09", html)
+        self.assertIn("begin 2027", html)
+
+    def test_deploy_workflow_runs_tests_before_build(self) -> None:
+        workflow = DEPLOY_WORKFLOW_PATH.read_text(encoding="utf-8")
+        self.assertIn('python -m unittest discover -s tests -p "test_*.py"', workflow)
+        self.assertIn("python src/run_pipeline.py --stage phase13_site_render", workflow)
 
     def test_search_index_covers_overviews_and_detail_pages(self) -> None:
         search_index = load_json(SEARCH_INDEX_PATH)

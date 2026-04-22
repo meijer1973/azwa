@@ -14,8 +14,6 @@ CLAIMS_DIR = EXTRACTED_DIR / "claims"
 MUNICIPAL_DIR = EXTRACTED_DIR / "municipal"
 
 ALMERE_VIEW_PATH = MUNICIPAL_DIR / "almere_current_view.json"
-MASTER_VIEW_PATH = CLAIMS_DIR / "d5_d6_master.json"
-CURRENT_INTERPRETATION_PATH = CLAIMS_DIR / "current_interpretation.json"
 CLAIMS_MASTER_PATH = CLAIMS_DIR / "claims_master.jsonl"
 INVENTORY_PATH = EXTRACTED_DIR / "document_inventory.json"
 REVIEW_QUEUE_PATH = EXTRACTED_DIR / "review_queue.json"
@@ -26,6 +24,7 @@ DOCUMENTS_DIR = EXTRACTED_DIR / "documents"
 HOME_VIEW_PATH = SITE_DIR / "site_home_view.json"
 ALMERE_SITE_VIEW_PATH = SITE_DIR / "site_almere_view.json"
 DASHBOARD_VIEW_PATH = SITE_DIR / "dashboard_view.json"
+TIMELINE_VIEW_PATH = SITE_DIR / "site_timeline_view.json"
 SITE_MANIFEST_PATH = SITE_DIR / "site_manifest.json"
 DECISION_DIR = SITE_DIR / "decision_view_models"
 ACTION_DIR = SITE_DIR / "action_view_models"
@@ -440,6 +439,71 @@ def join_titles(document_refs: list[dict], max_items: int = 3) -> str:
     return f"{', '.join(titles[:-1])} en {titles[-1]}"
 
 
+def timeline_anchor(seed: str) -> str:
+    return f"tijdlijn-{slugify(seed)}"
+
+
+def document_timeline_entry(
+    document_id: str,
+    documents: dict[str, dict],
+    summary: str,
+    linked_domain: str,
+    relation_type: str,
+    consequence_for_almere: str,
+) -> dict:
+    document = documents[document_id]
+    entry_id = timeline_anchor(f"{document['publication_date']}-{document_id}")
+    return {
+        "entry_id": entry_id,
+        "date_label": document["publication_date"],
+        "title": document["title"],
+        "summary": summary,
+        "linked_domain": linked_domain,
+        "relation_type": relation_type,
+        "consequence_for_almere": consequence_for_almere,
+        "entry_type": "bronmoment",
+        "source_url": document["source_url"],
+        "source_label": f"{document['publisher']} ({document['document_type']})",
+        "page_url": f"/timeline/#{entry_id}",
+        "sort_key": document["publication_date"],
+    }
+
+
+def milestone_timeline_entry(
+    date_label: str,
+    title: str,
+    summary: str,
+    linked_domain: str,
+    relation_type: str,
+    consequence_for_almere: str,
+    sort_key: str,
+) -> dict:
+    entry_id = timeline_anchor(f"{sort_key}-{title}")
+    return {
+        "entry_id": entry_id,
+        "date_label": date_label,
+        "title": title,
+        "summary": summary,
+        "linked_domain": linked_domain,
+        "relation_type": relation_type,
+        "consequence_for_almere": consequence_for_almere,
+        "entry_type": "mijlpaal",
+        "source_url": None,
+        "source_label": "Afgeleid uit de huidige interpretatielaag",
+        "page_url": f"/timeline/#{entry_id}",
+        "sort_key": sort_key,
+    }
+
+
+def review_summary_for_reason(reason_code: str) -> str:
+    mapping = {
+        "authority_unclear": "Brondocumenten met lagere autoriteit vragen expliciete bronduiding in menselijke samenvattingen.",
+        "municipality_relevance_inferred": "Er is een landelijk of regionaal spoor zichtbaar, maar in openbare Almere-documenten is lokale overname nog niet expliciet vastgelegd.",
+        "unresolved_conflict": "Begrippen of lokale vertalingen worden in meerdere contexten gebruikt en vragen bestuurlijke of beleidsmatige duiding.",
+    }
+    return mapping.get(reason_code, "Menselijke duiding is nodig voordat dit punt als bestuurlijk uitgewerkte lijn kan worden gepresenteerd.")
+
+
 def choice_map(almere_view: dict) -> dict[str, dict]:
     return {item["choice_id"]: item for item in almere_view["items_requiring_political_choice"]}
 
@@ -476,6 +540,73 @@ def review_note_for_topics(topics: list[str], uncertainty_by_topic: dict[str, di
     if relevant_uncertain:
         return "Menselijke duiding nodig: een deel van de relevante bronbasis bestaat uit lagere autoriteit of afgeleide lokale relevantie."
     return None
+
+
+def review_details_for_topics(
+    topics: list[str],
+    supporting_evidence: list[dict],
+    uncertainty_by_topic: dict[str, dict],
+    conflict_by_topic: dict[str, dict],
+) -> dict | None:
+    note = review_note_for_topics(topics, uncertainty_by_topic, conflict_by_topic)
+    if note is None:
+        return None
+
+    issue_items: list[dict] = []
+    for topic in topics:
+        if topic in conflict_by_topic:
+            conflict = conflict_by_topic[topic]
+            issue_items.append(
+                {
+                    "topic": topic,
+                    "topic_label": topic_label(topic),
+                    "reason_label": review_reason_label("unresolved_conflict"),
+                    "summary": conflict_note(conflict),
+                    "recommended_action": conflict_resolution_label(conflict["recommended_resolution_rule"]),
+                }
+            )
+        elif topic in uncertainty_by_topic:
+            issue_items.append(
+                {
+                    "topic": topic,
+                    "topic_label": topic_label(topic),
+                    "reason_label": "lagere autoriteit of afgeleide lokale relevantie",
+                    "summary": (
+                        "Rond dit onderwerp bevat de huidige bronbasis naast de landelijke basis ook bronnen met lagere autoriteit "
+                        "of passages waarvan de relevantie voor Almere vooral uit context is afgeleid."
+                    ),
+                    "recommended_action": (
+                        "Maak in bestuurlijke duiding expliciet welke bron de landelijke basis vormt en waar Almere publieke "
+                        "overname nog niet expliciet heeft vastgelegd."
+                    ),
+                }
+            )
+
+    source_signals: list[dict] = []
+    seen_sources: set[str] = set()
+    for evidence in supporting_evidence:
+        if not (evidence.get("authority_note") or evidence.get("needs_human_review")):
+            continue
+        if evidence["document_id"] in seen_sources:
+            continue
+        seen_sources.add(evidence["document_id"])
+        source_signals.append(
+            {
+                "document_title": evidence["document_title"],
+                "publisher": evidence["publisher"],
+                "publication_date": evidence["publication_date"],
+                "topic_label": evidence["topic_label"],
+                "summary": evidence.get("authority_note")
+                or "Menselijke duiding nodig voordat deze passage als expliciete lokale vastlegging kan worden gepresenteerd.",
+            }
+        )
+
+    return {
+        "note": note,
+        "section_url": "#menselijke-duiding",
+        "issues": issue_items,
+        "source_signals": source_signals,
+    }
 
 
 def conflict_resolution_label(rule: str) -> str:
@@ -780,7 +911,10 @@ def build_decision_models(
         topics = dedupe(choice["based_on_topics"] + [topic for gap in gap_entries for topic in gap["based_on_topics"]])
         linked_theme_ids = dedupe(blueprint["theme_ids"] + theme_ids_for_topics(topics, themes))
         options = option_set(blueprint["decision_id"])
+        all_supporting_evidence = evidence_entries(claim_ids, claims, documents, limit=max(len(claim_ids), 12))
+        supporting_evidence = all_supporting_evidence[:6]
         review_note = review_note_for_topics(topics, uncertainty_by_topic, conflict_by_topic)
+        review_details = review_details_for_topics(topics, all_supporting_evidence, uncertainty_by_topic, conflict_by_topic)
 
         model = {
             "decision_id": blueprint["decision_id"],
@@ -816,9 +950,10 @@ def build_decision_models(
             ],
             "next_formal_step": next_formal_step_for_decision(blueprint["status"]),
             "next_milestone": next_milestone(blueprint["decision_id"]),
-            "supporting_evidence": evidence_entries(claim_ids, claims, documents),
+            "supporting_evidence": supporting_evidence,
             "supporting_claim_ids": claim_ids,
             "review_note": review_note,
+            "review_details": review_details,
             "scope_note": "Dit is een machine-gegenereerde mogelijke besluitvraag op basis van de huidige openbare bronbasis; geen vastgestelde gemeentelijke beslissing.",
         }
         models.append(model)
@@ -917,7 +1052,9 @@ def build_featured_themes(decisions: list[dict], actions: list[dict], themes: li
                 "summary": theme["summary"],
                 "linked_decision_count": linked_decision_count,
                 "linked_action_count": linked_action_count,
-                "page_url": "/themes/",
+                "page_url": f"/dashboard/?theme={theme_id}",
+                "decision_page_url": f"/decisions/?theme={theme_id}",
+                "action_page_url": f"/actions/?theme={theme_id}",
             }
         )
     return featured
@@ -949,33 +1086,106 @@ def build_recent_changes(document_payloads: dict[str, dict], documents: dict[str
     return entries[:5]
 
 
-def timeline_entries(master_view: dict) -> list[dict]:
-    return [
-        {
-            "date_label": "begin 2027",
-            "title": "Tussentijds evaluatiemoment",
-            "summary": "In de landelijke bronbasis staat een tussentijds evaluatiemoment voorzien waarmee afspraken kunnen worden aangescherpt of bijgesteld.",
-            "linked_domain": "D5 en D6",
-        },
-        {
-            "date_label": "voor 1 juli 2027",
-            "title": "Besluitvorming richting 2028",
-            "summary": "Voor de verdere koers richting 2028 is bestuurlijke besluitvorming voorzien op basis van monitoring en voortgang.",
-            "linked_domain": "D5 en D6",
-        },
-        {
-            "date_label": "2028",
-            "title": "Actualisatie van basisfunctionaliteiten",
-            "summary": "De bronbasis verwijst naar een actualisatie op basis van monitoring en evaluatie in 2028.",
-            "linked_domain": "D5",
-        },
-        {
-            "date_label": "2030",
-            "title": "Landelijke dekking van bekende basisfunctionaliteiten",
-            "summary": "De landelijke inzet werkt toe naar bredere dekking van de bekende basisfunctionaliteiten vanaf 2030.",
-            "linked_domain": "D5",
-        },
+def timeline_entries(documents: dict[str, dict]) -> list[dict]:
+    entries = [
+        document_timeline_entry(
+            "nat_iza_2022_integraal_zorgakkoord",
+            documents,
+            "IZA legt het regionale samenwerkingsspoor vast waar latere D5/D6-uitwerking voor gemeenten en regio's op voortbouwt.",
+            "D5 en D6",
+            "legt basis",
+            "Maakt zichtbaar dat Almere zich in regionale en lokale uitwerking moet verhouden tot het bredere IZA-spoor.",
+        ),
+        document_timeline_entry(
+            "nat_gala_2023_gezond_en_actief_leven",
+            documents,
+            "GALA verbindt landelijke gezondheidsdoelen aan regionale en lokale uitvoering, waaronder ketenaanpakken die later ook in D5 terugkomen.",
+            "D5 en D6",
+            "verbreedt",
+            "Onderstreept dat landelijke doelen rond gezondheid en preventie lokaal herkenbaar gemaakt moeten worden.",
+        ),
+        document_timeline_entry(
+            "nat_azwa_2025_definitief",
+            documents,
+            "Het definitieve AZWA brengt D5 en D6 expliciet in de landelijke bestuurlijke lijn, inclusief werkagenda's, governance en evaluatiemomenten.",
+            "D5 en D6",
+            "stelt vast",
+            "Vanaf dit moment is er een duidelijke nationale basis waar Almere zich bestuurlijk toe moet verhouden.",
+        ),
+        document_timeline_entry(
+            "nat_azwa_2025_aanbiedingsbrief",
+            documents,
+            "De aanbiedingsbrief plaatst het akkoord formeel in het parlementaire en bestuurlijke vervolgspoor.",
+            "D5 en D6",
+            "formaliseert",
+            "Markeert dat de landelijke afspraken niet alleen inhoudelijk maar ook bestuurlijk worden doorgezet.",
+        ),
+        document_timeline_entry(
+            "nat_azwa_2026_cw31_kader_d5_d6",
+            documents,
+            "CW 3.1 werkt de ordening van basisfunctionaliteiten en basisinfrastructuur verder uit en maakt de D5/D6-kaders concreter.",
+            "D5 en D6",
+            "werkt uit",
+            "Geeft Almere en Flevoland een concreter referentiekader voor lokale en regionale vertaling.",
+        ),
+        document_timeline_entry(
+            "nat_azwa_2026_voortgang_kamerbrief",
+            documents,
+            "De voortgangsbrief beschrijft de implementatiestand en scherpt het bestuurlijke beeld rond D5, D6 en monitoring verder aan.",
+            "D5 en D6",
+            "verduidelijkt",
+            "Geeft richting aan welke onderdelen voor Almere bestuurlijk nog explicitering vragen.",
+        ),
+        milestone_timeline_entry(
+            "begin 2027",
+            "Tussentijds evaluatiemoment",
+            "In de landelijke bronbasis staat een tussentijds evaluatiemoment voorzien waarmee afspraken kunnen worden aangescherpt of bijgesteld.",
+            "D5 en D6",
+            "evalueert",
+            "Kan leiden tot bijstelling van afspraken, middeleninzet en bestuurlijke accenten.",
+            "2027-01-01",
+        ),
+        milestone_timeline_entry(
+            "voor 1 juli 2027",
+            "Besluitvorming richting 2028",
+            "Voor de verdere koers richting 2028 is bestuurlijke besluitvorming voorzien op basis van monitoring en voortgang.",
+            "D5 en D6",
+            "besluit",
+            "Geeft een bestuurlijk moment waarop Almere de eigen lijn naast de landelijke koers moet leggen.",
+            "2027-07-01",
+        ),
+        milestone_timeline_entry(
+            "2028",
+            "Actualisatie van basisfunctionaliteiten",
+            "De bronbasis verwijst naar een actualisatie op basis van monitoring en evaluatie in 2028.",
+            "D5",
+            "actualiseert",
+            "Nieuwe landelijke duiding kan lokale keuzes of publieke verantwoording opnieuw raken.",
+            "2028-01-01",
+        ),
+        milestone_timeline_entry(
+            "2030",
+            "Landelijke dekking van bekende basisfunctionaliteiten",
+            "De landelijke inzet werkt toe naar bredere dekking van de bekende basisfunctionaliteiten vanaf 2030.",
+            "D5",
+            "werkt toe naar",
+            "Geeft de langere horizon voor lokale en regionale uitwerking.",
+            "2030-01-01",
+        ),
     ]
+    entries.sort(key=lambda item: (item["sort_key"], item["title"]))
+    return entries
+
+
+def build_timeline_view(documents: dict[str, dict]) -> dict:
+    entries = timeline_entries(documents)
+    return {
+        "view_run_id": SITE_RUN_ID,
+        "generated_on": TODAY,
+        "as_of_date": TODAY,
+        "title": "Tijdlijn",
+        "entries": entries,
+    }
 
 
 def build_home_view(
@@ -1025,7 +1235,7 @@ def build_home_view(
             "title": "Begripsduiding rond lokale teams",
             "summary": "De term lokale teams wordt in verschillende contexten gebruikt; menselijke duiding blijft nodig om beleidsdefinitie en publieke formulering te scheiden.",
             "linked_domain": "D6",
-            "page_url": "/almere/#onzekerheden",
+            "page_url": "/almere/#review-unresolved-conflict",
         },
         {
             "title": "Bekostigingsroute en lokale verdeling nog niet volledig uitgewerkt",
@@ -1041,6 +1251,7 @@ def build_home_view(
         "concretisering van D5 en D6, regie en governance, financiering en monitoring. "
         "De landelijke basis is zichtbaar, maar een deel van de lokale doorvertaling is in openbare Almere-documenten nog niet expliciet."
     )
+    near_term_timeline = [entry for entry in timeline_entries(documents) if entry["sort_key"] >= "2025-01-01"][:6]
 
     return {
         "view_run_id": SITE_RUN_ID,
@@ -1062,7 +1273,7 @@ def build_home_view(
             }
             for item in almere_view["local_dependencies"][:3]
         ],
-        "near_term_timeline": timeline_entries(load_json(MASTER_VIEW_PATH)),
+        "near_term_timeline": near_term_timeline,
         "featured_themes": build_featured_themes(decision_models, action_models, themes),
         "recent_changes": build_recent_changes(document_payloads, documents),
         "supporting_navigation": [item for item in navigation_items() if item["priority"] == "secondary"],
@@ -1107,7 +1318,7 @@ def build_current_local_state(almere_view: dict) -> list[dict]:
     return state
 
 
-def build_review_items(review_queue: dict, documents: dict[str, dict]) -> tuple[list[dict], list[dict]]:
+def build_review_items(review_queue: dict, documents: dict[str, dict]) -> tuple[list[dict], list[dict], list[dict]]:
     items: list[dict] = []
     reason_counts: Counter[str] = Counter()
     for review_item in review_queue["items"]:
@@ -1117,26 +1328,29 @@ def build_review_items(review_queue: dict, documents: dict[str, dict]) -> tuple[
         document_id = review_item.get("document_id")
         document = documents.get(document_id) if document_id else None
         document_title = document["title"] if document else (document_id or "onbekende bron")
+        publisher = document["publisher"] if document else "onbekende uitgever"
         topic = review_item.get("topic")
+        reason_anchor = f"review-{reason_code.replace('_', '-')}"
 
         if reason_code == "authority_unclear":
-            summary = f"{document_title} is een bron met lagere autoriteit die nog menselijke duiding vraagt."
-            recommended_action = "Gebruik deze bron voorlopig als context, tenzij een sterkere bron dezelfde lijn bevestigt."
+            summary = f"{publisher} stelt dit in {document_title}; deze bron heeft lagere autoriteit en vraagt daarom expliciete bronduiding."
+            recommended_action = "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         elif reason_code == "municipality_relevance_inferred":
             summary = (
-                f"In {document_title} is relevantie voor Almere zichtbaar, maar de lokale overname is in "
-                "openbare Almere-documenten nog niet expliciet vastgelegd."
+                f"In {document_title} is een landelijke of regionale lijn zichtbaar, maar in openbaar beschikbare "
+                "Almere-documenten is nog niet expliciet vastgelegd dat Almere deze lijn lokaal heeft overgenomen."
             )
-            recommended_action = "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil vastleggen."
+            recommended_action = "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         else:
             topic_part = topic_label(topic) if topic else "deze bronrelatie"
-            summary = f"Voor {topic_part} is nog menselijke duiding nodig over begrippen, interpretatie of onderlinge verhouding van bronnen."
-            recommended_action = "Maak expliciet hoe de landelijke basis en de lokale of regionale vertaling zich tot elkaar verhouden."
+            summary = f"Voor {topic_part} is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt."
+            recommended_action = "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
 
         items.append(
             {
                 "review_item_id": review_item["review_item_id"],
                 "reason_code": reason_code,
+                "reason_anchor": reason_anchor,
                 "reason_label": review_reason_label(reason_code),
                 "document_id": document_id,
                 "document_title": document_title,
@@ -1147,16 +1361,30 @@ def build_review_items(review_queue: dict, documents: dict[str, dict]) -> tuple[
             }
         )
 
+    reason_order = ["authority_unclear", "municipality_relevance_inferred", "unresolved_conflict"]
     reason_summary = [
         {
             "reason_code": reason_code,
             "reason_label": review_reason_label(reason_code),
             "metric": count,
-            "summary": f"{count} item(s) in deze categorie vragen nog menselijke duiding.",
+            "summary": review_summary_for_reason(reason_code),
+            "page_url": f"/almere/#review-{reason_code.replace('_', '-')}",
         }
-        for reason_code, count in sorted(reason_counts.items())
+        for reason_code in reason_order
+        for count in [reason_counts.get(reason_code, 0)]
+        if count
     ]
-    return items, reason_summary
+    reason_groups = [
+        {
+            "reason_code": reason["reason_code"],
+            "reason_label": reason["reason_label"],
+            "anchor_id": f"review-{reason['reason_code'].replace('_', '-')}",
+            "summary": review_summary_for_reason(reason["reason_code"]),
+            "items": [item for item in items if item["reason_code"] == reason["reason_code"]],
+        }
+        for reason in reason_summary
+    ]
+    return items, reason_summary, reason_groups
 
 
 def build_almere_site_view(
@@ -1172,7 +1400,7 @@ def build_almere_site_view(
         evidence_claim_ids.extend(decision["supporting_claim_ids"][:3])
     for action in action_models[:3]:
         evidence_claim_ids.extend(action["supporting_claim_ids"][:3])
-    review_items, review_reason_summary = build_review_items(review_queue, documents)
+    review_items, review_reason_summary, review_groups = build_review_items(review_queue, documents)
 
     return {
         "view_run_id": SITE_RUN_ID,
@@ -1198,6 +1426,7 @@ def build_almere_site_view(
         "current_actions": action_models,
         "review_reason_summary": review_reason_summary,
         "review_items": review_items,
+        "review_groups": review_groups,
         "external_dependencies": [
             {
                 "dependency_id": dependency["dependency_id"],
@@ -1278,7 +1507,7 @@ def build_dashboard_view(
                 "dependencies": conflict_resolution_label(conflict["recommended_resolution_rule"]),
                 "consequences_of_non_follow_up": conflict_note(conflict),
                 "linked_theme_ids": [],
-                "linked_page_url": "/almere/#onzekerheden",
+                "linked_page_url": "/almere/#review-unresolved-conflict",
             }
         )
 
@@ -1316,6 +1545,11 @@ def build_site_manifest(decisions: list[dict], actions: list[dict]) -> dict:
             "page_type": "dashboard",
             "title": "Dashboard",
             "url": "/dashboard/",
+        },
+        {
+            "page_type": "timeline",
+            "title": "Tijdlijn",
+            "url": "/timeline/",
         },
     ]
     pages.extend(
@@ -1363,11 +1597,13 @@ def main() -> None:
     )
     almere_site_view = build_almere_site_view(almere_view, decision_models, action_models, review_queue, claims, documents)
     dashboard_view = build_dashboard_view(almere_view, decision_models, action_models)
+    timeline_view = build_timeline_view(documents)
     site_manifest = build_site_manifest(decision_models, action_models)
 
     write_json(HOME_VIEW_PATH, home_view)
     write_json(ALMERE_SITE_VIEW_PATH, almere_site_view)
     write_json(DASHBOARD_VIEW_PATH, dashboard_view)
+    write_json(TIMELINE_VIEW_PATH, timeline_view)
     write_json(SITE_MANIFEST_PATH, site_manifest)
 
     DECISION_DIR.mkdir(parents=True, exist_ok=True)
@@ -1380,6 +1616,7 @@ def main() -> None:
     print(f"Wrote {HOME_VIEW_PATH.relative_to(REPO_ROOT).as_posix()}")
     print(f"Wrote {ALMERE_SITE_VIEW_PATH.relative_to(REPO_ROOT).as_posix()}")
     print(f"Wrote {DASHBOARD_VIEW_PATH.relative_to(REPO_ROOT).as_posix()}")
+    print(f"Wrote {TIMELINE_VIEW_PATH.relative_to(REPO_ROOT).as_posix()}")
     print(f"Wrote {SITE_MANIFEST_PATH.relative_to(REPO_ROOT).as_posix()}")
     print(f"Wrote {len(decision_models)} decision view models and {len(action_models)} action view models")
 

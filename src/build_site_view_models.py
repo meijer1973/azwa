@@ -138,6 +138,12 @@ ACTION_STATUS_LABELS = {
     "underway": "lopende uitwerking zichtbaar",
 }
 
+REVIEW_REASON_LABELS = {
+    "authority_unclear": "lagere autoriteit vraagt menselijke duiding",
+    "municipality_relevance_inferred": "lokale overname is nog niet expliciet zichtbaar",
+    "unresolved_conflict": "begrips- of interpretatieduiding nodig",
+}
+
 DECISION_BLUEPRINTS = [
     {
         "decision_id": "dec_d5_prioritering",
@@ -492,6 +498,20 @@ def conflict_note(conflict: dict) -> str:
             "Menselijke duiding is nodig om de lagen en definities expliciet te maken."
         )
     return "Er blijft menselijke duiding nodig om te bepalen hoe deze bronrelatie voor Almere moet worden geïnterpreteerd."
+
+
+def review_reason_label(reason_code: str) -> str:
+    return REVIEW_REASON_LABELS.get(reason_code, reason_code.replace("_", " "))
+
+
+def scope_label(scope: str) -> str:
+    labels = {
+        "national": "landelijke basis",
+        "mixed": "landelijke basis met regionale of lokale uitwerking",
+        "regional": "regionale basis",
+        "municipal": "lokale basis",
+    }
+    return labels.get(scope, scope)
 
 
 def status_group_for_decision(status: str) -> str:
@@ -972,21 +992,25 @@ def build_home_view(
             "title": "Landelijke basis zichtbaar",
             "metric": len([item for item in almere_view["applicable_d5_items"] + almere_view["applicable_d6_items"] if item["scope"] in {"national", "mixed"}]),
             "summary": "De landelijke basis voor D5 en D6 is in de bronbasis herkenbaar aanwezig.",
+            "page_url": "/almere/#landelijke-basis-zichtbaar",
         },
         {
             "title": "Lokale aanknopingspunten zichtbaar",
             "metric": len(almere_view["relevant_municipal_documents"]),
             "summary": "Er zijn lokale Almere-documenten zichtbaar, maar niet alle landelijke verwachtingen zijn daarin expliciet overgenomen.",
+            "page_url": "/almere/#wat-al-in-beeld-is",
         },
         {
             "title": "Open uitwerkingsvragen",
             "metric": len(almere_view["local_gaps"]),
             "summary": "De huidige bronbasis laat meerdere punten zien waar lokale explicitering of bestuurlijke keuze nog niet zichtbaar is.",
+            "page_url": "/almere/#lokale-hiaten",
         },
         {
             "title": "Menselijke duiding nodig",
             "metric": review_queue["summary"]["review"],
             "summary": "Een deel van de bronbasis vraagt nog om menselijke duiding over autoriteit, lokale overname of begripsafbakening.",
+            "page_url": "/almere/#menselijke-duiding",
         },
     ]
 
@@ -1047,20 +1071,24 @@ def build_home_view(
 
 def build_expected_responsibilities(almere_view: dict) -> list[dict]:
     responsibilities: list[dict] = []
-    for item in almere_view["applicable_d5_items"][:3]:
+    for item in almere_view["applicable_d5_items"] + almere_view["applicable_d6_items"]:
+        if item["scope"] not in {"national", "mixed"}:
+            continue
+        source_titles = [document["title"] for document in item["source_documents"][:3]]
+        if item["scope"] == "national":
+            summary = f"Landelijke basis zichtbaar via {join_titles([{'title': title} for title in source_titles])}."
+        else:
+            summary = (
+                f"Landelijke basis zichtbaar, met aanvullende regionale of lokale uitwerking via "
+                f"{join_titles([{'title': title} for title in source_titles])}."
+            )
         responsibilities.append(
             {
                 "topic": item["topic"],
                 "title": topic_label(item["topic"]),
-                "summary": "Landelijke basis aanwezig; lokale vertaling en bestuurlijke explicitering blijven voor Almere relevant.",
-            }
-        )
-    for item in almere_view["applicable_d6_items"][:3]:
-        responsibilities.append(
-            {
-                "topic": item["topic"],
-                "title": topic_label(item["topic"]),
-                "summary": "Landelijke of gemengde basis aanwezig; lokale structuur, regie en aansluiting op regionale infrastructuur vragen om bestuurlijke aandacht.",
+                "summary": summary,
+                "scope_label": scope_label(item["scope"]),
+                "needs_human_review": item["needs_human_review"],
             }
         )
     return responsibilities
@@ -1068,7 +1096,7 @@ def build_expected_responsibilities(almere_view: dict) -> list[dict]:
 
 def build_current_local_state(almere_view: dict) -> list[dict]:
     state: list[dict] = []
-    for document in almere_view["relevant_municipal_documents"][:5]:
+    for document in almere_view["relevant_municipal_documents"]:
         state.append(
             {
                 "document_id": document["document_id"],
@@ -1079,10 +1107,63 @@ def build_current_local_state(almere_view: dict) -> list[dict]:
     return state
 
 
+def build_review_items(review_queue: dict, documents: dict[str, dict]) -> tuple[list[dict], list[dict]]:
+    items: list[dict] = []
+    reason_counts: Counter[str] = Counter()
+    for review_item in review_queue["items"]:
+        reason_code = review_item["reason_code"]
+        reason_counts[reason_code] += 1
+
+        document_id = review_item.get("document_id")
+        document = documents.get(document_id) if document_id else None
+        document_title = document["title"] if document else (document_id or "onbekende bron")
+        topic = review_item.get("topic")
+
+        if reason_code == "authority_unclear":
+            summary = f"{document_title} is een bron met lagere autoriteit die nog menselijke duiding vraagt."
+            recommended_action = "Gebruik deze bron voorlopig als context, tenzij een sterkere bron dezelfde lijn bevestigt."
+        elif reason_code == "municipality_relevance_inferred":
+            summary = (
+                f"In {document_title} is relevantie voor Almere zichtbaar, maar de lokale overname is in "
+                "openbare Almere-documenten nog niet expliciet vastgelegd."
+            )
+            recommended_action = "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil vastleggen."
+        else:
+            topic_part = topic_label(topic) if topic else "deze bronrelatie"
+            summary = f"Voor {topic_part} is nog menselijke duiding nodig over begrippen, interpretatie of onderlinge verhouding van bronnen."
+            recommended_action = "Maak expliciet hoe de landelijke basis en de lokale of regionale vertaling zich tot elkaar verhouden."
+
+        items.append(
+            {
+                "review_item_id": review_item["review_item_id"],
+                "reason_code": reason_code,
+                "reason_label": review_reason_label(reason_code),
+                "document_id": document_id,
+                "document_title": document_title,
+                "topic": topic,
+                "topic_label": topic_label(topic) if topic else None,
+                "summary": summary,
+                "recommended_action": recommended_action,
+            }
+        )
+
+    reason_summary = [
+        {
+            "reason_code": reason_code,
+            "reason_label": review_reason_label(reason_code),
+            "metric": count,
+            "summary": f"{count} item(s) in deze categorie vragen nog menselijke duiding.",
+        }
+        for reason_code, count in sorted(reason_counts.items())
+    ]
+    return items, reason_summary
+
+
 def build_almere_site_view(
     almere_view: dict,
     decision_models: list[dict],
     action_models: list[dict],
+    review_queue: dict,
     claims: dict[str, dict],
     documents: dict[str, dict],
 ) -> dict:
@@ -1091,6 +1172,7 @@ def build_almere_site_view(
         evidence_claim_ids.extend(decision["supporting_claim_ids"][:3])
     for action in action_models[:3]:
         evidence_claim_ids.extend(action["supporting_claim_ids"][:3])
+    review_items, review_reason_summary = build_review_items(review_queue, documents)
 
     return {
         "view_run_id": SITE_RUN_ID,
@@ -1114,6 +1196,8 @@ def build_almere_site_view(
         "leadership_requirements": [decision["title"] for decision in decision_models] + [action["title"] for action in action_models[:2]],
         "current_decisions": decision_models,
         "current_actions": action_models,
+        "review_reason_summary": review_reason_summary,
+        "review_items": review_items,
         "external_dependencies": [
             {
                 "dependency_id": dependency["dependency_id"],
@@ -1277,7 +1361,7 @@ def main() -> None:
         document_payloads,
         documents,
     )
-    almere_site_view = build_almere_site_view(almere_view, decision_models, action_models, claims, documents)
+    almere_site_view = build_almere_site_view(almere_view, decision_models, action_models, review_queue, claims, documents)
     dashboard_view = build_dashboard_view(almere_view, decision_models, action_models)
     site_manifest = build_site_manifest(decision_models, action_models)
 

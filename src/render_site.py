@@ -131,16 +131,27 @@ def render_card(title: str, body: str, meta: list[str] | None = None, footer: st
     return f'<article class="card">{title_html}<p>{body}</p>{meta_html}{footer_html}</article>'
 
 
-def render_summary_boxes(items: list[dict]) -> str:
+def render_summary_boxes(current_route: str, items: list[dict]) -> str:
     blocks = []
     for item in items:
-        blocks.append(
-            '<article class="summary-box">'
-            + f'<span class="summary-box__metric">{esc(str(item["metric"]))}</span>'
-            + f'<h3 class="card__title">{esc(item["title"])}</h3>'
-            + f'<p>{esc(item["summary"])}</p>'
-            + "</article>"
-        )
+        href = item.get("page_url")
+        title = item.get("title") or item.get("reason_label") or ""
+        if href:
+            blocks.append(
+                f'<a class="summary-box summary-box--link" href="{esc(relative_link(current_route, href))}">'
+                + f'<span class="summary-box__metric">{esc(str(item["metric"]))}</span>'
+                + f'<h3 class="card__title">{esc(title)}</h3>'
+                + f'<p>{esc(item["summary"])}</p>'
+                + "</a>"
+            )
+        else:
+            blocks.append(
+                '<article class="summary-box">'
+                + f'<span class="summary-box__metric">{esc(str(item["metric"]))}</span>'
+                + f'<h3 class="card__title">{esc(title)}</h3>'
+                + f'<p>{esc(item["summary"])}</p>'
+                + "</article>"
+            )
     return '<div class="summary-grid">' + "".join(blocks) + "</div>"
 
 
@@ -222,7 +233,7 @@ def render_home(route: str, home_view: dict) -> str:
         + "".join(render_action_card(route, item) for item in home_view["top_actions"])
         + "</div></section>",
         '<section class="section"><h2>Huidige implementatiestatus</h2>'
-        + render_summary_boxes(home_view["implementation_status_blocks"])
+        + render_summary_boxes(route, home_view["implementation_status_blocks"])
         + "</section>",
         '<section class="section"><h2>Belangrijkste risico\'s en afhankelijkheden</h2><div class="card-grid">'
         + "".join(
@@ -282,11 +293,13 @@ def render_almere(route: str, almere_view: dict) -> str:
     sections = [
         '<section class="section" id="huidig-beeld"><h2>Huidig bestuurlijk beeld</h2>'
         + f'<div class="notice">{esc(almere_view["current_picture"])}</div></section>',
-        '<section class="section" id="verwachte-verantwoordelijkheden"><h2>Wat Almere naar verwachting moet organiseren</h2><ul class="stack-list">'
+        '<section class="section" id="landelijke-basis-zichtbaar"><h2>Landelijke basis die in de bronbasis zichtbaar is</h2><ul class="stack-list">'
         + "".join(
             "<li>"
             + f'<strong>{esc(item["title"])}</strong><br>'
             + esc(item["summary"])
+            + "<br>"
+            + f'<span class="list-meta">{esc(item["scope_label"])}</span>'
             + "</li>"
             for item in almere_view["expected_municipal_responsibilities"]
         )
@@ -318,6 +331,22 @@ def render_almere(route: str, almere_view: dict) -> str:
         '<section class="section"><h2>Huidige opvolgacties</h2><div class="card-grid">'
         + "".join(render_action_card(route, item) for item in almere_view["current_actions"])
         + "</div></section>",
+        '<section class="section" id="menselijke-duiding"><h2>Menselijke duiding en reviewpunten</h2>'
+        + render_summary_boxes(route, almere_view["review_reason_summary"])
+        + '<ul class="stack-list">'
+        + "".join(
+            "<li>"
+            + f'<strong>{esc(item["reason_label"])}</strong><br>'
+            + f'<span class="list-meta">{esc(item["document_title"])}</span>'
+            + (f'<br><span class="list-meta">Onderwerp: {esc(item["topic_label"])}</span>' if item.get("topic_label") else "")
+            + "<br>"
+            + esc(item["summary"])
+            + "<br>"
+            + f'<span class="list-meta">Aanbevolen vervolgstap: {esc(item["recommended_action"])}</span>'
+            + "</li>"
+            for item in almere_view["review_items"]
+        )
+        + "</ul></section>",
         '<section class="section" id="externe-afhankelijkheden"><h2>Externe afhankelijkheden</h2><ul class="stack-list">'
         + "".join(
             "<li>"

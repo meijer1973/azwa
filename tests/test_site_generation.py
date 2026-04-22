@@ -58,11 +58,19 @@ class SiteGenerationTests(unittest.TestCase):
         self.assertIn("mogelijke opvolgacties", html)
         self.assertIn('href="almere/index.html"', html)
         self.assertIn('href="decisions/index.html"', html)
+        self.assertIn('href="almere/index.html#landelijke-basis-zichtbaar"', html)
+        self.assertIn('href="almere/index.html#menselijke-duiding"', html)
 
     def test_decisions_page_contains_explicit_notice(self) -> None:
         html = DECISIONS_PAGE_PATH.read_text(encoding="utf-8")
         self.assertIn("mogelijke besluitvragen", html)
         self.assertIn("geen vastgestelde gemeentelijke besluiten", html)
+
+    def test_almere_page_contains_review_section(self) -> None:
+        html = ALMERE_PAGE_PATH.read_text(encoding="utf-8")
+        self.assertIn('id="menselijke-duiding"', html)
+        self.assertIn("Menselijke duiding en reviewpunten", html)
+        self.assertIn("lagere autoriteit vraagt menselijke duiding", html)
 
     def test_search_index_covers_overviews_and_detail_pages(self) -> None:
         search_index = load_json(SEARCH_INDEX_PATH)

@@ -35,6 +35,7 @@ De bronanalyse mag leiden tot:
 De bronanalyse mag niet zonder expliciete onderbouwing leiden tot:
 - concrete fte-inzet;
 - budgetverdeling;
+- zelfgekozen planning of interne deadlines;
 - bestuurlijke voorkeurskeuzes;
 - prioritering alsof die al besloten is;
 - uitvoeringsadvies dat niet in de bronbasis staat.
@@ -102,6 +103,7 @@ In de hoofdtekst staat bij voorkeur **niet**:
 - uitleg over extractie, claims of QC;
 - formuleringen alsof het document zelf door data "spreekt".
 - zelfbedachte personele inzet, budgetten of uitvoeringsoplossingen.
+- zelfbedachte planning, mijlpalen of deadlines die niet uit de bronbasis volgen.
 
 Als de bronbasis nog geen concrete invulling geeft, benoem dan de keuze die nog gemaakt moet worden in plaats van zelf een advies in te vullen.
 
@@ -178,6 +180,29 @@ Nog beter als keuzevraag:
 
 Gebruik dus geen precieze fte's, bedragen, termijnen of voorkeursopties tenzij die expliciet in de bronbasis of opdracht staan.
 
+### 7. Gebruik alleen bron- of modelgedragen datums als planning
+Niet:
+`April-mei 2026: factsheet, nulmeting en besluitnotitie op basis van de Almere-view.`
+
+Niet:
+`Q4 2026: uitvoeringsplan 2027-2028 met KPI's, eigenaarschap en rapportageritme.`
+
+Waarom niet:
+Deze formuleringen zetten een interne planning neer die niet vanzelf uit de bronbasis volgt. Daarmee lijkt het alsof het plan al bestuurlijke of ambtelijke keuzes maakt over tempo, producten en volgorde.
+
+Beter:
+`De bronbasis bevat verschillende externe ijkmomenten in 2026, waaronder publicatie- en toelichtingsmomenten rond AZWA-financiering, de meicirculaire, de regionale werkagenda en de vaststellingstermijn van 15 november 2026. De vertaling naar een interne Almere-planning vraagt nog om menselijke beoordeling.`
+
+Nog beter als keuzevraag:
+`Te bepalen is welke interne planning Almere koppelt aan de externe ijkmomenten in 2026, en welke producten daarvoor nodig zijn, zoals een factsheet, besluitnotitie, financieel scenario of uitvoeringsplan.`
+
+Gebruik datums dus alleen als:
+- ze expliciet in een bron staan;
+- ze in het tijdlijnregister of model als bron- of modelgedragen moment zijn opgenomen;
+- ze duidelijk als extern ijkmoment worden gepresenteerd.
+
+Als een datum een interpretatie, werkhypothese of voorgestelde interne planning is, markeer die dan als `te bepalen`, `voor menselijke beoordeling` of verplaats hem naar een conceptplanning die door reviewers moet worden ingevuld.
+
 ## Voorkeurswoorden
 Gebruik liever:
 - `opgave`
@@ -253,6 +278,8 @@ Beantwoord:
 - wat de eerstvolgende ijkmomenten zijn;
 - welke besluiten of producten wanneer nodig zijn.
 
+Gebruik hierbij alleen bron- of modelgedragen datums. Vul geen interne Almere-planning in die niet expliciet uit de bronbasis volgt. Als de bronbasis alleen externe ijkmomenten geeft, beschrijf dan die ijkmomenten en formuleer de lokale planning als keuzevraag voor menselijke reviewers.
+
 ### Middelen
 Beantwoord:
 - welke middelen beschikbaar zijn of worden verwacht;
@@ -285,6 +312,7 @@ Controleer bij elk concept:
 - Is duidelijk waarom bestuurlijke actie nodig is?
 - Zijn de kernzinnen handelingsgericht?
 - Zijn er geen fte's, bedragen, prioriteiten of uitvoeringsadviezen toegevoegd die niet expliciet uit de bronbasis komen?
+- Zijn alle datums, deadlines en mijlpalen bron- of modelgedragen, of duidelijk gemarkeerd als menselijke invulling?
 - Zijn technische termen uit de hoofdtekst verwijderd?
 - Is methodische taal verplaatst naar verantwoording of bijlage?
 - Staat er per onderdeel steeds een actor, actie en gevolg?

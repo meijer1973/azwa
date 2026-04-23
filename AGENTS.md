@@ -9,6 +9,7 @@
 - When writing or revising files in `docs/rapporten/`, first read `docs/rapporten/schrijfrichtlijn-plan-van-aanpak.md`.
 - For `plan van aanpak` documents, write from the bestuurlijke opgave, not from the dataset or repository. Avoid main-text phrases such as `de dataset laat zien`, `de repository toont`, `de claimlaag zegt`, or `de JSON maakt zichtbaar`.
 - Do not invent policy, staffing, budget, governance, or implementation advice that is not grounded in the data/model/source base. If the source base does not support a concrete recommendation, frame it as a choice question or human review point.
+- Do not invent planning dates, deadlines, or milestones. Use only dates grounded in sources or the generated timeline/model; otherwise mark timing as a human planning decision.
 - Technical source, data, QC, or pipeline details belong in a methodische verantwoording or appendix, not in the main narrative.
 
 ## Current Guidelines

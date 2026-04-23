@@ -1706,8 +1706,22 @@ def build_site_updates_view(documents: dict[str, dict], timeline_register: dict)
 
     updates: list[dict] = []
     for spec in sorted(update_specs, key=lambda item: (item["published_on"], item["title"]), reverse=True):
+        update_page_url = f"/updates/#{spec['update_id']}"
+        section_urls = {
+            "samenvatting": f"/updates/#{spec['update_id']}-samenvatting",
+            "wijzigingen": f"/updates/#{spec['update_id']}-wijzigingen",
+            "tijdlijn": f"/updates/#{spec['update_id']}-tijdlijn",
+            "bronnen": f"/updates/#{spec['update_id']}-bronnen",
+        }
         metrics = []
         for item in spec.get("metrics", []):
+            label = item["label"].lower()
+            if label == "bronnen":
+                metric_page_url = section_urls["bronnen"]
+            elif label == "claims":
+                metric_page_url = section_urls["wijzigingen"]
+            else:
+                metric_page_url = section_urls["tijdlijn"]
             metrics.append(
                 {
                     "label": item["label"],
@@ -1715,6 +1729,7 @@ def build_site_updates_view(documents: dict[str, dict], timeline_register: dict)
                     "after": item["after"],
                     "delta": item["after"] - item["before"],
                     "delta_label": format_metric_delta(item["before"], item["after"]),
+                    "page_url": metric_page_url,
                 }
             )
 
@@ -1748,13 +1763,26 @@ def build_site_updates_view(documents: dict[str, dict], timeline_register: dict)
                 }
             )
 
+        source_reference = None
+        if spec.get("source_reference"):
+            source_reference = timeline_source_ref(
+                {
+                    **spec["source_reference"],
+                    "title": spec["source_reference"].get("title", spec["source_reference"].get("label", "")),
+                }
+            )
+
         updates.append(
             {
                 "update_id": spec["update_id"],
-                "page_url": f"/updates/#{spec['update_id']}",
+                "page_url": update_page_url,
                 "published_on": spec["published_on"],
                 "title": spec["title"],
                 "summary": spec["summary"],
+                "source_reference": source_reference,
+                "human_summary": spec.get("human_summary", {}),
+                "key_points": spec.get("key_points", []),
+                "section_urls": section_urls,
                 "change_highlights": spec.get("change_highlights", []),
                 "metrics": metrics,
                 "affected_pages": spec.get("affected_pages", []),

@@ -208,8 +208,9 @@ def render_update_metric_boxes(route: str, metrics: list[dict], page_url: str | 
             "title": item["label"],
             "summary": f'{item["before"]} -> {item["after"]} ({item["delta_label"]})',
         }
-        if page_url:
-            box["page_url"] = page_url
+        target_url = item.get("page_url") or page_url
+        if target_url:
+            box["page_url"] = target_url
         items.append(box)
     return render_summary_boxes(route, items)
 
@@ -315,7 +316,7 @@ def render_home(route: str, home_view: dict) -> str:
         latest_update_section = (
             '<section class="section"><h2>Laatste data-update</h2>'
             + f'<div class="notice"><strong>{esc(latest_update["published_on"])}</strong> - {esc(latest_update["title"])}<br>{esc(latest_update["summary"])}</div>'
-            + render_update_metric_boxes(route, latest_update["metrics"], latest_update["page_url"])
+            + render_update_metric_boxes(route, latest_update["metrics"])
             + '<ul class="stack-list">'
             + "".join(f"<li>{esc(item)}</li>" for item in latest_update["change_highlights"][:3])
             + "</ul>"
@@ -809,13 +810,31 @@ def render_updates(route: str, updates_view: dict) -> str:
     ]
 
     for update in updates_view["updates"]:
+        source_reference = update.get("source_reference")
+        source_reference_html = ""
+        if source_reference:
+            source_reference_html = (
+                '<p class="list-meta"><strong>Aanleiding:</strong> '
+                + f'<a href="{esc(relative_link(route, source_reference["page_url"]))}">{esc(source_reference["title"])}</a>'
+                + f' ({esc(source_reference["publisher"])}, {esc(source_reference["publication_date"] or "datum onbekend")})'
+                + "</p>"
+            )
+
+        human_summary = update.get("human_summary", {})
         sections.append(
             f'<section class="section" id="{esc(update["update_id"])}">'
             + f'<h2>{esc(update["title"])}</h2>'
             + f'<p class="list-meta">{esc(update["published_on"])}</p>'
             + f'<div class="notice">{esc(update["summary"])}</div>'
             + render_update_metric_boxes(route, update["metrics"])
-            + '<section class="section section--nested"><h3>Wat is er veranderd</h3><ul class="stack-list">'
+            + f'<section class="section section--nested" id="{esc(update["update_id"])}-samenvatting"><h3>Kort samengevat</h3>'
+            + source_reference_html
+            + f'<p>{esc(human_summary.get("intro", update["summary"]))}</p>'
+            + (f'<p>{esc(human_summary["what_happened"])}</p>' if human_summary.get("what_happened") else "")
+            + (f'<p>{esc(human_summary["what_changed"])}</p>' if human_summary.get("what_changed") else "")
+            + (f'<p>{esc(human_summary["why_it_matters"])}</p>' if human_summary.get("why_it_matters") else "")
+            + "</section>"
+            + f'<section class="section section--nested" id="{esc(update["update_id"])}-wijzigingen"><h3>Wat is er veranderd</h3><ul class="stack-list">'
             + "".join(f"<li>{esc(item)}</li>" for item in update["change_highlights"])
             + "</ul></section>"
             + '<section class="section section--nested"><h3>Raakt direct aan</h3>'
@@ -824,7 +843,7 @@ def render_updates(route: str, updates_view: dict) -> str:
                 [{"label": item["label"], "href": item["url"]} for item in update["affected_pages"]],
             )
             + "</section>"
-            + '<section class="section section--nested"><h3>Nieuwe of aangescherpte tijdlijnmomenten</h3><ul class="stack-list">'
+            + f'<section class="section section--nested" id="{esc(update["update_id"])}-tijdlijn"><h3>Nieuwe of aangescherpte tijdlijnmomenten</h3><ul class="stack-list">'
             + "".join(
                 "<li>"
                 + f'<strong><a href="{esc(relative_link(route, item["page_url"]))}">{esc(item["date_label"])} - {esc(item["title"])}</a></strong><br>'
@@ -833,7 +852,7 @@ def render_updates(route: str, updates_view: dict) -> str:
                 for item in update["highlighted_timeline_entries"]
             )
             + "</ul></section>"
-            + '<section class="section section--nested"><h3>Bronnen die deze update hebben veroorzaakt</h3><ul class="stack-list">'
+            + f'<section class="section section--nested" id="{esc(update["update_id"])}-bronnen"><h3>Bronnen die deze update hebben veroorzaakt</h3><ul class="stack-list">'
             + "".join(
                 "<li>"
                 + f'<strong><a href="{esc(relative_link(route, item["page_url"]))}">{esc(item["title"])}</a></strong><br>'

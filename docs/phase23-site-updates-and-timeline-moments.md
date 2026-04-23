@@ -18,6 +18,7 @@ Make two kinds of change visible on the public site:
 - rendered a new public page at [dist/updates/index.html](C:/Projects/azwa/dist/updates/index.html)
 - added `Updates` to the site navigation and search index
 - added a `Laatste data-update` section on the homepage
+- added regression coverage so summary-style metric blocks on update pages must stay clickable when they summarize drill-down content
 
 ## Why this matters
 

@@ -19,3 +19,4 @@
 
 ## Current Guidelines
 - `docs/rapporten/schrijfrichtlijn-plan-van-aanpak.md`: style and structure guidance for Dutch municipal `plan van aanpak` documents.
+- `docs/phase24-data-quality-roadmap.md`: long-term roadmap for improving source quality, claim quality, timeline quality, and public-facing site text along the perspectives Norm, Time, Money, Governance, Locality, and Execution.

@@ -36,6 +36,7 @@ De bronanalyse mag niet zonder expliciete onderbouwing leiden tot:
 - concrete fte-inzet;
 - budgetverdeling;
 - zelfgekozen planning of interne deadlines;
+- niet-bestaande bijlagen of onderliggende stukken;
 - bestuurlijke voorkeurskeuzes;
 - prioritering alsof die al besloten is;
 - uitvoeringsadvies dat niet in de bronbasis staat.
@@ -106,6 +107,7 @@ In de hoofdtekst staat bij voorkeur **niet**:
 - formuleringen alsof het document zelf door data "spreekt".
 - zelfbedachte personele inzet, budgetten of uitvoeringsoplossingen.
 - zelfbedachte planning, mijlpalen of deadlines die niet uit de bronbasis volgen.
+- verwijzingen naar bijlagen, tabellen, kaarten of onderliggende notities die niet daadwerkelijk bestaan.
 
 Als de bronbasis nog geen concrete invulling geeft, benoem dan de keuze die nog gemaakt moet worden in plaats van zelf een advies in te vullen.
 
@@ -129,6 +131,25 @@ Gebruik in plaats daarvan:
 - `Waar de bronnen nog geen lokale invulling geven, is geen bestuurlijke keuze ingevuld.`
 
 Technische verantwoording kan apart worden bijgehouden in interne documentatie of in antwoorden aan de gebruiker, maar hoort niet in public-facing rapporttekst.
+
+## Bijlagen
+Noem alleen bijlagen die daadwerkelijk bestaan en beschikbaar zijn bij het document.
+
+Niet:
+`Bijlage A: gebruikte bronset en peildatum.`
+
+Niet:
+`Bijlage C: planning 2026-2030.`
+
+Waarom niet:
+Als zulke bijlagen niet zijn gemaakt, wekt het document ten onrechte de indruk dat er onderliggende stukken beschikbaar zijn.
+
+Beter:
+- laat de bijlagensectie weg;
+- verwijs in de tekst kort naar de gebruikte openbare bronnen;
+- of markeer een stuk expliciet als `nog op te stellen` als de opdrachtgever daarom vraagt.
+
+Gebruik dus geen bijlagenlijst als de bijlagen niet echt bestaan. Een plan zonder bijlagen is beter dan een plan met verzonnen bijlagen.
 
 ## Formuleringsregels
 
@@ -324,6 +345,7 @@ Controleer bij elk concept:
 - Zijn de kernzinnen handelingsgericht?
 - Zijn er geen fte's, bedragen, prioriteiten of uitvoeringsadviezen toegevoegd die niet expliciet uit de bronbasis komen?
 - Zijn alle datums, deadlines en mijlpalen bron- of modelgedragen, of duidelijk gemarkeerd als menselijke invulling?
+- Worden alleen bijlagen genoemd die daadwerkelijk bestaan of expliciet als `nog op te stellen` zijn gemarkeerd?
 - Zijn technische termen uit de hoofdtekst verwijderd?
 - Is technische methodetaal ook uit publieke verantwoordingen en bijlagen gehouden?
 - Staat er per onderdeel steeds een actor, actie en gevolg?

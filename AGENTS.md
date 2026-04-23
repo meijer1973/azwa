@@ -13,6 +13,7 @@
 - Do not invent policy, staffing, budget, governance, or implementation advice that is not grounded in the data/model/source base. If the source base does not support a concrete recommendation, frame it as a choice question or human review point.
 - Do not invent planning dates, deadlines, or milestones. Use only dates grounded in sources or the generated timeline/model; otherwise mark timing as a human planning decision.
 - Technical source, data, QC, or pipeline details belong in a methodische verantwoording or appendix, not in the main narrative.
+- For public-facing or bestuurlijke report text, avoid technical data/pipeline language altogether, including in accountability sections. Use plain source-grounding language instead of filenames, JSON names, claim-layer terminology, QC counts, or pipeline status.
 
 ## Current Guidelines
 - `docs/rapporten/schrijfrichtlijn-plan-van-aanpak.md`: style and structure guidance for Dutch municipal `plan van aanpak` documents.

@@ -67,6 +67,8 @@ Vermijd in de hoofdtekst:
 
 Dat soort taal hoort alleen thuis in een methodische bijlage of verantwoording.
 
+Voor publieke of bestuurlijke stukken geldt aanvullend: ook een verantwoording of bijlage moet leesbaar blijven voor mensen buiten het projectteam. Gebruik daar geen bestandsnamen, JSON-verwijzingen, pipeline-termen of QC-jargon. Zulke technische details zijn geschikt voor interne notities, ontwikkelverslagen of antwoorden aan de gebruiker, niet voor public-facing materiaal.
+
 ## Schrijf vanuit bestuurlijke logica
 De volgorde van redeneren in een plan van aanpak is meestal:
 
@@ -112,12 +114,21 @@ In een bijlage of verantwoording mogen wel staan:
 - peildatum;
 - gebruikte bronset;
 - methodische toelichting;
-- datatoets;
-- kwaliteitscontrole;
 - beperkingen van de bronbasis;
 - open reviewpunten.
 
-Daar mag de taal technischer zijn, zolang die duidelijk van de hoofdtekst is gescheiden.
+Voor publieke of bestuurlijke documenten blijft ook deze verantwoording gewoon Nederlands. Vermijd:
+- bestandsnamen zoals `site_almere_view.json`;
+- interne modelnamen zoals `claimlaag`;
+- pipeline-termen zoals `extractie`, `render`, `QC` of `blocking issues`;
+- technische tellingen die alleen voor ontwikkelaars betekenis hebben.
+
+Gebruik in plaats daarvan:
+- `Deze versie is gebaseerd op de beschikbare landelijke, regionale en lokale bronnen tot en met [datum].`
+- `Open punten zijn apart benoemd als keuze- of beoordelingspunten.`
+- `Waar de bronnen nog geen lokale invulling geven, is geen bestuurlijke keuze ingevuld.`
+
+Technische verantwoording kan apart worden bijgehouden in interne documentatie of in antwoorden aan de gebruiker, maar hoort niet in public-facing rapporttekst.
 
 ## Formuleringsregels
 
@@ -314,7 +325,7 @@ Controleer bij elk concept:
 - Zijn er geen fte's, bedragen, prioriteiten of uitvoeringsadviezen toegevoegd die niet expliciet uit de bronbasis komen?
 - Zijn alle datums, deadlines en mijlpalen bron- of modelgedragen, of duidelijk gemarkeerd als menselijke invulling?
 - Zijn technische termen uit de hoofdtekst verwijderd?
-- Is methodische taal verplaatst naar verantwoording of bijlage?
+- Is technische methodetaal ook uit publieke verantwoordingen en bijlagen gehouden?
 - Staat er per onderdeel steeds een actor, actie en gevolg?
 - Klinkt de tekst als gemeentelijk beleidsstuk en niet als analyse-output?
 

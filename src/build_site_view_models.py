@@ -1707,10 +1707,11 @@ def build_site_updates_view(documents: dict[str, dict], timeline_register: dict,
     updates: list[dict] = []
     for spec in sorted(update_specs, key=lambda item: (item["published_on"], item["title"]), reverse=True):
         update_page_url = f"/updates/#{spec['update_id']}"
+        claims_page_url = f"/updates/claims/{spec['update_id']}/"
         section_urls = {
             "samenvatting": f"/updates/#{spec['update_id']}-samenvatting",
             "wijzigingen": f"/updates/#{spec['update_id']}-wijzigingen",
-            "claims": f"/updates/#{spec['update_id']}-claims",
+            "claims": claims_page_url,
             "tijdlijn": f"/updates/#{spec['update_id']}-tijdlijn",
             "bronnen": f"/updates/#{spec['update_id']}-bronnen",
         }
@@ -1817,6 +1818,7 @@ def build_site_updates_view(documents: dict[str, dict], timeline_register: dict,
             {
                 "update_id": spec["update_id"],
                 "page_url": update_page_url,
+                "claims_page_url": claims_page_url,
                 "published_on": spec["published_on"],
                 "title": spec["title"],
                 "summary": spec["summary"],
@@ -2781,6 +2783,14 @@ def build_site_manifest(
             "page_type": "update_note",
             "title": item["title"],
             "url": item["page_url"],
+        }
+        for item in updates_view.get("updates", [])
+    )
+    pages.extend(
+        {
+            "page_type": "update_claims",
+            "title": f'Claimlijst: {item["title"]}',
+            "url": item["claims_page_url"],
         }
         for item in updates_view.get("updates", [])
     )

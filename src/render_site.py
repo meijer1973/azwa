@@ -215,6 +215,32 @@ def render_update_metric_boxes(route: str, metrics: list[dict], page_url: str | 
     return render_summary_boxes(route, items)
 
 
+def render_update_change_highlights(update_id: str, items: list[dict | str]) -> str:
+    if not items:
+        return '<div class="empty-state">Geen aparte wijzigingspunten beschikbaar.</div>'
+    rendered = []
+    for index, item in enumerate(items, start=1):
+        if isinstance(item, str):
+            summary = item
+            detail = ""
+        else:
+            summary = item.get("summary") or item.get("title") or ""
+            detail = item.get("detail") or item.get("body") or ""
+        rendered.append(
+            f'<details class="timeline-entry" id="{esc(f"{update_id}-wijziging-{index}")}">'
+            + '<summary class="timeline-entry__summary">'
+            + '<div class="timeline-entry__summary-main">'
+            + f'<h4 class="timeline-entry__title">{esc(summary)}</h4>'
+            + "</div>"
+            + '<span class="timeline-entry__toggle">Meer duiding</span>'
+            + "</summary>"
+            + '<div class="timeline-entry__body">'
+            + (f"<p>{esc(detail)}</p>" if detail else '<p class="list-meta">Nog geen extra duiding beschikbaar.</p>')
+            + "</div></details>"
+        )
+    return "".join(rendered)
+
+
 def render_document_refs(current_route: str, document_refs: list[dict]) -> str:
     if not document_refs:
         return '<div class="empty-state">Geen bronverwijzingen beschikbaar.</div>'
@@ -318,7 +344,10 @@ def render_home(route: str, home_view: dict) -> str:
             + f'<div class="notice"><strong>{esc(latest_update["published_on"])}</strong> - {esc(latest_update["title"])}<br>{esc(latest_update["summary"])}</div>'
             + render_update_metric_boxes(route, latest_update["metrics"])
             + '<ul class="stack-list">'
-            + "".join(f"<li>{esc(item)}</li>" for item in latest_update["change_highlights"][:3])
+            + "".join(
+                f"<li>{esc(item if isinstance(item, str) else item.get('summary') or item.get('title') or '')}</li>"
+                for item in latest_update["change_highlights"][:3]
+            )
             + "</ul>"
             + render_link_pills(route, update_links)
             + "</section>"
@@ -834,43 +863,13 @@ def render_updates(route: str, updates_view: dict) -> str:
             + (f'<p>{esc(human_summary["what_changed"])}</p>' if human_summary.get("what_changed") else "")
             + (f'<p>{esc(human_summary["why_it_matters"])}</p>' if human_summary.get("why_it_matters") else "")
             + "</section>"
-            + f'<section class="section section--nested" id="{esc(update["update_id"])}-wijzigingen"><h3>Wat is er veranderd</h3><ul class="stack-list">'
-            + "".join(f"<li>{esc(item)}</li>" for item in update["change_highlights"])
-            + "</ul></section>"
-            + f'<section class="section section--nested" id="{esc(update["update_id"])}-claims"><h3>Alle betrokken claims ({esc(str(update["affected_claim_count"]))})</h3><div class="notice">Dit is de volledige lijst van claims die met deze bronupdate zijn meegekomen in de dataset, gegroepeerd per bron.</div>'
-            + "".join(
-                '<details class="timeline-entry">'
-                + '<summary class="timeline-entry__summary">'
-                + '<div class="timeline-entry__summary-main">'
-                + f'<p class="timeline-entry__date">{esc(group["publication_date"] or "datum onbekend")}</p>'
-                + f'<h3 class="timeline-entry__title">{esc(group["title"])}</h3>'
-                + "</div>"
-                + f'<span class="timeline-entry__toggle">{esc(str(group["claim_count"]))} claims</span>'
-                + "</summary>"
-                + '<div class="timeline-entry__body">'
-                + f'<p class="list-meta"><strong>Bronpagina:</strong> <a href="{esc(relative_link(route, group["page_url"]))}">{esc(group["title"])}</a> | {esc(group["publisher"])}</p>'
-                + '<ul class="stack-list">'
-                + "".join(
-                    "<li>"
-                    + f'<strong>{esc(claim["topic_label"])}</strong>'
-                    + (f' <span class="list-meta">[{esc(claim["claim_id"])}]</span>' if claim.get("claim_id") else "")
-                    + "<br>"
-                    + esc(claim["statement"])
-                    + (
-                        f'<br><span class="list-meta">Pagina(s): {esc(", ".join(claim["page_labels"]))}</span>'
-                        if claim.get("page_labels")
-                        else ""
-                    )
-                    + (
-                        f'<br><span class="list-meta">Sectie(s): {esc(", ".join(claim["section_labels"]))}</span>'
-                        if claim.get("section_labels")
-                        else ""
-                    )
-                    + "</li>"
-                    for claim in group["claims"]
-                )
-                + "</ul></div></details>"
-                for group in update["affected_claims_by_source"]
+            + f'<section class="section section--nested" id="{esc(update["update_id"])}-wijzigingen"><h3>Wat is er veranderd</h3>'
+            + render_update_change_highlights(update["update_id"], update["change_highlights"])
+            + "</section>"
+            + f'<section class="section section--nested" id="{esc(update["update_id"])}-claims"><h3>Alle betrokken claims ({esc(str(update["affected_claim_count"]))})</h3><div class="notice">De volledige claimlijst staat op een aparte detailpagina. Dat houdt deze updatepagina leesbaar, terwijl de ruwe extractielaag wel volledig raadpleegbaar blijft.</div>'
+            + render_link_pills(
+                route,
+                [{"label": "Bekijk volledige claimlijst", "href": update["claims_page_url"]}],
             )
             + "</section>"
             + '<section class="section section--nested"><h3>Raakt direct aan</h3>'
@@ -899,6 +898,49 @@ def render_updates(route: str, updates_view: dict) -> str:
             + "</ul></section></section>"
         )
     return "".join(sections)
+
+
+def render_update_claims_detail(route: str, update: dict) -> str:
+    return (
+        '<section class="section"><h2>Hoe deze claimlijst te lezen</h2><div class="notice">Dit is de ruwe, machine-afgeleide claimlaag die uit de nieuwe bronset is gekomen. Claims zijn hier bewijsfragmenten, niet herschreven bestuurlijke samenvattingen. Daardoor kunnen tabelkoppen, afgebroken PDF-zinnen of korte tekstfragmenten zichtbaar zijn.</div></section>'
+        + '<section class="section"><h2>Waarom sommige claims onvolledige zinnen lijken</h2><p>De claimlaag probeert brongetrouw en atomair te blijven. Bij PDF-tabellen, afgebroken regels en compacte bronpassages levert dat soms halve zinnen of fragmenten op, zoals in tabellen of opsommingen. Voor menselijk leesbare duiding blijft de updatepagina zelf leidend; deze detailpagina is vooral bedoeld voor controle, herleidbaarheid en verdere analyse.</p></section>'
+        + f'<section class="section"><h2>Alle betrokken claims ({esc(str(update["affected_claim_count"]))})</h2>'
+        + "".join(
+            '<details class="timeline-entry">'
+            + '<summary class="timeline-entry__summary">'
+            + '<div class="timeline-entry__summary-main">'
+            + f'<p class="timeline-entry__date">{esc(group["publication_date"] or "datum onbekend")}</p>'
+            + f'<h3 class="timeline-entry__title">{esc(group["title"])}</h3>'
+            + "</div>"
+            + f'<span class="timeline-entry__toggle">{esc(str(group["claim_count"]))} claims</span>'
+            + "</summary>"
+            + '<div class="timeline-entry__body">'
+            + f'<p class="list-meta"><strong>Bronpagina:</strong> <a href="{esc(relative_link(route, group["page_url"]))}">{esc(group["title"])}</a> | {esc(group["publisher"])}</p>'
+            + '<ul class="stack-list">'
+            + "".join(
+                "<li>"
+                + f'<strong>{esc(claim["topic_label"])}</strong>'
+                + (f' <span class="list-meta">[{esc(claim["claim_id"])}]</span>' if claim.get("claim_id") else "")
+                + "<br>"
+                + esc(claim["statement"])
+                + (
+                    f'<br><span class="list-meta">Pagina(s): {esc(", ".join(claim["page_labels"]))}</span>'
+                    if claim.get("page_labels")
+                    else ""
+                )
+                + (
+                    f'<br><span class="list-meta">Sectie(s): {esc(", ".join(claim["section_labels"]))}</span>'
+                    if claim.get("section_labels")
+                    else ""
+                )
+                + "</li>"
+                for claim in group["claims"]
+            )
+            + "</ul></div></details>"
+            for group in update["affected_claims_by_source"]
+        )
+        + "</section>"
+    )
 
 
 def render_themes_index(route: str, themes_view: dict) -> str:
@@ -1445,6 +1487,19 @@ def build_search_index(
                 "page_type_label": "Update",
             }
         )
+        index.append(
+            {
+                "title": f'Claimlijst: {update["title"]}',
+                "subtitle": f'Ruwe claimlaag voor {update["published_on"]}',
+                "summary": "Volledige, brongetrouwe claimlijst voor deze update, gegroepeerd per bron.",
+                "aliases": ["claims", "claimlijst", "ruwe claimlaag"],
+                "themes": [],
+                "domains": ["D5", "D6"],
+                "url": route_to_output_path(update["claims_page_url"]).as_posix(),
+                "page_type": "update_claims",
+                "page_type_label": "Claimlijst",
+            }
+        )
     return index
 
 
@@ -1464,6 +1519,7 @@ def main() -> None:
     timeline_view = load_json(TIMELINE_VIEW_PATH)
     themes_view = load_json(THEMES_VIEW_PATH)
     updates_view = load_json(UPDATES_VIEW_PATH)
+    updates = updates_view["updates"]
     reference_view = load_json(REFERENCE_VIEW_PATH)
     sources_view = load_json(SOURCES_VIEW_PATH)
     decisions = [load_json(path) for path in sorted((DATA_DIR / "decision_view_models").glob("*.json"))]
@@ -1583,6 +1639,29 @@ def main() -> None:
                 crumbs=[("Start", "/"), ("Updates", "/updates/")],
             ),
         ),
+        *[
+            (
+                update["claims_page_url"],
+                render_page(
+                    update["claims_page_url"],
+                    f'Claimlijst: {update["title"]}',
+                    f'Volledige, brongetrouwe claimlijst voor de update van {update["published_on"]}.',
+                    render_update_claims_detail(update["claims_page_url"], update),
+                    navigation,
+                    site_info,
+                    updates_view["as_of_date"],
+                    updates_view["generated_on"],
+                    "page-updates page-updates-claims",
+                    crumbs=[
+                        ("Start", "/"),
+                        ("Updates", "/updates/"),
+                        (update["title"], update["page_url"]),
+                        ("Claimlijst", update["claims_page_url"]),
+                    ],
+                ),
+            )
+            for update in updates
+        ],
         (
             "/themes/",
             render_page(

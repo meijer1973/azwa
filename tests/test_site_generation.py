@@ -101,7 +101,7 @@ class SiteGenerationTests(unittest.TestCase):
         self.assertIn('href="almere/index.html#menselijke-duiding"', html)
         self.assertIn('href="timeline/index.html#', html)
         self.assertIn('href="updates/index.html#upd_vng_financiering_2026_04_23-bronnen"', html)
-        self.assertIn('href="updates/index.html#upd_vng_financiering_2026_04_23-wijzigingen"', html)
+        self.assertIn('href="updates/index.html#upd_vng_financiering_2026_04_23-claims"', html)
         self.assertIn('href="updates/index.html#upd_vng_financiering_2026_04_23-tijdlijn"', html)
         self.assertIn('href="decisions/index.html?theme=', html)
         self.assertIn('href="actions/index.html?theme=', html)
@@ -145,7 +145,7 @@ class SiteGenerationTests(unittest.TestCase):
 
         self.assertIn('href="almere/index.html#menselijke-duiding"', home_html)
         self.assertIn('href="updates/index.html#upd_vng_financiering_2026_04_23-bronnen"', home_html)
-        self.assertIn('href="updates/index.html#upd_vng_financiering_2026_04_23-wijzigingen"', home_html)
+        self.assertIn('href="updates/index.html#upd_vng_financiering_2026_04_23-claims"', home_html)
         self.assertIn('href="updates/index.html#upd_vng_financiering_2026_04_23-tijdlijn"', home_html)
         self.assertIn('href="decisions/index.html?theme=governance-en-regie"', home_html)
         self.assertIn('href="actions/index.html?theme=governance-en-regie"', home_html)
@@ -163,7 +163,7 @@ class SiteGenerationTests(unittest.TestCase):
         self.assertIn('class="card card--link" href="azwa-definitief/index.html"', sources_html)
 
         self.assertIn('class="summary-box summary-box--link" href="index.html#upd_vng_financiering_2026_04_23-bronnen"', updates_html)
-        self.assertIn('class="summary-box summary-box--link" href="index.html#upd_vng_financiering_2026_04_23-wijzigingen"', updates_html)
+        self.assertIn('class="summary-box summary-box--link" href="index.html#upd_vng_financiering_2026_04_23-claims"', updates_html)
         self.assertIn('class="summary-box summary-box--link" href="index.html#upd_vng_financiering_2026_04_23-tijdlijn"', updates_html)
 
     def test_traceability_pages_link_internally(self) -> None:
@@ -268,11 +268,16 @@ class SiteGenerationTests(unittest.TestCase):
         self.assertIn("Deze update is gemaakt naar aanleiding van de VNG-publicatie", html)
         self.assertIn('../sources/vng-webpagina-azwa-financiering/index.html', html)
         self.assertIn("376", html)
+        self.assertIn("Alle betrokken claims (78)", html)
+        self.assertIn("18 claims", html)
+        self.assertIn("16 claims", html)
+        self.assertIn("15 claims", html)
         self.assertIn("Tijdlijn", html)
         self.assertIn("VWS en VNG-webinar over AZWA-middelen en regionale werkagenda", html)
         self.assertIn("Landelijke thematafel Medisch-Sociaal en Preventie", html)
         self.assertIn('../timeline/index.html#tijdlijn-2026-04-23t12-00-webinar-azwa-financiering-23-april-2026', html)
         self.assertIn('../sources/vng-ledenbrief-azwa-financiering/index.html', html)
+        self.assertIn("clm__nat_vng_ledenbrief_azwa_financiering_2026_d5_001", html)
 
     def test_timeline_register_is_chronological_within_each_year(self) -> None:
         register = load_json(TIMELINE_REGISTER_PATH)

@@ -837,6 +837,42 @@ def render_updates(route: str, updates_view: dict) -> str:
             + f'<section class="section section--nested" id="{esc(update["update_id"])}-wijzigingen"><h3>Wat is er veranderd</h3><ul class="stack-list">'
             + "".join(f"<li>{esc(item)}</li>" for item in update["change_highlights"])
             + "</ul></section>"
+            + f'<section class="section section--nested" id="{esc(update["update_id"])}-claims"><h3>Alle betrokken claims ({esc(str(update["affected_claim_count"]))})</h3><div class="notice">Dit is de volledige lijst van claims die met deze bronupdate zijn meegekomen in de dataset, gegroepeerd per bron.</div>'
+            + "".join(
+                '<details class="timeline-entry">'
+                + '<summary class="timeline-entry__summary">'
+                + '<div class="timeline-entry__summary-main">'
+                + f'<p class="timeline-entry__date">{esc(group["publication_date"] or "datum onbekend")}</p>'
+                + f'<h3 class="timeline-entry__title">{esc(group["title"])}</h3>'
+                + "</div>"
+                + f'<span class="timeline-entry__toggle">{esc(str(group["claim_count"]))} claims</span>'
+                + "</summary>"
+                + '<div class="timeline-entry__body">'
+                + f'<p class="list-meta"><strong>Bronpagina:</strong> <a href="{esc(relative_link(route, group["page_url"]))}">{esc(group["title"])}</a> | {esc(group["publisher"])}</p>'
+                + '<ul class="stack-list">'
+                + "".join(
+                    "<li>"
+                    + f'<strong>{esc(claim["topic_label"])}</strong>'
+                    + (f' <span class="list-meta">[{esc(claim["claim_id"])}]</span>' if claim.get("claim_id") else "")
+                    + "<br>"
+                    + esc(claim["statement"])
+                    + (
+                        f'<br><span class="list-meta">Pagina(s): {esc(", ".join(claim["page_labels"]))}</span>'
+                        if claim.get("page_labels")
+                        else ""
+                    )
+                    + (
+                        f'<br><span class="list-meta">Sectie(s): {esc(", ".join(claim["section_labels"]))}</span>'
+                        if claim.get("section_labels")
+                        else ""
+                    )
+                    + "</li>"
+                    for claim in group["claims"]
+                )
+                + "</ul></div></details>"
+                for group in update["affected_claims_by_source"]
+            )
+            + "</section>"
             + '<section class="section section--nested"><h3>Raakt direct aan</h3>'
             + render_link_pills(
                 route,

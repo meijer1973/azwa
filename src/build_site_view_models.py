@@ -1696,7 +1696,7 @@ def format_metric_delta(before: int, after: int) -> str:
     return "0"
 
 
-def build_site_updates_view(documents: dict[str, dict], timeline_register: dict) -> dict:
+def build_site_updates_view(documents: dict[str, dict], timeline_register: dict, claims: dict[str, dict]) -> dict:
     update_specs = site_updates_config().get("updates", [])
     timeline_lookup = {
         entry["entry_key"]: entry
@@ -1710,6 +1710,7 @@ def build_site_updates_view(documents: dict[str, dict], timeline_register: dict)
         section_urls = {
             "samenvatting": f"/updates/#{spec['update_id']}-samenvatting",
             "wijzigingen": f"/updates/#{spec['update_id']}-wijzigingen",
+            "claims": f"/updates/#{spec['update_id']}-claims",
             "tijdlijn": f"/updates/#{spec['update_id']}-tijdlijn",
             "bronnen": f"/updates/#{spec['update_id']}-bronnen",
         }
@@ -1719,7 +1720,7 @@ def build_site_updates_view(documents: dict[str, dict], timeline_register: dict)
             if label == "bronnen":
                 metric_page_url = section_urls["bronnen"]
             elif label == "claims":
-                metric_page_url = section_urls["wijzigingen"]
+                metric_page_url = section_urls["claims"]
             else:
                 metric_page_url = section_urls["tijdlijn"]
             metrics.append(
@@ -1745,6 +1746,46 @@ def build_site_updates_view(documents: dict[str, dict], timeline_register: dict)
                     "publisher": document["publisher"],
                     "publication_date": document["publication_date"],
                     "page_url": source_page_url(document),
+                }
+            )
+
+        affected_claims_by_source = []
+        for document_id in spec.get("affected_document_ids", []):
+            document = documents.get(document_id)
+            if document is None:
+                continue
+            source_claims = [
+                claim for claim in claims.values() if claim["source_document_id"] == document_id
+            ]
+            source_claims.sort(key=lambda claim: (claim.get("topic", ""), claim.get("claim_id", "")))
+            affected_claims_by_source.append(
+                {
+                    "document_id": document_id,
+                    "title": document["title"],
+                    "publisher": document["publisher"],
+                    "publication_date": document["publication_date"],
+                    "page_url": source_page_url(document),
+                    "claim_count": len(source_claims),
+                    "claims": [
+                        {
+                            "claim_id": claim["claim_id"],
+                            "topic": claim["topic"],
+                            "topic_label": topic_label(claim["topic"]),
+                            "statement": claim["statement"],
+                            "validity_status": claim.get("validity_status", ""),
+                            "page_labels": [
+                                str(page)
+                                for page in claim.get("source_location", {}).get("pages", [])
+                                if page is not None
+                            ],
+                            "section_labels": [
+                                section
+                                for section in claim.get("source_location", {}).get("sections", [])
+                                if section
+                            ],
+                        }
+                        for claim in source_claims
+                    ],
                 }
             )
 
@@ -1787,6 +1828,8 @@ def build_site_updates_view(documents: dict[str, dict], timeline_register: dict)
                 "metrics": metrics,
                 "affected_pages": spec.get("affected_pages", []),
                 "affected_sources": affected_sources,
+                "affected_claims_by_source": affected_claims_by_source,
+                "affected_claim_count": sum(item["claim_count"] for item in affected_claims_by_source),
                 "highlighted_timeline_entries": highlighted_timeline_entries,
             }
         )
@@ -2761,7 +2804,7 @@ def main() -> None:
     decision_models = build_decision_models(almere_view, claims, documents, themes)
     action_models = build_action_models(almere_view, claims, documents, decision_models)
     timeline_register = build_timeline_register(documents, claims, current_topics, decision_models, action_models)
-    site_updates_view = build_site_updates_view(documents, timeline_register)
+    site_updates_view = build_site_updates_view(documents, timeline_register, claims)
     theme_models = build_theme_models(themes, current_topics, almere_view, decision_models, action_models, claims, documents)
     source_models = build_source_view_models(documents, document_payloads, claims, decision_models, action_models, themes)
     reference_topic_models = build_reference_topic_models(current_topics, themes, decision_models, action_models, claims, documents)

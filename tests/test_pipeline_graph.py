@@ -52,6 +52,7 @@ class PipelineGraphTests(unittest.TestCase):
         self.assertIn("data/raw/regional", phase2_inputs)
         self.assertIn("data/raw/municipal", phase2_inputs)
         self.assertIn("config/timeline_curation.json", phase12_inputs)
+        self.assertIn("config/site_updates.json", phase12_inputs)
 
 
 if __name__ == "__main__":

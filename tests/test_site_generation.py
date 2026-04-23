@@ -16,6 +16,7 @@ TIMELINE_VIEW_PATH = REPO_ROOT / "data" / "site" / "site_timeline_view.json"
 THEMES_VIEW_PATH = REPO_ROOT / "data" / "site" / "site_themes_view.json"
 REFERENCE_VIEW_PATH = REPO_ROOT / "data" / "site" / "site_reference_view.json"
 SOURCES_VIEW_PATH = REPO_ROOT / "data" / "site" / "site_sources_view.json"
+UPDATES_VIEW_PATH = REPO_ROOT / "data" / "site" / "site_updates_view.json"
 SITE_MANIFEST_PATH = REPO_ROOT / "data" / "site" / "site_manifest.json"
 SOURCE_INTAKE_CANDIDATES_PATH = REPO_ROOT / "data" / "raw" / "source_intake_candidates.json"
 DECISION_DIR = REPO_ROOT / "data" / "site" / "decision_view_models"
@@ -34,6 +35,7 @@ THEMES_PAGE_PATH = DIST_DIR / "themes" / "index.html"
 REFERENCE_PAGE_PATH = DIST_DIR / "reference" / "index.html"
 REFERENCE_TOPICS_PAGE_PATH = DIST_DIR / "reference" / "topics" / "index.html"
 SOURCES_PAGE_PATH = DIST_DIR / "sources" / "index.html"
+UPDATES_PAGE_PATH = DIST_DIR / "updates" / "index.html"
 SEARCH_INDEX_PATH = DIST_DIR / "search-index.json"
 SITE_BUILD_PATH = DIST_DIR / "site-build.json"
 DEPLOY_WORKFLOW_PATH = REPO_ROOT / ".github" / "workflows" / "deploy-pages.yml"
@@ -59,6 +61,7 @@ class SiteGenerationTests(unittest.TestCase):
         self.assertTrue(THEMES_VIEW_PATH.exists())
         self.assertTrue(REFERENCE_VIEW_PATH.exists())
         self.assertTrue(SOURCES_VIEW_PATH.exists())
+        self.assertTrue(UPDATES_VIEW_PATH.exists())
         self.assertGreater(len(list(DECISION_DIR.glob("*.json"))), 0)
         self.assertGreater(len(list(ACTION_DIR.glob("*.json"))), 0)
         self.assertGreater(len(list(THEME_DIR.glob("*.json"))), 0)
@@ -73,6 +76,7 @@ class SiteGenerationTests(unittest.TestCase):
             ACTIONS_PAGE_PATH,
             DASHBOARD_PAGE_PATH,
             TIMELINE_PAGE_PATH,
+            UPDATES_PAGE_PATH,
             THEMES_PAGE_PATH,
             REFERENCE_PAGE_PATH,
             REFERENCE_TOPICS_PAGE_PATH,
@@ -96,9 +100,11 @@ class SiteGenerationTests(unittest.TestCase):
         self.assertIn('href="almere/index.html#landelijke-basis-zichtbaar"', html)
         self.assertIn('href="almere/index.html#menselijke-duiding"', html)
         self.assertIn('href="timeline/index.html#', html)
+        self.assertIn('href="updates/index.html#upd_vng_financiering_2026_04_23"', html)
         self.assertIn('href="decisions/index.html?theme=', html)
         self.assertIn('href="actions/index.html?theme=', html)
         self.assertIn('href="themes/index.html"', html)
+        self.assertIn("Nieuwste bronnen", html)
         self.assertIn('href="reference/index.html"', html)
         self.assertIn('href="sources/index.html"', html)
 
@@ -135,9 +141,11 @@ class SiteGenerationTests(unittest.TestCase):
         sources_html = SOURCES_PAGE_PATH.read_text(encoding="utf-8")
 
         self.assertIn('href="almere/index.html#menselijke-duiding"', home_html)
+        self.assertIn('href="updates/index.html#upd_vng_financiering_2026_04_23"', home_html)
         self.assertIn('href="decisions/index.html?theme=governance-en-regie"', home_html)
         self.assertIn('href="actions/index.html?theme=governance-en-regie"', home_html)
         self.assertIn('class="card card--link" href="themes/index.html"', home_html)
+        self.assertIn('class="card card--link" href="updates/index.html"', home_html)
 
         self.assertIn('href="../decisions/index.html?theme=governance-en-regie"', themes_html)
         self.assertIn('href="../actions/index.html?theme=governance-en-regie"', themes_html)
@@ -166,8 +174,10 @@ class SiteGenerationTests(unittest.TestCase):
         self.assertIn("2025-10-09", html)
         self.assertIn("2025-11-13", html)
         self.assertIn("2026-04-01", html)
-        self.assertIn("2026-05-31", html)
         self.assertIn("2026-04-09", html)
+        self.assertIn("23 april 2026, 12.00-13.00 uur", html)
+        self.assertIn("26 mei 2026", html)
+        self.assertIn("2026-05-31", html)
         self.assertIn("begin 2027", html)
         self.assertIn("2027-03-31", html)
         self.assertIn("2027-07-15", html)
@@ -196,6 +206,14 @@ class SiteGenerationTests(unittest.TestCase):
         )
         self.assertLess(
             html.index("2026-04-09"),
+            html.index("23 april 2026, 12.00-13.00 uur"),
+        )
+        self.assertLess(
+            html.index("23 april 2026, 12.00-13.00 uur"),
+            html.index("26 mei 2026"),
+        )
+        self.assertLess(
+            html.index("26 mei 2026"),
             html.index("2026-05-31"),
         )
         self.assertLess(
@@ -224,10 +242,25 @@ class SiteGenerationTests(unittest.TestCase):
         self.assertIn("Programmabegroting 2026 aangeboden aan de gemeenteraad", titles)
         self.assertIn("Gemeenteraadsverkiezingen 2026 in Almere", titles)
         self.assertIn("Benoeming van de raad 2026-2030", titles)
+        self.assertIn("VWS en VNG-webinar over AZWA-middelen en regionale werkagenda", titles)
+        self.assertIn("Landelijke thematafel Medisch-Sociaal en Preventie", titles)
         self.assertIn("VNG-ledenbrief noemt aanvullend regioplan gereed in Q3 2026", titles)
         self.assertIn("Tussentijdse evaluatie van IZA/AZWA", titles)
         self.assertIn("Startpakket sociaal domein en evaluatieperiode", titles)
         self.assertIn("Lokale impacthorizon Positief Gezond Almere", titles)
+
+    def test_updates_page_contains_current_change_log(self) -> None:
+        updates_view = load_json(UPDATES_VIEW_PATH)
+        html = UPDATES_PAGE_PATH.read_text(encoding="utf-8")
+
+        self.assertEqual(updates_view["latest_update"]["update_id"], "upd_vng_financiering_2026_04_23")
+        self.assertIn("VNG-financieringsset van 22 april 2026 verwerkt in de dataset", html)
+        self.assertIn("376", html)
+        self.assertIn("Tijdlijn", html)
+        self.assertIn("VWS en VNG-webinar over AZWA-middelen en regionale werkagenda", html)
+        self.assertIn("Landelijke thematafel Medisch-Sociaal en Preventie", html)
+        self.assertIn('../timeline/index.html#tijdlijn-2026-04-23t12-00-webinar-azwa-financiering-23-april-2026', html)
+        self.assertIn('../sources/vng-ledenbrief-azwa-financiering/index.html', html)
 
     def test_timeline_register_is_chronological_within_each_year(self) -> None:
         register = load_json(TIMELINE_REGISTER_PATH)
@@ -243,6 +276,7 @@ class SiteGenerationTests(unittest.TestCase):
         titles = {page["title"] for page in manifest["pages"]}
         self.assertNotIn("D6 other", titles)
         self.assertNotIn("D6 regional coordination", titles)
+        self.assertIn("Updates", titles)
         self.assertIn("overige D6-lijn", titles)
         self.assertIn("regionale coördinatie voor D6", titles)
 
@@ -280,10 +314,12 @@ class SiteGenerationTests(unittest.TestCase):
         search_index = load_json(SEARCH_INDEX_PATH)
         titles = {entry["title"] for entry in search_index}
         page_types = {entry["page_type"] for entry in search_index}
-        self.assertTrue({"Start", "Almere", "Besluitvragen", "Opvolgacties", "Dashboard", "Thema's", "Referentie", "Bronnen"}.issubset(titles))
+        self.assertTrue({"Start", "Almere", "Besluitvragen", "Opvolgacties", "Dashboard", "Thema's", "Updates", "Referentie", "Bronnen"}.issubset(titles))
         self.assertIn("decision", page_types)
         self.assertIn("action", page_types)
         self.assertIn("theme", page_types)
+        self.assertIn("updates", page_types)
+        self.assertIn("update", page_types)
         self.assertIn("reference_topic", page_types)
         self.assertIn("source", page_types)
 

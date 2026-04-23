@@ -19,6 +19,7 @@ CURRENT_INTERPRETATION_PATH = CLAIMS_DIR / "current_interpretation.json"
 INVENTORY_PATH = EXTRACTED_DIR / "document_inventory.json"
 REVIEW_QUEUE_PATH = EXTRACTED_DIR / "review_queue.json"
 SITE_TAXONOMY_PATH = REPO_ROOT / "config" / "site_taxonomy.json"
+SITE_UPDATES_CONFIG_PATH = REPO_ROOT / "config" / "site_updates.json"
 
 DOCUMENTS_DIR = EXTRACTED_DIR / "documents"
 
@@ -30,6 +31,7 @@ TIMELINE_VIEW_PATH = SITE_DIR / "site_timeline_view.json"
 THEMES_VIEW_PATH = SITE_DIR / "site_themes_view.json"
 REFERENCE_VIEW_PATH = SITE_DIR / "site_reference_view.json"
 SOURCES_VIEW_PATH = SITE_DIR / "site_sources_view.json"
+SITE_UPDATES_VIEW_PATH = SITE_DIR / "site_updates_view.json"
 SITE_MANIFEST_PATH = SITE_DIR / "site_manifest.json"
 DECISION_DIR = SITE_DIR / "decision_view_models"
 ACTION_DIR = SITE_DIR / "action_view_models"
@@ -616,6 +618,10 @@ def site_meta() -> dict:
     return load_json(SITE_TAXONOMY_PATH)["site"]
 
 
+def site_updates_config() -> dict:
+    return load_json(SITE_UPDATES_CONFIG_PATH)
+
+
 def timeline_curation() -> dict:
     return load_json(TIMELINE_CURATION_PATH)
 
@@ -969,6 +975,7 @@ def document_timeline_entry_from_spec(spec: dict, documents: dict[str, dict]) ->
     document = documents[spec["document_id"]]
     entry_id = timeline_anchor(f"{document['publication_date']}-{document['document_id']}")
     return {
+        "entry_key": document["document_id"],
         "entry_id": entry_id,
         "year": timeline_year(document["publication_date"]),
         "date_label": document["publication_date"],
@@ -1007,6 +1014,7 @@ def reference_timeline_entry_from_spec(
     )
     entry_id = timeline_anchor(f"{spec['sort_key']}-{spec['entry_key']}")
     return {
+        "entry_key": spec["entry_key"],
         "entry_id": entry_id,
         "year": timeline_year(spec["sort_key"]),
         "date_label": spec["date_label"],
@@ -1039,6 +1047,7 @@ def external_timeline_entry_from_spec(
 ) -> dict:
     entry_id = timeline_anchor(f"{spec['sort_key']}-{spec['entry_key']}")
     return {
+        "entry_key": spec["entry_key"],
         "entry_id": entry_id,
         "year": timeline_year(spec["sort_key"]),
         "date_label": spec["date_label"],
@@ -1670,11 +1679,98 @@ def build_recent_changes(document_payloads: dict[str, dict], documents: dict[str
                 "publication_date": publication_date,
                 "document_type": metadata["document_type"],
                 "summary": summary or "Toegevoegd of bijgewerkt in de huidige bronbasis.",
+                "page_url": source_page_url(metadata),
                 "source_url": metadata["source_url"],
             }
         )
     entries.sort(key=lambda item: (item["publication_date"], item["title"]), reverse=True)
     return entries[:5]
+
+
+def format_metric_delta(before: int, after: int) -> str:
+    delta = after - before
+    if delta > 0:
+        return f"+{delta}"
+    if delta < 0:
+        return str(delta)
+    return "0"
+
+
+def build_site_updates_view(documents: dict[str, dict], timeline_register: dict) -> dict:
+    update_specs = site_updates_config().get("updates", [])
+    timeline_lookup = {
+        entry["entry_key"]: entry
+        for entry in timeline_register["entries"]
+        if entry.get("entry_key")
+    }
+
+    updates: list[dict] = []
+    for spec in sorted(update_specs, key=lambda item: (item["published_on"], item["title"]), reverse=True):
+        metrics = []
+        for item in spec.get("metrics", []):
+            metrics.append(
+                {
+                    "label": item["label"],
+                    "before": item["before"],
+                    "after": item["after"],
+                    "delta": item["after"] - item["before"],
+                    "delta_label": format_metric_delta(item["before"], item["after"]),
+                }
+            )
+
+        affected_sources = []
+        for document_id in spec.get("affected_document_ids", []):
+            document = documents.get(document_id)
+            if document is None:
+                continue
+            affected_sources.append(
+                {
+                    "document_id": document_id,
+                    "title": document["title"],
+                    "publisher": document["publisher"],
+                    "publication_date": document["publication_date"],
+                    "page_url": source_page_url(document),
+                }
+            )
+
+        highlighted_timeline_entries = []
+        for entry_key in spec.get("highlighted_timeline_entry_keys", []):
+            entry = timeline_lookup.get(entry_key)
+            if entry is None:
+                continue
+            highlighted_timeline_entries.append(
+                {
+                    "entry_key": entry["entry_key"],
+                    "date_label": entry["date_label"],
+                    "title": entry["title"],
+                    "summary": entry["summary"],
+                    "page_url": entry["page_url"],
+                }
+            )
+
+        updates.append(
+            {
+                "update_id": spec["update_id"],
+                "page_url": f"/updates/#{spec['update_id']}",
+                "published_on": spec["published_on"],
+                "title": spec["title"],
+                "summary": spec["summary"],
+                "change_highlights": spec.get("change_highlights", []),
+                "metrics": metrics,
+                "affected_pages": spec.get("affected_pages", []),
+                "affected_sources": affected_sources,
+                "highlighted_timeline_entries": highlighted_timeline_entries,
+            }
+        )
+
+    return {
+        "view_run_id": SITE_RUN_ID,
+        "generated_on": TODAY,
+        "as_of_date": TODAY,
+        "title": "Updates",
+        "updates": updates,
+        "latest_update": updates[0] if updates else None,
+    }
 
 
 def build_timeline_register(
@@ -1693,6 +1789,10 @@ def build_timeline_register(
     entries.extend(
         reference_timeline_entry_from_spec(spec, claims, documents, current_topic_map, decision_models, action_models)
         for spec in curation["claim_entries"]
+    )
+    entries.extend(
+        external_timeline_entry_from_spec(spec, decision_models, action_models)
+        for spec in curation.get("supplemental_entries", [])
     )
     entries.sort(key=lambda item: (item["sort_key"], item["title"]))
 
@@ -1766,6 +1866,7 @@ def build_home_view(
     document_payloads: dict[str, dict],
     documents: dict[str, dict],
     timeline_register: dict,
+    site_updates_view: dict,
 ) -> dict:
     implementation_status_blocks = [
         {
@@ -1831,6 +1932,7 @@ def build_home_view(
         "as_of_date": almere_view["as_of_date"],
         "title": "Start",
         "executive_summary": executive_summary,
+        "latest_update": site_updates_view.get("latest_update"),
         "top_decisions": decision_models[:3],
         "top_actions": action_models[:3],
         "implementation_status_blocks": implementation_status_blocks,
@@ -2504,6 +2606,7 @@ def build_site_manifest(
     themes: list[dict],
     reference_topics: list[dict],
     sources: list[dict],
+    updates_view: dict,
 ) -> dict:
     pages = [
         {
@@ -2535,6 +2638,11 @@ def build_site_manifest(
             "page_type": "timeline",
             "title": "Tijdlijn",
             "url": "/timeline/",
+        },
+        {
+            "page_type": "updates",
+            "title": "Updates",
+            "url": "/updates/",
         },
         {
             "page_type": "themes",
@@ -2597,6 +2705,14 @@ def build_site_manifest(
         }
         for item in sources
     )
+    pages.extend(
+        {
+            "page_type": "update_note",
+            "title": item["title"],
+            "url": item["page_url"],
+        }
+        for item in updates_view.get("updates", [])
+    )
     return {
         "site_run_id": SITE_RUN_ID,
         "generated_on": TODAY,
@@ -2617,6 +2733,7 @@ def main() -> None:
     decision_models = build_decision_models(almere_view, claims, documents, themes)
     action_models = build_action_models(almere_view, claims, documents, decision_models)
     timeline_register = build_timeline_register(documents, claims, current_topics, decision_models, action_models)
+    site_updates_view = build_site_updates_view(documents, timeline_register)
     theme_models = build_theme_models(themes, current_topics, almere_view, decision_models, action_models, claims, documents)
     source_models = build_source_view_models(documents, document_payloads, claims, decision_models, action_models, themes)
     reference_topic_models = build_reference_topic_models(current_topics, themes, decision_models, action_models, claims, documents)
@@ -2629,6 +2746,7 @@ def main() -> None:
         document_payloads,
         documents,
         timeline_register,
+        site_updates_view,
     )
     almere_site_view = build_almere_site_view(almere_view, decision_models, action_models, review_queue, claims, documents)
     dashboard_view = build_dashboard_view(almere_view, decision_models, action_models)
@@ -2636,7 +2754,7 @@ def main() -> None:
     themes_view = build_themes_view(theme_models)
     reference_view = build_reference_view(reference_topic_models, source_models)
     sources_view = build_sources_view(source_models)
-    site_manifest = build_site_manifest(decision_models, action_models, theme_models, reference_topic_models, source_models)
+    site_manifest = build_site_manifest(decision_models, action_models, theme_models, reference_topic_models, source_models, site_updates_view)
 
     write_json(HOME_VIEW_PATH, home_view)
     write_json(ALMERE_SITE_VIEW_PATH, almere_site_view)
@@ -2646,6 +2764,7 @@ def main() -> None:
     write_json(THEMES_VIEW_PATH, themes_view)
     write_json(REFERENCE_VIEW_PATH, reference_view)
     write_json(SOURCES_VIEW_PATH, sources_view)
+    write_json(SITE_UPDATES_VIEW_PATH, site_updates_view)
     write_json(SITE_MANIFEST_PATH, site_manifest)
 
     DECISION_DIR.mkdir(parents=True, exist_ok=True)
@@ -2672,6 +2791,7 @@ def main() -> None:
     print(f"Wrote {THEMES_VIEW_PATH.relative_to(REPO_ROOT).as_posix()}")
     print(f"Wrote {REFERENCE_VIEW_PATH.relative_to(REPO_ROOT).as_posix()}")
     print(f"Wrote {SOURCES_VIEW_PATH.relative_to(REPO_ROOT).as_posix()}")
+    print(f"Wrote {SITE_UPDATES_VIEW_PATH.relative_to(REPO_ROOT).as_posix()}")
     print(f"Wrote {SITE_MANIFEST_PATH.relative_to(REPO_ROOT).as_posix()}")
     print(
         f"Wrote {len(decision_models)} decision view models, {len(action_models)} action view models, "

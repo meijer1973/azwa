@@ -17,6 +17,7 @@ TIMELINE_VIEW_PATH = DATA_DIR / "site_timeline_view.json"
 THEMES_VIEW_PATH = DATA_DIR / "site_themes_view.json"
 REFERENCE_VIEW_PATH = DATA_DIR / "site_reference_view.json"
 SOURCES_VIEW_PATH = DATA_DIR / "site_sources_view.json"
+UPDATES_VIEW_PATH = DATA_DIR / "site_updates_view.json"
 
 
 def load_json(path: Path) -> dict:
@@ -199,6 +200,20 @@ def render_inline_links(current_route: str, items: list[dict]) -> str:
     return ", ".join(rendered)
 
 
+def render_update_metric_boxes(route: str, metrics: list[dict], page_url: str | None = None) -> str:
+    items = []
+    for item in metrics:
+        box = {
+            "metric": item["after"],
+            "title": item["label"],
+            "summary": f'{item["before"]} -> {item["after"]} ({item["delta_label"]})',
+        }
+        if page_url:
+            box["page_url"] = page_url
+        items.append(box)
+    return render_summary_boxes(route, items)
+
+
 def render_document_refs(current_route: str, document_refs: list[dict]) -> str:
     if not document_refs:
         return '<div class="empty-state">Geen bronverwijzingen beschikbaar.</div>'
@@ -289,9 +304,29 @@ def render_action_card(current_route: str, action: dict) -> str:
 
 
 def render_home(route: str, home_view: dict) -> str:
+    latest_update = home_view.get("latest_update")
+    latest_update_section = ""
+    if latest_update:
+        update_links = [{"label": "Volledige update", "href": latest_update["page_url"]}]
+        update_links.extend(
+            {"label": item["label"], "href": item["url"]}
+            for item in latest_update.get("affected_pages", [])
+        )
+        latest_update_section = (
+            '<section class="section"><h2>Laatste data-update</h2>'
+            + f'<div class="notice"><strong>{esc(latest_update["published_on"])}</strong> - {esc(latest_update["title"])}<br>{esc(latest_update["summary"])}</div>'
+            + render_update_metric_boxes(route, latest_update["metrics"], latest_update["page_url"])
+            + '<ul class="stack-list">'
+            + "".join(f"<li>{esc(item)}</li>" for item in latest_update["change_highlights"][:3])
+            + "</ul>"
+            + render_link_pills(route, update_links)
+            + "</section>"
+        )
+
     sections = [
         '<section class="section"><h2>Bestuurlijk overzicht</h2>'
         + f'<div class="notice">{esc(home_view["executive_summary"])}</div></section>',
+        latest_update_section,
         '<section class="section"><h2>Huidige besluitvragen</h2><div class="card-grid">'
         + "".join(render_decision_card(route, item) for item in home_view["top_decisions"])
         + "</div></section>",
@@ -339,10 +374,10 @@ def render_home(route: str, home_view: dict) -> str:
             for item in home_view["featured_themes"]
         )
         + "</div></section>",
-        '<section class="section"><h2>Recente wijzigingen in de bronbasis</h2><ul class="stack-list">'
+        '<section class="section"><h2>Nieuwste bronnen</h2><ul class="stack-list">'
         + "".join(
             "<li>"
-            + f'<strong><a href="{esc(item["source_url"])}">{esc(item["title"])}</a></strong><br>'
+            + f'<strong><a href="{esc(relative_link(route, item["page_url"]))}">{esc(item["title"])}</a></strong><br>'
             + f'<span class="list-meta">{esc(item["publication_date"])} | {esc(item["document_type"])}</span>'
             + "</li>"
             for item in home_view["recent_changes"]
@@ -765,6 +800,52 @@ def render_timeline(route: str, timeline_view: dict) -> str:
     )
 
 
+def render_updates(route: str, updates_view: dict) -> str:
+    if not updates_view["updates"]:
+        return '<section class="section"><div class="empty-state">Nog geen publieke data-updates beschikbaar.</div></section>'
+
+    sections = [
+        '<section class="section"><h2>Hoe deze updatepagina te gebruiken</h2><div class="notice">Deze pagina laat zien wat er door nieuwe data in de dataset en op de site is veranderd. De onderliggende bronpagina\'s en tijdlijnmomenten blijven leidend voor de inhoudelijke duiding.</div></section>'
+    ]
+
+    for update in updates_view["updates"]:
+        sections.append(
+            f'<section class="section" id="{esc(update["update_id"])}">'
+            + f'<h2>{esc(update["title"])}</h2>'
+            + f'<p class="list-meta">{esc(update["published_on"])}</p>'
+            + f'<div class="notice">{esc(update["summary"])}</div>'
+            + render_update_metric_boxes(route, update["metrics"])
+            + '<section class="section section--nested"><h3>Wat is er veranderd</h3><ul class="stack-list">'
+            + "".join(f"<li>{esc(item)}</li>" for item in update["change_highlights"])
+            + "</ul></section>"
+            + '<section class="section section--nested"><h3>Raakt direct aan</h3>'
+            + render_link_pills(
+                route,
+                [{"label": item["label"], "href": item["url"]} for item in update["affected_pages"]],
+            )
+            + "</section>"
+            + '<section class="section section--nested"><h3>Nieuwe of aangescherpte tijdlijnmomenten</h3><ul class="stack-list">'
+            + "".join(
+                "<li>"
+                + f'<strong><a href="{esc(relative_link(route, item["page_url"]))}">{esc(item["date_label"])} - {esc(item["title"])}</a></strong><br>'
+                + esc(item["summary"])
+                + "</li>"
+                for item in update["highlighted_timeline_entries"]
+            )
+            + "</ul></section>"
+            + '<section class="section section--nested"><h3>Bronnen die deze update hebben veroorzaakt</h3><ul class="stack-list">'
+            + "".join(
+                "<li>"
+                + f'<strong><a href="{esc(relative_link(route, item["page_url"]))}">{esc(item["title"])}</a></strong><br>'
+                + f'<span class="list-meta">{esc(item["publisher"])} | {esc(item["publication_date"] or "datum onbekend")}</span>'
+                + "</li>"
+                for item in update["affected_sources"]
+            )
+            + "</ul></section></section>"
+        )
+    return "".join(sections)
+
+
 def render_themes_index(route: str, themes_view: dict) -> str:
     return (
         '<section class="section"><h2>Strategische thema\'s</h2><div class="card-grid">'
@@ -1108,6 +1189,7 @@ def build_search_index(
     dashboard_view: dict,
     timeline_view: dict,
     themes_view: dict,
+    updates_view: dict,
     reference_view: dict,
     reference_topics: list[dict],
     sources_view: dict,
@@ -1177,6 +1259,17 @@ def build_search_index(
             "domains": ["D5", "D6"],
             "url": route_to_output_path("/timeline/").as_posix(),
             "page_type": "timeline",
+            "page_type_label": "Pagina",
+        },
+        {
+            "title": "Updates",
+            "subtitle": "Wijzigingen door nieuwe data",
+            "summary": "Overzicht van publieke data-updates en wat die hebben veranderd in dataset, tijdlijn en site.",
+            "aliases": ["updates", "wijzigingen", "data-update"],
+            "themes": [],
+            "domains": ["D5", "D6"],
+            "url": route_to_output_path("/updates/").as_posix(),
+            "page_type": "updates",
             "page_type_label": "Pagina",
         },
         {
@@ -1283,6 +1376,20 @@ def build_search_index(
                 "page_type_label": "Bron",
             }
         )
+    for update in updates_view["updates"]:
+        index.append(
+            {
+                "title": update["title"],
+                "subtitle": update["published_on"],
+                "summary": update["summary"],
+                "aliases": ["update", "data-update", *[item["label"].lower() for item in update["metrics"]]],
+                "themes": [],
+                "domains": ["D5", "D6"],
+                "url": f'{route_to_output_path("/updates/").as_posix()}#{update["update_id"]}',
+                "page_type": "update",
+                "page_type_label": "Update",
+            }
+        )
     return index
 
 
@@ -1301,6 +1408,7 @@ def main() -> None:
     dashboard_view = load_json(DATA_DIR / "dashboard_view.json")
     timeline_view = load_json(TIMELINE_VIEW_PATH)
     themes_view = load_json(THEMES_VIEW_PATH)
+    updates_view = load_json(UPDATES_VIEW_PATH)
     reference_view = load_json(REFERENCE_VIEW_PATH)
     sources_view = load_json(SOURCES_VIEW_PATH)
     decisions = [load_json(path) for path in sorted((DATA_DIR / "decision_view_models").glob("*.json"))]
@@ -1403,6 +1511,21 @@ def main() -> None:
                 timeline_view["generated_on"],
                 "page-timeline",
                 crumbs=[("Start", "/"), ("Tijdlijn", "/timeline/")],
+            ),
+        ),
+        (
+            "/updates/",
+            render_page(
+                "/updates/",
+                "Updates",
+                "Overzicht van wat nieuwe data in de dataset, tijdlijn en site heeft veranderd.",
+                render_updates("/updates/", updates_view),
+                navigation,
+                site_info,
+                updates_view["as_of_date"],
+                updates_view["generated_on"],
+                "page-updates",
+                crumbs=[("Start", "/"), ("Updates", "/updates/")],
             ),
         ),
         (
@@ -1593,6 +1716,7 @@ def main() -> None:
         dashboard_view,
         timeline_view,
         themes_view,
+        updates_view,
         reference_view,
         reference_topics,
         sources_view,

@@ -48,6 +48,27 @@
       "linked_domain": "D5 en D6",
       "relation_type": "verduidelijkt",
       "consequence_for_almere": "Geeft richting aan welke onderdelen voor Almere bestuurlijk nog explicitering vragen."
+    },
+    {
+      "document_id": "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026",
+      "summary": "De VWS-brief van 22 april 2026 verduidelijkt dat gemeenten vanaf 2027 via een nieuwe SPUK middelen ontvangen voor D5/D6 en zet de financieringsroute formeel uiteen.",
+      "linked_domain": "D5 en D6",
+      "relation_type": "verduidelijkt financieringsroute",
+      "consequence_for_almere": "Geeft een actueler landelijk beeld van de financieringsconstructie waar Almere en de regio hun werkagenda en middelenverdeling op moeten enten."
+    },
+    {
+      "document_id": "nat_azwa_opdracht_werkagenda_d5_2026",
+      "summary": "De opdracht voor de D5-werkagenda zet het regionale proces, de rol van de mandaatgemeente en de sleutelproducten voor 2026 concreet neer.",
+      "linked_domain": "D5",
+      "relation_type": "start uitvoering",
+      "consequence_for_almere": "Maakt van de regionale werkagenda een bestuurlijk en financieel ijkpunt voor de lokale vertaling van D5."
+    },
+    {
+      "document_id": "nat_azwa_toelichting_producten_proces_2026",
+      "summary": "De begeleidende toelichting verbindt de werkagenda, het format en de nieuwe SPUK-route aan een concreet procespad in 2026.",
+      "linked_domain": "D5 en D6",
+      "relation_type": "verduidelijkt procespad",
+      "consequence_for_almere": "Geeft extra bestuurlijke houvast over welke producten, data en afstemmomenten Almere in 2026 in de gaten moet houden."
     }
   ],
   "claim_entries": [
@@ -428,6 +449,110 @@
         "d5.basisfunctionaliteiten_onderbouwd"
       ],
       "timeline_note": "Huidige lijn uit nationale bronnen en de interpretatielaag."
+    },
+    {
+      "entry_key": "vng_financiering_werkagenda_randvoorwaarde_2026",
+      "date_label": "2026",
+      "sort_key": "2026-12-15",
+      "date_granularity": "year",
+      "title": "VNG-ledenbrief: werkagenda randvoorwaardelijk voor uitkering van middelen in 2026",
+      "summary": "De nieuwe VNG-ledenbrief zegt dat vaststelling van de regionale werkagenda door de mandaatgemeente randvoorwaardelijk is voor het nog in 2026 uitkeren van middelen.",
+      "linked_domain": "D5 en D6",
+      "relation_type": "volgens ledenbrief",
+      "entry_type": "toekomstige financieringsstap",
+      "consequence_for_almere": "Maakt zichtbaar dat de regionale werkagenda niet alleen inhoudelijk, maar ook financieel een voorwaarde is voor de middelenstroom in 2026.",
+      "claim_ids": [
+        "clm__nat_vng_ledenbrief_azwa_financiering_2026_timeline_and_status_002"
+      ],
+      "topic_keys": [
+        "timeline.other",
+        "finance.d5_d6.funding_instrument"
+      ],
+      "timeline_note": "Volgens de VNG-ledenbrief is de werkagenda via de mandaatgemeente randvoorwaardelijk voor uitkering van middelen nog in 2026.",
+      "force_human_review": true
+    },
+    {
+      "entry_key": "werkagenda_half_september_2026",
+      "date_label": "medio september 2026",
+      "sort_key": "2026-09-15",
+      "date_granularity": "period",
+      "title": "Werkagenda moet in de praktijk medio september 2026 gereed zijn",
+      "summary": "De opdracht voor de D5-werkagenda zegt dat de deadline van 15 november in de praktijk betekent dat de werkagenda half september klaar moet zijn.",
+      "linked_domain": "D5",
+      "relation_type": "praktische voorbereidende deadline",
+      "entry_type": "toekomstige beleidsstap",
+      "consequence_for_almere": "Legt een eerder regionaal werkmoment vast dan de formele vaststellingsdatum en raakt daardoor de lokale voorbereiding in Almere direct.",
+      "claim_ids": [
+        "clm__nat_azwa_opdracht_werkagenda_d5_2026_municipal_translation_002"
+      ],
+      "topic_keys": [
+        "municipal.implementation_translation",
+        "timeline.other"
+      ],
+      "timeline_note": "De opdracht voor de werkagenda vertaalt de formele novemberdeadline naar een praktisch moment medio september 2026."
+    },
+    {
+      "entry_key": "werkagenda_vaststelling_15_november_2026",
+      "date_label": "15 november 2026",
+      "sort_key": "2026-11-15",
+      "date_granularity": "date",
+      "title": "Regionale werkagenda uiterlijk door colleges vastgesteld",
+      "summary": "De begeleidende toelichting zegt dat de regionale werkagenda uiterlijk op 15 november 2026 door de colleges moet zijn vastgesteld.",
+      "linked_domain": "D5",
+      "relation_type": "vaststellingsdeadline",
+      "entry_type": "toekomstige beleidsstap",
+      "consequence_for_almere": "Geeft een expliciet bestuurlijk eindmoment voor regionale afstemming en lokale besluitvorming over de D5-werkagenda.",
+      "claim_ids": [
+        "clm__nat_azwa_toelichting_producten_proces_2026_timeline_and_status_001"
+      ],
+      "topic_keys": [
+        "timeline.other",
+        "municipal.implementation_translation"
+      ],
+      "timeline_note": "Procesdatum uit de begeleidende toelichting bij de werkagenda-documenten.",
+      "force_human_review": true
+    },
+    {
+      "entry_key": "nieuwe_spuk_publicatie_later_2026",
+      "date_label": "later in 2026",
+      "sort_key": "2026-12-01",
+      "date_granularity": "period",
+      "title": "Nieuwe SPUK-regeling voor gemeenten later in 2026 voorzien",
+      "summary": "De begeleidende toelichting zegt dat voor gemeenten later in 2026 een nieuwe SPUK-regeling wordt gepubliceerd die inzicht geeft in de AZWA-middelen.",
+      "linked_domain": "D5 en D6",
+      "relation_type": "aangekondigde publicatie",
+      "entry_type": "toekomstige financieringsstap",
+      "consequence_for_almere": "Maakt zichtbaar dat het financieringsbeeld in 2026 nog een extra formeel publicatiemoment krijgt waarop Almere moet inhaken.",
+      "claim_ids": [
+        "clm__nat_azwa_toelichting_producten_proces_2026_governance_and_finance_001"
+      ],
+      "topic_keys": [
+        "finance.d5_d6.funding_instrument",
+        "timeline.other"
+      ],
+      "timeline_note": "Aangekondigd vervolgdocument in de toelichting bij de werkagenda-documenten.",
+      "force_human_review": true
+    },
+    {
+      "entry_key": "nieuwe_spuk_2027_2029_vws_2026",
+      "date_label": "2027-2029",
+      "sort_key": "2027-01-02",
+      "date_granularity": "period",
+      "title": "Nieuwe AZWA-SPUK voor gemeenten voorzien voor 2027-2029",
+      "summary": "De VWS-brief van 22 april 2026 zegt dat voor gemeenten een nieuwe specifieke uitkering voor 2027-2029 wordt ingericht.",
+      "linked_domain": "D5 en D6",
+      "relation_type": "nieuw financieringsvenster",
+      "entry_type": "toekomstige financieringsstap",
+      "consequence_for_almere": "Scherpt het bestaande financieringsbeeld aan: niet alleen een startpakket, maar een benoemde SPUK-constructie voor 2027-2029 vraagt bestuurlijke voorbereiding.",
+      "claim_ids": [
+        "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_governance_and_finance_002"
+      ],
+      "topic_keys": [
+        "finance.d5_d6.funding_instrument",
+        "timeline.almere_2029"
+      ],
+      "timeline_note": "Formele duiding uit de VWS-brief aan de VNG over het financieringsinstrument.",
+      "force_human_review": true
     }
   ],
   "external_entries": [

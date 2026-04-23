@@ -97,7 +97,7 @@
       "topic": "timeline.almere_2029",
       "title": "lokale horizon Positief Gezond Almere",
       "status": "huidige lijn zonder extra review",
-      "confidence_label": "middel",
+      "confidence_label": "hoog",
       "needs_human_review": false,
       "page_url": "/reference/topics/timeline-almere-2029/"
     },
@@ -112,9 +112,9 @@
     {
       "topic": "monitoring.d5_operational_monitoring",
       "title": "operationele D5-monitoring",
-      "status": "huidige lijn zonder extra review",
-      "confidence_label": "hoog",
-      "needs_human_review": false,
+      "status": "huidige lijn met menselijke duiding",
+      "confidence_label": "middel",
+      "needs_human_review": true,
       "page_url": "/reference/topics/monitoring-d5-operational-monitoring/"
     },
     {
@@ -157,6 +157,11 @@
       "page_url": "/almere/#lokale-hiaten"
     },
     {
+      "title": "Menselijke duiding bij operationele D5-monitoring",
+      "summary": "De huidige interpretatielaag markeert dit onderwerp voor extra menselijke duiding.",
+      "page_url": "/almere/#menselijke-duiding"
+    },
+    {
       "title": "Menselijke duiding bij monitoringskader",
       "summary": "De huidige interpretatielaag markeert dit onderwerp voor extra menselijke duiding.",
       "page_url": "/almere/#menselijke-duiding"
@@ -175,11 +180,6 @@
       "title": "Menselijke duiding bij financieringshorizon D5/D6",
       "summary": "De huidige interpretatielaag markeert dit onderwerp voor extra menselijke duiding.",
       "page_url": "/almere/#menselijke-duiding"
-    },
-    {
-      "title": "Menselijke duiding bij implementatielijn D5/D6",
-      "summary": "De huidige interpretatielaag markeert dit onderwerp voor extra menselijke duiding.",
-      "page_url": "/almere/#menselijke-duiding"
     }
   ],
   "dependencies": [
@@ -195,6 +195,85 @@
     }
   ],
   "source_basis": [
+    {
+      "document_id": "nat_azwa_toelichting_producten_proces_2026",
+      "title": "Toelichting producten en proces",
+      "publisher": "VNG / VWS",
+      "publication_date": "2026-04-22",
+      "document_type": "process_note",
+      "jurisdiction_level": "national",
+      "status": "current",
+      "source_url": "https://vng.nl/sites/default/files/2026-04/20260422-begeleidende-toelichting-op-opdracht-werkagenda-financiele-middelen-proces.pdf",
+      "page_url": "/sources/toelichting-werkagenda-d5-azwa/",
+      "topics": [
+        "landelijke dekking richting 2030",
+        "operationele D5-monitoring",
+        "overige tijdlijnmomenten"
+      ]
+    },
+    {
+      "document_id": "nat_azwa_opdracht_werkagenda_d5_2026",
+      "title": "Opdracht voor de werkagenda samenwerking zorg en sociaal domein voor D5 AZWA",
+      "publisher": "VNG / VWS",
+      "publication_date": "2026-04-22",
+      "document_type": "assignment",
+      "jurisdiction_level": "national",
+      "status": "current",
+      "source_url": "https://vng.nl/sites/default/files/2026-04/opdracht-voor-de-werkagenda-azwa.pdf",
+      "page_url": "/sources/opdracht-werkagenda-d5-azwa/",
+      "topics": [
+        "landelijke dekking richting 2030",
+        "overige monitoringslijn",
+        "overige tijdlijnmomenten"
+      ]
+    },
+    {
+      "document_id": "nat_azwa_format_werkagenda_d5_2026",
+      "title": "Format werkagenda basisfunctionaliteiten AZWA",
+      "publisher": "VNG / VWS",
+      "publication_date": "2026-04-22",
+      "document_type": "template",
+      "jurisdiction_level": "national",
+      "status": "current",
+      "source_url": "https://vng.nl/sites/default/files/2026-04/format-voor-de-werkagenda-azwa.docx",
+      "page_url": "/sources/format-werkagenda-azwa/",
+      "topics": [
+        "overige monitoringslijn"
+      ]
+    },
+    {
+      "document_id": "nat_vng_ledenbrief_azwa_financiering_2026",
+      "title": "AZWA-financiering voor gemeenten (Zorgakkoord)",
+      "publisher": "VNG",
+      "publication_date": "2026-04-22",
+      "document_type": "members_letter",
+      "jurisdiction_level": "national",
+      "status": "current",
+      "source_url": "https://vng.nl/sites/default/files/2026-04/20260422-ledenbrief-azwa-financiering-voor-gemeenten-zorgakkoord.pdf",
+      "page_url": "/sources/vng-ledenbrief-azwa-financiering/",
+      "topics": [
+        "landelijke dekking richting 2030",
+        "overige monitoringslijn",
+        "overige tijdlijnmomenten"
+      ]
+    },
+    {
+      "document_id": "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026",
+      "title": "AZWA-afspraken D5 en D6 en financieringsinstrument",
+      "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
+      "publication_date": "2026-04-22",
+      "document_type": "ministerial_letter",
+      "jurisdiction_level": "national",
+      "status": "current",
+      "source_url": "https://vng.nl/sites/default/files/2026-04/brief-vws-aan-vng-over-azwa-afspraken-d5-en-d6-en-financieringsinstrument.pdf",
+      "page_url": "/sources/vws-brief-d5-d6-financieringsinstrument/",
+      "topics": [
+        "lokale horizon Positief Gezond Almere",
+        "operationele D5-monitoring",
+        "overige monitoringslijn",
+        "overige tijdlijnmomenten"
+      ]
+    },
     {
       "document_id": "nat_azwa_2026_voortgang_kamerbrief",
       "title": "Kamerbrief inzake voortgang Integraal Zorgakkoord (IZA) en Aanvullend Zorg- en Welzijnsakkoord (AZWA)",
@@ -239,84 +318,6 @@
       "page_url": "/sources/sociaal-domein-informatiepagina/",
       "topics": [
         "overige tijdlijnmomenten"
-      ]
-    },
-    {
-      "document_id": "nat_azwa_2026_cw31_kamerbrief",
-      "title": "Kamerbrief over CW 3.1 kaders voor AZWA onderdelen",
-      "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
-      "publication_date": "2026-03-10",
-      "document_type": "kamerbrief",
-      "jurisdiction_level": "national",
-      "status": "current",
-      "source_url": "https://www.rijksoverheid.nl/documenten/kamerstukken/2026/03/10/kamerbrief-over-cw3-1-kaders-voor-azwa-onderdelen",
-      "page_url": "/sources/kamerbrief-cw-3-1-kaders-azwa/",
-      "topics": [
-        "overige monitoringslijn",
-        "overige tijdlijnmomenten"
-      ]
-    },
-    {
-      "document_id": "nat_azwa_2026_cw31_kader_d5_d6",
-      "title": "CW 3.1 kader basisfunctionaliteiten en basisinfrastructuur D5 en D6",
-      "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
-      "publication_date": "2026-03-10",
-      "document_type": "framework",
-      "jurisdiction_level": "national",
-      "status": "current",
-      "source_url": "https://www.rijksoverheid.nl/documenten/publicaties/2026/03/10/cw-3-1-kader-basisfunctionaliteiten-en-basisinfrastructuur-d5-en-d6",
-      "page_url": "/sources/cw-3-1-kader-d5-d6/",
-      "topics": [
-        "actualisatiecyclus 2028",
-        "financieringshorizon D5/D6",
-        "monitoringskader"
-      ]
-    },
-    {
-      "document_id": "nat_dusi_spuk_transformatiemiddelen_2024_2028",
-      "title": "Specifieke uitkering transformatiemiddelen IZA & AZWA 2024-2028",
-      "publisher": "Dienst Uitvoering Subsidies aan Instellingen",
-      "publication_date": "2025-09-26",
-      "document_type": "subsidy_page",
-      "jurisdiction_level": "national",
-      "status": "supporting",
-      "source_url": "https://www.dus-i.nl/subsidies/specifieke-uitkeringen-spuk/specifieke-uitkering-transformatiemiddelen-iza",
-      "page_url": "/sources/dus-i-spuk-transformatiemiddelen/",
-      "topics": [
-        "overige monitoringslijn",
-        "overige tijdlijnmomenten"
-      ]
-    },
-    {
-      "document_id": "nat_azwa_2025_aanbiedingsbrief",
-      "title": "Kamerbrief aanbieding Aanvullend Zorg- en Welzijnsakkoord (AZWA)",
-      "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
-      "publication_date": "2025-09-08",
-      "document_type": "kamerbrief",
-      "jurisdiction_level": "national",
-      "status": "reference",
-      "source_url": "https://www.rijksoverheid.nl/documenten/kamerstukken/2025/09/08/kamerbrief-over-aanbieding-aanvullend-zorg-en-welzijnsakkoord-azwa",
-      "page_url": "/sources/kamerbrief-aanbieding-azwa/",
-      "topics": [
-        "overige tijdlijnmomenten"
-      ]
-    },
-    {
-      "document_id": "nat_azwa_2025_definitief",
-      "title": "Aanvullend Zorg- en Welzijnsakkoord (AZWA) (Definitief)",
-      "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
-      "publication_date": "2025-08-31",
-      "document_type": "agreement",
-      "jurisdiction_level": "national",
-      "status": "current",
-      "source_url": "https://www.rijksoverheid.nl/documenten/rapporten/2025/08/31/aanvullend-zorg-en-welzijnsakkoord-azwa",
-      "page_url": "/sources/azwa-definitief/",
-      "topics": [
-        "implementatielijn D5/D6",
-        "landelijke dekking richting 2030",
-        "monitoringskader",
-        "operationele D5-monitoring",
-        "tussentijdse evaluatie"
       ]
     }
   ],
@@ -390,7 +391,7 @@
     {
       "topic": "monitoring.d5_operational_monitoring",
       "title": "operationele D5-monitoring",
-      "status": "huidige lijn zonder extra review",
+      "status": "huidige lijn met menselijke duiding",
       "page_url": "/reference/topics/monitoring-d5-operational-monitoring/"
     },
     {

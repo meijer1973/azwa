@@ -371,6 +371,96 @@ ANNOTATIONS = {
             "that can anchor local governance timing around later D5/D6 follow-up."
         ),
     },
+    "nat_vng_brief_azwa_financiering_webpagina_2026": {
+        "source_classification": "derivative",
+        "curation_bucket": "context",
+        "contains_d5": True,
+        "contains_d6": False,
+        "contains_structured_tables": False,
+        "contains_financing_logic": True,
+        "contains_governance_logic": True,
+        "contains_monitoring_evaluation_logic": False,
+        "contains_municipal_implications": True,
+        "inventory_notes": (
+            "VNG landing page for the 22 April 2026 AZWA financing update, linking the ledenbrief and the attached "
+            "workagenda documents that structure the 2026 municipal follow-up."
+        ),
+    },
+    "nat_vng_ledenbrief_azwa_financiering_2026": {
+        "source_classification": "derivative",
+        "curation_bucket": "context",
+        "contains_d5": True,
+        "contains_d6": False,
+        "contains_structured_tables": False,
+        "contains_financing_logic": True,
+        "contains_governance_logic": True,
+        "contains_monitoring_evaluation_logic": False,
+        "contains_municipal_implications": True,
+        "inventory_notes": (
+            "Current VNG ledenbrief that explains the new AZWA financing route for gemeenten and points to the "
+            "required D5 workagenda, webinar, and municipal approval moment in November 2026."
+        ),
+    },
+    "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026": {
+        "source_classification": "primary",
+        "curation_bucket": "canonical",
+        "contains_d5": True,
+        "contains_d6": True,
+        "contains_structured_tables": False,
+        "contains_financing_logic": True,
+        "contains_governance_logic": True,
+        "contains_monitoring_evaluation_logic": False,
+        "contains_municipal_implications": True,
+        "inventory_notes": (
+            "Official VWS letter to VNG on the D5/D6 agreements and the financing instrument, including the move "
+            "toward a new SPUK for 2027-2029 and the municipal implementation framing for 2026."
+        ),
+    },
+    "nat_azwa_opdracht_werkagenda_d5_2026": {
+        "source_classification": "primary",
+        "curation_bucket": "canonical",
+        "contains_d5": True,
+        "contains_d6": False,
+        "contains_structured_tables": False,
+        "contains_financing_logic": True,
+        "contains_governance_logic": True,
+        "contains_monitoring_evaluation_logic": False,
+        "contains_municipal_implications": True,
+        "inventory_notes": (
+            "Operational source document for the D5 workagenda, with the concrete products, milestones, and "
+            "regional-to-municipal process needed to unlock the AZWA middelen."
+        ),
+    },
+    "nat_azwa_format_werkagenda_d5_2026": {
+        "source_classification": "derivative",
+        "curation_bucket": "canonical",
+        "contains_d5": True,
+        "contains_d6": False,
+        "contains_structured_tables": False,
+        "contains_financing_logic": True,
+        "contains_governance_logic": True,
+        "contains_monitoring_evaluation_logic": False,
+        "contains_municipal_implications": True,
+        "inventory_notes": (
+            "Operational AZWA format for the D5 workagenda, useful for tracing which local and regional fields, "
+            "planning elements, and implementation commitments are expected in 2026."
+        ),
+    },
+    "nat_azwa_toelichting_producten_proces_2026": {
+        "source_classification": "derivative",
+        "curation_bucket": "canonical",
+        "contains_d5": True,
+        "contains_d6": False,
+        "contains_structured_tables": False,
+        "contains_financing_logic": True,
+        "contains_governance_logic": True,
+        "contains_monitoring_evaluation_logic": False,
+        "contains_municipal_implications": True,
+        "inventory_notes": (
+            "Short process note that explains the D5 workagenda products, the relation to the regioplan, and the "
+            "target dates around 26 May, mid-September, and 15 November 2026."
+        ),
+    },
 }
 
 

@@ -1,15 +1,15 @@
 {
   "review_run_id": "phase11_quality_control_v1",
-  "generated_on": "2026-04-22",
+  "generated_on": "2026-04-23",
   "summary": {
     "blocking": 0,
     "warning": 0,
-    "review": 35,
-    "item_count": 35,
+    "review": 41,
+    "item_count": 41,
     "issue_counts_by_reason": {
-      "authority_unclear": 16,
-      "municipality_relevance_inferred": 11,
-      "unresolved_conflict": 8
+      "authority_unclear": 20,
+      "municipality_relevance_inferred": 12,
+      "unresolved_conflict": 9
     }
   },
   "items": [
@@ -310,6 +310,77 @@
       "severity": "review",
       "check_id": "claim_payload_integrity",
       "reason_code": "authority_unclear",
+      "summary": "nat_azwa_format_werkagenda_d5_2026 contributes lower-authority claims that still require human review.",
+      "recommended_action": "Keep these claims as contextual support only until a stronger primary source confirms or replaces them.",
+      "document_id": "nat_azwa_format_werkagenda_d5_2026",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_azwa_format_werkagenda_d5_2026.json"
+      ],
+      "related_ids": {
+        "review_claim_count": 10,
+        "sample_claim_ids": [
+          "clm__nat_azwa_format_werkagenda_d5_2026_d5_001",
+          "clm__nat_azwa_format_werkagenda_d5_2026_d5_002",
+          "clm__nat_azwa_format_werkagenda_d5_2026_d5_003",
+          "clm__nat_azwa_format_werkagenda_d5_2026_governance_and_finance_001",
+          "clm__nat_azwa_format_werkagenda_d5_2026_governance_and_finance_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_013"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "municipality_relevance_inferred",
+      "summary": "nat_azwa_opdracht_werkagenda_d5_2026 contains 1 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
+      "recommended_action": "Review these claims before treating them as firm municipal obligations or implementation facts.",
+      "document_id": "nat_azwa_opdracht_werkagenda_d5_2026",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_azwa_opdracht_werkagenda_d5_2026.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_d6_001"
+        ],
+        "topic_count": 1
+      },
+      "evidence": {},
+      "review_item_id": "rvw_014"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "authority_unclear",
+      "summary": "nat_azwa_toelichting_producten_proces_2026 contributes lower-authority claims that still require human review.",
+      "recommended_action": "Keep these claims as contextual support only until a stronger primary source confirms or replaces them.",
+      "document_id": "nat_azwa_toelichting_producten_proces_2026",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_azwa_toelichting_producten_proces_2026.json"
+      ],
+      "related_ids": {
+        "review_claim_count": 14,
+        "sample_claim_ids": [
+          "clm__nat_azwa_toelichting_producten_proces_2026_d5_001",
+          "clm__nat_azwa_toelichting_producten_proces_2026_d5_002",
+          "clm__nat_azwa_toelichting_producten_proces_2026_d5_003",
+          "clm__nat_azwa_toelichting_producten_proces_2026_governance_and_finance_001",
+          "clm__nat_azwa_toelichting_producten_proces_2026_governance_and_finance_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_015"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "authority_unclear",
       "summary": "nat_bzk_gemeentefonds_cyclus contributes lower-authority claims that still require human review.",
       "recommended_action": "Keep these claims as contextual support only until a stronger primary source confirms or replaces them.",
       "document_id": "nat_bzk_gemeentefonds_cyclus",
@@ -328,7 +399,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_013"
+      "review_item_id": "rvw_016"
     },
     {
       "status": "open",
@@ -353,7 +424,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_014"
+      "review_item_id": "rvw_017"
     },
     {
       "status": "open",
@@ -378,7 +449,7 @@
         "topic_count": 2
       },
       "evidence": {},
-      "review_item_id": "rvw_015"
+      "review_item_id": "rvw_018"
     },
     {
       "status": "open",
@@ -402,7 +473,7 @@
         "topic_count": 2
       },
       "evidence": {},
-      "review_item_id": "rvw_016"
+      "review_item_id": "rvw_019"
     },
     {
       "status": "open",
@@ -427,7 +498,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_017"
+      "review_item_id": "rvw_020"
     },
     {
       "status": "open",
@@ -452,7 +523,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_018"
+      "review_item_id": "rvw_021"
     },
     {
       "status": "open",
@@ -477,7 +548,7 @@
         "topic_count": 2
       },
       "evidence": {},
-      "review_item_id": "rvw_019"
+      "review_item_id": "rvw_022"
     },
     {
       "status": "open",
@@ -501,7 +572,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_020"
+      "review_item_id": "rvw_023"
     },
     {
       "status": "open",
@@ -524,7 +595,32 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_021"
+      "review_item_id": "rvw_024"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "authority_unclear",
+      "summary": "nat_vng_brief_azwa_financiering_webpagina_2026 contributes lower-authority claims that still require human review.",
+      "recommended_action": "Keep these claims as contextual support only until a stronger primary source confirms or replaces them.",
+      "document_id": "nat_vng_brief_azwa_financiering_webpagina_2026",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_vng_brief_azwa_financiering_webpagina_2026.json"
+      ],
+      "related_ids": {
+        "review_claim_count": 5,
+        "sample_claim_ids": [
+          "clm__nat_vng_brief_azwa_financiering_webpagina_2026_d5_001",
+          "clm__nat_vng_brief_azwa_financiering_webpagina_2026_governance_and_finance_001",
+          "clm__nat_vng_brief_azwa_financiering_webpagina_2026_governance_and_finance_002",
+          "clm__nat_vng_brief_azwa_financiering_webpagina_2026_municipal_translation_001",
+          "clm__nat_vng_brief_azwa_financiering_webpagina_2026_municipal_translation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_025"
     },
     {
       "status": "open",
@@ -549,7 +645,32 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_022"
+      "review_item_id": "rvw_026"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "authority_unclear",
+      "summary": "nat_vng_ledenbrief_azwa_financiering_2026 contributes lower-authority claims that still require human review.",
+      "recommended_action": "Keep these claims as contextual support only until a stronger primary source confirms or replaces them.",
+      "document_id": "nat_vng_ledenbrief_azwa_financiering_2026",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_vng_ledenbrief_azwa_financiering_2026.json"
+      ],
+      "related_ids": {
+        "review_claim_count": 15,
+        "sample_claim_ids": [
+          "clm__nat_vng_ledenbrief_azwa_financiering_2026_d5_001",
+          "clm__nat_vng_ledenbrief_azwa_financiering_2026_d5_002",
+          "clm__nat_vng_ledenbrief_azwa_financiering_2026_d5_003",
+          "clm__nat_vng_ledenbrief_azwa_financiering_2026_governance_and_finance_001",
+          "clm__nat_vng_ledenbrief_azwa_financiering_2026_governance_and_finance_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_027"
     },
     {
       "status": "open",
@@ -574,7 +695,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_023"
+      "review_item_id": "rvw_028"
     },
     {
       "status": "open",
@@ -599,7 +720,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_024"
+      "review_item_id": "rvw_029"
     },
     {
       "status": "open",
@@ -624,7 +745,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_025"
+      "review_item_id": "rvw_030"
     },
     {
       "status": "open",
@@ -647,7 +768,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_026"
+      "review_item_id": "rvw_031"
     },
     {
       "status": "open",
@@ -670,7 +791,7 @@
         "topic_count": 3
       },
       "evidence": {},
-      "review_item_id": "rvw_027"
+      "review_item_id": "rvw_032"
     },
     {
       "status": "open",
@@ -694,14 +815,14 @@
           "clm__nat_iza_2022_integraal_zorgakkoord_d5_003",
           "clm__nat_iza_2022_integraal_zorgakkoord_d5_002",
           "clm__nat_iza_2022_integraal_zorgakkoord_d5_001",
-          "clm__nat_azwa_2026_cw31_kader_d5_d6_d5_002",
-          "clm__nat_azwa_2026_cw31_kader_d5_d6_d5_001",
-          "clm__nat_azwa_2026_voortgang_kamerbrief_d5_002",
-          "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_d5_002"
+          "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d5_003",
+          "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d5_002",
+          "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d5_001",
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_d5_003"
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_028"
+      "review_item_id": "rvw_033"
     },
     {
       "status": "open",
@@ -727,7 +848,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_029"
+      "review_item_id": "rvw_034"
     },
     {
       "status": "open",
@@ -745,6 +866,7 @@
       "related_ids": {
         "conflict_id": "conflict__d5__mentale_gezondheidsnetwerken",
         "claim_ids": [
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_d5_001",
           "clm__reg_flevoland_2023_regioplan_iza_d5_001",
           "clm__mun_almere_pga_transformatieplan_d5_001",
           "clm__mun_almere_pga_seo_businesscase_2024_d5_003",
@@ -752,7 +874,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_030"
+      "review_item_id": "rvw_035"
     },
     {
       "status": "open",
@@ -778,7 +900,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_031"
+      "review_item_id": "rvw_036"
     },
     {
       "status": "open",
@@ -797,13 +919,14 @@
         "conflict_id": "conflict__d6__local_teams",
         "claim_ids": [
           "clm__nat_azwa_2025_definitief_d6_002",
+          "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d6_001",
           "clm__mun_almere_sociaal_domein_informatiepagina_d6_001",
           "clm__nat_vng_ledenbrief_onderhandelaarsakkoord_azwa_2025_d6_003",
           "clm__nat_vng_ledenbrief_onderhandelaarsakkoord_azwa_2025_d6_002"
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_032"
+      "review_item_id": "rvw_037"
     },
     {
       "status": "open",
@@ -827,7 +950,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_033"
+      "review_item_id": "rvw_038"
     },
     {
       "status": "open",
@@ -850,7 +973,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_034"
+      "review_item_id": "rvw_039"
     },
     {
       "status": "open",
@@ -873,7 +996,31 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_035"
+      "review_item_id": "rvw_040"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "interpretation_integrity",
+      "reason_code": "unresolved_conflict",
+      "summary": "Conflict conflict__timeline__almere_2029 for topic timeline.almere_2029 still needs human review.",
+      "recommended_action": "Resolve or annotate this topic before using it as settled policy guidance for Almere.",
+      "document_id": null,
+      "topic": "timeline.almere_2029",
+      "source_paths": [
+        "data/extracted/claims/conflict_register.json",
+        "data/extracted/claims/current_interpretation.json"
+      ],
+      "related_ids": {
+        "conflict_id": "conflict__timeline__almere_2029",
+        "claim_ids": [
+          "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_timeline_and_status_003",
+          "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_timeline_and_status_002",
+          "clm__mun_almere_pga_transformatieplan_timeline_and_status_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_041"
     }
   ]
 }

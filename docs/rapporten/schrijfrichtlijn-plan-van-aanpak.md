@@ -11,6 +11,8 @@ Het document moet:
 
 Het document moet **niet** klinken als een technische analyse, repository-notitie of datasetbeschrijving.
 
+Het document moet ook **niet** zelf beleidsadvies, capaciteitsadvies of uitvoeringskeuzes invullen die niet uit de bronbasis volgen. De schrijver ordent de opgave en maakt keuzevragen zichtbaar; de menselijke opdrachtgever of beleidsmaker bepaalt de inhoudelijke invulling.
+
 ## Hoofdregel
 Een `plan van aanpak` beschrijft:
 - wat de opgave is;
@@ -21,6 +23,21 @@ Een `plan van aanpak` beschrijft:
 - wanneer welke stappen gezet worden.
 
 De bronanalyse is ondersteunend, niet leidend in de formulering.
+
+De bronanalyse mag leiden tot:
+- opgaven;
+- afhankelijkheden;
+- aandachtspunten;
+- keuzevragen;
+- ontbrekende lokale uitwerking;
+- punten voor menselijke beoordeling.
+
+De bronanalyse mag niet zonder expliciete onderbouwing leiden tot:
+- concrete fte-inzet;
+- budgetverdeling;
+- bestuurlijke voorkeurskeuzes;
+- prioritering alsof die al besloten is;
+- uitvoeringsadvies dat niet in de bronbasis staat.
 
 ## Gewenste toon
 Gebruik taal die:
@@ -84,6 +101,9 @@ In de hoofdtekst staat bij voorkeur **niet**:
 - verwijzingen naar JSON-bestanden;
 - uitleg over extractie, claims of QC;
 - formuleringen alsof het document zelf door data "spreekt".
+- zelfbedachte personele inzet, budgetten of uitvoeringsoplossingen.
+
+Als de bronbasis nog geen concrete invulling geeft, benoem dan de keuze die nog gemaakt moet worden in plaats van zelf een advies in te vullen.
 
 ## Wat hoort in de verantwoording of bijlage
 In een bijlage of verantwoording mogen wel staan:
@@ -145,6 +165,18 @@ Beter:
 
 Nog sterker:
 `Daarom is bestuurlijke concretisering nodig op prioritering, regie, middelen en monitoring.`
+
+### 6. Vul geen beleids- of capaciteitsadvies in zonder bronbasis
+Niet:
+`Indicatief is nodig: 0,8 fte programmamanager, 0,8 fte gecombineerde beleidsinzet sociaal domein en gezondheid, 0,2 fte financien/control, 0,2 fte data/monitoring en 0,1 fte communicatie.`
+
+Beter:
+`De beschikbare stukken geven nog geen concrete onderbouwing voor de benodigde personele inzet. Voor de verdere uitwerking is een bestuurlijke en ambtelijke inschatting nodig van capaciteit, rolverdeling en dekking.`
+
+Nog beter als keuzevraag:
+`Te bepalen is welke capaciteit Almere nodig acht voor programmasturing, beleidsuitwerking, financien/control, monitoring en communicatie, en welk deel daarvan binnen bestaande capaciteit of regionale samenwerking kan worden georganiseerd.`
+
+Gebruik dus geen precieze fte's, bedragen, termijnen of voorkeursopties tenzij die expliciet in de bronbasis of opdracht staan.
 
 ## Voorkeurswoorden
 Gebruik liever:
@@ -227,6 +259,8 @@ Beantwoord:
 - welke onzekerheden er nog zijn;
 - hoe daarmee wordt omgegaan.
 
+Noem geen eigen indicatieve budgetten, fte's of verdeelsleutels tenzij de bronbasis die expliciet bevat. Als de informatie ontbreekt, formuleer een invulpunt of keuzevraag voor menselijke beoordeling.
+
 ### Risico's
 Beantwoord:
 - wat uitvoering kan belemmeren;
@@ -250,6 +284,7 @@ Controleer bij elk concept:
 - Is duidelijk wat Almere moet doen?
 - Is duidelijk waarom bestuurlijke actie nodig is?
 - Zijn de kernzinnen handelingsgericht?
+- Zijn er geen fte's, bedragen, prioriteiten of uitvoeringsadviezen toegevoegd die niet expliciet uit de bronbasis komen?
 - Zijn technische termen uit de hoofdtekst verwijderd?
 - Is methodische taal verplaatst naar verantwoording of bijlage?
 - Staat er per onderdeel steeds een actor, actie en gevolg?

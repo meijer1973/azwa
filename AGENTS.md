@@ -4,6 +4,8 @@
 - Before editing a document type or workflow, check whether this file references a relevant guideline.
 - If a new guideline, workflow note, style guide, or recurring approach is added anywhere in the repository, add a reference to it in this file so future sessions can discover it quickly.
 - Keep project-specific guidance in the relevant folder, but use this file as the central index of guidance that agents should consult.
+- This repository is intended to ground outputs in reality. It is heavily source-based: do not present statements, checks, dates, numbers, decisions, or conclusions as factual unless they are supported by the source corpus, generated model data, or an actually performed verification step.
+- If something is a useful interpretation, draft proposal, or reviewer task rather than grounded fact, label it explicitly as such.
 
 ## Rapporten
 - When writing or revising files in `docs/rapporten/`, first read `docs/rapporten/schrijfrichtlijn-plan-van-aanpak.md`.

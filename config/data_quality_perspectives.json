@@ -1,0 +1,162 @@
+{
+  "version": 1,
+  "purpose": "Canonical taxonomy for judging source quality, claim quality, and public-facing site text across six policy perspectives.",
+  "storage_notes": {
+    "canonical_config": "config/data_quality_perspectives.json",
+    "human_checklist": "docs/data-quality-checklist.md",
+    "generated_outputs": "data/site/*.json"
+  },
+  "classifications": [
+    {
+      "classification_id": "source_fact",
+      "label": "Source fact",
+      "description": "Use when the statement is presented as grounded in a source document, source quote, explicit table item, or directly verified timeline moment.",
+      "allowed_in_public_text": true,
+      "editorial_rule": "Keep the wording close to what the source establishes. Attribute lower-authority sources explicitly."
+    },
+    {
+      "classification_id": "interpretation",
+      "label": "Interpretation",
+      "description": "Use when the content synthesizes multiple sources, current interpretation outputs, or review logic into a best-current reading.",
+      "allowed_in_public_text": true,
+      "editorial_rule": "Present as current interpretation, synthesis, or reading of the source base. Do not overstate certainty."
+    },
+    {
+      "classification_id": "local_gap",
+      "label": "Local gap",
+      "description": "Use when a national or regional requirement, expectation, or direction is visible, but explicit local adoption or local documentation is not yet visible in Almere or Flevoland sources.",
+      "allowed_in_public_text": true,
+      "editorial_rule": "Frame as an adoption, documentation, or explicitation gap, not as a database error."
+    },
+    {
+      "classification_id": "human_choice_question",
+      "label": "Human choice question",
+      "description": "Use when the source base raises a real decision, sequencing choice, interpretation need, or local design choice that the system should not decide automatically.",
+      "allowed_in_public_text": true,
+      "editorial_rule": "Phrase as a possible decision, possible follow-up action, or point for human review. Do not present as already decided policy."
+    }
+  ],
+  "perspectives": [
+    {
+      "perspective_id": "norm",
+      "title": "Norm",
+      "question": "What is required, allowed, expected, or binding?",
+      "description": "Used for statements about obligations, agreed arrangements, allowed room, or norm-setting interpretations.",
+      "topic_prefixes": [
+        "d5.",
+        "d6."
+      ],
+      "topic_ids": [
+        "finance.d5_d6.funding_instrument",
+        "governance.national_coordination",
+        "governance.regional_coordination"
+      ],
+      "theme_ids": [
+        "basisfunctionaliteiten-d5",
+        "basisinfrastructuur-d6"
+      ],
+      "page_type_defaults": [
+        "source"
+      ],
+      "editorial_rule": "Differentiate clearly between binding text, agreed text, lower-authority interpretation, and practical guidance.",
+      "exclusion_rule": "Do not let commentary, FAQ text, sector pages, or summaries sound more binding than the stronger source base allows."
+    },
+    {
+      "perspective_id": "time",
+      "title": "Time",
+      "question": "Which dates, deadlines, phasing, review moments, and budget-calendar alignments matter?",
+      "description": "Used for dated policy events, milestones, expected publication moments, review cycles, and planning dependencies.",
+      "topic_prefixes": [
+        "timeline.",
+        "monitoring."
+      ],
+      "theme_ids": [
+        "monitoring-en-leren"
+      ],
+      "page_type_defaults": [
+        "timeline"
+      ],
+      "editorial_rule": "Keep dates chronological, distinguish expected moments from formal deadlines, and surface source-backed timing before local interpretation.",
+      "exclusion_rule": "Do not invent internal Almere timing if the source base only gives external milestones."
+    },
+    {
+      "perspective_id": "money",
+      "title": "Money",
+      "question": "Which funding flows, budget windows, allocation conditions, and co-financing logic apply?",
+      "description": "Used for budget windows, SPUK logic, funding channels, allocation conditions, and financial dependencies.",
+      "topic_prefixes": [
+        "finance."
+      ],
+      "theme_ids": [
+        "financiering"
+      ],
+      "page_type_defaults": [],
+      "editorial_rule": "State what the source says about funding routes, conditions, and windows; keep unverified financial assumptions out of the public layer.",
+      "exclusion_rule": "Do not present rumored carry-over rules, local budgets, or scenarios as facts unless a source or verified calculation supports them."
+    },
+    {
+      "perspective_id": "governance",
+      "title": "Governance",
+      "question": "Who decides, who coordinates, who owns, and who must approve?",
+      "description": "Used for ownership, approval, coordination, regional roles, and decision routes.",
+      "topic_prefixes": [
+        "governance."
+      ],
+      "topic_ids": [
+        "municipal.role_allocation"
+      ],
+      "theme_ids": [
+        "governance-en-regie"
+      ],
+      "page_type_defaults": [
+        "decision",
+        "action"
+      ],
+      "editorial_rule": "Separate decision-making, coordination, execution, and accountability roles wherever the source base allows.",
+      "exclusion_rule": "Do not collapse actors into vague labels like 'the region' if the source is more specific."
+    },
+    {
+      "perspective_id": "locality",
+      "title": "Locality",
+      "question": "What matters specifically for Almere or Flevoland?",
+      "description": "Used for explicitly local or regional relevance, adoption gaps, and public local translation.",
+      "topic_prefixes": [
+        "municipal."
+      ],
+      "jurisdiction_level_hints": [
+        "municipal",
+        "regional"
+      ],
+      "page_type_defaults": [
+        "almere"
+      ],
+      "editorial_rule": "Show clearly whether something is explicitly local, regionally translated, or only nationally visible so far.",
+      "exclusion_rule": "Do not imply that Almere has formally adopted a line if the local public source base does not yet show that."
+    },
+    {
+      "perspective_id": "execution",
+      "title": "Execution",
+      "question": "What must policymakers actually organize, prepare, or sequence?",
+      "description": "Used for operational follow-up, sequencing questions, workagenda preparation, and implementation dependencies.",
+      "topic_prefixes": [
+        "d5.",
+        "d6.",
+        "municipal.",
+        "monitoring."
+      ],
+      "theme_ids": [
+        "basisfunctionaliteiten-d5",
+        "basisinfrastructuur-d6",
+        "monitoring-en-leren",
+        "governance-en-regie"
+      ],
+      "page_type_defaults": [
+        "decision",
+        "action",
+        "dashboard"
+      ],
+      "editorial_rule": "Phrase execution as what must be organized, clarified, prepared, or sequenced, while keeping ownership and decision status explicit.",
+      "exclusion_rule": "Do not turn the generator into a policymaker by inventing staffing, internal milestones, or implementation advice."
+    }
+  ]
+}

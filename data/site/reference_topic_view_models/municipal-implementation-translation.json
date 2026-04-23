@@ -252,5 +252,26 @@
   "current_claim_count": 72,
   "historical_claim_count": 10,
   "needs_human_review": true,
-  "confidence_label": "voorzichtig"
+  "confidence_label": "voorzichtig",
+  "content_classification": {
+    "classification_id": "interpretation",
+    "label": "Interpretation",
+    "description": "Use when the content synthesizes multiple sources, current interpretation outputs, or review logic into a best-current reading."
+  },
+  "perspective_ids": [
+    "locality",
+    "execution"
+  ],
+  "quality_perspectives": [
+    {
+      "perspective_id": "locality",
+      "title": "Locality",
+      "question": "What matters specifically for Almere or Flevoland?"
+    },
+    {
+      "perspective_id": "execution",
+      "title": "Execution",
+      "question": "What must policymakers actually organize, prepare, or sequence?"
+    }
+  ]
 }

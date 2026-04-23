@@ -119,5 +119,26 @@
   "current_claim_count": 1,
   "historical_claim_count": 1,
   "needs_human_review": false,
-  "confidence_label": "hoog"
+  "confidence_label": "hoog",
+  "content_classification": {
+    "classification_id": "interpretation",
+    "label": "Interpretation",
+    "description": "Use when the content synthesizes multiple sources, current interpretation outputs, or review logic into a best-current reading."
+  },
+  "perspective_ids": [
+    "time",
+    "execution"
+  ],
+  "quality_perspectives": [
+    {
+      "perspective_id": "time",
+      "title": "Time",
+      "question": "Which dates, deadlines, phasing, review moments, and budget-calendar alignments matter?"
+    },
+    {
+      "perspective_id": "execution",
+      "title": "Execution",
+      "question": "What must policymakers actually organize, prepare, or sequence?"
+    }
+  ]
 }

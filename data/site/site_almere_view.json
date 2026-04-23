@@ -531,7 +531,40 @@
           }
         ]
       },
-      "scope_note": "Dit is een machine-gegenereerde mogelijke besluitvraag op basis van de huidige openbare bronbasis; geen vastgestelde gemeentelijke beslissing."
+      "scope_note": "Dit is een machine-gegenereerde mogelijke besluitvraag op basis van de huidige openbare bronbasis; geen vastgestelde gemeentelijke beslissing.",
+      "content_classification": {
+        "classification_id": "human_choice_question",
+        "label": "Human choice question",
+        "description": "Use when the source base raises a real decision, sequencing choice, interpretation need, or local design choice that the system should not decide automatically."
+      },
+      "perspective_ids": [
+        "norm",
+        "governance",
+        "locality",
+        "execution"
+      ],
+      "quality_perspectives": [
+        {
+          "perspective_id": "norm",
+          "title": "Norm",
+          "question": "What is required, allowed, expected, or binding?"
+        },
+        {
+          "perspective_id": "governance",
+          "title": "Governance",
+          "question": "Who decides, who coordinates, who owns, and who must approve?"
+        },
+        {
+          "perspective_id": "locality",
+          "title": "Locality",
+          "question": "What matters specifically for Almere or Flevoland?"
+        },
+        {
+          "perspective_id": "execution",
+          "title": "Execution",
+          "question": "What must policymakers actually organize, prepare, or sequence?"
+        }
+      ]
     },
     {
       "decision_id": "dec_d6_regiemodel",
@@ -1048,7 +1081,40 @@
           }
         ]
       },
-      "scope_note": "Dit is een machine-gegenereerde mogelijke besluitvraag op basis van de huidige openbare bronbasis; geen vastgestelde gemeentelijke beslissing."
+      "scope_note": "Dit is een machine-gegenereerde mogelijke besluitvraag op basis van de huidige openbare bronbasis; geen vastgestelde gemeentelijke beslissing.",
+      "content_classification": {
+        "classification_id": "human_choice_question",
+        "label": "Human choice question",
+        "description": "Use when the source base raises a real decision, sequencing choice, interpretation need, or local design choice that the system should not decide automatically."
+      },
+      "perspective_ids": [
+        "norm",
+        "governance",
+        "locality",
+        "execution"
+      ],
+      "quality_perspectives": [
+        {
+          "perspective_id": "norm",
+          "title": "Norm",
+          "question": "What is required, allowed, expected, or binding?"
+        },
+        {
+          "perspective_id": "governance",
+          "title": "Governance",
+          "question": "Who decides, who coordinates, who owns, and who must approve?"
+        },
+        {
+          "perspective_id": "locality",
+          "title": "Locality",
+          "question": "What matters specifically for Almere or Flevoland?"
+        },
+        {
+          "perspective_id": "execution",
+          "title": "Execution",
+          "question": "What must policymakers actually organize, prepare, or sequence?"
+        }
+      ]
     },
     {
       "decision_id": "dec_budget_verdeling",
@@ -1426,7 +1492,46 @@
           }
         ]
       },
-      "scope_note": "Dit is een machine-gegenereerde mogelijke besluitvraag op basis van de huidige openbare bronbasis; geen vastgestelde gemeentelijke beslissing."
+      "scope_note": "Dit is een machine-gegenereerde mogelijke besluitvraag op basis van de huidige openbare bronbasis; geen vastgestelde gemeentelijke beslissing.",
+      "content_classification": {
+        "classification_id": "human_choice_question",
+        "label": "Human choice question",
+        "description": "Use when the source base raises a real decision, sequencing choice, interpretation need, or local design choice that the system should not decide automatically."
+      },
+      "perspective_ids": [
+        "norm",
+        "money",
+        "governance",
+        "locality",
+        "execution"
+      ],
+      "quality_perspectives": [
+        {
+          "perspective_id": "norm",
+          "title": "Norm",
+          "question": "What is required, allowed, expected, or binding?"
+        },
+        {
+          "perspective_id": "money",
+          "title": "Money",
+          "question": "Which funding flows, budget windows, allocation conditions, and co-financing logic apply?"
+        },
+        {
+          "perspective_id": "governance",
+          "title": "Governance",
+          "question": "Who decides, who coordinates, who owns, and who must approve?"
+        },
+        {
+          "perspective_id": "locality",
+          "title": "Locality",
+          "question": "What matters specifically for Almere or Flevoland?"
+        },
+        {
+          "perspective_id": "execution",
+          "title": "Execution",
+          "question": "What must policymakers actually organize, prepare, or sequence?"
+        }
+      ]
     },
     {
       "decision_id": "dec_monitoring_arrangement",
@@ -1766,7 +1871,34 @@
           }
         ]
       },
-      "scope_note": "Dit is een machine-gegenereerde mogelijke besluitvraag op basis van de huidige openbare bronbasis; geen vastgestelde gemeentelijke beslissing."
+      "scope_note": "Dit is een machine-gegenereerde mogelijke besluitvraag op basis van de huidige openbare bronbasis; geen vastgestelde gemeentelijke beslissing.",
+      "content_classification": {
+        "classification_id": "human_choice_question",
+        "label": "Human choice question",
+        "description": "Use when the source base raises a real decision, sequencing choice, interpretation need, or local design choice that the system should not decide automatically."
+      },
+      "perspective_ids": [
+        "time",
+        "governance",
+        "execution"
+      ],
+      "quality_perspectives": [
+        {
+          "perspective_id": "time",
+          "title": "Time",
+          "question": "Which dates, deadlines, phasing, review moments, and budget-calendar alignments matter?"
+        },
+        {
+          "perspective_id": "governance",
+          "title": "Governance",
+          "question": "Who decides, who coordinates, who owns, and who must approve?"
+        },
+        {
+          "perspective_id": "execution",
+          "title": "Execution",
+          "question": "What must policymakers actually organize, prepare, or sequence?"
+        }
+      ]
     }
   ],
   "current_actions": [
@@ -1949,7 +2081,46 @@
         "clm__nat_azwa_2026_voortgang_kamerbrief_monitoring_and_evaluation_001",
         "clm__nat_azwa_2026_cw31_kader_d5_d6_monitoring_and_evaluation_001"
       ],
-      "scope_note": "Dit is een machine-gegenereerde mogelijke opvolgactie op basis van de huidige openbare bronbasis; geen vastgestelde gemeentelijke opdracht."
+      "scope_note": "Dit is een machine-gegenereerde mogelijke opvolgactie op basis van de huidige openbare bronbasis; geen vastgestelde gemeentelijke opdracht.",
+      "content_classification": {
+        "classification_id": "human_choice_question",
+        "label": "Human choice question",
+        "description": "Use when the source base raises a real decision, sequencing choice, interpretation need, or local design choice that the system should not decide automatically."
+      },
+      "perspective_ids": [
+        "norm",
+        "time",
+        "governance",
+        "locality",
+        "execution"
+      ],
+      "quality_perspectives": [
+        {
+          "perspective_id": "norm",
+          "title": "Norm",
+          "question": "What is required, allowed, expected, or binding?"
+        },
+        {
+          "perspective_id": "time",
+          "title": "Time",
+          "question": "Which dates, deadlines, phasing, review moments, and budget-calendar alignments matter?"
+        },
+        {
+          "perspective_id": "governance",
+          "title": "Governance",
+          "question": "Who decides, who coordinates, who owns, and who must approve?"
+        },
+        {
+          "perspective_id": "locality",
+          "title": "Locality",
+          "question": "What matters specifically for Almere or Flevoland?"
+        },
+        {
+          "perspective_id": "execution",
+          "title": "Execution",
+          "question": "What must policymakers actually organize, prepare, or sequence?"
+        }
+      ]
     },
     {
       "action_id": "act_d6_lokale_structuur_verduidelijken",
@@ -2187,7 +2358,40 @@
         "clm__reg_flevoland_2023_regioplan_iza_governance_and_finance_001",
         "clm__nat_vng_gezond_en_actief_leven_2026_governance_and_finance_003"
       ],
-      "scope_note": "Dit is een machine-gegenereerde mogelijke opvolgactie op basis van de huidige openbare bronbasis; geen vastgestelde gemeentelijke opdracht."
+      "scope_note": "Dit is een machine-gegenereerde mogelijke opvolgactie op basis van de huidige openbare bronbasis; geen vastgestelde gemeentelijke opdracht.",
+      "content_classification": {
+        "classification_id": "human_choice_question",
+        "label": "Human choice question",
+        "description": "Use when the source base raises a real decision, sequencing choice, interpretation need, or local design choice that the system should not decide automatically."
+      },
+      "perspective_ids": [
+        "norm",
+        "governance",
+        "locality",
+        "execution"
+      ],
+      "quality_perspectives": [
+        {
+          "perspective_id": "norm",
+          "title": "Norm",
+          "question": "What is required, allowed, expected, or binding?"
+        },
+        {
+          "perspective_id": "governance",
+          "title": "Governance",
+          "question": "Who decides, who coordinates, who owns, and who must approve?"
+        },
+        {
+          "perspective_id": "locality",
+          "title": "Locality",
+          "question": "What matters specifically for Almere or Flevoland?"
+        },
+        {
+          "perspective_id": "execution",
+          "title": "Execution",
+          "question": "What must policymakers actually organize, prepare, or sequence?"
+        }
+      ]
     },
     {
       "action_id": "act_middelen_en_eigenaarschap_vastleggen",
@@ -2357,7 +2561,40 @@
         "clm__nat_vng_gezond_en_actief_leven_2026_governance_and_finance_001",
         "clm__nat_azwa_2025_definitief_governance_and_finance_002"
       ],
-      "scope_note": "Dit is een machine-gegenereerde mogelijke opvolgactie op basis van de huidige openbare bronbasis; geen vastgestelde gemeentelijke opdracht."
+      "scope_note": "Dit is een machine-gegenereerde mogelijke opvolgactie op basis van de huidige openbare bronbasis; geen vastgestelde gemeentelijke opdracht.",
+      "content_classification": {
+        "classification_id": "human_choice_question",
+        "label": "Human choice question",
+        "description": "Use when the source base raises a real decision, sequencing choice, interpretation need, or local design choice that the system should not decide automatically."
+      },
+      "perspective_ids": [
+        "norm",
+        "money",
+        "governance",
+        "execution"
+      ],
+      "quality_perspectives": [
+        {
+          "perspective_id": "norm",
+          "title": "Norm",
+          "question": "What is required, allowed, expected, or binding?"
+        },
+        {
+          "perspective_id": "money",
+          "title": "Money",
+          "question": "Which funding flows, budget windows, allocation conditions, and co-financing logic apply?"
+        },
+        {
+          "perspective_id": "governance",
+          "title": "Governance",
+          "question": "Who decides, who coordinates, who owns, and who must approve?"
+        },
+        {
+          "perspective_id": "execution",
+          "title": "Execution",
+          "question": "What must policymakers actually organize, prepare, or sequence?"
+        }
+      ]
     },
     {
       "action_id": "act_monitoring_afstemmen",
@@ -2529,7 +2766,46 @@
         "clm__reg_flevoland_2023_regioplan_iza_governance_and_finance_001",
         "clm__nat_vng_gezond_en_actief_leven_2026_governance_and_finance_003"
       ],
-      "scope_note": "Dit is een machine-gegenereerde mogelijke opvolgactie op basis van de huidige openbare bronbasis; geen vastgestelde gemeentelijke opdracht."
+      "scope_note": "Dit is een machine-gegenereerde mogelijke opvolgactie op basis van de huidige openbare bronbasis; geen vastgestelde gemeentelijke opdracht.",
+      "content_classification": {
+        "classification_id": "human_choice_question",
+        "label": "Human choice question",
+        "description": "Use when the source base raises a real decision, sequencing choice, interpretation need, or local design choice that the system should not decide automatically."
+      },
+      "perspective_ids": [
+        "norm",
+        "time",
+        "governance",
+        "locality",
+        "execution"
+      ],
+      "quality_perspectives": [
+        {
+          "perspective_id": "norm",
+          "title": "Norm",
+          "question": "What is required, allowed, expected, or binding?"
+        },
+        {
+          "perspective_id": "time",
+          "title": "Time",
+          "question": "Which dates, deadlines, phasing, review moments, and budget-calendar alignments matter?"
+        },
+        {
+          "perspective_id": "governance",
+          "title": "Governance",
+          "question": "Who decides, who coordinates, who owns, and who must approve?"
+        },
+        {
+          "perspective_id": "locality",
+          "title": "Locality",
+          "question": "What matters specifically for Almere or Flevoland?"
+        },
+        {
+          "perspective_id": "execution",
+          "title": "Execution",
+          "question": "What must policymakers actually organize, prepare, or sequence?"
+        }
+      ]
     },
     {
       "action_id": "act_regionale_digitale_aansluiting",
@@ -2661,7 +2937,34 @@
         "clm__mun_almere_pga_seo_businesscase_2024_d6_002",
         "clm__mun_almere_pga_seo_businesscase_2024_d6_001"
       ],
-      "scope_note": "Dit is een machine-gegenereerde mogelijke opvolgactie op basis van de huidige openbare bronbasis; geen vastgestelde gemeentelijke opdracht."
+      "scope_note": "Dit is een machine-gegenereerde mogelijke opvolgactie op basis van de huidige openbare bronbasis; geen vastgestelde gemeentelijke opdracht.",
+      "content_classification": {
+        "classification_id": "human_choice_question",
+        "label": "Human choice question",
+        "description": "Use when the source base raises a real decision, sequencing choice, interpretation need, or local design choice that the system should not decide automatically."
+      },
+      "perspective_ids": [
+        "norm",
+        "governance",
+        "execution"
+      ],
+      "quality_perspectives": [
+        {
+          "perspective_id": "norm",
+          "title": "Norm",
+          "question": "What is required, allowed, expected, or binding?"
+        },
+        {
+          "perspective_id": "governance",
+          "title": "Governance",
+          "question": "Who decides, who coordinates, who owns, and who must approve?"
+        },
+        {
+          "perspective_id": "execution",
+          "title": "Execution",
+          "question": "What must policymakers actually organize, prepare, or sequence?"
+        }
+      ]
     }
   ],
   "review_reason_summary": [

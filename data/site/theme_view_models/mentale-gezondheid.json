@@ -112,5 +112,26 @@
       "status": "huidige lijn met menselijke duiding",
       "page_url": "/reference/topics/d5-mentale-gezondheidsnetwerken/"
     }
+  ],
+  "content_classification": {
+    "classification_id": "interpretation",
+    "label": "Interpretation",
+    "description": "Use when the content synthesizes multiple sources, current interpretation outputs, or review logic into a best-current reading."
+  },
+  "perspective_ids": [
+    "norm",
+    "execution"
+  ],
+  "quality_perspectives": [
+    {
+      "perspective_id": "norm",
+      "title": "Norm",
+      "question": "What is required, allowed, expected, or binding?"
+    },
+    {
+      "perspective_id": "execution",
+      "title": "Execution",
+      "question": "What must policymakers actually organize, prepare, or sequence?"
+    }
   ]
 }

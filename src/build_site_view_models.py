@@ -20,6 +20,7 @@ INVENTORY_PATH = EXTRACTED_DIR / "document_inventory.json"
 REVIEW_QUEUE_PATH = EXTRACTED_DIR / "review_queue.json"
 SITE_TAXONOMY_PATH = REPO_ROOT / "config" / "site_taxonomy.json"
 SITE_UPDATES_CONFIG_PATH = REPO_ROOT / "config" / "site_updates.json"
+DATA_QUALITY_PERSPECTIVES_PATH = REPO_ROOT / "config" / "data_quality_perspectives.json"
 
 DOCUMENTS_DIR = EXTRACTED_DIR / "documents"
 
@@ -622,6 +623,21 @@ def site_updates_config() -> dict:
     return load_json(SITE_UPDATES_CONFIG_PATH)
 
 
+def data_quality_config() -> dict:
+    return load_json(DATA_QUALITY_PERSPECTIVES_PATH)
+
+
+def data_quality_perspectives() -> list[dict]:
+    return data_quality_config()["perspectives"]
+
+
+def data_quality_classification(classification_id: str) -> dict:
+    for item in data_quality_config()["classifications"]:
+        if item["classification_id"] == classification_id:
+            return item
+    raise KeyError(f"Unknown data quality classification: {classification_id}")
+
+
 def timeline_curation() -> dict:
     return load_json(TIMELINE_CURATION_PATH)
 
@@ -652,6 +668,62 @@ def theme_page_url(theme_id: str) -> str:
 def source_page_url(document: dict) -> str:
     short_title = document.get("short_title") or document["title"]
     return f"/sources/{slugify(short_title)}/"
+
+
+def perspective_ids_for_context(
+    *,
+    topic_ids: list[str] | None = None,
+    theme_ids: list[str] | None = None,
+    page_type: str | None = None,
+    jurisdiction_level: str | None = None,
+) -> list[str]:
+    topic_ids = topic_ids or []
+    theme_ids = theme_ids or []
+    matched: list[str] = []
+    for perspective in data_quality_perspectives():
+        perspective_id = perspective["perspective_id"]
+        if page_type and page_type in perspective.get("page_type_defaults", []):
+            matched.append(perspective_id)
+            continue
+        if jurisdiction_level and jurisdiction_level in perspective.get("jurisdiction_level_hints", []):
+            matched.append(perspective_id)
+            continue
+        if any(topic in perspective.get("topic_ids", []) for topic in topic_ids):
+            matched.append(perspective_id)
+            continue
+        if any(
+            topic.startswith(prefix)
+            for topic in topic_ids
+            for prefix in perspective.get("topic_prefixes", [])
+        ):
+            matched.append(perspective_id)
+            continue
+        if any(theme_id in perspective.get("theme_ids", []) for theme_id in theme_ids):
+            matched.append(perspective_id)
+            continue
+    return dedupe(matched)
+
+
+def quality_perspective_refs(perspective_ids: list[str]) -> list[dict]:
+    lookup = {item["perspective_id"]: item for item in data_quality_perspectives()}
+    return [
+        {
+            "perspective_id": perspective_id,
+            "title": lookup[perspective_id]["title"],
+            "question": lookup[perspective_id]["question"],
+        }
+        for perspective_id in perspective_ids
+        if perspective_id in lookup
+    ]
+
+
+def quality_classification_ref(classification_id: str) -> dict:
+    item = data_quality_classification(classification_id)
+    return {
+        "classification_id": item["classification_id"],
+        "label": item["label"],
+        "description": item["description"],
+    }
 
 
 def domain_for_topic(topic: str) -> str:
@@ -1515,6 +1587,11 @@ def build_decision_models(
         supporting_evidence = all_supporting_evidence[:6]
         review_note = review_note_for_topics(topics, uncertainty_by_topic, conflict_by_topic)
         review_details = review_details_for_topics(topics, all_supporting_evidence, uncertainty_by_topic, conflict_by_topic)
+        perspective_ids = perspective_ids_for_context(
+            topic_ids=topics,
+            theme_ids=linked_theme_ids,
+            page_type="decision",
+        )
 
         model = {
             "decision_id": blueprint["decision_id"],
@@ -1555,6 +1632,9 @@ def build_decision_models(
             "review_note": review_note,
             "review_details": review_details,
             "scope_note": "Dit is een machine-gegenereerde mogelijke besluitvraag op basis van de huidige openbare bronbasis; geen vastgestelde gemeentelijke beslissing.",
+            "content_classification": quality_classification_ref("human_choice_question"),
+            "perspective_ids": perspective_ids,
+            "quality_perspectives": quality_perspective_refs(perspective_ids),
         }
         models.append(model)
 
@@ -1586,6 +1666,12 @@ def build_action_models(
         claim_ids = dedupe(
             source_claim_ids
             + [claim_id for dependency in dependency_entries for claim_id in dependency["supporting_claim_ids"]]
+        )
+        topics = topics_for_claim_ids(claim_ids, claims)
+        perspective_ids = perspective_ids_for_context(
+            topic_ids=topics,
+            theme_ids=blueprint["theme_ids"],
+            page_type="action",
         )
         model = {
             "action_id": blueprint["action_id"],
@@ -1630,6 +1716,9 @@ def build_action_models(
             "supporting_evidence": evidence_entries(claim_ids, claims, documents),
             "supporting_claim_ids": claim_ids,
             "scope_note": "Dit is een machine-gegenereerde mogelijke opvolgactie op basis van de huidige openbare bronbasis; geen vastgestelde gemeentelijke opdracht.",
+            "content_classification": quality_classification_ref("human_choice_question"),
+            "perspective_ids": perspective_ids,
+            "quality_perspectives": quality_perspective_refs(perspective_ids),
         }
         models.append(model)
     return models
@@ -2367,6 +2456,11 @@ def build_theme_models(
             }
             for entry in topic_entries
         ]
+        theme_topic_ids = [entry["topic"] for entry in topic_entries]
+        perspective_ids = perspective_ids_for_context(
+            topic_ids=theme_topic_ids,
+            theme_ids=[theme_id],
+        )
 
         theme_models.append(
             {
@@ -2390,6 +2484,9 @@ def build_theme_models(
                 "dependencies": dependencies,
                 "source_basis": source_basis[:8],
                 "related_reference_topics": related_reference_topics,
+                "content_classification": quality_classification_ref("interpretation"),
+                "perspective_ids": perspective_ids,
+                "quality_perspectives": quality_perspective_refs(perspective_ids),
             }
         )
 
@@ -2455,6 +2552,7 @@ def build_reference_topic_models(
             f"Voor {topic_label(entry['topic'])} zijn {len(entry['current_claim_ids'])} actuele claim(s) "
             f"en {len(entry['historical_claim_ids'])} historische claim(s) beschikbaar in de huidige referentielaag."
         )
+        perspective_ids = perspective_ids_for_context(topic_ids=[entry["topic"]])
         topic_models.append(
             {
                 "topic_id": entry["topic"],
@@ -2496,6 +2594,9 @@ def build_reference_topic_models(
                 "historical_claim_count": len(entry["historical_claim_ids"]),
                 "needs_human_review": entry["needs_human_review"],
                 "confidence_label": confidence_label(entry["confidence"]),
+                "content_classification": quality_classification_ref("interpretation"),
+                "perspective_ids": perspective_ids,
+                "quality_perspectives": quality_perspective_refs(perspective_ids),
             }
         )
     return topic_models
@@ -2596,6 +2697,12 @@ def build_source_view_models(
         extraction_scope = payload["extraction_scope"] if payload else {}
         d5_section = (payload or {}).get("structured_content", {}).get("d5", {})
         d6_section = (payload or {}).get("structured_content", {}).get("d6", {})
+        perspective_ids = perspective_ids_for_context(
+            topic_ids=list(topic_counts.keys()),
+            theme_ids=list(theme_ids),
+            page_type="source",
+            jurisdiction_level=document["jurisdiction_level"],
+        )
 
         source_models.append(
             {
@@ -2638,6 +2745,9 @@ def build_source_view_models(
                     "governance_item_count": len((payload or {}).get("structured_content", {}).get("governance_and_finance", {}).get("items", [])),
                     "timeline_item_count": len((payload or {}).get("structured_content", {}).get("timeline_and_status", {}).get("items", [])),
                 },
+                "content_classification": quality_classification_ref("source_fact"),
+                "perspective_ids": perspective_ids,
+                "quality_perspectives": quality_perspective_refs(perspective_ids),
             }
         )
 

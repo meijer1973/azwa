@@ -336,5 +336,32 @@
       }
     ]
   },
-  "scope_note": "Dit is een machine-gegenereerde mogelijke besluitvraag op basis van de huidige openbare bronbasis; geen vastgestelde gemeentelijke beslissing."
+  "scope_note": "Dit is een machine-gegenereerde mogelijke besluitvraag op basis van de huidige openbare bronbasis; geen vastgestelde gemeentelijke beslissing.",
+  "content_classification": {
+    "classification_id": "human_choice_question",
+    "label": "Human choice question",
+    "description": "Use when the source base raises a real decision, sequencing choice, interpretation need, or local design choice that the system should not decide automatically."
+  },
+  "perspective_ids": [
+    "time",
+    "governance",
+    "execution"
+  ],
+  "quality_perspectives": [
+    {
+      "perspective_id": "time",
+      "title": "Time",
+      "question": "Which dates, deadlines, phasing, review moments, and budget-calendar alignments matter?"
+    },
+    {
+      "perspective_id": "governance",
+      "title": "Governance",
+      "question": "Who decides, who coordinates, who owns, and who must approve?"
+    },
+    {
+      "perspective_id": "execution",
+      "title": "Execution",
+      "question": "What must policymakers actually organize, prepare, or sequence?"
+    }
+  ]
 }

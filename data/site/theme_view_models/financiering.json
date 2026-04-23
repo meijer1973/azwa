@@ -239,5 +239,26 @@
       "status": "huidige lijn met menselijke duiding",
       "page_url": "/reference/topics/finance-regional-funding-path/"
     }
+  ],
+  "content_classification": {
+    "classification_id": "interpretation",
+    "label": "Interpretation",
+    "description": "Use when the content synthesizes multiple sources, current interpretation outputs, or review logic into a best-current reading."
+  },
+  "perspective_ids": [
+    "norm",
+    "money"
+  ],
+  "quality_perspectives": [
+    {
+      "perspective_id": "norm",
+      "title": "Norm",
+      "question": "What is required, allowed, expected, or binding?"
+    },
+    {
+      "perspective_id": "money",
+      "title": "Money",
+      "question": "Which funding flows, budget windows, allocation conditions, and co-financing logic apply?"
+    }
   ]
 }

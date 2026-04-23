@@ -345,5 +345,38 @@
       "status": "huidige lijn met menselijke duiding",
       "page_url": "/reference/topics/municipal-role-allocation/"
     }
+  ],
+  "content_classification": {
+    "classification_id": "interpretation",
+    "label": "Interpretation",
+    "description": "Use when the content synthesizes multiple sources, current interpretation outputs, or review logic into a best-current reading."
+  },
+  "perspective_ids": [
+    "norm",
+    "governance",
+    "locality",
+    "execution"
+  ],
+  "quality_perspectives": [
+    {
+      "perspective_id": "norm",
+      "title": "Norm",
+      "question": "What is required, allowed, expected, or binding?"
+    },
+    {
+      "perspective_id": "governance",
+      "title": "Governance",
+      "question": "Who decides, who coordinates, who owns, and who must approve?"
+    },
+    {
+      "perspective_id": "locality",
+      "title": "Locality",
+      "question": "What matters specifically for Almere or Flevoland?"
+    },
+    {
+      "perspective_id": "execution",
+      "title": "Execution",
+      "question": "What must policymakers actually organize, prepare, or sequence?"
+    }
   ]
 }

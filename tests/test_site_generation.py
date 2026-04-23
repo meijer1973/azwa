@@ -18,6 +18,7 @@ REFERENCE_VIEW_PATH = REPO_ROOT / "data" / "site" / "site_reference_view.json"
 SOURCES_VIEW_PATH = REPO_ROOT / "data" / "site" / "site_sources_view.json"
 UPDATES_VIEW_PATH = REPO_ROOT / "data" / "site" / "site_updates_view.json"
 SITE_MANIFEST_PATH = REPO_ROOT / "data" / "site" / "site_manifest.json"
+DATA_QUALITY_CONFIG_PATH = REPO_ROOT / "config" / "data_quality_perspectives.json"
 SOURCE_INTAKE_CANDIDATES_PATH = REPO_ROOT / "data" / "raw" / "source_intake_candidates.json"
 DECISION_DIR = REPO_ROOT / "data" / "site" / "decision_view_models"
 ACTION_DIR = REPO_ROOT / "data" / "site" / "action_view_models"
@@ -68,6 +69,50 @@ class SiteGenerationTests(unittest.TestCase):
         self.assertGreater(len(list(THEME_DIR.glob("*.json"))), 0)
         self.assertGreater(len(list(REFERENCE_TOPIC_DIR.glob("*.json"))), 0)
         self.assertGreater(len(list(SOURCE_VIEW_DIR.glob("*.json"))), 0)
+        self.assertTrue(DATA_QUALITY_CONFIG_PATH.exists())
+
+    def test_data_quality_taxonomy_is_saved_in_expected_locations(self) -> None:
+        config = load_json(DATA_QUALITY_CONFIG_PATH)
+        checklist = (REPO_ROOT / "docs" / "data-quality-checklist.md").read_text(encoding="utf-8")
+
+        perspective_ids = {item["perspective_id"] for item in config["perspectives"]}
+        classification_ids = {item["classification_id"] for item in config["classifications"]}
+
+        self.assertEqual(
+            perspective_ids,
+            {"norm", "time", "money", "governance", "locality", "execution"},
+        )
+        self.assertEqual(
+            classification_ids,
+            {"source_fact", "interpretation", "local_gap", "human_choice_question"},
+        )
+        self.assertIn("config/data_quality_perspectives.json", checklist)
+        self.assertIn("data/site/*.json", checklist)
+
+    def test_site_view_models_carry_quality_perspectives(self) -> None:
+        decision = load_json(DECISION_DIR / "dec_d5_prioritering.json")
+        action = load_json(ACTION_DIR / "act_middelen_en_eigenaarschap_vastleggen.json")
+        theme = load_json(THEME_DIR / "financiering.json")
+        reference_topic = load_json(REFERENCE_TOPIC_DIR / "finance-d5-d6-funding-instrument.json")
+        source = load_json(SOURCE_VIEW_DIR / "vws-brief-d5-d6-financieringsinstrument.json")
+
+        self.assertEqual(decision["content_classification"]["classification_id"], "human_choice_question")
+        self.assertIn("execution", decision["perspective_ids"])
+        self.assertIn("governance", decision["perspective_ids"])
+
+        self.assertEqual(action["content_classification"]["classification_id"], "human_choice_question")
+        self.assertIn("money", action["perspective_ids"])
+        self.assertIn("execution", action["perspective_ids"])
+
+        self.assertEqual(theme["content_classification"]["classification_id"], "interpretation")
+        self.assertIn("money", theme["perspective_ids"])
+
+        self.assertEqual(reference_topic["content_classification"]["classification_id"], "interpretation")
+        self.assertIn("money", reference_topic["perspective_ids"])
+
+        self.assertEqual(source["content_classification"]["classification_id"], "source_fact")
+        self.assertIn("money", source["perspective_ids"])
+        self.assertTrue(source["quality_perspectives"])
 
     def test_rendered_pages_exist(self) -> None:
         for path in [

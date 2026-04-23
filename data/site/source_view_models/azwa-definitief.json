@@ -184,5 +184,50 @@
     "d6_item_count": 2,
     "governance_item_count": 3,
     "timeline_item_count": 2
-  }
+  },
+  "content_classification": {
+    "classification_id": "source_fact",
+    "label": "Source fact",
+    "description": "Use when the statement is presented as grounded in a source document, source quote, explicit table item, or directly verified timeline moment."
+  },
+  "perspective_ids": [
+    "norm",
+    "time",
+    "money",
+    "governance",
+    "locality",
+    "execution"
+  ],
+  "quality_perspectives": [
+    {
+      "perspective_id": "norm",
+      "title": "Norm",
+      "question": "What is required, allowed, expected, or binding?"
+    },
+    {
+      "perspective_id": "time",
+      "title": "Time",
+      "question": "Which dates, deadlines, phasing, review moments, and budget-calendar alignments matter?"
+    },
+    {
+      "perspective_id": "money",
+      "title": "Money",
+      "question": "Which funding flows, budget windows, allocation conditions, and co-financing logic apply?"
+    },
+    {
+      "perspective_id": "governance",
+      "title": "Governance",
+      "question": "Who decides, who coordinates, who owns, and who must approve?"
+    },
+    {
+      "perspective_id": "locality",
+      "title": "Locality",
+      "question": "What matters specifically for Almere or Flevoland?"
+    },
+    {
+      "perspective_id": "execution",
+      "title": "Execution",
+      "question": "What must policymakers actually organize, prepare, or sequence?"
+    }
+  ]
 }

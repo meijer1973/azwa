@@ -70,6 +70,8 @@ Dat soort taal hoort alleen thuis in een methodische bijlage of verantwoording.
 
 Voor publieke of bestuurlijke stukken geldt aanvullend: ook een verantwoording of bijlage moet leesbaar blijven voor mensen buiten het projectteam. Gebruik daar geen bestandsnamen, JSON-verwijzingen, pipeline-termen of QC-jargon. Zulke technische details zijn geschikt voor interne notities, ontwikkelverslagen of antwoorden aan de gebruiker, niet voor public-facing materiaal.
 
+Interne datalagen zijn geen publieke bronnen. Namen zoals `Almere-view`, `site_almere_view.json`, `claims_master.jsonl`, `current_interpretation.json` of vergelijkbare modelartefacten mogen het schrijfproces intern ondersteunen, maar worden niet genoemd in public-facing tekst. Vertaal ze naar gewone taal, bijvoorbeeld `op basis van de beschikbare openbare bronnen` of `uit de analyse van de beschikbare stukken`.
+
 ## Schrijf vanuit bestuurlijke logica
 De volgorde van redeneren in een plan van aanpak is meestal:
 
@@ -121,7 +123,7 @@ In een bijlage of verantwoording mogen wel staan:
 
 Voor publieke of bestuurlijke documenten blijft ook deze verantwoording gewoon Nederlands. Vermijd:
 - bestandsnamen zoals `site_almere_view.json`;
-- interne modelnamen zoals `claimlaag`;
+- interne modelnamen zoals `Almere-view` of `claimlaag`;
 - pipeline-termen zoals `extractie`, `render`, `QC` of `blocking issues`;
 - technische tellingen die alleen voor ontwikkelaars betekenis hebben.
 
@@ -182,6 +184,8 @@ Beter:
 
 Als methodische precisie nodig is:
 `Deze vier opgaven zijn ontleend aan de huidige analyse van de Almere-bronbasis.`
+
+Voor public-facing tekst geldt: verwijs niet naar interne viewnamen, modelbestanden of data-objecten als bron. De bron voor de lezer is de openbare bronbasis, niet de interne datalaag.
 
 ### 4. Vermijd te technische zekerheid
 Niet:

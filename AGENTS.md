@@ -15,6 +15,7 @@
 - Do not reference attachments, appendices, tables, maps, notes, or other supporting documents unless they actually exist or are explicitly marked as still to be produced.
 - Technical source, data, QC, or pipeline details belong in a methodische verantwoording or appendix, not in the main narrative.
 - For public-facing or bestuurlijke report text, avoid technical data/pipeline language altogether, including in accountability sections. Use plain source-grounding language instead of filenames, JSON names, claim-layer terminology, QC counts, or pipeline status.
+- Internal generated data layers are not public sources. Do not cite names such as `Almere-view`, `site_almere_view.json`, `claims_master.jsonl`, or similar model artifacts in public-facing text; translate them into plain references to the available public source base or source analysis.
 
 ## Current Guidelines
 - `docs/rapporten/schrijfrichtlijn-plan-van-aanpak.md`: style and structure guidance for Dutch municipal `plan van aanpak` documents.

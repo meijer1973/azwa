@@ -4,6 +4,7 @@
 - Before editing a document type or workflow, check whether this file references a relevant guideline.
 - If a new guideline, workflow note, style guide, or recurring approach is added anywhere in the repository, add a reference to it in this file so future sessions can discover it quickly.
 - Keep project-specific guidance in the relevant folder, but use this file as the central index of guidance that agents should consult.
+- `RESEARCH_AGENT_MAP.md` is the entry-point guide for research agents using the corpus and data layers. When repository structure, source coverage, generated data layers, synthesized reports, or major guidance changes, check whether `RESEARCH_AGENT_MAP.md` also needs an update.
 - This repository is intended to ground outputs in reality. It is heavily source-based: do not present statements, checks, dates, numbers, decisions, or conclusions as factual unless they are supported by the source corpus, generated model data, or an actually performed verification step.
 - If something is a useful interpretation, draft proposal, or reviewer task rather than grounded fact, label it explicitly as such.
 
@@ -18,6 +19,7 @@
 - Internal generated data layers are not public sources. Do not cite names such as `Almere-view`, `site_almere_view.json`, `claims_master.jsonl`, or similar model artifacts in public-facing text; translate them into plain references to the available public source base or source analysis.
 
 ## Current Guidelines
+- `RESEARCH_AGENT_MAP.md`: first-read map for research agents using the AZWA/IZA/GALA corpus and generated data layers; keep it aligned with repository updates.
 - `docs/rapporten/schrijfrichtlijn-plan-van-aanpak.md`: style and structure guidance for Dutch municipal `plan van aanpak` documents.
 - `docs/regional-roles-and-splits-almere-flevoland.md`: source-backed guide to regional roles and splits around Almere, Flevoland, mandaatgemeente, GGD-regio, zorgkantoorregio, ROAZ/subregions, Zeewolde/Noord-Veluwe, and practical task ownership.
 - `data/curated/regional_roles_and_splits_almere_flevoland.json`: machine-readable role/split map for the same regional distinctions, including review-needed claims such as practical task ownership by Lelystad.

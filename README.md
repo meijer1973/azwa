@@ -4,9 +4,11 @@ This repository contains the AZWA / D5-D6 source corpus and the working material
 
 ## Repository Layout
 
+- `RESEARCH_AGENT_MAP.md`: first-read map for research agents using the corpus and generated data layers
 - `data/raw/`: Phase 0 corpus used by the pipeline, organized into `national`, `regional`, and `municipal`
 - `data/intermediate/`: structural extraction outputs such as text, chunks, and tables
 - `data/extracted/`: document JSON, claim outputs, municipality views, QC report, and review queue
+- `data/curated/`: curated human-readable or machine-readable maps that clarify cross-source interpretation issues
 - `data/site/`: derived site view models for the public executive publication layer
 - `data/schemas/`: JSON schema and validation assets
 - `data/logs/`: run logs and extraction diagnostics

@@ -1,5 +1,69 @@
 # Langetermijnplan datakwaliteit AZWA-site
 
+## Sprint Ledger
+Gebruik deze roadmap als levend werkdocument. Werk na elke sprint de statusregel bij:
+
+- `completed`: uitgevoerd en vastgelegd in een notitie, data-output, codewijziging of controle.
+- `open`: nog niet uitgevoerd of nog niet volledig afgerond.
+- Afgeronde fase- en sprintplannen staan in `docs/completed-plans/`; actieve plannen blijven in de hoofdmap `docs/`.
+- Het interne dashboard `docs/internal/review-dashboard.html` moet de meest actuele sprintstand tonen. Werk bij sprintstatus, huidige planning, cleanup targets, reviewdata, brondekking of publieke updategeschiedenis altijd eerst deze roadmap bij en draai daarna `python src/build_internal_review_dashboard.py` voordat wijzigingen worden vastgelegd.
+- Elk plan of elke sprintnotitie begint met een korte actuele samenvatting. Bij meer-sprintplannen heeft een Sprint Ledger bovenaan de voorkeur; bij kleinere plannen volstaat een korte samenvatting bovenaan.
+
+| Sprint | Status | Vindplaats / opmerking |
+| --- | --- | --- |
+| 25.1 Werkagenda- en financieringslaag | open | Huidige sprint; bouw eerst een D5-werkagenda operationele laag en koppel daarna financieringsstromen |
+| 24.1 Taxonomie en checklist | completed | `config/data_quality_perspectives.json`, `docs/data-quality-checklist.md` |
+| 24.2 Audit van bestaande site-data | completed | `docs/completed-plans/phase24-sprint24.2-audit.md`, `data/extracted/data_quality_audit.json` |
+| 24.3 Review-dashboard intern | completed | `docs/internal/review-dashboard.html`, `src/build_internal_review_dashboard.py`, `docs/completed-plans/phase24-sprint24.3-review-dashboard.md` |
+| 25.2 Lokale bronversterking Almere | open | Vervolg na 25.1; verwerk deep-research kwaliteitsrapport en haal primaire lokale bronnen en rolbronnen binnen |
+| 25.3 Nulmeting en capaciteit werkagenda | open | Nieuwe sprint uit conceptinvulling; maak per basisfunctionaliteit zichtbaar wat al bekend is en welke lokale capaciteit, dekking en aantallen ontbreken |
+| 25.4 D6 governance en samenwerking | open | Niet hoogste prioriteit, wel vroeg plannen; versterk bronbasis rond wie wat doet, wie samenwerkt en wie verantwoordelijk is voor D6 |
+| 25.5 Almere en Flevoland | open |  |
+| 25.6 Regionale governance | open |  |
+| 26.1 PDF- en tabelkwaliteit | open |  |
+| 26.2 Claimtekst schoonmaken | open |  |
+| 26.3 Locatie- en bewijscontrole | open |  |
+| 27.1 Norm | open |  |
+| 27.2 Tijd | open |  |
+| 27.3 Geld | open |  |
+| 27.4 Governance | open |  |
+| 27.5 Locality | open |  |
+| 27.6 Execution | open |  |
+| 28.1 Menselijke samenvattingen per update | open |  |
+| 28.2 Bronverwijzing en autoriteitstaal | open |  |
+| 28.3 Detailpagina's voor drill-down | open |  |
+| 29.1 Tijdlijnregister verdiepen | open |  |
+| 29.2 Begrotings- en verantwoordingscyclus | open |  |
+| 29.3 Handreikingen en uitvoeringsmomenten | open |  |
+| 30.1 Lokale lacunes | open |  |
+| 30.2 Besluitvragen en mogelijke opvolgacties | open |  |
+| 30.3 Beleidsdocumenten en rapporten | open |  |
+| 31.1 Updateprotocol | open |  |
+| 31.2 Maandelijkse bronaudit | open |  |
+| 31.3 Reviewronde met menselijke beoordelaars | open |  |
+
+## Huidige sprintplan
+Sprint 25.1 richt zich op financieringsbronnen, maar begint na vergelijking met `opdracht-voor-de-werkagenda-azwa` en `Samenvatting werkagenda` met een aparte D5-werkagenda-laag. De opdracht en het format maken duidelijk dat de werkagenda zelf een operationeel raamwerk is: doelen, prioritering, IST/SOLL/GAP, financiering, rollen, mijlpalen, monitoring en samenhang per leefgebied en basisfunctionaliteit. De samenvatting gebruiken we als interne controle, niet als primaire bron wanneer dezelfde punten in de officiele opdracht of het format staan.
+
+Eerste verbeterplan:
+
+- Maak een aparte D5-werkagenda-laag, bijvoorbeeld `data/extracted/workagenda_d5_operational_requirements.json`, gebouwd uit de opdracht, het format en bijbehorende bronclaims.
+- Model daarin de regionale preventie-infrastructuur, leefgebieden, basisfunctionaliteiten, lopende ontwikkelagenda 1, nieuwe/optionele ontwikkelagenda 1 en overige initiatieven apart.
+- Neem operationele targets op zoals laagdrempelige steunpunten, sociaal verwijzen, valpreventie, ketenaanpak overgewicht volwassenen, kansrijke start, Integrale Gezinspoli, Nu Niet Zwanger, mentale gezondheidsnetwerken, ketenaanpak overgewicht kinderen en optionele beproevende aanpakken, alleen waar de bronbasis dit draagt.
+- Leg per target vast: werkagenda-status, leefgebied, doelgroep, dekkings- of capaciteitsrichting, IST/SOLL/GAP-velden, financieel plan, verantwoordelijke actoren, regionale/lokale schaal, mijlpalen, samenhang met andere targets, claim_ids, source_ids en reviewvragen.
+- Laat `d5_d6_master.json` deze laag gebruiken in plaats van alleen losse `known_items`, zodat ontwikkelagenda-items niet leeg blijven terwijl de werkagenda-bronnen ze wel benoemen.
+- Verwerk de matrixlogica uit `docs/internal/conceptinvulling_werkagenda_azwa_almere.md`: per werkagenda-onderdeel en per basisfunctionaliteit een statusveld `voldoende`, `gedeeltelijk` of `onvoldoende`, met aparte velden voor wat nog bestuurlijk, financieel of bronmatig moet worden verduidelijkt.
+- Leg vast dat `almere_local_decisions.json` nog geen lokale beleidskeuzes bevat; gebruik dit als guardrail tegen het presenteren van conceptinvulling als vastgesteld Almeers besluit.
+- Koppel daarna financieringsbronnen aan deze operationele targets, zodat zichtbaar wordt waar meerdere geldstromen, verantwoordelijken of uitvoeringsschalen door elkaar lopen.
+- Voeg daarna een `Werkagenda` of `Operational Targets`-tab toe aan het interne dashboard, met filters voor werkagenda-status, leefgebied, target, Almere, IZA/AZWA-regio Flevoland, financieringsstroom, actor en reviewstatus.
+- Presenteer onduidelijkheden als reviewpunten, niet als vastgestelde taakverdeling of budgetadvies.
+
+Geplande vervolgsprint:
+
+- Sprint 25.2 komt direct na 25.1. De deep-research-notitie `docs/internal/AZWA, IZA and GALA for the Almere case.md` signaleert vooral lokale bron- en rolhiaten. Die horen niet voor de werkagenda-structuur, maar direct erna: zodra de operationele werkagendalaag staat, kunnen de primaire Almeerse documenten en rolbronnen gericht op die laag worden gemapt.
+- Sprint 25.3 volgt daarna voor de nulmeting en capaciteitsbasis per basisfunctionaliteit. De conceptinvulling laat zien dat de structuur van de werkagenda al goed te vullen is, maar dat lokale capaciteit, bestaand aanbod, dekking, fte, wachttijden, wijkspreiding, budget en ingroeipad nog niet besluitvast zijn. Dat is een eigen sprint waard, omdat dit de werkagenda uitvoerbaar maakt.
+- Sprint 25.4 volgt daarna voor D6-governance en samenwerking. Deze is niet hoger dan de werkagenda-, lokale-bron- of nulmetingsprint, maar wel belangrijk genoeg om voor de bredere Almere/Flevoland- en governance-sprints te staan: D6 gaat sterk over rollen, lokale teams, wijkverbanden, sociale basis, GGD, zorgpartijen en regionale samenwerking, terwijl het dashboard nu laat zien dat governance-bronnen relatief dun zijn.
+
 ## Doel
 De website is werkbaar als V1. De volgende ontwikkelfase richt zich daarom niet primair op de gebruikersinterface, maar op betere bronkwaliteit, betere extracties, betere claimstructuur en betere Nederlandse siteteksten.
 
@@ -40,44 +104,6 @@ Elke sprint eindigt met:
 - een lijst van open reviewpunten;
 - testresultaten voor pipeline en site.
 
-## Sprintstatus
-Gebruik deze roadmap als levend werkdocument. Werk na elke sprint de statusregel bij:
-
-- `completed`: uitgevoerd en vastgelegd in een notitie, data-output, codewijziging of controle.
-- `open`: nog niet uitgevoerd of nog niet volledig afgerond.
-- Afgeronde fase- en sprintplannen staan in `docs/completed-plans/`; actieve plannen blijven in de hoofdmap `docs/`.
-- Het interne dashboard `docs/internal/review-dashboard.html` moet de meest actuele sprintstand tonen. Werk bij sprintstatus, huidige planning, cleanup targets, reviewdata, brondekking of publieke updategeschiedenis altijd eerst deze roadmap bij en draai daarna `python src/build_internal_review_dashboard.py` voordat wijzigingen worden vastgelegd.
-
-| Sprint | Status | Vindplaats / opmerking |
-| --- | --- | --- |
-| 24.1 Taxonomie en checklist | completed | `config/data_quality_perspectives.json`, `docs/data-quality-checklist.md` |
-| 24.2 Audit van bestaande site-data | completed | `docs/completed-plans/phase24-sprint24.2-audit.md`, `data/extracted/data_quality_audit.json` |
-| 24.3 Review-dashboard intern | completed | `docs/internal/review-dashboard.html`, `src/build_internal_review_dashboard.py`, `docs/completed-plans/phase24-sprint24.3-review-dashboard.md` |
-| 25.1 Financieringsbronnen | open | Huidige volgende sprint |
-| 25.2 Almere en Flevoland | open |  |
-| 25.3 Regionale governance | open |  |
-| 26.1 PDF- en tabelkwaliteit | open |  |
-| 26.2 Claimtekst schoonmaken | open |  |
-| 26.3 Locatie- en bewijscontrole | open |  |
-| 27.1 Norm | open |  |
-| 27.2 Tijd | open |  |
-| 27.3 Geld | open |  |
-| 27.4 Governance | open |  |
-| 27.5 Locality | open |  |
-| 27.6 Execution | open |  |
-| 28.1 Menselijke samenvattingen per update | open |  |
-| 28.2 Bronverwijzing en autoriteitstaal | open |  |
-| 28.3 Detailpagina's voor drill-down | open |  |
-| 29.1 Tijdlijnregister verdiepen | open |  |
-| 29.2 Begrotings- en verantwoordingscyclus | open |  |
-| 29.3 Handreikingen en uitvoeringsmomenten | open |  |
-| 30.1 Lokale lacunes | open |  |
-| 30.2 Besluitvragen en mogelijke opvolgacties | open |  |
-| 30.3 Beleidsdocumenten en rapporten | open |  |
-| 31.1 Updateprotocol | open |  |
-| 31.2 Maandelijkse bronaudit | open |  |
-| 31.3 Reviewronde met menselijke beoordelaars | open |  |
-
 ## Fase 24 - Kwaliteitskader per perspectief
 Doel: de zes perspectieven omzetten in een vaste beoordelingsstructuur voor bronnen, claims en site-tekst.
 
@@ -106,21 +132,57 @@ Status: completed.
 ## Fase 25 - Bronkwaliteit en bronhiaten
 Doel: de bronbasis versterken, vooral voor geld, tijd, governance en lokale relevantie.
 
-Sprint 25.1: Financieringsbronnen
+Sprint 25.1: Werkagenda- en financieringslaag
 Status: open.
 
+- Bouw eerst een operationele D5-werkagendalaag, zodat financiering kan worden gekoppeld aan concrete doelen, inwonerdiensten en basisfunctionaliteiten.
 - Controleer VWS, VNG, DUS-I, wetten.nl en gemeentefondsbronnen op AZWA, SPUK, meicirculaire, werkagenda en verantwoordingsmomenten.
 - Markeer welke bronnen normatief zijn en welke alleen toelichtend of praktisch zijn.
 - Zoek expliciet naar regels over besteding, reservering, doorschuiven, aanvraag en verantwoording van middelen.
+- Koppel per werkagenda-target mogelijke financieringsstromen, betrokken actoren, locality scope, IST/SOLL/GAP-onderdelen, mijlpalen en reviewvragen.
 
-Sprint 25.2: Almere en Flevoland
+Sprint 25.2: Lokale bronversterking Almere
+Status: open.
+
+- Gebruik `docs/internal/AZWA, IZA and GALA for the Almere case.md` als intern research-signaal, vooral de `Repository quality log`, maar behandel de daarin genoemde externe bevindingen pas als feit nadat de primaire bronnen zelf zijn opgenomen of gecontroleerd.
+- Gebruik ook `docs/internal/conceptinvulling_werkagenda_azwa_almere.md` als intern research-signaal voor bronhiaten; behandel genoemde cijfers, voorbeelden en externe bronclaims pas als feit nadat de primaire bron is opgenomen of gecontroleerd.
+- Vervang waar mogelijk samenvattende contextpagina's door de onderliggende Almeerse beleidsdocumenten voor de Maatschappelijke Agenda en de Visie Gezondheidsbeleid.
+- Zoek en verwerk de lokale raadsbrief `Stand van zaken Gezondheidsbeleid (IZA en GALA)` van 2 februari 2025, als deze openbaar en herleidbaar beschikbaar is.
+- Controleer of de Zorgakkoorden-pagina `Handvatten voor het opstellen van de regionale werkagenda`, de officiele opdracht-PDF, het format en de proces/financieringstoelichting volledig als canonieke bronnen in de bronmanifesten en inventarislaag staan.
+- Haal, waar openbaar en herleidbaar, actuele brondata binnen voor GGD Flevoland Gezondheidsmonitor 2024, de GGD Flevoland valpreventiepagina Almere, ZonMw/Zorgzaam Flevoland, actuele PGA-bronnen en actuele BRP/CBS-bevolkingsgegevens voor capaciteitsberekeningen.
+- Voeg rolbronnen toe of versterk ze voor: expliciete goedkeuring door gemeente of mandaatgemeente bij social-domain onderdelen van integrale transformatieplannen; en de landelijke listing waarin Almere als mandaatgemeente voor het Flevolandse mentale-gezondheidsnetwerk wordt genoemd.
+- Koppel deze bronnen aan locality, governance en execution claims, en markeer waar de bron alleen een onderzoekssignaal geeft in plaats van een vastgestelde lokale keuze.
+- Gebruik deze sprint ook om de door het kwaliteitsrapport genoemde representatieproblemen te triageren: `governance_and_finance.other`, `timeline.other`, onopgeloste conflicten rond lokale teams, digitale/operationele infrastructuur, regionale coordinatie, finance-local alignment en mentale gezondheidsnetwerken.
+
+Sprint 25.3: Nulmeting en capaciteit werkagenda
+Status: open.
+
+- Bouw een nulmetingslaag per basisfunctionaliteit/aanpak, gekoppeld aan de werkagenda-targets uit Sprint 25.1.
+- Leg per target vast: bestaand aanbod, locaties, bereik, capaciteit/fte, wachttijden, aanbieders, huidige financiering, wijk- of stadsdeeldekking, doelgroepomvang en bronstatus.
+- Maak aparte berekenvelden voor landelijke richtwaarden die de bronbasis draagt, zoals verwijzingen per 10.000 inwoners, brugfunctionaris-fte per 10.000 inwoners, valrisico-inschatting bij 65-plussers en jeugd-/ouderenindicatoren. Gebruik actuele BRP/CBS-peildatum en markeer berekeningen als indicatief totdat bestuurlijk gevalideerd.
+- Gebruik actuele GGD 2024-data alleen na opname of verificatie van de primaire tabellenboeken; koppel deze aan overgewicht, valpreventie, eenzaamheid, mentale gezondheid en kwetsbaarheid.
+- Houd PGA-IZA-transformatieplan, AZWA-D5/SPUK-middelen, GALA-afspraken en reguliere gemeentelijke middelen strikt gescheiden om dubbeltelling of verkeerde financieringsclaims te voorkomen.
+- Voeg per target een `decision_needed`-veld toe voor prioritering 2027-2030, schaalkeuze, eigenaar, uitvoerder, budget, monitoring en formele besluitvorming.
+- Markeer expliciet welke onderdelen conceptueel te vullen zijn en welke pas na lokale of regionale besluitvorming verantwoord kunnen worden ingevuld.
+
+Sprint 25.4: D6 governance en samenwerking
+Status: open.
+
+- Versterk bronnen over D6-rolverdeling: gemeente, mandaatgemeente, college, raad, GGD, welzijn, sociaal werk, huisartsen/eerstelijn, zorgverzekeraar, wijkteams/lokale teams en regionale samenwerkingsverbanden.
+- Zoek expliciete bronpassages over wie besluit, wie coordineert, wie uitvoert, wie financiert, wie monitort en wie aanspreekbaar is bij lokale teams, hechte wijkverbanden, inloopvoorzieningen en sociale basis.
+- Splits governanceclaims in besluitvorming, samenwerking, uitvoering, verantwoording en monitoring, zodat D6 niet alleen als inhoudelijke infrastructuur maar ook als verantwoordelijkheidsmodel zichtbaar wordt.
+- Controleer of `d6.local_teams`, `d6.basisinfrastructuur`, `d6.regional_coordination`, `municipal.role_allocation` en `governance.regional_coordination` genoeg bronbasis hebben voor Almere/Flevoland-duiding.
+- Voeg reviewpunten toe waar de bronbasis alleen samenwerking noemt maar geen expliciete taak- of besluitverdeling geeft.
+- Laat het interne dashboard D6-governance als apart aandachtspunt tonen als de brondekking of claimduiding zwak blijft.
+
+Sprint 25.5: Almere en Flevoland
 Status: open.
 
 - Zoek bestuurlijke agenda's, raadsinformatie, begrotingsstukken en lokale beleidsdocumenten die AZWA, IZA, GALA, preventie, sociaal domein of gezondheid raken.
 - Voeg alleen bronnen toe die openbaar en herleidbaar zijn.
 - Leg vast waar landelijke doelen nog niet zichtbaar lokaal zijn overgenomen.
 
-Sprint 25.3: Regionale governance
+Sprint 25.6: Regionale governance
 Status: open.
 
 - Versterk bronnen over mandaatgemeente, regio, zorgverzekeraar, GGD, regionale preventie-infrastructuur en werkagenda.
@@ -305,17 +367,18 @@ Een verbetering is pas klaar als:
 - de update een menselijke changelog heeft.
 
 ## Huidige volgende sprint
-De beste eerstvolgende sprint is Sprint 25.1: Financieringsbronnen.
+De beste eerstvolgende sprint is Sprint 25.1: Werkagenda- en financieringslaag.
 
 Waarom:
 
 - Sprint 24.1 heeft de taxonomie en checklist opgeleverd;
 - Sprint 24.2 heeft een interne auditbasis opgeleverd;
 - Sprint 24.3 heeft een lokaal intern review-dashboard opgeleverd;
-- de volgende stap is het versterken van de bronbasis rond middelen, SPUK, meicirculaire, werkagenda en verantwoordingsmomenten.
+- de volgende stap is het versterken van de werkagenda-operatielaag en daarna de koppeling met middelen, SPUK, meicirculaire en verantwoordingsmomenten.
 
 De concrete deliverables zijn:
 
+- een D5-werkagenda operationele datalaag met targets, leefgebieden, IST/SOLL/GAP, rollen, mijlpalen en reviewvragen;
 - een gecontroleerde lijst met financieringsbronnen;
 - bronlabels voor normatieve, toelichtende en praktische financieringsinformatie;
 - expliciete reviewpunten voor besteding, reservering, doorschuiven, aanvraag en verantwoording van middelen;

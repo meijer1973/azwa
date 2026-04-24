@@ -244,12 +244,32 @@
       ]
     },
     {
+      "stage_id": "phase24_data_quality_audit",
+      "kind": "script",
+      "description": "Audit current claims and site-data against the six quality perspectives, broad rest buckets, and rough publication text risks.",
+      "script": "src/build_data_quality_audit.py",
+      "depends_on": [
+        "phase12_site_view_models"
+      ],
+      "inputs": [
+        "config/data_quality_perspectives.json",
+        "data/extracted/claims/claims_master.jsonl",
+        "data/extracted/claims/current_interpretation.json",
+        "data/extracted/review_queue.json",
+        "data/site",
+        "src/build_data_quality_audit.py"
+      ],
+      "outputs": [
+        "data/extracted/data_quality_audit.json"
+      ]
+    },
+    {
       "stage_id": "phase13_site_render",
       "kind": "script",
       "description": "Render the static executive site, search index, and public assets for GitHub Pages deployment.",
       "script": "src/render_site.py",
       "depends_on": [
-        "phase12_site_view_models"
+        "phase24_data_quality_audit"
       ],
       "inputs": [
         "assets/site.css",

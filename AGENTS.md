@@ -21,3 +21,4 @@
 - `docs/rapporten/schrijfrichtlijn-plan-van-aanpak.md`: style and structure guidance for Dutch municipal `plan van aanpak` documents.
 - `docs/data-quality-checklist.md`: working checklist for applying the Norm, Time, Money, Governance, Locality, and Execution perspectives during source and site improvement.
 - `docs/phase24-data-quality-roadmap.md`: long-term roadmap for improving source quality, claim quality, timeline quality, and public-facing site text along the perspectives Norm, Time, Money, Governance, Locality, and Execution.
+- `docs/phase24-sprint24.2-audit.md`: internal note for the Sprint 24.2 audit, including where the saved audit output lives and how to use it in later cleanup sprints.

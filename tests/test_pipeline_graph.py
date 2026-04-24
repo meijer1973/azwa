@@ -46,6 +46,7 @@ class PipelineGraphTests(unittest.TestCase):
         phase1_inputs = set(self.stage_map["phase1_document_inventory"]["inputs"])
         phase2_inputs = set(self.stage_map["phase2_structural_extractions"]["inputs"])
         phase12_inputs = set(self.stage_map["phase12_site_view_models"]["inputs"])
+        phase24_inputs = set(self.stage_map["phase24_data_quality_audit"]["inputs"])
 
         self.assertIn("data/raw/manifest.json", phase1_inputs)
         self.assertIn("data/raw/national", phase2_inputs)
@@ -53,6 +54,12 @@ class PipelineGraphTests(unittest.TestCase):
         self.assertIn("data/raw/municipal", phase2_inputs)
         self.assertIn("config/timeline_curation.json", phase12_inputs)
         self.assertIn("config/site_updates.json", phase12_inputs)
+        self.assertIn("data/site", phase24_inputs)
+        self.assertIn("data/extracted/review_queue.json", phase24_inputs)
+
+    def test_render_stage_depends_on_data_quality_audit(self) -> None:
+        render_stage = self.stage_map["phase13_site_render"]
+        self.assertIn("phase24_data_quality_audit", render_stage["depends_on"])
 
 
 if __name__ == "__main__":

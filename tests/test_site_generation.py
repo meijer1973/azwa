@@ -18,6 +18,7 @@ REFERENCE_VIEW_PATH = REPO_ROOT / "data" / "site" / "site_reference_view.json"
 SOURCES_VIEW_PATH = REPO_ROOT / "data" / "site" / "site_sources_view.json"
 UPDATES_VIEW_PATH = REPO_ROOT / "data" / "site" / "site_updates_view.json"
 SITE_MANIFEST_PATH = REPO_ROOT / "data" / "site" / "site_manifest.json"
+DATA_QUALITY_AUDIT_PATH = REPO_ROOT / "data" / "extracted" / "data_quality_audit.json"
 DATA_QUALITY_CONFIG_PATH = REPO_ROOT / "config" / "data_quality_perspectives.json"
 SOURCE_INTAKE_CANDIDATES_PATH = REPO_ROOT / "data" / "raw" / "source_intake_candidates.json"
 DECISION_DIR = REPO_ROOT / "data" / "site" / "decision_view_models"
@@ -51,6 +52,7 @@ class SiteGenerationTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         subprocess.run([sys.executable, "src/build_site_view_models.py"], cwd=REPO_ROOT, check=True)
+        subprocess.run([sys.executable, "src/build_data_quality_audit.py"], cwd=REPO_ROOT, check=True)
         subprocess.run([sys.executable, "src/render_site.py"], cwd=REPO_ROOT, check=True)
 
     def test_site_view_model_outputs_exist(self) -> None:
@@ -64,6 +66,7 @@ class SiteGenerationTests(unittest.TestCase):
         self.assertTrue(REFERENCE_VIEW_PATH.exists())
         self.assertTrue(SOURCES_VIEW_PATH.exists())
         self.assertTrue(UPDATES_VIEW_PATH.exists())
+        self.assertTrue(DATA_QUALITY_AUDIT_PATH.exists())
         self.assertGreater(len(list(DECISION_DIR.glob("*.json"))), 0)
         self.assertGreater(len(list(ACTION_DIR.glob("*.json"))), 0)
         self.assertGreater(len(list(THEME_DIR.glob("*.json"))), 0)
@@ -88,6 +91,32 @@ class SiteGenerationTests(unittest.TestCase):
         )
         self.assertIn("config/data_quality_perspectives.json", checklist)
         self.assertIn("data/site/*.json", checklist)
+
+    def test_data_quality_audit_surfaces_broad_topics_and_rough_claims(self) -> None:
+        audit = load_json(DATA_QUALITY_AUDIT_PATH)
+
+        broad_topics = {item["topic"] for item in audit["topic_bucket_audit"]["broad_rest_topics"]}
+        rough_issue_counts = audit["rough_publication_claims"]["issue_counts"]
+        rough_claim_ids = {item["claim_id"] for item in audit["rough_publication_claims"]["claims"]}
+        site_risk_paths = {item["path"] for item in audit["site_text_risks"]["files"]}
+
+        self.assertEqual(audit["audit_run_id"], "phase24_data_quality_audit_v1")
+        self.assertIn("timeline.other", broad_topics)
+        self.assertIn("monitoring.other", broad_topics)
+        self.assertIn("governance_and_finance.other", broad_topics)
+        self.assertIn("d5.other", broad_topics)
+        self.assertIn("d6.other", broad_topics)
+        self.assertGreater(rough_issue_counts["english_summary"], 0)
+        self.assertGreater(rough_issue_counts["raw_letterhead"], 0)
+        self.assertIn("clm__nat_azwa_2026_cw31_kamerbrief_d5_002", rough_claim_ids)
+        self.assertIn("data/site/decision_view_models/dec_d5_prioritering.json", site_risk_paths)
+        self.assertIn("data/site/site_home_view.json", site_risk_paths)
+
+    def test_data_quality_audit_tracks_unmapped_topics(self) -> None:
+        audit = load_json(DATA_QUALITY_AUDIT_PATH)
+        topic_mapping_gaps = {item["topic"] for item in audit["perspective_coverage"]["claims"]["topic_mapping_gaps"]}
+        self.assertIn("governance_and_finance.other", topic_mapping_gaps)
+        self.assertGreaterEqual(audit["summary"]["claims_without_perspectives"], 1)
 
     def test_site_view_models_carry_quality_perspectives(self) -> None:
         decision = load_json(DECISION_DIR / "dec_d5_prioritering.json")

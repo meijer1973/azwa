@@ -21,6 +21,7 @@ PERSPECTIVES_PATH = CONFIG_DIR / "data_quality_perspectives.json"
 REGIONAL_ROLES_PATH = DATA_DIR / "curated" / "regional_roles_and_splits_almere_flevoland.json"
 ROADMAP_PATH = DOCS_DIR / "phase24-data-quality-roadmap.md"
 SITE_UPDATES_PATH = DATA_DIR / "site" / "site_updates_view.json"
+WORKAGENDA_D5_PATH = EXTRACTED_DIR / "workagenda_d5_operational_requirements.json"
 OUTPUT_PATH = DOCS_DIR / "internal" / "review-dashboard.html"
 
 ISSUE_TYPES = {
@@ -560,6 +561,7 @@ def build_dashboard_data() -> dict[str, Any]:
     perspective_config = load_json(PERSPECTIVES_PATH)
     regional_roles = load_json(REGIONAL_ROLES_PATH) if REGIONAL_ROLES_PATH.exists() else None
     public_updates = load_json(SITE_UPDATES_PATH) if SITE_UPDATES_PATH.exists() else {"updates": []}
+    workagenda_d5 = load_json(WORKAGENDA_D5_PATH) if WORKAGENDA_D5_PATH.exists() else {}
     sprint_ledger = parse_sprint_ledger()
     claims = load_claims()
     claim_index = {claim["claim_id"]: claim for claim in claims}
@@ -583,6 +585,8 @@ def build_dashboard_data() -> dict[str, Any]:
         repo_path(ROADMAP_PATH),
         repo_path(SITE_UPDATES_PATH),
     ]
+    if workagenda_d5:
+        source_paths.append(repo_path(WORKAGENDA_D5_PATH))
     if regional_roles:
         source_paths.append(repo_path(REGIONAL_ROLES_PATH))
 
@@ -629,6 +633,11 @@ def build_dashboard_data() -> dict[str, Any]:
             "title": public_updates.get("title", "Updates"),
             "updates": public_updates.get("updates") or [],
         },
+        "workagenda_d5": {
+            "path": repo_path(WORKAGENDA_D5_PATH),
+            "href": output_relative_link(repo_path(WORKAGENDA_D5_PATH)),
+            **workagenda_d5,
+        } if workagenda_d5 else {},
         "regional_guardrails": {
             "path": "docs/regional-roles-and-splits-almere-flevoland.md",
             "href": output_relative_link("docs/regional-roles-and-splits-almere-flevoland.md"),
@@ -853,6 +862,7 @@ def render_html(data: dict[str, Any]) -> str:
   </header>
   <nav class="tabbar" aria-label="Dashboard tabs">
     <button class="tab-button active" type="button" data-tab="overview">Overview</button>
+    <button class="tab-button" type="button" data-tab="workagenda">Werkagenda</button>
     <button class="tab-button" type="button" data-tab="sprint-history">Sprint History</button>
     <button class="tab-button" type="button" data-tab="public-updates">Public Updates Mirror</button>
     <button class="tab-button" type="button" data-tab="open-items">Open Items</button>
@@ -912,6 +922,24 @@ def render_html(data: dict[str, Any]) -> str:
       <section>
         <h2>Sprint History</h2>
         <div id="sprintHistory"></div>
+      </section>
+    </div>
+
+    <div class="tab-panel" data-tab-panel="workagenda" hidden>
+      <section>
+        <h2>D5 Werkagenda Operational Layer</h2>
+        <p class="subtle">Internal mirror of <a id="workagendaSourceLink" href="#"><code id="workagendaSourcePath"></code></a>. Concept status is a review aid, not an adopted Almere decision.</p>
+        <div class="metrics" id="workagendaMetrics"></div>
+      </section>
+
+      <section>
+        <h2>Targets</h2>
+        <div id="workagendaTargets"></div>
+      </section>
+
+      <section>
+        <h2>Finance Guardrails</h2>
+        <div id="workagendaFinance"></div>
       </section>
     </div>
 
@@ -1128,6 +1156,48 @@ def render_html(data: dict[str, Any]) -> str:
       byId('publicUpdates').innerHTML = `<p class="subtle">As of ${{esc(publicUpdates.as_of_date || '')}}, generated ${{esc(publicUpdates.generated_on || '')}}.</p>${{updateCards}}`;
     }}
 
+    function renderWorkagenda() {{
+      const workagenda = DATA.workagenda_d5 || {{}};
+      byId('workagendaSourceLink').href = workagenda.href || '#';
+      byId('workagendaSourcePath').textContent = workagenda.path || '';
+      const targets = workagenda.targets || [];
+      const required = targets.filter(target => target.required_in_workagenda).length;
+      const statuses = new Set(targets.map(target => target.workagenda_status));
+      const reviewThemes = workagenda.open_review_themes || [];
+      byId('workagendaMetrics').innerHTML = [
+        ['Targets', targets.length],
+        ['Required', required],
+        ['Status groups', statuses.size],
+        ['Review themes', reviewThemes.length],
+        ['Run', workagenda.layer_run_id || '']
+      ].map(([label, value]) => `<div class="metric"><strong>${{esc(value)}}</strong><span>${{esc(label)}}</span></div>`).join('');
+
+      if (!targets.length) {{
+        byId('workagendaTargets').innerHTML = '<p class="empty">No workagenda layer generated yet.</p>';
+      }} else {{
+        byId('workagendaTargets').innerHTML = `<table>
+          <thead><tr><th>Target</th><th>Status</th><th>Scale / finance</th><th>Review questions</th></tr></thead>
+          <tbody>${{targets.map(target => `
+            <tr>
+              <td><strong>${{esc(target.title)}}</strong><br><code>${{esc(target.target_id)}}</code><br><span class="subtle">${{esc(target.leefgebied || '')}}</span></td>
+              <td>${{target.required_in_workagenda ? '<span class="pill accent">Required</span>' : '<span class="pill">Conditional</span>'}}<br><code>${{esc(target.workagenda_status || '')}}</code><br><span class="subtle">${{esc(target.almere_concept_status || '')}}</span></td>
+              <td><span class="subtle">${{esc(target.scale_hint || '')}}</span><br>${{(target.finance_stream_hints || []).map(stream => `<span class="tag issue">${{esc(stream)}}</span>`).join('')}}</td>
+              <td><ul class="compact">${{(target.review_questions || []).slice(0, 3).map(question => `<li>${{esc(question)}}</li>`).join('')}}</ul></td>
+            </tr>`).join('')}}</tbody>
+        </table>`;
+      }}
+
+      const finance = ((workagenda.finance_linking_model || {{}}).finance_streams || []);
+      byId('workagendaFinance').innerHTML = finance.length ? `<table>
+        <thead><tr><th>Stream</th><th>Status</th><th>Claims</th></tr></thead>
+        <tbody>${{finance.map(stream => `<tr>
+          <td><strong>${{esc(stream.label || stream.stream_id)}}</strong><br><code>${{esc(stream.stream_id || '')}}</code></td>
+          <td>${{esc(stream.status || '')}}</td>
+          <td>${{(stream.source_claim_ids || []).slice(0, 5).map(id => `<code>${{esc(id)}}</code>`).join(' ')}}</td>
+        </tr>`).join('')}}</tbody>
+      </table><p class="subtle">${{esc((workagenda.finance_linking_model || {{}}).review_rule || '')}}</p>` : '<p class="empty">No finance streams recorded.</p>';
+    }}
+
     function countFor(items, predicate) {{
       return items.filter(predicate).length;
     }}
@@ -1260,6 +1330,7 @@ def render_html(data: dict[str, Any]) -> str:
     renderSprintLedger();
     renderSprintHistory();
     renderPublicUpdates();
+    renderWorkagenda();
     renderRegional();
     renderCleanupTargets();
     render();

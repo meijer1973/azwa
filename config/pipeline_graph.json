@@ -144,14 +144,34 @@
       ]
     },
     {
+      "stage_id": "phase25_1_workagenda_operational_layer",
+      "kind": "script",
+      "description": "Build the operational D5 workagenda target layer from workagenda, format, process, and finance claims.",
+      "script": "src/build_workagenda_d5_operational_requirements.py",
+      "depends_on": [
+        "phase4_claims_all_docs",
+        "phase1_document_inventory"
+      ],
+      "inputs": [
+        "data/extracted/claims/claims_master.jsonl",
+        "data/extracted/document_inventory.json",
+        "src/build_workagenda_d5_operational_requirements.py"
+      ],
+      "outputs": [
+        "data/extracted/workagenda_d5_operational_requirements.json"
+      ]
+    },
+    {
       "stage_id": "phase7_phase8_master_views",
       "kind": "script",
       "description": "Generate the D5/D6 master model plus the computed Almere view and decision shell.",
       "script": "src/build_master_views.py",
       "depends_on": [
-        "phase6_current_interpretation"
+        "phase6_current_interpretation",
+        "phase25_1_workagenda_operational_layer"
       ],
       "inputs": [
+        "data/extracted/workagenda_d5_operational_requirements.json",
         "src/build_master_views.py"
       ],
       "outputs": [

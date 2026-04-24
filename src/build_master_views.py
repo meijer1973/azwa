@@ -17,6 +17,7 @@ CLAIMS_MASTER_PATH = CLAIMS_DIR / "claims_master.jsonl"
 MASTER_OUTPUT_PATH = CLAIMS_DIR / "d5_d6_master.json"
 ALMERE_CURRENT_VIEW_PATH = MUNICIPAL_DIR / "almere_current_view.json"
 ALMERE_LOCAL_DECISIONS_PATH = MUNICIPAL_DIR / "almere_local_decisions.json"
+WORKAGENDA_D5_PATH = REPO_ROOT / "data" / "extracted" / "workagenda_d5_operational_requirements.json"
 
 MASTER_VIEW_RUN_ID = "phase7_phase8_views_v2"
 TODAY = date.today().isoformat()
@@ -28,6 +29,12 @@ def load_json(path: Path) -> dict:
 
 def load_jsonl(path: Path) -> list[dict]:
     return [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
+
+
+def load_optional_json(path: Path) -> dict:
+    if not path.exists():
+        return {}
+    return load_json(path)
 
 
 def dedupe(values: list) -> list:
@@ -235,10 +242,35 @@ def uncertain_items(topic_map: dict[str, dict], document_map: dict[str, dict], c
     return items
 
 
-def build_d5_master(topic_map: dict[str, dict], claim_map: dict[str, dict], document_map: dict[str, dict]) -> dict:
+def workagenda_targets_by_status(workagenda: dict, *statuses: str) -> list[dict]:
+    status_set = set(statuses)
+    return [
+        target
+        for target in workagenda.get("targets", [])
+        if target.get("workagenda_status") in status_set
+    ]
+
+
+def target_titles(targets: list[dict]) -> list[str]:
+    return [target["title"] for target in targets]
+
+
+def build_d5_master(
+    topic_map: dict[str, dict],
+    claim_map: dict[str, dict],
+    document_map: dict[str, dict],
+    workagenda: dict,
+) -> dict:
     definition_claims = current_claims_for("d5.definition", topic_map, claim_map)
     underbouwde_claims = current_claims_for("d5.basisfunctionaliteiten_onderbouwd", topic_map, claim_map)
     ontwikkelagenda_claims = current_claims_for("d5.ontwikkelagenda", topic_map, claim_map)
+    basis_targets = workagenda_targets_by_status(workagenda, "basisfunctionaliteit")
+    ontwikkelagenda_1_targets = workagenda_targets_by_status(
+        workagenda,
+        "ontwikkelagenda_1_lopend",
+        "ontwikkelagenda_1_nieuw_conditioneel",
+    )
+    optional_targets = workagenda_targets_by_status(workagenda, "optioneel_geen_landelijke_financiering")
 
     leefgebieden = []
     if definition_claims:
@@ -259,26 +291,39 @@ def build_d5_master(topic_map: dict[str, dict], claim_map: dict[str, dict], docu
         },
         "basisfunctionaliteiten_onderbouwd": {
             **topic_bundle("d5.basisfunctionaliteiten_onderbouwd", topic_map, claim_map, document_map),
-            "known_items": keyword_items(
+            "known_items": target_titles(basis_targets),
+            "legacy_keyword_items": keyword_items(
                 underbouwde_claims + ontwikkelagenda_claims,
                 ["sociaal verwijzen", "valpreventie"],
             ),
+            "operational_targets": basis_targets,
         },
         "ontwikkelagenda_1": {
             **topic_bundle("d5.ontwikkelagenda", topic_map, claim_map, document_map),
-            "known_items": [],
+            "known_items": target_titles(ontwikkelagenda_1_targets),
             "coverage_note": (
-                "The current corpus confirms that a development agenda exists, but it does not yet enumerate the specific ontwikkelagenda 1 items individually."
+                "Sprint 25.1 adds an operational workagenda layer that names current and conditional ontwikkelagenda 1 targets from the workagenda sources. Local adoption still needs review."
             ),
+            "operational_targets": ontwikkelagenda_1_targets,
             "needs_human_review": True,
         },
         "ontwikkelagenda_2": {
             **topic_bundle("d5.ontwikkelagenda", topic_map, claim_map, document_map),
-            "known_items": [],
+            "known_items": target_titles(optional_targets),
             "coverage_note": (
-                "The current corpus does not yet split named items between ontwikkelagenda 1 and deel 2, so this section stays intentionally incomplete."
+                "Optional or broader initiatives can be included pragmatically, but this layer marks them separately because the workagenda sources do not make them required D5 basisfunctionaliteiten with national financing."
             ),
+            "operational_targets": optional_targets,
             "needs_human_review": True,
+        },
+        "workagenda_operational_layer": {
+            "path": "data/extracted/workagenda_d5_operational_requirements.json" if workagenda else None,
+            "layer_run_id": workagenda.get("layer_run_id"),
+            "target_count": workagenda.get("target_count", 0),
+            "required_target_count": workagenda.get("required_target_count", 0),
+            "source_policy": workagenda.get("source_policy", {}),
+            "repository_guardrails": workagenda.get("repository_guardrails", {}),
+            "open_review_themes": workagenda.get("open_review_themes", []),
         },
         "implementation_requirements": [
             topic_bundle("d5.regional_workagenda", topic_map, claim_map, document_map),
@@ -545,6 +590,7 @@ def build_master_payload(
     document_map: dict[str, dict],
     conflict_register: dict,
     current_interpretation: dict,
+    workagenda: dict,
 ) -> dict:
     return {
         "view_run_id": MASTER_VIEW_RUN_ID,
@@ -552,7 +598,7 @@ def build_master_payload(
         "as_of_date": current_interpretation["as_of_date"],
         "source_interpretation_run_id": current_interpretation["interpretation_run_id"],
         "source_claim_extraction_runs": current_interpretation["source_claim_extraction_runs"],
-        "d5": build_d5_master(topic_map, claim_map, document_map),
+        "d5": build_d5_master(topic_map, claim_map, document_map, workagenda),
         "d6": build_d6_master(topic_map, claim_map, document_map),
         "finance": {
             "macro_framework": topic_bundle("finance.azwa_macro_framework", topic_map, claim_map, document_map),
@@ -568,6 +614,7 @@ def build_master_payload(
             "regional_transformation_timing": topic_bundle("timeline.flevoland_transformatieagenda", topic_map, claim_map, document_map),
             "almere_local_horizon": topic_bundle("timeline.almere_2029", topic_map, claim_map, document_map),
         },
+        "workagenda_d5": workagenda,
         "open_questions": build_open_questions(topic_map),
         "unresolved_conflicts": unresolved_conflicts(conflict_register),
     }
@@ -661,6 +708,7 @@ def initialize_local_decisions_file() -> None:
 def main() -> None:
     current_interpretation = load_json(CURRENT_INTERPRETATION_PATH)
     conflict_register = load_json(CONFLICT_REGISTER_PATH)
+    workagenda = load_optional_json(WORKAGENDA_D5_PATH)
     topic_map = topic_map_from_interpretation()
     claim_map = claim_map_from_master()
     document_map = load_document_map()
@@ -671,6 +719,7 @@ def main() -> None:
         document_map,
         conflict_register,
         current_interpretation,
+        workagenda,
     )
     almere_current_view = build_almere_current_view_payload(
         topic_map,

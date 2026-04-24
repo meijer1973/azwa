@@ -1,260 +1,432 @@
-# Research agent map — AZWA / IZA / GALA corpus (Almere focus)
+# Research Agent Map
 
-This repository curates and structures policy documents on the Dutch **Aanvullend Zorg- en Welzijnsakkoord (AZWA)**, its predecessors the **Integraal Zorgakkoord (IZA)** and **Gezond en Actief Leven Akkoord (GALA)**, the **CW 3.1 frameworks** for D5/D6 building blocks, and the **Almere / Flevoland** implementation context. It exposes both the raw corpus and a layered set of derived data products.
+Agent-executable navigation and access specification for the AZWA / IZA / GALA corpus and derived data layers.
 
-**Repository location:** https://github.com/meijer1973/azwa
+## Access Layer
 
-If you are a research agent working on a deep-research task over this corpus, read this file first. It tells you what exists, where to look, and how the pieces relate.
+Base URL:
 
----
-
-## Quick orientation
-
-- **Domain:** Dutch zorg-en-welzijn (health & social-care) policy — national, regional (Flevoland), municipal (Almere).
-- **Language:** All source documents and extractions are in **Dutch**. Queries, keywords, and claim text are Dutch; write search terms accordingly (e.g. *"basisinfrastructuur"*, *"middelen"*, *"uitvoeringscapaciteit"*, *"transformatiemiddelen"*, *"regioplan"*).
-- **Time span:** IZA (2022) → GALA (2023) → AZWA onderhandelaarsakkoord (2025) → AZWA definitief + CW 3.1-kaders (2025–2026) → Almere PGA / begroting (2024–2026).
-- **Corpus size:** 18 numbered sources; 33 per-document structured extractions; one master claims register.
-- **What this is not:** not a public website. The repo also *builds* a static site (`dist/`), but that output is generated and not authoritative — always read from sources and data layers, not from `dist/`.
-- **Regional caution:** do not treat "Flevoland", "de regio", "mandaatgemeente", GGD-regio, zorgkantoorregio, ROAZ and practical execution as interchangeable. Read `docs/regional-roles-and-splits-almere-flevoland.md` before drawing regional conclusions.
-
----
-
-## Key acronyms
-
-| Term | Meaning |
-|------|---------|
-| AZWA | Aanvullend Zorg- en Welzijnsakkoord (2025) — the agreement this repo centers on |
-| IZA | Integraal Zorgakkoord (2022) — predecessor framework for healthcare agreements |
-| GALA | Gezond en Actief Leven Akkoord (2023) — prevention/healthy-living agreement |
-| D5 | AZWA building block 5 — basisfunctionaliteiten (functional services) |
-| D6 | AZWA building block 6 — basisinfrastructuur (digital/organizational infrastructure) |
-| CW 3.1 | Comptabiliteitswet art. 3.1 — framework for assessing policy instruments (used for D5/D6) |
-| PGA | Positief Gezond Almere — Almere's local transformation programme |
-| SPUK | Specifieke Uitkering — earmarked grant mechanism (transformatiemiddelen) |
-| VNG | Vereniging van Nederlandse Gemeenten — national municipal association (publisher of ledenbrieven, FAQs) |
-| VWS | Ministerie van Volksgezondheid, Welzijn en Sport |
-| BZK | Ministerie van Binnenlandse Zaken en Koninkrijksrelaties (gemeentefonds) |
-| DUS-I | Dienst Uitvoering Subsidies aan Instellingen (executes SPUK regelingen) |
-
----
-
-## Repository structure
-
-The repo has two kinds of content:
-
-1. **Source corpus** — primary policy documents (PDFs) and their markdown extractions. Numbered `01`..`18`.
-2. **Data layers** — pipeline outputs derived from the corpus, in progressive stages: `raw → intermediate → extracted → site`.
-
-All paths below are relative to the repo root (`C:\Projects\azwa\` locally, or the root of https://github.com/meijer1973/azwa on GitHub).
-
-Build plumbing (source code, tests, rendered site output, pipeline config, phase docs) is intentionally omitted from this map — agents doing research on the AZWA/IZA/GALA/Almere case should look here first.
-
-### Entry points
-
-```
-RESEARCH_AGENT_MAP.md                 First-read map for research agents
-README.md                           Project overview
-AGENTS.md                           Guidance for agents working in this repo
-source-curation.md                  Which source files are canonical vs context; preferred replacements
-source-curation.json                Same curation as structured data
-sources/manifest.json               Mapping of source index (01..18) → source_url + saved file names
+```text
+https://raw.githubusercontent.com/meijer1973/azwa/main/
 ```
 
-Start with `source-curation.md` + `sources/manifest.json`. Together they tell you which 18 sources exist, where they came from, and which markdown extraction to prefer.
+Agents MUST construct file URLs as:
 
-### Source corpus (primary documents)
-
-Six parallel directories hold the same 18 sources in different forms. Note the **space** in folder names.
-
-```
-sources/                            Original downloads: .html landing pages + .pdf primary docs (01..18)
-sources canonical/                  Subset recommended as canonical raw archive (PDFs only for doc-backed sources)
-sources context/                    Supporting/context sources only (06 ledenbrief, 13–16 municipal gateways)
-sources markdown/                   Markdown extraction of every source (full set, including duplicates)
-sources markdown canonical/         Markdown of the canonical subset — PREFERRED TEXT BASIS for JSON extractions
-sources markdown context/           Markdown of context-only sources
+```text
+<base_url><relative_path>
 ```
 
-**Recommendation (from `source-curation.md`):** for textual evidence, read `sources markdown canonical/`. Treat `sources markdown context/` as supporting material. Use `sources canonical/` PDFs only when page/line fidelity matters.
+Example:
 
-#### The 18 sources (stable index → topic)
-
-| # | Topic | Origin |
-|---|-------|--------|
-| 01 | Aanvullend Zorg- en Welzijnsakkoord (AZWA) — definitief | rijksoverheid.nl |
-| 02 | Kamerbrief aanbieding AZWA | rijksoverheid.nl |
-| 03 | Kamerbrief CW 3.1-kaders voor AZWA-onderdelen | rijksoverheid.nl |
-| 04 | CW 3.1-kader basisfunctionaliteiten & basisinfrastructuur (D5/D6) | rijksoverheid.nl |
-| 05 | Kamerbrief voortgang IZA en AZWA | rijksoverheid.nl |
-| 06 | Onderhandelaarsakkoord AZWA (+ VNG ledenbrief, context) | vng.nl / rijksoverheid.nl |
-| 07 | VNG FAQ — middelen AZWA | vng.nl |
-| 08 | VNG FAQ — uitvoeringscapaciteit AZWA | vng.nl |
-| 09 | Integraal Zorgakkoord (IZA) 2022 | rijksoverheid.nl |
-| 10 | Gezond en Actief Leven Akkoord (GALA) 2023 | rijksoverheid.nl |
-| 11 | Regiobeeld Flevoland 2023 | regional |
-| 12 | Regioplan IZA Flevoland — ZorgzaamFlevoland 2023 | regional |
-| 13 | Informatiepagina sociaal domein (Almere, context) | almere.nl |
-| 14 | Sociale Staat van Almere — gateway page (context) | almere.nl |
-| 15 | Maatschappelijke Agenda 2024–2034 — council summary (context) | almere.nl |
-| 16 | Visie Gezondheidsbeleid Almere 2024–2026 — council summary (context) | almere.nl |
-| 17 | Transformatieplan Positief Gezond Almere (PGA) | positiefgezondalmere.nl |
-| 18 | Beleidstheorie & businesscase PGA — SEO / Wouter Vermeulen 2021 | SEO report |
-
-Filename pattern in each `sources*/` folder: `<NN>-<slug>__<doc-id>.<ext>` (long form) or `<NN>-<slug>.<ext>` (short form, drops the doc-id). The long form is the actual document; the short form is typically the HTML landing page or a redundant export. See `sources/manifest.json` for the authoritative list of saved files per source.
-
-### Data layer: raw intake
-
-```
-data/raw/
-├── manifest.json                       Intake manifest
-├── source_intake_candidates.json       Queue of candidate sources under evaluation
-├── municipal/                          Municipal (Almere) raw captures
-├── national/                           National (Rijk / VNG / ministries) raw captures
-└── regional/                           Regional (Flevoland) raw captures
+```text
+sources/manifest.json ->
+https://raw.githubusercontent.com/meijer1973/azwa/main/sources/manifest.json
 ```
 
-Use when you need to trace a source back to its intake record.
+Access rules:
 
-### Data layer: intermediate extractions
+- All file references in this document are relative paths from the repository root.
+- Use forward slashes in constructed URLs.
+- Preserve spaces in relative paths; URL-encode them only when required by the HTTP client.
+- Directories are path namespaces, not fetch targets.
+- Fetch files only by declared path, manifest mapping, or declared path template.
 
-```
-data/intermediate/
-├── source_markdown/                    Per-source markdown normalized for pipeline use
-├── text/                               Flat-text extractions
-├── chunks/                             Chunked text for retrieval (per source)
-└── tables/                             Extracted tables (per source)
-```
+## Entry Points
 
-Not the primary search surface — prefer `sources markdown canonical/` for human-readable text. Chunks/tables are useful when you need structure rather than prose.
+Human-readable:
 
-### Data layer: structured extractions (main research surface)
+- `source-curation.md`
+- `sources/manifest.json`
 
-```
-data/extracted/
-├── documents/                          Per-document structured JSON (one file per source)
-├── claims/                             Per-document claim extractions + master registers
-├── municipal/                          Almere-specific composed views
-├── document_inventory.json             Index of all extracted documents (start here)
-├── data_quality_audit.json             Sprint 24.2 data-quality audit results
-├── qc_report.json                      Quality-control report across all extractions
-└── review_queue.json                   Items flagged for human review
-```
+Machine-readable:
 
-#### Naming convention (documents/, claims/)
-
-Every file under `data/extracted/documents/` and `data/extracted/claims/` is named `<scope>_<slug>.json` where `<scope>` is:
-
-- `nat_` — national policy (AZWA, IZA, GALA, CW 3.1, VNG / VWS / BZK documents)
-- `reg_` — regional (Flevoland regiobeeld, regioplan IZA)
-- `mun_` — municipal (Almere: visie gezondheidsbeleid, maatschappelijke agenda, PGA, begroting, raadskalender, etc.)
-
-The **same slug** appears in both `documents/` (document-level extraction: metadata, sections, key statements) and `claims/` (atomic claims with provenance). So `documents/nat_iza_2022_integraal_zorgakkoord.json` pairs with `claims/nat_iza_2022_integraal_zorgakkoord.json`.
-
-#### Key aggregated files in `data/extracted/claims/`
-
-```
-claims/claims_master.jsonl                     All claims from all sources, one per line
-claims/conflict_register.json                  Claims that conflict across sources
-claims/current_interpretation.json             Resolved "current best interpretation"
-claims/d5_d6_master.json                       D5/D6-specific consolidated claims
+```json
+{
+  "entry_points": [
+    "source-curation.json",
+    "sources/manifest.json"
+  ]
+}
 ```
 
-### Data layer: site view models (pre-composed topical views)
+## Machine Index
 
-```
-data/site/
-├── site_manifest.json                  Site structure manifest
-├── dashboard_view.json                 Dashboard composition
-├── site_home_view.json                 Home page composition
-├── site_almere_view.json               Almere-specific composed view
-├── site_themes_view.json               Themes index
-├── site_sources_view.json              Sources index
-├── site_timeline_view.json             Timeline index
-├── site_reference_view.json            Reference/glossary index
-├── site_updates_view.json              Recent-updates feed
-├── timeline_register.json              Timeline events register
-├── theme_view_models/                  One JSON per theme (D5, D6, financiering, governance, mentale gezondheid, monitoring)
-├── source_view_models/                 One JSON per source (pre-composed)
-├── decision_view_models/               Open decision questions
-├── action_view_models/                 Candidate follow-up actions
-└── reference_topic_view_models/        Glossary/reference topics
+```json
+{
+  "path_root": "https://raw.githubusercontent.com/meijer1973/azwa/main/",
+  "layers": [
+    "data/raw",
+    "data/intermediate",
+    "data/extracted",
+    "data/site"
+  ],
+  "preferred_layer": "data/extracted",
+  "manifest": "sources/manifest.json",
+  "curation": "source-curation.json"
+}
 ```
 
-These are the most agent-friendly reads when you want topical synthesis (one theme, one source, one decision) without joining across `documents/` + `claims/` yourself.
+## Path Registry
 
----
-
-### Curated interpretation aids
-
+```json
+{
+  "root": "https://raw.githubusercontent.com/meijer1973/azwa/main/",
+  "entry_points": {
+    "human": [
+      "source-curation.md",
+      "sources/manifest.json"
+    ],
+    "machine": [
+      "source-curation.json",
+      "sources/manifest.json"
+    ]
+  },
+  "declared_path_namespaces": [
+    "sources",
+    "sources canonical",
+    "sources context",
+    "sources markdown",
+    "sources markdown canonical",
+    "sources markdown context",
+    "data/raw",
+    "data/intermediate",
+    "data/extracted",
+    "data/site",
+    "data/curated",
+    "data/schemas",
+    "config",
+    "docs",
+    "docs/rapporten"
+  ],
+  "source_corpus_indexes": [
+    "source-curation.json",
+    "source-curation.md",
+    "sources/manifest.json"
+  ],
+  "layer_indexes": {
+    "raw": [
+      "data/raw/manifest.json",
+      "data/raw/source_intake_candidates.json"
+    ],
+    "intermediate": [],
+    "extracted": [
+      "data/extracted/document_inventory.json",
+      "data/extracted/qc_report.json",
+      "data/extracted/review_queue.json",
+      "data/extracted/data_quality_audit.json",
+      "data/extracted/claims/claims_master.jsonl",
+      "data/extracted/claims/conflict_register.json",
+      "data/extracted/claims/current_interpretation.json",
+      "data/extracted/claims/d5_d6_master.json",
+      "data/extracted/municipal/almere_current_view.json",
+      "data/extracted/municipal/almere_local_decisions.json"
+    ],
+    "site": [
+      "data/site/site_manifest.json",
+      "data/site/dashboard_view.json",
+      "data/site/site_home_view.json",
+      "data/site/site_almere_view.json",
+      "data/site/site_themes_view.json",
+      "data/site/site_sources_view.json",
+      "data/site/site_timeline_view.json",
+      "data/site/site_reference_view.json",
+      "data/site/site_updates_view.json",
+      "data/site/timeline_register.json"
+    ]
+  },
+  "layer_namespaces": {
+    "intermediate": [
+      "data/intermediate/source_markdown",
+      "data/intermediate/text",
+      "data/intermediate/chunks",
+      "data/intermediate/tables"
+    ],
+    "extracted": [
+      "data/extracted/documents",
+      "data/extracted/claims",
+      "data/extracted/municipal"
+    ],
+    "site": [
+      "data/site/source_view_models",
+      "data/site/theme_view_models",
+      "data/site/decision_view_models",
+      "data/site/action_view_models",
+      "data/site/reference_topic_view_models"
+    ]
+  },
+  "schema_and_rule_paths": [
+    "data/schemas/claim.schema.json",
+    "config/site_taxonomy.json",
+    "config/data_quality_perspectives.json",
+    "config/authority_rules.json",
+    "config/claim_resolution_rules.json",
+    "config/timeline_curation.json",
+    "config/pipeline_graph.json"
+  ],
+  "curated_aids": [
+    "data/curated/regional_roles_and_splits_almere_flevoland.json",
+    "docs/regional-roles-and-splits-almere-flevoland.md",
+    "docs/data-quality-checklist.md",
+    "docs/human-review-guidance.md"
+  ],
+  "report_paths": [
+    "docs/rapporten/schrijfrichtlijn-plan-van-aanpak.md",
+    "docs/rapporten/plan-van-aanpak-v1.md",
+    "docs/rapporten/plan-van-aanpak-v2.md",
+    "docs/rapporten/plan-van-aanpak-v3.md",
+    "docs/rapporten/bestuurlijke-planning-azwa-almere-2026.md"
+  ]
+}
 ```
-data/curated/
-└── regional_roles_and_splits_almere_flevoland.json  Machine-readable map of regional roles and splits
 
-docs/regional-roles-and-splits-almere-flevoland.md   Human-readable guide to the same regional distinctions
+## Agent Traversal Protocol
+
+Agents MUST follow this sequence:
+
+1. Load `source-curation.json`.
+   - Identify `canonical` sources.
+   - Identify `context` sources.
+   - Exclude `delete_candidates` unless explicitly instructed.
+   - Treat `preferred_replacements` as human-review guidance, not corpus facts.
+2. Load `sources/manifest.json`.
+   - Map `index` to `source_url`.
+   - Map `index` to `saved_files`.
+   - Use this file for source numbers 1 through 18.
+3. Load `data/raw/manifest.json`.
+   - Map `document_id` to `file_path`.
+   - Map `document_id` to `source_number`.
+   - Use this file for the full 33-document raw layer.
+4. Load `data/extracted/document_inventory.json`.
+   - Confirm `document_id`.
+   - Confirm `curation_bucket`.
+   - Confirm `source_classification`.
+   - Confirm `status`.
+   - Confirm `priority_rank`.
+5. Traverse layers in order:
+
+```text
+raw -> intermediate -> extracted -> site
 ```
 
-Use these before summarizing Almere's position in Flevoland. They distinguish the IZA/AZWA-regio Flevoland, GGD-regio Flevoland, zorgkantoorregio 't Gooi, ROAZ/subregional structures, Zeewolde's Noord-Veluwe route, formal mandaatgemeente roles, and practical task ownership that still needs source-specific checking.
+6. Prefer layers by task:
+   - Use `data/extracted` for reasoning.
+   - Use `data/intermediate` for validation.
+   - Use `data/raw` only when source fidelity, page fidelity, or extraction validation is required.
+   - Use `data/site` for pre-composed topical, source, timeline, decision, action, and reference views.
+7. Do NOT skip layers unless explicitly instructed.
 
----
+## Dependency Flow
 
-## Schema & taxonomy (how to interpret the data)
-
-```
-data/schemas/claim.schema.json          JSON schema for individual claims (fields, provenance, authority)
-config/site_taxonomy.json               Theme hierarchy used by site/theme_view_models
-config/data_quality_perspectives.json   DQ perspective taxonomy used by data_quality_audit.json
-config/authority_rules.json             How source authority is ranked (used by claim resolution)
-config/claim_resolution_rules.json      Rules for resolving conflicting claims
-config/timeline_curation.json           Which events make the timeline
+```text
+sources -> raw -> intermediate -> extracted -> site
 ```
 
-Read these when a field's meaning is ambiguous.
+Rules:
 
----
+- Upstream changes propagate downstream.
+- `data/extracted` is the primary reasoning layer.
+- Dependencies must not form cycles.
+- `data/site` is derived from `data/extracted` and is not primary evidence.
+- `sources/manifest.json` and `data/raw/manifest.json` are mapping files, not evidence files.
 
-## Synthesized reports
+## Path Construction
 
+Use these templates only after loading the required index.
+
+```json
+{
+  "source_corpus": {
+    "all_saved_sources": "sources/{saved_files[] from sources/manifest.json}",
+    "canonical_raw": "sources canonical/{source-curation.json.canonical.raw[].file}",
+    "context_raw": "sources context/{source-curation.json.context.raw[].file}",
+    "canonical_markdown": "sources markdown canonical/{source-curation.json.canonical.markdown[].file}",
+    "context_markdown": "sources markdown context/{source-curation.json.context.markdown[].file}"
+  },
+  "raw_layer": {
+    "document_file": "{data/raw/manifest.json[].file_path}"
+  },
+  "intermediate_layer": {
+    "text": "data/intermediate/text/{document_id}.json",
+    "chunks": "data/intermediate/chunks/{document_id}.json",
+    "tables": "data/intermediate/tables/{document_id}.json"
+  },
+  "extracted_layer": {
+    "document": "data/extracted/documents/{document_id}.json",
+    "claims": "data/extracted/claims/{document_id}.json"
+  },
+  "site_layer": {
+    "source_view": "data/site/source_view_models/{slug from data/site/site_sources_view.json}.json",
+    "theme_view": "data/site/theme_view_models/{theme_id from data/site/site_themes_view.json}.json",
+    "reference_topic_view": "data/site/reference_topic_view_models/{slug from data/site/site_reference_view.json}.json"
+  }
+}
 ```
-docs/rapporten/
-├── plan-van-aanpak-v1.md / v2.md / v3.md            Iterated plan-of-approach narratives (v3 is newest)
-├── plan-van-aanpak-v1..v3.docx                      Word versions (same content)
-├── bestuurlijke-planning-azwa-almere-2026.md        Governance timeline for Almere
-└── schrijfrichtlijn-plan-van-aanpak.md              Writing guidelines for the above
 
-docs/data-quality-checklist.md                       Checklist applied in data_quality_audit.json
-docs/human-review-guidance.md                        Guidance for human review of extractions
+If a constructed path fails, apply `Failure Handling`.
+
+## Site View Model Paths
+
+Decision view models:
+
+- `data/site/decision_view_models/dec_budget_verdeling.json`
+- `data/site/decision_view_models/dec_d5_prioritering.json`
+- `data/site/decision_view_models/dec_d6_regiemodel.json`
+- `data/site/decision_view_models/dec_monitoring_arrangement.json`
+
+Action view models:
+
+- `data/site/action_view_models/act_d5_werkagenda_expliciteren.json`
+- `data/site/action_view_models/act_d6_lokale_structuur_verduidelijken.json`
+- `data/site/action_view_models/act_middelen_en_eigenaarschap_vastleggen.json`
+- `data/site/action_view_models/act_monitoring_afstemmen.json`
+- `data/site/action_view_models/act_regionale_digitale_aansluiting.json`
+
+Theme view models:
+
+- `data/site/theme_view_models/basisfunctionaliteiten-d5.json`
+- `data/site/theme_view_models/basisinfrastructuur-d6.json`
+- `data/site/theme_view_models/financiering.json`
+- `data/site/theme_view_models/governance-en-regie.json`
+- `data/site/theme_view_models/mentale-gezondheid.json`
+- `data/site/theme_view_models/monitoring-en-leren.json`
+
+## Research Task Routing
+
+```json
+{
+  "source_discovery": [
+    "source-curation.json",
+    "sources/manifest.json",
+    "data/raw/manifest.json",
+    "data/extracted/document_inventory.json"
+  ],
+  "claim_search": [
+    "data/extracted/claims/claims_master.jsonl",
+    "data/extracted/claims/{document_id}.json"
+  ],
+  "document_reasoning": [
+    "data/extracted/documents/{document_id}.json",
+    "data/extracted/claims/{document_id}.json"
+  ],
+  "conflict_resolution": [
+    "data/extracted/claims/conflict_register.json",
+    "data/extracted/claims/current_interpretation.json",
+    "config/authority_rules.json",
+    "config/claim_resolution_rules.json"
+  ],
+  "d5_d6_reasoning": [
+    "data/extracted/claims/d5_d6_master.json",
+    "data/site/theme_view_models/basisfunctionaliteiten-d5.json",
+    "data/site/theme_view_models/basisinfrastructuur-d6.json"
+  ],
+  "almere_reasoning": [
+    "data/extracted/municipal/almere_current_view.json",
+    "data/extracted/municipal/almere_local_decisions.json",
+    "data/curated/regional_roles_and_splits_almere_flevoland.json"
+  ],
+  "timeline_reasoning": [
+    "data/site/timeline_register.json",
+    "data/site/site_timeline_view.json",
+    "config/timeline_curation.json"
+  ],
+  "site_synthesis": [
+    "data/site/site_manifest.json",
+    "data/site/site_sources_view.json",
+    "data/site/site_themes_view.json",
+    "data/site/site_reference_view.json"
+  ],
+  "quality_control": [
+    "data/extracted/qc_report.json",
+    "data/extracted/review_queue.json",
+    "data/extracted/data_quality_audit.json",
+    "docs/data-quality-checklist.md"
+  ],
+  "public_report_review": [
+    "docs/rapporten/schrijfrichtlijn-plan-van-aanpak.md",
+    "docs/rapporten/plan-van-aanpak-v3.md"
+  ]
+}
 ```
 
-The `plan-van-aanpak-v*.md` files are the current synthesized narrative outputs. Prefer the highest version number for the latest thinking.
+## Agent Rules
 
----
+Agents MAY:
 
-## Search guidance
+- Fetch files via raw GitHub URLs.
+- Traverse only declared paths and declared path namespaces.
+- Use JSON blocks in this file as authoritative structure.
+- Construct per-document paths only from loaded manifests and declared templates.
+- Use `data/site` view models for fast synthesis when the underlying `data/extracted` basis is available.
 
-- **Full-text search over source prose:** `sources markdown canonical/` (+ `sources markdown context/` if context is needed). Search with Dutch terms.
-- **Structured search for specific claims or provisions:** `data/extracted/claims/claims_master.jsonl`, then follow `source_id` back to the per-document file.
-- **"What does source X say about topic Y?"** `data/extracted/documents/<scope>_<slug>.json` or `data/site/source_view_models/<slug>.json`.
-- **"What is the position across sources on theme Z?"** `data/site/theme_view_models/<theme>.json`.
-- **"Where do sources disagree?"** `data/extracted/claims/conflict_register.json`.
-- **"What's the current best interpretation?"** `data/extracted/claims/current_interpretation.json`.
-- **Almere-specific questions:** `data/extracted/municipal/almere_current_view.json` + `mun_*` files under `documents/` and `claims/`.
-- **Chronology / what-changed-when:** `data/site/timeline_register.json` and `data/site/site_timeline_view.json`.
-- **Regional role/split questions:** `docs/regional-roles-and-splits-almere-flevoland.md` and `data/curated/regional_roles_and_splits_almere_flevoland.json`.
+Agents MUST:
 
-## Authority hints when sources disagree
+- Load entry points before traversing data layers.
+- Keep source numbers 1 through 18 separate from the 33-document derived layer.
+- Ground factual statements in source corpus files, generated model data, or an actually performed verification step.
+- Label interpretation, proposals, review tasks, and unresolved issues explicitly.
+- Check `data/extracted/review_queue.json` when a claim has `needs_human_review`.
+- Check `data/extracted/claims/conflict_register.json` before reporting source disagreement.
+- Use Dutch search terms for corpus text and claims.
+- Use `docs/regional-roles-and-splits-almere-flevoland.md` and `data/curated/regional_roles_and_splits_almere_flevoland.json` before drawing regional conclusions about Almere, Flevoland, mandaatgemeente, GGD-regio, zorgkantoorregio, ROAZ, Zeewolde, or practical task ownership.
 
-When multiple sources speak to the same point, prefer them roughly in this order (and consult `config/authority_rules.json` for the precise rules the pipeline used):
+Agents MUST NOT:
 
-1. **Primary agreement text** — the signed akkoord itself (AZWA definitief #01, IZA #09, GALA #10).
-2. **Kamerbrieven / CW 3.1 documents** (#02–#05) — official government framing and financial frameworks.
-3. **Onderhandelaarsakkoord** (#06) — what was negotiated before formal adoption; use for intent, not for final terms.
-4. **VNG ledenbrieven & FAQ** (#07, #08, #06 context) — municipal-association interpretation; authoritative for implementation-capacity questions but secondary on policy scope.
-5. **Regional plans** (#11 Regiobeeld, #12 Regioplan) — authoritative for Flevoland facts.
-6. **Municipal PGA / SEO** (#17, #18) — authoritative for Almere's transformation strategy.
-7. **Municipal gateway/summary pages** (#13–#16) — orientation only, not evidence; look for the underlying policy document referenced there.
+- Crawl the entire repository blindly.
+- Infer undocumented structure.
+- Use files outside declared layers or declared path namespaces.
+- Treat rendered site output as authoritative.
+- Treat source filenames, JSON filenames, claim-layer names, or internal generated data names as public-facing citations.
+- Present unsupported dates, numbers, policy conclusions, staffing advice, budget advice, governance advice, or implementation advice as factual.
+- Treat context sources as canonical evidence when canonical sources address the same point.
 
-If you find a conflict, `data/extracted/claims/conflict_register.json` likely already records it — check there before concluding the corpus is silent or contradictory.
+## Layer Semantics
 
-## Maintenance note
+```json
+{
+  "sources": {
+    "purpose": "original saved source files and curated markdown source text",
+    "primary_indexes": [
+      "source-curation.json",
+      "sources/manifest.json"
+    ]
+  },
+  "data/raw": {
+    "purpose": "raw intake files and intake manifest",
+    "primary_index": "data/raw/manifest.json"
+  },
+  "data/intermediate": {
+    "purpose": "normalized markdown, text, chunks, and tables for validation",
+    "preferred_use": "validation"
+  },
+  "data/extracted": {
+    "purpose": "document extractions, claim extractions, master claims, current interpretation, QC, review queue, and municipal views",
+    "preferred_use": "reasoning"
+  },
+  "data/site": {
+    "purpose": "pre-composed view models for site, source, theme, timeline, reference, decision, and action synthesis",
+    "preferred_use": "synthesis"
+  }
+}
+```
 
-Keep this file aligned with the repository. When sources, data-layer paths, generated outputs, synthesized reports, or agent guidance change, check whether `RESEARCH_AGENT_MAP.md` should be updated in the same work.
+## Failure Handling
+
+If a file cannot be retrieved:
+
+1. Retry with the constructed raw URL.
+2. Verify that the relative path uses forward slashes.
+3. Verify URL encoding for spaces.
+4. Fallback to `sources/manifest.json` for source numbers 1 through 18.
+5. Fallback to `data/raw/manifest.json` for derived document IDs.
+6. Fallback to `data/extracted/document_inventory.json` for extracted document metadata.
+7. Stop traversal if `source-curation.json` or `sources/manifest.json` cannot be retrieved.
+8. Stop task execution if a required evidence file is unavailable and no declared fallback exists.
+9. Report unavailable evidence as unavailable, not absent from the corpus.
+
+## Output Constraints
+
+- Factual outputs must cite or name the supporting source path, generated data path, or verification step.
+- Public-facing text must not cite internal model artifacts such as `data/site/site_almere_view.json` or `data/extracted/claims/claims_master.jsonl`; translate them into plain references to the public source base or source analysis.
+- Technical source, data, QC, and pipeline details belong in method notes, appendix material, or internal review notes.
+- For files under `docs/rapporten`, read `docs/rapporten/schrijfrichtlijn-plan-van-aanpak.md` before writing or revising.
+- For `plan van aanpak` text, write from the bestuurlijke opgave, not from the dataset or repository.

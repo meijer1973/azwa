@@ -2,6 +2,18 @@
 
 Agent-executable navigation and access specification for the AZWA / IZA / GALA corpus and derived data layers.
 
+## Minimal Research Guidance
+
+This file is a repository map, not a substitute for independent source evaluation.
+
+Use the derived data layers to navigate the corpus efficiently:
+
+- `data/extracted` for structured claims, timelines, and Almere/D5/D6 views.
+- `data/site` for synthesized orientation.
+- `sources markdown canonical` and `sources canonical` when exact wording, dates, obligations, or public citations matter.
+
+Do not treat generated data-layer files as public policy sources. They are research aids derived from the source corpus.
+
 ## Access Layer
 
 Base URL:

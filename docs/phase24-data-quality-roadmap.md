@@ -11,7 +11,7 @@ Gebruik deze roadmap als levend werkdocument. Werk na elke sprint de statusregel
 
 | Sprint | Status | Vindplaats / opmerking |
 | --- | --- | --- |
-| 25.2 Lokale bronversterking Almere | open | Huidige sprint; verwerk deep-research kwaliteitsrapport en haal primaire lokale bronnen en rolbronnen binnen |
+| 25.2 Lokale bronversterking Almere | open | Huidige sprint; eerste bronversterkingslaag staat in `data/extracted/local_source_strengthening_almere.json`; vervolg is directe intake van primaire lokale bijlagen en rolbronnen |
 | 25.1 Werkagenda- en financieringslaag | completed | `data/extracted/workagenda_d5_operational_requirements.json`, `src/build_workagenda_d5_operational_requirements.py`, `docs/completed-plans/phase25-sprint25.1-werkagenda-financieringslaag.md` |
 | 24.1 Taxonomie en checklist | completed | `config/data_quality_perspectives.json`, `docs/data-quality-checklist.md` |
 | 24.2 Audit van bestaande site-data | completed | `docs/completed-plans/phase24-sprint24.2-audit.md`, `data/extracted/data_quality_audit.json` |
@@ -44,6 +44,8 @@ Gebruik deze roadmap als levend werkdocument. Werk na elke sprint de statusregel
 
 ## Huidige sprintplan
 Sprint 25.2 richt zich op lokale bronversterking voor Almere. Sprint 25.1 heeft de eerste D5-werkagenda operationele laag opgeleverd; de volgende stap is de primaire lokale bronbasis en rolbronnen versterken zodat die laag betrouwbaar met Almere-specifieke context kan worden gevuld.
+
+Status op 24 april 2026: eerste tranche uitgevoerd. `data/extracted/local_source_strengthening_almere.json` maakt zichtbaar welke lokale bronnen al in de formele laag zitten, welke bronnen alleen als kandidaat of summary aanwezig zijn, en welke primaire bijlagen nog direct moeten worden opgehaald. De sprint blijft open totdat de belangrijkste primaire stukken daadwerkelijk in de bronlaag zijn opgenomen of als niet-openbaar/onvindbaar zijn verantwoord.
 
 Eerste verbeterplan:
 
@@ -139,6 +141,8 @@ Status: completed.
 Sprint 25.2: Lokale bronversterking Almere
 Status: open.
 
+- Eerste uitvoerlaag toegevoegd: `data/extracted/local_source_strengthening_almere.json`.
+- Deze laag behandelt interne deep-research documenten alleen als bronhiatensignaal en maakt kandidaatbronnen expliciet voordat ze als feiten in claims of publieke tekst mogen belanden.
 - Gebruik `docs/internal/AZWA, IZA and GALA for the Almere case.md` als intern research-signaal, vooral de `Repository quality log`, maar behandel de daarin genoemde externe bevindingen pas als feit nadat de primaire bronnen zelf zijn opgenomen of gecontroleerd.
 - Gebruik ook `docs/internal/conceptinvulling_werkagenda_azwa_almere.md` als intern research-signaal voor bronhiaten; behandel genoemde cijfers, voorbeelden en externe bronclaims pas als feit nadat de primaire bron is opgenomen of gecontroleerd.
 - Vervang waar mogelijk samenvattende contextpagina's door de onderliggende Almeerse beleidsdocumenten voor de Maatschappelijke Agenda en de Visie Gezondheidsbeleid.

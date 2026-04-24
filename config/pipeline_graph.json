@@ -162,6 +162,25 @@
       ]
     },
     {
+      "stage_id": "phase25_2_local_source_strengthening_almere",
+      "kind": "script",
+      "description": "Build the Almere local source-strengthening layer with present sources, candidate primary sources, and remaining intake gaps.",
+      "script": "src/build_local_source_strengthening_almere.py",
+      "depends_on": [
+        "phase1_document_inventory",
+        "phase25_1_workagenda_operational_layer"
+      ],
+      "inputs": [
+        "data/raw/manifest.json",
+        "data/extracted/document_inventory.json",
+        "data/extracted/workagenda_d5_operational_requirements.json",
+        "src/build_local_source_strengthening_almere.py"
+      ],
+      "outputs": [
+        "data/extracted/local_source_strengthening_almere.json"
+      ]
+    },
+    {
       "stage_id": "phase7_phase8_master_views",
       "kind": "script",
       "description": "Generate the D5/D6 master model plus the computed Almere view and decision shell.",

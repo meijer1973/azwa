@@ -22,6 +22,7 @@ REGIONAL_ROLES_PATH = DATA_DIR / "curated" / "regional_roles_and_splits_almere_f
 ROADMAP_PATH = DOCS_DIR / "phase24-data-quality-roadmap.md"
 SITE_UPDATES_PATH = DATA_DIR / "site" / "site_updates_view.json"
 WORKAGENDA_D5_PATH = EXTRACTED_DIR / "workagenda_d5_operational_requirements.json"
+LOCAL_SOURCE_STRENGTHENING_PATH = EXTRACTED_DIR / "local_source_strengthening_almere.json"
 OUTPUT_PATH = DOCS_DIR / "internal" / "review-dashboard.html"
 
 ISSUE_TYPES = {
@@ -562,6 +563,7 @@ def build_dashboard_data() -> dict[str, Any]:
     regional_roles = load_json(REGIONAL_ROLES_PATH) if REGIONAL_ROLES_PATH.exists() else None
     public_updates = load_json(SITE_UPDATES_PATH) if SITE_UPDATES_PATH.exists() else {"updates": []}
     workagenda_d5 = load_json(WORKAGENDA_D5_PATH) if WORKAGENDA_D5_PATH.exists() else {}
+    local_source_strengthening = load_json(LOCAL_SOURCE_STRENGTHENING_PATH) if LOCAL_SOURCE_STRENGTHENING_PATH.exists() else {}
     sprint_ledger = parse_sprint_ledger()
     claims = load_claims()
     claim_index = {claim["claim_id"]: claim for claim in claims}
@@ -587,6 +589,8 @@ def build_dashboard_data() -> dict[str, Any]:
     ]
     if workagenda_d5:
         source_paths.append(repo_path(WORKAGENDA_D5_PATH))
+    if local_source_strengthening:
+        source_paths.append(repo_path(LOCAL_SOURCE_STRENGTHENING_PATH))
     if regional_roles:
         source_paths.append(repo_path(REGIONAL_ROLES_PATH))
 
@@ -638,6 +642,11 @@ def build_dashboard_data() -> dict[str, Any]:
             "href": output_relative_link(repo_path(WORKAGENDA_D5_PATH)),
             **workagenda_d5,
         } if workagenda_d5 else {},
+        "local_source_strengthening": {
+            "path": repo_path(LOCAL_SOURCE_STRENGTHENING_PATH),
+            "href": output_relative_link(repo_path(LOCAL_SOURCE_STRENGTHENING_PATH)),
+            **local_source_strengthening,
+        } if local_source_strengthening else {},
         "regional_guardrails": {
             "path": "docs/regional-roles-and-splits-almere-flevoland.md",
             "href": output_relative_link("docs/regional-roles-and-splits-almere-flevoland.md"),
@@ -862,6 +871,7 @@ def render_html(data: dict[str, Any]) -> str:
   </header>
   <nav class="tabbar" aria-label="Dashboard tabs">
     <button class="tab-button active" type="button" data-tab="overview">Overview</button>
+    <button class="tab-button" type="button" data-tab="local-sources">Local Sources</button>
     <button class="tab-button" type="button" data-tab="workagenda">Werkagenda</button>
     <button class="tab-button" type="button" data-tab="sprint-history">Sprint History</button>
     <button class="tab-button" type="button" data-tab="public-updates">Public Updates Mirror</button>
@@ -915,6 +925,24 @@ def render_html(data: dict[str, Any]) -> str:
         <div id="regionDefinition"></div>
         <p><a id="regionalLink" href="#">Open regional roles guide</a></p>
         <div id="regionalPrompts"></div>
+      </section>
+    </div>
+
+    <div class="tab-panel" data-tab-panel="local-sources" hidden>
+      <section>
+        <h2>Local Source Strengthening</h2>
+        <p class="subtle">Internal mirror of <a id="localSourcesLink" href="#"><code id="localSourcesPath"></code></a>. Candidate sources are source-intake tasks, not claim facts.</p>
+        <div class="metrics" id="localSourceMetrics"></div>
+      </section>
+
+      <section>
+        <h2>Candidate Sources</h2>
+        <div id="localSourceCandidates"></div>
+      </section>
+
+      <section>
+        <h2>Target Source Needs</h2>
+        <div id="targetSourceNeeds"></div>
       </section>
     </div>
 
@@ -1198,6 +1226,46 @@ def render_html(data: dict[str, Any]) -> str:
       </table><p class="subtle">${{esc((workagenda.finance_linking_model || {{}}).review_rule || '')}}</p>` : '<p class="empty">No finance streams recorded.</p>';
     }}
 
+    function renderLocalSources() {{
+      const layer = DATA.local_source_strengthening || {{}};
+      byId('localSourcesLink').href = layer.href || '#';
+      byId('localSourcesPath').textContent = layer.path || '';
+      const summary = layer.summary || {{}};
+      const candidates = layer.candidate_sources || [];
+      const targetNeeds = layer.target_source_needs || [];
+      byId('localSourceMetrics').innerHTML = [
+        ['Candidates', summary.candidate_source_count || candidates.length || 0],
+        ['Verified URLs', summary.verified_or_candidate_url_count || 0],
+        ['Not found', summary.not_found_candidate_count || 0],
+        ['Municipal docs', summary.municipal_manifest_document_count || 0],
+        ['Regional docs', summary.regional_manifest_document_count || 0]
+      ].map(([label, value]) => `<div class="metric"><strong>${{esc(value)}}</strong><span>${{esc(label)}}</span></div>`).join('');
+
+      if (!candidates.length) {{
+        byId('localSourceCandidates').innerHTML = '<p class="empty">No local source strengthening layer generated yet.</p>';
+      }} else {{
+        byId('localSourceCandidates').innerHTML = `<table>
+          <thead><tr><th>Source</th><th>Status</th><th>Why it matters</th><th>Review</th></tr></thead>
+          <tbody>${{candidates.map(candidate => `
+            <tr>
+              <td><strong>${{esc(candidate.title)}}</strong><br><code>${{esc(candidate.candidate_id)}}</code><br>${{candidate.source_url ? `<a href="${{esc(candidate.source_url)}}">source URL</a>` : '<span class="subtle">No public URL verified</span>'}}</td>
+              <td><span class="tag origin">${{esc(candidate.verification_status || '')}}</span><br><span class="tag issue">${{esc(candidate.intake_status || '')}}</span><br><span class="subtle">${{esc(candidate.current_repository_status || '')}}</span></td>
+              <td>${{esc(candidate.why_it_matters || '')}}<br>${{(candidate.unlocks || []).map(value => `<span class="tag perspective">${{esc(value)}}</span>`).join('')}}</td>
+              <td>${{esc(candidate.review_question || '')}}</td>
+            </tr>`).join('')}}</tbody>
+        </table>`;
+      }}
+
+      byId('targetSourceNeeds').innerHTML = targetNeeds.length ? `<table>
+        <thead><tr><th>Target</th><th>Candidate sources</th><th>Note</th></tr></thead>
+        <tbody>${{targetNeeds.map(row => `<tr>
+          <td><strong>${{esc(row.title || row.target_id)}}</strong><br><code>${{esc(row.target_id || '')}}</code></td>
+          <td>${{esc(row.candidate_source_count || 0)}}<br>${{(row.candidate_source_ids || []).slice(0, 5).map(id => `<code>${{esc(id)}}</code>`).join(' ')}}</td>
+          <td>${{esc(row.note || '')}}</td>
+        </tr>`).join('')}}</tbody>
+      </table>` : '<p class="empty">No target source needs recorded.</p>';
+    }}
+
     function countFor(items, predicate) {{
       return items.filter(predicate).length;
     }}
@@ -1331,6 +1399,7 @@ def render_html(data: dict[str, Any]) -> str:
     renderSprintHistory();
     renderPublicUpdates();
     renderWorkagenda();
+    renderLocalSources();
     renderRegional();
     renderCleanupTargets();
     render();

@@ -200,6 +200,7 @@
   </header>
   <nav class="tabbar" aria-label="Dashboard tabs">
     <button class="tab-button active" type="button" data-tab="overview">Overview</button>
+    <button class="tab-button" type="button" data-tab="local-sources">Local Sources</button>
     <button class="tab-button" type="button" data-tab="workagenda">Werkagenda</button>
     <button class="tab-button" type="button" data-tab="sprint-history">Sprint History</button>
     <button class="tab-button" type="button" data-tab="public-updates">Public Updates Mirror</button>
@@ -253,6 +254,24 @@
         <div id="regionDefinition"></div>
         <p><a id="regionalLink" href="#">Open regional roles guide</a></p>
         <div id="regionalPrompts"></div>
+      </section>
+    </div>
+
+    <div class="tab-panel" data-tab-panel="local-sources" hidden>
+      <section>
+        <h2>Local Source Strengthening</h2>
+        <p class="subtle">Internal mirror of <a id="localSourcesLink" href="#"><code id="localSourcesPath"></code></a>. Candidate sources are source-intake tasks, not claim facts.</p>
+        <div class="metrics" id="localSourceMetrics"></div>
+      </section>
+
+      <section>
+        <h2>Candidate Sources</h2>
+        <div id="localSourceCandidates"></div>
+      </section>
+
+      <section>
+        <h2>Target Source Needs</h2>
+        <div id="targetSourceNeeds"></div>
       </section>
     </div>
 
@@ -361,6 +380,10 @@
     {
       "path": "data/extracted/workagenda_d5_operational_requirements.json",
       "href": "../../data/extracted/workagenda_d5_operational_requirements.json"
+    },
+    {
+      "path": "data/extracted/local_source_strengthening_almere.json",
+      "href": "../../data/extracted/local_source_strengthening_almere.json"
     },
     {
       "path": "data/curated/regional_roles_and_splits_almere_flevoland.json",
@@ -8656,7 +8679,7 @@
       {
         "sprint": "25.2 Lokale bronversterking Almere",
         "status": "open",
-        "note": "Huidige sprint; verwerk deep-research kwaliteitsrapport en haal primaire lokale bronnen en rolbronnen binnen"
+        "note": "Huidige sprint; eerste bronversterkingslaag staat in `data/extracted/local_source_strengthening_almere.json`; vervolg is directe intake van primaire lokale bijlagen en rolbronnen"
       },
       {
         "sprint": "25.1 Werkagenda- en financieringslaag",
@@ -8807,7 +8830,7 @@
     "current": {
       "sprint": "25.2 Lokale bronversterking Almere",
       "status": "open",
-      "note": "Huidige sprint; verwerk deep-research kwaliteitsrapport en haal primaire lokale bronnen en rolbronnen binnen"
+      "note": "Huidige sprint; eerste bronversterkingslaag staat in `data/extracted/local_source_strengthening_almere.json`; vervolg is directe intake van primaire lokale bijlagen en rolbronnen"
     },
     "history": [
       {
@@ -11126,6 +11149,577 @@
       "ingroeipad_2027_2030"
     ]
   },
+  "local_source_strengthening": {
+    "path": "data/extracted/local_source_strengthening_almere.json",
+    "href": "../../data/extracted/local_source_strengthening_almere.json",
+    "layer_run_id": "phase25_2_local_source_strengthening_v1",
+    "generated_on": "2026-04-24",
+    "status": "active_sprint_support",
+    "sprint": "25.2 Lokale bronversterking Almere",
+    "summary": {
+      "manifest_document_count": 33,
+      "municipal_manifest_document_count": 8,
+      "regional_manifest_document_count": 2,
+      "candidate_source_count": 10,
+      "verified_or_candidate_url_count": 9,
+      "not_found_candidate_count": 1
+    },
+    "guardrail": "This layer is a source-intake and review aid. Candidate sources are not claim facts until the primary source has been ingested or manually checked.",
+    "existing_focus_sources": [
+      {
+        "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid",
+        "title": "Visie Gezondheidsbeleid Almere 2024-2026",
+        "short_title": "Visie gezondheidsbeleid Almere",
+        "publisher": "Raad van Almere",
+        "source_url": "https://raadvanalmere.nl/article/visie-gezondheidsbeleid-almere-2024-2026",
+        "file_path": "data/raw/municipal/mun_almere_2024_2026_visie_gezondheidsbeleid.html",
+        "jurisdiction_level": "municipal",
+        "document_type": "municipal_policy_summary",
+        "source_classification": "derivative",
+        "curation_bucket": "context",
+        "present_in_manifest": true,
+        "present_in_inventory": true,
+        "repository_status": "present_but_weaker_or_contextual",
+        "inventory_notes": "Agendawijzer summary page with useful local policy signals but not the full policy text."
+      },
+      {
+        "document_id": "mun_almere_2024_2034_maatschappelijke_agenda",
+        "title": "Maatschappelijke agenda 2024-2034",
+        "short_title": "Maatschappelijke agenda 2024-2034",
+        "publisher": "Raad van Almere",
+        "source_url": "https://raadvanalmere.nl/article/maatschappelijke-agenda-2024-2034",
+        "file_path": "data/raw/municipal/mun_almere_2024_2034_maatschappelijke_agenda.html",
+        "jurisdiction_level": "municipal",
+        "document_type": "municipal_policy_summary",
+        "source_classification": "derivative",
+        "curation_bucket": "context",
+        "present_in_manifest": true,
+        "present_in_inventory": true,
+        "repository_status": "present_but_weaker_or_contextual",
+        "inventory_notes": "Agendawijzer summary page that points to underlying municipal documents rather than replacing them."
+      },
+      {
+        "document_id": "mun_almere_pga_transformatieplan",
+        "title": "Transformatieplan Positief Gezond Almere",
+        "short_title": "PGA transformatieplan",
+        "publisher": "Positief Gezond Almere",
+        "source_url": "https://positiefgezondalmere.nl/over-ons/",
+        "file_path": "data/raw/municipal/mun_almere_pga_transformatieplan.pdf",
+        "jurisdiction_level": "municipal",
+        "document_type": "implementation_plan",
+        "source_classification": "primary",
+        "curation_bucket": "canonical",
+        "present_in_manifest": true,
+        "present_in_inventory": true,
+        "repository_status": "present",
+        "inventory_notes": "Core local implementation source for Almere, but not itself a D5/D6 source document."
+      },
+      {
+        "document_id": "mun_almere_pga_seo_businesscase_2024",
+        "title": "Naar een positief gezond Almere; Beleidstheorie en businesscase transformatieplan",
+        "short_title": "SEO beleidstheorie en businesscase PGA",
+        "publisher": "SEO Economisch Onderzoek",
+        "source_url": "https://www.seo.nl/publicaties/naar-een-positief-gezond-almere-beleidstheorie-en-businesscase-transformatieplan/",
+        "file_path": "data/raw/municipal/mun_almere_pga_seo_businesscase_2024.pdf",
+        "jurisdiction_level": "municipal",
+        "document_type": "research_report",
+        "source_classification": "primary",
+        "curation_bucket": "canonical",
+        "present_in_manifest": true,
+        "present_in_inventory": true,
+        "repository_status": "present",
+        "inventory_notes": "Commissioned research and business-case report that can support local claim and impact interpretation."
+      },
+      {
+        "document_id": "reg_flevoland_2023_regioplan_iza",
+        "title": "Zorgzaam Flevoland 2023 Regioplan IZA Flevoland",
+        "short_title": "Regioplan IZA Flevoland",
+        "publisher": "Zorgzaam Flevoland / Flever",
+        "source_url": "https://flever.nl/wp-content/uploads/2024/01/Regioplan_IZA_Flevoland_ZorgzaamFlevoland2023.pdf",
+        "file_path": "data/raw/regional/reg_flevoland_2023_regioplan_iza.pdf",
+        "jurisdiction_level": "regional",
+        "document_type": "regional_plan",
+        "source_classification": "primary",
+        "curation_bucket": "canonical",
+        "present_in_manifest": true,
+        "present_in_inventory": true,
+        "repository_status": "present",
+        "inventory_notes": "Regional IZA implementation plan with strong governance, monitoring, and Almere relevance; it contains structured visuals, but not stable table evidence we currently want to treat as table-bearing for downstream extraction."
+      },
+      {
+        "document_id": "reg_flevoland_2023_regiobeeld",
+        "title": "Regiobeeld Flevoland 2023",
+        "short_title": "Regiobeeld Flevoland 2023",
+        "publisher": "Flever",
+        "source_url": "https://flever.nl/kennisbank/regiobeeld-flevoland-2023/",
+        "file_path": "data/raw/regional/reg_flevoland_2023_regiobeeld.pdf",
+        "jurisdiction_level": "regional",
+        "document_type": "regional_report",
+        "source_classification": "primary",
+        "curation_bucket": "canonical",
+        "present_in_manifest": true,
+        "present_in_inventory": true,
+        "repository_status": "present",
+        "inventory_notes": "Regional baseline evidence report for needs, pressures, and context rather than normative policy content; the current corpus behaves as narrative/regional evidence, not as a reliable table source."
+      },
+      {
+        "document_id": "nat_azwa_opdracht_werkagenda_d5_2026",
+        "title": "Opdracht voor de werkagenda samenwerking zorg en sociaal domein voor D5 AZWA",
+        "short_title": "Opdracht werkagenda D5 AZWA",
+        "publisher": "VNG / VWS",
+        "source_url": "https://vng.nl/sites/default/files/2026-04/opdracht-voor-de-werkagenda-azwa.pdf",
+        "file_path": "data/raw/national/nat_azwa_opdracht_werkagenda_d5_2026.pdf",
+        "jurisdiction_level": "national",
+        "document_type": "assignment",
+        "source_classification": "primary",
+        "curation_bucket": "canonical",
+        "present_in_manifest": true,
+        "present_in_inventory": true,
+        "repository_status": "present",
+        "inventory_notes": "Operational source document for the D5 workagenda, with the concrete products, milestones, and regional-to-municipal process needed to unlock the AZWA middelen."
+      },
+      {
+        "document_id": "nat_azwa_format_werkagenda_d5_2026",
+        "title": "Format werkagenda basisfunctionaliteiten AZWA",
+        "short_title": "Format werkagenda AZWA",
+        "publisher": "VNG / VWS",
+        "source_url": "https://vng.nl/sites/default/files/2026-04/format-voor-de-werkagenda-azwa.docx",
+        "file_path": "data/raw/national/nat_azwa_format_werkagenda_d5_2026.docx",
+        "jurisdiction_level": "national",
+        "document_type": "template",
+        "source_classification": "derivative",
+        "curation_bucket": "canonical",
+        "present_in_manifest": true,
+        "present_in_inventory": true,
+        "repository_status": "present_but_weaker_or_contextual",
+        "inventory_notes": "Operational AZWA format for the D5 workagenda, useful for tracing which local and regional fields, planning elements, and implementation commitments are expected in 2026."
+      },
+      {
+        "document_id": "nat_azwa_toelichting_producten_proces_2026",
+        "title": "Toelichting producten en proces",
+        "short_title": "Toelichting werkagenda D5 AZWA",
+        "publisher": "VNG / VWS",
+        "source_url": "https://vng.nl/sites/default/files/2026-04/20260422-begeleidende-toelichting-op-opdracht-werkagenda-financiele-middelen-proces.pdf",
+        "file_path": "data/raw/national/nat_azwa_toelichting_producten_proces_2026.pdf",
+        "jurisdiction_level": "national",
+        "document_type": "process_note",
+        "source_classification": "derivative",
+        "curation_bucket": "canonical",
+        "present_in_manifest": true,
+        "present_in_inventory": true,
+        "repository_status": "present_but_weaker_or_contextual",
+        "inventory_notes": "Short process note that explains the D5 workagenda products, the relation to the regioplan, and the target dates around 26 May, mid-September, and 15 November 2026."
+      }
+    ],
+    "candidate_sources": [
+      {
+        "candidate_id": "mun_almere_2024_2034_maatschappelijke_agenda_underlying_documents",
+        "title": "Onderliggende stukken Maatschappelijke agenda 2024-2034",
+        "publisher": "Raad van Almere / Documentwijzer",
+        "source_url": "https://documentwijzer.raadvanalmere.nl/app/instrument/24161",
+        "verification_status": "candidate_url_verified",
+        "intake_status": "needs_primary_attachment_intake",
+        "current_repository_status": "summary_page_present",
+        "current_document_id": "mun_almere_2024_2034_maatschappelijke_agenda",
+        "why_it_matters": "Replaces the weaker Agendawijzer summary page with the council proposal, attachments, amendments, and adopted decision material.",
+        "unlocks": [
+          "locality",
+          "governance",
+          "execution"
+        ],
+        "workagenda_targets": [
+          "laagdrempelige_steunpunten",
+          "sociaal_verwijzen",
+          "ketenaanpak_overgewicht_obesitas_volwassenen",
+          "ontwikkelagenda_2_overige_initiatieven"
+        ],
+        "review_question": "Download the actual Documentwijzer attachments and decide which are primary policy sources versus supporting council-process records."
+      },
+      {
+        "candidate_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_underlying_documents",
+        "title": "Onderliggende stukken Visie Gezondheidsbeleid Almere 2024-2026",
+        "publisher": "Raad van Almere / Documentwijzer",
+        "source_url": "https://documentwijzer.raadvanalmere.nl/app/instrument/24118",
+        "verification_status": "candidate_url_verified",
+        "intake_status": "needs_primary_attachment_intake",
+        "current_repository_status": "summary_page_present",
+        "current_document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid",
+        "why_it_matters": "Replaces the weaker Agendawijzer summary page with the adopted local health-policy text and decision trail.",
+        "unlocks": [
+          "locality",
+          "governance",
+          "execution",
+          "time"
+        ],
+        "workagenda_targets": [
+          "valpreventie",
+          "ketenaanpak_overgewicht_obesitas_volwassenen",
+          "kansrijke_start",
+          "ketenaanpak_overgewicht_obesitas_kinderen"
+        ],
+        "review_question": "Download the actual Documentwijzer attachments and separate adopted policy text from motions, amendments, and debate notes."
+      },
+      {
+        "candidate_id": "mun_almere_2025_stand_van_zaken_gezondheidsbeleid_iza_gala",
+        "title": "Raadsbrief Stand van zaken Gezondheidsbeleid (IZA en GALA)",
+        "publisher": "Gemeente Almere / Raad van Almere",
+        "source_url": null,
+        "verification_status": "not_found_in_public_search_2026_04_24",
+        "intake_status": "needs_human_lookup",
+        "current_repository_status": "not_present",
+        "current_document_id": null,
+        "why_it_matters": "The deep-research note treats this as a likely local bridge source for IZA/GALA status, but it should not be used as fact until the primary source is found.",
+        "unlocks": [
+          "locality",
+          "governance",
+          "money",
+          "execution",
+          "time"
+        ],
+        "workagenda_targets": [
+          "all_d5_workagenda_targets"
+        ],
+        "review_question": "Search Documentwijzer, Notubiz, and council incoming/outgoing letters for the exact 2 February 2025 raadsbrief before adding claims."
+      },
+      {
+        "candidate_id": "reg_ggd_flevoland_2024_gezondheidsmonitor_volwassenen_ouderen",
+        "title": "Gezondheidsmonitor Volwassenen en Ouderen 2024",
+        "publisher": "GGD Flevoland",
+        "source_url": "https://www.ggdflevoland.nl/professional/kennis-en-advies/gezondheidsmonitors/gezondheids-monitor-volwassenen-en-ouderen/",
+        "verification_status": "candidate_url_verified",
+        "intake_status": "needs_pdf_intake",
+        "current_repository_status": "not_present",
+        "current_document_id": null,
+        "why_it_matters": "Provides current municipal baseline data for overgewicht, valrisico, eenzaamheid, mentale gezondheid, bewegen, and vulnerability.",
+        "unlocks": [
+          "locality",
+          "execution"
+        ],
+        "workagenda_targets": [
+          "valpreventie",
+          "ketenaanpak_overgewicht_obesitas_volwassenen",
+          "sociaal_verwijzen",
+          "laagdrempelige_steunpunten"
+        ],
+        "review_question": "Ingest the adult and older-person tables separately and preserve municipality-level Almere rows for later capacity calculations."
+      },
+      {
+        "candidate_id": "reg_ggd_flevoland_2024_tabellenboek_volwassenen",
+        "title": "Tabellenboek volwassenen 2024 - Flevoland alle gemeenten",
+        "publisher": "GGD Flevoland",
+        "source_url": "https://www.ggdflevoland.nl/app/uploads/sites/6/2024/12/Gezondheidsmonitor-Volwassenen-en-Ouderen-alle-gemeenten-van-Flevoland-2024_volwassenen-18-64.pdf",
+        "verification_status": "source_url_verified",
+        "intake_status": "needs_pdf_intake",
+        "current_repository_status": "not_present",
+        "current_document_id": null,
+        "why_it_matters": "Primary table source for adult Almere indicators needed in workagenda prioritization.",
+        "unlocks": [
+          "locality",
+          "execution"
+        ],
+        "workagenda_targets": [
+          "ketenaanpak_overgewicht_obesitas_volwassenen",
+          "sociaal_verwijzen"
+        ],
+        "review_question": "Add as raw regional source and keep table extraction separate from narrative policy claims."
+      },
+      {
+        "candidate_id": "reg_ggd_flevoland_valpreventie_almere",
+        "title": "Valpreventie",
+        "publisher": "GGD Flevoland",
+        "source_url": "https://www.ggdflevoland.nl/positief-ouder-worden/valpreventie/",
+        "verification_status": "source_url_verified",
+        "intake_status": "needs_html_intake",
+        "current_repository_status": "not_present",
+        "current_document_id": null,
+        "why_it_matters": "Operational source for current Almere valpreventie intake/inloop signals and delivery context.",
+        "unlocks": [
+          "locality",
+          "execution"
+        ],
+        "workagenda_targets": [
+          "valpreventie"
+        ],
+        "review_question": "Extract only current operational routes and dates; avoid treating event announcements as durable policy."
+      },
+      {
+        "candidate_id": "reg_zonmw_doorontwikkeling_zorgzaam_flevoland",
+        "title": "Doorontwikkeling Zorgzaam Flevoland naar een toekomstbestendige samenwerkingsstructuur",
+        "publisher": "ZonMw",
+        "source_url": "https://projecten.zonmw.nl/nl/project/doorontwikkeling-zorgzaam-flevoland-naar-een-toekomstbestendige-samenwerkingsstructuur",
+        "verification_status": "source_url_verified",
+        "intake_status": "needs_html_intake",
+        "current_repository_status": "not_present",
+        "current_document_id": null,
+        "why_it_matters": "Strengthens the regional governance story around Zorgzaam Flevoland, including Almere as responsible organization in a 2025-2027 development route.",
+        "unlocks": [
+          "governance",
+          "locality",
+          "execution"
+        ],
+        "workagenda_targets": [
+          "all_d5_workagenda_targets"
+        ],
+        "review_question": "Check whether this is a project registration, grant decision, or substantive governance source before promoting it as evidence."
+      },
+      {
+        "candidate_id": "reg_mgn_flevoland_almere_mandaatgemeente",
+        "title": "Alle netwerken - Mentale gezondheidsnetwerken",
+        "publisher": "Mentale gezondheidsnetwerken",
+        "source_url": "https://www.mentalegezondheidsnetwerken.nl/alle-netwerken/",
+        "verification_status": "source_url_verified",
+        "intake_status": "needs_html_intake",
+        "current_repository_status": "covered_in_regional_role_guardrail_not_manifest",
+        "current_document_id": null,
+        "why_it_matters": "Clarifies that Almere is listed as mandaatgemeente for the Flevoland mental-health network and that Zeewolde is in a different listed route.",
+        "unlocks": [
+          "governance",
+          "locality",
+          "execution"
+        ],
+        "workagenda_targets": [
+          "mentale_gezondheidsnetwerken",
+          "laagdrempelige_steunpunten",
+          "sociaal_verwijzen"
+        ],
+        "review_question": "Add as a role source, but do not overgeneralize it to all IZA/AZWA regional workstreams."
+      },
+      {
+        "candidate_id": "mun_almere_2024_programmarekening_pga_iza_gala",
+        "title": "Programmarekening 2024",
+        "publisher": "Gemeente Almere",
+        "source_url": "https://almere.jaarverslag-2024.nl/assets/docs/Programmarekening_2024.pdf",
+        "verification_status": "source_url_verified",
+        "intake_status": "needs_pdf_intake",
+        "current_repository_status": "not_present",
+        "current_document_id": null,
+        "why_it_matters": "Potential municipal financial and execution-status source for PGA, IZA and GALA references in Almere's own accountability cycle.",
+        "unlocks": [
+          "money",
+          "governance",
+          "time",
+          "execution"
+        ],
+        "workagenda_targets": [
+          "all_d5_workagenda_targets"
+        ],
+        "review_question": "Use as a local accountability source, not as a replacement for the actual policy or workagenda documents."
+      },
+      {
+        "candidate_id": "nat_cbs_2025_bevolkingsgroei_almere",
+        "title": "Bevolkingsgroei in 2024 afgenomen in de Randstad, toegenomen daarbuiten",
+        "publisher": "CBS",
+        "source_url": "https://www.cbs.nl/nl-nl/nieuws/2025/05/bevolkingsgroei-in-2024-afgenomen-in-de-randstad-toegenomen-daarbuiten",
+        "verification_status": "source_url_verified",
+        "intake_status": "needs_reference_intake",
+        "current_repository_status": "not_present",
+        "current_document_id": null,
+        "why_it_matters": "Useful context for growth pressure, but exact workagenda calculations should use a chosen BRP/CBS peildatum.",
+        "unlocks": [
+          "locality",
+          "execution"
+        ],
+        "workagenda_targets": [
+          "sociaal_verwijzen",
+          "valpreventie",
+          "ketenaanpak_overgewicht_obesitas_kinderen"
+        ],
+        "review_question": "Do not use news-rate figures as denominator data; choose a stable population table for calculations in Sprint 25.3."
+      }
+    ],
+    "gap_summary": [
+      {
+        "group": "verification_status",
+        "counts": {
+          "candidate_url_verified": 3,
+          "not_found_in_public_search_2026_04_24": 1,
+          "source_url_verified": 6
+        }
+      },
+      {
+        "group": "intake_status",
+        "counts": {
+          "needs_html_intake": 3,
+          "needs_human_lookup": 1,
+          "needs_pdf_intake": 3,
+          "needs_primary_attachment_intake": 2,
+          "needs_reference_intake": 1
+        }
+      },
+      {
+        "group": "perspective_unlocked",
+        "counts": {
+          "execution": 10,
+          "governance": 6,
+          "locality": 9,
+          "money": 2,
+          "time": 3
+        }
+      }
+    ],
+    "target_source_needs": [
+      {
+        "target_id": "integrale_gezinspoli",
+        "title": "Integrale gezinspoli",
+        "candidate_source_count": 3,
+        "candidate_source_ids": [
+          "mun_almere_2025_stand_van_zaken_gezondheidsbeleid_iza_gala",
+          "reg_zonmw_doorontwikkeling_zorgzaam_flevoland",
+          "mun_almere_2024_programmarekening_pga_iza_gala"
+        ],
+        "still_needs_local_decision": true,
+        "note": "Candidate sources can strengthen baseline and role evidence, but local choices remain unset until Almere or the regional table records target-specific decisions."
+      },
+      {
+        "target_id": "kansrijke_start",
+        "title": "Kansrijke Start",
+        "candidate_source_count": 4,
+        "candidate_source_ids": [
+          "mun_almere_2024_2026_visie_gezondheidsbeleid_underlying_documents",
+          "mun_almere_2025_stand_van_zaken_gezondheidsbeleid_iza_gala",
+          "reg_zonmw_doorontwikkeling_zorgzaam_flevoland",
+          "mun_almere_2024_programmarekening_pga_iza_gala"
+        ],
+        "still_needs_local_decision": true,
+        "note": "Candidate sources can strengthen baseline and role evidence, but local choices remain unset until Almere or the regional table records target-specific decisions."
+      },
+      {
+        "target_id": "ketenaanpak_overgewicht_obesitas_kinderen",
+        "title": "Ketenaanpak overgewicht en obesitas kinderen",
+        "candidate_source_count": 5,
+        "candidate_source_ids": [
+          "mun_almere_2024_2026_visie_gezondheidsbeleid_underlying_documents",
+          "mun_almere_2025_stand_van_zaken_gezondheidsbeleid_iza_gala",
+          "reg_zonmw_doorontwikkeling_zorgzaam_flevoland",
+          "mun_almere_2024_programmarekening_pga_iza_gala",
+          "nat_cbs_2025_bevolkingsgroei_almere"
+        ],
+        "still_needs_local_decision": true,
+        "note": "Candidate sources can strengthen baseline and role evidence, but local choices remain unset until Almere or the regional table records target-specific decisions."
+      },
+      {
+        "target_id": "ketenaanpak_overgewicht_obesitas_volwassenen",
+        "title": "Ketenaanpak overgewicht en obesitas volwassenen",
+        "candidate_source_count": 7,
+        "candidate_source_ids": [
+          "mun_almere_2024_2034_maatschappelijke_agenda_underlying_documents",
+          "mun_almere_2024_2026_visie_gezondheidsbeleid_underlying_documents",
+          "mun_almere_2025_stand_van_zaken_gezondheidsbeleid_iza_gala",
+          "reg_ggd_flevoland_2024_gezondheidsmonitor_volwassenen_ouderen",
+          "reg_ggd_flevoland_2024_tabellenboek_volwassenen",
+          "reg_zonmw_doorontwikkeling_zorgzaam_flevoland",
+          "mun_almere_2024_programmarekening_pga_iza_gala"
+        ],
+        "still_needs_local_decision": true,
+        "note": "Candidate sources can strengthen baseline and role evidence, but local choices remain unset until Almere or the regional table records target-specific decisions."
+      },
+      {
+        "target_id": "laagdrempelige_steunpunten",
+        "title": "Laagdrempelige steunpunten",
+        "candidate_source_count": 6,
+        "candidate_source_ids": [
+          "mun_almere_2024_2034_maatschappelijke_agenda_underlying_documents",
+          "mun_almere_2025_stand_van_zaken_gezondheidsbeleid_iza_gala",
+          "reg_ggd_flevoland_2024_gezondheidsmonitor_volwassenen_ouderen",
+          "reg_zonmw_doorontwikkeling_zorgzaam_flevoland",
+          "reg_mgn_flevoland_almere_mandaatgemeente",
+          "mun_almere_2024_programmarekening_pga_iza_gala"
+        ],
+        "still_needs_local_decision": true,
+        "note": "Candidate sources can strengthen baseline and role evidence, but local choices remain unset until Almere or the regional table records target-specific decisions."
+      },
+      {
+        "target_id": "mentale_gezondheidsnetwerken",
+        "title": "Mentale gezondheidsnetwerken",
+        "candidate_source_count": 4,
+        "candidate_source_ids": [
+          "mun_almere_2025_stand_van_zaken_gezondheidsbeleid_iza_gala",
+          "reg_zonmw_doorontwikkeling_zorgzaam_flevoland",
+          "reg_mgn_flevoland_almere_mandaatgemeente",
+          "mun_almere_2024_programmarekening_pga_iza_gala"
+        ],
+        "still_needs_local_decision": true,
+        "note": "Candidate sources can strengthen baseline and role evidence, but local choices remain unset until Almere or the regional table records target-specific decisions."
+      },
+      {
+        "target_id": "nu_niet_zwanger",
+        "title": "Nu Niet Zwanger",
+        "candidate_source_count": 3,
+        "candidate_source_ids": [
+          "mun_almere_2025_stand_van_zaken_gezondheidsbeleid_iza_gala",
+          "reg_zonmw_doorontwikkeling_zorgzaam_flevoland",
+          "mun_almere_2024_programmarekening_pga_iza_gala"
+        ],
+        "still_needs_local_decision": true,
+        "note": "Candidate sources can strengthen baseline and role evidence, but local choices remain unset until Almere or the regional table records target-specific decisions."
+      },
+      {
+        "target_id": "ontwikkelagenda_1_nieuw_beproeven",
+        "title": "Ontwikkelagenda 1 nieuw: dementie, nicotinevrij, rookvrije start, multiproblematiek NPLV",
+        "candidate_source_count": 3,
+        "candidate_source_ids": [
+          "mun_almere_2025_stand_van_zaken_gezondheidsbeleid_iza_gala",
+          "reg_zonmw_doorontwikkeling_zorgzaam_flevoland",
+          "mun_almere_2024_programmarekening_pga_iza_gala"
+        ],
+        "still_needs_local_decision": true,
+        "note": "Candidate sources can strengthen baseline and role evidence, but local choices remain unset until Almere or the regional table records target-specific decisions."
+      },
+      {
+        "target_id": "ontwikkelagenda_2_overige_initiatieven",
+        "title": "Ontwikkelagenda 2 en overige initiatieven",
+        "candidate_source_count": 4,
+        "candidate_source_ids": [
+          "mun_almere_2024_2034_maatschappelijke_agenda_underlying_documents",
+          "mun_almere_2025_stand_van_zaken_gezondheidsbeleid_iza_gala",
+          "reg_zonmw_doorontwikkeling_zorgzaam_flevoland",
+          "mun_almere_2024_programmarekening_pga_iza_gala"
+        ],
+        "still_needs_local_decision": true,
+        "note": "Candidate sources can strengthen baseline and role evidence, but local choices remain unset until Almere or the regional table records target-specific decisions."
+      },
+      {
+        "target_id": "sociaal_verwijzen",
+        "title": "Sociaal verwijzen",
+        "candidate_source_count": 8,
+        "candidate_source_ids": [
+          "mun_almere_2024_2034_maatschappelijke_agenda_underlying_documents",
+          "mun_almere_2025_stand_van_zaken_gezondheidsbeleid_iza_gala",
+          "reg_ggd_flevoland_2024_gezondheidsmonitor_volwassenen_ouderen",
+          "reg_ggd_flevoland_2024_tabellenboek_volwassenen",
+          "reg_zonmw_doorontwikkeling_zorgzaam_flevoland",
+          "reg_mgn_flevoland_almere_mandaatgemeente",
+          "mun_almere_2024_programmarekening_pga_iza_gala",
+          "nat_cbs_2025_bevolkingsgroei_almere"
+        ],
+        "still_needs_local_decision": true,
+        "note": "Candidate sources can strengthen baseline and role evidence, but local choices remain unset until Almere or the regional table records target-specific decisions."
+      },
+      {
+        "target_id": "valpreventie",
+        "title": "Valpreventie",
+        "candidate_source_count": 7,
+        "candidate_source_ids": [
+          "mun_almere_2024_2026_visie_gezondheidsbeleid_underlying_documents",
+          "mun_almere_2025_stand_van_zaken_gezondheidsbeleid_iza_gala",
+          "reg_ggd_flevoland_2024_gezondheidsmonitor_volwassenen_ouderen",
+          "reg_ggd_flevoland_valpreventie_almere",
+          "reg_zonmw_doorontwikkeling_zorgzaam_flevoland",
+          "mun_almere_2024_programmarekening_pga_iza_gala",
+          "nat_cbs_2025_bevolkingsgroei_almere"
+        ],
+        "still_needs_local_decision": true,
+        "note": "Candidate sources can strengthen baseline and role evidence, but local choices remain unset until Almere or the regional table records target-specific decisions."
+      }
+    ],
+    "next_actions": [
+      "Download the Documentwijzer attachments for 24118 and 24161 or record why direct download is blocked.",
+      "Ingest the GGD Flevoland 2024 adult and older-person tables as separate regional data sources.",
+      "Add the mental-health-network listing as a role source while keeping its scope limited to MGN.",
+      "Keep the missing 2 February 2025 raadsbrief as a human lookup task until a public source is found.",
+      "Use this layer to drive Sprint 25.3 nulmeting/capacity work, especially target-level denominators and current provision."
+    ]
+  },
   "regional_guardrails": {
     "path": "docs/regional-roles-and-splits-almere-flevoland.md",
     "href": "../../docs/regional-roles-and-splits-almere-flevoland.md",
@@ -11382,6 +11976,46 @@
       </table><p class="subtle">${esc((workagenda.finance_linking_model || {}).review_rule || '')}</p>` : '<p class="empty">No finance streams recorded.</p>';
     }
 
+    function renderLocalSources() {
+      const layer = DATA.local_source_strengthening || {};
+      byId('localSourcesLink').href = layer.href || '#';
+      byId('localSourcesPath').textContent = layer.path || '';
+      const summary = layer.summary || {};
+      const candidates = layer.candidate_sources || [];
+      const targetNeeds = layer.target_source_needs || [];
+      byId('localSourceMetrics').innerHTML = [
+        ['Candidates', summary.candidate_source_count || candidates.length || 0],
+        ['Verified URLs', summary.verified_or_candidate_url_count || 0],
+        ['Not found', summary.not_found_candidate_count || 0],
+        ['Municipal docs', summary.municipal_manifest_document_count || 0],
+        ['Regional docs', summary.regional_manifest_document_count || 0]
+      ].map(([label, value]) => `<div class="metric"><strong>${esc(value)}</strong><span>${esc(label)}</span></div>`).join('');
+
+      if (!candidates.length) {
+        byId('localSourceCandidates').innerHTML = '<p class="empty">No local source strengthening layer generated yet.</p>';
+      } else {
+        byId('localSourceCandidates').innerHTML = `<table>
+          <thead><tr><th>Source</th><th>Status</th><th>Why it matters</th><th>Review</th></tr></thead>
+          <tbody>${candidates.map(candidate => `
+            <tr>
+              <td><strong>${esc(candidate.title)}</strong><br><code>${esc(candidate.candidate_id)}</code><br>${candidate.source_url ? `<a href="${esc(candidate.source_url)}">source URL</a>` : '<span class="subtle">No public URL verified</span>'}</td>
+              <td><span class="tag origin">${esc(candidate.verification_status || '')}</span><br><span class="tag issue">${esc(candidate.intake_status || '')}</span><br><span class="subtle">${esc(candidate.current_repository_status || '')}</span></td>
+              <td>${esc(candidate.why_it_matters || '')}<br>${(candidate.unlocks || []).map(value => `<span class="tag perspective">${esc(value)}</span>`).join('')}</td>
+              <td>${esc(candidate.review_question || '')}</td>
+            </tr>`).join('')}</tbody>
+        </table>`;
+      }
+
+      byId('targetSourceNeeds').innerHTML = targetNeeds.length ? `<table>
+        <thead><tr><th>Target</th><th>Candidate sources</th><th>Note</th></tr></thead>
+        <tbody>${targetNeeds.map(row => `<tr>
+          <td><strong>${esc(row.title || row.target_id)}</strong><br><code>${esc(row.target_id || '')}</code></td>
+          <td>${esc(row.candidate_source_count || 0)}<br>${(row.candidate_source_ids || []).slice(0, 5).map(id => `<code>${esc(id)}</code>`).join(' ')}</td>
+          <td>${esc(row.note || '')}</td>
+        </tr>`).join('')}</tbody>
+      </table>` : '<p class="empty">No target source needs recorded.</p>';
+    }
+
     function countFor(items, predicate) {
       return items.filter(predicate).length;
     }
@@ -11515,6 +12149,7 @@
     renderSprintHistory();
     renderPublicUpdates();
     renderWorkagenda();
+    renderLocalSources();
     renderRegional();
     renderCleanupTargets();
     render();

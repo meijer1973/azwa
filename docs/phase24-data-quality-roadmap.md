@@ -20,6 +20,7 @@ Het doel is dat beleidsmakers de site kunnen beoordelen langs zes vaste perspect
 - Elke verbetering moet herleidbaar blijven naar bron, claim, tijdlijnitem of menselijke reviewtaak.
 - UI-werk blijft beperkt tot noodzakelijke leesbaarheid, klikbaarheid en traceerbaarheid totdat de datakwaliteit stabieler is.
 - Onzekere punten worden zichtbaar gemaakt als beoordelingspunt, niet opgelost door de generator.
+- Interne developer- en agentmaterialen mogen Engels gebruiken voor technische helderheid. Publieke en bestuurlijke inhoud blijft Nederlands. Interne dashboards mogen Engelse technische framing combineren met Nederlandse domeinlabels uit bronnen en roadmap.
 
 ## Sprintcadans
 Elke sprint heeft dezelfde basisvolgorde:
@@ -45,13 +46,14 @@ Gebruik deze roadmap als levend werkdocument. Werk na elke sprint de statusregel
 - `completed`: uitgevoerd en vastgelegd in een notitie, data-output, codewijziging of controle.
 - `open`: nog niet uitgevoerd of nog niet volledig afgerond.
 - Afgeronde fase- en sprintplannen staan in `docs/completed-plans/`; actieve plannen blijven in de hoofdmap `docs/`.
+- Het interne dashboard `docs/internal/review-dashboard.html` moet de meest actuele sprintstand tonen. Werk bij sprintstatus, huidige planning, cleanup targets, reviewdata, brondekking of publieke updategeschiedenis altijd eerst deze roadmap bij en draai daarna `python src/build_internal_review_dashboard.py` voordat wijzigingen worden vastgelegd.
 
 | Sprint | Status | Vindplaats / opmerking |
 | --- | --- | --- |
 | 24.1 Taxonomie en checklist | completed | `config/data_quality_perspectives.json`, `docs/data-quality-checklist.md` |
 | 24.2 Audit van bestaande site-data | completed | `docs/completed-plans/phase24-sprint24.2-audit.md`, `data/extracted/data_quality_audit.json` |
-| 24.3 Review-dashboard intern | open | Huidige volgende sprint |
-| 25.1 Financieringsbronnen | open |  |
+| 24.3 Review-dashboard intern | completed | `docs/internal/review-dashboard.html`, `src/build_internal_review_dashboard.py`, `docs/completed-plans/phase24-sprint24.3-review-dashboard.md` |
+| 25.1 Financieringsbronnen | open | Huidige volgende sprint |
 | 25.2 Almere en Flevoland | open |  |
 | 25.3 Regionale governance | open |  |
 | 26.1 PDF- en tabelkwaliteit | open |  |
@@ -94,10 +96,11 @@ Status: completed.
 - Maak een overzicht van claims die inhoudelijk nuttig zijn maar tekstueel te ruw zijn voor publicatie.
 
 Sprint 24.3: Review-dashboard intern
-Status: open.
+Status: completed.
 
 - Maak een intern overzicht met open kwaliteitsissues per perspectief.
 - Splits issues in bronprobleem, extractieprobleem, claimprobleem, interpretatieprobleem en tekstprobleem.
+- Splits Locality in het dashboard zichtbaar uit naar Almere, IZA/AZWA-regio Flevoland en algemene of nog onduidelijke lokale relevantie.
 - Houd dit intern; public-facing site mag deze technische categorieen niet tonen.
 
 ## Fase 25 - Bronkwaliteit en bronhiaten
@@ -302,17 +305,18 @@ Een verbetering is pas klaar als:
 - de update een menselijke changelog heeft.
 
 ## Huidige volgende sprint
-De beste eerstvolgende sprint is Sprint 24.3: Review-dashboard intern.
+De beste eerstvolgende sprint is Sprint 25.1: Financieringsbronnen.
 
 Waarom:
 
 - Sprint 24.1 heeft de taxonomie en checklist opgeleverd;
 - Sprint 24.2 heeft een interne auditbasis opgeleverd;
-- de volgende stap is het zichtbaar maken van open kwaliteitsissues per perspectief zonder deze technische categorieen op de public-facing site te tonen.
+- Sprint 24.3 heeft een lokaal intern review-dashboard opgeleverd;
+- de volgende stap is het versterken van de bronbasis rond middelen, SPUK, meicirculaire, werkagenda en verantwoordingsmomenten.
 
 De concrete deliverables zijn:
 
-- een intern review-overzicht per perspectief;
-- indeling van issues naar bronprobleem, extractieprobleem, claimprobleem, interpretatieprobleem en tekstprobleem;
-- verwijzing naar onderliggende audit-, claim- of site-data;
-- een korte notitie met open punten en voorgestelde vervolgsprints.
+- een gecontroleerde lijst met financieringsbronnen;
+- bronlabels voor normatieve, toelichtende en praktische financieringsinformatie;
+- expliciete reviewpunten voor besteding, reservering, doorschuiven, aanvraag en verantwoording van middelen;
+- een korte datakwaliteitsnotitie met open financieringsvragen.

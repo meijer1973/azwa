@@ -108,6 +108,7 @@ Machine-readable:
     "data/schemas",
     "config",
     "docs",
+    "docs/internal",
     "docs/rapporten"
   ],
   "source_corpus_indexes": [
@@ -179,7 +180,8 @@ Machine-readable:
     "data/curated/regional_roles_and_splits_almere_flevoland.json",
     "docs/regional-roles-and-splits-almere-flevoland.md",
     "docs/data-quality-checklist.md",
-    "docs/human-review-guidance.md"
+    "docs/human-review-guidance.md",
+    "docs/internal/review-dashboard.html"
   ],
   "report_paths": [
     "docs/rapporten/schrijfrichtlijn-plan-van-aanpak.md",
@@ -351,7 +353,8 @@ Theme view models:
     "data/extracted/qc_report.json",
     "data/extracted/review_queue.json",
     "data/extracted/data_quality_audit.json",
-    "docs/data-quality-checklist.md"
+    "docs/data-quality-checklist.md",
+    "docs/internal/review-dashboard.html"
   ],
   "public_report_review": [
     "docs/rapporten/schrijfrichtlijn-plan-van-aanpak.md",
@@ -380,6 +383,7 @@ Agents MUST:
 - Check `data/extracted/claims/conflict_register.json` before reporting source disagreement.
 - Use Dutch search terms for corpus text and claims.
 - Use `docs/regional-roles-and-splits-almere-flevoland.md` and `data/curated/regional_roles_and_splits_almere_flevoland.json` before drawing regional conclusions about Almere, Flevoland, mandaatgemeente, GGD-regio, zorgkantoorregio, ROAZ, Zeewolde, or practical task ownership.
+- Use `docs/internal/review-dashboard.html` for internal quality triage when the task is about open review issues, perspective coverage, rough claim text, or Sprint 24.3 cleanup planning.
 
 Agents MUST NOT:
 
@@ -417,6 +421,10 @@ Agents MUST NOT:
   "data/site": {
     "purpose": "pre-composed view models for site, source, theme, timeline, reference, decision, and action synthesis",
     "preferred_use": "synthesis"
+  },
+  "docs/internal": {
+    "purpose": "local-only internal workbenches and review dashboards, not public-facing site output",
+    "preferred_use": "quality triage"
   }
 }
 ```

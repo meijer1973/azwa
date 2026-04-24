@@ -20,6 +20,7 @@ This repository contains the AZWA / D5-D6 source corpus and the working material
 - `dist/`: generated static site output for local preview and GitHub Pages deployment
 - `tests/`: automated checks
 - `docs/`: active process notes and implementation documentation
+- `docs/internal/`: local-only internal workbenches and review dashboards, not published through `dist/`
 - `docs/completed-plans/`: completed phase and sprint plans kept out of the active docs root
 
 ## Source Collections

@@ -39,22 +39,62 @@ Elke sprint eindigt met:
 - een lijst van open reviewpunten;
 - testresultaten voor pipeline en site.
 
+## Sprintstatus
+Gebruik deze roadmap als levend werkdocument. Werk na elke sprint de statusregel bij:
+
+- `completed`: uitgevoerd en vastgelegd in een notitie, data-output, codewijziging of controle.
+- `open`: nog niet uitgevoerd of nog niet volledig afgerond.
+- Afgeronde fase- en sprintplannen staan in `docs/completed-plans/`; actieve plannen blijven in de hoofdmap `docs/`.
+
+| Sprint | Status | Vindplaats / opmerking |
+| --- | --- | --- |
+| 24.1 Taxonomie en checklist | completed | `config/data_quality_perspectives.json`, `docs/data-quality-checklist.md` |
+| 24.2 Audit van bestaande site-data | completed | `docs/completed-plans/phase24-sprint24.2-audit.md`, `data/extracted/data_quality_audit.json` |
+| 24.3 Review-dashboard intern | open | Huidige volgende sprint |
+| 25.1 Financieringsbronnen | open |  |
+| 25.2 Almere en Flevoland | open |  |
+| 25.3 Regionale governance | open |  |
+| 26.1 PDF- en tabelkwaliteit | open |  |
+| 26.2 Claimtekst schoonmaken | open |  |
+| 26.3 Locatie- en bewijscontrole | open |  |
+| 27.1 Norm | open |  |
+| 27.2 Tijd | open |  |
+| 27.3 Geld | open |  |
+| 27.4 Governance | open |  |
+| 27.5 Locality | open |  |
+| 27.6 Execution | open |  |
+| 28.1 Menselijke samenvattingen per update | open |  |
+| 28.2 Bronverwijzing en autoriteitstaal | open |  |
+| 28.3 Detailpagina's voor drill-down | open |  |
+| 29.1 Tijdlijnregister verdiepen | open |  |
+| 29.2 Begrotings- en verantwoordingscyclus | open |  |
+| 29.3 Handreikingen en uitvoeringsmomenten | open |  |
+| 30.1 Lokale lacunes | open |  |
+| 30.2 Besluitvragen en mogelijke opvolgacties | open |  |
+| 30.3 Beleidsdocumenten en rapporten | open |  |
+| 31.1 Updateprotocol | open |  |
+| 31.2 Maandelijkse bronaudit | open |  |
+| 31.3 Reviewronde met menselijke beoordelaars | open |  |
+
 ## Fase 24 - Kwaliteitskader per perspectief
 Doel: de zes perspectieven omzetten in een vaste beoordelingsstructuur voor bronnen, claims en site-tekst.
 
 Sprint 24.1: Taxonomie en checklist
+Status: completed.
 
 - Maak per perspectief een vaste set velden, voorbeelden en uitsluitingsregels.
 - Leg vast wanneer iets een bronfeit, interpretatie, lokale lacune of menselijke keuzevraag is.
 - Voeg een korte redactieregel toe voor public-facing formuleringen per perspectief.
 
 Sprint 24.2: Audit van bestaande site-data
+Status: completed.
 
 - Label bestaande claims en viewmodels met de zes perspectieven waar mogelijk.
 - Zoek brede restcategorieen zoals `timeline.other`, `monitoring.other` en `governance_and_finance.other`.
 - Maak een overzicht van claims die inhoudelijk nuttig zijn maar tekstueel te ruw zijn voor publicatie.
 
 Sprint 24.3: Review-dashboard intern
+Status: open.
 
 - Maak een intern overzicht met open kwaliteitsissues per perspectief.
 - Splits issues in bronprobleem, extractieprobleem, claimprobleem, interpretatieprobleem en tekstprobleem.
@@ -64,18 +104,21 @@ Sprint 24.3: Review-dashboard intern
 Doel: de bronbasis versterken, vooral voor geld, tijd, governance en lokale relevantie.
 
 Sprint 25.1: Financieringsbronnen
+Status: open.
 
 - Controleer VWS, VNG, DUS-I, wetten.nl en gemeentefondsbronnen op AZWA, SPUK, meicirculaire, werkagenda en verantwoordingsmomenten.
 - Markeer welke bronnen normatief zijn en welke alleen toelichtend of praktisch zijn.
 - Zoek expliciet naar regels over besteding, reservering, doorschuiven, aanvraag en verantwoording van middelen.
 
 Sprint 25.2: Almere en Flevoland
+Status: open.
 
 - Zoek bestuurlijke agenda's, raadsinformatie, begrotingsstukken en lokale beleidsdocumenten die AZWA, IZA, GALA, preventie, sociaal domein of gezondheid raken.
 - Voeg alleen bronnen toe die openbaar en herleidbaar zijn.
 - Leg vast waar landelijke doelen nog niet zichtbaar lokaal zijn overgenomen.
 
 Sprint 25.3: Regionale governance
+Status: open.
 
 - Versterk bronnen over mandaatgemeente, regio, zorgverzekeraar, GGD, regionale preventie-infrastructuur en werkagenda.
 - Maak onderscheid tussen wie formeel besluit, wie voorbereidt en wie uitvoert.
@@ -85,18 +128,21 @@ Sprint 25.3: Regionale governance
 Doel: minder halve zinnen, betere tabellen, betere paginaverwijzingen en betere broncitaten.
 
 Sprint 26.1: PDF- en tabelkwaliteit
+Status: open.
 
 - Verbeter extractie van tabellen met middelen, jaartallen, deadlines en rollen.
 - Bewaar tabelrijen als afzonderlijke bewijsobjecten waar dat kan.
 - Controleer sleutelbronnen handmatig op ontbrekende of verkeerd samengevoegde rijen.
 
 Sprint 26.2: Claimtekst schoonmaken
+Status: open.
 
 - Voorkom dat claims bestaan uit afgebroken zinnen, voetteksten, kopregels of navigatietekst.
 - Bewaar ruwe broncitaten, maar genereer aparte leesbare claim-samenvattingen voor sitegebruik.
 - Voeg regressietests toe voor bekende probleemvormen.
 
 Sprint 26.3: Locatie- en bewijscontrole
+Status: open.
 
 - Controleer dat belangrijke claims minimaal pagina, sectie, quote of chunk-id hebben.
 - HTML-bronnen krijgen sectie- en chunkverwijzingen als paginanummers niet bestaan.
@@ -106,36 +152,42 @@ Sprint 26.3: Locatie- en bewijscontrole
 Doel: van algemene claims naar beleidsmatig bruikbare claims per Norm, Tijd, Geld, Governance, Locality en Execution.
 
 Sprint 27.1: Norm
+Status: open.
 
 - Splits normclaims in bindend, afspraak, verwachting, toelichting en lagere-autoriteitssignaal.
 - Voorkom dat VNG-FAQ's, nieuwsberichten of toelichtingen klinken als harde norm.
 - Maak conflicten of onzekerheid expliciet in mensentaal.
 
 Sprint 27.2: Tijd
+Status: open.
 
 - Maak deadlines, verwachte publicatiemomenten, reviewmomenten en begrotingsmomenten aparte tijdclaims.
 - Sorteer en groepeer tijdlijnitems structureel chronologisch.
 - Markeer verwachte momenten duidelijk anders dan vastgestelde deadlines.
 
 Sprint 27.3: Geld
+Status: open.
 
 - Maak claims voor financieringsinstrument, aanvraagvoorwaarde, budgetvenster, verdeelmechanisme, bestedingsruimte en verantwoording.
 - Leg onzekerheden over uitkering, overloop, reservering en besteding apart vast.
 - Voeg een zoekbare categorie toe voor "te verifieren financieringsregel".
 
 Sprint 27.4: Governance
+Status: open.
 
 - Maak rollen expliciet: ministerie, VNG, fondsbeheerder, mandaatgemeente, regio, gemeente, raad, college, zorgverzekeraar, uitvoeringspartner.
 - Splits besluitvorming, coordinatie, aanvraag, uitvoering en verantwoording.
 - Voorkom dat "regio" als actor wordt gebruikt als de bron specifieker is.
 
 Sprint 27.5: Locality
+Status: open.
 
 - Markeer claims die expliciet over Almere gaan anders dan claims die alleen algemeen voor gemeenten gelden.
 - Markeer Flevolandse claims apart van Almeerse claims.
 - Houd adoptiegaten zichtbaar: landelijk doel aanwezig, lokale openbare uitwerking nog niet gevonden.
 
 Sprint 27.6: Execution
+Status: open.
 
 - Vertaal bronclaims naar mogelijke uitvoeringsvragen zonder beleidsadvies toe te voegen.
 - Splits mogelijke besluitvragen, mogelijke opvolgacties, afhankelijkheden en reviewvragen.
@@ -145,18 +197,21 @@ Sprint 27.6: Execution
 Doel: minder technische of ruwe tekst, meer bestuurlijk leesbare Nederlandse samenvattingen.
 
 Sprint 28.1: Menselijke samenvattingen per update
+Status: open.
 
 - Elke data-update krijgt een korte, leesbare samenvatting.
 - Leg uit welke publicatie aanleiding was voor de update.
 - Benoem wat inhoudelijk is veranderd, zonder interne datatermen.
 
 Sprint 28.2: Bronverwijzing en autoriteitstaal
+Status: open.
 
 - Lagere-autoriteitsbronnen worden expliciet toegeschreven, bijvoorbeeld "Volgens de VNG-toelichting..." of "DUS-I vermeldt...".
 - Normatieve bronnen krijgen sterkere formulering, maar alleen waar de bron dat draagt.
 - Onzekerheden blijven zichtbaar zonder dramatische woorden als urgent of kritisch.
 
 Sprint 28.3: Detailpagina's voor drill-down
+Status: open.
 
 - Overzichtspagina's blijven kort.
 - Lange claimlijsten, bronlijsten en reviewdetails gaan naar aparte detailpagina's.
@@ -166,18 +221,21 @@ Sprint 28.3: Detailpagina's voor drill-down
 Doel: de tijdlijn gebruiken voor bestuurlijke orientatie, niet alleen als chronologische lijst.
 
 Sprint 29.1: Tijdlijnregister verdiepen
+Status: open.
 
 - Voeg bronstatus, autoriteit, actor, type moment en gevolg voor Almere toe aan tijdlijnitems.
 - Houd verwachte, formele en lokale momenten zichtbaar verschillend.
 - Leg per item vast welk perspectief vooral geraakt wordt: Tijd, Geld, Governance of Execution.
 
 Sprint 29.2: Begrotings- en verantwoordingscyclus
+Status: open.
 
 - Voeg landelijke en lokale begrotingsmomenten toe zodra ze bronvast zijn.
 - Koppel gemeentefonds, meicirculaire, septembercirculaire, begroting Almere en SPUK-verantwoording waar bronnen dit dragen.
 - Markeer waar menselijke beoordeling nodig is om een extern moment naar lokale planning te vertalen.
 
 Sprint 29.3: Handreikingen en uitvoeringsmomenten
+Status: open.
 
 - Houd handreikingen, webinars, thematafels en formatdocumenten apart van formele besluiten.
 - Gebruik deze bronnen wel voor uitvoering en voorbereiding, maar niet als harde norm.
@@ -187,18 +245,21 @@ Sprint 29.3: Handreikingen en uitvoeringsmomenten
 Doel: de site beter laten aansluiten op vragen van Almeerse beleidsmakers.
 
 Sprint 30.1: Lokale lacunes
+Status: open.
 
 - Maak per thema zichtbaar welke landelijke of regionale opgave nog niet openbaar lokaal is uitgewerkt.
 - Voorkom oordeelstaal; formuleer als documentatie- of adoptiegat.
 - Koppel elk gat aan bronbasis en mogelijke vervolgvraag.
 
 Sprint 30.2: Besluitvragen en mogelijke opvolgacties
+Status: open.
 
 - Herclassificeer bestaande besluitvragen en opvolgacties langs de zes perspectieven.
 - Maak duidelijk welke vraag door bronbasis wordt opgeroepen en welke invulling aan Almere is.
 - Verwijder of herformuleer items die te veel als advies klinken.
 
 Sprint 30.3: Beleidsdocumenten en rapporten
+Status: open.
 
 - Laat public-facing rapporten alleen publieke bronnen noemen, geen interne datalagen.
 - Controleer plannen van aanpak op verzonnen bijlagen, bedragen, FTE's, deadlines en scenario's.
@@ -208,18 +269,21 @@ Sprint 30.3: Beleidsdocumenten en rapporten
 Doel: zorgen dat de site meebeweegt met nieuwe bronnen zonder dat oude informatie wordt overschreven.
 
 Sprint 31.1: Updateprotocol
+Status: open.
 
 - Maak een vaste procedure voor nieuwe publicaties.
 - Nieuwe broninformatie krijgt altijd een changelog met inhoudelijke delta.
 - Oude claims blijven bewaard; nieuwe claims kunnen aanvullen, verduidelijken, beperken of tegenspreken.
 
 Sprint 31.2: Maandelijkse bronaudit
+Status: open.
 
 - Controleer of verwachte bronnen zijn verschenen, zoals circulaires, SPUK-regelingen, handreikingen en monitorrapportages.
 - Controleer dode links en gewijzigde webpagina's.
 - Houd pending bronnen apart tot ze door de pipeline zijn verwerkt.
 
 Sprint 31.3: Reviewronde met menselijke beoordelaars
+Status: open.
 
 - Lever per perspectief een korte reviewlijst op.
 - Vraag reviewers vooral om bestuurlijke interpretatie, lokale keuze en bronvalidatie.
@@ -237,19 +301,18 @@ Een verbetering is pas klaar als:
 - onzekerheden niet als feiten zijn gepresenteerd;
 - de update een menselijke changelog heeft.
 
-## Eerste aanbevolen sprint
-De beste eerstvolgende sprint is Sprint 24.1: taxonomie en checklist per perspectief.
+## Huidige volgende sprint
+De beste eerstvolgende sprint is Sprint 24.3: Review-dashboard intern.
 
 Waarom:
 
-- de site is al bruikbaar;
-- de grootste winst zit in consistente beoordeling van broninformatie;
-- alle latere sprints profiteren van vaste labels voor Norm, Tijd, Geld, Governance, Locality en Execution;
-- het helpt voorkomen dat nieuwe data opnieuw als ruwe of te technische tekst op de website verschijnt.
+- Sprint 24.1 heeft de taxonomie en checklist opgeleverd;
+- Sprint 24.2 heeft een interne auditbasis opgeleverd;
+- de volgende stap is het zichtbaar maken van open kwaliteitsissues per perspectief zonder deze technische categorieen op de public-facing site te tonen.
 
-De eerste concrete deliverables zijn:
+De concrete deliverables zijn:
 
-- `config/data_quality_perspectives.json`;
-- een korte interne checklist in `docs/data-quality-checklist.md`;
-- aanpassing van de claim- en sitegenerator zodat perspectieven in viewmodels beschikbaar komen;
-- regressietests voor klikbaarheid, chronologie en public-facing tekstkwaliteit.
+- een intern review-overzicht per perspectief;
+- indeling van issues naar bronprobleem, extractieprobleem, claimprobleem, interpretatieprobleem en tekstprobleem;
+- verwijzing naar onderliggende audit-, claim- of site-data;
+- een korte notitie met open punten en voorgestelde vervolgsprints.

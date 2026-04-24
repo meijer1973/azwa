@@ -60,7 +60,7 @@ Te beoordelen keuzevragen zijn:
 - hoe het college en de raad worden betrokken.
 
 ## 7. Samenwerking en aansluiting
-De AZWA-uitwerking voor D5 en D6 vraagt afstemming met regionale partners, maar dit plan werkt die route niet verder uit. Voor Almere is vooral van belang dat de lokale uitwerking aansluit op bestaande samenwerking en uitvoeringskennis.
+De AZWA-uitwerking voor D5 en D6 vraagt afstemming met regionale partners, maar dit plan werkt die route niet verder uit. Voor Almere is vooral van belang dat de lokale uitwerking aansluit op bestaande samenwerking en uitvoeringskennis. Daarbij moet onderscheid worden gemaakt tussen de IZA/AZWA-regio Flevoland, de GGD-regio Flevoland, de zorgkantoorregio en eventuele subregionale of thematische taakverdeling.
 
 Met Positief Gezond Almere loopt al een breed transformatieprogramma met 20 miljoen euro uit het IZA. Aansluiting op bestaande netwerken en uitvoeringskennis ligt daarom voor de hand.
 
@@ -88,12 +88,12 @@ Voor Almere moet die planning worden gelezen in samenhang met de gemeentelijke f
 Daarom is het verdedigbaar om medio september 2026 als interne afrondingsgrens te hanteren. Dat is geen formeel voorschrift, maar een bestuurlijk planningsoordeel dat aansluit bij de landelijke stukken en de Almeerse kalender.
 
 ## 10. Organisatie en governance
-De regionale werkagenda moet door de colleges van B en W worden vastgesteld. Voor Almere betekent dit dat de ambtelijke uitwerking, regionale afstemming en bestuurlijke voorbereiding ruim voor november op orde moeten zijn.
+De regionale werkagenda moet door de colleges van B en W worden vastgesteld. Voor Almere betekent dit dat de ambtelijke uitwerking, de afstemming binnen de IZA/AZWA-regio Flevoland en de bestuurlijke voorbereiding ruim voor november op orde moeten zijn.
 
 Te bepalen is:
 - waar de centrale ambtelijke regie wordt gelegd;
 - hoe beleid, uitvoering en financien/control daarbij worden verbonden;
-- hoe portefeuillehouders het regionale mandaat dragen;
+- hoe portefeuillehouders het formele regionale mandaat dragen en hoe dit zich verhoudt tot praktische coordinatie of uitvoering door partners;
 - wanneer de raad in beeld komt bij keuzes over middelen, kaders en voortgang.
 
 ## 11. Monitoring en verantwoording

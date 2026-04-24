@@ -32,9 +32,9 @@ Deze vier opgaven vallen rechtstreeks samen met de bestuurlijke keuzevragen die 
 - Welke KPI-set en welk reviewritme gebruikt Almere om lokaal, regionaal en landelijk in de pas te lopen?
 
 Daarbij zijn er vier externe afhankelijkheden die niet genegeerd kunnen worden:
-- de regionale digitale infrastructuur in Flevoland;
+- de regionale digitale infrastructuur binnen de IZA/AZWA-regio Flevoland, voor zover die voor Almere relevant is;
 - de landelijke keuze voor de bekostigingsroute en inzet van middelen;
-- de regionale rolverdeling tussen gemeente, sociaal domein, zorgpartijen en governance-structuren;
+- de rolverdeling tussen formeel mandaat, praktische coordinatie, uitvoering, sociaal domein, zorgpartijen en governance-structuren;
 - de landelijke D5/D6- en monitoringscyclus richting 2028.
 
 ## Ambitie en Doelstellingen
@@ -42,7 +42,7 @@ De ambitie is dat Almere in 2026 de stap zet van een impliciete naar een explici
 
 De doelstellingen zijn:
 - uiterlijk in Q3 2026 een bestuurlijk gedragen lokale D5-werkagenda met expliciete prioriteiten, doelgroepen en interventielogica;
-- uiterlijk in Q3 2026 een regiemodel voor D6 met rolverdeling voor gemeente, GGD Flevoland, regionale partners, lokale teams en wijkverbanden;
+- uiterlijk in Q3 2026 een regiemodel voor D6 met rolverdeling tussen gemeente, GGD-regio Flevoland, regionale partners, lokale teams en wijkverbanden;
 - uiterlijk in Q4 2026 een financieel arrangement voor 2027-2028, gekoppeld aan de meicirculaire 2026 en de begroting 2027;
 - uiterlijk in Q4 2026 een monitoringsarrangement met een compacte KPI-set, halfjaarlijkse review en aansluiting op de landelijke herijking van 2028;
 - richting 2030 een bestendige lokale inbedding van de gekozen D5/D6-lijn.
@@ -73,8 +73,8 @@ De gemeente Almere is eigenaar van de lokale vertaling. Dat vraagt om een compac
 - inhoudelijke trekkers: beleid sociaal domein, publieke gezondheid, jeugd, financien en monitoring.
 
 **Regionale en lokale partners**
-- GGD Flevoland voor kennis, preventie-infrastructuur, regionale coordinatie en koppeling met de Flevolandse monitor;
-- Flevolandse IZA-governance en mandaatstructuur voor regionale afstemming;
+- GGD-regio Flevoland voor kennis, preventie-infrastructuur, GGD-gebonden coordinatie en koppeling met beschikbare regionale monitoring;
+- IZA/AZWA-regio Flevoland en mandaatstructuur voor regionale afstemming, waarbij formeel mandaat en praktische uitvoering apart moeten worden benoemd;
 - zorgverzekeraars en aanbieders voor uitvoerbaarheid, rolverdeling en bekostigingsroute;
 - lokale teams, welzijn, eerstelijn, jeugdhulp, onderwijs, sport en Positief Gezond Almere voor uitvoering en lokale verankering.
 
@@ -82,7 +82,7 @@ De gemeente Almere is eigenaar van de lokale vertaling. Dat vraagt om een compac
 - ambtelijk: uitwerken van een keuze- en uitvoeringspakket in drie rondes;
 - bestuurlijk: besluitvorming door het college over koers, middelen en regiemodel;
 - politiek: raad meenemen via P&C, meicirculaire en voortgangsrapportage;
-- regionaal: vastleggen welke onderdelen lokaal en welke regionaal worden belegd.
+- regionaal: vastleggen welke onderdelen lokaal, binnen de IZA/AZWA-regio, binnen de GGD-regio of subregionaal worden belegd.
 
 ## Aanpak en strategie
 De aanpak volgt vier principes.

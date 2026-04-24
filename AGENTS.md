@@ -19,6 +19,8 @@
 
 ## Current Guidelines
 - `docs/rapporten/schrijfrichtlijn-plan-van-aanpak.md`: style and structure guidance for Dutch municipal `plan van aanpak` documents.
+- `docs/regional-roles-and-splits-almere-flevoland.md`: source-backed guide to regional roles and splits around Almere, Flevoland, mandaatgemeente, GGD-regio, zorgkantoorregio, ROAZ/subregions, Zeewolde/Noord-Veluwe, and practical task ownership.
+- `data/curated/regional_roles_and_splits_almere_flevoland.json`: machine-readable role/split map for the same regional distinctions, including review-needed claims such as practical task ownership by Lelystad.
 - `docs/data-quality-checklist.md`: working checklist for applying the Norm, Time, Money, Governance, Locality, and Execution perspectives during source and site improvement.
-- `docs/phase24-data-quality-roadmap.md`: long-term roadmap for improving source quality, claim quality, timeline quality, and public-facing site text along the perspectives Norm, Time, Money, Governance, Locality, and Execution.
-- `docs/phase24-sprint24.2-audit.md`: internal note for the Sprint 24.2 audit, including where the saved audit output lives and how to use it in later cleanup sprints.
+- `docs/phase24-data-quality-roadmap.md`: long-term roadmap for improving source quality, claim quality, timeline quality, and public-facing site text along the perspectives Norm, Time, Money, Governance, Locality, and Execution. Keep its `Sprintstatus` table current by marking each sprint `open` or `completed` as work progresses.
+- `docs/completed-plans/phase24-sprint24.2-audit.md`: internal note for the completed Sprint 24.2 audit, including where the saved audit output lives and how to use it in later cleanup sprints.

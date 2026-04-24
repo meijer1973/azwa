@@ -17,7 +17,8 @@ This repository contains the AZWA / D5-D6 source corpus and the working material
 - `assets/`: CSS and JavaScript assets for the public site
 - `dist/`: generated static site output for local preview and GitHub Pages deployment
 - `tests/`: automated checks
-- `docs/`: process notes and implementation documentation
+- `docs/`: active process notes and implementation documentation
+- `docs/completed-plans/`: completed phase and sprint plans kept out of the active docs root
 
 ## Source Collections
 
@@ -39,7 +40,7 @@ This repository contains the AZWA / D5-D6 source corpus and the working material
 
 - `source-curation.md`: human-readable recommendation for canonical vs context material
 - `source-curation.json`: machine-readable version of the curation decision
-- `docs/phase0.md`: Phase 0 repository setup and corpus assumptions
+- `docs/completed-plans/phase0.md`: Phase 0 repository setup and corpus assumptions
 
 ## Working Principle
 

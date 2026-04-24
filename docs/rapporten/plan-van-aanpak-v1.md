@@ -69,11 +69,12 @@ Te beoordelen keuzevragen zijn:
 - hoe de raad wordt betrokken bij keuzes over middelen, uitvoering en voortgang.
 
 ## 7. Regionale samenwerking
-De AZWA-uitwerking voor D5 en D6 staat niet los van regionale samenwerking. De recente stukken leggen nadruk op de regionale werkagenda, de rol van gemeenten en zorgverzekeraars en de samenhang tussen lokale en regionale middelen.
+De AZWA-uitwerking voor D5 en D6 staat niet los van regionale samenwerking. De recente stukken leggen nadruk op de regionale werkagenda, de rol van gemeenten en zorgverzekeraars en de samenhang tussen lokale en regionale middelen. Daarbij moet steeds duidelijk zijn welke regionale schaal wordt bedoeld: de IZA/AZWA-regio Flevoland, de GGD-regio Flevoland, de zorgkantoorregio of een praktische subregionale aanpak.
 
 Voor Almere vraagt dit om nadere uitwerking van:
-- de aansluiting op de Flevolandse IZA- en AZWA-structuur;
-- de rol van de mandaatgemeente waar dat voor middelen of verantwoording relevant is;
+- de aansluiting op de IZA/AZWA-regio Flevoland;
+- de formele rol van de mandaatgemeente waar dat voor middelen of verantwoording relevant is;
+- de praktische taakverdeling voor coordinatie, uitvoering en subregionale onderdelen;
 - de verhouding tussen lokale uitvoering en regionale afspraken;
 - de betrokkenheid van zorg- en welzijnspartijen;
 - de wijze waarop lokale keuzes herkenbaar terugkomen in regionale documenten.

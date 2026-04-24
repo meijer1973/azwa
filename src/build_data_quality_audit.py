@@ -518,7 +518,7 @@ def main() -> None:
         "generated_on": TODAY,
         "storage": {
             "canonical_output": AUDIT_OUTPUT_PATH.relative_to(REPO_ROOT).as_posix(),
-            "sprint_note": "docs/phase24-sprint24.2-audit.md",
+            "sprint_note": "docs/completed-plans/phase24-sprint24.2-audit.md",
         },
         "summary": {
             "claim_count": len(claims),

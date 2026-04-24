@@ -309,6 +309,8 @@ Beantwoord:
 - wie uitvoert;
 - hoe regionale afstemming loopt.
 
+Voor Almere en Flevoland geldt hierbij een extra precisie-eis. Gebruik `de regio`, `Flevoland`, `regionale structuur` of `mandaatgemeente` niet als verzamelterm wanneer verschillende regionale indelingen relevant zijn. Benoem waar nodig de schaal: `IZA/AZWA-regio Flevoland`, `GGD-regio Flevoland`, `zorgkantoorregio 't Gooi`, `ROAZ/subregio` of `subregionale aanpak`. Maak ook onderscheid tussen formeel mandaat, programmacoordinatie en praktische uitvoering. Als alleen bekend is dat Almere als mandaatgemeente wordt genoemd, maar niet wie een specifieke taak uitvoert, formuleer de taakverdeling als reviewpunt.
+
 ### Planning
 Beantwoord:
 - wat de eerstvolgende ijkmomenten zijn;

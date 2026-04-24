@@ -88,14 +88,17 @@ Check:
 - Who coordinates?
 - Who owns implementation?
 - Who must approve or account?
+- Which regional role is meant: formal mandate, coordination, execution, or review signal?
 
 Common quality problems:
 - Actor labels are too vague
 - Decision, coordination, and execution are blended together
 - Regional governance is described without saying which party actually acts
+- `mandaatgemeente` is treated as if it also means practical task owner or project lead
 
 Editorial rule:
 - Keep ownership, coordination, and approval distinct.
+- For Almere/Flevoland regional roles, first check [regional-roles-and-splits-almere-flevoland.md](C:/Projects/azwa/docs/regional-roles-and-splits-almere-flevoland.md).
 
 ### 5. Locality
 Check:
@@ -103,14 +106,18 @@ Check:
 - Is it explicitly about Flevoland?
 - Is it only nationally relevant but not yet publicly adopted locally?
 - Is a local implication inferred rather than visible in a local source?
+- Which regional split is meant: IZA/AZWA-regio, GGD-regio, zorgkantoorregio, ROAZ/subregio, province, or subregional project?
 
 Common quality problems:
 - National goals are presented as if Almere already adopted them
 - Regional context is mistaken for local policy
 - Local documentation gaps are hidden instead of shown
+- Flevoland as province, IZA/AZWA-regio Flevoland, GGD Flevoland, and zorgkantoorregio 't Gooi are collapsed into one vague `regio`
+- Zeewolde is included or excluded without saying which regional split is being used
 
 Editorial rule:
 - Frame these as adoption or documentation gaps, not as failures of the database.
+- Do not write `de regio` or `Flevolandse structuur` where Almere's role depends on the regional split. Name the relevant scale in plain language.
 
 ### 6. Execution
 Check:

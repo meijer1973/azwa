@@ -10,7 +10,7 @@ Voor Almere is de bestuurlijke opgave in 2026 niet primair het opnieuw duiden va
 Daarom is het voor Almere verdedigbaar om medio september 2026 als interne afrondingsgrens te hanteren. Dat is geen formeel landelijk voorschrift en ook nog geen lokale bestuurlijke beslissing, maar wel een logisch uitgangspunt voor de verdere planning.
 
 ## Wat in 2026 vastligt
-Op 22 april 2026 hebben VNG, VWS en ZN de handvatten voor de regionale werkagenda gedeeld. Daarbij is aangegeven dat de regionale werkagenda uiterlijk 15 november 2026 door de colleges moet zijn vastgesteld en dat deze in de praktijk medio september gereed moet zijn. Dezelfde stukken melden dat de handreikingen per basisfunctionaliteit na de thematafel Medisch-Sociaal en Preventie van 26 mei 2026 worden gedeeld. Daarmee beschikt de regio pas vanaf eind mei over de volledige landelijke uitwerking voor de inhoudelijke vertaling.
+Op 22 april 2026 hebben VNG, VWS en ZN de handvatten voor de regionale werkagenda gedeeld. Daarbij is aangegeven dat de regionale werkagenda uiterlijk 15 november 2026 door de colleges moet zijn vastgesteld en dat deze in de praktijk medio september gereed moet zijn. Dezelfde stukken melden dat de handreikingen per basisfunctionaliteit na de thematafel Medisch-Sociaal en Preventie van 26 mei 2026 worden gedeeld. Daarmee beschikt de IZA/AZWA-regio pas vanaf eind mei over de volledige landelijke uitwerking voor de inhoudelijke vertaling.
 
 Voor Almere komt die landelijke planning samen met een eigen bestuurlijke kalender. De gemeente beschrijft de perspectiefnota in het voorjaar als het moment waarop de raad zich uitspreekt over de inzet van geld; de vertaling volgt daarna in de meerjarenbegroting in het najaar. In 2025 bood het college de programmabegroting 2026 op 9 oktober aan en stemde de raad op 13 november met die begroting in. De raad van Almere had op 18 maart 2026 verkiezingen; op 1 april 2026 is de nieuwe raad benoemd. De Gemeentewet bepaalt bovendien dat de raad de begroting in het voorafgaande jaar vaststelt en dat het college de vastgestelde begroting binnen twee weken, en in elk geval voor 15 november, aan gedeputeerde staten zendt.
 
@@ -22,21 +22,23 @@ Voor Almere is dat geen puur organisatorisch punt. De stad moet de regionale wer
 ## Drie aandachtspunten voor Almere
 
 ### 1. Regionale positionering vraagt tijdige bevestiging
-De regionale context is voor Almere niet vanzelfsprekend eenduidig. Het Regiobeeld Flevoland benoemt Almere als onderdeel van de Flevolandse samenwerking, maar vermeldt tegelijk dat Almere onder zorgkantoorregio 't Gooi valt en voor het IZA-proces in Flevoland wil blijven meedoen. Hetzelfde regiobeeld vermeldt dat Zeewolde vanwege bestaande samenwerking aansluit bij Noord-Veluwe. Voor Almere vraagt dit om tijdige duidelijkheid over de regionale route waarlangs de stad haar bijdrage aan de werkagenda organiseert en over de bestuurlijke en ambtelijke afstemming die daarbij hoort.
+De regionale context is voor Almere niet vanzelfsprekend eenduidig. Het Regiobeeld Flevoland benoemt Almere als onderdeel van de Flevolandse samenwerking, maar vermeldt tegelijk dat Almere onder zorgkantoorregio 't Gooi valt en voor het IZA-proces in Flevoland wil blijven meedoen. Hetzelfde regiobeeld vermeldt dat Zeewolde vanwege bestaande samenwerking aansluit bij Noord-Veluwe. Voor Almere vraagt dit om tijdige duidelijkheid over de IZA/AZWA-regio waarlangs de stad haar bijdrage aan de werkagenda organiseert, over de verhouding met GGD-regio Flevoland en zorgkantoorregio 't Gooi, en over de bestuurlijke en ambtelijke afstemming die daarbij hoort.
+
+Daarbij moet de formele mandaatgemeente-rol worden onderscheiden van praktische coordinatie en uitvoering. De beschikbare bronnen ondersteunen dat een mandaatgemeente namens gemeenten in een IZA-regio regionale middelen aanvraagt en verantwoordt. Zij maken nog niet per taak duidelijk welke onderdelen praktisch door Almere, Lelystad, Flever, GGD Flevoland of andere partners worden opgepakt.
 
 ### 2. Bestaande samenwerking hoeft niet opnieuw te worden opgebouwd
-Almere begint niet op nul. Met Positief Gezond Almere loopt al een breed transformatieprogramma waarvoor in december 2024 20 miljoen euro uit het IZA is toegekend. Volgens de gemeente werken daarin onder meer Flevoziekenhuis, Zorggroep Almere, ReHA, De Schoor, GGD Flevoland, GGZ Centraal, de Flevolandse Patientenfederatie, Woonzorg Flevoland, Zilveren Kruis en de gemeente samen. Dat maakt het bestuurlijk logisch om AZWA niet als een los traject naast PGA te organiseren, maar zoveel mogelijk aan te sluiten op bestaande samenwerking, netwerken en uitvoeringskennis.
+Almere begint niet op nul. Met Positief Gezond Almere loopt al een breed transformatieprogramma waarvoor in december 2024 20 miljoen euro uit het IZA is toegekend. Volgens de gemeente werken daarin onder meer Flevoziekenhuis, Zorggroep Almere, ReHA, De Schoor, GGD Flevoland als partner binnen de GGD-regio, GGZ Centraal, de Flevolandse Patientenfederatie, Woonzorg Flevoland, Zilveren Kruis en de gemeente samen. Dat maakt het bestuurlijk logisch om AZWA niet als een los traject naast PGA te organiseren, maar zoveel mogelijk aan te sluiten op bestaande samenwerking, netwerken en uitvoeringskennis.
 
 ### 3. De koppeling met de P&C-cyclus kan niet tot het najaar wachten
 De financiele vertaling is voor Almere niet alleen een technisch sluitstuk. Zodra maatregelen uit de werkagenda gevolgen hebben voor lokale dekking, structurele lasten of beleidskaders, raakt de regionale werkagenda direct aan de gemeentelijke begrotingsroute. Dat vraagt erom dat financiele gevolgen, dekking en bestuurlijke keuzevragen tijdig herkenbaar zijn. De beschikbare landelijke stukken geven daarvoor wel richting, maar nog niet op alle punten een uitgewerkte lokale vertaling. Juist daarom is vroege financiele duiding nodig.
 
 ## Bestuurlijke route
-De landelijke stukken leggen vast dat de regionale werkagenda door de colleges van B en W moet worden vastgesteld. Voor Almere betekent dit dat de ambtelijke uitwerking, de regionale afstemming en de bestuurlijke voorbereiding ruim voor november op orde moeten zijn.
+De landelijke stukken leggen vast dat de regionale werkagenda door de colleges van B en W moet worden vastgesteld. Voor Almere betekent dit dat de ambtelijke uitwerking, de afstemming binnen de IZA/AZWA-regio Flevoland en de bestuurlijke voorbereiding ruim voor november op orde moeten zijn.
 
 Daarbinnen ligt het voor de hand om de rollen als volgt te onderscheiden:
-- ambtelijk niveau: inhoudelijke uitwerking, regionale aansluiting, uitvoerbaarheid en voorbereiding van keuzevragen;
+- ambtelijk niveau: inhoudelijke uitwerking, aansluiting op de juiste regionale schaal, uitvoerbaarheid en voorbereiding van keuzevragen;
 - management- en directieniveau: ordening van prioriteiten, capaciteit, afhankelijkheden en escalatiepunten;
-- portefeuillehouders: mandaat voor regionale onderhandelingen en weging van lokale gevolgen;
+- portefeuillehouders: formeel mandaat voor regionale onderhandelingen en weging van lokale gevolgen;
 - college: formele vaststelling van de regionale werkagenda;
 - raad: betrokkenheid zodra financiele keuzes, beleidswijzigingen of structurele lokale gevolgen aan de orde zijn.
 

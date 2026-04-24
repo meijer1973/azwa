@@ -1,0 +1,222 @@
+{
+  "title": "Regional roles and splits around Almere and Flevoland",
+  "as_of_date": "2026-04-24",
+  "purpose": "Make regional scale, formal mandate, coordination, and execution roles explicit so reports and agents do not collapse them into a single 'region' concept.",
+  "editorial_rule": "Do not use 'Flevoland', 'de regio', or 'mandaatgemeente' as generic shorthand when IZA/AZWA-regio, GGD-regio, zorgkantoorregio, ROAZ/subregio, or practical task ownership matters.",
+  "role_types": [
+    {
+      "role_type": "formal_mandaatgemeente",
+      "meaning": "Gemeente die namens alle gemeenten in een IZA-regio regionale middelen aanvraagt en verantwoordt, en hierover afspraken kan maken met andere partijen.",
+      "source_ids": [
+        "nat_azwa_opdracht_werkagenda_d5_2026"
+      ]
+    },
+    {
+      "role_type": "regional_coordination",
+      "meaning": "Proces-, programma- of netwerkcoordinatie. Dit kan bij een persoon, programma, ondersteunende organisatie of partner liggen en is niet hetzelfde als formeel mandaat."
+    },
+    {
+      "role_type": "subregional_or_thematic_execution",
+      "meaning": "Praktische uitvoering of trekkerschap voor een subregio, thema, pilot, basisfunctionaliteit of transformatieplan."
+    },
+    {
+      "role_type": "human_claim_needs_verification",
+      "meaning": "Signaal uit gesprekken of review dat pas als feit mag worden gebruikt na broncontrole."
+    }
+  ],
+  "regional_splits": [
+    {
+      "split_id": "iza_azwa_regio_flevoland",
+      "region_type": "IZA/AZWA-regio",
+      "label": "IZA/AZWA-regio Flevoland",
+      "almere_position": "Deelnemer; extern genoemd als mandaatgemeente voor Flevoland.",
+      "included_municipalities": [
+        "Almere",
+        "Dronten",
+        "Lelystad",
+        "Noordoostpolder",
+        "Urk"
+      ],
+      "not_in_this_split_or_exception": [
+        "Zeewolde sluit voor het regioplan aan bij Noord-Veluwe."
+      ],
+      "source_status": "source_backed_with_review_note",
+      "source_ids": [
+        "reg_flevoland_2023_regiobeeld",
+        "reg_flevoland_2023_regioplan_iza",
+        "external_mentale_gezondheidsnetwerken_allenetwerken"
+      ],
+      "agent_warning": "Use this split for IZA/AZWA workagenda and mandaatgemeente wording; do not infer that all execution sits with Almere."
+    },
+    {
+      "split_id": "zorgkantoorregio_t_gooi",
+      "region_type": "zorgkantoorregio",
+      "label": "Zorgkantoorregio 't Gooi",
+      "almere_position": "Almere valt onder zorgkantoorregio 't Gooi.",
+      "included_municipalities_or_areas": [
+        "Almere",
+        "Blaricum",
+        "Eemnes",
+        "Gooise Meren",
+        "Hilversum",
+        "Huizen",
+        "Laren",
+        "Wijdemeren"
+      ],
+      "source_status": "source_backed",
+      "source_ids": [
+        "reg_flevoland_2023_regiobeeld",
+        "external_zilveren_kruis_t_gooi"
+      ],
+      "agent_warning": "Do not treat zorgkantoorregio 't Gooi as the same as IZA/AZWA-regio Flevoland."
+    },
+    {
+      "split_id": "ggd_regio_flevoland",
+      "region_type": "GGD-regio",
+      "label": "GGD Flevoland",
+      "almere_position": "Almere valt binnen GGD Flevoland.",
+      "included_municipalities": [
+        "Almere",
+        "Dronten",
+        "Lelystad",
+        "Noordoostpolder",
+        "Urk",
+        "Zeewolde"
+      ],
+      "source_status": "source_backed",
+      "source_ids": [
+        "external_ggd_flevoland_gemeenten",
+        "external_ggd_flevoland_begroting_2026"
+      ],
+      "agent_warning": "Use GGD-regio wording for GGD-executed tasks; this scale includes Zeewolde and may differ from the IZA/AZWA-regio."
+    },
+    {
+      "split_id": "flevoland_subregions_regioplan",
+      "region_type": "subregio",
+      "label": "Subregionale aanpakken vanuit Regioplan IZA Flevoland",
+      "subregions": [
+        "Almere",
+        "Lelystad/Dronten",
+        "Noordoostpolder/Urk"
+      ],
+      "source_status": "source_backed",
+      "source_ids": [
+        "reg_flevoland_2023_regioplan_iza",
+        "external_ggd_flevoland_begroting_2026"
+      ],
+      "agent_warning": "A subregional task in Lelystad/Dronten does not make Lelystad the formal mandaatgemeente."
+    },
+    {
+      "split_id": "roaz_acute_care_lens",
+      "region_type": "ROAZ/subregio acute zorg",
+      "label": "ROAZ- en acute-zorglens",
+      "almere_position": "Afhankelijk van het acute-zorgthema; het Regiobeeld gebruikt ROAZ-bronnen en noemt onder meer subregio Flevoland en Flevoland / Gooi en Vechtstreek.",
+      "source_status": "source_backed_per_passage",
+      "source_ids": [
+        "reg_flevoland_2023_regiobeeld"
+      ],
+      "agent_warning": "Check the passage before translating ROAZ/acute-care evidence into IZA/AZWA governance claims."
+    }
+  ],
+  "regional_roles": [
+    {
+      "role_id": "iza_flevoland_formal_mandaatgemeente_almere",
+      "role_type": "formal_mandaatgemeente",
+      "region_type": "IZA/AZWA-regio",
+      "actor": "Gemeente Almere",
+      "applies_to_region": "IZA/AZWA-regio Flevoland",
+      "applies_to_municipalities": [
+        "Almere",
+        "Dronten",
+        "Lelystad",
+        "Noordoostpolder",
+        "Urk"
+      ],
+      "source_status": "source_backed_with_review_note",
+      "source_ids": [
+        "external_mentale_gezondheidsnetwerken_allenetwerken",
+        "nat_azwa_opdracht_werkagenda_d5_2026"
+      ],
+      "public_wording": "Voor de Flevolandse IZA/AZWA-route wordt Almere in externe netwerkgegevens als mandaatgemeente genoemd. De mandaatgemeente-rol gaat over regionale middelen en afspraken namens gemeenten in de IZA-regio.",
+      "does_not_mean": [
+        "Almere voert alle regionale taken zelf uit.",
+        "Almere is automatisch trekker van elk subregionaal of thematisch project.",
+        "Lelystad kan geen praktische uitvoerings- of coordinatierol hebben."
+      ],
+      "review_note": "Een lokaal mandaatbesluit of expliciete regionale bestuursovereenkomst is nog waardevol als aanvullende bron."
+    },
+    {
+      "role_id": "zorgzaam_flevoland_regional_movement",
+      "role_type": "regional_coordination",
+      "actor": "Zorgzaam Flevoland / Flever",
+      "applies_to_region": "Flevolandse IZA-regioplanbeweging",
+      "source_status": "source_backed",
+      "source_ids": [
+        "reg_flevoland_2023_regioplan_iza",
+        "external_flever_zorgzaam_flevoland"
+      ],
+      "public_wording": "Zorgzaam Flevoland is de regionale beweging die vanuit het IZA Regioplan is ontstaan; Flever ondersteunt deze beweging.",
+      "does_not_mean": [
+        "Flever is de mandaatgemeente.",
+        "Vestiging of ondersteuning in Lelystad wijzigt de formele mandaatgemeente-rol."
+      ]
+    },
+    {
+      "role_id": "ggd_flevoland_execution_scale",
+      "role_type": "subregional_or_thematic_execution",
+      "actor": "GGD Flevoland",
+      "applies_to_region": "GGD-regio Flevoland",
+      "source_status": "source_backed",
+      "source_ids": [
+        "nat_azwa_opdracht_werkagenda_d5_2026",
+        "external_ggd_flevoland_begroting_2026"
+      ],
+      "public_wording": "Voor GGD-uitgevoerde onderdelen kan de GGD-regio de natuurlijke schaal zijn; de landelijke werkagenda-bron waarschuwt dat GGD-regio en IZA-regio niet overal overeenkomen.",
+      "does_not_mean": [
+        "GGD-schaal is automatisch gelijk aan IZA/AZWA-regio Flevoland."
+      ]
+    },
+    {
+      "role_id": "lelystad_practical_task_claim",
+      "role_type": "human_claim_needs_verification",
+      "actor": "Gemeente Lelystad",
+      "claim": "Een deel van de IZA/AZWA-taken wordt praktisch door Lelystad opgepakt.",
+      "source_status": "human_claim_needs_verification",
+      "source_ids": [],
+      "review_question": "Welke specifieke taak, werkagenda, pilot, besluit, budgethouderrol of projectdocument noemt Lelystad als trekker, penvoerder, budgethouder, coordinatiepunt of uitvoerder?",
+      "agent_warning": "Do not restate this as fact. Use it as a search and review prompt."
+    }
+  ],
+  "external_sources": [
+    {
+      "source_id": "external_mentale_gezondheidsnetwerken_allenetwerken",
+      "title": "Alle netwerken - Mentale gezondheidsnetwerken",
+      "url": "https://www.mentalegezondheidsnetwerken.nl/alle-netwerken/",
+      "used_for": "External listing naming Almere as mandaatgemeente for Mentale gezondheidsnetwerk Flevoland."
+    },
+    {
+      "source_id": "external_flever_zorgzaam_flevoland",
+      "title": "Zorgzaam Flevoland - Flever",
+      "url": "https://flever.nl/project/zorgzaam-flevoland/",
+      "used_for": "Description of Zorgzaam Flevoland as movement from the IZA Regioplan and Flever support role."
+    },
+    {
+      "source_id": "external_zilveren_kruis_t_gooi",
+      "title": "Zilveren Kruis regio 't Gooi",
+      "url": "https://www.zilverenkruis.nl/zorgaanbieders/visie-en-transformatie/ontwikkelingen/tgooi",
+      "used_for": "Zorgkantoor/regio composition including Almere in 't Gooi."
+    },
+    {
+      "source_id": "external_ggd_flevoland_gemeenten",
+      "title": "GGD Flevoland gemeenten",
+      "url": "https://www.ggdflevoland.nl/professional/gemeenten/",
+      "used_for": "GGD Flevoland municipality coverage."
+    },
+    {
+      "source_id": "external_ggd_flevoland_begroting_2026",
+      "title": "GGD Flevoland Begroting 2026",
+      "url": "https://www.ggdflevoland.nl/app/uploads/sites/6/2025/10/Begroting-2026-GGD-Flevoland.pdf",
+      "used_for": "GGD role and subregions Almere, Lelystad/Dronten, Noordoostpolder/Urk."
+    }
+  ]
+}

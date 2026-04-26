@@ -17,8 +17,8 @@ Gebruik deze roadmap als levend werkdocument. Werk na elke sprint de statusregel
 | 24.2 Audit van bestaande site-data | completed | `docs/completed-plans/phase24-sprint24.2-audit.md`, `data/extracted/data_quality_audit.json` |
 | 24.3 Review-dashboard intern | completed | `docs/internal/review-dashboard.html`, `src/build_internal_review_dashboard.py`, `docs/completed-plans/phase24-sprint24.3-review-dashboard.md` |
 | 25.3 Nulmeting en capaciteit werkagenda | completed | `data/extracted/workagenda_nulmeting_capacity.json`, `src/build_workagenda_nulmeting_capacity.py`, `docs/completed-plans/phase25-sprint25.3-nulmeting-capaciteit.md` |
-| 25.4 D6 governance en samenwerking | completed | `data/extracted/d6_governance_collaboration.json`, `src/build_d6_governance_collaboration.py`, `docs/completed-plans/phase25-sprint25.4-d6-governance-samenwerking.md` |
-| 25.5 Almere en Flevoland | open | Volgende sprint; nog niet gestart |
+| 25.4 D6 governance en samenwerking | open | Heropend voor D6 Almere responsibility pack: `docs/phase25-sprint25.4-d6-almere-responsibility-pack-plan.md`; eerste publieke prefill staat in `data/extracted/d6_governance_collaboration.json` |
+| 25.5 Almere en Flevoland | open | Volgende sprint; wacht op afronding heropende Sprint 25.4 |
 | 25.6 Regionale governance | open |  |
 | 26.1 PDF- en tabelkwaliteit | open |  |
 | 26.2 Claimtekst schoonmaken | open |  |
@@ -43,13 +43,15 @@ Gebruik deze roadmap als levend werkdocument. Werk na elke sprint de statusregel
 | 31.3 Reviewronde met menselijke beoordelaars | open |  |
 
 ## Huidige sprintplan
-Sprint 25.4 is afgerond op publieke-bronstructuur: de D6-governance- en samenwerkingslaag maakt nu per D6-dimensie zichtbaar welke publieke claims beschikbaar zijn, welke actorrollen als publieke prefill kunnen dienen, en welke verantwoordelijkheidssloten nog lokale validatie of besluitvorming vragen. Sprint 25.5 is de volgende open sprint, maar is nog niet gestart.
+Sprint 25.4 is heropend na inhoudelijke review. De eerste D6-governance- en samenwerkingslaag blijft bruikbaar als publieke prefill, maar de sprint is nog niet klaar zolang de lokale Almere-verantwoordelijkheidsallocatie onvoldoende bronsterk is. De heropende sprint richt zich op een D6 Almere responsibility pack: extra publieke lokale/regionale bronnen beoordelen en opnemen, D6-componenten koppelen aan bestaande voorzieningen, eigenaar, uitvoerder, partners, schaal, financiering, besluitstatus en open reviewpunten, en expliciet scheiden wat feit, interpretatie, voorstel, lokale validatie of later besluit is.
 
 Status op 26 april 2026: Sprint 25.2 is afgerond als publieke bronversterkingssprint. `data/extracted/local_source_strengthening_almere.json` maakt zichtbaar welke lokale bronnen in de formele laag zitten, welke publieke bronnen als assessmentmateriaal zijn beoordeeld, en welke vragen naar later in de workflow gaan omdat de publieke bronbasis is uitgeput of omdat een geschoonde validatiestap nodig is. De geselecteerde Documentwijzer-bijlagen voor Visie Gezondheidsbeleid en Maatschappelijke Agenda zijn eerst naar page-markdown omgezet en daarna opgenomen in `data/raw/manifest.json`. Ook de GGD-tabellenboeken voor volwassenen en ouderen, de GGD-valpreventiepagina Almere en de ZonMw-bron zijn opgenomen in `data/raw/manifest.json`, door inventory/extractie/claims/site-viewmodels verwerkt en blijven reviewmateriaal voordat ze bestuurlijk of public-facing worden gebruikt. Niet-publieke informatie, ontbrekende lokale bevestiging en formele besluitvragen blokkeren deze fase niet; ze worden als gaten of carry-over taken zichtbaar gemaakt voor lokale medewerkers en latere besluitvorming.
 
-Status op 26 april 2026: Sprint 25.4 is afgerond in `data/extracted/d6_governance_collaboration.json`. De laag gebruikt de publieke claims, de regionale rollen/splits-guardrail en de nulmeting uit Sprint 25.3 om per D6-dimensie de publieke brondekking, actorrollen, verantwoordelijkheidsprefill, lokale validatievelden en besluitvragen zichtbaar te maken. Niet-publieke rolverdeling, eigenaarschap, budget, monitoring en schaalkeuzes blijven invul- of besluitvragen.
+Status op 26 april 2026: Sprint 25.4a is afgerond in `data/extracted/d6_governance_collaboration.json`. De laag gebruikt de publieke claims, de regionale rollen/splits-guardrail en de nulmeting uit Sprint 25.3 om per D6-dimensie de publieke brondekking, actorrollen, verantwoordelijkheidsprefill, lokale validatievelden en besluitvragen zichtbaar te maken. Niet-publieke rolverdeling, eigenaarschap, budget, monitoring en schaalkeuzes blijven invul- of besluitvragen.
 
-Afgeronde aanpak voor Sprint 25.4:
+Status op 26 april 2026: Sprint 25.4b is geopend in `docs/phase25-sprint25.4-d6-almere-responsibility-pack-plan.md`. De nieuwe focus is niet een algemene D6-samenvatting, maar een Almere responsibility pack rond lokale toegang, wijkteams, Stevige Lokale Teams, GGD/JGZ, mentale-gezondheidswijkinfrastructuur, monitoring/data, regionale/lokale uitvoering en financieringsafbakening.
+
+Afgeronde aanpak voor Sprint 25.4a:
 
 - Gebruik publieke bronnen eerst om D6-rollen te ordenen; als bronnen geen taak, eigenaar of besluit geven, markeer dit als lokale validatie of besluitvraag.
 - Houd IZA/AZWA-regio, GGD-regio, zorgkantoorregio en lokale uitvoering strikt uit elkaar.
@@ -57,9 +59,13 @@ Afgeronde aanpak voor Sprint 25.4:
 - Gebruik `data/extracted/d6_governance_collaboration.json` als werklijst voor lokale medewerkers: lokale teams, wijkverbanden, inloopvoorzieningen, sociale basispartners, monitoring en eigenaarschap.
 - Schuif formele mandaat-, budget- en schaalkeuzes door naar besluitvorming wanneer de publieke bronbasis geen vastgesteld antwoord geeft.
 
-Geplande vervolgsprint:
+Aanpak voor heropende Sprint 25.4b:
 
-- Sprint 25.5 volgt daarna voor Almere en Flevoland: verdere publieke lokale en regionale bronnen rond AZWA, IZA, GALA, preventie, sociaal domein en gezondheid.
+- Verifieer en intake publieke D6-uitvoeringsbronnen: Stevige Lokale Teams, Wijkteams Almere, VNG Richtinggevend Kader, Toezicht Sociaal Domein Basisfuncties, GGD Flevoland Begroting/Ontwerpbegroting 2026, GGD Kennis en Advies, JGZ Almere, Samen Sterker in de Wijk, actuele PGA-samenwerking en selectieve GGZ/partnerbronnen.
+- Maak een D6 responsibility register voor Almere met bestaande voorziening, benodigde upgrade, eigenaar, uitvoerder, partners, schaal, financiering, besluitstatus, bronstatus, confidence en open issue.
+- Markeer elke rij als feit, interpretatie, voorstel, lokale validatie of later besluit.
+- Gebruik lokale besluitdocumenten alleen als `settled` wanneer de bronpassage dit draagt; behandel andere invulling als prefill of reviewtaak.
+- Houd Almere-local, IZA/AZWA-regio Flevoland, GGD-regio Flevoland, zorgkantoorregio en project-/programmaschaal strikt gescheiden.
 
 ## Doel
 De website is werkbaar als V1. De volgende ontwikkelfase richt zich daarom niet primair op de gebruikersinterface, maar op betere bronkwaliteit, betere extracties, betere claimstructuur en betere Nederlandse siteteksten.
@@ -172,7 +178,7 @@ Status: completed.
 - Markeer expliciet welke onderdelen conceptueel te vullen zijn en welke pas na lokale of regionale besluitvorming verantwoord kunnen worden ingevuld.
 
 Sprint 25.4: D6 governance en samenwerking
-Status: completed.
+Status: open.
 
 - Eerste uitvoerlaag toegevoegd: `data/extracted/d6_governance_collaboration.json`.
 - De laag splitst D6 in basisinfrastructuur, lokale teams/wijkverbanden, inloopvoorzieningen/steunpunten, regionale coordinatie en monitoring/leren.
@@ -181,6 +187,8 @@ Status: completed.
 - Per D6-dimensie zijn besluitvragen toegevoegd met publieke prefill waar mogelijk en lokale validatiestatus waar publieke bronnen geen vastgesteld antwoord geven.
 - Het interne dashboard toont D6-governance als apart aandachtspunt met dimensies, actorrollen, verantwoordelijkheidsprefill en besluitvragen.
 - Niet-publieke rolverdeling, mandaat, budget, monitoring en schaalkeuzes zijn doorgeschoven naar lokale validatie of latere besluitvorming.
+- Sprint 25.4 is heropend met `docs/phase25-sprint25.4-d6-almere-responsibility-pack-plan.md` omdat de bronbasis rond lokale D6-verantwoordelijkheid voor Almere nog versterking vraagt.
+- Volgende output: D6 Almere responsibility register met twaalf startcomponenten, publieke bronstatus en lokale validatie-/besluitvelden.
 
 Sprint 25.5: Almere en Flevoland
 Status: open.

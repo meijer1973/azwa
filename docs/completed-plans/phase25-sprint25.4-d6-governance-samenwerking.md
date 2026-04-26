@@ -1,7 +1,7 @@
 # Sprint 25.4 - D6 governance en samenwerking
 
 ## Summary
-Status: completed.
+Status: completed as Sprint 25.4a; Sprint 25.4 is reopened in `docs/phase25-sprint25.4-d6-almere-responsibility-pack-plan.md`.
 
 Sprint 25.4 heeft de D6-governance en samenwerking uitgewerkt als publieke prefill- en validatielaag. De laag maakt per D6-dimensie zichtbaar welke publieke claims beschikbaar zijn, welke actorrollen als publieke rolhypothese of bronstatus kunnen worden gebruikt, en welke verantwoordelijkheidssloten lokaal moeten worden bevestigd.
 

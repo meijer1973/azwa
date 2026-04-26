@@ -186,6 +186,7 @@ Machine-readable:
     "data/curated/regional_roles_and_splits_almere_flevoland.json",
     "docs/regional-roles-and-splits-almere-flevoland.md",
     "docs/data-quality-checklist.md",
+    "docs/phase25-sprint25.4-d6-almere-responsibility-pack-plan.md",
     "docs/human-review-guidance.md",
     "docs/internal/review-dashboard.html"
   ],

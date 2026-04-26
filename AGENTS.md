@@ -36,3 +36,4 @@
 - `docs/completed-plans/phase24-sprint24.3-review-dashboard.md`: internal note for the completed Sprint 24.3 review dashboard.
 - `docs/completed-plans/phase25-sprint25.2-lokale-bronversterking.md`: internal note for the completed Sprint 25.2 public local-source strengthening sprint, including the rule that non-public gaps carry forward to validation or decision workflows rather than blocking public-source structuring.
 - `docs/completed-plans/phase25-sprint25.3-nulmeting-capaciteit.md`: internal note for the completed Sprint 25.3 public nulmeting/capacity prefill sprint.
+- `docs/completed-plans/phase25-sprint25.4-d6-governance-samenwerking.md`: internal note for the completed Sprint 25.4 D6 governance and collaboration sprint, including responsibility-slot prefill and local validation/decision carry-over.

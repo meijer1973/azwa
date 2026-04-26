@@ -17,8 +17,8 @@ Gebruik deze roadmap als levend werkdocument. Werk na elke sprint de statusregel
 | 24.2 Audit van bestaande site-data | completed | `docs/completed-plans/phase24-sprint24.2-audit.md`, `data/extracted/data_quality_audit.json` |
 | 24.3 Review-dashboard intern | completed | `docs/internal/review-dashboard.html`, `src/build_internal_review_dashboard.py`, `docs/completed-plans/phase24-sprint24.3-review-dashboard.md` |
 | 25.3 Nulmeting en capaciteit werkagenda | completed | `data/extracted/workagenda_nulmeting_capacity.json`, `src/build_workagenda_nulmeting_capacity.py`, `docs/completed-plans/phase25-sprint25.3-nulmeting-capaciteit.md` |
-| 25.4 D6 governance en samenwerking | open | Huidige sprint; eerste D6-governance- en samenwerkingslaag staat in `data/extracted/d6_governance_collaboration.json` |
-| 25.5 Almere en Flevoland | open |  |
+| 25.4 D6 governance en samenwerking | completed | `data/extracted/d6_governance_collaboration.json`, `src/build_d6_governance_collaboration.py`, `docs/completed-plans/phase25-sprint25.4-d6-governance-samenwerking.md` |
+| 25.5 Almere en Flevoland | open | Volgende sprint; nog niet gestart |
 | 25.6 Regionale governance | open |  |
 | 26.1 PDF- en tabelkwaliteit | open |  |
 | 26.2 Claimtekst schoonmaken | open |  |
@@ -43,13 +43,13 @@ Gebruik deze roadmap als levend werkdocument. Werk na elke sprint de statusregel
 | 31.3 Reviewronde met menselijke beoordelaars | open |  |
 
 ## Huidige sprintplan
-Sprint 25.4 richt zich op D6-governance en samenwerking. Sprint 25.3 heeft de publieke nulmeting en capaciteitsvelden per D5-werkagenda-target gevuld voor zover de publieke bronbasis dat toestaat; de volgende stap is expliciet maken wie bij D6 besluit, coordineert, uitvoert, financiert, monitort en welke rol nog lokale validatie of besluitvorming vraagt.
+Sprint 25.4 is afgerond op publieke-bronstructuur: de D6-governance- en samenwerkingslaag maakt nu per D6-dimensie zichtbaar welke publieke claims beschikbaar zijn, welke actorrollen als publieke prefill kunnen dienen, en welke verantwoordelijkheidssloten nog lokale validatie of besluitvorming vragen. Sprint 25.5 is de volgende open sprint, maar is nog niet gestart.
 
 Status op 26 april 2026: Sprint 25.2 is afgerond als publieke bronversterkingssprint. `data/extracted/local_source_strengthening_almere.json` maakt zichtbaar welke lokale bronnen in de formele laag zitten, welke publieke bronnen als assessmentmateriaal zijn beoordeeld, en welke vragen naar later in de workflow gaan omdat de publieke bronbasis is uitgeput of omdat een geschoonde validatiestap nodig is. De geselecteerde Documentwijzer-bijlagen voor Visie Gezondheidsbeleid en Maatschappelijke Agenda zijn eerst naar page-markdown omgezet en daarna opgenomen in `data/raw/manifest.json`. Ook de GGD-tabellenboeken voor volwassenen en ouderen, de GGD-valpreventiepagina Almere en de ZonMw-bron zijn opgenomen in `data/raw/manifest.json`, door inventory/extractie/claims/site-viewmodels verwerkt en blijven reviewmateriaal voordat ze bestuurlijk of public-facing worden gebruikt. Niet-publieke informatie, ontbrekende lokale bevestiging en formele besluitvragen blokkeren deze fase niet; ze worden als gaten of carry-over taken zichtbaar gemaakt voor lokale medewerkers en latere besluitvorming.
 
-Status op 26 april 2026: eerste Sprint 25.4-uitvoer toegevoegd in `data/extracted/d6_governance_collaboration.json`. De laag gebruikt de publieke claims, de regionale rollen/splits-guardrail en de nulmeting uit Sprint 25.3 om per D6-dimensie de publieke brondekking, actorrollen en lokale validatievelden zichtbaar te maken. Niet-publieke rolverdeling, eigenaarschap, budget, monitoring en schaalkeuzes blijven invul- of besluitvragen.
+Status op 26 april 2026: Sprint 25.4 is afgerond in `data/extracted/d6_governance_collaboration.json`. De laag gebruikt de publieke claims, de regionale rollen/splits-guardrail en de nulmeting uit Sprint 25.3 om per D6-dimensie de publieke brondekking, actorrollen, verantwoordelijkheidsprefill, lokale validatievelden en besluitvragen zichtbaar te maken. Niet-publieke rolverdeling, eigenaarschap, budget, monitoring en schaalkeuzes blijven invul- of besluitvragen.
 
-Eerste verbeterplan voor Sprint 25.4:
+Afgeronde aanpak voor Sprint 25.4:
 
 - Gebruik publieke bronnen eerst om D6-rollen te ordenen; als bronnen geen taak, eigenaar of besluit geven, markeer dit als lokale validatie of besluitvraag.
 - Houd IZA/AZWA-regio, GGD-regio, zorgkantoorregio en lokale uitvoering strikt uit elkaar.
@@ -172,17 +172,15 @@ Status: completed.
 - Markeer expliciet welke onderdelen conceptueel te vullen zijn en welke pas na lokale of regionale besluitvorming verantwoord kunnen worden ingevuld.
 
 Sprint 25.4: D6 governance en samenwerking
-Status: open.
+Status: completed.
 
 - Eerste uitvoerlaag toegevoegd: `data/extracted/d6_governance_collaboration.json`.
 - De laag splitst D6 in basisinfrastructuur, lokale teams/wijkverbanden, inloopvoorzieningen/steunpunten, regionale coordinatie en monitoring/leren.
 - Actorrollen voor Almere, GGD Flevoland, Zorgzaam Flevoland/Flever, zorgverzekeraar/zorgkantoor, welzijn/sociaal werk en huisartsen/eerstelijn zijn als publieke rolhypothese of bronstatus opgenomen met validatievelden.
-- Versterk bronnen over D6-rolverdeling: gemeente, mandaatgemeente, college, raad, GGD, welzijn, sociaal werk, huisartsen/eerstelijn, zorgverzekeraar, wijkteams/lokale teams en regionale samenwerkingsverbanden.
-- Zoek expliciete bronpassages over wie besluit, wie coordineert, wie uitvoert, wie financiert, wie monitort en wie aanspreekbaar is bij lokale teams, hechte wijkverbanden, inloopvoorzieningen en sociale basis.
-- Splits governanceclaims in besluitvorming, samenwerking, uitvoering, verantwoording en monitoring, zodat D6 niet alleen als inhoudelijke infrastructuur maar ook als verantwoordelijkheidsmodel zichtbaar wordt.
-- Controleer of `d6.local_teams`, `d6.basisinfrastructuur`, `d6.regional_coordination`, `municipal.role_allocation` en `governance.regional_coordination` genoeg bronbasis hebben voor Almere/Flevoland-duiding.
-- Voeg reviewpunten toe waar de bronbasis alleen samenwerking noemt maar geen expliciete taak- of besluitverdeling geeft.
-- Laat het interne dashboard D6-governance als apart aandachtspunt tonen als de brondekking of claimduiding zwak blijft.
+- Verantwoordelijkheidssloten toegevoegd voor besluitvorming, coordinatie, uitvoering, financiering en monitoring/verantwoording.
+- Per D6-dimensie zijn besluitvragen toegevoegd met publieke prefill waar mogelijk en lokale validatiestatus waar publieke bronnen geen vastgesteld antwoord geven.
+- Het interne dashboard toont D6-governance als apart aandachtspunt met dimensies, actorrollen, verantwoordelijkheidsprefill en besluitvragen.
+- Niet-publieke rolverdeling, mandaat, budget, monitoring en schaalkeuzes zijn doorgeschoven naar lokale validatie of latere besluitvorming.
 
 Sprint 25.5: Almere en Flevoland
 Status: open.

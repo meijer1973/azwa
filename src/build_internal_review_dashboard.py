@@ -1416,18 +1416,20 @@ def render_html(data: dict[str, Any]) -> str:
         ['Dimensions', summary.dimension_count || 0],
         ['With public claims', summary.dimensions_with_public_claims || 0],
         ['Actor roles', summary.actor_role_count || 0],
+        ['Responsibility slots', summary.responsibility_assignment_count || 0],
+        ['Decision questions', summary.decision_question_count || 0],
         ['Validation fields', summary.local_validation_field_count || 0],
         ['Nulmeting targets', summary.nulmeting_target_count || 0]
       ].map(([label, value]) => `<div class="metric"><strong>${{esc(value)}}</strong><span>${{esc(label)}}</span></div>`).join('');
 
       const dimensions = layer.dimensions || [];
       byId('d6GovernanceDimensions').innerHTML = dimensions.length ? `<table>
-        <thead><tr><th>Dimension</th><th>Coverage</th><th>Top sources</th><th>Validation fields</th></tr></thead>
+        <thead><tr><th>Dimension</th><th>Coverage</th><th>Responsibility prefill</th><th>Decision questions</th></tr></thead>
         <tbody>${{dimensions.map(row => `<tr>
           <td><strong>${{esc(row.label || row.dimension_id)}}</strong><br><code>${{esc(row.dimension_id || '')}}</code><br><span class="subtle">${{esc(row.public_question || '')}}</span></td>
-          <td><span class="tag issue">${{esc(row.public_coverage_status || '')}}</span><br>${{esc(row.source_claim_count || 0)}} claims</td>
-          <td>${{(row.top_source_document_ids || []).slice(0, 5).map(id => `<code>${{esc(id)}}</code>`).join(' ')}}</td>
-          <td><ul class="compact">${{(row.local_validation_fields || []).map(field => `<li>${{esc(field)}}</li>`).join('')}}</ul></td>
+          <td><span class="tag issue">${{esc(row.public_coverage_status || '')}}</span><br>${{esc(row.source_claim_count || 0)}} claims<br>${{(row.top_source_document_ids || []).slice(0, 3).map(id => `<code>${{esc(id)}}</code>`).join(' ')}}</td>
+          <td><ul class="compact">${{(row.responsibility_matrix || []).map(slot => `<li><strong>${{esc(slot.label || slot.slot_id)}}:</strong> ${{esc((slot.candidate_actors || []).join(', ') || 'no public prefill')}}<br><span class="subtle">${{esc(slot.public_evidence_status || '')}}</span></li>`).join('')}}</ul></td>
+          <td><ul class="compact">${{(row.decision_questions || []).map(question => `<li>${{esc(question.question || '')}}<br><span class="subtle">${{esc(question.public_prefill || '')}}</span></li>`).join('')}}</ul></td>
         </tr>`).join('')}}</tbody>
       </table>` : '<p class="empty">No D6 governance layer generated yet.</p>';
 

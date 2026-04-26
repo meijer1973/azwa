@@ -13,8 +13,11 @@
   "summary": {
     "dimension_count": 5,
     "actor_role_count": 6,
+    "responsibility_slot_count": 5,
+    "responsibility_assignment_count": 25,
+    "decision_question_count": 25,
     "dimensions_with_public_claims": 5,
-    "local_validation_field_count": 36,
+    "local_validation_field_count": 86,
     "nulmeting_target_count": 11
   },
   "regional_guardrail": {
@@ -183,6 +186,33 @@
       }
     ]
   },
+  "responsibility_slots": [
+    {
+      "slot_id": "decision",
+      "label": "Besluitvorming",
+      "public_question": "Welke publieke bron wijst aan waar het formele besluit of mandaat ligt?"
+    },
+    {
+      "slot_id": "coordination",
+      "label": "Coordinatie",
+      "public_question": "Welke publieke bron wijst een coordinerende tafel, organisatie of rol aan?"
+    },
+    {
+      "slot_id": "execution",
+      "label": "Uitvoering",
+      "public_question": "Welke publieke bron maakt duidelijk wie het onderdeel feitelijk uitvoert?"
+    },
+    {
+      "slot_id": "finance",
+      "label": "Financiering",
+      "public_question": "Welke publieke bron koppelt middelen, opdracht of bekostiging aan dit onderdeel?"
+    },
+    {
+      "slot_id": "monitoring",
+      "label": "Monitoring en verantwoording",
+      "public_question": "Welke publieke bron maakt monitoring, leren of verantwoording concreet?"
+    }
+  ],
   "actor_roles": [
     {
       "actor_id": "gemeente_almere",
@@ -347,6 +377,262 @@
         }
       ],
       "public_coverage_status": "public_claims_present_needs_review",
+      "responsibility_matrix": [
+        {
+          "slot_id": "decision",
+          "label": "Besluitvorming",
+          "public_question": "Welke publieke bron wijst aan waar het formele besluit of mandaat ligt?",
+          "candidate_actor_ids": [
+            "gemeente_almere"
+          ],
+          "candidate_actors": [
+            "Gemeente Almere"
+          ],
+          "public_evidence_status": "public_claims_present_but_role_allocation_needs_validation",
+          "topic_counts": {
+            "d6.basisinfrastructuur": 20,
+            "d6.digital_and_operational_infrastructure": 5,
+            "d6.local_teams": 5,
+            "d6.other": 15,
+            "d6.regional_coordination": 1,
+            "governance.local_coalition": 1,
+            "governance.national_coordination": 1,
+            "governance.regional_coordination": 3,
+            "governance_and_finance.other": 43,
+            "timeline.local_governance_calendar": 3
+          },
+          "source_document_ids": [
+            "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd",
+            "mun_almere_2024_2034_maatschappelijke_agenda",
+            "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst",
+            "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie",
+            "mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd"
+          ],
+          "actor_validation_status": {
+            "gemeente_almere": "public_role_hypothesis_needs_local_validation"
+          },
+          "local_validation_fields": [
+            "besluitvorming: bevestig actor, mandaat en bronpassage voor d6_basisinfrastructuur",
+            "besluitvorming: leg vast of dit lokaal, regionaal of gemengd wordt belegd"
+          ]
+        },
+        {
+          "slot_id": "coordination",
+          "label": "Coordinatie",
+          "public_question": "Welke publieke bron wijst een coordinerende tafel, organisatie of rol aan?",
+          "candidate_actor_ids": [
+            "gemeente_almere",
+            "welzijn_sociaal_werk"
+          ],
+          "candidate_actors": [
+            "Gemeente Almere",
+            "Welzijn en sociaal werk"
+          ],
+          "public_evidence_status": "public_claims_present_but_role_allocation_needs_validation",
+          "topic_counts": {
+            "d6.basisinfrastructuur": 20,
+            "d6.digital_and_operational_infrastructure": 5,
+            "d6.local_teams": 5,
+            "d6.other": 15,
+            "d6.regional_coordination": 1,
+            "governance.local_coalition": 1,
+            "governance.national_coordination": 1,
+            "governance.regional_coordination": 3,
+            "governance_and_finance.other": 43,
+            "timeline.local_governance_calendar": 3
+          },
+          "source_document_ids": [
+            "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd",
+            "mun_almere_2024_2034_maatschappelijke_agenda",
+            "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst",
+            "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie",
+            "mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd"
+          ],
+          "actor_validation_status": {
+            "gemeente_almere": "public_role_hypothesis_needs_local_validation",
+            "welzijn_sociaal_werk": "public_role_hypothesis_needs_local_validation"
+          },
+          "local_validation_fields": [
+            "coordinatie: bevestig actor, mandaat en bronpassage voor d6_basisinfrastructuur",
+            "coordinatie: leg vast of dit lokaal, regionaal of gemengd wordt belegd"
+          ]
+        },
+        {
+          "slot_id": "execution",
+          "label": "Uitvoering",
+          "public_question": "Welke publieke bron maakt duidelijk wie het onderdeel feitelijk uitvoert?",
+          "candidate_actor_ids": [
+            "welzijn_sociaal_werk",
+            "ggd_flevoland"
+          ],
+          "candidate_actors": [
+            "Welzijn en sociaal werk",
+            "GGD Flevoland"
+          ],
+          "public_evidence_status": "public_claims_present_but_role_allocation_needs_validation",
+          "topic_counts": {
+            "d6.basisinfrastructuur": 20,
+            "d6.digital_and_operational_infrastructure": 5,
+            "d6.local_teams": 5,
+            "d6.other": 15,
+            "d6.regional_coordination": 1,
+            "governance.local_coalition": 1,
+            "governance.national_coordination": 1,
+            "governance.regional_coordination": 3,
+            "governance_and_finance.other": 43,
+            "timeline.local_governance_calendar": 3
+          },
+          "source_document_ids": [
+            "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd",
+            "mun_almere_2024_2034_maatschappelijke_agenda",
+            "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst",
+            "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie",
+            "mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd"
+          ],
+          "actor_validation_status": {
+            "welzijn_sociaal_werk": "public_role_hypothesis_needs_local_validation",
+            "ggd_flevoland": "public_role_source_backed_role_scope_still_needs_target_validation"
+          },
+          "local_validation_fields": [
+            "uitvoering: bevestig actor, mandaat en bronpassage voor d6_basisinfrastructuur",
+            "uitvoering: leg vast of dit lokaal, regionaal of gemengd wordt belegd"
+          ]
+        },
+        {
+          "slot_id": "finance",
+          "label": "Financiering",
+          "public_question": "Welke publieke bron koppelt middelen, opdracht of bekostiging aan dit onderdeel?",
+          "candidate_actor_ids": [
+            "gemeente_almere",
+            "zorgverzekeraar"
+          ],
+          "candidate_actors": [
+            "Gemeente Almere",
+            "Zorgverzekeraar / zorgkantoor"
+          ],
+          "public_evidence_status": "public_claims_present_but_role_allocation_needs_validation",
+          "topic_counts": {
+            "d6.basisinfrastructuur": 20,
+            "d6.digital_and_operational_infrastructure": 5,
+            "d6.local_teams": 5,
+            "d6.other": 15,
+            "d6.regional_coordination": 1,
+            "governance.local_coalition": 1,
+            "governance.national_coordination": 1,
+            "governance.regional_coordination": 3,
+            "governance_and_finance.other": 43,
+            "timeline.local_governance_calendar": 3
+          },
+          "source_document_ids": [
+            "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd",
+            "mun_almere_2024_2034_maatschappelijke_agenda",
+            "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst",
+            "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie",
+            "mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd"
+          ],
+          "actor_validation_status": {
+            "gemeente_almere": "public_role_hypothesis_needs_local_validation",
+            "zorgverzekeraar": "public_role_source_backed_role_scope_still_needs_target_validation"
+          },
+          "local_validation_fields": [
+            "financiering: bevestig actor, mandaat en bronpassage voor d6_basisinfrastructuur",
+            "financiering: leg vast of dit lokaal, regionaal of gemengd wordt belegd"
+          ]
+        },
+        {
+          "slot_id": "monitoring",
+          "label": "Monitoring en verantwoording",
+          "public_question": "Welke publieke bron maakt monitoring, leren of verantwoording concreet?",
+          "candidate_actor_ids": [
+            "gemeente_almere",
+            "ggd_flevoland"
+          ],
+          "candidate_actors": [
+            "Gemeente Almere",
+            "GGD Flevoland"
+          ],
+          "public_evidence_status": "public_claims_present_but_role_allocation_needs_validation",
+          "topic_counts": {
+            "d6.basisinfrastructuur": 20,
+            "d6.digital_and_operational_infrastructure": 5,
+            "d6.local_teams": 5,
+            "d6.other": 15,
+            "d6.regional_coordination": 1,
+            "governance.local_coalition": 1,
+            "governance.national_coordination": 1,
+            "governance.regional_coordination": 3,
+            "governance_and_finance.other": 43,
+            "timeline.local_governance_calendar": 3
+          },
+          "source_document_ids": [
+            "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd",
+            "mun_almere_2024_2034_maatschappelijke_agenda",
+            "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst",
+            "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie",
+            "mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd"
+          ],
+          "actor_validation_status": {
+            "gemeente_almere": "public_role_hypothesis_needs_local_validation",
+            "ggd_flevoland": "public_role_source_backed_role_scope_still_needs_target_validation"
+          },
+          "local_validation_fields": [
+            "monitoring en verantwoording: bevestig actor, mandaat en bronpassage voor d6_basisinfrastructuur",
+            "monitoring en verantwoording: leg vast of dit lokaal, regionaal of gemengd wordt belegd"
+          ]
+        }
+      ],
+      "decision_questions": [
+        {
+          "question_id": "d6_basisinfrastructuur.decision",
+          "slot_id": "decision",
+          "question": "Wie is voor D6 sociale en gezonde basisinfrastructuur bestuurlijk of operationeel verantwoordelijk voor besluitvorming?",
+          "public_prefill": "Gemeente Almere",
+          "decision_status": "local_validation_or_later_decision_needed"
+        },
+        {
+          "question_id": "d6_basisinfrastructuur.coordination",
+          "slot_id": "coordination",
+          "question": "Wie is voor D6 sociale en gezonde basisinfrastructuur bestuurlijk of operationeel verantwoordelijk voor coordinatie?",
+          "public_prefill": "Gemeente Almere, Welzijn en sociaal werk",
+          "decision_status": "local_validation_or_later_decision_needed"
+        },
+        {
+          "question_id": "d6_basisinfrastructuur.execution",
+          "slot_id": "execution",
+          "question": "Wie is voor D6 sociale en gezonde basisinfrastructuur bestuurlijk of operationeel verantwoordelijk voor uitvoering?",
+          "public_prefill": "Welzijn en sociaal werk, GGD Flevoland",
+          "decision_status": "local_validation_or_later_decision_needed"
+        },
+        {
+          "question_id": "d6_basisinfrastructuur.finance",
+          "slot_id": "finance",
+          "question": "Wie is voor D6 sociale en gezonde basisinfrastructuur bestuurlijk of operationeel verantwoordelijk voor financiering?",
+          "public_prefill": "Gemeente Almere, Zorgverzekeraar / zorgkantoor",
+          "decision_status": "local_validation_or_later_decision_needed"
+        },
+        {
+          "question_id": "d6_basisinfrastructuur.monitoring",
+          "slot_id": "monitoring",
+          "question": "Wie is voor D6 sociale en gezonde basisinfrastructuur bestuurlijk of operationeel verantwoordelijk voor monitoring en verantwoording?",
+          "public_prefill": "Gemeente Almere, GGD Flevoland",
+          "decision_status": "local_validation_or_later_decision_needed"
+        }
+      ],
       "review_note": "Claims support orientation only; use source passages before writing bestuurlijke text."
     },
     {
@@ -446,6 +732,262 @@
         }
       ],
       "public_coverage_status": "public_claims_present_needs_review",
+      "responsibility_matrix": [
+        {
+          "slot_id": "decision",
+          "label": "Besluitvorming",
+          "public_question": "Welke publieke bron wijst aan waar het formele besluit of mandaat ligt?",
+          "candidate_actor_ids": [
+            "gemeente_almere"
+          ],
+          "candidate_actors": [
+            "Gemeente Almere"
+          ],
+          "public_evidence_status": "public_claims_present_but_role_allocation_needs_validation",
+          "topic_counts": {
+            "d6.basisinfrastructuur": 20,
+            "d6.digital_and_operational_infrastructure": 5,
+            "d6.local_teams": 5,
+            "d6.other": 15,
+            "d6.regional_coordination": 1,
+            "governance.local_coalition": 1,
+            "governance.national_coordination": 1,
+            "governance.regional_coordination": 3,
+            "governance_and_finance.other": 43,
+            "timeline.local_governance_calendar": 3
+          },
+          "source_document_ids": [
+            "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd",
+            "mun_almere_2024_2034_maatschappelijke_agenda",
+            "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst",
+            "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie",
+            "mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd"
+          ],
+          "actor_validation_status": {
+            "gemeente_almere": "public_role_hypothesis_needs_local_validation"
+          },
+          "local_validation_fields": [
+            "besluitvorming: bevestig actor, mandaat en bronpassage voor local_teams_and_wijkverbanden",
+            "besluitvorming: leg vast of dit lokaal, regionaal of gemengd wordt belegd"
+          ]
+        },
+        {
+          "slot_id": "coordination",
+          "label": "Coordinatie",
+          "public_question": "Welke publieke bron wijst een coordinerende tafel, organisatie of rol aan?",
+          "candidate_actor_ids": [
+            "gemeente_almere",
+            "huisartsen_eerstelijn",
+            "welzijn_sociaal_werk"
+          ],
+          "candidate_actors": [
+            "Gemeente Almere",
+            "Huisartsen en eerstelijn",
+            "Welzijn en sociaal werk"
+          ],
+          "public_evidence_status": "public_claims_present_but_role_allocation_needs_validation",
+          "topic_counts": {
+            "d6.basisinfrastructuur": 20,
+            "d6.digital_and_operational_infrastructure": 5,
+            "d6.local_teams": 5,
+            "d6.other": 15,
+            "d6.regional_coordination": 1,
+            "governance.local_coalition": 1,
+            "governance.national_coordination": 1,
+            "governance.regional_coordination": 3,
+            "governance_and_finance.other": 43,
+            "timeline.local_governance_calendar": 3
+          },
+          "source_document_ids": [
+            "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd",
+            "mun_almere_2024_2034_maatschappelijke_agenda",
+            "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst",
+            "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie",
+            "mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd"
+          ],
+          "actor_validation_status": {
+            "gemeente_almere": "public_role_hypothesis_needs_local_validation",
+            "huisartsen_eerstelijn": "public_role_hypothesis_needs_local_validation",
+            "welzijn_sociaal_werk": "public_role_hypothesis_needs_local_validation"
+          },
+          "local_validation_fields": [
+            "coordinatie: bevestig actor, mandaat en bronpassage voor local_teams_and_wijkverbanden",
+            "coordinatie: leg vast of dit lokaal, regionaal of gemengd wordt belegd"
+          ]
+        },
+        {
+          "slot_id": "execution",
+          "label": "Uitvoering",
+          "public_question": "Welke publieke bron maakt duidelijk wie het onderdeel feitelijk uitvoert?",
+          "candidate_actor_ids": [
+            "welzijn_sociaal_werk",
+            "huisartsen_eerstelijn"
+          ],
+          "candidate_actors": [
+            "Welzijn en sociaal werk",
+            "Huisartsen en eerstelijn"
+          ],
+          "public_evidence_status": "public_claims_present_but_role_allocation_needs_validation",
+          "topic_counts": {
+            "d6.basisinfrastructuur": 20,
+            "d6.digital_and_operational_infrastructure": 5,
+            "d6.local_teams": 5,
+            "d6.other": 15,
+            "d6.regional_coordination": 1,
+            "governance.local_coalition": 1,
+            "governance.national_coordination": 1,
+            "governance.regional_coordination": 3,
+            "governance_and_finance.other": 43,
+            "timeline.local_governance_calendar": 3
+          },
+          "source_document_ids": [
+            "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd",
+            "mun_almere_2024_2034_maatschappelijke_agenda",
+            "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst",
+            "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie",
+            "mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd"
+          ],
+          "actor_validation_status": {
+            "welzijn_sociaal_werk": "public_role_hypothesis_needs_local_validation",
+            "huisartsen_eerstelijn": "public_role_hypothesis_needs_local_validation"
+          },
+          "local_validation_fields": [
+            "uitvoering: bevestig actor, mandaat en bronpassage voor local_teams_and_wijkverbanden",
+            "uitvoering: leg vast of dit lokaal, regionaal of gemengd wordt belegd"
+          ]
+        },
+        {
+          "slot_id": "finance",
+          "label": "Financiering",
+          "public_question": "Welke publieke bron koppelt middelen, opdracht of bekostiging aan dit onderdeel?",
+          "candidate_actor_ids": [
+            "gemeente_almere",
+            "zorgverzekeraar"
+          ],
+          "candidate_actors": [
+            "Gemeente Almere",
+            "Zorgverzekeraar / zorgkantoor"
+          ],
+          "public_evidence_status": "public_claims_present_but_role_allocation_needs_validation",
+          "topic_counts": {
+            "d6.basisinfrastructuur": 20,
+            "d6.digital_and_operational_infrastructure": 5,
+            "d6.local_teams": 5,
+            "d6.other": 15,
+            "d6.regional_coordination": 1,
+            "governance.local_coalition": 1,
+            "governance.national_coordination": 1,
+            "governance.regional_coordination": 3,
+            "governance_and_finance.other": 43,
+            "timeline.local_governance_calendar": 3
+          },
+          "source_document_ids": [
+            "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd",
+            "mun_almere_2024_2034_maatschappelijke_agenda",
+            "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst",
+            "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie",
+            "mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd"
+          ],
+          "actor_validation_status": {
+            "gemeente_almere": "public_role_hypothesis_needs_local_validation",
+            "zorgverzekeraar": "public_role_source_backed_role_scope_still_needs_target_validation"
+          },
+          "local_validation_fields": [
+            "financiering: bevestig actor, mandaat en bronpassage voor local_teams_and_wijkverbanden",
+            "financiering: leg vast of dit lokaal, regionaal of gemengd wordt belegd"
+          ]
+        },
+        {
+          "slot_id": "monitoring",
+          "label": "Monitoring en verantwoording",
+          "public_question": "Welke publieke bron maakt monitoring, leren of verantwoording concreet?",
+          "candidate_actor_ids": [
+            "gemeente_almere"
+          ],
+          "candidate_actors": [
+            "Gemeente Almere"
+          ],
+          "public_evidence_status": "public_claims_present_but_role_allocation_needs_validation",
+          "topic_counts": {
+            "d6.basisinfrastructuur": 20,
+            "d6.digital_and_operational_infrastructure": 5,
+            "d6.local_teams": 5,
+            "d6.other": 15,
+            "d6.regional_coordination": 1,
+            "governance.local_coalition": 1,
+            "governance.national_coordination": 1,
+            "governance.regional_coordination": 3,
+            "governance_and_finance.other": 43,
+            "timeline.local_governance_calendar": 3
+          },
+          "source_document_ids": [
+            "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd",
+            "mun_almere_2024_2034_maatschappelijke_agenda",
+            "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst",
+            "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie",
+            "mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd"
+          ],
+          "actor_validation_status": {
+            "gemeente_almere": "public_role_hypothesis_needs_local_validation"
+          },
+          "local_validation_fields": [
+            "monitoring en verantwoording: bevestig actor, mandaat en bronpassage voor local_teams_and_wijkverbanden",
+            "monitoring en verantwoording: leg vast of dit lokaal, regionaal of gemengd wordt belegd"
+          ]
+        }
+      ],
+      "decision_questions": [
+        {
+          "question_id": "local_teams_and_wijkverbanden.decision",
+          "slot_id": "decision",
+          "question": "Wie is voor Lokale teams en hechte wijkverbanden bestuurlijk of operationeel verantwoordelijk voor besluitvorming?",
+          "public_prefill": "Gemeente Almere",
+          "decision_status": "local_validation_or_later_decision_needed"
+        },
+        {
+          "question_id": "local_teams_and_wijkverbanden.coordination",
+          "slot_id": "coordination",
+          "question": "Wie is voor Lokale teams en hechte wijkverbanden bestuurlijk of operationeel verantwoordelijk voor coordinatie?",
+          "public_prefill": "Gemeente Almere, Huisartsen en eerstelijn, Welzijn en sociaal werk",
+          "decision_status": "local_validation_or_later_decision_needed"
+        },
+        {
+          "question_id": "local_teams_and_wijkverbanden.execution",
+          "slot_id": "execution",
+          "question": "Wie is voor Lokale teams en hechte wijkverbanden bestuurlijk of operationeel verantwoordelijk voor uitvoering?",
+          "public_prefill": "Welzijn en sociaal werk, Huisartsen en eerstelijn",
+          "decision_status": "local_validation_or_later_decision_needed"
+        },
+        {
+          "question_id": "local_teams_and_wijkverbanden.finance",
+          "slot_id": "finance",
+          "question": "Wie is voor Lokale teams en hechte wijkverbanden bestuurlijk of operationeel verantwoordelijk voor financiering?",
+          "public_prefill": "Gemeente Almere, Zorgverzekeraar / zorgkantoor",
+          "decision_status": "local_validation_or_later_decision_needed"
+        },
+        {
+          "question_id": "local_teams_and_wijkverbanden.monitoring",
+          "slot_id": "monitoring",
+          "question": "Wie is voor Lokale teams en hechte wijkverbanden bestuurlijk of operationeel verantwoordelijk voor monitoring en verantwoording?",
+          "public_prefill": "Gemeente Almere",
+          "decision_status": "local_validation_or_later_decision_needed"
+        }
+      ],
       "review_note": "Claims support orientation only; use source passages before writing bestuurlijke text."
     },
     {
@@ -458,7 +1000,7 @@
       ],
       "local_validation_fields": [
         "bestaande inloopvoorzieningen",
-        "laag­drempelige steunpunten",
+        "laagdrempelige steunpunten",
         "openingstijden en toegankelijkheid",
         "uitvoerder en financier"
       ],
@@ -546,6 +1088,261 @@
         }
       ],
       "public_coverage_status": "public_claims_present_needs_review",
+      "responsibility_matrix": [
+        {
+          "slot_id": "decision",
+          "label": "Besluitvorming",
+          "public_question": "Welke publieke bron wijst aan waar het formele besluit of mandaat ligt?",
+          "candidate_actor_ids": [
+            "gemeente_almere"
+          ],
+          "candidate_actors": [
+            "Gemeente Almere"
+          ],
+          "public_evidence_status": "public_claims_present_but_role_allocation_needs_validation",
+          "topic_counts": {
+            "d5.basisfunctionaliteiten_onderbouwd": 28,
+            "d6.basisinfrastructuur": 20,
+            "d6.digital_and_operational_infrastructure": 5,
+            "d6.local_teams": 5,
+            "d6.other": 15,
+            "d6.regional_coordination": 1,
+            "governance.local_coalition": 1,
+            "governance.national_coordination": 1,
+            "governance.regional_coordination": 3,
+            "governance_and_finance.other": 43,
+            "timeline.local_governance_calendar": 3
+          },
+          "source_document_ids": [
+            "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd",
+            "mun_almere_2024_2034_maatschappelijke_agenda",
+            "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst",
+            "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie",
+            "mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd"
+          ],
+          "actor_validation_status": {
+            "gemeente_almere": "public_role_hypothesis_needs_local_validation"
+          },
+          "local_validation_fields": [
+            "besluitvorming: bevestig actor, mandaat en bronpassage voor inloopvoorzieningen_en_steunpunten",
+            "besluitvorming: leg vast of dit lokaal, regionaal of gemengd wordt belegd"
+          ]
+        },
+        {
+          "slot_id": "coordination",
+          "label": "Coordinatie",
+          "public_question": "Welke publieke bron wijst een coordinerende tafel, organisatie of rol aan?",
+          "candidate_actor_ids": [
+            "welzijn_sociaal_werk",
+            "gemeente_almere"
+          ],
+          "candidate_actors": [
+            "Welzijn en sociaal werk",
+            "Gemeente Almere"
+          ],
+          "public_evidence_status": "public_claims_present_but_role_allocation_needs_validation",
+          "topic_counts": {
+            "d5.basisfunctionaliteiten_onderbouwd": 28,
+            "d6.basisinfrastructuur": 20,
+            "d6.digital_and_operational_infrastructure": 5,
+            "d6.local_teams": 5,
+            "d6.other": 15,
+            "d6.regional_coordination": 1,
+            "governance.local_coalition": 1,
+            "governance.national_coordination": 1,
+            "governance.regional_coordination": 3,
+            "governance_and_finance.other": 43,
+            "timeline.local_governance_calendar": 3
+          },
+          "source_document_ids": [
+            "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd",
+            "mun_almere_2024_2034_maatschappelijke_agenda",
+            "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst",
+            "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie",
+            "mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd"
+          ],
+          "actor_validation_status": {
+            "welzijn_sociaal_werk": "public_role_hypothesis_needs_local_validation",
+            "gemeente_almere": "public_role_hypothesis_needs_local_validation"
+          },
+          "local_validation_fields": [
+            "coordinatie: bevestig actor, mandaat en bronpassage voor inloopvoorzieningen_en_steunpunten",
+            "coordinatie: leg vast of dit lokaal, regionaal of gemengd wordt belegd"
+          ]
+        },
+        {
+          "slot_id": "execution",
+          "label": "Uitvoering",
+          "public_question": "Welke publieke bron maakt duidelijk wie het onderdeel feitelijk uitvoert?",
+          "candidate_actor_ids": [
+            "welzijn_sociaal_werk"
+          ],
+          "candidate_actors": [
+            "Welzijn en sociaal werk"
+          ],
+          "public_evidence_status": "public_claims_present_but_role_allocation_needs_validation",
+          "topic_counts": {
+            "d5.basisfunctionaliteiten_onderbouwd": 28,
+            "d6.basisinfrastructuur": 20,
+            "d6.digital_and_operational_infrastructure": 5,
+            "d6.local_teams": 5,
+            "d6.other": 15,
+            "d6.regional_coordination": 1,
+            "governance.local_coalition": 1,
+            "governance.national_coordination": 1,
+            "governance.regional_coordination": 3,
+            "governance_and_finance.other": 43,
+            "timeline.local_governance_calendar": 3
+          },
+          "source_document_ids": [
+            "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd",
+            "mun_almere_2024_2034_maatschappelijke_agenda",
+            "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst",
+            "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie",
+            "mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd"
+          ],
+          "actor_validation_status": {
+            "welzijn_sociaal_werk": "public_role_hypothesis_needs_local_validation"
+          },
+          "local_validation_fields": [
+            "uitvoering: bevestig actor, mandaat en bronpassage voor inloopvoorzieningen_en_steunpunten",
+            "uitvoering: leg vast of dit lokaal, regionaal of gemengd wordt belegd"
+          ]
+        },
+        {
+          "slot_id": "finance",
+          "label": "Financiering",
+          "public_question": "Welke publieke bron koppelt middelen, opdracht of bekostiging aan dit onderdeel?",
+          "candidate_actor_ids": [
+            "gemeente_almere"
+          ],
+          "candidate_actors": [
+            "Gemeente Almere"
+          ],
+          "public_evidence_status": "public_claims_present_but_role_allocation_needs_validation",
+          "topic_counts": {
+            "d5.basisfunctionaliteiten_onderbouwd": 28,
+            "d6.basisinfrastructuur": 20,
+            "d6.digital_and_operational_infrastructure": 5,
+            "d6.local_teams": 5,
+            "d6.other": 15,
+            "d6.regional_coordination": 1,
+            "governance.local_coalition": 1,
+            "governance.national_coordination": 1,
+            "governance.regional_coordination": 3,
+            "governance_and_finance.other": 43,
+            "timeline.local_governance_calendar": 3
+          },
+          "source_document_ids": [
+            "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd",
+            "mun_almere_2024_2034_maatschappelijke_agenda",
+            "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst",
+            "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie",
+            "mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd"
+          ],
+          "actor_validation_status": {
+            "gemeente_almere": "public_role_hypothesis_needs_local_validation"
+          },
+          "local_validation_fields": [
+            "financiering: bevestig actor, mandaat en bronpassage voor inloopvoorzieningen_en_steunpunten",
+            "financiering: leg vast of dit lokaal, regionaal of gemengd wordt belegd"
+          ]
+        },
+        {
+          "slot_id": "monitoring",
+          "label": "Monitoring en verantwoording",
+          "public_question": "Welke publieke bron maakt monitoring, leren of verantwoording concreet?",
+          "candidate_actor_ids": [
+            "gemeente_almere",
+            "welzijn_sociaal_werk"
+          ],
+          "candidate_actors": [
+            "Gemeente Almere",
+            "Welzijn en sociaal werk"
+          ],
+          "public_evidence_status": "public_claims_present_but_role_allocation_needs_validation",
+          "topic_counts": {
+            "d5.basisfunctionaliteiten_onderbouwd": 28,
+            "d6.basisinfrastructuur": 20,
+            "d6.digital_and_operational_infrastructure": 5,
+            "d6.local_teams": 5,
+            "d6.other": 15,
+            "d6.regional_coordination": 1,
+            "governance.local_coalition": 1,
+            "governance.national_coordination": 1,
+            "governance.regional_coordination": 3,
+            "governance_and_finance.other": 43,
+            "timeline.local_governance_calendar": 3
+          },
+          "source_document_ids": [
+            "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd",
+            "mun_almere_2024_2034_maatschappelijke_agenda",
+            "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst",
+            "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie",
+            "mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd"
+          ],
+          "actor_validation_status": {
+            "gemeente_almere": "public_role_hypothesis_needs_local_validation",
+            "welzijn_sociaal_werk": "public_role_hypothesis_needs_local_validation"
+          },
+          "local_validation_fields": [
+            "monitoring en verantwoording: bevestig actor, mandaat en bronpassage voor inloopvoorzieningen_en_steunpunten",
+            "monitoring en verantwoording: leg vast of dit lokaal, regionaal of gemengd wordt belegd"
+          ]
+        }
+      ],
+      "decision_questions": [
+        {
+          "question_id": "inloopvoorzieningen_en_steunpunten.decision",
+          "slot_id": "decision",
+          "question": "Wie is voor Inloopvoorzieningen en laagdrempelige steun bestuurlijk of operationeel verantwoordelijk voor besluitvorming?",
+          "public_prefill": "Gemeente Almere",
+          "decision_status": "local_validation_or_later_decision_needed"
+        },
+        {
+          "question_id": "inloopvoorzieningen_en_steunpunten.coordination",
+          "slot_id": "coordination",
+          "question": "Wie is voor Inloopvoorzieningen en laagdrempelige steun bestuurlijk of operationeel verantwoordelijk voor coordinatie?",
+          "public_prefill": "Welzijn en sociaal werk, Gemeente Almere",
+          "decision_status": "local_validation_or_later_decision_needed"
+        },
+        {
+          "question_id": "inloopvoorzieningen_en_steunpunten.execution",
+          "slot_id": "execution",
+          "question": "Wie is voor Inloopvoorzieningen en laagdrempelige steun bestuurlijk of operationeel verantwoordelijk voor uitvoering?",
+          "public_prefill": "Welzijn en sociaal werk",
+          "decision_status": "local_validation_or_later_decision_needed"
+        },
+        {
+          "question_id": "inloopvoorzieningen_en_steunpunten.finance",
+          "slot_id": "finance",
+          "question": "Wie is voor Inloopvoorzieningen en laagdrempelige steun bestuurlijk of operationeel verantwoordelijk voor financiering?",
+          "public_prefill": "Gemeente Almere",
+          "decision_status": "local_validation_or_later_decision_needed"
+        },
+        {
+          "question_id": "inloopvoorzieningen_en_steunpunten.monitoring",
+          "slot_id": "monitoring",
+          "question": "Wie is voor Inloopvoorzieningen en laagdrempelige steun bestuurlijk of operationeel verantwoordelijk voor monitoring en verantwoording?",
+          "public_prefill": "Gemeente Almere, Welzijn en sociaal werk",
+          "decision_status": "local_validation_or_later_decision_needed"
+        }
+      ],
       "review_note": "Claims support orientation only; use source passages before writing bestuurlijke text."
     },
     {
@@ -646,6 +1443,279 @@
         }
       ],
       "public_coverage_status": "public_claims_present_needs_review",
+      "responsibility_matrix": [
+        {
+          "slot_id": "decision",
+          "label": "Besluitvorming",
+          "public_question": "Welke publieke bron wijst aan waar het formele besluit of mandaat ligt?",
+          "candidate_actor_ids": [
+            "gemeente_almere",
+            "zorgverzekeraar"
+          ],
+          "candidate_actors": [
+            "Gemeente Almere",
+            "Zorgverzekeraar / zorgkantoor"
+          ],
+          "public_evidence_status": "public_claims_present_but_role_allocation_needs_validation",
+          "topic_counts": {
+            "d6.basisinfrastructuur": 20,
+            "d6.digital_and_operational_infrastructure": 5,
+            "d6.local_teams": 5,
+            "d6.other": 15,
+            "d6.regional_coordination": 1,
+            "governance.local_coalition": 1,
+            "governance.national_coordination": 1,
+            "governance.regional_coordination": 3,
+            "governance_and_finance.other": 43,
+            "municipal.role_allocation": 2,
+            "timeline.local_governance_calendar": 3
+          },
+          "source_document_ids": [
+            "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd",
+            "mun_almere_2024_2034_maatschappelijke_agenda",
+            "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst",
+            "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie",
+            "mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd"
+          ],
+          "actor_validation_status": {
+            "gemeente_almere": "public_role_hypothesis_needs_local_validation",
+            "zorgverzekeraar": "public_role_source_backed_role_scope_still_needs_target_validation"
+          },
+          "local_validation_fields": [
+            "besluitvorming: bevestig actor, mandaat en bronpassage voor regional_coordination",
+            "besluitvorming: leg vast of dit lokaal, regionaal of gemengd wordt belegd"
+          ]
+        },
+        {
+          "slot_id": "coordination",
+          "label": "Coordinatie",
+          "public_question": "Welke publieke bron wijst een coordinerende tafel, organisatie of rol aan?",
+          "candidate_actor_ids": [
+            "zorgzaam_flevoland_flever",
+            "gemeente_almere",
+            "ggd_flevoland"
+          ],
+          "candidate_actors": [
+            "Zorgzaam Flevoland / Flever",
+            "Gemeente Almere",
+            "GGD Flevoland"
+          ],
+          "public_evidence_status": "public_claims_present_but_role_allocation_needs_validation",
+          "topic_counts": {
+            "d6.basisinfrastructuur": 20,
+            "d6.digital_and_operational_infrastructure": 5,
+            "d6.local_teams": 5,
+            "d6.other": 15,
+            "d6.regional_coordination": 1,
+            "governance.local_coalition": 1,
+            "governance.national_coordination": 1,
+            "governance.regional_coordination": 3,
+            "governance_and_finance.other": 43,
+            "municipal.role_allocation": 2,
+            "timeline.local_governance_calendar": 3
+          },
+          "source_document_ids": [
+            "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd",
+            "mun_almere_2024_2034_maatschappelijke_agenda",
+            "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst",
+            "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie",
+            "mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd"
+          ],
+          "actor_validation_status": {
+            "zorgzaam_flevoland_flever": "public_role_source_backed_role_scope_still_needs_target_validation",
+            "gemeente_almere": "public_role_hypothesis_needs_local_validation",
+            "ggd_flevoland": "public_role_source_backed_role_scope_still_needs_target_validation"
+          },
+          "local_validation_fields": [
+            "coordinatie: bevestig actor, mandaat en bronpassage voor regional_coordination",
+            "coordinatie: leg vast of dit lokaal, regionaal of gemengd wordt belegd"
+          ]
+        },
+        {
+          "slot_id": "execution",
+          "label": "Uitvoering",
+          "public_question": "Welke publieke bron maakt duidelijk wie het onderdeel feitelijk uitvoert?",
+          "candidate_actor_ids": [
+            "gemeente_almere",
+            "ggd_flevoland",
+            "zorgzaam_flevoland_flever"
+          ],
+          "candidate_actors": [
+            "Gemeente Almere",
+            "GGD Flevoland",
+            "Zorgzaam Flevoland / Flever"
+          ],
+          "public_evidence_status": "public_claims_present_but_role_allocation_needs_validation",
+          "topic_counts": {
+            "d6.basisinfrastructuur": 20,
+            "d6.digital_and_operational_infrastructure": 5,
+            "d6.local_teams": 5,
+            "d6.other": 15,
+            "d6.regional_coordination": 1,
+            "governance.local_coalition": 1,
+            "governance.national_coordination": 1,
+            "governance.regional_coordination": 3,
+            "governance_and_finance.other": 43,
+            "municipal.role_allocation": 2,
+            "timeline.local_governance_calendar": 3
+          },
+          "source_document_ids": [
+            "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd",
+            "mun_almere_2024_2034_maatschappelijke_agenda",
+            "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst",
+            "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie",
+            "mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd"
+          ],
+          "actor_validation_status": {
+            "gemeente_almere": "public_role_hypothesis_needs_local_validation",
+            "ggd_flevoland": "public_role_source_backed_role_scope_still_needs_target_validation",
+            "zorgzaam_flevoland_flever": "public_role_source_backed_role_scope_still_needs_target_validation"
+          },
+          "local_validation_fields": [
+            "uitvoering: bevestig actor, mandaat en bronpassage voor regional_coordination",
+            "uitvoering: leg vast of dit lokaal, regionaal of gemengd wordt belegd"
+          ]
+        },
+        {
+          "slot_id": "finance",
+          "label": "Financiering",
+          "public_question": "Welke publieke bron koppelt middelen, opdracht of bekostiging aan dit onderdeel?",
+          "candidate_actor_ids": [
+            "gemeente_almere",
+            "zorgverzekeraar"
+          ],
+          "candidate_actors": [
+            "Gemeente Almere",
+            "Zorgverzekeraar / zorgkantoor"
+          ],
+          "public_evidence_status": "public_claims_present_but_role_allocation_needs_validation",
+          "topic_counts": {
+            "d6.basisinfrastructuur": 20,
+            "d6.digital_and_operational_infrastructure": 5,
+            "d6.local_teams": 5,
+            "d6.other": 15,
+            "d6.regional_coordination": 1,
+            "governance.local_coalition": 1,
+            "governance.national_coordination": 1,
+            "governance.regional_coordination": 3,
+            "governance_and_finance.other": 43,
+            "municipal.role_allocation": 2,
+            "timeline.local_governance_calendar": 3
+          },
+          "source_document_ids": [
+            "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd",
+            "mun_almere_2024_2034_maatschappelijke_agenda",
+            "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst",
+            "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie",
+            "mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd"
+          ],
+          "actor_validation_status": {
+            "gemeente_almere": "public_role_hypothesis_needs_local_validation",
+            "zorgverzekeraar": "public_role_source_backed_role_scope_still_needs_target_validation"
+          },
+          "local_validation_fields": [
+            "financiering: bevestig actor, mandaat en bronpassage voor regional_coordination",
+            "financiering: leg vast of dit lokaal, regionaal of gemengd wordt belegd"
+          ]
+        },
+        {
+          "slot_id": "monitoring",
+          "label": "Monitoring en verantwoording",
+          "public_question": "Welke publieke bron maakt monitoring, leren of verantwoording concreet?",
+          "candidate_actor_ids": [
+            "zorgzaam_flevoland_flever",
+            "ggd_flevoland",
+            "gemeente_almere"
+          ],
+          "candidate_actors": [
+            "Zorgzaam Flevoland / Flever",
+            "GGD Flevoland",
+            "Gemeente Almere"
+          ],
+          "public_evidence_status": "public_claims_present_but_role_allocation_needs_validation",
+          "topic_counts": {
+            "d6.basisinfrastructuur": 20,
+            "d6.digital_and_operational_infrastructure": 5,
+            "d6.local_teams": 5,
+            "d6.other": 15,
+            "d6.regional_coordination": 1,
+            "governance.local_coalition": 1,
+            "governance.national_coordination": 1,
+            "governance.regional_coordination": 3,
+            "governance_and_finance.other": 43,
+            "municipal.role_allocation": 2,
+            "timeline.local_governance_calendar": 3
+          },
+          "source_document_ids": [
+            "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd",
+            "mun_almere_2024_2034_maatschappelijke_agenda",
+            "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst",
+            "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie",
+            "mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd"
+          ],
+          "actor_validation_status": {
+            "zorgzaam_flevoland_flever": "public_role_source_backed_role_scope_still_needs_target_validation",
+            "ggd_flevoland": "public_role_source_backed_role_scope_still_needs_target_validation",
+            "gemeente_almere": "public_role_hypothesis_needs_local_validation"
+          },
+          "local_validation_fields": [
+            "monitoring en verantwoording: bevestig actor, mandaat en bronpassage voor regional_coordination",
+            "monitoring en verantwoording: leg vast of dit lokaal, regionaal of gemengd wordt belegd"
+          ]
+        }
+      ],
+      "decision_questions": [
+        {
+          "question_id": "regional_coordination.decision",
+          "slot_id": "decision",
+          "question": "Wie is voor Regionale coordinatie en schaal bestuurlijk of operationeel verantwoordelijk voor besluitvorming?",
+          "public_prefill": "Gemeente Almere, Zorgverzekeraar / zorgkantoor",
+          "decision_status": "local_validation_or_later_decision_needed"
+        },
+        {
+          "question_id": "regional_coordination.coordination",
+          "slot_id": "coordination",
+          "question": "Wie is voor Regionale coordinatie en schaal bestuurlijk of operationeel verantwoordelijk voor coordinatie?",
+          "public_prefill": "Zorgzaam Flevoland / Flever, Gemeente Almere, GGD Flevoland",
+          "decision_status": "local_validation_or_later_decision_needed"
+        },
+        {
+          "question_id": "regional_coordination.execution",
+          "slot_id": "execution",
+          "question": "Wie is voor Regionale coordinatie en schaal bestuurlijk of operationeel verantwoordelijk voor uitvoering?",
+          "public_prefill": "Gemeente Almere, GGD Flevoland, Zorgzaam Flevoland / Flever",
+          "decision_status": "local_validation_or_later_decision_needed"
+        },
+        {
+          "question_id": "regional_coordination.finance",
+          "slot_id": "finance",
+          "question": "Wie is voor Regionale coordinatie en schaal bestuurlijk of operationeel verantwoordelijk voor financiering?",
+          "public_prefill": "Gemeente Almere, Zorgverzekeraar / zorgkantoor",
+          "decision_status": "local_validation_or_later_decision_needed"
+        },
+        {
+          "question_id": "regional_coordination.monitoring",
+          "slot_id": "monitoring",
+          "question": "Wie is voor Regionale coordinatie en schaal bestuurlijk of operationeel verantwoordelijk voor monitoring en verantwoording?",
+          "public_prefill": "Zorgzaam Flevoland / Flever, GGD Flevoland, Gemeente Almere",
+          "decision_status": "local_validation_or_later_decision_needed"
+        }
+      ],
       "review_note": "Claims support orientation only; use source passages before writing bestuurlijke text."
     },
     {
@@ -746,7 +1816,285 @@
         }
       ],
       "public_coverage_status": "public_claims_present_needs_review",
+      "responsibility_matrix": [
+        {
+          "slot_id": "decision",
+          "label": "Besluitvorming",
+          "public_question": "Welke publieke bron wijst aan waar het formele besluit of mandaat ligt?",
+          "candidate_actor_ids": [
+            "gemeente_almere"
+          ],
+          "candidate_actors": [
+            "Gemeente Almere"
+          ],
+          "public_evidence_status": "public_claims_present_but_role_allocation_needs_validation",
+          "topic_counts": {
+            "d6.basisinfrastructuur": 20,
+            "d6.digital_and_operational_infrastructure": 5,
+            "d6.local_teams": 5,
+            "d6.other": 15,
+            "d6.regional_coordination": 1,
+            "governance.local_coalition": 1,
+            "governance.national_coordination": 1,
+            "governance.regional_coordination": 3,
+            "governance_and_finance.other": 43,
+            "monitoring.other": 57,
+            "timeline.local_governance_calendar": 3
+          },
+          "source_document_ids": [
+            "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd",
+            "mun_almere_2024_2034_maatschappelijke_agenda",
+            "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst",
+            "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie",
+            "mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd"
+          ],
+          "actor_validation_status": {
+            "gemeente_almere": "public_role_hypothesis_needs_local_validation"
+          },
+          "local_validation_fields": [
+            "besluitvorming: bevestig actor, mandaat en bronpassage voor monitoring_and_learning",
+            "besluitvorming: leg vast of dit lokaal, regionaal of gemengd wordt belegd"
+          ]
+        },
+        {
+          "slot_id": "coordination",
+          "label": "Coordinatie",
+          "public_question": "Welke publieke bron wijst een coordinerende tafel, organisatie of rol aan?",
+          "candidate_actor_ids": [
+            "ggd_flevoland",
+            "zorgzaam_flevoland_flever"
+          ],
+          "candidate_actors": [
+            "GGD Flevoland",
+            "Zorgzaam Flevoland / Flever"
+          ],
+          "public_evidence_status": "public_claims_present_but_role_allocation_needs_validation",
+          "topic_counts": {
+            "d6.basisinfrastructuur": 20,
+            "d6.digital_and_operational_infrastructure": 5,
+            "d6.local_teams": 5,
+            "d6.other": 15,
+            "d6.regional_coordination": 1,
+            "governance.local_coalition": 1,
+            "governance.national_coordination": 1,
+            "governance.regional_coordination": 3,
+            "governance_and_finance.other": 43,
+            "monitoring.other": 57,
+            "timeline.local_governance_calendar": 3
+          },
+          "source_document_ids": [
+            "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd",
+            "mun_almere_2024_2034_maatschappelijke_agenda",
+            "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst",
+            "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie",
+            "mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd"
+          ],
+          "actor_validation_status": {
+            "ggd_flevoland": "public_role_source_backed_role_scope_still_needs_target_validation",
+            "zorgzaam_flevoland_flever": "public_role_source_backed_role_scope_still_needs_target_validation"
+          },
+          "local_validation_fields": [
+            "coordinatie: bevestig actor, mandaat en bronpassage voor monitoring_and_learning",
+            "coordinatie: leg vast of dit lokaal, regionaal of gemengd wordt belegd"
+          ]
+        },
+        {
+          "slot_id": "execution",
+          "label": "Uitvoering",
+          "public_question": "Welke publieke bron maakt duidelijk wie het onderdeel feitelijk uitvoert?",
+          "candidate_actor_ids": [
+            "ggd_flevoland",
+            "gemeente_almere"
+          ],
+          "candidate_actors": [
+            "GGD Flevoland",
+            "Gemeente Almere"
+          ],
+          "public_evidence_status": "public_claims_present_but_role_allocation_needs_validation",
+          "topic_counts": {
+            "d6.basisinfrastructuur": 20,
+            "d6.digital_and_operational_infrastructure": 5,
+            "d6.local_teams": 5,
+            "d6.other": 15,
+            "d6.regional_coordination": 1,
+            "governance.local_coalition": 1,
+            "governance.national_coordination": 1,
+            "governance.regional_coordination": 3,
+            "governance_and_finance.other": 43,
+            "monitoring.other": 57,
+            "timeline.local_governance_calendar": 3
+          },
+          "source_document_ids": [
+            "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd",
+            "mun_almere_2024_2034_maatschappelijke_agenda",
+            "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst",
+            "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie",
+            "mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd"
+          ],
+          "actor_validation_status": {
+            "ggd_flevoland": "public_role_source_backed_role_scope_still_needs_target_validation",
+            "gemeente_almere": "public_role_hypothesis_needs_local_validation"
+          },
+          "local_validation_fields": [
+            "uitvoering: bevestig actor, mandaat en bronpassage voor monitoring_and_learning",
+            "uitvoering: leg vast of dit lokaal, regionaal of gemengd wordt belegd"
+          ]
+        },
+        {
+          "slot_id": "finance",
+          "label": "Financiering",
+          "public_question": "Welke publieke bron koppelt middelen, opdracht of bekostiging aan dit onderdeel?",
+          "candidate_actor_ids": [
+            "gemeente_almere"
+          ],
+          "candidate_actors": [
+            "Gemeente Almere"
+          ],
+          "public_evidence_status": "public_claims_present_but_role_allocation_needs_validation",
+          "topic_counts": {
+            "d6.basisinfrastructuur": 20,
+            "d6.digital_and_operational_infrastructure": 5,
+            "d6.local_teams": 5,
+            "d6.other": 15,
+            "d6.regional_coordination": 1,
+            "governance.local_coalition": 1,
+            "governance.national_coordination": 1,
+            "governance.regional_coordination": 3,
+            "governance_and_finance.other": 43,
+            "monitoring.other": 57,
+            "timeline.local_governance_calendar": 3
+          },
+          "source_document_ids": [
+            "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd",
+            "mun_almere_2024_2034_maatschappelijke_agenda",
+            "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst",
+            "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie",
+            "mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd"
+          ],
+          "actor_validation_status": {
+            "gemeente_almere": "public_role_hypothesis_needs_local_validation"
+          },
+          "local_validation_fields": [
+            "financiering: bevestig actor, mandaat en bronpassage voor monitoring_and_learning",
+            "financiering: leg vast of dit lokaal, regionaal of gemengd wordt belegd"
+          ]
+        },
+        {
+          "slot_id": "monitoring",
+          "label": "Monitoring en verantwoording",
+          "public_question": "Welke publieke bron maakt monitoring, leren of verantwoording concreet?",
+          "candidate_actor_ids": [
+            "ggd_flevoland",
+            "gemeente_almere",
+            "zorgzaam_flevoland_flever"
+          ],
+          "candidate_actors": [
+            "GGD Flevoland",
+            "Gemeente Almere",
+            "Zorgzaam Flevoland / Flever"
+          ],
+          "public_evidence_status": "public_claims_present_but_role_allocation_needs_validation",
+          "topic_counts": {
+            "d6.basisinfrastructuur": 20,
+            "d6.digital_and_operational_infrastructure": 5,
+            "d6.local_teams": 5,
+            "d6.other": 15,
+            "d6.regional_coordination": 1,
+            "governance.local_coalition": 1,
+            "governance.national_coordination": 1,
+            "governance.regional_coordination": 3,
+            "governance_and_finance.other": 43,
+            "monitoring.other": 57,
+            "timeline.local_governance_calendar": 3
+          },
+          "source_document_ids": [
+            "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd",
+            "mun_almere_2024_2034_maatschappelijke_agenda",
+            "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst",
+            "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie",
+            "mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd"
+          ],
+          "actor_validation_status": {
+            "ggd_flevoland": "public_role_source_backed_role_scope_still_needs_target_validation",
+            "gemeente_almere": "public_role_hypothesis_needs_local_validation",
+            "zorgzaam_flevoland_flever": "public_role_source_backed_role_scope_still_needs_target_validation"
+          },
+          "local_validation_fields": [
+            "monitoring en verantwoording: bevestig actor, mandaat en bronpassage voor monitoring_and_learning",
+            "monitoring en verantwoording: leg vast of dit lokaal, regionaal of gemengd wordt belegd"
+          ]
+        }
+      ],
+      "decision_questions": [
+        {
+          "question_id": "monitoring_and_learning.decision",
+          "slot_id": "decision",
+          "question": "Wie is voor Monitoring, leren en verantwoording bestuurlijk of operationeel verantwoordelijk voor besluitvorming?",
+          "public_prefill": "Gemeente Almere",
+          "decision_status": "local_validation_or_later_decision_needed"
+        },
+        {
+          "question_id": "monitoring_and_learning.coordination",
+          "slot_id": "coordination",
+          "question": "Wie is voor Monitoring, leren en verantwoording bestuurlijk of operationeel verantwoordelijk voor coordinatie?",
+          "public_prefill": "GGD Flevoland, Zorgzaam Flevoland / Flever",
+          "decision_status": "local_validation_or_later_decision_needed"
+        },
+        {
+          "question_id": "monitoring_and_learning.execution",
+          "slot_id": "execution",
+          "question": "Wie is voor Monitoring, leren en verantwoording bestuurlijk of operationeel verantwoordelijk voor uitvoering?",
+          "public_prefill": "GGD Flevoland, Gemeente Almere",
+          "decision_status": "local_validation_or_later_decision_needed"
+        },
+        {
+          "question_id": "monitoring_and_learning.finance",
+          "slot_id": "finance",
+          "question": "Wie is voor Monitoring, leren en verantwoording bestuurlijk of operationeel verantwoordelijk voor financiering?",
+          "public_prefill": "Gemeente Almere",
+          "decision_status": "local_validation_or_later_decision_needed"
+        },
+        {
+          "question_id": "monitoring_and_learning.monitoring",
+          "slot_id": "monitoring",
+          "question": "Wie is voor Monitoring, leren en verantwoording bestuurlijk of operationeel verantwoordelijk voor monitoring en verantwoording?",
+          "public_prefill": "GGD Flevoland, Gemeente Almere, Zorgzaam Flevoland / Flever",
+          "decision_status": "local_validation_or_later_decision_needed"
+        }
+      ],
       "review_note": "Claims support orientation only; use source passages before writing bestuurlijke text."
+    }
+  ],
+  "local_validation_workflow": [
+    {
+      "step": "publieke prefill controleren",
+      "owner_hint": "research/beleid",
+      "output": "bronpassages per D6-dimensie en verantwoordelijkheidsslot bevestigen of afwijzen"
+    },
+    {
+      "step": "lokale medewerkerinvulling",
+      "owner_hint": "gemeente Almere en relevante regionale partners",
+      "output": "lokale teams, wijkverbanden, inloopvoorzieningen, uitvoerders en aanspreekpunten invullen"
+    },
+    {
+      "step": "besluitvragen escaleren",
+      "owner_hint": "bestuurlijke lijn",
+      "output": "mandaat, budget, monitoring, schaalkeuze en eigenaarschap vaststellen waar bronnen geen antwoord geven"
     }
   ],
   "carry_forward": [

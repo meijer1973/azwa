@@ -133,6 +133,9 @@ Machine-readable:
       "data/extracted/claims/conflict_register.json",
       "data/extracted/claims/current_interpretation.json",
       "data/extracted/claims/d5_d6_master.json",
+      "data/extracted/workagenda_d5_operational_requirements.json",
+      "data/extracted/local_source_strengthening_almere.json",
+      "data/extracted/workagenda_nulmeting_capacity.json",
       "data/extracted/municipal/almere_current_view.json",
       "data/extracted/municipal/almere_local_decisions.json"
     ],

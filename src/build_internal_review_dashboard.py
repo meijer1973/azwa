@@ -23,6 +23,7 @@ ROADMAP_PATH = DOCS_DIR / "data-quality-roadmap.md"
 SITE_UPDATES_PATH = DATA_DIR / "site" / "site_updates_view.json"
 WORKAGENDA_D5_PATH = EXTRACTED_DIR / "workagenda_d5_operational_requirements.json"
 LOCAL_SOURCE_STRENGTHENING_PATH = EXTRACTED_DIR / "local_source_strengthening_almere.json"
+WORKAGENDA_NULMETING_PATH = EXTRACTED_DIR / "workagenda_nulmeting_capacity.json"
 OUTPUT_PATH = DOCS_DIR / "internal" / "review-dashboard.html"
 
 ISSUE_TYPES = {
@@ -564,6 +565,7 @@ def build_dashboard_data() -> dict[str, Any]:
     public_updates = load_json(SITE_UPDATES_PATH) if SITE_UPDATES_PATH.exists() else {"updates": []}
     workagenda_d5 = load_json(WORKAGENDA_D5_PATH) if WORKAGENDA_D5_PATH.exists() else {}
     local_source_strengthening = load_json(LOCAL_SOURCE_STRENGTHENING_PATH) if LOCAL_SOURCE_STRENGTHENING_PATH.exists() else {}
+    workagenda_nulmeting = load_json(WORKAGENDA_NULMETING_PATH) if WORKAGENDA_NULMETING_PATH.exists() else {}
     sprint_ledger = parse_sprint_ledger()
     claims = load_claims()
     claim_index = {claim["claim_id"]: claim for claim in claims}
@@ -591,6 +593,8 @@ def build_dashboard_data() -> dict[str, Any]:
         source_paths.append(repo_path(WORKAGENDA_D5_PATH))
     if local_source_strengthening:
         source_paths.append(repo_path(LOCAL_SOURCE_STRENGTHENING_PATH))
+    if workagenda_nulmeting:
+        source_paths.append(repo_path(WORKAGENDA_NULMETING_PATH))
     if regional_roles:
         source_paths.append(repo_path(REGIONAL_ROLES_PATH))
 
@@ -647,6 +651,11 @@ def build_dashboard_data() -> dict[str, Any]:
             "href": output_relative_link(repo_path(LOCAL_SOURCE_STRENGTHENING_PATH)),
             **local_source_strengthening,
         } if local_source_strengthening else {},
+        "workagenda_nulmeting": {
+            "path": repo_path(WORKAGENDA_NULMETING_PATH),
+            "href": output_relative_link(repo_path(WORKAGENDA_NULMETING_PATH)),
+            **workagenda_nulmeting,
+        } if workagenda_nulmeting else {},
         "regional_guardrails": {
             "path": "docs/regional-roles-and-splits-almere-flevoland.md",
             "href": output_relative_link("docs/regional-roles-and-splits-almere-flevoland.md"),
@@ -969,6 +978,13 @@ def render_html(data: dict[str, Any]) -> str:
         <h2>Finance Guardrails</h2>
         <div id="workagendaFinance"></div>
       </section>
+
+      <section>
+        <h2>Nulmeting And Capacity</h2>
+        <p class="subtle">Sprint 25.3 public-source prefill from <a id="nulmetingSourceLink" href="#"><code id="nulmetingSourcePath"></code></a>. Local gaps stay visible for staff validation and later decisions.</p>
+        <div class="metrics" id="nulmetingMetrics"></div>
+        <div id="nulmetingTargets"></div>
+      </section>
     </div>
 
     <div class="tab-panel" data-tab-panel="public-updates" hidden>
@@ -1224,6 +1240,31 @@ def render_html(data: dict[str, Any]) -> str:
           <td>${{(stream.source_claim_ids || []).slice(0, 5).map(id => `<code>${{esc(id)}}</code>`).join(' ')}}</td>
         </tr>`).join('')}}</tbody>
       </table><p class="subtle">${{esc((workagenda.finance_linking_model || {{}}).review_rule || '')}}</p>` : '<p class="empty">No finance streams recorded.</p>';
+
+      const nulmeting = DATA.workagenda_nulmeting || {{}};
+      byId('nulmetingSourceLink').href = nulmeting.href || '#';
+      byId('nulmetingSourcePath').textContent = nulmeting.path || '';
+      const nulSummary = nulmeting.summary || {{}};
+      byId('nulmetingMetrics').innerHTML = [
+        ['Targets prefilled', nulSummary.targets_with_public_prefill || 0],
+        ['Public-gap only', nulSummary.targets_public_gap_only || 0],
+        ['Indicators', nulSummary.indicator_count || 0],
+        ['Calculations', nulSummary.indicative_calculation_count || 0],
+        ['Local fields', nulSummary.local_fill_field_count || 0]
+      ].map(([label, value]) => `<div class="metric"><strong>${{esc(value)}}</strong><span>${{esc(label)}}</span></div>`).join('');
+      const nulTargets = nulmeting.targets || [];
+      byId('nulmetingTargets').innerHTML = nulTargets.length ? `<table>
+        <thead><tr><th>Target</th><th>Public prefill</th><th>Indicative calculations</th><th>Local fill fields</th></tr></thead>
+        <tbody>${{nulTargets.map(target => `<tr>
+          <td><strong>${{esc(target.title || target.target_id)}}</strong><br><code>${{esc(target.target_id || '')}}</code><br><span class="tag issue">${{esc(target.public_baseline_status || '')}}</span></td>
+          <td>${{(target.public_indicators || []).slice(0, 4).map(indicator => `<span class="tag perspective">${{esc(indicator.label)}}: ${{esc(indicator.value)}}${{esc(indicator.unit || '')}}</span>`).join(' ')}}<br><span class="subtle">${{(target.public_evidence || []).slice(0, 2).map(esc).join(' ')}}</span></td>
+          <td>${{(target.indicative_calculations || []).map(calc => {{
+            const value = calc.min_value !== undefined ? esc(calc.min_value) + '-' + esc(calc.max_value) : esc(calc.value);
+            return `<span class="tag origin">${{esc(calc.label)}}: ${{value}} ${{esc(calc.unit || '')}}</span>`;
+          }}).join(' ') || '<span class="subtle">No public calculation yet</span>'}}</td>
+          <td><ul class="compact">${{(target.local_fill_fields || []).slice(0, 6).map(field => `<li>${{esc(field)}}</li>`).join('')}}</ul></td>
+        </tr>`).join('')}}</tbody>
+      </table>` : '<p class="empty">No nulmeting layer generated yet.</p>';
     }}
 
     function renderLocalSources() {{

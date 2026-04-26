@@ -47,6 +47,8 @@ Sprint 25.3 richt zich op nulmeting en capaciteit voor de werkagenda. Sprint 25.
 
 Status op 26 april 2026: Sprint 25.2 is afgerond als publieke bronversterkingssprint. `data/extracted/local_source_strengthening_almere.json` maakt zichtbaar welke lokale bronnen in de formele laag zitten, welke publieke bronnen als assessmentmateriaal zijn beoordeeld, en welke vragen naar later in de workflow gaan omdat de publieke bronbasis is uitgeput of omdat een geschoonde validatiestap nodig is. De geselecteerde Documentwijzer-bijlagen voor Visie Gezondheidsbeleid en Maatschappelijke Agenda zijn eerst naar page-markdown omgezet en daarna opgenomen in `data/raw/manifest.json`. Ook de GGD-tabellenboeken voor volwassenen en ouderen, de GGD-valpreventiepagina Almere en de ZonMw-bron zijn opgenomen in `data/raw/manifest.json`, door inventory/extractie/claims/site-viewmodels verwerkt en blijven reviewmateriaal voordat ze bestuurlijk of public-facing worden gebruikt. Niet-publieke informatie, ontbrekende lokale bevestiging en formele besluitvragen blokkeren deze fase niet; ze worden als gaten of carry-over taken zichtbaar gemaakt voor lokale medewerkers en latere besluitvorming.
 
+Eerste Sprint 25.3-uitvoer op 26 april 2026: `data/extracted/workagenda_nulmeting_capacity.json` vult per D5-werkagenda-target de publieke nulmetingsstructuur voor zover mogelijk. De laag gebruikt de werkagenda-targets uit Sprint 25.1, de publieke bronversterking uit Sprint 25.2, GGD Flevoland 2024-indicatoren en een op 26 april 2026 geverifieerde CBS KWB 2025-denominator voor Almere. De laag bevat indicatieve berekeningen voor sociaal verwijzen en valpreventie en houdt ontbrekende lokale capaciteit, aanbod, eigenaar, budget, wachttijden en besluitstatus als invulvelden zichtbaar.
+
 Eerste verbeterplan voor Sprint 25.3:
 
 - Gebruik `docs/internal/AZWA, IZA and GALA for the Almere case.md` en `docs/internal/conceptinvulling_werkagenda_azwa_almere.md` als interne research-signalen voor bronhiaten, niet als primaire bronfeiten.
@@ -158,6 +160,10 @@ Status: completed.
 Sprint 25.3: Nulmeting en capaciteit werkagenda
 Status: open.
 
+- Eerste uitvoerlaag toegevoegd: `data/extracted/workagenda_nulmeting_capacity.json`.
+- De laag vult de werkagenda-structuur zo ver mogelijk met publieke bronnen en markeert lokale invulvelden expliciet voor medewerkers of latere besluitvorming.
+- Indicatieve berekeningen zijn toegevoegd voor sociaal verwijzen en valpreventie met CBS KWB 2025 Almere als denominator; deze berekeningen blijven indicatief totdat lokaal gevalideerd.
+- GGD Flevoland 2024-indicatoren zijn gekoppeld aan relevante targets zoals valpreventie, overgewicht/obesitas volwassenen, laagdrempelige steunpunten en mentale gezondheidsnetwerken; claims uit de tabellenboeken blijven reviewmateriaal.
 - Bouw een nulmetingslaag per basisfunctionaliteit/aanpak, gekoppeld aan de werkagenda-targets uit Sprint 25.1.
 - Leg per target vast: bestaand aanbod, locaties, bereik, capaciteit/fte, wachttijden, aanbieders, huidige financiering, wijk- of stadsdeeldekking, doelgroepomvang en bronstatus.
 - Maak aparte berekenvelden voor landelijke richtwaarden die de bronbasis draagt, zoals verwijzingen per 10.000 inwoners, brugfunctionaris-fte per 10.000 inwoners, valrisico-inschatting bij 65-plussers en jeugd-/ouderenindicatoren. Gebruik actuele BRP/CBS-peildatum en markeer berekeningen als indicatief totdat bestuurlijk gevalideerd.

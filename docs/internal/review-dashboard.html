@@ -298,6 +298,13 @@
         <h2>Finance Guardrails</h2>
         <div id="workagendaFinance"></div>
       </section>
+
+      <section>
+        <h2>Nulmeting And Capacity</h2>
+        <p class="subtle">Sprint 25.3 public-source prefill from <a id="nulmetingSourceLink" href="#"><code id="nulmetingSourcePath"></code></a>. Local gaps stay visible for staff validation and later decisions.</p>
+        <div class="metrics" id="nulmetingMetrics"></div>
+        <div id="nulmetingTargets"></div>
+      </section>
     </div>
 
     <div class="tab-panel" data-tab-panel="public-updates" hidden>
@@ -384,6 +391,10 @@
     {
       "path": "data/extracted/local_source_strengthening_almere.json",
       "href": "../../data/extracted/local_source_strengthening_almere.json"
+    },
+    {
+      "path": "data/extracted/workagenda_nulmeting_capacity.json",
+      "href": "../../data/extracted/workagenda_nulmeting_capacity.json"
     },
     {
       "path": "data/curated/regional_roles_and_splits_almere_flevoland.json",
@@ -13603,6 +13614,774 @@
       "Use this layer to drive Sprint 25.3 nulmeting/capacity work, especially target-level denominators and current provision."
     ]
   },
+  "workagenda_nulmeting": {
+    "path": "data/extracted/workagenda_nulmeting_capacity.json",
+    "href": "../../data/extracted/workagenda_nulmeting_capacity.json",
+    "layer_run_id": "phase25_3_workagenda_nulmeting_capacity_v1",
+    "generated_on": "2026-04-26",
+    "status": "active_sprint_support",
+    "sprint": "25.3 Nulmeting en capaciteit werkagenda",
+    "purpose": "Prefill the workagenda structure as far as public sources allow, while marking capacity, provider, ownership, budget, and decision gaps for local staff validation or later decisions.",
+    "public_source_boundary": "Only public corpus sources and a verified public CBS denominator are used. Missing non-public knowledge is represented as local_fill_fields or decision_needed, not inferred.",
+    "inputs": [
+      "data/extracted/workagenda_d5_operational_requirements.json",
+      "data/extracted/local_source_strengthening_almere.json",
+      "data/intermediate/source_markdown/reg_ggd_flevoland_2024_volwassenen_gemeenten.md",
+      "data/intermediate/source_markdown/reg_ggd_flevoland_2024_ouderen_gemeenten.md",
+      "CBS OData 86165NED row GM0034 verified on 2026-04-26"
+    ],
+    "summary": {
+      "target_count": 11,
+      "targets_with_public_prefill": 11,
+      "targets_public_gap_only": 0,
+      "indicator_count": 17,
+      "indicative_calculation_count": 3,
+      "local_fill_field_count": 63,
+      "manifest_document_count_at_start": 45
+    },
+    "denominators": {
+      "almere_population_2025": {
+        "source_id": "cbs_kwb_2025_almere_verified_live",
+        "title": "CBS Kerncijfers wijken en buurten 2025 - Almere gemeente",
+        "source_url": "https://www.cbs.nl/nl-nl/cijfers/detail/86165NED",
+        "verification": "Verified from CBS OData table 86165NED on 2026-04-26; row Codering_3 GM0034, SoortRegio_2 Gemeente.",
+        "peildatum": "2025-01-01",
+        "status": "verified_public_denominator_not_yet_manifest_source",
+        "values": {
+          "population_total": 229574,
+          "population_0_15": 41399,
+          "population_15_25": 28014,
+          "population_25_45": 67600,
+          "population_45_65": 60051,
+          "population_65_plus": 32510,
+          "households_total": 98394,
+          "population_density_per_km2": 1777
+        }
+      }
+    },
+    "indicator_sources": {
+      "adult": {
+        "source_document_id": "reg_ggd_flevoland_2024_volwassenen_gemeenten",
+        "source_title": "GGD Flevoland Tabellenboek volwassenen 2024 - gemeenten",
+        "status": "public_table_book_ingested_needs_human_review",
+        "indicators": [
+          {
+            "indicator_id": "adult_overweight_moderate_pct",
+            "label": "Matig overgewicht 18-64",
+            "value": 37,
+            "unit": "%",
+            "page": 11
+          },
+          {
+            "indicator_id": "adult_obesity_pct",
+            "label": "Ernstig overgewicht/obesitas 18-64",
+            "value": 21,
+            "unit": "%",
+            "page": 11
+          },
+          {
+            "indicator_id": "adult_meets_movement_guideline_pct",
+            "label": "Voldoet aan beweegrichtlijn 18-64",
+            "value": 47,
+            "unit": "%",
+            "page": 11
+          },
+          {
+            "indicator_id": "adult_fallen_once_or_more_pct",
+            "label": "Een of meer keer gevallen 18-64",
+            "value": 14,
+            "unit": "%",
+            "page": 10
+          },
+          {
+            "indicator_id": "adult_strong_loneliness_pct",
+            "label": "Sterk eenzaam 18-64",
+            "value": 21,
+            "unit": "%",
+            "page": 14
+          },
+          {
+            "indicator_id": "adult_high_anxiety_depression_risk_pct",
+            "label": "Hoog risico angststoornis/depressie 18-64",
+            "value": 14,
+            "unit": "%",
+            "page": 14
+          },
+          {
+            "indicator_id": "adult_brittle_health_pct",
+            "label": "Broze gezondheid 18-64",
+            "value": 37,
+            "unit": "%",
+            "page": 15
+          },
+          {
+            "indicator_id": "adult_informal_carer_pct",
+            "label": "Mantelzorger 18-64",
+            "value": 11,
+            "unit": "%",
+            "page": 16
+          }
+        ]
+      },
+      "older": {
+        "source_document_id": "reg_ggd_flevoland_2024_ouderen_gemeenten",
+        "source_title": "GGD Flevoland Tabellenboek ouderen 2024 - gemeenten",
+        "status": "public_table_book_ingested_needs_human_review",
+        "indicators": [
+          {
+            "indicator_id": "older_fall_concern_pct",
+            "label": "Bezorgd om te vallen 65+",
+            "value": 31,
+            "unit": "%",
+            "page": 10
+          },
+          {
+            "indicator_id": "older_fallen_once_or_more_pct",
+            "label": "Een of meer keer gevallen 65+",
+            "value": 24,
+            "unit": "%",
+            "page": 10
+          },
+          {
+            "indicator_id": "older_fallen_twice_or_more_pct",
+            "label": "Twee keer of vaker gevallen 65+",
+            "value": 10,
+            "unit": "%",
+            "page": 10
+          },
+          {
+            "indicator_id": "older_obesity_pct",
+            "label": "Ernstig overgewicht/obesitas 65+",
+            "value": 16,
+            "unit": "%",
+            "page": 11
+          },
+          {
+            "indicator_id": "older_meets_movement_guideline_pct",
+            "label": "Voldoet aan beweegrichtlijn 65+",
+            "value": 37,
+            "unit": "%",
+            "page": 11
+          },
+          {
+            "indicator_id": "older_strong_loneliness_pct",
+            "label": "Sterk eenzaam 65+",
+            "value": 15,
+            "unit": "%",
+            "page": 14
+          },
+          {
+            "indicator_id": "older_high_anxiety_depression_risk_pct",
+            "label": "Hoog risico angststoornis/depressie 65+",
+            "value": 8,
+            "unit": "%",
+            "page": 14
+          },
+          {
+            "indicator_id": "older_brittle_health_pct",
+            "label": "Broze gezondheid 65+",
+            "value": 32,
+            "unit": "%",
+            "page": 15
+          },
+          {
+            "indicator_id": "older_informal_carer_pct",
+            "label": "Mantelzorger 65+",
+            "value": 20,
+            "unit": "%",
+            "page": 16
+          }
+        ]
+      }
+    },
+    "calculations": {
+      "sociaal_verwijzen_referrals_per_year": {
+        "label": "Richtinggevend aantal verwijzingen sociaal verwijzen per jaar",
+        "formula": "population_total / 10000 * 60",
+        "value": 1377,
+        "unit": "verwijzingen per jaar",
+        "basis": "Landelijke richtingwaarde uit werkagenda-bron, toegepast op CBS 2025 Almere totaal.",
+        "status": "indicative_public_calculation_needs_local_validation"
+      },
+      "sociaal_verwijzen_bridge_fte_range": {
+        "label": "Richtinggevende brugfunctionaris-capaciteit",
+        "formula": "population_total / 10000 * 0.2 to population_total / 10000 * 0.5",
+        "min_value": 4.6,
+        "max_value": 11.5,
+        "unit": "fte",
+        "basis": "Landelijke richtingwaarde uit werkagenda-bron, toegepast op CBS 2025 Almere totaal.",
+        "status": "indicative_public_calculation_needs_local_validation"
+      },
+      "valpreventie_risk_assessments_14pct_65plus": {
+        "label": "Richtinggevend aantal valrisico-inschattingen bij 14% van 65-plussers",
+        "formula": "population_65_plus * 0.14",
+        "value": 4551,
+        "unit": "valrisico-inschattingen",
+        "basis": "Landelijke richtingwaarde uit werkagenda-bron, toegepast op CBS 2025 Almere 65-plus.",
+        "status": "indicative_public_calculation_needs_local_validation"
+      }
+    },
+    "targets": [
+      {
+        "target_id": "laagdrempelige_steunpunten",
+        "title": "Laagdrempelige steunpunten",
+        "workagenda_status": "basisfunctionaliteit",
+        "required_in_workagenda": true,
+        "leefgebied": "mentale_gezondheid",
+        "public_baseline_status": "partly_filled_from_public_sources",
+        "public_evidence": [
+          "GGD-indicatoren voor eenzaamheid, angst/depressierisico en broze gezondheid geven publieke urgentiesignalen."
+        ],
+        "public_indicators": [
+          {
+            "indicator_id": "adult_strong_loneliness_pct",
+            "label": "Sterk eenzaam 18-64",
+            "value": 21,
+            "unit": "%",
+            "page": 14,
+            "age_group": "adult",
+            "source_document_id": "reg_ggd_flevoland_2024_volwassenen_gemeenten",
+            "source_title": "GGD Flevoland Tabellenboek volwassenen 2024 - gemeenten",
+            "source_status": "public_table_book_ingested_needs_human_review"
+          },
+          {
+            "indicator_id": "older_strong_loneliness_pct",
+            "label": "Sterk eenzaam 65+",
+            "value": 15,
+            "unit": "%",
+            "page": 14,
+            "age_group": "older",
+            "source_document_id": "reg_ggd_flevoland_2024_ouderen_gemeenten",
+            "source_title": "GGD Flevoland Tabellenboek ouderen 2024 - gemeenten",
+            "source_status": "public_table_book_ingested_needs_human_review"
+          },
+          {
+            "indicator_id": "adult_high_anxiety_depression_risk_pct",
+            "label": "Hoog risico angststoornis/depressie 18-64",
+            "value": 14,
+            "unit": "%",
+            "page": 14,
+            "age_group": "adult",
+            "source_document_id": "reg_ggd_flevoland_2024_volwassenen_gemeenten",
+            "source_title": "GGD Flevoland Tabellenboek volwassenen 2024 - gemeenten",
+            "source_status": "public_table_book_ingested_needs_human_review"
+          },
+          {
+            "indicator_id": "older_high_anxiety_depression_risk_pct",
+            "label": "Hoog risico angststoornis/depressie 65+",
+            "value": 8,
+            "unit": "%",
+            "page": 14,
+            "age_group": "older",
+            "source_document_id": "reg_ggd_flevoland_2024_ouderen_gemeenten",
+            "source_title": "GGD Flevoland Tabellenboek ouderen 2024 - gemeenten",
+            "source_status": "public_table_book_ingested_needs_human_review"
+          }
+        ],
+        "indicative_calculations": [],
+        "local_fill_fields": [
+          "bestaande steunpunten die mogen meetellen",
+          "openingstijden en toegankelijkheid",
+          "wijk- of stadsdeeldekking",
+          "uitvoerder/eigenaar",
+          "formatie of coordinatiecapaciteit",
+          "budget en financieringsbron"
+        ],
+        "local_fill_count": 6,
+        "decision_needed": [
+          "prioritering_2027_2030",
+          "lokale_eigenaar",
+          "budget",
+          "monitoringafspraak",
+          "formele_besluitstatus"
+        ],
+        "review_note": "Use public evidence to prefill the workagenda. Leave local capacity, exact providers, budget, ownership, and decisions as validation fields when public sources do not support them."
+      },
+      {
+        "target_id": "sociaal_verwijzen",
+        "title": "Sociaal verwijzen",
+        "workagenda_status": "basisfunctionaliteit",
+        "required_in_workagenda": true,
+        "leefgebied": "mentale_gezondheid",
+        "public_baseline_status": "partly_filled_from_public_sources",
+        "public_evidence": [
+          "Landelijke werkagenda-bron geeft richtinggevende capaciteit: 60 verwijzingen per 10.000 inwoners en 0,2-0,5 fte brugfunctie per 10.000 inwoners.",
+          "CBS 2025 denominator maakt een eerste indicatieve Almere-rekensom mogelijk."
+        ],
+        "public_indicators": [
+          {
+            "indicator_id": "adult_brittle_health_pct",
+            "label": "Broze gezondheid 18-64",
+            "value": 37,
+            "unit": "%",
+            "page": 15,
+            "age_group": "adult",
+            "source_document_id": "reg_ggd_flevoland_2024_volwassenen_gemeenten",
+            "source_title": "GGD Flevoland Tabellenboek volwassenen 2024 - gemeenten",
+            "source_status": "public_table_book_ingested_needs_human_review"
+          },
+          {
+            "indicator_id": "older_brittle_health_pct",
+            "label": "Broze gezondheid 65+",
+            "value": 32,
+            "unit": "%",
+            "page": 15,
+            "age_group": "older",
+            "source_document_id": "reg_ggd_flevoland_2024_ouderen_gemeenten",
+            "source_title": "GGD Flevoland Tabellenboek ouderen 2024 - gemeenten",
+            "source_status": "public_table_book_ingested_needs_human_review"
+          }
+        ],
+        "indicative_calculations": [
+          {
+            "label": "Richtinggevend aantal verwijzingen sociaal verwijzen per jaar",
+            "formula": "population_total / 10000 * 60",
+            "value": 1377,
+            "unit": "verwijzingen per jaar",
+            "basis": "Landelijke richtingwaarde uit werkagenda-bron, toegepast op CBS 2025 Almere totaal.",
+            "status": "indicative_public_calculation_needs_local_validation",
+            "calculation_id": "sociaal_verwijzen_referrals_per_year"
+          },
+          {
+            "label": "Richtinggevende brugfunctionaris-capaciteit",
+            "formula": "population_total / 10000 * 0.2 to population_total / 10000 * 0.5",
+            "min_value": 4.6,
+            "max_value": 11.5,
+            "unit": "fte",
+            "basis": "Landelijke richtingwaarde uit werkagenda-bron, toegepast op CBS 2025 Almere totaal.",
+            "status": "indicative_public_calculation_needs_local_validation",
+            "calculation_id": "sociaal_verwijzen_bridge_fte_range"
+          }
+        ],
+        "local_fill_fields": [
+          "huidige verwijsroute",
+          "aantal verwijzingen huidig",
+          "brugfunctionaris-fte huidig",
+          "aanbieders en afspraken met eerste lijn",
+          "monitoringregistratie"
+        ],
+        "local_fill_count": 5,
+        "decision_needed": [
+          "prioritering_2027_2030",
+          "lokale_eigenaar",
+          "budget",
+          "monitoringafspraak",
+          "formele_besluitstatus"
+        ],
+        "review_note": "Use public evidence to prefill the workagenda. Leave local capacity, exact providers, budget, ownership, and decisions as validation fields when public sources do not support them."
+      },
+      {
+        "target_id": "mentale_gezondheidsnetwerken",
+        "title": "Mentale gezondheidsnetwerken",
+        "workagenda_status": "ontwikkelagenda_1_lopend",
+        "required_in_workagenda": true,
+        "leefgebied": "mentale_gezondheid",
+        "public_baseline_status": "partly_filled_from_public_sources",
+        "public_evidence": [
+          "GGD-indicatoren geven publieke urgentiesignalen; MGN-rol/geografie is carry-over naar geschoonde validatie."
+        ],
+        "public_indicators": [
+          {
+            "indicator_id": "adult_high_anxiety_depression_risk_pct",
+            "label": "Hoog risico angststoornis/depressie 18-64",
+            "value": 14,
+            "unit": "%",
+            "page": 14,
+            "age_group": "adult",
+            "source_document_id": "reg_ggd_flevoland_2024_volwassenen_gemeenten",
+            "source_title": "GGD Flevoland Tabellenboek volwassenen 2024 - gemeenten",
+            "source_status": "public_table_book_ingested_needs_human_review"
+          },
+          {
+            "indicator_id": "older_high_anxiety_depression_risk_pct",
+            "label": "Hoog risico angststoornis/depressie 65+",
+            "value": 8,
+            "unit": "%",
+            "page": 14,
+            "age_group": "older",
+            "source_document_id": "reg_ggd_flevoland_2024_ouderen_gemeenten",
+            "source_title": "GGD Flevoland Tabellenboek ouderen 2024 - gemeenten",
+            "source_status": "public_table_book_ingested_needs_human_review"
+          },
+          {
+            "indicator_id": "adult_strong_loneliness_pct",
+            "label": "Sterk eenzaam 18-64",
+            "value": 21,
+            "unit": "%",
+            "page": 14,
+            "age_group": "adult",
+            "source_document_id": "reg_ggd_flevoland_2024_volwassenen_gemeenten",
+            "source_title": "GGD Flevoland Tabellenboek volwassenen 2024 - gemeenten",
+            "source_status": "public_table_book_ingested_needs_human_review"
+          },
+          {
+            "indicator_id": "older_strong_loneliness_pct",
+            "label": "Sterk eenzaam 65+",
+            "value": 15,
+            "unit": "%",
+            "page": 14,
+            "age_group": "older",
+            "source_document_id": "reg_ggd_flevoland_2024_ouderen_gemeenten",
+            "source_title": "GGD Flevoland Tabellenboek ouderen 2024 - gemeenten",
+            "source_status": "public_table_book_ingested_needs_human_review"
+          }
+        ],
+        "indicative_calculations": [],
+        "local_fill_fields": [
+          "geschoonde MGN-rol/geografie",
+          "huidige netwerkafspraken",
+          "aanmeldroute",
+          "capaciteit per partner",
+          "mandaat en besluitstatus"
+        ],
+        "local_fill_count": 5,
+        "decision_needed": [
+          "prioritering_2027_2030",
+          "lokale_eigenaar",
+          "budget",
+          "monitoringafspraak",
+          "formele_besluitstatus"
+        ],
+        "review_note": "Use public evidence to prefill the workagenda. Leave local capacity, exact providers, budget, ownership, and decisions as validation fields when public sources do not support them."
+      },
+      {
+        "target_id": "valpreventie",
+        "title": "Valpreventie",
+        "workagenda_status": "basisfunctionaliteit",
+        "required_in_workagenda": true,
+        "leefgebied": "vitaal_ouder_worden",
+        "public_baseline_status": "partly_filled_from_public_sources",
+        "public_evidence": [
+          "GGD Valpreventie Almere beschrijft publieke inloop/risico-inschatting en cursusmatching.",
+          "GGD-tabellenboek ouderen geeft publieke valindicatoren voor Almere.",
+          "Landelijke werkagenda-richting noemt valrisico-inschatting bij 14% van de 65-plussers."
+        ],
+        "public_indicators": [
+          {
+            "indicator_id": "older_fall_concern_pct",
+            "label": "Bezorgd om te vallen 65+",
+            "value": 31,
+            "unit": "%",
+            "page": 10,
+            "age_group": "older",
+            "source_document_id": "reg_ggd_flevoland_2024_ouderen_gemeenten",
+            "source_title": "GGD Flevoland Tabellenboek ouderen 2024 - gemeenten",
+            "source_status": "public_table_book_ingested_needs_human_review"
+          },
+          {
+            "indicator_id": "older_fallen_once_or_more_pct",
+            "label": "Een of meer keer gevallen 65+",
+            "value": 24,
+            "unit": "%",
+            "page": 10,
+            "age_group": "older",
+            "source_document_id": "reg_ggd_flevoland_2024_ouderen_gemeenten",
+            "source_title": "GGD Flevoland Tabellenboek ouderen 2024 - gemeenten",
+            "source_status": "public_table_book_ingested_needs_human_review"
+          },
+          {
+            "indicator_id": "older_fallen_twice_or_more_pct",
+            "label": "Twee keer of vaker gevallen 65+",
+            "value": 10,
+            "unit": "%",
+            "page": 10,
+            "age_group": "older",
+            "source_document_id": "reg_ggd_flevoland_2024_ouderen_gemeenten",
+            "source_title": "GGD Flevoland Tabellenboek ouderen 2024 - gemeenten",
+            "source_status": "public_table_book_ingested_needs_human_review"
+          },
+          {
+            "indicator_id": "older_meets_movement_guideline_pct",
+            "label": "Voldoet aan beweegrichtlijn 65+",
+            "value": 37,
+            "unit": "%",
+            "page": 11,
+            "age_group": "older",
+            "source_document_id": "reg_ggd_flevoland_2024_ouderen_gemeenten",
+            "source_title": "GGD Flevoland Tabellenboek ouderen 2024 - gemeenten",
+            "source_status": "public_table_book_ingested_needs_human_review"
+          }
+        ],
+        "indicative_calculations": [
+          {
+            "label": "Richtinggevend aantal valrisico-inschattingen bij 14% van 65-plussers",
+            "formula": "population_65_plus * 0.14",
+            "value": 4551,
+            "unit": "valrisico-inschattingen",
+            "basis": "Landelijke richtingwaarde uit werkagenda-bron, toegepast op CBS 2025 Almere 65-plus.",
+            "status": "indicative_public_calculation_needs_local_validation",
+            "calculation_id": "valpreventie_risk_assessments_14pct_65plus"
+          }
+        ],
+        "local_fill_fields": [
+          "cursuscapaciteit",
+          "aanbieders per wijk/stadsdeel",
+          "wachttijden",
+          "doorverwijsroute vanuit inloop",
+          "structureel beweegaanbod",
+          "budget en eigenaarschap"
+        ],
+        "local_fill_count": 6,
+        "decision_needed": [
+          "prioritering_2027_2030",
+          "lokale_eigenaar",
+          "budget",
+          "monitoringafspraak",
+          "formele_besluitstatus"
+        ],
+        "review_note": "Use public evidence to prefill the workagenda. Leave local capacity, exact providers, budget, ownership, and decisions as validation fields when public sources do not support them."
+      },
+      {
+        "target_id": "ketenaanpak_overgewicht_obesitas_volwassenen",
+        "title": "Ketenaanpak overgewicht en obesitas volwassenen",
+        "workagenda_status": "basisfunctionaliteit",
+        "required_in_workagenda": true,
+        "leefgebied": "leefstijl",
+        "public_baseline_status": "partly_filled_from_public_sources",
+        "public_evidence": [
+          "GGD-tabellenboek volwassenen geeft publieke Almere-indicatoren voor overgewicht, obesitas en bewegen."
+        ],
+        "public_indicators": [
+          {
+            "indicator_id": "adult_overweight_moderate_pct",
+            "label": "Matig overgewicht 18-64",
+            "value": 37,
+            "unit": "%",
+            "page": 11,
+            "age_group": "adult",
+            "source_document_id": "reg_ggd_flevoland_2024_volwassenen_gemeenten",
+            "source_title": "GGD Flevoland Tabellenboek volwassenen 2024 - gemeenten",
+            "source_status": "public_table_book_ingested_needs_human_review"
+          },
+          {
+            "indicator_id": "adult_obesity_pct",
+            "label": "Ernstig overgewicht/obesitas 18-64",
+            "value": 21,
+            "unit": "%",
+            "page": 11,
+            "age_group": "adult",
+            "source_document_id": "reg_ggd_flevoland_2024_volwassenen_gemeenten",
+            "source_title": "GGD Flevoland Tabellenboek volwassenen 2024 - gemeenten",
+            "source_status": "public_table_book_ingested_needs_human_review"
+          },
+          {
+            "indicator_id": "adult_meets_movement_guideline_pct",
+            "label": "Voldoet aan beweegrichtlijn 18-64",
+            "value": 47,
+            "unit": "%",
+            "page": 11,
+            "age_group": "adult",
+            "source_document_id": "reg_ggd_flevoland_2024_volwassenen_gemeenten",
+            "source_title": "GGD Flevoland Tabellenboek volwassenen 2024 - gemeenten",
+            "source_status": "public_table_book_ingested_needs_human_review"
+          }
+        ],
+        "indicative_calculations": [],
+        "local_fill_fields": [
+          "GLI-capaciteit",
+          "leefstijl- en beweegaanbod",
+          "centrale zorgcoordinatie",
+          "wijkspreiding",
+          "wachttijden",
+          "financieringsmix Zvw/gemeente/GALA/PGA"
+        ],
+        "local_fill_count": 6,
+        "decision_needed": [
+          "prioritering_2027_2030",
+          "lokale_eigenaar",
+          "budget",
+          "monitoringafspraak",
+          "formele_besluitstatus"
+        ],
+        "review_note": "Use public evidence to prefill the workagenda. Leave local capacity, exact providers, budget, ownership, and decisions as validation fields when public sources do not support them."
+      },
+      {
+        "target_id": "kansrijke_start",
+        "title": "Kansrijke Start",
+        "workagenda_status": "basisfunctionaliteit",
+        "required_in_workagenda": true,
+        "leefgebied": "kansrijk_opgroeien",
+        "public_baseline_status": "partly_filled_from_public_sources",
+        "public_evidence": [
+          "CBS 2025 geeft publieke leeftijdsdenominatoren; lokale coalitie-, capaciteit- en interventiekeuzes zijn nog invulvelden."
+        ],
+        "public_indicators": [],
+        "indicative_calculations": [],
+        "local_fill_fields": [
+          "coalitie Kansrijke Start",
+          "doelgroepdefinitie",
+          "huidig interventieaanbod",
+          "bereik en locaties",
+          "eigenaar en uitvoerders",
+          "besluitstatus"
+        ],
+        "local_fill_count": 6,
+        "decision_needed": [
+          "prioritering_2027_2030",
+          "lokale_eigenaar",
+          "budget",
+          "monitoringafspraak",
+          "formele_besluitstatus"
+        ],
+        "review_note": "Use public evidence to prefill the workagenda. Leave local capacity, exact providers, budget, ownership, and decisions as validation fields when public sources do not support them."
+      },
+      {
+        "target_id": "integrale_gezinspoli",
+        "title": "Integrale gezinspoli",
+        "workagenda_status": "basisfunctionaliteit",
+        "required_in_workagenda": true,
+        "leefgebied": "kansrijk_opgroeien",
+        "public_baseline_status": "partly_filled_from_public_sources",
+        "public_evidence": [
+          "Publieke corpuslaag bevat nog geen Almeerse capaciteit of besluit voor een integrale gezinspoli."
+        ],
+        "public_indicators": [],
+        "indicative_calculations": [],
+        "local_fill_fields": [
+          "bestaat er een gezinspoli of vergelijkbare route",
+          "kernteam en vaste gezichten",
+          "MDO-afspraken",
+          "taakverschuiving",
+          "capaciteit",
+          "besluitstatus"
+        ],
+        "local_fill_count": 6,
+        "decision_needed": [
+          "prioritering_2027_2030",
+          "lokale_eigenaar",
+          "budget",
+          "monitoringafspraak",
+          "formele_besluitstatus"
+        ],
+        "review_note": "Use public evidence to prefill the workagenda. Leave local capacity, exact providers, budget, ownership, and decisions as validation fields when public sources do not support them."
+      },
+      {
+        "target_id": "nu_niet_zwanger",
+        "title": "Nu Niet Zwanger",
+        "workagenda_status": "basisfunctionaliteit",
+        "required_in_workagenda": true,
+        "leefgebied": "kansrijk_opgroeien",
+        "public_baseline_status": "partly_filled_from_public_sources",
+        "public_evidence": [
+          "Werkagenda noemt structurele coordinatie en expertise; publieke Almere-capaciteit is nog niet in de corpuslaag gevonden."
+        ],
+        "public_indicators": [],
+        "indicative_calculations": [],
+        "local_fill_fields": [
+          "regionale of lokale organisatievorm",
+          "coordinator/expertise",
+          "aangesloten professionals",
+          "anticonceptiebudget",
+          "bereik",
+          "GGD-regio versus IZA/AZWA-regio keuze"
+        ],
+        "local_fill_count": 6,
+        "decision_needed": [
+          "prioritering_2027_2030",
+          "lokale_eigenaar",
+          "budget",
+          "monitoringafspraak",
+          "formele_besluitstatus"
+        ],
+        "review_note": "Use public evidence to prefill the workagenda. Leave local capacity, exact providers, budget, ownership, and decisions as validation fields when public sources do not support them."
+      },
+      {
+        "target_id": "ketenaanpak_overgewicht_obesitas_kinderen",
+        "title": "Ketenaanpak overgewicht en obesitas kinderen",
+        "workagenda_status": "ontwikkelagenda_1_lopend",
+        "required_in_workagenda": true,
+        "leefgebied": "kansrijk_opgroeien",
+        "public_baseline_status": "partly_filled_from_public_sources",
+        "public_evidence": [
+          "CBS 2025 geeft publieke jeugdleeftijdsdenominatoren; specifieke jeugdgezondheids- en CZV/kinder-GLI-capaciteit is nog invulveld."
+        ],
+        "public_indicators": [],
+        "indicative_calculations": [],
+        "local_fill_fields": [
+          "CZV-capaciteit",
+          "kinder-GLI-aanbod",
+          "jeugdgezondheidsindicatoren",
+          "school/wijkspreiding",
+          "regionale coordinatie",
+          "financiering"
+        ],
+        "local_fill_count": 6,
+        "decision_needed": [
+          "prioritering_2027_2030",
+          "lokale_eigenaar",
+          "budget",
+          "monitoringafspraak",
+          "formele_besluitstatus"
+        ],
+        "review_note": "Use public evidence to prefill the workagenda. Leave local capacity, exact providers, budget, ownership, and decisions as validation fields when public sources do not support them."
+      },
+      {
+        "target_id": "ontwikkelagenda_1_nieuw_beproeven",
+        "title": "Ontwikkelagenda 1 nieuw: dementie, nicotinevrij, rookvrije start, multiproblematiek NPLV",
+        "workagenda_status": "ontwikkelagenda_1_nieuw_conditioneel",
+        "required_in_workagenda": false,
+        "leefgebied": "meerdere_leefgebieden",
+        "public_baseline_status": "partly_filled_from_public_sources",
+        "public_evidence": [
+          "Alleen vullen wanneer publieke bron of lokale validatie aangeeft dat Almere/Flevoland dit wil beproeven."
+        ],
+        "public_indicators": [],
+        "indicative_calculations": [],
+        "local_fill_fields": [
+          "gekozen aanpak",
+          "onderbouwing",
+          "beschikbare capaciteit",
+          "financiering zonder verdringing",
+          "besluitstatus"
+        ],
+        "local_fill_count": 5,
+        "decision_needed": [
+          "prioritering_2027_2030",
+          "lokale_eigenaar",
+          "budget",
+          "monitoringafspraak",
+          "formele_besluitstatus"
+        ],
+        "review_note": "Use public evidence to prefill the workagenda. Leave local capacity, exact providers, budget, ownership, and decisions as validation fields when public sources do not support them."
+      },
+      {
+        "target_id": "ontwikkelagenda_2_overige_initiatieven",
+        "title": "Ontwikkelagenda 2 en overige initiatieven",
+        "workagenda_status": "optioneel_geen_landelijke_financiering",
+        "required_in_workagenda": false,
+        "leefgebied": "meerdere_leefgebieden",
+        "public_baseline_status": "partly_filled_from_public_sources",
+        "public_evidence": [
+          "Alleen opnemen als publieke bron of lokale validatie aangeeft dat dit praktisch nodig is."
+        ],
+        "public_indicators": [],
+        "indicative_calculations": [],
+        "local_fill_fields": [
+          "initiatief",
+          "relatie met D5",
+          "lokale eigenaar",
+          "capaciteit",
+          "financiering",
+          "besluitstatus"
+        ],
+        "local_fill_count": 6,
+        "decision_needed": [
+          "prioritering_2027_2030",
+          "lokale_eigenaar",
+          "budget",
+          "monitoringafspraak",
+          "formele_besluitstatus"
+        ],
+        "review_note": "Use public evidence to prefill the workagenda. Leave local capacity, exact providers, budget, ownership, and decisions as validation fields when public sources do not support them."
+      }
+    ],
+    "carry_forward": [
+      "Review GGD percentage extraction against source pages before using in bestuurlijke text.",
+      "Add the CBS denominator as a formal manifest source if the layer becomes public-facing or audit-critical.",
+      "Ask local employees to fill current aanbod, capaciteit/fte, wachttijden, wijkspreiding, budget, owner, and decision status where public sources are silent.",
+      "Escalate unresolved prioritization, budget, owner, and scale choices as decision questions after local validation."
+    ]
+  },
   "regional_guardrails": {
     "path": "docs/regional-roles-and-splits-almere-flevoland.md",
     "href": "../../docs/regional-roles-and-splits-almere-flevoland.md",
@@ -13857,6 +14636,31 @@
           <td>${(stream.source_claim_ids || []).slice(0, 5).map(id => `<code>${esc(id)}</code>`).join(' ')}</td>
         </tr>`).join('')}</tbody>
       </table><p class="subtle">${esc((workagenda.finance_linking_model || {}).review_rule || '')}</p>` : '<p class="empty">No finance streams recorded.</p>';
+
+      const nulmeting = DATA.workagenda_nulmeting || {};
+      byId('nulmetingSourceLink').href = nulmeting.href || '#';
+      byId('nulmetingSourcePath').textContent = nulmeting.path || '';
+      const nulSummary = nulmeting.summary || {};
+      byId('nulmetingMetrics').innerHTML = [
+        ['Targets prefilled', nulSummary.targets_with_public_prefill || 0],
+        ['Public-gap only', nulSummary.targets_public_gap_only || 0],
+        ['Indicators', nulSummary.indicator_count || 0],
+        ['Calculations', nulSummary.indicative_calculation_count || 0],
+        ['Local fields', nulSummary.local_fill_field_count || 0]
+      ].map(([label, value]) => `<div class="metric"><strong>${esc(value)}</strong><span>${esc(label)}</span></div>`).join('');
+      const nulTargets = nulmeting.targets || [];
+      byId('nulmetingTargets').innerHTML = nulTargets.length ? `<table>
+        <thead><tr><th>Target</th><th>Public prefill</th><th>Indicative calculations</th><th>Local fill fields</th></tr></thead>
+        <tbody>${nulTargets.map(target => `<tr>
+          <td><strong>${esc(target.title || target.target_id)}</strong><br><code>${esc(target.target_id || '')}</code><br><span class="tag issue">${esc(target.public_baseline_status || '')}</span></td>
+          <td>${(target.public_indicators || []).slice(0, 4).map(indicator => `<span class="tag perspective">${esc(indicator.label)}: ${esc(indicator.value)}${esc(indicator.unit || '')}</span>`).join(' ')}<br><span class="subtle">${(target.public_evidence || []).slice(0, 2).map(esc).join(' ')}</span></td>
+          <td>${(target.indicative_calculations || []).map(calc => {
+            const value = calc.min_value !== undefined ? esc(calc.min_value) + '-' + esc(calc.max_value) : esc(calc.value);
+            return `<span class="tag origin">${esc(calc.label)}: ${value} ${esc(calc.unit || '')}</span>`;
+          }).join(' ') || '<span class="subtle">No public calculation yet</span>'}</td>
+          <td><ul class="compact">${(target.local_fill_fields || []).slice(0, 6).map(field => `<li>${esc(field)}</li>`).join('')}</ul></td>
+        </tr>`).join('')}</tbody>
+      </table>` : '<p class="empty">No nulmeting layer generated yet.</p>';
     }
 
     function renderLocalSources() {

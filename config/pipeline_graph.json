@@ -205,6 +205,26 @@
       ]
     },
     {
+      "stage_id": "phase25_3_workagenda_nulmeting_capacity",
+      "kind": "script",
+      "description": "Build the public-source nulmeting and capacity prefill layer for each D5 workagenda target, with local validation gaps kept explicit.",
+      "script": "src/build_workagenda_nulmeting_capacity.py",
+      "depends_on": [
+        "phase25_1_workagenda_operational_layer",
+        "phase25_2_local_source_strengthening_almere"
+      ],
+      "inputs": [
+        "data/extracted/workagenda_d5_operational_requirements.json",
+        "data/extracted/local_source_strengthening_almere.json",
+        "data/intermediate/source_markdown/reg_ggd_flevoland_2024_volwassenen_gemeenten.md",
+        "data/intermediate/source_markdown/reg_ggd_flevoland_2024_ouderen_gemeenten.md",
+        "src/build_workagenda_nulmeting_capacity.py"
+      ],
+      "outputs": [
+        "data/extracted/workagenda_nulmeting_capacity.json"
+      ]
+    },
+    {
       "stage_id": "phase7_phase8_master_views",
       "kind": "script",
       "description": "Generate the D5/D6 master model plus the computed Almere view and decision shell.",

@@ -11,7 +11,7 @@ Gebruik deze roadmap als levend werkdocument. Werk na elke sprint de statusregel
 
 | Sprint | Status | Vindplaats / opmerking |
 | --- | --- | --- |
-| 25.2 Lokale bronversterking Almere | open | Huidige sprint; eerste bronversterkingslaag staat in `data/extracted/local_source_strengthening_almere.json`; vervolg is directe intake van primaire lokale bijlagen en rolbronnen |
+| 25.2 Lokale bronversterking Almere | open | Huidige sprint; eerste formele intake van geselecteerde Documentwijzer-, GGD- en ZonMw-bronnen is verwerkt; vervolg is claimreview, geschoonde MGN-rol/geografie-extractie en resterende lokale bronhiaten |
 | 25.1 Werkagenda- en financieringslaag | completed | `data/extracted/workagenda_d5_operational_requirements.json`, `src/build_workagenda_d5_operational_requirements.py`, `docs/completed-plans/phase25-sprint25.1-werkagenda-financieringslaag.md` |
 | 24.1 Taxonomie en checklist | completed | `config/data_quality_perspectives.json`, `docs/data-quality-checklist.md` |
 | 24.2 Audit van bestaande site-data | completed | `docs/completed-plans/phase24-sprint24.2-audit.md`, `data/extracted/data_quality_audit.json` |
@@ -45,7 +45,7 @@ Gebruik deze roadmap als levend werkdocument. Werk na elke sprint de statusregel
 ## Huidige sprintplan
 Sprint 25.2 richt zich op lokale bronversterking voor Almere. Sprint 25.1 heeft de eerste D5-werkagenda operationele laag opgeleverd; de volgende stap is de primaire lokale bronbasis en rolbronnen versterken zodat die laag betrouwbaar met Almere-specifieke context kan worden gevuld.
 
-Status op 24 april 2026: eerste tranche uitgevoerd. `data/extracted/local_source_strengthening_almere.json` maakt zichtbaar welke lokale bronnen al in de formele laag zitten, welke bronnen alleen als kandidaat of summary aanwezig zijn, en welke primaire bijlagen nog direct moeten worden opgehaald. Een publieke bronprobe is vastgelegd in `docs/internal/source-intake/phase25.2-public-source-assessment.md`; de Documentwijzer-bijlagen, GGD-tabellenboeken, GGD-valpreventiepagina Almere, ZonMw-bron en MGN-rolbron zijn publiek downloadbaar en inhoudelijk beoordeeld. De sprint blijft open totdat de geselecteerde primaire stukken daadwerkelijk in de bronlaag zijn opgenomen of als niet-openbaar/onvindbaar zijn verantwoord.
+Status op 26 april 2026: eerste formele intake uitgevoerd. `data/extracted/local_source_strengthening_almere.json` maakt zichtbaar welke lokale bronnen al in de formele laag zitten, welke bronnen alleen als kandidaat of summary aanwezig zijn, en welke primaire bijlagen nog direct moeten worden opgehaald. Een publieke bronprobe is vastgelegd in `docs/internal/source-intake/phase25.2-public-source-assessment.md`; de Documentwijzer-bijlagen, GGD-tabellenboeken, GGD-valpreventiepagina Almere, ZonMw-bron en MGN-rolbron zijn publiek downloadbaar en inhoudelijk beoordeeld. De geselecteerde Documentwijzer-bijlagen voor Visie Gezondheidsbeleid en Maatschappelijke Agenda zijn eerst naar page-markdown omgezet en daarna opgenomen in `data/raw/manifest.json`. Ook de GGD-tabellenboeken voor volwassenen en ouderen, de GGD-valpreventiepagina Almere en de ZonMw-bron zijn opgenomen in `data/raw/manifest.json`, door inventory/extractie/claims/site-viewmodels verwerkt en blijven als reviewmateriaal gemarkeerd voordat ze beleidsmatig worden gebruikt. De MGN-rolbron blijft buiten de formele corpuslaag totdat er een geschoonde rol/geografie-extractie zonder contactpersonen, telefoonnummers of e-mailadressen is gemaakt.
 
 Eerste verbeterplan:
 
@@ -53,8 +53,9 @@ Eerste verbeterplan:
 - Vervang waar mogelijk samenvattende contextpagina's door de onderliggende Almeerse beleidsdocumenten voor de Maatschappelijke Agenda en de Visie Gezondheidsbeleid.
 - Zoek en verwerk de lokale raadsbrief `Stand van zaken Gezondheidsbeleid (IZA en GALA)` van 2 februari 2025, als deze openbaar en herleidbaar beschikbaar is.
 - Controleer of de Zorgakkoorden-pagina `Handvatten voor het opstellen van de regionale werkagenda`, de officiele opdracht-PDF, het format en de proces/financieringstoelichting volledig als canonieke bronnen in de bronmanifesten en inventarislaag staan.
-- Haal, waar openbaar en herleidbaar, actuele brondata binnen voor GGD Flevoland Gezondheidsmonitor 2024, de GGD Flevoland valpreventiepagina Almere, ZonMw/Zorgzaam Flevoland, actuele PGA-bronnen en actuele BRP/CBS-bevolkingsgegevens voor capaciteitsberekeningen.
-- Voeg rolbronnen toe of versterk ze voor expliciete goedkeuring door gemeente of mandaatgemeente bij social-domain onderdelen van integrale transformatieplannen en voor Almere als mandaatgemeente in het Flevolandse mentale-gezondheidsnetwerk.
+- De GGD Flevoland Gezondheidsmonitor-tabellenboeken 2024, GGD Flevoland valpreventiepagina Almere en ZonMw/Zorgzaam Flevoland-bron zijn opgenomen; resterend zijn actuele PGA-bronnen en stabiele BRP/CBS-bronnen voor capaciteitsberekeningen.
+- Voeg rolbronnen toe of versterk ze voor expliciete goedkeuring door gemeente of mandaatgemeente bij social-domain onderdelen van integrale transformatieplannen; maak voor Almere als mandaatgemeente in het Flevolandse mentale-gezondheidsnetwerk eerst een geschoonde rol/geografie-extractie.
+- Volgende intake moet vooral de gegenereerde claims uit de Documentwijzer-bijlagen controleren en voor de MGN-bron eerst een geschoonde rol/geografie-extractie maken.
 
 Geplande vervolgsprint:
 
@@ -144,13 +145,15 @@ Status: open.
 - Eerste uitvoerlaag toegevoegd: `data/extracted/local_source_strengthening_almere.json`.
 - Deze laag behandelt interne deep-research documenten alleen als bronhiatensignaal en maakt kandidaatbronnen expliciet voordat ze als feiten in claims of publieke tekst mogen belanden.
 - Publieke bronprobe uitgevoerd en beoordeeld in `docs/internal/source-intake/phase25.2-public-source-assessment.md`. Eerste intakebatch is inhoudelijk afgebakend; MGN-contactgegevens en andere persoons-/contactdetails mogen niet als claim of publieke tekst worden gepromoveerd.
+- Eerste formele intakebatch toegevoegd aan `data/raw/manifest.json`: GGD Flevoland tabellenboeken 2024 voor volwassenen en ouderen, GGD Flevoland Valpreventie Gemeente Almere, en ZonMw Doorontwikkeling Zorgzaam Flevoland. Deze bronnen zijn verwerkt tot inventory, extracties, claims, site-viewmodels en intern dashboard; claims blijven reviewmateriaal.
+- Eerste Documentwijzer-intake toegevoegd aan `data/raw/manifest.json`: beleidstekst, geamendeerd raadsvoorstel en besluitenlijst voor de Visie Gezondheidsbeleid; Brede SPUK/GALA plan van aanpak; beleidstekst, geamendeerd raadsvoorstel, besluitenlijst en evaluatie-opzet voor de Maatschappelijke Agenda. Alle acht stukken zijn eerst geconverteerd naar page-markdown en daarna door de pipeline verwerkt; claims blijven reviewmateriaal.
 - Gebruik `docs/internal/AZWA, IZA and GALA for the Almere case.md` als intern research-signaal, vooral de `Repository quality log`, maar behandel de daarin genoemde externe bevindingen pas als feit nadat de primaire bronnen zelf zijn opgenomen of gecontroleerd.
 - Gebruik ook `docs/internal/conceptinvulling_werkagenda_azwa_almere.md` als intern research-signaal voor bronhiaten; behandel genoemde cijfers, voorbeelden en externe bronclaims pas als feit nadat de primaire bron is opgenomen of gecontroleerd.
 - Vervang waar mogelijk samenvattende contextpagina's door de onderliggende Almeerse beleidsdocumenten voor de Maatschappelijke Agenda en de Visie Gezondheidsbeleid.
 - Zoek en verwerk de lokale raadsbrief `Stand van zaken Gezondheidsbeleid (IZA en GALA)` van 2 februari 2025, als deze openbaar en herleidbaar beschikbaar is.
 - Controleer of de Zorgakkoorden-pagina `Handvatten voor het opstellen van de regionale werkagenda`, de officiele opdracht-PDF, het format en de proces/financieringstoelichting volledig als canonieke bronnen in de bronmanifesten en inventarislaag staan.
-- Haal, waar openbaar en herleidbaar, actuele brondata binnen voor GGD Flevoland Gezondheidsmonitor 2024, de GGD Flevoland valpreventiepagina Almere, ZonMw/Zorgzaam Flevoland, actuele PGA-bronnen en actuele BRP/CBS-bevolkingsgegevens voor capaciteitsberekeningen.
-- Voeg rolbronnen toe of versterk ze voor: expliciete goedkeuring door gemeente of mandaatgemeente bij social-domain onderdelen van integrale transformatieplannen; en de landelijke listing waarin Almere als mandaatgemeente voor het Flevolandse mentale-gezondheidsnetwerk wordt genoemd.
+- GGD Flevoland Gezondheidsmonitor-tabellenboeken 2024, de GGD Flevoland valpreventiepagina Almere en ZonMw/Zorgzaam Flevoland zijn opgenomen; haal daarna nog actuele PGA-bronnen en stabiele BRP/CBS-bronnen binnen voor capaciteitsberekeningen.
+- Voeg rolbronnen toe of versterk ze voor: expliciete goedkeuring door gemeente of mandaatgemeente bij social-domain onderdelen van integrale transformatieplannen; en maak voor de landelijke listing waarin Almere als mandaatgemeente voor het Flevolandse mentale-gezondheidsnetwerk wordt genoemd eerst een geschoonde rol/geografie-extractie.
 - Koppel deze bronnen aan locality, governance en execution claims, en markeer waar de bron alleen een onderzoekssignaal geeft in plaats van een vastgestelde lokale keuze.
 - Gebruik deze sprint ook om de door het kwaliteitsrapport genoemde representatieproblemen te triageren: `governance_and_finance.other`, `timeline.other`, onopgeloste conflicten rond lokale teams, digitale/operationele infrastructuur, regionale coordinatie, finance-local alignment en mentale gezondheidsnetwerken.
 

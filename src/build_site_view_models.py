@@ -1654,11 +1654,15 @@ def build_action_models(
     models: list[dict] = []
     for blueprint in ACTION_BLUEPRINTS:
         if blueprint["kind"] == "gap":
-            source_item = gaps[blueprint["source_id"]]
+            source_item = gaps.get(blueprint["source_id"])
+            if source_item is None:
+                continue
             source_claim_ids = list(source_item["supporting_claim_ids"])
             current_status_detail = GAP_LABELS[blueprint["source_id"]]["summary"]
         else:
-            source_item = dependencies[blueprint["source_id"]]
+            source_item = dependencies.get(blueprint["source_id"])
+            if source_item is None:
+                continue
             source_claim_ids = list(source_item["supporting_claim_ids"])
             current_status_detail = DEPENDENCY_LABELS[blueprint["source_id"]]["summary"]
 

@@ -1,18 +1,111 @@
 {
   "review_run_id": "phase11_quality_control_v1",
-  "generated_on": "2026-04-23",
+  "generated_on": "2026-04-26",
   "summary": {
     "blocking": 0,
-    "warning": 0,
-    "review": 41,
-    "item_count": 41,
+    "warning": 4,
+    "review": 59,
+    "item_count": 63,
     "issue_counts_by_reason": {
-      "authority_unclear": 20,
-      "municipality_relevance_inferred": 12,
-      "unresolved_conflict": 9
+      "authority_unclear": 25,
+      "extraction_noise_detected": 3,
+      "missing_d5_content": 3,
+      "missing_d6_content": 1,
+      "municipality_relevance_inferred": 18,
+      "table_content_not_promoted": 1,
+      "unresolved_conflict": 12
     }
   },
   "items": [
+    {
+      "status": "open",
+      "severity": "warning",
+      "check_id": "document_payload_integrity",
+      "reason_code": "missing_d5_content",
+      "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd is expected to contain D5 material, but the extraction produced no D5 items.",
+      "recommended_action": "Review the source and improve the D5 extraction rules for this document.",
+      "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/documents/mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd.json"
+      ],
+      "related_ids": {},
+      "evidence": {},
+      "review_item_id": "rvw_001"
+    },
+    {
+      "status": "open",
+      "severity": "warning",
+      "check_id": "document_payload_integrity",
+      "reason_code": "missing_d5_content",
+      "summary": "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst is expected to contain D5 material, but the extraction produced no D5 items.",
+      "recommended_action": "Review the source and improve the D5 extraction rules for this document.",
+      "document_id": "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/documents/mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst.json"
+      ],
+      "related_ids": {},
+      "evidence": {},
+      "review_item_id": "rvw_002"
+    },
+    {
+      "status": "open",
+      "severity": "warning",
+      "check_id": "document_payload_integrity",
+      "reason_code": "missing_d5_content",
+      "summary": "mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd is expected to contain D5 material, but the extraction produced no D5 items.",
+      "recommended_action": "Review the source and improve the D5 extraction rules for this document.",
+      "document_id": "mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/documents/mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd.json"
+      ],
+      "related_ids": {},
+      "evidence": {},
+      "review_item_id": "rvw_003"
+    },
+    {
+      "status": "open",
+      "severity": "warning",
+      "check_id": "document_payload_integrity",
+      "reason_code": "missing_d6_content",
+      "summary": "mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd is expected to contain D6 material, but the extraction produced no D6 items.",
+      "recommended_action": "Review the source and improve the D6 extraction rules for this document.",
+      "document_id": "mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/documents/mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd.json"
+      ],
+      "related_ids": {},
+      "evidence": {},
+      "review_item_id": "rvw_004"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "municipality_relevance_inferred",
+      "summary": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 6 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
+      "recommended_action": "Review these claims before treating them as firm municipal obligations or implementation facts.",
+      "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d5_001",
+          "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d5_002",
+          "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d5_003",
+          "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d6_001",
+          "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d6_002"
+        ],
+        "topic_count": 4
+      },
+      "evidence": {},
+      "review_item_id": "rvw_005"
+    },
     {
       "status": "open",
       "severity": "review",
@@ -36,7 +129,77 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_001"
+      "review_item_id": "rvw_006"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "municipality_relevance_inferred",
+      "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst contains 6 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
+      "recommended_action": "Review these claims before treating them as firm municipal obligations or implementation facts.",
+      "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d5_001",
+          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d5_002",
+          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d5_003",
+          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d6_001",
+          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d6_002"
+        ],
+        "topic_count": 2
+      },
+      "evidence": {},
+      "review_item_id": "rvw_007"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "extraction_noise_detected",
+      "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd contains 1 suspicious claim statement(s) with navigation text, encoding noise, or over-concatenated list content.",
+      "recommended_action": "Manually review these claims and tighten the extraction filters before promoting them to briefings or dashboards.",
+      "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_timeline_and_status_003"
+        ]
+      },
+      "evidence": {
+        "sample_statements": [
+          "De Visie Gezondheidsbeleid Almere 2024-2026 vast te stellen: 1. waarin de volgende doelstellingen zijn vastgelegd: a. Brede Preventie: Het stimuleren van een gezonde leefstijl en leefomgeving vanuit het gedachtengoed Positieve Gezondheid; b. We verweven gezondheid in alle beleidsterreinen: Health in all policies; c. De toegankelijkheid van de zorg in de toekomst garanderen door alle Almeerders de juiste hulp op de juiste plek te bieden; 2. met daarin de volgende ambities: a. in te zetten op het bevorderen van de samenwerking tussen het medische en het sociale domein; b. bij te dragen aan de zorgtransitie; c. mensen in staat te stellen de vaardigheden te verwerven om beter voor zichzelf ..."
+        ]
+      },
+      "review_item_id": "rvw_008"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "municipality_relevance_inferred",
+      "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd contains 1 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
+      "recommended_action": "Review these claims before treating them as firm municipal obligations or implementation facts.",
+      "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_d6_001"
+        ],
+        "topic_count": 1
+      },
+      "evidence": {},
+      "review_item_id": "rvw_009"
     },
     {
       "status": "open",
@@ -61,7 +224,77 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_002"
+      "review_item_id": "rvw_010"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "municipality_relevance_inferred",
+      "summary": "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst contains 3 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
+      "recommended_action": "Review these claims before treating them as firm municipal obligations or implementation facts.",
+      "document_id": "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_d6_001",
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_d6_002",
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_d6_003"
+        ],
+        "topic_count": 1
+      },
+      "evidence": {},
+      "review_item_id": "rvw_011"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "authority_unclear",
+      "summary": "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie contributes lower-authority claims that still require human review.",
+      "recommended_action": "Keep these claims as contextual support only until a stronger primary source confirms or replaces them.",
+      "document_id": "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie.json"
+      ],
+      "related_ids": {
+        "review_claim_count": 9,
+        "sample_claim_ids": [
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie_d6_001",
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie_d6_002",
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie_governance_and_finance_001",
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie_monitoring_and_evaluation_001",
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie_monitoring_and_evaluation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_012"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "municipality_relevance_inferred",
+      "summary": "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie contains 2 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
+      "recommended_action": "Review these claims before treating them as firm municipal obligations or implementation facts.",
+      "document_id": "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie_d6_001",
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie_d6_002"
+        ],
+        "topic_count": 1
+      },
+      "evidence": {},
+      "review_item_id": "rvw_013"
     },
     {
       "status": "open",
@@ -86,7 +319,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_003"
+      "review_item_id": "rvw_014"
     },
     {
       "status": "open",
@@ -111,7 +344,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_004"
+      "review_item_id": "rvw_015"
     },
     {
       "status": "open",
@@ -136,7 +369,7 @@
         "topic_count": 5
       },
       "evidence": {},
-      "review_item_id": "rvw_005"
+      "review_item_id": "rvw_016"
     },
     {
       "status": "open",
@@ -161,7 +394,7 @@
         "topic_count": 4
       },
       "evidence": {},
-      "review_item_id": "rvw_006"
+      "review_item_id": "rvw_017"
     },
     {
       "status": "open",
@@ -186,7 +419,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_007"
+      "review_item_id": "rvw_018"
     },
     {
       "status": "open",
@@ -211,7 +444,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_008"
+      "review_item_id": "rvw_019"
     },
     {
       "status": "open",
@@ -236,7 +469,7 @@
         "topic_count": 3
       },
       "evidence": {},
-      "review_item_id": "rvw_009"
+      "review_item_id": "rvw_020"
     },
     {
       "status": "open",
@@ -259,7 +492,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_010"
+      "review_item_id": "rvw_021"
     },
     {
       "status": "open",
@@ -282,7 +515,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_011"
+      "review_item_id": "rvw_022"
     },
     {
       "status": "open",
@@ -303,7 +536,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_012"
+      "review_item_id": "rvw_023"
     },
     {
       "status": "open",
@@ -328,7 +561,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_013"
+      "review_item_id": "rvw_024"
     },
     {
       "status": "open",
@@ -349,7 +582,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_014"
+      "review_item_id": "rvw_025"
     },
     {
       "status": "open",
@@ -374,7 +607,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_015"
+      "review_item_id": "rvw_026"
     },
     {
       "status": "open",
@@ -399,7 +632,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_016"
+      "review_item_id": "rvw_027"
     },
     {
       "status": "open",
@@ -424,7 +657,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_017"
+      "review_item_id": "rvw_028"
     },
     {
       "status": "open",
@@ -449,7 +682,7 @@
         "topic_count": 2
       },
       "evidence": {},
-      "review_item_id": "rvw_018"
+      "review_item_id": "rvw_029"
     },
     {
       "status": "open",
@@ -473,7 +706,7 @@
         "topic_count": 2
       },
       "evidence": {},
-      "review_item_id": "rvw_019"
+      "review_item_id": "rvw_030"
     },
     {
       "status": "open",
@@ -498,7 +731,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_020"
+      "review_item_id": "rvw_031"
     },
     {
       "status": "open",
@@ -523,7 +756,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_021"
+      "review_item_id": "rvw_032"
     },
     {
       "status": "open",
@@ -548,7 +781,7 @@
         "topic_count": 2
       },
       "evidence": {},
-      "review_item_id": "rvw_022"
+      "review_item_id": "rvw_033"
     },
     {
       "status": "open",
@@ -572,7 +805,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_023"
+      "review_item_id": "rvw_034"
     },
     {
       "status": "open",
@@ -595,7 +828,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_024"
+      "review_item_id": "rvw_035"
     },
     {
       "status": "open",
@@ -620,7 +853,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_025"
+      "review_item_id": "rvw_036"
     },
     {
       "status": "open",
@@ -645,7 +878,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_026"
+      "review_item_id": "rvw_037"
     },
     {
       "status": "open",
@@ -670,7 +903,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_027"
+      "review_item_id": "rvw_038"
     },
     {
       "status": "open",
@@ -695,7 +928,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_028"
+      "review_item_id": "rvw_039"
     },
     {
       "status": "open",
@@ -720,7 +953,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_029"
+      "review_item_id": "rvw_040"
     },
     {
       "status": "open",
@@ -745,7 +978,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_030"
+      "review_item_id": "rvw_041"
     },
     {
       "status": "open",
@@ -768,7 +1001,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_031"
+      "review_item_id": "rvw_042"
     },
     {
       "status": "open",
@@ -791,7 +1024,199 @@
         "topic_count": 3
       },
       "evidence": {},
-      "review_item_id": "rvw_032"
+      "review_item_id": "rvw_043"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "authority_unclear",
+      "summary": "reg_ggd_flevoland_2024_ouderen_gemeenten contributes lower-authority claims that still require human review.",
+      "recommended_action": "Keep these claims as contextual support only until a stronger primary source confirms or replaces them.",
+      "document_id": "reg_ggd_flevoland_2024_ouderen_gemeenten",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/reg_ggd_flevoland_2024_ouderen_gemeenten.json"
+      ],
+      "related_ids": {
+        "review_claim_count": 6,
+        "sample_claim_ids": [
+          "clm__reg_ggd_flevoland_2024_ouderen_gemeenten_monitoring_and_evaluation_001",
+          "clm__reg_ggd_flevoland_2024_ouderen_gemeenten_monitoring_and_evaluation_002",
+          "clm__reg_ggd_flevoland_2024_ouderen_gemeenten_monitoring_and_evaluation_003",
+          "clm__reg_ggd_flevoland_2024_ouderen_gemeenten_municipal_translation_001",
+          "clm__reg_ggd_flevoland_2024_ouderen_gemeenten_municipal_translation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_044"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "extraction_noise_detected",
+      "summary": "reg_ggd_flevoland_2024_ouderen_gemeenten contains 2 suspicious claim statement(s) with navigation text, encoding noise, or over-concatenated list content.",
+      "recommended_action": "Manually review these claims and tighten the extraction filters before promoting them to briefings or dashboards.",
+      "document_id": "reg_ggd_flevoland_2024_ouderen_gemeenten",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/reg_ggd_flevoland_2024_ouderen_gemeenten.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__reg_ggd_flevoland_2024_ouderen_gemeenten_municipal_translation_001",
+          "clm__reg_ggd_flevoland_2024_ouderen_gemeenten_municipal_translation_003"
+        ]
+      },
+      "evidence": {
+        "sample_statements": [
+          "In dat geval zijn de verschillen tussen Nederland en de gemeenten ook niet getoetst (zie â€œAnalyseâ€).",
+          "onderwerp alleen uitgevraagd in Flevoland. In dat geval zijn de verschillen tussen Nederland en de gemeenten ook niet getoetst (zie â€œAnalyseâ€)."
+        ]
+      },
+      "review_item_id": "rvw_045"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "authority_unclear",
+      "summary": "reg_ggd_flevoland_2024_volwassenen_gemeenten contributes lower-authority claims that still require human review.",
+      "recommended_action": "Keep these claims as contextual support only until a stronger primary source confirms or replaces them.",
+      "document_id": "reg_ggd_flevoland_2024_volwassenen_gemeenten",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/reg_ggd_flevoland_2024_volwassenen_gemeenten.json"
+      ],
+      "related_ids": {
+        "review_claim_count": 6,
+        "sample_claim_ids": [
+          "clm__reg_ggd_flevoland_2024_volwassenen_gemeenten_monitoring_and_evaluation_001",
+          "clm__reg_ggd_flevoland_2024_volwassenen_gemeenten_monitoring_and_evaluation_002",
+          "clm__reg_ggd_flevoland_2024_volwassenen_gemeenten_monitoring_and_evaluation_003",
+          "clm__reg_ggd_flevoland_2024_volwassenen_gemeenten_municipal_translation_001",
+          "clm__reg_ggd_flevoland_2024_volwassenen_gemeenten_municipal_translation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_046"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "extraction_noise_detected",
+      "summary": "reg_ggd_flevoland_2024_volwassenen_gemeenten contains 2 suspicious claim statement(s) with navigation text, encoding noise, or over-concatenated list content.",
+      "recommended_action": "Manually review these claims and tighten the extraction filters before promoting them to briefings or dashboards.",
+      "document_id": "reg_ggd_flevoland_2024_volwassenen_gemeenten",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/reg_ggd_flevoland_2024_volwassenen_gemeenten.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__reg_ggd_flevoland_2024_volwassenen_gemeenten_municipal_translation_001",
+          "clm__reg_ggd_flevoland_2024_volwassenen_gemeenten_municipal_translation_003"
+        ]
+      },
+      "evidence": {
+        "sample_statements": [
+          "In dat geval zijn de verschillen tussen Nederland en de gemeenten ook niet getoetst (zie â€œAnalyseâ€).",
+          "onderwerp alleen uitgevraagd in Flevoland. In dat geval zijn de verschillen tussen Nederland en de gemeenten ook niet getoetst (zie â€œAnalyseâ€)."
+        ]
+      },
+      "review_item_id": "rvw_047"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "authority_unclear",
+      "summary": "reg_ggd_flevoland_valpreventie_almere contributes lower-authority claims that still require human review.",
+      "recommended_action": "Keep these claims as contextual support only until a stronger primary source confirms or replaces them.",
+      "document_id": "reg_ggd_flevoland_valpreventie_almere",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/reg_ggd_flevoland_valpreventie_almere.json"
+      ],
+      "related_ids": {
+        "review_claim_count": 3,
+        "sample_claim_ids": [
+          "clm__reg_ggd_flevoland_valpreventie_almere_d5_001",
+          "clm__reg_ggd_flevoland_valpreventie_almere_d5_002",
+          "clm__reg_ggd_flevoland_valpreventie_almere_d5_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_048"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "municipality_relevance_inferred",
+      "summary": "reg_ggd_flevoland_valpreventie_almere contains 3 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
+      "recommended_action": "Review these claims before treating them as firm municipal obligations or implementation facts.",
+      "document_id": "reg_ggd_flevoland_valpreventie_almere",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/reg_ggd_flevoland_valpreventie_almere.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__reg_ggd_flevoland_valpreventie_almere_d5_001",
+          "clm__reg_ggd_flevoland_valpreventie_almere_d5_002",
+          "clm__reg_ggd_flevoland_valpreventie_almere_d5_003"
+        ],
+        "topic_count": 1
+      },
+      "evidence": {},
+      "review_item_id": "rvw_049"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "authority_unclear",
+      "summary": "reg_zonmw_doorontwikkeling_zorgzaam_flevoland contributes lower-authority claims that still require human review.",
+      "recommended_action": "Keep these claims as contextual support only until a stronger primary source confirms or replaces them.",
+      "document_id": "reg_zonmw_doorontwikkeling_zorgzaam_flevoland",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/reg_zonmw_doorontwikkeling_zorgzaam_flevoland.json"
+      ],
+      "related_ids": {
+        "review_claim_count": 9,
+        "sample_claim_ids": [
+          "clm__reg_zonmw_doorontwikkeling_zorgzaam_flevoland_governance_and_finance_001",
+          "clm__reg_zonmw_doorontwikkeling_zorgzaam_flevoland_governance_and_finance_002",
+          "clm__reg_zonmw_doorontwikkeling_zorgzaam_flevoland_governance_and_finance_003",
+          "clm__reg_zonmw_doorontwikkeling_zorgzaam_flevoland_monitoring_and_evaluation_001",
+          "clm__reg_zonmw_doorontwikkeling_zorgzaam_flevoland_monitoring_and_evaluation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_050"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "document_payload_integrity",
+      "reason_code": "table_content_not_promoted",
+      "summary": "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie has extracted tables, but no document statements currently retain table_id evidence.",
+      "recommended_action": "Promote the relevant table rows into the document extraction so downstream claims can cite the D5/D6 matrix or financing tables explicitly.",
+      "document_id": "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/documents/mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie.json",
+        "data/intermediate/tables/mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie.json"
+      ],
+      "related_ids": {},
+      "evidence": {
+        "table_count": 4
+      },
+      "review_item_id": "rvw_051"
     },
     {
       "status": "open",
@@ -822,7 +1247,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_033"
+      "review_item_id": "rvw_052"
     },
     {
       "status": "open",
@@ -848,7 +1273,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_034"
+      "review_item_id": "rvw_053"
     },
     {
       "status": "open",
@@ -874,7 +1299,38 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_035"
+      "review_item_id": "rvw_054"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "interpretation_integrity",
+      "reason_code": "unresolved_conflict",
+      "summary": "Conflict conflict__d5__other for topic d5.other still needs human review.",
+      "recommended_action": "Resolve or annotate this topic before using it as settled policy guidance for Almere.",
+      "document_id": null,
+      "topic": "d5.other",
+      "source_paths": [
+        "data/extracted/claims/conflict_register.json",
+        "data/extracted/claims/current_interpretation.json"
+      ],
+      "related_ids": {
+        "conflict_id": "conflict__d5__other",
+        "claim_ids": [
+          "clm__nat_azwa_2026_voortgang_kamerbrief_d5_003",
+          "clm__nat_azwa_2026_voortgang_kamerbrief_d5_001",
+          "clm__nat_azwa_2026_cw31_kamerbrief_d5_002",
+          "clm__nat_azwa_2026_cw31_kamerbrief_d5_001",
+          "clm__nat_azwa_2025_aanbiedingsbrief_d5_001",
+          "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d5_001",
+          "clm__nat_vng_ledenbrief_azwa_financiering_2026_d5_002",
+          "clm__nat_vng_ledenbrief_azwa_financiering_2026_d5_001",
+          "clm__nat_vng_brief_azwa_financiering_webpagina_2026_d5_001",
+          "clm__nat_azwa_toelichting_producten_proces_2026_d5_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_055"
     },
     {
       "status": "open",
@@ -900,7 +1356,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_036"
+      "review_item_id": "rvw_056"
     },
     {
       "status": "open",
@@ -926,7 +1382,38 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_037"
+      "review_item_id": "rvw_057"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "interpretation_integrity",
+      "reason_code": "unresolved_conflict",
+      "summary": "Conflict conflict__d6__other for topic d6.other still needs human review.",
+      "recommended_action": "Resolve or annotate this topic before using it as settled policy guidance for Almere.",
+      "document_id": null,
+      "topic": "d6.other",
+      "source_paths": [
+        "data/extracted/claims/conflict_register.json",
+        "data/extracted/claims/current_interpretation.json"
+      ],
+      "related_ids": {
+        "conflict_id": "conflict__d6__other",
+        "claim_ids": [
+          "clm__nat_azwa_2026_voortgang_kamerbrief_d6_001",
+          "clm__nat_azwa_2026_cw31_kamerbrief_d6_002",
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_d6_003",
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_d6_002",
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_d6_001",
+          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d6_003",
+          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d6_002",
+          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d6_001",
+          "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d6_002",
+          "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d6_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_058"
     },
     {
       "status": "open",
@@ -950,7 +1437,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_038"
+      "review_item_id": "rvw_059"
     },
     {
       "status": "open",
@@ -969,11 +1456,35 @@
         "conflict_id": "conflict__governance__regional_coordination",
         "claim_ids": [
           "clm__reg_flevoland_2023_regioplan_iza_governance_and_finance_001",
+          "clm__reg_zonmw_doorontwikkeling_zorgzaam_flevoland_governance_and_finance_001",
           "clm__nat_vng_gezond_en_actief_leven_2026_governance_and_finance_003"
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_039"
+      "review_item_id": "rvw_060"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "interpretation_integrity",
+      "reason_code": "unresolved_conflict",
+      "summary": "Conflict conflict__municipal__local_structure for topic municipal.local_structure still needs human review.",
+      "recommended_action": "Resolve or annotate this topic before using it as settled policy guidance for Almere.",
+      "document_id": null,
+      "topic": "municipal.local_structure",
+      "source_paths": [
+        "data/extracted/claims/conflict_register.json",
+        "data/extracted/claims/current_interpretation.json"
+      ],
+      "related_ids": {
+        "conflict_id": "conflict__municipal__local_structure",
+        "claim_ids": [
+          "clm__nat_azwa_2025_onderhandelaarsakkoord_municipal_translation_002",
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie_municipal_translation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_061"
     },
     {
       "status": "open",
@@ -996,7 +1507,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_040"
+      "review_item_id": "rvw_062"
     },
     {
       "status": "open",
@@ -1020,7 +1531,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_041"
+      "review_item_id": "rvw_063"
     }
   ]
 }

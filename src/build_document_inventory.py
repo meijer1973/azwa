@@ -461,6 +461,192 @@ ANNOTATIONS = {
             "target dates around 26 May, mid-September, and 15 November 2026."
         ),
     },
+    "reg_ggd_flevoland_2024_volwassenen_gemeenten": {
+        "source_classification": "primary",
+        "curation_bucket": "canonical",
+        "contains_d5": False,
+        "contains_d6": False,
+        "contains_structured_tables": True,
+        "contains_financing_logic": False,
+        "contains_governance_logic": False,
+        "contains_monitoring_evaluation_logic": True,
+        "contains_municipal_implications": True,
+        "inventory_notes": (
+            "Public GGD Flevoland municipality-level table book for adults aged 18-64. Use as aggregate baseline "
+            "evidence for Sprint 25.3 nulmeting fields such as overgewicht, bewegen, eenzaamheid, mentale "
+            "gezondheid, kwetsbaarheid, and participation. It is not individual-level health data."
+        ),
+    },
+    "reg_ggd_flevoland_2024_ouderen_gemeenten": {
+        "source_classification": "primary",
+        "curation_bucket": "canonical",
+        "contains_d5": False,
+        "contains_d6": False,
+        "contains_structured_tables": True,
+        "contains_financing_logic": False,
+        "contains_governance_logic": False,
+        "contains_monitoring_evaluation_logic": True,
+        "contains_municipal_implications": True,
+        "inventory_notes": (
+            "Public GGD Flevoland municipality-level table book for residents aged 65 and older. Use as aggregate "
+            "baseline evidence for Sprint 25.3 nulmeting fields such as valrisico, eenzaamheid, gezondheid, "
+            "bewegen, kwetsbaarheid, mantelzorg, and participation. It is not individual-level health data."
+        ),
+    },
+    "reg_ggd_flevoland_valpreventie_almere": {
+        "source_classification": "primary",
+        "curation_bucket": "canonical",
+        "contains_d5": True,
+        "contains_d6": False,
+        "contains_structured_tables": False,
+        "contains_financing_logic": False,
+        "contains_governance_logic": False,
+        "contains_monitoring_evaluation_logic": False,
+        "contains_municipal_implications": True,
+        "inventory_notes": (
+            "Public Almere-specific GGD Flevoland page for the valpreventie service route. Use only for current "
+            "operational execution evidence such as inloop, referral, advice, and course matching; avoid treating "
+            "event details as durable policy."
+        ),
+    },
+    "reg_zonmw_doorontwikkeling_zorgzaam_flevoland": {
+        "source_classification": "derivative",
+        "curation_bucket": "context",
+        "contains_d5": False,
+        "contains_d6": False,
+        "contains_structured_tables": False,
+        "contains_financing_logic": True,
+        "contains_governance_logic": True,
+        "contains_monitoring_evaluation_logic": False,
+        "contains_municipal_implications": True,
+        "inventory_notes": (
+            "ZonMw project registration for development of Zorgzaam Flevoland. Use as supporting governance and "
+            "collaboration evidence only; it is not an adopted local policy document or a complete mandate source."
+        ),
+    },
+    "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst": {
+        "source_classification": "primary",
+        "curation_bucket": "canonical",
+        "contains_d5": True,
+        "contains_d6": False,
+        "contains_structured_tables": False,
+        "contains_financing_logic": False,
+        "contains_governance_logic": True,
+        "contains_monitoring_evaluation_logic": True,
+        "contains_municipal_implications": True,
+        "inventory_notes": (
+            "Underlying municipal policy text for the Almere health-policy vision. It replaces the earlier "
+            "Agendawijzer summary as the stronger local source for local prevention, health, and care-to-social-domain "
+            "translation signals."
+        ),
+    },
+    "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd": {
+        "source_classification": "primary",
+        "curation_bucket": "canonical",
+        "contains_d5": True,
+        "contains_d6": False,
+        "contains_structured_tables": False,
+        "contains_financing_logic": False,
+        "contains_governance_logic": True,
+        "contains_monitoring_evaluation_logic": True,
+        "contains_municipal_implications": True,
+        "inventory_notes": (
+            "Amended council proposal for the Almere health-policy vision. Use for governance, decision route, "
+            "and local framing; do not treat as a national norm source."
+        ),
+    },
+    "mun_almere_2024_2026_visie_gezondheidsbeleid_besluitenlijst": {
+        "source_classification": "primary",
+        "curation_bucket": "canonical",
+        "contains_d5": False,
+        "contains_d6": False,
+        "contains_structured_tables": False,
+        "contains_financing_logic": False,
+        "contains_governance_logic": True,
+        "contains_monitoring_evaluation_logic": False,
+        "contains_municipal_implications": True,
+        "inventory_notes": (
+            "Council decision-list source for the health-policy vision route. Use for local decision traceability, "
+            "not for substantive policy expansion beyond what the decision list itself records."
+        ),
+    },
+    "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak": {
+        "source_classification": "primary",
+        "curation_bucket": "canonical",
+        "contains_d5": True,
+        "contains_d6": False,
+        "contains_structured_tables": True,
+        "contains_financing_logic": True,
+        "contains_governance_logic": True,
+        "contains_monitoring_evaluation_logic": True,
+        "contains_municipal_implications": True,
+        "inventory_notes": (
+            "Municipal plan of approach for Brede SPUK/GALA 2024-2026. Use for local prevention, financing, "
+            "execution, and monitoring context; named officials or empty contact fields should not be promoted "
+            "to public claims."
+        ),
+    },
+    "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst": {
+        "source_classification": "primary",
+        "curation_bucket": "canonical",
+        "contains_d5": True,
+        "contains_d6": True,
+        "contains_structured_tables": False,
+        "contains_financing_logic": False,
+        "contains_governance_logic": True,
+        "contains_monitoring_evaluation_logic": True,
+        "contains_municipal_implications": True,
+        "inventory_notes": (
+            "Underlying municipal policy text for the Maatschappelijke agenda 2024-2034. It is the stronger "
+            "local source for social-domain priorities, social basis, cooperation, monitoring, and long-term "
+            "municipal context."
+        ),
+    },
+    "mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd": {
+        "source_classification": "primary",
+        "curation_bucket": "canonical",
+        "contains_d5": True,
+        "contains_d6": True,
+        "contains_structured_tables": False,
+        "contains_financing_logic": False,
+        "contains_governance_logic": True,
+        "contains_monitoring_evaluation_logic": True,
+        "contains_municipal_implications": True,
+        "inventory_notes": (
+            "Amended council proposal for the Maatschappelijke agenda. Use for governance, decision route, and "
+            "local social-domain framing; keep process text separate from adopted policy content."
+        ),
+    },
+    "mun_almere_2024_2034_maatschappelijke_agenda_besluitenlijst": {
+        "source_classification": "primary",
+        "curation_bucket": "canonical",
+        "contains_d5": False,
+        "contains_d6": False,
+        "contains_structured_tables": False,
+        "contains_financing_logic": False,
+        "contains_governance_logic": True,
+        "contains_monitoring_evaluation_logic": False,
+        "contains_municipal_implications": True,
+        "inventory_notes": (
+            "Council decision-list source for the Maatschappelijke agenda route. Use for local decision "
+            "traceability, not as a source for new substantive policy claims."
+        ),
+    },
+    "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie": {
+        "source_classification": "derivative",
+        "curation_bucket": "canonical",
+        "contains_d5": False,
+        "contains_d6": True,
+        "contains_structured_tables": True,
+        "contains_financing_logic": False,
+        "contains_governance_logic": True,
+        "contains_monitoring_evaluation_logic": True,
+        "contains_municipal_implications": True,
+        "inventory_notes": (
+            "Supporting evaluation and monitoring setup for the social domain. Use for monitoring design and "
+            "review questions, not as a replacement for the adopted Maatschappelijke agenda itself."
+        ),
+    },
 }
 
 

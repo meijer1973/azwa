@@ -209,7 +209,7 @@ Agents MUST follow this sequence:
 3. Load `data/raw/manifest.json`.
    - Map `document_id` to `file_path`.
    - Map `document_id` to `source_number`.
-   - Use this file for the full 33-document raw layer.
+   - Use this file for the full 45-document raw layer.
 4. Load `data/extracted/document_inventory.json`.
    - Confirm `document_id`.
    - Confirm `curation_bucket`.
@@ -376,7 +376,7 @@ Agents MAY:
 Agents MUST:
 
 - Load entry points before traversing data layers.
-- Keep source numbers 1 through 18 separate from the 33-document derived layer.
+- Keep source numbers 1 through 18 separate from the 45-document derived layer.
 - Ground factual statements in source corpus files, generated model data, or an actually performed verification step.
 - Label interpretation, proposals, review tasks, and unresolved issues explicitly.
 - Check `data/extracted/review_queue.json` when a claim has `needs_human_review`.

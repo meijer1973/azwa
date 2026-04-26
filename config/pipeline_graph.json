@@ -61,7 +61,7 @@
     {
       "stage_id": "phase3_document_extractions_all_docs",
       "kind": "script",
-      "description": "Generate immutable document extraction JSON for the full curated 18-document corpus.",
+      "description": "Generate immutable document extraction JSON for the full manifest corpus.",
       "script": "src/build_document_extractions.py",
       "depends_on": [
         "phase1_document_inventory",
@@ -87,8 +87,20 @@
         "data/extracted/documents/nat_vng_azwa_faq_uitvoeringscapaciteit.json",
         "data/extracted/documents/mun_almere_2024_2034_maatschappelijke_agenda.json",
         "data/extracted/documents/mun_almere_2024_2026_visie_gezondheidsbeleid.json",
+        "data/extracted/documents/mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak.json",
+        "data/extracted/documents/mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst.json",
+        "data/extracted/documents/mun_almere_2024_2026_visie_gezondheidsbeleid_besluitenlijst.json",
+        "data/extracted/documents/mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd.json",
+        "data/extracted/documents/mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst.json",
+        "data/extracted/documents/mun_almere_2024_2034_maatschappelijke_agenda_besluitenlijst.json",
+        "data/extracted/documents/mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie.json",
+        "data/extracted/documents/mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd.json",
         "data/extracted/documents/mun_almere_sociaal_domein_informatiepagina.json",
-        "data/extracted/documents/mun_almere_sociale_staat_gateway.json"
+        "data/extracted/documents/mun_almere_sociale_staat_gateway.json",
+        "data/extracted/documents/reg_ggd_flevoland_2024_ouderen_gemeenten.json",
+        "data/extracted/documents/reg_ggd_flevoland_2024_volwassenen_gemeenten.json",
+        "data/extracted/documents/reg_ggd_flevoland_valpreventie_almere.json",
+        "data/extracted/documents/reg_zonmw_doorontwikkeling_zorgzaam_flevoland.json"
       ]
     },
     {
@@ -122,8 +134,20 @@
         "data/extracted/claims/nat_vng_azwa_faq_uitvoeringscapaciteit.json",
         "data/extracted/claims/mun_almere_2024_2034_maatschappelijke_agenda.json",
         "data/extracted/claims/mun_almere_2024_2026_visie_gezondheidsbeleid.json",
+        "data/extracted/claims/mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak.json",
+        "data/extracted/claims/mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst.json",
+        "data/extracted/claims/mun_almere_2024_2026_visie_gezondheidsbeleid_besluitenlijst.json",
+        "data/extracted/claims/mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd.json",
+        "data/extracted/claims/mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst.json",
+        "data/extracted/claims/mun_almere_2024_2034_maatschappelijke_agenda_besluitenlijst.json",
+        "data/extracted/claims/mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie.json",
+        "data/extracted/claims/mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd.json",
         "data/extracted/claims/mun_almere_sociaal_domein_informatiepagina.json",
-        "data/extracted/claims/mun_almere_sociale_staat_gateway.json"
+        "data/extracted/claims/mun_almere_sociale_staat_gateway.json",
+        "data/extracted/claims/reg_ggd_flevoland_2024_ouderen_gemeenten.json",
+        "data/extracted/claims/reg_ggd_flevoland_2024_volwassenen_gemeenten.json",
+        "data/extracted/claims/reg_ggd_flevoland_valpreventie_almere.json",
+        "data/extracted/claims/reg_zonmw_doorontwikkeling_zorgzaam_flevoland.json"
       ]
     },
     {

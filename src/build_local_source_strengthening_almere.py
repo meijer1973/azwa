@@ -101,19 +101,21 @@ SOURCE_CANDIDATES = [
         "publisher": "Gemeente Almere / Raad van Almere",
         "source_url": None,
         "verification_status": "not_found_in_public_search_2026_04_24",
-        "intake_status": "needs_human_lookup",
+        "intake_status": "deferred_to_local_validation_workflow",
         "current_repository_status": "not_present",
         "current_document_id": None,
         "why_it_matters": "The deep-research note treats this as a likely local bridge source for IZA/GALA status, but it should not be used as fact until the primary source is found.",
         "public_probe_status": "not_found",
         "usefulness_read": "Unknown. No public source was found in the public-search probe, so the existence and contents cannot be treated as grounded.",
-        "intake_recommendation": "do_not_ingest_until_found",
+        "intake_recommendation": "do_not_block_public_workagenda_structure",
         "recommended_for_corpus": [],
-        "exclude_or_defer": ["All claims depending on this source until a public document URL is found."],
+        "exclude_or_defer": [
+            "All claims depending on this source until a public document URL is found or local staff provide a usable source."
+        ],
         "privacy_scope": "Do not use non-public correspondence or private mailbox copies.",
         "unlocks": ["locality", "governance", "money", "execution", "time"],
         "workagenda_targets": ["all_d5_workagenda_targets"],
-        "review_question": "Search Documentwijzer, Notubiz, and council incoming/outgoing letters for the exact 2 February 2025 raadsbrief before adding claims.",
+        "review_question": "Treat as a later local-validation lookup; do not block the public-source workagenda structure on this document.",
     },
     {
         "candidate_id": "reg_ggd_flevoland_2024_gezondheidsmonitor_volwassenen_ouderen",
@@ -212,19 +214,19 @@ SOURCE_CANDIDATES = [
         "publisher": "Mentale gezondheidsnetwerken",
         "source_url": "https://www.mentalegezondheidsnetwerken.nl/alle-netwerken/",
         "verification_status": "source_url_verified",
-        "intake_status": "public_html_downloaded_for_assessment",
+        "intake_status": "deferred_to_sanitized_role_extract",
         "current_repository_status": "covered_in_regional_role_guardrail_not_manifest",
         "current_document_id": None,
         "why_it_matters": "Clarifies that Almere is listed as mandaatgemeente for the Flevoland mental-health network and that Zeewolde is in a different listed route.",
         "public_probe_status": "downloaded_public_listing",
         "usefulness_read": "High for the narrow role question. The page supports Almere as mandaatgemeente for MGN Flevoland and separates Zeewolde into the Gezond Veluwe listing.",
-        "intake_recommendation": "ingest_sanitized_role_source_or_extract_role_only",
+        "intake_recommendation": "carry_forward_to_role_validation_workflow",
         "recommended_for_corpus": ["Mentale gezondheidsnetwerken listing, limited to network geography and role fields"],
         "exclude_or_defer": ["Named contact people, phone numbers, and email addresses."],
         "privacy_scope": "Contains public personal contact details; formal corpus extraction should suppress contact data and retain only organization/role/geography facts.",
         "unlocks": ["governance", "locality", "execution"],
         "workagenda_targets": ["mentale_gezondheidsnetwerken", "laagdrempelige_steunpunten", "sociaal_verwijzen"],
-        "review_question": "Add as a role source, but do not overgeneralize it to all IZA/AZWA regional workstreams.",
+        "review_question": "Carry forward as a later role/geography validation task; do not block public-source workagenda structuring.",
     },
     {
         "candidate_id": "mun_almere_2024_programmarekening_pga_iza_gala",
@@ -397,7 +399,7 @@ def build_payload() -> dict[str, Any]:
     return {
         "layer_run_id": "phase25_2_local_source_strengthening_v1",
         "generated_on": date.today().isoformat(),
-        "status": "active_sprint_support",
+        "status": "completed_public_source_intake",
         "sprint": "25.2 Lokale bronversterking Almere",
         "summary": {
             "manifest_document_count": len(manifest),
@@ -417,6 +419,11 @@ def build_payload() -> dict[str, Any]:
             "This layer is a source-intake and review aid. Candidate sources are not claim facts until the primary "
             "source has been ingested or manually checked."
         ),
+        "workflow_boundary": (
+            "Sprint 25.2 closes when the public-source structure is filled as far as the public corpus allows. "
+            "Missing non-public material, local staff validation, and decision requests are carryover workflow tasks, "
+            "not blockers for this public-source intake sprint."
+        ),
         "privacy_policy": (
             "Sprint 25.2 uses only public sources. Do not add private correspondence, non-public personal data, "
             "or resident-level health data. Public pages that contain named contacts may be used only for "
@@ -431,8 +438,8 @@ def build_payload() -> dict[str, Any]:
         "next_actions": [
             "Review the generated claims from the selected Documentwijzer attachments before relying on them in public or bestuurlijke text.",
             "Review the ingested GGD Flevoland 2024 table-book claims before using them for Sprint 25.3 nulmeting calculations.",
-            "Create a sanitized MGN role extract before adding the mental-health-network listing to the formal corpus.",
-            "Keep the missing 2 February 2025 raadsbrief as a human lookup task until a public source is found.",
+            "Carry the MGN role/geography question forward to a sanitized role-validation workflow.",
+            "Carry the missing 2 February 2025 raadsbrief forward to local-staff validation if public search remains exhausted.",
             "Use this layer to drive Sprint 25.3 nulmeting/capacity work, especially target-level denominators and current provision.",
         ],
     }

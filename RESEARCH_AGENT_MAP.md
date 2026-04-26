@@ -14,6 +14,8 @@ Use the derived data layers to navigate the corpus efficiently:
 
 Do not treat generated data-layer files as public policy sources. They are research aids derived from the source corpus.
 
+For workagenda filling, use public sources as far as they go. When a field requires non-public local knowledge, staff confirmation, or a formal local decision, mark it as a validation gap or decision question instead of treating it as a blocker to the public-source structure.
+
 ## Access Layer
 
 Base URL:

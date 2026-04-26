@@ -10444,8 +10444,8 @@
     "rows": [
       {
         "sprint": "25.2 Lokale bronversterking Almere",
-        "status": "open",
-        "note": "Huidige sprint; eerste formele intake van geselecteerde Documentwijzer-, GGD- en ZonMw-bronnen is verwerkt; vervolg is claimreview, geschoonde MGN-rol/geografie-extractie en resterende lokale bronhiaten"
+        "status": "completed",
+        "note": "`data/extracted/local_source_strengthening_almere.json`, `docs/internal/source-intake/phase25.2-public-source-assessment.md`, `docs/completed-plans/phase25-sprint25.2-lokale-bronversterking.md`"
       },
       {
         "sprint": "25.1 Werkagenda- en financieringslaag",
@@ -10470,7 +10470,7 @@
       {
         "sprint": "25.3 Nulmeting en capaciteit werkagenda",
         "status": "open",
-        "note": "Nieuwe sprint uit conceptinvulling; maak per basisfunctionaliteit zichtbaar wat al bekend is en welke lokale capaciteit, dekking en aantallen ontbreken"
+        "note": "Huidige volgende sprint; vul de werkagenda-structuur zo ver mogelijk met publieke informatie en markeer lokale gaten voor medewerkers, validatie of besluitvorming"
       },
       {
         "sprint": "25.4 D6 governance en samenwerking",
@@ -10594,9 +10594,9 @@
       }
     ],
     "current": {
-      "sprint": "25.2 Lokale bronversterking Almere",
+      "sprint": "25.3 Nulmeting en capaciteit werkagenda",
       "status": "open",
-      "note": "Huidige sprint; eerste formele intake van geselecteerde Documentwijzer-, GGD- en ZonMw-bronnen is verwerkt; vervolg is claimreview, geschoonde MGN-rol/geografie-extractie en resterende lokale bronhiaten"
+      "note": "Huidige volgende sprint; vul de werkagenda-structuur zo ver mogelijk met publieke informatie en markeer lokale gaten voor medewerkers, validatie of besluitvorming"
     },
     "history": [
       {
@@ -10618,10 +10618,15 @@
         "sprint": "25.1 Werkagenda- en financieringslaag",
         "status": "completed",
         "note": "`data/extracted/workagenda_d5_operational_requirements.json`, `src/build_workagenda_d5_operational_requirements.py`, `docs/completed-plans/phase25-sprint25.1-werkagenda-financieringslaag.md`"
+      },
+      {
+        "sprint": "25.2 Lokale bronversterking Almere",
+        "status": "completed",
+        "note": "`data/extracted/local_source_strengthening_almere.json`, `docs/internal/source-intake/phase25.2-public-source-assessment.md`, `docs/completed-plans/phase25-sprint25.2-lokale-bronversterking.md`"
       }
     ],
-    "completed_count": 4,
-    "open_count": 26
+    "completed_count": 5,
+    "open_count": 25
   },
   "next_cleanup_targets": [
     {
@@ -12924,7 +12929,7 @@
     "href": "../../data/extracted/local_source_strengthening_almere.json",
     "layer_run_id": "phase25_2_local_source_strengthening_v1",
     "generated_on": "2026-04-26",
-    "status": "active_sprint_support",
+    "status": "completed_public_source_intake",
     "sprint": "25.2 Lokale bronversterking Almere",
     "summary": {
       "manifest_document_count": 45,
@@ -12935,6 +12940,7 @@
       "not_found_candidate_count": 1
     },
     "guardrail": "This layer is a source-intake and review aid. Candidate sources are not claim facts until the primary source has been ingested or manually checked.",
+    "workflow_boundary": "Sprint 25.2 closes when the public-source structure is filled as far as the public corpus allows. Missing non-public material, local staff validation, and decision requests are carryover workflow tasks, not blockers for this public-source intake sprint.",
     "privacy_policy": "Sprint 25.2 uses only public sources. Do not add private correspondence, non-public personal data, or resident-level health data. Public pages that contain named contacts may be used only for organization, role, geography, and policy facts; suppress phone numbers, email addresses, and named-person contact details in extracted claims and public text.",
     "public_probe_folder": "docs/internal/source-intake/phase25.2-public-source-probe",
     "existing_focus_sources": [
@@ -13166,16 +13172,16 @@
         "publisher": "Gemeente Almere / Raad van Almere",
         "source_url": null,
         "verification_status": "not_found_in_public_search_2026_04_24",
-        "intake_status": "needs_human_lookup",
+        "intake_status": "deferred_to_local_validation_workflow",
         "current_repository_status": "not_present",
         "current_document_id": null,
         "why_it_matters": "The deep-research note treats this as a likely local bridge source for IZA/GALA status, but it should not be used as fact until the primary source is found.",
         "public_probe_status": "not_found",
         "usefulness_read": "Unknown. No public source was found in the public-search probe, so the existence and contents cannot be treated as grounded.",
-        "intake_recommendation": "do_not_ingest_until_found",
+        "intake_recommendation": "do_not_block_public_workagenda_structure",
         "recommended_for_corpus": [],
         "exclude_or_defer": [
-          "All claims depending on this source until a public document URL is found."
+          "All claims depending on this source until a public document URL is found or local staff provide a usable source."
         ],
         "privacy_scope": "Do not use non-public correspondence or private mailbox copies.",
         "unlocks": [
@@ -13188,7 +13194,7 @@
         "workagenda_targets": [
           "all_d5_workagenda_targets"
         ],
-        "review_question": "Search Documentwijzer, Notubiz, and council incoming/outgoing letters for the exact 2 February 2025 raadsbrief before adding claims."
+        "review_question": "Treat as a later local-validation lookup; do not block the public-source workagenda structure on this document."
       },
       {
         "candidate_id": "reg_ggd_flevoland_2024_gezondheidsmonitor_volwassenen_ouderen",
@@ -13317,13 +13323,13 @@
         "publisher": "Mentale gezondheidsnetwerken",
         "source_url": "https://www.mentalegezondheidsnetwerken.nl/alle-netwerken/",
         "verification_status": "source_url_verified",
-        "intake_status": "public_html_downloaded_for_assessment",
+        "intake_status": "deferred_to_sanitized_role_extract",
         "current_repository_status": "covered_in_regional_role_guardrail_not_manifest",
         "current_document_id": null,
         "why_it_matters": "Clarifies that Almere is listed as mandaatgemeente for the Flevoland mental-health network and that Zeewolde is in a different listed route.",
         "public_probe_status": "downloaded_public_listing",
         "usefulness_read": "High for the narrow role question. The page supports Almere as mandaatgemeente for MGN Flevoland and separates Zeewolde into the Gezond Veluwe listing.",
-        "intake_recommendation": "ingest_sanitized_role_source_or_extract_role_only",
+        "intake_recommendation": "carry_forward_to_role_validation_workflow",
         "recommended_for_corpus": [
           "Mentale gezondheidsnetwerken listing, limited to network geography and role fields"
         ],
@@ -13341,7 +13347,7 @@
           "laagdrempelige_steunpunten",
           "sociaal_verwijzen"
         ],
-        "review_question": "Add as a role source, but do not overgeneralize it to all IZA/AZWA regional workstreams."
+        "review_question": "Carry forward as a later role/geography validation task; do not block public-source workagenda structuring."
       },
       {
         "candidate_id": "mun_almere_2024_programmarekening_pga_iza_gala",
@@ -13414,10 +13420,11 @@
       {
         "group": "intake_status",
         "counts": {
+          "deferred_to_local_validation_workflow": 1,
+          "deferred_to_sanitized_role_extract": 1,
           "ingested_formal_corpus": 3,
-          "needs_human_lookup": 1,
           "public_document_downloaded_for_assessment": 1,
-          "public_html_downloaded_for_assessment": 2,
+          "public_html_downloaded_for_assessment": 1,
           "selected_documents_converted_and_ingested": 2,
           "selected_table_books_ingested": 1
         }
@@ -13591,8 +13598,8 @@
     "next_actions": [
       "Review the generated claims from the selected Documentwijzer attachments before relying on them in public or bestuurlijke text.",
       "Review the ingested GGD Flevoland 2024 table-book claims before using them for Sprint 25.3 nulmeting calculations.",
-      "Create a sanitized MGN role extract before adding the mental-health-network listing to the formal corpus.",
-      "Keep the missing 2 February 2025 raadsbrief as a human lookup task until a public source is found.",
+      "Carry the MGN role/geography question forward to a sanitized role-validation workflow.",
+      "Carry the missing 2 February 2025 raadsbrief forward to local-staff validation if public search remains exhausted.",
       "Use this layer to drive Sprint 25.3 nulmeting/capacity work, especially target-level denominators and current provision."
     ]
   },

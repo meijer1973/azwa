@@ -193,7 +193,7 @@
     <h1>Internal Review Dashboard</h1>
     <p class="subtle">Local-only workbench for current sprint status, cleanup targets, and open data-quality issues.</p>
     <div class="meta-row">
-      <span class="pill accent">Generated: 2026-04-24</span>
+      <span class="pill accent">Generated: 2026-04-25</span>
       <span class="pill">Local file, not dist/</span>
       <span class="pill warn">Internal technical categories</span>
     </div>
@@ -346,7 +346,7 @@
   </main>
 
   <script id="dashboard-data" type="application/json">{
-  "generated_on": "2026-04-24",
+  "generated_on": "2026-04-25",
   "title": "Internal Review Dashboard",
   "subtitle": "Local-only workbench for current sprint status, cleanup targets, and open data-quality issues.",
   "language_note": "Internal developer/agent UI uses English technical framing. Dutch domain labels are kept where they come from the roadmap, corpus, or review taxonomy.",
@@ -370,8 +370,8 @@
       "href": "../../data/extracted/claims/claims_master.jsonl"
     },
     {
-      "path": "docs/phase24-data-quality-roadmap.md",
-      "href": "../../docs/phase24-data-quality-roadmap.md"
+      "path": "docs/data-quality-roadmap.md",
+      "href": "../../docs/data-quality-roadmap.md"
     },
     {
       "path": "data/site/site_updates_view.json",
@@ -8673,8 +8673,8 @@
     }
   ],
   "sprint_ledger": {
-    "path": "docs/phase24-data-quality-roadmap.md",
-    "href": "../../docs/phase24-data-quality-roadmap.md",
+    "path": "docs/data-quality-roadmap.md",
+    "href": "../../docs/data-quality-roadmap.md",
     "rows": [
       {
         "sprint": "25.2 Lokale bronversterking Almere",
@@ -10168,8 +10168,8 @@
     "path": "data/extracted/workagenda_d5_operational_requirements.json",
     "href": "../../data/extracted/workagenda_d5_operational_requirements.json",
     "layer_run_id": "phase25_1_workagenda_d5_operational_requirements_v1",
-    "generated_on": "2026-04-24",
-    "as_of_date": "2026-04-24",
+    "generated_on": "2026-04-25",
+    "as_of_date": "2026-04-25",
     "layer_status": "phase25_1_completed_initial_operational_model",
     "purpose": "Operational D5 workagenda layer for linking basisfunctionaliteiten, ontwikkelagenda items, finance streams, locality scope, actors, milestones, and review questions.",
     "source_policy": {
@@ -11165,6 +11165,8 @@
       "not_found_candidate_count": 1
     },
     "guardrail": "This layer is a source-intake and review aid. Candidate sources are not claim facts until the primary source has been ingested or manually checked.",
+    "privacy_policy": "Sprint 25.2 uses only public sources. Do not add private correspondence, non-public personal data, or resident-level health data. Public pages that contain named contacts may be used only for organization, role, geography, and policy facts; suppress phone numbers, email addresses, and named-person contact details in extracted claims and public text.",
+    "public_probe_folder": "docs/internal/source-intake/phase25.2-public-source-probe",
     "existing_focus_sources": [
       {
         "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid",
@@ -11318,10 +11320,24 @@
         "publisher": "Raad van Almere / Documentwijzer",
         "source_url": "https://documentwijzer.raadvanalmere.nl/app/instrument/24161",
         "verification_status": "candidate_url_verified",
-        "intake_status": "needs_primary_attachment_intake",
+        "intake_status": "public_documents_downloaded_for_assessment",
         "current_repository_status": "summary_page_present",
         "current_document_id": "mun_almere_2024_2034_maatschappelijke_agenda",
         "why_it_matters": "Replaces the weaker Agendawijzer summary page with the council proposal, attachments, amendments, and adopted decision material.",
+        "public_probe_status": "downloaded_public_notubiz_attachments",
+        "usefulness_read": "High. The public dossier contains the policy text, raadsvoorstel, geamendeerd raadsvoorstel, besluitenlijsten, collegevoorstel, evaluation setup, ASD advice, and process documents.",
+        "intake_recommendation": "ingest_selected_primary_documents",
+        "recommended_for_corpus": [
+          "Maatschappelijke agenda 2024-2034 (policy text)",
+          "Raadsvoorstel Maatschappelijke agenda 2024-2034 - geamendeerd",
+          "Besluitenlijst final decision route",
+          "Opzet procesevaluatie en monitor Sociaal Domein"
+        ],
+        "exclude_or_defer": [
+          "Gesprekswijzers and duplicate debate/process documents unless needed for decision history",
+          "ASD advice and college reaction as supporting review material, not core policy baseline"
+        ],
+        "privacy_scope": "Public council documents only; avoid extracting personal contact details or speaker lists into public claims.",
         "unlocks": [
           "locality",
           "governance",
@@ -11341,10 +11357,25 @@
         "publisher": "Raad van Almere / Documentwijzer",
         "source_url": "https://documentwijzer.raadvanalmere.nl/app/instrument/24118",
         "verification_status": "candidate_url_verified",
-        "intake_status": "needs_primary_attachment_intake",
+        "intake_status": "public_documents_downloaded_for_assessment",
         "current_repository_status": "summary_page_present",
         "current_document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid",
         "why_it_matters": "Replaces the weaker Agendawijzer summary page with the adopted local health-policy text and decision trail.",
+        "public_probe_status": "downloaded_public_notubiz_attachments",
+        "usefulness_read": "High. The public dossier contains the adopted health vision, raadsvoorstel/geamendeerd raadsvoorstel, collegevoorstel, besluitenlijsten, ASD advice, and the GALA/Brede SPUK plan of approach.",
+        "intake_recommendation": "ingest_selected_primary_documents",
+        "recommended_for_corpus": [
+          "Visie Gezondheidsbeleid Almere 2024-2026",
+          "Raadsvoorstel Visie Gezondheidsbeleid Almere 2024-2026 - geamendeerd",
+          "Besluitenlijst final decision route",
+          "Integraal plan van aanpak 2024-2026 Brede SPUK/GALA publicatieversie"
+        ],
+        "exclude_or_defer": [
+          "Gesprekswijzers and duplicate process documents unless needed for decision chronology",
+          "ASD advice as supporting review material, not core policy baseline",
+          "PGA transformatieplan attachment if it duplicates the already-ingested PGA source"
+        ],
+        "privacy_scope": "Public council documents only; avoid extracting personal contact details or speaker lists into public claims.",
         "unlocks": [
           "locality",
           "governance",
@@ -11369,6 +11400,14 @@
         "current_repository_status": "not_present",
         "current_document_id": null,
         "why_it_matters": "The deep-research note treats this as a likely local bridge source for IZA/GALA status, but it should not be used as fact until the primary source is found.",
+        "public_probe_status": "not_found",
+        "usefulness_read": "Unknown. No public source was found in the public-search probe, so the existence and contents cannot be treated as grounded.",
+        "intake_recommendation": "do_not_ingest_until_found",
+        "recommended_for_corpus": [],
+        "exclude_or_defer": [
+          "All claims depending on this source until a public document URL is found."
+        ],
+        "privacy_scope": "Do not use non-public correspondence or private mailbox copies.",
         "unlocks": [
           "locality",
           "governance",
@@ -11387,10 +11426,22 @@
         "publisher": "GGD Flevoland",
         "source_url": "https://www.ggdflevoland.nl/professional/kennis-en-advies/gezondheidsmonitors/gezondheids-monitor-volwassenen-en-ouderen/",
         "verification_status": "candidate_url_verified",
-        "intake_status": "needs_pdf_intake",
+        "intake_status": "public_documents_downloaded_for_assessment",
         "current_repository_status": "not_present",
         "current_document_id": null,
         "why_it_matters": "Provides current municipal baseline data for overgewicht, valrisico, eenzaamheid, mentale gezondheid, bewegen, and vulnerability.",
+        "public_probe_status": "downloaded_public_ggd_table_books",
+        "usefulness_read": "High. The public GGD page links municipality-level 2024 table books for adults and older residents. These directly support D5 nulmeting and capacity work.",
+        "intake_recommendation": "ingest_selected_table_books",
+        "recommended_for_corpus": [
+          "Tabellenboek Volwassenen 2024 Gemeenten",
+          "Tabellenboek Ouderen 2024 Gemeenten"
+        ],
+        "exclude_or_defer": [
+          "Province-only table books unless needed for comparison",
+          "Narrative trend pages when the table books provide cleaner source data"
+        ],
+        "privacy_scope": "Aggregated public statistics only; no individual-level health data.",
         "unlocks": [
           "locality",
           "execution"
@@ -11409,10 +11460,18 @@
         "publisher": "GGD Flevoland",
         "source_url": "https://www.ggdflevoland.nl/app/uploads/sites/6/2024/12/Gezondheidsmonitor-Volwassenen-en-Ouderen-alle-gemeenten-van-Flevoland-2024_volwassenen-18-64.pdf",
         "verification_status": "source_url_verified",
-        "intake_status": "needs_pdf_intake",
+        "intake_status": "public_document_downloaded_for_assessment",
         "current_repository_status": "not_present",
         "current_document_id": null,
         "why_it_matters": "Primary table source for adult Almere indicators needed in workagenda prioritization.",
+        "public_probe_status": "downloaded_public_ggd_table_book",
+        "usefulness_read": "High. The PDF contains municipality-level adult percentages for Almere, including overgewicht, obesitas, beweegrichtlijn, eenzaamheid, anxiety/depression risk, broze gezondheid, mantelzorg, and vrijwilligerswerk.",
+        "intake_recommendation": "ingest_as_table_source",
+        "recommended_for_corpus": [
+          "Tabellenboek Volwassenen 2024 Gemeenten"
+        ],
+        "exclude_or_defer": [],
+        "privacy_scope": "Aggregated public statistics only; no individual-level health data.",
         "unlocks": [
           "locality",
           "execution"
@@ -11429,10 +11488,20 @@
         "publisher": "GGD Flevoland",
         "source_url": "https://www.ggdflevoland.nl/positief-ouder-worden/valpreventie/",
         "verification_status": "source_url_verified",
-        "intake_status": "needs_html_intake",
+        "intake_status": "public_html_downloaded_for_assessment",
         "current_repository_status": "not_present",
         "current_document_id": null,
         "why_it_matters": "Operational source for current Almere valpreventie intake/inloop signals and delivery context.",
+        "public_probe_status": "downloaded_general_and_almere_specific_pages",
+        "usefulness_read": "High for operational layer. The Almere-specific public page describes free inloop/no-registration, personal advice, course matching, and central coordinator follow-up within two weeks.",
+        "intake_recommendation": "ingest_almere_specific_html_page",
+        "recommended_for_corpus": [
+          "Valpreventie Gemeente Almere - GGD Flevoland"
+        ],
+        "exclude_or_defer": [
+          "General valpreventie landing page unless needed for regional comparison."
+        ],
+        "privacy_scope": "Public service route only; do not extract form submissions or any resident-level data.",
         "unlocks": [
           "locality",
           "execution"
@@ -11448,10 +11517,20 @@
         "publisher": "ZonMw",
         "source_url": "https://projecten.zonmw.nl/nl/project/doorontwikkeling-zorgzaam-flevoland-naar-een-toekomstbestendige-samenwerkingsstructuur",
         "verification_status": "source_url_verified",
-        "intake_status": "needs_html_intake",
+        "intake_status": "public_html_downloaded_for_assessment",
         "current_repository_status": "not_present",
         "current_document_id": null,
         "why_it_matters": "Strengthens the regional governance story around Zorgzaam Flevoland, including Almere as responsible organization in a 2025-2027 development route.",
+        "public_probe_status": "downloaded_public_project_page",
+        "usefulness_read": "Medium-high. Useful for governance and regional collaboration, but it is a project registration rather than a formal policy decision.",
+        "intake_recommendation": "ingest_as_supporting_governance_source",
+        "recommended_for_corpus": [
+          "ZonMw project page Doorontwikkeling Zorgzaam Flevoland"
+        ],
+        "exclude_or_defer": [
+          "Do not treat as adopted local policy or complete governance mandate."
+        ],
+        "privacy_scope": "Use organization/project facts only; avoid named-person contact details.",
         "unlocks": [
           "governance",
           "locality",
@@ -11468,10 +11547,20 @@
         "publisher": "Mentale gezondheidsnetwerken",
         "source_url": "https://www.mentalegezondheidsnetwerken.nl/alle-netwerken/",
         "verification_status": "source_url_verified",
-        "intake_status": "needs_html_intake",
+        "intake_status": "public_html_downloaded_for_assessment",
         "current_repository_status": "covered_in_regional_role_guardrail_not_manifest",
         "current_document_id": null,
         "why_it_matters": "Clarifies that Almere is listed as mandaatgemeente for the Flevoland mental-health network and that Zeewolde is in a different listed route.",
+        "public_probe_status": "downloaded_public_listing",
+        "usefulness_read": "High for the narrow role question. The page supports Almere as mandaatgemeente for MGN Flevoland and separates Zeewolde into the Gezond Veluwe listing.",
+        "intake_recommendation": "ingest_sanitized_role_source_or_extract_role_only",
+        "recommended_for_corpus": [
+          "Mentale gezondheidsnetwerken listing, limited to network geography and role fields"
+        ],
+        "exclude_or_defer": [
+          "Named contact people, phone numbers, and email addresses."
+        ],
+        "privacy_scope": "Contains public personal contact details; formal corpus extraction should suppress contact data and retain only organization/role/geography facts.",
         "unlocks": [
           "governance",
           "locality",
@@ -11490,10 +11579,18 @@
         "publisher": "Gemeente Almere",
         "source_url": "https://almere.jaarverslag-2024.nl/assets/docs/Programmarekening_2024.pdf",
         "verification_status": "source_url_verified",
-        "intake_status": "needs_pdf_intake",
+        "intake_status": "public_document_downloaded_for_assessment",
         "current_repository_status": "not_present",
         "current_document_id": null,
         "why_it_matters": "Potential municipal financial and execution-status source for PGA, IZA and GALA references in Almere's own accountability cycle.",
+        "public_probe_status": "downloaded_public_pdf",
+        "usefulness_read": "Medium. Useful for financial/accountability context, but very broad and not a clean first intake source for D5 operational requirements.",
+        "intake_recommendation": "defer_or_ingest_later_as_financial_context",
+        "recommended_for_corpus": [],
+        "exclude_or_defer": [
+          "Defer until money/governance sprint unless a specific PGA/IZA/GALA passage is needed."
+        ],
+        "privacy_scope": "Public annual-account document; avoid irrelevant accounting or signature material in extracted claims.",
         "unlocks": [
           "money",
           "governance",
@@ -11511,10 +11608,18 @@
         "publisher": "CBS",
         "source_url": "https://www.cbs.nl/nl-nl/nieuws/2025/05/bevolkingsgroei-in-2024-afgenomen-in-de-randstad-toegenomen-daarbuiten",
         "verification_status": "source_url_verified",
-        "intake_status": "needs_reference_intake",
+        "intake_status": "public_html_downloaded_for_assessment",
         "current_repository_status": "not_present",
         "current_document_id": null,
         "why_it_matters": "Useful context for growth pressure, but exact workagenda calculations should use a chosen BRP/CBS peildatum.",
+        "public_probe_status": "downloaded_public_news_page",
+        "usefulness_read": "Low-medium for corpus. The article is useful context for growth pressure but should not be the denominator source for capacity calculations.",
+        "intake_recommendation": "do_not_ingest_for_25_2_or_defer_as_context",
+        "recommended_for_corpus": [],
+        "exclude_or_defer": [
+          "Use a stable CBS/BRP table in Sprint 25.3 instead of this news page for calculations."
+        ],
+        "privacy_scope": "Aggregated public statistics only.",
         "unlocks": [
           "locality",
           "execution"
@@ -11539,11 +11644,10 @@
       {
         "group": "intake_status",
         "counts": {
-          "needs_html_intake": 3,
           "needs_human_lookup": 1,
-          "needs_pdf_intake": 3,
-          "needs_primary_attachment_intake": 2,
-          "needs_reference_intake": 1
+          "public_document_downloaded_for_assessment": 2,
+          "public_documents_downloaded_for_assessment": 3,
+          "public_html_downloaded_for_assessment": 4
         }
       },
       {
@@ -12000,7 +12104,7 @@
             <tr>
               <td><strong>${esc(candidate.title)}</strong><br><code>${esc(candidate.candidate_id)}</code><br>${candidate.source_url ? `<a href="${esc(candidate.source_url)}">source URL</a>` : '<span class="subtle">No public URL verified</span>'}</td>
               <td><span class="tag origin">${esc(candidate.verification_status || '')}</span><br><span class="tag issue">${esc(candidate.intake_status || '')}</span><br><span class="subtle">${esc(candidate.current_repository_status || '')}</span></td>
-              <td>${esc(candidate.why_it_matters || '')}<br>${(candidate.unlocks || []).map(value => `<span class="tag perspective">${esc(value)}</span>`).join('')}</td>
+              <td>${esc(candidate.why_it_matters || '')}<br>${candidate.intake_recommendation ? `<strong>Recommendation:</strong> ${esc(candidate.intake_recommendation)}<br>` : ''}${(candidate.unlocks || []).map(value => `<span class="tag perspective">${esc(value)}</span>`).join('')}</td>
               <td>${esc(candidate.review_question || '')}</td>
             </tr>`).join('')}</tbody>
         </table>`;

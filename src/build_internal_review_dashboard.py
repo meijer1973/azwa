@@ -19,7 +19,7 @@ REVIEW_QUEUE_PATH = EXTRACTED_DIR / "review_queue.json"
 CLAIMS_MASTER_PATH = EXTRACTED_DIR / "claims" / "claims_master.jsonl"
 PERSPECTIVES_PATH = CONFIG_DIR / "data_quality_perspectives.json"
 REGIONAL_ROLES_PATH = DATA_DIR / "curated" / "regional_roles_and_splits_almere_flevoland.json"
-ROADMAP_PATH = DOCS_DIR / "phase24-data-quality-roadmap.md"
+ROADMAP_PATH = DOCS_DIR / "data-quality-roadmap.md"
 SITE_UPDATES_PATH = DATA_DIR / "site" / "site_updates_view.json"
 WORKAGENDA_D5_PATH = EXTRACTED_DIR / "workagenda_d5_operational_requirements.json"
 LOCAL_SOURCE_STRENGTHENING_PATH = EXTRACTED_DIR / "local_source_strengthening_almere.json"
@@ -1250,7 +1250,7 @@ def render_html(data: dict[str, Any]) -> str:
             <tr>
               <td><strong>${{esc(candidate.title)}}</strong><br><code>${{esc(candidate.candidate_id)}}</code><br>${{candidate.source_url ? `<a href="${{esc(candidate.source_url)}}">source URL</a>` : '<span class="subtle">No public URL verified</span>'}}</td>
               <td><span class="tag origin">${{esc(candidate.verification_status || '')}}</span><br><span class="tag issue">${{esc(candidate.intake_status || '')}}</span><br><span class="subtle">${{esc(candidate.current_repository_status || '')}}</span></td>
-              <td>${{esc(candidate.why_it_matters || '')}}<br>${{(candidate.unlocks || []).map(value => `<span class="tag perspective">${{esc(value)}}</span>`).join('')}}</td>
+              <td>${{esc(candidate.why_it_matters || '')}}<br>${{candidate.intake_recommendation ? `<strong>Recommendation:</strong> ${{esc(candidate.intake_recommendation)}}<br>` : ''}}${{(candidate.unlocks || []).map(value => `<span class="tag perspective">${{esc(value)}}</span>`).join('')}}</td>
               <td>${{esc(candidate.review_question || '')}}</td>
             </tr>`).join('')}}</tbody>
         </table>`;

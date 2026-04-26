@@ -10,7 +10,7 @@ This checklist is the working guide for applying the six quality perspectives in
 - Locality
 - Execution
 
-It supports Sprint 24.1 of the long-term roadmap in [phase24-data-quality-roadmap.md](C:/Projects/azwa/docs/phase24-data-quality-roadmap.md).
+It supports Sprint 24.1 of the long-term roadmap in [data-quality-roadmap.md](C:/Projects/azwa/docs/data-quality-roadmap.md).
 
 ## Where The Information Is Saved
 - Canonical taxonomy: [config/data_quality_perspectives.json](C:/Projects/azwa/config/data_quality_perspectives.json)

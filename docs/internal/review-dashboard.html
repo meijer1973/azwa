@@ -324,6 +324,13 @@
         <h2>Actor Roles</h2>
         <div id="d6GovernanceActors"></div>
       </section>
+
+      <section>
+        <h2>Almere D6 Responsibility Register</h2>
+        <p class="subtle">Sprint 25.4b public-source prefill from <a id="almereD6ResponsibilityLink" href="#"><code id="almereD6ResponsibilityPath"></code></a>. Rows are not settled local decisions unless their decision status says so.</p>
+        <div class="metrics" id="almereD6ResponsibilityMetrics"></div>
+        <div id="almereD6ResponsibilityComponents"></div>
+      </section>
     </div>
 
     <div class="tab-panel" data-tab-panel="public-updates" hidden>
@@ -418,6 +425,10 @@
     {
       "path": "data/extracted/d6_governance_collaboration.json",
       "href": "../../data/extracted/d6_governance_collaboration.json"
+    },
+    {
+      "path": "data/extracted/municipal/almere_d6_responsibility_register.json",
+      "href": "../../data/extracted/municipal/almere_d6_responsibility_register.json"
     },
     {
       "path": "data/curated/regional_roles_and_splits_almere_flevoland.json",
@@ -10509,7 +10520,7 @@
       {
         "sprint": "25.4 D6 governance en samenwerking",
         "status": "open",
-        "note": "Heropend voor D6 Almere responsibility pack: `docs/phase25-sprint25.4-d6-almere-responsibility-pack-plan.md`; eerste publieke prefill staat in `data/extracted/d6_governance_collaboration.json`"
+        "note": "Heropend voor D6 Almere responsibility pack: `docs/phase25-sprint25.4-d6-almere-responsibility-pack-plan.md`; eerste registerlaag staat in `data/extracted/municipal/almere_d6_responsibility_register.json`"
       },
       {
         "sprint": "25.5 Almere en Flevoland",
@@ -10630,7 +10641,7 @@
     "current": {
       "sprint": "25.4 D6 governance en samenwerking",
       "status": "open",
-      "note": "Heropend voor D6 Almere responsibility pack: `docs/phase25-sprint25.4-d6-almere-responsibility-pack-plan.md`; eerste publieke prefill staat in `data/extracted/d6_governance_collaboration.json`"
+      "note": "Heropend voor D6 Almere responsibility pack: `docs/phase25-sprint25.4-d6-almere-responsibility-pack-plan.md`; eerste registerlaag staat in `data/extracted/municipal/almere_d6_responsibility_register.json`"
     },
     "history": [
       {
@@ -16518,6 +16529,586 @@
       "Escalate unresolved ownership, budget, monitoring and scale choices as decision questions after local validation."
     ]
   },
+  "almere_d6_responsibility": {
+    "path": "data/extracted/municipal/almere_d6_responsibility_register.json",
+    "href": "../../data/extracted/municipal/almere_d6_responsibility_register.json",
+    "layer_run_id": "phase25_4b_almere_d6_responsibility_register_v1",
+    "generated_on": "2026-04-26",
+    "status": "active_sprint_support",
+    "sprint": "25.4b D6 Almere responsibility pack",
+    "purpose": "Create an execution-oriented D6 Almere register that separates public prefill, local validation, decision needs, scale, funding, and evidence status.",
+    "public_source_boundary": "This register is public-source prefill. It does not settle local ownership, execution, budget or D6 classification without ingested decision sources or local validation.",
+    "inputs": [
+      "docs/phase25-sprint25.4-d6-almere-responsibility-pack-plan.md",
+      "data/extracted/d6_governance_collaboration.json",
+      "public URL verification performed 2026-04-26"
+    ],
+    "summary": {
+      "component_count": 12,
+      "candidate_source_count": 9,
+      "source_backed_prefill_count": 6,
+      "review_needed_count": 5,
+      "decision_needed_count": 1,
+      "d6_prefill_dimension_count": 5
+    },
+    "scale_guardrail": "Keep Almere-local, IZA/AZWA-regio Flevoland, GGD-regio Flevoland, zorgkantoorregio and project/programme scale separate in every D6 row.",
+    "public_source_candidates": [
+      {
+        "source_id": "mun_almere_2026_stevige_lokale_teams_raad",
+        "title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin",
+        "publisher": "Raad van Almere",
+        "source_url": "https://raadvanalmere.nl/article/stevige-lokale-teams-en-inzet-investeringsfonds-jeugd-en-gezin1",
+        "repository_status": "candidate_public_source_not_ingested",
+        "verification_status": "search_result_verified_2026_04_26_direct_fetch_timeout",
+        "why_it_matters": "Candidate local decision source for one recognizable team per wijk, professionals with mandate, continuous regie, 2026 start in two wijkteamgebieden, and involvement of JGZ Almere and wijkteams.",
+        "intake_action": "Verify council page and Documentwijzer 26006 attachments; ingest selected decision documents."
+      },
+      {
+        "source_id": "mun_almere_wijkteams",
+        "title": "Wijkteams Almere",
+        "publisher": "Wijkteams Almere / Gemeente Almere",
+        "source_url": "https://wijkteams.almere.nl/",
+        "repository_status": "candidate_public_source_not_ingested",
+        "verification_status": "opened_2026_04_26",
+        "why_it_matters": "Baseline public source for existing local access and wijkteam support structure.",
+        "intake_action": "Add as municipal implementation source for D6 access and social infrastructure."
+      },
+      {
+        "source_id": "nat_vng_richtinggevend_kader_toegang_lokale_teams",
+        "title": "Richtinggevend kader: toegang, lokale teams en integrale dienstverlening",
+        "publisher": "VNG",
+        "source_url": "https://vng.nl/publicaties/richtinggevend-kader-toegang-lokale-teams-en-integrale-dienstverlening",
+        "repository_status": "candidate_public_source_not_ingested",
+        "verification_status": "search_result_and_pdf_verified_2026_04_26",
+        "why_it_matters": "National assessment frame for access, local teams and integrated services; useful as benchmark, not as an Almere decision.",
+        "intake_action": "Add as national implementation benchmark and preserve distinction from local decisions."
+      },
+      {
+        "source_id": "nat_tsd_basisfuncties_lokale_teams",
+        "title": "Basisfuncties voor lokale teams",
+        "publisher": "Toezicht Sociaal Domein",
+        "source_url": "https://www.toezichtsociaaldomein.nl/documenten/2021/10/06/basisfuncties-voor-lokale-teams",
+        "repository_status": "candidate_public_source_not_ingested",
+        "verification_status": "opened_2026_04_26",
+        "why_it_matters": "Quality and assessment framework for low-threshold, nearby and integrated local teams.",
+        "intake_action": "Add as assessment framework for Wijkteams Almere and Stevige Lokale Teams."
+      },
+      {
+        "source_id": "reg_ggd_flevoland_begroting_2026",
+        "title": "Begroting 2026 GGD Flevoland",
+        "publisher": "GGD Flevoland",
+        "source_url": "https://www.ggdflevoland.nl/app/uploads/sites/6/2025/10/Begroting-2026-GGD-Flevoland.pdf",
+        "repository_status": "candidate_public_source_not_ingested",
+        "verification_status": "opened_2026_04_26",
+        "why_it_matters": "Current public source for GGD governance, JGZ, Kennis en Advies, prevention, finance, plustaken and GGD-region scale.",
+        "intake_action": "Add as regional raw PDF and link to D6 GGD/JGZ/monitoring responsibilities."
+      },
+      {
+        "source_id": "reg_ggd_flevoland_kennis_en_advies",
+        "title": "Kennis en Advies",
+        "publisher": "GGD Flevoland",
+        "source_url": "https://www.ggdflevoland.nl/professional/kennis-en-advies/",
+        "repository_status": "candidate_public_source_not_ingested",
+        "verification_status": "opened_2026_04_26",
+        "why_it_matters": "Public source for monitors, dashboards, epidemiology, data analysis and advice.",
+        "intake_action": "Add as monitoring and knowledge source."
+      },
+      {
+        "source_id": "reg_ggd_flevoland_jgz_almere_profile",
+        "title": "Profiel Jeugdgezondheidszorg",
+        "publisher": "GGD Flevoland",
+        "source_url": "https://www.ggdflevoland.nl/professional/jeugdgezondheidszorg/",
+        "repository_status": "candidate_public_source_not_ingested",
+        "verification_status": "opened_2026_04_26",
+        "why_it_matters": "Public source for JGZ Almere 0-18, school links, youth support and care-chain role.",
+        "intake_action": "Add as D6/JGZ implementation evidence."
+      },
+      {
+        "source_id": "mun_almere_samen_sterker_in_de_wijk_story",
+        "title": "Samen Sterker in de Wijk",
+        "publisher": "Gemeente Almere",
+        "source_url": "https://www.almere.nl/zorg-en-welzijn/wonen-en-zorg/informatie-voor-onze-inwoners/verhalen-over-wonen-en-zorg/zorgvrager-en-zorgdrager/samen-sterker-in-de-wijk",
+        "repository_status": "candidate_public_source_not_ingested",
+        "verification_status": "opened_2026_04_26",
+        "why_it_matters": "Public narrative source for mental-health neighbourhood cooperation and one-plan/steungroep logic.",
+        "intake_action": "Add as supporting local implementation source; avoid treating interview text as formal mandate."
+      },
+      {
+        "source_id": "mun_almere_samenwerkingsprojecten",
+        "title": "Samenwerkingsprojecten",
+        "publisher": "Gemeente Almere",
+        "source_url": "https://www.almere.nl/zorg-en-welzijn/wonen-en-zorg/informatie-voor-onze-partners/samenwerkingsprojecten",
+        "repository_status": "candidate_public_source_not_ingested",
+        "verification_status": "opened_2026_04_26",
+        "why_it_matters": "Public source for Samen Sterker in de Wijk partners, pilots, netwerkteams, learning cycle and related local projects.",
+        "intake_action": "Add as implementation source for mental-health wijk infrastructure and partner mapping."
+      }
+    ],
+    "components": [
+      {
+        "component_id": "inloopvoorzieningen_sociaal_en_gezond",
+        "component_label": "Inloopvoorzieningen sociaal en gezond",
+        "existing_almere_provision": null,
+        "required_upgrade": "Local inventory needed: which existing inloop/social-base facilities count as D6 infrastructure.",
+        "owner": null,
+        "executors": [],
+        "cooperation_partners": [
+          "social work",
+          "GGD/JGZ",
+          "citizen initiatives",
+          "informal support"
+        ],
+        "scale": "almere_local_needs_validation",
+        "funding_sources": [
+          "unknown_needs_decision"
+        ],
+        "decision_status": "review_needed",
+        "evidence_sources": [
+          "data/extracted/d6_governance_collaboration.json"
+        ],
+        "confidence": "low",
+        "open_issue": "National D6 norm exists, but local Almere inventory and formal classification are not yet source-backed.",
+        "evidence": [
+          {
+            "source_id": "data/extracted/d6_governance_collaboration.json",
+            "repository_status": "existing_repository_layer_or_prior_source"
+          }
+        ],
+        "human_review_needed": true,
+        "fact_interpretation_proposal_status": "public_prefill_needs_local_validation"
+      },
+      {
+        "component_id": "wijkteams_almere",
+        "component_label": "Wijkteams Almere",
+        "existing_almere_provision": "Public page confirms wijkteams as local support route with wijkwerkers from diverse care and welfare organizations.",
+        "required_upgrade": "Map governance, mandate, partners, wijk coverage, relation to D6 and relation to Stevige Lokale Teams.",
+        "owner": "Gemeente Almere needs confirmation",
+        "executors": [
+          "wijkwerkers",
+          "care and welfare organizations represented in wijkteams"
+        ],
+        "cooperation_partners": [
+          "Gemeente Almere",
+          "zorg- en welzijnsorganisaties"
+        ],
+        "scale": "almere_local",
+        "funding_sources": [
+          "unknown_needs_decision"
+        ],
+        "decision_status": "source_backed_prefill",
+        "evidence_sources": [
+          "mun_almere_wijkteams"
+        ],
+        "confidence": "medium",
+        "open_issue": "Baseline function is public, but formal D6 classification and responsibility allocation remain unsettled.",
+        "evidence": [
+          {
+            "source_id": "mun_almere_wijkteams",
+            "title": "Wijkteams Almere",
+            "source_url": "https://wijkteams.almere.nl/",
+            "repository_status": "candidate_public_source_not_ingested",
+            "verification_status": "opened_2026_04_26"
+          }
+        ],
+        "human_review_needed": true,
+        "fact_interpretation_proposal_status": "public_prefill_needs_local_validation"
+      },
+      {
+        "component_id": "stevige_lokale_teams",
+        "component_label": "Stevige Lokale Teams",
+        "existing_almere_provision": "Candidate council source indicates a 2026 start in two wijkteamgebieden and involvement of JGZ Almere and wijkteams.",
+        "required_upgrade": "Ingest council dossier and underlying Documentwijzer documents before using as settled local decision evidence.",
+        "owner": "Almere council/college line needs source-passage confirmation",
+        "executors": [
+          "JGZ Almere",
+          "wijkteams",
+          "schools and childcare partners"
+        ],
+        "cooperation_partners": [
+          "social and pedagogical basis",
+          "specialists",
+          "schools",
+          "childcare",
+          "JGZ Almere",
+          "wijkteams"
+        ],
+        "scale": "almere_local",
+        "funding_sources": [
+          "Investeringsfonds Jeugd en Gezin candidate",
+          "unknown_needs_source_confirmation"
+        ],
+        "decision_status": "source_backed_prefill",
+        "evidence_sources": [
+          "mun_almere_2026_stevige_lokale_teams_raad"
+        ],
+        "confidence": "medium",
+        "open_issue": "Direct page/search evidence is strong enough for intake priority, but underlying decision documents must be ingested.",
+        "evidence": [
+          {
+            "source_id": "mun_almere_2026_stevige_lokale_teams_raad",
+            "title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin",
+            "source_url": "https://raadvanalmere.nl/article/stevige-lokale-teams-en-inzet-investeringsfonds-jeugd-en-gezin1",
+            "repository_status": "candidate_public_source_not_ingested",
+            "verification_status": "search_result_verified_2026_04_26_direct_fetch_timeout"
+          }
+        ],
+        "human_review_needed": true,
+        "fact_interpretation_proposal_status": "public_prefill_needs_local_validation"
+      },
+      {
+        "component_id": "jgz_almere",
+        "component_label": "JGZ Almere",
+        "existing_almere_provision": "GGD Flevoland public profile describes JGZ Almere as 0-18 jeugdgezondheidszorg with broader local configuration.",
+        "required_upgrade": "Link JGZ Almere to SLT, school, Kansrijke Start, mental-health prevention and local team roles.",
+        "owner": "JGZ Almere / GGD Flevoland, municipal governance needs confirmation",
+        "executors": [
+          "JGZ Almere"
+        ],
+        "cooperation_partners": [
+          "schools",
+          "huisartsen",
+          "Passend Onderwijs",
+          "wijkteams",
+          "jeugdhulp"
+        ],
+        "scale": "almere_local_with_ggd_flevoland_governance",
+        "funding_sources": [
+          "GGD/JGZ funding needs source-specific split"
+        ],
+        "decision_status": "source_backed_prefill",
+        "evidence_sources": [
+          "reg_ggd_flevoland_jgz_almere_profile",
+          "reg_ggd_flevoland_begroting_2026"
+        ],
+        "confidence": "medium",
+        "open_issue": "Operational role is public, but exact D6 ownership and budget status need local validation.",
+        "evidence": [
+          {
+            "source_id": "reg_ggd_flevoland_jgz_almere_profile",
+            "title": "Profiel Jeugdgezondheidszorg",
+            "source_url": "https://www.ggdflevoland.nl/professional/jeugdgezondheidszorg/",
+            "repository_status": "candidate_public_source_not_ingested",
+            "verification_status": "opened_2026_04_26"
+          },
+          {
+            "source_id": "reg_ggd_flevoland_begroting_2026",
+            "title": "Begroting 2026 GGD Flevoland",
+            "source_url": "https://www.ggdflevoland.nl/app/uploads/sites/6/2025/10/Begroting-2026-GGD-Flevoland.pdf",
+            "repository_status": "candidate_public_source_not_ingested",
+            "verification_status": "opened_2026_04_26"
+          }
+        ],
+        "human_review_needed": true,
+        "fact_interpretation_proposal_status": "public_prefill_needs_local_validation"
+      },
+      {
+        "component_id": "ggd_flevoland_coordination",
+        "component_label": "GGD Flevoland-coordinatie",
+        "existing_almere_provision": "GGD Begroting 2026 is a candidate source for governance, public health, prevention and municipal contribution context.",
+        "required_upgrade": "Ingest the 2026 budget and connect relevant sections to D6 governance, JGZ, Gezond Leven and monitoring.",
+        "owner": "GGD Flevoland under six-municipality governance",
+        "executors": [
+          "GGD Flevoland"
+        ],
+        "cooperation_partners": [
+          "Flevoland municipalities",
+          "Zorgzaam Flevoland/PGA",
+          "public-health and prevention partners"
+        ],
+        "scale": "ggd_regio_flevoland",
+        "funding_sources": [
+          "inwonerbijdrage",
+          "municipal subsidies/plustaken",
+          "other source-specific funding"
+        ],
+        "decision_status": "source_backed_prefill",
+        "evidence_sources": [
+          "reg_ggd_flevoland_begroting_2026"
+        ],
+        "confidence": "medium",
+        "open_issue": "Separate GGD-region tasks from IZA/AZWA-region and Almere-local execution.",
+        "evidence": [
+          {
+            "source_id": "reg_ggd_flevoland_begroting_2026",
+            "title": "Begroting 2026 GGD Flevoland",
+            "source_url": "https://www.ggdflevoland.nl/app/uploads/sites/6/2025/10/Begroting-2026-GGD-Flevoland.pdf",
+            "repository_status": "candidate_public_source_not_ingested",
+            "verification_status": "opened_2026_04_26"
+          }
+        ],
+        "human_review_needed": true,
+        "fact_interpretation_proposal_status": "public_prefill_needs_local_validation"
+      },
+      {
+        "component_id": "gezonde_school_mentale_gezonde_school",
+        "component_label": "Gezonde School / mentale gezonde school",
+        "existing_almere_provision": null,
+        "required_upgrade": "Find Almere-specific implementation source and link to GGD/JGZ and schools.",
+        "owner": null,
+        "executors": [
+          "GGD/JGZ candidate",
+          "schools candidate"
+        ],
+        "cooperation_partners": [
+          "schools",
+          "GGD/JGZ",
+          "municipality",
+          "youth partners"
+        ],
+        "scale": "almere_local_or_ggd_regio_needs_validation",
+        "funding_sources": [
+          "unknown_needs_decision"
+        ],
+        "decision_status": "review_needed",
+        "evidence_sources": [
+          "reg_ggd_flevoland_jgz_almere_profile"
+        ],
+        "confidence": "low",
+        "open_issue": "National D6 direction is clear, but local Almere implementation evidence still needs source intake.",
+        "evidence": [
+          {
+            "source_id": "reg_ggd_flevoland_jgz_almere_profile",
+            "title": "Profiel Jeugdgezondheidszorg",
+            "source_url": "https://www.ggdflevoland.nl/professional/jeugdgezondheidszorg/",
+            "repository_status": "candidate_public_source_not_ingested",
+            "verification_status": "opened_2026_04_26"
+          }
+        ],
+        "human_review_needed": true,
+        "fact_interpretation_proposal_status": "public_prefill_needs_local_validation"
+      },
+      {
+        "component_id": "kennis_advies_monitoring_dashboards",
+        "component_label": "Kennis & Advies / monitoring / dashboards",
+        "existing_almere_provision": "GGD Kennis en Advies page describes monitors, dashboards, epidemiology, data analysis and advice.",
+        "required_upgrade": "Map which dashboards and monitors are used for D6 workagenda steering and who owns reporting.",
+        "owner": "GGD Flevoland candidate, decision owner needs confirmation",
+        "executors": [
+          "GGD Flevoland Kennis en Advies"
+        ],
+        "cooperation_partners": [
+          "municipality",
+          "regional programme structures",
+          "knowledge institutions"
+        ],
+        "scale": "ggd_regio_flevoland_with_almere_use",
+        "funding_sources": [
+          "unknown_needs_source_specific_split"
+        ],
+        "decision_status": "source_backed_prefill",
+        "evidence_sources": [
+          "reg_ggd_flevoland_kennis_en_advies",
+          "reg_ggd_flevoland_begroting_2026"
+        ],
+        "confidence": "medium",
+        "open_issue": "Public monitoring function is clear; D6-specific steering arrangement is not yet settled.",
+        "evidence": [
+          {
+            "source_id": "reg_ggd_flevoland_kennis_en_advies",
+            "title": "Kennis en Advies",
+            "source_url": "https://www.ggdflevoland.nl/professional/kennis-en-advies/",
+            "repository_status": "candidate_public_source_not_ingested",
+            "verification_status": "opened_2026_04_26"
+          },
+          {
+            "source_id": "reg_ggd_flevoland_begroting_2026",
+            "title": "Begroting 2026 GGD Flevoland",
+            "source_url": "https://www.ggdflevoland.nl/app/uploads/sites/6/2025/10/Begroting-2026-GGD-Flevoland.pdf",
+            "repository_status": "candidate_public_source_not_ingested",
+            "verification_status": "opened_2026_04_26"
+          }
+        ],
+        "human_review_needed": true,
+        "fact_interpretation_proposal_status": "public_prefill_needs_local_validation"
+      },
+      {
+        "component_id": "samen_sterker_wijk_mental_health",
+        "component_label": "Samen Sterker in de Wijk / mentale-gezondheidswijkinfrastructuur",
+        "existing_almere_provision": "Almere public pages describe Samen Sterker in de Wijk, partners, pilots, one-plan logic, steunkring and learning meetings.",
+        "required_upgrade": "Decide whether this is formal D6 infrastructure, adjacent infrastructure or supporting implementation evidence.",
+        "owner": "shared responsibility needs validation",
+        "executors": [
+          "Zorgplatform Flevoland partners",
+          "local professionals and ervaringsdeskundigen"
+        ],
+        "cooperation_partners": [
+          "Triade",
+          "GGZ Centraal",
+          "Amethist",
+          "Kwintes",
+          "Leger des Heils",
+          "GGD Flevoland",
+          "Gemeente Almere"
+        ],
+        "scale": "almere_local_and_regional_project_scale",
+        "funding_sources": [
+          "unknown_needs_decision"
+        ],
+        "decision_status": "source_backed_prefill",
+        "evidence_sources": [
+          "mun_almere_samen_sterker_in_de_wijk_story",
+          "mun_almere_samenwerkingsprojecten"
+        ],
+        "confidence": "medium",
+        "open_issue": "Public implementation evidence exists, but formal D6 classification and funding line are not settled.",
+        "evidence": [
+          {
+            "source_id": "mun_almere_samen_sterker_in_de_wijk_story",
+            "title": "Samen Sterker in de Wijk",
+            "source_url": "https://www.almere.nl/zorg-en-welzijn/wonen-en-zorg/informatie-voor-onze-inwoners/verhalen-over-wonen-en-zorg/zorgvrager-en-zorgdrager/samen-sterker-in-de-wijk",
+            "repository_status": "candidate_public_source_not_ingested",
+            "verification_status": "opened_2026_04_26"
+          },
+          {
+            "source_id": "mun_almere_samenwerkingsprojecten",
+            "title": "Samenwerkingsprojecten",
+            "source_url": "https://www.almere.nl/zorg-en-welzijn/wonen-en-zorg/informatie-voor-onze-partners/samenwerkingsprojecten",
+            "repository_status": "candidate_public_source_not_ingested",
+            "verification_status": "opened_2026_04_26"
+          }
+        ],
+        "human_review_needed": true,
+        "fact_interpretation_proposal_status": "public_prefill_needs_local_validation"
+      },
+      {
+        "component_id": "pga_zorgzaam_flevoland_interface",
+        "component_label": "Positief Gezond Almere / Zorgzaam Flevoland-interface",
+        "existing_almere_provision": "Existing corpus includes PGA and Zorgzaam/Flevoland context.",
+        "required_upgrade": "Update current cooperation evidence and separate PGA, Zorgzaam Flevoland/Flever and AZWA workagenda roles.",
+        "owner": "shared programme roles need validation",
+        "executors": [],
+        "cooperation_partners": [
+          "Gemeente Almere",
+          "Zorgzaam Flevoland/Flever",
+          "care and welfare partners"
+        ],
+        "scale": "almere_local_and_iza_azwa_regio_flevoland",
+        "funding_sources": [
+          "PGA transformation funding candidate",
+          "AZWA/D5/D6 funding needs separation"
+        ],
+        "decision_status": "review_needed",
+        "evidence_sources": [
+          "mun_almere_pga_transformatieplan",
+          "reg_zonmw_doorontwikkeling_zorgzaam_flevoland"
+        ],
+        "confidence": "medium",
+        "open_issue": "Avoid merging PGA transformation plan, AZWA workagenda and regular municipal funding without source-specific evidence.",
+        "evidence": [
+          {
+            "source_id": "mun_almere_pga_transformatieplan",
+            "repository_status": "existing_repository_layer_or_prior_source"
+          },
+          {
+            "source_id": "reg_zonmw_doorontwikkeling_zorgzaam_flevoland",
+            "repository_status": "existing_repository_layer_or_prior_source"
+          }
+        ],
+        "human_review_needed": true,
+        "fact_interpretation_proposal_status": "public_prefill_needs_local_validation"
+      },
+      {
+        "component_id": "digital_operational_infrastructure",
+        "component_label": "Digitale en operationele infrastructuur",
+        "existing_almere_provision": null,
+        "required_upgrade": "Map RTP Almere, RSO, Monitoring@home and shared information picture only after source confirmation.",
+        "owner": null,
+        "executors": [],
+        "cooperation_partners": [],
+        "scale": "programme_or_project_scale_needs_validation",
+        "funding_sources": [
+          "unknown_needs_decision"
+        ],
+        "decision_status": "review_needed",
+        "evidence_sources": [
+          "data/extracted/d6_governance_collaboration.json"
+        ],
+        "confidence": "low",
+        "open_issue": "Advice flags this component, but current register has no settled public Almere source.",
+        "evidence": [
+          {
+            "source_id": "data/extracted/d6_governance_collaboration.json",
+            "repository_status": "existing_repository_layer_or_prior_source"
+          }
+        ],
+        "human_review_needed": true,
+        "fact_interpretation_proposal_status": "public_prefill_needs_local_validation"
+      },
+      {
+        "component_id": "citizen_initiatives_informal_support",
+        "component_label": "Burgerinitiatieven en informele steun",
+        "existing_almere_provision": null,
+        "required_upgrade": "Inventory social-base partners, citizen initiatives, informal networks and relation to inloop/social support.",
+        "owner": null,
+        "executors": [
+          "citizen initiatives candidate",
+          "volunteer/informal support candidate"
+        ],
+        "cooperation_partners": [
+          "social work",
+          "VMCA candidate",
+          "De Schoor candidate",
+          "neighbourhood networks"
+        ],
+        "scale": "almere_local",
+        "funding_sources": [
+          "unknown_needs_decision"
+        ],
+        "decision_status": "review_needed",
+        "evidence_sources": [
+          "data/extracted/d6_governance_collaboration.json"
+        ],
+        "confidence": "low",
+        "open_issue": "Needs public local source intake before partner names or ownership are used as facts.",
+        "evidence": [
+          {
+            "source_id": "data/extracted/d6_governance_collaboration.json",
+            "repository_status": "existing_repository_layer_or_prior_source"
+          }
+        ],
+        "human_review_needed": true,
+        "fact_interpretation_proposal_status": "public_prefill_needs_local_validation"
+      },
+      {
+        "component_id": "funding_budget_alignment",
+        "component_label": "Financiering en budgetafbakening",
+        "existing_almere_provision": "National funding architecture is present in the existing corpus; Almere-specific D6 allocation is not settled.",
+        "required_upgrade": "Map AZWA-D6, D5 workagenda, SPUK IZA, Brede SPUK/GALA, PGA transformation funding, municipal regular budget and Zvw lines per component.",
+        "owner": "municipality and regional workagenda governance need component-specific validation",
+        "executors": [],
+        "cooperation_partners": [
+          "mandaatgemeente",
+          "preferente zorgverzekeraar",
+          "financial controllers",
+          "regional table"
+        ],
+        "scale": "mixed_scale_must_be_split",
+        "funding_sources": [
+          "unknown_needs_decision"
+        ],
+        "decision_status": "decision_needed",
+        "evidence_sources": [
+          "data/extracted/workagenda_d5_operational_requirements.json"
+        ],
+        "confidence": "medium",
+        "open_issue": "This is the main anti-dubbeltelling control point for D6.",
+        "evidence": [
+          {
+            "source_id": "data/extracted/workagenda_d5_operational_requirements.json",
+            "repository_status": "existing_repository_layer_or_prior_source"
+          }
+        ],
+        "human_review_needed": true,
+        "fact_interpretation_proposal_status": "decision_needed"
+      }
+    ],
+    "next_actions": [
+      "Ingest the highest-priority verified public sources into data/raw/manifest.json.",
+      "Convert council Documentwijzer attachments for Stevige Lokale Teams to page-markdown before claim extraction.",
+      "Regenerate inventory, structural extraction, claims, D6 layers, QC and dashboard after formal source intake.",
+      "Ask local employees to validate D6 classification, owner, executor, budget and monitoring fields after public-source exhaustion."
+    ]
+  },
   "regional_guardrails": {
     "path": "docs/regional-roles-and-splits-almere-flevoland.md",
     "href": "../../docs/regional-roles-and-splits-almere-flevoland.md",
@@ -16947,6 +17538,28 @@
           <td><ul class="compact">${(actor.validation_needed || []).map(field => `<li>${esc(field)}</li>`).join('')}</ul></td>
         </tr>`).join('')}</tbody>
       </table>` : '<p class="empty">No actor roles recorded.</p>';
+
+      const responsibility = DATA.almere_d6_responsibility || {};
+      byId('almereD6ResponsibilityLink').href = responsibility.href || '#';
+      byId('almereD6ResponsibilityPath').textContent = responsibility.path || '';
+      const responsibilitySummary = responsibility.summary || {};
+      byId('almereD6ResponsibilityMetrics').innerHTML = [
+        ['Components', responsibilitySummary.component_count || 0],
+        ['Candidate sources', responsibilitySummary.candidate_source_count || 0],
+        ['Public prefill', responsibilitySummary.source_backed_prefill_count || 0],
+        ['Review needed', responsibilitySummary.review_needed_count || 0],
+        ['Decision needed', responsibilitySummary.decision_needed_count || 0]
+      ].map(([label, value]) => `<div class="metric"><strong>${esc(value)}</strong><span>${esc(label)}</span></div>`).join('');
+      const components = responsibility.components || [];
+      byId('almereD6ResponsibilityComponents').innerHTML = components.length ? `<table>
+        <thead><tr><th>Component</th><th>Existing / upgrade</th><th>Responsibility</th><th>Status</th></tr></thead>
+        <tbody>${components.map(component => `<tr>
+          <td><strong>${esc(component.component_label || component.component_id)}</strong><br><code>${esc(component.component_id || '')}</code></td>
+          <td><span class="subtle">${esc(component.existing_almere_provision || 'No public Almere provision confirmed yet.')}</span><br>${esc(component.required_upgrade || '')}</td>
+          <td><strong>Owner:</strong> ${esc(component.owner || 'needs validation')}<br><strong>Scale:</strong> <code>${esc(component.scale || '')}</code><br><strong>Partners:</strong> ${esc((component.cooperation_partners || []).join(', '))}</td>
+          <td><span class="tag issue">${esc(component.decision_status || '')}</span><br><span class="subtle">${esc(component.open_issue || '')}</span></td>
+        </tr>`).join('')}</tbody>
+      </table>` : '<p class="empty">No Almere D6 responsibility register generated yet.</p>';
     }
 
     function renderCleanupTargets() {

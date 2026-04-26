@@ -244,6 +244,23 @@
       ]
     },
     {
+      "stage_id": "phase25_4b_almere_d6_responsibility_register",
+      "kind": "script",
+      "description": "Build the Almere D6 responsibility register for public-source prefill, scale separation, funding status, and local validation fields.",
+      "script": "src/build_almere_d6_responsibility_register.py",
+      "depends_on": [
+        "phase25_4_d6_governance_collaboration"
+      ],
+      "inputs": [
+        "docs/phase25-sprint25.4-d6-almere-responsibility-pack-plan.md",
+        "data/extracted/d6_governance_collaboration.json",
+        "src/build_almere_d6_responsibility_register.py"
+      ],
+      "outputs": [
+        "data/extracted/municipal/almere_d6_responsibility_register.json"
+      ]
+    },
+    {
       "stage_id": "phase7_phase8_master_views",
       "kind": "script",
       "description": "Generate the D5/D6 master model plus the computed Almere view and decision shell.",

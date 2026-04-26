@@ -25,6 +25,7 @@ WORKAGENDA_D5_PATH = EXTRACTED_DIR / "workagenda_d5_operational_requirements.jso
 LOCAL_SOURCE_STRENGTHENING_PATH = EXTRACTED_DIR / "local_source_strengthening_almere.json"
 WORKAGENDA_NULMETING_PATH = EXTRACTED_DIR / "workagenda_nulmeting_capacity.json"
 D6_GOVERNANCE_PATH = EXTRACTED_DIR / "d6_governance_collaboration.json"
+ALMERE_D6_RESPONSIBILITY_PATH = EXTRACTED_DIR / "municipal" / "almere_d6_responsibility_register.json"
 OUTPUT_PATH = DOCS_DIR / "internal" / "review-dashboard.html"
 
 ISSUE_TYPES = {
@@ -568,6 +569,9 @@ def build_dashboard_data() -> dict[str, Any]:
     local_source_strengthening = load_json(LOCAL_SOURCE_STRENGTHENING_PATH) if LOCAL_SOURCE_STRENGTHENING_PATH.exists() else {}
     workagenda_nulmeting = load_json(WORKAGENDA_NULMETING_PATH) if WORKAGENDA_NULMETING_PATH.exists() else {}
     d6_governance = load_json(D6_GOVERNANCE_PATH) if D6_GOVERNANCE_PATH.exists() else {}
+    almere_d6_responsibility = (
+        load_json(ALMERE_D6_RESPONSIBILITY_PATH) if ALMERE_D6_RESPONSIBILITY_PATH.exists() else {}
+    )
     sprint_ledger = parse_sprint_ledger()
     claims = load_claims()
     claim_index = {claim["claim_id"]: claim for claim in claims}
@@ -599,6 +603,8 @@ def build_dashboard_data() -> dict[str, Any]:
         source_paths.append(repo_path(WORKAGENDA_NULMETING_PATH))
     if d6_governance:
         source_paths.append(repo_path(D6_GOVERNANCE_PATH))
+    if almere_d6_responsibility:
+        source_paths.append(repo_path(ALMERE_D6_RESPONSIBILITY_PATH))
     if regional_roles:
         source_paths.append(repo_path(REGIONAL_ROLES_PATH))
 
@@ -665,6 +671,11 @@ def build_dashboard_data() -> dict[str, Any]:
             "href": output_relative_link(repo_path(D6_GOVERNANCE_PATH)),
             **d6_governance,
         } if d6_governance else {},
+        "almere_d6_responsibility": {
+            "path": repo_path(ALMERE_D6_RESPONSIBILITY_PATH),
+            "href": output_relative_link(repo_path(ALMERE_D6_RESPONSIBILITY_PATH)),
+            **almere_d6_responsibility,
+        } if almere_d6_responsibility else {},
         "regional_guardrails": {
             "path": "docs/regional-roles-and-splits-almere-flevoland.md",
             "href": output_relative_link("docs/regional-roles-and-splits-almere-flevoland.md"),
@@ -1012,6 +1023,13 @@ def render_html(data: dict[str, Any]) -> str:
       <section>
         <h2>Actor Roles</h2>
         <div id="d6GovernanceActors"></div>
+      </section>
+
+      <section>
+        <h2>Almere D6 Responsibility Register</h2>
+        <p class="subtle">Sprint 25.4b public-source prefill from <a id="almereD6ResponsibilityLink" href="#"><code id="almereD6ResponsibilityPath"></code></a>. Rows are not settled local decisions unless their decision status says so.</p>
+        <div class="metrics" id="almereD6ResponsibilityMetrics"></div>
+        <div id="almereD6ResponsibilityComponents"></div>
       </section>
     </div>
 
@@ -1443,6 +1461,28 @@ def render_html(data: dict[str, Any]) -> str:
           <td><ul class="compact">${{(actor.validation_needed || []).map(field => `<li>${{esc(field)}}</li>`).join('')}}</ul></td>
         </tr>`).join('')}}</tbody>
       </table>` : '<p class="empty">No actor roles recorded.</p>';
+
+      const responsibility = DATA.almere_d6_responsibility || {{}};
+      byId('almereD6ResponsibilityLink').href = responsibility.href || '#';
+      byId('almereD6ResponsibilityPath').textContent = responsibility.path || '';
+      const responsibilitySummary = responsibility.summary || {{}};
+      byId('almereD6ResponsibilityMetrics').innerHTML = [
+        ['Components', responsibilitySummary.component_count || 0],
+        ['Candidate sources', responsibilitySummary.candidate_source_count || 0],
+        ['Public prefill', responsibilitySummary.source_backed_prefill_count || 0],
+        ['Review needed', responsibilitySummary.review_needed_count || 0],
+        ['Decision needed', responsibilitySummary.decision_needed_count || 0]
+      ].map(([label, value]) => `<div class="metric"><strong>${{esc(value)}}</strong><span>${{esc(label)}}</span></div>`).join('');
+      const components = responsibility.components || [];
+      byId('almereD6ResponsibilityComponents').innerHTML = components.length ? `<table>
+        <thead><tr><th>Component</th><th>Existing / upgrade</th><th>Responsibility</th><th>Status</th></tr></thead>
+        <tbody>${{components.map(component => `<tr>
+          <td><strong>${{esc(component.component_label || component.component_id)}}</strong><br><code>${{esc(component.component_id || '')}}</code></td>
+          <td><span class="subtle">${{esc(component.existing_almere_provision || 'No public Almere provision confirmed yet.')}}</span><br>${{esc(component.required_upgrade || '')}}</td>
+          <td><strong>Owner:</strong> ${{esc(component.owner || 'needs validation')}}<br><strong>Scale:</strong> <code>${{esc(component.scale || '')}}</code><br><strong>Partners:</strong> ${{esc((component.cooperation_partners || []).join(', '))}}</td>
+          <td><span class="tag issue">${{esc(component.decision_status || '')}}</span><br><span class="subtle">${{esc(component.open_issue || '')}}</span></td>
+        </tr>`).join('')}}</tbody>
+      </table>` : '<p class="empty">No Almere D6 responsibility register generated yet.</p>';
     }}
 
     function renderCleanupTargets() {{

@@ -10,7 +10,7 @@ Sprint 25.4 is heropend na inhoudelijke review. De eerste D6-governance-laag is 
 | Onderdeel | Status | Output |
 | --- | --- | --- |
 | 25.4a D6 publieke governance-prefill | completed | `data/extracted/d6_governance_collaboration.json`, `docs/completed-plans/phase25-sprint25.4-d6-governance-samenwerking.md` |
-| 25.4b D6 Almere responsibility pack | open | Dit plan; beoogd register `data/extracted/municipal/almere_d6_responsibility_register.json` |
+| 25.4b D6 Almere responsibility pack | open | Dit plan; eerste registerlaag `data/extracted/municipal/almere_d6_responsibility_register.json` |
 
 ## Kernbesluit
 D6 wordt in deze sprint behandeld als basisinfrastructuur onder D5: herkenbare toegang en inloop, wijkteams/stevige lokale teams, sociale basis, GGD/JGZ, school- en mentale-gezondheidspreventie, monitoring/data/leren, regionale en lokale uitvoeringsgovernance, en financieringsafbakening.
@@ -61,6 +61,8 @@ Maak een register met minimaal deze velden:
 - `open_issue`
 - `human_review_needed`
 - `fact_interpretation_proposal_status`
+
+Eerste generator: `src/build_almere_d6_responsibility_register.py`.
 
 Start met deze D6-componenten:
 

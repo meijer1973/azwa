@@ -24,6 +24,7 @@ SITE_UPDATES_PATH = DATA_DIR / "site" / "site_updates_view.json"
 WORKAGENDA_D5_PATH = EXTRACTED_DIR / "workagenda_d5_operational_requirements.json"
 LOCAL_SOURCE_STRENGTHENING_PATH = EXTRACTED_DIR / "local_source_strengthening_almere.json"
 WORKAGENDA_NULMETING_PATH = EXTRACTED_DIR / "workagenda_nulmeting_capacity.json"
+D6_GOVERNANCE_PATH = EXTRACTED_DIR / "d6_governance_collaboration.json"
 OUTPUT_PATH = DOCS_DIR / "internal" / "review-dashboard.html"
 
 ISSUE_TYPES = {
@@ -566,6 +567,7 @@ def build_dashboard_data() -> dict[str, Any]:
     workagenda_d5 = load_json(WORKAGENDA_D5_PATH) if WORKAGENDA_D5_PATH.exists() else {}
     local_source_strengthening = load_json(LOCAL_SOURCE_STRENGTHENING_PATH) if LOCAL_SOURCE_STRENGTHENING_PATH.exists() else {}
     workagenda_nulmeting = load_json(WORKAGENDA_NULMETING_PATH) if WORKAGENDA_NULMETING_PATH.exists() else {}
+    d6_governance = load_json(D6_GOVERNANCE_PATH) if D6_GOVERNANCE_PATH.exists() else {}
     sprint_ledger = parse_sprint_ledger()
     claims = load_claims()
     claim_index = {claim["claim_id"]: claim for claim in claims}
@@ -595,6 +597,8 @@ def build_dashboard_data() -> dict[str, Any]:
         source_paths.append(repo_path(LOCAL_SOURCE_STRENGTHENING_PATH))
     if workagenda_nulmeting:
         source_paths.append(repo_path(WORKAGENDA_NULMETING_PATH))
+    if d6_governance:
+        source_paths.append(repo_path(D6_GOVERNANCE_PATH))
     if regional_roles:
         source_paths.append(repo_path(REGIONAL_ROLES_PATH))
 
@@ -656,6 +660,11 @@ def build_dashboard_data() -> dict[str, Any]:
             "href": output_relative_link(repo_path(WORKAGENDA_NULMETING_PATH)),
             **workagenda_nulmeting,
         } if workagenda_nulmeting else {},
+        "d6_governance": {
+            "path": repo_path(D6_GOVERNANCE_PATH),
+            "href": output_relative_link(repo_path(D6_GOVERNANCE_PATH)),
+            **d6_governance,
+        } if d6_governance else {},
         "regional_guardrails": {
             "path": "docs/regional-roles-and-splits-almere-flevoland.md",
             "href": output_relative_link("docs/regional-roles-and-splits-almere-flevoland.md"),
@@ -882,6 +891,7 @@ def render_html(data: dict[str, Any]) -> str:
     <button class="tab-button active" type="button" data-tab="overview">Overview</button>
     <button class="tab-button" type="button" data-tab="local-sources">Local Sources</button>
     <button class="tab-button" type="button" data-tab="workagenda">Werkagenda</button>
+    <button class="tab-button" type="button" data-tab="d6-governance">D6 Governance</button>
     <button class="tab-button" type="button" data-tab="sprint-history">Sprint History</button>
     <button class="tab-button" type="button" data-tab="public-updates">Public Updates Mirror</button>
     <button class="tab-button" type="button" data-tab="open-items">Open Items</button>
@@ -984,6 +994,24 @@ def render_html(data: dict[str, Any]) -> str:
         <p class="subtle">Sprint 25.3 public-source prefill from <a id="nulmetingSourceLink" href="#"><code id="nulmetingSourcePath"></code></a>. Local gaps stay visible for staff validation and later decisions.</p>
         <div class="metrics" id="nulmetingMetrics"></div>
         <div id="nulmetingTargets"></div>
+      </section>
+    </div>
+
+    <div class="tab-panel" data-tab-panel="d6-governance" hidden>
+      <section>
+        <h2>D6 Governance And Collaboration</h2>
+        <p class="subtle">Sprint 25.4 public-source role map from <a id="d6GovernanceSourceLink" href="#"><code id="d6GovernanceSourcePath"></code></a>. Use this to separate public role evidence from local validation and decision questions.</p>
+        <div class="metrics" id="d6GovernanceMetrics"></div>
+      </section>
+
+      <section>
+        <h2>Dimensions</h2>
+        <div id="d6GovernanceDimensions"></div>
+      </section>
+
+      <section>
+        <h2>Actor Roles</h2>
+        <div id="d6GovernanceActors"></div>
       </section>
     </div>
 
@@ -1379,6 +1407,42 @@ def render_html(data: dict[str, Any]) -> str:
       ).join('')}}</ul>` : '<p class="empty">No open regional review prompts.</p>';
     }}
 
+    function renderD6Governance() {{
+      const layer = DATA.d6_governance || {{}};
+      byId('d6GovernanceSourceLink').href = layer.href || '#';
+      byId('d6GovernanceSourcePath').textContent = layer.path || '';
+      const summary = layer.summary || {{}};
+      byId('d6GovernanceMetrics').innerHTML = [
+        ['Dimensions', summary.dimension_count || 0],
+        ['With public claims', summary.dimensions_with_public_claims || 0],
+        ['Actor roles', summary.actor_role_count || 0],
+        ['Validation fields', summary.local_validation_field_count || 0],
+        ['Nulmeting targets', summary.nulmeting_target_count || 0]
+      ].map(([label, value]) => `<div class="metric"><strong>${{esc(value)}}</strong><span>${{esc(label)}}</span></div>`).join('');
+
+      const dimensions = layer.dimensions || [];
+      byId('d6GovernanceDimensions').innerHTML = dimensions.length ? `<table>
+        <thead><tr><th>Dimension</th><th>Coverage</th><th>Top sources</th><th>Validation fields</th></tr></thead>
+        <tbody>${{dimensions.map(row => `<tr>
+          <td><strong>${{esc(row.label || row.dimension_id)}}</strong><br><code>${{esc(row.dimension_id || '')}}</code><br><span class="subtle">${{esc(row.public_question || '')}}</span></td>
+          <td><span class="tag issue">${{esc(row.public_coverage_status || '')}}</span><br>${{esc(row.source_claim_count || 0)}} claims</td>
+          <td>${{(row.top_source_document_ids || []).slice(0, 5).map(id => `<code>${{esc(id)}}</code>`).join(' ')}}</td>
+          <td><ul class="compact">${{(row.local_validation_fields || []).map(field => `<li>${{esc(field)}}</li>`).join('')}}</ul></td>
+        </tr>`).join('')}}</tbody>
+      </table>` : '<p class="empty">No D6 governance layer generated yet.</p>';
+
+      const actors = layer.actor_roles || [];
+      byId('d6GovernanceActors').innerHTML = actors.length ? `<table>
+        <thead><tr><th>Actor</th><th>Public role</th><th>Status</th><th>Validation needed</th></tr></thead>
+        <tbody>${{actors.map(actor => `<tr>
+          <td><strong>${{esc(actor.actor || actor.actor_id)}}</strong><br><code>${{esc(actor.actor_id || '')}}</code></td>
+          <td>${{esc(actor.public_role || '')}}</td>
+          <td><span class="tag origin">${{esc(actor.source_status || '')}}</span></td>
+          <td><ul class="compact">${{(actor.validation_needed || []).map(field => `<li>${{esc(field)}}</li>`).join('')}}</ul></td>
+        </tr>`).join('')}}</tbody>
+      </table>` : '<p class="empty">No actor roles recorded.</p>';
+    }}
+
     function renderCleanupTargets() {{
       const targets = DATA.next_cleanup_targets || [];
       byId('cleanupTargets').innerHTML = targets.length ? `<table>
@@ -1441,6 +1505,7 @@ def render_html(data: dict[str, Any]) -> str:
     renderPublicUpdates();
     renderWorkagenda();
     renderLocalSources();
+    renderD6Governance();
     renderRegional();
     renderCleanupTargets();
     render();

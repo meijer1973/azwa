@@ -225,6 +225,25 @@
       ]
     },
     {
+      "stage_id": "phase25_4_d6_governance_collaboration",
+      "kind": "script",
+      "description": "Build the public-source D6 governance and collaboration role map, keeping local validation and decision fields explicit.",
+      "script": "src/build_d6_governance_collaboration.py",
+      "depends_on": [
+        "phase4_claims_all_docs",
+        "phase25_3_workagenda_nulmeting_capacity"
+      ],
+      "inputs": [
+        "data/extracted/claims/claims_master.jsonl",
+        "data/curated/regional_roles_and_splits_almere_flevoland.json",
+        "data/extracted/workagenda_nulmeting_capacity.json",
+        "src/build_d6_governance_collaboration.py"
+      ],
+      "outputs": [
+        "data/extracted/d6_governance_collaboration.json"
+      ]
+    },
+    {
       "stage_id": "phase7_phase8_master_views",
       "kind": "script",
       "description": "Generate the D5/D6 master model plus the computed Almere view and decision shell.",

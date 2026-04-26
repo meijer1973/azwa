@@ -1,0 +1,758 @@
+{
+  "layer_run_id": "phase25_4_d6_governance_collaboration_v1",
+  "generated_on": "2026-04-26",
+  "status": "active_sprint_support",
+  "sprint": "25.4 D6 governance en samenwerking",
+  "purpose": "Make D6 role allocation, scale, collaboration, monitoring, and remaining validation questions explicit from the public corpus.",
+  "public_source_boundary": "Use public corpus and curated role/split guardrails first; non-public role allocation remains local validation or decision work.",
+  "inputs": [
+    "data/extracted/claims/claims_master.jsonl",
+    "data/curated/regional_roles_and_splits_almere_flevoland.json",
+    "data/extracted/workagenda_nulmeting_capacity.json"
+  ],
+  "summary": {
+    "dimension_count": 5,
+    "actor_role_count": 6,
+    "dimensions_with_public_claims": 5,
+    "local_validation_field_count": 36,
+    "nulmeting_target_count": 11
+  },
+  "regional_guardrail": {
+    "editorial_rule": "Do not use 'Flevoland', 'de regio', or 'mandaatgemeente' as generic shorthand when IZA/AZWA-regio, GGD-regio, zorgkantoorregio, ROAZ/subregio, or practical task ownership matters.",
+    "regional_splits": [
+      {
+        "split_id": "iza_azwa_regio_flevoland",
+        "region_type": "IZA/AZWA-regio",
+        "label": "IZA/AZWA-regio Flevoland",
+        "almere_position": "Deelnemer; extern genoemd als mandaatgemeente voor Flevoland.",
+        "included_municipalities": [
+          "Almere",
+          "Dronten",
+          "Lelystad",
+          "Noordoostpolder",
+          "Urk"
+        ],
+        "not_in_this_split_or_exception": [
+          "Zeewolde sluit voor het regioplan aan bij Noord-Veluwe."
+        ],
+        "source_status": "source_backed_with_review_note",
+        "source_ids": [
+          "reg_flevoland_2023_regiobeeld",
+          "reg_flevoland_2023_regioplan_iza",
+          "external_mentale_gezondheidsnetwerken_allenetwerken"
+        ],
+        "agent_warning": "Use this split for IZA/AZWA workagenda and mandaatgemeente wording; do not infer that all execution sits with Almere."
+      },
+      {
+        "split_id": "zorgkantoorregio_t_gooi",
+        "region_type": "zorgkantoorregio",
+        "label": "Zorgkantoorregio 't Gooi",
+        "almere_position": "Almere valt onder zorgkantoorregio 't Gooi.",
+        "included_municipalities_or_areas": [
+          "Almere",
+          "Blaricum",
+          "Eemnes",
+          "Gooise Meren",
+          "Hilversum",
+          "Huizen",
+          "Laren",
+          "Wijdemeren"
+        ],
+        "source_status": "source_backed",
+        "source_ids": [
+          "reg_flevoland_2023_regiobeeld",
+          "external_zilveren_kruis_t_gooi"
+        ],
+        "agent_warning": "Do not treat zorgkantoorregio 't Gooi as the same as IZA/AZWA-regio Flevoland."
+      },
+      {
+        "split_id": "ggd_regio_flevoland",
+        "region_type": "GGD-regio",
+        "label": "GGD Flevoland",
+        "almere_position": "Almere valt binnen GGD Flevoland.",
+        "included_municipalities": [
+          "Almere",
+          "Dronten",
+          "Lelystad",
+          "Noordoostpolder",
+          "Urk",
+          "Zeewolde"
+        ],
+        "source_status": "source_backed",
+        "source_ids": [
+          "external_ggd_flevoland_gemeenten",
+          "external_ggd_flevoland_begroting_2026"
+        ],
+        "agent_warning": "Use GGD-regio wording for GGD-executed tasks; this scale includes Zeewolde and may differ from the IZA/AZWA-regio."
+      },
+      {
+        "split_id": "flevoland_subregions_regioplan",
+        "region_type": "subregio",
+        "label": "Subregionale aanpakken vanuit Regioplan IZA Flevoland",
+        "subregions": [
+          "Almere",
+          "Lelystad/Dronten",
+          "Noordoostpolder/Urk"
+        ],
+        "source_status": "source_backed",
+        "source_ids": [
+          "reg_flevoland_2023_regioplan_iza",
+          "external_ggd_flevoland_begroting_2026"
+        ],
+        "agent_warning": "A subregional task in Lelystad/Dronten does not make Lelystad the formal mandaatgemeente."
+      },
+      {
+        "split_id": "roaz_acute_care_lens",
+        "region_type": "ROAZ/subregio acute zorg",
+        "label": "ROAZ- en acute-zorglens",
+        "almere_position": "Afhankelijk van het acute-zorgthema; het Regiobeeld gebruikt ROAZ-bronnen en noemt onder meer subregio Flevoland en Flevoland / Gooi en Vechtstreek.",
+        "source_status": "source_backed_per_passage",
+        "source_ids": [
+          "reg_flevoland_2023_regiobeeld"
+        ],
+        "agent_warning": "Check the passage before translating ROAZ/acute-care evidence into IZA/AZWA governance claims."
+      }
+    ],
+    "regional_roles": [
+      {
+        "role_id": "iza_flevoland_formal_mandaatgemeente_almere",
+        "role_type": "formal_mandaatgemeente",
+        "region_type": "IZA/AZWA-regio",
+        "actor": "Gemeente Almere",
+        "applies_to_region": "IZA/AZWA-regio Flevoland",
+        "applies_to_municipalities": [
+          "Almere",
+          "Dronten",
+          "Lelystad",
+          "Noordoostpolder",
+          "Urk"
+        ],
+        "source_status": "source_backed_with_review_note",
+        "source_ids": [
+          "external_mentale_gezondheidsnetwerken_allenetwerken",
+          "nat_azwa_opdracht_werkagenda_d5_2026"
+        ],
+        "public_wording": "Voor de Flevolandse IZA/AZWA-route wordt Almere in externe netwerkgegevens als mandaatgemeente genoemd. De mandaatgemeente-rol gaat over regionale middelen en afspraken namens gemeenten in de IZA-regio.",
+        "does_not_mean": [
+          "Almere voert alle regionale taken zelf uit.",
+          "Almere is automatisch trekker van elk subregionaal of thematisch project.",
+          "Lelystad kan geen praktische uitvoerings- of coordinatierol hebben."
+        ],
+        "review_note": "Een lokaal mandaatbesluit of expliciete regionale bestuursovereenkomst is nog waardevol als aanvullende bron."
+      },
+      {
+        "role_id": "zorgzaam_flevoland_regional_movement",
+        "role_type": "regional_coordination",
+        "actor": "Zorgzaam Flevoland / Flever",
+        "applies_to_region": "Flevolandse IZA-regioplanbeweging",
+        "source_status": "source_backed",
+        "source_ids": [
+          "reg_flevoland_2023_regioplan_iza",
+          "external_flever_zorgzaam_flevoland"
+        ],
+        "public_wording": "Zorgzaam Flevoland is de regionale beweging die vanuit het IZA Regioplan is ontstaan; Flever ondersteunt deze beweging.",
+        "does_not_mean": [
+          "Flever is de mandaatgemeente.",
+          "Vestiging of ondersteuning in Lelystad wijzigt de formele mandaatgemeente-rol."
+        ]
+      },
+      {
+        "role_id": "ggd_flevoland_execution_scale",
+        "role_type": "subregional_or_thematic_execution",
+        "actor": "GGD Flevoland",
+        "applies_to_region": "GGD-regio Flevoland",
+        "source_status": "source_backed",
+        "source_ids": [
+          "nat_azwa_opdracht_werkagenda_d5_2026",
+          "external_ggd_flevoland_begroting_2026"
+        ],
+        "public_wording": "Voor GGD-uitgevoerde onderdelen kan de GGD-regio de natuurlijke schaal zijn; de landelijke werkagenda-bron waarschuwt dat GGD-regio en IZA-regio niet overal overeenkomen.",
+        "does_not_mean": [
+          "GGD-schaal is automatisch gelijk aan IZA/AZWA-regio Flevoland."
+        ]
+      },
+      {
+        "role_id": "lelystad_practical_task_claim",
+        "role_type": "human_claim_needs_verification",
+        "actor": "Gemeente Lelystad",
+        "claim": "Een deel van de IZA/AZWA-taken wordt praktisch door Lelystad opgepakt.",
+        "source_status": "human_claim_needs_verification",
+        "source_ids": [],
+        "review_question": "Welke specifieke taak, werkagenda, pilot, besluit, budgethouderrol of projectdocument noemt Lelystad als trekker, penvoerder, budgethouder, coordinatiepunt of uitvoerder?",
+        "agent_warning": "Do not restate this as fact. Use it as a search and review prompt."
+      }
+    ]
+  },
+  "actor_roles": [
+    {
+      "actor_id": "gemeente_almere",
+      "actor": "Gemeente Almere",
+      "public_role": "Lokale gemeente en in externe netwerkgegevens genoemd als mandaatgemeente voor de Flevolandse IZA/AZWA-route.",
+      "source_status": "partly_source_backed_needs_local_mandate_validation",
+      "validation_needed": [
+        "formeel mandaatbesluit",
+        "lokale eigenaar per D6-onderdeel",
+        "college/raad rol"
+      ]
+    },
+    {
+      "actor_id": "ggd_flevoland",
+      "actor": "GGD Flevoland",
+      "public_role": "Publieke gezondheidsdienst voor GGD-regio Flevoland; natuurlijke schaal voor GGD-uitgevoerde onderdelen.",
+      "source_status": "source_backed_for_region_split",
+      "validation_needed": [
+        "welke D6-taken GGD uitvoert",
+        "afbakening GGD-regio versus IZA/AZWA-regio"
+      ]
+    },
+    {
+      "actor_id": "zorgzaam_flevoland_flever",
+      "actor": "Zorgzaam Flevoland / Flever",
+      "public_role": "Regionale beweging en ondersteuning vanuit het IZA-regioplan; ZonMw-bron noemt doorontwikkeling van de samenwerkingsstructuur.",
+      "source_status": "source_backed_supporting_governance",
+      "validation_needed": [
+        "besluitvormende rol versus ondersteunende rol",
+        "wie is aanspreekbaar per werkstroom"
+      ]
+    },
+    {
+      "actor_id": "zorgverzekeraar",
+      "actor": "Zorgverzekeraar / zorgkantoor",
+      "public_role": "Partner in regionale samenwerking en financieringsafspraken; zorgkantoorregio valt niet samen met IZA/AZWA-regio.",
+      "source_status": "source_backed_at_regional_split_level",
+      "validation_needed": [
+        "contracteerrol",
+        "Zvw-financiering per target",
+        "zorgkantoor versus IZA/AZWA-route"
+      ]
+    },
+    {
+      "actor_id": "welzijn_sociaal_werk",
+      "actor": "Welzijn en sociaal werk",
+      "public_role": "Uitvoeringspartner voor sociale basis, ontmoeting, sociaal verwijzen en laagdrempelige steun.",
+      "source_status": "public_sources_indicate_role_but_local_allocation_needed",
+      "validation_needed": [
+        "welke organisaties",
+        "capaciteit",
+        "opdracht en budget"
+      ]
+    },
+    {
+      "actor_id": "huisartsen_eerstelijn",
+      "actor": "Huisartsen en eerstelijn",
+      "public_role": "Partner voor sociaal verwijzen, wijkverbanden en verbinding tussen zorg en sociaal domein.",
+      "source_status": "public_sources_indicate_role_but_local_allocation_needed",
+      "validation_needed": [
+        "praktijknetwerken",
+        "verwijsafspraken",
+        "wijkverbanden"
+      ]
+    }
+  ],
+  "dimensions": [
+    {
+      "dimension_id": "d6_basisinfrastructuur",
+      "label": "D6 sociale en gezonde basisinfrastructuur",
+      "public_question": "Welke publieke bronnen maken duidelijk wat lokaal of regionaal onder de D6-basisinfrastructuur valt?",
+      "topics": [
+        "d6.basisinfrastructuur"
+      ],
+      "local_validation_fields": [
+        "lokale afbakening basisinfrastructuur",
+        "relatie met sociale basis en GALA",
+        "welke onderdelen al bestaan",
+        "welke onderdelen nieuw of uit te breiden zijn"
+      ],
+      "source_claim_count": 97,
+      "top_source_document_ids": [
+        "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst",
+        "nat_azwa_2026_voortgang_kamerbrief",
+        "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
+        "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026",
+        "nat_azwa_opdracht_werkagenda_d5_2026",
+        "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst"
+      ],
+      "sample_claims": [
+        {
+          "claim_id": "clm__nat_azwa_2025_definitief_d6_001",
+          "topic": "d6.basisinfrastructuur",
+          "statement": "D6 requires a herkenbaar aanbod van inloopvoorzieningen sociaal en gezond, stronger local teams, supported citizen initiatives, healthy-school work, and GGD coordination.",
+          "source_document_id": "nat_azwa_2025_definitief",
+          "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
+          "human_review_status": "seeded_from_document_extraction",
+          "confidence": 0.95
+        },
+        {
+          "claim_id": "clm__nat_azwa_2025_definitief_d6_002",
+          "topic": "d6.local_teams",
+          "statement": "The D6 local structure is concretized through strong local teams in hechte wijkverbanden and regional agreements about ketenaanpak governance by Q1 2026.",
+          "source_document_id": "nat_azwa_2025_definitief",
+          "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
+          "human_review_status": "seeded_from_document_extraction",
+          "confidence": 0.93
+        },
+        {
+          "claim_id": "clm__nat_azwa_2025_onderhandelaarsakkoord_d6_001",
+          "topic": "d6.basisinfrastructuur",
+          "statement": "D6 is defined as a basisinfrastructuur with inloopvoorzieningen, stronger local teams, support for citizen initiatives, healthy-school work, and regional GGD coordination.",
+          "source_document_id": "nat_azwa_2025_onderhandelaarsakkoord",
+          "publisher": "VNG",
+          "human_review_status": "seeded_from_document_extraction",
+          "confidence": 0.95
+        },
+        {
+          "claim_id": "clm__nat_azwa_2026_cw31_kader_d5_d6_d6_001",
+          "topic": "d6.basisinfrastructuur",
+          "statement": "D6 is framed as the basis in wijk and regio that must support the execution of the basisfunctionaliteiten.",
+          "source_document_id": "nat_azwa_2026_cw31_kader_d5_d6",
+          "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
+          "human_review_status": "seeded_from_document_extraction",
+          "confidence": 0.95
+        },
+        {
+          "claim_id": "clm__reg_flevoland_2023_regioplan_iza_d6_001",
+          "topic": "d6.digital_and_operational_infrastructure",
+          "statement": "The Regioplan identifies digital infrastructure as essential and names a regional collaboration organization, a shared data-availability vision, information architecture, and use-case based rollout.",
+          "source_document_id": "reg_flevoland_2023_regioplan_iza",
+          "publisher": "Zorgzaam Flevoland / Flever",
+          "human_review_status": "needs_human_review",
+          "confidence": 0.68
+        },
+        {
+          "claim_id": "clm__reg_flevoland_2023_regioplan_iza_governance_and_finance_001",
+          "topic": "governance.regional_coordination",
+          "statement": "The Verbindende Coalitie, workgroups, and an expert team are used to shape the transformatieagenda and test financial feasibility.",
+          "source_document_id": "reg_flevoland_2023_regioplan_iza",
+          "publisher": "Zorgzaam Flevoland / Flever",
+          "human_review_status": "seeded_from_document_extraction",
+          "confidence": 0.82
+        },
+        {
+          "claim_id": "clm__mun_almere_pga_transformatieplan_d6_001",
+          "topic": "d6.digital_and_operational_infrastructure",
+          "statement": "The local plan names RTP Almere, the RSO, data infrastructure, and Monitoring@home as part of the operational infrastructure needed for care closer to home.",
+          "source_document_id": "mun_almere_pga_transformatieplan",
+          "publisher": "Positief Gezond Almere",
+          "human_review_status": "needs_human_review",
+          "confidence": 0.68
+        },
+        {
+          "claim_id": "clm__mun_almere_pga_transformatieplan_d6_002",
+          "topic": "d6.digital_and_operational_infrastructure",
+          "statement": "The plan also makes a current shared information picture for professionals part of the local enabling structure.",
+          "source_document_id": "mun_almere_pga_transformatieplan",
+          "publisher": "Positief Gezond Almere",
+          "human_review_status": "needs_human_review",
+          "confidence": 0.68
+        }
+      ],
+      "public_coverage_status": "public_claims_present_needs_review",
+      "review_note": "Claims support orientation only; use source passages before writing bestuurlijke text."
+    },
+    {
+      "dimension_id": "local_teams_and_wijkverbanden",
+      "label": "Lokale teams en hechte wijkverbanden",
+      "public_question": "Wie is aanspreekbaar voor lokale teams, wijkverbanden en verbinding met de eerste lijn?",
+      "topics": [
+        "d6.local_teams"
+      ],
+      "local_validation_fields": [
+        "welke lokale teams tellen mee",
+        "wijkverbanden per gebied",
+        "aanspreekpunt per wijk",
+        "verbinding met huisartsen/eerstelijn"
+      ],
+      "source_claim_count": 97,
+      "top_source_document_ids": [
+        "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst",
+        "nat_azwa_2026_voortgang_kamerbrief",
+        "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
+        "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026",
+        "nat_azwa_opdracht_werkagenda_d5_2026",
+        "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst"
+      ],
+      "sample_claims": [
+        {
+          "claim_id": "clm__nat_azwa_2025_definitief_d6_001",
+          "topic": "d6.basisinfrastructuur",
+          "statement": "D6 requires a herkenbaar aanbod van inloopvoorzieningen sociaal en gezond, stronger local teams, supported citizen initiatives, healthy-school work, and GGD coordination.",
+          "source_document_id": "nat_azwa_2025_definitief",
+          "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
+          "human_review_status": "seeded_from_document_extraction",
+          "confidence": 0.95
+        },
+        {
+          "claim_id": "clm__nat_azwa_2025_definitief_d6_002",
+          "topic": "d6.local_teams",
+          "statement": "The D6 local structure is concretized through strong local teams in hechte wijkverbanden and regional agreements about ketenaanpak governance by Q1 2026.",
+          "source_document_id": "nat_azwa_2025_definitief",
+          "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
+          "human_review_status": "seeded_from_document_extraction",
+          "confidence": 0.93
+        },
+        {
+          "claim_id": "clm__nat_azwa_2025_onderhandelaarsakkoord_d6_001",
+          "topic": "d6.basisinfrastructuur",
+          "statement": "D6 is defined as a basisinfrastructuur with inloopvoorzieningen, stronger local teams, support for citizen initiatives, healthy-school work, and regional GGD coordination.",
+          "source_document_id": "nat_azwa_2025_onderhandelaarsakkoord",
+          "publisher": "VNG",
+          "human_review_status": "seeded_from_document_extraction",
+          "confidence": 0.95
+        },
+        {
+          "claim_id": "clm__nat_azwa_2026_cw31_kader_d5_d6_d6_001",
+          "topic": "d6.basisinfrastructuur",
+          "statement": "D6 is framed as the basis in wijk and regio that must support the execution of the basisfunctionaliteiten.",
+          "source_document_id": "nat_azwa_2026_cw31_kader_d5_d6",
+          "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
+          "human_review_status": "seeded_from_document_extraction",
+          "confidence": 0.95
+        },
+        {
+          "claim_id": "clm__reg_flevoland_2023_regioplan_iza_d6_001",
+          "topic": "d6.digital_and_operational_infrastructure",
+          "statement": "The Regioplan identifies digital infrastructure as essential and names a regional collaboration organization, a shared data-availability vision, information architecture, and use-case based rollout.",
+          "source_document_id": "reg_flevoland_2023_regioplan_iza",
+          "publisher": "Zorgzaam Flevoland / Flever",
+          "human_review_status": "needs_human_review",
+          "confidence": 0.68
+        },
+        {
+          "claim_id": "clm__reg_flevoland_2023_regioplan_iza_governance_and_finance_001",
+          "topic": "governance.regional_coordination",
+          "statement": "The Verbindende Coalitie, workgroups, and an expert team are used to shape the transformatieagenda and test financial feasibility.",
+          "source_document_id": "reg_flevoland_2023_regioplan_iza",
+          "publisher": "Zorgzaam Flevoland / Flever",
+          "human_review_status": "seeded_from_document_extraction",
+          "confidence": 0.82
+        },
+        {
+          "claim_id": "clm__mun_almere_pga_transformatieplan_d6_001",
+          "topic": "d6.digital_and_operational_infrastructure",
+          "statement": "The local plan names RTP Almere, the RSO, data infrastructure, and Monitoring@home as part of the operational infrastructure needed for care closer to home.",
+          "source_document_id": "mun_almere_pga_transformatieplan",
+          "publisher": "Positief Gezond Almere",
+          "human_review_status": "needs_human_review",
+          "confidence": 0.68
+        },
+        {
+          "claim_id": "clm__mun_almere_pga_transformatieplan_d6_002",
+          "topic": "d6.digital_and_operational_infrastructure",
+          "statement": "The plan also makes a current shared information picture for professionals part of the local enabling structure.",
+          "source_document_id": "mun_almere_pga_transformatieplan",
+          "publisher": "Positief Gezond Almere",
+          "human_review_status": "needs_human_review",
+          "confidence": 0.68
+        }
+      ],
+      "public_coverage_status": "public_claims_present_needs_review",
+      "review_note": "Claims support orientation only; use source passages before writing bestuurlijke text."
+    },
+    {
+      "dimension_id": "inloopvoorzieningen_en_steunpunten",
+      "label": "Inloopvoorzieningen en laagdrempelige steun",
+      "public_question": "Welke bronnen koppelen inloop, steunpunten, sociaal verwijzen of ontmoeting aan D6/D5?",
+      "topics": [
+        "d6.basisinfrastructuur",
+        "d5.basisfunctionaliteiten_onderbouwd"
+      ],
+      "local_validation_fields": [
+        "bestaande inloopvoorzieningen",
+        "laag­drempelige steunpunten",
+        "openingstijden en toegankelijkheid",
+        "uitvoerder en financier"
+      ],
+      "source_claim_count": 125,
+      "top_source_document_ids": [
+        "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026",
+        "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
+        "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
+        "nat_azwa_2026_voortgang_kamerbrief",
+        "nat_azwa_opdracht_werkagenda_d5_2026",
+        "nat_gala_2023_gezond_en_actief_leven"
+      ],
+      "sample_claims": [
+        {
+          "claim_id": "clm__nat_azwa_2025_definitief_d6_001",
+          "topic": "d6.basisinfrastructuur",
+          "statement": "D6 requires a herkenbaar aanbod van inloopvoorzieningen sociaal en gezond, stronger local teams, supported citizen initiatives, healthy-school work, and GGD coordination.",
+          "source_document_id": "nat_azwa_2025_definitief",
+          "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
+          "human_review_status": "seeded_from_document_extraction",
+          "confidence": 0.95
+        },
+        {
+          "claim_id": "clm__nat_azwa_2025_definitief_d6_002",
+          "topic": "d6.local_teams",
+          "statement": "The D6 local structure is concretized through strong local teams in hechte wijkverbanden and regional agreements about ketenaanpak governance by Q1 2026.",
+          "source_document_id": "nat_azwa_2025_definitief",
+          "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
+          "human_review_status": "seeded_from_document_extraction",
+          "confidence": 0.93
+        },
+        {
+          "claim_id": "clm__nat_azwa_2025_onderhandelaarsakkoord_d6_001",
+          "topic": "d6.basisinfrastructuur",
+          "statement": "D6 is defined as a basisinfrastructuur with inloopvoorzieningen, stronger local teams, support for citizen initiatives, healthy-school work, and regional GGD coordination.",
+          "source_document_id": "nat_azwa_2025_onderhandelaarsakkoord",
+          "publisher": "VNG",
+          "human_review_status": "seeded_from_document_extraction",
+          "confidence": 0.95
+        },
+        {
+          "claim_id": "clm__nat_azwa_2026_cw31_kader_d5_d6_d5_001",
+          "topic": "d5.basisfunctionaliteiten_onderbouwd",
+          "statement": "The D5 objective is to strengthen care-social cooperation so people get equal access to the care and support they need, with sociaal verwijzen named as an example.",
+          "source_document_id": "nat_azwa_2026_cw31_kader_d5_d6",
+          "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
+          "human_review_status": "seeded_from_document_extraction",
+          "confidence": 0.93
+        },
+        {
+          "claim_id": "clm__nat_azwa_2026_cw31_kader_d5_d6_d5_002",
+          "topic": "d5.basisfunctionaliteiten_onderbouwd",
+          "statement": "The sheet describes D5 as a way to implement proven effective basisfunctionaliteiten such as sociaal verwijzen and valpreventie on a regional scale.",
+          "source_document_id": "nat_azwa_2026_cw31_kader_d5_d6",
+          "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
+          "human_review_status": "seeded_from_document_extraction",
+          "confidence": 0.93
+        },
+        {
+          "claim_id": "clm__nat_azwa_2026_cw31_kader_d5_d6_d6_001",
+          "topic": "d6.basisinfrastructuur",
+          "statement": "D6 is framed as the basis in wijk and regio that must support the execution of the basisfunctionaliteiten.",
+          "source_document_id": "nat_azwa_2026_cw31_kader_d5_d6",
+          "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
+          "human_review_status": "seeded_from_document_extraction",
+          "confidence": 0.95
+        },
+        {
+          "claim_id": "clm__reg_flevoland_2023_regioplan_iza_d6_001",
+          "topic": "d6.digital_and_operational_infrastructure",
+          "statement": "The Regioplan identifies digital infrastructure as essential and names a regional collaboration organization, a shared data-availability vision, information architecture, and use-case based rollout.",
+          "source_document_id": "reg_flevoland_2023_regioplan_iza",
+          "publisher": "Zorgzaam Flevoland / Flever",
+          "human_review_status": "needs_human_review",
+          "confidence": 0.68
+        },
+        {
+          "claim_id": "clm__reg_flevoland_2023_regioplan_iza_governance_and_finance_001",
+          "topic": "governance.regional_coordination",
+          "statement": "The Verbindende Coalitie, workgroups, and an expert team are used to shape the transformatieagenda and test financial feasibility.",
+          "source_document_id": "reg_flevoland_2023_regioplan_iza",
+          "publisher": "Zorgzaam Flevoland / Flever",
+          "human_review_status": "seeded_from_document_extraction",
+          "confidence": 0.82
+        }
+      ],
+      "public_coverage_status": "public_claims_present_needs_review",
+      "review_note": "Claims support orientation only; use source passages before writing bestuurlijke text."
+    },
+    {
+      "dimension_id": "regional_coordination",
+      "label": "Regionale coordinatie en schaal",
+      "public_question": "Welke bron onderscheidt IZA/AZWA-regio, GGD-regio, mandaatgemeente en uitvoeringsschaal?",
+      "topics": [
+        "governance.regional_coordination",
+        "municipal.role_allocation"
+      ],
+      "local_validation_fields": [
+        "mandaatgemeente-besluit",
+        "regionale tafel of bestuurlijke coalitie",
+        "GGD-regio versus IZA/AZWA-regio",
+        "zorgverzekeraar/zorgkantoorrol"
+      ],
+      "source_claim_count": 99,
+      "top_source_document_ids": [
+        "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst",
+        "nat_azwa_2026_voortgang_kamerbrief",
+        "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
+        "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026",
+        "nat_azwa_opdracht_werkagenda_d5_2026",
+        "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst"
+      ],
+      "sample_claims": [
+        {
+          "claim_id": "clm__nat_azwa_2025_definitief_d6_001",
+          "topic": "d6.basisinfrastructuur",
+          "statement": "D6 requires a herkenbaar aanbod van inloopvoorzieningen sociaal en gezond, stronger local teams, supported citizen initiatives, healthy-school work, and GGD coordination.",
+          "source_document_id": "nat_azwa_2025_definitief",
+          "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
+          "human_review_status": "seeded_from_document_extraction",
+          "confidence": 0.95
+        },
+        {
+          "claim_id": "clm__nat_azwa_2025_definitief_d6_002",
+          "topic": "d6.local_teams",
+          "statement": "The D6 local structure is concretized through strong local teams in hechte wijkverbanden and regional agreements about ketenaanpak governance by Q1 2026.",
+          "source_document_id": "nat_azwa_2025_definitief",
+          "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
+          "human_review_status": "seeded_from_document_extraction",
+          "confidence": 0.93
+        },
+        {
+          "claim_id": "clm__nat_azwa_2025_onderhandelaarsakkoord_d6_001",
+          "topic": "d6.basisinfrastructuur",
+          "statement": "D6 is defined as a basisinfrastructuur with inloopvoorzieningen, stronger local teams, support for citizen initiatives, healthy-school work, and regional GGD coordination.",
+          "source_document_id": "nat_azwa_2025_onderhandelaarsakkoord",
+          "publisher": "VNG",
+          "human_review_status": "seeded_from_document_extraction",
+          "confidence": 0.95
+        },
+        {
+          "claim_id": "clm__nat_azwa_2026_cw31_kader_d5_d6_d6_001",
+          "topic": "d6.basisinfrastructuur",
+          "statement": "D6 is framed as the basis in wijk and regio that must support the execution of the basisfunctionaliteiten.",
+          "source_document_id": "nat_azwa_2026_cw31_kader_d5_d6",
+          "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
+          "human_review_status": "seeded_from_document_extraction",
+          "confidence": 0.95
+        },
+        {
+          "claim_id": "clm__reg_flevoland_2023_regioplan_iza_d6_001",
+          "topic": "d6.digital_and_operational_infrastructure",
+          "statement": "The Regioplan identifies digital infrastructure as essential and names a regional collaboration organization, a shared data-availability vision, information architecture, and use-case based rollout.",
+          "source_document_id": "reg_flevoland_2023_regioplan_iza",
+          "publisher": "Zorgzaam Flevoland / Flever",
+          "human_review_status": "needs_human_review",
+          "confidence": 0.68
+        },
+        {
+          "claim_id": "clm__reg_flevoland_2023_regioplan_iza_governance_and_finance_001",
+          "topic": "governance.regional_coordination",
+          "statement": "The Verbindende Coalitie, workgroups, and an expert team are used to shape the transformatieagenda and test financial feasibility.",
+          "source_document_id": "reg_flevoland_2023_regioplan_iza",
+          "publisher": "Zorgzaam Flevoland / Flever",
+          "human_review_status": "seeded_from_document_extraction",
+          "confidence": 0.82
+        },
+        {
+          "claim_id": "clm__reg_flevoland_2023_regioplan_iza_municipal_translation_002",
+          "topic": "municipal.role_allocation",
+          "statement": "A key follow-up issue for municipal implementation is clarifying roles and responsibilities between municipality, social domain, insurers, and providers.",
+          "source_document_id": "reg_flevoland_2023_regioplan_iza",
+          "publisher": "Zorgzaam Flevoland / Flever",
+          "human_review_status": "seeded_from_document_extraction",
+          "confidence": 0.82
+        },
+        {
+          "claim_id": "clm__mun_almere_pga_transformatieplan_d6_001",
+          "topic": "d6.digital_and_operational_infrastructure",
+          "statement": "The local plan names RTP Almere, the RSO, data infrastructure, and Monitoring@home as part of the operational infrastructure needed for care closer to home.",
+          "source_document_id": "mun_almere_pga_transformatieplan",
+          "publisher": "Positief Gezond Almere",
+          "human_review_status": "needs_human_review",
+          "confidence": 0.68
+        }
+      ],
+      "public_coverage_status": "public_claims_present_needs_review",
+      "review_note": "Claims support orientation only; use source passages before writing bestuurlijke text."
+    },
+    {
+      "dimension_id": "monitoring_and_learning",
+      "label": "Monitoring, leren en verantwoording",
+      "public_question": "Wie monitort, leert en verantwoordt de samenwerking rond D6?",
+      "topics": [
+        "monitoring.other",
+        "governance.regional_coordination"
+      ],
+      "local_validation_fields": [
+        "monitoringset",
+        "wie rapporteert",
+        "frequentie",
+        "waar besluiten of bijsturing landen"
+      ],
+      "source_claim_count": 154,
+      "top_source_document_ids": [
+        "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst",
+        "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
+        "nat_azwa_2026_voortgang_kamerbrief",
+        "nat_azwa_opdracht_werkagenda_d5_2026",
+        "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
+        "nat_azwa_2026_cw31_kamerbrief"
+      ],
+      "sample_claims": [
+        {
+          "claim_id": "clm__nat_azwa_2025_definitief_d6_001",
+          "topic": "d6.basisinfrastructuur",
+          "statement": "D6 requires a herkenbaar aanbod van inloopvoorzieningen sociaal en gezond, stronger local teams, supported citizen initiatives, healthy-school work, and GGD coordination.",
+          "source_document_id": "nat_azwa_2025_definitief",
+          "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
+          "human_review_status": "seeded_from_document_extraction",
+          "confidence": 0.95
+        },
+        {
+          "claim_id": "clm__nat_azwa_2025_definitief_d6_002",
+          "topic": "d6.local_teams",
+          "statement": "The D6 local structure is concretized through strong local teams in hechte wijkverbanden and regional agreements about ketenaanpak governance by Q1 2026.",
+          "source_document_id": "nat_azwa_2025_definitief",
+          "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
+          "human_review_status": "seeded_from_document_extraction",
+          "confidence": 0.93
+        },
+        {
+          "claim_id": "clm__nat_azwa_2025_onderhandelaarsakkoord_d6_001",
+          "topic": "d6.basisinfrastructuur",
+          "statement": "D6 is defined as a basisinfrastructuur with inloopvoorzieningen, stronger local teams, support for citizen initiatives, healthy-school work, and regional GGD coordination.",
+          "source_document_id": "nat_azwa_2025_onderhandelaarsakkoord",
+          "publisher": "VNG",
+          "human_review_status": "seeded_from_document_extraction",
+          "confidence": 0.95
+        },
+        {
+          "claim_id": "clm__nat_azwa_2026_cw31_kader_d5_d6_d6_001",
+          "topic": "d6.basisinfrastructuur",
+          "statement": "D6 is framed as the basis in wijk and regio that must support the execution of the basisfunctionaliteiten.",
+          "source_document_id": "nat_azwa_2026_cw31_kader_d5_d6",
+          "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
+          "human_review_status": "seeded_from_document_extraction",
+          "confidence": 0.95
+        },
+        {
+          "claim_id": "clm__reg_flevoland_2023_regioplan_iza_d6_001",
+          "topic": "d6.digital_and_operational_infrastructure",
+          "statement": "The Regioplan identifies digital infrastructure as essential and names a regional collaboration organization, a shared data-availability vision, information architecture, and use-case based rollout.",
+          "source_document_id": "reg_flevoland_2023_regioplan_iza",
+          "publisher": "Zorgzaam Flevoland / Flever",
+          "human_review_status": "needs_human_review",
+          "confidence": 0.68
+        },
+        {
+          "claim_id": "clm__reg_flevoland_2023_regioplan_iza_governance_and_finance_001",
+          "topic": "governance.regional_coordination",
+          "statement": "The Verbindende Coalitie, workgroups, and an expert team are used to shape the transformatieagenda and test financial feasibility.",
+          "source_document_id": "reg_flevoland_2023_regioplan_iza",
+          "publisher": "Zorgzaam Flevoland / Flever",
+          "human_review_status": "seeded_from_document_extraction",
+          "confidence": 0.82
+        },
+        {
+          "claim_id": "clm__mun_almere_pga_transformatieplan_d6_001",
+          "topic": "d6.digital_and_operational_infrastructure",
+          "statement": "The local plan names RTP Almere, the RSO, data infrastructure, and Monitoring@home as part of the operational infrastructure needed for care closer to home.",
+          "source_document_id": "mun_almere_pga_transformatieplan",
+          "publisher": "Positief Gezond Almere",
+          "human_review_status": "needs_human_review",
+          "confidence": 0.68
+        },
+        {
+          "claim_id": "clm__mun_almere_pga_transformatieplan_d6_002",
+          "topic": "d6.digital_and_operational_infrastructure",
+          "statement": "The plan also makes a current shared information picture for professionals part of the local enabling structure.",
+          "source_document_id": "mun_almere_pga_transformatieplan",
+          "publisher": "Positief Gezond Almere",
+          "human_review_status": "needs_human_review",
+          "confidence": 0.68
+        }
+      ],
+      "public_coverage_status": "public_claims_present_needs_review",
+      "review_note": "Claims support orientation only; use source passages before writing bestuurlijke text."
+    }
+  ],
+  "carry_forward": [
+    "Validate formal Almere mandaatgemeente documentation before using as bestuurlijke fact beyond narrow public listings.",
+    "Ask local staff which local teams, wijkverbanden, inloopvoorzieningen and social-basis partners should count for D6.",
+    "Separate GGD-regio, IZA/AZWA-regio, zorgkantoorregio and local execution in all outward-facing material.",
+    "Escalate unresolved ownership, budget, monitoring and scale choices as decision questions after local validation."
+  ]
+}

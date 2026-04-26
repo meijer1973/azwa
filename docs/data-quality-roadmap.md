@@ -16,8 +16,8 @@ Gebruik deze roadmap als levend werkdocument. Werk na elke sprint de statusregel
 | 24.1 Taxonomie en checklist | completed | `config/data_quality_perspectives.json`, `docs/data-quality-checklist.md` |
 | 24.2 Audit van bestaande site-data | completed | `docs/completed-plans/phase24-sprint24.2-audit.md`, `data/extracted/data_quality_audit.json` |
 | 24.3 Review-dashboard intern | completed | `docs/internal/review-dashboard.html`, `src/build_internal_review_dashboard.py`, `docs/completed-plans/phase24-sprint24.3-review-dashboard.md` |
-| 25.3 Nulmeting en capaciteit werkagenda | open | Huidige volgende sprint; vul de werkagenda-structuur zo ver mogelijk met publieke informatie en markeer lokale gaten voor medewerkers, validatie of besluitvorming |
-| 25.4 D6 governance en samenwerking | open | Niet hoogste prioriteit, wel vroeg plannen; versterk bronbasis rond wie wat doet, wie samenwerkt en wie verantwoordelijk is voor D6 |
+| 25.3 Nulmeting en capaciteit werkagenda | completed | `data/extracted/workagenda_nulmeting_capacity.json`, `src/build_workagenda_nulmeting_capacity.py`, `docs/completed-plans/phase25-sprint25.3-nulmeting-capaciteit.md` |
+| 25.4 D6 governance en samenwerking | open | Huidige sprint; eerste D6-governance- en samenwerkingslaag staat in `data/extracted/d6_governance_collaboration.json` |
 | 25.5 Almere en Flevoland | open |  |
 | 25.6 Regionale governance | open |  |
 | 26.1 PDF- en tabelkwaliteit | open |  |
@@ -43,25 +43,23 @@ Gebruik deze roadmap als levend werkdocument. Werk na elke sprint de statusregel
 | 31.3 Reviewronde met menselijke beoordelaars | open |  |
 
 ## Huidige sprintplan
-Sprint 25.3 richt zich op nulmeting en capaciteit voor de werkagenda. Sprint 25.2 heeft de publieke lokale bronbasis versterkt; de volgende stap is de werkagenda-structuur zo ver mogelijk vullen met publieke informatie en expliciet markeren welke gaten door lokale medewerkers, validatie of latere besluitvorming moeten worden gevuld.
+Sprint 25.4 richt zich op D6-governance en samenwerking. Sprint 25.3 heeft de publieke nulmeting en capaciteitsvelden per D5-werkagenda-target gevuld voor zover de publieke bronbasis dat toestaat; de volgende stap is expliciet maken wie bij D6 besluit, coordineert, uitvoert, financiert, monitort en welke rol nog lokale validatie of besluitvorming vraagt.
 
 Status op 26 april 2026: Sprint 25.2 is afgerond als publieke bronversterkingssprint. `data/extracted/local_source_strengthening_almere.json` maakt zichtbaar welke lokale bronnen in de formele laag zitten, welke publieke bronnen als assessmentmateriaal zijn beoordeeld, en welke vragen naar later in de workflow gaan omdat de publieke bronbasis is uitgeput of omdat een geschoonde validatiestap nodig is. De geselecteerde Documentwijzer-bijlagen voor Visie Gezondheidsbeleid en Maatschappelijke Agenda zijn eerst naar page-markdown omgezet en daarna opgenomen in `data/raw/manifest.json`. Ook de GGD-tabellenboeken voor volwassenen en ouderen, de GGD-valpreventiepagina Almere en de ZonMw-bron zijn opgenomen in `data/raw/manifest.json`, door inventory/extractie/claims/site-viewmodels verwerkt en blijven reviewmateriaal voordat ze bestuurlijk of public-facing worden gebruikt. Niet-publieke informatie, ontbrekende lokale bevestiging en formele besluitvragen blokkeren deze fase niet; ze worden als gaten of carry-over taken zichtbaar gemaakt voor lokale medewerkers en latere besluitvorming.
 
-Eerste Sprint 25.3-uitvoer op 26 april 2026: `data/extracted/workagenda_nulmeting_capacity.json` vult per D5-werkagenda-target de publieke nulmetingsstructuur voor zover mogelijk. De laag gebruikt de werkagenda-targets uit Sprint 25.1, de publieke bronversterking uit Sprint 25.2, GGD Flevoland 2024-indicatoren en een op 26 april 2026 geverifieerde CBS KWB 2025-denominator voor Almere. De laag bevat indicatieve berekeningen voor sociaal verwijzen en valpreventie en houdt ontbrekende lokale capaciteit, aanbod, eigenaar, budget, wachttijden en besluitstatus als invulvelden zichtbaar.
+Status op 26 april 2026: eerste Sprint 25.4-uitvoer toegevoegd in `data/extracted/d6_governance_collaboration.json`. De laag gebruikt de publieke claims, de regionale rollen/splits-guardrail en de nulmeting uit Sprint 25.3 om per D6-dimensie de publieke brondekking, actorrollen en lokale validatievelden zichtbaar te maken. Niet-publieke rolverdeling, eigenaarschap, budget, monitoring en schaalkeuzes blijven invul- of besluitvragen.
 
-Eerste verbeterplan voor Sprint 25.3:
+Eerste verbeterplan voor Sprint 25.4:
 
-- Gebruik `docs/internal/AZWA, IZA and GALA for the Almere case.md` en `docs/internal/conceptinvulling_werkagenda_azwa_almere.md` als interne research-signalen voor bronhiaten, niet als primaire bronfeiten.
-- Vul per werkagenda-target wat publiek bekend is over bestaand aanbod, doelgroep, dekking, capaciteit, uitvoerders, bronstatus en beslisgat.
-- Gebruik publieke bronnen eerst. Als publieke zoekslag is uitgeput, markeer het veld als lokale invulvraag in plaats van de sprint te blokkeren.
-- Gebruik de GGD Flevoland Gezondheidsmonitor-tabellenboeken 2024 voor publieke nulmetingsindicatoren, maar markeer berekeningen als indicatief totdat lokale medewerkers de interpretatie valideren.
-- Gebruik stabiele BRP/CBS-bronnen voor noemers en groeidruk; nieuwsberichten alleen als context, niet als rekenbasis.
-- Houd MGN-rol/geografie, ontbrekende raadsbrieven en formele lokale besluiten als carry-over taken voor lokale validatie of besluitvorming.
+- Gebruik publieke bronnen eerst om D6-rollen te ordenen; als bronnen geen taak, eigenaar of besluit geven, markeer dit als lokale validatie of besluitvraag.
+- Houd IZA/AZWA-regio, GGD-regio, zorgkantoorregio en lokale uitvoering strikt uit elkaar.
+- Maak per D6-dimensie zichtbaar welke bron alleen samenwerking of ambitie noemt en welke bron ook besluitvorming, uitvoering, financiering of monitoring aanwijst.
+- Gebruik `data/extracted/d6_governance_collaboration.json` als werklijst voor lokale medewerkers: lokale teams, wijkverbanden, inloopvoorzieningen, sociale basispartners, monitoring en eigenaarschap.
+- Schuif formele mandaat-, budget- en schaalkeuzes door naar besluitvorming wanneer de publieke bronbasis geen vastgesteld antwoord geeft.
 
 Geplande vervolgsprint:
 
-- Sprint 25.3 volgt daarna voor de nulmeting en capaciteitsbasis per basisfunctionaliteit. De conceptinvulling laat zien dat de structuur van de werkagenda al goed te vullen is, maar dat lokale capaciteit, bestaand aanbod, dekking, fte, wachttijden, wijkspreiding, budget en ingroeipad nog niet besluitvast zijn. Dat is een eigen sprint waard, omdat dit de werkagenda uitvoerbaar maakt.
-- Sprint 25.4 volgt daarna voor D6-governance en samenwerking. Deze is niet hoger dan de werkagenda-, lokale-bron- of nulmetingsprint, maar wel belangrijk genoeg om voor de bredere Almere/Flevoland- en governance-sprints te staan: D6 gaat sterk over rollen, lokale teams, wijkverbanden, sociale basis, GGD, zorgpartijen en regionale samenwerking, terwijl het dashboard nu laat zien dat governance-bronnen relatief dun zijn.
+- Sprint 25.5 volgt daarna voor Almere en Flevoland: verdere publieke lokale en regionale bronnen rond AZWA, IZA, GALA, preventie, sociaal domein en gezondheid.
 
 ## Doel
 De website is werkbaar als V1. De volgende ontwikkelfase richt zich daarom niet primair op de gebruikersinterface, maar op betere bronkwaliteit, betere extracties, betere claimstructuur en betere Nederlandse siteteksten.
@@ -158,12 +156,13 @@ Status: completed.
 - Open lokale bronvragen zijn expliciet carry-over naar Sprint 25.3, lokale medewerkers of latere besluitvorming wanneer publieke informatie is uitgeput.
 
 Sprint 25.3: Nulmeting en capaciteit werkagenda
-Status: open.
+Status: completed.
 
 - Eerste uitvoerlaag toegevoegd: `data/extracted/workagenda_nulmeting_capacity.json`.
 - De laag vult de werkagenda-structuur zo ver mogelijk met publieke bronnen en markeert lokale invulvelden expliciet voor medewerkers of latere besluitvorming.
 - Indicatieve berekeningen zijn toegevoegd voor sociaal verwijzen en valpreventie met CBS KWB 2025 Almere als denominator; deze berekeningen blijven indicatief totdat lokaal gevalideerd.
 - GGD Flevoland 2024-indicatoren zijn gekoppeld aan relevante targets zoals valpreventie, overgewicht/obesitas volwassenen, laagdrempelige steunpunten en mentale gezondheidsnetwerken; claims uit de tabellenboeken blijven reviewmateriaal.
+- De resterende capaciteit, fte, wachttijden, wijkspreiding, budget, eigenaar en besluitstatus zijn als lokale invulvelden vastgelegd in plaats van ingevuld zonder bron.
 - Bouw een nulmetingslaag per basisfunctionaliteit/aanpak, gekoppeld aan de werkagenda-targets uit Sprint 25.1.
 - Leg per target vast: bestaand aanbod, locaties, bereik, capaciteit/fte, wachttijden, aanbieders, huidige financiering, wijk- of stadsdeeldekking, doelgroepomvang en bronstatus.
 - Maak aparte berekenvelden voor landelijke richtwaarden die de bronbasis draagt, zoals verwijzingen per 10.000 inwoners, brugfunctionaris-fte per 10.000 inwoners, valrisico-inschatting bij 65-plussers en jeugd-/ouderenindicatoren. Gebruik actuele BRP/CBS-peildatum en markeer berekeningen als indicatief totdat bestuurlijk gevalideerd.
@@ -175,6 +174,9 @@ Status: open.
 Sprint 25.4: D6 governance en samenwerking
 Status: open.
 
+- Eerste uitvoerlaag toegevoegd: `data/extracted/d6_governance_collaboration.json`.
+- De laag splitst D6 in basisinfrastructuur, lokale teams/wijkverbanden, inloopvoorzieningen/steunpunten, regionale coordinatie en monitoring/leren.
+- Actorrollen voor Almere, GGD Flevoland, Zorgzaam Flevoland/Flever, zorgverzekeraar/zorgkantoor, welzijn/sociaal werk en huisartsen/eerstelijn zijn als publieke rolhypothese of bronstatus opgenomen met validatievelden.
 - Versterk bronnen over D6-rolverdeling: gemeente, mandaatgemeente, college, raad, GGD, welzijn, sociaal werk, huisartsen/eerstelijn, zorgverzekeraar, wijkteams/lokale teams en regionale samenwerkingsverbanden.
 - Zoek expliciete bronpassages over wie besluit, wie coordineert, wie uitvoert, wie financiert, wie monitort en wie aanspreekbaar is bij lokale teams, hechte wijkverbanden, inloopvoorzieningen en sociale basis.
 - Splits governanceclaims in besluitvorming, samenwerking, uitvoering, verantwoording en monitoring, zodat D6 niet alleen als inhoudelijke infrastructuur maar ook als verantwoordelijkheidsmodel zichtbaar wordt.
@@ -374,7 +376,7 @@ Een verbetering is pas klaar als:
 - de update een menselijke changelog heeft.
 
 ## Huidige volgende sprint
-De beste eerstvolgende sprint is Sprint 25.3: Nulmeting en capaciteit werkagenda.
+De beste eerstvolgende sprint is Sprint 25.4: D6 governance en samenwerking.
 
 Waarom:
 
@@ -383,12 +385,13 @@ Waarom:
 - Sprint 24.3 heeft een lokaal intern review-dashboard opgeleverd;
 - Sprint 25.1 heeft de werkagenda-operatielaag opgeleverd;
 - Sprint 25.2 heeft de publieke lokale bronbasis versterkt;
-- de volgende stap is de werkagenda-structuur zo ver mogelijk vullen met publieke informatie en de resterende lokale invulvragen expliciet maken voor medewerkers, validatie of besluitvorming.
+- Sprint 25.3 heeft de publieke nulmeting en capaciteitsvelden per werkagenda-target gevuld;
+- de volgende stap is D6-rollen, schaalniveaus, samenwerking en validatievragen expliciet maken.
 
 De concrete deliverables zijn:
 
-- een nulmetingslaag per werkagenda-target;
-- publieke velden voor aanbod, doelgroep, dekking, capaciteit, uitvoerders, bronstatus en resterende gaten;
-- expliciete markering van velden die lokale medewerkers moeten aanvullen;
-- onderscheid tussen publieke bronfeiten, indicatieve berekeningen, validatievragen en besluitvragen;
-- een korte datakwaliteitsnotitie met carry-over naar lokale invulling en besluitvorming.
+- een D6-governance- en samenwerkingslaag;
+- actorrollen per schaalniveau;
+- onderscheid tussen publieke rolfeiten, rolhypotheses, lokale validatievragen en besluitvragen;
+- dashboardweergave van D6-brondekking en open validatievelden;
+- een korte datakwaliteitsnotitie met carry-over naar lokale validatie en besluitvorming.

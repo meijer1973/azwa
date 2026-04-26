@@ -136,6 +136,7 @@ Machine-readable:
       "data/extracted/workagenda_d5_operational_requirements.json",
       "data/extracted/local_source_strengthening_almere.json",
       "data/extracted/workagenda_nulmeting_capacity.json",
+      "data/extracted/d6_governance_collaboration.json",
       "data/extracted/municipal/almere_current_view.json",
       "data/extracted/municipal/almere_local_decisions.json"
     ],

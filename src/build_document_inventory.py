@@ -740,6 +740,96 @@ ANNOTATIONS = {
         "contains_municipal_implications": True,
         "inventory_notes": "Public source for JGZ Almere's 0-18 role, school links, youth support and care-chain function.",
     },
+    "mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel": {
+        "source_classification": "primary",
+        "curation_bucket": "canonical",
+        "contains_d5": False,
+        "contains_d6": True,
+        "contains_structured_tables": True,
+        "contains_financing_logic": True,
+        "contains_governance_logic": True,
+        "contains_monitoring_evaluation_logic": False,
+        "contains_municipal_implications": True,
+        "inventory_notes": (
+            "Geamendeerd local council proposal for Stevige Lokale Teams. Use as high-value local decision "
+            "evidence, while still separating source-backed text from D6 classification choices."
+        ),
+    },
+    "mun_almere_2026_stevige_lokale_teams_raadsvoorstel": {
+        "source_classification": "primary",
+        "curation_bucket": "canonical",
+        "contains_d5": False,
+        "contains_d6": True,
+        "contains_structured_tables": True,
+        "contains_financing_logic": True,
+        "contains_governance_logic": True,
+        "contains_monitoring_evaluation_logic": False,
+        "contains_municipal_implications": True,
+        "inventory_notes": (
+            "Original local council proposal for Stevige Lokale Teams. Use for proposal logic and compare with "
+            "the amended/adopted version before treating claims as settled."
+        ),
+    },
+    "mun_almere_2026_stevige_lokale_teams_begrotingswijziging": {
+        "source_classification": "primary",
+        "curation_bucket": "canonical",
+        "contains_d5": False,
+        "contains_d6": True,
+        "contains_structured_tables": True,
+        "contains_financing_logic": True,
+        "contains_governance_logic": True,
+        "contains_monitoring_evaluation_logic": False,
+        "contains_municipal_implications": True,
+        "inventory_notes": (
+            "Budget-change attachment for the Stevige Lokale Teams council route. Use for local money-flow "
+            "evidence, not for national AZWA/D6 financing conclusions."
+        ),
+    },
+    "mun_almere_2026_stevige_lokale_teams_besluitenlijst": {
+        "source_classification": "primary",
+        "curation_bucket": "canonical",
+        "contains_d5": False,
+        "contains_d6": True,
+        "contains_structured_tables": False,
+        "contains_financing_logic": False,
+        "contains_governance_logic": True,
+        "contains_monitoring_evaluation_logic": False,
+        "contains_municipal_implications": True,
+        "inventory_notes": (
+            "Decision-list attachment for the Stevige Lokale Teams route. Use for decision traceability and "
+            "voting/adoption status."
+        ),
+    },
+    "mun_almere_samenwerkingsprojecten": {
+        "source_classification": "primary",
+        "curation_bucket": "canonical",
+        "contains_d5": False,
+        "contains_d6": True,
+        "contains_structured_tables": False,
+        "contains_financing_logic": False,
+        "contains_governance_logic": True,
+        "contains_monitoring_evaluation_logic": True,
+        "contains_municipal_implications": True,
+        "inventory_notes": (
+            "Public municipal project page for Samen Sterker in de Wijk and related Wonen & Zorg projects. "
+            "Use as implementation evidence, not as formal D6 classification."
+        ),
+    },
+    "mun_almere_pga_current_home": {
+        "source_classification": "primary",
+        "curation_bucket": "canonical",
+        "contains_d5": True,
+        "contains_d6": True,
+        "contains_structured_tables": False,
+        "contains_financing_logic": False,
+        "contains_governance_logic": True,
+        "contains_monitoring_evaluation_logic": True,
+        "contains_municipal_implications": True,
+        "inventory_notes": (
+            "Current public PGA homepage. Use for current implementation context and themes, not as a replacement "
+            "for the formal PGA transformation plan."
+        ),
+    },
 }
 
 

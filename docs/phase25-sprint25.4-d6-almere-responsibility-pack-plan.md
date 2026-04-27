@@ -5,6 +5,8 @@ Status: open.
 
 Sprint 25.4 is heropend na inhoudelijke review. De eerste D6-governance-laag is bruikbaar als publieke prefill, maar nog niet genoeg voor een uitvoeringsklare Almere-werkagenda. De heropende sprint richt zich daarom op een D6 Almere responsibility pack: publieke lokale en regionale bronnen versterken, D6-componenten aan actoren/schaal/financiering/besluitstatus koppelen, en expliciet markeren wat feit, interpretatie, voorstel, lokale validatie of later besluit is.
 
+Gate op 27 april 2026: niet door naar rapportproductie of bestuurlijke werkagenda-drafting. Wel doorgaan met een gefocuste D6 implementation/remediation sprint. De gate faalt nog zolang lokale D6-verantwoordelijkheid, eigenaarschap, samenwerking, uitvoeringsbewijs en bronstatus niet expliciet genoeg in het register en de bronlaag zijn vastgelegd.
+
 ## Sprint Ledger
 
 | Onderdeel | Status | Output |
@@ -45,7 +47,8 @@ Verifieer en intake daarna deze kandidaatbronnen als publieke D6-uitvoeringsbron
 Intakestatus op 27 april 2026:
 
 - Ingested in de formele raw manifest en downstream pipeline: Stevige Lokale Teams raadspagina, Wijkteams Almere, VNG Richtinggevend Kader, Toezicht Sociaal Domein Basisfuncties, GGD Flevoland Begroting 2026, GGD Flevoland Kennis en Advies, en GGD Flevoland/JGZ Almere profiel.
-- Nog open voor gerichte bronselectie: onderliggende Documentwijzer-stukken bij Stevige Lokale Teams, Samen Sterker in de Wijk/Almere samenwerkingsprojecten omdat directe download van de gevonden Almere-pagina's op 27 april 2026 een 404 gaf, actuele PGA-samenwerkingsbronnen en selectieve GGZ/partnerbronnen.
+- Aanvullende remediation-intake op 27 april 2026: Documentwijzer/Notubiz-stukken bij Stevige Lokale Teams zijn gevonden via instrument 26006 en opgenomen als geamendeerd raadsvoorstel, oorspronkelijk raadsvoorstel, begrotingswijziging en besluitenlijst. Ook Samenwerkingsprojecten/Samen Sterker in de Wijk en een actuele PGA-homepage zijn toegevoegd aan de bronlaag.
+- Nog open voor gerichte bronselectie: volledige afzonderlijke Samen Sterker-verhalenpagina als die weer publiek downloadbaar is, actuele specifieke PGA-projectpagina's, en selectieve GGZ/partnerbronnen.
 - Source-intake updates worden vastgelegd in `config/site_updates.json` en daarna verwerkt naar `data/site/site_updates_view.json`, de publieke updatepagina en de interne dashboardmirror. Elke update moet als afzonderlijk openklapbaar item leesbaar zijn.
 
 ## Responsibility register

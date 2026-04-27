@@ -1798,7 +1798,15 @@ def build_site_updates_view(documents: dict[str, dict], timeline_register: dict,
     }
 
     updates: list[dict] = []
-    for spec in sorted(update_specs, key=lambda item: (item["published_on"], item["title"]), reverse=True):
+    ordered_specs = [
+        spec
+        for _, spec in sorted(
+            enumerate(update_specs),
+            key=lambda item: (item[1]["published_on"], -item[0]),
+            reverse=True,
+        )
+    ]
+    for spec in ordered_specs:
         update_page_url = f"/updates/#{spec['update_id']}"
         claims_page_url = f"/updates/claims/{spec['update_id']}/"
         section_urls = {

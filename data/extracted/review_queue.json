@@ -3,15 +3,15 @@
   "generated_on": "2026-04-27",
   "summary": {
     "blocking": 0,
-    "warning": 4,
-    "review": 67,
-    "item_count": 71,
+    "warning": 6,
+    "review": 75,
+    "item_count": 81,
     "issue_counts_by_reason": {
-      "authority_unclear": 29,
-      "extraction_noise_detected": 3,
-      "missing_d5_content": 3,
-      "missing_d6_content": 1,
-      "municipality_relevance_inferred": 24,
+      "authority_unclear": 30,
+      "extraction_noise_detected": 5,
+      "missing_d5_content": 4,
+      "missing_d6_content": 2,
+      "municipality_relevance_inferred": 29,
       "table_content_not_promoted": 1,
       "unresolved_conflict": 10
     }
@@ -83,6 +83,38 @@
     },
     {
       "status": "open",
+      "severity": "warning",
+      "check_id": "document_payload_integrity",
+      "reason_code": "missing_d5_content",
+      "summary": "mun_almere_pga_current_home is expected to contain D5 material, but the extraction produced no D5 items.",
+      "recommended_action": "Review the source and improve the D5 extraction rules for this document.",
+      "document_id": "mun_almere_pga_current_home",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/documents/mun_almere_pga_current_home.json"
+      ],
+      "related_ids": {},
+      "evidence": {},
+      "review_item_id": "rvw_005"
+    },
+    {
+      "status": "open",
+      "severity": "warning",
+      "check_id": "document_payload_integrity",
+      "reason_code": "missing_d6_content",
+      "summary": "mun_almere_pga_current_home is expected to contain D6 material, but the extraction produced no D6 items.",
+      "recommended_action": "Review the source and improve the D6 extraction rules for this document.",
+      "document_id": "mun_almere_pga_current_home",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/documents/mun_almere_pga_current_home.json"
+      ],
+      "related_ids": {},
+      "evidence": {},
+      "review_item_id": "rvw_006"
+    },
+    {
+      "status": "open",
       "severity": "review",
       "check_id": "claim_payload_integrity",
       "reason_code": "municipality_relevance_inferred",
@@ -104,7 +136,7 @@
         "topic_count": 4
       },
       "evidence": {},
-      "review_item_id": "rvw_005"
+      "review_item_id": "rvw_007"
     },
     {
       "status": "open",
@@ -129,7 +161,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_006"
+      "review_item_id": "rvw_008"
     },
     {
       "status": "open",
@@ -154,7 +186,7 @@
         "topic_count": 2
       },
       "evidence": {},
-      "review_item_id": "rvw_007"
+      "review_item_id": "rvw_009"
     },
     {
       "status": "open",
@@ -178,7 +210,7 @@
           "De Visie Gezondheidsbeleid Almere 2024-2026 vast te stellen: 1. waarin de volgende doelstellingen zijn vastgelegd: a. Brede Preventie: Het stimuleren van een gezonde leefstijl en leefomgeving vanuit het gedachtengoed Positieve Gezondheid; b. We verweven gezondheid in alle beleidsterreinen: Health in all policies; c. De toegankelijkheid van de zorg in de toekomst garanderen door alle Almeerders de juiste hulp op de juiste plek te bieden; 2. met daarin de volgende ambities: a. in te zetten op het bevorderen van de samenwerking tussen het medische en het sociale domein; b. bij te dragen aan de zorgtransitie; c. mensen in staat te stellen de vaardigheden te verwerven om beter voor zichzelf ..."
         ]
       },
-      "review_item_id": "rvw_008"
+      "review_item_id": "rvw_010"
     },
     {
       "status": "open",
@@ -199,7 +231,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_009"
+      "review_item_id": "rvw_011"
     },
     {
       "status": "open",
@@ -224,7 +256,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_010"
+      "review_item_id": "rvw_012"
     },
     {
       "status": "open",
@@ -247,7 +279,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_011"
+      "review_item_id": "rvw_013"
     },
     {
       "status": "open",
@@ -272,7 +304,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_012"
+      "review_item_id": "rvw_014"
     },
     {
       "status": "open",
@@ -294,7 +326,102 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_013"
+      "review_item_id": "rvw_015"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "municipality_relevance_inferred",
+      "summary": "mun_almere_2026_stevige_lokale_teams_begrotingswijziging contains 3 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
+      "recommended_action": "Review these claims before treating them as firm municipal obligations or implementation facts.",
+      "document_id": "mun_almere_2026_stevige_lokale_teams_begrotingswijziging",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2026_stevige_lokale_teams_begrotingswijziging.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2026_stevige_lokale_teams_begrotingswijziging_d6_001",
+          "clm__mun_almere_2026_stevige_lokale_teams_begrotingswijziging_d6_002",
+          "clm__mun_almere_2026_stevige_lokale_teams_begrotingswijziging_d6_003"
+        ],
+        "topic_count": 1
+      },
+      "evidence": {},
+      "review_item_id": "rvw_016"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "municipality_relevance_inferred",
+      "summary": "mun_almere_2026_stevige_lokale_teams_besluitenlijst contains 2 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
+      "recommended_action": "Review these claims before treating them as firm municipal obligations or implementation facts.",
+      "document_id": "mun_almere_2026_stevige_lokale_teams_besluitenlijst",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2026_stevige_lokale_teams_besluitenlijst.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2026_stevige_lokale_teams_besluitenlijst_d6_001",
+          "clm__mun_almere_2026_stevige_lokale_teams_besluitenlijst_d6_002"
+        ],
+        "topic_count": 1
+      },
+      "evidence": {},
+      "review_item_id": "rvw_017"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "extraction_noise_detected",
+      "summary": "mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel contains 2 suspicious claim statement(s) with navigation text, encoding noise, or over-concatenated list content.",
+      "recommended_action": "Manually review these claims and tighten the extraction filters before promoting them to briefings or dashboards.",
+      "document_id": "mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel_d6_003",
+          "clm__mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel_municipal_translation_003"
+        ]
+      },
+      "evidence": {
+        "sample_statements": [
+          "Voorgesteld raadsbesluit 1. De ontwikkeling van de Stevige Lokale Teams in de komende periode te starten op basis van de volgende uitgangspunten: a. één stedelijk kader met maatwerk in de wijk; b. één team per wijk, voor alle leeftijden; c. mandaat en doorlopende regie; d. de organisatievorm en capaciteit volgt de inhoud; e. professionals die zowel verbinden als doen, mét inzet van experts en de sociale basis; f. helder opdrachtgeverschap en een taak op resultaat en financiën; g. aansluiten op bestaande netwerken en werkwijzen. 2. Het college opdracht te geven om: a. naast JGZ Almere ook de wijkteams mee te nemen in de scope van de Stevige Lokale Teams; b. in 2026 te starten met de ...",
+          "Voorgesteld raadsbesluit 1. De ontwikkeling van de Stevige Lokale Teams in de komende periode te starten op basis van de volgende uitgangspunten: a. één stedelijk kader met maatwerk in de wijk; b. één team per wijk, voor alle leeftijden; c. mandaat en doorlopende regie; d. de organisatievorm en capaciteit volgt de inhoud; e. professionals die zowel verbinden als doen, mét inzet van experts en de sociale basis; f. helder opdrachtgeverschap en een taak op resultaat en financiën; g. aansluiten op bestaande netwerken en werkwijzen. 2. Het college opdracht te geven om: a. naast JGZ Almere ook de wijkteams mee te nemen in de scope van de Stevige Lokale Teams; b. in 2026 te starten met de ..."
+        ]
+      },
+      "review_item_id": "rvw_018"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "municipality_relevance_inferred",
+      "summary": "mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel contains 4 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
+      "recommended_action": "Review these claims before treating them as firm municipal obligations or implementation facts.",
+      "document_id": "mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel_d5_001",
+          "clm__mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel_d6_001",
+          "clm__mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel_d6_002",
+          "clm__mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel_d6_003"
+        ],
+        "topic_count": 2
+      },
+      "evidence": {},
+      "review_item_id": "rvw_019"
     },
     {
       "status": "open",
@@ -319,7 +446,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_014"
+      "review_item_id": "rvw_020"
     },
     {
       "status": "open",
@@ -342,7 +469,57 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_015"
+      "review_item_id": "rvw_021"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "extraction_noise_detected",
+      "summary": "mun_almere_2026_stevige_lokale_teams_raadsvoorstel contains 2 suspicious claim statement(s) with navigation text, encoding noise, or over-concatenated list content.",
+      "recommended_action": "Manually review these claims and tighten the extraction filters before promoting them to briefings or dashboards.",
+      "document_id": "mun_almere_2026_stevige_lokale_teams_raadsvoorstel",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2026_stevige_lokale_teams_raadsvoorstel.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2026_stevige_lokale_teams_raadsvoorstel_d6_003",
+          "clm__mun_almere_2026_stevige_lokale_teams_raadsvoorstel_municipal_translation_003"
+        ]
+      },
+      "evidence": {
+        "sample_statements": [
+          "Voorgesteld raadsbesluit 1. De ontwikkeling van de Stevige Lokale Teams in de komende periode te starten op basis van de volgende uitgangspunten: a. één stedelijk kader met maatwerk in de wijk; b. één team per wijk, voor alle leeftijden; c. mandaat en doorlopende regie; d. de organisatievorm en capaciteit volgt de inhoud; e. professionals die zowel verbinden als doen, mét inzet van experts en de sociale basis; f. helder opdrachtgeverschap en een taak op resultaat en financiën; g. aansluiten op bestaande netwerken en werkwijzen. 2. Het college opdracht te geven om: a. naast JGZ Almere ook de wijkteams mee te nemen in de scope van de Stevige Lokale Teams; b. in 2026 te starten met de ...",
+          "Voorgesteld raadsbesluit 1. De ontwikkeling van de Stevige Lokale Teams in de komende periode te starten op basis van de volgende uitgangspunten: a. één stedelijk kader met maatwerk in de wijk; b. één team per wijk, voor alle leeftijden; c. mandaat en doorlopende regie; d. de organisatievorm en capaciteit volgt de inhoud; e. professionals die zowel verbinden als doen, mét inzet van experts en de sociale basis; f. helder opdrachtgeverschap en een taak op resultaat en financiën; g. aansluiten op bestaande netwerken en werkwijzen. 2. Het college opdracht te geven om: a. naast JGZ Almere ook de wijkteams mee te nemen in de scope van de Stevige Lokale Teams; b. in 2026 te starten met de ..."
+        ]
+      },
+      "review_item_id": "rvw_022"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "municipality_relevance_inferred",
+      "summary": "mun_almere_2026_stevige_lokale_teams_raadsvoorstel contains 4 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
+      "recommended_action": "Review these claims before treating them as firm municipal obligations or implementation facts.",
+      "document_id": "mun_almere_2026_stevige_lokale_teams_raadsvoorstel",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2026_stevige_lokale_teams_raadsvoorstel.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2026_stevige_lokale_teams_raadsvoorstel_d5_001",
+          "clm__mun_almere_2026_stevige_lokale_teams_raadsvoorstel_d6_001",
+          "clm__mun_almere_2026_stevige_lokale_teams_raadsvoorstel_d6_002",
+          "clm__mun_almere_2026_stevige_lokale_teams_raadsvoorstel_d6_003"
+        ],
+        "topic_count": 2
+      },
+      "evidence": {},
+      "review_item_id": "rvw_023"
     },
     {
       "status": "open",
@@ -367,7 +544,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_016"
+      "review_item_id": "rvw_024"
     },
     {
       "status": "open",
@@ -392,7 +569,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_017"
+      "review_item_id": "rvw_025"
     },
     {
       "status": "open",
@@ -417,7 +594,7 @@
         "topic_count": 5
       },
       "evidence": {},
-      "review_item_id": "rvw_018"
+      "review_item_id": "rvw_026"
     },
     {
       "status": "open",
@@ -442,7 +619,7 @@
         "topic_count": 4
       },
       "evidence": {},
-      "review_item_id": "rvw_019"
+      "review_item_id": "rvw_027"
     },
     {
       "status": "open",
@@ -467,7 +644,53 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_020"
+      "review_item_id": "rvw_028"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "authority_unclear",
+      "summary": "mun_almere_samenwerkingsprojecten contributes lower-authority claims that still require human review.",
+      "recommended_action": "Keep these claims as contextual support only until a stronger primary source confirms or replaces them.",
+      "document_id": "mun_almere_samenwerkingsprojecten",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_samenwerkingsprojecten.json"
+      ],
+      "related_ids": {
+        "review_claim_count": 8,
+        "sample_claim_ids": [
+          "clm__mun_almere_samenwerkingsprojecten_d6_001",
+          "clm__mun_almere_samenwerkingsprojecten_governance_and_finance_001",
+          "clm__mun_almere_samenwerkingsprojecten_monitoring_and_evaluation_001",
+          "clm__mun_almere_samenwerkingsprojecten_monitoring_and_evaluation_002",
+          "clm__mun_almere_samenwerkingsprojecten_monitoring_and_evaluation_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_029"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "municipality_relevance_inferred",
+      "summary": "mun_almere_samenwerkingsprojecten contains 1 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
+      "recommended_action": "Review these claims before treating them as firm municipal obligations or implementation facts.",
+      "document_id": "mun_almere_samenwerkingsprojecten",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_samenwerkingsprojecten.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_samenwerkingsprojecten_d6_001"
+        ],
+        "topic_count": 1
+      },
+      "evidence": {},
+      "review_item_id": "rvw_030"
     },
     {
       "status": "open",
@@ -492,7 +715,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_021"
+      "review_item_id": "rvw_031"
     },
     {
       "status": "open",
@@ -517,7 +740,7 @@
         "topic_count": 3
       },
       "evidence": {},
-      "review_item_id": "rvw_022"
+      "review_item_id": "rvw_032"
     },
     {
       "status": "open",
@@ -540,7 +763,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_023"
+      "review_item_id": "rvw_033"
     },
     {
       "status": "open",
@@ -563,7 +786,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_024"
+      "review_item_id": "rvw_034"
     },
     {
       "status": "open",
@@ -585,7 +808,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_025"
+      "review_item_id": "rvw_035"
     },
     {
       "status": "open",
@@ -606,7 +829,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_026"
+      "review_item_id": "rvw_036"
     },
     {
       "status": "open",
@@ -627,7 +850,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_027"
+      "review_item_id": "rvw_037"
     },
     {
       "status": "open",
@@ -652,7 +875,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_028"
+      "review_item_id": "rvw_038"
     },
     {
       "status": "open",
@@ -673,7 +896,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_029"
+      "review_item_id": "rvw_039"
     },
     {
       "status": "open",
@@ -698,7 +921,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_030"
+      "review_item_id": "rvw_040"
     },
     {
       "status": "open",
@@ -723,7 +946,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_031"
+      "review_item_id": "rvw_041"
     },
     {
       "status": "open",
@@ -748,7 +971,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_032"
+      "review_item_id": "rvw_042"
     },
     {
       "status": "open",
@@ -773,7 +996,7 @@
         "topic_count": 2
       },
       "evidence": {},
-      "review_item_id": "rvw_033"
+      "review_item_id": "rvw_043"
     },
     {
       "status": "open",
@@ -797,7 +1020,7 @@
         "topic_count": 2
       },
       "evidence": {},
-      "review_item_id": "rvw_034"
+      "review_item_id": "rvw_044"
     },
     {
       "status": "open",
@@ -822,7 +1045,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_035"
+      "review_item_id": "rvw_045"
     },
     {
       "status": "open",
@@ -847,7 +1070,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_036"
+      "review_item_id": "rvw_046"
     },
     {
       "status": "open",
@@ -872,7 +1095,7 @@
         "topic_count": 2
       },
       "evidence": {},
-      "review_item_id": "rvw_037"
+      "review_item_id": "rvw_047"
     },
     {
       "status": "open",
@@ -896,7 +1119,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_038"
+      "review_item_id": "rvw_048"
     },
     {
       "status": "open",
@@ -919,7 +1142,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_039"
+      "review_item_id": "rvw_049"
     },
     {
       "status": "open",
@@ -944,7 +1167,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_040"
+      "review_item_id": "rvw_050"
     },
     {
       "status": "open",
@@ -969,7 +1192,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_041"
+      "review_item_id": "rvw_051"
     },
     {
       "status": "open",
@@ -994,7 +1217,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_042"
+      "review_item_id": "rvw_052"
     },
     {
       "status": "open",
@@ -1019,7 +1242,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_043"
+      "review_item_id": "rvw_053"
     },
     {
       "status": "open",
@@ -1040,7 +1263,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_044"
+      "review_item_id": "rvw_054"
     },
     {
       "status": "open",
@@ -1065,7 +1288,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_045"
+      "review_item_id": "rvw_055"
     },
     {
       "status": "open",
@@ -1090,7 +1313,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_046"
+      "review_item_id": "rvw_056"
     },
     {
       "status": "open",
@@ -1113,7 +1336,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_047"
+      "review_item_id": "rvw_057"
     },
     {
       "status": "open",
@@ -1136,7 +1359,7 @@
         "topic_count": 3
       },
       "evidence": {},
-      "review_item_id": "rvw_048"
+      "review_item_id": "rvw_058"
     },
     {
       "status": "open",
@@ -1161,7 +1384,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_049"
+      "review_item_id": "rvw_059"
     },
     {
       "status": "open",
@@ -1187,7 +1410,7 @@
           "onderwerp alleen uitgevraagd in Flevoland. In dat geval zijn de verschillen tussen Nederland en de gemeenten ook niet getoetst (zie â€œAnalyseâ€)."
         ]
       },
-      "review_item_id": "rvw_050"
+      "review_item_id": "rvw_060"
     },
     {
       "status": "open",
@@ -1212,7 +1435,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_051"
+      "review_item_id": "rvw_061"
     },
     {
       "status": "open",
@@ -1238,7 +1461,7 @@
           "onderwerp alleen uitgevraagd in Flevoland. In dat geval zijn de verschillen tussen Nederland en de gemeenten ook niet getoetst (zie â€œAnalyseâ€)."
         ]
       },
-      "review_item_id": "rvw_052"
+      "review_item_id": "rvw_062"
     },
     {
       "status": "open",
@@ -1262,7 +1485,7 @@
         "topic_count": 3
       },
       "evidence": {},
-      "review_item_id": "rvw_053"
+      "review_item_id": "rvw_063"
     },
     {
       "status": "open",
@@ -1287,7 +1510,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_054"
+      "review_item_id": "rvw_064"
     },
     {
       "status": "open",
@@ -1310,7 +1533,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_055"
+      "review_item_id": "rvw_065"
     },
     {
       "status": "open",
@@ -1335,7 +1558,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_056"
+      "review_item_id": "rvw_066"
     },
     {
       "status": "open",
@@ -1356,7 +1579,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_057"
+      "review_item_id": "rvw_067"
     },
     {
       "status": "open",
@@ -1379,7 +1602,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_058"
+      "review_item_id": "rvw_068"
     },
     {
       "status": "open",
@@ -1402,7 +1625,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_059"
+      "review_item_id": "rvw_069"
     },
     {
       "status": "open",
@@ -1427,7 +1650,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_060"
+      "review_item_id": "rvw_070"
     },
     {
       "status": "open",
@@ -1446,7 +1669,7 @@
       "evidence": {
         "table_count": 4
       },
-      "review_item_id": "rvw_061"
+      "review_item_id": "rvw_071"
     },
     {
       "status": "open",
@@ -1477,7 +1700,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_062"
+      "review_item_id": "rvw_072"
     },
     {
       "status": "open",
@@ -1503,7 +1726,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_063"
+      "review_item_id": "rvw_073"
     },
     {
       "status": "open",
@@ -1523,13 +1746,15 @@
         "claim_ids": [
           "clm__nat_azwa_opdracht_werkagenda_d5_2026_d5_001",
           "clm__reg_flevoland_2023_regioplan_iza_d5_001",
+          "clm__mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel_d5_001",
+          "clm__mun_almere_2026_stevige_lokale_teams_raadsvoorstel_d5_001",
           "clm__mun_almere_pga_transformatieplan_d5_001",
           "clm__mun_almere_pga_seo_businesscase_2024_d5_003",
           "clm__nat_vng_gezond_en_actief_leven_2026_d5_002"
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_064"
+      "review_item_id": "rvw_074"
     },
     {
       "status": "open",
@@ -1560,7 +1785,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_065"
+      "review_item_id": "rvw_075"
     },
     {
       "status": "open",
@@ -1587,7 +1812,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_066"
+      "review_item_id": "rvw_076"
     },
     {
       "status": "open",
@@ -1618,7 +1843,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_067"
+      "review_item_id": "rvw_077"
     },
     {
       "status": "open",
@@ -1642,7 +1867,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_068"
+      "review_item_id": "rvw_078"
     },
     {
       "status": "open",
@@ -1666,7 +1891,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_069"
+      "review_item_id": "rvw_079"
     },
     {
       "status": "open",
@@ -1689,7 +1914,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_070"
+      "review_item_id": "rvw_080"
     },
     {
       "status": "open",
@@ -1712,11 +1937,15 @@
           "clm__reg_ggd_flevoland_begroting_2026_timeline_and_status_003",
           "clm__reg_ggd_flevoland_begroting_2026_timeline_and_status_002",
           "clm__reg_ggd_flevoland_begroting_2026_timeline_and_status_001",
-          "clm__mun_almere_pga_transformatieplan_timeline_and_status_001"
+          "clm__mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel_timeline_and_status_002",
+          "clm__mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel_timeline_and_status_001",
+          "clm__mun_almere_2026_stevige_lokale_teams_raadsvoorstel_timeline_and_status_002",
+          "clm__mun_almere_2026_stevige_lokale_teams_raadsvoorstel_timeline_and_status_001",
+          "clm__mun_almere_2026_stevige_lokale_teams_begrotingswijziging_timeline_and_status_002"
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_071"
+      "review_item_id": "rvw_081"
     }
   ]
 }

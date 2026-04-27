@@ -242,10 +242,12 @@
     {
       "item_id": "almere_d5_mental_health",
       "topic": "d5.mentale_gezondheidsnetwerken",
-      "summary": "Current view combines 5 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
+      "summary": "Current view combines 7 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
       "claim_ids": [
         "clm__nat_azwa_opdracht_werkagenda_d5_2026_d5_001",
         "clm__reg_flevoland_2023_regioplan_iza_d5_001",
+        "clm__mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel_d5_001",
+        "clm__mun_almere_2026_stevige_lokale_teams_raadsvoorstel_d5_001",
         "clm__mun_almere_pga_transformatieplan_d5_001",
         "clm__mun_almere_pga_seo_businesscase_2024_d5_003",
         "clm__nat_vng_gezond_en_actief_leven_2026_d5_002"
@@ -263,6 +265,20 @@
           "title": "Zorgzaam Flevoland 2023 Regioplan IZA Flevoland",
           "jurisdiction_level": "regional",
           "document_type": "regional_plan",
+          "document_status": "reference"
+        },
+        {
+          "document_id": "mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel",
+          "title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin - geamendeerd raadsvoorstel",
+          "jurisdiction_level": "municipal",
+          "document_type": "municipal_council_proposal",
+          "document_status": "current"
+        },
+        {
+          "document_id": "mun_almere_2026_stevige_lokale_teams_raadsvoorstel",
+          "title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin - raadsvoorstel",
+          "jurisdiction_level": "municipal",
+          "document_type": "municipal_council_proposal",
           "document_status": "reference"
         },
         {
@@ -288,7 +304,7 @@
         }
       ],
       "scope": "mixed",
-      "confidence": 0.6,
+      "confidence": 0.59,
       "needs_human_review": true
     },
     {
@@ -439,12 +455,23 @@
     {
       "item_id": "almere_d6_local_teams",
       "topic": "d6.local_teams",
-      "summary": "Current view combines 10 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
+      "summary": "Current view combines 21 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
       "claim_ids": [
         "clm__nat_azwa_2025_definitief_d6_002",
         "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d6_001",
         "clm__reg_ggd_flevoland_begroting_2026_d6_002",
         "clm__reg_ggd_flevoland_begroting_2026_d6_001",
+        "clm__mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel_d6_003",
+        "clm__mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel_d6_002",
+        "clm__mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel_d6_001",
+        "clm__mun_almere_2026_stevige_lokale_teams_raadsvoorstel_d6_003",
+        "clm__mun_almere_2026_stevige_lokale_teams_raadsvoorstel_d6_002",
+        "clm__mun_almere_2026_stevige_lokale_teams_raadsvoorstel_d6_001",
+        "clm__mun_almere_2026_stevige_lokale_teams_besluitenlijst_d6_002",
+        "clm__mun_almere_2026_stevige_lokale_teams_besluitenlijst_d6_001",
+        "clm__mun_almere_2026_stevige_lokale_teams_begrotingswijziging_d6_003",
+        "clm__mun_almere_2026_stevige_lokale_teams_begrotingswijziging_d6_002",
+        "clm__mun_almere_2026_stevige_lokale_teams_begrotingswijziging_d6_001",
         "clm__mun_almere_sociaal_domein_informatiepagina_d6_001",
         "clm__mun_almere_2026_stevige_lokale_teams_raad_d6_003",
         "clm__mun_almere_2026_stevige_lokale_teams_raad_d6_002",
@@ -475,6 +502,34 @@
           "document_status": "current"
         },
         {
+          "document_id": "mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel",
+          "title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin - geamendeerd raadsvoorstel",
+          "jurisdiction_level": "municipal",
+          "document_type": "municipal_council_proposal",
+          "document_status": "current"
+        },
+        {
+          "document_id": "mun_almere_2026_stevige_lokale_teams_raadsvoorstel",
+          "title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin - raadsvoorstel",
+          "jurisdiction_level": "municipal",
+          "document_type": "municipal_council_proposal",
+          "document_status": "reference"
+        },
+        {
+          "document_id": "mun_almere_2026_stevige_lokale_teams_besluitenlijst",
+          "title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin - besluitenlijst",
+          "jurisdiction_level": "municipal",
+          "document_type": "municipal_decision_list",
+          "document_status": "reference"
+        },
+        {
+          "document_id": "mun_almere_2026_stevige_lokale_teams_begrotingswijziging",
+          "title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin - begrotingswijziging",
+          "jurisdiction_level": "municipal",
+          "document_type": "municipal_budget_change",
+          "document_status": "reference"
+        },
+        {
           "document_id": "mun_almere_sociaal_domein_informatiepagina",
           "title": "Informatiepagina Sociaal Domein",
           "jurisdiction_level": "municipal",
@@ -497,7 +552,7 @@
         }
       ],
       "scope": "mixed",
-      "confidence": 0.6,
+      "confidence": 0.58,
       "needs_human_review": true
     },
     {
@@ -549,7 +604,7 @@
     {
       "item_id": "almere_d6_translation",
       "topic": "municipal.implementation_translation",
-      "summary": "Current view combines 106 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
+      "summary": "Current view combines 114 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
       "claim_ids": [
         "clm__nat_wetten_spuk_transformatiemiddelen_regeling_municipal_translation_003",
         "clm__nat_wetten_spuk_transformatiemiddelen_regeling_municipal_translation_002",
@@ -573,6 +628,8 @@
         "clm__reg_ggd_flevoland_begroting_2026_municipal_translation_002",
         "clm__reg_ggd_flevoland_begroting_2026_municipal_translation_001",
         "clm__reg_flevoland_2023_regioplan_iza_municipal_translation_001",
+        "clm__mun_almere_2026_stevige_lokale_teams_besluitenlijst_municipal_translation_003",
+        "clm__mun_almere_2026_stevige_lokale_teams_besluitenlijst_municipal_translation_002",
         "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_municipal_translation_003",
         "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_municipal_translation_002",
         "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_municipal_translation_001",
@@ -588,6 +645,9 @@
         "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_municipal_translation_003",
         "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_municipal_translation_002",
         "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_municipal_translation_001",
+        "clm__mun_almere_pga_current_home_municipal_translation_003",
+        "clm__mun_almere_pga_current_home_municipal_translation_002",
+        "clm__mun_almere_pga_current_home_municipal_translation_001",
         "clm__nat_vng_azwa_faq_uitvoeringscapaciteit_municipal_translation_003",
         "clm__nat_vng_azwa_faq_uitvoeringscapaciteit_municipal_translation_002",
         "clm__nat_vng_azwa_faq_uitvoeringscapaciteit_municipal_translation_001",
@@ -650,6 +710,9 @@
         "clm__mun_almere_sociale_staat_gateway_municipal_translation_003",
         "clm__mun_almere_sociale_staat_gateway_municipal_translation_002",
         "clm__mun_almere_sociale_staat_gateway_municipal_translation_001",
+        "clm__mun_almere_samenwerkingsprojecten_municipal_translation_003",
+        "clm__mun_almere_samenwerkingsprojecten_municipal_translation_002",
+        "clm__mun_almere_samenwerkingsprojecten_municipal_translation_001",
         "clm__mun_almere_raad_vergaderschema_2026_municipal_translation_002",
         "clm__mun_almere_raad_vergaderschema_2026_municipal_translation_001",
         "clm__mun_almere_begroting_2026_webpagina_municipal_translation_003",
@@ -723,6 +786,13 @@
           "document_status": "reference"
         },
         {
+          "document_id": "mun_almere_2026_stevige_lokale_teams_besluitenlijst",
+          "title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin - besluitenlijst",
+          "jurisdiction_level": "municipal",
+          "document_type": "municipal_decision_list",
+          "document_status": "reference"
+        },
+        {
           "document_id": "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst",
           "title": "Maatschappelijke agenda 2024-2034",
           "jurisdiction_level": "municipal",
@@ -755,6 +825,13 @@
           "title": "Raadsvoorstel Visie Gezondheidsbeleid Almere 2024-2026 - geamendeerd",
           "jurisdiction_level": "municipal",
           "document_type": "municipal_council_proposal",
+          "document_status": "current"
+        },
+        {
+          "document_id": "mun_almere_pga_current_home",
+          "title": "Positief Gezond Almere",
+          "jurisdiction_level": "municipal",
+          "document_type": "municipal_program_page",
           "document_status": "current"
         },
         {
@@ -917,6 +994,13 @@
           "jurisdiction_level": "municipal",
           "document_type": "municipal_gateway_page",
           "document_status": "supporting"
+        },
+        {
+          "document_id": "mun_almere_samenwerkingsprojecten",
+          "title": "Samenwerkingsprojecten",
+          "jurisdiction_level": "municipal",
+          "document_type": "municipal_project_page",
+          "document_status": "current"
         },
         {
           "document_id": "mun_almere_raad_vergaderschema_2026",
@@ -1312,6 +1396,34 @@
       ]
     },
     {
+      "document_id": "mun_almere_2026_stevige_lokale_teams_begrotingswijziging",
+      "title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin - begrotingswijziging",
+      "document_type": "municipal_budget_change",
+      "relevant_topics": [
+        "d6.local_teams",
+        "timeline.almere_2029"
+      ]
+    },
+    {
+      "document_id": "mun_almere_2026_stevige_lokale_teams_besluitenlijst",
+      "title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin - besluitenlijst",
+      "document_type": "municipal_decision_list",
+      "relevant_topics": [
+        "d6.local_teams",
+        "municipal.implementation_translation"
+      ]
+    },
+    {
+      "document_id": "mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel",
+      "title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin - geamendeerd raadsvoorstel",
+      "document_type": "municipal_council_proposal",
+      "relevant_topics": [
+        "d5.mentale_gezondheidsnetwerken",
+        "d6.local_teams",
+        "timeline.almere_2029"
+      ]
+    },
+    {
       "document_id": "mun_almere_2026_stevige_lokale_teams_raad",
       "title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin",
       "document_type": "municipal_council_page",
@@ -1321,9 +1433,27 @@
       ]
     },
     {
+      "document_id": "mun_almere_2026_stevige_lokale_teams_raadsvoorstel",
+      "title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin - raadsvoorstel",
+      "document_type": "municipal_council_proposal",
+      "relevant_topics": [
+        "d5.mentale_gezondheidsnetwerken",
+        "d6.local_teams",
+        "timeline.almere_2029"
+      ]
+    },
+    {
       "document_id": "mun_almere_begroting_2026_webpagina",
       "title": "Begroting 2026",
       "document_type": "municipal_info_page",
+      "relevant_topics": [
+        "municipal.implementation_translation"
+      ]
+    },
+    {
+      "document_id": "mun_almere_pga_current_home",
+      "title": "Positief Gezond Almere",
+      "document_type": "municipal_program_page",
       "relevant_topics": [
         "municipal.implementation_translation"
       ]
@@ -1362,6 +1492,14 @@
       "document_id": "mun_almere_raad_vergaderschema_2026",
       "title": "Vergaderschema Raad van Almere 2026",
       "document_type": "municipal_schedule_page",
+      "relevant_topics": [
+        "municipal.implementation_translation"
+      ]
+    },
+    {
+      "document_id": "mun_almere_samenwerkingsprojecten",
+      "title": "Samenwerkingsprojecten",
+      "document_type": "municipal_project_page",
       "relevant_topics": [
         "municipal.implementation_translation"
       ]
@@ -1591,10 +1729,12 @@
     },
     {
       "topic": "d5.mentale_gezondheidsnetwerken",
-      "summary": "Current view combines 5 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
+      "summary": "Current view combines 7 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
       "claim_ids": [
         "clm__nat_azwa_opdracht_werkagenda_d5_2026_d5_001",
         "clm__reg_flevoland_2023_regioplan_iza_d5_001",
+        "clm__mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel_d5_001",
+        "clm__mun_almere_2026_stevige_lokale_teams_raadsvoorstel_d5_001",
         "clm__mun_almere_pga_transformatieplan_d5_001",
         "clm__mun_almere_pga_seo_businesscase_2024_d5_003",
         "clm__nat_vng_gezond_en_actief_leven_2026_d5_002"
@@ -1612,6 +1752,20 @@
           "title": "Zorgzaam Flevoland 2023 Regioplan IZA Flevoland",
           "jurisdiction_level": "regional",
           "document_type": "regional_plan",
+          "document_status": "reference"
+        },
+        {
+          "document_id": "mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel",
+          "title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin - geamendeerd raadsvoorstel",
+          "jurisdiction_level": "municipal",
+          "document_type": "municipal_council_proposal",
+          "document_status": "current"
+        },
+        {
+          "document_id": "mun_almere_2026_stevige_lokale_teams_raadsvoorstel",
+          "title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin - raadsvoorstel",
+          "jurisdiction_level": "municipal",
+          "document_type": "municipal_council_proposal",
           "document_status": "reference"
         },
         {
@@ -1918,12 +2072,23 @@
     },
     {
       "topic": "d6.local_teams",
-      "summary": "Current view combines 10 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
+      "summary": "Current view combines 21 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
       "claim_ids": [
         "clm__nat_azwa_2025_definitief_d6_002",
         "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d6_001",
         "clm__reg_ggd_flevoland_begroting_2026_d6_002",
         "clm__reg_ggd_flevoland_begroting_2026_d6_001",
+        "clm__mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel_d6_003",
+        "clm__mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel_d6_002",
+        "clm__mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel_d6_001",
+        "clm__mun_almere_2026_stevige_lokale_teams_raadsvoorstel_d6_003",
+        "clm__mun_almere_2026_stevige_lokale_teams_raadsvoorstel_d6_002",
+        "clm__mun_almere_2026_stevige_lokale_teams_raadsvoorstel_d6_001",
+        "clm__mun_almere_2026_stevige_lokale_teams_besluitenlijst_d6_002",
+        "clm__mun_almere_2026_stevige_lokale_teams_besluitenlijst_d6_001",
+        "clm__mun_almere_2026_stevige_lokale_teams_begrotingswijziging_d6_003",
+        "clm__mun_almere_2026_stevige_lokale_teams_begrotingswijziging_d6_002",
+        "clm__mun_almere_2026_stevige_lokale_teams_begrotingswijziging_d6_001",
         "clm__mun_almere_sociaal_domein_informatiepagina_d6_001",
         "clm__mun_almere_2026_stevige_lokale_teams_raad_d6_003",
         "clm__mun_almere_2026_stevige_lokale_teams_raad_d6_002",
@@ -1952,6 +2117,34 @@
           "jurisdiction_level": "regional",
           "document_type": "regional_budget",
           "document_status": "current"
+        },
+        {
+          "document_id": "mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel",
+          "title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin - geamendeerd raadsvoorstel",
+          "jurisdiction_level": "municipal",
+          "document_type": "municipal_council_proposal",
+          "document_status": "current"
+        },
+        {
+          "document_id": "mun_almere_2026_stevige_lokale_teams_raadsvoorstel",
+          "title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin - raadsvoorstel",
+          "jurisdiction_level": "municipal",
+          "document_type": "municipal_council_proposal",
+          "document_status": "reference"
+        },
+        {
+          "document_id": "mun_almere_2026_stevige_lokale_teams_besluitenlijst",
+          "title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin - besluitenlijst",
+          "jurisdiction_level": "municipal",
+          "document_type": "municipal_decision_list",
+          "document_status": "reference"
+        },
+        {
+          "document_id": "mun_almere_2026_stevige_lokale_teams_begrotingswijziging",
+          "title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin - begrotingswijziging",
+          "jurisdiction_level": "municipal",
+          "document_type": "municipal_budget_change",
+          "document_status": "reference"
         },
         {
           "document_id": "mun_almere_sociaal_domein_informatiepagina",
@@ -2067,13 +2260,14 @@
     },
     {
       "topic": "d6.regional_coordination",
-      "summary": "Current view combines 5 compatible claims for d6.regional_coordination, led by mun_almere_pga_seo_businesscase_2024: Binnen Almere zijn momenteel al verschillende partners betrokken bij de pilotprojecten: De Schoor, GGZ Centraal, Kwintes, Leger des Heils, Triade Vitree, Amethist, GGD, Eigenwijze Compagnie en de wijkteams.",
+      "summary": "Current view combines 6 compatible claims for d6.regional_coordination, led by mun_almere_pga_seo_businesscase_2024: Binnen Almere zijn momenteel al verschillende partners betrokken bij de pilotprojecten: De Schoor, GGZ Centraal, Kwintes, Leger des Heils, Triade Vitree, Amethist, GGD, Eigenwijze Compagnie en de wijkteams.",
       "claim_ids": [
         "clm__mun_almere_pga_seo_businesscase_2024_d6_003",
         "clm__reg_ggd_flevoland_kennis_en_advies_d6_001",
         "clm__reg_ggd_flevoland_jgz_almere_profile_d6_003",
         "clm__reg_ggd_flevoland_jgz_almere_profile_d6_002",
-        "clm__reg_ggd_flevoland_jgz_almere_profile_d6_001"
+        "clm__reg_ggd_flevoland_jgz_almere_profile_d6_001",
+        "clm__mun_almere_samenwerkingsprojecten_d6_001"
       ],
       "source_documents": [
         {
@@ -2095,6 +2289,13 @@
           "title": "Profiel Jeugdgezondheidszorg",
           "jurisdiction_level": "regional",
           "document_type": "regional_service_page",
+          "document_status": "current"
+        },
+        {
+          "document_id": "mun_almere_samenwerkingsprojecten",
+          "title": "Samenwerkingsprojecten",
+          "jurisdiction_level": "municipal",
+          "document_type": "municipal_project_page",
           "document_status": "current"
         }
       ],
@@ -2318,9 +2519,10 @@
     },
     {
       "topic": "governance.national_coordination",
-      "summary": "Current view is provisional because it rests on contextual or local evidence. Onder andere Bestuurlijk Overleg Flevoland (VVT/ZH/HA), Getijde, Positief Ouder Worden, Valpreventie, Zorg in de wijk, (G)OUD, Netwerk Dementie, Almere Durft.",
+      "summary": "Current view combines 2 compatible claims for governance.national_coordination, led by reg_flevoland_2023_regiobeeld: Onder andere Bestuurlijk Overleg Flevoland (VVT/ZH/HA), Getijde, Positief Ouder Worden, Valpreventie, Zorg in de wijk, (G)OUD, Netwerk Dementie, Almere Durft.",
       "claim_ids": [
-        "clm__reg_flevoland_2023_regiobeeld_governance_and_finance_002"
+        "clm__reg_flevoland_2023_regiobeeld_governance_and_finance_002",
+        "clm__mun_almere_samenwerkingsprojecten_governance_and_finance_001"
       ],
       "source_documents": [
         {
@@ -2329,6 +2531,13 @@
           "jurisdiction_level": "regional",
           "document_type": "regional_report",
           "document_status": "reference"
+        },
+        {
+          "document_id": "mun_almere_samenwerkingsprojecten",
+          "title": "Samenwerkingsprojecten",
+          "jurisdiction_level": "municipal",
+          "document_type": "municipal_project_page",
+          "document_status": "current"
         }
       ],
       "reason": "Current interpretation relies on contextual or lower-authority evidence and should be reviewed before firm local use."
@@ -2368,7 +2577,7 @@
     },
     {
       "topic": "governance_and_finance.other",
-      "summary": "Current view combines 45 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
+      "summary": "Current view combines 51 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
       "claim_ids": [
         "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_governance_and_finance_003",
         "clm__nat_azwa_opdracht_werkagenda_d5_2026_governance_and_finance_003",
@@ -2380,6 +2589,12 @@
         "clm__reg_ggd_flevoland_begroting_2026_governance_and_finance_003",
         "clm__reg_ggd_flevoland_begroting_2026_governance_and_finance_002",
         "clm__reg_ggd_flevoland_begroting_2026_governance_and_finance_001",
+        "clm__mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel_governance_and_finance_003",
+        "clm__mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel_governance_and_finance_002",
+        "clm__mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel_governance_and_finance_001",
+        "clm__mun_almere_2026_stevige_lokale_teams_raadsvoorstel_governance_and_finance_003",
+        "clm__mun_almere_2026_stevige_lokale_teams_raadsvoorstel_governance_and_finance_002",
+        "clm__mun_almere_2026_stevige_lokale_teams_raadsvoorstel_governance_and_finance_001",
         "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_governance_and_finance_003",
         "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_governance_and_finance_002",
         "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_governance_and_finance_001",
@@ -2451,6 +2666,20 @@
           "jurisdiction_level": "regional",
           "document_type": "regional_budget",
           "document_status": "current"
+        },
+        {
+          "document_id": "mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel",
+          "title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin - geamendeerd raadsvoorstel",
+          "jurisdiction_level": "municipal",
+          "document_type": "municipal_council_proposal",
+          "document_status": "current"
+        },
+        {
+          "document_id": "mun_almere_2026_stevige_lokale_teams_raadsvoorstel",
+          "title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin - raadsvoorstel",
+          "jurisdiction_level": "municipal",
+          "document_type": "municipal_council_proposal",
+          "document_status": "reference"
         },
         {
           "document_id": "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst",
@@ -2684,7 +2913,7 @@
     },
     {
       "topic": "monitoring.other",
-      "summary": "Current view combines 59 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
+      "summary": "Current view combines 69 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
       "claim_ids": [
         "clm__nat_wetten_spuk_transformatiemiddelen_regeling_monitoring_and_evaluation_003",
         "clm__nat_wetten_spuk_transformatiemiddelen_regeling_monitoring_and_evaluation_002",
@@ -2702,6 +2931,12 @@
         "clm__reg_ggd_flevoland_begroting_2026_monitoring_and_evaluation_003",
         "clm__reg_ggd_flevoland_begroting_2026_monitoring_and_evaluation_002",
         "clm__reg_ggd_flevoland_begroting_2026_monitoring_and_evaluation_001",
+        "clm__mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel_monitoring_and_evaluation_003",
+        "clm__mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel_monitoring_and_evaluation_002",
+        "clm__mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel_monitoring_and_evaluation_001",
+        "clm__mun_almere_2026_stevige_lokale_teams_raadsvoorstel_monitoring_and_evaluation_003",
+        "clm__mun_almere_2026_stevige_lokale_teams_raadsvoorstel_monitoring_and_evaluation_002",
+        "clm__mun_almere_2026_stevige_lokale_teams_raadsvoorstel_monitoring_and_evaluation_001",
         "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_monitoring_and_evaluation_003",
         "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_monitoring_and_evaluation_002",
         "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_monitoring_and_evaluation_001",
@@ -2715,6 +2950,7 @@
         "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_monitoring_and_evaluation_003",
         "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_monitoring_and_evaluation_002",
         "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_monitoring_and_evaluation_001",
+        "clm__mun_almere_pga_current_home_monitoring_and_evaluation_001",
         "clm__nat_vng_ledenbrief_azwa_financiering_2026_monitoring_and_evaluation_003",
         "clm__nat_vng_ledenbrief_azwa_financiering_2026_monitoring_and_evaluation_002",
         "clm__nat_vng_ledenbrief_azwa_financiering_2026_monitoring_and_evaluation_001",
@@ -2742,6 +2978,9 @@
         "clm__nat_vng_gezond_en_actief_leven_2026_monitoring_and_evaluation_003",
         "clm__nat_vng_gezond_en_actief_leven_2026_monitoring_and_evaluation_002",
         "clm__nat_vng_gezond_en_actief_leven_2026_monitoring_and_evaluation_001",
+        "clm__mun_almere_samenwerkingsprojecten_monitoring_and_evaluation_003",
+        "clm__mun_almere_samenwerkingsprojecten_monitoring_and_evaluation_002",
+        "clm__mun_almere_samenwerkingsprojecten_monitoring_and_evaluation_001",
         "clm__mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie_monitoring_and_evaluation_003",
         "clm__mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie_monitoring_and_evaluation_002",
         "clm__mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie_monitoring_and_evaluation_001"
@@ -2790,6 +3029,20 @@
           "document_status": "current"
         },
         {
+          "document_id": "mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel",
+          "title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin - geamendeerd raadsvoorstel",
+          "jurisdiction_level": "municipal",
+          "document_type": "municipal_council_proposal",
+          "document_status": "current"
+        },
+        {
+          "document_id": "mun_almere_2026_stevige_lokale_teams_raadsvoorstel",
+          "title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin - raadsvoorstel",
+          "jurisdiction_level": "municipal",
+          "document_type": "municipal_council_proposal",
+          "document_status": "reference"
+        },
+        {
           "document_id": "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst",
           "title": "Maatschappelijke agenda 2024-2034",
           "jurisdiction_level": "municipal",
@@ -2822,6 +3075,13 @@
           "title": "Raadsvoorstel Visie Gezondheidsbeleid Almere 2024-2026 - geamendeerd",
           "jurisdiction_level": "municipal",
           "document_type": "municipal_council_proposal",
+          "document_status": "current"
+        },
+        {
+          "document_id": "mun_almere_pga_current_home",
+          "title": "Positief Gezond Almere",
+          "jurisdiction_level": "municipal",
+          "document_type": "municipal_program_page",
           "document_status": "current"
         },
         {
@@ -2923,6 +3183,13 @@
           "document_status": "supporting"
         },
         {
+          "document_id": "mun_almere_samenwerkingsprojecten",
+          "title": "Samenwerkingsprojecten",
+          "jurisdiction_level": "municipal",
+          "document_type": "municipal_project_page",
+          "document_status": "current"
+        },
+        {
           "document_id": "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie",
           "title": "Opzet procesevaluatie en monitor Sociaal Domein",
           "jurisdiction_level": "municipal",
@@ -2986,7 +3253,7 @@
     },
     {
       "topic": "municipal.implementation_translation",
-      "summary": "Current view combines 106 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
+      "summary": "Current view combines 114 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
       "claim_ids": [
         "clm__nat_wetten_spuk_transformatiemiddelen_regeling_municipal_translation_003",
         "clm__nat_wetten_spuk_transformatiemiddelen_regeling_municipal_translation_002",
@@ -3010,6 +3277,8 @@
         "clm__reg_ggd_flevoland_begroting_2026_municipal_translation_002",
         "clm__reg_ggd_flevoland_begroting_2026_municipal_translation_001",
         "clm__reg_flevoland_2023_regioplan_iza_municipal_translation_001",
+        "clm__mun_almere_2026_stevige_lokale_teams_besluitenlijst_municipal_translation_003",
+        "clm__mun_almere_2026_stevige_lokale_teams_besluitenlijst_municipal_translation_002",
         "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_municipal_translation_003",
         "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_municipal_translation_002",
         "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_municipal_translation_001",
@@ -3025,6 +3294,9 @@
         "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_municipal_translation_003",
         "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_municipal_translation_002",
         "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_municipal_translation_001",
+        "clm__mun_almere_pga_current_home_municipal_translation_003",
+        "clm__mun_almere_pga_current_home_municipal_translation_002",
+        "clm__mun_almere_pga_current_home_municipal_translation_001",
         "clm__nat_vng_azwa_faq_uitvoeringscapaciteit_municipal_translation_003",
         "clm__nat_vng_azwa_faq_uitvoeringscapaciteit_municipal_translation_002",
         "clm__nat_vng_azwa_faq_uitvoeringscapaciteit_municipal_translation_001",
@@ -3087,6 +3359,9 @@
         "clm__mun_almere_sociale_staat_gateway_municipal_translation_003",
         "clm__mun_almere_sociale_staat_gateway_municipal_translation_002",
         "clm__mun_almere_sociale_staat_gateway_municipal_translation_001",
+        "clm__mun_almere_samenwerkingsprojecten_municipal_translation_003",
+        "clm__mun_almere_samenwerkingsprojecten_municipal_translation_002",
+        "clm__mun_almere_samenwerkingsprojecten_municipal_translation_001",
         "clm__mun_almere_raad_vergaderschema_2026_municipal_translation_002",
         "clm__mun_almere_raad_vergaderschema_2026_municipal_translation_001",
         "clm__mun_almere_begroting_2026_webpagina_municipal_translation_003",
@@ -3160,6 +3435,13 @@
           "document_status": "reference"
         },
         {
+          "document_id": "mun_almere_2026_stevige_lokale_teams_besluitenlijst",
+          "title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin - besluitenlijst",
+          "jurisdiction_level": "municipal",
+          "document_type": "municipal_decision_list",
+          "document_status": "reference"
+        },
+        {
           "document_id": "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst",
           "title": "Maatschappelijke agenda 2024-2034",
           "jurisdiction_level": "municipal",
@@ -3192,6 +3474,13 @@
           "title": "Raadsvoorstel Visie Gezondheidsbeleid Almere 2024-2026 - geamendeerd",
           "jurisdiction_level": "municipal",
           "document_type": "municipal_council_proposal",
+          "document_status": "current"
+        },
+        {
+          "document_id": "mun_almere_pga_current_home",
+          "title": "Positief Gezond Almere",
+          "jurisdiction_level": "municipal",
+          "document_type": "municipal_program_page",
           "document_status": "current"
         },
         {
@@ -3356,6 +3645,13 @@
           "document_status": "supporting"
         },
         {
+          "document_id": "mun_almere_samenwerkingsprojecten",
+          "title": "Samenwerkingsprojecten",
+          "jurisdiction_level": "municipal",
+          "document_type": "municipal_project_page",
+          "document_status": "current"
+        },
+        {
           "document_id": "mun_almere_raad_vergaderschema_2026",
           "title": "Vergaderschema Raad van Almere 2026",
           "jurisdiction_level": "municipal",
@@ -3381,14 +3677,52 @@
     },
     {
       "topic": "municipal.local_structure",
-      "summary": "Current view combines 4 compatible claims for municipal.local_structure, led by mun_almere_2026_stevige_lokale_teams_raad: Het college benadrukte hierop dat de ontwikkeling van de Stevige Lokale Teams nog volop in beweging is.Volgende week komt het college met een raadsbrief over de aanpassingen op de regionale inkoopstrategie.",
+      "summary": "Current view combines 14 compatible claims for municipal.local_structure, led by mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel: Voorgesteld raadsbesluit 1. De ontwikkeling van de Stevige Lokale Teams in de komende periode te starten op basis van de volgende uitgangspunten: a. één stedelijk kader met maatwerk in de wijk; b. één team per wijk, voor alle leeftijden; c. mandaat en doorlopende regie; d. de organisatievorm en capaciteit volgt de inhoud; e. professionals die zowel verbinden als doen, mét inzet van experts en de sociale basis; f. helder opdrachtgeverschap en een taak op resultaat en financiën; g. aansluiten op bestaande netwerken en werkwijzen. 2. Het college opdracht te geven om: a. naast JGZ Almere ook de wijkteams mee te nemen in de scope van de Stevige Lokale Teams; b. in 2026 te starten met de ...",
       "claim_ids": [
+        "clm__mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel_municipal_translation_003",
+        "clm__mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel_municipal_translation_002",
+        "clm__mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel_municipal_translation_001",
+        "clm__mun_almere_2026_stevige_lokale_teams_raadsvoorstel_municipal_translation_003",
+        "clm__mun_almere_2026_stevige_lokale_teams_raadsvoorstel_municipal_translation_002",
+        "clm__mun_almere_2026_stevige_lokale_teams_raadsvoorstel_municipal_translation_001",
+        "clm__mun_almere_2026_stevige_lokale_teams_besluitenlijst_municipal_translation_001",
+        "clm__mun_almere_2026_stevige_lokale_teams_begrotingswijziging_municipal_translation_003",
+        "clm__mun_almere_2026_stevige_lokale_teams_begrotingswijziging_municipal_translation_002",
+        "clm__mun_almere_2026_stevige_lokale_teams_begrotingswijziging_municipal_translation_001",
         "clm__mun_almere_2026_stevige_lokale_teams_raad_municipal_translation_002",
         "clm__mun_almere_2026_stevige_lokale_teams_raad_municipal_translation_001",
         "clm__mun_almere_wijkteams_municipal_translation_001",
         "clm__mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie_municipal_translation_001"
       ],
       "source_documents": [
+        {
+          "document_id": "mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel",
+          "title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin - geamendeerd raadsvoorstel",
+          "jurisdiction_level": "municipal",
+          "document_type": "municipal_council_proposal",
+          "document_status": "current"
+        },
+        {
+          "document_id": "mun_almere_2026_stevige_lokale_teams_raadsvoorstel",
+          "title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin - raadsvoorstel",
+          "jurisdiction_level": "municipal",
+          "document_type": "municipal_council_proposal",
+          "document_status": "reference"
+        },
+        {
+          "document_id": "mun_almere_2026_stevige_lokale_teams_besluitenlijst",
+          "title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin - besluitenlijst",
+          "jurisdiction_level": "municipal",
+          "document_type": "municipal_decision_list",
+          "document_status": "reference"
+        },
+        {
+          "document_id": "mun_almere_2026_stevige_lokale_teams_begrotingswijziging",
+          "title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin - begrotingswijziging",
+          "jurisdiction_level": "municipal",
+          "document_type": "municipal_budget_change",
+          "document_status": "reference"
+        },
         {
           "document_id": "mun_almere_2026_stevige_lokale_teams_raad",
           "title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin",
@@ -3440,9 +3774,11 @@
     },
     {
       "topic": "timeline.d5_d6_financing_horizon",
-      "summary": "Current view combines 4 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
+      "summary": "Current view combines 6 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
       "claim_ids": [
         "clm__nat_azwa_2026_cw31_kader_d5_d6_timeline_and_status_001",
+        "clm__mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel_timeline_and_status_003",
+        "clm__mun_almere_2026_stevige_lokale_teams_raadsvoorstel_timeline_and_status_003",
         "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_timeline_and_status_003",
         "clm__nat_vng_gezond_en_actief_leven_2026_timeline_and_status_003",
         "clm__nat_vng_gezond_en_actief_leven_2026_timeline_and_status_002"
@@ -3454,6 +3790,20 @@
           "jurisdiction_level": "national",
           "document_type": "framework",
           "document_status": "current"
+        },
+        {
+          "document_id": "mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel",
+          "title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin - geamendeerd raadsvoorstel",
+          "jurisdiction_level": "municipal",
+          "document_type": "municipal_council_proposal",
+          "document_status": "current"
+        },
+        {
+          "document_id": "mun_almere_2026_stevige_lokale_teams_raadsvoorstel",
+          "title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin - raadsvoorstel",
+          "jurisdiction_level": "municipal",
+          "document_type": "municipal_council_proposal",
+          "document_status": "reference"
         },
         {
           "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
@@ -4222,6 +4572,17 @@
         "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d6_001",
         "clm__reg_ggd_flevoland_begroting_2026_d6_002",
         "clm__reg_ggd_flevoland_begroting_2026_d6_001",
+        "clm__mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel_d6_003",
+        "clm__mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel_d6_002",
+        "clm__mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel_d6_001",
+        "clm__mun_almere_2026_stevige_lokale_teams_raadsvoorstel_d6_003",
+        "clm__mun_almere_2026_stevige_lokale_teams_raadsvoorstel_d6_002",
+        "clm__mun_almere_2026_stevige_lokale_teams_raadsvoorstel_d6_001",
+        "clm__mun_almere_2026_stevige_lokale_teams_besluitenlijst_d6_002",
+        "clm__mun_almere_2026_stevige_lokale_teams_besluitenlijst_d6_001",
+        "clm__mun_almere_2026_stevige_lokale_teams_begrotingswijziging_d6_003",
+        "clm__mun_almere_2026_stevige_lokale_teams_begrotingswijziging_d6_002",
+        "clm__mun_almere_2026_stevige_lokale_teams_begrotingswijziging_d6_001",
         "clm__mun_almere_sociaal_domein_informatiepagina_d6_001",
         "clm__mun_almere_2026_stevige_lokale_teams_raad_d6_003",
         "clm__mun_almere_2026_stevige_lokale_teams_raad_d6_002",

@@ -1,6 +1,105 @@
 {
   "updates": [
     {
+      "update_id": "upd_d6_almere_gate_remediation_intake_2026_04_27",
+      "published_on": "2026-04-27",
+      "title": "D6 gate-remediation intake Almere verwerkt",
+      "summary": "Zes extra publieke bronnen zijn toegevoegd voor de D6-verantwoordelijkheidslaag van Almere: vier Stevige Lokale Teams-bijlagen uit Documentwijzer/Notubiz, de Samenwerkingsprojecten/Samen Sterker-bron en een actuele PGA-bron.",
+      "source_reference": {
+        "label": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin - geamendeerd raadsvoorstel",
+        "publisher": "Raad van Almere",
+        "page_url": "/sources/slt-geamendeerd-raadsvoorstel/",
+        "source_url": "https://api.notubiz.nl/document/16660072/2",
+        "publication_date": "2026-02-19",
+        "document_type": "municipal_council_proposal",
+        "jurisdiction_level": "municipal",
+        "status": "current"
+      },
+      "human_summary": {
+        "intro": "Deze update verwerkt de gate-beslissing dat Sprint 25.4 nog niet door mag naar rapportproductie of bestuurlijke werkagenda-drafting. De toegestane vervolgstap is alleen D6 responsibility implementation/remediation.",
+        "what_happened": "De Documentwijzer bij raadsnummer 26006 is via de achterliggende Spinque/Notubiz-bronnen ontsloten. Vier lokale raadstukken zijn opgeslagen en naar page-markdown geconverteerd. Daarnaast zijn Samenwerkingsprojecten/Samen Sterker in de Wijk en een actuele PGA-homepage aan de formele bronlaag toegevoegd.",
+        "what_changed": "De bronlaag groeit van 52 naar 58 documenten en de claimlaag van 541 naar 598 claims. De lokale decision layer bevat nu een source-backed publieke raadbeslissing voor Stevige Lokale Teams, terwijl de D6-classificatie en precieze lokale eigenaarschap nog als review- en validatiepunt open blijven.",
+        "why_it_matters": "Hiermee verschuift Sprint 25.4 van algemene D6-duiding naar uitvoeringsbewijs: welke lokale besluiten, partners, projecten en geldsporen publiek aantoonbaar zijn, en welke velden later door lokale medewerkers of bestuurlijke besluitvorming moeten worden ingevuld."
+      },
+      "change_highlights": [
+        {
+          "summary": "Documentwijzer/Notubiz-stukken bij Stevige Lokale Teams zijn toegevoegd.",
+          "detail": "Het gaat om het geamendeerde raadsvoorstel, het oorspronkelijke raadsvoorstel, de begrotingswijziging en de besluitenlijst rond raadsnummer 26006."
+        },
+        {
+          "summary": "Samenwerkingsprojecten/Samen Sterker in de Wijk is als D6-uitvoeringsbron opgenomen.",
+          "detail": "De bron helpt de mentale-gezondheidswijkinfrastructuur te onderbouwen met partners, netwerkteams, een gezamenlijk plan, steunkringlogica en leerbijeenkomsten."
+        },
+        {
+          "summary": "De actuele PGA-homepage is toegevoegd als huidige implementatiecontext.",
+          "detail": "Deze bron ondersteunt de actuele context rond gezonde wijken, duurzame zorg, lerende netwerken, betere samenwerking tussen informele zorg, sociaal en medisch domein en een actueel informatiebeeld."
+        },
+        {
+          "summary": "De lokale decision layer bevat nu een source-backed publieke raadbeslissing.",
+          "detail": "De beslissing is vastgelegd als publieke besluitroute voor Stevige Lokale Teams; formele D6-classificatie blijft review_needed."
+        }
+      ],
+      "key_points": [
+        "Niet door naar rapportproductie of bestuurlijke D6-drafting; alleen D6 remediation is toegestaan.",
+        "Zes extra bronnen zijn formeel ingested en verwerkt.",
+        "Stevige Lokale Teams heeft nu lokale besluitdocumenten in de bronlaag.",
+        "D6-classificatie, eigenaar, uitvoerder en budgetallocatie blijven lokale validatie- of besluitvelden waar de bronnen dat niet zelf vastleggen."
+      ],
+      "metrics": [
+        {
+          "label": "Bronnen",
+          "before": 52,
+          "after": 58
+        },
+        {
+          "label": "Claims",
+          "before": 541,
+          "after": 598
+        },
+        {
+          "label": "Reviewitems",
+          "before": 71,
+          "after": 75
+        },
+        {
+          "label": "Lokale beslissingen",
+          "before": 0,
+          "after": 1
+        }
+      ],
+      "affected_pages": [
+        {
+          "label": "Updates",
+          "url": "/updates/"
+        },
+        {
+          "label": "Bronnen",
+          "url": "/sources/"
+        },
+        {
+          "label": "Almere",
+          "url": "/almere/"
+        },
+        {
+          "label": "Dashboard",
+          "url": "/dashboard/"
+        },
+        {
+          "label": "Thema D6",
+          "url": "/themes/basisinfrastructuur-d6/"
+        }
+      ],
+      "affected_document_ids": [
+        "mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel",
+        "mun_almere_2026_stevige_lokale_teams_raadsvoorstel",
+        "mun_almere_2026_stevige_lokale_teams_begrotingswijziging",
+        "mun_almere_2026_stevige_lokale_teams_besluitenlijst",
+        "mun_almere_samenwerkingsprojecten",
+        "mun_almere_pga_current_home"
+      ],
+      "highlighted_timeline_entry_keys": []
+    },
+    {
       "update_id": "upd_d6_almere_source_intake_2026_04_27",
       "published_on": "2026-04-27",
       "title": "D6-bronintake Almere verwerkt in de dataset",

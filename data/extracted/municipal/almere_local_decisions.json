@@ -2,7 +2,34 @@
   "municipality_id": "GM0034",
   "municipality_name": "Almere",
   "created_on": "2026-04-21",
-  "note": "Reserved for human-entered local policy choices. This file should not be overwritten automatically once decisions are added.",
-  "decision_count": 0,
-  "decisions": []
+  "note": "Reserved for human-entered local policy choices. This file should not be overwritten automatically once decisions are added. Source-backed public council decisions may be entered manually when the decision document is ingested; D6 classification remains a separate validation field.",
+  "decision_count": 1,
+  "decisions": [
+    {
+      "decision_id": "almere_2026_02_19_stevige_lokale_teams_geamendeerd_aangenomen",
+      "decision_date": "2026-02-19",
+      "decision_title": "Raadsvoorstel Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin geamendeerd aangenomen",
+      "decision_body": "Raad van Almere",
+      "decision_status": "source_backed_public_decision",
+      "source_document_ids": [
+        "mun_almere_2026_stevige_lokale_teams_raad",
+        "mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel",
+        "mun_almere_2026_stevige_lokale_teams_besluitenlijst"
+      ],
+      "source_urls": [
+        "https://raadvanalmere.nl/article/stevige-lokale-teams-en-inzet-investeringsfonds-jeugd-en-gezin1",
+        "https://api.notubiz.nl/document/16660072/2",
+        "https://api.notubiz.nl/document/16520063/2"
+      ],
+      "scope": [
+        "Stevige Lokale Teams",
+        "Investeringsfonds Jeugd en Gezin",
+        "JGZ Almere",
+        "wijkteams"
+      ],
+      "d6_interpretation_status": "review_needed",
+      "local_validation_needed": true,
+      "open_issue": "This records the public council decision route. It does not by itself settle whether Stevige Lokale Teams are formal D6 infrastructure, adjacent infrastructure, candidate infrastructure or outside D6 scope."
+    }
+  ]
 }

@@ -1,6 +1,106 @@
 {
   "updates": [
     {
+      "update_id": "upd_d6_almere_source_intake_2026_04_27",
+      "published_on": "2026-04-27",
+      "title": "D6-bronintake Almere verwerkt in de dataset",
+      "summary": "Zeven publieke bronnen voor de D6-basisinfrastructuur van Almere zijn toegevoegd aan de formele bronlaag en door de pijplijn verwerkt. De update versterkt vooral lokale toegang, wijkteams, Stevige Lokale Teams, GGD/JGZ, monitoring en lokale verantwoordelijkheidsprefill.",
+      "source_reference": {
+        "label": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin",
+        "publisher": "Raad van Almere",
+        "page_url": "/sources/stevige-lokale-teams-almere/",
+        "source_url": "https://raadvanalmere.nl/article/stevige-lokale-teams-en-inzet-investeringsfonds-jeugd-en-gezin1",
+        "publication_date": "2026-01-06",
+        "document_type": "municipal_council_page",
+        "jurisdiction_level": "municipal",
+        "status": "current"
+      },
+      "human_summary": {
+        "intro": "Deze update legt de eerste formele bronintake vast voor het heropende Sprint 25.4b-spoor: het D6 Almere responsibility pack. De focus ligt niet op een nieuwe algemene D6-samenvatting, maar op lokale uitvoeringsbronnen waarmee verantwoordelijkheid, schaal en validatievelden scherper kunnen worden gemaakt.",
+        "what_happened": "Zeven publieke bronnen zijn lokaal opgeslagen, toegevoegd aan data/raw/manifest.json en daarna verwerkt via inventory, structural extraction, document extraction, claims, current interpretation, D6-lagen, QC, site-viewmodels en het interne dashboard.",
+        "what_changed": "De bronbasis bevat nu formele corpusdocumenten voor Stevige Lokale Teams, Wijkteams Almere, lokale-teamkaders van VNG en Toezicht Sociaal Domein, GGD Flevoland Begroting 2026, GGD Kennis en Advies en het JGZ Almere-profiel. Het D6 responsibility register kan daardoor meer velden als publieke prefill behandelen, terwijl niet-besloten eigenaar-, budget- en uitvoeringsvragen open blijven voor lokale validatie.",
+        "why_it_matters": "Voor Almere maakt dit het verschil tussen D6 als beleidsbegrip en D6 als uitvoeringsagenda: welke lokale toegang, teams, GGD/JGZ-functies en monitoringsbronnen publiek zichtbaar zijn, en waar nog expliciet lokaal besluit of medewerkerinvulling nodig is."
+      },
+      "change_highlights": [
+        {
+          "summary": "De formele bronlaag groeide van 45 naar 52 documenten door zeven D6-uitvoeringsbronnen toe te voegen.",
+          "detail": "De nieuwe bronnen zijn niet alleen als kandidaat genoemd, maar opgeslagen in data/raw, opgenomen in de manifestlaag en downstream verwerkt."
+        },
+        {
+          "summary": "Stevige Lokale Teams en Wijkteams Almere zijn nu als lokale D6-toegangsbronnen zichtbaar.",
+          "detail": "De raadspagina over Stevige Lokale Teams geeft lokale besluit- en uitvoeringssignalen; Wijkteams Almere geeft de bestaande publieke toegangsbasis. Onderliggende Documentwijzer-stukken blijven nog een aparte intakeactie."
+        },
+        {
+          "summary": "GGD/JGZ en monitoring zijn versterkt met GGD Flevoland-bronnen.",
+          "detail": "De begroting 2026, Kennis en Advies en het JGZ-profiel helpen om GGD-regioschaal, JGZ Almere, dashboards, monitors en kennisfunctie te onderscheiden van Almere-local en IZA/AZWA-regio."
+        },
+        {
+          "summary": "De updatepagina zelf wordt voortaan als openklapbare lijst gelezen.",
+          "detail": "Elke update is een klikbaar item met samenvatting, wijzigingen, claims, betrokken pagina's, bronnen en tijdlijninformatie."
+        }
+      ],
+      "key_points": [
+        "Zeven D6-bronnen zijn formeel ingested en verwerkt.",
+        "De D6 responsibility register-laag is bijgewerkt met ingested/source-backed status voor de nieuwe bronset.",
+        "Samen Sterker in de Wijk en Almere samenwerkingsprojecten blijven open intakewerk omdat directe download op 27 april 2026 een 404 gaf.",
+        "Onderliggende Documentwijzer-stukken voor Stevige Lokale Teams blijven nodig voordat lokale besluiten als volledig settled worden behandeld."
+      ],
+      "metrics": [
+        {
+          "label": "Bronnen",
+          "before": 45,
+          "after": 52
+        },
+        {
+          "label": "Claims",
+          "before": 480,
+          "after": 541
+        },
+        {
+          "label": "Reviewitems",
+          "before": 67,
+          "after": 71
+        },
+        {
+          "label": "D6-ingestbronnen",
+          "before": 0,
+          "after": 7
+        }
+      ],
+      "affected_pages": [
+        {
+          "label": "Updates",
+          "url": "/updates/"
+        },
+        {
+          "label": "Bronnen",
+          "url": "/sources/"
+        },
+        {
+          "label": "Almere",
+          "url": "/almere/"
+        },
+        {
+          "label": "Dashboard",
+          "url": "/dashboard/"
+        },
+        {
+          "label": "Thema D6",
+          "url": "/themes/basisinfrastructuur-d6/"
+        }
+      ],
+      "affected_document_ids": [
+        "mun_almere_2026_stevige_lokale_teams_raad",
+        "mun_almere_wijkteams",
+        "nat_vng_richtinggevend_kader_toegang_lokale_teams",
+        "nat_tsd_basisfuncties_lokale_teams",
+        "reg_ggd_flevoland_begroting_2026",
+        "reg_ggd_flevoland_kennis_en_advies",
+        "reg_ggd_flevoland_jgz_almere_profile"
+      ],
+      "highlighted_timeline_entry_keys": []
+    },
+    {
       "update_id": "upd_vng_financiering_2026_04_23",
       "published_on": "2026-04-23",
       "title": "VNG-financieringsset van 22 april 2026 verwerkt in de dataset",

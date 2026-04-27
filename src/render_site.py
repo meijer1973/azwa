@@ -838,7 +838,7 @@ def render_updates(route: str, updates_view: dict) -> str:
         '<section class="section"><h2>Hoe deze updatepagina te gebruiken</h2><div class="notice">Deze pagina laat zien wat er door nieuwe data in de dataset en op de site is veranderd. De onderliggende bronpagina\'s en tijdlijnmomenten blijven leidend voor de inhoudelijke duiding.</div></section>'
     ]
 
-    for update in updates_view["updates"]:
+    for index, update in enumerate(updates_view["updates"]):
         source_reference = update.get("source_reference")
         source_reference_html = ""
         if source_reference:
@@ -851,10 +851,17 @@ def render_updates(route: str, updates_view: dict) -> str:
 
         human_summary = update.get("human_summary", {})
         sections.append(
-            f'<section class="section" id="{esc(update["update_id"])}">'
-            + f'<h2>{esc(update["title"])}</h2>'
-            + f'<p class="list-meta">{esc(update["published_on"])}</p>'
-            + f'<div class="notice">{esc(update["summary"])}</div>'
+            f'<details class="timeline-entry update-entry" id="{esc(update["update_id"])}"'
+            + (" open" if index == 0 else "")
+            + '><summary class="timeline-entry__summary">'
+            + '<div class="timeline-entry__summary-main">'
+            + f'<p class="timeline-entry__date">{esc(update["published_on"])}</p>'
+            + f'<h2 class="timeline-entry__title">{esc(update["title"])}</h2>'
+            + f'<p class="timeline-entry__summary-text">{esc(update["summary"])}</p>'
+            + "</div>"
+            + '<span class="timeline-entry__toggle">Open update</span>'
+            + "</summary>"
+            + '<div class="timeline-entry__body">'
             + render_update_metric_boxes(route, update["metrics"])
             + f'<section class="section section--nested" id="{esc(update["update_id"])}-samenvatting"><h3>Kort samengevat</h3>'
             + source_reference_html
@@ -878,15 +885,21 @@ def render_updates(route: str, updates_view: dict) -> str:
                 [{"label": item["label"], "href": item["url"]} for item in update["affected_pages"]],
             )
             + "</section>"
-            + f'<section class="section section--nested" id="{esc(update["update_id"])}-tijdlijn"><h3>Nieuwe of aangescherpte tijdlijnmomenten</h3><ul class="stack-list">'
-            + "".join(
-                "<li>"
-                + f'<strong><a href="{esc(relative_link(route, item["page_url"]))}">{esc(item["date_label"])} - {esc(item["title"])}</a></strong><br>'
-                + esc(item["summary"])
-                + "</li>"
-                for item in update["highlighted_timeline_entries"]
+            + f'<section class="section section--nested" id="{esc(update["update_id"])}-tijdlijn"><h3>Nieuwe of aangescherpte tijdlijnmomenten</h3>'
+            + (
+                '<ul class="stack-list">'
+                + "".join(
+                    "<li>"
+                    + f'<strong><a href="{esc(relative_link(route, item["page_url"]))}">{esc(item["date_label"])} - {esc(item["title"])}</a></strong><br>'
+                    + esc(item["summary"])
+                    + "</li>"
+                    for item in update["highlighted_timeline_entries"]
+                )
+                + "</ul>"
+                if update["highlighted_timeline_entries"]
+                else '<div class="empty-state">Deze update voegt geen apart tijdlijnmoment toe.</div>'
             )
-            + "</ul></section>"
+            + "</section>"
             + f'<section class="section section--nested" id="{esc(update["update_id"])}-bronnen"><h3>Bronnen die deze update hebben veroorzaakt</h3><ul class="stack-list">'
             + "".join(
                 "<li>"
@@ -895,7 +908,7 @@ def render_updates(route: str, updates_view: dict) -> str:
                 + "</li>"
                 for item in update["affected_sources"]
             )
-            + "</ul></section></section>"
+            + "</ul></section></div></details>"
         )
     return "".join(sections)
 

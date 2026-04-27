@@ -1811,7 +1811,7 @@ def build_site_updates_view(documents: dict[str, dict], timeline_register: dict,
         metrics = []
         for item in spec.get("metrics", []):
             label = item["label"].lower()
-            if label == "bronnen":
+            if "bronnen" in label:
                 metric_page_url = section_urls["bronnen"]
             elif label == "claims":
                 metric_page_url = section_urls["claims"]

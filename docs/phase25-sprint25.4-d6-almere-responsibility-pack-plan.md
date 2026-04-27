@@ -42,6 +42,12 @@ Verifieer en intake daarna deze kandidaatbronnen als publieke D6-uitvoeringsbron
 | 9 | Actuele Positief Gezond Almere-samenwerking | Huidige lokale coalitie en praktische zorg/welzijnssamenwerking | Actualiseer of voeg toe als PGA-uitvoeringscontext |
 | 10 | GGZ Centraal Flevoland en partnerpagina's | Psychiatrische wijkteams en relatie met wijkteams/huisartsen | Selectief toevoegen als ondersteunende bron |
 
+Intakestatus op 27 april 2026:
+
+- Ingested in de formele raw manifest en downstream pipeline: Stevige Lokale Teams raadspagina, Wijkteams Almere, VNG Richtinggevend Kader, Toezicht Sociaal Domein Basisfuncties, GGD Flevoland Begroting 2026, GGD Flevoland Kennis en Advies, en GGD Flevoland/JGZ Almere profiel.
+- Nog open voor gerichte bronselectie: onderliggende Documentwijzer-stukken bij Stevige Lokale Teams, Samen Sterker in de Wijk/Almere samenwerkingsprojecten omdat directe download van de gevonden Almere-pagina's op 27 april 2026 een 404 gaf, actuele PGA-samenwerkingsbronnen en selectieve GGZ/partnerbronnen.
+- Source-intake updates worden vastgelegd in `config/site_updates.json` en daarna verwerkt naar `data/site/site_updates_view.json`, de publieke updatepagina en de interne dashboardmirror. Elke update moet als afzonderlijk openklapbaar item leesbaar zijn.
+
 ## Responsibility register
 
 Maak een register met minimaal deze velden:

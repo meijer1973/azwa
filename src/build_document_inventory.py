@@ -647,6 +647,99 @@ ANNOTATIONS = {
             "review questions, not as a replacement for the adopted Maatschappelijke agenda itself."
         ),
     },
+    "mun_almere_2026_stevige_lokale_teams_raad": {
+        "source_classification": "primary",
+        "curation_bucket": "canonical",
+        "contains_d5": False,
+        "contains_d6": True,
+        "contains_structured_tables": False,
+        "contains_financing_logic": True,
+        "contains_governance_logic": True,
+        "contains_monitoring_evaluation_logic": False,
+        "contains_municipal_implications": True,
+        "inventory_notes": (
+            "Local council page for Stevige Lokale Teams and the youth/family investment fund; high-priority "
+            "D6 responsibility evidence, but underlying Documentwijzer decision documents still need separate intake."
+        ),
+    },
+    "mun_almere_wijkteams": {
+        "source_classification": "primary",
+        "curation_bucket": "canonical",
+        "contains_d5": False,
+        "contains_d6": True,
+        "contains_structured_tables": False,
+        "contains_financing_logic": False,
+        "contains_governance_logic": True,
+        "contains_monitoring_evaluation_logic": False,
+        "contains_municipal_implications": True,
+        "inventory_notes": "Public baseline source for the existing Almere wijkteam access and support route.",
+    },
+    "nat_vng_richtinggevend_kader_toegang_lokale_teams": {
+        "source_classification": "primary",
+        "curation_bucket": "canonical",
+        "contains_d5": False,
+        "contains_d6": True,
+        "contains_structured_tables": False,
+        "contains_financing_logic": False,
+        "contains_governance_logic": True,
+        "contains_monitoring_evaluation_logic": True,
+        "contains_municipal_implications": True,
+        "inventory_notes": (
+            "National implementation framework for access, local teams and integrated services; use as assessment "
+            "benchmark, not as an Almere decision."
+        ),
+    },
+    "nat_tsd_basisfuncties_lokale_teams": {
+        "source_classification": "primary",
+        "curation_bucket": "canonical",
+        "contains_d5": False,
+        "contains_d6": True,
+        "contains_structured_tables": False,
+        "contains_financing_logic": False,
+        "contains_governance_logic": True,
+        "contains_monitoring_evaluation_logic": True,
+        "contains_municipal_implications": True,
+        "inventory_notes": "Assessment framework for low-threshold, nearby and integrated local teams in the social domain.",
+    },
+    "reg_ggd_flevoland_begroting_2026": {
+        "source_classification": "primary",
+        "curation_bucket": "canonical",
+        "contains_d5": False,
+        "contains_d6": True,
+        "contains_structured_tables": True,
+        "contains_financing_logic": True,
+        "contains_governance_logic": True,
+        "contains_monitoring_evaluation_logic": True,
+        "contains_municipal_implications": True,
+        "inventory_notes": (
+            "Current GGD Flevoland budget source for governance, JGZ, Kennis en Advies, prevention, plustaken, "
+            "inwonerbijdrage and GGD-region scale."
+        ),
+    },
+    "reg_ggd_flevoland_kennis_en_advies": {
+        "source_classification": "primary",
+        "curation_bucket": "canonical",
+        "contains_d5": False,
+        "contains_d6": True,
+        "contains_structured_tables": False,
+        "contains_financing_logic": False,
+        "contains_governance_logic": False,
+        "contains_monitoring_evaluation_logic": True,
+        "contains_municipal_implications": True,
+        "inventory_notes": "Public source for GGD Flevoland monitors, dashboards, epidemiology, data analysis and advice.",
+    },
+    "reg_ggd_flevoland_jgz_almere_profile": {
+        "source_classification": "primary",
+        "curation_bucket": "canonical",
+        "contains_d5": False,
+        "contains_d6": True,
+        "contains_structured_tables": False,
+        "contains_financing_logic": False,
+        "contains_governance_logic": True,
+        "contains_monitoring_evaluation_logic": False,
+        "contains_municipal_implications": True,
+        "inventory_notes": "Public source for JGZ Almere's 0-18 role, school links, youth support and care-chain function.",
+    },
 }
 
 

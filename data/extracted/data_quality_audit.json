@@ -1,20 +1,20 @@
 {
   "audit_run_id": "phase24_data_quality_audit_v1",
-  "generated_on": "2026-04-26",
+  "generated_on": "2026-04-27",
   "storage": {
     "canonical_output": "data/extracted/data_quality_audit.json",
     "sprint_note": "docs/completed-plans/phase24-sprint24.2-audit.md"
   },
   "summary": {
-    "claim_count": 480,
+    "claim_count": 541,
     "topic_count": 44,
-    "claims_with_perspectives": 460,
-    "claims_without_perspectives": 20,
+    "claims_with_perspectives": 518,
+    "claims_without_perspectives": 23,
     "broad_rest_topic_count": 5,
     "high_volume_topic_count": 6,
-    "rough_claim_count": 235,
+    "rough_claim_count": 269,
     "site_files_with_rough_claims": 12,
-    "open_review_items": 59
+    "open_review_items": 67
   },
   "perspective_coverage": {
     "claims": {
@@ -22,7 +22,7 @@
         {
           "perspective_id": "norm",
           "title": "Norm",
-          "claim_count": 148,
+          "claim_count": 167,
           "topic_count": 17,
           "sample_topics": [
             "d5.basisfunctionaliteiten_onderbouwd",
@@ -38,7 +38,7 @@
         {
           "perspective_id": "time",
           "title": "Time",
-          "claim_count": 157,
+          "claim_count": 175,
           "topic_count": 16,
           "sample_topics": [
             "monitoring.d5_operational_monitoring",
@@ -79,7 +79,7 @@
         {
           "perspective_id": "locality",
           "title": "Locality",
-          "claim_count": 263,
+          "claim_count": 308,
           "topic_count": 35,
           "sample_topics": [
             "d5.basisfunctionaliteiten_onderbouwd",
@@ -95,7 +95,7 @@
         {
           "perspective_id": "execution",
           "title": "Execution",
-          "claim_count": 305,
+          "claim_count": 352,
           "topic_count": 27,
           "sample_topics": [
             "d5.basisfunctionaliteiten_onderbouwd",
@@ -109,13 +109,13 @@
           ]
         }
       ],
-      "claims_with_perspectives": 460,
-      "claims_without_perspectives": 20,
+      "claims_with_perspectives": 518,
+      "claims_without_perspectives": 23,
       "unmapped_topics": [],
       "topic_mapping_gaps": [
         {
           "topic": "governance_and_finance.other",
-          "claim_without_perspective_count": 20,
+          "claim_without_perspective_count": 23,
           "sample_claim_ids": [
             "clm__nat_azwa_2026_cw31_kamerbrief_governance_and_finance_001",
             "clm__nat_azwa_2026_voortgang_kamerbrief_governance_and_finance_002",
@@ -192,19 +192,19 @@
         }
       },
       "source_detail": {
-        "file_count": 45,
-        "labeled_file_count": 45,
+        "file_count": 52,
+        "labeled_file_count": 52,
         "unlabeled_file_count": 0,
         "perspective_counts": {
-          "norm": 45,
-          "time": 38,
+          "norm": 52,
+          "time": 43,
           "money": 21,
-          "governance": 42,
-          "locality": 45,
-          "execution": 43
+          "governance": 49,
+          "locality": 52,
+          "execution": 50
         },
         "classification_counts": {
-          "source_fact": 45
+          "source_fact": 52
         }
       }
     }
@@ -213,8 +213,8 @@
     "broad_rest_topics": [
       {
         "topic": "monitoring.other",
-        "current_claim_count": 52,
-        "historical_claim_count": 5,
+        "current_claim_count": 59,
+        "historical_claim_count": 8,
         "needs_human_review": true,
         "confidence": 0.42,
         "perspective_ids": [
@@ -238,14 +238,42 @@
           "clm__nat_azwa_opdracht_werkagenda_d5_2026_monitoring_and_evaluation_002",
           "clm__nat_azwa_opdracht_werkagenda_d5_2026_monitoring_and_evaluation_001"
         ],
-        "interpretation_summary": "Current view combines 52 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
+        "interpretation_summary": "Current view combines 59 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
+      },
+      {
+        "topic": "governance_and_finance.other",
+        "current_claim_count": 45,
+        "historical_claim_count": 5,
+        "needs_human_review": true,
+        "confidence": 0.4,
+        "perspective_ids": [
+          "locality"
+        ],
+        "sample_documents": [
+          "nat_azwa_2026_cw31_kamerbrief",
+          "nat_azwa_2026_voortgang_kamerbrief",
+          "nat_azwa_opdracht_werkagenda_d5_2026",
+          "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026",
+          "reg_ggd_flevoland_begroting_2026"
+        ],
+        "sample_claim_ids": [
+          "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_governance_and_finance_003",
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_governance_and_finance_003",
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_governance_and_finance_002",
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_governance_and_finance_001",
+          "clm__nat_azwa_2026_voortgang_kamerbrief_governance_and_finance_003",
+          "clm__nat_azwa_2026_voortgang_kamerbrief_governance_and_finance_002",
+          "clm__nat_azwa_2026_cw31_kamerbrief_governance_and_finance_001",
+          "clm__reg_ggd_flevoland_begroting_2026_governance_and_finance_003"
+        ],
+        "interpretation_summary": "Current view combines 45 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
       },
       {
         "topic": "timeline.other",
-        "current_claim_count": 42,
-        "historical_claim_count": 5,
+        "current_claim_count": 43,
+        "historical_claim_count": 6,
         "needs_human_review": true,
-        "confidence": 0.42,
+        "confidence": 0.41,
         "perspective_ids": [
           "locality",
           "time"
@@ -268,35 +296,7 @@
           "clm__nat_azwa_2026_voortgang_kamerbrief_timeline_and_status_002",
           "clm__nat_azwa_2026_voortgang_kamerbrief_timeline_and_status_001"
         ],
-        "interpretation_summary": "Current view combines 42 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
-      },
-      {
-        "topic": "governance_and_finance.other",
-        "current_claim_count": 41,
-        "historical_claim_count": 2,
-        "needs_human_review": true,
-        "confidence": 0.39,
-        "perspective_ids": [
-          "locality"
-        ],
-        "sample_documents": [
-          "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst",
-          "nat_azwa_2026_cw31_kamerbrief",
-          "nat_azwa_2026_voortgang_kamerbrief",
-          "nat_azwa_opdracht_werkagenda_d5_2026",
-          "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
-        ],
-        "sample_claim_ids": [
-          "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_governance_and_finance_003",
-          "clm__nat_azwa_opdracht_werkagenda_d5_2026_governance_and_finance_003",
-          "clm__nat_azwa_opdracht_werkagenda_d5_2026_governance_and_finance_002",
-          "clm__nat_azwa_opdracht_werkagenda_d5_2026_governance_and_finance_001",
-          "clm__nat_azwa_2026_voortgang_kamerbrief_governance_and_finance_003",
-          "clm__nat_azwa_2026_voortgang_kamerbrief_governance_and_finance_002",
-          "clm__nat_azwa_2026_cw31_kamerbrief_governance_and_finance_001",
-          "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_governance_and_finance_003"
-        ],
-        "interpretation_summary": "Current view combines 41 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
+        "interpretation_summary": "Current view combines 43 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
       },
       {
         "topic": "d5.other",
@@ -332,7 +332,7 @@
       },
       {
         "topic": "d6.other",
-        "current_claim_count": 15,
+        "current_claim_count": 16,
         "historical_claim_count": 0,
         "needs_human_review": true,
         "confidence": 0.4,
@@ -358,14 +358,14 @@
           "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d6_002",
           "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d6_001"
         ],
-        "interpretation_summary": "Current view combines 15 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
+        "interpretation_summary": "Current view combines 16 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
       }
     ],
     "high_volume_topics": [
       {
         "topic": "municipal.implementation_translation",
-        "current_claim_count": 98,
-        "historical_claim_count": 10,
+        "current_claim_count": 106,
+        "historical_claim_count": 11,
         "needs_human_review": true,
         "confidence": 0.57,
         "sample_claim_ids": [
@@ -378,12 +378,12 @@
           "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_municipal_translation_002",
           "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_municipal_translation_001"
         ],
-        "interpretation_summary": "Current view combines 98 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
+        "interpretation_summary": "Current view combines 106 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
       },
       {
         "topic": "monitoring.other",
-        "current_claim_count": 52,
-        "historical_claim_count": 5,
+        "current_claim_count": 59,
+        "historical_claim_count": 8,
         "needs_human_review": true,
         "confidence": 0.42,
         "sample_claim_ids": [
@@ -396,14 +396,32 @@
           "clm__nat_azwa_opdracht_werkagenda_d5_2026_monitoring_and_evaluation_002",
           "clm__nat_azwa_opdracht_werkagenda_d5_2026_monitoring_and_evaluation_001"
         ],
-        "interpretation_summary": "Current view combines 52 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
+        "interpretation_summary": "Current view combines 59 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
+      },
+      {
+        "topic": "governance_and_finance.other",
+        "current_claim_count": 45,
+        "historical_claim_count": 5,
+        "needs_human_review": true,
+        "confidence": 0.4,
+        "sample_claim_ids": [
+          "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_governance_and_finance_003",
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_governance_and_finance_003",
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_governance_and_finance_002",
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_governance_and_finance_001",
+          "clm__nat_azwa_2026_voortgang_kamerbrief_governance_and_finance_003",
+          "clm__nat_azwa_2026_voortgang_kamerbrief_governance_and_finance_002",
+          "clm__nat_azwa_2026_cw31_kamerbrief_governance_and_finance_001",
+          "clm__reg_ggd_flevoland_begroting_2026_governance_and_finance_003"
+        ],
+        "interpretation_summary": "Current view combines 45 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
       },
       {
         "topic": "timeline.other",
-        "current_claim_count": 42,
-        "historical_claim_count": 5,
+        "current_claim_count": 43,
+        "historical_claim_count": 6,
         "needs_human_review": true,
-        "confidence": 0.42,
+        "confidence": 0.41,
         "sample_claim_ids": [
           "clm__nat_wetten_spuk_transformatiemiddelen_regeling_timeline_and_status_003",
           "clm__nat_wetten_spuk_transformatiemiddelen_regeling_timeline_and_status_001",
@@ -414,32 +432,14 @@
           "clm__nat_azwa_2026_voortgang_kamerbrief_timeline_and_status_002",
           "clm__nat_azwa_2026_voortgang_kamerbrief_timeline_and_status_001"
         ],
-        "interpretation_summary": "Current view combines 42 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
-      },
-      {
-        "topic": "governance_and_finance.other",
-        "current_claim_count": 41,
-        "historical_claim_count": 2,
-        "needs_human_review": true,
-        "confidence": 0.39,
-        "sample_claim_ids": [
-          "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_governance_and_finance_003",
-          "clm__nat_azwa_opdracht_werkagenda_d5_2026_governance_and_finance_003",
-          "clm__nat_azwa_opdracht_werkagenda_d5_2026_governance_and_finance_002",
-          "clm__nat_azwa_opdracht_werkagenda_d5_2026_governance_and_finance_001",
-          "clm__nat_azwa_2026_voortgang_kamerbrief_governance_and_finance_003",
-          "clm__nat_azwa_2026_voortgang_kamerbrief_governance_and_finance_002",
-          "clm__nat_azwa_2026_cw31_kamerbrief_governance_and_finance_001",
-          "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_governance_and_finance_003"
-        ],
-        "interpretation_summary": "Current view combines 41 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
+        "interpretation_summary": "Current view combines 43 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
       },
       {
         "topic": "d5.basisfunctionaliteiten_onderbouwd",
-        "current_claim_count": 28,
+        "current_claim_count": 30,
         "historical_claim_count": 0,
         "needs_human_review": true,
-        "confidence": 0.63,
+        "confidence": 0.62,
         "sample_claim_ids": [
           "clm__nat_gala_2023_gezond_en_actief_leven_d5_003",
           "clm__nat_gala_2023_gezond_en_actief_leven_d5_002",
@@ -450,7 +450,7 @@
           "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d5_003",
           "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d5_002"
         ],
-        "interpretation_summary": "Current view combines 28 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
+        "interpretation_summary": "Current view combines 30 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
       },
       {
         "topic": "finance.d5_d6.funding_instrument",
@@ -483,13 +483,13 @@
     },
     "issue_counts": {
       "english_summary": 59,
-      "long_raw_excerpt": 120,
+      "long_raw_excerpt": 145,
       "raw_letterhead": 6,
-      "fragment_too_short": 36,
-      "bullet_or_heading_fragment": 38,
+      "fragment_too_short": 37,
+      "bullet_or_heading_fragment": 48,
       "encoding_noise": 4
     },
-    "claim_count": 235,
+    "claim_count": 269,
     "claims": [
       {
         "claim_id": "clm__nat_azwa_2025_aanbiedingsbrief_municipal_translation_001",
@@ -1595,6 +1595,21 @@
         "statement_excerpt": "- 50 miljoen euro extra voor gemeenten, aanvullend op de bestaande SPUK IZA en de Brede SPUK GALA. Deze middelen zijn onder andere bedoeld voor de ketenaanpak Kind naar Gezonder Gewicht en de Gecombineerde Leefstijlin..."
       },
       {
+        "claim_id": "clm__nat_tsd_basisfuncties_lokale_teams_d6_003",
+        "topic": "d6.local_teams",
+        "document_id": "nat_tsd_basisfuncties_lokale_teams",
+        "jurisdiction_level": "national",
+        "perspective_ids": [
+          "execution",
+          "norm"
+        ],
+        "issue_codes": [
+          "bullet_or_heading_fragment",
+          "long_raw_excerpt"
+        ],
+        "statement_excerpt": "- Rapport06-10-2021PDF-document1.9 MB87 paginas Hulp en ondersteuning op basis van de Jeugdwet, Wmo 2015 en de Participatiewet dient zo laagdrempelig, dichtbij en zo intensief als nodig en licht als mogelijk te zijn...."
+      },
+      {
         "claim_id": "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d5_001",
         "topic": "d5.basisfunctionaliteiten_onderbouwd",
         "document_id": "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026",
@@ -1787,6 +1802,21 @@
         "statement_excerpt": "The plan expects the definite transformatieagenda by the end of the second quarter and sets up kwartiermakers for the fundamental work tracks."
       },
       {
+        "claim_id": "clm__reg_ggd_flevoland_begroting_2026_municipal_translation_001",
+        "topic": "municipal.implementation_translation",
+        "document_id": "reg_ggd_flevoland_begroting_2026",
+        "jurisdiction_level": "regional",
+        "perspective_ids": [
+          "execution",
+          "locality"
+        ],
+        "issue_codes": [
+          "bullet_or_heading_fragment",
+          "long_raw_excerpt"
+        ],
+        "statement_excerpt": "3. Maatschappelijke en organisatorische ontwikkelingen Het Gezond en Actief Leven Akkoord4 en het Integraal Zorgakkoord5 zijn in 2023 landelijk vastgesteld om uitvoering te geven aan deze transformatie. GGD Flevoland..."
+      },
+      {
         "claim_id": "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_municipal_translation_002",
         "topic": "municipal.implementation_translation",
         "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
@@ -1884,6 +1914,50 @@
           "fragment_too_short"
         ],
         "statement_excerpt": "De Gezondheidsvisie 2024-2026 met het onderliggende transformatieplan Positief"
+      },
+      {
+        "claim_id": "clm__mun_almere_2026_stevige_lokale_teams_raad_d6_002",
+        "topic": "d6.local_teams",
+        "document_id": "mun_almere_2026_stevige_lokale_teams_raad",
+        "jurisdiction_level": "municipal",
+        "perspective_ids": [
+          "execution",
+          "locality",
+          "norm"
+        ],
+        "issue_codes": [
+          "bullet_or_heading_fragment"
+        ],
+        "statement_excerpt": "- Randvoorwaarden Stevige Lokale Teams (26006.001) Het amendement is met 21 stemmen voor en 19 stemmen tegen aangenomen."
+      },
+      {
+        "claim_id": "clm__mun_almere_2026_stevige_lokale_teams_raad_monitoring_and_evaluation_001",
+        "topic": "monitoring.other",
+        "document_id": "mun_almere_2026_stevige_lokale_teams_raad",
+        "jurisdiction_level": "municipal",
+        "perspective_ids": [
+          "execution",
+          "locality",
+          "time"
+        ],
+        "issue_codes": [
+          "bullet_or_heading_fragment"
+        ],
+        "statement_excerpt": "- Evaluatie keuze 0-100 wijkteammodel (26006.002) De motie is met 8 stemmen voor en 32 stemmen tegen verworpen."
+      },
+      {
+        "claim_id": "clm__mun_almere_2026_stevige_lokale_teams_raad_municipal_translation_003",
+        "topic": "municipal.implementation_translation",
+        "document_id": "mun_almere_2026_stevige_lokale_teams_raad",
+        "jurisdiction_level": "municipal",
+        "perspective_ids": [
+          "execution",
+          "locality"
+        ],
+        "issue_codes": [
+          "fragment_too_short"
+        ],
+        "statement_excerpt": "https://documentwijzer.raadvanalmere.nl/app/instrument/26006"
       },
       {
         "claim_id": "clm__mun_almere_raad_vergaderschema_2026_municipal_translation_001",
@@ -2319,6 +2393,93 @@
           "fragment_too_short"
         ],
         "statement_excerpt": "Gezondheidsmonitor: volwassenen en ouderen 2024, Flevoland"
+      },
+      {
+        "claim_id": "clm__reg_ggd_flevoland_begroting_2026_monitoring_and_evaluation_002",
+        "topic": "monitoring.other",
+        "document_id": "reg_ggd_flevoland_begroting_2026",
+        "jurisdiction_level": "regional",
+        "perspective_ids": [
+          "execution",
+          "locality",
+          "time"
+        ],
+        "issue_codes": [
+          "bullet_or_heading_fragment"
+        ],
+        "statement_excerpt": "• Monitoring, onderzoek en evaluatie: de vraag naar inzicht"
+      },
+      {
+        "claim_id": "clm__reg_ggd_flevoland_kennis_en_advies_governance_and_finance_001",
+        "topic": "governance_and_finance.other",
+        "document_id": "reg_ggd_flevoland_kennis_en_advies",
+        "jurisdiction_level": "regional",
+        "perspective_ids": [
+          "locality"
+        ],
+        "issue_codes": [
+          "bullet_or_heading_fragment"
+        ],
+        "statement_excerpt": "- Bij Cijfers vind je interactieve visualisaties over verkeersongevallen, overmatig middelengebruik, valincidenten 65+, vaccinatiegraad, buurtmonitor jeugdgezondheid en buurtmonitor overgewicht"
+      },
+      {
+        "claim_id": "clm__reg_ggd_flevoland_kennis_en_advies_monitoring_and_evaluation_001",
+        "topic": "monitoring.regional_monitoring_plan",
+        "document_id": "reg_ggd_flevoland_kennis_en_advies",
+        "jurisdiction_level": "regional",
+        "perspective_ids": [
+          "execution",
+          "locality",
+          "time"
+        ],
+        "issue_codes": [
+          "bullet_or_heading_fragment"
+        ],
+        "statement_excerpt": "- Op Een Gezonder Flevoland staan de resultaten van de Gezondheidsmonitors in interactieve dashboards, ingedeeld naar gemeente, doelgroep en thema"
+      },
+      {
+        "claim_id": "clm__reg_ggd_flevoland_kennis_en_advies_monitoring_and_evaluation_002",
+        "topic": "monitoring.other",
+        "document_id": "reg_ggd_flevoland_kennis_en_advies",
+        "jurisdiction_level": "regional",
+        "perspective_ids": [
+          "execution",
+          "locality",
+          "time"
+        ],
+        "issue_codes": [
+          "bullet_or_heading_fragment"
+        ],
+        "statement_excerpt": "- Bij Gezondheidsmonitors vind je voor de Gezondheidsmonitors Jeugd, Jongvolwassenen, en Volwassenen Ouderen meer informatie én de resultaten in de vorm van tabellenboeken"
+      },
+      {
+        "claim_id": "clm__reg_ggd_flevoland_kennis_en_advies_monitoring_and_evaluation_003",
+        "topic": "monitoring.other",
+        "document_id": "reg_ggd_flevoland_kennis_en_advies",
+        "jurisdiction_level": "regional",
+        "perspective_ids": [
+          "execution",
+          "locality",
+          "time"
+        ],
+        "issue_codes": [
+          "bullet_or_heading_fragment"
+        ],
+        "statement_excerpt": "- Bij Cijfers vind je interactieve visualisaties over verkeersongevallen, overmatig middelengebruik, valincidenten 65+, vaccinatiegraad, buurtmonitor jeugdgezondheid en buurtmonitor overgewicht"
+      },
+      {
+        "claim_id": "clm__reg_ggd_flevoland_kennis_en_advies_municipal_translation_001",
+        "topic": "municipal.implementation_translation",
+        "document_id": "reg_ggd_flevoland_kennis_en_advies",
+        "jurisdiction_level": "regional",
+        "perspective_ids": [
+          "execution",
+          "locality"
+        ],
+        "issue_codes": [
+          "bullet_or_heading_fragment"
+        ],
+        "statement_excerpt": "- Op Een Gezonder Flevoland staan de resultaten van de Gezondheidsmonitors in interactieve dashboards, ingedeeld naar gemeente, doelgroep en thema"
       },
       {
         "claim_id": "clm__reg_zonmw_doorontwikkeling_zorgzaam_flevoland_governance_and_finance_001",
@@ -3454,6 +3615,62 @@
         "statement_excerpt": "Basisinfrastructuur en basisfunctionaliteiten Voor het sociaal werk staan de belangrijkste afspraken in het onderhandelaarsakkoord AZWA op pagina’s 68 t/m 74, namelijk over de inzet van enkele basisfunctionaliteiten (..."
       },
       {
+        "claim_id": "clm__nat_tsd_basisfuncties_lokale_teams_d6_001",
+        "topic": "d6.local_teams",
+        "document_id": "nat_tsd_basisfuncties_lokale_teams",
+        "jurisdiction_level": "national",
+        "perspective_ids": [
+          "execution",
+          "norm"
+        ],
+        "issue_codes": [
+          "long_raw_excerpt"
+        ],
+        "statement_excerpt": "In veel gemeenten wordt vanaf 2015 meer gebiedsgericht gewerkt en zijn lokale teams of wijkteams ingericht, die samen met andere voorzieningen (sociale basisvoorzieningen als vrijwilligerswerk, mantelzorg, welzijn, al..."
+      },
+      {
+        "claim_id": "clm__nat_tsd_basisfuncties_lokale_teams_d6_002",
+        "topic": "d6.local_teams",
+        "document_id": "nat_tsd_basisfuncties_lokale_teams",
+        "jurisdiction_level": "national",
+        "perspective_ids": [
+          "execution",
+          "norm"
+        ],
+        "issue_codes": [
+          "long_raw_excerpt"
+        ],
+        "statement_excerpt": "In veel gemeenten wordt vanaf 2015 meer gebiedsgericht gewerkt en zijn lokale teams of wijkteams ingericht, die samen met andere voorzieningen (sociale basisvoorzieningen als vrijwilligerswerk, mantelzorg, welzijn, al..."
+      },
+      {
+        "claim_id": "clm__nat_tsd_basisfuncties_lokale_teams_municipal_translation_002",
+        "topic": "municipal.local_structure",
+        "document_id": "nat_tsd_basisfuncties_lokale_teams",
+        "jurisdiction_level": "national",
+        "perspective_ids": [
+          "execution",
+          "locality"
+        ],
+        "issue_codes": [
+          "long_raw_excerpt"
+        ],
+        "statement_excerpt": "In veel gemeenten wordt vanaf 2015 meer gebiedsgericht gewerkt en zijn lokale teams of wijkteams ingericht, die samen met andere voorzieningen (sociale basisvoorzieningen als vrijwilligerswerk, mantelzorg, welzijn, al..."
+      },
+      {
+        "claim_id": "clm__nat_tsd_basisfuncties_lokale_teams_municipal_translation_003",
+        "topic": "municipal.local_structure",
+        "document_id": "nat_tsd_basisfuncties_lokale_teams",
+        "jurisdiction_level": "national",
+        "perspective_ids": [
+          "execution",
+          "locality"
+        ],
+        "issue_codes": [
+          "long_raw_excerpt"
+        ],
+        "statement_excerpt": "In veel gemeenten wordt vanaf 2015 meer gebiedsgericht gewerkt en zijn lokale teams of wijkteams ingericht, die samen met andere voorzieningen (sociale basisvoorzieningen als vrijwilligerswerk, mantelzorg, welzijn, al..."
+      },
+      {
         "claim_id": "clm__nat_vng_azwa_faq_middelen_governance_and_finance_001",
         "topic": "finance.d5_d6.funding_instrument",
         "document_id": "nat_vng_azwa_faq_middelen",
@@ -3668,6 +3885,134 @@
         "statement_excerpt": "Vereniging van Nederlandse Gemeenten 3/6 gemeenten, de sociaal domein aanbieders én de zorgpartijen op aanspreekbaar. Deze afgesproken wederkerigheid draagt bij aan versnelling, opschaling en waar van toepassing stand..."
       },
       {
+        "claim_id": "clm__nat_vng_richtinggevend_kader_toegang_lokale_teams_d6_001",
+        "topic": "d6.local_teams",
+        "document_id": "nat_vng_richtinggevend_kader_toegang_lokale_teams",
+        "jurisdiction_level": "national",
+        "perspective_ids": [
+          "execution",
+          "norm"
+        ],
+        "issue_codes": [
+          "long_raw_excerpt"
+        ],
+        "statement_excerpt": "4 Uit de Hervormingsagenda Jeugd: ‘De VNG ontwikkelt een bestuurlijk kader in de vorm van een convenant ‘Stevige lokale teams’, gericht op zowel Jeugd als Wmo. Hierin zal ook de transitie richting stevige lokale teams..."
+      },
+      {
+        "claim_id": "clm__nat_vng_richtinggevend_kader_toegang_lokale_teams_governance_and_finance_001",
+        "topic": "governance_and_finance.other",
+        "document_id": "nat_vng_richtinggevend_kader_toegang_lokale_teams",
+        "jurisdiction_level": "national",
+        "perspective_ids": [],
+        "issue_codes": [
+          "long_raw_excerpt"
+        ],
+        "statement_excerpt": "Gevolgen voor gemeenten Voor de inrichting en toerusting van de toegang, de lokale teams en de wijze van domeinoverstijgende en integrale dienstverlening kan dit diverse consequenties hebben. Concreet kan het van geme..."
+      },
+      {
+        "claim_id": "clm__nat_vng_richtinggevend_kader_toegang_lokale_teams_governance_and_finance_002",
+        "topic": "governance_and_finance.other",
+        "document_id": "nat_vng_richtinggevend_kader_toegang_lokale_teams",
+        "jurisdiction_level": "national",
+        "perspective_ids": [],
+        "issue_codes": [
+          "long_raw_excerpt"
+        ],
+        "statement_excerpt": "4 Uit de Hervormingsagenda Jeugd: ‘De VNG ontwikkelt een bestuurlijk kader in de vorm van een convenant ‘Stevige lokale teams’, gericht op zowel Jeugd als Wmo. Hierin zal ook de transitie richting stevige lokale teams..."
+      },
+      {
+        "claim_id": "clm__nat_vng_richtinggevend_kader_toegang_lokale_teams_governance_and_finance_003",
+        "topic": "governance_and_finance.other",
+        "document_id": "nat_vng_richtinggevend_kader_toegang_lokale_teams",
+        "jurisdiction_level": "national",
+        "perspective_ids": [],
+        "issue_codes": [
+          "long_raw_excerpt"
+        ],
+        "statement_excerpt": "Vereniging van Nederlandse Gemeenten 11) hebben mandaat over gemeentelijke beleidsterreinen heen; 12) hebben oog voor en kennis van (on)veiligheid, betrekken anderen en blijven zelf betrokken; 13) gaan bewust om met w..."
+      },
+      {
+        "claim_id": "clm__nat_vng_richtinggevend_kader_toegang_lokale_teams_monitoring_and_evaluation_002",
+        "topic": "monitoring.other",
+        "document_id": "nat_vng_richtinggevend_kader_toegang_lokale_teams",
+        "jurisdiction_level": "national",
+        "perspective_ids": [
+          "execution",
+          "time"
+        ],
+        "issue_codes": [
+          "long_raw_excerpt"
+        ],
+        "statement_excerpt": "1 Met ‘inwoners’ bedoelen wij alle leden van een huishouden. Dus ook kinderen. 2 Specifiek de proposities ‘De Waarde van het Sociaal Domein’ (2024) en ‘Propositie Toegang: leren en verbeteren Visienotitie doorontwikke..."
+      },
+      {
+        "claim_id": "clm__nat_vng_richtinggevend_kader_toegang_lokale_teams_municipal_translation_001",
+        "topic": "municipal.local_structure",
+        "document_id": "nat_vng_richtinggevend_kader_toegang_lokale_teams",
+        "jurisdiction_level": "national",
+        "perspective_ids": [
+          "execution",
+          "locality"
+        ],
+        "issue_codes": [
+          "long_raw_excerpt"
+        ],
+        "statement_excerpt": "Vereniging van Nederlandse Gemeenten Leeswijzer • Hoofdstuk 1, Waarom een kader en welke reikwijdte heeft het? Hier gaan wij in op de belangrijkste aanleiding voor dit Richtinggevend kader, op wie het kader zich prima..."
+      },
+      {
+        "claim_id": "clm__nat_vng_richtinggevend_kader_toegang_lokale_teams_municipal_translation_003",
+        "topic": "municipal.local_structure",
+        "document_id": "nat_vng_richtinggevend_kader_toegang_lokale_teams",
+        "jurisdiction_level": "national",
+        "perspective_ids": [
+          "execution",
+          "locality"
+        ],
+        "issue_codes": [
+          "long_raw_excerpt"
+        ],
+        "statement_excerpt": "4 Uit de Hervormingsagenda Jeugd: ‘De VNG ontwikkelt een bestuurlijk kader in de vorm van een convenant ‘Stevige lokale teams’, gericht op zowel Jeugd als Wmo. Hierin zal ook de transitie richting stevige lokale teams..."
+      },
+      {
+        "claim_id": "clm__nat_vng_richtinggevend_kader_toegang_lokale_teams_timeline_and_status_001",
+        "topic": "timeline.rollout_2030",
+        "document_id": "nat_vng_richtinggevend_kader_toegang_lokale_teams",
+        "jurisdiction_level": "national",
+        "perspective_ids": [
+          "time"
+        ],
+        "issue_codes": [
+          "long_raw_excerpt"
+        ],
+        "statement_excerpt": "Vereniging van Nederlandse Gemeenten • Wet maatschappelijke ondersteuning. (2015). https://wetten.overheid.nl/BWBR0035362/2023/07-01/ • Wet publieke gezondheid. (2008). https://wetten.overheid.nl/BWBR0024705/2023-07-0..."
+      },
+      {
+        "claim_id": "clm__nat_vng_richtinggevend_kader_toegang_lokale_teams_timeline_and_status_002",
+        "topic": "timeline.rollout_2030",
+        "document_id": "nat_vng_richtinggevend_kader_toegang_lokale_teams",
+        "jurisdiction_level": "national",
+        "perspective_ids": [
+          "time"
+        ],
+        "issue_codes": [
+          "long_raw_excerpt"
+        ],
+        "statement_excerpt": "xlii Propositie toegang: leren en verbeteren (2023) En Leidraad samenwerking huisartsen en gemeenten rond jeugd: ‘Functionarissen die gefinancierd worden door de gemeente en worden ingezet als verbinding tussen het wi..."
+      },
+      {
+        "claim_id": "clm__nat_vng_richtinggevend_kader_toegang_lokale_teams_timeline_and_status_003",
+        "topic": "timeline.other",
+        "document_id": "nat_vng_richtinggevend_kader_toegang_lokale_teams",
+        "jurisdiction_level": "national",
+        "perspective_ids": [
+          "time"
+        ],
+        "issue_codes": [
+          "long_raw_excerpt"
+        ],
+        "statement_excerpt": "4 Uit de Hervormingsagenda Jeugd: ‘De VNG ontwikkelt een bestuurlijk kader in de vorm van een convenant ‘Stevige lokale teams’, gericht op zowel Jeugd als Wmo. Hierin zal ook de transitie richting stevige lokale teams..."
+      },
+      {
         "claim_id": "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d5_003",
         "topic": "d5.basisfunctionaliteiten_onderbouwd",
         "document_id": "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026",
@@ -3746,6 +4091,130 @@
           "long_raw_excerpt"
         ],
         "statement_excerpt": "Een van de afspraken is dat zorgaanbieders, zorgprofessionals, patiëntenorganisaties en zorgverzekeraars en gemeenten, in samenwerking met elkaar (waarbij de samenstelling afhankelijk is van het plan) plannen ontwikke..."
+      },
+      {
+        "claim_id": "clm__reg_ggd_flevoland_begroting_2026_governance_and_finance_001",
+        "topic": "governance_and_finance.other",
+        "document_id": "reg_ggd_flevoland_begroting_2026",
+        "jurisdiction_level": "regional",
+        "perspective_ids": [
+          "locality"
+        ],
+        "issue_codes": [
+          "long_raw_excerpt"
+        ],
+        "statement_excerpt": "en risicobeheersing Het weerstandsvermogen bestaat uit de algemene reserve en bestemmingsreserves. De algemene reserve wordt aangehouden ter financiering van investeringen, het bekostigen van nieuwe ontwikkelingen en..."
+      },
+      {
+        "claim_id": "clm__reg_ggd_flevoland_begroting_2026_governance_and_finance_002",
+        "topic": "governance_and_finance.other",
+        "document_id": "reg_ggd_flevoland_begroting_2026",
+        "jurisdiction_level": "regional",
+        "perspective_ids": [
+          "locality"
+        ],
+        "issue_codes": [
+          "long_raw_excerpt"
+        ],
+        "statement_excerpt": "Vanaf 2026 wordt richting 2029 een gehele afbouw van de landelijke VIP gelden door dit kabinet beoogt. Tijdens de uitrol in 2022-2024 van de VIP-gelden is er een toezegging gedaan voor een structurele financiering. Mo..."
+      },
+      {
+        "claim_id": "clm__reg_ggd_flevoland_begroting_2026_governance_and_finance_003",
+        "topic": "governance_and_finance.other",
+        "document_id": "reg_ggd_flevoland_begroting_2026",
+        "jurisdiction_level": "regional",
+        "perspective_ids": [
+          "locality"
+        ],
+        "issue_codes": [
+          "long_raw_excerpt"
+        ],
+        "statement_excerpt": "8. Paragrafen dan een risico van €999.200 + PM. Het bestuur heeft besloten voorlopig geen invulling te geven aan dit risico. Wanneer middelen tekort schieten voor de uitvoer van wettelijke taken kan worden besloteen d..."
+      },
+      {
+        "claim_id": "clm__reg_ggd_flevoland_begroting_2026_municipal_translation_002",
+        "topic": "municipal.implementation_translation",
+        "document_id": "reg_ggd_flevoland_begroting_2026",
+        "jurisdiction_level": "regional",
+        "perspective_ids": [
+          "execution",
+          "locality"
+        ],
+        "issue_codes": [
+          "long_raw_excerpt"
+        ],
+        "statement_excerpt": "Wethouder dhr. E. van de Beld Bevolking: 456.446 inwoners 6 regionale vestigingen in: Aantal inwoners Inwonerbijdrage per gemeente (x € 1.000) Almere 229.570 6.947 Dronten 44.883 1.358 Lelystad 84.722 2.564 Noordoostp..."
+      },
+      {
+        "claim_id": "clm__reg_ggd_flevoland_begroting_2026_municipal_translation_003",
+        "topic": "municipal.implementation_translation",
+        "document_id": "reg_ggd_flevoland_begroting_2026",
+        "jurisdiction_level": "regional",
+        "perspective_ids": [
+          "execution",
+          "locality"
+        ],
+        "issue_codes": [
+          "long_raw_excerpt"
+        ],
+        "statement_excerpt": "5. Publieke gezondheid 5.1 Jeugd en gezin Grotendeels plustaakfinanciering De afdeling jeugdgezondheidszorg Flevoland is in 2025 samen­ gevoegd met de directie JGZ Almere tot één directie Jeugd en Gezin. Er is bewust..."
+      },
+      {
+        "claim_id": "clm__reg_ggd_flevoland_begroting_2026_timeline_and_status_001",
+        "topic": "timeline.almere_2029",
+        "document_id": "reg_ggd_flevoland_begroting_2026",
+        "jurisdiction_level": "regional",
+        "perspective_ids": [
+          "locality",
+          "time"
+        ],
+        "issue_codes": [
+          "long_raw_excerpt"
+        ],
+        "statement_excerpt": "7. Financiën Mutatie inwonerbijdrage per gemeente (x € 1.000) boekjaar (T) 2026 2027 2028 2029 Almere 482 81 90 91 Dronten 95 16 18 18 Lelystad 165 30 33 34 NOP 108 18 20 20 Urk 45 8 9 9 Zeewolde 52 9 10 10 Totaal oph..."
+      },
+      {
+        "claim_id": "clm__reg_ggd_flevoland_begroting_2026_timeline_and_status_002",
+        "topic": "timeline.almere_2029",
+        "document_id": "reg_ggd_flevoland_begroting_2026",
+        "jurisdiction_level": "regional",
+        "perspective_ids": [
+          "locality",
+          "time"
+        ],
+        "issue_codes": [
+          "long_raw_excerpt"
+        ],
+        "statement_excerpt": "7. Financiën 7.3 Geprognotiseerde balans en EMU-saldo Geprognostiseerde balans Begrotingsjaar T 2026 Bedragen x € 1.000 T-2 T-1 T T+1 T+2 T+3 Activa 31-12-2024 31-12-2025 31-12-2026 31-12-2027 31-12-2028 31-12-2029 (i..."
+      },
+      {
+        "claim_id": "clm__reg_ggd_flevoland_begroting_2026_timeline_and_status_003",
+        "topic": "timeline.almere_2029",
+        "document_id": "reg_ggd_flevoland_begroting_2026",
+        "jurisdiction_level": "regional",
+        "perspective_ids": [
+          "locality",
+          "time"
+        ],
+        "issue_codes": [
+          "long_raw_excerpt"
+        ],
+        "statement_excerpt": "6. Ambulancehulpverlening en meldkamer EMU-saldo T-1 T T+1 T+2 T+3 2025 2026 2027 2028 2029 EMU-SALDO -5.040 1.094 661 2.812 -2.093 EMU-SALDO referentiewaarde Verschil EMU-saldo & referentiewaarde -5.040 1.094 661 2.8..."
+      },
+      {
+        "claim_id": "clm__reg_ggd_flevoland_kennis_en_advies_d6_001",
+        "topic": "d6.regional_coordination",
+        "document_id": "reg_ggd_flevoland_kennis_en_advies",
+        "jurisdiction_level": "regional",
+        "perspective_ids": [
+          "execution",
+          "locality",
+          "norm"
+        ],
+        "issue_codes": [
+          "long_raw_excerpt"
+        ],
+        "statement_excerpt": "Het team Kennis en Advies van GGD Flevoland bundelt kennis over de publieke gezondheid in Flevoland, door relevante literatuur bij te houden, het verrichten van epidemiologisch onderzoek, het analyseren van in- en ext..."
       },
       {
         "claim_id": "clm__reg_zonmw_doorontwikkeling_zorgzaam_flevoland_municipal_translation_001",
@@ -4334,8 +4803,8 @@
       "reason": "The audit still finds broad rest categories that mix multiple policy lines into one topic.",
       "related_topics": [
         "monitoring.other",
-        "timeline.other",
         "governance_and_finance.other",
+        "timeline.other",
         "d5.other",
         "d6.other"
       ],

@@ -1,7 +1,7 @@
 {
   "view_run_id": "phase16_site_views_v1",
-  "generated_on": "2026-04-26",
-  "as_of_date": "2026-04-26",
+  "generated_on": "2026-04-27",
+  "as_of_date": "2026-04-27",
   "title": "Bronnen",
   "sources": [
     {
@@ -1739,8 +1739,8 @@
           "page_url": "/sources/cw-3-1-kader-d5-d6/"
         },
         {
-          "title": "Aanvullend Zorg- en Welzijnsakkoord (AZWA) (Definitief)",
-          "page_url": "/sources/azwa-definitief/"
+          "title": "Begroting 2026 GGD Flevoland",
+          "page_url": "/sources/ggd-flevoland-begroting-2026/"
         }
       ],
       "structured_signals": {
@@ -2118,6 +2118,365 @@
           "perspective_id": "norm",
           "title": "Norm",
           "question": "What is required, allowed, expected, or binding?"
+        },
+        {
+          "perspective_id": "governance",
+          "title": "Governance",
+          "question": "Who decides, who coordinates, who owns, and who must approve?"
+        },
+        {
+          "perspective_id": "locality",
+          "title": "Locality",
+          "question": "What matters specifically for Almere or Flevoland?"
+        },
+        {
+          "perspective_id": "execution",
+          "title": "Execution",
+          "question": "What must policymakers actually organize, prepare, or sequence?"
+        }
+      ]
+    },
+    {
+      "source_id": "mun_almere_2026_stevige_lokale_teams_raad",
+      "slug": "stevige-lokale-teams-almere",
+      "page_url": "/sources/stevige-lokale-teams-almere/",
+      "metadata": {
+        "document_id": "mun_almere_2026_stevige_lokale_teams_raad",
+        "source_number": 46,
+        "title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin",
+        "short_title": "Stevige Lokale Teams Almere",
+        "publisher": "Raad van Almere",
+        "publication_date": "2026-01-06",
+        "document_type": "municipal_council_page",
+        "jurisdiction_level": "municipal",
+        "status": "current",
+        "source_url": "https://raadvanalmere.nl/article/stevige-lokale-teams-en-inzet-investeringsfonds-jeugd-en-gezin1",
+        "file_path": "data/raw/municipal/mun_almere_2026_stevige_lokale_teams_raad.html",
+        "source_format": "html",
+        "traceability_mode": "section_chunk_based",
+        "source_classification": "primary",
+        "curation_bucket": "canonical",
+        "contains_d5": false,
+        "contains_d6": true,
+        "contains_structured_tables": false,
+        "contains_financing_logic": true,
+        "contains_governance_logic": true,
+        "contains_monitoring_evaluation_logic": false,
+        "contains_municipal_implications": true,
+        "priority_rank": 28,
+        "extraction_priority": "low",
+        "inventory_notes": "Local council page for Stevige Lokale Teams and the youth/family investment fund; high-priority D6 responsibility evidence, but underlying Documentwijzer decision documents still need separate intake.",
+        "document_type_label": "municipal council page",
+        "source_classification_label": "primaire bron"
+      },
+      "summary": "Deze bron draagt vooral bij aan de D6-lijn en de randvoorwaarden voor uitvoering.",
+      "what_changed_or_added": "Deze bron laat zien welke lokale vertaling of context in Almere openbaar zichtbaar is.",
+      "d5_relevance": "Geen duidelijke D5-passages in de huidige extractie.",
+      "d6_relevance": "Bevat expliciete D6-passages in de huidige extractie.",
+      "linked_claims": [
+        {
+          "topic": "d6.local_teams",
+          "title": "stevige lokale teams en wijkverbanden",
+          "claim_count": 3,
+          "page_url": "/reference/topics/d6-local-teams/"
+        },
+        {
+          "topic": "municipal.local_structure",
+          "title": "lokale structuur",
+          "claim_count": 2,
+          "page_url": "/reference/topics/municipal-local-structure/"
+        },
+        {
+          "topic": "timeline.other",
+          "title": "overige tijdlijnmomenten",
+          "claim_count": 1,
+          "page_url": "/reference/topics/timeline-other/"
+        },
+        {
+          "topic": "monitoring.other",
+          "title": "overige monitoringslijn",
+          "claim_count": 1,
+          "page_url": "/reference/topics/monitoring-other/"
+        },
+        {
+          "topic": "municipal.implementation_translation",
+          "title": "lokale vertaling in openbare stukken",
+          "claim_count": 1,
+          "page_url": "/reference/topics/municipal-implementation-translation/"
+        }
+      ],
+      "linked_decisions": [
+        {
+          "title": "Mogelijke besluitvraag: regiemodel voor D6 en lokale teams",
+          "status": "wacht op verduidelijking",
+          "page_url": "/decisions/mogelijke-besluitvraag-regiemodel-voor-d6-en-lokale-teams/"
+        }
+      ],
+      "linked_actions": [],
+      "linked_themes": [
+        {
+          "theme_id": "basisinfrastructuur-d6",
+          "title": "Basisinfrastructuur (D6)",
+          "page_url": "/themes/basisinfrastructuur-d6/"
+        },
+        {
+          "theme_id": "monitoring-en-leren",
+          "title": "Monitoring en leren",
+          "page_url": "/themes/monitoring-en-leren/"
+        },
+        {
+          "theme_id": "governance-en-regie",
+          "title": "Governance en regie",
+          "page_url": "/themes/governance-en-regie/"
+        }
+      ],
+      "related_sources": [
+        {
+          "title": "Opdracht voor de werkagenda samenwerking zorg en sociaal domein voor D5 AZWA",
+          "page_url": "/sources/opdracht-werkagenda-d5-azwa/"
+        },
+        {
+          "title": "AZWA-afspraken D5 en D6 en financieringsinstrument",
+          "page_url": "/sources/vws-brief-d5-d6-financieringsinstrument/"
+        },
+        {
+          "title": "Kamerbrief inzake voortgang Integraal Zorgakkoord (IZA) en Aanvullend Zorg- en Welzijnsakkoord (AZWA)",
+          "page_url": "/sources/voortgangsbrief-iza-azwa/"
+        },
+        {
+          "title": "Informatiepagina Sociaal Domein",
+          "page_url": "/sources/sociaal-domein-informatiepagina/"
+        },
+        {
+          "title": "Kamerbrief over CW 3.1 kaders voor AZWA onderdelen",
+          "page_url": "/sources/kamerbrief-cw-3-1-kaders-azwa/"
+        }
+      ],
+      "structured_signals": {
+        "contains_structured_table": false,
+        "d5_item_count": 0,
+        "d6_item_count": 3,
+        "governance_item_count": 0,
+        "timeline_item_count": 1
+      },
+      "content_classification": {
+        "classification_id": "source_fact",
+        "label": "Source fact",
+        "description": "Use when the statement is presented as grounded in a source document, source quote, explicit table item, or directly verified timeline moment."
+      },
+      "perspective_ids": [
+        "norm",
+        "time",
+        "governance",
+        "locality",
+        "execution"
+      ],
+      "quality_perspectives": [
+        {
+          "perspective_id": "norm",
+          "title": "Norm",
+          "question": "What is required, allowed, expected, or binding?"
+        },
+        {
+          "perspective_id": "time",
+          "title": "Time",
+          "question": "Which dates, deadlines, phasing, review moments, and budget-calendar alignments matter?"
+        },
+        {
+          "perspective_id": "governance",
+          "title": "Governance",
+          "question": "Who decides, who coordinates, who owns, and who must approve?"
+        },
+        {
+          "perspective_id": "locality",
+          "title": "Locality",
+          "question": "What matters specifically for Almere or Flevoland?"
+        },
+        {
+          "perspective_id": "execution",
+          "title": "Execution",
+          "question": "What must policymakers actually organize, prepare, or sequence?"
+        }
+      ]
+    },
+    {
+      "source_id": "reg_ggd_flevoland_begroting_2026",
+      "slug": "ggd-flevoland-begroting-2026",
+      "page_url": "/sources/ggd-flevoland-begroting-2026/",
+      "metadata": {
+        "document_id": "reg_ggd_flevoland_begroting_2026",
+        "source_number": 50,
+        "title": "Begroting 2026 GGD Flevoland",
+        "short_title": "GGD Flevoland begroting 2026",
+        "publisher": "GGD Flevoland",
+        "publication_date": "2025-10-14",
+        "document_type": "regional_budget",
+        "jurisdiction_level": "regional",
+        "status": "current",
+        "source_url": "https://www.ggdflevoland.nl/app/uploads/sites/6/2025/10/Begroting-2026-GGD-Flevoland.pdf",
+        "file_path": "data/raw/regional/reg_ggd_flevoland_begroting_2026.pdf",
+        "source_format": "pdf",
+        "traceability_mode": "page_based",
+        "source_classification": "primary",
+        "curation_bucket": "canonical",
+        "contains_d5": false,
+        "contains_d6": true,
+        "contains_structured_tables": true,
+        "contains_financing_logic": true,
+        "contains_governance_logic": true,
+        "contains_monitoring_evaluation_logic": true,
+        "contains_municipal_implications": true,
+        "priority_rank": 32,
+        "extraction_priority": "low",
+        "inventory_notes": "Current GGD Flevoland budget source for governance, JGZ, Kennis en Advies, prevention, plustaken, inwonerbijdrage and GGD-region scale.",
+        "document_type_label": "regional budget",
+        "source_classification_label": "primaire bron"
+      },
+      "summary": "Deze bron draagt vooral bij aan de D6-lijn en de randvoorwaarden voor uitvoering.",
+      "what_changed_or_added": "Deze bron laat zien hoe landelijke lijnen regionaal in Flevoland worden vertaald.",
+      "d5_relevance": "Bevat vooral contextuele of afgeleide signalen die aan D5 raken.",
+      "d6_relevance": "Bevat expliciete D6-passages in de huidige extractie.",
+      "linked_claims": [
+        {
+          "topic": "governance_and_finance.other",
+          "title": "overige governance- en financieringslijn",
+          "claim_count": 3,
+          "page_url": "/reference/topics/governance-and-finance-other/"
+        },
+        {
+          "topic": "timeline.almere_2029",
+          "title": "lokale horizon Positief Gezond Almere",
+          "claim_count": 3,
+          "page_url": "/reference/topics/timeline-almere-2029/"
+        },
+        {
+          "topic": "monitoring.other",
+          "title": "overige monitoringslijn",
+          "claim_count": 3,
+          "page_url": "/reference/topics/monitoring-other/"
+        },
+        {
+          "topic": "municipal.implementation_translation",
+          "title": "lokale vertaling in openbare stukken",
+          "claim_count": 3,
+          "page_url": "/reference/topics/municipal-implementation-translation/"
+        },
+        {
+          "topic": "d6.local_teams",
+          "title": "stevige lokale teams en wijkverbanden",
+          "claim_count": 2,
+          "page_url": "/reference/topics/d6-local-teams/"
+        },
+        {
+          "topic": "d5.basisfunctionaliteiten_onderbouwd",
+          "title": "onderbouwde D5-basisfunctionaliteiten",
+          "claim_count": 1,
+          "page_url": "/reference/topics/d5-basisfunctionaliteiten-onderbouwd/"
+        },
+        {
+          "topic": "d6.digital_and_operational_infrastructure",
+          "title": "digitale en operationele infrastructuur",
+          "claim_count": 1,
+          "page_url": "/reference/topics/d6-digital-and-operational-infrastructure/"
+        }
+      ],
+      "linked_decisions": [
+        {
+          "title": "Mogelijke besluitvraag: prioritering van D5-interventies in Almere",
+          "status": "gedeeltelijk ingevuld",
+          "page_url": "/decisions/mogelijke-besluitvraag-prioritering-van-d5-interventies-in-almere/"
+        },
+        {
+          "title": "Mogelijke besluitvraag: regiemodel voor D6 en lokale teams",
+          "status": "wacht op verduidelijking",
+          "page_url": "/decisions/mogelijke-besluitvraag-regiemodel-voor-d6-en-lokale-teams/"
+        }
+      ],
+      "linked_actions": [
+        {
+          "title": "Mogelijke opvolgactie: D5-vertaling voor Almere expliciteren",
+          "status": "in voorbereiding",
+          "page_url": "/actions/mogelijke-opvolgactie-d5-vertaling-voor-almere-expliciteren/"
+        },
+        {
+          "title": "Mogelijke opvolgactie: regionale digitale aansluiting concretiseren",
+          "status": "geblokkeerd door afhankelijkheid",
+          "page_url": "/actions/mogelijke-opvolgactie-regionale-digitale-aansluiting-concretiseren/"
+        }
+      ],
+      "linked_themes": [
+        {
+          "theme_id": "basisfunctionaliteiten-d5",
+          "title": "Basisfunctionaliteiten (D5)",
+          "page_url": "/themes/basisfunctionaliteiten-d5/"
+        },
+        {
+          "theme_id": "basisinfrastructuur-d6",
+          "title": "Basisinfrastructuur (D6)",
+          "page_url": "/themes/basisinfrastructuur-d6/"
+        },
+        {
+          "theme_id": "monitoring-en-leren",
+          "title": "Monitoring en leren",
+          "page_url": "/themes/monitoring-en-leren/"
+        },
+        {
+          "theme_id": "governance-en-regie",
+          "title": "Governance en regie",
+          "page_url": "/themes/governance-en-regie/"
+        }
+      ],
+      "related_sources": [
+        {
+          "title": "Opdracht voor de werkagenda samenwerking zorg en sociaal domein voor D5 AZWA",
+          "page_url": "/sources/opdracht-werkagenda-d5-azwa/"
+        },
+        {
+          "title": "AZWA-afspraken D5 en D6 en financieringsinstrument",
+          "page_url": "/sources/vws-brief-d5-d6-financieringsinstrument/"
+        },
+        {
+          "title": "Kamerbrief inzake voortgang Integraal Zorgakkoord (IZA) en Aanvullend Zorg- en Welzijnsakkoord (AZWA)",
+          "page_url": "/sources/voortgangsbrief-iza-azwa/"
+        },
+        {
+          "title": "Kamerbrief over CW 3.1 kaders voor AZWA onderdelen",
+          "page_url": "/sources/kamerbrief-cw-3-1-kaders-azwa/"
+        },
+        {
+          "title": "CW 3.1 kader basisfunctionaliteiten en basisinfrastructuur D5 en D6",
+          "page_url": "/sources/cw-3-1-kader-d5-d6/"
+        }
+      ],
+      "structured_signals": {
+        "contains_structured_table": true,
+        "d5_item_count": 1,
+        "d6_item_count": 3,
+        "governance_item_count": 3,
+        "timeline_item_count": 3
+      },
+      "content_classification": {
+        "classification_id": "source_fact",
+        "label": "Source fact",
+        "description": "Use when the statement is presented as grounded in a source document, source quote, explicit table item, or directly verified timeline moment."
+      },
+      "perspective_ids": [
+        "norm",
+        "time",
+        "governance",
+        "locality",
+        "execution"
+      ],
+      "quality_perspectives": [
+        {
+          "perspective_id": "norm",
+          "title": "Norm",
+          "question": "What is required, allowed, expected, or binding?"
+        },
+        {
+          "perspective_id": "time",
+          "title": "Time",
+          "question": "Which dates, deadlines, phasing, review moments, and budget-calendar alignments matter?"
         },
         {
           "perspective_id": "governance",
@@ -4938,6 +5297,192 @@
       ]
     },
     {
+      "source_id": "nat_vng_richtinggevend_kader_toegang_lokale_teams",
+      "slug": "vng-richtinggevend-kader-lokale-teams",
+      "page_url": "/sources/vng-richtinggevend-kader-lokale-teams/",
+      "metadata": {
+        "document_id": "nat_vng_richtinggevend_kader_toegang_lokale_teams",
+        "source_number": 48,
+        "title": "Richtinggevend kader toegang, lokale teams en integrale dienstverlening",
+        "short_title": "VNG richtinggevend kader lokale teams",
+        "publisher": "VNG",
+        "publication_date": "2024-03-01",
+        "document_type": "implementation_framework",
+        "jurisdiction_level": "national",
+        "status": "reference",
+        "source_url": "https://vng.nl/publicaties/richtinggevend-kader-toegang-lokale-teams-en-integrale-dienstverlening",
+        "file_path": "data/raw/national/nat_vng_richtinggevend_kader_toegang_lokale_teams.pdf",
+        "source_format": "pdf",
+        "traceability_mode": "page_based",
+        "source_classification": "primary",
+        "curation_bucket": "canonical",
+        "contains_d5": false,
+        "contains_d6": true,
+        "contains_structured_tables": false,
+        "contains_financing_logic": false,
+        "contains_governance_logic": true,
+        "contains_monitoring_evaluation_logic": true,
+        "contains_municipal_implications": true,
+        "priority_rank": 30,
+        "extraction_priority": "low",
+        "inventory_notes": "National implementation framework for access, local teams and integrated services; use as assessment benchmark, not as an Almere decision.",
+        "document_type_label": "implementation framework",
+        "source_classification_label": "primaire bron"
+      },
+      "summary": "Deze bron draagt vooral bij aan de D6-lijn en de randvoorwaarden voor uitvoering.",
+      "what_changed_or_added": "Deze bron geeft aanvullende bestuurlijke context voor de huidige corpuslijn.",
+      "d5_relevance": "Bevat vooral contextuele of afgeleide signalen die aan D5 raken.",
+      "d6_relevance": "Bevat expliciete D6-passages in de huidige extractie.",
+      "linked_claims": [
+        {
+          "topic": "d6.local_teams",
+          "title": "stevige lokale teams en wijkverbanden",
+          "claim_count": 3,
+          "page_url": "/reference/topics/d6-local-teams/"
+        },
+        {
+          "topic": "governance_and_finance.other",
+          "title": "overige governance- en financieringslijn",
+          "claim_count": 3,
+          "page_url": "/reference/topics/governance-and-finance-other/"
+        },
+        {
+          "topic": "monitoring.other",
+          "title": "overige monitoringslijn",
+          "claim_count": 3,
+          "page_url": "/reference/topics/monitoring-other/"
+        },
+        {
+          "topic": "municipal.local_structure",
+          "title": "lokale structuur",
+          "claim_count": 3,
+          "page_url": "/reference/topics/municipal-local-structure/"
+        },
+        {
+          "topic": "timeline.rollout_2030",
+          "title": "landelijke dekking richting 2030",
+          "claim_count": 2,
+          "page_url": "/reference/topics/timeline-rollout-2030/"
+        },
+        {
+          "topic": "d5.basisfunctionaliteiten_onderbouwd",
+          "title": "onderbouwde D5-basisfunctionaliteiten",
+          "claim_count": 1,
+          "page_url": "/reference/topics/d5-basisfunctionaliteiten-onderbouwd/"
+        },
+        {
+          "topic": "timeline.other",
+          "title": "overige tijdlijnmomenten",
+          "claim_count": 1,
+          "page_url": "/reference/topics/timeline-other/"
+        }
+      ],
+      "linked_decisions": [
+        {
+          "title": "Mogelijke besluitvraag: prioritering van D5-interventies in Almere",
+          "status": "gedeeltelijk ingevuld",
+          "page_url": "/decisions/mogelijke-besluitvraag-prioritering-van-d5-interventies-in-almere/"
+        }
+      ],
+      "linked_actions": [
+        {
+          "title": "Mogelijke opvolgactie: D5-vertaling voor Almere expliciteren",
+          "status": "in voorbereiding",
+          "page_url": "/actions/mogelijke-opvolgactie-d5-vertaling-voor-almere-expliciteren/"
+        }
+      ],
+      "linked_themes": [
+        {
+          "theme_id": "basisfunctionaliteiten-d5",
+          "title": "Basisfunctionaliteiten (D5)",
+          "page_url": "/themes/basisfunctionaliteiten-d5/"
+        },
+        {
+          "theme_id": "basisinfrastructuur-d6",
+          "title": "Basisinfrastructuur (D6)",
+          "page_url": "/themes/basisinfrastructuur-d6/"
+        },
+        {
+          "theme_id": "monitoring-en-leren",
+          "title": "Monitoring en leren",
+          "page_url": "/themes/monitoring-en-leren/"
+        },
+        {
+          "theme_id": "governance-en-regie",
+          "title": "Governance en regie",
+          "page_url": "/themes/governance-en-regie/"
+        }
+      ],
+      "related_sources": [
+        {
+          "title": "Opdracht voor de werkagenda samenwerking zorg en sociaal domein voor D5 AZWA",
+          "page_url": "/sources/opdracht-werkagenda-d5-azwa/"
+        },
+        {
+          "title": "AZWA-afspraken D5 en D6 en financieringsinstrument",
+          "page_url": "/sources/vws-brief-d5-d6-financieringsinstrument/"
+        },
+        {
+          "title": "Kamerbrief inzake voortgang Integraal Zorgakkoord (IZA) en Aanvullend Zorg- en Welzijnsakkoord (AZWA)",
+          "page_url": "/sources/voortgangsbrief-iza-azwa/"
+        },
+        {
+          "title": "Kamerbrief over CW 3.1 kaders voor AZWA onderdelen",
+          "page_url": "/sources/kamerbrief-cw-3-1-kaders-azwa/"
+        },
+        {
+          "title": "CW 3.1 kader basisfunctionaliteiten en basisinfrastructuur D5 en D6",
+          "page_url": "/sources/cw-3-1-kader-d5-d6/"
+        }
+      ],
+      "structured_signals": {
+        "contains_structured_table": false,
+        "d5_item_count": 1,
+        "d6_item_count": 3,
+        "governance_item_count": 3,
+        "timeline_item_count": 3
+      },
+      "content_classification": {
+        "classification_id": "source_fact",
+        "label": "Source fact",
+        "description": "Use when the statement is presented as grounded in a source document, source quote, explicit table item, or directly verified timeline moment."
+      },
+      "perspective_ids": [
+        "norm",
+        "time",
+        "governance",
+        "locality",
+        "execution"
+      ],
+      "quality_perspectives": [
+        {
+          "perspective_id": "norm",
+          "title": "Norm",
+          "question": "What is required, allowed, expected, or binding?"
+        },
+        {
+          "perspective_id": "time",
+          "title": "Time",
+          "question": "Which dates, deadlines, phasing, review moments, and budget-calendar alignments matter?"
+        },
+        {
+          "perspective_id": "governance",
+          "title": "Governance",
+          "question": "Who decides, who coordinates, who owns, and who must approve?"
+        },
+        {
+          "perspective_id": "locality",
+          "title": "Locality",
+          "question": "What matters specifically for Almere or Flevoland?"
+        },
+        {
+          "perspective_id": "execution",
+          "title": "Execution",
+          "question": "What must policymakers actually organize, prepare, or sequence?"
+        }
+      ]
+    },
+    {
       "source_id": "reg_flevoland_2023_regioplan_iza",
       "slug": "regioplan-iza-flevoland",
       "page_url": "/sources/regioplan-iza-flevoland/",
@@ -5986,6 +6531,268 @@
       ]
     },
     {
+      "source_id": "nat_tsd_basisfuncties_lokale_teams",
+      "slug": "basisfuncties-lokale-teams",
+      "page_url": "/sources/basisfuncties-lokale-teams/",
+      "metadata": {
+        "document_id": "nat_tsd_basisfuncties_lokale_teams",
+        "source_number": 49,
+        "title": "Basisfuncties voor lokale teams",
+        "short_title": "Basisfuncties lokale teams",
+        "publisher": "Toezicht Sociaal Domein",
+        "publication_date": "2021-10-06",
+        "document_type": "assessment_framework",
+        "jurisdiction_level": "national",
+        "status": "reference",
+        "source_url": "https://www.toezichtsociaaldomein.nl/documenten/2021/10/06/basisfuncties-voor-lokale-teams",
+        "file_path": "data/raw/national/nat_tsd_basisfuncties_lokale_teams.html",
+        "source_format": "html",
+        "traceability_mode": "section_chunk_based",
+        "source_classification": "primary",
+        "curation_bucket": "canonical",
+        "contains_d5": false,
+        "contains_d6": true,
+        "contains_structured_tables": false,
+        "contains_financing_logic": false,
+        "contains_governance_logic": true,
+        "contains_monitoring_evaluation_logic": true,
+        "contains_municipal_implications": true,
+        "priority_rank": 31,
+        "extraction_priority": "low",
+        "inventory_notes": "Assessment framework for low-threshold, nearby and integrated local teams in the social domain.",
+        "document_type_label": "assessment framework",
+        "source_classification_label": "primaire bron"
+      },
+      "summary": "Deze bron draagt vooral bij aan de D6-lijn en de randvoorwaarden voor uitvoering.",
+      "what_changed_or_added": "Deze bron geeft aanvullende bestuurlijke context voor de huidige corpuslijn.",
+      "d5_relevance": "Geen duidelijke D5-passages in de huidige extractie.",
+      "d6_relevance": "Bevat expliciete D6-passages in de huidige extractie.",
+      "linked_claims": [
+        {
+          "topic": "d6.local_teams",
+          "title": "stevige lokale teams en wijkverbanden",
+          "claim_count": 3,
+          "page_url": "/reference/topics/d6-local-teams/"
+        },
+        {
+          "topic": "municipal.local_structure",
+          "title": "lokale structuur",
+          "claim_count": 2,
+          "page_url": "/reference/topics/municipal-local-structure/"
+        },
+        {
+          "topic": "municipal.implementation_translation",
+          "title": "lokale vertaling in openbare stukken",
+          "claim_count": 1,
+          "page_url": "/reference/topics/municipal-implementation-translation/"
+        }
+      ],
+      "linked_decisions": [],
+      "linked_actions": [],
+      "linked_themes": [
+        {
+          "theme_id": "basisinfrastructuur-d6",
+          "title": "Basisinfrastructuur (D6)",
+          "page_url": "/themes/basisinfrastructuur-d6/"
+        },
+        {
+          "theme_id": "governance-en-regie",
+          "title": "Governance en regie",
+          "page_url": "/themes/governance-en-regie/"
+        }
+      ],
+      "related_sources": [
+        {
+          "title": "Opdracht voor de werkagenda samenwerking zorg en sociaal domein voor D5 AZWA",
+          "page_url": "/sources/opdracht-werkagenda-d5-azwa/"
+        },
+        {
+          "title": "AZWA-afspraken D5 en D6 en financieringsinstrument",
+          "page_url": "/sources/vws-brief-d5-d6-financieringsinstrument/"
+        },
+        {
+          "title": "Kamerbrief inzake voortgang Integraal Zorgakkoord (IZA) en Aanvullend Zorg- en Welzijnsakkoord (AZWA)",
+          "page_url": "/sources/voortgangsbrief-iza-azwa/"
+        },
+        {
+          "title": "Informatiepagina Sociaal Domein",
+          "page_url": "/sources/sociaal-domein-informatiepagina/"
+        },
+        {
+          "title": "Kamerbrief over CW 3.1 kaders voor AZWA onderdelen",
+          "page_url": "/sources/kamerbrief-cw-3-1-kaders-azwa/"
+        }
+      ],
+      "structured_signals": {
+        "contains_structured_table": false,
+        "d5_item_count": 0,
+        "d6_item_count": 3,
+        "governance_item_count": 0,
+        "timeline_item_count": 0
+      },
+      "content_classification": {
+        "classification_id": "source_fact",
+        "label": "Source fact",
+        "description": "Use when the statement is presented as grounded in a source document, source quote, explicit table item, or directly verified timeline moment."
+      },
+      "perspective_ids": [
+        "norm",
+        "governance",
+        "locality",
+        "execution"
+      ],
+      "quality_perspectives": [
+        {
+          "perspective_id": "norm",
+          "title": "Norm",
+          "question": "What is required, allowed, expected, or binding?"
+        },
+        {
+          "perspective_id": "governance",
+          "title": "Governance",
+          "question": "Who decides, who coordinates, who owns, and who must approve?"
+        },
+        {
+          "perspective_id": "locality",
+          "title": "Locality",
+          "question": "What matters specifically for Almere or Flevoland?"
+        },
+        {
+          "perspective_id": "execution",
+          "title": "Execution",
+          "question": "What must policymakers actually organize, prepare, or sequence?"
+        }
+      ]
+    },
+    {
+      "source_id": "mun_almere_wijkteams",
+      "slug": "wijkteams-almere",
+      "page_url": "/sources/wijkteams-almere/",
+      "metadata": {
+        "document_id": "mun_almere_wijkteams",
+        "source_number": 47,
+        "title": "Wijkteams Almere",
+        "short_title": "Wijkteams Almere",
+        "publisher": "Wijkteams Almere / Gemeente Almere",
+        "publication_date": null,
+        "document_type": "municipal_service_page",
+        "jurisdiction_level": "municipal",
+        "status": "current",
+        "source_url": "https://wijkteams.almere.nl/",
+        "file_path": "data/raw/municipal/mun_almere_wijkteams.html",
+        "source_format": "html",
+        "traceability_mode": "section_chunk_based",
+        "source_classification": "primary",
+        "curation_bucket": "canonical",
+        "contains_d5": false,
+        "contains_d6": true,
+        "contains_structured_tables": false,
+        "contains_financing_logic": false,
+        "contains_governance_logic": true,
+        "contains_monitoring_evaluation_logic": false,
+        "contains_municipal_implications": true,
+        "priority_rank": 29,
+        "extraction_priority": "low",
+        "inventory_notes": "Public baseline source for the existing Almere wijkteam access and support route.",
+        "document_type_label": "municipal service page",
+        "source_classification_label": "primaire bron"
+      },
+      "summary": "Deze bron draagt vooral bij aan de D6-lijn en de randvoorwaarden voor uitvoering.",
+      "what_changed_or_added": "Deze bron laat zien welke lokale vertaling of context in Almere openbaar zichtbaar is.",
+      "d5_relevance": "Geen duidelijke D5-passages in de huidige extractie.",
+      "d6_relevance": "Bevat expliciete D6-passages in de huidige extractie.",
+      "linked_claims": [
+        {
+          "topic": "d6.other",
+          "title": "overige D6-lijn",
+          "claim_count": 1,
+          "page_url": "/reference/topics/d6-other/"
+        },
+        {
+          "topic": "municipal.local_structure",
+          "title": "lokale structuur",
+          "claim_count": 1,
+          "page_url": "/reference/topics/municipal-local-structure/"
+        }
+      ],
+      "linked_decisions": [],
+      "linked_actions": [],
+      "linked_themes": [
+        {
+          "theme_id": "basisinfrastructuur-d6",
+          "title": "Basisinfrastructuur (D6)",
+          "page_url": "/themes/basisinfrastructuur-d6/"
+        },
+        {
+          "theme_id": "governance-en-regie",
+          "title": "Governance en regie",
+          "page_url": "/themes/governance-en-regie/"
+        }
+      ],
+      "related_sources": [
+        {
+          "title": "Opdracht voor de werkagenda samenwerking zorg en sociaal domein voor D5 AZWA",
+          "page_url": "/sources/opdracht-werkagenda-d5-azwa/"
+        },
+        {
+          "title": "AZWA-afspraken D5 en D6 en financieringsinstrument",
+          "page_url": "/sources/vws-brief-d5-d6-financieringsinstrument/"
+        },
+        {
+          "title": "Kamerbrief inzake voortgang Integraal Zorgakkoord (IZA) en Aanvullend Zorg- en Welzijnsakkoord (AZWA)",
+          "page_url": "/sources/voortgangsbrief-iza-azwa/"
+        },
+        {
+          "title": "Informatiepagina Sociaal Domein",
+          "page_url": "/sources/sociaal-domein-informatiepagina/"
+        },
+        {
+          "title": "Kamerbrief over CW 3.1 kaders voor AZWA onderdelen",
+          "page_url": "/sources/kamerbrief-cw-3-1-kaders-azwa/"
+        }
+      ],
+      "structured_signals": {
+        "contains_structured_table": false,
+        "d5_item_count": 0,
+        "d6_item_count": 1,
+        "governance_item_count": 0,
+        "timeline_item_count": 0
+      },
+      "content_classification": {
+        "classification_id": "source_fact",
+        "label": "Source fact",
+        "description": "Use when the statement is presented as grounded in a source document, source quote, explicit table item, or directly verified timeline moment."
+      },
+      "perspective_ids": [
+        "norm",
+        "governance",
+        "locality",
+        "execution"
+      ],
+      "quality_perspectives": [
+        {
+          "perspective_id": "norm",
+          "title": "Norm",
+          "question": "What is required, allowed, expected, or binding?"
+        },
+        {
+          "perspective_id": "governance",
+          "title": "Governance",
+          "question": "Who decides, who coordinates, who owns, and who must approve?"
+        },
+        {
+          "perspective_id": "locality",
+          "title": "Locality",
+          "question": "What matters specifically for Almere or Flevoland?"
+        },
+        {
+          "perspective_id": "execution",
+          "title": "Execution",
+          "question": "What must policymakers actually organize, prepare, or sequence?"
+        }
+      ]
+    },
+    {
       "source_id": "nat_vng_azwa_faq_middelen",
       "slug": "vng-faq-middelen-azwa",
       "page_url": "/sources/vng-faq-middelen-azwa/",
@@ -6849,6 +7656,151 @@
       ]
     },
     {
+      "source_id": "reg_ggd_flevoland_jgz_almere_profile",
+      "slug": "jgz-almere-profiel",
+      "page_url": "/sources/jgz-almere-profiel/",
+      "metadata": {
+        "document_id": "reg_ggd_flevoland_jgz_almere_profile",
+        "source_number": 52,
+        "title": "Profiel Jeugdgezondheidszorg",
+        "short_title": "JGZ Almere profiel",
+        "publisher": "GGD Flevoland",
+        "publication_date": null,
+        "document_type": "regional_service_page",
+        "jurisdiction_level": "regional",
+        "status": "current",
+        "source_url": "https://www.ggdflevoland.nl/professional/jeugdgezondheidszorg/",
+        "file_path": "data/raw/regional/reg_ggd_flevoland_jgz_almere_profile.html",
+        "source_format": "html",
+        "traceability_mode": "section_chunk_based",
+        "source_classification": "primary",
+        "curation_bucket": "canonical",
+        "contains_d5": false,
+        "contains_d6": true,
+        "contains_structured_tables": false,
+        "contains_financing_logic": false,
+        "contains_governance_logic": true,
+        "contains_monitoring_evaluation_logic": false,
+        "contains_municipal_implications": true,
+        "priority_rank": 34,
+        "extraction_priority": "low",
+        "inventory_notes": "Public source for JGZ Almere's 0-18 role, school links, youth support and care-chain function.",
+        "document_type_label": "regional service page",
+        "source_classification_label": "primaire bron"
+      },
+      "summary": "Deze bron draagt vooral bij aan de D6-lijn en de randvoorwaarden voor uitvoering.",
+      "what_changed_or_added": "Deze bron laat zien hoe landelijke lijnen regionaal in Flevoland worden vertaald.",
+      "d5_relevance": "Geen duidelijke D5-passages in de huidige extractie.",
+      "d6_relevance": "Bevat expliciete D6-passages in de huidige extractie.",
+      "linked_claims": [
+        {
+          "topic": "d6.regional_coordination",
+          "title": "regionale coördinatie voor D6",
+          "claim_count": 3,
+          "page_url": "/reference/topics/d6-regional-coordination/"
+        },
+        {
+          "topic": "municipal.implementation_translation",
+          "title": "lokale vertaling in openbare stukken",
+          "claim_count": 3,
+          "page_url": "/reference/topics/municipal-implementation-translation/"
+        },
+        {
+          "topic": "monitoring.other",
+          "title": "overige monitoringslijn",
+          "claim_count": 1,
+          "page_url": "/reference/topics/monitoring-other/"
+        }
+      ],
+      "linked_decisions": [],
+      "linked_actions": [],
+      "linked_themes": [
+        {
+          "theme_id": "basisinfrastructuur-d6",
+          "title": "Basisinfrastructuur (D6)",
+          "page_url": "/themes/basisinfrastructuur-d6/"
+        },
+        {
+          "theme_id": "monitoring-en-leren",
+          "title": "Monitoring en leren",
+          "page_url": "/themes/monitoring-en-leren/"
+        },
+        {
+          "theme_id": "governance-en-regie",
+          "title": "Governance en regie",
+          "page_url": "/themes/governance-en-regie/"
+        }
+      ],
+      "related_sources": [
+        {
+          "title": "Opdracht voor de werkagenda samenwerking zorg en sociaal domein voor D5 AZWA",
+          "page_url": "/sources/opdracht-werkagenda-d5-azwa/"
+        },
+        {
+          "title": "AZWA-afspraken D5 en D6 en financieringsinstrument",
+          "page_url": "/sources/vws-brief-d5-d6-financieringsinstrument/"
+        },
+        {
+          "title": "Kamerbrief inzake voortgang Integraal Zorgakkoord (IZA) en Aanvullend Zorg- en Welzijnsakkoord (AZWA)",
+          "page_url": "/sources/voortgangsbrief-iza-azwa/"
+        },
+        {
+          "title": "Informatiepagina Sociaal Domein",
+          "page_url": "/sources/sociaal-domein-informatiepagina/"
+        },
+        {
+          "title": "Kamerbrief over CW 3.1 kaders voor AZWA onderdelen",
+          "page_url": "/sources/kamerbrief-cw-3-1-kaders-azwa/"
+        }
+      ],
+      "structured_signals": {
+        "contains_structured_table": false,
+        "d5_item_count": 0,
+        "d6_item_count": 3,
+        "governance_item_count": 0,
+        "timeline_item_count": 0
+      },
+      "content_classification": {
+        "classification_id": "source_fact",
+        "label": "Source fact",
+        "description": "Use when the statement is presented as grounded in a source document, source quote, explicit table item, or directly verified timeline moment."
+      },
+      "perspective_ids": [
+        "norm",
+        "time",
+        "governance",
+        "locality",
+        "execution"
+      ],
+      "quality_perspectives": [
+        {
+          "perspective_id": "norm",
+          "title": "Norm",
+          "question": "What is required, allowed, expected, or binding?"
+        },
+        {
+          "perspective_id": "time",
+          "title": "Time",
+          "question": "Which dates, deadlines, phasing, review moments, and budget-calendar alignments matter?"
+        },
+        {
+          "perspective_id": "governance",
+          "title": "Governance",
+          "question": "Who decides, who coordinates, who owns, and who must approve?"
+        },
+        {
+          "perspective_id": "locality",
+          "title": "Locality",
+          "question": "What matters specifically for Almere or Flevoland?"
+        },
+        {
+          "perspective_id": "execution",
+          "title": "Execution",
+          "question": "What must policymakers actually organize, prepare, or sequence?"
+        }
+      ]
+    },
+    {
       "source_id": "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie",
       "slug": "opzet-evaluatie-sociaal-domein",
       "page_url": "/sources/opzet-evaluatie-sociaal-domein/",
@@ -6962,6 +7914,163 @@
         "contains_structured_table": true,
         "d5_item_count": 0,
         "d6_item_count": 2,
+        "governance_item_count": 1,
+        "timeline_item_count": 0
+      },
+      "content_classification": {
+        "classification_id": "source_fact",
+        "label": "Source fact",
+        "description": "Use when the statement is presented as grounded in a source document, source quote, explicit table item, or directly verified timeline moment."
+      },
+      "perspective_ids": [
+        "norm",
+        "time",
+        "governance",
+        "locality",
+        "execution"
+      ],
+      "quality_perspectives": [
+        {
+          "perspective_id": "norm",
+          "title": "Norm",
+          "question": "What is required, allowed, expected, or binding?"
+        },
+        {
+          "perspective_id": "time",
+          "title": "Time",
+          "question": "Which dates, deadlines, phasing, review moments, and budget-calendar alignments matter?"
+        },
+        {
+          "perspective_id": "governance",
+          "title": "Governance",
+          "question": "Who decides, who coordinates, who owns, and who must approve?"
+        },
+        {
+          "perspective_id": "locality",
+          "title": "Locality",
+          "question": "What matters specifically for Almere or Flevoland?"
+        },
+        {
+          "perspective_id": "execution",
+          "title": "Execution",
+          "question": "What must policymakers actually organize, prepare, or sequence?"
+        }
+      ]
+    },
+    {
+      "source_id": "reg_ggd_flevoland_kennis_en_advies",
+      "slug": "ggd-flevoland-kennis-en-advies",
+      "page_url": "/sources/ggd-flevoland-kennis-en-advies/",
+      "metadata": {
+        "document_id": "reg_ggd_flevoland_kennis_en_advies",
+        "source_number": 51,
+        "title": "Kennis en Advies",
+        "short_title": "GGD Flevoland Kennis en Advies",
+        "publisher": "GGD Flevoland",
+        "publication_date": null,
+        "document_type": "regional_service_page",
+        "jurisdiction_level": "regional",
+        "status": "current",
+        "source_url": "https://www.ggdflevoland.nl/professional/kennis-en-advies/",
+        "file_path": "data/raw/regional/reg_ggd_flevoland_kennis_en_advies.html",
+        "source_format": "html",
+        "traceability_mode": "section_chunk_based",
+        "source_classification": "primary",
+        "curation_bucket": "canonical",
+        "contains_d5": false,
+        "contains_d6": true,
+        "contains_structured_tables": false,
+        "contains_financing_logic": false,
+        "contains_governance_logic": false,
+        "contains_monitoring_evaluation_logic": true,
+        "contains_municipal_implications": true,
+        "priority_rank": 33,
+        "extraction_priority": "low",
+        "inventory_notes": "Public source for GGD Flevoland monitors, dashboards, epidemiology, data analysis and advice.",
+        "document_type_label": "regional service page",
+        "source_classification_label": "primaire bron"
+      },
+      "summary": "Deze bron draagt vooral bij aan de D6-lijn en de randvoorwaarden voor uitvoering.",
+      "what_changed_or_added": "Deze bron laat zien hoe landelijke lijnen regionaal in Flevoland worden vertaald.",
+      "d5_relevance": "Geen duidelijke D5-passages in de huidige extractie.",
+      "d6_relevance": "Bevat expliciete D6-passages in de huidige extractie.",
+      "linked_claims": [
+        {
+          "topic": "monitoring.other",
+          "title": "overige monitoringslijn",
+          "claim_count": 2,
+          "page_url": "/reference/topics/monitoring-other/"
+        },
+        {
+          "topic": "d6.regional_coordination",
+          "title": "regionale coördinatie voor D6",
+          "claim_count": 1,
+          "page_url": "/reference/topics/d6-regional-coordination/"
+        },
+        {
+          "topic": "governance_and_finance.other",
+          "title": "overige governance- en financieringslijn",
+          "claim_count": 1,
+          "page_url": "/reference/topics/governance-and-finance-other/"
+        },
+        {
+          "topic": "monitoring.regional_monitoring_plan",
+          "title": "regionaal monitoringsplan",
+          "claim_count": 1,
+          "page_url": "/reference/topics/monitoring-regional-monitoring-plan/"
+        },
+        {
+          "topic": "municipal.implementation_translation",
+          "title": "lokale vertaling in openbare stukken",
+          "claim_count": 1,
+          "page_url": "/reference/topics/municipal-implementation-translation/"
+        }
+      ],
+      "linked_decisions": [],
+      "linked_actions": [],
+      "linked_themes": [
+        {
+          "theme_id": "basisinfrastructuur-d6",
+          "title": "Basisinfrastructuur (D6)",
+          "page_url": "/themes/basisinfrastructuur-d6/"
+        },
+        {
+          "theme_id": "monitoring-en-leren",
+          "title": "Monitoring en leren",
+          "page_url": "/themes/monitoring-en-leren/"
+        },
+        {
+          "theme_id": "governance-en-regie",
+          "title": "Governance en regie",
+          "page_url": "/themes/governance-en-regie/"
+        }
+      ],
+      "related_sources": [
+        {
+          "title": "Opdracht voor de werkagenda samenwerking zorg en sociaal domein voor D5 AZWA",
+          "page_url": "/sources/opdracht-werkagenda-d5-azwa/"
+        },
+        {
+          "title": "AZWA-afspraken D5 en D6 en financieringsinstrument",
+          "page_url": "/sources/vws-brief-d5-d6-financieringsinstrument/"
+        },
+        {
+          "title": "Kamerbrief inzake voortgang Integraal Zorgakkoord (IZA) en Aanvullend Zorg- en Welzijnsakkoord (AZWA)",
+          "page_url": "/sources/voortgangsbrief-iza-azwa/"
+        },
+        {
+          "title": "Informatiepagina Sociaal Domein",
+          "page_url": "/sources/sociaal-domein-informatiepagina/"
+        },
+        {
+          "title": "Kamerbrief over CW 3.1 kaders voor AZWA onderdelen",
+          "page_url": "/sources/kamerbrief-cw-3-1-kaders-azwa/"
+        }
+      ],
+      "structured_signals": {
+        "contains_structured_table": false,
+        "d5_item_count": 0,
+        "d6_item_count": 1,
         "governance_item_count": 1,
         "timeline_item_count": 0
       },
@@ -7419,6 +8528,10 @@
           "page_url": "/sources/sociaal-domein-informatiepagina/"
         },
         {
+          "title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin",
+          "page_url": "/sources/stevige-lokale-teams-almere/"
+        },
+        {
           "title": "Maatschappelijke agenda 2024-2034",
           "page_url": "/sources/maatschappelijke-agenda-2024-2034/"
         },
@@ -7429,10 +8542,6 @@
         {
           "title": "Vergaderschema Raad van Almere 2026",
           "page_url": "/sources/raadskalender-2026/"
-        },
-        {
-          "title": "Raadsvoorstel Visie Gezondheidsbeleid Almere 2024-2026 - geamendeerd",
-          "page_url": "/sources/raadsvoorstel-visie-gezondheid-geamendeerd/"
         }
       ],
       "structured_signals": {
@@ -7511,6 +8620,10 @@
           "page_url": "/sources/sociaal-domein-informatiepagina/"
         },
         {
+          "title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin",
+          "page_url": "/sources/stevige-lokale-teams-almere/"
+        },
+        {
           "title": "Maatschappelijke agenda 2024-2034",
           "page_url": "/sources/maatschappelijke-agenda-2024-2034/"
         },
@@ -7521,10 +8634,6 @@
         {
           "title": "Vergaderschema Raad van Almere 2026",
           "page_url": "/sources/raadskalender-2026/"
-        },
-        {
-          "title": "Raadsvoorstel Visie Gezondheidsbeleid Almere 2024-2026 - geamendeerd",
-          "page_url": "/sources/raadsvoorstel-visie-gezondheid-geamendeerd/"
         }
       ],
       "structured_signals": {

@@ -1,0 +1,145 @@
+{
+  "source_id": "reg_ggd_flevoland_jgz_almere_profile",
+  "slug": "jgz-almere-profiel",
+  "page_url": "/sources/jgz-almere-profiel/",
+  "metadata": {
+    "document_id": "reg_ggd_flevoland_jgz_almere_profile",
+    "source_number": 52,
+    "title": "Profiel Jeugdgezondheidszorg",
+    "short_title": "JGZ Almere profiel",
+    "publisher": "GGD Flevoland",
+    "publication_date": null,
+    "document_type": "regional_service_page",
+    "jurisdiction_level": "regional",
+    "status": "current",
+    "source_url": "https://www.ggdflevoland.nl/professional/jeugdgezondheidszorg/",
+    "file_path": "data/raw/regional/reg_ggd_flevoland_jgz_almere_profile.html",
+    "source_format": "html",
+    "traceability_mode": "section_chunk_based",
+    "source_classification": "primary",
+    "curation_bucket": "canonical",
+    "contains_d5": false,
+    "contains_d6": true,
+    "contains_structured_tables": false,
+    "contains_financing_logic": false,
+    "contains_governance_logic": true,
+    "contains_monitoring_evaluation_logic": false,
+    "contains_municipal_implications": true,
+    "priority_rank": 34,
+    "extraction_priority": "low",
+    "inventory_notes": "Public source for JGZ Almere's 0-18 role, school links, youth support and care-chain function.",
+    "document_type_label": "regional service page",
+    "source_classification_label": "primaire bron"
+  },
+  "summary": "Deze bron draagt vooral bij aan de D6-lijn en de randvoorwaarden voor uitvoering.",
+  "what_changed_or_added": "Deze bron laat zien hoe landelijke lijnen regionaal in Flevoland worden vertaald.",
+  "d5_relevance": "Geen duidelijke D5-passages in de huidige extractie.",
+  "d6_relevance": "Bevat expliciete D6-passages in de huidige extractie.",
+  "linked_claims": [
+    {
+      "topic": "d6.regional_coordination",
+      "title": "regionale coördinatie voor D6",
+      "claim_count": 3,
+      "page_url": "/reference/topics/d6-regional-coordination/"
+    },
+    {
+      "topic": "municipal.implementation_translation",
+      "title": "lokale vertaling in openbare stukken",
+      "claim_count": 3,
+      "page_url": "/reference/topics/municipal-implementation-translation/"
+    },
+    {
+      "topic": "monitoring.other",
+      "title": "overige monitoringslijn",
+      "claim_count": 1,
+      "page_url": "/reference/topics/monitoring-other/"
+    }
+  ],
+  "linked_decisions": [],
+  "linked_actions": [],
+  "linked_themes": [
+    {
+      "theme_id": "basisinfrastructuur-d6",
+      "title": "Basisinfrastructuur (D6)",
+      "page_url": "/themes/basisinfrastructuur-d6/"
+    },
+    {
+      "theme_id": "monitoring-en-leren",
+      "title": "Monitoring en leren",
+      "page_url": "/themes/monitoring-en-leren/"
+    },
+    {
+      "theme_id": "governance-en-regie",
+      "title": "Governance en regie",
+      "page_url": "/themes/governance-en-regie/"
+    }
+  ],
+  "related_sources": [
+    {
+      "title": "Opdracht voor de werkagenda samenwerking zorg en sociaal domein voor D5 AZWA",
+      "page_url": "/sources/opdracht-werkagenda-d5-azwa/"
+    },
+    {
+      "title": "AZWA-afspraken D5 en D6 en financieringsinstrument",
+      "page_url": "/sources/vws-brief-d5-d6-financieringsinstrument/"
+    },
+    {
+      "title": "Kamerbrief inzake voortgang Integraal Zorgakkoord (IZA) en Aanvullend Zorg- en Welzijnsakkoord (AZWA)",
+      "page_url": "/sources/voortgangsbrief-iza-azwa/"
+    },
+    {
+      "title": "Informatiepagina Sociaal Domein",
+      "page_url": "/sources/sociaal-domein-informatiepagina/"
+    },
+    {
+      "title": "Kamerbrief over CW 3.1 kaders voor AZWA onderdelen",
+      "page_url": "/sources/kamerbrief-cw-3-1-kaders-azwa/"
+    }
+  ],
+  "structured_signals": {
+    "contains_structured_table": false,
+    "d5_item_count": 0,
+    "d6_item_count": 3,
+    "governance_item_count": 0,
+    "timeline_item_count": 0
+  },
+  "content_classification": {
+    "classification_id": "source_fact",
+    "label": "Source fact",
+    "description": "Use when the statement is presented as grounded in a source document, source quote, explicit table item, or directly verified timeline moment."
+  },
+  "perspective_ids": [
+    "norm",
+    "time",
+    "governance",
+    "locality",
+    "execution"
+  ],
+  "quality_perspectives": [
+    {
+      "perspective_id": "norm",
+      "title": "Norm",
+      "question": "What is required, allowed, expected, or binding?"
+    },
+    {
+      "perspective_id": "time",
+      "title": "Time",
+      "question": "Which dates, deadlines, phasing, review moments, and budget-calendar alignments matter?"
+    },
+    {
+      "perspective_id": "governance",
+      "title": "Governance",
+      "question": "Who decides, who coordinates, who owns, and who must approve?"
+    },
+    {
+      "perspective_id": "locality",
+      "title": "Locality",
+      "question": "What matters specifically for Almere or Flevoland?"
+    },
+    {
+      "perspective_id": "execution",
+      "title": "Execution",
+      "question": "What must policymakers actually organize, prepare, or sequence?"
+    }
+  ]
+}

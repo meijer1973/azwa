@@ -1,102 +1,106 @@
 {
   "view_run_id": "phase16_site_views_v1",
-  "generated_on": "2026-04-26",
-  "as_of_date": "2026-04-26",
+  "generated_on": "2026-04-27",
+  "as_of_date": "2026-04-27",
   "title": "Start",
   "executive_summary": "De huidige bronbasis laat voor Almere 4 mogelijke besluitvragen en 4 mogelijke opvolgacties zien. De meeste open punten zitten in lokale concretisering van D5 en D6, regie en governance, financiering en monitoring. De landelijke basis is zichtbaar, maar een deel van de lokale doorvertaling is in openbare Almere-documenten nog niet expliciet.",
   "latest_update": {
-    "update_id": "upd_vng_financiering_2026_04_23",
-    "page_url": "/updates/#upd_vng_financiering_2026_04_23",
-    "claims_page_url": "/updates/claims/upd_vng_financiering_2026_04_23/",
-    "published_on": "2026-04-23",
-    "title": "VNG-financieringsset van 22 april 2026 verwerkt in de dataset",
-    "summary": "De VNG-webpagina over AZWA-financiering en vijf gekoppelde documenten zijn via de volledige pijplijn verwerkt. Daardoor zijn nieuwe financieringsstappen, werkagenda-momenten en extra 2026-tijdlijnsignalen zichtbaar geworden in de dataset en op de site.",
+    "update_id": "upd_d6_almere_source_intake_2026_04_27",
+    "page_url": "/updates/#upd_d6_almere_source_intake_2026_04_27",
+    "claims_page_url": "/updates/claims/upd_d6_almere_source_intake_2026_04_27/",
+    "published_on": "2026-04-27",
+    "title": "D6-bronintake Almere verwerkt in de dataset",
+    "summary": "Zeven publieke bronnen voor de D6-basisinfrastructuur van Almere zijn toegevoegd aan de formele bronlaag en door de pijplijn verwerkt. De update versterkt vooral lokale toegang, wijkteams, Stevige Lokale Teams, GGD/JGZ, monitoring en lokale verantwoordelijkheidsprefill.",
     "source_reference": {
-      "title": "VNG-publicatie AZWA-financiering voor gemeenten (Zorgakkoord)",
-      "publisher": "VNG",
-      "publication_date": "2026-04-22",
-      "document_type": "topic_page",
-      "jurisdiction_level": "national",
+      "title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin",
+      "publisher": "Raad van Almere",
+      "publication_date": "2026-01-06",
+      "document_type": "municipal_council_page",
+      "jurisdiction_level": "municipal",
       "status": "current",
-      "source_url": "https://vng.nl/brieven/azwa-financiering-voor-gemeenten-zorgakkoord",
+      "source_url": "https://raadvanalmere.nl/article/stevige-lokale-teams-en-inzet-investeringsfonds-jeugd-en-gezin1",
       "topics": [],
-      "page_url": "/sources/vng-webpagina-azwa-financiering/"
+      "page_url": "/sources/stevige-lokale-teams-almere/"
     },
     "human_summary": {
-      "intro": "Deze update is gemaakt naar aanleiding van de VNG-publicatie 'AZWA-financiering voor gemeenten (Zorgakkoord)' van 22 april 2026 en de documenten die daaronder zijn gedeeld. Die publicatie gaf nieuw bestuurlijk houvast over financiering, regionale werkagenda en planning van D5/D6.",
-      "what_happened": "Niet alleen de VNG-webpagina, maar ook de ledenbrief, de VWS-brief en de werkagenda-documenten zijn nu via de volledige pijplijn opgenomen. Daardoor is de lijn tussen landelijke afspraken, regionale werkagenda en gemeentelijke financiering veel concreter geworden.",
-      "what_changed": "De belangrijkste inhoudelijke verandering is dat de financieringsroute voor gemeenten scherper is geworden: de nieuwe AZWA-SPUK voor 2027-2029 is explicieter zichtbaar, de regionale werkagenda komt duidelijker naar voren als voorwaarde voor uitkering van middelen in 2026, en de planning van 2026 is aangevuld met concrete uitvoerings- en toelichtingsmomenten.",
-      "why_it_matters": "Voor Almere betekent dit dat collega's nu beter kunnen zien welke landelijke publicatie de verandering veroorzaakte, welke momenten in 2026 bestuurlijk relevant zijn en waarom de financierings- en proceslijn serieuzer moet worden gevolgd."
+      "intro": "Deze update legt de eerste formele bronintake vast voor het heropende Sprint 25.4b-spoor: het D6 Almere responsibility pack. De focus ligt niet op een nieuwe algemene D6-samenvatting, maar op lokale uitvoeringsbronnen waarmee verantwoordelijkheid, schaal en validatievelden scherper kunnen worden gemaakt.",
+      "what_happened": "Zeven publieke bronnen zijn lokaal opgeslagen, toegevoegd aan data/raw/manifest.json en daarna verwerkt via inventory, structural extraction, document extraction, claims, current interpretation, D6-lagen, QC, site-viewmodels en het interne dashboard.",
+      "what_changed": "De bronbasis bevat nu formele corpusdocumenten voor Stevige Lokale Teams, Wijkteams Almere, lokale-teamkaders van VNG en Toezicht Sociaal Domein, GGD Flevoland Begroting 2026, GGD Kennis en Advies en het JGZ Almere-profiel. Het D6 responsibility register kan daardoor meer velden als publieke prefill behandelen, terwijl niet-besloten eigenaar-, budget- en uitvoeringsvragen open blijven voor lokale validatie.",
+      "why_it_matters": "Voor Almere maakt dit het verschil tussen D6 als beleidsbegrip en D6 als uitvoeringsagenda: welke lokale toegang, teams, GGD/JGZ-functies en monitoringsbronnen publiek zichtbaar zijn, en waar nog expliciet lokaal besluit of medewerkerinvulling nodig is."
     },
     "key_points": [
-      "De VWS-brief maakt een nieuwe AZWA-SPUK voor gemeenten in 2027-2029 explicieter zichtbaar.",
-      "De regionale werkagenda wordt duidelijker zichtbaar als randvoorwaarde voor uitkering van middelen in 2026.",
-      "De tijdlijn van 2026 is aangevuld met webinar-, thematafel- en werkagenda-momenten die bestuurlijk relevant zijn voor voorbereiding en afstemming.",
-      "De publieke site laat nu niet alleen nieuwe bronnen zien, maar ook wat die bronset concreet in de dataset veranderde."
+      "Zeven D6-bronnen zijn formeel ingested en verwerkt.",
+      "De D6 responsibility register-laag is bijgewerkt met ingested/source-backed status voor de nieuwe bronset.",
+      "Samen Sterker in de Wijk en Almere samenwerkingsprojecten blijven open intakewerk omdat directe download op 27 april 2026 een 404 gaf.",
+      "Onderliggende Documentwijzer-stukken voor Stevige Lokale Teams blijven nodig voordat lokale besluiten als volledig settled worden behandeld."
     ],
     "section_urls": {
-      "samenvatting": "/updates/#upd_vng_financiering_2026_04_23-samenvatting",
-      "wijzigingen": "/updates/#upd_vng_financiering_2026_04_23-wijzigingen",
-      "claims": "/updates/claims/upd_vng_financiering_2026_04_23/",
-      "tijdlijn": "/updates/#upd_vng_financiering_2026_04_23-tijdlijn",
-      "bronnen": "/updates/#upd_vng_financiering_2026_04_23-bronnen"
+      "samenvatting": "/updates/#upd_d6_almere_source_intake_2026_04_27-samenvatting",
+      "wijzigingen": "/updates/#upd_d6_almere_source_intake_2026_04_27-wijzigingen",
+      "claims": "/updates/claims/upd_d6_almere_source_intake_2026_04_27/",
+      "tijdlijn": "/updates/#upd_d6_almere_source_intake_2026_04_27-tijdlijn",
+      "bronnen": "/updates/#upd_d6_almere_source_intake_2026_04_27-bronnen"
     },
     "change_highlights": [
       {
-        "summary": "De financieringsroute voor gemeenten is explicieter geworden door de VWS-brief over een nieuwe AZWA-SPUK voor 2027-2029.",
-        "detail": "In de bronbasis is nu duidelijker zichtbaar dat het financieringsspoor voor gemeenten niet alleen via algemene afspraken loopt, maar ook via een specifiek instrument voor 2027-2029. Daardoor is de koppeling tussen bestuurlijke afspraken en latere gemeentelijke bekostiging concreter geworden."
+        "summary": "De formele bronlaag groeide van 45 naar 52 documenten door zeven D6-uitvoeringsbronnen toe te voegen.",
+        "detail": "De nieuwe bronnen zijn niet alleen als kandidaat genoemd, maar opgeslagen in data/raw, opgenomen in de manifestlaag en downstream verwerkt."
       },
       {
-        "summary": "De regionale werkagenda is nu scherper gekoppeld aan de middelenstroom: de mandaatgemeente en vaststelling van de werkagenda worden explicieter zichtbaar als randvoorwaarde voor uitkering van middelen in 2026.",
-        "detail": "De nieuwe documenten maken beter zichtbaar dat niet elke regio automatisch middelen ontvangt. Eerst moet de regionale werkagenda bestuurlijk zijn uitgewerkt en via de aangewezen mandaatgemeente worden aangeboden. Dat maakt de relatie tussen inhoudelijke uitwerking en financiering voor gemeenten bestuurlijk veel directer."
+        "summary": "Stevige Lokale Teams en Wijkteams Almere zijn nu als lokale D6-toegangsbronnen zichtbaar.",
+        "detail": "De raadspagina over Stevige Lokale Teams geeft lokale besluit- en uitvoeringssignalen; Wijkteams Almere geeft de bestaande publieke toegangsbasis. Onderliggende Documentwijzer-stukken blijven nog een aparte intakeactie."
       },
       {
-        "summary": "Procesmomenten in 2026 zijn aangescherpt, waaronder het praktische voorbereidingsmoment medio september en de formele vaststellingsdeadline van 15 november 2026.",
-        "detail": "Voor de uitvoering in 2026 is nu duidelijker welke momenten tellen voor voorbereiding, bestuurlijke afstemming en formele vaststelling. Daardoor is de tijdlijn niet alleen rijker, maar ook bruikbaarder als stuurinformatie voor planning en opvolging."
+        "summary": "GGD/JGZ en monitoring zijn versterkt met GGD Flevoland-bronnen.",
+        "detail": "De begroting 2026, Kennis en Advies en het JGZ-profiel helpen om GGD-regioschaal, JGZ Almere, dashboards, monitors en kennisfunctie te onderscheiden van Almere-local en IZA/AZWA-regio."
       },
       {
-        "summary": "De publieke tijdlijn bevat nu ook het webinar van 23 april 2026 en de landelijke thematafel van 26 mei 2026 als uitvoerings- en toelichtingsmomenten.",
-        "detail": "Deze momenten zijn niet primair juridische besluitmomenten, maar wel belangrijk voor toelichting, uitvoeringsduiding en het beschikbaar komen van handreikingen. Daardoor krijgen collega's beter zicht op wanneer landelijke toelichting en praktische uitwerking beschikbaar komen."
+        "summary": "De updatepagina zelf wordt voortaan als openklapbare lijst gelezen.",
+        "detail": "Elke update is een klikbaar item met samenvatting, wijzigingen, claims, betrokken pagina's, bronnen en tijdlijninformatie."
       }
     ],
     "metrics": [
       {
         "label": "Bronnen",
-        "before": 27,
-        "after": 33,
-        "delta": 6,
-        "delta_label": "+6",
-        "page_url": "/updates/#upd_vng_financiering_2026_04_23-bronnen"
+        "before": 45,
+        "after": 52,
+        "delta": 7,
+        "delta_label": "+7",
+        "page_url": "/updates/#upd_d6_almere_source_intake_2026_04_27-bronnen"
       },
       {
         "label": "Claims",
-        "before": 298,
-        "after": 376,
-        "delta": 78,
-        "delta_label": "+78",
-        "page_url": "/updates/claims/upd_vng_financiering_2026_04_23/"
+        "before": 480,
+        "after": 541,
+        "delta": 61,
+        "delta_label": "+61",
+        "page_url": "/updates/claims/upd_d6_almere_source_intake_2026_04_27/"
       },
       {
-        "label": "Tijdlijnitems",
-        "before": 26,
-        "after": 36,
-        "delta": 10,
-        "delta_label": "+10",
-        "page_url": "/updates/#upd_vng_financiering_2026_04_23-tijdlijn"
+        "label": "Reviewitems",
+        "before": 67,
+        "after": 71,
+        "delta": 4,
+        "delta_label": "+4",
+        "page_url": "/updates/#upd_d6_almere_source_intake_2026_04_27-tijdlijn"
       },
       {
-        "label": "Tijdlijnitems in 2026",
-        "before": 10,
-        "after": 19,
-        "delta": 9,
-        "delta_label": "+9",
-        "page_url": "/updates/#upd_vng_financiering_2026_04_23-tijdlijn"
+        "label": "D6-ingestbronnen",
+        "before": 0,
+        "after": 7,
+        "delta": 7,
+        "delta_label": "+7",
+        "page_url": "/updates/#upd_d6_almere_source_intake_2026_04_27-bronnen"
       }
     ],
     "affected_pages": [
       {
-        "label": "Tijdlijn",
-        "url": "/timeline/"
+        "label": "Updates",
+        "url": "/updates/"
+      },
+      {
+        "label": "Bronnen",
+        "url": "/sources/"
       },
       {
         "label": "Almere",
@@ -107,583 +111,219 @@
         "url": "/dashboard/"
       },
       {
-        "label": "Bronnen",
-        "url": "/sources/"
+        "label": "Thema D6",
+        "url": "/themes/basisinfrastructuur-d6/"
       }
     ],
     "affected_sources": [
       {
-        "document_id": "nat_vng_brief_azwa_financiering_webpagina_2026",
-        "title": "AZWA-financiering voor gemeenten (Zorgakkoord)",
+        "document_id": "mun_almere_2026_stevige_lokale_teams_raad",
+        "title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin",
+        "publisher": "Raad van Almere",
+        "publication_date": "2026-01-06",
+        "page_url": "/sources/stevige-lokale-teams-almere/"
+      },
+      {
+        "document_id": "mun_almere_wijkteams",
+        "title": "Wijkteams Almere",
+        "publisher": "Wijkteams Almere / Gemeente Almere",
+        "publication_date": null,
+        "page_url": "/sources/wijkteams-almere/"
+      },
+      {
+        "document_id": "nat_vng_richtinggevend_kader_toegang_lokale_teams",
+        "title": "Richtinggevend kader toegang, lokale teams en integrale dienstverlening",
         "publisher": "VNG",
-        "publication_date": "2026-04-22",
-        "page_url": "/sources/vng-webpagina-azwa-financiering/"
+        "publication_date": "2024-03-01",
+        "page_url": "/sources/vng-richtinggevend-kader-lokale-teams/"
       },
       {
-        "document_id": "nat_vng_ledenbrief_azwa_financiering_2026",
-        "title": "AZWA-financiering voor gemeenten (Zorgakkoord)",
-        "publisher": "VNG",
-        "publication_date": "2026-04-22",
-        "page_url": "/sources/vng-ledenbrief-azwa-financiering/"
+        "document_id": "nat_tsd_basisfuncties_lokale_teams",
+        "title": "Basisfuncties voor lokale teams",
+        "publisher": "Toezicht Sociaal Domein",
+        "publication_date": "2021-10-06",
+        "page_url": "/sources/basisfuncties-lokale-teams/"
       },
       {
-        "document_id": "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026",
-        "title": "AZWA-afspraken D5 en D6 en financieringsinstrument",
-        "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
-        "publication_date": "2026-04-22",
-        "page_url": "/sources/vws-brief-d5-d6-financieringsinstrument/"
+        "document_id": "reg_ggd_flevoland_begroting_2026",
+        "title": "Begroting 2026 GGD Flevoland",
+        "publisher": "GGD Flevoland",
+        "publication_date": "2025-10-14",
+        "page_url": "/sources/ggd-flevoland-begroting-2026/"
       },
       {
-        "document_id": "nat_azwa_opdracht_werkagenda_d5_2026",
-        "title": "Opdracht voor de werkagenda samenwerking zorg en sociaal domein voor D5 AZWA",
-        "publisher": "VNG / VWS",
-        "publication_date": "2026-04-22",
-        "page_url": "/sources/opdracht-werkagenda-d5-azwa/"
+        "document_id": "reg_ggd_flevoland_kennis_en_advies",
+        "title": "Kennis en Advies",
+        "publisher": "GGD Flevoland",
+        "publication_date": null,
+        "page_url": "/sources/ggd-flevoland-kennis-en-advies/"
       },
       {
-        "document_id": "nat_azwa_format_werkagenda_d5_2026",
-        "title": "Format werkagenda basisfunctionaliteiten AZWA",
-        "publisher": "VNG / VWS",
-        "publication_date": "2026-04-22",
-        "page_url": "/sources/format-werkagenda-azwa/"
-      },
-      {
-        "document_id": "nat_azwa_toelichting_producten_proces_2026",
-        "title": "Toelichting producten en proces",
-        "publisher": "VNG / VWS",
-        "publication_date": "2026-04-22",
-        "page_url": "/sources/toelichting-werkagenda-d5-azwa/"
+        "document_id": "reg_ggd_flevoland_jgz_almere_profile",
+        "title": "Profiel Jeugdgezondheidszorg",
+        "publisher": "GGD Flevoland",
+        "publication_date": null,
+        "page_url": "/sources/jgz-almere-profiel/"
       }
     ],
     "affected_claims_by_source": [
       {
-        "document_id": "nat_vng_brief_azwa_financiering_webpagina_2026",
-        "title": "AZWA-financiering voor gemeenten (Zorgakkoord)",
-        "publisher": "VNG",
-        "publication_date": "2026-04-22",
-        "page_url": "/sources/vng-webpagina-azwa-financiering/",
-        "claim_count": 5,
+        "document_id": "mun_almere_2026_stevige_lokale_teams_raad",
+        "title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin",
+        "publisher": "Raad van Almere",
+        "publication_date": "2026-01-06",
+        "page_url": "/sources/stevige-lokale-teams-almere/",
+        "claim_count": 8,
         "claims": [
           {
-            "claim_id": "clm__nat_vng_brief_azwa_financiering_webpagina_2026_d5_001",
-            "topic": "d5.other",
-            "topic_label": "overige D5-lijn",
-            "statement": "In het AZWA zijn basisfunctionaliteiten afgesproken: afspraken en voorzieningen waarmee mensen tijdig passende ondersteuning krijgen, zodat zwaardere zorg wordt voorkomen en middelen kunnen verschuiven van zorg naar gezondheid en welzijn.",
-            "validity_status": "active",
-            "page_labels": [],
-            "section_labels": [
-              "AZWA-financiering voor gemeenten (Zorgakkoord) / Ledenbrief nummer"
-            ]
-          },
-          {
-            "claim_id": "clm__nat_vng_brief_azwa_financiering_webpagina_2026_governance_and_finance_001",
-            "topic": "governance_and_finance.other",
-            "topic_label": "overige governance- en financieringslijn",
-            "statement": "- AZWA-financiering voor gemeenten (Zorgakkoord) (huidige pagina)",
-            "validity_status": "active",
-            "page_labels": [],
-            "section_labels": [
-              "AZWA-financiering voor gemeenten (Zorgakkoord) / Kruimelpad"
-            ]
-          },
-          {
-            "claim_id": "clm__nat_vng_brief_azwa_financiering_webpagina_2026_governance_and_finance_002",
-            "topic": "governance_and_finance.other",
-            "topic_label": "overige governance- en financieringslijn",
-            "statement": "In het AZWA zijn basisfunctionaliteiten afgesproken: afspraken en voorzieningen waarmee mensen tijdig passende ondersteuning krijgen, zodat zwaardere zorg wordt voorkomen en middelen kunnen verschuiven van zorg naar gezondheid en welzijn.",
-            "validity_status": "active",
-            "page_labels": [],
-            "section_labels": [
-              "AZWA-financiering voor gemeenten (Zorgakkoord) / Ledenbrief nummer"
-            ]
-          },
-          {
-            "claim_id": "clm__nat_vng_brief_azwa_financiering_webpagina_2026_municipal_translation_001",
-            "topic": "municipal.implementation_translation",
-            "topic_label": "lokale vertaling in openbare stukken",
-            "statement": "- AZWA-financiering voor gemeenten (Zorgakkoord) (huidige pagina)",
-            "validity_status": "active",
-            "page_labels": [],
-            "section_labels": [
-              "AZWA-financiering voor gemeenten (Zorgakkoord) / Kruimelpad"
-            ]
-          },
-          {
-            "claim_id": "clm__nat_vng_brief_azwa_financiering_webpagina_2026_municipal_translation_002",
-            "topic": "municipal.implementation_translation",
-            "topic_label": "lokale vertaling in openbare stukken",
-            "statement": "Met het Integraal Zorgakkoord (IZA) is ingezet op een verschuiving van zorg naar gezondheid en welzijn en op betere regionale samenwerking.",
-            "validity_status": "active",
-            "page_labels": [],
-            "section_labels": [
-              "AZWA-financiering voor gemeenten (Zorgakkoord) / Ledenbrief nummer"
-            ]
-          }
-        ]
-      },
-      {
-        "document_id": "nat_vng_ledenbrief_azwa_financiering_2026",
-        "title": "AZWA-financiering voor gemeenten (Zorgakkoord)",
-        "publisher": "VNG",
-        "publication_date": "2026-04-22",
-        "page_url": "/sources/vng-ledenbrief-azwa-financiering/",
-        "claim_count": 15,
-        "claims": [
-          {
-            "claim_id": "clm__nat_vng_ledenbrief_azwa_financiering_2026_d5_001",
-            "topic": "d5.other",
-            "topic_label": "overige D5-lijn",
-            "statement": "Prioritering en ambitie voor de basisfunctionaliteiten en voor de regio relevante",
-            "validity_status": "active",
-            "page_labels": [
-              "1"
-            ],
-            "section_labels": [
-              "Page 1"
-            ]
-          },
-          {
-            "claim_id": "clm__nat_vng_ledenbrief_azwa_financiering_2026_d5_002",
-            "topic": "d5.other",
-            "topic_label": "overige D5-lijn",
-            "statement": "• Prioritering en ambitie voor de basisfunctionaliteiten en voor de regio relevante",
-            "validity_status": "active",
-            "page_labels": [
-              "1"
-            ],
-            "section_labels": [
-              "Page 1"
-            ]
-          },
-          {
-            "claim_id": "clm__nat_vng_ledenbrief_azwa_financiering_2026_d5_003",
-            "topic": "d5.regional_workagenda",
-            "topic_label": "regionale/lokale D5-werkagenda",
-            "statement": "De werkagenda bevat in elk geval: • Regionale doelen op gezondheid en welzijn • Prioritering en ambitie voor de basisfunctionaliteiten en voor de regio relevante ontwikkelagenda-aanpakken richting 2030 • Concrete afspraken over inzet, planning en financiering (zonder volledige begroting) • Rol- en verantwoordelijkheidsverdeling tussen partijen • Afspraken over leren, monitoring en bijsturing Aan de leden Onderwerp: AZWA-financiering voor gemeenten (Zorgakkoord) Datum 22 april 2026 Ons kenmerk U202600211 Lbr. 26/012 Telefoon 070 – 373 83 93 Bijlage(n) 4",
-            "validity_status": "active",
-            "page_labels": [
-              "1"
-            ],
-            "section_labels": [
-              "Page 1"
-            ]
-          },
-          {
-            "claim_id": "clm__nat_vng_ledenbrief_azwa_financiering_2026_governance_and_finance_001",
-            "topic": "governance_and_finance.other",
-            "topic_label": "overige governance- en financieringslijn",
-            "statement": "Aan het AZWA zijn financiële middelen gekoppeld in opmaat naar structurele financiering vanaf",
-            "validity_status": "active",
-            "page_labels": [
-              "1"
-            ],
-            "section_labels": [
-              "Page 1"
-            ]
-          },
-          {
-            "claim_id": "clm__nat_vng_ledenbrief_azwa_financiering_2026_governance_and_finance_002",
-            "topic": "governance_and_finance.other",
-            "topic_label": "overige governance- en financieringslijn",
-            "statement": "De werkagenda bevat in elk geval: • Regionale doelen op gezondheid en welzijn • Prioritering en ambitie voor de basisfunctionaliteiten en voor de regio relevante ontwikkelagenda-aanpakken richting 2030 • Concrete afspraken over inzet, planning en financiering (zonder volledige begroting) • Rol- en verantwoordelijkheidsverdeling tussen partijen • Afspraken over leren, monitoring en bijsturing Aan de leden Onderwerp: AZWA-financiering voor gemeenten (Zorgakkoord) Datum 22 april 2026 Ons kenmerk U202600211 Lbr. 26/012 Telefoon 070 – 373 83 93 Bijlage(n) 4",
-            "validity_status": "active",
-            "page_labels": [
-              "1"
-            ],
-            "section_labels": [
-              "Page 1"
-            ]
-          },
-          {
-            "claim_id": "clm__nat_vng_ledenbrief_azwa_financiering_2026_governance_and_finance_003",
-            "topic": "governance_and_finance.other",
-            "topic_label": "overige governance- en financieringslijn",
-            "statement": "Meer informatie of vragen De volgende documenten treft u aan als bijlagen: 1. Brief VWS ‘AZWA Afspraken D5 en D6 en Financieringsinstrument’ 2. Opdracht voor de werkagenda Samenwerking zorg en sociaal domein voor D5 AZWA 3. Format werkagenda basisfunctionaliteiten AZWA 4. Toelichting producten en proces",
-            "validity_status": "active",
-            "page_labels": [
-              "2"
-            ],
-            "section_labels": [
-              "Page 2"
-            ]
-          },
-          {
-            "claim_id": "clm__nat_vng_ledenbrief_azwa_financiering_2026_monitoring_and_evaluation_001",
-            "topic": "monitoring.other",
-            "topic_label": "overige monitoringslijn",
-            "statement": "Afspraken over leren, monitoring en bijsturing",
-            "validity_status": "active",
-            "page_labels": [
-              "1"
-            ],
-            "section_labels": [
-              "Page 1"
-            ]
-          },
-          {
-            "claim_id": "clm__nat_vng_ledenbrief_azwa_financiering_2026_monitoring_and_evaluation_002",
-            "topic": "monitoring.other",
-            "topic_label": "overige monitoringslijn",
-            "statement": "• Afspraken over leren, monitoring en bijsturing",
-            "validity_status": "active",
-            "page_labels": [
-              "1"
-            ],
-            "section_labels": [
-              "Page 1"
-            ]
-          },
-          {
-            "claim_id": "clm__nat_vng_ledenbrief_azwa_financiering_2026_monitoring_and_evaluation_003",
-            "topic": "monitoring.other",
-            "topic_label": "overige monitoringslijn",
-            "statement": "De werkagenda bevat in elk geval: • Regionale doelen op gezondheid en welzijn • Prioritering en ambitie voor de basisfunctionaliteiten en voor de regio relevante ontwikkelagenda-aanpakken richting 2030 • Concrete afspraken over inzet, planning en financiering (zonder volledige begroting) • Rol- en verantwoordelijkheidsverdeling tussen partijen • Afspraken over leren, monitoring en bijsturing Aan de leden Onderwerp: AZWA-financiering voor gemeenten (Zorgakkoord) Datum 22 april 2026 Ons kenmerk U202600211 Lbr. 26/012 Telefoon 070 – 373 83 93 Bijlage(n) 4",
-            "validity_status": "active",
-            "page_labels": [
-              "1"
-            ],
-            "section_labels": [
-              "Page 1"
-            ]
-          },
-          {
-            "claim_id": "clm__nat_vng_ledenbrief_azwa_financiering_2026_municipal_translation_001",
-            "topic": "municipal.implementation_translation",
-            "topic_label": "lokale vertaling in openbare stukken",
-            "statement": "regionale werkagenda beschrijft hoe gemeenten en de preferente zorgverzekeraar, samen met",
-            "validity_status": "active",
-            "page_labels": [
-              "1"
-            ],
-            "section_labels": [
-              "Page 1"
-            ]
-          },
-          {
-            "claim_id": "clm__nat_vng_ledenbrief_azwa_financiering_2026_municipal_translation_002",
-            "topic": "municipal.implementation_translation",
-            "topic_label": "lokale vertaling in openbare stukken",
-            "statement": "De werkagenda bevat in elk geval: • Regionale doelen op gezondheid en welzijn • Prioritering en ambitie voor de basisfunctionaliteiten en voor de regio relevante ontwikkelagenda-aanpakken richting 2030 • Concrete afspraken over inzet, planning en financiering (zonder volledige begroting) • Rol- en verantwoordelijkheidsverdeling tussen partijen • Afspraken over leren, monitoring en bijsturing Aan de leden Onderwerp: AZWA-financiering voor gemeenten (Zorgakkoord) Datum 22 april 2026 Ons kenmerk U202600211 Lbr. 26/012 Telefoon 070 – 373 83 93 Bijlage(n) 4",
-            "validity_status": "active",
-            "page_labels": [
-              "1"
-            ],
-            "section_labels": [
-              "Page 1"
-            ]
-          },
-          {
-            "claim_id": "clm__nat_vng_ledenbrief_azwa_financiering_2026_municipal_translation_003",
-            "topic": "municipal.implementation_translation",
-            "topic_label": "lokale vertaling in openbare stukken",
-            "statement": "gemeenten tijdig duidelijkheid nodig over de middelen.",
-            "validity_status": "active",
-            "page_labels": [
-              "1"
-            ],
-            "section_labels": [
-              "Page 1"
-            ]
-          },
-          {
-            "claim_id": "clm__nat_vng_ledenbrief_azwa_financiering_2026_timeline_and_status_002",
-            "topic": "timeline.other",
-            "topic_label": "overige tijdlijnmomenten",
-            "statement": "werkagenda door de mandaatgemeente is randvoorwaardelijk voor het nog in 2026 uitkeren",
-            "validity_status": "active",
-            "page_labels": [
-              "1"
-            ],
-            "section_labels": [
-              "Page 1"
-            ]
-          },
-          {
-            "claim_id": "clm__nat_vng_ledenbrief_azwa_financiering_2026_timeline_and_status_001",
-            "topic": "timeline.rollout_2030",
-            "topic_label": "landelijke dekking richting 2030",
-            "statement": "De werkagenda bevat in elk geval: • Regionale doelen op gezondheid en welzijn • Prioritering en ambitie voor de basisfunctionaliteiten en voor de regio relevante ontwikkelagenda-aanpakken richting 2030 • Concrete afspraken over inzet, planning en financiering (zonder volledige begroting) • Rol- en verantwoordelijkheidsverdeling tussen partijen • Afspraken over leren, monitoring en bijsturing Aan de leden Onderwerp: AZWA-financiering voor gemeenten (Zorgakkoord) Datum 22 april 2026 Ons kenmerk U202600211 Lbr. 26/012 Telefoon 070 – 373 83 93 Bijlage(n) 4",
-            "validity_status": "active",
-            "page_labels": [
-              "1"
-            ],
-            "section_labels": [
-              "Page 1"
-            ]
-          },
-          {
-            "claim_id": "clm__nat_vng_ledenbrief_azwa_financiering_2026_timeline_and_status_003",
-            "topic": "timeline.rollout_2030",
-            "topic_label": "landelijke dekking richting 2030",
-            "statement": "ontwikkelagenda-aanpakken richting 2030",
-            "validity_status": "active",
-            "page_labels": [
-              "1"
-            ],
-            "section_labels": [
-              "Page 1"
-            ]
-          }
-        ]
-      },
-      {
-        "document_id": "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026",
-        "title": "AZWA-afspraken D5 en D6 en financieringsinstrument",
-        "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
-        "publication_date": "2026-04-22",
-        "page_url": "/sources/vws-brief-d5-d6-financieringsinstrument/",
-        "claim_count": 18,
-        "claims": [
-          {
-            "claim_id": "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d5_001",
-            "topic": "d5.basisfunctionaliteiten_onderbouwd",
-            "topic_label": "onderbouwde D5-basisfunctionaliteiten",
-            "statement": "• Laagdrempelige steunpunten EPA • Sociaal Venvilzen • Valpreventie • Ketenaanpak overgewicht en obesitas volwassenen • Kansrijke start integrale gezinspoli en Nu Niet Zwanger 1. Mentale Gezondheid 2. Vitaal ouder worden/ ouderen 3. Leefstijl 4. Kansrijk opgroeien Directie Maatschappelijke Ondersteuning D5 Basis- D5 ontwikkel- Ontwikkel- D6 Basis- functionaliteit agenda 1 agenda deel 2 Infrastructuur onderbouwd Leefgebied Maatregel Maatregel Maatregel Maatregel • Mentale Gezond- heidsnetwerken (onder andere verkennend gesprek) • Ketenaanpak dementie (incl. preventie) • Nicotinevrij • Ketenaanpak overgewicht en obesitas kinderen • Kansrijke start Rookvrije stal • Aanpak eenzaamheid • ...",
-            "validity_status": "active",
-            "page_labels": [
-              "3"
-            ],
-            "section_labels": [
-              "Page 3"
-            ]
-          },
-          {
-            "claim_id": "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d5_002",
-            "topic": "d5.basisfunctionaliteiten_onderbouwd",
-            "topic_label": "onderbouwde D5-basisfunctionaliteiten",
-            "statement": "programma's, te weten: valpreventie, kansrijke start, respijtzorg en gezond-",
-            "validity_status": "active",
-            "page_labels": [
-              "4"
-            ],
-            "section_labels": [
-              "Page 4"
-            ]
-          },
-          {
-            "claim_id": "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d5_003",
-            "topic": "d5.basisfunctionaliteiten_onderbouwd",
-            "topic_label": "onderbouwde D5-basisfunctionaliteiten",
-            "statement": "ssik `t~f 25 4. Welke middelen komen in de SPUK In deze SPUK worden verschillende middelen samengebracht 3 Het gaat om: de AZWA-middelen voor de afspraken D5 en D6; middelen uit het Hoofdlijnenakkoord Ouderenzorg (HLO) voor gelijkgerichte mantelzorg en respijt- en logeerzorg; structurele GALA-middelen die verbonden zijn aan verschillende thema's en programma's, te weten: valpreventie, kansrijke start, respijtzorg en gezond- heidsachterstanden; middelen die uit de doorbraakmiddelen zijn genomen om de basisfunctionali- teiten sneller te kunnen realiseren. De middelen voor de Brede Regeling Combinatiefuncties landen niet in de SPUK AZWA. De middelen voor de aanpak multiproblematiek in de ...",
-            "validity_status": "active",
-            "page_labels": [
-              "4"
-            ],
-            "section_labels": [
-              "Page 4"
-            ]
-          },
-          {
-            "claim_id": "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d6_002",
-            "topic": "d6.basisinfrastructuur",
-            "topic_label": "D6-basisinfrastructuur",
-            "statement": "• Laagdrempelige steunpunten EPA • Sociaal Venvilzen • Valpreventie • Ketenaanpak overgewicht en obesitas volwassenen • Kansrijke start integrale gezinspoli en Nu Niet Zwanger 1. Mentale Gezondheid 2. Vitaal ouder worden/ ouderen 3. Leefstijl 4. Kansrijk opgroeien Directie Maatschappelijke Ondersteuning D5 Basis- D5 ontwikkel- Ontwikkel- D6 Basis- functionaliteit agenda 1 agenda deel 2 Infrastructuur onderbouwd Leefgebied Maatregel Maatregel Maatregel Maatregel • Mentale Gezond- heidsnetwerken (onder andere verkennend gesprek) • Ketenaanpak dementie (incl. preventie) • Nicotinevrij • Ketenaanpak overgewicht en obesitas kinderen • Kansrijke start Rookvrije stal • Aanpak eenzaamheid • ...",
-            "validity_status": "active",
-            "page_labels": [
-              "3"
-            ],
-            "section_labels": [
-              "Page 3"
-            ]
-          },
-          {
-            "claim_id": "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d6_003",
-            "topic": "d6.basisinfrastructuur",
-            "topic_label": "D6-basisinfrastructuur",
-            "statement": "basisfunctionaliteiten ondersteunen (sociale en gezonde basisinfrastructuur).",
-            "validity_status": "active",
-            "page_labels": [
-              "2"
-            ],
-            "section_labels": [
-              "Page 2"
-            ]
-          },
-          {
-            "claim_id": "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d6_001",
+            "claim_id": "clm__mun_almere_2026_stevige_lokale_teams_raad_d6_001",
             "topic": "d6.local_teams",
             "topic_label": "stevige lokale teams en wijkverbanden",
-            "statement": "verbinding van lokale teams met hechte wijkverbanden of de gelijkgerichte",
-            "validity_status": "active",
-            "page_labels": [
-              "5"
-            ],
+            "statement": "Raadsvoorstel Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin (26006) Het geamendeerde raadsvoorstel is met algemene stemmen aangenomen.",
+            "validity_status": "contextual_active",
+            "page_labels": [],
             "section_labels": [
-              "Page 5"
+              "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin / Eerdere berichten / Het voorstel is op 19 februari 2026 geamendeerd aangenomen 20-02-2026"
             ]
           },
           {
-            "claim_id": "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_governance_and_finance_001",
-            "topic": "finance.d5_d6.funding_instrument",
-            "topic_label": "bekostigingsroute D5/D6",
-            "statement": "specifieke uitkering (SPUK) opgesteld voor de jaren 2027.",
-            "validity_status": "active",
-            "page_labels": [
-              "1"
-            ],
+            "claim_id": "clm__mun_almere_2026_stevige_lokale_teams_raad_d6_002",
+            "topic": "d6.local_teams",
+            "topic_label": "stevige lokale teams en wijkverbanden",
+            "statement": "- Randvoorwaarden Stevige Lokale Teams (26006.001) Het amendement is met 21 stemmen voor en 19 stemmen tegen aangenomen.",
+            "validity_status": "contextual_active",
+            "page_labels": [],
             "section_labels": [
-              "Page 1"
+              "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin / Eerdere berichten / Het voorstel is op 19 februari 2026 geamendeerd aangenomen 20-02-2026"
             ]
           },
           {
-            "claim_id": "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_governance_and_finance_002",
-            "topic": "finance.d5_d6.funding_instrument",
-            "topic_label": "bekostigingsroute D5/D6",
-            "statement": "specifieke uitkering (SPUK) opgesteld voor de jaren 2027 - 2029. Dit gebeurt in",
-            "validity_status": "active",
-            "page_labels": [
-              "1"
-            ],
+            "claim_id": "clm__mun_almere_2026_stevige_lokale_teams_raad_d6_003",
+            "topic": "d6.local_teams",
+            "topic_label": "stevige lokale teams en wijkverbanden",
+            "statement": "Op 15 januarisprakde raad voor het eerstoverhet raadsvoorstelStevige Lokale Teams en inzet Investeringsfonds Jeugd en Gezin.",
+            "validity_status": "contextual_active",
+            "page_labels": [],
             "section_labels": [
-              "Page 1"
+              "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin / Eerdere berichten / De eerte bespreking vond plaats op 15 januari 202616-01-2026"
             ]
           },
           {
-            "claim_id": "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_governance_and_finance_003",
-            "topic": "governance_and_finance.other",
-            "topic_label": "overige governance- en financieringslijn",
-            "statement": "> Retouradres Postbus 20350 2500 EJ Den Haag VNG T.a.v. voorzitter VNG bestuur Postbus 30435 2500 GK DEN HAAG Ministerie van Volksgezondheid, Welzijn en Sport Directie Maatschappelijke Ondersteuning Bezoekadres Parnassusplein 5 2511 VX Den Haag T 070 340 79 11 F 070 340 78 34 www.rijksoverheid.n1 2 2 APR. 2026 Datum Betreft AZWA-afspraken D5 en D6 en financieringsinstrument Geachte mevrouw Dijksma, Met het Aanvullend Zorg- en Welzijnsakkoord (AZWA) hebben we samen met 19 andere partijen uit het zorg- en welzijnsdomein aanvullende afspraken gemaakt op het Integraal Zorgakkoord (IZA) en het Gezond en Actief Leven Akkoord (GALA). Vanaf 2027 ontvangt u als gemeente financiële middelen om de ...",
-            "validity_status": "active",
-            "page_labels": [
-              "1"
-            ],
-            "section_labels": [
-              "Page 1"
-            ]
-          },
-          {
-            "claim_id": "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_monitoring_and_evaluation_003",
-            "topic": "monitoring.d5_operational_monitoring",
-            "topic_label": "operationele D5-monitoring",
-            "statement": "de huidige GALA-monitor. Ook wordt de regioscan op de basisfunctionaliteiten en",
-            "validity_status": "active",
-            "page_labels": [
-              "5"
-            ],
-            "section_labels": [
-              "Page 5"
-            ]
-          },
-          {
-            "claim_id": "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_monitoring_and_evaluation_001",
+            "claim_id": "clm__mun_almere_2026_stevige_lokale_teams_raad_monitoring_and_evaluation_001",
             "topic": "monitoring.other",
             "topic_label": "overige monitoringslijn",
-            "statement": "monitoring de voortgang op resultaten bijgehouden.",
-            "validity_status": "active",
-            "page_labels": [
-              "5"
-            ],
+            "statement": "- Evaluatie keuze 0-100 wijkteammodel (26006.002) De motie is met 8 stemmen voor en 32 stemmen tegen verworpen.",
+            "validity_status": "contextual_active",
+            "page_labels": [],
             "section_labels": [
-              "Page 5"
+              "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin / Eerdere berichten / Het voorstel is op 19 februari 2026 geamendeerd aangenomen 20-02-2026"
             ]
           },
           {
-            "claim_id": "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_monitoring_and_evaluation_002",
-            "topic": "monitoring.other",
-            "topic_label": "overige monitoringslijn",
-            "statement": "monitoring de voortgang op resultaten bijgehouden. Daarbij bouwen we voort op",
-            "validity_status": "active",
-            "page_labels": [
-              "5"
-            ],
-            "section_labels": [
-              "Page 5"
-            ]
-          },
-          {
-            "claim_id": "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_municipal_translation_001",
+            "claim_id": "clm__mun_almere_2026_stevige_lokale_teams_raad_municipal_translation_003",
             "topic": "municipal.implementation_translation",
             "topic_label": "lokale vertaling in openbare stukken",
-            "statement": "kr1W.f% .4 J. Dit betekent dat de middelen die voor u bestemd zijn één budget vormen zonder exacte bestedingsvoorschriften per thema. Met deze middelen kunt u uw opgave uit het AZWA uitvoeren. Deze opgave wordt dit jaar uitgewerkt in een werkagenda in regionale samenwerking tussen gemeenten en zorgverzekeraar, waarbij zorg- en welzijnspartijen worden betrokken. Door middelen integraal te benaderen kunnen gemeente en regio gerichter en effectiever investeren in gezondheid en welzijn. Interventies kunnen elkaar versterken en regio's kunnen accenten leggen waar de behoefte of energie ligt. Juist deze ruimte maakt het mogelijk om de maatschappelijke transformatie daadwerkelijk vanuit de ...",
-            "validity_status": "active",
-            "page_labels": [
-              "2"
-            ],
+            "statement": "https://documentwijzer.raadvanalmere.nl/app/instrument/26006",
+            "validity_status": "contextual_active",
+            "page_labels": [],
             "section_labels": [
-              "Page 2"
+              "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin / Waar gaat het over? / U vindt de stukken in onze documentwijzer:"
             ]
           },
           {
-            "claim_id": "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_municipal_translation_002",
-            "topic": "municipal.implementation_translation",
-            "topic_label": "lokale vertaling in openbare stukken",
-            "statement": "een evenwichtige verdeling tussen lokale (gemeenten) en regionale middelen",
-            "validity_status": "active",
-            "page_labels": [
-              "4"
-            ],
+            "claim_id": "clm__mun_almere_2026_stevige_lokale_teams_raad_municipal_translation_001",
+            "topic": "municipal.local_structure",
+            "topic_label": "lokale structuur",
+            "statement": "De avond begon met een inspreker die namensArti Care Almere zorgen uitte over de koers van de Stevige Lokale Teams.",
+            "validity_status": "contextual_active",
+            "page_labels": [],
             "section_labels": [
-              "Page 4"
+              "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin / Eerdere berichten / De eerte bespreking vond plaats op 15 januari 202616-01-2026"
             ]
           },
           {
-            "claim_id": "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_municipal_translation_003",
-            "topic": "municipal.implementation_translation",
-            "topic_label": "lokale vertaling in openbare stukken",
-            "statement": "(mandaatgemeenten). In het AZWA is zowel de lokale als de regionale schaal",
-            "validity_status": "active",
-            "page_labels": [
-              "5"
-            ],
+            "claim_id": "clm__mun_almere_2026_stevige_lokale_teams_raad_municipal_translation_002",
+            "topic": "municipal.local_structure",
+            "topic_label": "lokale structuur",
+            "statement": "Het college benadrukte hierop dat de ontwikkeling van de Stevige Lokale Teams nog volop in beweging is.Volgende week komt het college met een raadsbrief over de aanpassingen op de regionale inkoopstrategie.",
+            "validity_status": "contextual_active",
+            "page_labels": [],
             "section_labels": [
-              "Page 5"
+              "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin / Eerdere berichten / De eerte bespreking vond plaats op 15 januari 202616-01-2026"
             ]
           },
           {
-            "claim_id": "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_timeline_and_status_002",
-            "topic": "timeline.almere_2029",
-            "topic_label": "lokale horizon Positief Gezond Almere",
-            "statement": "specifieke uitkering (SPUK) opgesteld voor de jaren 2027 - 2029. Dit gebeurt in",
-            "validity_status": "active",
-            "page_labels": [
-              "1"
-            ],
-            "section_labels": [
-              "Page 1"
-            ]
-          },
-          {
-            "claim_id": "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_timeline_and_status_003",
-            "topic": "timeline.almere_2029",
-            "topic_label": "lokale horizon Positief Gezond Almere",
-            "statement": "3. Financieringsinstrument 2027 - 2029: een nieuwe SPUK",
-            "validity_status": "active",
-            "page_labels": [
-              "1"
-            ],
-            "section_labels": [
-              "Page 1"
-            ]
-          },
-          {
-            "claim_id": "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_timeline_and_status_001",
+            "claim_id": "clm__mun_almere_2026_stevige_lokale_teams_raad_timeline_and_status_001",
             "topic": "timeline.other",
             "topic_label": "overige tijdlijnmomenten",
-            "statement": "> Retouradres Postbus 20350 2500 EJ Den Haag VNG T.a.v. voorzitter VNG bestuur Postbus 30435 2500 GK DEN HAAG Ministerie van Volksgezondheid, Welzijn en Sport Directie Maatschappelijke Ondersteuning Bezoekadres Parnassusplein 5 2511 VX Den Haag T 070 340 79 11 F 070 340 78 34 www.rijksoverheid.n1 2 2 APR. 2026 Datum Betreft AZWA-afspraken D5 en D6 en financieringsinstrument Geachte mevrouw Dijksma, Met het Aanvullend Zorg- en Welzijnsakkoord (AZWA) hebben we samen met 19 andere partijen uit het zorg- en welzijnsdomein aanvullende afspraken gemaakt op het Integraal Zorgakkoord (IZA) en het Gezond en Actief Leven Akkoord (GALA). Vanaf 2027 ontvangt u als gemeente financiële middelen om de ...",
-            "validity_status": "active",
-            "page_labels": [
-              "1"
-            ],
+            "statement": "Deze worden tijdens de Politieke Markt van 5 februari besproken.",
+            "validity_status": "contextual_active",
+            "page_labels": [],
             "section_labels": [
-              "Page 1"
+              "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin / Eerdere berichten / De bespreking kreeg een vervolg op 22 januari 202626-01-2026"
             ]
           }
         ]
       },
       {
-        "document_id": "nat_azwa_opdracht_werkagenda_d5_2026",
-        "title": "Opdracht voor de werkagenda samenwerking zorg en sociaal domein voor D5 AZWA",
-        "publisher": "VNG / VWS",
-        "publication_date": "2026-04-22",
-        "page_url": "/sources/opdracht-werkagenda-d5-azwa/",
+        "document_id": "mun_almere_wijkteams",
+        "title": "Wijkteams Almere",
+        "publisher": "Wijkteams Almere / Gemeente Almere",
+        "publication_date": null,
+        "page_url": "/sources/wijkteams-almere/",
+        "claim_count": 2,
+        "claims": [
+          {
+            "claim_id": "clm__mun_almere_wijkteams_d6_001",
+            "topic": "d6.other",
+            "topic_label": "overige D6-lijn",
+            "statement": "De wijkwerkers van de wijkteams in Almere vertegenwoordigen diverse zorg- en welzijnsorganisaties in de wijk.",
+            "validity_status": "contextual_active",
+            "page_labels": [],
+            "section_labels": [
+              "Wijkteams Almere"
+            ]
+          },
+          {
+            "claim_id": "clm__mun_almere_wijkteams_municipal_translation_001",
+            "topic": "municipal.local_structure",
+            "topic_label": "lokale structuur",
+            "statement": "De wijkwerkers van de wijkteams in Almere vertegenwoordigen diverse zorg- en welzijnsorganisaties in de wijk.",
+            "validity_status": "contextual_active",
+            "page_labels": [],
+            "section_labels": [
+              "Wijkteams Almere"
+            ]
+          }
+        ]
+      },
+      {
+        "document_id": "nat_vng_richtinggevend_kader_toegang_lokale_teams",
+        "title": "Richtinggevend kader toegang, lokale teams en integrale dienstverlening",
+        "publisher": "VNG",
+        "publication_date": "2024-03-01",
+        "page_url": "/sources/vng-richtinggevend-kader-lokale-teams/",
         "claim_count": 16,
         "claims": [
           {
-            "claim_id": "clm__nat_azwa_opdracht_werkagenda_d5_2026_d5_002",
+            "claim_id": "clm__nat_vng_richtinggevend_kader_toegang_lokale_teams_d5_001",
             "topic": "d5.basisfunctionaliteiten_onderbouwd",
             "topic_label": "onderbouwde D5-basisfunctionaliteiten",
-            "statement": "Samenhang met andere basisfunctionaliteiten/aanpakken: sociaal verwijzen, laagdrempelige",
-            "validity_status": "active",
+            "statement": "Welzijn op Recept 2.0, Welzijn op consult en Waar is Wally.xliv De teams zetten in op goede",
+            "validity_status": "contextual_active",
+            "page_labels": [
+              "16"
+            ],
+            "section_labels": [
+              "Page 16"
+            ]
+          },
+          {
+            "claim_id": "clm__nat_vng_richtinggevend_kader_toegang_lokale_teams_d6_001",
+            "topic": "d6.local_teams",
+            "topic_label": "stevige lokale teams en wijkverbanden",
+            "statement": "4 Uit de Hervormingsagenda Jeugd: ‘De VNG ontwikkelt een bestuurlijk kader in de vorm van een convenant ‘Stevige lokale teams’, gericht op zowel Jeugd als Wmo. Hierin zal ook de transitie richting stevige lokale teams inzichtelijk gemaakt worden. Het convenant wordt ontwikkeld in nauwe afstemming met onder andere de gemeenten, de Associatie Wijkteams, de SBJ, cliënt- en brancheorganisaties, VWS en partijen uit de brede sociale basis. Het streven is dit convenant in 2025 te ondertekenen door VNG en VWS, mogelijk aangevuld met bovengenoemde partijen.’ Hervormingsagenda jeugd 2023-2028 (2023) 5 Denk aan: vraagverheldering, mogelijk indiceren, het maken van een plan met de inwoner, ...",
+            "validity_status": "historical",
             "page_labels": [
               "8"
             ],
@@ -692,50 +332,11 @@
             ]
           },
           {
-            "claim_id": "clm__nat_azwa_opdracht_werkagenda_d5_2026_d5_003",
-            "topic": "d5.basisfunctionaliteiten_onderbouwd",
-            "topic_label": "onderbouwde D5-basisfunctionaliteiten",
-            "statement": "Samenhang met andere basisfunctionaliteiten/aanpakken: Kansrijke Start, Nu Niet Zwanger",
-            "validity_status": "active",
-            "page_labels": [
-              "10"
-            ],
-            "section_labels": [
-              "Page 10"
-            ]
-          },
-          {
-            "claim_id": "clm__nat_azwa_opdracht_werkagenda_d5_2026_d5_001",
-            "topic": "d5.mentale_gezondheidsnetwerken",
-            "topic_label": "mentale gezondheidsnetwerken",
-            "statement": "Samenhang met andere basisfunctionaliteiten/aanpakken: mentale gezondheidsnetwerken",
-            "validity_status": "active",
-            "page_labels": [
-              "7"
-            ],
-            "section_labels": [
-              "Page 7"
-            ]
-          },
-          {
-            "claim_id": "clm__nat_azwa_opdracht_werkagenda_d5_2026_d6_001",
-            "topic": "d6.basisinfrastructuur",
-            "topic_label": "D6-basisinfrastructuur",
-            "statement": "Betreft: laagdrempelige steunpunten, sociaal verwijzen,",
-            "validity_status": "contextual_active",
-            "page_labels": [
-              "5"
-            ],
-            "section_labels": [
-              "Page 5"
-            ]
-          },
-          {
-            "claim_id": "clm__nat_azwa_opdracht_werkagenda_d5_2026_governance_and_finance_001",
-            "topic": "governance_and_finance.other",
-            "topic_label": "overige governance- en financieringslijn",
-            "statement": "Komen tot een werkagenda De IZA-regiotafel10 is de centrale plek waar alle doelen en opgaven van de werkagenda integraal worden afgewogen. De mandaatgemeente en preferente zorgverzekeraar hebben – als financiers van het AZWA D5 – regie op de totstandkoming van de werkagenda. De gemeentelijke middelen betreffen zowel lokale als regionale middelen. Daarom moet de werkagenda vastgesteld worden door alle colleges van B&W in de regio nadat deze binnen de IZA- governance is vastgesteld. De deadline van 15 november betekent in de praktijk dus dat de werkagenda half september klaar moet zijn. Wat te verwachten de komende tijd? We werken toe van de start van de uitvoering van de aanvullende ...",
-            "validity_status": "active",
+            "claim_id": "clm__nat_vng_richtinggevend_kader_toegang_lokale_teams_d6_002",
+            "topic": "d6.local_teams",
+            "topic_label": "stevige lokale teams en wijkverbanden",
+            "statement": "De noodzaak van een goede toegangsfunctie en stevige lokale teams is urgenter geworden",
+            "validity_status": "historical",
             "page_labels": [
               "6"
             ],
@@ -744,11 +345,24 @@
             ]
           },
           {
-            "claim_id": "clm__nat_azwa_opdracht_werkagenda_d5_2026_governance_and_finance_002",
+            "claim_id": "clm__nat_vng_richtinggevend_kader_toegang_lokale_teams_d6_003",
+            "topic": "d6.local_teams",
+            "topic_label": "stevige lokale teams en wijkverbanden",
+            "statement": "4 Uit de Hervormingsagenda Jeugd: ‘De VNG ontwikkelt een bestuurlijk kader in de vorm van een convenant ‘Stevige lokale teams’, gericht op zowel Jeugd als",
+            "validity_status": "historical",
+            "page_labels": [
+              "8"
+            ],
+            "section_labels": [
+              "Page 8"
+            ]
+          },
+          {
+            "claim_id": "clm__nat_vng_richtinggevend_kader_toegang_lokale_teams_governance_and_finance_001",
             "topic": "governance_and_finance.other",
             "topic_label": "overige governance- en financieringslijn",
-            "statement": "Kansrijke Start Doelgroep: (Toekomstige) ouders in een kwetsbare situatie in de eerste 1000 dagen van het kind (van drie maanden vóór de bevruchting tot ongeveer 2 jaar). Benodigd landelijk dekkend aanbod: • Elke gemeente en regio heeft een coalitie Kansrijke Start, bestaande uit partijen uit medisch, sociaal, publiek en informeel domein. • Op basis van de situatie in de regio en gemeente maken partijen onderbouwde keuzes welk hulp- en ondersteuningsaanbod en welke interventies nodig zijn en kopen deze in bij de betrokken organisaties. • Samenwerkingsafspraken op uitvoerings-, organisatie- en bestuurlijk niveau, zowel lokaal als regionaal. Belangrijkste inhoudelijke ...",
-            "validity_status": "active",
+            "statement": "Gevolgen voor gemeenten Voor de inrichting en toerusting van de toegang, de lokale teams en de wijze van domeinoverstijgende en integrale dienstverlening kan dit diverse consequenties hebben. Concreet kan het van gemeenten vragen: 1. een herijking (en eventuele aanpassing) van hun rol als opdrachtgever, namelijk: a. herijking (en eventuele aanpassing) van de opdracht aan de uitvoerders om de (nieuwe) functionaliteiten te borgen8; b. herijking (en eventuele aanpassing) van de benodigde financiering (zowel in hoogte als in vorm); c. verschuiving van middelen (van specialistische zorg naar lokaal team). 2. meer en andere samenwerking tussen lokale teams en andere partijen, namelijk: a. ...",
+            "validity_status": "historical",
             "page_labels": [
               "9"
             ],
@@ -757,115 +371,63 @@
             ]
           },
           {
-            "claim_id": "clm__nat_azwa_opdracht_werkagenda_d5_2026_governance_and_finance_003",
+            "claim_id": "clm__nat_vng_richtinggevend_kader_toegang_lokale_teams_governance_and_finance_002",
             "topic": "governance_and_finance.other",
             "topic_label": "overige governance- en financieringslijn",
-            "statement": "1 Een mandaatgemeente is de gemeente die namens alle gemeenten in een IZA-regio de regionale middelen aanvraagt en verantwoordt, en hierover afspraken kan maken met andere partijen. 2 Handreiking Regionale Preventie Infrastructuur, maart 2026. 3 Afhankelijk van de uitwerking van de basisfunctionaliteiten op de ont wikkelagenda is het wellicht nog wel nodig om nieuwe NZa prestaties op te stellen.",
-            "validity_status": "active",
+            "statement": "4 Uit de Hervormingsagenda Jeugd: ‘De VNG ontwikkelt een bestuurlijk kader in de vorm van een convenant ‘Stevige lokale teams’, gericht op zowel Jeugd als Wmo. Hierin zal ook de transitie richting stevige lokale teams inzichtelijk gemaakt worden. Het convenant wordt ontwikkeld in nauwe afstemming met onder andere de gemeenten, de Associatie Wijkteams, de SBJ, cliënt- en brancheorganisaties, VWS en partijen uit de brede sociale basis. Het streven is dit convenant in 2025 te ondertekenen door VNG en VWS, mogelijk aangevuld met bovengenoemde partijen.’ Hervormingsagenda jeugd 2023-2028 (2023) 5 Denk aan: vraagverheldering, mogelijk indiceren, het maken van een plan met de inwoner, ...",
+            "validity_status": "historical",
             "page_labels": [
-              "2"
+              "8"
             ],
             "section_labels": [
-              "Page 2"
+              "Page 8"
             ]
           },
           {
-            "claim_id": "clm__nat_azwa_opdracht_werkagenda_d5_2026_monitoring_and_evaluation_001",
+            "claim_id": "clm__nat_vng_richtinggevend_kader_toegang_lokale_teams_governance_and_finance_003",
+            "topic": "governance_and_finance.other",
+            "topic_label": "overige governance- en financieringslijn",
+            "statement": "Vereniging van Nederlandse Gemeenten 11) hebben mandaat over gemeentelijke beleidsterreinen heen; 12) hebben oog voor en kennis van (on)veiligheid, betrekken anderen en blijven zelf betrokken; 13) gaan bewust om met wat passend is en wat nodig is, ook gezien de schaarste aan mensen en middelen.",
+            "validity_status": "historical",
+            "page_labels": [
+              "12"
+            ],
+            "section_labels": [
+              "Page 12"
+            ]
+          },
+          {
+            "claim_id": "clm__nat_vng_richtinggevend_kader_toegang_lokale_teams_monitoring_and_evaluation_001",
             "topic": "monitoring.other",
             "topic_label": "overige monitoringslijn",
-            "statement": "monitoring hoeft nog niet in de werkagenda opgenomen te worden.",
-            "validity_status": "active",
+            "statement": "2 Specifiek de proposities ‘De Waarde van het Sociaal Domein’ (2024) en ‘Propositie Toegang: leren en verbeteren Visienotitie doorontwikkeling gemeentelijke",
+            "validity_status": "historical",
             "page_labels": [
-              "4"
+              "3"
             ],
             "section_labels": [
-              "Page 4"
+              "Page 3"
             ]
           },
           {
-            "claim_id": "clm__nat_azwa_opdracht_werkagenda_d5_2026_monitoring_and_evaluation_002",
+            "claim_id": "clm__nat_vng_richtinggevend_kader_toegang_lokale_teams_monitoring_and_evaluation_002",
             "topic": "monitoring.other",
             "topic_label": "overige monitoringslijn",
-            "statement": "verantwoordelijkheid heeft en de manier waarop de regio een lerende cyclus vormgeeft.",
-            "validity_status": "active",
+            "statement": "1 Met ‘inwoners’ bedoelen wij alle leden van een huishouden. Dus ook kinderen. 2 Specifiek de proposities ‘De Waarde van het Sociaal Domein’ (2024) en ‘Propositie Toegang: leren en verbeteren Visienotitie doorontwikkeling gemeentelijke toegang sociaal domein, lokale teams en integrale dienstverlening’ (2023).",
+            "validity_status": "historical",
             "page_labels": [
-              "5"
+              "3"
             ],
             "section_labels": [
-              "Page 5"
+              "Page 3"
             ]
           },
           {
-            "claim_id": "clm__nat_azwa_opdracht_werkagenda_d5_2026_monitoring_and_evaluation_003",
+            "claim_id": "clm__nat_vng_richtinggevend_kader_toegang_lokale_teams_monitoring_and_evaluation_003",
             "topic": "monitoring.other",
             "topic_label": "overige monitoringslijn",
-            "statement": "verantwoordelijkheid heeft en de manier waarop de regio een lerende cyclus vormgeeft. Dit zijn",
-            "validity_status": "active",
-            "page_labels": [
-              "5"
-            ],
-            "section_labels": [
-              "Page 5"
-            ]
-          },
-          {
-            "claim_id": "clm__nat_azwa_opdracht_werkagenda_d5_2026_municipal_translation_001",
-            "topic": "municipal.implementation_translation",
-            "topic_label": "lokale vertaling in openbare stukken",
-            "statement": "middelen die gemeenten ontvangen en is nodig voor contractering van de verzekeraar waar het inzet van zorgprofessionals betreft. Welke aanpakken opnemen in de werkagenda? In de werkagenda staan dus de doelen van de regio (ook op gezondheid en welzijn), prioritering van de basisfunctionaliteiten en aanpakken op de ontwikkelagenda, afspraken over wie welke verantwoordelijkheid heeft en de manier waarop de regio een lerende cyclus vormgeeft. Dit zijn deels overkoepelende afspraken (gerelateerd aan de regionale preventie infrastructuur) en deels afspraken per aanpak. De precieze onderdelen die per aanpak in de werkagenda moeten landen, zijn afhankelijk van de status van de aanpak in het ...",
-            "validity_status": "active",
-            "page_labels": [
-              "5"
-            ],
-            "section_labels": [
-              "Page 5"
-            ]
-          },
-          {
-            "claim_id": "clm__nat_azwa_opdracht_werkagenda_d5_2026_municipal_translation_002",
-            "topic": "municipal.implementation_translation",
-            "topic_label": "lokale vertaling in openbare stukken",
-            "statement": "Komen tot een werkagenda De IZA-regiotafel10 is de centrale plek waar alle doelen en opgaven van de werkagenda integraal worden afgewogen. De mandaatgemeente en preferente zorgverzekeraar hebben – als financiers van het AZWA D5 – regie op de totstandkoming van de werkagenda. De gemeentelijke middelen betreffen zowel lokale als regionale middelen. Daarom moet de werkagenda vastgesteld worden door alle colleges van B&W in de regio nadat deze binnen de IZA- governance is vastgesteld. De deadline van 15 november betekent in de praktijk dus dat de werkagenda half september klaar moet zijn. Wat te verwachten de komende tijd? We werken toe van de start van de uitvoering van de aanvullende ...",
-            "validity_status": "active",
-            "page_labels": [
-              "6"
-            ],
-            "section_labels": [
-              "Page 6"
-            ]
-          },
-          {
-            "claim_id": "clm__nat_azwa_opdracht_werkagenda_d5_2026_municipal_translation_003",
-            "topic": "municipal.implementation_translation",
-            "topic_label": "lokale vertaling in openbare stukken",
-            "statement": "1 Een mandaatgemeente is de gemeente die namens alle gemeenten in een IZA-regio de regionale middelen aanvraagt en verantwoordt, en",
-            "validity_status": "active",
-            "page_labels": [
-              "2"
-            ],
-            "section_labels": [
-              "Page 2"
-            ]
-          },
-          {
-            "claim_id": "clm__nat_azwa_opdracht_werkagenda_d5_2026_timeline_and_status_001",
-            "topic": "timeline.other",
-            "topic_label": "overige tijdlijnmomenten",
-            "statement": "1 Een mandaatgemeente is de gemeente die namens alle gemeenten in een IZA-regio de regionale middelen aanvraagt en verantwoordt, en hierover afspraken kan maken met andere partijen. 2 Handreiking Regionale Preventie Infrastructuur, maart 2026. 3 Afhankelijk van de uitwerking van de basisfunctionaliteiten op de ont wikkelagenda is het wellicht nog wel nodig om nieuwe NZa prestaties op te stellen.",
-            "validity_status": "active",
-            "page_labels": [
-              "2"
-            ],
-            "section_labels": [
-              "Page 2"
-            ]
-          },
-          {
-            "claim_id": "clm__nat_azwa_opdracht_werkagenda_d5_2026_timeline_and_status_002",
-            "topic": "timeline.other",
-            "topic_label": "overige tijdlijnmomenten",
-            "statement": "Ketenaanpak overgewicht en obesitas kinderen (ontwikkelagenda) Doelgroep: Kinderen en jongeren van 0 tot 18 jaar met overgewicht of obesitas. De aanpak is van toepassing vanaf een licht verhoogd gewichtsgerelateerd gezondheidsrisico (GGR) Benodigd landelijk dekkend aanbod (eerste inschatting11, evaluatie in 2028): • Centrale zorgverlener (CZV): 0,2 fte per 1000 jeugdigen • Kinder-GLI-aanbieder: 0,2 fte per 1000 jeugdigen • 0,2-0,4 fte regionale coördinatie per 100.000 jeugdigen Belangrijkste inhoudelijke aandachtspunten/opgaven: • Voor kinderen vanaf een matig verhoogd GGR wordt de intake, analyse en het opstellen van het plan van aanpak door de CZV ingekocht door zorgverzekeraars. • ...",
-            "validity_status": "active",
+            "statement": "Op basis van een analyse van eigen proposities, waaronder de Propositie toegang leren en",
+            "validity_status": "historical",
             "page_labels": [
               "11"
             ],
@@ -874,378 +436,545 @@
             ]
           },
           {
-            "claim_id": "clm__nat_azwa_opdracht_werkagenda_d5_2026_timeline_and_status_003",
-            "topic": "timeline.rollout_2030",
-            "topic_label": "landelijke dekking richting 2030",
-            "statement": "van basisfunctionaliteiten in 2030 en het (verder) implementeren van aanpakken op de",
-            "validity_status": "active",
+            "claim_id": "clm__nat_vng_richtinggevend_kader_toegang_lokale_teams_municipal_translation_001",
+            "topic": "municipal.local_structure",
+            "topic_label": "lokale structuur",
+            "statement": "Vereniging van Nederlandse Gemeenten Leeswijzer • Hoofdstuk 1, Waarom een kader en welke reikwijdte heeft het? Hier gaan wij in op de belangrijkste aanleiding voor dit Richtinggevend kader, op wie het kader zich primair richt, en wat de reikwijdte is van het kader. Ook schetsen wij de mogelijke gevolgen voor gemeenten, en gaan we kort in op het vervolg en ondersteuningsmogelijkheden. • Hoofdstuk 2, Basiskenmerken van toegang en lokale teams Belangrijke akkoorden overziend, komen wij tot drie belangrijke waarden: de gemeentelijke toegangsfunctie en lokale teams zijn 1) dichtbij, 2) werken integraal, en 3) met mandaat. Binnen deze drie waarden zijn er 13 basiskenmerken waar een ...",
+            "validity_status": "historical",
             "page_labels": [
-              "2"
+              "6"
             ],
             "section_labels": [
-              "Page 2"
+              "Page 6"
+            ]
+          },
+          {
+            "claim_id": "clm__nat_vng_richtinggevend_kader_toegang_lokale_teams_municipal_translation_002",
+            "topic": "municipal.local_structure",
+            "topic_label": "lokale structuur",
+            "statement": "lokale teams – die kan per gemeenten verschillen – maar om de geborgde functionaliteiten.",
+            "validity_status": "historical",
+            "page_labels": [
+              "7"
+            ],
+            "section_labels": [
+              "Page 7"
+            ]
+          },
+          {
+            "claim_id": "clm__nat_vng_richtinggevend_kader_toegang_lokale_teams_municipal_translation_003",
+            "topic": "municipal.local_structure",
+            "topic_label": "lokale structuur",
+            "statement": "4 Uit de Hervormingsagenda Jeugd: ‘De VNG ontwikkelt een bestuurlijk kader in de vorm van een convenant ‘Stevige lokale teams’, gericht op zowel Jeugd als Wmo. Hierin zal ook de transitie richting stevige lokale teams inzichtelijk gemaakt worden. Het convenant wordt ontwikkeld in nauwe afstemming met onder andere de gemeenten, de Associatie Wijkteams, de SBJ, cliënt- en brancheorganisaties, VWS en partijen uit de brede sociale basis. Het streven is dit convenant in 2025 te ondertekenen door VNG en VWS, mogelijk aangevuld met bovengenoemde partijen.’ Hervormingsagenda jeugd 2023-2028 (2023) 5 Denk aan: vraagverheldering, mogelijk indiceren, het maken van een plan met de inwoner, ...",
+            "validity_status": "historical",
+            "page_labels": [
+              "8"
+            ],
+            "section_labels": [
+              "Page 8"
+            ]
+          },
+          {
+            "claim_id": "clm__nat_vng_richtinggevend_kader_toegang_lokale_teams_timeline_and_status_003",
+            "topic": "timeline.other",
+            "topic_label": "overige tijdlijnmomenten",
+            "statement": "4 Uit de Hervormingsagenda Jeugd: ‘De VNG ontwikkelt een bestuurlijk kader in de vorm van een convenant ‘Stevige lokale teams’, gericht op zowel Jeugd als Wmo. Hierin zal ook de transitie richting stevige lokale teams inzichtelijk gemaakt worden. Het convenant wordt ontwikkeld in nauwe afstemming met onder andere de gemeenten, de Associatie Wijkteams, de SBJ, cliënt- en brancheorganisaties, VWS en partijen uit de brede sociale basis. Het streven is dit convenant in 2025 te ondertekenen door VNG en VWS, mogelijk aangevuld met bovengenoemde partijen.’ Hervormingsagenda jeugd 2023-2028 (2023) 5 Denk aan: vraagverheldering, mogelijk indiceren, het maken van een plan met de inwoner, ...",
+            "validity_status": "historical",
+            "page_labels": [
+              "8"
+            ],
+            "section_labels": [
+              "Page 8"
+            ]
+          },
+          {
+            "claim_id": "clm__nat_vng_richtinggevend_kader_toegang_lokale_teams_timeline_and_status_001",
+            "topic": "timeline.rollout_2030",
+            "topic_label": "landelijke dekking richting 2030",
+            "statement": "Vereniging van Nederlandse Gemeenten • Wet maatschappelijke ondersteuning. (2015). https://wetten.overheid.nl/BWBR0035362/2023/07-01/ • Wet publieke gezondheid. (2008). https://wetten.overheid.nl/BWBR0024705/2023-07-01/0 i Vereniging van Nederlandse Gemeenten, Divosa (2023) Een vernieuwde propositie van gemeenten aan het nieuwe kabinet. De waarde van het sociaal domein. Een slimme investering in bestaanszekerheid, kansengelijkheid en gezond samenleven. ii Vereniging van Nederlandse Gemeenten (2023) Verenigingsstrategie VNG 2030, Stap naar voren. iii Vereniging van Nederlandse Gemeenten (2023) Verenigingsstrategie VNG 2030, Stap naar voren. iv Hervormingsagenda Jeugd 2023-2028 (2023) ...",
+            "validity_status": "historical",
+            "page_labels": [
+              "35"
+            ],
+            "section_labels": [
+              "Page 35"
+            ]
+          },
+          {
+            "claim_id": "clm__nat_vng_richtinggevend_kader_toegang_lokale_teams_timeline_and_status_002",
+            "topic": "timeline.rollout_2030",
+            "topic_label": "landelijke dekking richting 2030",
+            "statement": "xlii Propositie toegang: leren en verbeteren (2023) En Leidraad samenwerking huisartsen en gemeenten rond jeugd: ‘Functionarissen die gefinancierd worden door de gemeente en worden ingezet als verbinding tussen het wijkteam en de huisartsenzorg krijgen een andere naam, bijv. ondersteuner jeugd.’ Hervormingsagenda Jeugd 2023-2028 (2023) xliii IZA xliv IZA xlv Hervormingsagenda Jeugd 2023-2028 (2023) xlvi Visie eerstelijnszorg 2030 p35 xlvii Wetsvoorstel Wet aanpak meervoudige problematiek sociaal domein (Wams) Memorie van toelichting p. 25. xlviii Hervormingsagenda Jeugd 2023-2028 (2023) xlix ...",
+            "validity_status": "historical",
+            "page_labels": [
+              "36"
+            ],
+            "section_labels": [
+              "Page 36"
             ]
           }
         ]
       },
       {
-        "document_id": "nat_azwa_format_werkagenda_d5_2026",
-        "title": "Format werkagenda basisfunctionaliteiten AZWA",
-        "publisher": "VNG / VWS",
-        "publication_date": "2026-04-22",
-        "page_url": "/sources/format-werkagenda-azwa/",
-        "claim_count": 10,
+        "document_id": "nat_tsd_basisfuncties_lokale_teams",
+        "title": "Basisfuncties voor lokale teams",
+        "publisher": "Toezicht Sociaal Domein",
+        "publication_date": "2021-10-06",
+        "page_url": "/sources/basisfuncties-lokale-teams/",
+        "claim_count": 6,
         "claims": [
           {
-            "claim_id": "clm__nat_azwa_format_werkagenda_d5_2026_d5_001",
-            "topic": "d5.other",
-            "topic_label": "overige D5-lijn",
-            "statement": "IST | Urgentie: Wat is er bekend over de urgentie van deze basisfunctionaliteit in de regio?",
-            "validity_status": "active",
+            "claim_id": "clm__nat_tsd_basisfuncties_lokale_teams_d6_001",
+            "topic": "d6.local_teams",
+            "topic_label": "stevige lokale teams en wijkverbanden",
+            "statement": "In veel gemeenten wordt vanaf 2015 meer gebiedsgericht gewerkt en zijn lokale teams of wijkteams ingericht, die samen met andere voorzieningen (sociale basisvoorzieningen als vrijwilligerswerk, mantelzorg, welzijn, algemene voorzieningen, buurthuizen, wijkverpleging) een belangrijke rol hebben in de nieuwe manier van werken.",
+            "validity_status": "historical",
             "page_labels": [],
             "section_labels": [
-              "Tabel 2"
+              "Basisfuncties voor lokale teams / Download: Basisfuncties voor lokale teams"
             ]
           },
           {
-            "claim_id": "clm__nat_azwa_format_werkagenda_d5_2026_d5_002",
-            "topic": "d5.other",
-            "topic_label": "overige D5-lijn",
-            "statement": "IST | Situatie: In hoeverre is deze basisfunctionaliteit (of onderdelen daarvan) al aanwezig in de regio?",
-            "validity_status": "active",
+            "claim_id": "clm__nat_tsd_basisfuncties_lokale_teams_d6_002",
+            "topic": "d6.local_teams",
+            "topic_label": "stevige lokale teams en wijkverbanden",
+            "statement": "In veel gemeenten wordt vanaf 2015 meer gebiedsgericht gewerkt en zijn lokale teams of wijkteams ingericht, die samen met andere voorzieningen (sociale basisvoorzieningen als vrijwilligerswerk, mantelzorg, welzijn, algemene voorzieningen, buurthuizen, ...",
+            "validity_status": "historical",
             "page_labels": [],
             "section_labels": [
-              "Tabel 2"
+              "Basisfuncties voor lokale teams / Download: Basisfuncties voor lokale teams"
             ]
           },
           {
-            "claim_id": "clm__nat_azwa_format_werkagenda_d5_2026_d5_003",
-            "topic": "d5.other",
-            "topic_label": "overige D5-lijn",
-            "statement": "SOLL | Ontwerp: Wat zijn expliciet gemaakte keuzes in de invulling van deze basisfunctionaliteit, en welke keuzes dienen nog gemaakt te worden?",
-            "validity_status": "active",
+            "claim_id": "clm__nat_tsd_basisfuncties_lokale_teams_d6_003",
+            "topic": "d6.local_teams",
+            "topic_label": "stevige lokale teams en wijkverbanden",
+            "statement": "- Rapport06-10-2021PDF-document1.9 MB87 paginas Hulp en ondersteuning op basis van de Jeugdwet, Wmo 2015 en de Participatiewet dient zo laagdrempelig, dichtbij en zo intensief als nodig en licht als mogelijk te zijn. Het gaat om individueel maatwerk en een integrale aanpak bij meervoudige problematiek. In veel gemeenten wordt vanaf 2015 meer gebiedsgericht gewerkt en zijn lokale teams of wijkteams ingericht, die samen met andere voorzieningen (sociale basisvoorzieningen als vrijwilligerswerk, mantelzorg, welzijn, algemene voorzieningen, buurthuizen, wijkverpleging) een belangrijke rol hebben in de nieuwe manier van werken. Wijk-of gebiedsgerichte teams zijn er bovendien voor vele ...",
+            "validity_status": "historical",
             "page_labels": [],
             "section_labels": [
-              "Tabel 2"
+              "Basisfuncties voor lokale teams / Download: Basisfuncties voor lokale teams"
             ]
           },
           {
-            "claim_id": "clm__nat_azwa_format_werkagenda_d5_2026_governance_and_finance_001",
-            "topic": "governance_and_finance.other",
-            "topic_label": "overige governance- en financieringslijn",
-            "statement": "Financiële middelen: Omschrijf de financieringsafspraken over de coördinatie en uitvoering.",
-            "validity_status": "active",
-            "page_labels": [],
-            "section_labels": [
-              "Tabel 1"
-            ]
-          },
-          {
-            "claim_id": "clm__nat_azwa_format_werkagenda_d5_2026_governance_and_finance_002",
-            "topic": "governance_and_finance.other",
-            "topic_label": "overige governance- en financieringslijn",
-            "statement": "GAP (projectplan) | Financieel plan (optioneel): Welke financiële middelen worden ingezet voor dit onderdeel?",
-            "validity_status": "active",
-            "page_labels": [],
-            "section_labels": [
-              "Tabel 2"
-            ]
-          },
-          {
-            "claim_id": "clm__nat_azwa_format_werkagenda_d5_2026_monitoring_and_evaluation_001",
-            "topic": "monitoring.other",
-            "topic_label": "overige monitoringslijn",
-            "statement": "Kennis en monitoring: Omschrijf de regionale monitoring van de voortgang op gezondheidsdoelen, digitalisering en de gezamenlijke leer- en datacyclus.",
-            "validity_status": "active",
-            "page_labels": [],
-            "section_labels": [
-              "Tabel 1"
-            ]
-          },
-          {
-            "claim_id": "clm__nat_azwa_format_werkagenda_d5_2026_monitoring_and_evaluation_002",
-            "topic": "monitoring.other",
-            "topic_label": "overige monitoringslijn",
-            "statement": "GAP (projectplan) | Monitoring (optioneel): Omschrijf de manier waarop de voortgang, prestaties en risico’s worden gevolgd en gerapporteerd.",
-            "validity_status": "active",
-            "page_labels": [],
-            "section_labels": [
-              "Tabel 2"
-            ]
-          },
-          {
-            "claim_id": "clm__nat_azwa_format_werkagenda_d5_2026_municipal_translation_001",
+            "claim_id": "clm__nat_tsd_basisfuncties_lokale_teams_municipal_translation_001",
             "topic": "municipal.implementation_translation",
             "topic_label": "lokale vertaling in openbare stukken",
-            "statement": "Toelichting op RPI: Omschrijf beknopt hoe de regionale preventie-infrastructuur in jullie regio is georganiseerd (een visuele toelichting, bijvoorbeeld in de vorm van een afbeelding, volstaat ook).",
-            "validity_status": "active",
+            "statement": "De decentralisatie van nieuwe taken naar gemeenten per 1 januari 2015 heeft als doel om ondersteuning en zorg dichtbij en passend bij de lokale situatie en inwoners te organiseren.",
+            "validity_status": "historical",
             "page_labels": [],
             "section_labels": [
-              "Tabel 1"
+              "Basisfuncties voor lokale teams"
             ]
           },
           {
-            "claim_id": "clm__nat_azwa_format_werkagenda_d5_2026_municipal_translation_002",
-            "topic": "municipal.implementation_translation",
-            "topic_label": "lokale vertaling in openbare stukken",
-            "statement": "Regionale gezondheidsdoelen: Omschrijf welke gezamenlijke gezondheidsdoelen in de regio zijn vastgesteld.",
-            "validity_status": "active",
+            "claim_id": "clm__nat_tsd_basisfuncties_lokale_teams_municipal_translation_002",
+            "topic": "municipal.local_structure",
+            "topic_label": "lokale structuur",
+            "statement": "In veel gemeenten wordt vanaf 2015 meer gebiedsgericht gewerkt en zijn lokale teams of wijkteams ingericht, die samen met andere voorzieningen (sociale basisvoorzieningen als vrijwilligerswerk, mantelzorg, welzijn, algemene voorzieningen, buurthuizen, wijkverpleging) een belangrijke rol hebben in de nieuwe manier van werken.",
+            "validity_status": "historical",
             "page_labels": [],
             "section_labels": [
-              "Tabel 1"
+              "Basisfuncties voor lokale teams / Download: Basisfuncties voor lokale teams"
             ]
           },
           {
-            "claim_id": "clm__nat_azwa_format_werkagenda_d5_2026_municipal_translation_003",
-            "topic": "municipal.implementation_translation",
-            "topic_label": "lokale vertaling in openbare stukken",
-            "statement": "Regionale samenwerkingsafspraken: Omschrijf welke afspraken er zijn gemaakt omtrent verantwoordelijkheid.",
-            "validity_status": "active",
+            "claim_id": "clm__nat_tsd_basisfuncties_lokale_teams_municipal_translation_003",
+            "topic": "municipal.local_structure",
+            "topic_label": "lokale structuur",
+            "statement": "In veel gemeenten wordt vanaf 2015 meer gebiedsgericht gewerkt en zijn lokale teams of wijkteams ingericht, die samen met andere voorzieningen (sociale basisvoorzieningen als vrijwilligerswerk, mantelzorg, welzijn, algemene voorzieningen, buurthuizen, ...",
+            "validity_status": "historical",
             "page_labels": [],
             "section_labels": [
-              "Tabel 1"
+              "Basisfuncties voor lokale teams / Download: Basisfuncties voor lokale teams"
             ]
           }
         ]
       },
       {
-        "document_id": "nat_azwa_toelichting_producten_proces_2026",
-        "title": "Toelichting producten en proces",
-        "publisher": "VNG / VWS",
-        "publication_date": "2026-04-22",
-        "page_url": "/sources/toelichting-werkagenda-d5-azwa/",
-        "claim_count": 14,
+        "document_id": "reg_ggd_flevoland_begroting_2026",
+        "title": "Begroting 2026 GGD Flevoland",
+        "publisher": "GGD Flevoland",
+        "publication_date": "2025-10-14",
+        "page_url": "/sources/ggd-flevoland-begroting-2026/",
+        "claim_count": 16,
         "claims": [
           {
-            "claim_id": "clm__nat_azwa_toelichting_producten_proces_2026_d5_001",
-            "topic": "d5.other",
-            "topic_label": "overige D5-lijn",
-            "statement": "basisfunctionaliteiten (D5) en investeert in de basisinfrastructuur via onder meer",
-            "validity_status": "active",
+            "claim_id": "clm__reg_ggd_flevoland_begroting_2026_d5_001",
+            "topic": "d5.basisfunctionaliteiten_onderbouwd",
+            "topic_label": "onderbouwde D5-basisfunctionaliteiten",
+            "statement": "gewicht en Kansrijke Start, bij inhoudelijke thema’s zoals",
+            "validity_status": "contextual_active",
             "page_labels": [
-              "1"
+              "8"
             ],
             "section_labels": [
-              "Page 1"
+              "Page 8"
             ]
           },
           {
-            "claim_id": "clm__nat_azwa_toelichting_producten_proces_2026_d5_002",
-            "topic": "d5.other",
-            "topic_label": "overige D5-lijn",
-            "statement": "het sociaal domein, waaronder doorbraakmiddelen, om de opbouw van de basisfunctionaliteiten",
-            "validity_status": "active",
+            "claim_id": "clm__reg_ggd_flevoland_begroting_2026_d6_003",
+            "topic": "d6.digital_and_operational_infrastructure",
+            "topic_label": "digitale en operationele infrastructuur",
+            "statement": "dienstverlening van de GGD. Om onze digitale infrastructuur",
+            "validity_status": "contextual_active",
             "page_labels": [
-              "1"
+              "40"
             ],
             "section_labels": [
-              "Page 1"
+              "Page 40"
             ]
           },
           {
-            "claim_id": "clm__nat_azwa_toelichting_producten_proces_2026_d5_003",
-            "topic": "d5.other",
-            "topic_label": "overige D5-lijn",
-            "statement": "basisfunctionaliteiten in 2030 en het (verder) implementeren van lopende aanpakken op de",
-            "validity_status": "active",
+            "claim_id": "clm__reg_ggd_flevoland_begroting_2026_d6_001",
+            "topic": "d6.local_teams",
+            "topic_label": "stevige lokale teams en wijkverbanden",
+            "statement": "belangrijke partner bij de ontwikkeling van Stevige Lokale Teams.",
+            "validity_status": "contextual_active",
             "page_labels": [
-              "1"
+              "7"
             ],
             "section_labels": [
-              "Page 1"
+              "Page 7"
             ]
           },
           {
-            "claim_id": "clm__nat_azwa_toelichting_producten_proces_2026_governance_and_finance_001",
-            "topic": "finance.d5_d6.funding_instrument",
-            "topic_label": "bekostigingsroute D5/D6",
-            "statement": "1. Opdracht aan regio’s voor het opstellen van de werkagenda; 2. Format voor de werkagenda; 3. Voor gemeenten: proces en inzicht in AZWA-middelen gemeenten via een nieuwe SPUK- regeling die later dit jaar wordt gepubliceerd.",
-            "validity_status": "active",
+            "claim_id": "clm__reg_ggd_flevoland_begroting_2026_d6_002",
+            "topic": "d6.local_teams",
+            "topic_label": "stevige lokale teams en wijkverbanden",
+            "statement": "Stevige Lokale Teams en bij het Toekomstscenario Jeugd- en",
+            "validity_status": "contextual_active",
             "page_labels": [
-              "1"
+              "14"
             ],
             "section_labels": [
-              "Page 1"
+              "Page 14"
             ]
           },
           {
-            "claim_id": "clm__nat_azwa_toelichting_producten_proces_2026_governance_and_finance_002",
-            "topic": "finance.d5_d6.funding_instrument",
-            "topic_label": "bekostigingsroute D5/D6",
-            "statement": "Voor gemeenten: proces en inzicht in AZWA-middelen gemeenten via een nieuwe SPUK-",
-            "validity_status": "active",
+            "claim_id": "clm__reg_ggd_flevoland_begroting_2026_governance_and_finance_001",
+            "topic": "governance_and_finance.other",
+            "topic_label": "overige governance- en financieringslijn",
+            "statement": "en risicobeheersing Het weerstandsvermogen bestaat uit de algemene reserve en bestemmingsreserves. De algemene reserve wordt aangehouden ter financiering van investeringen, het bekostigen van nieuwe ontwikkelingen en het bieden van een buffer voor tegenvallers en risico’s. Bestemmingsreserves kunnen gevormd worden vanuit bestuurlijk geoormerkte middelen voor een bepaald doel. De minimumwaarde van de algemene reserve is 4% van de baten van het jaar. Voorzieningen worden meestal getroffen voor de dekking van verplichtingen en verliezen. Reserve Aanvaardbare kosten RAV Het overschot of tekort op het budgetdeel van de financiering van de RAV wordt conform de verantwoordingssystematiek van ...",
+            "validity_status": "contextual_active",
             "page_labels": [
-              "1"
+              "32"
             ],
             "section_labels": [
-              "Page 1"
+              "Page 32"
             ]
           },
           {
-            "claim_id": "clm__nat_azwa_toelichting_producten_proces_2026_governance_and_finance_003",
-            "topic": "finance.d5_d6.funding_instrument",
-            "topic_label": "bekostigingsroute D5/D6",
-            "statement": "3. Voor gemeenten: proces en inzicht in AZWA-middelen gemeenten via een nieuwe SPUK-",
-            "validity_status": "active",
+            "claim_id": "clm__reg_ggd_flevoland_begroting_2026_governance_and_finance_002",
+            "topic": "governance_and_finance.other",
+            "topic_label": "overige governance- en financieringslijn",
+            "statement": "Vanaf 2026 wordt richting 2029 een gehele afbouw van de landelijke VIP gelden door dit kabinet beoogt. Tijdens de uitrol in 2022-2024 van de VIP-gelden is er een toezegging gedaan voor een structurele financiering. Mocht deze vorm van financiering niet worden voortgezet zal er gekeken moeten worden naar een alternatieve vorm van financiering om de continuering van zorgverlening voort te zetten. Een mogelijkheid bestaat wanneer dit niet uit landelijke middelen kan komen, een beroep zal worden gedaan op de gemeente. 7. Zorg en veiligheid",
+            "validity_status": "contextual_active",
             "page_labels": [
-              "1"
+              "12"
             ],
             "section_labels": [
-              "Page 1"
+              "Page 12"
             ]
           },
           {
-            "claim_id": "clm__nat_azwa_toelichting_producten_proces_2026_monitoring_and_evaluation_001",
-            "topic": "monitoring.d5_operational_monitoring",
-            "topic_label": "operationele D5-monitoring",
-            "statement": "Deze producten zijn tot stand gekomen met dank aan de input uit de regioscan en de",
-            "validity_status": "active",
+            "claim_id": "clm__reg_ggd_flevoland_begroting_2026_governance_and_finance_003",
+            "topic": "governance_and_finance.other",
+            "topic_label": "overige governance- en financieringslijn",
+            "statement": "8. Paragrafen dan een risico van €999.200 + PM. Het bestuur heeft besloten voorlopig geen invulling te geven aan dit risico. Wanneer middelen tekort schieten voor de uitvoer van wettelijke taken kan worden besloteen dit uit de inwoner­ bijdrage te financieren. Beheersmaatregel Wat betreft de kabinetskeuzes is er vanuit het bestuur besloten nog geen invulling te geven aan deze naderende bezuinigingen. De GGD agendeert knelpunten rondom de bezuinigingen op zoveel mogelijk plekken, waar mogelijk samen met partners, om vanuit deze lobby het belang van publieke gezondheid te op de politieke agenda te krijgen/houden. Indien geen middelen meer beschikbaar komen, zal de GGD genoodzaakt zijn de ...",
+            "validity_status": "contextual_active",
             "page_labels": [
-              "1"
+              "37"
             ],
             "section_labels": [
-              "Page 1"
+              "Page 37"
             ]
           },
           {
-            "claim_id": "clm__nat_azwa_toelichting_producten_proces_2026_monitoring_and_evaluation_002",
-            "topic": "monitoring.d5_operational_monitoring",
-            "topic_label": "operationele D5-monitoring",
-            "statement": "Advies op basis van de regioscan Dit is een faciliterend advies, niet dwingend.",
-            "validity_status": "active",
+            "claim_id": "clm__reg_ggd_flevoland_begroting_2026_monitoring_and_evaluation_001",
+            "topic": "monitoring.other",
+            "topic_label": "overige monitoringslijn",
+            "statement": "Monitoring, onderzoek en evaluatie: de vraag naar inzicht",
+            "validity_status": "contextual_active",
             "page_labels": [
-              "2"
+              "8"
             ],
             "section_labels": [
-              "Page 2"
+              "Page 8"
             ]
           },
           {
-            "claim_id": "clm__nat_azwa_toelichting_producten_proces_2026_municipal_translation_001",
+            "claim_id": "clm__reg_ggd_flevoland_begroting_2026_monitoring_and_evaluation_002",
+            "topic": "monitoring.other",
+            "topic_label": "overige monitoringslijn",
+            "statement": "• Monitoring, onderzoek en evaluatie: de vraag naar inzicht",
+            "validity_status": "contextual_active",
+            "page_labels": [
+              "8"
+            ],
+            "section_labels": [
+              "Page 8"
+            ]
+          },
+          {
+            "claim_id": "clm__reg_ggd_flevoland_begroting_2026_monitoring_and_evaluation_003",
+            "topic": "monitoring.other",
+            "topic_label": "overige monitoringslijn",
+            "statement": "belangrijke rol in monitoring, surveillance en bestrijding van",
+            "validity_status": "contextual_active",
+            "page_labels": [
+              "7"
+            ],
+            "section_labels": [
+              "Page 7"
+            ]
+          },
+          {
+            "claim_id": "clm__reg_ggd_flevoland_begroting_2026_municipal_translation_001",
             "topic": "municipal.implementation_translation",
             "topic_label": "lokale vertaling in openbare stukken",
-            "statement": "gemeenten en zorgverzekeraars gaan over de financiële middelen.",
-            "validity_status": "active",
+            "statement": "3. Maatschappelijke en organisatorische ontwikkelingen Het Gezond en Actief Leven Akkoord4 en het Integraal Zorgakkoord5 zijn in 2023 landelijk vastgesteld om uitvoering te geven aan deze transformatie. GGD Flevoland heeft hierin vanuit de Wet Publieke Gezondheid6 (Wpg) en haar takenpakket een belangrijke rol. Zo is GGD Flevoland nauw betrokken bij de lokale GALA plannen van de gemeenten, het Regiobeeld7 en Regioplan8, de transformatieagenda’s die in 2024 en 2025 zijn opgesteld vanuit het Regioplan in de drie subregio’s (Almere, Lelystad/Dronten en Noordoostpolder/Urk), en de preventiecoa­ litie Flevoland Gezond en Wel. Enkele voorbeelden: GGD Flevoland heeft een belangrijke rol in het ...",
+            "validity_status": "contextual_active",
             "page_labels": [
-              "1"
+              "8"
             ],
             "section_labels": [
-              "Page 1"
+              "Page 8"
             ]
           },
           {
-            "claim_id": "clm__nat_azwa_toelichting_producten_proces_2026_municipal_translation_002",
+            "claim_id": "clm__reg_ggd_flevoland_begroting_2026_municipal_translation_002",
             "topic": "municipal.implementation_translation",
             "topic_label": "lokale vertaling in openbare stukken",
-            "statement": "1. Opdracht aan regio’s voor het opstellen van de werkagenda; 2. Format voor de werkagenda; 3. Voor gemeenten: proces en inzicht in AZWA-middelen gemeenten via een nieuwe SPUK- regeling die later dit jaar wordt gepubliceerd.",
-            "validity_status": "active",
+            "statement": "Wethouder dhr. E. van de Beld Bevolking: 456.446 inwoners 6 regionale vestigingen in: Aantal inwoners Inwonerbijdrage per gemeente (x € 1.000) Almere 229.570 6.947 Dronten 44.883 1.358 Lelystad 84.722 2.564 Noordoostpolder 50.803 1.537 Urk 22.172 671 Zeewolde 24.296 735 Totaal 456.446 13.813 18% 32% 50% Inwonerbijdrage Plustaken gemeenten Taken derden Baten o.b.v. begroting 2026 Basispakket gemeenten is inclusief inwonergroei en indexering prijzen en lonen 2026. Taken Fte’s FTE Jeugd en gezin 219 AGZ 55 Maatschappelijke zorg 34 Toezicht 18 Gezond Leven en Kennis&Advies 26 Ambulancehulpverlening en meldkamer 185 GHOR 10 Directie- en bestuursondersteuning en Bedrijfsvoering 51 Totaal 599 ...",
+            "validity_status": "contextual_active",
             "page_labels": [
-              "1"
+              "13"
             ],
             "section_labels": [
-              "Page 1"
+              "Page 13"
             ]
           },
           {
-            "claim_id": "clm__nat_azwa_toelichting_producten_proces_2026_municipal_translation_003",
+            "claim_id": "clm__reg_ggd_flevoland_begroting_2026_municipal_translation_003",
             "topic": "municipal.implementation_translation",
             "topic_label": "lokale vertaling in openbare stukken",
-            "statement": "Gemeenten ontvangen middelen voor de inzet binnen",
-            "validity_status": "active",
+            "statement": "5. Publieke gezondheid 5.1 Jeugd en gezin Grotendeels plustaakfinanciering De afdeling jeugdgezondheidszorg Flevoland is in 2025 samen­ gevoegd met de directie JGZ Almere tot één directie Jeugd en Gezin. Er is bewust gekozen voor deze brede naam omdat de ontwikkeling van het kind altijd in context van het gezin staat en diverse interventies zich daar ook op richten. JGZ Almere en JGZ Flevoland blijven hun lokale opdrachten onder hun huidige (merk)namen uitvoeren en borgen daarmee herkenbaarheid en continuïteit naar ouders, kinderen en partners in het veld. Daarbij kennen de verschillende gemeenten hun eigen lokale speelveld waar vorm wordt gegeven aan de opgaven in het sociaal domein. ...",
+            "validity_status": "contextual_active",
             "page_labels": [
-              "1"
+              "14"
             ],
             "section_labels": [
-              "Page 1"
+              "Page 14"
             ]
           },
           {
-            "claim_id": "clm__nat_azwa_toelichting_producten_proces_2026_timeline_and_status_001",
-            "topic": "timeline.other",
-            "topic_label": "overige tijdlijnmomenten",
-            "statement": "De regionale werkagenda moet uiterlijk op 15 november 2026 door de colleges zijn vastgesteld.",
-            "validity_status": "active",
+            "claim_id": "clm__reg_ggd_flevoland_begroting_2026_timeline_and_status_001",
+            "topic": "timeline.almere_2029",
+            "topic_label": "lokale horizon Positief Gezond Almere",
+            "statement": "7. Financiën Mutatie inwonerbijdrage per gemeente (x € 1.000) boekjaar (T) 2026 2027 2028 2029 Almere 482 81 90 91 Dronten 95 16 18 18 Lelystad 165 30 33 34 NOP 108 18 20 20 Urk 45 8 9 9 Zeewolde 52 9 10 10 Totaal ophoging gemeentelijke inwonerbijdrage ontwerpbegroting boekjaar T (inclusief wijzigingen I en II) 945 161 179 181 Totale inwonerbijdrage per gemeenten (x € 1.000) boekjaar (T) 2026 2027 2028 2029 Almere 6.947 7.029 7.118 7.209 Dronten 1.358 1.374 1.392 1.410 Lelystad 2.564 2.594 2.627 2.661 NOP 1.537 1.555 1.575 1.595 Urk 671 679 688 696 Zeewolde 735 744 753 763 Totaal gemeentelijke inwonerbijdrage ontwerpbegroting boekjaar T (inclusief wijzigingen I en II) 13.813 13.975 ...",
+            "validity_status": "contextual_active",
             "page_labels": [
-              "2"
+              "28"
             ],
             "section_labels": [
-              "Page 2"
+              "Page 28"
             ]
           },
           {
-            "claim_id": "clm__nat_azwa_toelichting_producten_proces_2026_timeline_and_status_002",
-            "topic": "timeline.other",
-            "topic_label": "overige tijdlijnmomenten",
-            "statement": "Met vriendelijke groet, VNG, VWS en ZN 22 april 2026",
-            "validity_status": "active",
+            "claim_id": "clm__reg_ggd_flevoland_begroting_2026_timeline_and_status_002",
+            "topic": "timeline.almere_2029",
+            "topic_label": "lokale horizon Positief Gezond Almere",
+            "statement": "7. Financiën 7.3 Geprognotiseerde balans en EMU-saldo Geprognostiseerde balans Begrotingsjaar T 2026 Bedragen x € 1.000 T-2 T-1 T T+1 T+2 T+3 Activa 31-12-2024 31-12-2025 31-12-2026 31-12-2027 31-12-2028 31-12-2029 (im) Materiële vaste activa 17.455 22.408 21.287 20.603 17.791 19.884 Totaal Vaste Activa 17.455 22.408 21.287 20.603 17.791 19.884 Uitzettingen <1 jaar 7.426 8.909 10.003 11.263 11.074 11.980 Liquide middelen 203 203 203 203 203 203 Overlopende activa 4.024 4.024 4.024 4.024 4.024 4.024 Totaal Vlottende Activa 11.652 13.136 14.229 15.489 15.301 16.206 Totaal Activa 29.108 35.544 35.516 36.092 33.091 36.090 Passiva 31-12-2024 31-12-2025 31-12-2026 31-12-2027 31-12-2028 ...",
+            "validity_status": "contextual_active",
             "page_labels": [
-              "2"
+              "30"
             ],
             "section_labels": [
-              "Page 2"
+              "Page 30"
             ]
           },
           {
-            "claim_id": "clm__nat_azwa_toelichting_producten_proces_2026_timeline_and_status_003",
-            "topic": "timeline.rollout_2030",
-            "topic_label": "landelijke dekking richting 2030",
-            "statement": "basisfunctionaliteiten in 2030 en het (verder) implementeren van lopende aanpakken op de",
-            "validity_status": "active",
+            "claim_id": "clm__reg_ggd_flevoland_begroting_2026_timeline_and_status_003",
+            "topic": "timeline.almere_2029",
+            "topic_label": "lokale horizon Positief Gezond Almere",
+            "statement": "6. Ambulancehulpverlening en meldkamer EMU-saldo T-1 T T+1 T+2 T+3 2025 2026 2027 2028 2029 EMU-SALDO -5.040 1.094 661 2.812 -2.093 EMU-SALDO referentiewaarde Verschil EMU-saldo & referentiewaarde -5.040 1.094 661 2.812 -2.093 Mutaties (1 januari tot 31 december) Activa Financiële vaste activa Kapitaal- verstrekkingen en leningen 0 0 0 0 0 Uitzettingen 0 0 0 0 0 Vlottende activa Uitzettingen 1.484 1.093 1.260 -189 906 Liquide middelen 0 0 0 0 0 Overlopende activa 0 0 0 0 0 Passiva Vaste Passiva Vaste schuld 6.524 -1 599 -3.001 2.999 Vlottende passiva Vlottende schuld 0 0 0 0 0 Overlopende passiva 0 0 0 0 0 Eventuele boekwinst bij verkoop effecten en (im)materiële vaste activa GGD ...",
+            "validity_status": "contextual_active",
             "page_labels": [
-              "1"
+              "31"
             ],
             "section_labels": [
-              "Page 1"
+              "Page 31"
+            ]
+          }
+        ]
+      },
+      {
+        "document_id": "reg_ggd_flevoland_kennis_en_advies",
+        "title": "Kennis en Advies",
+        "publisher": "GGD Flevoland",
+        "publication_date": null,
+        "page_url": "/sources/ggd-flevoland-kennis-en-advies/",
+        "claim_count": 6,
+        "claims": [
+          {
+            "claim_id": "clm__reg_ggd_flevoland_kennis_en_advies_d6_001",
+            "topic": "d6.regional_coordination",
+            "topic_label": "regionale coördinatie voor D6",
+            "statement": "Het team Kennis en Advies van GGD Flevoland bundelt kennis over de publieke gezondheid in Flevoland, door relevante literatuur bij te houden, het verrichten van epidemiologisch onderzoek, het analyseren van in- en externe data en het onderhouden van samenwerkingsrelaties met kennisinstellingen.",
+            "validity_status": "contextual_active",
+            "page_labels": [],
+            "section_labels": [
+              "Kennis en Advies"
+            ]
+          },
+          {
+            "claim_id": "clm__reg_ggd_flevoland_kennis_en_advies_governance_and_finance_001",
+            "topic": "governance_and_finance.other",
+            "topic_label": "overige governance- en financieringslijn",
+            "statement": "- Bij Cijfers vind je interactieve visualisaties over verkeersongevallen, overmatig middelengebruik, valincidenten 65+, vaccinatiegraad, buurtmonitor jeugdgezondheid en buurtmonitor overgewicht",
+            "validity_status": "contextual_active",
+            "page_labels": [],
+            "section_labels": [
+              "Kennis en Advies"
+            ]
+          },
+          {
+            "claim_id": "clm__reg_ggd_flevoland_kennis_en_advies_monitoring_and_evaluation_002",
+            "topic": "monitoring.other",
+            "topic_label": "overige monitoringslijn",
+            "statement": "- Bij Gezondheidsmonitors vind je voor de Gezondheidsmonitors Jeugd, Jongvolwassenen, en Volwassenen Ouderen meer informatie én de resultaten in de vorm van tabellenboeken",
+            "validity_status": "contextual_active",
+            "page_labels": [],
+            "section_labels": [
+              "Kennis en Advies"
+            ]
+          },
+          {
+            "claim_id": "clm__reg_ggd_flevoland_kennis_en_advies_monitoring_and_evaluation_003",
+            "topic": "monitoring.other",
+            "topic_label": "overige monitoringslijn",
+            "statement": "- Bij Cijfers vind je interactieve visualisaties over verkeersongevallen, overmatig middelengebruik, valincidenten 65+, vaccinatiegraad, buurtmonitor jeugdgezondheid en buurtmonitor overgewicht",
+            "validity_status": "contextual_active",
+            "page_labels": [],
+            "section_labels": [
+              "Kennis en Advies"
+            ]
+          },
+          {
+            "claim_id": "clm__reg_ggd_flevoland_kennis_en_advies_monitoring_and_evaluation_001",
+            "topic": "monitoring.regional_monitoring_plan",
+            "topic_label": "regionaal monitoringsplan",
+            "statement": "- Op Een Gezonder Flevoland staan de resultaten van de Gezondheidsmonitors in interactieve dashboards, ingedeeld naar gemeente, doelgroep en thema",
+            "validity_status": "contextual_active",
+            "page_labels": [],
+            "section_labels": [
+              "Kennis en Advies"
+            ]
+          },
+          {
+            "claim_id": "clm__reg_ggd_flevoland_kennis_en_advies_municipal_translation_001",
+            "topic": "municipal.implementation_translation",
+            "topic_label": "lokale vertaling in openbare stukken",
+            "statement": "- Op Een Gezonder Flevoland staan de resultaten van de Gezondheidsmonitors in interactieve dashboards, ingedeeld naar gemeente, doelgroep en thema",
+            "validity_status": "contextual_active",
+            "page_labels": [],
+            "section_labels": [
+              "Kennis en Advies"
+            ]
+          }
+        ]
+      },
+      {
+        "document_id": "reg_ggd_flevoland_jgz_almere_profile",
+        "title": "Profiel Jeugdgezondheidszorg",
+        "publisher": "GGD Flevoland",
+        "publication_date": null,
+        "page_url": "/sources/jgz-almere-profiel/",
+        "claim_count": 7,
+        "claims": [
+          {
+            "claim_id": "clm__reg_ggd_flevoland_jgz_almere_profile_d6_001",
+            "topic": "d6.regional_coordination",
+            "topic_label": "regionale coördinatie voor D6",
+            "statement": "De jeugdgezondheidszorg van GGD Flevoland bestaat uit ‘JGZ GGD’ (Lelystad, Zeewolde, Dronten, Emmeloord en Urk) en JGZ Almere (Almere).",
+            "validity_status": "contextual_active",
+            "page_labels": [],
+            "section_labels": [
+              "Profiel Jeugdgezondheidszorg"
+            ]
+          },
+          {
+            "claim_id": "clm__reg_ggd_flevoland_jgz_almere_profile_d6_002",
+            "topic": "d6.regional_coordination",
+            "topic_label": "regionale coördinatie voor D6",
+            "statement": "JGZ GGD Flevoland biedt jeugdgezondheidszorg aan voor 4-18 jaar in vijf gemeenten en 0-4 jaar in twee gemeenten (Noordoostpolder en Urk).",
+            "validity_status": "contextual_active",
+            "page_labels": [],
+            "section_labels": [
+              "Profiel Jeugdgezondheidszorg / JGZ GGD"
+            ]
+          },
+          {
+            "claim_id": "clm__reg_ggd_flevoland_jgz_almere_profile_d6_003",
+            "topic": "d6.regional_coordination",
+            "topic_label": "regionale coördinatie voor D6",
+            "statement": "Ook verzorgt JGZ GGD de jeugdgezondheidszorg in de asielzoekerscentra.",
+            "validity_status": "contextual_active",
+            "page_labels": [],
+            "section_labels": [
+              "Profiel Jeugdgezondheidszorg / JGZ GGD"
+            ]
+          },
+          {
+            "claim_id": "clm__reg_ggd_flevoland_jgz_almere_profile_monitoring_and_evaluation_001",
+            "topic": "monitoring.other",
+            "topic_label": "overige monitoringslijn",
+            "statement": "Legio mogelijkheden voor het leren kennen van de sociale kaart, de mogelijkheden en samenwerken in de keten!",
+            "validity_status": "contextual_active",
+            "page_labels": [],
+            "section_labels": [
+              "Profiel Jeugdgezondheidszorg / JGZ Almere"
+            ]
+          },
+          {
+            "claim_id": "clm__reg_ggd_flevoland_jgz_almere_profile_municipal_translation_001",
+            "topic": "municipal.implementation_translation",
+            "topic_label": "lokale vertaling in openbare stukken",
+            "statement": "JGZ GGD Flevoland biedt jeugdgezondheidszorg aan voor 4-18 jaar in vijf gemeenten en 0-4 jaar in twee gemeenten (Noordoostpolder en Urk).",
+            "validity_status": "contextual_active",
+            "page_labels": [],
+            "section_labels": [
+              "Profiel Jeugdgezondheidszorg / JGZ GGD"
+            ]
+          },
+          {
+            "claim_id": "clm__reg_ggd_flevoland_jgz_almere_profile_municipal_translation_002",
+            "topic": "municipal.implementation_translation",
+            "topic_label": "lokale vertaling in openbare stukken",
+            "statement": "De jeugdgezondheidszorg van GGD Flevoland bestaat uit ‘JGZ GGD’ (Lelystad, Zeewolde, Dronten, Emmeloord en Urk) en JGZ Almere (Almere).",
+            "validity_status": "contextual_active",
+            "page_labels": [],
+            "section_labels": [
+              "Profiel Jeugdgezondheidszorg"
+            ]
+          },
+          {
+            "claim_id": "clm__reg_ggd_flevoland_jgz_almere_profile_municipal_translation_003",
+            "topic": "municipal.implementation_translation",
+            "topic_label": "lokale vertaling in openbare stukken",
+            "statement": "In Almere wordt de opleiding verzorgd door de GGD onder de vlag van JGZ Almere, die jeugdgezondheidszorg 0-18 jaar aanbiedt.",
+            "validity_status": "contextual_active",
+            "page_labels": [],
+            "section_labels": [
+              "Profiel Jeugdgezondheidszorg / JGZ Almere"
             ]
           }
         ]
       }
     ],
-    "affected_claim_count": 78,
-    "highlighted_timeline_entries": [
-      {
-        "entry_key": "webinar_azwa_financiering_23_april_2026",
-        "date_label": "23 april 2026, 12.00-13.00 uur",
-        "title": "VWS en VNG-webinar over AZWA-middelen en regionale werkagenda",
-        "summary": "De VNG-ledenbrief kondigt een gezamenlijk webinar van VWS en de VNG aan over de AZWA-middelen en de regionale werkagenda, primair voor gemeentelijke beleids- en financiële medewerkers.",
-        "page_url": "/timeline/#tijdlijn-2026-04-23t12-00-webinar-azwa-financiering-23-april-2026"
-      },
-      {
-        "entry_key": "thematafel_medisch_sociaal_preventie_26_mei_2026",
-        "date_label": "26 mei 2026",
-        "title": "Landelijke thematafel Medisch-Sociaal en Preventie",
-        "summary": "Volgens de begeleidende toelichting worden na de landelijke thematafel van 26 mei 2026 de handreikingen voor basisfunctionaliteiten, lopende ontwikkelagenda-aanpakken en verdere D6-uitwerking gedeeld met de regio's.",
-        "page_url": "/timeline/#tijdlijn-2026-05-26-thematafel-medisch-sociaal-preventie-26-mei-2026"
-      },
-      {
-        "entry_key": "vng_financiering_werkagenda_randvoorwaarde_2026",
-        "date_label": "2026",
-        "title": "VNG-ledenbrief: werkagenda randvoorwaardelijk voor uitkering van middelen in 2026",
-        "summary": "De nieuwe VNG-ledenbrief zegt dat vaststelling van de regionale werkagenda door de mandaatgemeente randvoorwaardelijk is voor het nog in 2026 uitkeren van middelen.",
-        "page_url": "/timeline/#tijdlijn-2026-12-15-vng-financiering-werkagenda-randvoorwaarde-2026"
-      },
-      {
-        "entry_key": "werkagenda_half_september_2026",
-        "date_label": "medio september 2026",
-        "title": "Werkagenda moet in de praktijk medio september 2026 gereed zijn",
-        "summary": "De opdracht voor de D5-werkagenda zegt dat de deadline van 15 november in de praktijk betekent dat de werkagenda half september klaar moet zijn.",
-        "page_url": "/timeline/#tijdlijn-2026-09-15-werkagenda-half-september-2026"
-      },
-      {
-        "entry_key": "werkagenda_vaststelling_15_november_2026",
-        "date_label": "15 november 2026",
-        "title": "Regionale werkagenda uiterlijk door colleges vastgesteld",
-        "summary": "De begeleidende toelichting zegt dat de regionale werkagenda uiterlijk op 15 november 2026 door de colleges moet zijn vastgesteld.",
-        "page_url": "/timeline/#tijdlijn-2026-11-15-werkagenda-vaststelling-15-november-2026"
-      },
-      {
-        "entry_key": "nieuwe_spuk_2027_2029_vws_2026",
-        "date_label": "2027-2029",
-        "title": "Nieuwe AZWA-SPUK voor gemeenten voorzien voor 2027-2029",
-        "summary": "De VWS-brief van 22 april 2026 zegt dat voor gemeenten een nieuwe specifieke uitkering voor 2027-2029 wordt ingericht.",
-        "page_url": "/timeline/#tijdlijn-2027-01-02-nieuwe-spuk-2027-2029-vws-2026"
-      }
-    ]
+    "affected_claim_count": 61,
+    "highlighted_timeline_entries": []
   },
   "top_decisions": [
     {
@@ -1255,7 +984,7 @@
       "title": "Mogelijke besluitvraag: prioritering van D5-interventies in Almere",
       "status": "gedeeltelijk ingevuld",
       "status_group": "partly_resolved",
-      "as_of_date": "2026-04-26",
+      "as_of_date": "2026-04-27",
       "responsible_level": "gemeentelijk / bestuurlijke afweging",
       "linked_domain": "D5",
       "linked_domain_label": "D5",
@@ -1341,19 +1070,17 @@
           ]
         },
         {
-          "document_id": "nat_azwa_2025_definitief",
-          "title": "Aanvullend Zorg- en Welzijnsakkoord (AZWA) (Definitief)",
-          "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
-          "publication_date": "2025-08-31",
-          "document_type": "agreement",
-          "jurisdiction_level": "national",
+          "document_id": "reg_ggd_flevoland_begroting_2026",
+          "title": "Begroting 2026 GGD Flevoland",
+          "publisher": "GGD Flevoland",
+          "publication_date": "2025-10-14",
+          "document_type": "regional_budget",
+          "jurisdiction_level": "regional",
           "status": "current",
-          "source_url": "https://www.rijksoverheid.nl/documenten/rapporten/2025/08/31/aanvullend-zorg-en-welzijnsakkoord-azwa",
-          "page_url": "/sources/azwa-definitief/",
+          "source_url": "https://www.ggdflevoland.nl/app/uploads/sites/6/2025/10/Begroting-2026-GGD-Flevoland.pdf",
+          "page_url": "/sources/ggd-flevoland-begroting-2026/",
           "topics": [
-            "regionale/lokale D5-werkagenda",
-            "implementatielijn D5/D6",
-            "tussentijdse evaluatie"
+            "onderbouwde D5-basisfunctionaliteiten"
           ]
         }
       ],
@@ -1522,7 +1249,9 @@
         "clm__nat_azwa_opdracht_werkagenda_d5_2026_d5_002",
         "clm__nat_azwa_2026_cw31_kader_d5_d6_d5_002",
         "clm__nat_azwa_2026_cw31_kader_d5_d6_d5_001",
+        "clm__nat_vng_richtinggevend_kader_toegang_lokale_teams_d5_001",
         "clm__nat_azwa_2026_voortgang_kamerbrief_d5_002",
+        "clm__reg_ggd_flevoland_begroting_2026_d5_001",
         "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d5_003",
         "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d5_002",
         "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d5_001",
@@ -1625,6 +1354,13 @@
             "summary": "Relevantie voor Almere is afgeleid; expliciete lokale overname is niet altijd zichtbaar in de verzamelde openbare Almere-documenten."
           },
           {
+            "document_title": "Richtinggevend kader toegang, lokale teams en integrale dienstverlening",
+            "publisher": "VNG",
+            "publication_date": "2024-03-01",
+            "topic_label": "onderbouwde D5-basisfunctionaliteiten",
+            "summary": "Relevantie voor Almere is afgeleid; expliciete lokale overname is niet altijd zichtbaar in de verzamelde openbare Almere-documenten."
+          },
+          {
             "document_title": "Samen werken aan gezondheid en zorg - Visie gezondheidsbeleid Almere 2024-2026",
             "publisher": "Gemeente Almere",
             "publication_date": "2024-03-01",
@@ -1658,6 +1394,13 @@
             "publication_date": "2025-08-05",
             "topic_label": "onderbouwde D5-basisfunctionaliteiten",
             "summary": "Lagere autoriteit: deze passage is afkomstig uit een sectorale duidingspagina van Sociaal Werk Nederland."
+          },
+          {
+            "document_title": "Begroting 2026 GGD Flevoland",
+            "publisher": "GGD Flevoland",
+            "publication_date": "2025-10-14",
+            "topic_label": "onderbouwde D5-basisfunctionaliteiten",
+            "summary": "Relevantie voor Almere is afgeleid; expliciete lokale overname is niet altijd zichtbaar in de verzamelde openbare Almere-documenten."
           },
           {
             "document_title": "AZWA-financiering voor gemeenten (Zorgakkoord)",
@@ -1710,7 +1453,7 @@
       "title": "Mogelijke besluitvraag: regiemodel voor D6 en lokale teams",
       "status": "wacht op verduidelijking",
       "status_group": "awaiting_clarification",
-      "as_of_date": "2026-04-26",
+      "as_of_date": "2026-04-27",
       "responsible_level": "gemeentelijk / bestuurlijke afweging",
       "linked_domain": "D6",
       "linked_domain_label": "D6",
@@ -1720,7 +1463,7 @@
       ],
       "decision_question": "Hoe wil Almere eigenaarschap, regie en verantwoording organiseren rond D6, stevige lokale teams en hechte wijkverbanden?",
       "why_decision_required": "De lokale uitwerking is nog niet expliciet zichtbaar.",
-      "current_working_direction": "De huidige bronbasis bevat verwijzingen naar lokale teams en regie in AZWA-afspraken D5 en D6 en financieringsinstrument, Informatiepagina Sociaal Domein en Aanvullend Zorg- en Welzijnsakkoord (AZWA) (Definitief), maar nog geen expliciete bestuurlijke afbakening van wat in Almere precies als D6-structuur geldt.",
+      "current_working_direction": "De huidige bronbasis bevat verwijzingen naar lokale teams en regie in AZWA-afspraken D5 en D6 en financieringsinstrument, Informatiepagina Sociaal Domein en Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin, maar nog geen expliciete bestuurlijke afbakening van wat in Almere precies als D6-structuur geldt.",
       "why_it_matters_for_leadership": "De term lokale teams komt in meerdere contexten voor; bestuurlijke duiding is nodig om uitvoering, regie en aanspreekbaarheid helder te maken.",
       "policy_basis": [
         {
@@ -1747,6 +1490,34 @@
           "status": "supporting",
           "source_url": "https://raadvanalmere.nl/page/informatiepagina-sociaal-domein",
           "page_url": "/sources/sociaal-domein-informatiepagina/",
+          "topics": [
+            "stevige lokale teams en wijkverbanden"
+          ]
+        },
+        {
+          "document_id": "mun_almere_2026_stevige_lokale_teams_raad",
+          "title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin",
+          "publisher": "Raad van Almere",
+          "publication_date": "2026-01-06",
+          "document_type": "municipal_council_page",
+          "jurisdiction_level": "municipal",
+          "status": "current",
+          "source_url": "https://raadvanalmere.nl/article/stevige-lokale-teams-en-inzet-investeringsfonds-jeugd-en-gezin1",
+          "page_url": "/sources/stevige-lokale-teams-almere/",
+          "topics": [
+            "stevige lokale teams en wijkverbanden"
+          ]
+        },
+        {
+          "document_id": "reg_ggd_flevoland_begroting_2026",
+          "title": "Begroting 2026 GGD Flevoland",
+          "publisher": "GGD Flevoland",
+          "publication_date": "2025-10-14",
+          "document_type": "regional_budget",
+          "jurisdiction_level": "regional",
+          "status": "current",
+          "source_url": "https://www.ggdflevoland.nl/app/uploads/sites/6/2025/10/Begroting-2026-GGD-Flevoland.pdf",
+          "page_url": "/sources/ggd-flevoland-begroting-2026/",
           "topics": [
             "stevige lokale teams en wijkverbanden"
           ]
@@ -1779,40 +1550,13 @@
             "stevige lokale teams en wijkverbanden",
             "rolverdeling en regie"
           ]
-        },
-        {
-          "document_id": "mun_almere_pga_transformatieplan",
-          "title": "Transformatieplan Positief Gezond Almere",
-          "publisher": "Positief Gezond Almere",
-          "publication_date": "2025-05-01",
-          "document_type": "implementation_plan",
-          "jurisdiction_level": "municipal",
-          "status": "current",
-          "source_url": "https://positiefgezondalmere.nl/over-ons/",
-          "page_url": "/sources/pga-transformatieplan/",
-          "topics": [
-            "lokale coalitie en samenwerking"
-          ]
-        },
-        {
-          "document_id": "reg_zonmw_doorontwikkeling_zorgzaam_flevoland",
-          "title": "Doorontwikkeling Zorgzaam Flevoland naar een toekomstbestendige samenwerkingsstructuur",
-          "publisher": "ZonMw",
-          "publication_date": "2025-05-01",
-          "document_type": "project_registration_page",
-          "jurisdiction_level": "regional",
-          "status": "supporting",
-          "source_url": "https://projecten.zonmw.nl/nl/project/doorontwikkeling-zorgzaam-flevoland-naar-een-toekomstbestendige-samenwerkingsstructuur",
-          "page_url": "/sources/zonmw-zorgzaam-flevoland/",
-          "topics": [
-            "regionale coordinatie"
-          ]
         }
       ],
       "current_situation_almere": {
         "summary": "De bronbasis laat nog niet expliciet zien hoe Almere de landelijke eis rond stevige lokale teams en hechte wijkverbanden bestuurlijk en organisatorisch invult.",
         "supporting_documents": [
           "Informatiepagina Sociaal Domein",
+          "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin",
           "Transformatieplan Positief Gezond Almere"
         ]
       },
@@ -1961,7 +1705,12 @@
       "supporting_claim_ids": [
         "clm__nat_azwa_2025_definitief_d6_002",
         "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d6_001",
+        "clm__reg_ggd_flevoland_begroting_2026_d6_002",
+        "clm__reg_ggd_flevoland_begroting_2026_d6_001",
         "clm__mun_almere_sociaal_domein_informatiepagina_d6_001",
+        "clm__mun_almere_2026_stevige_lokale_teams_raad_d6_003",
+        "clm__mun_almere_2026_stevige_lokale_teams_raad_d6_002",
+        "clm__mun_almere_2026_stevige_lokale_teams_raad_d6_001",
         "clm__nat_vng_ledenbrief_onderhandelaarsakkoord_azwa_2025_d6_003",
         "clm__nat_vng_ledenbrief_onderhandelaarsakkoord_azwa_2025_d6_002",
         "clm__reg_flevoland_2023_regioplan_iza_municipal_translation_002",
@@ -1979,9 +1728,9 @@
           {
             "topic": "d6.local_teams",
             "topic_label": "stevige lokale teams en wijkverbanden",
-            "reason_label": "begrips- of interpretatieduiding nodig",
-            "summary": "De landelijke basis blijft leidend, terwijl regionale of lokale vertalingen daarnaast blijven bestaan. Menselijke duiding is nodig om te bepalen hoe Almere dit bestuurlijk en publiek moet formuleren.",
-            "recommended_action": "Lokale documenten kunnen de landelijke basis niet wijzigen; duiding van de lokale vertaling is nodig."
+            "reason_label": "lagere autoriteit of afgeleide lokale relevantie",
+            "summary": "Rond dit onderwerp bevat de huidige bronbasis naast de landelijke basis ook bronnen met lagere autoriteit of passages waarvan de relevantie voor Almere vooral uit context is afgeleid.",
+            "recommended_action": "Maak in bestuurlijke duiding expliciet welke bron de landelijke basis vormt en waar Almere publieke overname nog niet expliciet heeft vastgelegd."
           },
           {
             "topic": "municipal.role_allocation",
@@ -2010,6 +1759,20 @@
             "document_title": "Ledenbrief onderhandelaarsakkoord AZWA",
             "publisher": "VNG",
             "publication_date": "2025-07-11",
+            "topic_label": "stevige lokale teams en wijkverbanden",
+            "summary": "Lagere autoriteit: deze passage is afkomstig uit een toelichtende of samenvattende bron."
+          },
+          {
+            "document_title": "Begroting 2026 GGD Flevoland",
+            "publisher": "GGD Flevoland",
+            "publication_date": "2025-10-14",
+            "topic_label": "stevige lokale teams en wijkverbanden",
+            "summary": "Relevantie voor Almere is afgeleid; expliciete lokale overname is niet altijd zichtbaar in de verzamelde openbare Almere-documenten."
+          },
+          {
+            "document_title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin",
+            "publisher": "Raad van Almere",
+            "publication_date": "2026-01-06",
             "topic_label": "stevige lokale teams en wijkverbanden",
             "summary": "Lagere autoriteit: deze passage is afkomstig uit een toelichtende of samenvattende bron."
           },
@@ -2064,7 +1827,7 @@
       "title": "Mogelijke besluitvraag: verdeling van beschikbare middelen over D5 en D6",
       "status": "geblokkeerd door afhankelijkheid",
       "status_group": "blocked",
-      "as_of_date": "2026-04-26",
+      "as_of_date": "2026-04-27",
       "responsible_level": "gemeentelijk / bestuurlijke afweging",
       "linked_domain": "beide",
       "linked_domain_label": "D5 en D6",
@@ -2490,7 +2253,7 @@
       "title": "Mogelijke opvolgactie: D5-vertaling voor Almere expliciteren",
       "status": "in voorbereiding",
       "status_group": "in_preparation",
-      "as_of_date": "2026-04-26",
+      "as_of_date": "2026-04-27",
       "owner": "Nog niet expliciet benoemd in de bronbasis; gemeentelijke regie ligt voor de hand.",
       "linked_domain": "D5",
       "linked_domain_label": "D5",
@@ -2639,7 +2402,9 @@
         "clm__nat_azwa_opdracht_werkagenda_d5_2026_d5_002",
         "clm__nat_azwa_2026_cw31_kader_d5_d6_d5_002",
         "clm__nat_azwa_2026_cw31_kader_d5_d6_d5_001",
+        "clm__nat_vng_richtinggevend_kader_toegang_lokale_teams_d5_001",
         "clm__nat_azwa_2026_voortgang_kamerbrief_d5_002",
+        "clm__reg_ggd_flevoland_begroting_2026_d5_001",
         "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d5_003",
         "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d5_002",
         "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d5_001",
@@ -2719,7 +2484,7 @@
       "title": "Mogelijke opvolgactie: inzet van middelen en eigenaarschap vastleggen",
       "status": "geblokkeerd door afhankelijkheid",
       "status_group": "blocked",
-      "as_of_date": "2026-04-26",
+      "as_of_date": "2026-04-27",
       "owner": "Nog niet expliciet benoemd in de bronbasis; bestuurlijk en ambtelijk eigenaarschap moet nog worden verduidelijkt.",
       "linked_domain": "beide",
       "linked_domain_label": "D5 en D6",
@@ -2927,7 +2692,7 @@
       "title": "Mogelijke opvolgactie: monitoringsaanpak voor Almere afstemmen",
       "status": "in voorbereiding",
       "status_group": "in_preparation",
-      "as_of_date": "2026-04-26",
+      "as_of_date": "2026-04-27",
       "owner": "Nog niet expliciet benoemd in de bronbasis; bestuurlijk en ambtelijk eigenaarschap moet nog worden verduidelijkt.",
       "linked_domain": "beide",
       "linked_domain_label": "D5 en D6",
@@ -3143,7 +2908,7 @@
     },
     {
       "title": "Lokale aanknopingspunten zichtbaar",
-      "metric": 14,
+      "metric": 15,
       "summary": "Er zijn lokale Almere-documenten zichtbaar, maar niet alle landelijke verwachtingen zijn daarin expliciet overgenomen.",
       "page_url": "/almere/#wat-al-in-beeld-is"
     },
@@ -3155,7 +2920,7 @@
     },
     {
       "title": "Menselijke duiding nodig",
-      "metric": 59,
+      "metric": 67,
       "summary": "Een deel van de bronbasis vraagt nog om menselijke duiding over autoriteit, lokale overname of begripsafbakening.",
       "page_url": "/almere/#menselijke-duiding"
     }

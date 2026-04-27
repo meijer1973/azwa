@@ -51,6 +51,8 @@ Status op 26 april 2026: Sprint 25.4a is afgerond in `data/extracted/d6_governan
 
 Status op 26 april 2026: Sprint 25.4b is geopend in `docs/phase25-sprint25.4-d6-almere-responsibility-pack-plan.md`. De nieuwe focus is niet een algemene D6-samenvatting, maar een Almere responsibility pack rond lokale toegang, wijkteams, Stevige Lokale Teams, GGD/JGZ, mentale-gezondheidswijkinfrastructuur, monitoring/data, regionale/lokale uitvoering en financieringsafbakening.
 
+Status op 27 april 2026: eerste 25.4b-bronintake uitgevoerd. Zeven publieke bronnen zijn toegevoegd aan `data/raw/manifest.json` en door inventory, structural extraction, document extraction, claims, current interpretation, D6-lagen, QC, site-viewmodels en intern dashboard verwerkt: Stevige Lokale Teams raadspagina, Wijkteams Almere, VNG Richtinggevend Kader, Toezicht Sociaal Domein Basisfuncties, GGD Flevoland Begroting 2026, GGD Flevoland Kennis en Advies, en GGD Flevoland/JGZ Almere profiel. Onderliggende Documentwijzer-stukken bij Stevige Lokale Teams en de Almere Samen Sterker/samenwerkingsprojectenpagina's blijven open intakewerk omdat ze gerichte selectie of hernieuwde publieke download/verificatie vragen.
+
 Afgeronde aanpak voor Sprint 25.4a:
 
 - Gebruik publieke bronnen eerst om D6-rollen te ordenen; als bronnen geen taak, eigenaar of besluit geven, markeer dit als lokale validatie of besluitvraag.

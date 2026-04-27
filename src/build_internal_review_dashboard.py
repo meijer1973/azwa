@@ -1216,7 +1216,7 @@ def render_html(data: dict[str, Any]) -> str:
         byId('publicUpdates').innerHTML = '<p class="empty">No public updates recorded.</p>';
         return;
       }}
-      const updateCards = updates.map(update => {{
+      const updateCards = updates.map((update, index) => {{
         const metrics = (update.metrics || []).map(metric => {{
           const delta = metric.delta_label || (Number.isFinite(metric.delta) ? String(metric.delta) : '');
           return `<div class="metric"><strong>${{esc(metric.after ?? '')}}</strong><span>${{esc(metric.label || '')}} ${{delta ? `(${{esc(delta)}})` : ''}}</span></div>`;
@@ -1226,9 +1226,11 @@ def render_html(data: dict[str, Any]) -> str:
           `<li><strong>${{esc(highlight.summary || '')}}</strong><br><span class="subtle">${{esc(highlight.detail || '')}}</span></li>`
         ).join('');
         const source = update.source_reference || {{}};
-        return `<article class="item">
-          <div class="item-title">${{esc(update.published_on || '')}} - ${{esc(update.title || update.update_id || '')}}</div>
-          <div class="item-summary">${{esc(update.summary || '')}}</div>
+        return `<details class="item" ${{index === 0 ? 'open' : ''}}>
+          <summary>
+            <div class="item-title">${{esc(update.published_on || '')}} - ${{esc(update.title || update.update_id || '')}}</div>
+            <div class="item-summary">${{esc(update.summary || '')}}</div>
+          </summary>
           <div class="tag-row">
             <span class="tag origin">public update</span>
             <span class="tag perspective">${{esc(update.update_id || '')}}</span>
@@ -1241,7 +1243,7 @@ def render_html(data: dict[str, Any]) -> str:
           ${{metrics ? `<div class="metrics" style="margin-top: 12px;">${{metrics}}</div>` : ''}}
           ${{keyPoints ? `<h3 style="margin-top: 14px;">Key points</h3><ul class="compact">${{keyPoints}}</ul>` : ''}}
           ${{highlights ? `<h3 style="margin-top: 14px;">Change highlights</h3><ul class="compact">${{highlights}}</ul>` : ''}}
-        </article>`;
+        </details>`;
       }}).join('');
       byId('publicUpdates').innerHTML = `<p class="subtle">As of ${{esc(publicUpdates.as_of_date || '')}}, generated ${{esc(publicUpdates.generated_on || '')}}.</p>${{updateCards}}`;
     }}

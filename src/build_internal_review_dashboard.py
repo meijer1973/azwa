@@ -28,6 +28,14 @@ D6_GOVERNANCE_PATH = EXTRACTED_DIR / "d6_governance_collaboration.json"
 ALMERE_D6_RESPONSIBILITY_PATH = EXTRACTED_DIR / "municipal" / "almere_d6_responsibility_register.json"
 OUTPUT_PATH = DOCS_DIR / "internal" / "review-dashboard.html"
 
+REVIEW_DOC_PATHS = [
+    DOCS_DIR / "review" / "almere_d6_validation_pack.md",
+    DOCS_DIR / "review" / "almere_d6_stakeholder_validation_log.md",
+    DOCS_DIR / "review" / "almere_d6_stakeholder_information_request.md",
+    DOCS_DIR / "review" / "almere_d6_decision_needed.md",
+    DOCS_DIR / "review" / "almere_d6_funding_gap_table.md",
+]
+
 ISSUE_TYPES = {
     "bronprobleem": "Source authority, source coverage, or evidence status needs review.",
     "extractieprobleem": "Extraction output may contain technical noise, fragments, or parsing artifacts.",
@@ -88,6 +96,36 @@ def output_relative_link(repo_relative_path: str) -> str:
     if not target.exists():
         return repo_relative_path
     return Path("../../").joinpath(repo_relative_path).as_posix()
+
+
+def read_markdown_review_doc(path: Path) -> dict[str, Any]:
+    content = path.read_text(encoding="utf-8")
+    lines = content.splitlines()
+    title = next((line.removeprefix("#").strip() for line in lines if line.startswith("# ")), path.stem)
+    summary = ""
+    for index, line in enumerate(lines):
+        if line.strip() == "## Summary":
+            collected = []
+            for follow in lines[index + 1:]:
+                if follow.startswith("## "):
+                    break
+                if follow.strip():
+                    collected.append(follow.strip())
+            summary = " ".join(collected[:3])
+            break
+    headings = [line.removeprefix("##").strip() for line in lines if line.startswith("## ")]
+    table_count = sum(1 for line in lines if line.strip().startswith("|") and line.strip().endswith("|"))
+    checklist_count = sum(1 for line in lines if line.startswith("- ") or re.match(r"^\d+\. ", line))
+    return {
+        "path": repo_path(path),
+        "href": output_relative_link(repo_path(path)),
+        "title": title,
+        "summary": summary,
+        "headings": headings,
+        "table_line_count": table_count,
+        "checklist_item_count": checklist_count,
+        "content": content,
+    }
 
 
 def slug(value: str) -> str:
@@ -607,6 +645,8 @@ def build_dashboard_data() -> dict[str, Any]:
         source_paths.append(repo_path(ALMERE_D6_RESPONSIBILITY_PATH))
     if regional_roles:
         source_paths.append(repo_path(REGIONAL_ROLES_PATH))
+    review_docs = [read_markdown_review_doc(path) for path in REVIEW_DOC_PATHS if path.exists()]
+    source_paths.extend(doc["path"] for doc in review_docs)
 
     return {
         "generated_on": date.today().isoformat(),
@@ -651,6 +691,7 @@ def build_dashboard_data() -> dict[str, Any]:
             "title": public_updates.get("title", "Updates"),
             "updates": public_updates.get("updates") or [],
         },
+        "review_docs": review_docs,
         "workagenda_d5": {
             "path": repo_path(WORKAGENDA_D5_PATH),
             "href": output_relative_link(repo_path(WORKAGENDA_D5_PATH)),
@@ -870,6 +911,40 @@ def render_html(data: dict[str, Any]) -> str:
       display: grid;
       gap: 4px;
     }}
+    details.review-doc {{
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbfdff;
+      margin-bottom: 14px;
+      overflow: hidden;
+    }}
+    details.review-doc > summary {{
+      cursor: pointer;
+      padding: 14px 16px;
+      font-weight: 700;
+      color: var(--strong);
+    }}
+    .review-doc-body {{
+      border-top: 1px solid var(--line);
+      padding: 14px 16px 18px;
+      background: #fff;
+    }}
+    .markdown-preview h1, .markdown-preview h2, .markdown-preview h3 {{
+      margin-top: 18px;
+    }}
+    .markdown-preview h1:first-child, .markdown-preview h2:first-child {{
+      margin-top: 0;
+    }}
+    .markdown-preview pre {{
+      white-space: pre-wrap;
+      background: var(--code);
+      border-radius: 6px;
+      padding: 10px;
+      overflow-x: auto;
+    }}
+    .markdown-preview table {{
+      margin: 10px 0 18px;
+    }}
     code {{
       background: var(--code);
       border-radius: 4px;
@@ -903,6 +978,7 @@ def render_html(data: dict[str, Any]) -> str:
     <button class="tab-button" type="button" data-tab="local-sources">Local Sources</button>
     <button class="tab-button" type="button" data-tab="workagenda">Werkagenda</button>
     <button class="tab-button" type="button" data-tab="d6-governance">D6 Governance</button>
+    <button class="tab-button" type="button" data-tab="review-docs">Review Docs</button>
     <button class="tab-button" type="button" data-tab="sprint-history">Sprint History</button>
     <button class="tab-button" type="button" data-tab="public-updates">Public Updates Mirror</button>
     <button class="tab-button" type="button" data-tab="open-items">Open Items</button>
@@ -1030,6 +1106,19 @@ def render_html(data: dict[str, Any]) -> str:
         <p class="subtle">Sprint 25.4b public-source prefill from <a id="almereD6ResponsibilityLink" href="#"><code id="almereD6ResponsibilityPath"></code></a>. Rows are not settled local decisions unless their decision status says so.</p>
         <div class="metrics" id="almereD6ResponsibilityMetrics"></div>
         <div id="almereD6ResponsibilityComponents"></div>
+      </section>
+    </div>
+
+    <div class="tab-panel" data-tab-panel="review-docs" hidden>
+      <section>
+        <h2>D6 Review Documents</h2>
+        <p class="subtle">Human-readable mirror of the internal Sprint 25.5 review artifacts. These are validation materials, not final public or bestuurlijke D6 text.</p>
+        <div class="metrics" id="reviewDocMetrics"></div>
+      </section>
+
+      <section>
+        <h2>Documents</h2>
+        <div id="reviewDocs"></div>
       </section>
     </div>
 
@@ -1487,6 +1576,106 @@ def render_html(data: dict[str, Any]) -> str:
       </table>` : '<p class="empty">No Almere D6 responsibility register generated yet.</p>';
     }}
 
+    function markdownMini(markdown) {{
+      const lines = String(markdown || '').split('\\n');
+      let html = '';
+      let inList = false;
+      let inCode = false;
+      let tableRows = [];
+
+      function flushList() {{
+        if (inList) {{
+          html += '</ul>';
+          inList = false;
+        }}
+      }}
+
+      function flushTable() {{
+        if (!tableRows.length) return;
+        html += '<table>';
+        tableRows.forEach((row, index) => {{
+          const cells = row.split('|').slice(1, -1).map(cell => cell.trim());
+          if (cells.every(cell => /^:?-{{3,}}:?$/.test(cell))) return;
+          const tag = index === 0 ? 'th' : 'td';
+          html += `<tr>${{cells.map(cell => `<${{tag}}>${{esc(cell)}}</${{tag}}>`).join('')}}</tr>`;
+        }});
+        html += '</table>';
+        tableRows = [];
+      }}
+
+      lines.forEach(line => {{
+        if (line.startsWith('```')) {{
+          flushTable();
+          flushList();
+          html += inCode ? '</pre>' : '<pre>';
+          inCode = !inCode;
+          return;
+        }}
+        if (inCode) {{
+          html += esc(line) + '\\n';
+          return;
+        }}
+        if (line.trim().startsWith('|') && line.trim().endsWith('|')) {{
+          flushList();
+          tableRows.push(line.trim());
+          return;
+        }}
+        flushTable();
+        if (!line.trim()) {{
+          flushList();
+          return;
+        }}
+        if (line.startsWith('# ')) {{
+          flushList();
+          html += `<h1>${{esc(line.slice(2).trim())}}</h1>`;
+        }} else if (line.startsWith('## ')) {{
+          flushList();
+          html += `<h2>${{esc(line.slice(3).trim())}}</h2>`;
+        }} else if (line.startsWith('### ')) {{
+          flushList();
+          html += `<h3>${{esc(line.slice(4).trim())}}</h3>`;
+        }} else if (line.startsWith('- ')) {{
+          if (!inList) {{
+            html += '<ul>';
+            inList = true;
+          }}
+          html += `<li>${{esc(line.slice(2).trim())}}</li>`;
+        }} else {{
+          flushList();
+          html += `<p>${{esc(line.trim())}}</p>`;
+        }}
+      }});
+      flushTable();
+      flushList();
+      if (inCode) html += '</pre>';
+      return html;
+    }}
+
+    function renderReviewDocs() {{
+      const docs = DATA.review_docs || [];
+      const totalSections = docs.reduce((sum, doc) => sum + (doc.headings || []).length, 0);
+      const totalTableLines = docs.reduce((sum, doc) => sum + (doc.table_line_count || 0), 0);
+      byId('reviewDocMetrics').innerHTML = [
+        ['Documents', docs.length],
+        ['Sections', totalSections],
+        ['Table lines', totalTableLines],
+        ['Validation sessions', (docs.find(doc => doc.path.endsWith('stakeholder_validation_log.md'))?.content || '').includes('No stakeholder validation sessions recorded yet.') ? 0 : 'check log'],
+        ['Boundary', 'not final']
+      ].map(([label, value]) => `<div class="metric"><strong>${{esc(value)}}</strong><span>${{esc(label)}}</span></div>`).join('');
+
+      byId('reviewDocs').innerHTML = docs.length ? docs.map((doc, index) => `<details class="review-doc" ${{index === 0 ? 'open' : ''}}>
+        <summary>${{esc(doc.title)}} <span class="subtle">- ${{esc(doc.path)}}</span></summary>
+        <div class="review-doc-body">
+          <p>${{esc(doc.summary || 'No summary section found.')}}</p>
+          <p><a href="${{esc(doc.href)}}">Open markdown source</a></p>
+          <div class="tag-row">
+            ${{(doc.headings || []).slice(0, 8).map(heading => `<span class="tag">${{esc(heading)}}</span>`).join('')}}
+          </div>
+          <div class="markdown-preview">${{markdownMini(doc.content)}}</div>
+        </div>
+      </details>`).join('') : '<p class="empty">No review documents found.</p>';
+    }}
+
     function renderCleanupTargets() {{
       const targets = DATA.next_cleanup_targets || [];
       byId('cleanupTargets').innerHTML = targets.length ? `<table>
@@ -1550,6 +1739,7 @@ def render_html(data: dict[str, Any]) -> str:
     renderWorkagenda();
     renderLocalSources();
     renderD6Governance();
+    renderReviewDocs();
     renderRegional();
     renderCleanupTargets();
     render();

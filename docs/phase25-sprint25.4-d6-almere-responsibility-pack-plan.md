@@ -14,6 +14,9 @@ Gate op 27 april 2026: niet door naar rapportproductie of bestuurlijke werkagend
 | 25.4a D6 publieke governance-prefill | completed | `data/extracted/d6_governance_collaboration.json`, `docs/completed-plans/phase25-sprint25.4-d6-governance-samenwerking.md` |
 | 25.4b D6 Almere responsibility pack | open | Dit plan; eerste registerlaag `data/extracted/municipal/almere_d6_responsibility_register.json` |
 | 25.4c Map, schema en QC-integratie | open | Schema `data/schemas/almere_d6_responsibility_register.schema.json`; QC-checks voor registerbewijs, `settled`-status en site-layer safety |
+| 24.6 Commit, verify and stabilize | completed | Implementatie is gecommit en gepusht; `python src/run_pipeline.py --all` en gerichte tests worden als gatecheck gebruikt |
+| 24.7 D6 register evidence audit | completed | Registerrijen gecontroleerd op status, eigenaar, uitvoerder, schaal, financiering, bewijs en reviewvraag |
+| 24.8 Local validation preparation | completed | Interne validatiepack: `docs/review/almere_d6_validation_pack.md` |
 
 ## Kernbesluit
 D6 wordt in deze sprint behandeld als basisinfrastructuur onder D5: herkenbare toegang en inloop, wijkteams/stevige lokale teams, sociale basis, GGD/JGZ, school- en mentale-gezondheidspreventie, monitoring/data/leren, regionale en lokale uitvoeringsgovernance, en financieringsafbakening.

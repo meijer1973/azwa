@@ -18,6 +18,9 @@ Gebruik deze roadmap als levend werkdocument. Werk na elke sprint de statusregel
 | 24.3 Review-dashboard intern | completed | `docs/internal/review-dashboard.html`, `src/build_internal_review_dashboard.py`, `docs/completed-plans/phase24-sprint24.3-review-dashboard.md` |
 | 25.3 Nulmeting en capaciteit werkagenda | completed | `data/extracted/workagenda_nulmeting_capacity.json`, `src/build_workagenda_nulmeting_capacity.py`, `docs/completed-plans/phase25-sprint25.3-nulmeting-capaciteit.md` |
 | 25.4 D6 governance en samenwerking | open | Heropend voor D6 Almere responsibility pack: `docs/phase25-sprint25.4-d6-almere-responsibility-pack-plan.md`; registerlaag staat in `data/extracted/municipal/almere_d6_responsibility_register.json` en schema in `data/schemas/almere_d6_responsibility_register.schema.json` |
+| 24.6 D6 commit, verify and stabilize | completed | Remediation is gecommit/gepusht; verificatie via `python src/run_pipeline.py --all`, gerichte tests en schema-validatie |
+| 24.7 D6 register evidence audit | completed | Registerrijen gecontroleerd op status, eigenaar, uitvoerder, schaal, financiering, bewijs en open reviewvraag |
+| 24.8 D6 local validation preparation | completed | Interne validatiepack: `docs/review/almere_d6_validation_pack.md` |
 | 25.5 Almere en Flevoland | open | Volgende sprint; wacht op afronding heropende Sprint 25.4 |
 | 25.6 Regionale governance | open |  |
 | 26.1 PDF- en tabelkwaliteit | open |  |
@@ -194,6 +197,7 @@ Status: open.
 - Sprint 25.4 is heropend met `docs/phase25-sprint25.4-d6-almere-responsibility-pack-plan.md` omdat de bronbasis rond lokale D6-verantwoordelijkheid voor Almere nog versterking vraagt.
 - Eerste D6 Almere responsibility register toegevoegd in `data/extracted/municipal/almere_d6_responsibility_register.json` met twaalf startcomponenten, publieke bronstatus en lokale validatie-/besluitvelden.
 - Registerintegratie aangescherpt met schema, research-agent routing en QC-checks voor bewijs per rij, toegestane besluitstatus, lokale autoriteitsbron bij `settled`, en uitsluiting van `data/site` als registerbewijs.
+- Interne D6-validatiepack toegevoegd in `docs/review/almere_d6_validation_pack.md`; dit is validatiemateriaal en geen finale publicatie of bestuurlijke werkagendatekst.
 
 Sprint 25.5: Almere en Flevoland
 Status: open.

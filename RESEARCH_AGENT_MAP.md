@@ -111,6 +111,7 @@ Machine-readable:
     "config",
     "docs",
     "docs/internal",
+    "docs/review",
     "docs/rapporten"
   ],
   "source_corpus_indexes": [
@@ -189,6 +190,7 @@ Machine-readable:
     "docs/regional-roles-and-splits-almere-flevoland.md",
     "docs/data-quality-checklist.md",
     "docs/phase25-sprint25.4-d6-almere-responsibility-pack-plan.md",
+    "docs/review/almere_d6_validation_pack.md",
     "docs/human-review-guidance.md",
     "docs/internal/review-dashboard.html"
   ],
@@ -370,6 +372,11 @@ Theme view models:
   "public_report_review": [
     "docs/rapporten/schrijfrichtlijn-plan-van-aanpak.md",
     "docs/rapporten/plan-van-aanpak-v3.md"
+  ],
+  "d6_validation": [
+    "data/extracted/municipal/almere_d6_responsibility_register.json",
+    "data/extracted/municipal/almere_local_decisions.json",
+    "docs/review/almere_d6_validation_pack.md"
   ]
 }
 ```

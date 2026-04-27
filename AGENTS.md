@@ -4,6 +4,7 @@
 - Before editing a document type or workflow, check whether this file references a relevant guideline.
 - If a new guideline, workflow note, style guide, or recurring approach is added anywhere in the repository, add a reference to it in this file so future sessions can discover it quickly.
 - Keep project-specific guidance in the relevant folder, but use this file as the central index of guidance that agents should consult.
+- When reporting back on sprint or phase work, explicitly name the current sprint being worked on. Before reporting back after repository changes, commit the work and push/update the remote unless the user explicitly asks not to.
 - `RESEARCH_AGENT_MAP.md` is the entry-point guide for research agents using the corpus and data layers. When repository structure, source coverage, generated data layers, synthesized reports, or major guidance changes, check whether `RESEARCH_AGENT_MAP.md` also needs an update.
 - Every plan or sprint note should start with a brief current-state summary. For multi-sprint plans, prefer a Sprint Ledger at the top with `open` / `completed` status and current sprint. For a one-sprint or smaller plan, use a short Summary section at the top instead.
 - This repository is intended to ground outputs in reality. It is heavily source-based: do not present statements, checks, dates, numbers, decisions, or conclusions as factual unless they are supported by the source corpus, generated model data, or an actually performed verification step.

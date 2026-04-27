@@ -13,6 +13,7 @@ Gate op 27 april 2026: niet door naar rapportproductie of bestuurlijke werkagend
 | --- | --- | --- |
 | 25.4a D6 publieke governance-prefill | completed | `data/extracted/d6_governance_collaboration.json`, `docs/completed-plans/phase25-sprint25.4-d6-governance-samenwerking.md` |
 | 25.4b D6 Almere responsibility pack | open | Dit plan; eerste registerlaag `data/extracted/municipal/almere_d6_responsibility_register.json` |
+| 25.4c Map, schema en QC-integratie | open | Schema `data/schemas/almere_d6_responsibility_register.schema.json`; QC-checks voor registerbewijs, `settled`-status en site-layer safety |
 
 ## Kernbesluit
 D6 wordt in deze sprint behandeld als basisinfrastructuur onder D5: herkenbare toegang en inloop, wijkteams/stevige lokale teams, sociale basis, GGD/JGZ, school- en mentale-gezondheidspreventie, monitoring/data/leren, regionale en lokale uitvoeringsgovernance, en financieringsafbakening.
@@ -55,21 +56,21 @@ Intakestatus op 27 april 2026:
 
 Maak een register met minimaal deze velden:
 
-- `component_id`
-- `component_label`
+- `d6_component`
 - `existing_almere_provision`
 - `required_upgrade`
 - `owner`
-- `executors`
+- `executor_or_executors`
 - `cooperation_partners`
 - `scale`
-- `funding_sources`
-- `decision_status`: `settled`, `source_backed_prefill`, `inferred`, `proposed`, `review_needed`, `decision_needed`
-- `evidence_sources`
+- `funding_source`
+- `decision_status`: `settled`, `proposed`, `inferred`, `unknown`, `review_needed`
+- `evidence_source`
 - `confidence`
 - `open_issue`
-- `human_review_needed`
-- `fact_interpretation_proposal_status`
+- `needs_human_review`
+
+Het gegenereerde register bewaart daarnaast compatibiliteitsvelden zoals `component_id`, `component_label`, `executors`, `funding_sources`, `evidence_sources`, `human_review_needed`, `prefill_status` en `fact_interpretation_proposal_status`, zodat bestaande dashboards blijven werken terwijl de schema-velden leidend zijn.
 
 Eerste generator: `src/build_almere_d6_responsibility_register.py`.
 

@@ -12,12 +12,17 @@ DOCUMENTS_DIR = REPO_ROOT / "data" / "extracted" / "documents"
 CLAIMS_DIR = REPO_ROOT / "data" / "extracted" / "claims"
 MUNICIPAL_DIR = REPO_ROOT / "data" / "extracted" / "municipal"
 TABLES_DIR = REPO_ROOT / "data" / "intermediate" / "tables"
+SITE_DIR = REPO_ROOT / "data" / "site"
 
 CLAIMS_MASTER_PATH = CLAIMS_DIR / "claims_master.jsonl"
 CONFLICT_REGISTER_PATH = CLAIMS_DIR / "conflict_register.json"
 CURRENT_INTERPRETATION_PATH = CLAIMS_DIR / "current_interpretation.json"
 D5_D6_MASTER_PATH = CLAIMS_DIR / "d5_d6_master.json"
 ALMERE_CURRENT_VIEW_PATH = MUNICIPAL_DIR / "almere_current_view.json"
+ALMERE_D6_RESPONSIBILITY_PATH = MUNICIPAL_DIR / "almere_d6_responsibility_register.json"
+ALMERE_D6_RESPONSIBILITY_SCHEMA_PATH = REPO_ROOT / "data" / "schemas" / "almere_d6_responsibility_register.schema.json"
+D6_DECISION_STATUSES = {"settled", "proposed", "inferred", "unknown", "review_needed"}
+LOCAL_AUTHORITY_SOURCE_PREFIXES = ("mun_almere_", "reg_ggd_flevoland_")
 
 QC_REPORT_PATH = REPO_ROOT / "data" / "extracted" / "qc_report.json"
 REVIEW_QUEUE_PATH = REPO_ROOT / "data" / "extracted" / "review_queue.json"
@@ -770,6 +775,189 @@ def check_interpretation_and_views(
     return conflict_register, current_interpretation, almere_view
 
 
+def check_almere_d6_responsibility_register(issues: list[dict], seen: set[str]) -> None:
+    source_paths = [
+        relative_path(ALMERE_D6_RESPONSIBILITY_PATH),
+        relative_path(ALMERE_D6_RESPONSIBILITY_SCHEMA_PATH),
+    ]
+    if not ALMERE_D6_RESPONSIBILITY_PATH.exists():
+        add_issue(
+            issues,
+            seen,
+            check_id="d6_responsibility_register",
+            severity="blocking",
+            reason_code="register_missing",
+            summary="The Almere D6 responsibility register is missing.",
+            recommended_action="Generate data/extracted/municipal/almere_d6_responsibility_register.json before using D6 outputs.",
+            source_paths=source_paths,
+        )
+        return
+
+    if not ALMERE_D6_RESPONSIBILITY_SCHEMA_PATH.exists():
+        add_issue(
+            issues,
+            seen,
+            check_id="d6_responsibility_register",
+            severity="blocking",
+            reason_code="schema_missing",
+            summary="The Almere D6 responsibility register schema is missing.",
+            recommended_action="Add data/schemas/almere_d6_responsibility_register.schema.json and keep it aligned with the generated register.",
+            source_paths=source_paths,
+        )
+
+    register = load_json(ALMERE_D6_RESPONSIBILITY_PATH)
+    components = register.get("components", [])
+    if len(components) < 12:
+        add_issue(
+            issues,
+            seen,
+            check_id="d6_responsibility_register",
+            severity="blocking",
+            reason_code="too_few_components",
+            summary="The Almere D6 responsibility register has fewer than the required twelve start components.",
+            recommended_action="Add rows for all required D6 components before proceeding to report or work-agenda drafting.",
+            source_paths=source_paths,
+            evidence={"component_count": len(components)},
+        )
+
+    required_fields = [
+        "d6_component",
+        "existing_almere_provision",
+        "required_upgrade",
+        "owner",
+        "executor_or_executors",
+        "cooperation_partners",
+        "scale",
+        "funding_source",
+        "decision_status",
+        "evidence_source",
+        "confidence",
+        "open_issue",
+        "needs_human_review",
+    ]
+    for component in components:
+        component_id = component.get("component_id") or component.get("d6_component") or "unknown_component"
+        missing_fields = [field for field in required_fields if field not in component]
+        if missing_fields:
+            add_issue(
+                issues,
+                seen,
+                check_id="d6_responsibility_register",
+                severity="blocking",
+                reason_code="required_fields_missing",
+                summary=f"D6 responsibility row '{component_id}' is missing required fields.",
+                recommended_action="Regenerate the register with the schema-compatible D6 responsibility fields.",
+                source_paths=source_paths,
+                related_ids={"component_id": component_id},
+                evidence={"missing_fields": missing_fields},
+            )
+
+        decision_status = component.get("decision_status")
+        if decision_status not in D6_DECISION_STATUSES:
+            add_issue(
+                issues,
+                seen,
+                check_id="d6_responsibility_register",
+                severity="blocking",
+                reason_code="invalid_decision_status",
+                summary=f"D6 responsibility row '{component_id}' has an unsupported decision_status.",
+                recommended_action="Use only settled, proposed, inferred, unknown, or review_needed.",
+                source_paths=source_paths,
+                related_ids={"component_id": component_id},
+                evidence={"decision_status": decision_status},
+            )
+
+        evidence_sources = component.get("evidence_source") or component.get("evidence_sources") or []
+        if empty_value(evidence_sources):
+            add_issue(
+                issues,
+                seen,
+                check_id="d6_responsibility_register",
+                severity="blocking",
+                reason_code="evidence_missing",
+                summary=f"D6 responsibility row '{component_id}' has no evidence source.",
+                recommended_action="Add at least one source-backed evidence reference or mark the row as incomplete before use.",
+                source_paths=source_paths,
+                related_ids={"component_id": component_id},
+            )
+
+        site_evidence = [source for source in evidence_sources if str(source).startswith("data/site/")]
+        if site_evidence:
+            add_issue(
+                issues,
+                seen,
+                check_id="d6_responsibility_register",
+                severity="blocking",
+                reason_code="site_file_used_as_register_evidence",
+                summary=f"D6 responsibility row '{component_id}' uses a site file as evidence.",
+                recommended_action="Use raw, extracted, curated, or canonical source references for D6 responsibility rows; site files are orientation only.",
+                source_paths=source_paths,
+                related_ids={"component_id": component_id},
+                evidence={"site_evidence": site_evidence},
+            )
+
+        if decision_status == "settled":
+            evidence = component.get("evidence") or []
+            local_authority_evidence = [
+                item
+                for item in evidence
+                if str(item.get("source_id", "")).startswith(LOCAL_AUTHORITY_SOURCE_PREFIXES)
+                and item.get("repository_status") == "ingested_formal_corpus"
+            ]
+            if not local_authority_evidence:
+                add_issue(
+                    issues,
+                    seen,
+                    check_id="d6_responsibility_register",
+                    severity="blocking",
+                    reason_code="settled_without_local_authority_evidence",
+                    summary=f"D6 responsibility row '{component_id}' is settled without local-authority evidence.",
+                    recommended_action="Only mark D6 rows settled when backed by an ingested formal local or regional authority source.",
+                    source_paths=source_paths,
+                    related_ids={"component_id": component_id},
+                )
+
+        if empty_value(component.get("owner")) and empty_value(component.get("open_issue")):
+            add_issue(
+                issues,
+                seen,
+                check_id="d6_responsibility_register",
+                severity="blocking",
+                reason_code="owner_unknown_without_open_issue",
+                summary=f"D6 responsibility row '{component_id}' has no owner and no open issue.",
+                recommended_action="Explain exactly which owner/responsibility decision remains open.",
+                source_paths=source_paths,
+                related_ids={"component_id": component_id},
+            )
+
+    d6_site_files = [
+        SITE_DIR / "theme_view_models" / "basisinfrastructuur-d6.json",
+        SITE_DIR / "reference_topic_view_models" / "d6-local-teams.json",
+        SITE_DIR / "reference_topic_view_models" / "d6-regional-coordination.json",
+        SITE_DIR / "site_almere_view.json",
+    ]
+    rough_markers = ("rough_claim", "bullet_or_heading_fragment", "fragment_too_short", "long_raw_excerpt")
+    rough_public_files = []
+    for path in d6_site_files:
+        if not path.exists():
+            continue
+        text = path.read_text(encoding="utf-8")
+        if any(marker in text for marker in rough_markers):
+            rough_public_files.append(relative_path(path))
+
+    if rough_public_files:
+        add_issue(
+            issues,
+            seen,
+            check_id="d6_responsibility_register",
+            severity="blocking",
+            reason_code="rough_d6_claims_in_site_output",
+            summary="D6 site output contains rough-claim markers.",
+            recommended_action="Correct, quarantine, or explicitly exclude rough D6 claims before public or bestuurlijke use.",
+            source_paths=rough_public_files,
+        )
+
+
 def build_report(
     issues: list[dict],
     inventory_documents: list[dict],
@@ -783,6 +971,7 @@ def build_report(
         ("claim_master_integrity", "Aggregated claim stream uniqueness, completeness, and relation integrity."),
         ("interpretation_integrity", "Conflict register and current interpretation consistency."),
         ("view_integrity", "D5/D6 master and Almere current view alignment with unresolved conflicts and as_of_date."),
+        ("d6_responsibility_register", "Almere D6 responsibility register schema fields, evidence, decision status, and source-layer safety."),
     ]:
         check_items = [item for item in issues if item["check_id"] == check_id]
         checks.append(
@@ -844,6 +1033,7 @@ def main() -> None:
         issues,
         seen,
     )
+    check_almere_d6_responsibility_register(issues, seen)
 
     numbered_issues = sort_and_number_issues(issues)
     qc_report = build_report(numbered_issues, inventory_documents, claim_map, current_interpretation)

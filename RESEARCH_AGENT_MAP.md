@@ -176,6 +176,7 @@ Machine-readable:
   },
   "schema_and_rule_paths": [
     "data/schemas/claim.schema.json",
+    "data/schemas/almere_d6_responsibility_register.schema.json",
     "config/site_taxonomy.json",
     "config/data_quality_perspectives.json",
     "config/authority_rules.json",
@@ -338,11 +339,13 @@ Theme view models:
   ],
   "d5_d6_reasoning": [
     "data/extracted/claims/d5_d6_master.json",
+    "data/extracted/municipal/almere_d6_responsibility_register.json",
     "data/site/theme_view_models/basisfunctionaliteiten-d5.json",
     "data/site/theme_view_models/basisinfrastructuur-d6.json"
   ],
   "almere_reasoning": [
     "data/extracted/municipal/almere_current_view.json",
+    "data/extracted/municipal/almere_d6_responsibility_register.json",
     "data/extracted/municipal/almere_local_decisions.json",
     "data/curated/regional_roles_and_splits_almere_flevoland.json"
   ],

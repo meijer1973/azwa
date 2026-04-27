@@ -12,6 +12,16 @@ MUNICIPAL_DIR = EXTRACTED_DIR / "municipal"
 D6_GOVERNANCE_PATH = EXTRACTED_DIR / "d6_governance_collaboration.json"
 OUTPUT_PATH = MUNICIPAL_DIR / "almere_d6_responsibility_register.json"
 
+DECISION_STATUS_MAP = {
+    "source_backed_prefill": "inferred",
+    "decision_needed": "unknown",
+    "review_needed": "review_needed",
+    "settled": "settled",
+    "proposed": "proposed",
+    "inferred": "inferred",
+    "unknown": "unknown",
+}
+
 
 PUBLIC_SOURCE_CANDIDATES = [
     {
@@ -372,14 +382,22 @@ def enrich_component(component: dict[str, Any], source_index: dict[str, dict[str
         else:
             evidence.append({"source_id": source_id, "repository_status": "existing_repository_layer_or_prior_source"})
 
-    human_review_needed = component["decision_status"] != "settled"
+    decision_status = DECISION_STATUS_MAP.get(component["decision_status"], "review_needed")
+    human_review_needed = decision_status != "settled"
     return {
         **component,
+        "d6_component": component["component_label"],
+        "executor_or_executors": component["executors"],
+        "funding_source": component["funding_sources"],
+        "decision_status": decision_status,
+        "prefill_status": component["decision_status"],
+        "evidence_source": component["evidence_sources"],
         "evidence": evidence,
         "human_review_needed": human_review_needed,
+        "needs_human_review": human_review_needed,
         "fact_interpretation_proposal_status": (
             "public_prefill_needs_local_validation"
-            if component["decision_status"] in {"source_backed_prefill", "review_needed"}
+            if decision_status in {"inferred", "review_needed"}
             else "decision_needed"
         ),
     }
@@ -411,11 +429,15 @@ def build_payload() -> dict[str, Any]:
         "summary": {
             "component_count": len(components),
             "candidate_source_count": len(PUBLIC_SOURCE_CANDIDATES),
-            "source_backed_prefill_count": sum(
-                1 for component in components if component["decision_status"] == "source_backed_prefill"
-            ),
+            "settled_count": sum(1 for component in components if component["decision_status"] == "settled"),
+            "inferred_count": sum(1 for component in components if component["decision_status"] == "inferred"),
+            "proposed_count": sum(1 for component in components if component["decision_status"] == "proposed"),
+            "unknown_count": sum(1 for component in components if component["decision_status"] == "unknown"),
             "review_needed_count": sum(1 for component in components if component["decision_status"] == "review_needed"),
-            "decision_needed_count": sum(1 for component in components if component["decision_status"] == "decision_needed"),
+            "decision_needed_count": sum(1 for component in components if component["decision_status"] == "unknown"),
+            "source_backed_prefill_count": sum(
+                1 for component in components if component.get("prefill_status") == "source_backed_prefill"
+            ),
             "d6_prefill_dimension_count": (d6_governance.get("summary") or {}).get("dimension_count"),
         },
         "scale_guardrail": (

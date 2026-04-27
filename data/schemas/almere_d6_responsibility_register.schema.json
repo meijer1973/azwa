@@ -1,0 +1,128 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/meijer1973/azwa/blob/main/data/schemas/almere_d6_responsibility_register.schema.json",
+  "title": "Almere D6 Responsibility Register",
+  "type": "object",
+  "required": [
+    "layer_run_id",
+    "generated_on",
+    "status",
+    "purpose",
+    "public_source_boundary",
+    "summary",
+    "components"
+  ],
+  "properties": {
+    "layer_run_id": {
+      "type": "string"
+    },
+    "generated_on": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "purpose": {
+      "type": "string"
+    },
+    "public_source_boundary": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "object"
+    },
+    "components": {
+      "type": "array",
+      "minItems": 12,
+      "items": {
+        "type": "object",
+        "required": [
+          "component_id",
+          "d6_component",
+          "existing_almere_provision",
+          "required_upgrade",
+          "owner",
+          "executor_or_executors",
+          "cooperation_partners",
+          "scale",
+          "funding_source",
+          "decision_status",
+          "evidence_source",
+          "confidence",
+          "open_issue",
+          "needs_human_review"
+        ],
+        "properties": {
+          "component_id": {
+            "type": "string"
+          },
+          "d6_component": {
+            "type": "string"
+          },
+          "existing_almere_provision": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "required_upgrade": {
+            "type": "string"
+          },
+          "owner": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "executor_or_executors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "cooperation_partners": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "scale": {
+            "type": "string"
+          },
+          "funding_source": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "decision_status": {
+            "type": "string",
+            "enum": [
+              "settled",
+              "proposed",
+              "inferred",
+              "unknown",
+              "review_needed"
+            ]
+          },
+          "evidence_source": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          },
+          "confidence": {
+            "type": "string"
+          },
+          "open_issue": {
+            "type": "string"
+          },
+          "needs_human_review": {
+            "type": "boolean"
+          }
+        }
+      }
+    }
+  }
+}

@@ -344,9 +344,12 @@
       "script": "src/build_quality_control.py",
       "depends_on": [
         "phase7_phase8_master_views",
-        "phase8_local_decision_shell"
+        "phase8_local_decision_shell",
+        "phase25_4b_almere_d6_responsibility_register"
       ],
       "inputs": [
+        "data/extracted/municipal/almere_d6_responsibility_register.json",
+        "data/schemas/almere_d6_responsibility_register.schema.json",
         "src/build_quality_control.py",
         "src/build_current_interpretation.py"
       ],

@@ -1,7 +1,7 @@
 # Almere D6 funding gap table
 
 ## Summary
-Current sprint: Sprint 25.5 - D6 stakeholder validation.
+Current sprint: Sprint 25.5 - D6 stakeholder validation handoff.
 
 This table prepares finance validation for the D6 responsibility register. It does not assign budgets. A row may only move from unknown or candidate funding to confirmed funding when a source-backed document or validation log entry supports that change.
 

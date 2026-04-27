@@ -1,7 +1,7 @@
 # Almere D6 validation pack
 
 ## Summary
-Current sprint: Sprint 25.5 - D6 stakeholder validation, under the reopened Sprint 25.4 D6 Almere responsibility pack.
+Current sprint: Sprint 25.5 - D6 stakeholder validation handoff, under the reopened Sprint 25.4 D6 Almere responsibility pack.
 
 This pack is for stakeholder validation only. It is not final bestuurlijke text, not a public D6 publication, and not a final Almere work-agenda section. The D6 register currently structures the public-source evidence and the open decision questions, but no row is marked `settled`.
 

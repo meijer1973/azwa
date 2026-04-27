@@ -21,8 +21,8 @@ Gebruik deze roadmap als levend werkdocument. Werk na elke sprint de statusregel
 | 24.6 D6 commit, verify and stabilize | completed | Remediation is gecommit/gepusht; verificatie via `python src/run_pipeline.py --all`, gerichte tests en schema-validatie |
 | 24.7 D6 register evidence audit | completed | Registerrijen gecontroleerd op status, eigenaar, uitvoerder, schaal, financiering, bewijs en open reviewvraag |
 | 24.8 D6 local validation preparation | completed | Interne validatiepack: `docs/review/almere_d6_validation_pack.md` |
-| 25.5 D6 stakeholder validation handoff | open | Repository-side voorbereiding nadert afronding; daadwerkelijke stakeholdervalidatie is policy-maker-afhankelijk. Artifacts in `docs/review/almere_d6_public_source_boundary.md`, `docs/review/almere_d6_validation_handoff_summary.md`, `docs/review/almere_d6_validation_pack.md`, `docs/review/almere_d6_stakeholder_validation_log.md`, `docs/review/almere_d6_stakeholder_information_request.md`, `docs/review/almere_d6_decision_needed.md`, `docs/review/almere_d6_funding_gap_table.md` en `docs/review/almere_d6_safe_wording.md` |
-| 25.6 Post-validation register hardening | open | Geblokkeerd tot stakeholder-validatierecords beschikbaar zijn of er een expliciet beleidsbesluit is om met open validatiegaten verder te gaan |
+| 25.5 D6 stakeholder validation handoff | completed | Repository-side handoff compleet; wacht op policy-maker stakeholdervalidatie. Artifacts in `docs/review/almere_d6_public_source_boundary.md`, `docs/review/almere_d6_validation_handoff_summary.md`, `docs/review/almere_d6_validation_pack.md`, `docs/review/almere_d6_stakeholder_validation_log.md`, `docs/review/almere_d6_stakeholder_information_request.md`, `docs/review/almere_d6_decision_needed.md`, `docs/review/almere_d6_funding_gap_table.md` en `docs/review/almere_d6_safe_wording.md` |
+| 25.6 Post-validation register hardening | blocked | Geblokkeerd tot stakeholder-validatierecords beschikbaar zijn of er een expliciet beleidsbesluit is om met open validatiegaten verder te gaan |
 | 26.1 PDF- en tabelkwaliteit | open |  |
 | 26.2 Claimtekst schoonmaken | open |  |
 | 26.3 Locatie- en bewijscontrole | open |  |
@@ -200,7 +200,7 @@ Status: open.
 - Interne D6-validatiepack toegevoegd in `docs/review/almere_d6_validation_pack.md`; dit is validatiemateriaal en geen finale publicatie of bestuurlijke werkagendatekst.
 
 Sprint 25.5: D6 stakeholder validation handoff
-Status: open.
+Status: repository-side complete; awaiting policy-maker stakeholder validation.
 
 Repository-team verantwoordelijkheid:
 
@@ -217,15 +217,15 @@ Policy-maker/stakeholder verantwoordelijkheid:
 
 Gate-conditie:
 
-- Sprint 25.5 kan niet door repositorywerk alleen volledig worden gesloten. Sluiting vereist stakeholder-validatierecords of een expliciet beleidsbesluit om met open validatiegaten verder te gaan.
+- Sprint 25.5 is repository-side afgerond. De daadwerkelijke stakeholdervalidatie blijft een policy-maker afhankelijkheid.
 - Sprint 25.6 blijft geblokkeerd tot zulke validatierecords of besluiten beschikbaar zijn.
 
-Sprint 25.6: Regionale governance
-Status: open.
+Sprint 25.6: Post-validation register hardening
+Status: blocked until stakeholder validation records or explicit policy decisions exist.
 
-- Versterk bronnen over mandaatgemeente, regio, zorgverzekeraar, GGD, regionale preventie-infrastructuur en werkagenda.
-- Maak onderscheid tussen wie formeel besluit, wie voorbereidt en wie uitvoert.
-- Controleer of de website dit onderscheid begrijpelijk weergeeft.
+- Verwerk alleen gevalideerde stakeholderrecords, lokale/interne documenten, finance/controller bevestigingen of expliciete beleidsbesluiten.
+- Verander geen D6-registerrij naar `settled` zonder traceerbaar bewijs.
+- Drafting of finale werkagendatekst blijft geblokkeerd tot deze hardening is afgerond en opnieuw gegatet.
 
 ## Fase 26 - Extractiekwaliteit
 Doel: minder halve zinnen, betere tabellen, betere paginaverwijzingen en betere broncitaten.

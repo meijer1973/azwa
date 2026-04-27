@@ -1,7 +1,7 @@
 # Almere D6 stakeholder validation log
 
 ## Summary
-Current sprint: Sprint 25.5 - D6 stakeholder validation.
+Current sprint: Sprint 25.5 - D6 stakeholder validation handoff.
 
 This log records validation contacts and sessions for the Almere D6 responsibility register. It avoids unnecessary personal data; roles are preferred over names. No validation session has been recorded yet. Until entries are added, no D6 register row may be promoted to `settled` on the basis of stakeholder validation.
 

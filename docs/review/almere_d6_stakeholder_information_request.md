@@ -1,7 +1,7 @@
 # Almere D6 stakeholder information request
 
 ## Summary
-Current sprint: Sprint 25.5 - D6 stakeholder validation.
+Current sprint: Sprint 25.5 - D6 stakeholder validation handoff.
 
 This request pack lists the information needed from stakeholders after public-source intake. It is not a final report and not a policy recommendation. It should be used to conduct validation sessions and to update `docs/review/almere_d6_stakeholder_validation_log.md`.
 

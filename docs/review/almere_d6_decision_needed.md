@@ -1,7 +1,7 @@
 # Almere D6 decision-needed list
 
 ## Summary
-Current sprint: Sprint 25.5 - D6 stakeholder validation.
+Current sprint: Sprint 25.5 - D6 stakeholder validation handoff.
 
 This list captures decisions that cannot be settled from the public source base alone. It is a validation and escalation artifact, not final bestuurlijke advice. Deadlines are not invented here; where no source-backed or locally supplied date exists, the deadline is marked as a human planning decision.
 

@@ -5,6 +5,14 @@ Current sprint: Sprint 25.5 - D6 stakeholder validation.
 
 This list captures decisions that cannot be settled from the public source base alone. It is a validation and escalation artifact, not final bestuurlijke advice. Deadlines are not invented here; where no source-backed or locally supplied date exists, the deadline is marked as a human planning decision.
 
+## How To Use This List
+
+- Use the first column as the decision or question to route to policy owners.
+- Use the affected rows column to update the D6 responsibility register after validation.
+- Ask the decision owner for a source, validation record or internal document that supports the answer.
+- Keep the deadline as a human planning decision unless a source or policy owner supplies a concrete date.
+- Do not close a decision by inference from public context alone.
+
 | Open decision / human question | Affected D6 rows | Why it matters | Decision owner | Required source/document | Deadline | Risk if not decided |
 | --- | --- | --- | --- | --- | --- | --- |
 | Classify existing inloop/social-base facilities for D6 | Inloopvoorzieningen sociaal en gezond; burgerinitiatieven en informele steun | D6 requires recognizable access and inloop, but the local inventory is not yet source-backed | Gemeente Almere with social-base partners | Local inventory or validation record naming facilities and D6 classification | Human planning decision | D6 remains abstract and cannot be translated into local access commitments |

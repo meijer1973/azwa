@@ -9,6 +9,15 @@ Access status on 27 April 2026: stakeholder validation is not yet conducted. The
 
 Use `docs/review/almere_d6_stakeholder_information_request.md` as the request pack for first contact.
 
+## How To Use This Log
+
+- Create one entry per stakeholder session or written validation response.
+- Record roles instead of unnecessary personal data.
+- Link every confirmation or correction to the affected D6 register row.
+- Record the evidence path before changing register status, owner, executor, funding or safe wording.
+- Keep unresolved or conflicting answers visible; do not smooth them into a single conclusion.
+- Repository staff must not complete this log with inferred answers.
+
 ## Session Template
 
 Use one entry per contact or session.

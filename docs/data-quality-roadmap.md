@@ -21,8 +21,8 @@ Gebruik deze roadmap als levend werkdocument. Werk na elke sprint de statusregel
 | 24.6 D6 commit, verify and stabilize | completed | Remediation is gecommit/gepusht; verificatie via `python src/run_pipeline.py --all`, gerichte tests en schema-validatie |
 | 24.7 D6 register evidence audit | completed | Registerrijen gecontroleerd op status, eigenaar, uitvoerder, schaal, financiering, bewijs en open reviewvraag |
 | 24.8 D6 local validation preparation | completed | Interne validatiepack: `docs/review/almere_d6_validation_pack.md` |
-| 25.5 D6 stakeholder validation | open | Validatievoorbereiding staat; daadwerkelijke sessies nog niet geregistreerd. Artifacts in `docs/review/almere_d6_validation_pack.md`, `docs/review/almere_d6_stakeholder_validation_log.md`, `docs/review/almere_d6_stakeholder_information_request.md`, `docs/review/almere_d6_decision_needed.md` en `docs/review/almere_d6_funding_gap_table.md` |
-| 25.6 Regionale governance | open |  |
+| 25.5 D6 stakeholder validation handoff | open | Repository-side voorbereiding nadert afronding; daadwerkelijke stakeholdervalidatie is policy-maker-afhankelijk. Artifacts in `docs/review/almere_d6_public_source_boundary.md`, `docs/review/almere_d6_validation_handoff_summary.md`, `docs/review/almere_d6_validation_pack.md`, `docs/review/almere_d6_stakeholder_validation_log.md`, `docs/review/almere_d6_stakeholder_information_request.md`, `docs/review/almere_d6_decision_needed.md`, `docs/review/almere_d6_funding_gap_table.md` en `docs/review/almere_d6_safe_wording.md` |
+| 25.6 Post-validation register hardening | open | Geblokkeerd tot stakeholder-validatierecords beschikbaar zijn of er een expliciet beleidsbesluit is om met open validatiegaten verder te gaan |
 | 26.1 PDF- en tabelkwaliteit | open |  |
 | 26.2 Claimtekst schoonmaken | open |  |
 | 26.3 Locatie- en bewijscontrole | open |  |
@@ -199,15 +199,26 @@ Status: open.
 - Registerintegratie aangescherpt met schema, research-agent routing en QC-checks voor bewijs per rij, toegestane besluitstatus, lokale autoriteitsbron bij `settled`, en uitsluiting van `data/site` als registerbewijs.
 - Interne D6-validatiepack toegevoegd in `docs/review/almere_d6_validation_pack.md`; dit is validatiemateriaal en geen finale publicatie of bestuurlijke werkagendatekst.
 
-Sprint 25.5: D6 stakeholder validation
+Sprint 25.5: D6 stakeholder validation handoff
 Status: open.
 
-- Valideer het D6 responsibility register met Gemeente Almere, Wijkteams Almere, JGZ Almere/GGD Flevoland, PGA/Zorgzaam Flevoland, mentale-gezondheids/wijkgerichte samenwerking en regionale werkagenda-governance.
-- Publieke bronnen zijn uitgeput voor de resterende formele classificatie-, mandaat-, eigenaarschap- en financieringsvragen; deze vragen moeten via stakeholders of lokale documenten worden beantwoord.
-- Leg per sessie rollen, besproken rijen, bevestigingen, correcties, open vragen, gevraagde documenten en follow-up-eigenaar vast in `docs/review/almere_d6_stakeholder_validation_log.md`.
-- Gebruik `docs/review/almere_d6_stakeholder_information_request.md` als eerste uitvraag naar stakeholders.
-- Werk de validatiepack bij met status per rij, veilige en onveilige werkagendaformuleringen, rijen die eventueel naar `settled` kunnen, resterende onzekerheden en bronappendix.
+Repository-team verantwoordelijkheid:
+
+- Completeer de publieke-brongrens in `docs/review/almere_d6_public_source_boundary.md`.
+- Onderhoud de validatiepack, informatie-uitvraag, decision-needed lijst, funding-gap tabel en safe-wording bibliotheek.
+- Documenteer welke D6-classificatie-, eigenaarschap-, mandaat-, financierings- en woordingsvragen niet meer uit publieke bronnen kunnen worden beantwoord.
 - Houd de registerstatus conservatief: geen `settled` zonder traceerbare validatie of autoritatieve lokale bron.
+
+Policy-maker/stakeholder verantwoordelijkheid:
+
+- Voer feitelijke validatiesessies met Gemeente Almere, Wijkteams Almere, JGZ Almere/GGD Flevoland, PGA/Zorgzaam/Flever, mentale-gezondheids/wijkgerichte samenwerking en regionale werkagenda-governance.
+- Lever lokale/interne documenten, finance/controller bevestiging of validatierecords.
+- Bevestig of corrigeer eigenaarschap, mandaat, financiering, schaal en veilige werkagendaformulering.
+
+Gate-conditie:
+
+- Sprint 25.5 kan niet door repositorywerk alleen volledig worden gesloten. Sluiting vereist stakeholder-validatierecords of een expliciet beleidsbesluit om met open validatiegaten verder te gaan.
+- Sprint 25.6 blijft geblokkeerd tot zulke validatierecords of besluiten beschikbaar zijn.
 
 Sprint 25.6: Regionale governance
 Status: open.

@@ -5,6 +5,14 @@ Current sprint: Sprint 25.5 - D6 stakeholder validation.
 
 This table prepares finance validation for the D6 responsibility register. It does not assign budgets. A row may only move from unknown or candidate funding to confirmed funding when a source-backed document or validation log entry supports that change.
 
+## How To Use This Table
+
+- Route each row to the relevant finance/controller or programme-budget owner.
+- Ask whether the listed possible funding source is correct, partial, wrong or not yet decided.
+- Ask explicitly about double-counting risk across AZWA-D6, D5 work-agenda resources, SPUK/GALA, PGA transformation funding, regular municipal budget and Zvw/insurer funding.
+- Record any answer in the validation log with the affected D6 row and evidence path.
+- Repository staff must not turn possible funding into known funding without finance validation.
+
 | D6 component | Known funding | Unknown funding | Possible funding source | Risk of double counting | Decision needed | Finance owner |
 | --- | --- | --- | --- | --- | --- | --- |
 | Inloopvoorzieningen sociaal en gezond | None confirmed | Full component funding unknown | AZWA-D6, municipal regular budget, SPUK/GALA, social-base budgets | High: social-base, D6 and municipal regular funding may be mixed | Confirm which facilities and funding lines apply | Gemeente Almere finance/controller with social-base policy owner |

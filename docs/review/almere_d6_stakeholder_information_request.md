@@ -5,6 +5,15 @@ Current sprint: Sprint 25.5 - D6 stakeholder validation.
 
 This request pack lists the information needed from stakeholders after public-source intake. It is not a final report and not a policy recommendation. It should be used to conduct validation sessions and to update `docs/review/almere_d6_stakeholder_validation_log.md`.
 
+## How To Use This Pack
+
+- Use the sections below to route questions to the right stakeholder group.
+- For every answer, ask which D6 register row it affects.
+- Ask for evidence with each answer: a public/local source, internal document, decision record, finance/controller confirmation or validation-log entry.
+- Record answers in `docs/review/almere_d6_stakeholder_validation_log.md`.
+- Do not treat a verbal answer as final unless the role, organization, rows discussed, confirmed points and evidence path are recorded.
+- Repository staff must not infer missing stakeholder answers from plausibility or programme logic.
+
 ## What Public Sources Can Already Support
 
 Public sources can support a validation-ready structure for D6 in Almere:

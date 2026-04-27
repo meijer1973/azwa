@@ -29,11 +29,14 @@ ALMERE_D6_RESPONSIBILITY_PATH = EXTRACTED_DIR / "municipal" / "almere_d6_respons
 OUTPUT_PATH = DOCS_DIR / "internal" / "review-dashboard.html"
 
 REVIEW_DOC_PATHS = [
+    DOCS_DIR / "review" / "almere_d6_public_source_boundary.md",
+    DOCS_DIR / "review" / "almere_d6_validation_handoff_summary.md",
     DOCS_DIR / "review" / "almere_d6_validation_pack.md",
     DOCS_DIR / "review" / "almere_d6_stakeholder_validation_log.md",
     DOCS_DIR / "review" / "almere_d6_stakeholder_information_request.md",
     DOCS_DIR / "review" / "almere_d6_decision_needed.md",
     DOCS_DIR / "review" / "almere_d6_funding_gap_table.md",
+    DOCS_DIR / "review" / "almere_d6_safe_wording.md",
 ]
 
 ISSUE_TYPES = {

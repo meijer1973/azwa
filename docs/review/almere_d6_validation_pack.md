@@ -5,6 +5,17 @@ Current sprint: Sprint 25.5 - D6 stakeholder validation, under the reopened Spri
 
 This pack is for stakeholder validation only. It is not final bestuurlijke text, not a public D6 publication, and not a final Almere work-agenda section. The D6 register currently structures the public-source evidence and the open decision questions, but no row is marked `settled`.
 
+## How To Use This Pack
+
+Use this pack as a policy validation handoff, not as a final advice document.
+
+- Policy officers use the decision table to decide who should validate each D6 row.
+- Stakeholders validate component description, existence, classification, owner, executor, coordinator, scale, funding and safe wording.
+- Returned evidence should be a public/local document, internal validation record, finance/controller confirmation or completed validation-log entry.
+- Answers should be recorded in `docs/review/almere_d6_stakeholder_validation_log.md` before the register is changed.
+- A register row may only move to stronger wording or `settled` when the evidence directly supports classification, owner, executor, scale and funding.
+- Repository staff must not fill stakeholder answers by inference. If evidence remains indirect, keep `inferred`; if stakeholders disagree, use `review_needed`; if owner or funding is unidentified, keep `unknown` or `review_needed`.
+
 ## Register Summary
 
 Source register: `data/extracted/municipal/almere_d6_responsibility_register.json`.

@@ -35,6 +35,7 @@
 - `docs/phase25-sprint25.4-d6-almere-responsibility-pack-plan.md`: active reopened Sprint 25.4 plan for strengthening D6 Almere evidence, responsibility allocation, execution logic, scale separation, financing status, and local validation/decision workflow.
 - `docs/review/almere_d6_validation_pack.md`: internal D6 validation pack for stakeholder review; use it as validation material only, not as final public or bestuurlijke D6 text.
 - `docs/review/almere_d6_stakeholder_validation_log.md`: Sprint 25.5 validation log; record stakeholder sessions by role, rows discussed, confirmations, corrections, open questions, requested documents and follow-up owner.
+- `docs/review/almere_d6_stakeholder_information_request.md`: Sprint 25.5 request pack listing what can no longer be solved by public sources and what must be validated by local/regional stakeholders.
 - `docs/review/almere_d6_decision_needed.md`: Sprint 25.5 decision-needed list for unresolved D6 ownership, classification, scale and funding decisions.
 - `docs/review/almere_d6_funding_gap_table.md`: Sprint 25.5 finance validation table; use it to keep known funding, unknown funding, possible sources and double-counting risks separate.
 - `data/extracted/municipal/almere_d6_responsibility_register.json`: Sprint 25.4b public-source prefill register for Almere D6 components; use it to separate existing provision, owner/executor hypotheses, scale, funding status, decision status, evidence, and local validation needs.

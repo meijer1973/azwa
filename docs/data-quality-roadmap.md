@@ -21,7 +21,7 @@ Gebruik deze roadmap als levend werkdocument. Werk na elke sprint de statusregel
 | 24.6 D6 commit, verify and stabilize | completed | Remediation is gecommit/gepusht; verificatie via `python src/run_pipeline.py --all`, gerichte tests en schema-validatie |
 | 24.7 D6 register evidence audit | completed | Registerrijen gecontroleerd op status, eigenaar, uitvoerder, schaal, financiering, bewijs en open reviewvraag |
 | 24.8 D6 local validation preparation | completed | Interne validatiepack: `docs/review/almere_d6_validation_pack.md` |
-| 25.5 D6 stakeholder validation | open | Stakeholdervalidatie voor D6-register; artifacts in `docs/review/almere_d6_validation_pack.md`, `docs/review/almere_d6_stakeholder_validation_log.md`, `docs/review/almere_d6_decision_needed.md` en `docs/review/almere_d6_funding_gap_table.md` |
+| 25.5 D6 stakeholder validation | open | Validatievoorbereiding staat; daadwerkelijke sessies nog niet geregistreerd. Artifacts in `docs/review/almere_d6_validation_pack.md`, `docs/review/almere_d6_stakeholder_validation_log.md`, `docs/review/almere_d6_stakeholder_information_request.md`, `docs/review/almere_d6_decision_needed.md` en `docs/review/almere_d6_funding_gap_table.md` |
 | 25.6 Regionale governance | open |  |
 | 26.1 PDF- en tabelkwaliteit | open |  |
 | 26.2 Claimtekst schoonmaken | open |  |
@@ -203,7 +203,9 @@ Sprint 25.5: D6 stakeholder validation
 Status: open.
 
 - Valideer het D6 responsibility register met Gemeente Almere, Wijkteams Almere, JGZ Almere/GGD Flevoland, PGA/Zorgzaam Flevoland, mentale-gezondheids/wijkgerichte samenwerking en regionale werkagenda-governance.
+- Publieke bronnen zijn uitgeput voor de resterende formele classificatie-, mandaat-, eigenaarschap- en financieringsvragen; deze vragen moeten via stakeholders of lokale documenten worden beantwoord.
 - Leg per sessie rollen, besproken rijen, bevestigingen, correcties, open vragen, gevraagde documenten en follow-up-eigenaar vast in `docs/review/almere_d6_stakeholder_validation_log.md`.
+- Gebruik `docs/review/almere_d6_stakeholder_information_request.md` als eerste uitvraag naar stakeholders.
 - Werk de validatiepack bij met status per rij, veilige en onveilige werkagendaformuleringen, rijen die eventueel naar `settled` kunnen, resterende onzekerheden en bronappendix.
 - Houd de registerstatus conservatief: geen `settled` zonder traceerbare validatie of autoritatieve lokale bron.
 

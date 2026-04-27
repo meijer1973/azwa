@@ -24,6 +24,7 @@ Source register: `data/extracted/municipal/almere_d6_responsibility_register.jso
 Validation artifacts:
 
 - Stakeholder validation log: `docs/review/almere_d6_stakeholder_validation_log.md`.
+- Stakeholder information request: `docs/review/almere_d6_stakeholder_information_request.md`.
 - Decision-needed list: `docs/review/almere_d6_decision_needed.md`.
 - Funding gap table: `docs/review/almere_d6_funding_gap_table.md`.
 
@@ -91,6 +92,8 @@ No stakeholder validation session has been recorded yet. All rows remain in thei
 ## Stakeholder Feedback Summary
 
 No stakeholder feedback has been recorded yet. Use the validation log to add each session before changing register status, owner, executor, funding or safe wording.
+
+Access status: stakeholder validation still needs to be conducted. The repository can supply the question structure and public-source prefill, but it cannot answer non-public/local validation points such as formal D6 classification, internal mandate, component-level budget allocation or safe local work-agenda wording. Use `docs/review/almere_d6_stakeholder_information_request.md` for first-round outreach.
 
 Rows ready to become `settled`: none.
 

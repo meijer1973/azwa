@@ -21,7 +21,7 @@ Gebruik deze roadmap als levend werkdocument. Werk na elke sprint de statusregel
 | 24.6 D6 commit, verify and stabilize | completed | Remediation is gecommit/gepusht; verificatie via `python src/run_pipeline.py --all`, gerichte tests en schema-validatie |
 | 24.7 D6 register evidence audit | completed | Registerrijen gecontroleerd op status, eigenaar, uitvoerder, schaal, financiering, bewijs en open reviewvraag |
 | 24.8 D6 local validation preparation | completed | Interne validatiepack: `docs/review/almere_d6_validation_pack.md` |
-| 25.5 Almere en Flevoland | open | Volgende sprint; wacht op afronding heropende Sprint 25.4 |
+| 25.5 D6 stakeholder validation | open | Stakeholdervalidatie voor D6-register; artifacts in `docs/review/almere_d6_validation_pack.md`, `docs/review/almere_d6_stakeholder_validation_log.md`, `docs/review/almere_d6_decision_needed.md` en `docs/review/almere_d6_funding_gap_table.md` |
 | 25.6 Regionale governance | open |  |
 | 26.1 PDF- en tabelkwaliteit | open |  |
 | 26.2 Claimtekst schoonmaken | open |  |
@@ -199,12 +199,13 @@ Status: open.
 - Registerintegratie aangescherpt met schema, research-agent routing en QC-checks voor bewijs per rij, toegestane besluitstatus, lokale autoriteitsbron bij `settled`, en uitsluiting van `data/site` als registerbewijs.
 - Interne D6-validatiepack toegevoegd in `docs/review/almere_d6_validation_pack.md`; dit is validatiemateriaal en geen finale publicatie of bestuurlijke werkagendatekst.
 
-Sprint 25.5: Almere en Flevoland
+Sprint 25.5: D6 stakeholder validation
 Status: open.
 
-- Zoek bestuurlijke agenda's, raadsinformatie, begrotingsstukken en lokale beleidsdocumenten die AZWA, IZA, GALA, preventie, sociaal domein of gezondheid raken.
-- Voeg alleen bronnen toe die openbaar en herleidbaar zijn.
-- Leg vast waar landelijke doelen nog niet zichtbaar lokaal zijn overgenomen.
+- Valideer het D6 responsibility register met Gemeente Almere, Wijkteams Almere, JGZ Almere/GGD Flevoland, PGA/Zorgzaam Flevoland, mentale-gezondheids/wijkgerichte samenwerking en regionale werkagenda-governance.
+- Leg per sessie rollen, besproken rijen, bevestigingen, correcties, open vragen, gevraagde documenten en follow-up-eigenaar vast in `docs/review/almere_d6_stakeholder_validation_log.md`.
+- Werk de validatiepack bij met status per rij, veilige en onveilige werkagendaformuleringen, rijen die eventueel naar `settled` kunnen, resterende onzekerheden en bronappendix.
+- Houd de registerstatus conservatief: geen `settled` zonder traceerbare validatie of autoritatieve lokale bron.
 
 Sprint 25.6: Regionale governance
 Status: open.

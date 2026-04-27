@@ -1,7 +1,7 @@
 # Almere D6 validation pack
 
 ## Summary
-Current sprint: Sprint 24.8 - Local validation preparation, under the reopened Sprint 25.4 D6 Almere responsibility pack.
+Current sprint: Sprint 25.5 - D6 stakeholder validation, under the reopened Sprint 25.4 D6 Almere responsibility pack.
 
 This pack is for stakeholder validation only. It is not final bestuurlijke text, not a public D6 publication, and not a final Almere work-agenda section. The D6 register currently structures the public-source evidence and the open decision questions, but no row is marked `settled`.
 
@@ -20,6 +20,12 @@ Source register: `data/extracted/municipal/almere_d6_responsibility_register.jso
 | Rows needing human review | 12 |
 | Rows without owner | 4 |
 | Rows with unknown or needs-decision funding | 9 |
+
+Validation artifacts:
+
+- Stakeholder validation log: `docs/review/almere_d6_stakeholder_validation_log.md`.
+- Decision-needed list: `docs/review/almere_d6_decision_needed.md`.
+- Funding gap table: `docs/review/almere_d6_funding_gap_table.md`.
 
 Rows without owner:
 
@@ -62,6 +68,52 @@ The public source base is now strong enough to prepare validation questions. It 
 | Digitale en operationele infrastructuur | `review_needed` | Unknown | Unknown | Programme or project scale, needs validation | Unknown | `data/extracted/d6_governance_collaboration.json` | Which sources confirm RTP Almere, RSO, Monitoring@home and shared information picture for D6? | Gemeente Almere, regional digital/data leads, care partners |
 | Burgerinitiatieven en informele steun | `review_needed` | Unknown | Citizen initiatives and volunteer/informal support candidates | Almere local | Unknown | `data/extracted/d6_governance_collaboration.json` | Which public local sources identify social-base partners, citizen initiatives and informal networks? | Gemeente Almere, De Schoor/VMCA/social-base partners |
 | Financiering en budgetafbakening | `unknown` | Municipality and regional work-agenda governance need component-specific validation | Not settled | Mixed scale, must be split | Unknown | `data/extracted/workagenda_d5_operational_requirements.json` | How are AZWA-D6, D5, SPUK/GALA, PGA, municipal regular budget and Zvw/insurer funding separated per component? | Gemeente Almere finance, mandaatgemeente/regional table, insurer/work-agenda governance |
+
+## Validation Status Per Row
+
+No stakeholder validation session has been recorded yet. All rows remain in their pre-validation status.
+
+| D6 component | Current status | Validation status | Ready to become `settled`? | Safe work-agenda wording | Unsafe wording |
+| --- | --- | --- | --- | --- | --- |
+| Inloopvoorzieningen sociaal en gezond | `review_needed` | Not yet validated | No | Almere must validate which inloop and social-base facilities are relevant to D6. | Almere has already designated specific inloopvoorzieningen as D6 infrastructure. |
+| Wijkteams Almere | `inferred` | Not yet validated | No | Wijkteams Almere are a public-source-backed candidate for local access/social infrastructure validation. | Wijkteams Almere are formal D6 infrastructure. |
+| Stevige Lokale Teams | `inferred` | Not yet validated | No | The SLT council route is relevant to D6 validation and touches JGZ Almere and wijkteams. | The SLT council decision settles D6 ownership or classification. |
+| JGZ Almere | `inferred` | Not yet validated | No | JGZ Almere is a public-source-backed actor to validate for D6/JGZ and SLT-related roles. | JGZ Almere owns the D6 JGZ component. |
+| GGD Flevoland-coordinatie | `inferred` | Not yet validated | No | GGD Flevoland has public-source-backed relevance for coordination, monitoring and prevention validation. | GGD Flevoland is confirmed as D6 owner for Almere. |
+| Gezonde School / mentale gezonde school | `review_needed` | Not yet validated | No | Local implementation and ownership still need validation. | Almere has a settled D6 Gezonde School arrangement. |
+| Kennis & Advies / monitoring / dashboards | `inferred` | Not yet validated | No | GGD Kennis & Advies is a candidate monitoring/data actor requiring D6-specific validation. | GGD Kennis & Advies owns D6 monitoring. |
+| Samen Sterker in de Wijk | `inferred` | Not yet validated | No | Samen Sterker is a public-source-backed candidate for mental-health wijkinfrastructure validation. | Samen Sterker is formal D6 infrastructure. |
+| PGA / Zorgzaam Flevoland-interface | `review_needed` | Not yet validated | No | PGA/Zorgzaam roles must be separated from AZWA/D5/D6 roles before drafting. | PGA/Zorgzaam is the D6 governance vehicle. |
+| Digitale en operationele infrastructuur | `review_needed` | Not yet validated | No | Digital/operational infrastructure needs direct source or stakeholder validation. | RTP/RSO/Monitoring@home are confirmed D6 infrastructure for Almere. |
+| Burgerinitiatieven en informele steun | `review_needed` | Not yet validated | No | Informal support and citizen initiatives need inventory and classification. | Named informal-support actors are D6 owners. |
+| Financiering en budgetafbakening | `unknown` | Not yet validated | No | Funding must be mapped per component to prevent double counting. | D6 funding is already locally allocated. |
+
+## Stakeholder Feedback Summary
+
+No stakeholder feedback has been recorded yet. Use the validation log to add each session before changing register status, owner, executor, funding or safe wording.
+
+Rows ready to become `settled`: none.
+
+Rows remaining `inferred`:
+
+- Wijkteams Almere.
+- Stevige Lokale Teams.
+- JGZ Almere.
+- GGD Flevoland-coordinatie.
+- Kennis & Advies / monitoring / dashboards.
+- Samen Sterker in de Wijk / mentale-gezondheidswijkinfrastructuur.
+
+Rows remaining `review_needed`:
+
+- Inloopvoorzieningen sociaal en gezond.
+- Gezonde School / mentale gezonde school.
+- Positief Gezond Almere / Zorgzaam Flevoland-interface.
+- Digitale en operationele infrastructuur.
+- Burgerinitiatieven en informele steun.
+
+Rows remaining `unknown`:
+
+- Financiering en budgetafbakening.
 
 ## One Local Decision
 

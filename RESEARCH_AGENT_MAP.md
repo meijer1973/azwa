@@ -191,6 +191,9 @@ Machine-readable:
     "docs/data-quality-checklist.md",
     "docs/phase25-sprint25.4-d6-almere-responsibility-pack-plan.md",
     "docs/review/almere_d6_validation_pack.md",
+    "docs/review/almere_d6_stakeholder_validation_log.md",
+    "docs/review/almere_d6_decision_needed.md",
+    "docs/review/almere_d6_funding_gap_table.md",
     "docs/human-review-guidance.md",
     "docs/internal/review-dashboard.html"
   ],
@@ -376,7 +379,10 @@ Theme view models:
   "d6_validation": [
     "data/extracted/municipal/almere_d6_responsibility_register.json",
     "data/extracted/municipal/almere_local_decisions.json",
-    "docs/review/almere_d6_validation_pack.md"
+    "docs/review/almere_d6_validation_pack.md",
+    "docs/review/almere_d6_stakeholder_validation_log.md",
+    "docs/review/almere_d6_decision_needed.md",
+    "docs/review/almere_d6_funding_gap_table.md"
   ]
 }
 ```

@@ -38,7 +38,10 @@ REFERENCE_PAGE_PATH = DIST_DIR / "reference" / "index.html"
 REFERENCE_TOPICS_PAGE_PATH = DIST_DIR / "reference" / "topics" / "index.html"
 SOURCES_PAGE_PATH = DIST_DIR / "sources" / "index.html"
 UPDATES_PAGE_PATH = DIST_DIR / "updates" / "index.html"
-UPDATE_CLAIMS_PAGE_PATH = DIST_DIR / "updates" / "claims" / "upd_vng_financiering_2026_04_23" / "index.html"
+LATEST_UPDATE_ID = "upd_d6_almere_gate_remediation_intake_2026_04_27"
+LATEST_UPDATE_CLAIMS_PAGE_PATH = DIST_DIR / "updates" / "claims" / LATEST_UPDATE_ID / "index.html"
+VNG_FINANCING_UPDATE_ID = "upd_vng_financiering_2026_04_23"
+VNG_FINANCING_UPDATE_CLAIMS_PAGE_PATH = DIST_DIR / "updates" / "claims" / VNG_FINANCING_UPDATE_ID / "index.html"
 SEARCH_INDEX_PATH = DIST_DIR / "search-index.json"
 SITE_BUILD_PATH = DIST_DIR / "site-build.json"
 DEPLOY_WORKFLOW_PATH = REPO_ROOT / ".github" / "workflows" / "deploy-pages.yml"
@@ -152,7 +155,8 @@ class SiteGenerationTests(unittest.TestCase):
             DASHBOARD_PAGE_PATH,
             TIMELINE_PAGE_PATH,
             UPDATES_PAGE_PATH,
-            UPDATE_CLAIMS_PAGE_PATH,
+            LATEST_UPDATE_CLAIMS_PAGE_PATH,
+            VNG_FINANCING_UPDATE_CLAIMS_PAGE_PATH,
             THEMES_PAGE_PATH,
             REFERENCE_PAGE_PATH,
             REFERENCE_TOPICS_PAGE_PATH,
@@ -176,9 +180,9 @@ class SiteGenerationTests(unittest.TestCase):
         self.assertIn('href="almere/index.html#landelijke-basis-zichtbaar"', html)
         self.assertIn('href="almere/index.html#menselijke-duiding"', html)
         self.assertIn('href="timeline/index.html#', html)
-        self.assertIn('href="updates/index.html#upd_vng_financiering_2026_04_23-bronnen"', html)
-        self.assertIn('href="updates/claims/upd_vng_financiering_2026_04_23/index.html"', html)
-        self.assertIn('href="updates/index.html#upd_vng_financiering_2026_04_23-tijdlijn"', html)
+        self.assertIn(f'href="updates/index.html#{LATEST_UPDATE_ID}-bronnen"', html)
+        self.assertIn(f'href="updates/claims/{LATEST_UPDATE_ID}/index.html"', html)
+        self.assertIn(f'href="updates/index.html#{LATEST_UPDATE_ID}-tijdlijn"', html)
         self.assertIn('href="decisions/index.html?theme=', html)
         self.assertIn('href="actions/index.html?theme=', html)
         self.assertIn('href="themes/index.html"', html)
@@ -220,9 +224,9 @@ class SiteGenerationTests(unittest.TestCase):
         updates_html = UPDATES_PAGE_PATH.read_text(encoding="utf-8")
 
         self.assertIn('href="almere/index.html#menselijke-duiding"', home_html)
-        self.assertIn('href="updates/index.html#upd_vng_financiering_2026_04_23-bronnen"', home_html)
-        self.assertIn('href="updates/claims/upd_vng_financiering_2026_04_23/index.html"', home_html)
-        self.assertIn('href="updates/index.html#upd_vng_financiering_2026_04_23-tijdlijn"', home_html)
+        self.assertIn(f'href="updates/index.html#{LATEST_UPDATE_ID}-bronnen"', home_html)
+        self.assertIn(f'href="updates/claims/{LATEST_UPDATE_ID}/index.html"', home_html)
+        self.assertIn(f'href="updates/index.html#{LATEST_UPDATE_ID}-tijdlijn"', home_html)
         self.assertIn('href="decisions/index.html?theme=governance-en-regie"', home_html)
         self.assertIn('href="actions/index.html?theme=governance-en-regie"', home_html)
         self.assertIn('class="card card--link" href="themes/index.html"', home_html)
@@ -238,10 +242,10 @@ class SiteGenerationTests(unittest.TestCase):
         self.assertIn('href="azwa-definitief/index.html"', sources_html)
         self.assertIn('class="card card--link" href="azwa-definitief/index.html"', sources_html)
 
-        self.assertIn('class="summary-box summary-box--link" href="index.html#upd_vng_financiering_2026_04_23-bronnen"', updates_html)
-        self.assertIn('class="summary-box summary-box--link" href="claims/upd_vng_financiering_2026_04_23/index.html"', updates_html)
-        self.assertIn('class="summary-box summary-box--link" href="index.html#upd_vng_financiering_2026_04_23-tijdlijn"', updates_html)
-        self.assertIn('id="upd_vng_financiering_2026_04_23-wijziging-1"', updates_html)
+        self.assertIn(f'class="summary-box summary-box--link" href="index.html#{LATEST_UPDATE_ID}-bronnen"', updates_html)
+        self.assertIn(f'class="summary-box summary-box--link" href="claims/{LATEST_UPDATE_ID}/index.html"', updates_html)
+        self.assertIn(f'class="summary-box summary-box--link" href="index.html#{LATEST_UPDATE_ID}-tijdlijn"', updates_html)
+        self.assertIn(f'id="{LATEST_UPDATE_ID}-wijziging-1"', updates_html)
         self.assertIn("Meer duiding", updates_html)
 
     def test_traceability_pages_link_internally(self) -> None:
@@ -340,26 +344,24 @@ class SiteGenerationTests(unittest.TestCase):
         updates_view = load_json(UPDATES_VIEW_PATH)
         html = UPDATES_PAGE_PATH.read_text(encoding="utf-8")
 
-        self.assertEqual(updates_view["latest_update"]["update_id"], "upd_vng_financiering_2026_04_23")
-        self.assertIn("VNG-financieringsset van 22 april 2026 verwerkt in de dataset", html)
+        self.assertEqual(updates_view["latest_update"]["update_id"], LATEST_UPDATE_ID)
+        self.assertIn("D6 gate-remediation intake Almere verwerkt", html)
         self.assertIn("Kort samengevat", html)
-        self.assertIn("Deze update is gemaakt naar aanleiding van de VNG-publicatie", html)
-        self.assertIn('../sources/vng-webpagina-azwa-financiering/index.html', html)
-        self.assertIn("376", html)
+        self.assertIn("Zes extra publieke bronnen zijn toegevoegd", html)
+        self.assertIn('../sources/slt-geamendeerd-raadsvoorstel/index.html', html)
+        self.assertIn("598", html)
         self.assertIn("Bekijk volledige claimlijst", html)
         self.assertIn("Wat is er veranderd", html)
         self.assertIn("Meer duiding", html)
-        self.assertIn("De financieringsroute voor gemeenten is explicieter geworden", html)
-        self.assertIn("De nieuwe documenten maken beter zichtbaar", html)
+        self.assertIn("Documentwijzer/Notubiz-stukken bij Stevige Lokale Teams zijn toegevoegd", html)
+        self.assertIn("Samenwerkingsprojecten/Samen Sterker in de Wijk", html)
         self.assertIn("Tijdlijn", html)
-        self.assertIn("VWS en VNG-webinar over AZWA-middelen en regionale werkagenda", html)
-        self.assertIn("Landelijke thematafel Medisch-Sociaal en Preventie", html)
-        self.assertIn('../timeline/index.html#tijdlijn-2026-04-23t12-00-webinar-azwa-financiering-23-april-2026', html)
-        self.assertIn('../sources/vng-ledenbrief-azwa-financiering/index.html', html)
+        self.assertIn(f'claims/{LATEST_UPDATE_ID}/index.html', html)
+        self.assertIn(f'id="{VNG_FINANCING_UPDATE_ID}"', html)
         self.assertNotIn("clm__nat_vng_ledenbrief_azwa_financiering_2026_d5_001", html)
 
     def test_update_claims_detail_page_contains_full_claim_list(self) -> None:
-        html = UPDATE_CLAIMS_PAGE_PATH.read_text(encoding="utf-8")
+        html = VNG_FINANCING_UPDATE_CLAIMS_PAGE_PATH.read_text(encoding="utf-8")
         self.assertIn("Hoe deze claimlijst te lezen", html)
         self.assertIn("Waarom sommige claims onvolledige zinnen lijken", html)
         self.assertIn("Alle betrokken claims (78)", html)
@@ -434,8 +436,12 @@ class SiteGenerationTests(unittest.TestCase):
 
     def test_search_index_contains_update_claims_page(self) -> None:
         search_index = load_json(SEARCH_INDEX_PATH)
-        entry = next(item for item in search_index if item["page_type"] == "update_claims")
-        self.assertEqual(entry["url"], "updates/claims/upd_vng_financiering_2026_04_23/index.html")
+        entry = next(
+            item
+            for item in search_index
+            if item["page_type"] == "update_claims"
+            and item["url"] == f"updates/claims/{LATEST_UPDATE_ID}/index.html"
+        )
         self.assertIn("Claimlijst:", entry["title"])
 
 

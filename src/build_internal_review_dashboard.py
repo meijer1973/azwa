@@ -74,6 +74,7 @@ ROUGH_CODE_TO_ISSUE_TYPES = {
     "english_summary": ["tekstprobleem"],
     "bullet_or_heading_fragment": ["extractieprobleem", "tekstprobleem"],
     "fragment_too_short": ["extractieprobleem", "tekstprobleem"],
+    "unverified_extraction_length": ["extractieprobleem", "tekstprobleem"],
     "long_raw_excerpt": ["tekstprobleem"],
 }
 

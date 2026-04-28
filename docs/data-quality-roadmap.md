@@ -22,10 +22,10 @@ Gebruik deze roadmap als levend werkdocument. Werk na elke sprint de statusregel
 | 24.7 D6 register evidence audit | completed | Registerrijen gecontroleerd op status, eigenaar, uitvoerder, schaal, financiering, bewijs en open reviewvraag |
 | 24.8 D6 local validation preparation | completed | Interne validatiepack: `docs/review/almere_d6_validation_pack.md` |
 | 25.5 D6 stakeholder validation handoff | completed | Repository-side handoff compleet; wacht op policy-maker stakeholdervalidatie. Artifacts in `docs/review/almere_d6_public_source_boundary.md`, `docs/review/almere_d6_validation_handoff_summary.md`, `docs/review/almere_d6_validation_pack.md`, `docs/review/almere_d6_stakeholder_validation_log.md`, `docs/review/almere_d6_stakeholder_information_request.md`, `docs/review/almere_d6_decision_needed.md`, `docs/review/almere_d6_funding_gap_table.md` en `docs/review/almere_d6_safe_wording.md` |
-| 25.6 Post-validation register hardening | blocked | Geblokkeerd tot stakeholder-validatierecords beschikbaar zijn of er een expliciet beleidsbesluit is om met open validatiegaten verder te gaan |
-| 26.1 PDF- en tabelkwaliteit | open |  |
-| 26.2 Claimtekst schoonmaken | open |  |
-| 26.3 Locatie- en bewijscontrole | open |  |
+| 25.6 Post-validation register hardening | parked | Geparkeerd tot stakeholder-validatierecords, lokale/interne documenten, finance/controller bevestiging of expliciet beleidsbesluit beschikbaar zijn; blokkeert Fase 26 niet |
+| 26.1 Rough-claim audit hercalibratie | completed | `src/build_data_quality_audit.py`, `tests/test_data_quality_audit.py`, `data/extracted/data_quality_audit.json`, `docs/completed-plans/phase26-sprint26.1-rough-claim-audit-recalibration.md` |
+| 26.2 Deterministische tekstfixes | open | Vervolg op 26.1: mojibake, letterhead, inhoudsopgave-, navigatie- en stemmingsfilters in extractie/claimvorming |
+| 26.3 Sentence-boundary en dedup | open | Vervolg op 26.2: zinsegmentatie, overlap/dedup en regressietests voor rough-claim cleanup |
 | 27.1 Norm | open |  |
 | 27.2 Tijd | open |  |
 | 27.3 Geld | open |  |
@@ -46,7 +46,7 @@ Gebruik deze roadmap als levend werkdocument. Werk na elke sprint de statusregel
 | 31.3 Reviewronde met menselijke beoordelaars | open |  |
 
 ## Huidige sprintplan
-Sprint 25.4 is heropend na inhoudelijke review. De eerste D6-governance- en samenwerkingslaag blijft bruikbaar als publieke prefill, maar de sprint is nog niet klaar zolang de lokale Almere-verantwoordelijkheidsallocatie onvoldoende bronsterk is. De heropende sprint richt zich op een D6 Almere responsibility pack: extra publieke lokale/regionale bronnen beoordelen en opnemen, D6-componenten koppelen aan bestaande voorzieningen, eigenaar, uitvoerder, partners, schaal, financiering, besluitstatus en open reviewpunten, en expliciet scheiden wat feit, interpretatie, voorstel, lokale validatie of later besluit is.
+Fase 26 is de actieve repository-side kwaliteitsfase. Sprint 25.6 blijft geparkeerd omdat post-validatie hardening pas verantwoord is na stakeholdervalidatierecords, lokale/interne documenten, finance/controller bevestiging of een expliciet beleidsbesluit. Dat is geen blocker voor rough-claim cleanup: de repository kan intussen auditdrempels, extractieruis, zinsegmentatie, dedup en reviewbaarheid verbeteren zonder D6-inhoud te overclaimen.
 
 Status op 26 april 2026: Sprint 25.2 is afgerond als publieke bronversterkingssprint. `data/extracted/local_source_strengthening_almere.json` maakt zichtbaar welke lokale bronnen in de formele laag zitten, welke publieke bronnen als assessmentmateriaal zijn beoordeeld, en welke vragen naar later in de workflow gaan omdat de publieke bronbasis is uitgeput of omdat een geschoonde validatiestap nodig is. De geselecteerde Documentwijzer-bijlagen voor Visie Gezondheidsbeleid en Maatschappelijke Agenda zijn eerst naar page-markdown omgezet en daarna opgenomen in `data/raw/manifest.json`. Ook de GGD-tabellenboeken voor volwassenen en ouderen, de GGD-valpreventiepagina Almere en de ZonMw-bron zijn opgenomen in `data/raw/manifest.json`, door inventory/extractie/claims/site-viewmodels verwerkt en blijven reviewmateriaal voordat ze bestuurlijk of public-facing worden gebruikt. Niet-publieke informatie, ontbrekende lokale bevestiging en formele besluitvragen blokkeren deze fase niet; ze worden als gaten of carry-over taken zichtbaar gemaakt voor lokale medewerkers en latere besluitvorming.
 
@@ -57,6 +57,8 @@ Status op 26 april 2026: Sprint 25.4b is geopend in `docs/phase25-sprint25.4-d6-
 Status op 27 april 2026: eerste 25.4b-bronintake uitgevoerd. Zeven publieke bronnen zijn toegevoegd aan `data/raw/manifest.json` en door inventory, structural extraction, document extraction, claims, current interpretation, D6-lagen, QC, site-viewmodels en intern dashboard verwerkt: Stevige Lokale Teams raadspagina, Wijkteams Almere, VNG Richtinggevend Kader, Toezicht Sociaal Domein Basisfuncties, GGD Flevoland Begroting 2026, GGD Flevoland Kennis en Advies, en GGD Flevoland/JGZ Almere profiel. Onderliggende Documentwijzer-stukken bij Stevige Lokale Teams en de Almere Samen Sterker/samenwerkingsprojectenpagina's blijven open intakewerk omdat ze gerichte selectie of hernieuwde publieke download/verificatie vragen.
 
 Status op 27 april 2026: gate-remediation gestart. De sprint gaat niet door naar rapportproductie of bestuurlijke werkagenda-drafting; de toegestane vervolgstap is alleen D6 responsibility implementation/remediation. Zes extra bronnen zijn toegevoegd: vier Documentwijzer/Notubiz-stukken bij Stevige Lokale Teams, de Almere Samenwerkingsprojecten/Samen Sterker-bron en een actuele PGA-homepage. De lokale decision layer bevat nu een source-backed publieke raadbeslissing voor Stevige Lokale Teams, met D6-classificatie nog expliciet op `review_needed`.
+
+Status op 28 april 2026: Sprint 25.6 is geparkeerd als policy-maker/stakeholder-afhankelijkheid en blokkeert repository-side datakwaliteitswerk niet. Fase 26 is gestart met rough-claim cleanup. Sprint 26.1 is afgerond als audit-hercalibratie: de lengte-only rough-code is vervangen door `unverified_extraction_length`, langere excerpts geven reviewers meer context, en regressietests bewaken dat lange maar goed gevormde claims niet alleen door lengte rough worden.
 
 Afgeronde aanpak voor Sprint 25.4a:
 
@@ -221,35 +223,38 @@ Gate-conditie:
 - Sprint 25.6 blijft geblokkeerd tot zulke validatierecords of besluiten beschikbaar zijn.
 
 Sprint 25.6: Post-validation register hardening
-Status: blocked until stakeholder validation records or explicit policy decisions exist.
+Status: parked until stakeholder validation records or explicit policy decisions exist.
 
 - Verwerk alleen gevalideerde stakeholderrecords, lokale/interne documenten, finance/controller bevestigingen of expliciete beleidsbesluiten.
 - Verander geen D6-registerrij naar `settled` zonder traceerbaar bewijs.
 - Drafting of finale werkagendatekst blijft geblokkeerd tot deze hardening is afgerond en opnieuw gegatet.
+- Deze sprint is een externe beleidsvalidatie-afhankelijkheid en blokkeert Fase 26 niet; repository-side datakwaliteitswerk mag doorgaan zolang D6-rijen niet inhoudelijk worden ingevuld zonder validatie.
 
-## Fase 26 - Extractiekwaliteit
-Doel: minder halve zinnen, betere tabellen, betere paginaverwijzingen en betere broncitaten.
+## Fase 26 - Ruwe claim cleanup en extractiekwaliteit
+Doel: het aantal ruwe publicatieclaims terugbrengen door eerst de auditdrempels te kalibreren en daarna deterministische extractie- en claimtekstfixes door te voeren. Deze fase wijzigt niet automatisch beleidsinhoud; zij verbetert detectie, reviewbaarheid en tekstkwaliteit.
 
-Sprint 26.1: PDF- en tabelkwaliteit
+Sprint 26.1: Rough-claim audit hercalibratie
+Status: completed.
+
+- Herkalibreer de audit zodat lengte alleen nog rough wordt wanneer er ook een extractiesignaal is: lowercase fragmentstart buiten whitelist, ontbrekende slotpunctuatie of tabel-/kolommerging.
+- Hernoem de lengtecode van `long_raw_excerpt` naar `unverified_extraction_length`.
+- Vergroot de review-excerpt in de audit naar 400 tekens zodat menselijke reviewers meer context zien.
+- Voeg regressietests toe voor lange maar goed gevormde claims, lowercase fragmenten, tabelmerge-fingerprints en excerptlengte.
+- Laat claimcontent zelf ongemoeid; deze sprint verbetert alleen detectie, auditoutput en dashboard/QC-compatibiliteit.
+
+Sprint 26.2: Deterministische tekstfixes
 Status: open.
 
-- Verbeter extractie van tabellen met middelen, jaartallen, deadlines en rollen.
-- Bewaar tabelrijen als afzonderlijke bewijsobjecten waar dat kan.
-- Controleer sleutelbronnen handmatig op ontbrekende of verkeerd samengevoegde rijen.
+- Pak na de audit-hercalibratie de echte bron van ruwe claims aan: mojibake, letterhead, inhoudsopgavefragmenten, navigatietekst, stemmings-/raadsmetadata en andere deterministische extractieruis.
+- Pas filters toe in de vroegste veilige pipelinefase, bij voorkeur structural extraction of claimvorming, zodat downstream lagen minder ruis ontvangen.
+- Voeg regressietests toe voor bekende probleemvormen en controleer dat inhoudelijke bronzinnen niet worden weggefilterd.
 
-Sprint 26.2: Claimtekst schoonmaken
+Sprint 26.3: Sentence-boundary en dedup
 Status: open.
 
-- Voorkom dat claims bestaan uit afgebroken zinnen, voetteksten, kopregels of navigatietekst.
-- Bewaar ruwe broncitaten, maar genereer aparte leesbare claim-samenvattingen voor sitegebruik.
-- Voeg regressietests toe voor bekende probleemvormen.
-
-Sprint 26.3: Locatie- en bewijscontrole
-Status: open.
-
-- Controleer dat belangrijke claims minimaal pagina, sectie, quote of chunk-id hebben.
-- HTML-bronnen krijgen sectie- en chunkverwijzingen als paginanummers niet bestaan.
-- Claims zonder bruikbare locatie gaan naar review.
+- Verbeter zinsegmentatie zodat claims niet halverwege een zin beginnen of zonder zelfstandig einde worden gepubliceerd.
+- Verminder overlap en dubbele claims die uit dezelfde passage voortkomen.
+- Controleer daarna opnieuw locatie- en bewijsvelden; claims zonder bruikbare locatie blijven reviewmateriaal.
 
 ## Fase 27 - Claimmodel per perspectief
 Doel: van algemene claims naar beleidsmatig bruikbare claims per Norm, Tijd, Geld, Governance, Locality en Execution.
@@ -405,7 +410,7 @@ Een verbetering is pas klaar als:
 - de update een menselijke changelog heeft.
 
 ## Huidige volgende sprint
-De beste eerstvolgende sprint is Sprint 25.4: D6 governance en samenwerking.
+De beste eerstvolgende sprint is Sprint 26.2: Deterministische tekstfixes.
 
 Waarom:
 
@@ -415,12 +420,13 @@ Waarom:
 - Sprint 25.1 heeft de werkagenda-operatielaag opgeleverd;
 - Sprint 25.2 heeft de publieke lokale bronbasis versterkt;
 - Sprint 25.3 heeft de publieke nulmeting en capaciteitsvelden per werkagenda-target gevuld;
-- de volgende stap is D6-rollen, schaalniveaus, samenwerking en validatievragen expliciet maken.
+- Sprint 25.4 en 25.5 hebben D6-verantwoordelijkheden en validatiehandoff voorbereid;
+- Sprint 25.6 is terecht geparkeerd tot beleidsvalidatie beschikbaar is;
+- Sprint 26.1 heeft de rough-claim audit herijkt, waardoor de resterende ruwe claims beter als echte extractie-/tekstproblemen kunnen worden aangepakt.
 
 De concrete deliverables zijn:
 
-- een D6-governance- en samenwerkingslaag;
-- actorrollen per schaalniveau;
-- onderscheid tussen publieke rolfeiten, rolhypotheses, lokale validatievragen en besluitvragen;
-- dashboardweergave van D6-brondekking en open validatievelden;
-- een korte datakwaliteitsnotitie met carry-over naar lokale validatie en besluitvorming.
+- deterministische filters voor mojibake, letterhead, inhoudsopgave-, navigatie- en stemmingsruis;
+- regressietests voor bekende ruisvormen;
+- een nieuwe auditrun die laat zien welke rough-claim categorieen overblijven;
+- een korte datakwaliteitsnotitie met de resterende cleanup-doelen voor Sprint 26.3.

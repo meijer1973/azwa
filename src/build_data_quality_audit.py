@@ -76,8 +76,23 @@ ISSUE_WEIGHTS = {
     "english_summary": 3,
     "bullet_or_heading_fragment": 2,
     "fragment_too_short": 2,
-    "long_raw_excerpt": 1,
+    "unverified_extraction_length": 1,
 }
+
+LOWERCASE_START_WHITELIST = {
+    "e-health",
+    "ehealth",
+    "i-sociaal",
+    "i-standaarden",
+}
+
+TERMINAL_PUNCTUATION = (".", "!", "?", '"', "'", "”", "’", "»")
+
+COLUMN_MERGE_PATTERNS = (
+    re.compile(r"\b\d{4}\s+\d{4}\s+\d{4}\b"),
+    re.compile(r"\b(?:eur|€)\s?\d[\d.,]*\s+\d[\d.,]*\s+\d[\d.,]*", re.IGNORECASE),
+    re.compile(r"\b(?:ja|nee|n\.v\.t\.|onbekend)\s+(?:ja|nee|n\.v\.t\.|onbekend)\b", re.IGNORECASE),
+)
 
 SITE_VIEW_MODEL_GROUPS = {
     "decision_view_models": "decision_detail",
@@ -142,6 +157,37 @@ def looks_english(text: str) -> bool:
     return starts_english or (english_hits >= 4 and english_hits > dutch_hits * 1.5)
 
 
+def first_word(text: str) -> str:
+    match = re.search(r"[^\W\d_][^\W\d_'-]*", text, flags=re.UNICODE)
+    return match.group(0) if match else ""
+
+
+def starts_lowercase_outside_whitelist(text: str) -> bool:
+    word = first_word(text)
+    if not word:
+        return False
+    return word[0].islower() and word.lower() not in LOWERCASE_START_WHITELIST
+
+
+def lacks_terminal_punctuation(text: str) -> bool:
+    return not text.rstrip().endswith(TERMINAL_PUNCTUATION)
+
+
+def has_column_merge_fingerprint(text: str) -> bool:
+    return any(pattern.search(text) for pattern in COLUMN_MERGE_PATTERNS)
+
+
+def has_unverified_extraction_length(text: str) -> bool:
+    stripped = text.strip()
+    if len(stripped) <= 240:
+        return False
+    return (
+        starts_lowercase_outside_whitelist(stripped)
+        or lacks_terminal_punctuation(stripped)
+        or has_column_merge_fingerprint(stripped)
+    )
+
+
 def detect_rough_issues(text: str) -> list[str]:
     issues: list[str] = []
     stripped = text.strip()
@@ -156,13 +202,13 @@ def detect_rough_issues(text: str) -> list[str]:
         issues.append("bullet_or_heading_fragment")
     if len(normalize_words(stripped)) < 8:
         issues.append("fragment_too_short")
-    if len(stripped) > 240:
-        issues.append("long_raw_excerpt")
+    if has_unverified_extraction_length(stripped):
+        issues.append("unverified_extraction_length")
 
     return sorted(set(issues))
 
 
-def claim_excerpt(text: str, limit: int = 220) -> str:
+def claim_excerpt(text: str, limit: int = 400) -> str:
     compact = " ".join(text.split())
     if len(compact) <= limit:
         return compact
@@ -396,7 +442,10 @@ def build_rough_claim_audit(claims: list[dict], claim_perspectives: dict[str, li
             "english_summary": "Claim text is in English or reads like an English summarization rather than Dutch source-grounded text.",
             "bullet_or_heading_fragment": "Claim starts like a bullet, heading, or list fragment.",
             "fragment_too_short": "Claim is too short to stand well on its own for publication.",
-            "long_raw_excerpt": "Claim is long enough to look like a raw extraction block rather than a publication-ready evidence line.",
+            "unverified_extraction_length": (
+                "Claim is long and also has a suspicious extraction signal: lowercase fragment start, "
+                "missing terminal punctuation, or table/column merge fingerprint."
+            ),
         },
         "issue_counts": dict(issue_counts),
         "claim_count": len(rough_claims),

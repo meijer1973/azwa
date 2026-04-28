@@ -49,3 +49,4 @@
 - `docs/completed-plans/phase25-sprint25.2-lokale-bronversterking.md`: internal note for the completed Sprint 25.2 public local-source strengthening sprint, including the rule that non-public gaps carry forward to validation or decision workflows rather than blocking public-source structuring.
 - `docs/completed-plans/phase25-sprint25.3-nulmeting-capaciteit.md`: internal note for the completed Sprint 25.3 public nulmeting/capacity prefill sprint.
 - `docs/completed-plans/phase25-sprint25.4-d6-governance-samenwerking.md`: internal note for the completed Sprint 25.4a D6 governance prefill pass; Sprint 25.4 has since been reopened in `docs/phase25-sprint25.4-d6-almere-responsibility-pack-plan.md`.
+- `docs/completed-plans/phase26-sprint26.1-rough-claim-audit-recalibration.md`: internal note for the completed Sprint 26.1 rough-claim audit recalibration; use it before changing rough-claim issue thresholds or interpreting the `unverified_extraction_length` audit code.

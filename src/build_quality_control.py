@@ -936,7 +936,13 @@ def check_almere_d6_responsibility_register(issues: list[dict], seen: set[str]) 
         SITE_DIR / "reference_topic_view_models" / "d6-regional-coordination.json",
         SITE_DIR / "site_almere_view.json",
     ]
-    rough_markers = ("rough_claim", "bullet_or_heading_fragment", "fragment_too_short", "long_raw_excerpt")
+    rough_markers = (
+        "rough_claim",
+        "bullet_or_heading_fragment",
+        "fragment_too_short",
+        "long_raw_excerpt",
+        "unverified_extraction_length",
+    )
     rough_public_files = []
     for path in d6_site_files:
         if not path.exists():

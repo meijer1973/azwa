@@ -73,6 +73,18 @@ ACCEPTED_NORMATIVE_STATUSES = {
     "contextual",
 }
 
+ACCEPTED_TIME_STATUSES = {
+    "formal_deadline",
+    "expected_moment",
+    "review_or_update_moment",
+    "budget_calendar_moment",
+    "implementation_horizon",
+    "local_planning_context",
+    "source_dated_moment",
+    "publication_or_context_date",
+    "undated_context",
+}
+
 
 def load_json(path: Path) -> dict | list:
     return json.loads(path.read_text(encoding="utf-8"))
@@ -505,10 +517,25 @@ def check_claim_payloads(
             for claim in claims
             if (claim.get("normative_status") or {}).get("status") not in ACCEPTED_NORMATIVE_STATUSES
         ]
+        missing_time_status = [
+            claim
+            for claim in claims
+            if (claim.get("time_status") or {}).get("status") not in ACCEPTED_TIME_STATUSES
+        ]
         lower_authority_norm_claims = [
             claim
             for claim in claims
             if (claim.get("normative_status") or {}).get("status") == "lower_authority_signal"
+        ]
+        expected_time_claims = [
+            claim
+            for claim in claims
+            if (claim.get("time_status") or {}).get("status") == "expected_moment"
+        ]
+        local_planning_time_claims = [
+            claim
+            for claim in claims
+            if (claim.get("time_status") or {}).get("status") == "local_planning_context"
         ]
 
         if missing_norm_status:
@@ -523,6 +550,20 @@ def check_claim_payloads(
                 document_id=document_id,
                 source_paths=[relative_path(claim_path)],
                 related_ids={"sample_claim_ids": [claim["claim_id"] for claim in missing_norm_status[:5]]},
+            )
+
+        if missing_time_status:
+            add_issue(
+                issues,
+                seen,
+                check_id="claim_payload_integrity",
+                severity="blocking",
+                reason_code="missing_or_invalid_time_status",
+                summary=f"{document_id} contains claim(s) without a valid Sprint 27.2 time_status.",
+                recommended_action="Regenerate claims with the time-status classifier before using timeline or planning outputs.",
+                document_id=document_id,
+                source_paths=[relative_path(claim_path)],
+                related_ids={"sample_claim_ids": [claim["claim_id"] for claim in missing_time_status[:5]]},
             )
 
         if contextual_claims:
@@ -571,6 +612,34 @@ def check_claim_payloads(
                 document_id=document_id,
                 source_paths=[relative_path(claim_path)],
                 related_ids={"sample_claim_ids": [claim["claim_id"] for claim in lower_authority_norm_claims[:5]]},
+            )
+
+        if expected_time_claims:
+            add_issue(
+                issues,
+                seen,
+                check_id="claim_payload_integrity",
+                severity="review",
+                reason_code="expected_time_not_deadline",
+                summary=f"{document_id} contains {len(expected_time_claims)} expected or indicative time claim(s).",
+                recommended_action="Keep these as expected moments unless a stronger source establishes a formal deadline.",
+                document_id=document_id,
+                source_paths=[relative_path(claim_path)],
+                related_ids={"sample_claim_ids": [claim["claim_id"] for claim in expected_time_claims[:5]]},
+            )
+
+        if local_planning_time_claims:
+            add_issue(
+                issues,
+                seen,
+                check_id="claim_payload_integrity",
+                severity="review",
+                reason_code="local_planning_context_not_policy_deadline",
+                summary=f"{document_id} contains {len(local_planning_time_claims)} local planning context claim(s).",
+                recommended_action="Use these as local governance context and do not present them as substantive D5/D6 deadlines.",
+                document_id=document_id,
+                source_paths=[relative_path(claim_path)],
+                related_ids={"sample_claim_ids": [claim["claim_id"] for claim in local_planning_time_claims[:5]]},
             )
 
         if noisy_claims:

@@ -8,6 +8,8 @@
     "topic",
     "subtopic",
     "claim_type",
+    "normative_status",
+    "time_status",
     "statement",
     "source_document_id",
     "source_location",
@@ -72,6 +74,60 @@
           "type": "string"
         },
         "needs_attribution": {
+          "type": "boolean"
+        }
+      }
+    },
+    "time_status": {
+      "type": "object",
+      "required": [
+        "status",
+        "label",
+        "date_signal",
+        "source_temporal_anchor",
+        "public_wording_guardrail",
+        "needs_review"
+      ],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "formal_deadline",
+            "expected_moment",
+            "review_or_update_moment",
+            "budget_calendar_moment",
+            "implementation_horizon",
+            "local_planning_context",
+            "source_dated_moment",
+            "publication_or_context_date",
+            "undated_context"
+          ]
+        },
+        "label": {
+          "type": "string"
+        },
+        "date_signal": {
+          "type": "string",
+          "enum": [
+            "exact_date",
+            "quarter",
+            "period",
+            "year",
+            "month_or_cycle",
+            "none"
+          ]
+        },
+        "source_temporal_anchor": {
+          "type": "string",
+          "enum": [
+            "explicit_text_signal",
+            "publication_context"
+          ]
+        },
+        "public_wording_guardrail": {
+          "type": "string"
+        },
+        "needs_review": {
           "type": "boolean"
         }
       }

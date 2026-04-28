@@ -53,3 +53,4 @@
 - `docs/completed-plans/phase26-sprint26.2-deterministic-text-fixes.md`: internal note for the completed Sprint 26.2 deterministic text cleanup; use it before changing structural/document candidate filters for mojibake, letterhead, TOC, Drupal-link or voting-result noise.
 - `docs/completed-plans/phase26-sprint26.3-sentence-boundary-dedup.md`: internal note for the completed Sprint 26.3 sentence-boundary and dedup cleanup; use it before changing the claim sentence gate, dedup pass, or claim-id reference verifier.
 - `docs/completed-plans/phase27-sprint27.1-norm.md`: internal note for the completed Sprint 27.1 norm split; use it before changing `normative_status`, authority wording, or lower-authority norm-signal checks.
+- `docs/completed-plans/phase27-sprint27.2-tijd.md`: internal note for the completed Sprint 27.2 time split; use it before changing `time_status`, timeline wording, deadline/expected-moment guardrails, or local planning context checks.

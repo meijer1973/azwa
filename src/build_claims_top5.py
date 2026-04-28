@@ -48,6 +48,69 @@ NORM_SIGNAL_TERMS = (
 AGREEMENT_SIGNAL_TERMS = ("afgesproken", "spreken af", "partijen spreken", "akkoord", "afspraken")
 EXPECTATION_SIGNAL_TERMS = ("verwacht", "beoogd", "doel", "werkt toe", "streven", "richting", "uiterlijk")
 GUIDANCE_SIGNAL_TERMS = ("handreiking", "format", "toelichting", "faq", "kan", "kunnen", "advies", "praktisch")
+DEADLINE_SIGNAL_TERMS = (
+    "uiterlijk",
+    "deadline",
+    "aanvraagdeadline",
+    "voor 1 juli",
+    "voor 15 november",
+    "voor 31 maart",
+    "15 juli",
+    "aanleveren",
+    "verantwoorden",
+    "gereed moet zijn",
+)
+EXPECTED_TIME_SIGNAL_TERMS = (
+    "verwacht",
+    "naar verwachting",
+    "planning",
+    "in de praktijk",
+    "medio",
+    "voorjaar",
+    "najaar",
+)
+REVIEW_TIME_SIGNAL_TERMS = (
+    "evaluatie",
+    "tussentijds",
+    "mid-term",
+    "mtr",
+    "herijk",
+    "herijken",
+    "actualisatie",
+    "bijstelling",
+)
+BUDGET_TIME_SIGNAL_TERMS = (
+    "begroting",
+    "gemeentefonds",
+    "circulaire",
+    "meicirculaire",
+    "septembercirculaire",
+    "decembercirculaire",
+    "spuk",
+    "subsidie",
+    "middelen",
+    "financiering",
+    "verantwoording",
+)
+LOCAL_PLANNING_SIGNAL_TERMS = (
+    "gemeenteraad",
+    "politieke markt",
+    "vergaderschema",
+    "besluitvorming",
+    "benoeming",
+    "afscheid raad",
+    "verkiezingen",
+)
+IMPLEMENTATION_HORIZON_TERMS = (
+    "2030",
+    "2028",
+    "2029",
+    "dekking",
+    "uitrol",
+    "gereed",
+    "implementatie",
+    "horizon",
+)
 
 
 def normalize_text(text: str) -> str:
@@ -155,6 +218,91 @@ def normative_status_for(
         "has_normative_language": has_norm_signal,
         "public_wording_guardrail": guardrail,
         "needs_attribution": status in {"lower_authority_signal", "guidance"} or source_statement_type == "contextual_relevance",
+    }
+
+
+def time_signal_for(statement: str) -> str:
+    normalized = normalize_text(statement)
+    if re.search(r"\b\d{4}-\d{2}-\d{2}\b", statement):
+        return "exact_date"
+    if re.search(r"\b\d{1,2}\s+(januari|februari|maart|april|mei|juni|juli|augustus|september|oktober|november|december)\s+\d{4}\b", normalized):
+        return "exact_date"
+    if re.search(r"\bq[1-4]\s+\d{4}\b", normalized):
+        return "quarter"
+    if re.search(r"\b(voorjaar|najaar|begin|medio|eind)\s+20\d{2}\b", normalized):
+        return "period"
+    if re.search(r"\b20\d{2}\s*[-/]\s*20\d{2}\b", normalized):
+        return "period"
+    if re.search(r"\b20\d{2}\b", normalized):
+        return "year"
+    if contains_any(normalized, "mei", "september", "december"):
+        return "month_or_cycle"
+    return "none"
+
+
+def time_status_for(
+    statement: str,
+    document_id: str,
+    instrument_type: str,
+    source_statement_type: str,
+    topic: str,
+    claim_type: str,
+) -> dict:
+    normalized = normalize_text(statement)
+    date_signal = time_signal_for(statement)
+    is_time_topic = topic.startswith(("timeline.", "monitoring."))
+    is_local_calendar = document_id == "mun_almere_raad_vergaderschema_2026" or topic == "timeline.local_governance_calendar"
+    has_deadline_signal = contains_any(normalized, *DEADLINE_SIGNAL_TERMS)
+    has_expected_signal = contains_any(normalized, *EXPECTED_TIME_SIGNAL_TERMS)
+    has_review_signal = contains_any(normalized, *REVIEW_TIME_SIGNAL_TERMS)
+    has_budget_signal = contains_any(normalized, *BUDGET_TIME_SIGNAL_TERMS)
+    has_local_planning_signal = contains_any(normalized, *LOCAL_PLANNING_SIGNAL_TERMS)
+    has_implementation_horizon = contains_any(normalized, *IMPLEMENTATION_HORIZON_TERMS)
+
+    if has_deadline_signal:
+        status = "formal_deadline"
+        label = "Formele of harde termijn"
+        guardrail = "Formuleer als deadline alleen wanneer de bronpassage zelf de uiterste termijn draagt."
+    elif has_review_signal or topic.startswith("monitoring."):
+        status = "review_or_update_moment"
+        label = "Evaluatie-, herijkings- of actualisatiemoment"
+        guardrail = "Formuleer als review- of updatecyclus; niet automatisch als lokaal besluitmoment."
+    elif has_budget_signal or topic.startswith("finance."):
+        status = "budget_calendar_moment"
+        label = "Begrotings- of financieringsmoment"
+        guardrail = "Koppel aan de financiele bronroute; maak geen lokale budgetkeuze zonder lokale bron."
+    elif is_local_calendar or has_local_planning_signal:
+        status = "local_planning_context"
+        label = "Lokale planningscontext"
+        guardrail = "Gebruik als lokale bestuurlijke context; niet als landelijke of inhoudelijke D5/D6-deadline."
+    elif has_expected_signal or date_signal in {"quarter", "month_or_cycle", "period"}:
+        status = "expected_moment"
+        label = "Verwacht of indicatief moment"
+        guardrail = "Formuleer als verwacht, indicatief of bronafhankelijk moment; niet als harde deadline."
+    elif has_implementation_horizon and (is_time_topic or claim_type in {"timeline_commitment", "implementation_requirement"}):
+        status = "implementation_horizon"
+        label = "Implementatiehorizon"
+        guardrail = "Formuleer als horizon of fasering; vermijd precieze lokale planning zonder lokale bron."
+    elif date_signal != "none" and is_time_topic:
+        status = "source_dated_moment"
+        label = "Bronverankerd tijdmoment"
+        guardrail = "Gebruik als bronverankerd tijdmoment en controleer de bronpassage voor precieze formulering."
+    elif date_signal != "none":
+        status = "publication_or_context_date"
+        label = "Publicatie- of contextdatum"
+        guardrail = "Gebruik als bron- of contextdatum; niet als beleidsdeadline."
+    else:
+        status = "undated_context"
+        label = "Geen zelfstandig tijdmoment"
+        guardrail = "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron."
+
+    return {
+        "status": status,
+        "label": label,
+        "date_signal": date_signal,
+        "source_temporal_anchor": "explicit_text_signal" if date_signal != "none" or is_time_topic else "publication_context",
+        "public_wording_guardrail": guardrail,
+        "needs_review": status in {"expected_moment", "local_planning_context"} or source_statement_type == "contextual_relevance",
     }
 
 
@@ -806,6 +954,9 @@ def build_claim(
         "normative_status": normative_status_for(
             statement, instrument_type, instrument_profile, source_statement_type, topic
         ),
+        "time_status": time_status_for(
+            statement, document_payload["document_id"], instrument_type, source_statement_type, topic, claim_type
+        ),
         "statement": statement,
         "source_document_id": document_payload["document_id"],
         "source_location": extract_source_location(item),
@@ -987,6 +1138,7 @@ def validate_claims(claims: list[dict], allowed_relation_types: set[str]) -> Non
         "subtopic",
         "claim_type",
         "normative_status",
+        "time_status",
         "statement",
         "source_document_id",
         "source_location",

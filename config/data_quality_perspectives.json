@@ -102,6 +102,44 @@
       "page_type_defaults": [
         "timeline"
       ],
+      "time_status_values": [
+        {
+          "status": "formal_deadline",
+          "meaning": "Formele of harde termijn die expliciet uit de bronpassage volgt."
+        },
+        {
+          "status": "expected_moment",
+          "meaning": "Verwacht, indicatief of bronafhankelijk moment; geen harde deadline."
+        },
+        {
+          "status": "review_or_update_moment",
+          "meaning": "Evaluatie-, herijkings- of actualisatiemoment."
+        },
+        {
+          "status": "budget_calendar_moment",
+          "meaning": "Begrotings-, subsidie-, circulaire- of verantwoordingsmoment."
+        },
+        {
+          "status": "implementation_horizon",
+          "meaning": "Meerjarige horizon of fasering voor uitvoering."
+        },
+        {
+          "status": "local_planning_context",
+          "meaning": "Lokale bestuurlijke planning of vergadercontext; niet automatisch inhoudelijke D5/D6-deadline."
+        },
+        {
+          "status": "source_dated_moment",
+          "meaning": "Bronverankerd tijdmoment zonder extra deadline- of budgetduiding."
+        },
+        {
+          "status": "publication_or_context_date",
+          "meaning": "Publicatie- of contextdatum van een bron."
+        },
+        {
+          "status": "undated_context",
+          "meaning": "Geen zelfstandig tijdmoment."
+        }
+      ],
       "editorial_rule": "Keep dates chronological, distinguish expected moments from formal deadlines, and surface source-backed timing before local interpretation.",
       "exclusion_rule": "Do not invent internal Almere timing if the source base only gives external milestones."
     },

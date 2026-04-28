@@ -878,6 +878,7 @@ def evidence_entries(claim_ids: list[str], claims: dict[str, dict], documents: d
                 "jurisdiction_level": document["jurisdiction_level"],
                 "authority_note": authority_note(claim, document),
                 "normative_status": claim.get("normative_status"),
+                "time_status": claim.get("time_status"),
                 "needs_human_review": claim.get("human_review_status") == "needs_human_review",
             }
         )
@@ -948,6 +949,50 @@ def timeline_temporal_status(sort_key: str, as_of_date: str = TODAY) -> str:
     if sort_key[:4] == as_of_date[:4]:
         return "komende stap"
     return "toekomstige referentie"
+
+
+def timeline_time_status(entry_type: str, date_granularity: str, relation_type: str, temporal_status: str) -> dict:
+    normalized_relation = relation_type.lower()
+    if "deadline" in normalized_relation or "uiterste" in normalized_relation:
+        status = "formal_deadline"
+        label = "Formele of harde termijn"
+        guardrail = "Gebruik als deadline alleen voor zover de bronbasis deze termijn expliciet draagt."
+    elif "evaluatie" in normalized_relation or entry_type == "toekomstig evaluatiemoment":
+        status = "review_or_update_moment"
+        label = "Evaluatie-, herijkings- of actualisatiemoment"
+        guardrail = "Gebruik als review- of bijsturingsmoment, niet automatisch als lokale besluitdatum."
+    elif "financier" in normalized_relation or entry_type == "toekomstige financieringsstap":
+        status = "budget_calendar_moment"
+        label = "Begrotings- of financieringsmoment"
+        guardrail = "Koppel aan de financiele bronroute; maak geen lokale budgetkeuze zonder lokale bron."
+    elif entry_type in {"toekomstige uitvoeringshorizon", "lokale uitvoeringshorizon"}:
+        status = "implementation_horizon"
+        label = "Implementatiehorizon"
+        guardrail = "Gebruik als horizon of fasering; vermijd precieze lokale planning zonder lokale bron."
+    elif "lokaal" in normalized_relation or entry_type == "beleidsuitwerking" and date_granularity == "date":
+        status = "local_planning_context"
+        label = "Lokale planningscontext"
+        guardrail = "Gebruik als lokale bestuurlijke context; niet als landelijke of inhoudelijke D5/D6-deadline."
+    elif temporal_status == "verstreken referentie" and entry_type == "bronmoment":
+        status = "publication_or_context_date"
+        label = "Publicatie- of contextdatum"
+        guardrail = "Gebruik als bron- of contextdatum; niet als beleidsdeadline."
+    elif date_granularity in {"quarter", "month", "period"}:
+        status = "expected_moment"
+        label = "Verwacht of indicatief moment"
+        guardrail = "Formuleer als verwacht, indicatief of bronafhankelijk moment; niet als harde deadline."
+    else:
+        status = "source_dated_moment"
+        label = "Bronverankerd tijdmoment"
+        guardrail = "Gebruik als bronverankerd tijdmoment en controleer de bronpassage voor precieze formulering."
+
+    return {
+        "status": status,
+        "label": label,
+        "date_granularity": date_granularity,
+        "public_wording_guardrail": guardrail,
+        "needs_review": status in {"expected_moment", "local_planning_context"},
+    }
 
 
 def timeline_entry_type_label(value: str) -> str:
@@ -1064,6 +1109,8 @@ def timeline_models_by_ids(models: list[dict], ids: list[str], id_key: str) -> l
 def document_timeline_entry_from_spec(spec: dict, documents: dict[str, dict]) -> dict:
     document = documents[spec["document_id"]]
     entry_id = timeline_anchor(f"{document['publication_date']}-{document['document_id']}")
+    temporal_status = timeline_temporal_status(document["publication_date"])
+    time_status = timeline_time_status("bronmoment", "date", spec["relation_type"], temporal_status)
     return {
         "entry_key": document["document_id"],
         "entry_id": entry_id,
@@ -1071,7 +1118,8 @@ def document_timeline_entry_from_spec(spec: dict, documents: dict[str, dict]) ->
         "date_label": document["publication_date"],
         "date_granularity": "date",
         "sort_key": document["publication_date"],
-        "temporal_status": timeline_temporal_status(document["publication_date"]),
+        "temporal_status": temporal_status,
+        "time_status": time_status,
         "title": document["title"],
         "summary": spec["summary"],
         "linked_domain": spec["linked_domain"],
@@ -1103,6 +1151,8 @@ def reference_timeline_entry_from_spec(
         current_topics.get(topic, {}).get("needs_human_review") for topic in topic_keys
     )
     entry_id = timeline_anchor(f"{spec['sort_key']}-{spec['entry_key']}")
+    temporal_status = timeline_temporal_status(spec["sort_key"])
+    time_status = timeline_time_status(spec["entry_type"], spec["date_granularity"], spec["relation_type"], temporal_status)
     return {
         "entry_key": spec["entry_key"],
         "entry_id": entry_id,
@@ -1110,7 +1160,8 @@ def reference_timeline_entry_from_spec(
         "date_label": spec["date_label"],
         "date_granularity": spec["date_granularity"],
         "sort_key": spec["sort_key"],
-        "temporal_status": timeline_temporal_status(spec["sort_key"]),
+        "temporal_status": temporal_status,
+        "time_status": time_status,
         "title": spec["title"],
         "summary": spec["summary"],
         "linked_domain": spec["linked_domain"],
@@ -1136,6 +1187,8 @@ def external_timeline_entry_from_spec(
     action_models: list[dict],
 ) -> dict:
     entry_id = timeline_anchor(f"{spec['sort_key']}-{spec['entry_key']}")
+    temporal_status = timeline_temporal_status(spec["sort_key"])
+    time_status = timeline_time_status(spec["entry_type"], spec["date_granularity"], spec["relation_type"], temporal_status)
     return {
         "entry_key": spec["entry_key"],
         "entry_id": entry_id,
@@ -1143,7 +1196,8 @@ def external_timeline_entry_from_spec(
         "date_label": spec["date_label"],
         "date_granularity": spec["date_granularity"],
         "sort_key": spec["sort_key"],
-        "temporal_status": timeline_temporal_status(spec["sort_key"]),
+        "temporal_status": temporal_status,
+        "time_status": time_status,
         "title": spec["title"],
         "summary": spec["summary"],
         "linked_domain": spec["linked_domain"],
@@ -1901,6 +1955,8 @@ def build_site_updates_view(documents: dict[str, dict], timeline_register: dict,
                             "topic_label": topic_label(claim["topic"]),
                             "statement": claim["statement"],
                             "validity_status": claim.get("validity_status", ""),
+                            "normative_status": claim.get("normative_status"),
+                            "time_status": claim.get("time_status"),
                             "page_labels": [
                                 str(page)
                                 for page in claim.get("source_location", {}).get("pages", [])

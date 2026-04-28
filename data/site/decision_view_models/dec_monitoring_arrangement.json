@@ -193,6 +193,14 @@
         "public_wording_guardrail": "Gebruik als context of bronaanwijzing, niet als norm.",
         "needs_attribution": false
       },
+      "time_status": {
+        "status": "review_or_update_moment",
+        "label": "Evaluatie-, herijkings- of actualisatiemoment",
+        "date_signal": "none",
+        "source_temporal_anchor": "explicit_text_signal",
+        "public_wording_guardrail": "Formuleer als review- of updatecyclus; niet automatisch als lokaal besluitmoment.",
+        "needs_review": false
+      },
       "needs_human_review": false
     },
     {
@@ -215,6 +223,14 @@
         "has_normative_language": false,
         "public_wording_guardrail": "Formuleer als afspraak tussen akkoordpartijen; niet automatisch als wettelijke plicht voor Almere.",
         "needs_attribution": false
+      },
+      "time_status": {
+        "status": "review_or_update_moment",
+        "label": "Evaluatie-, herijkings- of actualisatiemoment",
+        "date_signal": "none",
+        "source_temporal_anchor": "explicit_text_signal",
+        "public_wording_guardrail": "Formuleer als review- of updatecyclus; niet automatisch als lokaal besluitmoment.",
+        "needs_review": false
       },
       "needs_human_review": false
     },
@@ -239,6 +255,14 @@
         "public_wording_guardrail": "Gebruik als context of bronaanwijzing, niet als norm.",
         "needs_attribution": false
       },
+      "time_status": {
+        "status": "review_or_update_moment",
+        "label": "Evaluatie-, herijkings- of actualisatiemoment",
+        "date_signal": "none",
+        "source_temporal_anchor": "explicit_text_signal",
+        "public_wording_guardrail": "Formuleer als review- of updatecyclus; niet automatisch als lokaal besluitmoment.",
+        "needs_review": false
+      },
       "needs_human_review": false
     },
     {
@@ -261,6 +285,14 @@
         "has_normative_language": false,
         "public_wording_guardrail": "Gebruik als context of bronaanwijzing, niet als norm.",
         "needs_attribution": false
+      },
+      "time_status": {
+        "status": "undated_context",
+        "label": "Geen zelfstandig tijdmoment",
+        "date_signal": "none",
+        "source_temporal_anchor": "publication_context",
+        "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
+        "needs_review": false
       },
       "needs_human_review": false
     },
@@ -285,6 +317,14 @@
         "public_wording_guardrail": "Altijd expliciet toeschrijven aan de bron; niet als harde norm presenteren zonder sterkere bron.",
         "needs_attribution": true
       },
+      "time_status": {
+        "status": "undated_context",
+        "label": "Geen zelfstandig tijdmoment",
+        "date_signal": "none",
+        "source_temporal_anchor": "publication_context",
+        "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
+        "needs_review": false
+      },
       "needs_human_review": false
     },
     {
@@ -307,6 +347,14 @@
         "has_normative_language": true,
         "public_wording_guardrail": "Altijd expliciet toeschrijven aan de bron; niet als harde norm presenteren zonder sterkere bron.",
         "needs_attribution": true
+      },
+      "time_status": {
+        "status": "formal_deadline",
+        "label": "Formele of harde termijn",
+        "date_signal": "year",
+        "source_temporal_anchor": "explicit_text_signal",
+        "public_wording_guardrail": "Formuleer als deadline alleen wanneer de bronpassage zelf de uiterste termijn draagt.",
+        "needs_review": false
       },
       "needs_human_review": false
     }

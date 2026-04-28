@@ -60,14 +60,17 @@ Check:
 - Is the timing formal, expected, or inferred?
 - Is the item chronologically sorted?
 - Does the item belong on the public timeline or only in an internal review queue?
+- Which `time_status` applies: `formal_deadline`, `expected_moment`, `review_or_update_moment`, `budget_calendar_moment`, `implementation_horizon`, `local_planning_context`, `source_dated_moment`, `publication_or_context_date`, or `undated_context`?
 
 Common quality problems:
 - Mixed chronology within a year
 - Expected moments shown as hard deadlines
 - Local internal timing invented from national milestones
+- Local council or agenda dates presented as substantive D5/D6 deadlines
+- Publication dates used as if they were implementation dates
 
 Editorial rule:
-- Keep external source-backed moments separate from internal planning.
+- Keep formal deadlines, expected moments, review/update cycles, budget-calendar moments, implementation horizons and local planning context separate. Use `local_planning_context` for Almere governance calendar items unless a source also establishes a substantive D5/D6 policy deadline.
 
 ### 3. Money
 Check:

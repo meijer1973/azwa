@@ -315,6 +315,38 @@ def build_perspective_coverage(claims: list[dict], perspective_config: dict) -> 
     }, claim_perspectives
 
 
+def build_normative_status_audit(claims: list[dict], claim_perspectives: dict[str, list[str]]) -> dict:
+    status_counts: Counter[str] = Counter()
+    norm_perspective_counts: Counter[str] = Counter()
+    attribution_needed: list[dict] = []
+
+    for claim in claims:
+        status_payload = claim.get("normative_status") or {}
+        status = status_payload.get("status", "missing")
+        status_counts[status] += 1
+        if "norm" in claim_perspectives.get(claim["claim_id"], []):
+            norm_perspective_counts[status] += 1
+        if status_payload.get("needs_attribution") and len(attribution_needed) < 25:
+            attribution_needed.append(
+                {
+                    "claim_id": claim["claim_id"],
+                    "source_document_id": claim["source_document_id"],
+                    "topic": claim["topic"],
+                    "normative_status": status,
+                    "source_authority": status_payload.get("source_authority"),
+                    "statement_excerpt": claim_excerpt(claim["statement"], limit=220),
+                    "public_wording_guardrail": status_payload.get("public_wording_guardrail"),
+                }
+            )
+
+    return {
+        "description": "Sprint 27.1 norm-strength split for binding text, agreement text, expectations, guidance, lower-authority signals, and contextual material.",
+        "status_counts": dict(sorted(status_counts.items())),
+        "norm_perspective_status_counts": dict(sorted(norm_perspective_counts.items())),
+        "attribution_needed_sample": attribution_needed,
+    }
+
+
 def build_view_model_coverage() -> dict:
     coverage: dict[str, dict] = {}
     for directory_name, group_name in SITE_VIEW_MODEL_GROUPS.items():
@@ -550,6 +582,7 @@ def main() -> None:
     review_queue = load_json(REVIEW_QUEUE_PATH)
 
     perspective_coverage, claim_perspectives = build_perspective_coverage(claims, perspective_config)
+    normative_status_audit = build_normative_status_audit(claims, claim_perspectives)
     view_model_coverage = build_view_model_coverage()
     broad_topics = build_broad_topic_bucket_audit(current_interpretation, claims_by_id, claim_perspectives)
     rough_claim_audit, rough_claim_ids = build_rough_claim_audit(claims, claim_perspectives)
@@ -584,6 +617,7 @@ def main() -> None:
             "claims": perspective_coverage,
             "site_view_models": view_model_coverage,
         },
+        "normative_status_audit": normative_status_audit,
         "topic_bucket_audit": broad_topics,
         "rough_publication_claims": rough_claim_audit,
         "site_text_risks": site_text_risks,

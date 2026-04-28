@@ -227,7 +227,7 @@
     <h1>Internal Review Dashboard</h1>
     <p class="subtle">Local-only workbench for current sprint status, cleanup targets, and open data-quality issues.</p>
     <div class="meta-row">
-      <span class="pill accent">Generated: 2026-04-28</span>
+      <span class="pill accent">Generated: 2026-04-29</span>
       <span class="pill">Local file, not dist/</span>
       <span class="pill warn">Internal technical categories</span>
     </div>
@@ -427,7 +427,7 @@
   </main>
 
   <script id="dashboard-data" type="application/json">{
-  "generated_on": "2026-04-28",
+  "generated_on": "2026-04-29",
   "title": "Internal Review Dashboard",
   "subtitle": "Local-only workbench for current sprint status, cleanup targets, and open data-quality issues.",
   "language_note": "Internal developer/agent UI uses English technical framing. Dutch domain labels are kept where they come from the roadmap, corpus, or review taxonomy.",
@@ -524,16 +524,17 @@
     "high_volume_topic_count": 6,
     "rough_claim_count": 119,
     "site_files_with_rough_claims": 11,
-    "open_review_items": 74
+    "open_review_items": 111
   },
   "review_summary": {
     "blocking": 0,
     "warning": 6,
-    "review": 74,
-    "item_count": 80,
+    "review": 111,
+    "item_count": 117,
     "issue_counts_by_reason": {
       "authority_unclear": 30,
       "extraction_noise_detected": 3,
+      "lower_authority_norm_signal": 37,
       "missing_d5_content": 4,
       "missing_d6_content": 2,
       "municipality_relevance_inferred": 30,
@@ -707,6 +708,43 @@
     {
       "item_id": "rvw_007",
       "origin": "review_queue",
+      "title": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 10 lower-authority norm signal claim(s).",
+      "summary": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 10 lower-authority norm signal claim(s).",
+      "issue_types": [
+        "claimprobleem"
+      ],
+      "perspective_ids": [
+        "execution",
+        "locality",
+        "norm"
+      ],
+      "status": "open",
+      "severity": "review",
+      "reason_code": "lower_authority_norm_signal",
+      "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
+      "topic": null,
+      "action": "Attribute these passages explicitly and do not present them as binding without a stronger source.",
+      "source_links": [
+        {
+          "path": "data/extracted/claims/mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak.json",
+          "href": "../../data/extracted/claims/mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak.json"
+        }
+      ],
+      "sample_claim_ids": [
+        "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d5_001",
+        "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d5_002",
+        "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d5_003",
+        "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d6_001",
+        "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d6_002"
+      ],
+      "evidence": {},
+      "locality_scope_ids": [
+        "almere"
+      ]
+    },
+    {
+      "item_id": "rvw_008",
+      "origin": "review_queue",
       "title": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 6 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
       "summary": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 6 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
       "issue_types": [
@@ -742,7 +780,7 @@
       ]
     },
     {
-      "item_id": "rvw_008",
+      "item_id": "rvw_009",
       "origin": "review_queue",
       "title": "mun_almere_2024_2026_visie_gezondheidsbeleid contributes lower-authority claims that still require human review.",
       "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid contributes lower-authority claims that still require human review.",
@@ -780,7 +818,76 @@
       ]
     },
     {
-      "item_id": "rvw_009",
+      "item_id": "rvw_010",
+      "origin": "review_queue",
+      "title": "mun_almere_2024_2026_visie_gezondheidsbeleid contains 1 lower-authority norm signal claim(s).",
+      "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid contains 1 lower-authority norm signal claim(s).",
+      "issue_types": [
+        "claimprobleem"
+      ],
+      "perspective_ids": [
+        "locality"
+      ],
+      "status": "open",
+      "severity": "review",
+      "reason_code": "lower_authority_norm_signal",
+      "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid",
+      "topic": null,
+      "action": "Attribute these passages explicitly and do not present them as binding without a stronger source.",
+      "source_links": [
+        {
+          "path": "data/extracted/claims/mun_almere_2024_2026_visie_gezondheidsbeleid.json",
+          "href": "../../data/extracted/claims/mun_almere_2024_2026_visie_gezondheidsbeleid.json"
+        }
+      ],
+      "sample_claim_ids": [
+        "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_governance_and_finance_002"
+      ],
+      "evidence": {},
+      "locality_scope_ids": [
+        "almere"
+      ]
+    },
+    {
+      "item_id": "rvw_011",
+      "origin": "review_queue",
+      "title": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst contains 6 lower-authority norm signal claim(s).",
+      "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst contains 6 lower-authority norm signal claim(s).",
+      "issue_types": [
+        "claimprobleem"
+      ],
+      "perspective_ids": [
+        "execution",
+        "locality",
+        "money",
+        "norm"
+      ],
+      "status": "open",
+      "severity": "review",
+      "reason_code": "lower_authority_norm_signal",
+      "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
+      "topic": null,
+      "action": "Attribute these passages explicitly and do not present them as binding without a stronger source.",
+      "source_links": [
+        {
+          "path": "data/extracted/claims/mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst.json",
+          "href": "../../data/extracted/claims/mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst.json"
+        }
+      ],
+      "sample_claim_ids": [
+        "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d5_002",
+        "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d5_003",
+        "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d6_001",
+        "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d6_003",
+        "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_governance_and_finance_001"
+      ],
+      "evidence": {},
+      "locality_scope_ids": [
+        "almere"
+      ]
+    },
+    {
+      "item_id": "rvw_012",
       "origin": "review_queue",
       "title": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst contains 4 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
       "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst contains 4 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
@@ -816,7 +923,7 @@
       ]
     },
     {
-      "item_id": "rvw_010",
+      "item_id": "rvw_013",
       "origin": "review_queue",
       "title": "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd contains 1 suspicious claim statement(s) with navigation text, encoding noise, or over-concatenated list content.",
       "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd contains 1 suspicious claim statement(s) with navigation text, encoding noise, or over-concatenated list content.",
@@ -852,7 +959,43 @@
       ]
     },
     {
-      "item_id": "rvw_011",
+      "item_id": "rvw_014",
+      "origin": "review_queue",
+      "title": "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd contains 3 lower-authority norm signal claim(s).",
+      "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd contains 3 lower-authority norm signal claim(s).",
+      "issue_types": [
+        "claimprobleem"
+      ],
+      "perspective_ids": [
+        "execution",
+        "locality",
+        "money",
+        "norm"
+      ],
+      "status": "open",
+      "severity": "review",
+      "reason_code": "lower_authority_norm_signal",
+      "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd",
+      "topic": null,
+      "action": "Attribute these passages explicitly and do not present them as binding without a stronger source.",
+      "source_links": [
+        {
+          "path": "data/extracted/claims/mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd.json",
+          "href": "../../data/extracted/claims/mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd.json"
+        }
+      ],
+      "sample_claim_ids": [
+        "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_d6_001",
+        "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_governance_and_finance_001",
+        "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_governance_and_finance_002"
+      ],
+      "evidence": {},
+      "locality_scope_ids": [
+        "almere"
+      ]
+    },
+    {
+      "item_id": "rvw_015",
       "origin": "review_queue",
       "title": "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd contains 1 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
       "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd contains 1 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
@@ -885,7 +1028,7 @@
       ]
     },
     {
-      "item_id": "rvw_012",
+      "item_id": "rvw_016",
       "origin": "review_queue",
       "title": "mun_almere_2024_2034_maatschappelijke_agenda contributes lower-authority claims that still require human review.",
       "summary": "mun_almere_2024_2034_maatschappelijke_agenda contributes lower-authority claims that still require human review.",
@@ -922,7 +1065,46 @@
       ]
     },
     {
-      "item_id": "rvw_013",
+      "item_id": "rvw_017",
+      "origin": "review_queue",
+      "title": "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst contains 6 lower-authority norm signal claim(s).",
+      "summary": "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst contains 6 lower-authority norm signal claim(s).",
+      "issue_types": [
+        "claimprobleem"
+      ],
+      "perspective_ids": [
+        "execution",
+        "locality",
+        "money",
+        "norm",
+        "time"
+      ],
+      "status": "open",
+      "severity": "review",
+      "reason_code": "lower_authority_norm_signal",
+      "document_id": "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst",
+      "topic": null,
+      "action": "Attribute these passages explicitly and do not present them as binding without a stronger source.",
+      "source_links": [
+        {
+          "path": "data/extracted/claims/mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst.json",
+          "href": "../../data/extracted/claims/mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst.json"
+        }
+      ],
+      "sample_claim_ids": [
+        "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_d6_001",
+        "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_d6_002",
+        "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_d6_003",
+        "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_governance_and_finance_002",
+        "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_timeline_and_status_001"
+      ],
+      "evidence": {},
+      "locality_scope_ids": [
+        "almere"
+      ]
+    },
+    {
+      "item_id": "rvw_018",
       "origin": "review_queue",
       "title": "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst contains 3 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
       "summary": "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst contains 3 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
@@ -957,7 +1139,7 @@
       ]
     },
     {
-      "item_id": "rvw_014",
+      "item_id": "rvw_019",
       "origin": "review_queue",
       "title": "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie contributes lower-authority claims that still require human review.",
       "summary": "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie contributes lower-authority claims that still require human review.",
@@ -996,7 +1178,40 @@
       ]
     },
     {
-      "item_id": "rvw_015",
+      "item_id": "rvw_020",
+      "origin": "review_queue",
+      "title": "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie contains 1 lower-authority norm signal claim(s).",
+      "summary": "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie contains 1 lower-authority norm signal claim(s).",
+      "issue_types": [
+        "claimprobleem"
+      ],
+      "perspective_ids": [
+        "execution",
+        "locality",
+        "norm"
+      ],
+      "status": "open",
+      "severity": "review",
+      "reason_code": "lower_authority_norm_signal",
+      "document_id": "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie",
+      "topic": null,
+      "action": "Attribute these passages explicitly and do not present them as binding without a stronger source.",
+      "source_links": [
+        {
+          "path": "data/extracted/claims/mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie.json",
+          "href": "../../data/extracted/claims/mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie.json"
+        }
+      ],
+      "sample_claim_ids": [
+        "clm__mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie_d6_002"
+      ],
+      "evidence": {},
+      "locality_scope_ids": [
+        "almere"
+      ]
+    },
+    {
+      "item_id": "rvw_021",
       "origin": "review_queue",
       "title": "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie contains 1 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
       "summary": "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie contains 1 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
@@ -1029,7 +1244,73 @@
       ]
     },
     {
-      "item_id": "rvw_016",
+      "item_id": "rvw_022",
+      "origin": "review_queue",
+      "title": "mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd contains 1 lower-authority norm signal claim(s).",
+      "summary": "mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd contains 1 lower-authority norm signal claim(s).",
+      "issue_types": [
+        "claimprobleem"
+      ],
+      "perspective_ids": [
+        "execution",
+        "locality",
+        "time"
+      ],
+      "status": "open",
+      "severity": "review",
+      "reason_code": "lower_authority_norm_signal",
+      "document_id": "mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd",
+      "topic": null,
+      "action": "Attribute these passages explicitly and do not present them as binding without a stronger source.",
+      "source_links": [
+        {
+          "path": "data/extracted/claims/mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd.json",
+          "href": "../../data/extracted/claims/mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd.json"
+        }
+      ],
+      "sample_claim_ids": [
+        "clm__mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd_monitoring_and_evaluation_003"
+      ],
+      "evidence": {},
+      "locality_scope_ids": [
+        "almere"
+      ]
+    },
+    {
+      "item_id": "rvw_023",
+      "origin": "review_queue",
+      "title": "mun_almere_2026_stevige_lokale_teams_begrotingswijziging contains 1 lower-authority norm signal claim(s).",
+      "summary": "mun_almere_2026_stevige_lokale_teams_begrotingswijziging contains 1 lower-authority norm signal claim(s).",
+      "issue_types": [
+        "claimprobleem"
+      ],
+      "perspective_ids": [
+        "execution",
+        "locality",
+        "norm"
+      ],
+      "status": "open",
+      "severity": "review",
+      "reason_code": "lower_authority_norm_signal",
+      "document_id": "mun_almere_2026_stevige_lokale_teams_begrotingswijziging",
+      "topic": null,
+      "action": "Attribute these passages explicitly and do not present them as binding without a stronger source.",
+      "source_links": [
+        {
+          "path": "data/extracted/claims/mun_almere_2026_stevige_lokale_teams_begrotingswijziging.json",
+          "href": "../../data/extracted/claims/mun_almere_2026_stevige_lokale_teams_begrotingswijziging.json"
+        }
+      ],
+      "sample_claim_ids": [
+        "clm__mun_almere_2026_stevige_lokale_teams_begrotingswijziging_d6_001"
+      ],
+      "evidence": {},
+      "locality_scope_ids": [
+        "almere"
+      ]
+    },
+    {
+      "item_id": "rvw_024",
       "origin": "review_queue",
       "title": "mun_almere_2026_stevige_lokale_teams_begrotingswijziging contains 1 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
       "summary": "mun_almere_2026_stevige_lokale_teams_begrotingswijziging contains 1 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
@@ -1062,7 +1343,40 @@
       ]
     },
     {
-      "item_id": "rvw_017",
+      "item_id": "rvw_025",
+      "origin": "review_queue",
+      "title": "mun_almere_2026_stevige_lokale_teams_besluitenlijst contains 1 lower-authority norm signal claim(s).",
+      "summary": "mun_almere_2026_stevige_lokale_teams_besluitenlijst contains 1 lower-authority norm signal claim(s).",
+      "issue_types": [
+        "claimprobleem"
+      ],
+      "perspective_ids": [
+        "execution",
+        "locality",
+        "norm"
+      ],
+      "status": "open",
+      "severity": "review",
+      "reason_code": "lower_authority_norm_signal",
+      "document_id": "mun_almere_2026_stevige_lokale_teams_besluitenlijst",
+      "topic": null,
+      "action": "Attribute these passages explicitly and do not present them as binding without a stronger source.",
+      "source_links": [
+        {
+          "path": "data/extracted/claims/mun_almere_2026_stevige_lokale_teams_besluitenlijst.json",
+          "href": "../../data/extracted/claims/mun_almere_2026_stevige_lokale_teams_besluitenlijst.json"
+        }
+      ],
+      "sample_claim_ids": [
+        "clm__mun_almere_2026_stevige_lokale_teams_besluitenlijst_d6_001"
+      ],
+      "evidence": {},
+      "locality_scope_ids": [
+        "almere"
+      ]
+    },
+    {
+      "item_id": "rvw_026",
       "origin": "review_queue",
       "title": "mun_almere_2026_stevige_lokale_teams_besluitenlijst contains 1 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
       "summary": "mun_almere_2026_stevige_lokale_teams_besluitenlijst contains 1 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
@@ -1095,7 +1409,7 @@
       ]
     },
     {
-      "item_id": "rvw_018",
+      "item_id": "rvw_027",
       "origin": "review_queue",
       "title": "mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel contains 1 suspicious claim statement(s) with navigation text, encoding noise, or over-concatenated list content.",
       "summary": "mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel contains 1 suspicious claim statement(s) with navigation text, encoding noise, or over-concatenated list content.",
@@ -1132,7 +1446,44 @@
       ]
     },
     {
-      "item_id": "rvw_019",
+      "item_id": "rvw_028",
+      "origin": "review_queue",
+      "title": "mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel contains 4 lower-authority norm signal claim(s).",
+      "summary": "mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel contains 4 lower-authority norm signal claim(s).",
+      "issue_types": [
+        "claimprobleem"
+      ],
+      "perspective_ids": [
+        "execution",
+        "locality",
+        "norm",
+        "time"
+      ],
+      "status": "open",
+      "severity": "review",
+      "reason_code": "lower_authority_norm_signal",
+      "document_id": "mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel",
+      "topic": null,
+      "action": "Attribute these passages explicitly and do not present them as binding without a stronger source.",
+      "source_links": [
+        {
+          "path": "data/extracted/claims/mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel.json",
+          "href": "../../data/extracted/claims/mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel.json"
+        }
+      ],
+      "sample_claim_ids": [
+        "clm__mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel_d5_001",
+        "clm__mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel_d6_003",
+        "clm__mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel_governance_and_finance_003",
+        "clm__mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel_monitoring_and_evaluation_003"
+      ],
+      "evidence": {},
+      "locality_scope_ids": [
+        "almere"
+      ]
+    },
+    {
+      "item_id": "rvw_029",
       "origin": "review_queue",
       "title": "mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel contains 2 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
       "summary": "mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel contains 2 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
@@ -1166,7 +1517,7 @@
       ]
     },
     {
-      "item_id": "rvw_020",
+      "item_id": "rvw_030",
       "origin": "review_queue",
       "title": "mun_almere_2026_stevige_lokale_teams_raad contributes lower-authority claims that still require human review.",
       "summary": "mun_almere_2026_stevige_lokale_teams_raad contributes lower-authority claims that still require human review.",
@@ -1205,7 +1556,42 @@
       ]
     },
     {
-      "item_id": "rvw_021",
+      "item_id": "rvw_031",
+      "origin": "review_queue",
+      "title": "mun_almere_2026_stevige_lokale_teams_raad contains 3 lower-authority norm signal claim(s).",
+      "summary": "mun_almere_2026_stevige_lokale_teams_raad contains 3 lower-authority norm signal claim(s).",
+      "issue_types": [
+        "claimprobleem"
+      ],
+      "perspective_ids": [
+        "execution",
+        "locality",
+        "norm"
+      ],
+      "status": "open",
+      "severity": "review",
+      "reason_code": "lower_authority_norm_signal",
+      "document_id": "mun_almere_2026_stevige_lokale_teams_raad",
+      "topic": null,
+      "action": "Attribute these passages explicitly and do not present them as binding without a stronger source.",
+      "source_links": [
+        {
+          "path": "data/extracted/claims/mun_almere_2026_stevige_lokale_teams_raad.json",
+          "href": "../../data/extracted/claims/mun_almere_2026_stevige_lokale_teams_raad.json"
+        }
+      ],
+      "sample_claim_ids": [
+        "clm__mun_almere_2026_stevige_lokale_teams_raad_d6_001",
+        "clm__mun_almere_2026_stevige_lokale_teams_raad_d6_002",
+        "clm__mun_almere_2026_stevige_lokale_teams_raad_d6_003"
+      ],
+      "evidence": {},
+      "locality_scope_ids": [
+        "almere"
+      ]
+    },
+    {
+      "item_id": "rvw_032",
       "origin": "review_queue",
       "title": "mun_almere_2026_stevige_lokale_teams_raad contains 3 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
       "summary": "mun_almere_2026_stevige_lokale_teams_raad contains 3 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
@@ -1240,7 +1626,7 @@
       ]
     },
     {
-      "item_id": "rvw_022",
+      "item_id": "rvw_033",
       "origin": "review_queue",
       "title": "mun_almere_2026_stevige_lokale_teams_raadsvoorstel contains 1 suspicious claim statement(s) with navigation text, encoding noise, or over-concatenated list content.",
       "summary": "mun_almere_2026_stevige_lokale_teams_raadsvoorstel contains 1 suspicious claim statement(s) with navigation text, encoding noise, or over-concatenated list content.",
@@ -1277,7 +1663,44 @@
       ]
     },
     {
-      "item_id": "rvw_023",
+      "item_id": "rvw_034",
+      "origin": "review_queue",
+      "title": "mun_almere_2026_stevige_lokale_teams_raadsvoorstel contains 4 lower-authority norm signal claim(s).",
+      "summary": "mun_almere_2026_stevige_lokale_teams_raadsvoorstel contains 4 lower-authority norm signal claim(s).",
+      "issue_types": [
+        "claimprobleem"
+      ],
+      "perspective_ids": [
+        "execution",
+        "locality",
+        "norm",
+        "time"
+      ],
+      "status": "open",
+      "severity": "review",
+      "reason_code": "lower_authority_norm_signal",
+      "document_id": "mun_almere_2026_stevige_lokale_teams_raadsvoorstel",
+      "topic": null,
+      "action": "Attribute these passages explicitly and do not present them as binding without a stronger source.",
+      "source_links": [
+        {
+          "path": "data/extracted/claims/mun_almere_2026_stevige_lokale_teams_raadsvoorstel.json",
+          "href": "../../data/extracted/claims/mun_almere_2026_stevige_lokale_teams_raadsvoorstel.json"
+        }
+      ],
+      "sample_claim_ids": [
+        "clm__mun_almere_2026_stevige_lokale_teams_raadsvoorstel_d5_001",
+        "clm__mun_almere_2026_stevige_lokale_teams_raadsvoorstel_d6_003",
+        "clm__mun_almere_2026_stevige_lokale_teams_raadsvoorstel_governance_and_finance_003",
+        "clm__mun_almere_2026_stevige_lokale_teams_raadsvoorstel_monitoring_and_evaluation_003"
+      ],
+      "evidence": {},
+      "locality_scope_ids": [
+        "almere"
+      ]
+    },
+    {
+      "item_id": "rvw_035",
       "origin": "review_queue",
       "title": "mun_almere_2026_stevige_lokale_teams_raadsvoorstel contains 2 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
       "summary": "mun_almere_2026_stevige_lokale_teams_raadsvoorstel contains 2 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
@@ -1311,7 +1734,7 @@
       ]
     },
     {
-      "item_id": "rvw_024",
+      "item_id": "rvw_036",
       "origin": "review_queue",
       "title": "mun_almere_begroting_2026_webpagina contributes lower-authority claims that still require human review.",
       "summary": "mun_almere_begroting_2026_webpagina contributes lower-authority claims that still require human review.",
@@ -1348,7 +1771,40 @@
       ]
     },
     {
-      "item_id": "rvw_025",
+      "item_id": "rvw_037",
+      "origin": "review_queue",
+      "title": "mun_almere_begroting_2026_webpagina contains 2 lower-authority norm signal claim(s).",
+      "summary": "mun_almere_begroting_2026_webpagina contains 2 lower-authority norm signal claim(s).",
+      "issue_types": [
+        "claimprobleem"
+      ],
+      "perspective_ids": [
+        "locality",
+        "time"
+      ],
+      "status": "open",
+      "severity": "review",
+      "reason_code": "lower_authority_norm_signal",
+      "document_id": "mun_almere_begroting_2026_webpagina",
+      "topic": null,
+      "action": "Attribute these passages explicitly and do not present them as binding without a stronger source.",
+      "source_links": [
+        {
+          "path": "data/extracted/claims/mun_almere_begroting_2026_webpagina.json",
+          "href": "../../data/extracted/claims/mun_almere_begroting_2026_webpagina.json"
+        }
+      ],
+      "sample_claim_ids": [
+        "clm__mun_almere_begroting_2026_webpagina_governance_and_finance_002",
+        "clm__mun_almere_begroting_2026_webpagina_timeline_and_status_001"
+      ],
+      "evidence": {},
+      "locality_scope_ids": [
+        "almere"
+      ]
+    },
+    {
+      "item_id": "rvw_038",
       "origin": "review_queue",
       "title": "mun_almere_pga_seo_businesscase_2024 contributes lower-authority claims that still require human review.",
       "summary": "mun_almere_pga_seo_businesscase_2024 contributes lower-authority claims that still require human review.",
@@ -1386,7 +1842,44 @@
       ]
     },
     {
-      "item_id": "rvw_026",
+      "item_id": "rvw_039",
+      "origin": "review_queue",
+      "title": "mun_almere_pga_seo_businesscase_2024 contains 10 lower-authority norm signal claim(s).",
+      "summary": "mun_almere_pga_seo_businesscase_2024 contains 10 lower-authority norm signal claim(s).",
+      "issue_types": [
+        "claimprobleem"
+      ],
+      "perspective_ids": [
+        "execution",
+        "locality",
+        "norm"
+      ],
+      "status": "open",
+      "severity": "review",
+      "reason_code": "lower_authority_norm_signal",
+      "document_id": "mun_almere_pga_seo_businesscase_2024",
+      "topic": null,
+      "action": "Attribute these passages explicitly and do not present them as binding without a stronger source.",
+      "source_links": [
+        {
+          "path": "data/extracted/claims/mun_almere_pga_seo_businesscase_2024.json",
+          "href": "../../data/extracted/claims/mun_almere_pga_seo_businesscase_2024.json"
+        }
+      ],
+      "sample_claim_ids": [
+        "clm__mun_almere_pga_seo_businesscase_2024_d5_001",
+        "clm__mun_almere_pga_seo_businesscase_2024_d5_002",
+        "clm__mun_almere_pga_seo_businesscase_2024_d5_003",
+        "clm__mun_almere_pga_seo_businesscase_2024_d6_001",
+        "clm__mun_almere_pga_seo_businesscase_2024_d6_002"
+      ],
+      "evidence": {},
+      "locality_scope_ids": [
+        "almere"
+      ]
+    },
+    {
+      "item_id": "rvw_040",
       "origin": "review_queue",
       "title": "mun_almere_pga_seo_businesscase_2024 contains 6 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
       "summary": "mun_almere_pga_seo_businesscase_2024 contains 6 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
@@ -1423,7 +1916,45 @@
       ]
     },
     {
-      "item_id": "rvw_027",
+      "item_id": "rvw_041",
+      "origin": "review_queue",
+      "title": "mun_almere_pga_transformatieplan contains 6 lower-authority norm signal claim(s).",
+      "summary": "mun_almere_pga_transformatieplan contains 6 lower-authority norm signal claim(s).",
+      "issue_types": [
+        "claimprobleem"
+      ],
+      "perspective_ids": [
+        "execution",
+        "governance",
+        "locality",
+        "norm"
+      ],
+      "status": "open",
+      "severity": "review",
+      "reason_code": "lower_authority_norm_signal",
+      "document_id": "mun_almere_pga_transformatieplan",
+      "topic": null,
+      "action": "Attribute these passages explicitly and do not present them as binding without a stronger source.",
+      "source_links": [
+        {
+          "path": "data/extracted/claims/mun_almere_pga_transformatieplan.json",
+          "href": "../../data/extracted/claims/mun_almere_pga_transformatieplan.json"
+        }
+      ],
+      "sample_claim_ids": [
+        "clm__mun_almere_pga_transformatieplan_d5_001",
+        "clm__mun_almere_pga_transformatieplan_d5_002",
+        "clm__mun_almere_pga_transformatieplan_d6_001",
+        "clm__mun_almere_pga_transformatieplan_d6_002",
+        "clm__mun_almere_pga_transformatieplan_governance_and_finance_001"
+      ],
+      "evidence": {},
+      "locality_scope_ids": [
+        "almere"
+      ]
+    },
+    {
+      "item_id": "rvw_042",
       "origin": "review_queue",
       "title": "mun_almere_pga_transformatieplan contains 5 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
       "summary": "mun_almere_pga_transformatieplan contains 5 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
@@ -1461,7 +1992,7 @@
       ]
     },
     {
-      "item_id": "rvw_028",
+      "item_id": "rvw_043",
       "origin": "review_queue",
       "title": "mun_almere_raad_vergaderschema_2026 contributes lower-authority claims that still require human review.",
       "summary": "mun_almere_raad_vergaderschema_2026 contributes lower-authority claims that still require human review.",
@@ -1497,7 +2028,7 @@
       ]
     },
     {
-      "item_id": "rvw_029",
+      "item_id": "rvw_044",
       "origin": "review_queue",
       "title": "mun_almere_samenwerkingsprojecten contributes lower-authority claims that still require human review.",
       "summary": "mun_almere_samenwerkingsprojecten contributes lower-authority claims that still require human review.",
@@ -1537,7 +2068,42 @@
       ]
     },
     {
-      "item_id": "rvw_030",
+      "item_id": "rvw_045",
+      "origin": "review_queue",
+      "title": "mun_almere_samenwerkingsprojecten contains 2 lower-authority norm signal claim(s).",
+      "summary": "mun_almere_samenwerkingsprojecten contains 2 lower-authority norm signal claim(s).",
+      "issue_types": [
+        "claimprobleem"
+      ],
+      "perspective_ids": [
+        "execution",
+        "governance",
+        "locality",
+        "norm"
+      ],
+      "status": "open",
+      "severity": "review",
+      "reason_code": "lower_authority_norm_signal",
+      "document_id": "mun_almere_samenwerkingsprojecten",
+      "topic": null,
+      "action": "Attribute these passages explicitly and do not present them as binding without a stronger source.",
+      "source_links": [
+        {
+          "path": "data/extracted/claims/mun_almere_samenwerkingsprojecten.json",
+          "href": "../../data/extracted/claims/mun_almere_samenwerkingsprojecten.json"
+        }
+      ],
+      "sample_claim_ids": [
+        "clm__mun_almere_samenwerkingsprojecten_d6_001",
+        "clm__mun_almere_samenwerkingsprojecten_governance_and_finance_001"
+      ],
+      "evidence": {},
+      "locality_scope_ids": [
+        "almere"
+      ]
+    },
+    {
+      "item_id": "rvw_046",
       "origin": "review_queue",
       "title": "mun_almere_samenwerkingsprojecten contains 1 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
       "summary": "mun_almere_samenwerkingsprojecten contains 1 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
@@ -1570,7 +2136,7 @@
       ]
     },
     {
-      "item_id": "rvw_031",
+      "item_id": "rvw_047",
       "origin": "review_queue",
       "title": "mun_almere_sociaal_domein_informatiepagina contributes lower-authority claims that still require human review.",
       "summary": "mun_almere_sociaal_domein_informatiepagina contributes lower-authority claims that still require human review.",
@@ -1609,7 +2175,41 @@
       ]
     },
     {
-      "item_id": "rvw_032",
+      "item_id": "rvw_048",
+      "origin": "review_queue",
+      "title": "mun_almere_sociaal_domein_informatiepagina contains 2 lower-authority norm signal claim(s).",
+      "summary": "mun_almere_sociaal_domein_informatiepagina contains 2 lower-authority norm signal claim(s).",
+      "issue_types": [
+        "claimprobleem"
+      ],
+      "perspective_ids": [
+        "execution",
+        "locality",
+        "norm"
+      ],
+      "status": "open",
+      "severity": "review",
+      "reason_code": "lower_authority_norm_signal",
+      "document_id": "mun_almere_sociaal_domein_informatiepagina",
+      "topic": null,
+      "action": "Attribute these passages explicitly and do not present them as binding without a stronger source.",
+      "source_links": [
+        {
+          "path": "data/extracted/claims/mun_almere_sociaal_domein_informatiepagina.json",
+          "href": "../../data/extracted/claims/mun_almere_sociaal_domein_informatiepagina.json"
+        }
+      ],
+      "sample_claim_ids": [
+        "clm__mun_almere_sociaal_domein_informatiepagina_d6_001",
+        "clm__mun_almere_sociaal_domein_informatiepagina_municipal_translation_003"
+      ],
+      "evidence": {},
+      "locality_scope_ids": [
+        "almere"
+      ]
+    },
+    {
+      "item_id": "rvw_049",
       "origin": "review_queue",
       "title": "mun_almere_sociaal_domein_informatiepagina contains 6 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
       "summary": "mun_almere_sociaal_domein_informatiepagina contains 6 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
@@ -1647,7 +2247,7 @@
       ]
     },
     {
-      "item_id": "rvw_033",
+      "item_id": "rvw_050",
       "origin": "review_queue",
       "title": "mun_almere_sociale_staat_gateway contributes lower-authority claims that still require human review.",
       "summary": "mun_almere_sociale_staat_gateway contributes lower-authority claims that still require human review.",
@@ -1682,7 +2282,7 @@
       ]
     },
     {
-      "item_id": "rvw_034",
+      "item_id": "rvw_051",
       "origin": "review_queue",
       "title": "mun_almere_sociale_staat_gateway contains 3 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
       "summary": "mun_almere_sociale_staat_gateway contains 3 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
@@ -1716,7 +2316,7 @@
       ]
     },
     {
-      "item_id": "rvw_035",
+      "item_id": "rvw_052",
       "origin": "review_queue",
       "title": "mun_almere_wijkteams contributes lower-authority claims that still require human review.",
       "summary": "mun_almere_wijkteams contributes lower-authority claims that still require human review.",
@@ -1751,7 +2351,40 @@
       ]
     },
     {
-      "item_id": "rvw_036",
+      "item_id": "rvw_053",
+      "origin": "review_queue",
+      "title": "mun_almere_wijkteams contains 1 lower-authority norm signal claim(s).",
+      "summary": "mun_almere_wijkteams contains 1 lower-authority norm signal claim(s).",
+      "issue_types": [
+        "claimprobleem"
+      ],
+      "perspective_ids": [
+        "execution",
+        "locality",
+        "norm"
+      ],
+      "status": "open",
+      "severity": "review",
+      "reason_code": "lower_authority_norm_signal",
+      "document_id": "mun_almere_wijkteams",
+      "topic": null,
+      "action": "Attribute these passages explicitly and do not present them as binding without a stronger source.",
+      "source_links": [
+        {
+          "path": "data/extracted/claims/mun_almere_wijkteams.json",
+          "href": "../../data/extracted/claims/mun_almere_wijkteams.json"
+        }
+      ],
+      "sample_claim_ids": [
+        "clm__mun_almere_wijkteams_d6_001"
+      ],
+      "evidence": {},
+      "locality_scope_ids": [
+        "almere"
+      ]
+    },
+    {
+      "item_id": "rvw_054",
       "origin": "review_queue",
       "title": "mun_almere_wijkteams contains 1 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
       "summary": "mun_almere_wijkteams contains 1 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
@@ -1784,7 +2417,7 @@
       ]
     },
     {
-      "item_id": "rvw_037",
+      "item_id": "rvw_055",
       "origin": "review_queue",
       "title": "nat_azwa_2025_aanbiedingsbrief contains 1 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
       "summary": "nat_azwa_2025_aanbiedingsbrief contains 1 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
@@ -1814,7 +2447,7 @@
       "locality_scope_ids": []
     },
     {
-      "item_id": "rvw_038",
+      "item_id": "rvw_056",
       "origin": "review_queue",
       "title": "nat_azwa_format_werkagenda_d5_2026 contributes lower-authority claims that still require human review.",
       "summary": "nat_azwa_format_werkagenda_d5_2026 contributes lower-authority claims that still require human review.",
@@ -1849,7 +2482,43 @@
       "locality_scope_ids": []
     },
     {
-      "item_id": "rvw_039",
+      "item_id": "rvw_057",
+      "origin": "review_queue",
+      "title": "nat_azwa_format_werkagenda_d5_2026 contains 4 lower-authority norm signal claim(s).",
+      "summary": "nat_azwa_format_werkagenda_d5_2026 contains 4 lower-authority norm signal claim(s).",
+      "issue_types": [
+        "claimprobleem"
+      ],
+      "perspective_ids": [
+        "execution",
+        "locality",
+        "norm"
+      ],
+      "status": "open",
+      "severity": "review",
+      "reason_code": "lower_authority_norm_signal",
+      "document_id": "nat_azwa_format_werkagenda_d5_2026",
+      "topic": null,
+      "action": "Attribute these passages explicitly and do not present them as binding without a stronger source.",
+      "source_links": [
+        {
+          "path": "data/extracted/claims/nat_azwa_format_werkagenda_d5_2026.json",
+          "href": "../../data/extracted/claims/nat_azwa_format_werkagenda_d5_2026.json"
+        }
+      ],
+      "sample_claim_ids": [
+        "clm__nat_azwa_format_werkagenda_d5_2026_d5_001",
+        "clm__nat_azwa_format_werkagenda_d5_2026_d5_002",
+        "clm__nat_azwa_format_werkagenda_d5_2026_d5_003",
+        "clm__nat_azwa_format_werkagenda_d5_2026_municipal_translation_002"
+      ],
+      "evidence": {},
+      "locality_scope_ids": [
+        "general_locality"
+      ]
+    },
+    {
+      "item_id": "rvw_058",
       "origin": "review_queue",
       "title": "nat_azwa_opdracht_werkagenda_d5_2026 contains 2 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
       "summary": "nat_azwa_opdracht_werkagenda_d5_2026 contains 2 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
@@ -1880,7 +2549,7 @@
       "locality_scope_ids": []
     },
     {
-      "item_id": "rvw_040",
+      "item_id": "rvw_059",
       "origin": "review_queue",
       "title": "nat_azwa_toelichting_producten_proces_2026 contributes lower-authority claims that still require human review.",
       "summary": "nat_azwa_toelichting_producten_proces_2026 contributes lower-authority claims that still require human review.",
@@ -1916,7 +2585,42 @@
       "locality_scope_ids": []
     },
     {
-      "item_id": "rvw_041",
+      "item_id": "rvw_060",
+      "origin": "review_queue",
+      "title": "nat_azwa_toelichting_producten_proces_2026 contains 8 lower-authority norm signal claim(s).",
+      "summary": "nat_azwa_toelichting_producten_proces_2026 contains 8 lower-authority norm signal claim(s).",
+      "issue_types": [
+        "claimprobleem"
+      ],
+      "perspective_ids": [
+        "execution",
+        "money",
+        "norm"
+      ],
+      "status": "open",
+      "severity": "review",
+      "reason_code": "lower_authority_norm_signal",
+      "document_id": "nat_azwa_toelichting_producten_proces_2026",
+      "topic": null,
+      "action": "Attribute these passages explicitly and do not present them as binding without a stronger source.",
+      "source_links": [
+        {
+          "path": "data/extracted/claims/nat_azwa_toelichting_producten_proces_2026.json",
+          "href": "../../data/extracted/claims/nat_azwa_toelichting_producten_proces_2026.json"
+        }
+      ],
+      "sample_claim_ids": [
+        "clm__nat_azwa_toelichting_producten_proces_2026_d5_001",
+        "clm__nat_azwa_toelichting_producten_proces_2026_d5_002",
+        "clm__nat_azwa_toelichting_producten_proces_2026_d5_003",
+        "clm__nat_azwa_toelichting_producten_proces_2026_d6_001",
+        "clm__nat_azwa_toelichting_producten_proces_2026_governance_and_finance_001"
+      ],
+      "evidence": {},
+      "locality_scope_ids": []
+    },
+    {
+      "item_id": "rvw_061",
       "origin": "review_queue",
       "title": "nat_azwa_toelichting_producten_proces_2026 contains 1 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
       "summary": "nat_azwa_toelichting_producten_proces_2026 contains 1 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
@@ -1946,7 +2650,7 @@
       "locality_scope_ids": []
     },
     {
-      "item_id": "rvw_042",
+      "item_id": "rvw_062",
       "origin": "review_queue",
       "title": "nat_bzk_gemeentefonds_cyclus contributes lower-authority claims that still require human review.",
       "summary": "nat_bzk_gemeentefonds_cyclus contributes lower-authority claims that still require human review.",
@@ -1983,7 +2687,39 @@
       ]
     },
     {
-      "item_id": "rvw_043",
+      "item_id": "rvw_063",
+      "origin": "review_queue",
+      "title": "nat_bzk_gemeentefonds_cyclus contains 1 lower-authority norm signal claim(s).",
+      "summary": "nat_bzk_gemeentefonds_cyclus contains 1 lower-authority norm signal claim(s).",
+      "issue_types": [
+        "claimprobleem"
+      ],
+      "perspective_ids": [
+        "execution",
+        "locality"
+      ],
+      "status": "open",
+      "severity": "review",
+      "reason_code": "lower_authority_norm_signal",
+      "document_id": "nat_bzk_gemeentefonds_cyclus",
+      "topic": null,
+      "action": "Attribute these passages explicitly and do not present them as binding without a stronger source.",
+      "source_links": [
+        {
+          "path": "data/extracted/claims/nat_bzk_gemeentefonds_cyclus.json",
+          "href": "../../data/extracted/claims/nat_bzk_gemeentefonds_cyclus.json"
+        }
+      ],
+      "sample_claim_ids": [
+        "clm__nat_bzk_gemeentefonds_cyclus_municipal_translation_003"
+      ],
+      "evidence": {},
+      "locality_scope_ids": [
+        "general_locality"
+      ]
+    },
+    {
+      "item_id": "rvw_064",
       "origin": "review_queue",
       "title": "nat_dusi_spuk_transformatiemiddelen_2024_2028 contributes lower-authority claims that still require human review.",
       "summary": "nat_dusi_spuk_transformatiemiddelen_2024_2028 contributes lower-authority claims that still require human review.",
@@ -2019,7 +2755,41 @@
       "locality_scope_ids": []
     },
     {
-      "item_id": "rvw_044",
+      "item_id": "rvw_065",
+      "origin": "review_queue",
+      "title": "nat_dusi_spuk_transformatiemiddelen_2024_2028 contains 4 lower-authority norm signal claim(s).",
+      "summary": "nat_dusi_spuk_transformatiemiddelen_2024_2028 contains 4 lower-authority norm signal claim(s).",
+      "issue_types": [
+        "claimprobleem"
+      ],
+      "perspective_ids": [
+        "money",
+        "norm",
+        "time"
+      ],
+      "status": "open",
+      "severity": "review",
+      "reason_code": "lower_authority_norm_signal",
+      "document_id": "nat_dusi_spuk_transformatiemiddelen_2024_2028",
+      "topic": null,
+      "action": "Attribute these passages explicitly and do not present them as binding without a stronger source.",
+      "source_links": [
+        {
+          "path": "data/extracted/claims/nat_dusi_spuk_transformatiemiddelen_2024_2028.json",
+          "href": "../../data/extracted/claims/nat_dusi_spuk_transformatiemiddelen_2024_2028.json"
+        }
+      ],
+      "sample_claim_ids": [
+        "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_governance_and_finance_001",
+        "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_governance_and_finance_002",
+        "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_timeline_and_status_002",
+        "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_timeline_and_status_003"
+      ],
+      "evidence": {},
+      "locality_scope_ids": []
+    },
+    {
+      "item_id": "rvw_066",
       "origin": "review_queue",
       "title": "nat_gala_2023_gezond_en_actief_leven contains 5 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
       "summary": "nat_gala_2023_gezond_en_actief_leven contains 5 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
@@ -2053,7 +2823,7 @@
       "locality_scope_ids": []
     },
     {
-      "item_id": "rvw_045",
+      "item_id": "rvw_067",
       "origin": "review_queue",
       "title": "nat_iza_2022_integraal_zorgakkoord contains 1 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
       "summary": "nat_iza_2022_integraal_zorgakkoord contains 1 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
@@ -2083,7 +2853,7 @@
       "locality_scope_ids": []
     },
     {
-      "item_id": "rvw_046",
+      "item_id": "rvw_068",
       "origin": "review_queue",
       "title": "nat_sociaalwerknl_financiering_iza_azwa_2025 contributes lower-authority claims that still require human review.",
       "summary": "nat_sociaalwerknl_financiering_iza_azwa_2025 contributes lower-authority claims that still require human review.",
@@ -2118,7 +2888,41 @@
       "locality_scope_ids": []
     },
     {
-      "item_id": "rvw_047",
+      "item_id": "rvw_069",
+      "origin": "review_queue",
+      "title": "nat_sociaalwerknl_financiering_iza_azwa_2025 contains 10 lower-authority norm signal claim(s).",
+      "summary": "nat_sociaalwerknl_financiering_iza_azwa_2025 contains 10 lower-authority norm signal claim(s).",
+      "issue_types": [
+        "claimprobleem"
+      ],
+      "perspective_ids": [
+        "execution",
+        "norm"
+      ],
+      "status": "open",
+      "severity": "review",
+      "reason_code": "lower_authority_norm_signal",
+      "document_id": "nat_sociaalwerknl_financiering_iza_azwa_2025",
+      "topic": null,
+      "action": "Attribute these passages explicitly and do not present them as binding without a stronger source.",
+      "source_links": [
+        {
+          "path": "data/extracted/claims/nat_sociaalwerknl_financiering_iza_azwa_2025.json",
+          "href": "../../data/extracted/claims/nat_sociaalwerknl_financiering_iza_azwa_2025.json"
+        }
+      ],
+      "sample_claim_ids": [
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_d5_001",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_d5_002",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_d5_003",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_d6_001",
+        "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_d6_002"
+      ],
+      "evidence": {},
+      "locality_scope_ids": []
+    },
+    {
+      "item_id": "rvw_070",
       "origin": "review_queue",
       "title": "nat_vng_azwa_faq_middelen contributes lower-authority claims that still require human review.",
       "summary": "nat_vng_azwa_faq_middelen contributes lower-authority claims that still require human review.",
@@ -2154,7 +2958,46 @@
       "locality_scope_ids": []
     },
     {
-      "item_id": "rvw_048",
+      "item_id": "rvw_071",
+      "origin": "review_queue",
+      "title": "nat_vng_azwa_faq_middelen contains 5 lower-authority norm signal claim(s).",
+      "summary": "nat_vng_azwa_faq_middelen contains 5 lower-authority norm signal claim(s).",
+      "issue_types": [
+        "claimprobleem"
+      ],
+      "perspective_ids": [
+        "execution",
+        "locality",
+        "money",
+        "norm",
+        "time"
+      ],
+      "status": "open",
+      "severity": "review",
+      "reason_code": "lower_authority_norm_signal",
+      "document_id": "nat_vng_azwa_faq_middelen",
+      "topic": null,
+      "action": "Attribute these passages explicitly and do not present them as binding without a stronger source.",
+      "source_links": [
+        {
+          "path": "data/extracted/claims/nat_vng_azwa_faq_middelen.json",
+          "href": "../../data/extracted/claims/nat_vng_azwa_faq_middelen.json"
+        }
+      ],
+      "sample_claim_ids": [
+        "clm__nat_vng_azwa_faq_middelen_governance_and_finance_001",
+        "clm__nat_vng_azwa_faq_middelen_governance_and_finance_003",
+        "clm__nat_vng_azwa_faq_middelen_timeline_and_status_001",
+        "clm__nat_vng_azwa_faq_middelen_timeline_and_status_002",
+        "clm__nat_vng_azwa_faq_middelen_municipal_translation_002"
+      ],
+      "evidence": {},
+      "locality_scope_ids": [
+        "general_locality"
+      ]
+    },
+    {
+      "item_id": "rvw_072",
       "origin": "review_queue",
       "title": "nat_vng_azwa_faq_middelen contains 5 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
       "summary": "nat_vng_azwa_faq_middelen contains 5 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
@@ -2191,7 +3034,7 @@
       ]
     },
     {
-      "item_id": "rvw_049",
+      "item_id": "rvw_073",
       "origin": "review_queue",
       "title": "nat_vng_azwa_faq_uitvoeringscapaciteit contributes lower-authority claims that still require human review.",
       "summary": "nat_vng_azwa_faq_uitvoeringscapaciteit contributes lower-authority claims that still require human review.",
@@ -2228,7 +3071,41 @@
       ]
     },
     {
-      "item_id": "rvw_050",
+      "item_id": "rvw_074",
+      "origin": "review_queue",
+      "title": "nat_vng_azwa_faq_uitvoeringscapaciteit contains 2 lower-authority norm signal claim(s).",
+      "summary": "nat_vng_azwa_faq_uitvoeringscapaciteit contains 2 lower-authority norm signal claim(s).",
+      "issue_types": [
+        "claimprobleem"
+      ],
+      "perspective_ids": [
+        "execution",
+        "locality",
+        "money"
+      ],
+      "status": "open",
+      "severity": "review",
+      "reason_code": "lower_authority_norm_signal",
+      "document_id": "nat_vng_azwa_faq_uitvoeringscapaciteit",
+      "topic": null,
+      "action": "Attribute these passages explicitly and do not present them as binding without a stronger source.",
+      "source_links": [
+        {
+          "path": "data/extracted/claims/nat_vng_azwa_faq_uitvoeringscapaciteit.json",
+          "href": "../../data/extracted/claims/nat_vng_azwa_faq_uitvoeringscapaciteit.json"
+        }
+      ],
+      "sample_claim_ids": [
+        "clm__nat_vng_azwa_faq_uitvoeringscapaciteit_governance_and_finance_001",
+        "clm__nat_vng_azwa_faq_uitvoeringscapaciteit_municipal_translation_002"
+      ],
+      "evidence": {},
+      "locality_scope_ids": [
+        "general_locality"
+      ]
+    },
+    {
+      "item_id": "rvw_075",
       "origin": "review_queue",
       "title": "nat_vng_azwa_faq_uitvoeringscapaciteit contains 3 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
       "summary": "nat_vng_azwa_faq_uitvoeringscapaciteit contains 3 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
@@ -2262,7 +3139,7 @@
       ]
     },
     {
-      "item_id": "rvw_051",
+      "item_id": "rvw_076",
       "origin": "review_queue",
       "title": "nat_vng_brief_azwa_financiering_webpagina_2026 contributes lower-authority claims that still require human review.",
       "summary": "nat_vng_brief_azwa_financiering_webpagina_2026 contributes lower-authority claims that still require human review.",
@@ -2298,7 +3175,38 @@
       ]
     },
     {
-      "item_id": "rvw_052",
+      "item_id": "rvw_077",
+      "origin": "review_queue",
+      "title": "nat_vng_brief_azwa_financiering_webpagina_2026 contains 2 lower-authority norm signal claim(s).",
+      "summary": "nat_vng_brief_azwa_financiering_webpagina_2026 contains 2 lower-authority norm signal claim(s).",
+      "issue_types": [
+        "claimprobleem"
+      ],
+      "perspective_ids": [
+        "execution",
+        "norm"
+      ],
+      "status": "open",
+      "severity": "review",
+      "reason_code": "lower_authority_norm_signal",
+      "document_id": "nat_vng_brief_azwa_financiering_webpagina_2026",
+      "topic": null,
+      "action": "Attribute these passages explicitly and do not present them as binding without a stronger source.",
+      "source_links": [
+        {
+          "path": "data/extracted/claims/nat_vng_brief_azwa_financiering_webpagina_2026.json",
+          "href": "../../data/extracted/claims/nat_vng_brief_azwa_financiering_webpagina_2026.json"
+        }
+      ],
+      "sample_claim_ids": [
+        "clm__nat_vng_brief_azwa_financiering_webpagina_2026_d5_001",
+        "clm__nat_vng_brief_azwa_financiering_webpagina_2026_governance_and_finance_002"
+      ],
+      "evidence": {},
+      "locality_scope_ids": []
+    },
+    {
+      "item_id": "rvw_078",
       "origin": "review_queue",
       "title": "nat_vng_gezond_en_actief_leven_2026 contributes lower-authority claims that still require human review.",
       "summary": "nat_vng_gezond_en_actief_leven_2026 contributes lower-authority claims that still require human review.",
@@ -2334,7 +3242,42 @@
       "locality_scope_ids": []
     },
     {
-      "item_id": "rvw_053",
+      "item_id": "rvw_079",
+      "origin": "review_queue",
+      "title": "nat_vng_gezond_en_actief_leven_2026 contains 7 lower-authority norm signal claim(s).",
+      "summary": "nat_vng_gezond_en_actief_leven_2026 contains 7 lower-authority norm signal claim(s).",
+      "issue_types": [
+        "claimprobleem"
+      ],
+      "perspective_ids": [
+        "execution",
+        "money",
+        "norm"
+      ],
+      "status": "open",
+      "severity": "review",
+      "reason_code": "lower_authority_norm_signal",
+      "document_id": "nat_vng_gezond_en_actief_leven_2026",
+      "topic": null,
+      "action": "Attribute these passages explicitly and do not present them as binding without a stronger source.",
+      "source_links": [
+        {
+          "path": "data/extracted/claims/nat_vng_gezond_en_actief_leven_2026.json",
+          "href": "../../data/extracted/claims/nat_vng_gezond_en_actief_leven_2026.json"
+        }
+      ],
+      "sample_claim_ids": [
+        "clm__nat_vng_gezond_en_actief_leven_2026_d5_001",
+        "clm__nat_vng_gezond_en_actief_leven_2026_d5_002",
+        "clm__nat_vng_gezond_en_actief_leven_2026_d5_003",
+        "clm__nat_vng_gezond_en_actief_leven_2026_d6_001",
+        "clm__nat_vng_gezond_en_actief_leven_2026_governance_and_finance_001"
+      ],
+      "evidence": {},
+      "locality_scope_ids": []
+    },
+    {
+      "item_id": "rvw_080",
       "origin": "review_queue",
       "title": "nat_vng_ledenbrief_azwa_financiering_2026 contributes lower-authority claims that still require human review.",
       "summary": "nat_vng_ledenbrief_azwa_financiering_2026 contributes lower-authority claims that still require human review.",
@@ -2369,7 +3312,40 @@
       "locality_scope_ids": []
     },
     {
-      "item_id": "rvw_054",
+      "item_id": "rvw_081",
+      "origin": "review_queue",
+      "title": "nat_vng_ledenbrief_azwa_financiering_2026 contains 3 lower-authority norm signal claim(s).",
+      "summary": "nat_vng_ledenbrief_azwa_financiering_2026 contains 3 lower-authority norm signal claim(s).",
+      "issue_types": [
+        "claimprobleem"
+      ],
+      "perspective_ids": [
+        "execution",
+        "norm",
+        "time"
+      ],
+      "status": "open",
+      "severity": "review",
+      "reason_code": "lower_authority_norm_signal",
+      "document_id": "nat_vng_ledenbrief_azwa_financiering_2026",
+      "topic": null,
+      "action": "Attribute these passages explicitly and do not present them as binding without a stronger source.",
+      "source_links": [
+        {
+          "path": "data/extracted/claims/nat_vng_ledenbrief_azwa_financiering_2026.json",
+          "href": "../../data/extracted/claims/nat_vng_ledenbrief_azwa_financiering_2026.json"
+        }
+      ],
+      "sample_claim_ids": [
+        "clm__nat_vng_ledenbrief_azwa_financiering_2026_d5_001",
+        "clm__nat_vng_ledenbrief_azwa_financiering_2026_d5_002",
+        "clm__nat_vng_ledenbrief_azwa_financiering_2026_timeline_and_status_003"
+      ],
+      "evidence": {},
+      "locality_scope_ids": []
+    },
+    {
+      "item_id": "rvw_082",
       "origin": "review_queue",
       "title": "nat_vng_ledenbrief_onderhandelaarsakkoord_azwa_2025 contributes lower-authority claims that still require human review.",
       "summary": "nat_vng_ledenbrief_onderhandelaarsakkoord_azwa_2025 contributes lower-authority claims that still require human review.",
@@ -2405,7 +3381,42 @@
       "locality_scope_ids": []
     },
     {
-      "item_id": "rvw_055",
+      "item_id": "rvw_083",
+      "origin": "review_queue",
+      "title": "nat_vng_ledenbrief_onderhandelaarsakkoord_azwa_2025 contains 9 lower-authority norm signal claim(s).",
+      "summary": "nat_vng_ledenbrief_onderhandelaarsakkoord_azwa_2025 contains 9 lower-authority norm signal claim(s).",
+      "issue_types": [
+        "claimprobleem"
+      ],
+      "perspective_ids": [
+        "execution",
+        "money",
+        "norm"
+      ],
+      "status": "open",
+      "severity": "review",
+      "reason_code": "lower_authority_norm_signal",
+      "document_id": "nat_vng_ledenbrief_onderhandelaarsakkoord_azwa_2025",
+      "topic": null,
+      "action": "Attribute these passages explicitly and do not present them as binding without a stronger source.",
+      "source_links": [
+        {
+          "path": "data/extracted/claims/nat_vng_ledenbrief_onderhandelaarsakkoord_azwa_2025.json",
+          "href": "../../data/extracted/claims/nat_vng_ledenbrief_onderhandelaarsakkoord_azwa_2025.json"
+        }
+      ],
+      "sample_claim_ids": [
+        "clm__nat_vng_ledenbrief_onderhandelaarsakkoord_azwa_2025_d5_001",
+        "clm__nat_vng_ledenbrief_onderhandelaarsakkoord_azwa_2025_d5_002",
+        "clm__nat_vng_ledenbrief_onderhandelaarsakkoord_azwa_2025_d6_001",
+        "clm__nat_vng_ledenbrief_onderhandelaarsakkoord_azwa_2025_d6_002",
+        "clm__nat_vng_ledenbrief_onderhandelaarsakkoord_azwa_2025_governance_and_finance_001"
+      ],
+      "evidence": {},
+      "locality_scope_ids": []
+    },
+    {
+      "item_id": "rvw_084",
       "origin": "review_queue",
       "title": "nat_vng_richtinggevend_kader_toegang_lokale_teams contains 1 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
       "summary": "nat_vng_richtinggevend_kader_toegang_lokale_teams contains 1 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
@@ -2435,7 +3446,7 @@
       "locality_scope_ids": []
     },
     {
-      "item_id": "rvw_056",
+      "item_id": "rvw_085",
       "origin": "review_queue",
       "title": "nat_zorgakkoorden_azwa_programmapagina_2025 contributes lower-authority claims that still require human review.",
       "summary": "nat_zorgakkoorden_azwa_programmapagina_2025 contributes lower-authority claims that still require human review.",
@@ -2470,7 +3481,41 @@
       "locality_scope_ids": []
     },
     {
-      "item_id": "rvw_057",
+      "item_id": "rvw_086",
+      "origin": "review_queue",
+      "title": "nat_zorgakkoorden_azwa_programmapagina_2025 contains 5 lower-authority norm signal claim(s).",
+      "summary": "nat_zorgakkoorden_azwa_programmapagina_2025 contains 5 lower-authority norm signal claim(s).",
+      "issue_types": [
+        "claimprobleem"
+      ],
+      "perspective_ids": [
+        "execution",
+        "norm"
+      ],
+      "status": "open",
+      "severity": "review",
+      "reason_code": "lower_authority_norm_signal",
+      "document_id": "nat_zorgakkoorden_azwa_programmapagina_2025",
+      "topic": null,
+      "action": "Attribute these passages explicitly and do not present them as binding without a stronger source.",
+      "source_links": [
+        {
+          "path": "data/extracted/claims/nat_zorgakkoorden_azwa_programmapagina_2025.json",
+          "href": "../../data/extracted/claims/nat_zorgakkoorden_azwa_programmapagina_2025.json"
+        }
+      ],
+      "sample_claim_ids": [
+        "clm__nat_zorgakkoorden_azwa_programmapagina_2025_d5_001",
+        "clm__nat_zorgakkoorden_azwa_programmapagina_2025_d5_002",
+        "clm__nat_zorgakkoorden_azwa_programmapagina_2025_d6_001",
+        "clm__nat_zorgakkoorden_azwa_programmapagina_2025_d6_002",
+        "clm__nat_zorgakkoorden_azwa_programmapagina_2025_d6_003"
+      ],
+      "evidence": {},
+      "locality_scope_ids": []
+    },
+    {
+      "item_id": "rvw_087",
       "origin": "review_queue",
       "title": "reg_flevoland_2023_regiobeeld contributes lower-authority claims that still require human review.",
       "summary": "reg_flevoland_2023_regiobeeld contributes lower-authority claims that still require human review.",
@@ -2510,7 +3555,47 @@
       ]
     },
     {
-      "item_id": "rvw_058",
+      "item_id": "rvw_088",
+      "origin": "review_queue",
+      "title": "reg_flevoland_2023_regiobeeld contains 5 lower-authority norm signal claim(s).",
+      "summary": "reg_flevoland_2023_regiobeeld contains 5 lower-authority norm signal claim(s).",
+      "issue_types": [
+        "claimprobleem"
+      ],
+      "perspective_ids": [
+        "execution",
+        "governance",
+        "locality",
+        "norm",
+        "time"
+      ],
+      "status": "open",
+      "severity": "review",
+      "reason_code": "lower_authority_norm_signal",
+      "document_id": "reg_flevoland_2023_regiobeeld",
+      "topic": null,
+      "action": "Attribute these passages explicitly and do not present them as binding without a stronger source.",
+      "source_links": [
+        {
+          "path": "data/extracted/claims/reg_flevoland_2023_regiobeeld.json",
+          "href": "../../data/extracted/claims/reg_flevoland_2023_regiobeeld.json"
+        }
+      ],
+      "sample_claim_ids": [
+        "clm__reg_flevoland_2023_regiobeeld_d5_001",
+        "clm__reg_flevoland_2023_regiobeeld_d5_002",
+        "clm__reg_flevoland_2023_regiobeeld_d5_003",
+        "clm__reg_flevoland_2023_regiobeeld_governance_and_finance_002",
+        "clm__reg_flevoland_2023_regiobeeld_monitoring_and_evaluation_001"
+      ],
+      "evidence": {},
+      "locality_scope_ids": [
+        "almere",
+        "iza_azwa_regio_flevoland"
+      ]
+    },
+    {
+      "item_id": "rvw_089",
       "origin": "review_queue",
       "title": "reg_flevoland_2023_regiobeeld contains 3 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
       "summary": "reg_flevoland_2023_regiobeeld contains 3 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
@@ -2546,7 +3631,47 @@
       ]
     },
     {
-      "item_id": "rvw_059",
+      "item_id": "rvw_090",
+      "origin": "review_queue",
+      "title": "reg_flevoland_2023_regioplan_iza contains 5 lower-authority norm signal claim(s).",
+      "summary": "reg_flevoland_2023_regioplan_iza contains 5 lower-authority norm signal claim(s).",
+      "issue_types": [
+        "claimprobleem"
+      ],
+      "perspective_ids": [
+        "execution",
+        "governance",
+        "locality",
+        "money",
+        "norm"
+      ],
+      "status": "open",
+      "severity": "review",
+      "reason_code": "lower_authority_norm_signal",
+      "document_id": "reg_flevoland_2023_regioplan_iza",
+      "topic": null,
+      "action": "Attribute these passages explicitly and do not present them as binding without a stronger source.",
+      "source_links": [
+        {
+          "path": "data/extracted/claims/reg_flevoland_2023_regioplan_iza.json",
+          "href": "../../data/extracted/claims/reg_flevoland_2023_regioplan_iza.json"
+        }
+      ],
+      "sample_claim_ids": [
+        "clm__reg_flevoland_2023_regioplan_iza_d5_001",
+        "clm__reg_flevoland_2023_regioplan_iza_d5_002",
+        "clm__reg_flevoland_2023_regioplan_iza_d6_001",
+        "clm__reg_flevoland_2023_regioplan_iza_governance_and_finance_001",
+        "clm__reg_flevoland_2023_regioplan_iza_governance_and_finance_002"
+      ],
+      "evidence": {},
+      "locality_scope_ids": [
+        "almere",
+        "iza_azwa_regio_flevoland"
+      ]
+    },
+    {
+      "item_id": "rvw_091",
       "origin": "review_queue",
       "title": "reg_flevoland_2023_regioplan_iza contains 3 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
       "summary": "reg_flevoland_2023_regioplan_iza contains 3 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
@@ -2582,7 +3707,7 @@
       ]
     },
     {
-      "item_id": "rvw_060",
+      "item_id": "rvw_092",
       "origin": "review_queue",
       "title": "reg_ggd_flevoland_2024_ouderen_gemeenten contributes lower-authority claims that still require human review.",
       "summary": "reg_ggd_flevoland_2024_ouderen_gemeenten contributes lower-authority claims that still require human review.",
@@ -2621,7 +3746,7 @@
       ]
     },
     {
-      "item_id": "rvw_061",
+      "item_id": "rvw_093",
       "origin": "review_queue",
       "title": "reg_ggd_flevoland_2024_volwassenen_gemeenten contributes lower-authority claims that still require human review.",
       "summary": "reg_ggd_flevoland_2024_volwassenen_gemeenten contributes lower-authority claims that still require human review.",
@@ -2660,7 +3785,45 @@
       ]
     },
     {
-      "item_id": "rvw_062",
+      "item_id": "rvw_094",
+      "origin": "review_queue",
+      "title": "reg_ggd_flevoland_begroting_2026 contains 6 lower-authority norm signal claim(s).",
+      "summary": "reg_ggd_flevoland_begroting_2026 contains 6 lower-authority norm signal claim(s).",
+      "issue_types": [
+        "claimprobleem"
+      ],
+      "perspective_ids": [
+        "execution",
+        "locality",
+        "norm"
+      ],
+      "status": "open",
+      "severity": "review",
+      "reason_code": "lower_authority_norm_signal",
+      "document_id": "reg_ggd_flevoland_begroting_2026",
+      "topic": null,
+      "action": "Attribute these passages explicitly and do not present them as binding without a stronger source.",
+      "source_links": [
+        {
+          "path": "data/extracted/claims/reg_ggd_flevoland_begroting_2026.json",
+          "href": "../../data/extracted/claims/reg_ggd_flevoland_begroting_2026.json"
+        }
+      ],
+      "sample_claim_ids": [
+        "clm__reg_ggd_flevoland_begroting_2026_d5_001",
+        "clm__reg_ggd_flevoland_begroting_2026_d5_002",
+        "clm__reg_ggd_flevoland_begroting_2026_d6_001",
+        "clm__reg_ggd_flevoland_begroting_2026_d6_003",
+        "clm__reg_ggd_flevoland_begroting_2026_governance_and_finance_003"
+      ],
+      "evidence": {},
+      "locality_scope_ids": [
+        "almere",
+        "iza_azwa_regio_flevoland"
+      ]
+    },
+    {
+      "item_id": "rvw_095",
       "origin": "review_queue",
       "title": "reg_ggd_flevoland_begroting_2026 contains 4 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
       "summary": "reg_ggd_flevoland_begroting_2026 contains 4 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
@@ -2697,7 +3860,7 @@
       ]
     },
     {
-      "item_id": "rvw_063",
+      "item_id": "rvw_096",
       "origin": "review_queue",
       "title": "reg_ggd_flevoland_jgz_almere_profile contributes lower-authority claims that still require human review.",
       "summary": "reg_ggd_flevoland_jgz_almere_profile contributes lower-authority claims that still require human review.",
@@ -2737,7 +3900,43 @@
       ]
     },
     {
-      "item_id": "rvw_064",
+      "item_id": "rvw_097",
+      "origin": "review_queue",
+      "title": "reg_ggd_flevoland_jgz_almere_profile contains 3 lower-authority norm signal claim(s).",
+      "summary": "reg_ggd_flevoland_jgz_almere_profile contains 3 lower-authority norm signal claim(s).",
+      "issue_types": [
+        "claimprobleem"
+      ],
+      "perspective_ids": [
+        "execution",
+        "locality",
+        "norm"
+      ],
+      "status": "open",
+      "severity": "review",
+      "reason_code": "lower_authority_norm_signal",
+      "document_id": "reg_ggd_flevoland_jgz_almere_profile",
+      "topic": null,
+      "action": "Attribute these passages explicitly and do not present them as binding without a stronger source.",
+      "source_links": [
+        {
+          "path": "data/extracted/claims/reg_ggd_flevoland_jgz_almere_profile.json",
+          "href": "../../data/extracted/claims/reg_ggd_flevoland_jgz_almere_profile.json"
+        }
+      ],
+      "sample_claim_ids": [
+        "clm__reg_ggd_flevoland_jgz_almere_profile_d6_001",
+        "clm__reg_ggd_flevoland_jgz_almere_profile_d6_002",
+        "clm__reg_ggd_flevoland_jgz_almere_profile_d6_003"
+      ],
+      "evidence": {},
+      "locality_scope_ids": [
+        "almere",
+        "iza_azwa_regio_flevoland"
+      ]
+    },
+    {
+      "item_id": "rvw_098",
       "origin": "review_queue",
       "title": "reg_ggd_flevoland_jgz_almere_profile contains 3 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
       "summary": "reg_ggd_flevoland_jgz_almere_profile contains 3 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
@@ -2773,7 +3972,7 @@
       ]
     },
     {
-      "item_id": "rvw_065",
+      "item_id": "rvw_099",
       "origin": "review_queue",
       "title": "reg_ggd_flevoland_kennis_en_advies contributes lower-authority claims that still require human review.",
       "summary": "reg_ggd_flevoland_kennis_en_advies contributes lower-authority claims that still require human review.",
@@ -2813,7 +4012,43 @@
       ]
     },
     {
-      "item_id": "rvw_066",
+      "item_id": "rvw_100",
+      "origin": "review_queue",
+      "title": "reg_ggd_flevoland_kennis_en_advies contains 3 lower-authority norm signal claim(s).",
+      "summary": "reg_ggd_flevoland_kennis_en_advies contains 3 lower-authority norm signal claim(s).",
+      "issue_types": [
+        "claimprobleem"
+      ],
+      "perspective_ids": [
+        "execution",
+        "locality",
+        "norm"
+      ],
+      "status": "open",
+      "severity": "review",
+      "reason_code": "lower_authority_norm_signal",
+      "document_id": "reg_ggd_flevoland_kennis_en_advies",
+      "topic": null,
+      "action": "Attribute these passages explicitly and do not present them as binding without a stronger source.",
+      "source_links": [
+        {
+          "path": "data/extracted/claims/reg_ggd_flevoland_kennis_en_advies.json",
+          "href": "../../data/extracted/claims/reg_ggd_flevoland_kennis_en_advies.json"
+        }
+      ],
+      "sample_claim_ids": [
+        "clm__reg_ggd_flevoland_kennis_en_advies_d6_001",
+        "clm__reg_ggd_flevoland_kennis_en_advies_d6_002",
+        "clm__reg_ggd_flevoland_kennis_en_advies_d6_003"
+      ],
+      "evidence": {},
+      "locality_scope_ids": [
+        "almere",
+        "iza_azwa_regio_flevoland"
+      ]
+    },
+    {
+      "item_id": "rvw_101",
       "origin": "review_queue",
       "title": "reg_ggd_flevoland_kennis_en_advies contains 3 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
       "summary": "reg_ggd_flevoland_kennis_en_advies contains 3 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
@@ -2849,7 +4084,7 @@
       ]
     },
     {
-      "item_id": "rvw_067",
+      "item_id": "rvw_102",
       "origin": "review_queue",
       "title": "reg_ggd_flevoland_valpreventie_almere contributes lower-authority claims that still require human review.",
       "summary": "reg_ggd_flevoland_valpreventie_almere contributes lower-authority claims that still require human review.",
@@ -2888,7 +4123,43 @@
       ]
     },
     {
-      "item_id": "rvw_068",
+      "item_id": "rvw_103",
+      "origin": "review_queue",
+      "title": "reg_ggd_flevoland_valpreventie_almere contains 3 lower-authority norm signal claim(s).",
+      "summary": "reg_ggd_flevoland_valpreventie_almere contains 3 lower-authority norm signal claim(s).",
+      "issue_types": [
+        "claimprobleem"
+      ],
+      "perspective_ids": [
+        "execution",
+        "locality",
+        "norm"
+      ],
+      "status": "open",
+      "severity": "review",
+      "reason_code": "lower_authority_norm_signal",
+      "document_id": "reg_ggd_flevoland_valpreventie_almere",
+      "topic": null,
+      "action": "Attribute these passages explicitly and do not present them as binding without a stronger source.",
+      "source_links": [
+        {
+          "path": "data/extracted/claims/reg_ggd_flevoland_valpreventie_almere.json",
+          "href": "../../data/extracted/claims/reg_ggd_flevoland_valpreventie_almere.json"
+        }
+      ],
+      "sample_claim_ids": [
+        "clm__reg_ggd_flevoland_valpreventie_almere_d5_001",
+        "clm__reg_ggd_flevoland_valpreventie_almere_d5_002",
+        "clm__reg_ggd_flevoland_valpreventie_almere_d5_003"
+      ],
+      "evidence": {},
+      "locality_scope_ids": [
+        "almere",
+        "iza_azwa_regio_flevoland"
+      ]
+    },
+    {
+      "item_id": "rvw_104",
       "origin": "review_queue",
       "title": "reg_ggd_flevoland_valpreventie_almere contains 3 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
       "summary": "reg_ggd_flevoland_valpreventie_almere contains 3 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
@@ -2924,7 +4195,7 @@
       ]
     },
     {
-      "item_id": "rvw_069",
+      "item_id": "rvw_105",
       "origin": "review_queue",
       "title": "reg_zonmw_doorontwikkeling_zorgzaam_flevoland contributes lower-authority claims that still require human review.",
       "summary": "reg_zonmw_doorontwikkeling_zorgzaam_flevoland contributes lower-authority claims that still require human review.",
@@ -2965,7 +4236,41 @@
       ]
     },
     {
-      "item_id": "rvw_070",
+      "item_id": "rvw_106",
+      "origin": "review_queue",
+      "title": "reg_zonmw_doorontwikkeling_zorgzaam_flevoland contains 1 lower-authority norm signal claim(s).",
+      "summary": "reg_zonmw_doorontwikkeling_zorgzaam_flevoland contains 1 lower-authority norm signal claim(s).",
+      "issue_types": [
+        "claimprobleem"
+      ],
+      "perspective_ids": [
+        "governance",
+        "locality",
+        "norm"
+      ],
+      "status": "open",
+      "severity": "review",
+      "reason_code": "lower_authority_norm_signal",
+      "document_id": "reg_zonmw_doorontwikkeling_zorgzaam_flevoland",
+      "topic": null,
+      "action": "Attribute these passages explicitly and do not present them as binding without a stronger source.",
+      "source_links": [
+        {
+          "path": "data/extracted/claims/reg_zonmw_doorontwikkeling_zorgzaam_flevoland.json",
+          "href": "../../data/extracted/claims/reg_zonmw_doorontwikkeling_zorgzaam_flevoland.json"
+        }
+      ],
+      "sample_claim_ids": [
+        "clm__reg_zonmw_doorontwikkeling_zorgzaam_flevoland_governance_and_finance_001"
+      ],
+      "evidence": {},
+      "locality_scope_ids": [
+        "almere",
+        "iza_azwa_regio_flevoland"
+      ]
+    },
+    {
+      "item_id": "rvw_107",
       "origin": "review_queue",
       "title": "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie has extracted tables, but no document statements currently retain table_id evidence.",
       "summary": "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie has extracted tables, but no document statements currently retain table_id evidence.",
@@ -2998,7 +4303,7 @@
       ]
     },
     {
-      "item_id": "rvw_071",
+      "item_id": "rvw_108",
       "origin": "review_queue",
       "title": "Conflict conflict__d5__basisfunctionaliteiten_onderbouwd for topic d5.basisfunctionaliteiten_onderbouwd still needs human review.",
       "summary": "Conflict conflict__d5__basisfunctionaliteiten_onderbouwd for topic d5.basisfunctionaliteiten_onderbouwd still needs human review.",
@@ -3031,7 +4336,7 @@
       "locality_scope_ids": []
     },
     {
-      "item_id": "rvw_072",
+      "item_id": "rvw_109",
       "origin": "review_queue",
       "title": "Conflict conflict__d5__cross_domain_collaboration for topic d5.cross_domain_collaboration still needs human review.",
       "summary": "Conflict conflict__d5__cross_domain_collaboration for topic d5.cross_domain_collaboration still needs human review.",
@@ -3064,7 +4369,7 @@
       "locality_scope_ids": []
     },
     {
-      "item_id": "rvw_073",
+      "item_id": "rvw_110",
       "origin": "review_queue",
       "title": "Conflict conflict__d5__mentale_gezondheidsnetwerken for topic d5.mentale_gezondheidsnetwerken still needs human review.",
       "summary": "Conflict conflict__d5__mentale_gezondheidsnetwerken for topic d5.mentale_gezondheidsnetwerken still needs human review.",
@@ -3097,7 +4402,7 @@
       "locality_scope_ids": []
     },
     {
-      "item_id": "rvw_074",
+      "item_id": "rvw_111",
       "origin": "review_queue",
       "title": "Conflict conflict__d5__other for topic d5.other still needs human review.",
       "summary": "Conflict conflict__d5__other for topic d5.other still needs human review.",
@@ -3130,7 +4435,7 @@
       "locality_scope_ids": []
     },
     {
-      "item_id": "rvw_075",
+      "item_id": "rvw_112",
       "origin": "review_queue",
       "title": "Conflict conflict__d6__digital_and_operational_infrastructure for topic d6.digital_and_operational_infrastructure still needs human review.",
       "summary": "Conflict conflict__d6__digital_and_operational_infrastructure for topic d6.digital_and_operational_infrastructure still needs human review.",
@@ -3163,7 +4468,7 @@
       "locality_scope_ids": []
     },
     {
-      "item_id": "rvw_076",
+      "item_id": "rvw_113",
       "origin": "review_queue",
       "title": "Conflict conflict__d6__other for topic d6.other still needs human review.",
       "summary": "Conflict conflict__d6__other for topic d6.other still needs human review.",
@@ -3196,7 +4501,7 @@
       "locality_scope_ids": []
     },
     {
-      "item_id": "rvw_077",
+      "item_id": "rvw_114",
       "origin": "review_queue",
       "title": "Conflict conflict__d6__regional_coordination for topic d6.regional_coordination still needs human review.",
       "summary": "Conflict conflict__d6__regional_coordination for topic d6.regional_coordination still needs human review.",
@@ -3229,7 +4534,7 @@
       "locality_scope_ids": []
     },
     {
-      "item_id": "rvw_078",
+      "item_id": "rvw_115",
       "origin": "review_queue",
       "title": "Conflict conflict__finance__local_alignment_goal for topic finance.local_alignment_goal still needs human review.",
       "summary": "Conflict conflict__finance__local_alignment_goal for topic finance.local_alignment_goal still needs human review.",
@@ -3261,7 +4566,7 @@
       "locality_scope_ids": []
     },
     {
-      "item_id": "rvw_079",
+      "item_id": "rvw_116",
       "origin": "review_queue",
       "title": "Conflict conflict__monitoring__mid_term_review for topic monitoring.mid_term_review still needs human review.",
       "summary": "Conflict conflict__monitoring__mid_term_review for topic monitoring.mid_term_review still needs human review.",
@@ -3294,7 +4599,7 @@
       "locality_scope_ids": []
     },
     {
-      "item_id": "rvw_080",
+      "item_id": "rvw_117",
       "origin": "review_queue",
       "title": "Conflict conflict__municipal__role_allocation for topic municipal.role_allocation still needs human review.",
       "summary": "Conflict conflict__municipal__role_allocation for topic municipal.role_allocation still needs human review.",
@@ -7815,17 +9120,17 @@
       "question": "What is required, allowed, expected, or binding?",
       "claim_count": 162,
       "topic_count": 17,
-      "open_item_count": 95,
+      "open_item_count": 127,
       "issue_counts": {
         "bronprobleem": 21,
-        "claimprobleem": 11,
+        "claimprobleem": 43,
         "extractieprobleem": 13,
         "interpretatieprobleem": 57,
         "tekstprobleem": 36
       },
       "origin_counts": {
         "broad_rest_topics": 2,
-        "review_queue": 57,
+        "review_queue": 89,
         "rough_publication_claim": 36
       }
     },
@@ -7835,17 +9140,17 @@
       "question": "Which dates, deadlines, phasing, review moments, and budget-calendar alignments matter?",
       "claim_count": 166,
       "topic_count": 16,
-      "open_item_count": 60,
+      "open_item_count": 69,
       "issue_counts": {
         "bronprobleem": 15,
-        "claimprobleem": 4,
+        "claimprobleem": 13,
         "extractieprobleem": 21,
         "interpretatieprobleem": 20,
         "tekstprobleem": 39
       },
       "origin_counts": {
         "broad_rest_topics": 2,
-        "review_queue": 19,
+        "review_queue": 28,
         "rough_publication_claim": 39
       }
     },
@@ -7855,16 +9160,16 @@
       "question": "Which funding flows, budget windows, allocation conditions, and co-financing logic apply?",
       "claim_count": 46,
       "topic_count": 5,
-      "open_item_count": 25,
+      "open_item_count": 35,
       "issue_counts": {
         "bronprobleem": 6,
-        "claimprobleem": 1,
+        "claimprobleem": 11,
         "extractieprobleem": 7,
         "interpretatieprobleem": 8,
         "tekstprobleem": 17
       },
       "origin_counts": {
-        "review_queue": 8,
+        "review_queue": 18,
         "rough_publication_claim": 17
       }
     },
@@ -7874,16 +9179,16 @@
       "question": "Who decides, who coordinates, who owns, and who must approve?",
       "claim_count": 7,
       "topic_count": 4,
-      "open_item_count": 8,
+      "open_item_count": 13,
       "issue_counts": {
         "bronprobleem": 4,
-        "claimprobleem": 1,
+        "claimprobleem": 6,
         "interpretatieprobleem": 5,
         "tekstprobleem": 3
       },
       "origin_counts": {
         "regional_role_review": 1,
-        "review_queue": 4,
+        "review_queue": 9,
         "rough_publication_claim": 3
       }
     },
@@ -7893,10 +9198,10 @@
       "question": "What matters specifically for Almere or Flevoland?",
       "claim_count": 324,
       "topic_count": 36,
-      "open_item_count": 123,
+      "open_item_count": 152,
       "issue_counts": {
         "bronprobleem": 22,
-        "claimprobleem": 9,
+        "claimprobleem": 38,
         "extractieprobleem": 37,
         "interpretatieprobleem": 52,
         "tekstprobleem": 68
@@ -7904,7 +9209,7 @@
       "origin_counts": {
         "broad_rest_topics": 5,
         "regional_role_review": 1,
-        "review_queue": 49,
+        "review_queue": 78,
         "rough_publication_claim": 68
       }
     },
@@ -7914,10 +9219,10 @@
       "question": "What must policymakers actually organize, prepare, or sequence?",
       "claim_count": 346,
       "topic_count": 27,
-      "open_item_count": 137,
+      "open_item_count": 170,
       "issue_counts": {
         "bronprobleem": 27,
-        "claimprobleem": 14,
+        "claimprobleem": 47,
         "extractieprobleem": 26,
         "interpretatieprobleem": 69,
         "tekstprobleem": 66
@@ -7925,7 +9230,7 @@
       "origin_counts": {
         "broad_rest_topics": 3,
         "regional_role_review": 1,
-        "review_queue": 67,
+        "review_queue": 100,
         "rough_publication_claim": 66
       }
     }
@@ -7967,20 +9272,20 @@
     {
       "issue_type": "claimprobleem",
       "description": "Claim grouping, conflict, topic mapping, or claim structure needs review.",
-      "open_item_count": 32,
+      "open_item_count": 69,
       "origin_counts": {
         "broad_rest_topics": 5,
         "high_volume_topics": 6,
-        "review_queue": 20,
+        "review_queue": 57,
         "topic_mapping_gap": 1
       },
       "perspective_counts": {
-        "execution": 14,
-        "governance": 1,
-        "locality": 9,
-        "money": 1,
-        "norm": 11,
-        "time": 4
+        "execution": 47,
+        "governance": 6,
+        "locality": 38,
+        "money": 11,
+        "norm": 43,
+        "time": 13
       }
     },
     {
@@ -8025,10 +9330,10 @@
       "scope_id": "almere",
       "label": "Almere",
       "description": "Items grounded in Almere municipal sources, Almere-specific documents, or Almere-specific review prompts.",
-      "open_item_count": 124,
+      "open_item_count": 149,
       "issue_counts": {
         "bronprobleem": 18,
-        "claimprobleem": 15,
+        "claimprobleem": 40,
         "extractieprobleem": 43,
         "interpretatieprobleem": 45,
         "tekstprobleem": 69
@@ -8036,7 +9341,7 @@
       "origin_counts": {
         "broad_rest_topics": 3,
         "high_volume_topics": 2,
-        "review_queue": 50,
+        "review_queue": 75,
         "rough_publication_claim": 58,
         "site_text_risk": 11
       }
@@ -8045,10 +9350,10 @@
       "scope_id": "iza_azwa_regio_flevoland",
       "label": "IZA/AZWA-regio Flevoland",
       "description": "Items grounded in the Flevoland IZA/AZWA regional route or the regional role/split guardrail.",
-      "open_item_count": 48,
+      "open_item_count": 55,
       "issue_counts": {
         "bronprobleem": 8,
-        "claimprobleem": 4,
+        "claimprobleem": 11,
         "extractieprobleem": 16,
         "interpretatieprobleem": 18,
         "tekstprobleem": 30
@@ -8057,7 +9362,7 @@
         "broad_rest_topics": 2,
         "high_volume_topics": 2,
         "regional_role_review": 1,
-        "review_queue": 13,
+        "review_queue": 20,
         "rough_publication_claim": 23,
         "site_text_risk": 7
       }
@@ -8066,10 +9371,10 @@
       "scope_id": "general_locality",
       "label": "General or unclear locality",
       "description": "Locality items that are municipal/regional in a broad sense but are not specific enough to assign to Almere or the IZA/AZWA-regio Flevoland.",
-      "open_item_count": 19,
+      "open_item_count": 23,
       "issue_counts": {
         "bronprobleem": 3,
-        "claimprobleem": 4,
+        "claimprobleem": 8,
         "extractieprobleem": 3,
         "interpretatieprobleem": 9,
         "tekstprobleem": 10
@@ -8077,7 +9382,7 @@
       "origin_counts": {
         "broad_rest_topics": 2,
         "high_volume_topics": 1,
-        "review_queue": 6,
+        "review_queue": 10,
         "rough_publication_claim": 10
       }
     }
@@ -8158,13 +9463,13 @@
       },
       {
         "sprint": "26.3 Sentence-boundary en dedup",
-        "status": "open",
-        "note": "Vervolg op 26.2: zinsegmentatie, overlap/dedup en regressietests voor rough-claim cleanup"
+        "status": "completed",
+        "note": "`src/build_claims_top5.py`, `src/verify_claim_id_references.py`, `data/extracted/claims/sentence_validator_rejects.json`, `data/extracted/claims/dedup_log.json`, `docs/completed-plans/phase26-sprint26.3-sentence-boundary-dedup.md`"
       },
       {
         "sprint": "27.1 Norm",
-        "status": "open",
-        "note": ""
+        "status": "completed",
+        "note": "`src/build_claims_top5.py`, `data/schemas/claim.schema.json`, `data/extracted/data_quality_audit.json`, `docs/completed-plans/phase27-sprint27.1-norm.md`"
       },
       {
         "sprint": "27.2 Tijd",
@@ -8259,6 +9564,16 @@
     },
     "history": [
       {
+        "sprint": "27.1 Norm",
+        "status": "completed",
+        "note": "`src/build_claims_top5.py`, `data/schemas/claim.schema.json`, `data/extracted/data_quality_audit.json`, `docs/completed-plans/phase27-sprint27.1-norm.md`"
+      },
+      {
+        "sprint": "26.3 Sentence-boundary en dedup",
+        "status": "completed",
+        "note": "`src/build_claims_top5.py`, `src/verify_claim_id_references.py`, `data/extracted/claims/sentence_validator_rejects.json`, `data/extracted/claims/dedup_log.json`, `docs/completed-plans/phase26-sprint26.3-sentence-boundary-dedup.md`"
+      },
+      {
         "sprint": "26.2 Deterministische tekstfixes",
         "status": "completed",
         "note": "`src/build_structural_extractions.py`, `src/build_document_extractions.py`, `data/extracted/voting_records.json`, `data/logs/phase26_text_cleanup.json`, `docs/completed-plans/phase26-sprint26.2-deterministic-text-fixes.md`"
@@ -8277,20 +9592,10 @@
         "sprint": "24.8 D6 local validation preparation",
         "status": "completed",
         "note": "Interne validatiepack: `docs/review/almere_d6_validation_pack.md`"
-      },
-      {
-        "sprint": "24.7 D6 register evidence audit",
-        "status": "completed",
-        "note": "Registerrijen gecontroleerd op status, eigenaar, uitvoerder, schaal, financiering, bewijs en open reviewvraag"
-      },
-      {
-        "sprint": "24.6 D6 commit, verify and stabilize",
-        "status": "completed",
-        "note": "Remediation is gecommit/gepusht; verificatie via `python src/run_pipeline.py --all`, gerichte tests en schema-validatie"
       }
     ],
-    "completed_count": 12,
-    "open_count": 20
+    "completed_count": 14,
+    "open_count": 18
   },
   "next_cleanup_targets": [
     {
@@ -8334,6 +9639,7 @@
       "related_review_reasons": [
         "authority_unclear",
         "extraction_noise_detected",
+        "lower_authority_norm_signal",
         "missing_d5_content",
         "missing_d6_content",
         "municipality_relevance_inferred",
@@ -8354,8 +9660,8 @@
   "public_updates": {
     "path": "data/site/site_updates_view.json",
     "href": "../../data/site/site_updates_view.json",
-    "generated_on": "2026-04-28",
-    "as_of_date": "2026-04-28",
+    "generated_on": "2026-04-29",
+    "as_of_date": "2026-04-29",
     "title": "Updates",
     "updates": [
       {
@@ -11198,8 +12504,8 @@
     "path": "data/extracted/workagenda_d5_operational_requirements.json",
     "href": "../../data/extracted/workagenda_d5_operational_requirements.json",
     "layer_run_id": "phase25_1_workagenda_d5_operational_requirements_v1",
-    "generated_on": "2026-04-28",
-    "as_of_date": "2026-04-28",
+    "generated_on": "2026-04-29",
+    "as_of_date": "2026-04-29",
     "layer_status": "phase25_1_completed_initial_operational_model",
     "purpose": "Operational D5 workagenda layer for linking basisfunctionaliteiten, ontwikkelagenda items, finance streams, locality scope, actors, milestones, and review questions.",
     "source_policy": {
@@ -12181,7 +13487,7 @@
     "path": "data/extracted/local_source_strengthening_almere.json",
     "href": "../../data/extracted/local_source_strengthening_almere.json",
     "layer_run_id": "phase25_2_local_source_strengthening_v1",
-    "generated_on": "2026-04-28",
+    "generated_on": "2026-04-29",
     "status": "completed_public_source_intake",
     "sprint": "25.2 Lokale bronversterking Almere",
     "summary": {
@@ -12860,7 +14166,7 @@
     "path": "data/extracted/workagenda_nulmeting_capacity.json",
     "href": "../../data/extracted/workagenda_nulmeting_capacity.json",
     "layer_run_id": "phase25_3_workagenda_nulmeting_capacity_v1",
-    "generated_on": "2026-04-28",
+    "generated_on": "2026-04-29",
     "status": "active_sprint_support",
     "sprint": "25.3 Nulmeting en capaciteit werkagenda",
     "purpose": "Prefill the workagenda structure as far as public sources allow, while marking capacity, provider, ownership, budget, and decision gaps for local staff validation or later decisions.",
@@ -13628,7 +14934,7 @@
     "path": "data/extracted/d6_governance_collaboration.json",
     "href": "../../data/extracted/d6_governance_collaboration.json",
     "layer_run_id": "phase25_4_d6_governance_collaboration_v1",
-    "generated_on": "2026-04-28",
+    "generated_on": "2026-04-29",
     "status": "active_sprint_support",
     "sprint": "25.4 D6 governance en samenwerking",
     "purpose": "Make D6 role allocation, scale, collaboration, monitoring, and remaining validation questions explicit from the public corpus.",
@@ -15736,7 +17042,7 @@
     "path": "data/extracted/municipal/almere_d6_responsibility_register.json",
     "href": "../../data/extracted/municipal/almere_d6_responsibility_register.json",
     "layer_run_id": "phase25_4b_almere_d6_responsibility_register_v1",
-    "generated_on": "2026-04-28",
+    "generated_on": "2026-04-29",
     "status": "active_sprint_support",
     "sprint": "25.4b D6 Almere responsibility pack",
     "purpose": "Create an execution-oriented D6 Almere register that separates public prefill, local validation, decision needs, scale, funding, and evidence status.",
@@ -16573,9 +17879,9 @@
     ]
   },
   "totals": {
-    "dashboard_item_count": 223,
-    "open_dashboard_item_count": 223,
-    "review_queue_items": 80,
+    "dashboard_item_count": 260,
+    "open_dashboard_item_count": 260,
+    "review_queue_items": 117,
     "rough_claim_items": 119,
     "site_text_risk_files": 11
   }

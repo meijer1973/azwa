@@ -1,7 +1,7 @@
 {
   "view_run_id": "phase16_site_views_v1",
-  "generated_on": "2026-04-28",
-  "as_of_date": "2026-04-28",
+  "generated_on": "2026-04-29",
+  "as_of_date": "2026-04-29",
   "title": "Almere",
   "current_picture": "De huidige bronbasis laat voor Almere een herkenbare landelijke basis voor D5 en D6 zien, maar de lokale vertaling is niet op alle punten expliciet zichtbaar in openbare gemeentelijke stukken.",
   "expected_municipal_responsibilities": [
@@ -209,7 +209,7 @@
       "title": "Mogelijke besluitvraag: prioritering van D5-interventies in Almere",
       "status": "gedeeltelijk ingevuld",
       "status_group": "partly_resolved",
-      "as_of_date": "2026-04-28",
+      "as_of_date": "2026-04-29",
       "responsible_level": "gemeentelijk / bestuurlijke afweging",
       "linked_domain": "D5",
       "linked_domain_label": "D5",
@@ -382,6 +382,14 @@
           "page_url": "/sources/raadsvoorstel-visie-gezondheid-geamendeerd/",
           "jurisdiction_level": "municipal",
           "authority_note": null,
+          "normative_status": {
+            "status": "contextual",
+            "label": "Contextueel signaal",
+            "source_authority": "municipal_policy",
+            "has_normative_language": false,
+            "public_wording_guardrail": "Gebruik als context of bronaanwijzing, niet als norm.",
+            "needs_attribution": false
+          },
           "needs_human_review": false
         },
         {
@@ -396,7 +404,15 @@
           "source_url": "https://documentwijzer.raadvanalmere.nl/app/instrument/24161",
           "page_url": "/sources/maatschappelijke-agenda-beleidstekst/",
           "jurisdiction_level": "municipal",
-          "authority_note": null,
+          "authority_note": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren.",
+          "normative_status": {
+            "status": "lower_authority_signal",
+            "label": "Lagere-autoriteitssignaal",
+            "source_authority": "municipal_policy",
+            "has_normative_language": true,
+            "public_wording_guardrail": "Altijd expliciet toeschrijven aan de bron; niet als harde norm presenteren zonder sterkere bron.",
+            "needs_attribution": true
+          },
           "needs_human_review": false
         },
         {
@@ -411,7 +427,15 @@
           "source_url": "https://positiefgezondalmere.nl/over-ons/",
           "page_url": "/sources/pga-transformatieplan/",
           "jurisdiction_level": "municipal",
-          "authority_note": null,
+          "authority_note": "Normstatus: toelichting, format, advies of praktische guidance.",
+          "normative_status": {
+            "status": "guidance",
+            "label": "Toelichting of praktische guidance",
+            "source_authority": "implementation_plan",
+            "has_normative_language": false,
+            "public_wording_guardrail": "Formuleer als toelichting, format, advies of handreiking.",
+            "needs_attribution": true
+          },
           "needs_human_review": false
         },
         {
@@ -426,7 +450,15 @@
           "source_url": "https://www.rijksoverheid.nl/documenten/rapporten/2025/08/31/aanvullend-zorg-en-welzijnsakkoord-azwa",
           "page_url": "/sources/azwa-definitief/",
           "jurisdiction_level": "national",
-          "authority_note": null,
+          "authority_note": "Normstatus: afspraak of akkoordtekst; niet automatisch als wettelijke plicht voor Almere formuleren.",
+          "normative_status": {
+            "status": "agreement",
+            "label": "Afspraak of akkoordtekst",
+            "source_authority": "agreement",
+            "has_normative_language": false,
+            "public_wording_guardrail": "Formuleer als afspraak tussen akkoordpartijen; niet automatisch als wettelijke plicht voor Almere.",
+            "needs_attribution": false
+          },
           "needs_human_review": false
         },
         {
@@ -441,7 +473,15 @@
           "source_url": "https://www.rijksoverheid.nl/documenten/rapporten/2025/08/31/aanvullend-zorg-en-welzijnsakkoord-azwa",
           "page_url": "/sources/azwa-definitief/",
           "jurisdiction_level": "national",
-          "authority_note": null,
+          "authority_note": "Normstatus: afspraak of akkoordtekst; niet automatisch als wettelijke plicht voor Almere formuleren.",
+          "normative_status": {
+            "status": "agreement",
+            "label": "Afspraak of akkoordtekst",
+            "source_authority": "agreement",
+            "has_normative_language": false,
+            "public_wording_guardrail": "Formuleer als afspraak tussen akkoordpartijen; niet automatisch als wettelijke plicht voor Almere.",
+            "needs_attribution": false
+          },
           "needs_human_review": false
         },
         {
@@ -456,7 +496,15 @@
           "source_url": "https://www.rijksoverheid.nl/documenten/rapporten/2025/08/31/aanvullend-zorg-en-welzijnsakkoord-azwa",
           "page_url": "/sources/azwa-definitief/",
           "jurisdiction_level": "national",
-          "authority_note": null,
+          "authority_note": "Normstatus: afspraak of akkoordtekst; niet automatisch als wettelijke plicht voor Almere formuleren.",
+          "normative_status": {
+            "status": "agreement",
+            "label": "Afspraak of akkoordtekst",
+            "source_authority": "agreement",
+            "has_normative_language": false,
+            "public_wording_guardrail": "Formuleer als afspraak tussen akkoordpartijen; niet automatisch als wettelijke plicht voor Almere.",
+            "needs_attribution": false
+          },
           "needs_human_review": false
         }
       ],
@@ -532,95 +580,144 @@
         ],
         "source_signals": [
           {
+            "document_title": "Maatschappelijke agenda 2024-2034",
+            "publisher": "Gemeente Almere",
+            "publication_date": "2024-05-28",
+            "topic_label": "implementatielijn D5/D6",
+            "summary": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren."
+          },
+          {
+            "document_title": "Transformatieplan Positief Gezond Almere",
+            "publisher": "Positief Gezond Almere",
+            "publication_date": "2025-05-01",
+            "topic_label": "Almeerse initiatieven",
+            "summary": "Normstatus: toelichting, format, advies of praktische guidance."
+          },
+          {
+            "document_title": "Aanvullend Zorg- en Welzijnsakkoord (AZWA) (Definitief)",
+            "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
+            "publication_date": "2025-08-31",
+            "topic_label": "regionale/lokale D5-werkagenda",
+            "summary": "Normstatus: afspraak of akkoordtekst; niet automatisch als wettelijke plicht voor Almere formuleren."
+          },
+          {
+            "document_title": "CW 3.1 kader basisfunctionaliteiten en basisinfrastructuur D5 en D6",
+            "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
+            "publication_date": "2026-03-10",
+            "topic_label": "onderbouwde D5-basisfunctionaliteiten",
+            "summary": "Normstatus: richtinggevende verwachting of uitwerkingskader; vermijd harde verplichtingstaal."
+          },
+          {
+            "document_title": "Kamerbrief inzake voortgang Integraal Zorgakkoord (IZA) en Aanvullend Zorg- en Welzijnsakkoord (AZWA)",
+            "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
+            "publication_date": "2026-04-09",
+            "topic_label": "onderbouwde D5-basisfunctionaliteiten",
+            "summary": "Normstatus: afspraak of akkoordtekst; niet automatisch als wettelijke plicht voor Almere formuleren."
+          },
+          {
+            "document_title": "AZWA-afspraken D5 en D6 en financieringsinstrument",
+            "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
+            "publication_date": "2026-04-22",
+            "topic_label": "onderbouwde D5-basisfunctionaliteiten",
+            "summary": "Normstatus: toelichting, format, advies of praktische guidance."
+          },
+          {
+            "document_title": "Opdracht voor de werkagenda samenwerking zorg en sociaal domein voor D5 AZWA",
+            "publisher": "VNG / VWS",
+            "publication_date": "2026-04-22",
+            "topic_label": "onderbouwde D5-basisfunctionaliteiten",
+            "summary": "Normstatus: richtinggevende verwachting of uitwerkingskader; vermijd harde verplichtingstaal."
+          },
+          {
             "document_title": "Aanvullend Zorg- en Welzijnsakkoord",
             "publisher": "Zorgakkoorden.nl (VWS)",
             "publication_date": null,
             "topic_label": "onderbouwde D5-basisfunctionaliteiten",
-            "summary": "Lagere autoriteit: deze passage is afkomstig uit een toelichtende of samenvattende bron."
+            "summary": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren."
           },
           {
             "document_title": "Gezond en actief leven",
             "publisher": "VNG",
             "publication_date": null,
             "topic_label": "onderbouwde D5-basisfunctionaliteiten",
-            "summary": "Lagere autoriteit: deze passage is afkomstig uit een toelichtende of samenvattende bron."
+            "summary": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren."
           },
           {
             "document_title": "Valpreventie Gemeente Almere",
             "publisher": "GGD Flevoland",
             "publication_date": null,
             "topic_label": "onderbouwde D5-basisfunctionaliteiten",
-            "summary": "Lagere autoriteit: deze passage is afkomstig uit een toelichtende of samenvattende bron."
+            "summary": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren."
           },
           {
             "document_title": "GALA - Gezond en Actief Leven Akkoord",
             "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
             "publication_date": "2023-01-31",
             "topic_label": "onderbouwde D5-basisfunctionaliteiten",
-            "summary": "Relevantie voor Almere is afgeleid; expliciete lokale overname is niet altijd zichtbaar in de verzamelde openbare Almere-documenten."
+            "summary": "Normstatus: afspraak of akkoordtekst; niet automatisch als wettelijke plicht voor Almere formuleren."
           },
           {
             "document_title": "Regiobeeld Flevoland 2023",
             "publisher": "Flever",
             "publication_date": "2023-07-12",
             "topic_label": "onderbouwde D5-basisfunctionaliteiten",
-            "summary": "Lagere autoriteit: deze passage is afkomstig uit een toelichtende of samenvattende bron."
+            "summary": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren."
           },
           {
             "document_title": "Plan van aanpak 2024-2026 Brede SPUK/GALA Almere",
             "publisher": "Gemeente Almere",
             "publication_date": "2023-09-20",
             "topic_label": "onderbouwde D5-basisfunctionaliteiten",
-            "summary": "Relevantie voor Almere is afgeleid; expliciete lokale overname is niet altijd zichtbaar in de verzamelde openbare Almere-documenten."
+            "summary": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren."
           },
           {
             "document_title": "Richtinggevend kader toegang, lokale teams en integrale dienstverlening",
             "publisher": "VNG",
             "publication_date": "2024-03-01",
             "topic_label": "onderbouwde D5-basisfunctionaliteiten",
-            "summary": "Relevantie voor Almere is afgeleid; expliciete lokale overname is niet altijd zichtbaar in de verzamelde openbare Almere-documenten."
+            "summary": "Normstatus: richtinggevende verwachting of uitwerkingskader; vermijd harde verplichtingstaal."
           },
           {
             "document_title": "Samen werken aan gezondheid en zorg - Visie gezondheidsbeleid Almere 2024-2026",
             "publisher": "Gemeente Almere",
             "publication_date": "2024-03-01",
             "topic_label": "onderbouwde D5-basisfunctionaliteiten",
-            "summary": "Relevantie voor Almere is afgeleid; expliciete lokale overname is niet altijd zichtbaar in de verzamelde openbare Almere-documenten."
+            "summary": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren."
           },
           {
             "document_title": "Naar een positief gezond Almere; Beleidstheorie en businesscase transformatieplan",
             "publisher": "SEO Economisch Onderzoek",
             "publication_date": "2024-04-25",
             "topic_label": "Almeerse initiatieven",
-            "summary": "Lagere autoriteit: deze passage is afkomstig uit een toelichtende of samenvattende bron."
+            "summary": "Normstatus: toelichting, format, advies of praktische guidance."
           },
           {
             "document_title": "Ledenbrief onderhandelaarsakkoord AZWA",
             "publisher": "VNG",
             "publication_date": "2025-07-11",
             "topic_label": "onderbouwde D5-basisfunctionaliteiten",
-            "summary": "Lagere autoriteit: deze passage is afkomstig uit een toelichtende of samenvattende bron."
+            "summary": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren."
           },
           {
             "document_title": "Financiering IZA en AZWA: hoe zit het precies?",
             "publisher": "Sociaal Werk Nederland",
             "publication_date": "2025-08-05",
             "topic_label": "onderbouwde D5-basisfunctionaliteiten",
-            "summary": "Lagere autoriteit: deze passage is afkomstig uit een sectorale duidingspagina van Sociaal Werk Nederland."
+            "summary": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren."
           },
           {
             "document_title": "Begroting 2026 GGD Flevoland",
             "publisher": "GGD Flevoland",
             "publication_date": "2025-10-14",
             "topic_label": "onderbouwde D5-basisfunctionaliteiten",
-            "summary": "Relevantie voor Almere is afgeleid; expliciete lokale overname is niet altijd zichtbaar in de verzamelde openbare Almere-documenten."
+            "summary": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren."
           },
           {
             "document_title": "Toelichting producten en proces",
             "publisher": "VNG / VWS",
             "publication_date": "2026-04-22",
             "topic_label": "regionale/lokale D5-werkagenda",
-            "summary": "Lagere autoriteit: deze passage is afkomstig uit een toelichtende of samenvattende bron."
+            "summary": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren."
           }
         ]
       },
@@ -666,7 +763,7 @@
       "title": "Mogelijke besluitvraag: regiemodel voor D6 en lokale teams",
       "status": "wacht op verduidelijking",
       "status_group": "awaiting_clarification",
-      "as_of_date": "2026-04-28",
+      "as_of_date": "2026-04-29",
       "responsible_level": "gemeentelijk / bestuurlijke afweging",
       "linked_domain": "D6",
       "linked_domain_label": "D6",
@@ -837,6 +934,14 @@
           "page_url": "/sources/regioplan-iza-flevoland/",
           "jurisdiction_level": "regional",
           "authority_note": null,
+          "normative_status": {
+            "status": "contextual",
+            "label": "Contextueel signaal",
+            "source_authority": "regional_plan",
+            "has_normative_language": false,
+            "public_wording_guardrail": "Gebruik als context of bronaanwijzing, niet als norm.",
+            "needs_attribution": false
+          },
           "needs_human_review": false
         },
         {
@@ -851,7 +956,15 @@
           "source_url": "https://flever.nl/wp-content/uploads/2024/01/Regioplan_IZA_Flevoland_ZorgzaamFlevoland2023.pdf",
           "page_url": "/sources/regioplan-iza-flevoland/",
           "jurisdiction_level": "regional",
-          "authority_note": null,
+          "authority_note": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren.",
+          "normative_status": {
+            "status": "lower_authority_signal",
+            "label": "Lagere-autoriteitssignaal",
+            "source_authority": "regional_plan",
+            "has_normative_language": false,
+            "public_wording_guardrail": "Altijd expliciet toeschrijven aan de bron; niet als harde norm presenteren zonder sterkere bron.",
+            "needs_attribution": true
+          },
           "needs_human_review": false
         },
         {
@@ -866,7 +979,15 @@
           "source_url": "https://positiefgezondalmere.nl/over-ons/",
           "page_url": "/sources/pga-transformatieplan/",
           "jurisdiction_level": "municipal",
-          "authority_note": null,
+          "authority_note": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren.",
+          "normative_status": {
+            "status": "lower_authority_signal",
+            "label": "Lagere-autoriteitssignaal",
+            "source_authority": "implementation_plan",
+            "has_normative_language": false,
+            "public_wording_guardrail": "Altijd expliciet toeschrijven aan de bron; niet als harde norm presenteren zonder sterkere bron.",
+            "needs_attribution": true
+          },
           "needs_human_review": false
         },
         {
@@ -881,7 +1002,15 @@
           "source_url": "https://www.rijksoverheid.nl/documenten/rapporten/2025/08/31/aanvullend-zorg-en-welzijnsakkoord-azwa",
           "page_url": "/sources/azwa-definitief/",
           "jurisdiction_level": "national",
-          "authority_note": null,
+          "authority_note": "Normstatus: afspraak of akkoordtekst; niet automatisch als wettelijke plicht voor Almere formuleren.",
+          "normative_status": {
+            "status": "agreement",
+            "label": "Afspraak of akkoordtekst",
+            "source_authority": "agreement",
+            "has_normative_language": false,
+            "public_wording_guardrail": "Formuleer als afspraak tussen akkoordpartijen; niet automatisch als wettelijke plicht voor Almere.",
+            "needs_attribution": false
+          },
           "needs_human_review": false
         },
         {
@@ -896,7 +1025,15 @@
           "source_url": "https://vng.nl/sites/default/files/2026-04/brief-vws-aan-vng-over-azwa-afspraken-d5-en-d6-en-financieringsinstrument.pdf",
           "page_url": "/sources/vws-brief-d5-d6-financieringsinstrument/",
           "jurisdiction_level": "national",
-          "authority_note": null,
+          "authority_note": "Normstatus: richtinggevende verwachting of uitwerkingskader; vermijd harde verplichtingstaal.",
+          "normative_status": {
+            "status": "expectation",
+            "label": "Verwachting of richtinggevende norm",
+            "source_authority": "framework",
+            "has_normative_language": false,
+            "public_wording_guardrail": "Formuleer als verwachting, richting of uitwerkingskader; vermijd verplichtende taal.",
+            "needs_attribution": false
+          },
           "needs_human_review": false
         },
         {
@@ -911,7 +1048,15 @@
           "source_url": "https://projecten.zonmw.nl/nl/project/doorontwikkeling-zorgzaam-flevoland-naar-een-toekomstbestendige-samenwerkingsstructuur",
           "page_url": "/sources/zonmw-zorgzaam-flevoland/",
           "jurisdiction_level": "regional",
-          "authority_note": "Lagere autoriteit: deze passage is afkomstig uit een toelichtende of samenvattende bron.",
+          "authority_note": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren.",
+          "normative_status": {
+            "status": "lower_authority_signal",
+            "label": "Lagere-autoriteitssignaal",
+            "source_authority": "commentary",
+            "has_normative_language": false,
+            "public_wording_guardrail": "Altijd expliciet toeschrijven aan de bron; niet als harde norm presenteren zonder sterkere bron.",
+            "needs_attribution": true
+          },
           "needs_human_review": true
         }
       ],
@@ -957,67 +1102,95 @@
         ],
         "source_signals": [
           {
+            "document_title": "Zorgzaam Flevoland 2023 Regioplan IZA Flevoland",
+            "publisher": "Zorgzaam Flevoland / Flever",
+            "publication_date": "2023-12-22",
+            "topic_label": "regionale coordinatie",
+            "summary": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren."
+          },
+          {
+            "document_title": "Transformatieplan Positief Gezond Almere",
+            "publisher": "Positief Gezond Almere",
+            "publication_date": "2025-05-01",
+            "topic_label": "lokale coalitie en samenwerking",
+            "summary": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren."
+          },
+          {
+            "document_title": "Aanvullend Zorg- en Welzijnsakkoord (AZWA) (Definitief)",
+            "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
+            "publication_date": "2025-08-31",
+            "topic_label": "stevige lokale teams en wijkverbanden",
+            "summary": "Normstatus: afspraak of akkoordtekst; niet automatisch als wettelijke plicht voor Almere formuleren."
+          },
+          {
+            "document_title": "AZWA-afspraken D5 en D6 en financieringsinstrument",
+            "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
+            "publication_date": "2026-04-22",
+            "topic_label": "stevige lokale teams en wijkverbanden",
+            "summary": "Normstatus: richtinggevende verwachting of uitwerkingskader; vermijd harde verplichtingstaal."
+          },
+          {
             "document_title": "Doorontwikkeling Zorgzaam Flevoland naar een toekomstbestendige samenwerkingsstructuur",
             "publisher": "ZonMw",
             "publication_date": "2025-05-01",
             "topic_label": "regionale coordinatie",
-            "summary": "Lagere autoriteit: deze passage is afkomstig uit een toelichtende of samenvattende bron."
+            "summary": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren."
           },
           {
             "document_title": "Ledenbrief onderhandelaarsakkoord AZWA",
             "publisher": "VNG",
             "publication_date": "2025-07-11",
             "topic_label": "stevige lokale teams en wijkverbanden",
-            "summary": "Lagere autoriteit: deze passage is afkomstig uit een toelichtende of samenvattende bron."
+            "summary": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren."
           },
           {
             "document_title": "Begroting 2026 GGD Flevoland",
             "publisher": "GGD Flevoland",
             "publication_date": "2025-10-14",
             "topic_label": "stevige lokale teams en wijkverbanden",
-            "summary": "Relevantie voor Almere is afgeleid; expliciete lokale overname is niet altijd zichtbaar in de verzamelde openbare Almere-documenten."
+            "summary": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren."
           },
           {
             "document_title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin",
             "publisher": "Raad van Almere",
             "publication_date": "2026-01-06",
             "topic_label": "stevige lokale teams en wijkverbanden",
-            "summary": "Lagere autoriteit: deze passage is afkomstig uit een toelichtende of samenvattende bron."
+            "summary": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren."
           },
           {
             "document_title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin - begrotingswijziging",
             "publisher": "Raad van Almere",
             "publication_date": "2026-01-15",
             "topic_label": "stevige lokale teams en wijkverbanden",
-            "summary": "Relevantie voor Almere is afgeleid; expliciete lokale overname is niet altijd zichtbaar in de verzamelde openbare Almere-documenten."
+            "summary": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren."
           },
           {
             "document_title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin - besluitenlijst",
             "publisher": "Raad van Almere",
             "publication_date": "2026-01-15",
             "topic_label": "stevige lokale teams en wijkverbanden",
-            "summary": "Relevantie voor Almere is afgeleid; expliciete lokale overname is niet altijd zichtbaar in de verzamelde openbare Almere-documenten."
+            "summary": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren."
           },
           {
             "document_title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin - raadsvoorstel",
             "publisher": "Raad van Almere",
             "publication_date": "2026-01-15",
             "topic_label": "stevige lokale teams en wijkverbanden",
-            "summary": "Relevantie voor Almere is afgeleid; expliciete lokale overname is niet altijd zichtbaar in de verzamelde openbare Almere-documenten."
+            "summary": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren."
           },
           {
             "document_title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin - geamendeerd raadsvoorstel",
             "publisher": "Raad van Almere",
             "publication_date": "2026-02-19",
             "topic_label": "stevige lokale teams en wijkverbanden",
-            "summary": "Relevantie voor Almere is afgeleid; expliciete lokale overname is niet altijd zichtbaar in de verzamelde openbare Almere-documenten."
+            "summary": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren."
           },
           {
             "document_title": "Informatiepagina Sociaal Domein",
             "publisher": "Raad van Almere",
             "publication_date": "2026-03-25",
             "topic_label": "stevige lokale teams en wijkverbanden",
-            "summary": "Lagere autoriteit: deze passage is afkomstig uit een toelichtende of samenvattende bron."
+            "summary": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren."
           }
         ]
       },
@@ -1063,7 +1236,7 @@
       "title": "Mogelijke besluitvraag: verdeling van beschikbare middelen over D5 en D6",
       "status": "geblokkeerd door afhankelijkheid",
       "status_group": "blocked",
-      "as_of_date": "2026-04-28",
+      "as_of_date": "2026-04-29",
       "responsible_level": "gemeentelijk / bestuurlijke afweging",
       "linked_domain": "beide",
       "linked_domain_label": "D5 en D6",
@@ -1236,7 +1409,15 @@
           "source_url": "https://documentwijzer.raadvanalmere.nl/app/instrument/24118",
           "page_url": "/sources/raadsvoorstel-visie-gezondheid-geamendeerd/",
           "jurisdiction_level": "municipal",
-          "authority_note": null,
+          "authority_note": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren.",
+          "normative_status": {
+            "status": "lower_authority_signal",
+            "label": "Lagere-autoriteitssignaal",
+            "source_authority": "municipal_policy",
+            "has_normative_language": false,
+            "public_wording_guardrail": "Altijd expliciet toeschrijven aan de bron; niet als harde norm presenteren zonder sterkere bron.",
+            "needs_attribution": true
+          },
           "needs_human_review": false
         },
         {
@@ -1251,7 +1432,15 @@
           "source_url": "https://documentwijzer.raadvanalmere.nl/app/instrument/24118",
           "page_url": "/sources/raadsvoorstel-visie-gezondheid-geamendeerd/",
           "jurisdiction_level": "municipal",
-          "authority_note": null,
+          "authority_note": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren.",
+          "normative_status": {
+            "status": "lower_authority_signal",
+            "label": "Lagere-autoriteitssignaal",
+            "source_authority": "municipal_policy",
+            "has_normative_language": false,
+            "public_wording_guardrail": "Altijd expliciet toeschrijven aan de bron; niet als harde norm presenteren zonder sterkere bron.",
+            "needs_attribution": true
+          },
           "needs_human_review": false
         },
         {
@@ -1266,7 +1455,15 @@
           "source_url": "https://documentwijzer.raadvanalmere.nl/app/instrument/24118",
           "page_url": "/sources/brede-spuk-gala-plan-van-aanpak/",
           "jurisdiction_level": "municipal",
-          "authority_note": null,
+          "authority_note": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren.",
+          "normative_status": {
+            "status": "lower_authority_signal",
+            "label": "Lagere-autoriteitssignaal",
+            "source_authority": "municipal_policy",
+            "has_normative_language": false,
+            "public_wording_guardrail": "Altijd expliciet toeschrijven aan de bron; niet als harde norm presenteren zonder sterkere bron.",
+            "needs_attribution": true
+          },
           "needs_human_review": false
         },
         {
@@ -1281,7 +1478,15 @@
           "source_url": "https://flever.nl/wp-content/uploads/2024/01/Regioplan_IZA_Flevoland_ZorgzaamFlevoland2023.pdf",
           "page_url": "/sources/regioplan-iza-flevoland/",
           "jurisdiction_level": "regional",
-          "authority_note": null,
+          "authority_note": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren.",
+          "normative_status": {
+            "status": "lower_authority_signal",
+            "label": "Lagere-autoriteitssignaal",
+            "source_authority": "regional_plan",
+            "has_normative_language": false,
+            "public_wording_guardrail": "Altijd expliciet toeschrijven aan de bron; niet als harde norm presenteren zonder sterkere bron.",
+            "needs_attribution": true
+          },
           "needs_human_review": false
         },
         {
@@ -1296,7 +1501,15 @@
           "source_url": "https://documentwijzer.raadvanalmere.nl/app/instrument/24118",
           "page_url": "/sources/visie-gezondheidsbeleid-beleidstekst/",
           "jurisdiction_level": "municipal",
-          "authority_note": null,
+          "authority_note": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren.",
+          "normative_status": {
+            "status": "lower_authority_signal",
+            "label": "Lagere-autoriteitssignaal",
+            "source_authority": "municipal_policy",
+            "has_normative_language": false,
+            "public_wording_guardrail": "Altijd expliciet toeschrijven aan de bron; niet als harde norm presenteren zonder sterkere bron.",
+            "needs_attribution": true
+          },
           "needs_human_review": false
         },
         {
@@ -1311,7 +1524,15 @@
           "source_url": "https://documentwijzer.raadvanalmere.nl/app/instrument/24118",
           "page_url": "/sources/visie-gezondheidsbeleid-beleidstekst/",
           "jurisdiction_level": "municipal",
-          "authority_note": null,
+          "authority_note": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren.",
+          "normative_status": {
+            "status": "lower_authority_signal",
+            "label": "Lagere-autoriteitssignaal",
+            "source_authority": "municipal_policy",
+            "has_normative_language": true,
+            "public_wording_guardrail": "Altijd expliciet toeschrijven aan de bron; niet als harde norm presenteren zonder sterkere bron.",
+            "needs_attribution": true
+          },
           "needs_human_review": false
         }
       ],
@@ -1382,60 +1603,123 @@
         ],
         "source_signals": [
           {
+            "document_title": "Raadsvoorstel Visie Gezondheidsbeleid Almere 2024-2026 - geamendeerd",
+            "publisher": "Raad van Almere",
+            "publication_date": null,
+            "topic_label": "bekostigingsroute D5/D6",
+            "summary": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren."
+          },
+          {
+            "document_title": "Plan van aanpak 2024-2026 Brede SPUK/GALA Almere",
+            "publisher": "Gemeente Almere",
+            "publication_date": "2023-09-20",
+            "topic_label": "bekostigingsroute D5/D6",
+            "summary": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren."
+          },
+          {
+            "document_title": "Zorgzaam Flevoland 2023 Regioplan IZA Flevoland",
+            "publisher": "Zorgzaam Flevoland / Flever",
+            "publication_date": "2023-12-22",
+            "topic_label": "bekostigingsroute D5/D6",
+            "summary": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren."
+          },
+          {
+            "document_title": "Samen werken aan gezondheid en zorg - Visie gezondheidsbeleid Almere 2024-2026",
+            "publisher": "Gemeente Almere",
+            "publication_date": "2024-03-01",
+            "topic_label": "bekostigingsroute D5/D6",
+            "summary": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren."
+          },
+          {
+            "document_title": "Maatschappelijke agenda 2024-2034",
+            "publisher": "Gemeente Almere",
+            "publication_date": "2024-05-28",
+            "topic_label": "lokale financiele aansluiting",
+            "summary": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren."
+          },
+          {
+            "document_title": "Transformatieplan Positief Gezond Almere",
+            "publisher": "Positief Gezond Almere",
+            "publication_date": "2025-05-01",
+            "topic_label": "Almeerse initiatieven",
+            "summary": "Normstatus: toelichting, format, advies of praktische guidance."
+          },
+          {
+            "document_title": "Aanvullend Zorg- en Welzijnsakkoord (AZWA) (Definitief)",
+            "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
+            "publication_date": "2025-08-31",
+            "topic_label": "gemeentelijke middelen D5/D6",
+            "summary": "Normstatus: afspraak of akkoordtekst; niet automatisch als wettelijke plicht voor Almere formuleren."
+          },
+          {
+            "document_title": "CW 3.1 kader basisfunctionaliteiten en basisinfrastructuur D5 en D6",
+            "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
+            "publication_date": "2026-03-10",
+            "topic_label": "bekostigingsroute D5/D6",
+            "summary": "Normstatus: richtinggevende verwachting of uitwerkingskader; vermijd harde verplichtingstaal."
+          },
+          {
+            "document_title": "Regeling specifieke uitkering transformatiemiddelen IZA & AZWA 2024-2028",
+            "publisher": "Wetten.nl / Ministerie van Volksgezondheid, Welzijn en Sport",
+            "publication_date": "2026-04-01",
+            "topic_label": "bekostigingsroute D5/D6",
+            "summary": "Normstatus: toelichting, format, advies of praktische guidance."
+          },
+          {
+            "document_title": "AZWA-afspraken D5 en D6 en financieringsinstrument",
+            "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
+            "publication_date": "2026-04-22",
+            "topic_label": "bekostigingsroute D5/D6",
+            "summary": "Normstatus: richtinggevende verwachting of uitwerkingskader; vermijd harde verplichtingstaal."
+          },
+          {
             "document_title": "Gezond en actief leven",
             "publisher": "VNG",
             "publication_date": null,
             "topic_label": "bekostigingsroute D5/D6",
-            "summary": "Lagere autoriteit: deze passage is afkomstig uit een toelichtende of samenvattende bron."
+            "summary": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren."
           },
           {
             "document_title": "Welke middelen zijn beschikbaar in het AZWA en hoe worden deze middelen verdeeld?",
             "publisher": "VNG",
             "publication_date": null,
             "topic_label": "bekostigingsroute D5/D6",
-            "summary": "Lagere autoriteit: deze passage is afkomstig uit een VNG-FAQ."
+            "summary": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren."
           },
           {
             "document_title": "Naar een positief gezond Almere; Beleidstheorie en businesscase transformatieplan",
             "publisher": "SEO Economisch Onderzoek",
             "publication_date": "2024-04-25",
             "topic_label": "lokale financiele aansluiting",
-            "summary": "Lagere autoriteit: deze passage is afkomstig uit een toelichtende of samenvattende bron."
-          },
-          {
-            "document_title": "Transformatieplan Positief Gezond Almere",
-            "publisher": "Positief Gezond Almere",
-            "publication_date": "2025-05-01",
-            "topic_label": "lokale financiele aansluiting",
-            "summary": "Relevantie voor Almere is afgeleid; expliciete lokale overname is niet altijd zichtbaar in de verzamelde openbare Almere-documenten."
+            "summary": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren."
           },
           {
             "document_title": "Ledenbrief onderhandelaarsakkoord AZWA",
             "publisher": "VNG",
             "publication_date": "2025-07-11",
             "topic_label": "lokale financiele aansluiting",
-            "summary": "Lagere autoriteit: deze passage is afkomstig uit een toelichtende of samenvattende bron."
+            "summary": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren."
           },
           {
             "document_title": "Financiering IZA en AZWA: hoe zit het precies?",
             "publisher": "Sociaal Werk Nederland",
             "publication_date": "2025-08-05",
             "topic_label": "bekostigingsroute D5/D6",
-            "summary": "Lagere autoriteit: deze passage is afkomstig uit een sectorale duidingspagina van Sociaal Werk Nederland."
+            "summary": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren."
           },
           {
             "document_title": "Specifieke uitkering transformatiemiddelen IZA & AZWA 2024-2028",
             "publisher": "Dienst Uitvoering Subsidies aan Instellingen",
             "publication_date": "2025-09-26",
             "topic_label": "bekostigingsroute D5/D6",
-            "summary": "Lagere autoriteit: deze passage is afkomstig uit een toelichtende of samenvattende bron."
+            "summary": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren."
           },
           {
             "document_title": "Toelichting producten en proces",
             "publisher": "VNG / VWS",
             "publication_date": "2026-04-22",
             "topic_label": "bekostigingsroute D5/D6",
-            "summary": "Lagere autoriteit: deze passage is afkomstig uit een toelichtende of samenvattende bron."
+            "summary": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren."
           }
         ]
       },
@@ -1487,7 +1771,7 @@
       "title": "Mogelijke besluitvraag: monitoringsarrangement voor Almere",
       "status": "open besluitvraag",
       "status_group": "open_decisions",
-      "as_of_date": "2026-04-28",
+      "as_of_date": "2026-04-29",
       "responsible_level": "gemeentelijk / bestuurlijke afweging",
       "linked_domain": "beide",
       "linked_domain_label": "D5 en D6",
@@ -1667,6 +1951,14 @@
           "page_url": "/sources/raadsvoorstel-visie-gezondheid-geamendeerd/",
           "jurisdiction_level": "municipal",
           "authority_note": null,
+          "normative_status": {
+            "status": "contextual",
+            "label": "Contextueel signaal",
+            "source_authority": "municipal_policy",
+            "has_normative_language": false,
+            "public_wording_guardrail": "Gebruik als context of bronaanwijzing, niet als norm.",
+            "needs_attribution": false
+          },
           "needs_human_review": false
         },
         {
@@ -1681,7 +1973,15 @@
           "source_url": "https://www.rijksoverheid.nl/documenten/rapporten/2023/01/31/gala-gezond-en-actief-leven-akkoord",
           "page_url": "/sources/gala-2023/",
           "jurisdiction_level": "national",
-          "authority_note": null,
+          "authority_note": "Normstatus: afspraak of akkoordtekst; niet automatisch als wettelijke plicht voor Almere formuleren.",
+          "normative_status": {
+            "status": "agreement",
+            "label": "Afspraak of akkoordtekst",
+            "source_authority": "agreement",
+            "has_normative_language": false,
+            "public_wording_guardrail": "Formuleer als afspraak tussen akkoordpartijen; niet automatisch als wettelijke plicht voor Almere.",
+            "needs_attribution": false
+          },
           "needs_human_review": false
         },
         {
@@ -1697,6 +1997,14 @@
           "page_url": "/sources/regioplan-iza-flevoland/",
           "jurisdiction_level": "regional",
           "authority_note": null,
+          "normative_status": {
+            "status": "contextual",
+            "label": "Contextueel signaal",
+            "source_authority": "regional_plan",
+            "has_normative_language": false,
+            "public_wording_guardrail": "Gebruik als context of bronaanwijzing, niet als norm.",
+            "needs_attribution": false
+          },
           "needs_human_review": false
         },
         {
@@ -1712,6 +2020,14 @@
           "page_url": "/sources/regioplan-iza-flevoland/",
           "jurisdiction_level": "regional",
           "authority_note": null,
+          "normative_status": {
+            "status": "contextual",
+            "label": "Contextueel signaal",
+            "source_authority": "regional_plan",
+            "has_normative_language": false,
+            "public_wording_guardrail": "Gebruik als context of bronaanwijzing, niet als norm.",
+            "needs_attribution": false
+          },
           "needs_human_review": false
         },
         {
@@ -1726,7 +2042,15 @@
           "source_url": "https://flever.nl/wp-content/uploads/2024/01/Regioplan_IZA_Flevoland_ZorgzaamFlevoland2023.pdf",
           "page_url": "/sources/regioplan-iza-flevoland/",
           "jurisdiction_level": "regional",
-          "authority_note": null,
+          "authority_note": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren.",
+          "normative_status": {
+            "status": "lower_authority_signal",
+            "label": "Lagere-autoriteitssignaal",
+            "source_authority": "regional_plan",
+            "has_normative_language": false,
+            "public_wording_guardrail": "Altijd expliciet toeschrijven aan de bron; niet als harde norm presenteren zonder sterkere bron.",
+            "needs_attribution": true
+          },
           "needs_human_review": false
         },
         {
@@ -1741,7 +2065,15 @@
           "source_url": "https://documentwijzer.raadvanalmere.nl/app/instrument/24161",
           "page_url": "/sources/maatschappelijke-agenda-beleidstekst/",
           "jurisdiction_level": "municipal",
-          "authority_note": null,
+          "authority_note": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren.",
+          "normative_status": {
+            "status": "lower_authority_signal",
+            "label": "Lagere-autoriteitssignaal",
+            "source_authority": "municipal_policy",
+            "has_normative_language": true,
+            "public_wording_guardrail": "Altijd expliciet toeschrijven aan de bron; niet als harde norm presenteren zonder sterkere bron.",
+            "needs_attribution": true
+          },
           "needs_human_review": false
         }
       ],
@@ -1785,46 +2117,81 @@
         ],
         "source_signals": [
           {
+            "document_title": "GALA - Gezond en Actief Leven Akkoord",
+            "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
+            "publication_date": "2023-01-31",
+            "topic_label": "monitoringskader",
+            "summary": "Normstatus: afspraak of akkoordtekst; niet automatisch als wettelijke plicht voor Almere formuleren."
+          },
+          {
+            "document_title": "Zorgzaam Flevoland 2023 Regioplan IZA Flevoland",
+            "publisher": "Zorgzaam Flevoland / Flever",
+            "publication_date": "2023-12-22",
+            "topic_label": "regionale coordinatie",
+            "summary": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren."
+          },
+          {
+            "document_title": "Maatschappelijke agenda 2024-2034",
+            "publisher": "Gemeente Almere",
+            "publication_date": "2024-05-28",
+            "topic_label": "implementatielijn D5/D6",
+            "summary": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren."
+          },
+          {
+            "document_title": "Aanvullend Zorg- en Welzijnsakkoord - onderhandelaarsakkoord",
+            "publisher": "VNG",
+            "publication_date": "2025-07-11",
+            "topic_label": "monitoringskader",
+            "summary": "Normstatus: afspraak of akkoordtekst; niet automatisch als wettelijke plicht voor Almere formuleren."
+          },
+          {
+            "document_title": "Aanvullend Zorg- en Welzijnsakkoord (AZWA) (Definitief)",
+            "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
+            "publication_date": "2025-08-31",
+            "topic_label": "monitoringskader",
+            "summary": "Normstatus: afspraak of akkoordtekst; niet automatisch als wettelijke plicht voor Almere formuleren."
+          },
+          {
             "document_title": "Aanvullend Zorg- en Welzijnsakkoord",
             "publisher": "Zorgakkoorden.nl (VWS)",
             "publication_date": null,
             "topic_label": "tussentijdse evaluatie",
-            "summary": "Lagere autoriteit: deze passage is afkomstig uit een toelichtende of samenvattende bron."
+            "summary": "Normstatus: toelichting, format, advies of praktische guidance."
           },
           {
             "document_title": "Gezond en actief leven",
             "publisher": "VNG",
             "publication_date": null,
             "topic_label": "monitoringskader",
-            "summary": "Lagere autoriteit: deze passage is afkomstig uit een toelichtende of samenvattende bron."
+            "summary": "Normstatus: toelichting, format, advies of praktische guidance."
           },
           {
             "document_title": "Regiobeeld Flevoland 2023",
             "publisher": "Flever",
             "publication_date": "2023-07-12",
             "topic_label": "monitoringskader",
-            "summary": "Lagere autoriteit: deze passage is afkomstig uit een toelichtende of samenvattende bron."
+            "summary": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren."
           },
           {
             "document_title": "Doorontwikkeling Zorgzaam Flevoland naar een toekomstbestendige samenwerkingsstructuur",
             "publisher": "ZonMw",
             "publication_date": "2025-05-01",
             "topic_label": "regionale coordinatie",
-            "summary": "Lagere autoriteit: deze passage is afkomstig uit een toelichtende of samenvattende bron."
+            "summary": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren."
           },
           {
             "document_title": "Ledenbrief onderhandelaarsakkoord AZWA",
             "publisher": "VNG",
             "publication_date": "2025-07-11",
             "topic_label": "implementatielijn D5/D6",
-            "summary": "Lagere autoriteit: deze passage is afkomstig uit een toelichtende of samenvattende bron."
+            "summary": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren."
           },
           {
             "document_title": "Financiering IZA en AZWA: hoe zit het precies?",
             "publisher": "Sociaal Werk Nederland",
             "publication_date": "2025-08-05",
             "topic_label": "implementatielijn D5/D6",
-            "summary": "Lagere autoriteit: deze passage is afkomstig uit een sectorale duidingspagina van Sociaal Werk Nederland."
+            "summary": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren."
           }
         ]
       },
@@ -1866,7 +2233,7 @@
       "title": "Mogelijke opvolgactie: D5-vertaling voor Almere expliciteren",
       "status": "in voorbereiding",
       "status_group": "in_preparation",
-      "as_of_date": "2026-04-28",
+      "as_of_date": "2026-04-29",
       "owner": "Nog niet expliciet benoemd in de bronbasis; gemeentelijke regie ligt voor de hand.",
       "linked_domain": "D5",
       "linked_domain_label": "D5",
@@ -1923,6 +2290,14 @@
           "page_url": "/sources/raadsvoorstel-visie-gezondheid-geamendeerd/",
           "jurisdiction_level": "municipal",
           "authority_note": null,
+          "normative_status": {
+            "status": "contextual",
+            "label": "Contextueel signaal",
+            "source_authority": "municipal_policy",
+            "has_normative_language": false,
+            "public_wording_guardrail": "Gebruik als context of bronaanwijzing, niet als norm.",
+            "needs_attribution": false
+          },
           "needs_human_review": false
         },
         {
@@ -1937,7 +2312,15 @@
           "source_url": "https://documentwijzer.raadvanalmere.nl/app/instrument/24161",
           "page_url": "/sources/maatschappelijke-agenda-beleidstekst/",
           "jurisdiction_level": "municipal",
-          "authority_note": null,
+          "authority_note": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren.",
+          "normative_status": {
+            "status": "lower_authority_signal",
+            "label": "Lagere-autoriteitssignaal",
+            "source_authority": "municipal_policy",
+            "has_normative_language": true,
+            "public_wording_guardrail": "Altijd expliciet toeschrijven aan de bron; niet als harde norm presenteren zonder sterkere bron.",
+            "needs_attribution": true
+          },
           "needs_human_review": false
         },
         {
@@ -1952,7 +2335,15 @@
           "source_url": "https://positiefgezondalmere.nl/over-ons/",
           "page_url": "/sources/pga-transformatieplan/",
           "jurisdiction_level": "municipal",
-          "authority_note": null,
+          "authority_note": "Normstatus: toelichting, format, advies of praktische guidance.",
+          "normative_status": {
+            "status": "guidance",
+            "label": "Toelichting of praktische guidance",
+            "source_authority": "implementation_plan",
+            "has_normative_language": false,
+            "public_wording_guardrail": "Formuleer als toelichting, format, advies of handreiking.",
+            "needs_attribution": true
+          },
           "needs_human_review": false
         },
         {
@@ -1967,7 +2358,15 @@
           "source_url": "https://www.rijksoverheid.nl/documenten/rapporten/2025/08/31/aanvullend-zorg-en-welzijnsakkoord-azwa",
           "page_url": "/sources/azwa-definitief/",
           "jurisdiction_level": "national",
-          "authority_note": null,
+          "authority_note": "Normstatus: afspraak of akkoordtekst; niet automatisch als wettelijke plicht voor Almere formuleren.",
+          "normative_status": {
+            "status": "agreement",
+            "label": "Afspraak of akkoordtekst",
+            "source_authority": "agreement",
+            "has_normative_language": false,
+            "public_wording_guardrail": "Formuleer als afspraak tussen akkoordpartijen; niet automatisch als wettelijke plicht voor Almere.",
+            "needs_attribution": false
+          },
           "needs_human_review": false
         },
         {
@@ -1982,7 +2381,15 @@
           "source_url": "https://www.rijksoverheid.nl/documenten/rapporten/2025/08/31/aanvullend-zorg-en-welzijnsakkoord-azwa",
           "page_url": "/sources/azwa-definitief/",
           "jurisdiction_level": "national",
-          "authority_note": null,
+          "authority_note": "Normstatus: afspraak of akkoordtekst; niet automatisch als wettelijke plicht voor Almere formuleren.",
+          "normative_status": {
+            "status": "agreement",
+            "label": "Afspraak of akkoordtekst",
+            "source_authority": "agreement",
+            "has_normative_language": false,
+            "public_wording_guardrail": "Formuleer als afspraak tussen akkoordpartijen; niet automatisch als wettelijke plicht voor Almere.",
+            "needs_attribution": false
+          },
           "needs_human_review": false
         },
         {
@@ -1997,7 +2404,15 @@
           "source_url": "https://www.rijksoverheid.nl/documenten/rapporten/2025/08/31/aanvullend-zorg-en-welzijnsakkoord-azwa",
           "page_url": "/sources/azwa-definitief/",
           "jurisdiction_level": "national",
-          "authority_note": null,
+          "authority_note": "Normstatus: afspraak of akkoordtekst; niet automatisch als wettelijke plicht voor Almere formuleren.",
+          "normative_status": {
+            "status": "agreement",
+            "label": "Afspraak of akkoordtekst",
+            "source_authority": "agreement",
+            "has_normative_language": false,
+            "public_wording_guardrail": "Formuleer als afspraak tussen akkoordpartijen; niet automatisch als wettelijke plicht voor Almere.",
+            "needs_attribution": false
+          },
           "needs_human_review": false
         }
       ],
@@ -2092,7 +2507,7 @@
       "title": "Mogelijke opvolgactie: inzet van middelen en eigenaarschap vastleggen",
       "status": "geblokkeerd door afhankelijkheid",
       "status_group": "blocked",
-      "as_of_date": "2026-04-28",
+      "as_of_date": "2026-04-29",
       "owner": "Nog niet expliciet benoemd in de bronbasis; bestuurlijk en ambtelijk eigenaarschap moet nog worden verduidelijkt.",
       "linked_domain": "beide",
       "linked_domain_label": "D5 en D6",
@@ -2148,7 +2563,15 @@
           "source_url": "https://documentwijzer.raadvanalmere.nl/app/instrument/24118",
           "page_url": "/sources/raadsvoorstel-visie-gezondheid-geamendeerd/",
           "jurisdiction_level": "municipal",
-          "authority_note": null,
+          "authority_note": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren.",
+          "normative_status": {
+            "status": "lower_authority_signal",
+            "label": "Lagere-autoriteitssignaal",
+            "source_authority": "municipal_policy",
+            "has_normative_language": false,
+            "public_wording_guardrail": "Altijd expliciet toeschrijven aan de bron; niet als harde norm presenteren zonder sterkere bron.",
+            "needs_attribution": true
+          },
           "needs_human_review": false
         },
         {
@@ -2163,7 +2586,15 @@
           "source_url": "https://documentwijzer.raadvanalmere.nl/app/instrument/24118",
           "page_url": "/sources/raadsvoorstel-visie-gezondheid-geamendeerd/",
           "jurisdiction_level": "municipal",
-          "authority_note": null,
+          "authority_note": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren.",
+          "normative_status": {
+            "status": "lower_authority_signal",
+            "label": "Lagere-autoriteitssignaal",
+            "source_authority": "municipal_policy",
+            "has_normative_language": false,
+            "public_wording_guardrail": "Altijd expliciet toeschrijven aan de bron; niet als harde norm presenteren zonder sterkere bron.",
+            "needs_attribution": true
+          },
           "needs_human_review": false
         },
         {
@@ -2178,7 +2609,15 @@
           "source_url": "https://documentwijzer.raadvanalmere.nl/app/instrument/24118",
           "page_url": "/sources/brede-spuk-gala-plan-van-aanpak/",
           "jurisdiction_level": "municipal",
-          "authority_note": null,
+          "authority_note": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren.",
+          "normative_status": {
+            "status": "lower_authority_signal",
+            "label": "Lagere-autoriteitssignaal",
+            "source_authority": "municipal_policy",
+            "has_normative_language": false,
+            "public_wording_guardrail": "Altijd expliciet toeschrijven aan de bron; niet als harde norm presenteren zonder sterkere bron.",
+            "needs_attribution": true
+          },
           "needs_human_review": false
         },
         {
@@ -2193,7 +2632,15 @@
           "source_url": "https://flever.nl/wp-content/uploads/2024/01/Regioplan_IZA_Flevoland_ZorgzaamFlevoland2023.pdf",
           "page_url": "/sources/regioplan-iza-flevoland/",
           "jurisdiction_level": "regional",
-          "authority_note": null,
+          "authority_note": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren.",
+          "normative_status": {
+            "status": "lower_authority_signal",
+            "label": "Lagere-autoriteitssignaal",
+            "source_authority": "regional_plan",
+            "has_normative_language": false,
+            "public_wording_guardrail": "Altijd expliciet toeschrijven aan de bron; niet als harde norm presenteren zonder sterkere bron.",
+            "needs_attribution": true
+          },
           "needs_human_review": false
         },
         {
@@ -2208,7 +2655,15 @@
           "source_url": "https://documentwijzer.raadvanalmere.nl/app/instrument/24118",
           "page_url": "/sources/visie-gezondheidsbeleid-beleidstekst/",
           "jurisdiction_level": "municipal",
-          "authority_note": null,
+          "authority_note": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren.",
+          "normative_status": {
+            "status": "lower_authority_signal",
+            "label": "Lagere-autoriteitssignaal",
+            "source_authority": "municipal_policy",
+            "has_normative_language": false,
+            "public_wording_guardrail": "Altijd expliciet toeschrijven aan de bron; niet als harde norm presenteren zonder sterkere bron.",
+            "needs_attribution": true
+          },
           "needs_human_review": false
         },
         {
@@ -2223,7 +2678,15 @@
           "source_url": "https://documentwijzer.raadvanalmere.nl/app/instrument/24118",
           "page_url": "/sources/visie-gezondheidsbeleid-beleidstekst/",
           "jurisdiction_level": "municipal",
-          "authority_note": null,
+          "authority_note": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren.",
+          "normative_status": {
+            "status": "lower_authority_signal",
+            "label": "Lagere-autoriteitssignaal",
+            "source_authority": "municipal_policy",
+            "has_normative_language": true,
+            "public_wording_guardrail": "Altijd expliciet toeschrijven aan de bron; niet als harde norm presenteren zonder sterkere bron.",
+            "needs_attribution": true
+          },
           "needs_human_review": false
         }
       ],
@@ -2299,7 +2762,7 @@
       "title": "Mogelijke opvolgactie: monitoringsaanpak voor Almere afstemmen",
       "status": "in voorbereiding",
       "status_group": "in_preparation",
-      "as_of_date": "2026-04-28",
+      "as_of_date": "2026-04-29",
       "owner": "Nog niet expliciet benoemd in de bronbasis; bestuurlijk en ambtelijk eigenaarschap moet nog worden verduidelijkt.",
       "linked_domain": "beide",
       "linked_domain_label": "D5 en D6",
@@ -2361,6 +2824,14 @@
           "page_url": "/sources/raadsvoorstel-visie-gezondheid-geamendeerd/",
           "jurisdiction_level": "municipal",
           "authority_note": null,
+          "normative_status": {
+            "status": "contextual",
+            "label": "Contextueel signaal",
+            "source_authority": "municipal_policy",
+            "has_normative_language": false,
+            "public_wording_guardrail": "Gebruik als context of bronaanwijzing, niet als norm.",
+            "needs_attribution": false
+          },
           "needs_human_review": false
         },
         {
@@ -2375,7 +2846,15 @@
           "source_url": "https://www.rijksoverheid.nl/documenten/rapporten/2023/01/31/gala-gezond-en-actief-leven-akkoord",
           "page_url": "/sources/gala-2023/",
           "jurisdiction_level": "national",
-          "authority_note": null,
+          "authority_note": "Normstatus: afspraak of akkoordtekst; niet automatisch als wettelijke plicht voor Almere formuleren.",
+          "normative_status": {
+            "status": "agreement",
+            "label": "Afspraak of akkoordtekst",
+            "source_authority": "agreement",
+            "has_normative_language": false,
+            "public_wording_guardrail": "Formuleer als afspraak tussen akkoordpartijen; niet automatisch als wettelijke plicht voor Almere.",
+            "needs_attribution": false
+          },
           "needs_human_review": false
         },
         {
@@ -2391,6 +2870,14 @@
           "page_url": "/sources/regioplan-iza-flevoland/",
           "jurisdiction_level": "regional",
           "authority_note": null,
+          "normative_status": {
+            "status": "contextual",
+            "label": "Contextueel signaal",
+            "source_authority": "regional_plan",
+            "has_normative_language": false,
+            "public_wording_guardrail": "Gebruik als context of bronaanwijzing, niet als norm.",
+            "needs_attribution": false
+          },
           "needs_human_review": false
         },
         {
@@ -2406,6 +2893,14 @@
           "page_url": "/sources/regioplan-iza-flevoland/",
           "jurisdiction_level": "regional",
           "authority_note": null,
+          "normative_status": {
+            "status": "contextual",
+            "label": "Contextueel signaal",
+            "source_authority": "regional_plan",
+            "has_normative_language": false,
+            "public_wording_guardrail": "Gebruik als context of bronaanwijzing, niet als norm.",
+            "needs_attribution": false
+          },
           "needs_human_review": false
         },
         {
@@ -2420,7 +2915,15 @@
           "source_url": "https://flever.nl/wp-content/uploads/2024/01/Regioplan_IZA_Flevoland_ZorgzaamFlevoland2023.pdf",
           "page_url": "/sources/regioplan-iza-flevoland/",
           "jurisdiction_level": "regional",
-          "authority_note": null,
+          "authority_note": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren.",
+          "normative_status": {
+            "status": "lower_authority_signal",
+            "label": "Lagere-autoriteitssignaal",
+            "source_authority": "regional_plan",
+            "has_normative_language": false,
+            "public_wording_guardrail": "Altijd expliciet toeschrijven aan de bron; niet als harde norm presenteren zonder sterkere bron.",
+            "needs_attribution": true
+          },
           "needs_human_review": false
         },
         {
@@ -2435,7 +2938,15 @@
           "source_url": "https://documentwijzer.raadvanalmere.nl/app/instrument/24161",
           "page_url": "/sources/maatschappelijke-agenda-beleidstekst/",
           "jurisdiction_level": "municipal",
-          "authority_note": null,
+          "authority_note": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren.",
+          "normative_status": {
+            "status": "lower_authority_signal",
+            "label": "Lagere-autoriteitssignaal",
+            "source_authority": "municipal_policy",
+            "has_normative_language": true,
+            "public_wording_guardrail": "Altijd expliciet toeschrijven aan de bron; niet als harde norm presenteren zonder sterkere bron.",
+            "needs_attribution": true
+          },
           "needs_human_review": false
         }
       ],
@@ -2512,7 +3023,7 @@
       "title": "Mogelijke opvolgactie: regionale digitale aansluiting concretiseren",
       "status": "geblokkeerd door afhankelijkheid",
       "status_group": "blocked",
-      "as_of_date": "2026-04-28",
+      "as_of_date": "2026-04-29",
       "owner": "Nog niet expliciet benoemd in de bronbasis; regionale en gemeentelijke afstemming lijkt nodig.",
       "linked_domain": "D6",
       "linked_domain_label": "D6",
@@ -2564,7 +3075,15 @@
           "source_url": "https://flever.nl/wp-content/uploads/2024/01/Regioplan_IZA_Flevoland_ZorgzaamFlevoland2023.pdf",
           "page_url": "/sources/regioplan-iza-flevoland/",
           "jurisdiction_level": "regional",
-          "authority_note": "Relevantie voor Almere is afgeleid; expliciete lokale overname is niet altijd zichtbaar in de verzamelde openbare Almere-documenten.",
+          "authority_note": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren.",
+          "normative_status": {
+            "status": "lower_authority_signal",
+            "label": "Lagere-autoriteitssignaal",
+            "source_authority": "regional_plan",
+            "has_normative_language": false,
+            "public_wording_guardrail": "Altijd expliciet toeschrijven aan de bron; niet als harde norm presenteren zonder sterkere bron.",
+            "needs_attribution": true
+          },
           "needs_human_review": true
         },
         {
@@ -2579,7 +3098,15 @@
           "source_url": "https://www.seo.nl/publicaties/naar-een-positief-gezond-almere-beleidstheorie-en-businesscase-transformatieplan/",
           "page_url": "/sources/seo-beleidstheorie-en-businesscase-pga/",
           "jurisdiction_level": "municipal",
-          "authority_note": "Lagere autoriteit: deze passage is afkomstig uit een toelichtende of samenvattende bron.",
+          "authority_note": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren.",
+          "normative_status": {
+            "status": "lower_authority_signal",
+            "label": "Lagere-autoriteitssignaal",
+            "source_authority": "commentary",
+            "has_normative_language": true,
+            "public_wording_guardrail": "Altijd expliciet toeschrijven aan de bron; niet als harde norm presenteren zonder sterkere bron.",
+            "needs_attribution": true
+          },
           "needs_human_review": true
         },
         {
@@ -2594,7 +3121,15 @@
           "source_url": "https://positiefgezondalmere.nl/over-ons/",
           "page_url": "/sources/pga-transformatieplan/",
           "jurisdiction_level": "municipal",
-          "authority_note": "Relevantie voor Almere is afgeleid; expliciete lokale overname is niet altijd zichtbaar in de verzamelde openbare Almere-documenten.",
+          "authority_note": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren.",
+          "normative_status": {
+            "status": "lower_authority_signal",
+            "label": "Lagere-autoriteitssignaal",
+            "source_authority": "implementation_plan",
+            "has_normative_language": false,
+            "public_wording_guardrail": "Altijd expliciet toeschrijven aan de bron; niet als harde norm presenteren zonder sterkere bron.",
+            "needs_attribution": true
+          },
           "needs_human_review": true
         },
         {
@@ -2609,7 +3144,15 @@
           "source_url": "https://positiefgezondalmere.nl/over-ons/",
           "page_url": "/sources/pga-transformatieplan/",
           "jurisdiction_level": "municipal",
-          "authority_note": "Relevantie voor Almere is afgeleid; expliciete lokale overname is niet altijd zichtbaar in de verzamelde openbare Almere-documenten.",
+          "authority_note": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren.",
+          "normative_status": {
+            "status": "lower_authority_signal",
+            "label": "Lagere-autoriteitssignaal",
+            "source_authority": "implementation_plan",
+            "has_normative_language": false,
+            "public_wording_guardrail": "Altijd expliciet toeschrijven aan de bron; niet als harde norm presenteren zonder sterkere bron.",
+            "needs_attribution": true
+          },
           "needs_human_review": true
         }
       ],
@@ -2747,6 +3290,18 @@
     },
     {
       "review_item_id": "rvw_007",
+      "reason_code": "lower_authority_norm_signal",
+      "reason_anchor": "review-lower-authority-norm-signal",
+      "reason_label": "lower authority norm signal",
+      "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
+      "document_title": "Plan van aanpak 2024-2026 Brede SPUK/GALA Almere",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_008",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -2758,7 +3313,7 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_008",
+      "review_item_id": "rvw_009",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -2770,7 +3325,31 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_009",
+      "review_item_id": "rvw_010",
+      "reason_code": "lower_authority_norm_signal",
+      "reason_anchor": "review-lower-authority-norm-signal",
+      "reason_label": "lower authority norm signal",
+      "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid",
+      "document_title": "Visie Gezondheidsbeleid Almere 2024-2026",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_011",
+      "reason_code": "lower_authority_norm_signal",
+      "reason_anchor": "review-lower-authority-norm-signal",
+      "reason_label": "lower authority norm signal",
+      "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
+      "document_title": "Samen werken aan gezondheid en zorg - Visie gezondheidsbeleid Almere 2024-2026",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_012",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -2782,7 +3361,7 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_010",
+      "review_item_id": "rvw_013",
       "reason_code": "extraction_noise_detected",
       "reason_anchor": "review-extraction-noise-detected",
       "reason_label": "extraction noise detected",
@@ -2794,7 +3373,19 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_011",
+      "review_item_id": "rvw_014",
+      "reason_code": "lower_authority_norm_signal",
+      "reason_anchor": "review-lower-authority-norm-signal",
+      "reason_label": "lower authority norm signal",
+      "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd",
+      "document_title": "Raadsvoorstel Visie Gezondheidsbeleid Almere 2024-2026 - geamendeerd",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_015",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -2806,7 +3397,7 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_012",
+      "review_item_id": "rvw_016",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -2818,7 +3409,19 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_013",
+      "review_item_id": "rvw_017",
+      "reason_code": "lower_authority_norm_signal",
+      "reason_anchor": "review-lower-authority-norm-signal",
+      "reason_label": "lower authority norm signal",
+      "document_id": "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst",
+      "document_title": "Maatschappelijke agenda 2024-2034",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_018",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -2830,7 +3433,7 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_014",
+      "review_item_id": "rvw_019",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -2842,7 +3445,19 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_015",
+      "review_item_id": "rvw_020",
+      "reason_code": "lower_authority_norm_signal",
+      "reason_anchor": "review-lower-authority-norm-signal",
+      "reason_label": "lower authority norm signal",
+      "document_id": "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie",
+      "document_title": "Opzet procesevaluatie en monitor Sociaal Domein",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_021",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -2854,7 +3469,31 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_016",
+      "review_item_id": "rvw_022",
+      "reason_code": "lower_authority_norm_signal",
+      "reason_anchor": "review-lower-authority-norm-signal",
+      "reason_label": "lower authority norm signal",
+      "document_id": "mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd",
+      "document_title": "Raadsvoorstel Maatschappelijke agenda 2024-2034 - geamendeerd",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_023",
+      "reason_code": "lower_authority_norm_signal",
+      "reason_anchor": "review-lower-authority-norm-signal",
+      "reason_label": "lower authority norm signal",
+      "document_id": "mun_almere_2026_stevige_lokale_teams_begrotingswijziging",
+      "document_title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin - begrotingswijziging",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_024",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -2866,7 +3505,19 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_017",
+      "review_item_id": "rvw_025",
+      "reason_code": "lower_authority_norm_signal",
+      "reason_anchor": "review-lower-authority-norm-signal",
+      "reason_label": "lower authority norm signal",
+      "document_id": "mun_almere_2026_stevige_lokale_teams_besluitenlijst",
+      "document_title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin - besluitenlijst",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_026",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -2878,7 +3529,7 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_018",
+      "review_item_id": "rvw_027",
       "reason_code": "extraction_noise_detected",
       "reason_anchor": "review-extraction-noise-detected",
       "reason_label": "extraction noise detected",
@@ -2890,7 +3541,19 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_019",
+      "review_item_id": "rvw_028",
+      "reason_code": "lower_authority_norm_signal",
+      "reason_anchor": "review-lower-authority-norm-signal",
+      "reason_label": "lower authority norm signal",
+      "document_id": "mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel",
+      "document_title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin - geamendeerd raadsvoorstel",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_029",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -2902,7 +3565,7 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_020",
+      "review_item_id": "rvw_030",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -2914,7 +3577,19 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_021",
+      "review_item_id": "rvw_031",
+      "reason_code": "lower_authority_norm_signal",
+      "reason_anchor": "review-lower-authority-norm-signal",
+      "reason_label": "lower authority norm signal",
+      "document_id": "mun_almere_2026_stevige_lokale_teams_raad",
+      "document_title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_032",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -2926,7 +3601,7 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_022",
+      "review_item_id": "rvw_033",
       "reason_code": "extraction_noise_detected",
       "reason_anchor": "review-extraction-noise-detected",
       "reason_label": "extraction noise detected",
@@ -2938,7 +3613,19 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_023",
+      "review_item_id": "rvw_034",
+      "reason_code": "lower_authority_norm_signal",
+      "reason_anchor": "review-lower-authority-norm-signal",
+      "reason_label": "lower authority norm signal",
+      "document_id": "mun_almere_2026_stevige_lokale_teams_raadsvoorstel",
+      "document_title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin - raadsvoorstel",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_035",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -2950,7 +3637,7 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_024",
+      "review_item_id": "rvw_036",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -2962,7 +3649,19 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_025",
+      "review_item_id": "rvw_037",
+      "reason_code": "lower_authority_norm_signal",
+      "reason_anchor": "review-lower-authority-norm-signal",
+      "reason_label": "lower authority norm signal",
+      "document_id": "mun_almere_begroting_2026_webpagina",
+      "document_title": "Begroting 2026",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_038",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -2974,7 +3673,19 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_026",
+      "review_item_id": "rvw_039",
+      "reason_code": "lower_authority_norm_signal",
+      "reason_anchor": "review-lower-authority-norm-signal",
+      "reason_label": "lower authority norm signal",
+      "document_id": "mun_almere_pga_seo_businesscase_2024",
+      "document_title": "Naar een positief gezond Almere; Beleidstheorie en businesscase transformatieplan",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_040",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -2986,7 +3697,19 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_027",
+      "review_item_id": "rvw_041",
+      "reason_code": "lower_authority_norm_signal",
+      "reason_anchor": "review-lower-authority-norm-signal",
+      "reason_label": "lower authority norm signal",
+      "document_id": "mun_almere_pga_transformatieplan",
+      "document_title": "Transformatieplan Positief Gezond Almere",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_042",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -2998,7 +3721,7 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_028",
+      "review_item_id": "rvw_043",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -3010,7 +3733,7 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_029",
+      "review_item_id": "rvw_044",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -3022,7 +3745,19 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_030",
+      "review_item_id": "rvw_045",
+      "reason_code": "lower_authority_norm_signal",
+      "reason_anchor": "review-lower-authority-norm-signal",
+      "reason_label": "lower authority norm signal",
+      "document_id": "mun_almere_samenwerkingsprojecten",
+      "document_title": "Samenwerkingsprojecten",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_046",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -3034,7 +3769,7 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_031",
+      "review_item_id": "rvw_047",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -3046,7 +3781,19 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_032",
+      "review_item_id": "rvw_048",
+      "reason_code": "lower_authority_norm_signal",
+      "reason_anchor": "review-lower-authority-norm-signal",
+      "reason_label": "lower authority norm signal",
+      "document_id": "mun_almere_sociaal_domein_informatiepagina",
+      "document_title": "Informatiepagina Sociaal Domein",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_049",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -3058,7 +3805,7 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_033",
+      "review_item_id": "rvw_050",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -3070,7 +3817,7 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_034",
+      "review_item_id": "rvw_051",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -3082,7 +3829,7 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_035",
+      "review_item_id": "rvw_052",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -3094,7 +3841,19 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_036",
+      "review_item_id": "rvw_053",
+      "reason_code": "lower_authority_norm_signal",
+      "reason_anchor": "review-lower-authority-norm-signal",
+      "reason_label": "lower authority norm signal",
+      "document_id": "mun_almere_wijkteams",
+      "document_title": "Wijkteams Almere",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_054",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -3106,7 +3865,7 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_037",
+      "review_item_id": "rvw_055",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -3118,7 +3877,7 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_038",
+      "review_item_id": "rvw_056",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -3130,7 +3889,19 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_039",
+      "review_item_id": "rvw_057",
+      "reason_code": "lower_authority_norm_signal",
+      "reason_anchor": "review-lower-authority-norm-signal",
+      "reason_label": "lower authority norm signal",
+      "document_id": "nat_azwa_format_werkagenda_d5_2026",
+      "document_title": "Format werkagenda basisfunctionaliteiten AZWA",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_058",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -3142,7 +3913,7 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_040",
+      "review_item_id": "rvw_059",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -3154,7 +3925,19 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_041",
+      "review_item_id": "rvw_060",
+      "reason_code": "lower_authority_norm_signal",
+      "reason_anchor": "review-lower-authority-norm-signal",
+      "reason_label": "lower authority norm signal",
+      "document_id": "nat_azwa_toelichting_producten_proces_2026",
+      "document_title": "Toelichting producten en proces",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_061",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -3166,7 +3949,7 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_042",
+      "review_item_id": "rvw_062",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -3178,7 +3961,19 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_043",
+      "review_item_id": "rvw_063",
+      "reason_code": "lower_authority_norm_signal",
+      "reason_anchor": "review-lower-authority-norm-signal",
+      "reason_label": "lower authority norm signal",
+      "document_id": "nat_bzk_gemeentefonds_cyclus",
+      "document_title": "Gemeentefonds",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_064",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -3190,7 +3985,19 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_044",
+      "review_item_id": "rvw_065",
+      "reason_code": "lower_authority_norm_signal",
+      "reason_anchor": "review-lower-authority-norm-signal",
+      "reason_label": "lower authority norm signal",
+      "document_id": "nat_dusi_spuk_transformatiemiddelen_2024_2028",
+      "document_title": "Specifieke uitkering transformatiemiddelen IZA & AZWA 2024-2028",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_066",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -3202,7 +4009,7 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_045",
+      "review_item_id": "rvw_067",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -3214,7 +4021,7 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_046",
+      "review_item_id": "rvw_068",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -3226,7 +4033,19 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_047",
+      "review_item_id": "rvw_069",
+      "reason_code": "lower_authority_norm_signal",
+      "reason_anchor": "review-lower-authority-norm-signal",
+      "reason_label": "lower authority norm signal",
+      "document_id": "nat_sociaalwerknl_financiering_iza_azwa_2025",
+      "document_title": "Financiering IZA en AZWA: hoe zit het precies?",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_070",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -3238,7 +4057,19 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_048",
+      "review_item_id": "rvw_071",
+      "reason_code": "lower_authority_norm_signal",
+      "reason_anchor": "review-lower-authority-norm-signal",
+      "reason_label": "lower authority norm signal",
+      "document_id": "nat_vng_azwa_faq_middelen",
+      "document_title": "Welke middelen zijn beschikbaar in het AZWA en hoe worden deze middelen verdeeld?",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_072",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -3250,7 +4081,7 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_049",
+      "review_item_id": "rvw_073",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -3262,7 +4093,19 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_050",
+      "review_item_id": "rvw_074",
+      "reason_code": "lower_authority_norm_signal",
+      "reason_anchor": "review-lower-authority-norm-signal",
+      "reason_label": "lower authority norm signal",
+      "document_id": "nat_vng_azwa_faq_uitvoeringscapaciteit",
+      "document_title": "Is er rekening gehouden met de benodigde uitvoeringscapaciteit van gemeenten bij het AZWA?",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_075",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -3274,7 +4117,7 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_051",
+      "review_item_id": "rvw_076",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -3286,7 +4129,19 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_052",
+      "review_item_id": "rvw_077",
+      "reason_code": "lower_authority_norm_signal",
+      "reason_anchor": "review-lower-authority-norm-signal",
+      "reason_label": "lower authority norm signal",
+      "document_id": "nat_vng_brief_azwa_financiering_webpagina_2026",
+      "document_title": "AZWA-financiering voor gemeenten (Zorgakkoord)",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_078",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -3298,7 +4153,19 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_053",
+      "review_item_id": "rvw_079",
+      "reason_code": "lower_authority_norm_signal",
+      "reason_anchor": "review-lower-authority-norm-signal",
+      "reason_label": "lower authority norm signal",
+      "document_id": "nat_vng_gezond_en_actief_leven_2026",
+      "document_title": "Gezond en actief leven",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_080",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -3310,7 +4177,19 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_054",
+      "review_item_id": "rvw_081",
+      "reason_code": "lower_authority_norm_signal",
+      "reason_anchor": "review-lower-authority-norm-signal",
+      "reason_label": "lower authority norm signal",
+      "document_id": "nat_vng_ledenbrief_azwa_financiering_2026",
+      "document_title": "AZWA-financiering voor gemeenten (Zorgakkoord)",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_082",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -3322,7 +4201,19 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_055",
+      "review_item_id": "rvw_083",
+      "reason_code": "lower_authority_norm_signal",
+      "reason_anchor": "review-lower-authority-norm-signal",
+      "reason_label": "lower authority norm signal",
+      "document_id": "nat_vng_ledenbrief_onderhandelaarsakkoord_azwa_2025",
+      "document_title": "Ledenbrief onderhandelaarsakkoord AZWA",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_084",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -3334,7 +4225,7 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_056",
+      "review_item_id": "rvw_085",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -3346,7 +4237,19 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_057",
+      "review_item_id": "rvw_086",
+      "reason_code": "lower_authority_norm_signal",
+      "reason_anchor": "review-lower-authority-norm-signal",
+      "reason_label": "lower authority norm signal",
+      "document_id": "nat_zorgakkoorden_azwa_programmapagina_2025",
+      "document_title": "Aanvullend Zorg- en Welzijnsakkoord",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_087",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -3358,7 +4261,19 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_058",
+      "review_item_id": "rvw_088",
+      "reason_code": "lower_authority_norm_signal",
+      "reason_anchor": "review-lower-authority-norm-signal",
+      "reason_label": "lower authority norm signal",
+      "document_id": "reg_flevoland_2023_regiobeeld",
+      "document_title": "Regiobeeld Flevoland 2023",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_089",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -3370,7 +4285,19 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_059",
+      "review_item_id": "rvw_090",
+      "reason_code": "lower_authority_norm_signal",
+      "reason_anchor": "review-lower-authority-norm-signal",
+      "reason_label": "lower authority norm signal",
+      "document_id": "reg_flevoland_2023_regioplan_iza",
+      "document_title": "Zorgzaam Flevoland 2023 Regioplan IZA Flevoland",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_091",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -3382,7 +4309,7 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_060",
+      "review_item_id": "rvw_092",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -3394,7 +4321,7 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_061",
+      "review_item_id": "rvw_093",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -3406,7 +4333,19 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_062",
+      "review_item_id": "rvw_094",
+      "reason_code": "lower_authority_norm_signal",
+      "reason_anchor": "review-lower-authority-norm-signal",
+      "reason_label": "lower authority norm signal",
+      "document_id": "reg_ggd_flevoland_begroting_2026",
+      "document_title": "Begroting 2026 GGD Flevoland",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_095",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -3418,7 +4357,7 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_063",
+      "review_item_id": "rvw_096",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -3430,7 +4369,19 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_064",
+      "review_item_id": "rvw_097",
+      "reason_code": "lower_authority_norm_signal",
+      "reason_anchor": "review-lower-authority-norm-signal",
+      "reason_label": "lower authority norm signal",
+      "document_id": "reg_ggd_flevoland_jgz_almere_profile",
+      "document_title": "Profiel Jeugdgezondheidszorg",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_098",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -3442,7 +4393,7 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_065",
+      "review_item_id": "rvw_099",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -3454,7 +4405,19 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_066",
+      "review_item_id": "rvw_100",
+      "reason_code": "lower_authority_norm_signal",
+      "reason_anchor": "review-lower-authority-norm-signal",
+      "reason_label": "lower authority norm signal",
+      "document_id": "reg_ggd_flevoland_kennis_en_advies",
+      "document_title": "Kennis en Advies",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_101",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -3466,7 +4429,7 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_067",
+      "review_item_id": "rvw_102",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -3478,7 +4441,19 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_068",
+      "review_item_id": "rvw_103",
+      "reason_code": "lower_authority_norm_signal",
+      "reason_anchor": "review-lower-authority-norm-signal",
+      "reason_label": "lower authority norm signal",
+      "document_id": "reg_ggd_flevoland_valpreventie_almere",
+      "document_title": "Valpreventie Gemeente Almere",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_104",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -3490,7 +4465,7 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_069",
+      "review_item_id": "rvw_105",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -3502,7 +4477,19 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_070",
+      "review_item_id": "rvw_106",
+      "reason_code": "lower_authority_norm_signal",
+      "reason_anchor": "review-lower-authority-norm-signal",
+      "reason_label": "lower authority norm signal",
+      "document_id": "reg_zonmw_doorontwikkeling_zorgzaam_flevoland",
+      "document_title": "Doorontwikkeling Zorgzaam Flevoland naar een toekomstbestendige samenwerkingsstructuur",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_107",
       "reason_code": "table_content_not_promoted",
       "reason_anchor": "review-table-content-not-promoted",
       "reason_label": "table content not promoted",
@@ -3514,7 +4501,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_071",
+      "review_item_id": "rvw_108",
       "reason_code": "unresolved_conflict",
       "reason_anchor": "review-unresolved-conflict",
       "reason_label": "begrips- of interpretatieduiding nodig",
@@ -3526,7 +4513,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_072",
+      "review_item_id": "rvw_109",
       "reason_code": "unresolved_conflict",
       "reason_anchor": "review-unresolved-conflict",
       "reason_label": "begrips- of interpretatieduiding nodig",
@@ -3538,7 +4525,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_073",
+      "review_item_id": "rvw_110",
       "reason_code": "unresolved_conflict",
       "reason_anchor": "review-unresolved-conflict",
       "reason_label": "begrips- of interpretatieduiding nodig",
@@ -3550,7 +4537,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_074",
+      "review_item_id": "rvw_111",
       "reason_code": "unresolved_conflict",
       "reason_anchor": "review-unresolved-conflict",
       "reason_label": "begrips- of interpretatieduiding nodig",
@@ -3562,7 +4549,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_075",
+      "review_item_id": "rvw_112",
       "reason_code": "unresolved_conflict",
       "reason_anchor": "review-unresolved-conflict",
       "reason_label": "begrips- of interpretatieduiding nodig",
@@ -3574,7 +4561,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_076",
+      "review_item_id": "rvw_113",
       "reason_code": "unresolved_conflict",
       "reason_anchor": "review-unresolved-conflict",
       "reason_label": "begrips- of interpretatieduiding nodig",
@@ -3586,7 +4573,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_077",
+      "review_item_id": "rvw_114",
       "reason_code": "unresolved_conflict",
       "reason_anchor": "review-unresolved-conflict",
       "reason_label": "begrips- of interpretatieduiding nodig",
@@ -3598,7 +4585,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_078",
+      "review_item_id": "rvw_115",
       "reason_code": "unresolved_conflict",
       "reason_anchor": "review-unresolved-conflict",
       "reason_label": "begrips- of interpretatieduiding nodig",
@@ -3610,7 +4597,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_079",
+      "review_item_id": "rvw_116",
       "reason_code": "unresolved_conflict",
       "reason_anchor": "review-unresolved-conflict",
       "reason_label": "begrips- of interpretatieduiding nodig",
@@ -3622,7 +4609,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_080",
+      "review_item_id": "rvw_117",
       "reason_code": "unresolved_conflict",
       "reason_anchor": "review-unresolved-conflict",
       "reason_label": "begrips- of interpretatieduiding nodig",
@@ -3642,7 +4629,7 @@
       "summary": "Brondocumenten met lagere autoriteit vragen expliciete bronduiding in menselijke samenvattingen.",
       "items": [
         {
-          "review_item_id": "rvw_008",
+          "review_item_id": "rvw_009",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -3654,7 +4641,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_012",
+          "review_item_id": "rvw_016",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -3666,7 +4653,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_014",
+          "review_item_id": "rvw_019",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -3678,7 +4665,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_020",
+          "review_item_id": "rvw_030",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -3690,7 +4677,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_024",
+          "review_item_id": "rvw_036",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -3702,7 +4689,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_025",
+          "review_item_id": "rvw_038",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -3714,7 +4701,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_028",
+          "review_item_id": "rvw_043",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -3726,7 +4713,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_029",
+          "review_item_id": "rvw_044",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -3738,7 +4725,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_031",
+          "review_item_id": "rvw_047",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -3750,7 +4737,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_033",
+          "review_item_id": "rvw_050",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -3762,7 +4749,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_035",
+          "review_item_id": "rvw_052",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -3774,7 +4761,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_038",
+          "review_item_id": "rvw_056",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -3786,7 +4773,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_040",
+          "review_item_id": "rvw_059",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -3798,7 +4785,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_042",
+          "review_item_id": "rvw_062",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -3810,7 +4797,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_043",
+          "review_item_id": "rvw_064",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -3822,7 +4809,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_046",
+          "review_item_id": "rvw_068",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -3834,7 +4821,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_047",
+          "review_item_id": "rvw_070",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -3846,7 +4833,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_049",
+          "review_item_id": "rvw_073",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -3858,7 +4845,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_051",
+          "review_item_id": "rvw_076",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -3870,7 +4857,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_052",
+          "review_item_id": "rvw_078",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -3882,7 +4869,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_053",
+          "review_item_id": "rvw_080",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -3894,7 +4881,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_054",
+          "review_item_id": "rvw_082",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -3906,7 +4893,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_056",
+          "review_item_id": "rvw_085",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -3918,7 +4905,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_057",
+          "review_item_id": "rvw_087",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -3930,7 +4917,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_060",
+          "review_item_id": "rvw_092",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -3942,7 +4929,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_061",
+          "review_item_id": "rvw_093",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -3954,7 +4941,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_063",
+          "review_item_id": "rvw_096",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -3966,7 +4953,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_065",
+          "review_item_id": "rvw_099",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -3978,7 +4965,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_067",
+          "review_item_id": "rvw_102",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -3990,7 +4977,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_069",
+          "review_item_id": "rvw_105",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -4010,7 +4997,7 @@
       "summary": "Er is een landelijk of regionaal spoor zichtbaar, maar in openbare Almere-documenten is lokale overname nog niet expliciet vastgelegd.",
       "items": [
         {
-          "review_item_id": "rvw_007",
+          "review_item_id": "rvw_008",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -4022,7 +5009,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_009",
+          "review_item_id": "rvw_012",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -4034,7 +5021,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_011",
+          "review_item_id": "rvw_015",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -4046,7 +5033,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_013",
+          "review_item_id": "rvw_018",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -4058,7 +5045,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_015",
+          "review_item_id": "rvw_021",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -4070,7 +5057,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_016",
+          "review_item_id": "rvw_024",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -4082,7 +5069,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_017",
+          "review_item_id": "rvw_026",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -4094,7 +5081,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_019",
+          "review_item_id": "rvw_029",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -4106,7 +5093,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_021",
+          "review_item_id": "rvw_032",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -4118,7 +5105,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_023",
+          "review_item_id": "rvw_035",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -4130,7 +5117,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_026",
+          "review_item_id": "rvw_040",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -4142,7 +5129,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_027",
+          "review_item_id": "rvw_042",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -4154,7 +5141,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_030",
+          "review_item_id": "rvw_046",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -4166,7 +5153,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_032",
+          "review_item_id": "rvw_049",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -4178,7 +5165,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_034",
+          "review_item_id": "rvw_051",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -4190,7 +5177,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_036",
+          "review_item_id": "rvw_054",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -4202,7 +5189,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_037",
+          "review_item_id": "rvw_055",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -4214,7 +5201,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_039",
+          "review_item_id": "rvw_058",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -4226,7 +5213,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_041",
+          "review_item_id": "rvw_061",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -4238,7 +5225,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_044",
+          "review_item_id": "rvw_066",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -4250,7 +5237,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_045",
+          "review_item_id": "rvw_067",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -4262,7 +5249,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_048",
+          "review_item_id": "rvw_072",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -4274,7 +5261,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_050",
+          "review_item_id": "rvw_075",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -4286,7 +5273,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_055",
+          "review_item_id": "rvw_084",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -4298,7 +5285,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_058",
+          "review_item_id": "rvw_089",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -4310,7 +5297,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_059",
+          "review_item_id": "rvw_091",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -4322,7 +5309,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_062",
+          "review_item_id": "rvw_095",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -4334,7 +5321,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_064",
+          "review_item_id": "rvw_098",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -4346,7 +5333,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_066",
+          "review_item_id": "rvw_101",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -4358,7 +5345,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_068",
+          "review_item_id": "rvw_104",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -4378,7 +5365,7 @@
       "summary": "Begrippen of lokale vertalingen worden in meerdere contexten gebruikt en vragen bestuurlijke of beleidsmatige duiding.",
       "items": [
         {
-          "review_item_id": "rvw_071",
+          "review_item_id": "rvw_108",
           "reason_code": "unresolved_conflict",
           "reason_anchor": "review-unresolved-conflict",
           "reason_label": "begrips- of interpretatieduiding nodig",
@@ -4390,7 +5377,7 @@
           "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
         },
         {
-          "review_item_id": "rvw_072",
+          "review_item_id": "rvw_109",
           "reason_code": "unresolved_conflict",
           "reason_anchor": "review-unresolved-conflict",
           "reason_label": "begrips- of interpretatieduiding nodig",
@@ -4402,7 +5389,7 @@
           "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
         },
         {
-          "review_item_id": "rvw_073",
+          "review_item_id": "rvw_110",
           "reason_code": "unresolved_conflict",
           "reason_anchor": "review-unresolved-conflict",
           "reason_label": "begrips- of interpretatieduiding nodig",
@@ -4414,7 +5401,7 @@
           "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
         },
         {
-          "review_item_id": "rvw_074",
+          "review_item_id": "rvw_111",
           "reason_code": "unresolved_conflict",
           "reason_anchor": "review-unresolved-conflict",
           "reason_label": "begrips- of interpretatieduiding nodig",
@@ -4426,7 +5413,7 @@
           "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
         },
         {
-          "review_item_id": "rvw_075",
+          "review_item_id": "rvw_112",
           "reason_code": "unresolved_conflict",
           "reason_anchor": "review-unresolved-conflict",
           "reason_label": "begrips- of interpretatieduiding nodig",
@@ -4438,7 +5425,7 @@
           "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
         },
         {
-          "review_item_id": "rvw_076",
+          "review_item_id": "rvw_113",
           "reason_code": "unresolved_conflict",
           "reason_anchor": "review-unresolved-conflict",
           "reason_label": "begrips- of interpretatieduiding nodig",
@@ -4450,7 +5437,7 @@
           "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
         },
         {
-          "review_item_id": "rvw_077",
+          "review_item_id": "rvw_114",
           "reason_code": "unresolved_conflict",
           "reason_anchor": "review-unresolved-conflict",
           "reason_label": "begrips- of interpretatieduiding nodig",
@@ -4462,7 +5449,7 @@
           "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
         },
         {
-          "review_item_id": "rvw_078",
+          "review_item_id": "rvw_115",
           "reason_code": "unresolved_conflict",
           "reason_anchor": "review-unresolved-conflict",
           "reason_label": "begrips- of interpretatieduiding nodig",
@@ -4474,7 +5461,7 @@
           "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
         },
         {
-          "review_item_id": "rvw_079",
+          "review_item_id": "rvw_116",
           "reason_code": "unresolved_conflict",
           "reason_anchor": "review-unresolved-conflict",
           "reason_label": "begrips- of interpretatieduiding nodig",
@@ -4486,7 +5473,7 @@
           "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
         },
         {
-          "review_item_id": "rvw_080",
+          "review_item_id": "rvw_117",
           "reason_code": "unresolved_conflict",
           "reason_anchor": "review-unresolved-conflict",
           "reason_label": "begrips- of interpretatieduiding nodig",
@@ -4540,6 +5527,14 @@
       "page_url": "/sources/regioplan-iza-flevoland/",
       "jurisdiction_level": "regional",
       "authority_note": null,
+      "normative_status": {
+        "status": "contextual",
+        "label": "Contextueel signaal",
+        "source_authority": "regional_plan",
+        "has_normative_language": false,
+        "public_wording_guardrail": "Gebruik als context of bronaanwijzing, niet als norm.",
+        "needs_attribution": false
+      },
       "needs_human_review": false
     },
     {
@@ -4554,7 +5549,15 @@
       "source_url": "https://documentwijzer.raadvanalmere.nl/app/instrument/24161",
       "page_url": "/sources/maatschappelijke-agenda-beleidstekst/",
       "jurisdiction_level": "municipal",
-      "authority_note": null,
+      "authority_note": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren.",
+      "normative_status": {
+        "status": "lower_authority_signal",
+        "label": "Lagere-autoriteitssignaal",
+        "source_authority": "municipal_policy",
+        "has_normative_language": true,
+        "public_wording_guardrail": "Altijd expliciet toeschrijven aan de bron; niet als harde norm presenteren zonder sterkere bron.",
+        "needs_attribution": true
+      },
       "needs_human_review": false
     },
     {
@@ -4569,7 +5572,15 @@
       "source_url": "https://www.rijksoverheid.nl/documenten/rapporten/2025/08/31/aanvullend-zorg-en-welzijnsakkoord-azwa",
       "page_url": "/sources/azwa-definitief/",
       "jurisdiction_level": "national",
-      "authority_note": null,
+      "authority_note": "Normstatus: afspraak of akkoordtekst; niet automatisch als wettelijke plicht voor Almere formuleren.",
+      "normative_status": {
+        "status": "agreement",
+        "label": "Afspraak of akkoordtekst",
+        "source_authority": "agreement",
+        "has_normative_language": false,
+        "public_wording_guardrail": "Formuleer als afspraak tussen akkoordpartijen; niet automatisch als wettelijke plicht voor Almere.",
+        "needs_attribution": false
+      },
       "needs_human_review": false
     },
     {
@@ -4584,7 +5595,15 @@
       "source_url": "https://www.rijksoverheid.nl/documenten/rapporten/2025/08/31/aanvullend-zorg-en-welzijnsakkoord-azwa",
       "page_url": "/sources/azwa-definitief/",
       "jurisdiction_level": "national",
-      "authority_note": null,
+      "authority_note": "Normstatus: afspraak of akkoordtekst; niet automatisch als wettelijke plicht voor Almere formuleren.",
+      "normative_status": {
+        "status": "agreement",
+        "label": "Afspraak of akkoordtekst",
+        "source_authority": "agreement",
+        "has_normative_language": false,
+        "public_wording_guardrail": "Formuleer als afspraak tussen akkoordpartijen; niet automatisch als wettelijke plicht voor Almere.",
+        "needs_attribution": false
+      },
       "needs_human_review": false
     },
     {
@@ -4599,7 +5618,15 @@
       "source_url": "https://www.rijksoverheid.nl/documenten/rapporten/2025/08/31/aanvullend-zorg-en-welzijnsakkoord-azwa",
       "page_url": "/sources/azwa-definitief/",
       "jurisdiction_level": "national",
-      "authority_note": null,
+      "authority_note": "Normstatus: afspraak of akkoordtekst; niet automatisch als wettelijke plicht voor Almere formuleren.",
+      "normative_status": {
+        "status": "agreement",
+        "label": "Afspraak of akkoordtekst",
+        "source_authority": "agreement",
+        "has_normative_language": false,
+        "public_wording_guardrail": "Formuleer als afspraak tussen akkoordpartijen; niet automatisch als wettelijke plicht voor Almere.",
+        "needs_attribution": false
+      },
       "needs_human_review": false
     },
     {
@@ -4615,6 +5642,14 @@
       "page_url": "/sources/cw-3-1-kader-d5-d6/",
       "jurisdiction_level": "national",
       "authority_note": null,
+      "normative_status": {
+        "status": "contextual",
+        "label": "Contextueel signaal",
+        "source_authority": "framework",
+        "has_normative_language": false,
+        "public_wording_guardrail": "Gebruik als context of bronaanwijzing, niet als norm.",
+        "needs_attribution": false
+      },
       "needs_human_review": false
     }
   ]

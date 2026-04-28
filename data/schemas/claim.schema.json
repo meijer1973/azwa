@@ -37,6 +37,45 @@
     "claim_type": {
       "type": "string"
     },
+    "normative_status": {
+      "type": "object",
+      "required": [
+        "status",
+        "label",
+        "source_authority",
+        "has_normative_language",
+        "public_wording_guardrail",
+        "needs_attribution"
+      ],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "binding",
+            "agreement",
+            "expectation",
+            "guidance",
+            "lower_authority_signal",
+            "contextual"
+          ]
+        },
+        "label": {
+          "type": "string"
+        },
+        "source_authority": {
+          "type": "string"
+        },
+        "has_normative_language": {
+          "type": "boolean"
+        },
+        "public_wording_guardrail": {
+          "type": "string"
+        },
+        "needs_attribution": {
+          "type": "boolean"
+        }
+      }
+    },
     "statement": {
       "type": "string"
     },

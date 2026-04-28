@@ -1,6 +1,6 @@
 {
   "audit_run_id": "phase24_data_quality_audit_v1",
-  "generated_on": "2026-04-28",
+  "generated_on": "2026-04-29",
   "storage": {
     "canonical_output": "data/extracted/data_quality_audit.json",
     "sprint_note": "docs/completed-plans/phase24-sprint24.2-audit.md"
@@ -14,7 +14,7 @@
     "high_volume_topic_count": 6,
     "rough_claim_count": 119,
     "site_files_with_rough_claims": 11,
-    "open_review_items": 74
+    "open_review_items": 111
   },
   "perspective_coverage": {
     "claims": {
@@ -208,6 +208,251 @@
         }
       }
     }
+  },
+  "normative_status_audit": {
+    "description": "Sprint 27.1 norm-strength split for binding text, agreement text, expectations, guidance, lower-authority signals, and contextual material.",
+    "status_counts": {
+      "agreement": 74,
+      "binding": 2,
+      "contextual": 74,
+      "expectation": 34,
+      "guidance": 190,
+      "lower_authority_signal": 150
+    },
+    "norm_perspective_status_counts": {
+      "agreement": 25,
+      "contextual": 1,
+      "expectation": 17,
+      "guidance": 9,
+      "lower_authority_signal": 110
+    },
+    "attribution_needed_sample": [
+      {
+        "claim_id": "clm__reg_flevoland_2023_regioplan_iza_d5_001",
+        "source_document_id": "reg_flevoland_2023_regioplan_iza",
+        "topic": "d5.mentale_gezondheidsnetwerken",
+        "normative_status": "lower_authority_signal",
+        "source_authority": "regional_plan",
+        "statement_excerpt": "The plan highlights Ecosysteem Mentale Gezondheid and Samen Sterker in de Wijk as a model for neighbourhood collaboration around psychosocial problems.",
+        "public_wording_guardrail": "Altijd expliciet toeschrijven aan de bron; niet als harde norm presenteren zonder sterkere bron."
+      },
+      {
+        "claim_id": "clm__reg_flevoland_2023_regioplan_iza_d5_002",
+        "source_document_id": "reg_flevoland_2023_regioplan_iza",
+        "topic": "d5.cross_domain_collaboration",
+        "normative_status": "lower_authority_signal",
+        "source_authority": "regional_plan",
+        "statement_excerpt": "The plan also explicitly calls integrale domeinoverstijgende samenwerking essential between the social domain, medical domain, long-term care, geriatrics, and wijk care.",
+        "public_wording_guardrail": "Altijd expliciet toeschrijven aan de bron; niet als harde norm presenteren zonder sterkere bron."
+      },
+      {
+        "claim_id": "clm__reg_flevoland_2023_regioplan_iza_d6_001",
+        "source_document_id": "reg_flevoland_2023_regioplan_iza",
+        "topic": "d6.digital_and_operational_infrastructure",
+        "normative_status": "lower_authority_signal",
+        "source_authority": "regional_plan",
+        "statement_excerpt": "The Regioplan identifies digital infrastructure as essential and names a regional collaboration organization, a shared data-availability vision, information architecture, and use-case based rollout.",
+        "public_wording_guardrail": "Altijd expliciet toeschrijven aan de bron; niet als harde norm presenteren zonder sterkere bron."
+      },
+      {
+        "claim_id": "clm__reg_flevoland_2023_regioplan_iza_governance_and_finance_001",
+        "source_document_id": "reg_flevoland_2023_regioplan_iza",
+        "topic": "governance.regional_coordination",
+        "normative_status": "lower_authority_signal",
+        "source_authority": "regional_plan",
+        "statement_excerpt": "The Verbindende Coalitie, workgroups, and an expert team are used to shape the transformatieagenda and test financial feasibility.",
+        "public_wording_guardrail": "Altijd expliciet toeschrijven aan de bron; niet als harde norm presenteren zonder sterkere bron."
+      },
+      {
+        "claim_id": "clm__reg_flevoland_2023_regioplan_iza_governance_and_finance_002",
+        "source_document_id": "reg_flevoland_2023_regioplan_iza",
+        "topic": "finance.d5_d6.funding_instrument",
+        "normative_status": "lower_authority_signal",
+        "source_authority": "regional_plan",
+        "statement_excerpt": "The plan itself says the ambitions still need concrete budgets and that financing may come from SPUK GALA, SPUK IZA, and transformatiemiddelen.",
+        "public_wording_guardrail": "Altijd expliciet toeschrijven aan de bron; niet als harde norm presenteren zonder sterkere bron."
+      },
+      {
+        "claim_id": "clm__reg_flevoland_2023_regioplan_iza_timeline_and_status_001",
+        "source_document_id": "reg_flevoland_2023_regioplan_iza",
+        "topic": "timeline.flevoland_transformatieagenda",
+        "normative_status": "guidance",
+        "source_authority": "regional_plan",
+        "statement_excerpt": "In the first and second quarter of 2024 the workgroups are expected to move toward a concrete transformatieagenda.",
+        "public_wording_guardrail": "Formuleer als toelichting, format, advies of handreiking."
+      },
+      {
+        "claim_id": "clm__reg_flevoland_2023_regioplan_iza_timeline_and_status_002",
+        "source_document_id": "reg_flevoland_2023_regioplan_iza",
+        "topic": "timeline.flevoland_transformatieagenda",
+        "normative_status": "guidance",
+        "source_authority": "regional_plan",
+        "statement_excerpt": "The plan expects the definite transformatieagenda by the end of the second quarter and sets up kwartiermakers for the fundamental work tracks.",
+        "public_wording_guardrail": "Formuleer als toelichting, format, advies of handreiking."
+      },
+      {
+        "claim_id": "clm__reg_flevoland_2023_regioplan_iza_monitoring_and_evaluation_001",
+        "source_document_id": "reg_flevoland_2023_regioplan_iza",
+        "topic": "monitoring.regional_monitoring_plan",
+        "normative_status": "guidance",
+        "source_authority": "regional_plan",
+        "statement_excerpt": "The Regioplan calls for a 2024 monitoringsplan to show whether the transformatie is visible and whether the region is on course.",
+        "public_wording_guardrail": "Formuleer als toelichting, format, advies of handreiking."
+      },
+      {
+        "claim_id": "clm__mun_almere_pga_transformatieplan_d5_001",
+        "source_document_id": "mun_almere_pga_transformatieplan",
+        "topic": "d5.mentale_gezondheidsnetwerken",
+        "normative_status": "lower_authority_signal",
+        "source_authority": "implementation_plan",
+        "statement_excerpt": "The plan explicitly aims for better cooperation between informal care, the social domain, and the medical domain, supported by initiatives such as Voorzorgcirkels, Welzijn op Recept, and Samen Sterker in de Wijk.",
+        "public_wording_guardrail": "Altijd expliciet toeschrijven aan de bron; niet als harde norm presenteren zonder sterkere bron."
+      },
+      {
+        "claim_id": "clm__mun_almere_pga_transformatieplan_d5_002",
+        "source_document_id": "mun_almere_pga_transformatieplan",
+        "topic": "d5.health_first_shift",
+        "normative_status": "lower_authority_signal",
+        "source_authority": "implementation_plan",
+        "statement_excerpt": "The local shift is framed as moving from care afterwards toward health first and the right help in the right place.",
+        "public_wording_guardrail": "Altijd expliciet toeschrijven aan de bron; niet als harde norm presenteren zonder sterkere bron."
+      },
+      {
+        "claim_id": "clm__mun_almere_pga_transformatieplan_d6_001",
+        "source_document_id": "mun_almere_pga_transformatieplan",
+        "topic": "d6.digital_and_operational_infrastructure",
+        "normative_status": "lower_authority_signal",
+        "source_authority": "implementation_plan",
+        "statement_excerpt": "The local plan names RTP Almere, the RSO, data infrastructure, and Monitoring@home as part of the operational infrastructure needed for care closer to home.",
+        "public_wording_guardrail": "Altijd expliciet toeschrijven aan de bron; niet als harde norm presenteren zonder sterkere bron."
+      },
+      {
+        "claim_id": "clm__mun_almere_pga_transformatieplan_d6_002",
+        "source_document_id": "mun_almere_pga_transformatieplan",
+        "topic": "d6.digital_and_operational_infrastructure",
+        "normative_status": "lower_authority_signal",
+        "source_authority": "implementation_plan",
+        "statement_excerpt": "The plan also makes a current shared information picture for professionals part of the local enabling structure.",
+        "public_wording_guardrail": "Altijd expliciet toeschrijven aan de bron; niet als harde norm presenteren zonder sterkere bron."
+      },
+      {
+        "claim_id": "clm__mun_almere_pga_transformatieplan_governance_and_finance_001",
+        "source_document_id": "mun_almere_pga_transformatieplan",
+        "topic": "governance.local_coalition",
+        "normative_status": "lower_authority_signal",
+        "source_authority": "implementation_plan",
+        "statement_excerpt": "The governance base is a broad local coalition of Almere municipality, wijkteams, care and welfare organizations, and preventive and public-health institutions.",
+        "public_wording_guardrail": "Altijd expliciet toeschrijven aan de bron; niet als harde norm presenteren zonder sterkere bron."
+      },
+      {
+        "claim_id": "clm__mun_almere_pga_transformatieplan_governance_and_finance_002",
+        "source_document_id": "mun_almere_pga_transformatieplan",
+        "topic": "finance.local_alignment_goal",
+        "normative_status": "lower_authority_signal",
+        "source_authority": "implementation_plan",
+        "statement_excerpt": "The plan does not set a detailed funding framework, but it does describe a target future balance in which care expenditures and social-domain expenditures are better aligned.",
+        "public_wording_guardrail": "Altijd expliciet toeschrijven aan de bron; niet als harde norm presenteren zonder sterkere bron."
+      },
+      {
+        "claim_id": "clm__mun_almere_pga_transformatieplan_timeline_and_status_002",
+        "source_document_id": "mun_almere_pga_transformatieplan",
+        "topic": "timeline.implementation_status",
+        "normative_status": "guidance",
+        "source_authority": "implementation_plan",
+        "statement_excerpt": "The plan describes itself as a transformation rather than a standalone project, which signals an ongoing implementation status.",
+        "public_wording_guardrail": "Formuleer als toelichting, format, advies of handreiking."
+      },
+      {
+        "claim_id": "clm__mun_almere_pga_transformatieplan_municipal_translation_001",
+        "source_document_id": "mun_almere_pga_transformatieplan",
+        "topic": "municipal.almere_initiatives",
+        "normative_status": "guidance",
+        "source_authority": "implementation_plan",
+        "statement_excerpt": "The plan translates the local agenda into named Almere initiatives such as Voorzorgcirkels, Welzijn op Recept, Leefstijlloket, Samen Sterker in de Wijk, and Opgroeien in een Kansrijke Omgeving.",
+        "public_wording_guardrail": "Formuleer als toelichting, format, advies of handreiking."
+      },
+      {
+        "claim_id": "clm__nat_azwa_2026_voortgang_kamerbrief_d5_001",
+        "source_document_id": "nat_azwa_2026_voortgang_kamerbrief",
+        "topic": "d5.other",
+        "normative_status": "guidance",
+        "source_authority": "kamerbrief",
+        "statement_excerpt": "Op peildatum 6 maart 2026 zijn er in totaal 180 transformatieplannen die transformatiemiddelen toegekend hebben gekregen. Daarmee zijn de transformatiemiddelen uitgeput. Omdat het bedrag dat samenhangt met het aantal...",
+        "public_wording_guardrail": "Formuleer als toelichting, format, advies of handreiking."
+      },
+      {
+        "claim_id": "clm__nat_azwa_2026_voortgang_kamerbrief_d6_001",
+        "source_document_id": "nat_azwa_2026_voortgang_kamerbrief",
+        "topic": "d6.other",
+        "normative_status": "guidance",
+        "source_authority": "kamerbrief",
+        "statement_excerpt": "Op peildatum 6 maart 2026 zijn er in totaal 180 transformatieplannen die transformatiemiddelen toegekend hebben gekregen. Daarmee zijn de transformatiemiddelen uitgeput. Omdat het bedrag dat samenhangt met het aantal...",
+        "public_wording_guardrail": "Formuleer als toelichting, format, advies of handreiking."
+      },
+      {
+        "claim_id": "clm__nat_azwa_2026_voortgang_kamerbrief_timeline_and_status_001",
+        "source_document_id": "nat_azwa_2026_voortgang_kamerbrief",
+        "topic": "timeline.other",
+        "normative_status": "guidance",
+        "source_authority": "kamerbrief",
+        "statement_excerpt": "Op peildatum 6 maart 2026 zijn er in totaal 180 transformatieplannen die transformatiemiddelen toegekend hebben gekregen. Daarmee zijn de transformatiemiddelen uitgeput. Omdat het bedrag dat samenhangt met het aantal...",
+        "public_wording_guardrail": "Formuleer als toelichting, format, advies of handreiking."
+      },
+      {
+        "claim_id": "clm__nat_azwa_2026_voortgang_kamerbrief_municipal_translation_001",
+        "source_document_id": "nat_azwa_2026_voortgang_kamerbrief",
+        "topic": "municipal.implementation_translation",
+        "normative_status": "guidance",
+        "source_authority": "kamerbrief",
+        "statement_excerpt": "Op peildatum 6 maart 2026 zijn er in totaal 180 transformatieplannen die transformatiemiddelen toegekend hebben gekregen. Daarmee zijn de transformatiemiddelen uitgeput. Omdat het bedrag dat samenhangt met het aantal...",
+        "public_wording_guardrail": "Formuleer als toelichting, format, advies of handreiking."
+      },
+      {
+        "claim_id": "clm__nat_azwa_2025_aanbiedingsbrief_d5_001",
+        "source_document_id": "nat_azwa_2025_aanbiedingsbrief",
+        "topic": "d5.other",
+        "normative_status": "contextual",
+        "source_authority": "kamerbrief",
+        "statement_excerpt": "In het bijzonder hecht ik aan de integrale benadering van het AZWA, waarmee we gezamenlijk voortbouwen op het IZA en de samenwerking over medisch en sociaal domein verder versterken en daarmee bijdragen aan de bewegin...",
+        "public_wording_guardrail": "Gebruik als context of bronaanwijzing, niet als norm."
+      },
+      {
+        "claim_id": "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d5_001",
+        "source_document_id": "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026",
+        "topic": "d5.basisfunctionaliteiten_onderbouwd",
+        "normative_status": "guidance",
+        "source_authority": "framework",
+        "statement_excerpt": "• Laagdrempelige steunpunten EPA • Sociaal Venvilzen • Valpreventie • Ketenaanpak overgewicht en obesitas volwassenen • Kansrijke start integrale gezinspoli en Nu Niet Zwanger 1. Mentale Gezondheid 2. Vitaal ouder wor...",
+        "public_wording_guardrail": "Formuleer als toelichting, format, advies of handreiking."
+      },
+      {
+        "claim_id": "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d6_003",
+        "source_document_id": "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026",
+        "topic": "d6.basisinfrastructuur",
+        "normative_status": "guidance",
+        "source_authority": "framework",
+        "statement_excerpt": "• Laagdrempelige steunpunten EPA • Sociaal Venvilzen • Valpreventie • Ketenaanpak overgewicht en obesitas volwassenen • Kansrijke start integrale gezinspoli en Nu Niet Zwanger 1. Mentale Gezondheid 2. Vitaal ouder wor...",
+        "public_wording_guardrail": "Formuleer als toelichting, format, advies of handreiking."
+      },
+      {
+        "claim_id": "clm__nat_azwa_opdracht_werkagenda_d5_2026_d5_001",
+        "source_document_id": "nat_azwa_opdracht_werkagenda_d5_2026",
+        "topic": "d5.basisfunctionaliteiten_onderbouwd",
+        "normative_status": "guidance",
+        "source_authority": "framework",
+        "statement_excerpt": "Basisfunctionaliteit Landelijk: (door)ontwikkeling handreikingen Regionaal: doorontwikkeling of start uitvoering Betreft: laagdrempelige steunpunten, sociaal verwijzen, valpreventie, volwassenen met overgewicht en obe...",
+        "public_wording_guardrail": "Formuleer als toelichting, format, advies of handreiking."
+      },
+      {
+        "claim_id": "clm__nat_azwa_opdracht_werkagenda_d5_2026_d6_001",
+        "source_document_id": "nat_azwa_opdracht_werkagenda_d5_2026",
+        "topic": "d6.basisinfrastructuur",
+        "normative_status": "guidance",
+        "source_authority": "framework",
+        "statement_excerpt": "Basisfunctionaliteit Landelijk: (door)ontwikkeling handreikingen Regionaal: doorontwikkeling of start uitvoering Betreft: laagdrempelige steunpunten, sociaal verwijzen, valpreventie, volwassenen met overgewicht en obe...",
+        "public_wording_guardrail": "Formuleer als toelichting, format, advies of handreiking."
+      }
+    ]
   },
   "topic_bucket_audit": {
     "broad_rest_topics": [
@@ -2650,6 +2895,7 @@
       "related_review_reasons": [
         "authority_unclear",
         "extraction_noise_detected",
+        "lower_authority_norm_signal",
         "missing_d5_content",
         "missing_d6_content",
         "municipality_relevance_inferred",

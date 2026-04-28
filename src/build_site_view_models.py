@@ -828,6 +828,17 @@ def theme_lookup(themes: list[dict]) -> dict[str, dict]:
 
 
 def authority_note(claim: dict, document: dict | None = None) -> str | None:
+    norm_status = claim.get("normative_status") or {}
+    if norm_status.get("status") == "binding":
+        return "Normstatus: formeel verplichtend of bindend volgens de broncategorie; blijf dicht bij de bronpassage."
+    if norm_status.get("status") == "agreement":
+        return "Normstatus: afspraak of akkoordtekst; niet automatisch als wettelijke plicht voor Almere formuleren."
+    if norm_status.get("status") == "expectation":
+        return "Normstatus: richtinggevende verwachting of uitwerkingskader; vermijd harde verplichtingstaal."
+    if norm_status.get("status") == "lower_authority_signal":
+        return "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren."
+    if norm_status.get("status") == "guidance":
+        return "Normstatus: toelichting, format, advies of praktische guidance."
     instrument_type = claim.get("instrument_type")
     document_type = document.get("document_type") if document else None
     publisher = document.get("publisher") if document else None
@@ -866,6 +877,7 @@ def evidence_entries(claim_ids: list[str], claims: dict[str, dict], documents: d
                 "page_url": source_page_url(document),
                 "jurisdiction_level": document["jurisdiction_level"],
                 "authority_note": authority_note(claim, document),
+                "normative_status": claim.get("normative_status"),
                 "needs_human_review": claim.get("human_review_status") == "needs_human_review",
             }
         )

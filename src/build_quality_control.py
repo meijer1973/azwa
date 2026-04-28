@@ -64,6 +64,15 @@ NAVIGATION_PATTERNS = (
 )
 ENCODING_PATTERNS = ("Ã", "â", "Â")
 
+ACCEPTED_NORMATIVE_STATUSES = {
+    "binding",
+    "agreement",
+    "expectation",
+    "guidance",
+    "lower_authority_signal",
+    "contextual",
+}
+
 
 def load_json(path: Path) -> dict | list:
     return json.loads(path.read_text(encoding="utf-8"))
@@ -491,6 +500,30 @@ def check_claim_payloads(
         contextual_claims = [claim for claim in claims if claim["source_statement_type"] == "contextual_relevance"]
         review_claims = [claim for claim in claims if claim["human_review_status"] == "needs_human_review"]
         noisy_claims = suspicious_claims(claims)
+        missing_norm_status = [
+            claim
+            for claim in claims
+            if (claim.get("normative_status") or {}).get("status") not in ACCEPTED_NORMATIVE_STATUSES
+        ]
+        lower_authority_norm_claims = [
+            claim
+            for claim in claims
+            if (claim.get("normative_status") or {}).get("status") == "lower_authority_signal"
+        ]
+
+        if missing_norm_status:
+            add_issue(
+                issues,
+                seen,
+                check_id="claim_payload_integrity",
+                severity="blocking",
+                reason_code="missing_or_invalid_normative_status",
+                summary=f"{document_id} contains claim(s) without a valid Sprint 27.1 normative_status.",
+                recommended_action="Regenerate claims with the norm-strength classifier before using the claim stream.",
+                document_id=document_id,
+                source_paths=[relative_path(claim_path)],
+                related_ids={"sample_claim_ids": [claim["claim_id"] for claim in missing_norm_status[:5]]},
+            )
 
         if contextual_claims:
             add_issue(
@@ -524,6 +557,20 @@ def check_claim_payloads(
                     "review_claim_count": len(review_claims),
                     "sample_claim_ids": [claim["claim_id"] for claim in review_claims[:5]],
                 },
+            )
+
+        if lower_authority_norm_claims:
+            add_issue(
+                issues,
+                seen,
+                check_id="claim_payload_integrity",
+                severity="review",
+                reason_code="lower_authority_norm_signal",
+                summary=f"{document_id} contains {len(lower_authority_norm_claims)} lower-authority norm signal claim(s).",
+                recommended_action="Attribute these passages explicitly and do not present them as binding without a stronger source.",
+                document_id=document_id,
+                source_paths=[relative_path(claim_path)],
+                related_ids={"sample_claim_ids": [claim["claim_id"] for claim in lower_authority_norm_claims[:5]]},
             )
 
         if noisy_claims:

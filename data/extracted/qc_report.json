@@ -1,18 +1,19 @@
 {
   "qc_run_id": "phase11_quality_control_v1",
-  "generated_on": "2026-04-28",
-  "as_of_date": "2026-04-28",
+  "generated_on": "2026-04-29",
+  "as_of_date": "2026-04-29",
   "summary": {
     "blocking": 0,
     "warning": 6,
-    "review": 74,
-    "review_queue_item_count": 80,
+    "review": 111,
+    "review_queue_item_count": 117,
     "document_count": 58,
     "master_claim_count": 524,
     "interpretation_topic_count": 44,
     "issue_counts_by_reason": {
       "authority_unclear": 30,
       "extraction_noise_detected": 3,
+      "lower_authority_norm_signal": 37,
       "missing_d5_content": 4,
       "missing_d6_content": 2,
       "municipality_relevance_inferred": 30,
@@ -34,10 +35,10 @@
       "check_id": "claim_payload_integrity",
       "description": "Per-document claim outputs, review-heavy contextual claims, and suspicious extraction noise.",
       "status": "warn",
-      "issue_count": 63,
+      "issue_count": 100,
       "blocking_issue_count": 0,
       "warning_issue_count": 0,
-      "review_issue_count": 63
+      "review_issue_count": 100
     },
     {
       "check_id": "claim_master_integrity",

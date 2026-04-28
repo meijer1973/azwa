@@ -27,6 +27,27 @@ RELATION_SEED_DOCUMENT_IDS = [
 SENTENCE_START_WHITELIST = {"de", "het", "een", "dat", "dit", "deze", "die", "in", "met", "voor", "van", "op", "om", "bij"}
 FIRST_WORD_PATTERN = re.compile(r"^[\"'“”‘’(\[]*([A-Za-zÀ-ÖØ-öø-ÿ]+)")
 SENTENCE_END_PATTERN = re.compile(r'(?:[.!?…»”"]|\.\.\.)$')
+LOWER_AUTHORITY_INSTRUMENTS = {"faq", "commentary", "regional_plan", "implementation_plan", "municipal_policy"}
+PRACTICAL_GUIDANCE_INSTRUMENTS = {"faq", "commentary", "template", "process_note"}
+NORM_SIGNAL_TERMS = (
+    "moet",
+    "moeten",
+    "vereist",
+    "verplicht",
+    "voorwaarde",
+    "voorwaarden",
+    "dient",
+    "dienen",
+    "uiterlijk",
+    "afgesproken",
+    "spreken af",
+    "vastgesteld",
+    "verantwoorden",
+    "aanleveren",
+)
+AGREEMENT_SIGNAL_TERMS = ("afgesproken", "spreken af", "partijen spreken", "akkoord", "afspraken")
+EXPECTATION_SIGNAL_TERMS = ("verwacht", "beoogd", "doel", "werkt toe", "streven", "richting", "uiterlijk")
+GUIDANCE_SIGNAL_TERMS = ("handreiking", "format", "toelichting", "faq", "kan", "kunnen", "advies", "praktisch")
 
 
 def normalize_text(text: str) -> str:
@@ -85,6 +106,56 @@ def should_reject_for_sentence_boundary(statement: str) -> tuple[bool, list[str]
 
 def contains_any(normalized_text: str, *terms: str) -> bool:
     return any(normalize_text(term) in normalized_text for term in terms)
+
+
+def normative_status_for(
+    statement: str,
+    instrument_type: str,
+    instrument_profile: dict,
+    source_statement_type: str,
+    topic: str,
+) -> dict:
+    normalized = normalize_text(statement)
+    has_norm_signal = contains_any(normalized, *NORM_SIGNAL_TERMS)
+    has_agreement_signal = contains_any(normalized, *AGREEMENT_SIGNAL_TERMS)
+    has_expectation_signal = contains_any(normalized, *EXPECTATION_SIGNAL_TERMS)
+    has_guidance_signal = contains_any(normalized, *GUIDANCE_SIGNAL_TERMS)
+    can_bind = bool(instrument_profile.get("can_create_binding_obligation"))
+    is_norm_topic = topic.startswith(("d5.", "d6.", "finance.", "governance."))
+
+    if instrument_type == "agreement" or has_agreement_signal and instrument_type in {"framework", "kamerbrief"}:
+        status = "agreement"
+        label = "Afspraak of akkoordtekst"
+        guardrail = "Formuleer als afspraak tussen akkoordpartijen; niet automatisch als wettelijke plicht voor Almere."
+    elif can_bind and has_norm_signal:
+        status = "binding"
+        label = "Bindend of formeel verplichtend"
+        guardrail = "Mag sterk worden geformuleerd, maar alleen dicht bij de bronpassage."
+    elif instrument_type in LOWER_AUTHORITY_INSTRUMENTS and (has_norm_signal or is_norm_topic):
+        status = "lower_authority_signal"
+        label = "Lagere-autoriteitssignaal"
+        guardrail = "Altijd expliciet toeschrijven aan de bron; niet als harde norm presenteren zonder sterkere bron."
+    elif instrument_type in PRACTICAL_GUIDANCE_INSTRUMENTS or has_guidance_signal:
+        status = "guidance"
+        label = "Toelichting of praktische guidance"
+        guardrail = "Formuleer als toelichting, format, advies of handreiking."
+    elif has_expectation_signal or is_norm_topic and source_statement_type == "direct_extraction":
+        status = "expectation"
+        label = "Verwachting of richtinggevende norm"
+        guardrail = "Formuleer als verwachting, richting of uitwerkingskader; vermijd verplichtende taal."
+    else:
+        status = "contextual"
+        label = "Contextueel signaal"
+        guardrail = "Gebruik als context of bronaanwijzing, niet als norm."
+
+    return {
+        "status": status,
+        "label": label,
+        "source_authority": instrument_type,
+        "has_normative_language": has_norm_signal,
+        "public_wording_guardrail": guardrail,
+        "needs_attribution": status in {"lower_authority_signal", "guidance"} or source_statement_type == "contextual_relevance",
+    }
 
 
 def claim_id_for(statement_id: str) -> str:
@@ -715,7 +786,14 @@ def relation_specs() -> dict[str, list[dict]]:
     }
 
 
-def build_claim(item: dict, document_payload: dict, section_name: str, instrument_type: str, authority_weight: float) -> dict:
+def build_claim(
+    item: dict,
+    document_payload: dict,
+    section_name: str,
+    instrument_type: str,
+    authority_weight: float,
+    instrument_profile: dict,
+) -> dict:
     statement = item["statement"]
     topic, subtopic, claim_type = classify_claim(document_payload["document_id"], section_name, statement)
     metadata = document_payload["metadata"]
@@ -725,6 +803,9 @@ def build_claim(item: dict, document_payload: dict, section_name: str, instrumen
         "topic": topic,
         "subtopic": subtopic,
         "claim_type": claim_type,
+        "normative_status": normative_status_for(
+            statement, instrument_type, instrument_profile, source_statement_type, topic
+        ),
         "statement": statement,
         "source_document_id": document_payload["document_id"],
         "source_location": extract_source_location(item),
@@ -755,7 +836,16 @@ def build_document_claims(document_id: str, authority_map: dict[str, str], instr
     claims: list[dict] = []
     for section_name, section in document_payload["structured_content"].items():
         for item in section["items"]:
-            claims.append(build_claim(item, document_payload, section_name, instrument_type, authority_weight))
+            claims.append(
+                build_claim(
+                    item,
+                    document_payload,
+                    section_name,
+                    instrument_type,
+                    authority_weight,
+                    instrument_profiles[instrument_type],
+                )
+            )
     return claims
 
 
@@ -896,6 +986,7 @@ def validate_claims(claims: list[dict], allowed_relation_types: set[str]) -> Non
         "topic",
         "subtopic",
         "claim_type",
+        "normative_status",
         "statement",
         "source_document_id",
         "source_location",

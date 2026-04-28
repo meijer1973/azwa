@@ -26,7 +26,7 @@ Gebruik deze roadmap als levend werkdocument. Werk na elke sprint de statusregel
 | 26.1 Rough-claim audit hercalibratie | completed | `src/build_data_quality_audit.py`, `tests/test_data_quality_audit.py`, `data/extracted/data_quality_audit.json`, `docs/completed-plans/phase26-sprint26.1-rough-claim-audit-recalibration.md` |
 | 26.2 Deterministische tekstfixes | completed | `src/build_structural_extractions.py`, `src/build_document_extractions.py`, `data/extracted/voting_records.json`, `data/logs/phase26_text_cleanup.json`, `docs/completed-plans/phase26-sprint26.2-deterministic-text-fixes.md` |
 | 26.3 Sentence-boundary en dedup | completed | `src/build_claims_top5.py`, `src/verify_claim_id_references.py`, `data/extracted/claims/sentence_validator_rejects.json`, `data/extracted/claims/dedup_log.json`, `docs/completed-plans/phase26-sprint26.3-sentence-boundary-dedup.md` |
-| 27.1 Norm | open |  |
+| 27.1 Norm | completed | `src/build_claims_top5.py`, `data/schemas/claim.schema.json`, `data/extracted/data_quality_audit.json`, `docs/completed-plans/phase27-sprint27.1-norm.md` |
 | 27.2 Tijd | open |  |
 | 27.3 Geld | open |  |
 | 27.4 Governance | open |  |
@@ -59,6 +59,8 @@ Status op 27 april 2026: eerste 25.4b-bronintake uitgevoerd. Zeven publieke bron
 Status op 27 april 2026: gate-remediation gestart. De sprint gaat niet door naar rapportproductie of bestuurlijke werkagenda-drafting; de toegestane vervolgstap is alleen D6 responsibility implementation/remediation. Zes extra bronnen zijn toegevoegd: vier Documentwijzer/Notubiz-stukken bij Stevige Lokale Teams, de Almere Samenwerkingsprojecten/Samen Sterker-bron en een actuele PGA-homepage. De lokale decision layer bevat nu een source-backed publieke raadbeslissing voor Stevige Lokale Teams, met D6-classificatie nog expliciet op `review_needed`.
 
 Status op 28 april 2026: Sprint 25.6 is geparkeerd als policy-maker/stakeholder-afhankelijkheid en blokkeert repository-side datakwaliteitswerk niet. Fase 26 is gestart met rough-claim cleanup. Sprint 26.1 is afgerond als audit-hercalibratie: de lengte-only rough-code is vervangen door `unverified_extraction_length`, langere excerpts geven reviewers meer context, en regressietests bewaken dat lange maar goed gevormde claims niet alleen door lengte rough worden. Sprint 26.2 is afgerond als deterministische tekstfix: mojibake, letterhead, TOC-/Drupal-ruis en stemuitslagen worden uit claim-input gehouden; stemuitslagen blijven apart bewaard in `data/extracted/voting_records.json`. Sprint 26.3 is afgerond als sentence-boundary/dedup sprint: lowercase mid-zin-claims worden uit de masterlaag geweerd, duplicate openings binnen document/topic/subtopic worden geconsolideerd, en `src/verify_claim_id_references.py` controleert downstream claim-id verwijzingen.
+
+Status op 29 april 2026: Sprint 27.1 is afgerond als norm-splitsing. Elke claim krijgt nu een `normative_status` met de waarden `binding`, `agreement`, `expectation`, `guidance`, `lower_authority_signal` of `contextual`. De audit bevat een `normative_status_audit`, de site-evidence draagt normstatus mee, en QC markeert lagere-autoriteitssignalen expliciet als reviewpunt zodat FAQ's, toelichtingen en regionale/lokale context niet als harde norm worden gelezen.
 
 Afgeronde aanpak voor Sprint 25.4a:
 
@@ -266,11 +268,15 @@ Status: completed.
 Doel: van algemene claims naar beleidsmatig bruikbare claims per Norm, Tijd, Geld, Governance, Locality en Execution.
 
 Sprint 27.1: Norm
-Status: open.
+Status: completed.
 
 - Splits normclaims in bindend, afspraak, verwachting, toelichting en lagere-autoriteitssignaal.
 - Voorkom dat VNG-FAQ's, nieuwsberichten of toelichtingen klinken als harde norm.
 - Maak conflicten of onzekerheid expliciet in mensentaal.
+- Eerste uitvoer: alle 524 claims dragen een `normative_status`.
+- Verdeling: 2 `binding`, 74 `agreement`, 34 `expectation`, 190 `guidance`, 150 `lower_authority_signal`, 74 `contextual`.
+- QC voegt `lower_authority_norm_signal` toe als reviewreden; dit verhoogt het aantal review-items bewust omdat lagere-autoriteitsnormen nu zichtbaar zijn in plaats van impliciet.
+- D6-registerrijen zijn niet inhoudelijk gehard; Sprint 25.6 blijft geparkeerd tot stakeholdervalidatie beschikbaar is.
 
 Sprint 27.2: Tijd
 Status: open.
@@ -416,7 +422,7 @@ Een verbetering is pas klaar als:
 - de update een menselijke changelog heeft.
 
 ## Huidige volgende sprint
-De beste eerstvolgende sprint is Sprint 27.1: Norm.
+De beste eerstvolgende sprint is Sprint 27.2: Tijd.
 
 Waarom:
 
@@ -430,11 +436,12 @@ Waarom:
 - Sprint 25.6 is terecht geparkeerd tot beleidsvalidatie beschikbaar is;
 - Sprint 26.1 heeft de rough-claim audit herijkt, waardoor de resterende ruwe claims beter als echte extractie-/tekstproblemen kunnen worden aangepakt;
 - Sprint 26.2 heeft deterministische tekstfilters toegevoegd en de eerste ruwe categorieen weggewerkt zonder D6-inhoud te overclaimen;
-- Sprint 26.3 heeft sentence-boundary en dedup-logica toegevoegd en de claim-id verwijzingen downstream verifieerbaar gemaakt.
+- Sprint 26.3 heeft sentence-boundary en dedup-logica toegevoegd en de claim-id verwijzingen downstream verifieerbaar gemaakt;
+- Sprint 27.1 heeft normclaims gesplitst naar bindend, afspraak, verwachting, toelichting, lagere-autoriteitssignaal en context.
 
 De concrete deliverables zijn:
 
-- normclaims splitsen in bindend, afspraak, verwachting, toelichting en lagere-autoriteitssignaal;
-- autoriteitstaal in site- en claimmodellen aanscherpen zodat toelichting niet als harde norm klinkt;
-- conflicten of onzekerheid expliciet in mensentaal houden;
+- deadlines, verwachte publicatiemomenten, reviewmomenten en begrotingsmomenten apart modelleren;
+- tijdlijnitems chronologisch en per momenttype controleerbaar maken;
+- verwachte momenten zichtbaar anders labelen dan formele deadlines;
 - geen D6-registerrijen inhoudelijk harden zolang stakeholdervalidatie voor Sprint 25.6 ontbreekt.

@@ -44,6 +44,7 @@ Check:
 - Is this required, allowed, expected, agreed, or only suggested?
 - What is the authority level of the source?
 - Is the wording on the site stronger than the source justifies?
+- Which `normative_status` applies: `binding`, `agreement`, `expectation`, `guidance`, `lower_authority_signal`, or `contextual`?
 
 Common quality problems:
 - FAQ or commentary sounds binding
@@ -51,7 +52,7 @@ Common quality problems:
 - Agreement text and guidance text are mixed together
 
 Editorial rule:
-- Attribute lower-authority sources explicitly in public-facing summaries.
+- Attribute lower-authority sources explicitly in public-facing summaries. Treat `binding` as difficult to earn; `agreement` and `expectation` should not be written as legal duties for Almere unless a stronger source carries that wording.
 
 ### 2. Time
 Check:

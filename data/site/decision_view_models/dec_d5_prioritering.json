@@ -5,7 +5,7 @@
   "title": "Mogelijke besluitvraag: prioritering van D5-interventies in Almere",
   "status": "gedeeltelijk ingevuld",
   "status_group": "partly_resolved",
-  "as_of_date": "2026-04-28",
+  "as_of_date": "2026-04-29",
   "responsible_level": "gemeentelijk / bestuurlijke afweging",
   "linked_domain": "D5",
   "linked_domain_label": "D5",
@@ -178,6 +178,14 @@
       "page_url": "/sources/raadsvoorstel-visie-gezondheid-geamendeerd/",
       "jurisdiction_level": "municipal",
       "authority_note": null,
+      "normative_status": {
+        "status": "contextual",
+        "label": "Contextueel signaal",
+        "source_authority": "municipal_policy",
+        "has_normative_language": false,
+        "public_wording_guardrail": "Gebruik als context of bronaanwijzing, niet als norm.",
+        "needs_attribution": false
+      },
       "needs_human_review": false
     },
     {
@@ -192,7 +200,15 @@
       "source_url": "https://documentwijzer.raadvanalmere.nl/app/instrument/24161",
       "page_url": "/sources/maatschappelijke-agenda-beleidstekst/",
       "jurisdiction_level": "municipal",
-      "authority_note": null,
+      "authority_note": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren.",
+      "normative_status": {
+        "status": "lower_authority_signal",
+        "label": "Lagere-autoriteitssignaal",
+        "source_authority": "municipal_policy",
+        "has_normative_language": true,
+        "public_wording_guardrail": "Altijd expliciet toeschrijven aan de bron; niet als harde norm presenteren zonder sterkere bron.",
+        "needs_attribution": true
+      },
       "needs_human_review": false
     },
     {
@@ -207,7 +223,15 @@
       "source_url": "https://positiefgezondalmere.nl/over-ons/",
       "page_url": "/sources/pga-transformatieplan/",
       "jurisdiction_level": "municipal",
-      "authority_note": null,
+      "authority_note": "Normstatus: toelichting, format, advies of praktische guidance.",
+      "normative_status": {
+        "status": "guidance",
+        "label": "Toelichting of praktische guidance",
+        "source_authority": "implementation_plan",
+        "has_normative_language": false,
+        "public_wording_guardrail": "Formuleer als toelichting, format, advies of handreiking.",
+        "needs_attribution": true
+      },
       "needs_human_review": false
     },
     {
@@ -222,7 +246,15 @@
       "source_url": "https://www.rijksoverheid.nl/documenten/rapporten/2025/08/31/aanvullend-zorg-en-welzijnsakkoord-azwa",
       "page_url": "/sources/azwa-definitief/",
       "jurisdiction_level": "national",
-      "authority_note": null,
+      "authority_note": "Normstatus: afspraak of akkoordtekst; niet automatisch als wettelijke plicht voor Almere formuleren.",
+      "normative_status": {
+        "status": "agreement",
+        "label": "Afspraak of akkoordtekst",
+        "source_authority": "agreement",
+        "has_normative_language": false,
+        "public_wording_guardrail": "Formuleer als afspraak tussen akkoordpartijen; niet automatisch als wettelijke plicht voor Almere.",
+        "needs_attribution": false
+      },
       "needs_human_review": false
     },
     {
@@ -237,7 +269,15 @@
       "source_url": "https://www.rijksoverheid.nl/documenten/rapporten/2025/08/31/aanvullend-zorg-en-welzijnsakkoord-azwa",
       "page_url": "/sources/azwa-definitief/",
       "jurisdiction_level": "national",
-      "authority_note": null,
+      "authority_note": "Normstatus: afspraak of akkoordtekst; niet automatisch als wettelijke plicht voor Almere formuleren.",
+      "normative_status": {
+        "status": "agreement",
+        "label": "Afspraak of akkoordtekst",
+        "source_authority": "agreement",
+        "has_normative_language": false,
+        "public_wording_guardrail": "Formuleer als afspraak tussen akkoordpartijen; niet automatisch als wettelijke plicht voor Almere.",
+        "needs_attribution": false
+      },
       "needs_human_review": false
     },
     {
@@ -252,7 +292,15 @@
       "source_url": "https://www.rijksoverheid.nl/documenten/rapporten/2025/08/31/aanvullend-zorg-en-welzijnsakkoord-azwa",
       "page_url": "/sources/azwa-definitief/",
       "jurisdiction_level": "national",
-      "authority_note": null,
+      "authority_note": "Normstatus: afspraak of akkoordtekst; niet automatisch als wettelijke plicht voor Almere formuleren.",
+      "normative_status": {
+        "status": "agreement",
+        "label": "Afspraak of akkoordtekst",
+        "source_authority": "agreement",
+        "has_normative_language": false,
+        "public_wording_guardrail": "Formuleer als afspraak tussen akkoordpartijen; niet automatisch als wettelijke plicht voor Almere.",
+        "needs_attribution": false
+      },
       "needs_human_review": false
     }
   ],
@@ -328,95 +376,144 @@
     ],
     "source_signals": [
       {
+        "document_title": "Maatschappelijke agenda 2024-2034",
+        "publisher": "Gemeente Almere",
+        "publication_date": "2024-05-28",
+        "topic_label": "implementatielijn D5/D6",
+        "summary": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren."
+      },
+      {
+        "document_title": "Transformatieplan Positief Gezond Almere",
+        "publisher": "Positief Gezond Almere",
+        "publication_date": "2025-05-01",
+        "topic_label": "Almeerse initiatieven",
+        "summary": "Normstatus: toelichting, format, advies of praktische guidance."
+      },
+      {
+        "document_title": "Aanvullend Zorg- en Welzijnsakkoord (AZWA) (Definitief)",
+        "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
+        "publication_date": "2025-08-31",
+        "topic_label": "regionale/lokale D5-werkagenda",
+        "summary": "Normstatus: afspraak of akkoordtekst; niet automatisch als wettelijke plicht voor Almere formuleren."
+      },
+      {
+        "document_title": "CW 3.1 kader basisfunctionaliteiten en basisinfrastructuur D5 en D6",
+        "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
+        "publication_date": "2026-03-10",
+        "topic_label": "onderbouwde D5-basisfunctionaliteiten",
+        "summary": "Normstatus: richtinggevende verwachting of uitwerkingskader; vermijd harde verplichtingstaal."
+      },
+      {
+        "document_title": "Kamerbrief inzake voortgang Integraal Zorgakkoord (IZA) en Aanvullend Zorg- en Welzijnsakkoord (AZWA)",
+        "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
+        "publication_date": "2026-04-09",
+        "topic_label": "onderbouwde D5-basisfunctionaliteiten",
+        "summary": "Normstatus: afspraak of akkoordtekst; niet automatisch als wettelijke plicht voor Almere formuleren."
+      },
+      {
+        "document_title": "AZWA-afspraken D5 en D6 en financieringsinstrument",
+        "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
+        "publication_date": "2026-04-22",
+        "topic_label": "onderbouwde D5-basisfunctionaliteiten",
+        "summary": "Normstatus: toelichting, format, advies of praktische guidance."
+      },
+      {
+        "document_title": "Opdracht voor de werkagenda samenwerking zorg en sociaal domein voor D5 AZWA",
+        "publisher": "VNG / VWS",
+        "publication_date": "2026-04-22",
+        "topic_label": "onderbouwde D5-basisfunctionaliteiten",
+        "summary": "Normstatus: richtinggevende verwachting of uitwerkingskader; vermijd harde verplichtingstaal."
+      },
+      {
         "document_title": "Aanvullend Zorg- en Welzijnsakkoord",
         "publisher": "Zorgakkoorden.nl (VWS)",
         "publication_date": null,
         "topic_label": "onderbouwde D5-basisfunctionaliteiten",
-        "summary": "Lagere autoriteit: deze passage is afkomstig uit een toelichtende of samenvattende bron."
+        "summary": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren."
       },
       {
         "document_title": "Gezond en actief leven",
         "publisher": "VNG",
         "publication_date": null,
         "topic_label": "onderbouwde D5-basisfunctionaliteiten",
-        "summary": "Lagere autoriteit: deze passage is afkomstig uit een toelichtende of samenvattende bron."
+        "summary": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren."
       },
       {
         "document_title": "Valpreventie Gemeente Almere",
         "publisher": "GGD Flevoland",
         "publication_date": null,
         "topic_label": "onderbouwde D5-basisfunctionaliteiten",
-        "summary": "Lagere autoriteit: deze passage is afkomstig uit een toelichtende of samenvattende bron."
+        "summary": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren."
       },
       {
         "document_title": "GALA - Gezond en Actief Leven Akkoord",
         "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
         "publication_date": "2023-01-31",
         "topic_label": "onderbouwde D5-basisfunctionaliteiten",
-        "summary": "Relevantie voor Almere is afgeleid; expliciete lokale overname is niet altijd zichtbaar in de verzamelde openbare Almere-documenten."
+        "summary": "Normstatus: afspraak of akkoordtekst; niet automatisch als wettelijke plicht voor Almere formuleren."
       },
       {
         "document_title": "Regiobeeld Flevoland 2023",
         "publisher": "Flever",
         "publication_date": "2023-07-12",
         "topic_label": "onderbouwde D5-basisfunctionaliteiten",
-        "summary": "Lagere autoriteit: deze passage is afkomstig uit een toelichtende of samenvattende bron."
+        "summary": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren."
       },
       {
         "document_title": "Plan van aanpak 2024-2026 Brede SPUK/GALA Almere",
         "publisher": "Gemeente Almere",
         "publication_date": "2023-09-20",
         "topic_label": "onderbouwde D5-basisfunctionaliteiten",
-        "summary": "Relevantie voor Almere is afgeleid; expliciete lokale overname is niet altijd zichtbaar in de verzamelde openbare Almere-documenten."
+        "summary": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren."
       },
       {
         "document_title": "Richtinggevend kader toegang, lokale teams en integrale dienstverlening",
         "publisher": "VNG",
         "publication_date": "2024-03-01",
         "topic_label": "onderbouwde D5-basisfunctionaliteiten",
-        "summary": "Relevantie voor Almere is afgeleid; expliciete lokale overname is niet altijd zichtbaar in de verzamelde openbare Almere-documenten."
+        "summary": "Normstatus: richtinggevende verwachting of uitwerkingskader; vermijd harde verplichtingstaal."
       },
       {
         "document_title": "Samen werken aan gezondheid en zorg - Visie gezondheidsbeleid Almere 2024-2026",
         "publisher": "Gemeente Almere",
         "publication_date": "2024-03-01",
         "topic_label": "onderbouwde D5-basisfunctionaliteiten",
-        "summary": "Relevantie voor Almere is afgeleid; expliciete lokale overname is niet altijd zichtbaar in de verzamelde openbare Almere-documenten."
+        "summary": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren."
       },
       {
         "document_title": "Naar een positief gezond Almere; Beleidstheorie en businesscase transformatieplan",
         "publisher": "SEO Economisch Onderzoek",
         "publication_date": "2024-04-25",
         "topic_label": "Almeerse initiatieven",
-        "summary": "Lagere autoriteit: deze passage is afkomstig uit een toelichtende of samenvattende bron."
+        "summary": "Normstatus: toelichting, format, advies of praktische guidance."
       },
       {
         "document_title": "Ledenbrief onderhandelaarsakkoord AZWA",
         "publisher": "VNG",
         "publication_date": "2025-07-11",
         "topic_label": "onderbouwde D5-basisfunctionaliteiten",
-        "summary": "Lagere autoriteit: deze passage is afkomstig uit een toelichtende of samenvattende bron."
+        "summary": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren."
       },
       {
         "document_title": "Financiering IZA en AZWA: hoe zit het precies?",
         "publisher": "Sociaal Werk Nederland",
         "publication_date": "2025-08-05",
         "topic_label": "onderbouwde D5-basisfunctionaliteiten",
-        "summary": "Lagere autoriteit: deze passage is afkomstig uit een sectorale duidingspagina van Sociaal Werk Nederland."
+        "summary": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren."
       },
       {
         "document_title": "Begroting 2026 GGD Flevoland",
         "publisher": "GGD Flevoland",
         "publication_date": "2025-10-14",
         "topic_label": "onderbouwde D5-basisfunctionaliteiten",
-        "summary": "Relevantie voor Almere is afgeleid; expliciete lokale overname is niet altijd zichtbaar in de verzamelde openbare Almere-documenten."
+        "summary": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren."
       },
       {
         "document_title": "Toelichting producten en proces",
         "publisher": "VNG / VWS",
         "publication_date": "2026-04-22",
         "topic_label": "regionale/lokale D5-werkagenda",
-        "summary": "Lagere autoriteit: deze passage is afkomstig uit een toelichtende of samenvattende bron."
+        "summary": "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren."
       }
     ]
   },

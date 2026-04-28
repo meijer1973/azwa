@@ -43,34 +43,40 @@
       "page_url": "/reference/topics/d6-local-teams/"
     },
     {
-      "topic": "governance_and_finance.other",
-      "title": "overige governance- en financieringslijn",
-      "claim_count": 3,
-      "page_url": "/reference/topics/governance-and-finance-other/"
-    },
-    {
-      "topic": "monitoring.other",
-      "title": "overige monitoringslijn",
-      "claim_count": 3,
-      "page_url": "/reference/topics/monitoring-other/"
-    },
-    {
       "topic": "municipal.local_structure",
       "title": "lokale structuur",
       "claim_count": 3,
       "page_url": "/reference/topics/municipal-local-structure/"
     },
     {
-      "topic": "timeline.rollout_2030",
-      "title": "landelijke dekking richting 2030",
+      "topic": "governance_and_finance.other",
+      "title": "overige governance- en financieringslijn",
       "claim_count": 2,
-      "page_url": "/reference/topics/timeline-rollout-2030/"
+      "page_url": "/reference/topics/governance-and-finance-other/"
+    },
+    {
+      "topic": "monitoring.other",
+      "title": "overige monitoringslijn",
+      "claim_count": 2,
+      "page_url": "/reference/topics/monitoring-other/"
     },
     {
       "topic": "d5.basisfunctionaliteiten_onderbouwd",
       "title": "onderbouwde D5-basisfunctionaliteiten",
       "claim_count": 1,
       "page_url": "/reference/topics/d5-basisfunctionaliteiten-onderbouwd/"
+    },
+    {
+      "topic": "finance.d5_d6.funding_instrument",
+      "title": "bekostigingsroute D5/D6",
+      "claim_count": 1,
+      "page_url": "/reference/topics/finance-d5-d6-funding-instrument/"
+    },
+    {
+      "topic": "timeline.rollout_2030",
+      "title": "landelijke dekking richting 2030",
+      "claim_count": 1,
+      "page_url": "/reference/topics/timeline-rollout-2030/"
     },
     {
       "topic": "timeline.other",
@@ -105,6 +111,11 @@
       "page_url": "/themes/basisinfrastructuur-d6/"
     },
     {
+      "theme_id": "financiering",
+      "title": "Financiering",
+      "page_url": "/themes/financiering/"
+    },
+    {
       "theme_id": "monitoring-en-leren",
       "title": "Monitoring en leren",
       "page_url": "/themes/monitoring-en-leren/"
@@ -117,8 +128,8 @@
   ],
   "related_sources": [
     {
-      "title": "Opdracht voor de werkagenda samenwerking zorg en sociaal domein voor D5 AZWA",
-      "page_url": "/sources/opdracht-werkagenda-d5-azwa/"
+      "title": "Toelichting producten en proces",
+      "page_url": "/sources/toelichting-werkagenda-d5-azwa/"
     },
     {
       "title": "AZWA-afspraken D5 en D6 en financieringsinstrument",
@@ -129,17 +140,17 @@
       "page_url": "/sources/voortgangsbrief-iza-azwa/"
     },
     {
-      "title": "Kamerbrief over CW 3.1 kaders voor AZWA onderdelen",
-      "page_url": "/sources/kamerbrief-cw-3-1-kaders-azwa/"
-    },
-    {
       "title": "CW 3.1 kader basisfunctionaliteiten en basisinfrastructuur D5 en D6",
       "page_url": "/sources/cw-3-1-kader-d5-d6/"
+    },
+    {
+      "title": "Aanvullend Zorg- en Welzijnsakkoord (AZWA) (Definitief)",
+      "page_url": "/sources/azwa-definitief/"
     }
   ],
   "structured_signals": {
     "contains_structured_table": false,
-    "d5_item_count": 1,
+    "d5_item_count": 2,
     "d6_item_count": 3,
     "governance_item_count": 3,
     "timeline_item_count": 3
@@ -152,6 +163,7 @@
   "perspective_ids": [
     "norm",
     "time",
+    "money",
     "governance",
     "locality",
     "execution"
@@ -166,6 +178,11 @@
       "perspective_id": "time",
       "title": "Time",
       "question": "Which dates, deadlines, phasing, review moments, and budget-calendar alignments matter?"
+    },
+    {
+      "perspective_id": "money",
+      "title": "Money",
+      "question": "Which funding flows, budget windows, allocation conditions, and co-financing logic apply?"
     },
     {
       "perspective_id": "governance",

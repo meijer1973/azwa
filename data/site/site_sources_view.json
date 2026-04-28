@@ -40,14 +40,8 @@
       "summary": "Deze bron draagt vooral bij aan de D5-lijn en de vertaling daarvan naar uitvoering en bestuurlijke duiding.",
       "what_changed_or_added": "Deze bron draagt bij aan de actuele landelijke bestuurlijke lijn.",
       "d5_relevance": "Bevat expliciete D5-passages in de huidige extractie.",
-      "d6_relevance": "Geen duidelijke D6-passages in de huidige extractie.",
+      "d6_relevance": "Bevat vooral contextuele of afgeleide signalen die aan D6 raken.",
       "linked_claims": [
-        {
-          "topic": "d5.other",
-          "title": "overige D5-lijn",
-          "claim_count": 3,
-          "page_url": "/reference/topics/d5-other/"
-        },
         {
           "topic": "finance.d5_d6.funding_instrument",
           "title": "bekostigingsroute D5/D6",
@@ -61,16 +55,34 @@
           "page_url": "/reference/topics/municipal-implementation-translation/"
         },
         {
-          "topic": "timeline.other",
-          "title": "overige tijdlijnmomenten",
+          "topic": "d5.other",
+          "title": "overige D5-lijn",
           "claim_count": 2,
-          "page_url": "/reference/topics/timeline-other/"
+          "page_url": "/reference/topics/d5-other/"
         },
         {
           "topic": "monitoring.d5_operational_monitoring",
           "title": "operationele D5-monitoring",
           "claim_count": 2,
           "page_url": "/reference/topics/monitoring-d5-operational-monitoring/"
+        },
+        {
+          "topic": "d5.regional_workagenda",
+          "title": "regionale/lokale D5-werkagenda",
+          "claim_count": 1,
+          "page_url": "/reference/topics/d5-regional-workagenda/"
+        },
+        {
+          "topic": "d6.basisinfrastructuur",
+          "title": "D6-basisinfrastructuur",
+          "claim_count": 1,
+          "page_url": "/reference/topics/d6-basisinfrastructuur/"
+        },
+        {
+          "topic": "timeline.other",
+          "title": "overige tijdlijnmomenten",
+          "claim_count": 1,
+          "page_url": "/reference/topics/timeline-other/"
         },
         {
           "topic": "timeline.rollout_2030",
@@ -81,12 +93,22 @@
       ],
       "linked_decisions": [
         {
+          "title": "Mogelijke besluitvraag: prioritering van D5-interventies in Almere",
+          "status": "gedeeltelijk ingevuld",
+          "page_url": "/decisions/mogelijke-besluitvraag-prioritering-van-d5-interventies-in-almere/"
+        },
+        {
           "title": "Mogelijke besluitvraag: verdeling van beschikbare middelen over D5 en D6",
           "status": "geblokkeerd door afhankelijkheid",
           "page_url": "/decisions/mogelijke-besluitvraag-verdeling-van-beschikbare-middelen-over-d5-en-d6/"
         }
       ],
       "linked_actions": [
+        {
+          "title": "Mogelijke opvolgactie: D5-vertaling voor Almere expliciteren",
+          "status": "in voorbereiding",
+          "page_url": "/actions/mogelijke-opvolgactie-d5-vertaling-voor-almere-expliciteren/"
+        },
         {
           "title": "Mogelijke opvolgactie: inzet van middelen en eigenaarschap vastleggen",
           "status": "geblokkeerd door afhankelijkheid",
@@ -98,6 +120,11 @@
           "theme_id": "basisfunctionaliteiten-d5",
           "title": "Basisfunctionaliteiten (D5)",
           "page_url": "/themes/basisfunctionaliteiten-d5/"
+        },
+        {
+          "theme_id": "basisinfrastructuur-d6",
+          "title": "Basisinfrastructuur (D6)",
+          "page_url": "/themes/basisinfrastructuur-d6/"
         },
         {
           "theme_id": "financiering",
@@ -140,7 +167,7 @@
       "structured_signals": {
         "contains_structured_table": false,
         "d5_item_count": 3,
-        "d6_item_count": 0,
+        "d6_item_count": 1,
         "governance_item_count": 3,
         "timeline_item_count": 3
       },
@@ -235,22 +262,16 @@
           "page_url": "/reference/topics/governance-and-finance-other/"
         },
         {
-          "topic": "monitoring.other",
-          "title": "overige monitoringslijn",
-          "claim_count": 3,
-          "page_url": "/reference/topics/monitoring-other/"
-        },
-        {
-          "topic": "municipal.implementation_translation",
-          "title": "lokale vertaling in openbare stukken",
-          "claim_count": 3,
-          "page_url": "/reference/topics/municipal-implementation-translation/"
-        },
-        {
           "topic": "d5.basisfunctionaliteiten_onderbouwd",
           "title": "onderbouwde D5-basisfunctionaliteiten",
           "claim_count": 2,
           "page_url": "/reference/topics/d5-basisfunctionaliteiten-onderbouwd/"
+        },
+        {
+          "topic": "d6.basisinfrastructuur",
+          "title": "D6-basisinfrastructuur",
+          "claim_count": 2,
+          "page_url": "/reference/topics/d6-basisinfrastructuur/"
         },
         {
           "topic": "timeline.other",
@@ -259,16 +280,16 @@
           "page_url": "/reference/topics/timeline-other/"
         },
         {
-          "topic": "d5.mentale_gezondheidsnetwerken",
-          "title": "mentale gezondheidsnetwerken",
-          "claim_count": 1,
-          "page_url": "/reference/topics/d5-mentale-gezondheidsnetwerken/"
+          "topic": "monitoring.other",
+          "title": "overige monitoringslijn",
+          "claim_count": 2,
+          "page_url": "/reference/topics/monitoring-other/"
         },
         {
-          "topic": "d6.basisinfrastructuur",
-          "title": "D6-basisinfrastructuur",
-          "claim_count": 1,
-          "page_url": "/reference/topics/d6-basisinfrastructuur/"
+          "topic": "municipal.implementation_translation",
+          "title": "lokale vertaling in openbare stukken",
+          "claim_count": 2,
+          "page_url": "/reference/topics/municipal-implementation-translation/"
         },
         {
           "topic": "timeline.rollout_2030",
@@ -298,11 +319,6 @@
           "page_url": "/themes/basisfunctionaliteiten-d5/"
         },
         {
-          "theme_id": "mentale-gezondheid",
-          "title": "Mentale gezondheid",
-          "page_url": "/themes/mentale-gezondheid/"
-        },
-        {
           "theme_id": "basisinfrastructuur-d6",
           "title": "Basisinfrastructuur (D6)",
           "page_url": "/themes/basisinfrastructuur-d6/"
@@ -320,30 +336,30 @@
       ],
       "related_sources": [
         {
+          "title": "Toelichting producten en proces",
+          "page_url": "/sources/toelichting-werkagenda-d5-azwa/"
+        },
+        {
+          "title": "AZWA-afspraken D5 en D6 en financieringsinstrument",
+          "page_url": "/sources/vws-brief-d5-d6-financieringsinstrument/"
+        },
+        {
+          "title": "Kamerbrief inzake voortgang Integraal Zorgakkoord (IZA) en Aanvullend Zorg- en Welzijnsakkoord (AZWA)",
+          "page_url": "/sources/voortgangsbrief-iza-azwa/"
+        },
+        {
+          "title": "CW 3.1 kader basisfunctionaliteiten en basisinfrastructuur D5 en D6",
+          "page_url": "/sources/cw-3-1-kader-d5-d6/"
+        },
+        {
           "title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin - geamendeerd raadsvoorstel",
           "page_url": "/sources/slt-geamendeerd-raadsvoorstel/"
-        },
-        {
-          "title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin - raadsvoorstel",
-          "page_url": "/sources/slt-raadsvoorstel/"
-        },
-        {
-          "title": "Transformatieplan Positief Gezond Almere",
-          "page_url": "/sources/pga-transformatieplan/"
-        },
-        {
-          "title": "Naar een positief gezond Almere; Beleidstheorie en businesscase transformatieplan",
-          "page_url": "/sources/seo-beleidstheorie-en-businesscase-pga/"
-        },
-        {
-          "title": "Zorgzaam Flevoland 2023 Regioplan IZA Flevoland",
-          "page_url": "/sources/regioplan-iza-flevoland/"
         }
       ],
       "structured_signals": {
         "contains_structured_table": false,
         "d5_item_count": 3,
-        "d6_item_count": 1,
+        "d6_item_count": 3,
         "governance_item_count": 3,
         "timeline_item_count": 3
       },
@@ -589,10 +605,10 @@
           "page_url": "/reference/topics/municipal-implementation-translation/"
         },
         {
-          "topic": "d5.regional_workagenda",
-          "title": "regionale/lokale D5-werkagenda",
+          "topic": "d5.other",
+          "title": "overige D5-lijn",
           "claim_count": 2,
-          "page_url": "/reference/topics/d5-regional-workagenda/"
+          "page_url": "/reference/topics/d5-other/"
         },
         {
           "topic": "timeline.rollout_2030",
@@ -607,32 +623,14 @@
           "page_url": "/reference/topics/monitoring-other/"
         },
         {
-          "topic": "d5.other",
-          "title": "overige D5-lijn",
-          "claim_count": 1,
-          "page_url": "/reference/topics/d5-other/"
-        },
-        {
           "topic": "timeline.other",
           "title": "overige tijdlijnmomenten",
           "claim_count": 1,
           "page_url": "/reference/topics/timeline-other/"
         }
       ],
-      "linked_decisions": [
-        {
-          "title": "Mogelijke besluitvraag: prioritering van D5-interventies in Almere",
-          "status": "gedeeltelijk ingevuld",
-          "page_url": "/decisions/mogelijke-besluitvraag-prioritering-van-d5-interventies-in-almere/"
-        }
-      ],
-      "linked_actions": [
-        {
-          "title": "Mogelijke opvolgactie: D5-vertaling voor Almere expliciteren",
-          "status": "in voorbereiding",
-          "page_url": "/actions/mogelijke-opvolgactie-d5-vertaling-voor-almere-expliciteren/"
-        }
-      ],
+      "linked_decisions": [],
+      "linked_actions": [],
       "linked_themes": [
         {
           "theme_id": "basisfunctionaliteiten-d5",
@@ -758,22 +756,22 @@
       "d6_relevance": "Geen duidelijke D6-passages in de huidige extractie.",
       "linked_claims": [
         {
+          "topic": "d5.other",
+          "title": "overige D5-lijn",
+          "claim_count": 1,
+          "page_url": "/reference/topics/d5-other/"
+        },
+        {
           "topic": "governance_and_finance.other",
           "title": "overige governance- en financieringslijn",
-          "claim_count": 2,
+          "claim_count": 1,
           "page_url": "/reference/topics/governance-and-finance-other/"
         },
         {
           "topic": "municipal.implementation_translation",
           "title": "lokale vertaling in openbare stukken",
-          "claim_count": 2,
-          "page_url": "/reference/topics/municipal-implementation-translation/"
-        },
-        {
-          "topic": "d5.other",
-          "title": "overige D5-lijn",
           "claim_count": 1,
-          "page_url": "/reference/topics/d5-other/"
+          "page_url": "/reference/topics/municipal-implementation-translation/"
         }
       ],
       "linked_decisions": [],
@@ -894,38 +892,20 @@
         {
           "topic": "d5.basisfunctionaliteiten_onderbouwd",
           "title": "onderbouwde D5-basisfunctionaliteiten",
-          "claim_count": 3,
+          "claim_count": 1,
           "page_url": "/reference/topics/d5-basisfunctionaliteiten-onderbouwd/"
         },
         {
-          "topic": "municipal.implementation_translation",
-          "title": "lokale vertaling in openbare stukken",
-          "claim_count": 3,
-          "page_url": "/reference/topics/municipal-implementation-translation/"
+          "topic": "d5.definition",
+          "title": "D5-definitie",
+          "claim_count": 1,
+          "page_url": "/reference/topics/d5-definition/"
         },
         {
-          "topic": "d6.basisinfrastructuur",
-          "title": "D6-basisinfrastructuur",
-          "claim_count": 2,
-          "page_url": "/reference/topics/d6-basisinfrastructuur/"
-        },
-        {
-          "topic": "finance.d5_d6.funding_instrument",
-          "title": "bekostigingsroute D5/D6",
-          "claim_count": 2,
-          "page_url": "/reference/topics/finance-d5-d6-funding-instrument/"
-        },
-        {
-          "topic": "timeline.almere_2029",
-          "title": "lokale horizon Positief Gezond Almere",
-          "claim_count": 2,
-          "page_url": "/reference/topics/timeline-almere-2029/"
-        },
-        {
-          "topic": "monitoring.other",
-          "title": "overige monitoringslijn",
-          "claim_count": 2,
-          "page_url": "/reference/topics/monitoring-other/"
+          "topic": "d5.mentale_gezondheidsnetwerken",
+          "title": "mentale gezondheidsnetwerken",
+          "claim_count": 1,
+          "page_url": "/reference/topics/d5-mentale-gezondheidsnetwerken/"
         },
         {
           "topic": "d6.local_teams",
@@ -934,10 +914,28 @@
           "page_url": "/reference/topics/d6-local-teams/"
         },
         {
+          "topic": "d6.basisinfrastructuur",
+          "title": "D6-basisinfrastructuur",
+          "claim_count": 1,
+          "page_url": "/reference/topics/d6-basisinfrastructuur/"
+        },
+        {
+          "topic": "finance.d5_d6.funding_instrument",
+          "title": "bekostigingsroute D5/D6",
+          "claim_count": 1,
+          "page_url": "/reference/topics/finance-d5-d6-funding-instrument/"
+        },
+        {
           "topic": "governance_and_finance.other",
           "title": "overige governance- en financieringslijn",
           "claim_count": 1,
           "page_url": "/reference/topics/governance-and-finance-other/"
+        },
+        {
+          "topic": "timeline.other",
+          "title": "overige tijdlijnmomenten",
+          "claim_count": 1,
+          "page_url": "/reference/topics/timeline-other/"
         }
       ],
       "linked_decisions": [
@@ -976,6 +974,11 @@
           "page_url": "/themes/basisfunctionaliteiten-d5/"
         },
         {
+          "theme_id": "mentale-gezondheid",
+          "title": "Mentale gezondheid",
+          "page_url": "/themes/mentale-gezondheid/"
+        },
+        {
           "theme_id": "basisinfrastructuur-d6",
           "title": "Basisinfrastructuur (D6)",
           "page_url": "/themes/basisinfrastructuur-d6/"
@@ -998,24 +1001,24 @@
       ],
       "related_sources": [
         {
+          "title": "Transformatieplan Positief Gezond Almere",
+          "page_url": "/sources/pga-transformatieplan/"
+        },
+        {
+          "title": "Zorgzaam Flevoland 2023 Regioplan IZA Flevoland",
+          "page_url": "/sources/regioplan-iza-flevoland/"
+        },
+        {
+          "title": "Gezond en actief leven",
+          "page_url": "/sources/vng-gezond-en-actief-leven/"
+        },
+        {
+          "title": "Toelichting producten en proces",
+          "page_url": "/sources/toelichting-werkagenda-d5-azwa/"
+        },
+        {
           "title": "Kamerbrief inzake voortgang Integraal Zorgakkoord (IZA) en Aanvullend Zorg- en Welzijnsakkoord (AZWA)",
           "page_url": "/sources/voortgangsbrief-iza-azwa/"
-        },
-        {
-          "title": "CW 3.1 kader basisfunctionaliteiten en basisinfrastructuur D5 en D6",
-          "page_url": "/sources/cw-3-1-kader-d5-d6/"
-        },
-        {
-          "title": "Aanvullend Zorg- en Welzijnsakkoord (AZWA) (Definitief)",
-          "page_url": "/sources/azwa-definitief/"
-        },
-        {
-          "title": "Financiering IZA en AZWA: hoe zit het precies?",
-          "page_url": "/sources/financiering-iza-azwa/"
-        },
-        {
-          "title": "Ledenbrief onderhandelaarsakkoord AZWA",
-          "page_url": "/sources/vng-ledenbrief-azwa/"
         }
       ],
       "structured_signals": {
@@ -1211,6 +1214,10 @@
       ],
       "related_sources": [
         {
+          "title": "Toelichting producten en proces",
+          "page_url": "/sources/toelichting-werkagenda-d5-azwa/"
+        },
+        {
           "title": "AZWA-afspraken D5 en D6 en financieringsinstrument",
           "page_url": "/sources/vws-brief-d5-d6-financieringsinstrument/"
         },
@@ -1225,10 +1232,6 @@
         {
           "title": "Financiering IZA en AZWA: hoe zit het precies?",
           "page_url": "/sources/financiering-iza-azwa/"
-        },
-        {
-          "title": "Ledenbrief onderhandelaarsakkoord AZWA",
-          "page_url": "/sources/vng-ledenbrief-azwa/"
         }
       ],
       "structured_signals": {
@@ -1329,22 +1332,22 @@
           "page_url": "/reference/topics/finance-d5-d6-funding-instrument/"
         },
         {
+          "topic": "timeline.other",
+          "title": "overige tijdlijnmomenten",
+          "claim_count": 2,
+          "page_url": "/reference/topics/timeline-other/"
+        },
+        {
           "topic": "monitoring.other",
           "title": "overige monitoringslijn",
-          "claim_count": 3,
+          "claim_count": 2,
           "page_url": "/reference/topics/monitoring-other/"
         },
         {
           "topic": "municipal.implementation_translation",
           "title": "lokale vertaling in openbare stukken",
-          "claim_count": 3,
-          "page_url": "/reference/topics/municipal-implementation-translation/"
-        },
-        {
-          "topic": "timeline.other",
-          "title": "overige tijdlijnmomenten",
           "claim_count": 2,
-          "page_url": "/reference/topics/timeline-other/"
+          "page_url": "/reference/topics/municipal-implementation-translation/"
         },
         {
           "topic": "timeline.rollout_2030",
@@ -1504,6 +1507,12 @@
           "page_url": "/reference/topics/municipal-implementation-translation/"
         },
         {
+          "topic": "timeline.other",
+          "title": "overige tijdlijnmomenten",
+          "claim_count": 2,
+          "page_url": "/reference/topics/timeline-other/"
+        },
+        {
           "topic": "d6.local_teams",
           "title": "stevige lokale teams en wijkverbanden",
           "claim_count": 1,
@@ -1514,12 +1523,6 @@
           "title": "overige governance- en financieringslijn",
           "claim_count": 1,
           "page_url": "/reference/topics/governance-and-finance-other/"
-        },
-        {
-          "topic": "timeline.other",
-          "title": "overige tijdlijnmomenten",
-          "claim_count": 1,
-          "page_url": "/reference/topics/timeline-other/"
         }
       ],
       "linked_decisions": [
@@ -1549,6 +1552,10 @@
       ],
       "related_sources": [
         {
+          "title": "Toelichting producten en proces",
+          "page_url": "/sources/toelichting-werkagenda-d5-azwa/"
+        },
+        {
           "title": "Opdracht voor de werkagenda samenwerking zorg en sociaal domein voor D5 AZWA",
           "page_url": "/sources/opdracht-werkagenda-d5-azwa/"
         },
@@ -1561,10 +1568,6 @@
           "page_url": "/sources/voortgangsbrief-iza-azwa/"
         },
         {
-          "title": "Kamerbrief over CW 3.1 kaders voor AZWA onderdelen",
-          "page_url": "/sources/kamerbrief-cw-3-1-kaders-azwa/"
-        },
-        {
           "title": "CW 3.1 kader basisfunctionaliteiten en basisinfrastructuur D5 en D6",
           "page_url": "/sources/cw-3-1-kader-d5-d6/"
         }
@@ -1574,7 +1577,7 @@
         "d5_item_count": 0,
         "d6_item_count": 1,
         "governance_item_count": 1,
-        "timeline_item_count": 1
+        "timeline_item_count": 2
       },
       "content_classification": {
         "classification_id": "source_fact",
@@ -1671,18 +1674,6 @@
           "title": "D6-basisinfrastructuur",
           "claim_count": 1,
           "page_url": "/reference/topics/d6-basisinfrastructuur/"
-        },
-        {
-          "topic": "timeline.other",
-          "title": "overige tijdlijnmomenten",
-          "claim_count": 1,
-          "page_url": "/reference/topics/timeline-other/"
-        },
-        {
-          "topic": "municipal.implementation_translation",
-          "title": "lokale vertaling in openbare stukken",
-          "claim_count": 1,
-          "page_url": "/reference/topics/municipal-implementation-translation/"
         }
       ],
       "linked_decisions": [],
@@ -1702,14 +1693,13 @@
           "theme_id": "monitoring-en-leren",
           "title": "Monitoring en leren",
           "page_url": "/themes/monitoring-en-leren/"
-        },
-        {
-          "theme_id": "governance-en-regie",
-          "title": "Governance en regie",
-          "page_url": "/themes/governance-en-regie/"
         }
       ],
       "related_sources": [
+        {
+          "title": "Toelichting producten en proces",
+          "page_url": "/sources/toelichting-werkagenda-d5-azwa/"
+        },
         {
           "title": "Opdracht voor de werkagenda samenwerking zorg en sociaal domein voor D5 AZWA",
           "page_url": "/sources/opdracht-werkagenda-d5-azwa/"
@@ -1725,10 +1715,6 @@
         {
           "title": "CW 3.1 kader basisfunctionaliteiten en basisinfrastructuur D5 en D6",
           "page_url": "/sources/cw-3-1-kader-d5-d6/"
-        },
-        {
-          "title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin - geamendeerd raadsvoorstel",
-          "page_url": "/sources/slt-geamendeerd-raadsvoorstel/"
         }
       ],
       "structured_signals": {
@@ -1746,8 +1732,6 @@
       "perspective_ids": [
         "norm",
         "time",
-        "governance",
-        "locality",
         "execution"
       ],
       "quality_perspectives": [
@@ -1760,16 +1744,6 @@
           "perspective_id": "time",
           "title": "Time",
           "question": "Which dates, deadlines, phasing, review moments, and budget-calendar alignments matter?"
-        },
-        {
-          "perspective_id": "governance",
-          "title": "Governance",
-          "question": "Who decides, who coordinates, who owns, and who must approve?"
-        },
-        {
-          "perspective_id": "locality",
-          "title": "Locality",
-          "question": "What matters specifically for Almere or Flevoland?"
         },
         {
           "perspective_id": "execution",
@@ -1928,6 +1902,10 @@
       ],
       "related_sources": [
         {
+          "title": "Toelichting producten en proces",
+          "page_url": "/sources/toelichting-werkagenda-d5-azwa/"
+        },
+        {
           "title": "AZWA-afspraken D5 en D6 en financieringsinstrument",
           "page_url": "/sources/vws-brief-d5-d6-financieringsinstrument/"
         },
@@ -1942,10 +1920,6 @@
         {
           "title": "Financiering IZA en AZWA: hoe zit het precies?",
           "page_url": "/sources/financiering-iza-azwa/"
-        },
-        {
-          "title": "Ledenbrief onderhandelaarsakkoord AZWA",
-          "page_url": "/sources/vng-ledenbrief-azwa/"
         }
       ],
       "structured_signals": {
@@ -2040,28 +2014,10 @@
       "d6_relevance": "Bevat expliciete D6-passages in de huidige extractie.",
       "linked_claims": [
         {
-          "topic": "d6.local_teams",
-          "title": "stevige lokale teams en wijkverbanden",
-          "claim_count": 3,
-          "page_url": "/reference/topics/d6-local-teams/"
-        },
-        {
           "topic": "governance_and_finance.other",
           "title": "overige governance- en financieringslijn",
           "claim_count": 3,
           "page_url": "/reference/topics/governance-and-finance-other/"
-        },
-        {
-          "topic": "monitoring.other",
-          "title": "overige monitoringslijn",
-          "claim_count": 3,
-          "page_url": "/reference/topics/monitoring-other/"
-        },
-        {
-          "topic": "municipal.local_structure",
-          "title": "lokale structuur",
-          "claim_count": 3,
-          "page_url": "/reference/topics/municipal-local-structure/"
         },
         {
           "topic": "timeline.almere_2029",
@@ -2070,16 +2026,28 @@
           "page_url": "/reference/topics/timeline-almere-2029/"
         },
         {
+          "topic": "monitoring.other",
+          "title": "overige monitoringslijn",
+          "claim_count": 2,
+          "page_url": "/reference/topics/monitoring-other/"
+        },
+        {
+          "topic": "municipal.local_structure",
+          "title": "lokale structuur",
+          "claim_count": 2,
+          "page_url": "/reference/topics/municipal-local-structure/"
+        },
+        {
           "topic": "d5.mentale_gezondheidsnetwerken",
           "title": "mentale gezondheidsnetwerken",
           "claim_count": 1,
           "page_url": "/reference/topics/d5-mentale-gezondheidsnetwerken/"
         },
         {
-          "topic": "timeline.d5_d6_financing_horizon",
-          "title": "financieringshorizon D5/D6",
+          "topic": "d6.local_teams",
+          "title": "stevige lokale teams en wijkverbanden",
           "claim_count": 1,
-          "page_url": "/reference/topics/timeline-d5-d6-financing-horizon/"
+          "page_url": "/reference/topics/d6-local-teams/"
         }
       ],
       "linked_decisions": [
@@ -2119,8 +2087,8 @@
       ],
       "related_sources": [
         {
-          "title": "Opdracht voor de werkagenda samenwerking zorg en sociaal domein voor D5 AZWA",
-          "page_url": "/sources/opdracht-werkagenda-d5-azwa/"
+          "title": "AZWA-afspraken D5 en D6 en financieringsinstrument",
+          "page_url": "/sources/vws-brief-d5-d6-financieringsinstrument/"
         },
         {
           "title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin - raadsvoorstel",
@@ -2131,12 +2099,12 @@
           "page_url": "/sources/pga-transformatieplan/"
         },
         {
-          "title": "Naar een positief gezond Almere; Beleidstheorie en businesscase transformatieplan",
-          "page_url": "/sources/seo-beleidstheorie-en-businesscase-pga/"
-        },
-        {
           "title": "Zorgzaam Flevoland 2023 Regioplan IZA Flevoland",
           "page_url": "/sources/regioplan-iza-flevoland/"
+        },
+        {
+          "title": "Gezond en actief leven",
+          "page_url": "/sources/vng-gezond-en-actief-leven/"
         }
       ],
       "structured_signals": {
@@ -2225,16 +2193,16 @@
       "d6_relevance": "Geen duidelijke D6-passages in de huidige extractie.",
       "linked_claims": [
         {
-          "topic": "governance_and_finance.other",
-          "title": "overige governance- en financieringslijn",
-          "claim_count": 3,
-          "page_url": "/reference/topics/governance-and-finance-other/"
-        },
-        {
           "topic": "municipal.implementation_translation",
           "title": "lokale vertaling in openbare stukken",
           "claim_count": 3,
           "page_url": "/reference/topics/municipal-implementation-translation/"
+        },
+        {
+          "topic": "governance_and_finance.other",
+          "title": "overige governance- en financieringslijn",
+          "claim_count": 2,
+          "page_url": "/reference/topics/governance-and-finance-other/"
         }
       ],
       "linked_decisions": [],
@@ -2348,28 +2316,10 @@
       "d6_relevance": "Bevat expliciete D6-passages in de huidige extractie.",
       "linked_claims": [
         {
-          "topic": "d6.local_teams",
-          "title": "stevige lokale teams en wijkverbanden",
-          "claim_count": 3,
-          "page_url": "/reference/topics/d6-local-teams/"
-        },
-        {
           "topic": "governance_and_finance.other",
           "title": "overige governance- en financieringslijn",
           "claim_count": 3,
           "page_url": "/reference/topics/governance-and-finance-other/"
-        },
-        {
-          "topic": "monitoring.other",
-          "title": "overige monitoringslijn",
-          "claim_count": 3,
-          "page_url": "/reference/topics/monitoring-other/"
-        },
-        {
-          "topic": "municipal.local_structure",
-          "title": "lokale structuur",
-          "claim_count": 3,
-          "page_url": "/reference/topics/municipal-local-structure/"
         },
         {
           "topic": "timeline.almere_2029",
@@ -2378,16 +2328,28 @@
           "page_url": "/reference/topics/timeline-almere-2029/"
         },
         {
+          "topic": "monitoring.other",
+          "title": "overige monitoringslijn",
+          "claim_count": 2,
+          "page_url": "/reference/topics/monitoring-other/"
+        },
+        {
+          "topic": "municipal.local_structure",
+          "title": "lokale structuur",
+          "claim_count": 2,
+          "page_url": "/reference/topics/municipal-local-structure/"
+        },
+        {
           "topic": "d5.mentale_gezondheidsnetwerken",
           "title": "mentale gezondheidsnetwerken",
           "claim_count": 1,
           "page_url": "/reference/topics/d5-mentale-gezondheidsnetwerken/"
         },
         {
-          "topic": "timeline.d5_d6_financing_horizon",
-          "title": "financieringshorizon D5/D6",
+          "topic": "d6.local_teams",
+          "title": "stevige lokale teams en wijkverbanden",
           "claim_count": 1,
-          "page_url": "/reference/topics/timeline-d5-d6-financing-horizon/"
+          "page_url": "/reference/topics/d6-local-teams/"
         }
       ],
       "linked_decisions": [
@@ -2427,8 +2389,8 @@
       ],
       "related_sources": [
         {
-          "title": "Opdracht voor de werkagenda samenwerking zorg en sociaal domein voor D5 AZWA",
-          "page_url": "/sources/opdracht-werkagenda-d5-azwa/"
+          "title": "AZWA-afspraken D5 en D6 en financieringsinstrument",
+          "page_url": "/sources/vws-brief-d5-d6-financieringsinstrument/"
         },
         {
           "title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin - geamendeerd raadsvoorstel",
@@ -2439,12 +2401,12 @@
           "page_url": "/sources/pga-transformatieplan/"
         },
         {
-          "title": "Naar een positief gezond Almere; Beleidstheorie en businesscase transformatieplan",
-          "page_url": "/sources/seo-beleidstheorie-en-businesscase-pga/"
-        },
-        {
           "title": "Zorgzaam Flevoland 2023 Regioplan IZA Flevoland",
           "page_url": "/sources/regioplan-iza-flevoland/"
+        },
+        {
+          "title": "Gezond en actief leven",
+          "page_url": "/sources/vng-gezond-en-actief-leven/"
         }
       ],
       "structured_signals": {
@@ -2535,20 +2497,20 @@
         {
           "topic": "d6.local_teams",
           "title": "stevige lokale teams en wijkverbanden",
-          "claim_count": 2,
+          "claim_count": 1,
           "page_url": "/reference/topics/d6-local-teams/"
-        },
-        {
-          "topic": "municipal.implementation_translation",
-          "title": "lokale vertaling in openbare stukken",
-          "claim_count": 2,
-          "page_url": "/reference/topics/municipal-implementation-translation/"
         },
         {
           "topic": "municipal.local_structure",
           "title": "lokale structuur",
           "claim_count": 1,
           "page_url": "/reference/topics/municipal-local-structure/"
+        },
+        {
+          "topic": "municipal.implementation_translation",
+          "title": "lokale vertaling in openbare stukken",
+          "claim_count": 1,
+          "page_url": "/reference/topics/municipal-implementation-translation/"
         }
       ],
       "linked_decisions": [
@@ -2573,6 +2535,10 @@
       ],
       "related_sources": [
         {
+          "title": "Toelichting producten en proces",
+          "page_url": "/sources/toelichting-werkagenda-d5-azwa/"
+        },
+        {
           "title": "Opdracht voor de werkagenda samenwerking zorg en sociaal domein voor D5 AZWA",
           "page_url": "/sources/opdracht-werkagenda-d5-azwa/"
         },
@@ -2587,16 +2553,12 @@
         {
           "title": "Informatiepagina Sociaal Domein",
           "page_url": "/sources/sociaal-domein-informatiepagina/"
-        },
-        {
-          "title": "Kamerbrief over CW 3.1 kaders voor AZWA onderdelen",
-          "page_url": "/sources/kamerbrief-cw-3-1-kaders-azwa/"
         }
       ],
       "structured_signals": {
         "contains_structured_table": false,
         "d5_item_count": 0,
-        "d6_item_count": 2,
+        "d6_item_count": 3,
         "governance_item_count": 0,
         "timeline_item_count": 0
       },
@@ -2675,20 +2637,20 @@
         {
           "topic": "d6.local_teams",
           "title": "stevige lokale teams en wijkverbanden",
-          "claim_count": 3,
+          "claim_count": 1,
           "page_url": "/reference/topics/d6-local-teams/"
-        },
-        {
-          "topic": "municipal.local_structure",
-          "title": "lokale structuur",
-          "claim_count": 3,
-          "page_url": "/reference/topics/municipal-local-structure/"
         },
         {
           "topic": "timeline.almere_2029",
           "title": "lokale horizon Positief Gezond Almere",
-          "claim_count": 2,
+          "claim_count": 1,
           "page_url": "/reference/topics/timeline-almere-2029/"
+        },
+        {
+          "topic": "municipal.local_structure",
+          "title": "lokale structuur",
+          "claim_count": 1,
+          "page_url": "/reference/topics/municipal-local-structure/"
         }
       ],
       "linked_decisions": [
@@ -2718,6 +2680,10 @@
       ],
       "related_sources": [
         {
+          "title": "Toelichting producten en proces",
+          "page_url": "/sources/toelichting-werkagenda-d5-azwa/"
+        },
+        {
           "title": "Opdracht voor de werkagenda samenwerking zorg en sociaal domein voor D5 AZWA",
           "page_url": "/sources/opdracht-werkagenda-d5-azwa/"
         },
@@ -2732,10 +2698,6 @@
         {
           "title": "Informatiepagina Sociaal Domein",
           "page_url": "/sources/sociaal-domein-informatiepagina/"
-        },
-        {
-          "title": "Kamerbrief over CW 3.1 kaders voor AZWA onderdelen",
-          "page_url": "/sources/kamerbrief-cw-3-1-kaders-azwa/"
         }
       ],
       "structured_signals": {
@@ -2743,7 +2705,7 @@
         "d5_item_count": 0,
         "d6_item_count": 3,
         "governance_item_count": 0,
-        "timeline_item_count": 2
+        "timeline_item_count": 3
       },
       "content_classification": {
         "classification_id": "source_fact",
@@ -2830,22 +2792,22 @@
           "page_url": "/reference/topics/d6-local-teams/"
         },
         {
+          "topic": "timeline.other",
+          "title": "overige tijdlijnmomenten",
+          "claim_count": 2,
+          "page_url": "/reference/topics/timeline-other/"
+        },
+        {
           "topic": "municipal.local_structure",
           "title": "lokale structuur",
           "claim_count": 2,
           "page_url": "/reference/topics/municipal-local-structure/"
         },
         {
-          "topic": "timeline.other",
-          "title": "overige tijdlijnmomenten",
+          "topic": "monitoring.other",
+          "title": "overige monitoringslijn",
           "claim_count": 1,
-          "page_url": "/reference/topics/timeline-other/"
-        },
-        {
-          "topic": "municipal.implementation_translation",
-          "title": "lokale vertaling in openbare stukken",
-          "claim_count": 1,
-          "page_url": "/reference/topics/municipal-implementation-translation/"
+          "page_url": "/reference/topics/monitoring-other/"
         }
       ],
       "linked_decisions": [
@@ -2875,6 +2837,10 @@
       ],
       "related_sources": [
         {
+          "title": "Toelichting producten en proces",
+          "page_url": "/sources/toelichting-werkagenda-d5-azwa/"
+        },
+        {
           "title": "Opdracht voor de werkagenda samenwerking zorg en sociaal domein voor D5 AZWA",
           "page_url": "/sources/opdracht-werkagenda-d5-azwa/"
         },
@@ -2889,10 +2855,6 @@
         {
           "title": "Informatiepagina Sociaal Domein",
           "page_url": "/sources/sociaal-domein-informatiepagina/"
-        },
-        {
-          "title": "Kamerbrief over CW 3.1 kaders voor AZWA onderdelen",
-          "page_url": "/sources/kamerbrief-cw-3-1-kaders-azwa/"
         }
       ],
       "structured_signals": {
@@ -2900,7 +2862,7 @@
         "d5_item_count": 0,
         "d6_item_count": 3,
         "governance_item_count": 0,
-        "timeline_item_count": 1
+        "timeline_item_count": 2
       },
       "content_classification": {
         "classification_id": "source_fact",
@@ -2981,22 +2943,10 @@
       "d6_relevance": "Bevat expliciete D6-passages in de huidige extractie.",
       "linked_claims": [
         {
-          "topic": "governance_and_finance.other",
-          "title": "overige governance- en financieringslijn",
-          "claim_count": 3,
-          "page_url": "/reference/topics/governance-and-finance-other/"
-        },
-        {
           "topic": "timeline.almere_2029",
           "title": "lokale horizon Positief Gezond Almere",
           "claim_count": 3,
           "page_url": "/reference/topics/timeline-almere-2029/"
-        },
-        {
-          "topic": "monitoring.other",
-          "title": "overige monitoringslijn",
-          "claim_count": 3,
-          "page_url": "/reference/topics/monitoring-other/"
         },
         {
           "topic": "municipal.implementation_translation",
@@ -3011,16 +2961,28 @@
           "page_url": "/reference/topics/d6-local-teams/"
         },
         {
+          "topic": "governance_and_finance.other",
+          "title": "overige governance- en financieringslijn",
+          "claim_count": 2,
+          "page_url": "/reference/topics/governance-and-finance-other/"
+        },
+        {
+          "topic": "monitoring.other",
+          "title": "overige monitoringslijn",
+          "claim_count": 2,
+          "page_url": "/reference/topics/monitoring-other/"
+        },
+        {
           "topic": "d5.basisfunctionaliteiten_onderbouwd",
           "title": "onderbouwde D5-basisfunctionaliteiten",
           "claim_count": 1,
           "page_url": "/reference/topics/d5-basisfunctionaliteiten-onderbouwd/"
         },
         {
-          "topic": "d6.digital_and_operational_infrastructure",
-          "title": "digitale en operationele infrastructuur",
+          "topic": "d5.other",
+          "title": "overige D5-lijn",
           "claim_count": 1,
-          "page_url": "/reference/topics/d6-digital-and-operational-infrastructure/"
+          "page_url": "/reference/topics/d5-other/"
         }
       ],
       "linked_decisions": [
@@ -3040,11 +3002,6 @@
           "title": "Mogelijke opvolgactie: D5-vertaling voor Almere expliciteren",
           "status": "in voorbereiding",
           "page_url": "/actions/mogelijke-opvolgactie-d5-vertaling-voor-almere-expliciteren/"
-        },
-        {
-          "title": "Mogelijke opvolgactie: regionale digitale aansluiting concretiseren",
-          "status": "geblokkeerd door afhankelijkheid",
-          "page_url": "/actions/mogelijke-opvolgactie-regionale-digitale-aansluiting-concretiseren/"
         }
       ],
       "linked_themes": [
@@ -3071,6 +3028,10 @@
       ],
       "related_sources": [
         {
+          "title": "Toelichting producten en proces",
+          "page_url": "/sources/toelichting-werkagenda-d5-azwa/"
+        },
+        {
           "title": "Opdracht voor de werkagenda samenwerking zorg en sociaal domein voor D5 AZWA",
           "page_url": "/sources/opdracht-werkagenda-d5-azwa/"
         },
@@ -3083,17 +3044,13 @@
           "page_url": "/sources/voortgangsbrief-iza-azwa/"
         },
         {
-          "title": "Kamerbrief over CW 3.1 kaders voor AZWA onderdelen",
-          "page_url": "/sources/kamerbrief-cw-3-1-kaders-azwa/"
-        },
-        {
           "title": "CW 3.1 kader basisfunctionaliteiten en basisinfrastructuur D5 en D6",
           "page_url": "/sources/cw-3-1-kader-d5-d6/"
         }
       ],
       "structured_signals": {
         "contains_structured_table": true,
-        "d5_item_count": 1,
+        "d5_item_count": 3,
         "d6_item_count": 3,
         "governance_item_count": 3,
         "timeline_item_count": 3
@@ -3193,12 +3150,6 @@
           "title": "bekostigingsroute D5/D6",
           "claim_count": 2,
           "page_url": "/reference/topics/finance-d5-d6-funding-instrument/"
-        },
-        {
-          "topic": "governance_and_finance.other",
-          "title": "overige governance- en financieringslijn",
-          "claim_count": 1,
-          "page_url": "/reference/topics/governance-and-finance-other/"
         },
         {
           "topic": "monitoring.other",
@@ -3368,12 +3319,6 @@
           "title": "overige governance- en financieringslijn",
           "claim_count": 1,
           "page_url": "/reference/topics/governance-and-finance-other/"
-        },
-        {
-          "topic": "timeline.other",
-          "title": "overige tijdlijnmomenten",
-          "claim_count": 1,
-          "page_url": "/reference/topics/timeline-other/"
         }
       ],
       "linked_decisions": [],
@@ -3383,11 +3328,6 @@
           "theme_id": "basisfunctionaliteiten-d5",
           "title": "Basisfunctionaliteiten (D5)",
           "page_url": "/themes/basisfunctionaliteiten-d5/"
-        },
-        {
-          "theme_id": "monitoring-en-leren",
-          "title": "Monitoring en leren",
-          "page_url": "/themes/monitoring-en-leren/"
         },
         {
           "theme_id": "governance-en-regie",
@@ -3413,8 +3353,8 @@
           "page_url": "/sources/vng-ledenbrief-azwa-financiering/"
         },
         {
-          "title": "AZWA-afspraken D5 en D6 en financieringsinstrument",
-          "page_url": "/sources/vws-brief-d5-d6-financieringsinstrument/"
+          "title": "AZWA-financiering voor gemeenten (Zorgakkoord)",
+          "page_url": "/sources/vng-webpagina-azwa-financiering/"
         }
       ],
       "structured_signals": {
@@ -3431,7 +3371,6 @@
       },
       "perspective_ids": [
         "norm",
-        "time",
         "governance",
         "locality",
         "execution"
@@ -3441,11 +3380,6 @@
           "perspective_id": "norm",
           "title": "Norm",
           "question": "What is required, allowed, expected, or binding?"
-        },
-        {
-          "perspective_id": "time",
-          "title": "Time",
-          "question": "Which dates, deadlines, phasing, review moments, and budget-calendar alignments matter?"
         },
         {
           "perspective_id": "governance",
@@ -3619,6 +3553,10 @@
       ],
       "related_sources": [
         {
+          "title": "Toelichting producten en proces",
+          "page_url": "/sources/toelichting-werkagenda-d5-azwa/"
+        },
+        {
           "title": "AZWA-afspraken D5 en D6 en financieringsinstrument",
           "page_url": "/sources/vws-brief-d5-d6-financieringsinstrument/"
         },
@@ -3633,10 +3571,6 @@
         {
           "title": "Financiering IZA en AZWA: hoe zit het precies?",
           "page_url": "/sources/financiering-iza-azwa/"
-        },
-        {
-          "title": "Ledenbrief onderhandelaarsakkoord AZWA",
-          "page_url": "/sources/vng-ledenbrief-azwa/"
         }
       ],
       "structured_signals": {
@@ -3842,6 +3776,10 @@
       ],
       "related_sources": [
         {
+          "title": "Toelichting producten en proces",
+          "page_url": "/sources/toelichting-werkagenda-d5-azwa/"
+        },
+        {
           "title": "AZWA-afspraken D5 en D6 en financieringsinstrument",
           "page_url": "/sources/vws-brief-d5-d6-financieringsinstrument/"
         },
@@ -3856,10 +3794,6 @@
         {
           "title": "Aanvullend Zorg- en Welzijnsakkoord (AZWA) (Definitief)",
           "page_url": "/sources/azwa-definitief/"
-        },
-        {
-          "title": "Ledenbrief onderhandelaarsakkoord AZWA",
-          "page_url": "/sources/vng-ledenbrief-azwa/"
         }
       ],
       "structured_signals": {
@@ -3954,18 +3888,6 @@
       "d6_relevance": "Bevat expliciete D6-passages in de huidige extractie.",
       "linked_claims": [
         {
-          "topic": "d5.other",
-          "title": "overige D5-lijn",
-          "claim_count": 3,
-          "page_url": "/reference/topics/d5-other/"
-        },
-        {
-          "topic": "d6.local_teams",
-          "title": "stevige lokale teams en wijkverbanden",
-          "claim_count": 2,
-          "page_url": "/reference/topics/d6-local-teams/"
-        },
-        {
           "topic": "finance.d5_d6.funding_instrument",
           "title": "bekostigingsroute D5/D6",
           "claim_count": 2,
@@ -3978,10 +3900,28 @@
           "page_url": "/reference/topics/municipal-implementation-translation/"
         },
         {
+          "topic": "d5.other",
+          "title": "overige D5-lijn",
+          "claim_count": 1,
+          "page_url": "/reference/topics/d5-other/"
+        },
+        {
+          "topic": "d5.basisfunctionaliteiten_onderbouwd",
+          "title": "onderbouwde D5-basisfunctionaliteiten",
+          "claim_count": 1,
+          "page_url": "/reference/topics/d5-basisfunctionaliteiten-onderbouwd/"
+        },
+        {
           "topic": "d6.basisinfrastructuur",
           "title": "D6-basisinfrastructuur",
           "claim_count": 1,
           "page_url": "/reference/topics/d6-basisinfrastructuur/"
+        },
+        {
+          "topic": "d6.local_teams",
+          "title": "stevige lokale teams en wijkverbanden",
+          "claim_count": 1,
+          "page_url": "/reference/topics/d6-local-teams/"
         },
         {
           "topic": "finance.local_alignment_goal",
@@ -3994,12 +3934,6 @@
           "title": "implementatielijn D5/D6",
           "claim_count": 1,
           "page_url": "/reference/topics/timeline-d5-d6-implementation/"
-        },
-        {
-          "topic": "timeline.rollout_2030",
-          "title": "landelijke dekking richting 2030",
-          "claim_count": 1,
-          "page_url": "/reference/topics/timeline-rollout-2030/"
         }
       ],
       "linked_decisions": [
@@ -4070,6 +4004,10 @@
       ],
       "related_sources": [
         {
+          "title": "Toelichting producten en proces",
+          "page_url": "/sources/toelichting-werkagenda-d5-azwa/"
+        },
+        {
           "title": "AZWA-afspraken D5 en D6 en financieringsinstrument",
           "page_url": "/sources/vws-brief-d5-d6-financieringsinstrument/"
         },
@@ -4084,10 +4022,6 @@
         {
           "title": "Aanvullend Zorg- en Welzijnsakkoord (AZWA) (Definitief)",
           "page_url": "/sources/azwa-definitief/"
-        },
-        {
-          "title": "Financiering IZA en AZWA: hoe zit het precies?",
-          "page_url": "/sources/financiering-iza-azwa/"
         }
       ],
       "structured_signals": {
@@ -4273,6 +4207,10 @@
       ],
       "related_sources": [
         {
+          "title": "Toelichting producten en proces",
+          "page_url": "/sources/toelichting-werkagenda-d5-azwa/"
+        },
+        {
           "title": "AZWA-afspraken D5 en D6 en financieringsinstrument",
           "page_url": "/sources/vws-brief-d5-d6-financieringsinstrument/"
         },
@@ -4287,10 +4225,6 @@
         {
           "title": "Aanvullend Zorg- en Welzijnsakkoord (AZWA) (Definitief)",
           "page_url": "/sources/azwa-definitief/"
-        },
-        {
-          "title": "Financiering IZA en AZWA: hoe zit het precies?",
-          "page_url": "/sources/financiering-iza-azwa/"
         }
       ],
       "structured_signals": {
@@ -4506,8 +4440,8 @@
       ],
       "related_sources": [
         {
-          "title": "Naar een positief gezond Almere; Beleidstheorie en businesscase transformatieplan",
-          "page_url": "/sources/seo-beleidstheorie-en-businesscase-pga/"
+          "title": "AZWA-afspraken D5 en D6 en financieringsinstrument",
+          "page_url": "/sources/vws-brief-d5-d6-financieringsinstrument/"
         },
         {
           "title": "Zorgzaam Flevoland 2023 Regioplan IZA Flevoland",
@@ -4518,12 +4452,12 @@
           "page_url": "/sources/vng-gezond-en-actief-leven/"
         },
         {
-          "title": "Opdracht voor de werkagenda samenwerking zorg en sociaal domein voor D5 AZWA",
-          "page_url": "/sources/opdracht-werkagenda-d5-azwa/"
+          "title": "Toelichting producten en proces",
+          "page_url": "/sources/toelichting-werkagenda-d5-azwa/"
         },
         {
-          "title": "AZWA-afspraken D5 en D6 en financieringsinstrument",
-          "page_url": "/sources/vws-brief-d5-d6-financieringsinstrument/"
+          "title": "Kamerbrief inzake voortgang Integraal Zorgakkoord (IZA) en Aanvullend Zorg- en Welzijnsakkoord (AZWA)",
+          "page_url": "/sources/voortgangsbrief-iza-azwa/"
         }
       ],
       "structured_signals": {
@@ -4624,16 +4558,16 @@
           "page_url": "/reference/topics/monitoring-other/"
         },
         {
-          "topic": "municipal.implementation_translation",
-          "title": "lokale vertaling in openbare stukken",
-          "claim_count": 3,
-          "page_url": "/reference/topics/municipal-implementation-translation/"
-        },
-        {
           "topic": "governance_and_finance.other",
           "title": "overige governance- en financieringslijn",
           "claim_count": 2,
           "page_url": "/reference/topics/governance-and-finance-other/"
+        },
+        {
+          "topic": "municipal.implementation_translation",
+          "title": "lokale vertaling in openbare stukken",
+          "claim_count": 2,
+          "page_url": "/reference/topics/municipal-implementation-translation/"
         },
         {
           "topic": "governance.regional_coordination",
@@ -4789,7 +4723,7 @@
         {
           "topic": "municipal.implementation_translation",
           "title": "lokale vertaling in openbare stukken",
-          "claim_count": 3,
+          "claim_count": 2,
           "page_url": "/reference/topics/municipal-implementation-translation/"
         }
       ],
@@ -4923,7 +4857,7 @@
         {
           "topic": "municipal.implementation_translation",
           "title": "lokale vertaling in openbare stukken",
-          "claim_count": 3,
+          "claim_count": 2,
           "page_url": "/reference/topics/municipal-implementation-translation/"
         }
       ],
@@ -5195,12 +5129,6 @@
           "page_url": "/reference/topics/d6-other/"
         },
         {
-          "topic": "governance_and_finance.other",
-          "title": "overige governance- en financieringslijn",
-          "claim_count": 3,
-          "page_url": "/reference/topics/governance-and-finance-other/"
-        },
-        {
           "topic": "monitoring.other",
           "title": "overige monitoringslijn",
           "claim_count": 3,
@@ -5213,10 +5141,22 @@
           "page_url": "/reference/topics/municipal-implementation-translation/"
         },
         {
+          "topic": "governance_and_finance.other",
+          "title": "overige governance- en financieringslijn",
+          "claim_count": 2,
+          "page_url": "/reference/topics/governance-and-finance-other/"
+        },
+        {
           "topic": "timeline.other",
           "title": "overige tijdlijnmomenten",
           "claim_count": 2,
           "page_url": "/reference/topics/timeline-other/"
+        },
+        {
+          "topic": "finance.local_alignment_goal",
+          "title": "lokale financiele aansluiting",
+          "claim_count": 1,
+          "page_url": "/reference/topics/finance-local-alignment-goal/"
         },
         {
           "topic": "timeline.d5_d6_implementation",
@@ -5230,6 +5170,11 @@
           "title": "Mogelijke besluitvraag: prioritering van D5-interventies in Almere",
           "status": "gedeeltelijk ingevuld",
           "page_url": "/decisions/mogelijke-besluitvraag-prioritering-van-d5-interventies-in-almere/"
+        },
+        {
+          "title": "Mogelijke besluitvraag: verdeling van beschikbare middelen over D5 en D6",
+          "status": "geblokkeerd door afhankelijkheid",
+          "page_url": "/decisions/mogelijke-besluitvraag-verdeling-van-beschikbare-middelen-over-d5-en-d6/"
         },
         {
           "title": "Mogelijke besluitvraag: monitoringsarrangement voor Almere",
@@ -5256,6 +5201,11 @@
           "page_url": "/themes/basisinfrastructuur-d6/"
         },
         {
+          "theme_id": "financiering",
+          "title": "Financiering",
+          "page_url": "/themes/financiering/"
+        },
+        {
           "theme_id": "monitoring-en-leren",
           "title": "Monitoring en leren",
           "page_url": "/themes/monitoring-en-leren/"
@@ -5268,8 +5218,8 @@
       ],
       "related_sources": [
         {
-          "title": "Opdracht voor de werkagenda samenwerking zorg en sociaal domein voor D5 AZWA",
-          "page_url": "/sources/opdracht-werkagenda-d5-azwa/"
+          "title": "Toelichting producten en proces",
+          "page_url": "/sources/toelichting-werkagenda-d5-azwa/"
         },
         {
           "title": "AZWA-afspraken D5 en D6 en financieringsinstrument",
@@ -5280,12 +5230,12 @@
           "page_url": "/sources/voortgangsbrief-iza-azwa/"
         },
         {
-          "title": "Informatiepagina Sociaal Domein",
-          "page_url": "/sources/sociaal-domein-informatiepagina/"
+          "title": "CW 3.1 kader basisfunctionaliteiten en basisinfrastructuur D5 en D6",
+          "page_url": "/sources/cw-3-1-kader-d5-d6/"
         },
         {
-          "title": "Kamerbrief over CW 3.1 kaders voor AZWA onderdelen",
-          "page_url": "/sources/kamerbrief-cw-3-1-kaders-azwa/"
+          "title": "Aanvullend Zorg- en Welzijnsakkoord (AZWA) (Definitief)",
+          "page_url": "/sources/azwa-definitief/"
         }
       ],
       "structured_signals": {
@@ -5303,6 +5253,7 @@
       "perspective_ids": [
         "norm",
         "time",
+        "money",
         "governance",
         "locality",
         "execution"
@@ -5317,6 +5268,11 @@
           "perspective_id": "time",
           "title": "Time",
           "question": "Which dates, deadlines, phasing, review moments, and budget-calendar alignments matter?"
+        },
+        {
+          "perspective_id": "money",
+          "title": "Money",
+          "question": "Which funding flows, budget windows, allocation conditions, and co-financing logic apply?"
         },
         {
           "perspective_id": "governance",
@@ -5374,22 +5330,22 @@
       "d6_relevance": "Bevat vooral contextuele of afgeleide signalen die aan D6 raken.",
       "linked_claims": [
         {
-          "topic": "timeline.other",
-          "title": "overige tijdlijnmomenten",
-          "claim_count": 3,
-          "page_url": "/reference/topics/timeline-other/"
-        },
-        {
           "topic": "municipal.almere_initiatives",
           "title": "Almeerse initiatieven",
           "claim_count": 3,
           "page_url": "/reference/topics/municipal-almere-initiatives/"
         },
         {
-          "topic": "d6.digital_and_operational_infrastructure",
-          "title": "digitale en operationele infrastructuur",
+          "topic": "d5.health_first_shift",
+          "title": "verschuiving naar gezondheid en veerkracht",
           "claim_count": 2,
-          "page_url": "/reference/topics/d6-digital-and-operational-infrastructure/"
+          "page_url": "/reference/topics/d5-health-first-shift/"
+        },
+        {
+          "topic": "timeline.other",
+          "title": "overige tijdlijnmomenten",
+          "claim_count": 2,
+          "page_url": "/reference/topics/timeline-other/"
         },
         {
           "topic": "monitoring.local_goal_tracking",
@@ -5398,22 +5354,22 @@
           "page_url": "/reference/topics/monitoring-local-goal-tracking/"
         },
         {
-          "topic": "d5.health_first_shift",
-          "title": "verschuiving naar gezondheid en veerkracht",
-          "claim_count": 1,
-          "page_url": "/reference/topics/d5-health-first-shift/"
-        },
-        {
           "topic": "d5.cross_domain_collaboration",
           "title": "domeinoverstijgende samenwerking",
           "claim_count": 1,
           "page_url": "/reference/topics/d5-cross-domain-collaboration/"
         },
         {
-          "topic": "d5.mentale_gezondheidsnetwerken",
-          "title": "mentale gezondheidsnetwerken",
+          "topic": "d6.other",
+          "title": "overige D6-lijn",
           "claim_count": 1,
-          "page_url": "/reference/topics/d5-mentale-gezondheidsnetwerken/"
+          "page_url": "/reference/topics/d6-other/"
+        },
+        {
+          "topic": "d6.digital_and_operational_infrastructure",
+          "title": "digitale en operationele infrastructuur",
+          "claim_count": 1,
+          "page_url": "/reference/topics/d6-digital-and-operational-infrastructure/"
         },
         {
           "topic": "d6.regional_coordination",
@@ -5458,11 +5414,6 @@
           "page_url": "/themes/basisfunctionaliteiten-d5/"
         },
         {
-          "theme_id": "mentale-gezondheid",
-          "title": "Mentale gezondheid",
-          "page_url": "/themes/mentale-gezondheid/"
-        },
-        {
           "theme_id": "basisinfrastructuur-d6",
           "title": "Basisinfrastructuur (D6)",
           "page_url": "/themes/basisinfrastructuur-d6/"
@@ -5485,24 +5436,24 @@
       ],
       "related_sources": [
         {
-          "title": "Transformatieplan Positief Gezond Almere",
-          "page_url": "/sources/pga-transformatieplan/"
-        },
-        {
-          "title": "Zorgzaam Flevoland 2023 Regioplan IZA Flevoland",
-          "page_url": "/sources/regioplan-iza-flevoland/"
-        },
-        {
-          "title": "Gezond en actief leven",
-          "page_url": "/sources/vng-gezond-en-actief-leven/"
-        },
-        {
-          "title": "Opdracht voor de werkagenda samenwerking zorg en sociaal domein voor D5 AZWA",
-          "page_url": "/sources/opdracht-werkagenda-d5-azwa/"
+          "title": "Toelichting producten en proces",
+          "page_url": "/sources/toelichting-werkagenda-d5-azwa/"
         },
         {
           "title": "AZWA-afspraken D5 en D6 en financieringsinstrument",
           "page_url": "/sources/vws-brief-d5-d6-financieringsinstrument/"
+        },
+        {
+          "title": "Kamerbrief inzake voortgang Integraal Zorgakkoord (IZA) en Aanvullend Zorg- en Welzijnsakkoord (AZWA)",
+          "page_url": "/sources/voortgangsbrief-iza-azwa/"
+        },
+        {
+          "title": "CW 3.1 kader basisfunctionaliteiten en basisinfrastructuur D5 en D6",
+          "page_url": "/sources/cw-3-1-kader-d5-d6/"
+        },
+        {
+          "title": "Aanvullend Zorg- en Welzijnsakkoord (AZWA) (Definitief)",
+          "page_url": "/sources/azwa-definitief/"
         }
       ],
       "structured_signals": {
@@ -5597,22 +5548,22 @@
       "d6_relevance": "Geen duidelijke D6-passages in de huidige extractie.",
       "linked_claims": [
         {
+          "topic": "governance_and_finance.other",
+          "title": "overige governance- en financieringslijn",
+          "claim_count": 2,
+          "page_url": "/reference/topics/governance-and-finance-other/"
+        },
+        {
           "topic": "timeline.other",
           "title": "overige tijdlijnmomenten",
-          "claim_count": 3,
+          "claim_count": 2,
           "page_url": "/reference/topics/timeline-other/"
         },
         {
           "topic": "municipal.implementation_translation",
           "title": "lokale vertaling in openbare stukken",
-          "claim_count": 3,
-          "page_url": "/reference/topics/municipal-implementation-translation/"
-        },
-        {
-          "topic": "governance_and_finance.other",
-          "title": "overige governance- en financieringslijn",
           "claim_count": 2,
-          "page_url": "/reference/topics/governance-and-finance-other/"
+          "page_url": "/reference/topics/municipal-implementation-translation/"
         },
         {
           "topic": "monitoring.other",
@@ -5743,28 +5694,10 @@
       "d6_relevance": "Bevat vooral contextuele of afgeleide signalen die aan D6 raken.",
       "linked_claims": [
         {
-          "topic": "d5.basisfunctionaliteiten_onderbouwd",
-          "title": "onderbouwde D5-basisfunctionaliteiten",
-          "claim_count": 3,
-          "page_url": "/reference/topics/d5-basisfunctionaliteiten-onderbouwd/"
-        },
-        {
-          "topic": "d6.other",
-          "title": "overige D6-lijn",
-          "claim_count": 3,
-          "page_url": "/reference/topics/d6-other/"
-        },
-        {
           "topic": "timeline.other",
           "title": "overige tijdlijnmomenten",
           "claim_count": 3,
           "page_url": "/reference/topics/timeline-other/"
-        },
-        {
-          "topic": "monitoring.other",
-          "title": "overige monitoringslijn",
-          "claim_count": 3,
-          "page_url": "/reference/topics/monitoring-other/"
         },
         {
           "topic": "municipal.implementation_translation",
@@ -5773,10 +5706,28 @@
           "page_url": "/reference/topics/municipal-implementation-translation/"
         },
         {
+          "topic": "d5.basisfunctionaliteiten_onderbouwd",
+          "title": "onderbouwde D5-basisfunctionaliteiten",
+          "claim_count": 2,
+          "page_url": "/reference/topics/d5-basisfunctionaliteiten-onderbouwd/"
+        },
+        {
+          "topic": "d6.other",
+          "title": "overige D6-lijn",
+          "claim_count": 2,
+          "page_url": "/reference/topics/d6-other/"
+        },
+        {
           "topic": "finance.d5_d6.funding_instrument",
           "title": "bekostigingsroute D5/D6",
           "claim_count": 2,
           "page_url": "/reference/topics/finance-d5-d6-funding-instrument/"
+        },
+        {
+          "topic": "monitoring.other",
+          "title": "overige monitoringslijn",
+          "claim_count": 2,
+          "page_url": "/reference/topics/monitoring-other/"
         },
         {
           "topic": "governance_and_finance.other",
@@ -5838,6 +5789,10 @@
       ],
       "related_sources": [
         {
+          "title": "Toelichting producten en proces",
+          "page_url": "/sources/toelichting-werkagenda-d5-azwa/"
+        },
+        {
           "title": "AZWA-afspraken D5 en D6 en financieringsinstrument",
           "page_url": "/sources/vws-brief-d5-d6-financieringsinstrument/"
         },
@@ -5852,10 +5807,6 @@
         {
           "title": "Aanvullend Zorg- en Welzijnsakkoord (AZWA) (Definitief)",
           "page_url": "/sources/azwa-definitief/"
-        },
-        {
-          "title": "Financiering IZA en AZWA: hoe zit het precies?",
-          "page_url": "/sources/financiering-iza-azwa/"
         }
       ],
       "structured_signals": {
@@ -5956,34 +5907,40 @@
           "page_url": "/reference/topics/d6-local-teams/"
         },
         {
-          "topic": "governance_and_finance.other",
-          "title": "overige governance- en financieringslijn",
-          "claim_count": 3,
-          "page_url": "/reference/topics/governance-and-finance-other/"
-        },
-        {
-          "topic": "monitoring.other",
-          "title": "overige monitoringslijn",
-          "claim_count": 3,
-          "page_url": "/reference/topics/monitoring-other/"
-        },
-        {
           "topic": "municipal.local_structure",
           "title": "lokale structuur",
           "claim_count": 3,
           "page_url": "/reference/topics/municipal-local-structure/"
         },
         {
-          "topic": "timeline.rollout_2030",
-          "title": "landelijke dekking richting 2030",
+          "topic": "governance_and_finance.other",
+          "title": "overige governance- en financieringslijn",
           "claim_count": 2,
-          "page_url": "/reference/topics/timeline-rollout-2030/"
+          "page_url": "/reference/topics/governance-and-finance-other/"
+        },
+        {
+          "topic": "monitoring.other",
+          "title": "overige monitoringslijn",
+          "claim_count": 2,
+          "page_url": "/reference/topics/monitoring-other/"
         },
         {
           "topic": "d5.basisfunctionaliteiten_onderbouwd",
           "title": "onderbouwde D5-basisfunctionaliteiten",
           "claim_count": 1,
           "page_url": "/reference/topics/d5-basisfunctionaliteiten-onderbouwd/"
+        },
+        {
+          "topic": "finance.d5_d6.funding_instrument",
+          "title": "bekostigingsroute D5/D6",
+          "claim_count": 1,
+          "page_url": "/reference/topics/finance-d5-d6-funding-instrument/"
+        },
+        {
+          "topic": "timeline.rollout_2030",
+          "title": "landelijke dekking richting 2030",
+          "claim_count": 1,
+          "page_url": "/reference/topics/timeline-rollout-2030/"
         },
         {
           "topic": "timeline.other",
@@ -6018,6 +5975,11 @@
           "page_url": "/themes/basisinfrastructuur-d6/"
         },
         {
+          "theme_id": "financiering",
+          "title": "Financiering",
+          "page_url": "/themes/financiering/"
+        },
+        {
           "theme_id": "monitoring-en-leren",
           "title": "Monitoring en leren",
           "page_url": "/themes/monitoring-en-leren/"
@@ -6030,8 +5992,8 @@
       ],
       "related_sources": [
         {
-          "title": "Opdracht voor de werkagenda samenwerking zorg en sociaal domein voor D5 AZWA",
-          "page_url": "/sources/opdracht-werkagenda-d5-azwa/"
+          "title": "Toelichting producten en proces",
+          "page_url": "/sources/toelichting-werkagenda-d5-azwa/"
         },
         {
           "title": "AZWA-afspraken D5 en D6 en financieringsinstrument",
@@ -6042,17 +6004,17 @@
           "page_url": "/sources/voortgangsbrief-iza-azwa/"
         },
         {
-          "title": "Kamerbrief over CW 3.1 kaders voor AZWA onderdelen",
-          "page_url": "/sources/kamerbrief-cw-3-1-kaders-azwa/"
-        },
-        {
           "title": "CW 3.1 kader basisfunctionaliteiten en basisinfrastructuur D5 en D6",
           "page_url": "/sources/cw-3-1-kader-d5-d6/"
+        },
+        {
+          "title": "Aanvullend Zorg- en Welzijnsakkoord (AZWA) (Definitief)",
+          "page_url": "/sources/azwa-definitief/"
         }
       ],
       "structured_signals": {
         "contains_structured_table": false,
-        "d5_item_count": 1,
+        "d5_item_count": 2,
         "d6_item_count": 3,
         "governance_item_count": 3,
         "timeline_item_count": 3
@@ -6065,6 +6027,7 @@
       "perspective_ids": [
         "norm",
         "time",
+        "money",
         "governance",
         "locality",
         "execution"
@@ -6079,6 +6042,11 @@
           "perspective_id": "time",
           "title": "Time",
           "question": "Which dates, deadlines, phasing, review moments, and budget-calendar alignments matter?"
+        },
+        {
+          "perspective_id": "money",
+          "title": "Money",
+          "question": "Which funding flows, budget windows, allocation conditions, and co-financing logic apply?"
         },
         {
           "perspective_id": "governance",
@@ -6252,24 +6220,24 @@
       ],
       "related_sources": [
         {
-          "title": "Transformatieplan Positief Gezond Almere",
-          "page_url": "/sources/pga-transformatieplan/"
+          "title": "AZWA-afspraken D5 en D6 en financieringsinstrument",
+          "page_url": "/sources/vws-brief-d5-d6-financieringsinstrument/"
         },
         {
-          "title": "Naar een positief gezond Almere; Beleidstheorie en businesscase transformatieplan",
-          "page_url": "/sources/seo-beleidstheorie-en-businesscase-pga/"
+          "title": "Transformatieplan Positief Gezond Almere",
+          "page_url": "/sources/pga-transformatieplan/"
         },
         {
           "title": "Gezond en actief leven",
           "page_url": "/sources/vng-gezond-en-actief-leven/"
         },
         {
-          "title": "Opdracht voor de werkagenda samenwerking zorg en sociaal domein voor D5 AZWA",
-          "page_url": "/sources/opdracht-werkagenda-d5-azwa/"
+          "title": "Toelichting producten en proces",
+          "page_url": "/sources/toelichting-werkagenda-d5-azwa/"
         },
         {
-          "title": "AZWA-afspraken D5 en D6 en financieringsinstrument",
-          "page_url": "/sources/vws-brief-d5-d6-financieringsinstrument/"
+          "title": "Kamerbrief inzake voortgang Integraal Zorgakkoord (IZA) en Aanvullend Zorg- en Welzijnsakkoord (AZWA)",
+          "page_url": "/sources/voortgangsbrief-iza-azwa/"
         }
       ],
       "structured_signals": {
@@ -6465,6 +6433,10 @@
       ],
       "related_sources": [
         {
+          "title": "Toelichting producten en proces",
+          "page_url": "/sources/toelichting-werkagenda-d5-azwa/"
+        },
+        {
           "title": "AZWA-afspraken D5 en D6 en financieringsinstrument",
           "page_url": "/sources/vws-brief-d5-d6-financieringsinstrument/"
         },
@@ -6479,10 +6451,6 @@
         {
           "title": "Aanvullend Zorg- en Welzijnsakkoord (AZWA) (Definitief)",
           "page_url": "/sources/azwa-definitief/"
-        },
-        {
-          "title": "Financiering IZA en AZWA: hoe zit het precies?",
-          "page_url": "/sources/financiering-iza-azwa/"
         }
       ],
       "structured_signals": {
@@ -6583,12 +6551,6 @@
           "page_url": "/reference/topics/d5-basisfunctionaliteiten-onderbouwd/"
         },
         {
-          "topic": "timeline.rollout_2030",
-          "title": "landelijke dekking richting 2030",
-          "claim_count": 3,
-          "page_url": "/reference/topics/timeline-rollout-2030/"
-        },
-        {
           "topic": "municipal.implementation_translation",
           "title": "lokale vertaling in openbare stukken",
           "claim_count": 3,
@@ -6611,6 +6573,12 @@
           "title": "landelijke coordinatie",
           "claim_count": 1,
           "page_url": "/reference/topics/governance-national-coordination/"
+        },
+        {
+          "topic": "timeline.rollout_2030",
+          "title": "landelijke dekking richting 2030",
+          "claim_count": 1,
+          "page_url": "/reference/topics/timeline-rollout-2030/"
         },
         {
           "topic": "monitoring.framework",
@@ -6768,28 +6736,22 @@
       "d6_relevance": "Bevat vooral contextuele of afgeleide signalen die aan D6 raken.",
       "linked_claims": [
         {
-          "topic": "d5.basisfunctionaliteiten_onderbouwd",
-          "title": "onderbouwde D5-basisfunctionaliteiten",
-          "claim_count": 3,
-          "page_url": "/reference/topics/d5-basisfunctionaliteiten-onderbouwd/"
-        },
-        {
           "topic": "d6.basisinfrastructuur",
           "title": "D6-basisinfrastructuur",
           "claim_count": 3,
           "page_url": "/reference/topics/d6-basisinfrastructuur/"
         },
         {
-          "topic": "finance.d5_d6.funding_instrument",
-          "title": "bekostigingsroute D5/D6",
-          "claim_count": 3,
-          "page_url": "/reference/topics/finance-d5-d6-funding-instrument/"
+          "topic": "d5.basisfunctionaliteiten_onderbouwd",
+          "title": "onderbouwde D5-basisfunctionaliteiten",
+          "claim_count": 2,
+          "page_url": "/reference/topics/d5-basisfunctionaliteiten-onderbouwd/"
         },
         {
-          "topic": "municipal.implementation_translation",
-          "title": "lokale vertaling in openbare stukken",
-          "claim_count": 3,
-          "page_url": "/reference/topics/municipal-implementation-translation/"
+          "topic": "finance.d5_d6.funding_instrument",
+          "title": "bekostigingsroute D5/D6",
+          "claim_count": 2,
+          "page_url": "/reference/topics/finance-d5-d6-funding-instrument/"
         },
         {
           "topic": "timeline.other",
@@ -6802,6 +6764,12 @@
           "title": "overige monitoringslijn",
           "claim_count": 2,
           "page_url": "/reference/topics/monitoring-other/"
+        },
+        {
+          "topic": "municipal.implementation_translation",
+          "title": "lokale vertaling in openbare stukken",
+          "claim_count": 2,
+          "page_url": "/reference/topics/municipal-implementation-translation/"
         },
         {
           "topic": "timeline.d5_d6_financing_horizon",
@@ -6869,6 +6837,10 @@
       ],
       "related_sources": [
         {
+          "title": "Toelichting producten en proces",
+          "page_url": "/sources/toelichting-werkagenda-d5-azwa/"
+        },
+        {
           "title": "AZWA-afspraken D5 en D6 en financieringsinstrument",
           "page_url": "/sources/vws-brief-d5-d6-financieringsinstrument/"
         },
@@ -6883,10 +6855,6 @@
         {
           "title": "Aanvullend Zorg- en Welzijnsakkoord (AZWA) (Definitief)",
           "page_url": "/sources/azwa-definitief/"
-        },
-        {
-          "title": "Financiering IZA en AZWA: hoe zit het precies?",
-          "page_url": "/sources/financiering-iza-azwa/"
         }
       ],
       "structured_signals": {
@@ -6981,34 +6949,22 @@
       "d6_relevance": "Bevat vooral contextuele of afgeleide signalen die aan D6 raken.",
       "linked_claims": [
         {
-          "topic": "d5.basisfunctionaliteiten_onderbouwd",
-          "title": "onderbouwde D5-basisfunctionaliteiten",
-          "claim_count": 3,
-          "page_url": "/reference/topics/d5-basisfunctionaliteiten-onderbouwd/"
-        },
-        {
-          "topic": "monitoring.other",
-          "title": "overige monitoringslijn",
-          "claim_count": 3,
-          "page_url": "/reference/topics/monitoring-other/"
-        },
-        {
-          "topic": "municipal.implementation_translation",
-          "title": "lokale vertaling in openbare stukken",
-          "claim_count": 3,
-          "page_url": "/reference/topics/municipal-implementation-translation/"
-        },
-        {
           "topic": "finance.regional_funding_path",
           "title": "regionale financieringsroute",
           "claim_count": 2,
           "page_url": "/reference/topics/finance-regional-funding-path/"
         },
         {
-          "topic": "timeline.other",
-          "title": "overige tijdlijnmomenten",
+          "topic": "monitoring.other",
+          "title": "overige monitoringslijn",
           "claim_count": 2,
-          "page_url": "/reference/topics/timeline-other/"
+          "page_url": "/reference/topics/monitoring-other/"
+        },
+        {
+          "topic": "municipal.implementation_translation",
+          "title": "lokale vertaling in openbare stukken",
+          "claim_count": 2,
+          "page_url": "/reference/topics/municipal-implementation-translation/"
         },
         {
           "topic": "d6.basisinfrastructuur",
@@ -7017,38 +6973,21 @@
           "page_url": "/reference/topics/d6-basisinfrastructuur/"
         },
         {
-          "topic": "governance_and_finance.other",
-          "title": "overige governance- en financieringslijn",
-          "claim_count": 1,
-          "page_url": "/reference/topics/governance-and-finance-other/"
-        },
-        {
           "topic": "timeline.d5_d6_implementation",
           "title": "implementatielijn D5/D6",
           "claim_count": 1,
           "page_url": "/reference/topics/timeline-d5-d6-implementation/"
-        }
-      ],
-      "linked_decisions": [
-        {
-          "title": "Mogelijke besluitvraag: prioritering van D5-interventies in Almere",
-          "status": "gedeeltelijk ingevuld",
-          "page_url": "/decisions/mogelijke-besluitvraag-prioritering-van-d5-interventies-in-almere/"
-        }
-      ],
-      "linked_actions": [
-        {
-          "title": "Mogelijke opvolgactie: D5-vertaling voor Almere expliciteren",
-          "status": "in voorbereiding",
-          "page_url": "/actions/mogelijke-opvolgactie-d5-vertaling-voor-almere-expliciteren/"
-        }
-      ],
-      "linked_themes": [
-        {
-          "theme_id": "basisfunctionaliteiten-d5",
-          "title": "Basisfunctionaliteiten (D5)",
-          "page_url": "/themes/basisfunctionaliteiten-d5/"
         },
+        {
+          "topic": "timeline.other",
+          "title": "overige tijdlijnmomenten",
+          "claim_count": 1,
+          "page_url": "/reference/topics/timeline-other/"
+        }
+      ],
+      "linked_decisions": [],
+      "linked_actions": [],
+      "linked_themes": [
         {
           "theme_id": "basisinfrastructuur-d6",
           "title": "Basisinfrastructuur (D6)",
@@ -7072,6 +7011,10 @@
       ],
       "related_sources": [
         {
+          "title": "Toelichting producten en proces",
+          "page_url": "/sources/toelichting-werkagenda-d5-azwa/"
+        },
+        {
           "title": "AZWA-afspraken D5 en D6 en financieringsinstrument",
           "page_url": "/sources/vws-brief-d5-d6-financieringsinstrument/"
         },
@@ -7086,10 +7029,6 @@
         {
           "title": "Aanvullend Zorg- en Welzijnsakkoord (AZWA) (Definitief)",
           "page_url": "/sources/azwa-definitief/"
-        },
-        {
-          "title": "Financiering IZA en AZWA: hoe zit het precies?",
-          "page_url": "/sources/financiering-iza-azwa/"
         }
       ],
       "structured_signals": {
@@ -7186,20 +7125,20 @@
         {
           "topic": "d6.local_teams",
           "title": "stevige lokale teams en wijkverbanden",
-          "claim_count": 3,
-          "page_url": "/reference/topics/d6-local-teams/"
-        },
-        {
-          "topic": "municipal.local_structure",
-          "title": "lokale structuur",
           "claim_count": 2,
-          "page_url": "/reference/topics/municipal-local-structure/"
+          "page_url": "/reference/topics/d6-local-teams/"
         },
         {
           "topic": "municipal.implementation_translation",
           "title": "lokale vertaling in openbare stukken",
           "claim_count": 1,
           "page_url": "/reference/topics/municipal-implementation-translation/"
+        },
+        {
+          "topic": "municipal.local_structure",
+          "title": "lokale structuur",
+          "claim_count": 1,
+          "page_url": "/reference/topics/municipal-local-structure/"
         }
       ],
       "linked_decisions": [],
@@ -7218,6 +7157,10 @@
       ],
       "related_sources": [
         {
+          "title": "Toelichting producten en proces",
+          "page_url": "/sources/toelichting-werkagenda-d5-azwa/"
+        },
+        {
           "title": "Opdracht voor de werkagenda samenwerking zorg en sociaal domein voor D5 AZWA",
           "page_url": "/sources/opdracht-werkagenda-d5-azwa/"
         },
@@ -7232,10 +7175,6 @@
         {
           "title": "Informatiepagina Sociaal Domein",
           "page_url": "/sources/sociaal-domein-informatiepagina/"
-        },
-        {
-          "title": "Kamerbrief over CW 3.1 kaders voor AZWA onderdelen",
-          "page_url": "/sources/kamerbrief-cw-3-1-kaders-azwa/"
         }
       ],
       "structured_signals": {
@@ -7346,6 +7285,10 @@
       ],
       "related_sources": [
         {
+          "title": "Toelichting producten en proces",
+          "page_url": "/sources/toelichting-werkagenda-d5-azwa/"
+        },
+        {
           "title": "Opdracht voor de werkagenda samenwerking zorg en sociaal domein voor D5 AZWA",
           "page_url": "/sources/opdracht-werkagenda-d5-azwa/"
         },
@@ -7360,16 +7303,12 @@
         {
           "title": "Informatiepagina Sociaal Domein",
           "page_url": "/sources/sociaal-domein-informatiepagina/"
-        },
-        {
-          "title": "Kamerbrief over CW 3.1 kaders voor AZWA onderdelen",
-          "page_url": "/sources/kamerbrief-cw-3-1-kaders-azwa/"
         }
       ],
       "structured_signals": {
         "contains_structured_table": false,
         "d5_item_count": 0,
-        "d6_item_count": 1,
+        "d6_item_count": 2,
         "governance_item_count": 0,
         "timeline_item_count": 0
       },
@@ -7446,16 +7385,16 @@
       "d6_relevance": "Geen duidelijke D6-passages in de huidige extractie.",
       "linked_claims": [
         {
-          "topic": "finance.d5_d6.funding_instrument",
-          "title": "bekostigingsroute D5/D6",
-          "claim_count": 3,
-          "page_url": "/reference/topics/finance-d5-d6-funding-instrument/"
-        },
-        {
           "topic": "timeline.other",
           "title": "overige tijdlijnmomenten",
           "claim_count": 3,
           "page_url": "/reference/topics/timeline-other/"
+        },
+        {
+          "topic": "finance.d5_d6.funding_instrument",
+          "title": "bekostigingsroute D5/D6",
+          "claim_count": 2,
+          "page_url": "/reference/topics/finance-d5-d6-funding-instrument/"
         },
         {
           "topic": "municipal.implementation_translation",
@@ -7611,13 +7550,19 @@
         {
           "topic": "timeline.local_governance_calendar",
           "title": "lokale bestuurlijke kalender",
-          "claim_count": 3,
+          "claim_count": 1,
           "page_url": "/reference/topics/timeline-local-governance-calendar/"
+        },
+        {
+          "topic": "monitoring.other",
+          "title": "overige monitoringslijn",
+          "claim_count": 1,
+          "page_url": "/reference/topics/monitoring-other/"
         },
         {
           "topic": "municipal.implementation_translation",
           "title": "lokale vertaling in openbare stukken",
-          "claim_count": 2,
+          "claim_count": 1,
           "page_url": "/reference/topics/municipal-implementation-translation/"
         }
       ],
@@ -7747,6 +7692,12 @@
           "title": "onderbouwde D5-basisfunctionaliteiten",
           "claim_count": 3,
           "page_url": "/reference/topics/d5-basisfunctionaliteiten-onderbouwd/"
+        },
+        {
+          "topic": "municipal.implementation_translation",
+          "title": "lokale vertaling in openbare stukken",
+          "claim_count": 2,
+          "page_url": "/reference/topics/municipal-implementation-translation/"
         }
       ],
       "linked_decisions": [
@@ -7768,6 +7719,11 @@
           "theme_id": "basisfunctionaliteiten-d5",
           "title": "Basisfunctionaliteiten (D5)",
           "page_url": "/themes/basisfunctionaliteiten-d5/"
+        },
+        {
+          "theme_id": "governance-en-regie",
+          "title": "Governance en regie",
+          "page_url": "/themes/governance-en-regie/"
         }
       ],
       "related_sources": [
@@ -7806,6 +7762,7 @@
       },
       "perspective_ids": [
         "norm",
+        "governance",
         "locality",
         "execution"
       ],
@@ -7814,6 +7771,11 @@
           "perspective_id": "norm",
           "title": "Norm",
           "question": "What is required, allowed, expected, or binding?"
+        },
+        {
+          "perspective_id": "governance",
+          "title": "Governance",
+          "question": "Who decides, who coordinates, who owns, and who must approve?"
         },
         {
           "perspective_id": "locality",
@@ -8028,6 +7990,10 @@
       ],
       "related_sources": [
         {
+          "title": "Toelichting producten en proces",
+          "page_url": "/sources/toelichting-werkagenda-d5-azwa/"
+        },
+        {
           "title": "Opdracht voor de werkagenda samenwerking zorg en sociaal domein voor D5 AZWA",
           "page_url": "/sources/opdracht-werkagenda-d5-azwa/"
         },
@@ -8042,10 +8008,6 @@
         {
           "title": "Informatiepagina Sociaal Domein",
           "page_url": "/sources/sociaal-domein-informatiepagina/"
-        },
-        {
-          "title": "Kamerbrief over CW 3.1 kaders voor AZWA onderdelen",
-          "page_url": "/sources/kamerbrief-cw-3-1-kaders-azwa/"
         }
       ],
       "structured_signals": {
@@ -8134,18 +8096,6 @@
       "d6_relevance": "Bevat vooral contextuele of afgeleide signalen die aan D6 raken.",
       "linked_claims": [
         {
-          "topic": "timeline.other",
-          "title": "overige tijdlijnmomenten",
-          "claim_count": 3,
-          "page_url": "/reference/topics/timeline-other/"
-        },
-        {
-          "topic": "monitoring.other",
-          "title": "overige monitoringslijn",
-          "claim_count": 3,
-          "page_url": "/reference/topics/monitoring-other/"
-        },
-        {
           "topic": "municipal.implementation_translation",
           "title": "lokale vertaling in openbare stukken",
           "claim_count": 3,
@@ -8158,30 +8108,62 @@
           "page_url": "/reference/topics/finance-d5-d6-funding-instrument/"
         },
         {
+          "topic": "timeline.other",
+          "title": "overige tijdlijnmomenten",
+          "claim_count": 2,
+          "page_url": "/reference/topics/timeline-other/"
+        },
+        {
+          "topic": "monitoring.other",
+          "title": "overige monitoringslijn",
+          "claim_count": 2,
+          "page_url": "/reference/topics/monitoring-other/"
+        },
+        {
           "topic": "d6.other",
           "title": "overige D6-lijn",
           "claim_count": 1,
           "page_url": "/reference/topics/d6-other/"
         },
         {
-          "topic": "governance_and_finance.other",
-          "title": "overige governance- en financieringslijn",
+          "topic": "monitoring.mid_term_review",
+          "title": "tussentijdse evaluatie",
           "claim_count": 1,
-          "page_url": "/reference/topics/governance-and-finance-other/"
+          "page_url": "/reference/topics/monitoring-mid-term-review/"
         }
       ],
       "linked_decisions": [
         {
+          "title": "Mogelijke besluitvraag: prioritering van D5-interventies in Almere",
+          "status": "gedeeltelijk ingevuld",
+          "page_url": "/decisions/mogelijke-besluitvraag-prioritering-van-d5-interventies-in-almere/"
+        },
+        {
           "title": "Mogelijke besluitvraag: verdeling van beschikbare middelen over D5 en D6",
           "status": "geblokkeerd door afhankelijkheid",
           "page_url": "/decisions/mogelijke-besluitvraag-verdeling-van-beschikbare-middelen-over-d5-en-d6/"
+        },
+        {
+          "title": "Mogelijke besluitvraag: monitoringsarrangement voor Almere",
+          "status": "open besluitvraag",
+          "page_url": "/decisions/mogelijke-besluitvraag-monitoringsarrangement-voor-almere/"
         }
       ],
       "linked_actions": [
         {
+          "title": "Mogelijke opvolgactie: D5-vertaling voor Almere expliciteren",
+          "status": "in voorbereiding",
+          "page_url": "/actions/mogelijke-opvolgactie-d5-vertaling-voor-almere-expliciteren/"
+        },
+        {
           "title": "Mogelijke opvolgactie: inzet van middelen en eigenaarschap vastleggen",
           "status": "geblokkeerd door afhankelijkheid",
           "page_url": "/actions/mogelijke-opvolgactie-inzet-van-middelen-en-eigenaarschap-vastleggen/"
+        },
+        {
+          "title": "Mogelijke opvolgactie: monitoringsaanpak voor Almere afstemmen",
+          "status": "in voorbereiding",
+          "page_url": "/actions/mogelijke-opvolgactie-monitoringsaanpak-voor-almere-afstemmen/"
         }
       ],
       "linked_themes": [
@@ -8208,6 +8190,10 @@
       ],
       "related_sources": [
         {
+          "title": "Toelichting producten en proces",
+          "page_url": "/sources/toelichting-werkagenda-d5-azwa/"
+        },
+        {
           "title": "AZWA-afspraken D5 en D6 en financieringsinstrument",
           "page_url": "/sources/vws-brief-d5-d6-financieringsinstrument/"
         },
@@ -8222,10 +8208,6 @@
         {
           "title": "Aanvullend Zorg- en Welzijnsakkoord (AZWA) (Definitief)",
           "page_url": "/sources/azwa-definitief/"
-        },
-        {
-          "title": "Financiering IZA en AZWA: hoe zit het precies?",
-          "page_url": "/sources/financiering-iza-azwa/"
         }
       ],
       "structured_signals": {
@@ -8320,10 +8302,10 @@
       "d6_relevance": "Bevat expliciete D6-passages in de huidige extractie.",
       "linked_claims": [
         {
-          "topic": "governance_and_finance.other",
-          "title": "overige governance- en financieringslijn",
+          "topic": "monitoring.other",
+          "title": "overige monitoringslijn",
           "claim_count": 3,
-          "page_url": "/reference/topics/governance-and-finance-other/"
+          "page_url": "/reference/topics/monitoring-other/"
         },
         {
           "topic": "municipal.implementation_translation",
@@ -8332,10 +8314,10 @@
           "page_url": "/reference/topics/municipal-implementation-translation/"
         },
         {
-          "topic": "monitoring.other",
-          "title": "overige monitoringslijn",
-          "claim_count": 1,
-          "page_url": "/reference/topics/monitoring-other/"
+          "topic": "governance_and_finance.other",
+          "title": "overige governance- en financieringslijn",
+          "claim_count": 2,
+          "page_url": "/reference/topics/governance-and-finance-other/"
         }
       ],
       "linked_decisions": [],
@@ -8499,6 +8481,10 @@
       ],
       "related_sources": [
         {
+          "title": "Toelichting producten en proces",
+          "page_url": "/sources/toelichting-werkagenda-d5-azwa/"
+        },
+        {
           "title": "Opdracht voor de werkagenda samenwerking zorg en sociaal domein voor D5 AZWA",
           "page_url": "/sources/opdracht-werkagenda-d5-azwa/"
         },
@@ -8513,10 +8499,6 @@
         {
           "title": "Informatiepagina Sociaal Domein",
           "page_url": "/sources/sociaal-domein-informatiepagina/"
-        },
-        {
-          "title": "Kamerbrief over CW 3.1 kaders voor AZWA onderdelen",
-          "page_url": "/sources/kamerbrief-cw-3-1-kaders-azwa/"
         }
       ],
       "structured_signals": {
@@ -8745,28 +8727,22 @@
           "page_url": "/reference/topics/monitoring-other/"
         },
         {
-          "topic": "d6.other",
-          "title": "overige D6-lijn",
-          "claim_count": 2,
-          "page_url": "/reference/topics/d6-other/"
-        },
-        {
           "topic": "municipal.implementation_translation",
           "title": "lokale vertaling in openbare stukken",
           "claim_count": 2,
           "page_url": "/reference/topics/municipal-implementation-translation/"
         },
         {
+          "topic": "d6.other",
+          "title": "overige D6-lijn",
+          "claim_count": 1,
+          "page_url": "/reference/topics/d6-other/"
+        },
+        {
           "topic": "governance_and_finance.other",
           "title": "overige governance- en financieringslijn",
           "claim_count": 1,
           "page_url": "/reference/topics/governance-and-finance-other/"
-        },
-        {
-          "topic": "municipal.local_structure",
-          "title": "lokale structuur",
-          "claim_count": 1,
-          "page_url": "/reference/topics/municipal-local-structure/"
         }
       ],
       "linked_decisions": [],
@@ -8790,6 +8766,10 @@
       ],
       "related_sources": [
         {
+          "title": "Toelichting producten en proces",
+          "page_url": "/sources/toelichting-werkagenda-d5-azwa/"
+        },
+        {
           "title": "Opdracht voor de werkagenda samenwerking zorg en sociaal domein voor D5 AZWA",
           "page_url": "/sources/opdracht-werkagenda-d5-azwa/"
         },
@@ -8804,10 +8784,6 @@
         {
           "title": "Informatiepagina Sociaal Domein",
           "page_url": "/sources/sociaal-domein-informatiepagina/"
-        },
-        {
-          "title": "Kamerbrief over CW 3.1 kaders voor AZWA onderdelen",
-          "page_url": "/sources/kamerbrief-cw-3-1-kaders-azwa/"
         }
       ],
       "structured_signals": {
@@ -8896,16 +8872,16 @@
       "d6_relevance": "Bevat expliciete D6-passages in de huidige extractie.",
       "linked_claims": [
         {
-          "topic": "monitoring.other",
-          "title": "overige monitoringslijn",
-          "claim_count": 2,
-          "page_url": "/reference/topics/monitoring-other/"
-        },
-        {
           "topic": "d6.regional_coordination",
           "title": "regionale coördinatie voor D6",
-          "claim_count": 1,
+          "claim_count": 3,
           "page_url": "/reference/topics/d6-regional-coordination/"
+        },
+        {
+          "topic": "municipal.implementation_translation",
+          "title": "lokale vertaling in openbare stukken",
+          "claim_count": 3,
+          "page_url": "/reference/topics/municipal-implementation-translation/"
         },
         {
           "topic": "governance_and_finance.other",
@@ -8918,12 +8894,6 @@
           "title": "regionaal monitoringsplan",
           "claim_count": 1,
           "page_url": "/reference/topics/monitoring-regional-monitoring-plan/"
-        },
-        {
-          "topic": "municipal.implementation_translation",
-          "title": "lokale vertaling in openbare stukken",
-          "claim_count": 1,
-          "page_url": "/reference/topics/municipal-implementation-translation/"
         }
       ],
       "linked_decisions": [],
@@ -8947,6 +8917,10 @@
       ],
       "related_sources": [
         {
+          "title": "Toelichting producten en proces",
+          "page_url": "/sources/toelichting-werkagenda-d5-azwa/"
+        },
+        {
           "title": "Opdracht voor de werkagenda samenwerking zorg en sociaal domein voor D5 AZWA",
           "page_url": "/sources/opdracht-werkagenda-d5-azwa/"
         },
@@ -8961,16 +8935,12 @@
         {
           "title": "Informatiepagina Sociaal Domein",
           "page_url": "/sources/sociaal-domein-informatiepagina/"
-        },
-        {
-          "title": "Kamerbrief over CW 3.1 kaders voor AZWA onderdelen",
-          "page_url": "/sources/kamerbrief-cw-3-1-kaders-azwa/"
         }
       ],
       "structured_signals": {
         "contains_structured_table": false,
         "d5_item_count": 0,
-        "d6_item_count": 1,
+        "d6_item_count": 3,
         "governance_item_count": 1,
         "timeline_item_count": 0
       },
@@ -9187,12 +9157,6 @@
       "d6_relevance": "Bevat expliciete D6-passages in de huidige extractie.",
       "linked_claims": [
         {
-          "topic": "monitoring.other",
-          "title": "overige monitoringslijn",
-          "claim_count": 3,
-          "page_url": "/reference/topics/monitoring-other/"
-        },
-        {
           "topic": "municipal.implementation_translation",
           "title": "lokale vertaling in openbare stukken",
           "claim_count": 3,
@@ -9205,10 +9169,10 @@
           "page_url": "/reference/topics/d5-basisfunctionaliteiten-onderbouwd/"
         },
         {
-          "topic": "d6.basisinfrastructuur",
-          "title": "D6-basisinfrastructuur",
+          "topic": "finance.d5_d6.funding_instrument",
+          "title": "bekostigingsroute D5/D6",
           "claim_count": 2,
-          "page_url": "/reference/topics/d6-basisinfrastructuur/"
+          "page_url": "/reference/topics/finance-d5-d6-funding-instrument/"
         },
         {
           "topic": "timeline.d5_d6_financing_horizon",
@@ -9223,16 +9187,22 @@
           "page_url": "/reference/topics/d5-mentale-gezondheidsnetwerken/"
         },
         {
-          "topic": "finance.d5_d6.funding_instrument",
-          "title": "bekostigingsroute D5/D6",
+          "topic": "d6.other",
+          "title": "overige D6-lijn",
           "claim_count": 1,
-          "page_url": "/reference/topics/finance-d5-d6-funding-instrument/"
+          "page_url": "/reference/topics/d6-other/"
         },
         {
           "topic": "finance.regional_funding_path",
           "title": "regionale financieringsroute",
           "claim_count": 1,
           "page_url": "/reference/topics/finance-regional-funding-path/"
+        },
+        {
+          "topic": "timeline.d5_d6_implementation",
+          "title": "implementatielijn D5/D6",
+          "claim_count": 1,
+          "page_url": "/reference/topics/timeline-d5-d6-implementation/"
         }
       ],
       "linked_decisions": [
@@ -9240,11 +9210,6 @@
           "title": "Mogelijke besluitvraag: prioritering van D5-interventies in Almere",
           "status": "gedeeltelijk ingevuld",
           "page_url": "/decisions/mogelijke-besluitvraag-prioritering-van-d5-interventies-in-almere/"
-        },
-        {
-          "title": "Mogelijke besluitvraag: regiemodel voor D6 en lokale teams",
-          "status": "wacht op verduidelijking",
-          "page_url": "/decisions/mogelijke-besluitvraag-regiemodel-voor-d6-en-lokale-teams/"
         },
         {
           "title": "Mogelijke besluitvraag: verdeling van beschikbare middelen over D5 en D6",
@@ -9296,36 +9261,36 @@
           "page_url": "/themes/financiering/"
         },
         {
-          "theme_id": "governance-en-regie",
-          "title": "Governance en regie",
-          "page_url": "/themes/governance-en-regie/"
-        },
-        {
           "theme_id": "monitoring-en-leren",
           "title": "Monitoring en leren",
           "page_url": "/themes/monitoring-en-leren/"
+        },
+        {
+          "theme_id": "governance-en-regie",
+          "title": "Governance en regie",
+          "page_url": "/themes/governance-en-regie/"
         }
       ],
       "related_sources": [
         {
-          "title": "Transformatieplan Positief Gezond Almere",
-          "page_url": "/sources/pga-transformatieplan/"
+          "title": "AZWA-afspraken D5 en D6 en financieringsinstrument",
+          "page_url": "/sources/vws-brief-d5-d6-financieringsinstrument/"
         },
         {
-          "title": "Naar een positief gezond Almere; Beleidstheorie en businesscase transformatieplan",
-          "page_url": "/sources/seo-beleidstheorie-en-businesscase-pga/"
+          "title": "Transformatieplan Positief Gezond Almere",
+          "page_url": "/sources/pga-transformatieplan/"
         },
         {
           "title": "Zorgzaam Flevoland 2023 Regioplan IZA Flevoland",
           "page_url": "/sources/regioplan-iza-flevoland/"
         },
         {
-          "title": "Opdracht voor de werkagenda samenwerking zorg en sociaal domein voor D5 AZWA",
-          "page_url": "/sources/opdracht-werkagenda-d5-azwa/"
+          "title": "Toelichting producten en proces",
+          "page_url": "/sources/toelichting-werkagenda-d5-azwa/"
         },
         {
-          "title": "AZWA-afspraken D5 en D6 en financieringsinstrument",
-          "page_url": "/sources/vws-brief-d5-d6-financieringsinstrument/"
+          "title": "Kamerbrief inzake voortgang Integraal Zorgakkoord (IZA) en Aanvullend Zorg- en Welzijnsakkoord (AZWA)",
+          "page_url": "/sources/voortgangsbrief-iza-azwa/"
         }
       ],
       "structured_signals": {
@@ -9750,26 +9715,72 @@
           "page_url": "/reference/topics/municipal-implementation-translation/"
         },
         {
-          "topic": "d5.cross_domain_collaboration",
-          "title": "domeinoverstijgende samenwerking",
-          "claim_count": 2,
-          "page_url": "/reference/topics/d5-cross-domain-collaboration/"
-        },
-        {
           "topic": "d6.other",
           "title": "overige D6-lijn",
           "claim_count": 2,
           "page_url": "/reference/topics/d6-other/"
         },
         {
-          "topic": "monitoring.other",
-          "title": "overige monitoringslijn",
+          "topic": "d5.basisfunctionaliteiten_onderbouwd",
+          "title": "onderbouwde D5-basisfunctionaliteiten",
           "claim_count": 1,
-          "page_url": "/reference/topics/monitoring-other/"
+          "page_url": "/reference/topics/d5-basisfunctionaliteiten-onderbouwd/"
+        },
+        {
+          "topic": "d5.other",
+          "title": "overige D5-lijn",
+          "claim_count": 1,
+          "page_url": "/reference/topics/d5-other/"
+        },
+        {
+          "topic": "d6.regional_coordination",
+          "title": "regionale coördinatie voor D6",
+          "claim_count": 1,
+          "page_url": "/reference/topics/d6-regional-coordination/"
+        },
+        {
+          "topic": "governance_and_finance.other",
+          "title": "overige governance- en financieringslijn",
+          "claim_count": 1,
+          "page_url": "/reference/topics/governance-and-finance-other/"
+        },
+        {
+          "topic": "timeline.other",
+          "title": "overige tijdlijnmomenten",
+          "claim_count": 1,
+          "page_url": "/reference/topics/timeline-other/"
+        },
+        {
+          "topic": "monitoring.mid_term_review",
+          "title": "tussentijdse evaluatie",
+          "claim_count": 1,
+          "page_url": "/reference/topics/monitoring-mid-term-review/"
         }
       ],
-      "linked_decisions": [],
-      "linked_actions": [],
+      "linked_decisions": [
+        {
+          "title": "Mogelijke besluitvraag: prioritering van D5-interventies in Almere",
+          "status": "gedeeltelijk ingevuld",
+          "page_url": "/decisions/mogelijke-besluitvraag-prioritering-van-d5-interventies-in-almere/"
+        },
+        {
+          "title": "Mogelijke besluitvraag: monitoringsarrangement voor Almere",
+          "status": "open besluitvraag",
+          "page_url": "/decisions/mogelijke-besluitvraag-monitoringsarrangement-voor-almere/"
+        }
+      ],
+      "linked_actions": [
+        {
+          "title": "Mogelijke opvolgactie: D5-vertaling voor Almere expliciteren",
+          "status": "in voorbereiding",
+          "page_url": "/actions/mogelijke-opvolgactie-d5-vertaling-voor-almere-expliciteren/"
+        },
+        {
+          "title": "Mogelijke opvolgactie: monitoringsaanpak voor Almere afstemmen",
+          "status": "in voorbereiding",
+          "page_url": "/actions/mogelijke-opvolgactie-monitoringsaanpak-voor-almere-afstemmen/"
+        }
+      ],
       "linked_themes": [
         {
           "theme_id": "basisfunctionaliteiten-d5",
@@ -9794,6 +9805,10 @@
       ],
       "related_sources": [
         {
+          "title": "Toelichting producten en proces",
+          "page_url": "/sources/toelichting-werkagenda-d5-azwa/"
+        },
+        {
           "title": "Opdracht voor de werkagenda samenwerking zorg en sociaal domein voor D5 AZWA",
           "page_url": "/sources/opdracht-werkagenda-d5-azwa/"
         },
@@ -9806,10 +9821,6 @@
           "page_url": "/sources/voortgangsbrief-iza-azwa/"
         },
         {
-          "title": "Kamerbrief over CW 3.1 kaders voor AZWA onderdelen",
-          "page_url": "/sources/kamerbrief-cw-3-1-kaders-azwa/"
-        },
-        {
           "title": "CW 3.1 kader basisfunctionaliteiten en basisinfrastructuur D5 en D6",
           "page_url": "/sources/cw-3-1-kader-d5-d6/"
         }
@@ -9817,9 +9828,9 @@
       "structured_signals": {
         "contains_structured_table": false,
         "d5_item_count": 2,
-        "d6_item_count": 2,
-        "governance_item_count": 0,
-        "timeline_item_count": 0
+        "d6_item_count": 3,
+        "governance_item_count": 1,
+        "timeline_item_count": 1
       },
       "content_classification": {
         "classification_id": "source_fact",

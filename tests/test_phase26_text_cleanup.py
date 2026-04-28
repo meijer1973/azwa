@@ -3,6 +3,11 @@ from __future__ import annotations
 import unittest
 
 from src.build_document_extractions import clean_candidate_statement, is_hard_noise_candidate, is_noise_candidate
+from src.build_claims_top5 import (
+    apply_claim_dedup,
+    has_invalid_sentence_start,
+    should_reject_for_sentence_boundary,
+)
 from src.build_structural_extractions import (
     is_structural_noise_line,
     repair_mojibake,
@@ -48,6 +53,44 @@ class Phase26TextCleanupTests(unittest.TestCase):
             clean_candidate_statement(text),
             "50 miljoen euro extra voor gemeenten, aanvullend op de bestaande SPUK IZA en de Brede SPUK GALA.",
         )
+
+    def test_sentence_boundary_gate_rejects_mid_sentence_start(self) -> None:
+        reject, reasons = should_reject_for_sentence_boundary(
+            "ingang van 1 januari 2024 gelden de ketenaanpakken."
+        )
+
+        self.assertTrue(reject)
+        self.assertIn("lowercase_mid_sentence_start", reasons)
+        self.assertFalse(has_invalid_sentence_start("De ketenaanpakken gelden vanaf 2024."))
+
+    def test_claim_dedup_keeps_longest_duplicate_opening(self) -> None:
+        base_claim = {
+            "source_document_id": "doc",
+            "topic": "d5.example",
+            "subtopic": "same",
+            "statement": (
+                "Dezelfde opening wordt hier gebruikt in een langere claim met genoeg woorden om de eerste "
+                "tweehonderd tekens volledig identiek te maken voor de dedup-test, zodat alleen de langste "
+                "variant overblijft in de claimlaag en de korte variant superseded wordt."
+            ),
+        }
+        claims_by_document = {
+            "doc": [
+                {**base_claim, "claim_id": "clm__short"},
+                {
+                    **base_claim,
+                    "claim_id": "clm__long",
+                    "statement": (
+                        base_claim["statement"]
+                        + " Extra context wint omdat deze claim dezelfde opening heeft maar meer inhoud bevat."
+                    ),
+                },
+            ]
+        }
+        filtered, log = apply_claim_dedup(claims_by_document)
+
+        self.assertEqual([claim["claim_id"] for claim in filtered["doc"]], ["clm__long"])
+        self.assertEqual(log["superseded_claim_count"], 1)
 
     def test_voting_records_are_preserved_outside_claim_input(self) -> None:
         entry = {"document_id": "mun_almere_test", "file_path": "data/raw/test.html", "source_url": "https://example.test"}

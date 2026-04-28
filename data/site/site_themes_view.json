@@ -129,7 +129,7 @@
           "topic": "d5.regional_workagenda",
           "title": "regionale/lokale D5-werkagenda",
           "status": "huidige lijn met menselijke duiding",
-          "confidence_label": "voorzichtig",
+          "confidence_label": "middel",
           "needs_human_review": true,
           "page_url": "/reference/topics/d5-regional-workagenda/"
         },
@@ -198,7 +198,8 @@
           "source_url": "https://vng.nl/sites/default/files/2026-04/20260422-begeleidende-toelichting-op-opdracht-werkagenda-financiele-middelen-proces.pdf",
           "page_url": "/sources/toelichting-werkagenda-d5-azwa/",
           "topics": [
-            "overige D5-lijn"
+            "overige D5-lijn",
+            "regionale/lokale D5-werkagenda"
           ]
         },
         {
@@ -212,7 +213,6 @@
           "source_url": "https://vng.nl/sites/default/files/2026-04/opdracht-voor-de-werkagenda-azwa.pdf",
           "page_url": "/sources/opdracht-werkagenda-d5-azwa/",
           "topics": [
-            "mentale gezondheidsnetwerken",
             "onderbouwde D5-basisfunctionaliteiten"
           ]
         },
@@ -241,8 +241,7 @@
           "source_url": "https://vng.nl/sites/default/files/2026-04/20260422-ledenbrief-azwa-financiering-voor-gemeenten-zorgakkoord.pdf",
           "page_url": "/sources/vng-ledenbrief-azwa-financiering/",
           "topics": [
-            "overige D5-lijn",
-            "regionale/lokale D5-werkagenda"
+            "overige D5-lijn"
           ]
         },
         {
@@ -270,6 +269,8 @@
           "source_url": "https://vng.nl/sites/default/files/2026-04/brief-vws-aan-vng-over-azwa-afspraken-d5-en-d6-en-financieringsinstrument.pdf",
           "page_url": "/sources/vws-brief-d5-d6-financieringsinstrument/",
           "topics": [
+            "D5-definitie",
+            "mentale gezondheidsnetwerken",
             "onderbouwde D5-basisfunctionaliteiten"
           ]
         },
@@ -464,7 +465,7 @@
           "topic": "d6.local_teams",
           "title": "stevige lokale teams en wijkverbanden",
           "status": "huidige lijn met menselijke duiding",
-          "confidence_label": "voorzichtig",
+          "confidence_label": "middel",
           "needs_human_review": true,
           "page_url": "/reference/topics/d6-local-teams/"
         }
@@ -514,6 +515,20 @@
         }
       ],
       "source_basis": [
+        {
+          "document_id": "nat_azwa_toelichting_producten_proces_2026",
+          "title": "Toelichting producten en proces",
+          "publisher": "VNG / VWS",
+          "publication_date": "2026-04-22",
+          "document_type": "process_note",
+          "jurisdiction_level": "national",
+          "status": "current",
+          "source_url": "https://vng.nl/sites/default/files/2026-04/20260422-begeleidende-toelichting-op-opdracht-werkagenda-financiele-middelen-proces.pdf",
+          "page_url": "/sources/toelichting-werkagenda-d5-azwa/",
+          "topics": [
+            "D6-basisinfrastructuur"
+          ]
+        },
         {
           "document_id": "nat_azwa_opdracht_werkagenda_d5_2026",
           "title": "Opdracht voor de werkagenda samenwerking zorg en sociaal domein voor D5 AZWA",
@@ -610,20 +625,6 @@
           "status": "current",
           "source_url": "https://api.notubiz.nl/document/16660072/2",
           "page_url": "/sources/slt-geamendeerd-raadsvoorstel/",
-          "topics": [
-            "stevige lokale teams en wijkverbanden"
-          ]
-        },
-        {
-          "document_id": "mun_almere_2026_stevige_lokale_teams_raadsvoorstel",
-          "title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin - raadsvoorstel",
-          "publisher": "Raad van Almere",
-          "publication_date": "2026-01-15",
-          "document_type": "municipal_council_proposal",
-          "jurisdiction_level": "municipal",
-          "status": "reference",
-          "source_url": "https://api.notubiz.nl/document/16466623/1",
-          "page_url": "/sources/slt-raadsvoorstel/",
           "topics": [
             "stevige lokale teams en wijkverbanden"
           ]
@@ -1391,7 +1392,7 @@
           "topic": "timeline.rollout_2030",
           "title": "landelijke dekking richting 2030",
           "status": "huidige lijn met menselijke duiding",
-          "confidence_label": "voorzichtig",
+          "confidence_label": "middel",
           "needs_human_review": true,
           "page_url": "/reference/topics/timeline-rollout-2030/"
         },
@@ -1439,7 +1440,7 @@
           "topic": "monitoring.d5_operational_monitoring",
           "title": "operationele D5-monitoring",
           "status": "huidige lijn met menselijke duiding",
-          "confidence_label": "middel",
+          "confidence_label": "voorzichtig",
           "needs_human_review": true,
           "page_url": "/reference/topics/monitoring-d5-operational-monitoring/"
         },
@@ -1470,9 +1471,9 @@
         {
           "topic": "monitoring.mid_term_review",
           "title": "tussentijdse evaluatie",
-          "status": "huidige lijn zonder extra review",
-          "confidence_label": "hoog",
-          "needs_human_review": false,
+          "status": "huidige lijn met menselijke duiding",
+          "confidence_label": "middel",
+          "needs_human_review": true,
           "page_url": "/reference/topics/monitoring-mid-term-review/"
         }
       ],
@@ -1498,12 +1499,12 @@
           "page_url": "/almere/#menselijke-duiding"
         },
         {
-          "title": "Menselijke duiding bij overige monitoringslijn",
+          "title": "Menselijke duiding bij tussentijdse evaluatie",
           "summary": "De huidige interpretatielaag markeert dit onderwerp voor extra menselijke duiding.",
           "page_url": "/almere/#menselijke-duiding"
         },
         {
-          "title": "Menselijke duiding bij regionaal monitoringsplan",
+          "title": "Menselijke duiding bij overige monitoringslijn",
           "summary": "De huidige interpretatielaag markeert dit onderwerp voor extra menselijke duiding.",
           "page_url": "/almere/#menselijke-duiding"
         }
@@ -1594,8 +1595,6 @@
           "source_url": "https://vng.nl/sites/default/files/2026-04/brief-vws-aan-vng-over-azwa-afspraken-d5-en-d6-en-financieringsinstrument.pdf",
           "page_url": "/sources/vws-brief-d5-d6-financieringsinstrument/",
           "topics": [
-            "lokale horizon Positief Gezond Almere",
-            "operationele D5-monitoring",
             "overige monitoringslijn",
             "overige tijdlijnmomenten"
           ]
@@ -1741,7 +1740,7 @@
         {
           "topic": "monitoring.mid_term_review",
           "title": "tussentijdse evaluatie",
-          "status": "huidige lijn zonder extra review",
+          "status": "huidige lijn met menselijke duiding",
           "page_url": "/reference/topics/monitoring-mid-term-review/"
         }
       ],
@@ -1804,15 +1803,15 @@
       "dependencies": [],
       "source_basis": [
         {
-          "document_id": "nat_azwa_opdracht_werkagenda_d5_2026",
-          "title": "Opdracht voor de werkagenda samenwerking zorg en sociaal domein voor D5 AZWA",
-          "publisher": "VNG / VWS",
+          "document_id": "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026",
+          "title": "AZWA-afspraken D5 en D6 en financieringsinstrument",
+          "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
           "publication_date": "2026-04-22",
-          "document_type": "assignment",
+          "document_type": "ministerial_letter",
           "jurisdiction_level": "national",
           "status": "current",
-          "source_url": "https://vng.nl/sites/default/files/2026-04/opdracht-voor-de-werkagenda-azwa.pdf",
-          "page_url": "/sources/opdracht-werkagenda-d5-azwa/",
+          "source_url": "https://vng.nl/sites/default/files/2026-04/brief-vws-aan-vng-over-azwa-afspraken-d5-en-d6-en-financieringsinstrument.pdf",
+          "page_url": "/sources/vws-brief-d5-d6-financieringsinstrument/",
           "topics": [
             "mentale gezondheidsnetwerken"
           ]
@@ -1855,20 +1854,6 @@
           "status": "current",
           "source_url": "https://positiefgezondalmere.nl/over-ons/",
           "page_url": "/sources/pga-transformatieplan/",
-          "topics": [
-            "mentale gezondheidsnetwerken"
-          ]
-        },
-        {
-          "document_id": "mun_almere_pga_seo_businesscase_2024",
-          "title": "Naar een positief gezond Almere; Beleidstheorie en businesscase transformatieplan",
-          "publisher": "SEO Economisch Onderzoek",
-          "publication_date": "2024-04-25",
-          "document_type": "research_report",
-          "jurisdiction_level": "municipal",
-          "status": "reference",
-          "source_url": "https://www.seo.nl/publicaties/naar-een-positief-gezond-almere-beleidstheorie-en-businesscase-transformatieplan/",
-          "page_url": "/sources/seo-beleidstheorie-en-businesscase-pga/",
           "topics": [
             "mentale gezondheidsnetwerken"
           ]

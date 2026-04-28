@@ -25,7 +25,7 @@ Gebruik deze roadmap als levend werkdocument. Werk na elke sprint de statusregel
 | 25.6 Post-validation register hardening | parked | Geparkeerd tot stakeholder-validatierecords, lokale/interne documenten, finance/controller bevestiging of expliciet beleidsbesluit beschikbaar zijn; blokkeert Fase 26 niet |
 | 26.1 Rough-claim audit hercalibratie | completed | `src/build_data_quality_audit.py`, `tests/test_data_quality_audit.py`, `data/extracted/data_quality_audit.json`, `docs/completed-plans/phase26-sprint26.1-rough-claim-audit-recalibration.md` |
 | 26.2 Deterministische tekstfixes | completed | `src/build_structural_extractions.py`, `src/build_document_extractions.py`, `data/extracted/voting_records.json`, `data/logs/phase26_text_cleanup.json`, `docs/completed-plans/phase26-sprint26.2-deterministic-text-fixes.md` |
-| 26.3 Sentence-boundary en dedup | open | Vervolg op 26.2: zinsegmentatie, overlap/dedup en regressietests voor rough-claim cleanup |
+| 26.3 Sentence-boundary en dedup | completed | `src/build_claims_top5.py`, `src/verify_claim_id_references.py`, `data/extracted/claims/sentence_validator_rejects.json`, `data/extracted/claims/dedup_log.json`, `docs/completed-plans/phase26-sprint26.3-sentence-boundary-dedup.md` |
 | 27.1 Norm | open |  |
 | 27.2 Tijd | open |  |
 | 27.3 Geld | open |  |
@@ -58,7 +58,7 @@ Status op 27 april 2026: eerste 25.4b-bronintake uitgevoerd. Zeven publieke bron
 
 Status op 27 april 2026: gate-remediation gestart. De sprint gaat niet door naar rapportproductie of bestuurlijke werkagenda-drafting; de toegestane vervolgstap is alleen D6 responsibility implementation/remediation. Zes extra bronnen zijn toegevoegd: vier Documentwijzer/Notubiz-stukken bij Stevige Lokale Teams, de Almere Samenwerkingsprojecten/Samen Sterker-bron en een actuele PGA-homepage. De lokale decision layer bevat nu een source-backed publieke raadbeslissing voor Stevige Lokale Teams, met D6-classificatie nog expliciet op `review_needed`.
 
-Status op 28 april 2026: Sprint 25.6 is geparkeerd als policy-maker/stakeholder-afhankelijkheid en blokkeert repository-side datakwaliteitswerk niet. Fase 26 is gestart met rough-claim cleanup. Sprint 26.1 is afgerond als audit-hercalibratie: de lengte-only rough-code is vervangen door `unverified_extraction_length`, langere excerpts geven reviewers meer context, en regressietests bewaken dat lange maar goed gevormde claims niet alleen door lengte rough worden. Sprint 26.2 is afgerond als deterministische tekstfix: mojibake, letterhead, TOC-/Drupal-ruis en stemuitslagen worden uit claim-input gehouden; stemuitslagen blijven apart bewaard in `data/extracted/voting_records.json`.
+Status op 28 april 2026: Sprint 25.6 is geparkeerd als policy-maker/stakeholder-afhankelijkheid en blokkeert repository-side datakwaliteitswerk niet. Fase 26 is gestart met rough-claim cleanup. Sprint 26.1 is afgerond als audit-hercalibratie: de lengte-only rough-code is vervangen door `unverified_extraction_length`, langere excerpts geven reviewers meer context, en regressietests bewaken dat lange maar goed gevormde claims niet alleen door lengte rough worden. Sprint 26.2 is afgerond als deterministische tekstfix: mojibake, letterhead, TOC-/Drupal-ruis en stemuitslagen worden uit claim-input gehouden; stemuitslagen blijven apart bewaard in `data/extracted/voting_records.json`. Sprint 26.3 is afgerond als sentence-boundary/dedup sprint: lowercase mid-zin-claims worden uit de masterlaag geweerd, duplicate openings binnen document/topic/subtopic worden geconsolideerd, en `src/verify_claim_id_references.py` controleert downstream claim-id verwijzingen.
 
 Afgeronde aanpak voor Sprint 25.4a:
 
@@ -252,11 +252,15 @@ Status: completed.
 - Stemuitslagen zijn niet weggegooid, maar apart vastgelegd in `data/extracted/voting_records.json`.
 
 Sprint 26.3: Sentence-boundary en dedup
-Status: open.
+Status: completed.
 
 - Verbeter zinsegmentatie zodat claims niet halverwege een zin beginnen of zonder zelfstandig einde worden gepubliceerd.
 - Verminder overlap en dubbele claims die uit dezelfde passage voortkomen.
 - Controleer daarna opnieuw locatie- en bewijsvelden; claims zonder bruikbare locatie blijven reviewmateriaal.
+- Eerste uitvoer: `claims_master.jsonl` bevat 524 claims, 0 lowercase mid-zin-starts en 0 duplicate first-200-char groepen binnen document/topic/subtopic.
+- De sentence-boundary gate heeft 84 claims geweerd en 34 langere claims met ontbrekende slotpunctuatie als review-only gelogd in `data/extracted/claims/sentence_validator_rejects.json`.
+- De dedup-pass heeft 7 duplicate groepen geconsolideerd in `data/extracted/claims/dedup_log.json`.
+- `src/verify_claim_id_references.py` is toegevoegd en draait groen op `data/extracted` en `data/site`.
 
 ## Fase 27 - Claimmodel per perspectief
 Doel: van algemene claims naar beleidsmatig bruikbare claims per Norm, Tijd, Geld, Governance, Locality en Execution.
@@ -412,7 +416,7 @@ Een verbetering is pas klaar als:
 - de update een menselijke changelog heeft.
 
 ## Huidige volgende sprint
-De beste eerstvolgende sprint is Sprint 26.3: Sentence-boundary en dedup.
+De beste eerstvolgende sprint is Sprint 27.1: Norm.
 
 Waarom:
 
@@ -425,11 +429,12 @@ Waarom:
 - Sprint 25.4 en 25.5 hebben D6-verantwoordelijkheden en validatiehandoff voorbereid;
 - Sprint 25.6 is terecht geparkeerd tot beleidsvalidatie beschikbaar is;
 - Sprint 26.1 heeft de rough-claim audit herijkt, waardoor de resterende ruwe claims beter als echte extractie-/tekstproblemen kunnen worden aangepakt;
-- Sprint 26.2 heeft deterministische tekstfilters toegevoegd en de eerste ruwe categorieen weggewerkt zonder D6-inhoud te overclaimen.
+- Sprint 26.2 heeft deterministische tekstfilters toegevoegd en de eerste ruwe categorieen weggewerkt zonder D6-inhoud te overclaimen;
+- Sprint 26.3 heeft sentence-boundary en dedup-logica toegevoegd en de claim-id verwijzingen downstream verifieerbaar gemaakt.
 
 De concrete deliverables zijn:
 
-- een sentence-boundary validator of gelijkwaardige claimpoort voor mid-zin-fragmenten;
-- dedup-logica voor letterlijke of bijna-letterlijke duplicaten binnen dezelfde document/topic/subtopic-combinatie;
-- een verifier op claim-id referenties;
-- een nieuwe auditrun met lagere `fragment_too_short`, `bullet_or_heading_fragment` en `unverified_extraction_length` restcategorieen.
+- normclaims splitsen in bindend, afspraak, verwachting, toelichting en lagere-autoriteitssignaal;
+- autoriteitstaal in site- en claimmodellen aanscherpen zodat toelichting niet als harde norm klinkt;
+- conflicten of onzekerheid expliciet in mensentaal houden;
+- geen D6-registerrijen inhoudelijk harden zolang stakeholdervalidatie voor Sprint 25.6 ontbreekt.

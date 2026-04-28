@@ -43,12 +43,6 @@
       "page_url": "/reference/topics/d6-other/"
     },
     {
-      "topic": "governance_and_finance.other",
-      "title": "overige governance- en financieringslijn",
-      "claim_count": 3,
-      "page_url": "/reference/topics/governance-and-finance-other/"
-    },
-    {
       "topic": "monitoring.other",
       "title": "overige monitoringslijn",
       "claim_count": 3,
@@ -61,10 +55,22 @@
       "page_url": "/reference/topics/municipal-implementation-translation/"
     },
     {
+      "topic": "governance_and_finance.other",
+      "title": "overige governance- en financieringslijn",
+      "claim_count": 2,
+      "page_url": "/reference/topics/governance-and-finance-other/"
+    },
+    {
       "topic": "timeline.other",
       "title": "overige tijdlijnmomenten",
       "claim_count": 2,
       "page_url": "/reference/topics/timeline-other/"
+    },
+    {
+      "topic": "finance.local_alignment_goal",
+      "title": "lokale financiele aansluiting",
+      "claim_count": 1,
+      "page_url": "/reference/topics/finance-local-alignment-goal/"
     },
     {
       "topic": "timeline.d5_d6_implementation",
@@ -78,6 +84,11 @@
       "title": "Mogelijke besluitvraag: prioritering van D5-interventies in Almere",
       "status": "gedeeltelijk ingevuld",
       "page_url": "/decisions/mogelijke-besluitvraag-prioritering-van-d5-interventies-in-almere/"
+    },
+    {
+      "title": "Mogelijke besluitvraag: verdeling van beschikbare middelen over D5 en D6",
+      "status": "geblokkeerd door afhankelijkheid",
+      "page_url": "/decisions/mogelijke-besluitvraag-verdeling-van-beschikbare-middelen-over-d5-en-d6/"
     },
     {
       "title": "Mogelijke besluitvraag: monitoringsarrangement voor Almere",
@@ -104,6 +115,11 @@
       "page_url": "/themes/basisinfrastructuur-d6/"
     },
     {
+      "theme_id": "financiering",
+      "title": "Financiering",
+      "page_url": "/themes/financiering/"
+    },
+    {
       "theme_id": "monitoring-en-leren",
       "title": "Monitoring en leren",
       "page_url": "/themes/monitoring-en-leren/"
@@ -116,8 +132,8 @@
   ],
   "related_sources": [
     {
-      "title": "Opdracht voor de werkagenda samenwerking zorg en sociaal domein voor D5 AZWA",
-      "page_url": "/sources/opdracht-werkagenda-d5-azwa/"
+      "title": "Toelichting producten en proces",
+      "page_url": "/sources/toelichting-werkagenda-d5-azwa/"
     },
     {
       "title": "AZWA-afspraken D5 en D6 en financieringsinstrument",
@@ -128,12 +144,12 @@
       "page_url": "/sources/voortgangsbrief-iza-azwa/"
     },
     {
-      "title": "Informatiepagina Sociaal Domein",
-      "page_url": "/sources/sociaal-domein-informatiepagina/"
+      "title": "CW 3.1 kader basisfunctionaliteiten en basisinfrastructuur D5 en D6",
+      "page_url": "/sources/cw-3-1-kader-d5-d6/"
     },
     {
-      "title": "Kamerbrief over CW 3.1 kaders voor AZWA onderdelen",
-      "page_url": "/sources/kamerbrief-cw-3-1-kaders-azwa/"
+      "title": "Aanvullend Zorg- en Welzijnsakkoord (AZWA) (Definitief)",
+      "page_url": "/sources/azwa-definitief/"
     }
   ],
   "structured_signals": {
@@ -151,6 +167,7 @@
   "perspective_ids": [
     "norm",
     "time",
+    "money",
     "governance",
     "locality",
     "execution"
@@ -165,6 +182,11 @@
       "perspective_id": "time",
       "title": "Time",
       "question": "Which dates, deadlines, phasing, review moments, and budget-calendar alignments matter?"
+    },
+    {
+      "perspective_id": "money",
+      "title": "Money",
+      "question": "Which funding flows, budget windows, allocation conditions, and co-financing logic apply?"
     },
     {
       "perspective_id": "governance",

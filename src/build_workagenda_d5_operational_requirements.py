@@ -274,6 +274,21 @@ def load_claims() -> list[dict[str, Any]]:
     return [json.loads(line) for line in CLAIMS_MASTER_PATH.read_text(encoding="utf-8").splitlines() if line.strip()]
 
 
+def filter_claim_id_references(node: Any, claim_ids: set[str]) -> Any:
+    if isinstance(node, dict):
+        return {
+            key: (
+                [claim_id for claim_id in value if claim_id in claim_ids]
+                if key.endswith("claim_ids") and isinstance(value, list)
+                else filter_claim_id_references(value, claim_ids)
+            )
+            for key, value in node.items()
+        }
+    if isinstance(node, list):
+        return [filter_claim_id_references(item, claim_ids) for item in node]
+    return node
+
+
 def document_refs(document_ids: list[str], inventory: dict[str, Any]) -> list[dict[str, Any]]:
     by_id = {document["document_id"]: document for document in inventory["documents"]}
     refs = []
@@ -488,6 +503,8 @@ def build_payload() -> dict[str, Any]:
 
 def main() -> None:
     payload = build_payload()
+    claims = load_claims()
+    payload = filter_claim_id_references(payload, {claim["claim_id"] for claim in claims})
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT_PATH.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(f"Wrote {OUTPUT_PATH.relative_to(REPO_ROOT).as_posix()}")

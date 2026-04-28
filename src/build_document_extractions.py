@@ -1773,15 +1773,13 @@ def is_hard_noise_candidate(text: str) -> bool:
 
 def sentence_candidates(text: str) -> list[str]:
     text = text.replace("â€¢", ". ").replace("•", ". ").replace(" - ", ". ")
-    raw_parts = re.split(r"(?<=[.!?])\s+|\n+", text)
+    text = re.sub(r"(\w)-\s*\n\s*(\w)", r"\1\2", text)
+    text = re.sub(r"\s*\n+\s*", " ", text)
+    raw_parts = re.split(r"(?<=[.!?])\s+", text)
     candidates: list[str] = []
     for part in raw_parts:
         cleaned = collapse_whitespace(part)
         if not cleaned:
-            continue
-        if len(cleaned) > 420 and ";" in cleaned:
-            subparts = [collapse_whitespace(item) for item in cleaned.split(";") if collapse_whitespace(item)]
-            candidates.extend(subparts)
             continue
         candidates.append(cleaned)
     return candidates

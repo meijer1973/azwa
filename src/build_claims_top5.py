@@ -13,6 +13,8 @@ INVENTORY_PATH = REPO_ROOT / "data" / "extracted" / "document_inventory.json"
 AUTHORITY_RULES_PATH = REPO_ROOT / "config" / "authority_rules.json"
 CLAIM_SCHEMA_PATH = REPO_ROOT / "data" / "schemas" / "claim.schema.json"
 OUTPUT_DIR = REPO_ROOT / "data" / "extracted" / "claims"
+SENTENCE_VALIDATOR_REJECTS_PATH = OUTPUT_DIR / "sentence_validator_rejects.json"
+DEDUP_LOG_PATH = OUTPUT_DIR / "dedup_log.json"
 
 CLAIM_EXTRACTION_RUN_ID = "phase4_all_docs_claims_v3"
 RELATION_SEED_DOCUMENT_IDS = [
@@ -22,12 +24,63 @@ RELATION_SEED_DOCUMENT_IDS = [
     "reg_flevoland_2023_regioplan_iza",
     "mun_almere_pga_transformatieplan",
 ]
+SENTENCE_START_WHITELIST = {"de", "het", "een", "dat", "dit", "deze", "die", "in", "met", "voor", "van", "op", "om", "bij"}
+FIRST_WORD_PATTERN = re.compile(r"^[\"'“”‘’(\[]*([A-Za-zÀ-ÖØ-öø-ÿ]+)")
+SENTENCE_END_PATTERN = re.compile(r'(?:[.!?…»”"]|\.\.\.)$')
 
 
 def normalize_text(text: str) -> str:
     text = re.sub(r"\s+", " ", text).strip().lower()
     text = unicodedata.normalize("NFKD", text)
     return text.encode("ascii", "ignore").decode("ascii")
+
+
+def normalized_statement_prefix(statement: str, max_chars: int = 200) -> str:
+    return re.sub(r"\s+", " ", statement).strip().lower()[:max_chars]
+
+
+def first_word(text: str) -> str | None:
+    match = FIRST_WORD_PATTERN.search(text.strip())
+    return match.group(1) if match else None
+
+
+def has_invalid_sentence_start(statement: str) -> bool:
+    word = first_word(statement)
+    if not word:
+        return False
+    return word[0].islower() and word.lower() not in SENTENCE_START_WHITELIST
+
+
+def has_invalid_sentence_end(statement: str) -> bool:
+    compact = statement.strip()
+    return bool(compact) and SENTENCE_END_PATTERN.search(compact) is None
+
+
+def should_reject_for_sentence_boundary(statement: str) -> tuple[bool, list[str]]:
+    reasons: list[str] = []
+    if has_invalid_sentence_start(statement):
+        reasons.append("lowercase_mid_sentence_start")
+    if has_invalid_sentence_end(statement):
+        reasons.append("missing_sentence_terminal")
+
+    if "lowercase_mid_sentence_start" in reasons:
+        return True, reasons
+
+    if "missing_sentence_terminal" in reasons:
+        normalized = normalize_text(statement)
+        heading_like = len(statement) < 140 or normalized.startswith(
+            (
+                "datum ",
+                "de voorzitter van de tweede kamer",
+                "regionale eerstelijnssamenwerkingsverbanden",
+                "pagina ",
+            )
+        )
+        section_heading = bool(re.match(r"^\d+(?:\.\d+)*\s+[A-ZÀ-ÖØ-Þ]", statement.strip()))
+        if heading_like or section_heading:
+            return True, reasons
+
+    return False, reasons
 
 
 def contains_any(normalized_text: str, *terms: str) -> bool:
@@ -706,6 +759,137 @@ def build_document_claims(document_id: str, authority_map: dict[str, str], instr
     return claims
 
 
+def apply_sentence_boundary_gate(claims_by_document: dict[str, list[dict]]) -> tuple[dict[str, list[dict]], dict]:
+    filtered: dict[str, list[dict]] = {}
+    rejected: list[dict] = []
+    reviewed: list[dict] = []
+
+    for document_id, claims in claims_by_document.items():
+        kept_claims: list[dict] = []
+        for claim in claims:
+            reject, reasons = should_reject_for_sentence_boundary(claim["statement"])
+            if reject:
+                rejected.append(
+                    {
+                        "claim_id": claim["claim_id"],
+                        "source_document_id": claim["source_document_id"],
+                        "topic": claim["topic"],
+                        "subtopic": claim["subtopic"],
+                        "reasons": reasons,
+                        "statement": claim["statement"],
+                        "source_statement_ids": claim["source_location"]["source_statement_ids"],
+                    }
+                )
+                continue
+            if reasons:
+                reviewed.append(
+                    {
+                        "claim_id": claim["claim_id"],
+                        "source_document_id": claim["source_document_id"],
+                        "topic": claim["topic"],
+                        "subtopic": claim["subtopic"],
+                        "reasons": reasons,
+                        "statement": claim["statement"],
+                        "source_statement_ids": claim["source_location"]["source_statement_ids"],
+                    }
+                )
+            kept_claims.append(claim)
+        filtered[document_id] = kept_claims
+
+    log = {
+        "generated_on": date.today().isoformat(),
+        "run_id": f"{CLAIM_EXTRACTION_RUN_ID}_sentence_boundary_gate",
+        "policy": {
+            "rejected": [
+                "Claims starting with a lowercase word outside the standard Dutch article/preposition whitelist.",
+                "Short or heading-like claims missing terminal sentence punctuation.",
+            ],
+            "review_only": [
+                "Longer claims missing terminal sentence punctuation are retained but logged for later cleanup.",
+            ],
+        },
+        "input_claim_count": sum(len(claims) for claims in claims_by_document.values()),
+        "kept_claim_count": sum(len(claims) for claims in filtered.values()),
+        "rejected_claim_count": len(rejected),
+        "review_only_count": len(reviewed),
+        "rejected_claims": rejected,
+        "review_only_claims": reviewed,
+    }
+    return filtered, log
+
+
+def apply_claim_dedup(claims_by_document: dict[str, list[dict]]) -> tuple[dict[str, list[dict]], dict]:
+    groups: dict[tuple[str, str, str, str], list[dict]] = {}
+    for claims in claims_by_document.values():
+        for claim in claims:
+            key = (
+                claim["source_document_id"],
+                claim["topic"],
+                claim["subtopic"],
+                normalized_statement_prefix(claim["statement"]),
+            )
+            groups.setdefault(key, []).append(claim)
+
+    winner_ids: set[str] = set()
+    loser_ids: set[str] = set()
+    entries: list[dict] = []
+
+    for key, group_claims in groups.items():
+        if len(group_claims) == 1:
+            winner_ids.add(group_claims[0]["claim_id"])
+            continue
+        ranked = sorted(group_claims, key=lambda claim: (-len(claim["statement"]), claim["claim_id"]))
+        winner = ranked[0]
+        losers = ranked[1:]
+        winner_ids.add(winner["claim_id"])
+        loser_ids.update(claim["claim_id"] for claim in losers)
+        entries.append(
+            {
+                "source_document_id": key[0],
+                "topic": key[1],
+                "subtopic": key[2],
+                "normalized_prefix": key[3],
+                "winning_claim_id": winner["claim_id"],
+                "winning_statement_length": len(winner["statement"]),
+                "superseded_claims": [
+                    {
+                        "claim_id": claim["claim_id"],
+                        "statement_length": len(claim["statement"]),
+                        "statement": claim["statement"],
+                    }
+                    for claim in losers
+                ],
+            }
+        )
+
+    filtered: dict[str, list[dict]] = {}
+    for document_id, claims in claims_by_document.items():
+        filtered[document_id] = [claim for claim in claims if claim["claim_id"] not in loser_ids]
+
+    log = {
+        "generated_on": date.today().isoformat(),
+        "run_id": f"{CLAIM_EXTRACTION_RUN_ID}_dedup",
+        "grouping": ["source_document_id", "topic", "subtopic", "first_200_normalized_statement_chars"],
+        "input_claim_count": sum(len(claims) for claims in claims_by_document.values()),
+        "kept_claim_count": sum(len(claims) for claims in filtered.values()),
+        "dedup_group_count": len(entries),
+        "superseded_claim_count": len(loser_ids),
+        "entries": entries,
+    }
+    return filtered, log
+
+
+def prune_missing_relation_targets(claims_by_document: dict[str, list[dict]]) -> None:
+    claim_ids = {claim["claim_id"] for claims in claims_by_document.values() for claim in claims}
+    for claims in claims_by_document.values():
+        for claim in claims:
+            claim["relations"] = [
+                relation
+                for relation in claim["relations"]
+                if relation["target_claim_id"] in claim_ids
+            ]
+
+
 def validate_claims(claims: list[dict], allowed_relation_types: set[str]) -> None:
     required_fields = {
         "claim_id",
@@ -782,6 +966,20 @@ def write_outputs(document_ids: list[str], claims_by_document: dict[str, list[di
     print(f"Wrote {master_path.relative_to(REPO_ROOT).as_posix()}")
 
 
+def write_claim_quality_logs(sentence_log: dict, dedup_log: dict) -> None:
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    SENTENCE_VALIDATOR_REJECTS_PATH.write_text(
+        json.dumps(sentence_log, indent=2, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+    )
+    DEDUP_LOG_PATH.write_text(
+        json.dumps(dedup_log, indent=2, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+    )
+    print(f"Wrote {SENTENCE_VALIDATOR_REJECTS_PATH.relative_to(REPO_ROOT).as_posix()}")
+    print(f"Wrote {DEDUP_LOG_PATH.relative_to(REPO_ROOT).as_posix()}")
+
+
 def main() -> None:
     authority_map, instrument_profiles = load_authority_model()
     allowed_relation_types = load_allowed_relation_types()
@@ -799,9 +997,14 @@ def main() -> None:
             claim["relations"] = relations_by_claim_id.get(claim["claim_id"], [])
         claims_by_document[document_id] = document_claims
 
+    claims_by_document, sentence_log = apply_sentence_boundary_gate(claims_by_document)
+    claims_by_document, dedup_log = apply_claim_dedup(claims_by_document)
+    prune_missing_relation_targets(claims_by_document)
+
     all_claims = [claim for document_id in document_ids for claim in claims_by_document[document_id]]
     validate_claims(all_claims, allowed_relation_types)
     write_outputs(document_ids, claims_by_document, source_runs)
+    write_claim_quality_logs(sentence_log, dedup_log)
 
 
 if __name__ == "__main__":

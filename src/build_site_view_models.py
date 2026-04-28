@@ -564,6 +564,12 @@ def write_json(path: Path, payload: dict | list) -> None:
     path.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
 
+def clear_generated_json_dir(path: Path) -> None:
+    path.mkdir(parents=True, exist_ok=True)
+    for item in path.glob("*.json"):
+        item.unlink()
+
+
 def slugify(value: str) -> str:
     collapsed = "".join(char.lower() if char.isalnum() else "-" for char in value)
     while "--" in collapsed:
@@ -1574,11 +1580,15 @@ def build_decision_models(
         choice = choices[blueprint["choice_id"]]
         gap_entries = [gaps[gap_id] for gap_id in blueprint["gap_ids"] if gap_id in gaps]
         dependency_entries = [dependencies[dep_id] for dep_id in blueprint["dependency_ids"] if dep_id in dependencies]
-        claim_ids = dedupe(
-            choice["supporting_claim_ids"]
-            + [claim_id for gap in gap_entries for claim_id in gap["supporting_claim_ids"]]
-            + [claim_id for dependency in dependency_entries for claim_id in dependency["supporting_claim_ids"]]
-        )
+        claim_ids = [
+            claim_id
+            for claim_id in dedupe(
+                choice["supporting_claim_ids"]
+                + [claim_id for gap in gap_entries for claim_id in gap["supporting_claim_ids"]]
+                + [claim_id for dependency in dependency_entries for claim_id in dependency["supporting_claim_ids"]]
+            )
+            if claim_id in claims
+        ]
         document_refs = document_refs_from_claim_ids(claim_ids, claims, documents)
         topics = dedupe(choice["based_on_topics"] + [topic for gap in gap_entries for topic in gap["based_on_topics"]])
         linked_theme_ids = dedupe(blueprint["theme_ids"] + theme_ids_for_topics(topics, themes))
@@ -1667,10 +1677,14 @@ def build_action_models(
             current_status_detail = DEPENDENCY_LABELS[blueprint["source_id"]]["summary"]
 
         dependency_entries = [dependencies[dep_id] for dep_id in blueprint["dependency_ids"] if dep_id in dependencies]
-        claim_ids = dedupe(
-            source_claim_ids
-            + [claim_id for dependency in dependency_entries for claim_id in dependency["supporting_claim_ids"]]
-        )
+        claim_ids = [
+            claim_id
+            for claim_id in dedupe(
+                source_claim_ids
+                + [claim_id for dependency in dependency_entries for claim_id in dependency["supporting_claim_ids"]]
+            )
+            if claim_id in claims
+        ]
         topics = topics_for_claim_ids(claim_ids, claims)
         perspective_ids = perspective_ids_for_context(
             topic_ids=topics,
@@ -2970,11 +2984,8 @@ def main() -> None:
     write_json(SITE_UPDATES_VIEW_PATH, site_updates_view)
     write_json(SITE_MANIFEST_PATH, site_manifest)
 
-    DECISION_DIR.mkdir(parents=True, exist_ok=True)
-    ACTION_DIR.mkdir(parents=True, exist_ok=True)
-    THEME_DIR.mkdir(parents=True, exist_ok=True)
-    REFERENCE_TOPIC_DIR.mkdir(parents=True, exist_ok=True)
-    SOURCE_VIEW_DIR.mkdir(parents=True, exist_ok=True)
+    for generated_dir in [DECISION_DIR, ACTION_DIR, THEME_DIR, REFERENCE_TOPIC_DIR, SOURCE_VIEW_DIR]:
+        clear_generated_json_dir(generated_dir)
     for model in decision_models:
         write_json(DECISION_DIR / f"{model['decision_id']}.json", model)
     for model in action_models:

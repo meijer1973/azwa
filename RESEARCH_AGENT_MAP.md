@@ -131,6 +131,8 @@ Machine-readable:
       "data/extracted/review_queue.json",
       "data/extracted/data_quality_audit.json",
       "data/extracted/claims/claims_master.jsonl",
+      "data/extracted/claims/sentence_validator_rejects.json",
+      "data/extracted/claims/dedup_log.json",
       "data/extracted/claims/conflict_register.json",
       "data/extracted/claims/current_interpretation.json",
       "data/extracted/claims/d5_d6_master.json",
@@ -369,10 +371,12 @@ Theme view models:
     "data/site/site_themes_view.json",
     "data/site/site_reference_view.json"
   ],
-  "quality_control": [
+    "quality_control": [
     "data/extracted/qc_report.json",
     "data/extracted/review_queue.json",
     "data/extracted/data_quality_audit.json",
+    "data/extracted/claims/sentence_validator_rejects.json",
+    "data/extracted/claims/dedup_log.json",
     "docs/data-quality-checklist.md",
     "docs/internal/review-dashboard.html"
   ],

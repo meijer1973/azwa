@@ -34,14 +34,8 @@
   "summary": "Deze bron draagt vooral bij aan de D5-lijn en de vertaling daarvan naar uitvoering en bestuurlijke duiding.",
   "what_changed_or_added": "Deze bron draagt bij aan de actuele landelijke bestuurlijke lijn.",
   "d5_relevance": "Bevat expliciete D5-passages in de huidige extractie.",
-  "d6_relevance": "Geen duidelijke D6-passages in de huidige extractie.",
+  "d6_relevance": "Bevat vooral contextuele of afgeleide signalen die aan D6 raken.",
   "linked_claims": [
-    {
-      "topic": "d5.other",
-      "title": "overige D5-lijn",
-      "claim_count": 3,
-      "page_url": "/reference/topics/d5-other/"
-    },
     {
       "topic": "finance.d5_d6.funding_instrument",
       "title": "bekostigingsroute D5/D6",
@@ -55,16 +49,34 @@
       "page_url": "/reference/topics/municipal-implementation-translation/"
     },
     {
-      "topic": "timeline.other",
-      "title": "overige tijdlijnmomenten",
+      "topic": "d5.other",
+      "title": "overige D5-lijn",
       "claim_count": 2,
-      "page_url": "/reference/topics/timeline-other/"
+      "page_url": "/reference/topics/d5-other/"
     },
     {
       "topic": "monitoring.d5_operational_monitoring",
       "title": "operationele D5-monitoring",
       "claim_count": 2,
       "page_url": "/reference/topics/monitoring-d5-operational-monitoring/"
+    },
+    {
+      "topic": "d5.regional_workagenda",
+      "title": "regionale/lokale D5-werkagenda",
+      "claim_count": 1,
+      "page_url": "/reference/topics/d5-regional-workagenda/"
+    },
+    {
+      "topic": "d6.basisinfrastructuur",
+      "title": "D6-basisinfrastructuur",
+      "claim_count": 1,
+      "page_url": "/reference/topics/d6-basisinfrastructuur/"
+    },
+    {
+      "topic": "timeline.other",
+      "title": "overige tijdlijnmomenten",
+      "claim_count": 1,
+      "page_url": "/reference/topics/timeline-other/"
     },
     {
       "topic": "timeline.rollout_2030",
@@ -75,12 +87,22 @@
   ],
   "linked_decisions": [
     {
+      "title": "Mogelijke besluitvraag: prioritering van D5-interventies in Almere",
+      "status": "gedeeltelijk ingevuld",
+      "page_url": "/decisions/mogelijke-besluitvraag-prioritering-van-d5-interventies-in-almere/"
+    },
+    {
       "title": "Mogelijke besluitvraag: verdeling van beschikbare middelen over D5 en D6",
       "status": "geblokkeerd door afhankelijkheid",
       "page_url": "/decisions/mogelijke-besluitvraag-verdeling-van-beschikbare-middelen-over-d5-en-d6/"
     }
   ],
   "linked_actions": [
+    {
+      "title": "Mogelijke opvolgactie: D5-vertaling voor Almere expliciteren",
+      "status": "in voorbereiding",
+      "page_url": "/actions/mogelijke-opvolgactie-d5-vertaling-voor-almere-expliciteren/"
+    },
     {
       "title": "Mogelijke opvolgactie: inzet van middelen en eigenaarschap vastleggen",
       "status": "geblokkeerd door afhankelijkheid",
@@ -92,6 +114,11 @@
       "theme_id": "basisfunctionaliteiten-d5",
       "title": "Basisfunctionaliteiten (D5)",
       "page_url": "/themes/basisfunctionaliteiten-d5/"
+    },
+    {
+      "theme_id": "basisinfrastructuur-d6",
+      "title": "Basisinfrastructuur (D6)",
+      "page_url": "/themes/basisinfrastructuur-d6/"
     },
     {
       "theme_id": "financiering",
@@ -134,7 +161,7 @@
   "structured_signals": {
     "contains_structured_table": false,
     "d5_item_count": 3,
-    "d6_item_count": 0,
+    "d6_item_count": 1,
     "governance_item_count": 3,
     "timeline_item_count": 3
   },

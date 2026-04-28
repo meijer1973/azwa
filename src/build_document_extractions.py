@@ -1739,6 +1739,38 @@ def truncate_text(text: str, max_chars: int = 520) -> str:
     return f"{trimmed} ..."
 
 
+TOC_LINE_PATTERN = re.compile(r"^\d+(?:\.\d+)+\s+[A-ZÀ-Ö][^.]{4,}\s+\d{1,3}$")
+VOTING_RESULT_PATTERN = re.compile(
+    r"\b(?:motie|amendement)\b.{0,160}\b(?:is\s+)?met\s+\d+\s+stemmen",
+    re.IGNORECASE,
+)
+MOJIBAKE_MARKERS = ("â€", "Ã¢", "Ãƒ", "\x07")
+
+
+def clean_candidate_statement(text: str) -> str:
+    cleaned = collapse_whitespace(text)
+    cleaned = re.sub(r"^(?:[-*•]\s+)+", "", cleaned)
+    return cleaned.strip()
+
+
+def is_hard_noise_candidate(text: str) -> bool:
+    compact = collapse_whitespace(text)
+    normalized = normalize_ascii(text)
+    if TOC_LINE_PATTERN.fullmatch(compact):
+        return True
+    if any(marker in text for marker in MOJIBAKE_MARKERS):
+        return True
+    if VOTING_RESULT_PATTERN.search(compact):
+        return True
+    if normalized.startswith(("aan de voorzitter", "geachte voorzitter", "correspondentie uitsluitend")):
+        return True
+    if "correspondentie uitsluitend richten" in normalized:
+        return True
+    if "](/article/" in text or text.lstrip().startswith("[######"):
+        return True
+    return False
+
+
 def sentence_candidates(text: str) -> list[str]:
     text = text.replace("â€¢", ". ").replace("•", ". ").replace(" - ", ". ")
     raw_parts = re.split(r"(?<=[.!?])\s+|\n+", text)
@@ -1756,8 +1788,11 @@ def sentence_candidates(text: str) -> list[str]:
 
 
 def is_noise_candidate(text: str) -> bool:
+    compact = collapse_whitespace(text)
     normalized = normalize_ascii(text)
     if len(normalized) < 45:
+        return True
+    if is_hard_noise_candidate(text):
         return True
     if re.fullmatch(r"pagina \d+ van \d+", normalized):
         return True
@@ -1779,7 +1814,9 @@ def is_noise_candidate(text: str) -> bool:
         return True
     if "/page/" in text or "#subonderwerpen" in text or "searchbytag?search=" in text:
         return True
-    if text.lstrip().startswith(("**[", "[beleid ", "[ga direct", "[informatiepagina ")):
+    if "](/article/" in text:
+        return True
+    if text.lstrip().startswith(("**[", "[######", "[beleid ", "[ga direct", "[informatiepagina ")):
         return True
     if "www.rijksoverheid.nl" in normalized:
         return True
@@ -1814,10 +1851,14 @@ def build_candidate_pool(document_id: str) -> list[dict]:
         for sentence in sentence_candidates(chunk["text"]):
             if is_noise_candidate(sentence):
                 continue
+            statement = clean_candidate_statement(sentence)
+            if is_noise_candidate(statement):
+                continue
             candidates.append(
                 {
-                    "text": truncate_text(sentence),
-                    "normalized": normalize_ascii(sentence),
+                    "text": truncate_text(statement),
+                    "evidence_quote": truncate_text(sentence),
+                    "normalized": normalize_ascii(statement),
                     "page": chunk.get("page_start"),
                     "section": section,
                     "table_id": None,
@@ -1837,12 +1878,20 @@ def build_candidate_pool(document_id: str) -> list[dict]:
         for row in row_candidates:
             normalized_row = normalize_ascii(row)
             has_timeline_signal = bool(re.search(r"\b(?:19|20)\d{2}\b", normalized_row)) or "|" in row
+            if is_hard_noise_candidate(row):
+                continue
             if is_noise_candidate(row) and not has_timeline_signal:
+                continue
+            statement = clean_candidate_statement(row)
+            if is_hard_noise_candidate(statement):
+                continue
+            if is_noise_candidate(statement) and not has_timeline_signal:
                 continue
             candidates.append(
                 {
-                    "text": truncate_text(row, max_chars=260),
-                    "normalized": normalized_row,
+                    "text": truncate_text(statement, max_chars=260),
+                    "evidence_quote": truncate_text(row, max_chars=260),
+                    "normalized": normalize_ascii(statement),
                     "page": table.get("page"),
                     "section": section,
                     "table_id": table["table_id"],
@@ -1920,7 +1969,7 @@ def build_auto_section(document_id: str, inventory: dict, section_name: str, can
                 "statement": candidate["text"],
                 "evidence": [
                     {
-                        "evidence_quote": candidate["text"],
+                        "evidence_quote": candidate.get("evidence_quote", candidate["text"]),
                         "page": candidate["page"],
                         "section": candidate["section"],
                         "table_id": candidate["table_id"],

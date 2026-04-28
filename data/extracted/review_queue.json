@@ -4,11 +4,11 @@
   "summary": {
     "blocking": 0,
     "warning": 6,
-    "review": 75,
-    "item_count": 81,
+    "review": 73,
+    "item_count": 79,
     "issue_counts_by_reason": {
       "authority_unclear": 30,
-      "extraction_noise_detected": 5,
+      "extraction_noise_detected": 3,
       "missing_d5_content": 4,
       "missing_d6_content": 2,
       "municipality_relevance_inferred": 29,
@@ -436,13 +436,13 @@
         "data/extracted/claims/mun_almere_2026_stevige_lokale_teams_raad.json"
       ],
       "related_ids": {
-        "review_claim_count": 8,
+        "review_claim_count": 7,
         "sample_claim_ids": [
           "clm__mun_almere_2026_stevige_lokale_teams_raad_d6_001",
           "clm__mun_almere_2026_stevige_lokale_teams_raad_d6_002",
           "clm__mun_almere_2026_stevige_lokale_teams_raad_d6_003",
           "clm__mun_almere_2026_stevige_lokale_teams_raad_timeline_and_status_001",
-          "clm__mun_almere_2026_stevige_lokale_teams_raad_monitoring_and_evaluation_001"
+          "clm__mun_almere_2026_stevige_lokale_teams_raad_municipal_translation_001"
         ]
       },
       "evidence": {},
@@ -1207,7 +1207,7 @@
         "data/extracted/claims/nat_vng_ledenbrief_azwa_financiering_2026.json"
       ],
       "related_ids": {
-        "review_claim_count": 15,
+        "review_claim_count": 14,
         "sample_claim_ids": [
           "clm__nat_vng_ledenbrief_azwa_financiering_2026_d5_001",
           "clm__nat_vng_ledenbrief_azwa_financiering_2026_d5_002",
@@ -1390,32 +1390,6 @@
       "status": "open",
       "severity": "review",
       "check_id": "claim_payload_integrity",
-      "reason_code": "extraction_noise_detected",
-      "summary": "reg_ggd_flevoland_2024_ouderen_gemeenten contains 2 suspicious claim statement(s) with navigation text, encoding noise, or over-concatenated list content.",
-      "recommended_action": "Manually review these claims and tighten the extraction filters before promoting them to briefings or dashboards.",
-      "document_id": "reg_ggd_flevoland_2024_ouderen_gemeenten",
-      "topic": null,
-      "source_paths": [
-        "data/extracted/claims/reg_ggd_flevoland_2024_ouderen_gemeenten.json"
-      ],
-      "related_ids": {
-        "sample_claim_ids": [
-          "clm__reg_ggd_flevoland_2024_ouderen_gemeenten_municipal_translation_001",
-          "clm__reg_ggd_flevoland_2024_ouderen_gemeenten_municipal_translation_003"
-        ]
-      },
-      "evidence": {
-        "sample_statements": [
-          "In dat geval zijn de verschillen tussen Nederland en de gemeenten ook niet getoetst (zie â€œAnalyseâ€).",
-          "onderwerp alleen uitgevraagd in Flevoland. In dat geval zijn de verschillen tussen Nederland en de gemeenten ook niet getoetst (zie â€œAnalyseâ€)."
-        ]
-      },
-      "review_item_id": "rvw_060"
-    },
-    {
-      "status": "open",
-      "severity": "review",
-      "check_id": "claim_payload_integrity",
       "reason_code": "authority_unclear",
       "summary": "reg_ggd_flevoland_2024_volwassenen_gemeenten contributes lower-authority claims that still require human review.",
       "recommended_action": "Keep these claims as contextual support only until a stronger primary source confirms or replaces them.",
@@ -1435,33 +1409,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_061"
-    },
-    {
-      "status": "open",
-      "severity": "review",
-      "check_id": "claim_payload_integrity",
-      "reason_code": "extraction_noise_detected",
-      "summary": "reg_ggd_flevoland_2024_volwassenen_gemeenten contains 2 suspicious claim statement(s) with navigation text, encoding noise, or over-concatenated list content.",
-      "recommended_action": "Manually review these claims and tighten the extraction filters before promoting them to briefings or dashboards.",
-      "document_id": "reg_ggd_flevoland_2024_volwassenen_gemeenten",
-      "topic": null,
-      "source_paths": [
-        "data/extracted/claims/reg_ggd_flevoland_2024_volwassenen_gemeenten.json"
-      ],
-      "related_ids": {
-        "sample_claim_ids": [
-          "clm__reg_ggd_flevoland_2024_volwassenen_gemeenten_municipal_translation_001",
-          "clm__reg_ggd_flevoland_2024_volwassenen_gemeenten_municipal_translation_003"
-        ]
-      },
-      "evidence": {
-        "sample_statements": [
-          "In dat geval zijn de verschillen tussen Nederland en de gemeenten ook niet getoetst (zie â€œAnalyseâ€).",
-          "onderwerp alleen uitgevraagd in Flevoland. In dat geval zijn de verschillen tussen Nederland en de gemeenten ook niet getoetst (zie â€œAnalyseâ€)."
-        ]
-      },
-      "review_item_id": "rvw_062"
+      "review_item_id": "rvw_060"
     },
     {
       "status": "open",
@@ -1485,7 +1433,7 @@
         "topic_count": 3
       },
       "evidence": {},
-      "review_item_id": "rvw_063"
+      "review_item_id": "rvw_061"
     },
     {
       "status": "open",
@@ -1510,7 +1458,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_064"
+      "review_item_id": "rvw_062"
     },
     {
       "status": "open",
@@ -1533,7 +1481,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_065"
+      "review_item_id": "rvw_063"
     },
     {
       "status": "open",
@@ -1558,7 +1506,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_066"
+      "review_item_id": "rvw_064"
     },
     {
       "status": "open",
@@ -1579,7 +1527,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_067"
+      "review_item_id": "rvw_065"
     },
     {
       "status": "open",
@@ -1602,7 +1550,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_068"
+      "review_item_id": "rvw_066"
     },
     {
       "status": "open",
@@ -1625,7 +1573,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_069"
+      "review_item_id": "rvw_067"
     },
     {
       "status": "open",
@@ -1650,7 +1598,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_070"
+      "review_item_id": "rvw_068"
     },
     {
       "status": "open",
@@ -1669,7 +1617,7 @@
       "evidence": {
         "table_count": 4
       },
-      "review_item_id": "rvw_071"
+      "review_item_id": "rvw_069"
     },
     {
       "status": "open",
@@ -1700,7 +1648,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_072"
+      "review_item_id": "rvw_070"
     },
     {
       "status": "open",
@@ -1726,7 +1674,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_073"
+      "review_item_id": "rvw_071"
     },
     {
       "status": "open",
@@ -1754,7 +1702,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_074"
+      "review_item_id": "rvw_072"
     },
     {
       "status": "open",
@@ -1774,18 +1722,18 @@
         "claim_ids": [
           "clm__nat_azwa_2026_voortgang_kamerbrief_d5_003",
           "clm__nat_azwa_2026_voortgang_kamerbrief_d5_001",
-          "clm__nat_azwa_2026_cw31_kamerbrief_d5_002",
           "clm__nat_azwa_2026_cw31_kamerbrief_d5_001",
           "clm__nat_azwa_2025_aanbiedingsbrief_d5_001",
           "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d5_001",
-          "clm__nat_vng_ledenbrief_azwa_financiering_2026_d5_002",
           "clm__nat_vng_ledenbrief_azwa_financiering_2026_d5_001",
           "clm__nat_vng_brief_azwa_financiering_webpagina_2026_d5_001",
-          "clm__nat_azwa_toelichting_producten_proces_2026_d5_003"
+          "clm__nat_azwa_toelichting_producten_proces_2026_d5_003",
+          "clm__nat_azwa_toelichting_producten_proces_2026_d5_002",
+          "clm__nat_azwa_toelichting_producten_proces_2026_d5_001"
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_075"
+      "review_item_id": "rvw_073"
     },
     {
       "status": "open",
@@ -1812,7 +1760,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_076"
+      "review_item_id": "rvw_074"
     },
     {
       "status": "open",
@@ -1831,7 +1779,6 @@
         "conflict_id": "conflict__d6__other",
         "claim_ids": [
           "clm__nat_azwa_2026_voortgang_kamerbrief_d6_001",
-          "clm__nat_azwa_2026_cw31_kamerbrief_d6_002",
           "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_d6_003",
           "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_d6_002",
           "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_d6_001",
@@ -1839,11 +1786,12 @@
           "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d6_002",
           "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d6_001",
           "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d6_002",
-          "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d6_001"
+          "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d6_001",
+          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_d6_001"
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_077"
+      "review_item_id": "rvw_075"
     },
     {
       "status": "open",
@@ -1867,7 +1815,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_078"
+      "review_item_id": "rvw_076"
     },
     {
       "status": "open",
@@ -1891,7 +1839,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_079"
+      "review_item_id": "rvw_077"
     },
     {
       "status": "open",
@@ -1914,7 +1862,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_080"
+      "review_item_id": "rvw_078"
     },
     {
       "status": "open",
@@ -1945,7 +1893,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_081"
+      "review_item_id": "rvw_079"
     }
   ]
 }

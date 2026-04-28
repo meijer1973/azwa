@@ -4,6 +4,7 @@ import json
 import re
 from html import unescape
 from html.parser import HTMLParser
+from datetime import date
 from pathlib import Path
 
 
@@ -12,12 +13,42 @@ MANIFEST_PATH = REPO_ROOT / "data" / "raw" / "manifest.json"
 TEXT_DIR = REPO_ROOT / "data" / "intermediate" / "text"
 CHUNKS_DIR = REPO_ROOT / "data" / "intermediate" / "chunks"
 TABLES_DIR = REPO_ROOT / "data" / "intermediate" / "tables"
+EXTRACTED_DIR = REPO_ROOT / "data" / "extracted"
+LOG_DIR = REPO_ROOT / "data" / "logs"
+VOTING_RECORDS_PATH = EXTRACTED_DIR / "voting_records.json"
+TEXT_CLEANUP_LOG_PATH = LOG_DIR / "phase26_text_cleanup.json"
 MARKDOWN_DIRECTORIES = [
     REPO_ROOT / "data" / "intermediate" / "source_markdown",
     REPO_ROOT / "sources markdown canonical",
     REPO_ROOT / "sources markdown",
     REPO_ROOT / "sources markdown context",
 ]
+
+MOJIBAKE_REPLACEMENTS = {
+    "\x07": "",
+    "â€œ": "“",
+    "â€": "”",
+    "â€˜": "‘",
+    "â€™": "’",
+    "â€“": "–",
+    "â€”": "—",
+    "â€¦": "…",
+    "â€¢": "•",
+    "Ã©": "é",
+    "Ã«": "ë",
+    "Ã¨": "è",
+    "Ã¡": "á",
+    "Ã ": "à",
+    "Ã¶": "ö",
+    "Ã¼": "ü",
+}
+
+TOC_LINE_PATTERN = re.compile(r"^\d+(?:\.\d+)+\s+[A-ZÀ-Ö][^.]{4,}\s+\d{1,3}$")
+DRUPAL_ARTICLE_LINK_PATTERN = re.compile(r"^\[######|\]\(/article/")
+VOTING_RESULT_PATTERN = re.compile(
+    r"\b(?:motie|amendement)\b.{0,160}\b(?:is\s+)?met\s+\d+\s+stemmen",
+    re.IGNORECASE,
+)
 
 
 def load_manifest() -> list[dict]:
@@ -74,6 +105,55 @@ def clean_lines(lines: list[str]) -> list[str]:
     return cleaned
 
 
+def repair_mojibake(text: str) -> tuple[str, dict[str, int]]:
+    counts: dict[str, int] = {}
+    repaired = text
+    for bad, good in MOJIBAKE_REPLACEMENTS.items():
+        count = repaired.count(bad)
+        if count:
+            counts[repr(bad)] = count
+            repaired = repaired.replace(bad, good)
+    return repaired, counts
+
+
+def is_toc_line(line: str) -> bool:
+    return bool(TOC_LINE_PATTERN.fullmatch(normalize_inline_text(line)))
+
+
+def is_drupal_article_link(line: str) -> bool:
+    return bool(DRUPAL_ARTICLE_LINK_PATTERN.search(line.strip()))
+
+
+def is_voting_result_text(text: str) -> bool:
+    return bool(VOTING_RESULT_PATTERN.search(normalize_inline_text(text)))
+
+
+def is_structural_noise_line(line: str) -> bool:
+    return is_toc_line(line) or is_drupal_article_link(line) or is_voting_result_text(line)
+
+
+def voting_records_from_text(entry: dict, text: str) -> list[dict]:
+    records = []
+    seen: set[str] = set()
+    for line in text.splitlines():
+        cleaned = normalize_inline_text(line)
+        if not cleaned or cleaned in seen:
+            continue
+        if not is_voting_result_text(cleaned):
+            continue
+        seen.add(cleaned)
+        records.append(
+            {
+                "document_id": entry["document_id"],
+                "source_file_path": entry["file_path"],
+                "source_url": entry.get("source_url"),
+                "record_text": cleaned,
+                "record_type": "voting_result",
+            }
+        )
+    return records
+
+
 def normalize_text(text: str) -> str:
     lines = clean_lines(text.splitlines())
     return "\n".join(lines).strip()
@@ -127,7 +207,7 @@ def parse_pdf_markdown(markdown_text: str) -> list[dict]:
             current_page_number = int(match.group(1))
             current_lines = []
             continue
-        if current_page_number is not None:
+        if current_page_number is not None and not is_structural_noise_line(line):
             current_lines.append(line)
 
     if current_page_number is not None:
@@ -165,6 +245,8 @@ def parse_html_markdown(markdown_text: str) -> list[dict]:
         if not stripped:
             return False
         if line.startswith("- Original file:") or line.startswith("- Source URL:") or line.startswith("- Converted from:"):
+            return True
+        if is_structural_noise_line(line):
             return True
         if stripped.startswith(("Laatst bewerkt op:", "###### Pagina delen:", "###### Tags:")):
             return True
@@ -214,6 +296,8 @@ def should_skip_html_block(text: str) -> bool:
     if not stripped:
         return True
     if stripped.startswith("- ") and stripped.count("- ") >= 3 and not any(token in stripped for token in (".", ":", ";")):
+        return True
+    if is_structural_noise_line(stripped):
         return True
     if stripped.startswith(("Laatst bewerkt op:", "Pagina delen", "Tags:")):
         return True
@@ -649,10 +733,19 @@ def write_json(path: Path, payload: dict | list) -> None:
 
 def main() -> None:
     manifest = load_manifest()
+    cleanup_log = {
+        "run_id": "phase26_text_cleanup_v1",
+        "generated_on": date.today().isoformat(),
+        "documents": [],
+    }
+    voting_records: list[dict] = []
 
     for entry in manifest:
         source_kind, source_path = locate_structural_source(entry)
         source_text = source_path.read_text(encoding="utf-8", errors="ignore")
+        source_text, mojibake_counts = repair_mojibake(source_text)
+        records = voting_records_from_text(entry, source_text)
+        voting_records.extend(records)
         source_format = source_file_path(entry).suffix.lower()
 
         if source_format == ".pdf":
@@ -663,8 +756,27 @@ def main() -> None:
         write_json(TEXT_DIR / f"{entry['document_id']}.json", text_payload)
         write_json(CHUNKS_DIR / f"{entry['document_id']}.json", chunks)
         write_json(TABLES_DIR / f"{entry['document_id']}.json", tables)
+        if mojibake_counts or records:
+            cleanup_log["documents"].append(
+                {
+                    "document_id": entry["document_id"],
+                    "mojibake_replacements": mojibake_counts,
+                    "voting_record_count": len(records),
+                }
+            )
 
+    write_json(
+        VOTING_RECORDS_PATH,
+        {
+            "run_id": "phase26_voting_records_v1",
+            "generated_on": date.today().isoformat(),
+            "record_count": len(voting_records),
+            "records": voting_records,
+        },
+    )
+    write_json(TEXT_CLEANUP_LOG_PATH, cleanup_log)
     print(f"Wrote structural extraction files for {len(manifest)} documents")
+    print(f"Wrote {len(voting_records)} voting record(s)")
 
 
 if __name__ == "__main__":

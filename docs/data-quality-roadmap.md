@@ -24,7 +24,7 @@ Gebruik deze roadmap als levend werkdocument. Werk na elke sprint de statusregel
 | 25.5 D6 stakeholder validation handoff | completed | Repository-side handoff compleet; wacht op policy-maker stakeholdervalidatie. Artifacts in `docs/review/almere_d6_public_source_boundary.md`, `docs/review/almere_d6_validation_handoff_summary.md`, `docs/review/almere_d6_validation_pack.md`, `docs/review/almere_d6_stakeholder_validation_log.md`, `docs/review/almere_d6_stakeholder_information_request.md`, `docs/review/almere_d6_decision_needed.md`, `docs/review/almere_d6_funding_gap_table.md` en `docs/review/almere_d6_safe_wording.md` |
 | 25.6 Post-validation register hardening | parked | Geparkeerd tot stakeholder-validatierecords, lokale/interne documenten, finance/controller bevestiging of expliciet beleidsbesluit beschikbaar zijn; blokkeert Fase 26 niet |
 | 26.1 Rough-claim audit hercalibratie | completed | `src/build_data_quality_audit.py`, `tests/test_data_quality_audit.py`, `data/extracted/data_quality_audit.json`, `docs/completed-plans/phase26-sprint26.1-rough-claim-audit-recalibration.md` |
-| 26.2 Deterministische tekstfixes | open | Vervolg op 26.1: mojibake, letterhead, inhoudsopgave-, navigatie- en stemmingsfilters in extractie/claimvorming |
+| 26.2 Deterministische tekstfixes | completed | `src/build_structural_extractions.py`, `src/build_document_extractions.py`, `data/extracted/voting_records.json`, `data/logs/phase26_text_cleanup.json`, `docs/completed-plans/phase26-sprint26.2-deterministic-text-fixes.md` |
 | 26.3 Sentence-boundary en dedup | open | Vervolg op 26.2: zinsegmentatie, overlap/dedup en regressietests voor rough-claim cleanup |
 | 27.1 Norm | open |  |
 | 27.2 Tijd | open |  |
@@ -58,7 +58,7 @@ Status op 27 april 2026: eerste 25.4b-bronintake uitgevoerd. Zeven publieke bron
 
 Status op 27 april 2026: gate-remediation gestart. De sprint gaat niet door naar rapportproductie of bestuurlijke werkagenda-drafting; de toegestane vervolgstap is alleen D6 responsibility implementation/remediation. Zes extra bronnen zijn toegevoegd: vier Documentwijzer/Notubiz-stukken bij Stevige Lokale Teams, de Almere Samenwerkingsprojecten/Samen Sterker-bron en een actuele PGA-homepage. De lokale decision layer bevat nu een source-backed publieke raadbeslissing voor Stevige Lokale Teams, met D6-classificatie nog expliciet op `review_needed`.
 
-Status op 28 april 2026: Sprint 25.6 is geparkeerd als policy-maker/stakeholder-afhankelijkheid en blokkeert repository-side datakwaliteitswerk niet. Fase 26 is gestart met rough-claim cleanup. Sprint 26.1 is afgerond als audit-hercalibratie: de lengte-only rough-code is vervangen door `unverified_extraction_length`, langere excerpts geven reviewers meer context, en regressietests bewaken dat lange maar goed gevormde claims niet alleen door lengte rough worden.
+Status op 28 april 2026: Sprint 25.6 is geparkeerd als policy-maker/stakeholder-afhankelijkheid en blokkeert repository-side datakwaliteitswerk niet. Fase 26 is gestart met rough-claim cleanup. Sprint 26.1 is afgerond als audit-hercalibratie: de lengte-only rough-code is vervangen door `unverified_extraction_length`, langere excerpts geven reviewers meer context, en regressietests bewaken dat lange maar goed gevormde claims niet alleen door lengte rough worden. Sprint 26.2 is afgerond als deterministische tekstfix: mojibake, letterhead, TOC-/Drupal-ruis en stemuitslagen worden uit claim-input gehouden; stemuitslagen blijven apart bewaard in `data/extracted/voting_records.json`.
 
 Afgeronde aanpak voor Sprint 25.4a:
 
@@ -243,11 +243,13 @@ Status: completed.
 - Laat claimcontent zelf ongemoeid; deze sprint verbetert alleen detectie, auditoutput en dashboard/QC-compatibiliteit.
 
 Sprint 26.2: Deterministische tekstfixes
-Status: open.
+Status: completed.
 
 - Pak na de audit-hercalibratie de echte bron van ruwe claims aan: mojibake, letterhead, inhoudsopgavefragmenten, navigatietekst, stemmings-/raadsmetadata en andere deterministische extractieruis.
 - Pas filters toe in de vroegste veilige pipelinefase, bij voorkeur structural extraction of claimvorming, zodat downstream lagen minder ruis ontvangen.
 - Voeg regressietests toe voor bekende probleemvormen en controleer dat inhoudelijke bronzinnen niet worden weggefilterd.
+- Eerste uitvoer: `encoding_noise` en `raw_letterhead` zijn naar 0 gebracht; Drupal-linkruis en stemuitslagclaims zijn niet meer aanwezig in `claims_master.jsonl`.
+- Stemuitslagen zijn niet weggegooid, maar apart vastgelegd in `data/extracted/voting_records.json`.
 
 Sprint 26.3: Sentence-boundary en dedup
 Status: open.
@@ -410,7 +412,7 @@ Een verbetering is pas klaar als:
 - de update een menselijke changelog heeft.
 
 ## Huidige volgende sprint
-De beste eerstvolgende sprint is Sprint 26.2: Deterministische tekstfixes.
+De beste eerstvolgende sprint is Sprint 26.3: Sentence-boundary en dedup.
 
 Waarom:
 
@@ -422,11 +424,12 @@ Waarom:
 - Sprint 25.3 heeft de publieke nulmeting en capaciteitsvelden per werkagenda-target gevuld;
 - Sprint 25.4 en 25.5 hebben D6-verantwoordelijkheden en validatiehandoff voorbereid;
 - Sprint 25.6 is terecht geparkeerd tot beleidsvalidatie beschikbaar is;
-- Sprint 26.1 heeft de rough-claim audit herijkt, waardoor de resterende ruwe claims beter als echte extractie-/tekstproblemen kunnen worden aangepakt.
+- Sprint 26.1 heeft de rough-claim audit herijkt, waardoor de resterende ruwe claims beter als echte extractie-/tekstproblemen kunnen worden aangepakt;
+- Sprint 26.2 heeft deterministische tekstfilters toegevoegd en de eerste ruwe categorieen weggewerkt zonder D6-inhoud te overclaimen.
 
 De concrete deliverables zijn:
 
-- deterministische filters voor mojibake, letterhead, inhoudsopgave-, navigatie- en stemmingsruis;
-- regressietests voor bekende ruisvormen;
-- een nieuwe auditrun die laat zien welke rough-claim categorieen overblijven;
-- een korte datakwaliteitsnotitie met de resterende cleanup-doelen voor Sprint 26.3.
+- een sentence-boundary validator of gelijkwaardige claimpoort voor mid-zin-fragmenten;
+- dedup-logica voor letterlijke of bijna-letterlijke duplicaten binnen dezelfde document/topic/subtopic-combinatie;
+- een verifier op claim-id referenties;
+- een nieuwe auditrun met lagere `fragment_too_short`, `bullet_or_heading_fragment` en `unverified_extraction_length` restcategorieen.

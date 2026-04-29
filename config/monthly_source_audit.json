@@ -1,0 +1,78 @@
+{
+  "audit_id": "monthly_source_audit_2026_04",
+  "as_of_date": "2026-04-30",
+  "purpose": "Monthly watchlist for expected AZWA/IZA/GALA sources, pending source-intake candidates, and link checks.",
+  "watchlist": [
+    {
+      "watch_id": "watch_meicirculaire_gemeentefonds_2026",
+      "title": "Meicirculaire gemeentefonds 2026",
+      "expected_source_type": "circulaire",
+      "expected_from": "2026-05-01",
+      "expected_by": "2026-06-15",
+      "topic": "Gemeentefonds / gemeentelijke financiele cyclus",
+      "official_watch_url": "https://www.rijksoverheid.nl/onderwerpen/financien-gemeenten-en-provincies/gemeentefonds/circulaires-gemeentefonds",
+      "candidate_document_id": "nat_bzk_meicirculaire_gemeentefonds_2026",
+      "intake_rule": "Pas toevoegen als eigen bron nadat de 2026-circulairepagina of PDF publiek beschikbaar is."
+    },
+    {
+      "watch_id": "watch_septembercirculaire_gemeentefonds_2026",
+      "title": "Septembercirculaire gemeentefonds 2026",
+      "expected_source_type": "circulaire",
+      "expected_from": "2026-09-01",
+      "expected_by": "2026-10-15",
+      "topic": "Gemeentefonds / gemeentelijke financiele cyclus",
+      "official_watch_url": "https://www.rijksoverheid.nl/onderwerpen/financien-gemeenten-en-provincies/gemeentefonds/circulaires-gemeentefonds",
+      "candidate_document_id": "nat_bzk_septembercirculaire_gemeentefonds_2026",
+      "intake_rule": "Pas toevoegen als eigen bron nadat de 2026-circulairepagina of PDF publiek beschikbaar is."
+    },
+    {
+      "watch_id": "watch_decembercirculaire_gemeentefonds_2026",
+      "title": "Decembercirculaire gemeentefonds 2026",
+      "expected_source_type": "circulaire",
+      "expected_from": "2026-12-01",
+      "expected_by": "2027-01-15",
+      "topic": "Gemeentefonds / gemeentelijke financiele cyclus",
+      "official_watch_url": "https://www.rijksoverheid.nl/onderwerpen/financien-gemeenten-en-provincies/gemeentefonds/circulaires-gemeentefonds",
+      "candidate_document_id": "nat_bzk_decembercirculaire_gemeentefonds_2026",
+      "intake_rule": "Pas toevoegen als eigen bron nadat de 2026-circulairepagina of PDF publiek beschikbaar is."
+    },
+    {
+      "watch_id": "watch_azwa_handreikingen_basisfunctionaliteiten",
+      "title": "Handreikingen basisfunctionaliteiten AZWA",
+      "expected_source_type": "handreiking",
+      "expected_from": "2026-05-26",
+      "expected_by": "2026-06-30",
+      "topic": "D5/D6 uitvoeringshandreikingen",
+      "official_watch_url": "https://www.zorgakkoorden.nl/programmas/aanvullend-zorg-en-welzijnsakkoord/handvatten-voor-het-opstellen-van-de-regionale-werkagenda/",
+      "candidate_document_id": "nat_azwa_2026_handreikingen_basisfunctionaliteiten",
+      "intake_rule": "Handreikingen pas als bron gebruiken nadat de publicatie of download beschikbaar is; tot die tijd blijft het tijdlijnitem een verwacht vrijgavemoment."
+    },
+    {
+      "watch_id": "watch_nieuwe_azwa_spuk_gemeenten",
+      "title": "Nieuwe AZWA-SPUK voor gemeenten 2027-2029",
+      "expected_source_type": "regeling",
+      "expected_from": "2026-06-01",
+      "expected_by": "2026-12-31",
+      "topic": "D5/D6 financieringsinstrument gemeenten",
+      "official_watch_url": "https://www.zorgakkoorden.nl/programmas/aanvullend-zorg-en-welzijnsakkoord/handvatten-voor-het-opstellen-van-de-regionale-werkagenda/",
+      "candidate_document_id": "nat_azwa_spuk_gemeenten_2027_2029",
+      "intake_rule": "Pas opnemen als regeling of uitvoeringspagina wanneer een formele publicatie of aanvraagpagina beschikbaar is."
+    },
+    {
+      "watch_id": "watch_iza_azwa_monitor_2026",
+      "title": "Geintegreerde IZA/AZWA-monitor 2026",
+      "expected_source_type": "monitorrapportage",
+      "expected_from": "2026-07-01",
+      "expected_by": "2026-12-31",
+      "topic": "Monitoring en landelijke voortgang",
+      "official_watch_url": "https://www.rijksoverheid.nl/onderwerpen/kwaliteit-van-de-zorg/integraal-zorgakkoord",
+      "candidate_document_id": "nat_iza_azwa_monitor_2026",
+      "intake_rule": "Pas opnemen wanneer een concrete monitorrapportage of Kamerbrief met monitorbijlage beschikbaar is."
+    }
+  ],
+  "link_check_scope": {
+    "candidate_sources": true,
+    "manifest_current_sources": false,
+    "watchlist_urls": true
+  }
+}

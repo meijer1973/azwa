@@ -24,6 +24,8 @@ For report use, check `docs/rapporten/report-status.json` before treating a mark
 
 For source-intake and public update history, follow `docs/updateprotocol.md`. A source intake or source correction that changes public interpretation, claims, timeline moments, review status, report-readiness or public pages must be recorded in `config/site_updates.json` and regenerated into `data/site/site_updates_view.json`, the public `/updates/` page and the internal dashboard mirror.
 
+For monthly source monitoring, use `config/monthly_source_audit.json`, `data/extracted/monthly_source_audit.json`, and `docs/internal/monthly-source-audit-2026-04-30.md`. Watchlist rows, expected publications and pending intake candidates are not public evidence until source intake, manifest registration and pipeline processing have happened.
+
 ## Access Layer
 
 Base URL:
@@ -138,6 +140,7 @@ Machine-readable:
       "data/extracted/qc_report.json",
       "data/extracted/review_queue.json",
       "data/extracted/data_quality_audit.json",
+      "data/extracted/monthly_source_audit.json",
       "data/extracted/claims/claims_master.jsonl",
       "data/extracted/claims/sentence_validator_rejects.json",
       "data/extracted/claims/dedup_log.json",
@@ -193,6 +196,7 @@ Machine-readable:
     "config/authority_rules.json",
     "config/claim_resolution_rules.json",
     "config/timeline_curation.json",
+    "config/monthly_source_audit.json",
     "config/pipeline_graph.json"
   ],
   "curated_aids": [
@@ -209,6 +213,7 @@ Machine-readable:
     "docs/review/almere_d6_funding_gap_table.md",
     "docs/review/almere_d6_safe_wording.md",
     "docs/human-review-guidance.md",
+    "docs/internal/monthly-source-audit-2026-04-30.md",
     "docs/internal/review-dashboard.html"
   ],
   "report_paths": [

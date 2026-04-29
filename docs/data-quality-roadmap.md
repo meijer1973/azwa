@@ -17,7 +17,7 @@ Gebruik deze roadmap als levend werkdocument. Werk na elke sprint de statusregel
 | 24.2 Audit van bestaande site-data | completed | `docs/completed-plans/phase24-sprint24.2-audit.md`, `data/extracted/data_quality_audit.json` |
 | 24.3 Review-dashboard intern | completed | `docs/internal/review-dashboard.html`, `src/build_internal_review_dashboard.py`, `docs/completed-plans/phase24-sprint24.3-review-dashboard.md` |
 | 25.3 Nulmeting en capaciteit werkagenda | completed | `data/extracted/workagenda_nulmeting_capacity.json`, `src/build_workagenda_nulmeting_capacity.py`, `docs/completed-plans/phase25-sprint25.3-nulmeting-capaciteit.md` |
-| 25.4 D6 governance en samenwerking | open | Heropend voor D6 Almere responsibility pack: `docs/phase25-sprint25.4-d6-almere-responsibility-pack-plan.md`; registerlaag staat in `data/extracted/municipal/almere_d6_responsibility_register.json` en schema in `data/schemas/almere_d6_responsibility_register.schema.json` |
+| 25.4 D6 governance en samenwerking | completed | Heropend en afgerond als D6 Almere responsibility pack: `docs/phase25-sprint25.4-d6-almere-responsibility-pack-plan.md`; registerlaag staat in `data/extracted/municipal/almere_d6_responsibility_register.json` en schema in `data/schemas/almere_d6_responsibility_register.schema.json` |
 | 24.6 D6 commit, verify and stabilize | completed | Remediation is gecommit/gepusht; verificatie via `python src/run_pipeline.py --all`, gerichte tests en schema-validatie |
 | 24.7 D6 register evidence audit | completed | Registerrijen gecontroleerd op status, eigenaar, uitvoerder, schaal, financiering, bewijs en open reviewvraag |
 | 24.8 D6 local validation preparation | completed | Interne validatiepack: `docs/review/almere_d6_validation_pack.md` |
@@ -45,11 +45,11 @@ Gebruik deze roadmap als levend werkdocument. Werk na elke sprint de statusregel
 | 30.2 Besluitvragen en mogelijke opvolgacties | completed | `src/build_site_view_models.py`, `src/render_site.py`, `data/site/decision_view_models/*.json`, `data/site/action_view_models/*.json`, `docs/completed-plans/phase30-sprint30.2-besluitvragen-opvolgacties.md` |
 | 30.3 Beleidsdocumenten en rapporten | completed | `docs/rapporten/report-status.json`, `src/audit_report_grounding.py`, `docs/internal/report-grounding-audit-2026-04-29.md`, `tests/test_report_grounding.py`, `docs/completed-plans/phase30-sprint30.3-beleidsdocumenten-rapporten.md` |
 | 31.1 Updateprotocol | completed | `docs/updateprotocol.md`, `src/validate_update_protocol.py`, `docs/internal/update-protocol-check-2026-04-29.md`, `tests/test_update_protocol.py`, `docs/completed-plans/phase31-sprint31.1-updateprotocol.md` |
-| 31.2 Maandelijkse bronaudit | open |  |
+| 31.2 Maandelijkse bronaudit | completed | `config/monthly_source_audit.json`, `src/build_monthly_source_audit.py`, `data/extracted/monthly_source_audit.json`, `docs/internal/monthly-source-audit-2026-04-30.md`, `docs/completed-plans/phase31-sprint31.2-maandelijkse-bronaudit.md` |
 | 31.3 Reviewronde met menselijke beoordelaars | open |  |
 
 ## Huidige sprintplan
-Sprint 31.1 is afgerond. Nieuwe broninformatie heeft nu een vast updateprotocol, een validator voor `config/site_updates.json` en een interne controle-uitkomst. De huidige sprint is Sprint 31.2: maandelijkse bronaudit. Sprint 25.6 blijft geparkeerd omdat post-validatie hardening pas verantwoord is na stakeholdervalidatierecords, lokale/interne documenten, finance/controller bevestiging of een expliciet beleidsbesluit. Dat blokkeert Fase 31 niet, zolang lokale lacunes niet als opgeloste D6-validatievragen worden gepresenteerd.
+Sprint 31.2 is afgerond. De maandelijkse bronaudit heeft nu een vaste watchlist, een script, een machineleesbare auditlaag en een interne auditnotitie. De huidige sprint is Sprint 31.3: reviewronde met menselijke beoordelaars. Sprint 25.6 blijft geparkeerd omdat post-validatie hardening pas verantwoord is na stakeholdervalidatierecords, lokale/interne documenten, finance/controller bevestiging of een expliciet beleidsbesluit. Dat blokkeert Fase 31 niet, zolang lokale lacunes niet als opgeloste D6-validatievragen worden gepresenteerd.
 
 Status op 26 april 2026: Sprint 25.2 is afgerond als publieke bronversterkingssprint. `data/extracted/local_source_strengthening_almere.json` maakt zichtbaar welke lokale bronnen in de formele laag zitten, welke publieke bronnen als assessmentmateriaal zijn beoordeeld, en welke vragen naar later in de workflow gaan omdat de publieke bronbasis is uitgeput of omdat een geschoonde validatiestap nodig is. De geselecteerde Documentwijzer-bijlagen voor Visie Gezondheidsbeleid en Maatschappelijke Agenda zijn eerst naar page-markdown omgezet en daarna opgenomen in `data/raw/manifest.json`. Ook de GGD-tabellenboeken voor volwassenen en ouderen, de GGD-valpreventiepagina Almere en de ZonMw-bron zijn opgenomen in `data/raw/manifest.json`, door inventory/extractie/claims/site-viewmodels verwerkt en blijven reviewmateriaal voordat ze bestuurlijk of public-facing worden gebruikt. Niet-publieke informatie, ontbrekende lokale bevestiging en formele besluitvragen blokkeren deze fase niet; ze worden als gaten of carry-over taken zichtbaar gemaakt voor lokale medewerkers en latere besluitvorming.
 
@@ -100,6 +100,8 @@ Status op 29 april 2026: Sprint 30.2 is afgerond. Besluitvraag- en opvolgactiepa
 Status op 29 april 2026: Sprint 30.3 is afgerond. `docs/rapporten/report-status.json` onderscheidt actuele public-review kandidaten van vervallen concepten. `plan-van-aanpak-v2.md` is expliciet gemarkeerd als vervallen concept dat niet public-facing gebruikt moet worden. `src/audit_report_grounding.py` en `tests/test_report_grounding.py` bewaken dat actuele rapportkandidaten geen interne datalaagtaal, exacte fte-claims, niet-bestaande bijlagen of te definitieve interne planning bevatten. De interne controle-uitkomst staat in `docs/internal/report-grounding-audit-2026-04-29.md`.
 
 Status op 29 april 2026: Sprint 31.1 is afgerond. `docs/updateprotocol.md` legt vast wanneer een bron- of datawijziging een publieke update nodig heeft, welke velden `config/site_updates.json` moet bevatten, hoe oude claims behouden blijven en welke verificatie hoort bij bronintake. `src/validate_update_protocol.py` controleert de bestaande updates op verplichte velden, menselijke samenvatting, metrics, betrokken pagina's en bestaande document-id's. De interne controle staat in `docs/internal/update-protocol-check-2026-04-29.md`.
+
+Status op 30 april 2026: Sprint 31.2 is afgerond. `config/monthly_source_audit.json` legt de maandelijkse watchlist vast voor verwachte circulaires, AZWA-handreikingen, nieuwe SPUK-/monitorbronnen en open intakekandidaten. `src/build_monthly_source_audit.py` schrijft `data/extracted/monthly_source_audit.json` en `docs/internal/monthly-source-audit-2026-04-30.md`. De audit houdt zes watchlistitems op `not_due_yet`, signaleert een VNG-vervangingsbron als pending replacement, bewaart drie verwachte tijdlijnmomenten als pending source ingestion en behandelt redirectgedrag als link-review in plaats van direct als bronfeit. Watchlist- en pending-items blijven geen publieke evidence totdat ze formeel zijn opgeslagen, aan de raw manifestlaag zijn toegevoegd en door de pipeline zijn verwerkt.
 
 Afgeronde aanpak voor Sprint 25.4a:
 
@@ -460,11 +462,12 @@ Status: completed.
 - De bestaande drie publieke updates voldoen aan het protocol; de controle-uitkomst staat in `docs/internal/update-protocol-check-2026-04-29.md`.
 
 Sprint 31.2: Maandelijkse bronaudit
-Status: open.
+Status: completed.
 
-- Controleer of verwachte bronnen zijn verschenen, zoals circulaires, SPUK-regelingen, handreikingen en monitorrapportages.
-- Controleer dode links en gewijzigde webpagina's.
-- Houd pending bronnen apart tot ze door de pipeline zijn verwerkt.
+- De watchlist staat in `config/monthly_source_audit.json`.
+- `src/build_monthly_source_audit.py` controleert watchlistitems, pending intakekandidaten en optionele live-linkstatus.
+- De audituitvoer staat in `data/extracted/monthly_source_audit.json` en `docs/internal/monthly-source-audit-2026-04-30.md`.
+- Pending bronnen en verwachte publicaties blijven apart tot ze door formele bronintake en pipelineverwerking zijn gegaan.
 
 Sprint 31.3: Reviewronde met menselijke beoordelaars
 Status: open.
@@ -486,26 +489,18 @@ Een verbetering is pas klaar als:
 - de update een menselijke changelog heeft.
 
 ## Huidige volgende sprint
-De beste eerstvolgende sprint is Sprint 27.2: Tijd.
+De beste eerstvolgende sprint is Sprint 31.3: Reviewronde met menselijke beoordelaars.
 
 Waarom:
 
-- Sprint 24.1 heeft de taxonomie en checklist opgeleverd;
-- Sprint 24.2 heeft een interne auditbasis opgeleverd;
-- Sprint 24.3 heeft een lokaal intern review-dashboard opgeleverd;
-- Sprint 25.1 heeft de werkagenda-operatielaag opgeleverd;
-- Sprint 25.2 heeft de publieke lokale bronbasis versterkt;
-- Sprint 25.3 heeft de publieke nulmeting en capaciteitsvelden per werkagenda-target gevuld;
-- Sprint 25.4 en 25.5 hebben D6-verantwoordelijkheden en validatiehandoff voorbereid;
+- Sprint 31.1 heeft het updateprotocol en de updatevalidator opgeleverd;
+- Sprint 31.2 heeft de maandelijkse bronaudit, watchlist en interne auditnotitie opgeleverd;
 - Sprint 25.6 is terecht geparkeerd tot beleidsvalidatie beschikbaar is;
-- Sprint 26.1 heeft de rough-claim audit herijkt, waardoor de resterende ruwe claims beter als echte extractie-/tekstproblemen kunnen worden aangepakt;
-- Sprint 26.2 heeft deterministische tekstfilters toegevoegd en de eerste ruwe categorieen weggewerkt zonder D6-inhoud te overclaimen;
-- Sprint 26.3 heeft sentence-boundary en dedup-logica toegevoegd en de claim-id verwijzingen downstream verifieerbaar gemaakt;
-- Sprint 27.1 heeft normclaims gesplitst naar bindend, afspraak, verwachting, toelichting, lagere-autoriteitssignaal en context.
+- de volgende repository-side stap is menselijke review organiseren rond perspectieven, open reviewpunten, pending bronnen en safe wording.
 
 De concrete deliverables zijn:
 
-- deadlines, verwachte publicatiemomenten, reviewmomenten en begrotingsmomenten apart modelleren;
-- tijdlijnitems chronologisch en per momenttype controleerbaar maken;
-- verwachte momenten zichtbaar anders labelen dan formele deadlines;
+- een compacte reviewlijst per perspectief;
+- een lijst van open bron-, claim-, timeline- en safe-wording-vragen;
+- een expliciete scheiding tussen menselijke reviewerbesluiten en bronclaims;
 - geen D6-registerrijen inhoudelijk harden zolang stakeholdervalidatie voor Sprint 25.6 ontbreekt.

@@ -616,6 +616,58 @@ def render_home(route: str, home_view: dict) -> str:
     return "".join(sections)
 
 
+def render_local_gap_items(route: str, local_gaps: list[dict]) -> str:
+    if not local_gaps:
+        return '<div class="empty-state">Geen lokale lacunes beschikbaar.</div>'
+    rendered = []
+    for index, item in enumerate(local_gaps, start=1):
+        gap_id = item.get("gap_id") or f"lokale-lacune-{index}"
+        register = item.get("register_summary") or {}
+        register_note = ""
+        if register:
+            register_note = (
+                '<p class="list-meta">'
+                + esc(
+                    "D6-register: "
+                    f"{register.get('component_count', 0)} onderdelen, "
+                    f"{register.get('settled_count', 0)} settled, "
+                    f"{register.get('inferred_count', 0)} inferred, "
+                    f"{register.get('review_needed_count', 0)} review_needed en "
+                    f"{register.get('unknown_count', 0)} unknown."
+                )
+                + "</p>"
+            )
+        topics = item.get("related_topics", [])
+        topic_tags = "".join(f'<span class="tag">{esc(topic["label"])}</span>' for topic in topics)
+        rendered.append(
+            f'<details class="timeline-entry" id="{esc(gap_id)}">'
+            + '<summary class="timeline-entry__summary">'
+            + '<div class="timeline-entry__summary-main">'
+            + f'<h3 class="timeline-entry__title">{esc(item["title"])}</h3>'
+            + f'<span class="list-meta">{esc(item.get("theme_label"))} | {esc(item.get("gap_type"))}</span>'
+            + "</div>"
+            + '<span class="timeline-entry__toggle">Open lacune</span>'
+            + "</summary>"
+            + '<div class="timeline-entry__body">'
+            + f'<p>{esc(item["summary"])}</p>'
+            + register_note
+            + (f'<div class="tag-row">{topic_tags}</div>' if topic_tags else "")
+            + '<section class="section section--nested"><h4>Wat openbare bronnen wel laten zien</h4>'
+            + f'<p>{esc(item.get("what_public_sources_show"))}</p></section>'
+            + '<section class="section section--nested"><h4>Wat openbare bronnen niet bewijzen</h4>'
+            + f'<p>{esc(item.get("what_public_sources_do_not_prove"))}</p></section>'
+            + '<section class="section section--nested"><h4>Mogelijke vervolgvraag</h4>'
+            + f'<p>{esc(item.get("follow_up_question"))}</p></section>'
+            + '<section class="section section--nested"><h4>Veilige formulering nu</h4>'
+            + f'<p>{esc(item.get("safe_wording"))}</p></section>'
+            + '<section class="section section--nested"><h4>Bronbasis</h4>'
+            + render_evidence_refs(route, item.get("evidence_refs", []))
+            + "</section>"
+            + "</div></details>"
+        )
+    return "".join(rendered)
+
+
 def render_almere(route: str, almere_view: dict) -> str:
     sections = [
         '<section class="section" id="huidig-beeld"><h2>Huidig bestuurlijk beeld</h2>'
@@ -640,15 +692,10 @@ def render_almere(route: str, almere_view: dict) -> str:
             for item in almere_view["current_local_state"]
         )
         + "</ul></section>",
-        '<section class="section" id="lokale-hiaten"><h2>Belangrijkste hiaten</h2><ul class="stack-list">'
-        + "".join(
-            "<li>"
-            + f'<strong>{esc(item["title"])}</strong><br>'
-            + esc(item["summary"])
-            + "</li>"
-            for item in almere_view["local_gaps"]
-        )
-        + "</ul></section>",
+        '<section class="section" id="lokale-hiaten"><h2>Lokale lacunes per thema</h2>'
+        + '<div class="notice">Deze onderdelen zijn geen oordeel over Almere. Ze maken zichtbaar waar openbare bronnen genoeg richting geven voor voorbereiding, maar nog geen lokale vaststelling, eigenaar, financiering of validatie bewijzen.</div>'
+        + render_local_gap_items(route, almere_view["local_gaps"])
+        + "</section>",
         '<section class="section" id="leiding-en-regie"><h2>Wat bestuurlijke regie vraagt</h2><ul class="stack-list">'
         + "".join(f"<li>{esc(item)}</li>" for item in almere_view["leadership_requirements"])
         + "</ul></section>",

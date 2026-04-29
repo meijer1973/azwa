@@ -14,6 +14,7 @@ CLAIMS_DIR = EXTRACTED_DIR / "claims"
 MUNICIPAL_DIR = EXTRACTED_DIR / "municipal"
 
 ALMERE_VIEW_PATH = MUNICIPAL_DIR / "almere_current_view.json"
+D6_RESPONSIBILITY_REGISTER_PATH = MUNICIPAL_DIR / "almere_d6_responsibility_register.json"
 CLAIMS_MASTER_PATH = CLAIMS_DIR / "claims_master.jsonl"
 CURRENT_INTERPRETATION_PATH = CLAIMS_DIR / "current_interpretation.json"
 INVENTORY_PATH = EXTRACTED_DIR / "document_inventory.json"
@@ -95,30 +96,127 @@ TOPIC_LABELS = {
 GAP_LABELS = {
     "gap_almere_d5_workagenda_mapping": {
         "title": "Lokale vertaling van D5 nog niet expliciet vastgelegd",
+        "theme_label": "Basisfunctionaliteiten D5",
+        "gap_type": "documentatie- of adoptiegat",
         "summary": (
             "In de huidige openbare Almere-documenten is nog niet expliciet zichtbaar hoe het landelijke "
             "D5-kader wordt vertaald naar doelgroepen, volgorde en interventiekeuze."
         ),
+        "what_public_sources_show": (
+            "Landelijke en regionale bronnen beschrijven de D5-basisfunctionaliteiten, de werkagenda-opdracht "
+            "en de proceslogica voor regionale uitwerking."
+        ),
+        "what_public_sources_do_not_prove": (
+            "Zij bewijzen nog niet welke D5-onderdelen Almere lokaal prioriteert, welke doelgroepvolgorde "
+            "wordt gekozen en welke interventies formeel in Almeerse stukken zijn vastgesteld."
+        ),
+        "follow_up_question": (
+            "Welke D5-basisfunctionaliteiten worden in Almere als eerste lokaal uitgewerkt, voor welke "
+            "doelgroepen en via welk lokaal of regionaal spoor?"
+        ),
+        "safe_wording": (
+            "De openbare bronbasis ondersteunt een werkagenda-vraag voor Almere; zij stelt de lokale "
+            "D5-prioritering nog niet vast."
+        ),
     },
     "gap_almere_d6_local_structure": {
         "title": "Lokale D6-structuur nog niet expliciet beschreven",
+        "theme_label": "Basisinfrastructuur D6",
+        "gap_type": "documentatie- of adoptiegat",
         "summary": (
             "De bronbasis laat nog niet expliciet zien hoe Almere de landelijke eis rond stevige lokale teams "
             "en hechte wijkverbanden bestuurlijk en organisatorisch invult."
         ),
+        "what_public_sources_show": (
+            "De bronbasis bevat landelijke D6-taal over basisinfrastructuur en publieke Almere/Flevoland-bronnen "
+            "over wijkteams, Stevige Lokale Teams, JGZ/GGD en samenwerking."
+        ),
+        "what_public_sources_do_not_prove": (
+            "Zij bewijzen niet vanzelf welke lokale structuur formeel als D6-infrastructuur geldt, wie eigenaar "
+            "is en welke rolverdeling bestuurlijk is vastgesteld."
+        ),
+        "follow_up_question": (
+            "Welke Almeerse structuren gelden formeel als D6-basisinfrastructuur en welke rol hebben wijkteams, "
+            "SLT, JGZ/GGD en samenwerkingsverbanden daarin?"
+        ),
+        "safe_wording": (
+            "Publieke bronnen leveren kandidaten voor D6-validatie; formele D6-classificatie vraagt lokale "
+            "bevestiging."
+        ),
+    },
+    "gap_almere_d6_validation_boundary": {
+        "title": "D6-classificatie en verantwoordelijkheid nog niet gevalideerd",
+        "theme_label": "Basisinfrastructuur D6",
+        "gap_type": "validatiegat",
+        "summary": (
+            "Het D6-register is gevuld als publieke prefill, maar geen D6-rij is lokaal gevalideerd of als "
+            "settled gemarkeerd."
+        ),
+        "what_public_sources_show": (
+            "Publieke bronnen tonen kandidaatonderdelen zoals Wijkteams Almere, Stevige Lokale Teams, JGZ/GGD "
+            "Flevoland, monitoring/Kennis en Advies, PGA/Zorgzaam Flevoland en Samen Sterker in de Wijk."
+        ),
+        "what_public_sources_do_not_prove": (
+            "Zij bewijzen niet welke onderdelen formeel D6-infrastructuur zijn, wie eigenaar is, wie uitvoert, "
+            "welke schaal geldt en welke financiering per component is gekozen."
+        ),
+        "follow_up_question": (
+            "Welke D6-registerrijen kunnen na lokale validatie worden bevestigd, gecorrigeerd of als open "
+            "besluitvraag blijven staan?"
+        ),
+        "safe_wording": (
+            "De D6-laag is stakeholder-ready validatiemateriaal; zij is nog geen vastgesteld lokaal "
+            "verantwoordelijkheidsmodel."
+        ),
     },
     "gap_almere_funding_choices": {
         "title": "Lokale verdeling van middelen nog niet expliciet zichtbaar",
+        "theme_label": "Financiering",
+        "gap_type": "financieel besluitgat",
         "summary": (
             "De landelijke bekostigingsroute is zichtbaar, maar de huidige bronbasis laat nog geen expliciete "
             "Almeerse keuze zien over verdeling van middelen, eigenaarschap en prioritering."
         ),
+        "what_public_sources_show": (
+            "Landelijke bronnen beschrijven bekostigingsroutes, SPUK-/DUS-I-logica, gemeentelijke middelen en "
+            "werkagenda-processtappen."
+        ),
+        "what_public_sources_do_not_prove": (
+            "Zij bewijzen nog niet hoe Almere middelen lokaal verdeelt over D5, D6, bestaande programma's, "
+            "PGA/GALA/SPUK en reguliere gemeentelijke budgetten."
+        ),
+        "follow_up_question": (
+            "Welke middelen zijn per D5/D6-onderdeel beschikbaar, wie beheert ze en hoe wordt dubbeltelling met "
+            "andere programma's voorkomen?"
+        ),
+        "safe_wording": (
+            "De openbare bronbasis maakt financieringsvragen zichtbaar; lokale budgetverdeling blijft een "
+            "besluit- of validatiepunt."
+        ),
     },
     "gap_almere_monitoring_alignment": {
         "title": "Lokale monitoring nog niet expliciet gekoppeld aan regionale en landelijke cyclus",
+        "theme_label": "Monitoring en leren",
+        "gap_type": "monitoring-/afstemmingsgat",
         "summary": (
             "De huidige bronbasis laat nog geen expliciete Almeerse uitwerking zien van de koppeling tussen "
             "lokale monitoring, de Flevolandse monitoringsaanpak en de landelijke actualisatiecyclus."
+        ),
+        "what_public_sources_show": (
+            "Publieke bronnen laten landelijke evaluatie- en actualisatiemomenten, GGD-monitoring, dashboards "
+            "en regionale leer- of informatie-infrastructuur zien."
+        ),
+        "what_public_sources_do_not_prove": (
+            "Zij bewijzen nog niet welke indicatorenset, welk bestuurlijk ritme en welke eigenaar Almere kiest "
+            "voor lokale D5/D6-monitoring."
+        ),
+        "follow_up_question": (
+            "Welke monitoringsset verbindt Almere aan GGD/Flevoland, landelijke D5/D6-cycli en lokale "
+            "bestuurlijke besluitvorming?"
+        ),
+        "safe_wording": (
+            "Monitoring is bronmatig relevant, maar de lokale monitoringsafspraak voor Almere is nog niet "
+            "als vastgesteld zichtbaar."
         ),
     },
 }
@@ -1616,6 +1714,93 @@ def gap_map(almere_view: dict) -> dict[str, dict]:
     return {item["gap_id"]: item for item in almere_view["local_gaps"]}
 
 
+def d6_validation_gap_from_register(claims: dict[str, dict]) -> dict | None:
+    if not D6_RESPONSIBILITY_REGISTER_PATH.exists():
+        return None
+
+    register = load_json(D6_RESPONSIBILITY_REGISTER_PATH)
+    summary = register.get("summary", {})
+    component_count = summary.get("component_count", 0)
+    if not component_count or summary.get("settled_count", 0) >= component_count:
+        return None
+
+    source_ids = [
+        candidate["source_id"]
+        for candidate in register.get("public_source_candidates", [])
+        if candidate.get("repository_status") == "ingested_formal_corpus"
+    ]
+    source_id_set = set(source_ids)
+    topic_prefixes = (
+        "d6.",
+        "municipal.",
+        "governance.",
+        "monitoring.",
+        "finance.",
+        "timeline.",
+    )
+    supporting_claim_ids = [
+        claim_id
+        for claim_id, claim in claims.items()
+        if claim.get("source_document_id") in source_id_set
+        and claim.get("topic", "").startswith(topic_prefixes)
+    ]
+
+    return {
+        "gap_id": "gap_almere_d6_validation_boundary",
+        "based_on_topics": [
+            "d6.basisinfrastructuur",
+            "d6.local_teams",
+            "municipal.role_allocation",
+            "finance.local_alignment_goal",
+        ],
+        "supporting_claim_ids": supporting_claim_ids,
+        "register_summary": summary,
+        "register_path": str(D6_RESPONSIBILITY_REGISTER_PATH.relative_to(REPO_ROOT)).replace("\\", "/"),
+        "public_source_candidate_count": summary.get("candidate_source_count", len(source_ids)),
+    }
+
+
+def build_local_gap_items(
+    almere_view: dict,
+    claims: dict[str, dict],
+    documents: dict[str, dict],
+) -> list[dict]:
+    gaps = list(almere_view["local_gaps"])
+    existing_gap_ids = {gap["gap_id"] for gap in gaps}
+    d6_gap = d6_validation_gap_from_register(claims)
+    if d6_gap and d6_gap["gap_id"] not in existing_gap_ids:
+        gaps.append(d6_gap)
+
+    items: list[dict] = []
+    for gap in gaps:
+        gap_id = gap["gap_id"]
+        labels = GAP_LABELS[gap_id]
+        supporting_claim_ids = dedupe(gap.get("supporting_claim_ids", []))
+        items.append(
+            {
+                "gap_id": gap_id,
+                "title": labels["title"],
+                "theme_label": labels["theme_label"],
+                "gap_type": labels["gap_type"],
+                "summary": labels["summary"],
+                "what_public_sources_show": labels["what_public_sources_show"],
+                "what_public_sources_do_not_prove": labels["what_public_sources_do_not_prove"],
+                "follow_up_question": labels["follow_up_question"],
+                "safe_wording": labels["safe_wording"],
+                "related_topics": [
+                    {"topic": topic, "label": topic_label(topic)}
+                    for topic in gap.get("based_on_topics", [])
+                ],
+                "evidence_refs": evidence_entries(supporting_claim_ids, claims, documents, limit=4),
+                "supporting_claim_count": len(supporting_claim_ids),
+                "register_summary": gap.get("register_summary"),
+                "register_path": gap.get("register_path"),
+                "public_source_candidate_count": gap.get("public_source_candidate_count"),
+            }
+        )
+    return items
+
+
 def dependency_map(almere_view: dict) -> dict[str, dict]:
     return {item["dependency_id"]: item for item in almere_view["local_dependencies"]}
 
@@ -2713,14 +2898,7 @@ def build_almere_site_view(
         ),
         "expected_municipal_responsibilities": build_expected_responsibilities(almere_view),
         "current_local_state": build_current_local_state(almere_view),
-        "local_gaps": [
-            {
-                "gap_id": gap["gap_id"],
-                "title": GAP_LABELS[gap["gap_id"]]["title"],
-                "summary": GAP_LABELS[gap["gap_id"]]["summary"],
-            }
-            for gap in almere_view["local_gaps"]
-        ],
+        "local_gaps": build_local_gap_items(almere_view, claims, documents),
         "leadership_requirements": [decision["title"] for decision in decision_models] + [action["title"] for action in action_models[:2]],
         "current_decisions": decision_models,
         "current_actions": action_models,

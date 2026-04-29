@@ -213,6 +213,38 @@ class SiteGenerationTests(unittest.TestCase):
         self.assertIn('href="index.html#review-authority-unclear"', html)
         self.assertIn('id="review-unresolved-conflict"', html)
 
+    def test_almere_local_gaps_are_human_readable_and_evidence_backed(self) -> None:
+        model = load_json(ALMERE_VIEW_PATH)
+        local_gaps = model["local_gaps"]
+        self.assertGreaterEqual(len(local_gaps), 4)
+
+        required_fields = {
+            "theme_label",
+            "gap_type",
+            "what_public_sources_show",
+            "what_public_sources_do_not_prove",
+            "follow_up_question",
+            "safe_wording",
+            "evidence_refs",
+        }
+        for gap in local_gaps:
+            self.assertTrue(required_fields.issubset(gap), gap["gap_id"])
+            self.assertTrue(gap["what_public_sources_show"])
+            self.assertTrue(gap["what_public_sources_do_not_prove"])
+            self.assertTrue(gap["follow_up_question"])
+
+        d6_gap = next(gap for gap in local_gaps if gap["gap_id"] == "gap_almere_d6_validation_boundary")
+        self.assertEqual(d6_gap["register_summary"]["settled_count"], 0)
+        self.assertIn("validatiegat", d6_gap["gap_type"])
+
+        html = ALMERE_PAGE_PATH.read_text(encoding="utf-8")
+        self.assertIn("Lokale lacunes per thema", html)
+        self.assertIn("Wat openbare bronnen wel laten zien", html)
+        self.assertIn("Wat openbare bronnen niet bewijzen", html)
+        self.assertIn("Mogelijke vervolgvraag", html)
+        self.assertIn("D6-classificatie en verantwoordelijkheid nog niet gevalideerd", html)
+        self.assertIn("De D6-laag is stakeholder-ready validatiemateriaal", html)
+
     def test_decision_cards_link_review_tags_to_detail_sections(self) -> None:
         html = INDEX_PATH.read_text(encoding="utf-8")
         self.assertIn('/onderbouwing/index.html#menselijke-duiding">Menselijke duiding nodig:', html)

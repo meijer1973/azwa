@@ -16,6 +16,8 @@ Do not treat generated data-layer files as public policy sources. They are resea
 
 For workagenda filling, use public sources as far as they go. When a field requires non-public local knowledge, staff confirmation, or a formal local decision, mark it as a validation gap or decision question instead of treating it as a blocker to the public-source structure.
 
+For Almere local-gap reasoning, use `data/extracted/municipal/almere_current_view.json` and `data/extracted/municipal/almere_d6_responsibility_register.json` as the structured basis. `data/site/site_almere_view.json` contains a human-readable local-gap synthesis with what public sources show, what they do not prove, and safe wording, but it remains an orientation layer rather than primary evidence.
+
 ## Access Layer
 
 Base URL:
@@ -357,6 +359,7 @@ Theme view models:
     "data/extracted/municipal/almere_current_view.json",
     "data/extracted/municipal/almere_d6_responsibility_register.json",
     "data/extracted/municipal/almere_local_decisions.json",
+    "data/site/site_almere_view.json",
     "data/curated/regional_roles_and_splits_almere_flevoland.json"
   ],
   "timeline_reasoning": [

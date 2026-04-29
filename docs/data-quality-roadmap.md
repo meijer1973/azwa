@@ -41,7 +41,7 @@ Gebruik deze roadmap als levend werkdocument. Werk na elke sprint de statusregel
 | 29.1 Tijdlijnregister verdiepen | completed | `src/build_site_view_models.py`, `src/render_site.py`, `config/timeline_curation.json`, `data/site/timeline_register.json`, `docs/completed-plans/phase29-sprint29.1-tijdlijnregister-verdiepen.md` |
 | 29.2 Begrotings- en verantwoordingscyclus | completed | `config/timeline_curation.json`, `src/build_site_view_models.py`, `src/render_site.py`, `data/site/site_timeline_view.json`, `docs/completed-plans/phase29-sprint29.2-begrotings-verantwoordingscyclus.md` |
 | 29.3 Handreikingen en uitvoeringsmomenten | completed | `config/timeline_curation.json`, `src/build_site_view_models.py`, `src/render_site.py`, `data/site/site_timeline_view.json`, `docs/completed-plans/phase29-sprint29.3-handreikingen-uitvoeringsmomenten.md` |
-| 30.1 Lokale lacunes | open |  |
+| 30.1 Lokale lacunes | completed | `src/build_site_view_models.py`, `src/render_site.py`, `data/site/site_almere_view.json`, `dist/almere/index.html`, `docs/completed-plans/phase30-sprint30.1-lokale-lacunes.md` |
 | 30.2 Besluitvragen en mogelijke opvolgacties | open |  |
 | 30.3 Beleidsdocumenten en rapporten | open |  |
 | 31.1 Updateprotocol | open |  |
@@ -49,7 +49,7 @@ Gebruik deze roadmap als levend werkdocument. Werk na elke sprint de statusregel
 | 31.3 Reviewronde met menselijke beoordelaars | open |  |
 
 ## Huidige sprintplan
-Fase 29 is afgerond. De tijdlijn onderscheidt nu chronologische momenten, beleidsmetadata, begrotings-/verantwoordingscyclus en handreikingen/uitvoeringsmomenten. De huidige sprint is Sprint 30.1: lokale lacunes. Sprint 25.6 blijft geparkeerd omdat post-validatie hardening pas verantwoord is na stakeholdervalidatierecords, lokale/interne documenten, finance/controller bevestiging of een expliciet beleidsbesluit. Dat blokkeert Fase 30 niet, zolang lokale lacunes niet als opgeloste D6-validatievragen worden gepresenteerd.
+Sprint 30.1 is afgerond. De Almerepagina toont lokale lacunes nu per thema als openklapbare, menselijk leesbare onderdelen met wat openbare bronnen wel laten zien, wat zij niet bewijzen, een vervolgvraag, veilige formulering en bronbasis. De huidige sprint is Sprint 30.2: besluitvragen en mogelijke opvolgacties. Sprint 25.6 blijft geparkeerd omdat post-validatie hardening pas verantwoord is na stakeholdervalidatierecords, lokale/interne documenten, finance/controller bevestiging of een expliciet beleidsbesluit. Dat blokkeert Fase 30 niet, zolang lokale lacunes niet als opgeloste D6-validatievragen worden gepresenteerd.
 
 Status op 26 april 2026: Sprint 25.2 is afgerond als publieke bronversterkingssprint. `data/extracted/local_source_strengthening_almere.json` maakt zichtbaar welke lokale bronnen in de formele laag zitten, welke publieke bronnen als assessmentmateriaal zijn beoordeeld, en welke vragen naar later in de workflow gaan omdat de publieke bronbasis is uitgeput of omdat een geschoonde validatiestap nodig is. De geselecteerde Documentwijzer-bijlagen voor Visie Gezondheidsbeleid en Maatschappelijke Agenda zijn eerst naar page-markdown omgezet en daarna opgenomen in `data/raw/manifest.json`. Ook de GGD-tabellenboeken voor volwassenen en ouderen, de GGD-valpreventiepagina Almere en de ZonMw-bron zijn opgenomen in `data/raw/manifest.json`, door inventory/extractie/claims/site-viewmodels verwerkt en blijven reviewmateriaal voordat ze bestuurlijk of public-facing worden gebruikt. Niet-publieke informatie, ontbrekende lokale bevestiging en formele besluitvragen blokkeren deze fase niet; ze worden als gaten of carry-over taken zichtbaar gemaakt voor lokale medewerkers en latere besluitvorming.
 
@@ -92,6 +92,8 @@ Status op 29 april 2026: Sprint 29.1 is afgerond. Het tijdlijnregister is verdie
 Status op 29 april 2026: Sprint 29.2 is afgerond. De bestaande gemeentefondsbron draagt nu drie verwachte circulairemomenten voor 2026: mei, september en december. De tijdlijnview maakt daarnaast een `budget_cycle`-doorsnede met lokale begroting, gemeentefonds, SPUK/subsidie, verantwoording, werkagenda/middelen en overige financiele context. Deze doorsnede staat onder de chronologische tijdlijn zodat datumvolgorde in de hoofdsectie intact blijft.
 
 Status op 29 april 2026: Sprint 29.3 is afgerond. Het format voor de D5-werkagenda is toegevoegd als eigen tijdlijnmoment en de tijdlijnview bevat nu een `execution_support`-doorsnede voor formatdocumenten, proces-/toelichtingsdocumenten, werkagenda-proces, webinars, handreiking/thematafel en ondersteuningspagina's. De publieke tijdlijn toont deze doorsnede apart zodat handreikingen en uitvoeringsduiding niet als formele besluiten of harde normen worden gelezen.
+
+Status op 29 april 2026: Sprint 30.1 is afgerond. De Almerepagina maakt lokale lacunes per thema zichtbaar zonder oordeelstaal: D5-werkagenda, financiering, monitoring en de D6-validatiegrens tonen nu wat de openbare bronbasis ondersteunt, wat zij niet bewijst, welke vervolgvraag resteert en welke formulering veilig is zolang lokale validatie ontbreekt. De D6-lacune gebruikt het D6 responsibility register als validatiegrens en blijft expliciet op nul `settled` rijen.
 
 Afgeronde aanpak voor Sprint 25.4a:
 
@@ -419,11 +421,12 @@ Status: completed.
 Doel: de site beter laten aansluiten op vragen van Almeerse beleidsmakers.
 
 Sprint 30.1: Lokale lacunes
-Status: open.
+Status: completed.
 
-- Maak per thema zichtbaar welke landelijke of regionale opgave nog niet openbaar lokaal is uitgewerkt.
-- Voorkom oordeelstaal; formuleer als documentatie- of adoptiegat.
-- Koppel elk gat aan bronbasis en mogelijke vervolgvraag.
+- De Almerepagina toont lokale lacunes per thema als openklapbare onderdelen.
+- Elke lacune benoemt wat openbare bronnen wel laten zien, wat zij niet bewijzen, de mogelijke vervolgvraag en de veilige formulering.
+- De D6-validatiegrens is toegevoegd als lokale lacune zonder deze als opgelost of `settled` te presenteren.
+- Elke lacune is gekoppeld aan bronbasis via evidence-references in `data/site/site_almere_view.json`.
 
 Sprint 30.2: Besluitvragen en mogelijke opvolgacties
 Status: open.

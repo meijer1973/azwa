@@ -345,12 +345,12 @@ class SiteGenerationTests(unittest.TestCase):
         html = UPDATES_PAGE_PATH.read_text(encoding="utf-8")
 
         self.assertEqual(updates_view["latest_update"]["update_id"], LATEST_UPDATE_ID)
-        self.assertIn("D6 gate-remediation intake Almere verwerkt", html)
+        self.assertIn("D6-verantwoordelijkheidsbronnen Almere aangevuld", html)
         self.assertIn("Kort samengevat", html)
         self.assertIn("Zes extra publieke bronnen zijn toegevoegd", html)
         self.assertIn('../sources/slt-geamendeerd-raadsvoorstel/index.html', html)
         self.assertIn("598", html)
-        self.assertIn("Bekijk volledige claimlijst", html)
+        self.assertIn("Bekijk volledige controlelijst", html)
         self.assertIn("Wat is er veranderd", html)
         self.assertIn("Meer duiding", html)
         self.assertIn("Documentwijzer/Notubiz-stukken bij Stevige Lokale Teams zijn toegevoegd", html)
@@ -360,11 +360,34 @@ class SiteGenerationTests(unittest.TestCase):
         self.assertIn(f'id="{VNG_FINANCING_UPDATE_ID}"', html)
         self.assertNotIn("clm__nat_vng_ledenbrief_azwa_financiering_2026_d5_001", html)
 
+    def test_update_human_summaries_avoid_pipeline_language(self) -> None:
+        updates_view = load_json(UPDATES_VIEW_PATH)
+        forbidden_terms = [
+            "dataset",
+            "claimlaag",
+            "bronlaag",
+            "pijplijn",
+            "data/raw",
+            "manifest",
+            "site-viewmodels",
+            "review_needed",
+            "source-backed",
+            "ingested",
+        ]
+
+        for update in updates_view["updates"]:
+            summary = update["human_summary"]
+            for field_name in ["intro", "what_happened", "what_changed", "why_it_matters"]:
+                self.assertIn(field_name, summary)
+                value = summary[field_name].lower()
+                for term in forbidden_terms:
+                    self.assertNotIn(term, value, f"{term} found in {update['update_id']} {field_name}")
+
     def test_update_claims_detail_page_contains_full_claim_list(self) -> None:
         html = VNG_FINANCING_UPDATE_CLAIMS_PAGE_PATH.read_text(encoding="utf-8")
-        self.assertIn("Hoe deze claimlijst te lezen", html)
-        self.assertIn("Waarom sommige claims onvolledige zinnen lijken", html)
-        self.assertIn("Alle betrokken claims (64)", html)
+        self.assertIn("Hoe deze controlelijst te lezen", html)
+        self.assertIn("Waarom sommige fragmenten onvolledige zinnen lijken", html)
+        self.assertIn("Alle betrokken bronfragmenten (64)", html)
         self.assertIn("14 claims", html)
         self.assertIn("13 claims", html)
         self.assertIn("10 claims", html)
@@ -386,7 +409,7 @@ class SiteGenerationTests(unittest.TestCase):
         self.assertNotIn("D6 other", titles)
         self.assertNotIn("D6 regional coordination", titles)
         self.assertIn("Updates", titles)
-        self.assertIn("Claimlijst: VNG-financieringsset van 22 april 2026 verwerkt in de dataset", titles)
+        self.assertIn("Controlelijst: VNG-financieringsset van 22 april 2026 verwerkt", titles)
         self.assertIn("overige D6-lijn", titles)
         self.assertIn("regionale coördinatie voor D6", titles)
 
@@ -442,7 +465,7 @@ class SiteGenerationTests(unittest.TestCase):
             if item["page_type"] == "update_claims"
             and item["url"] == f"updates/claims/{LATEST_UPDATE_ID}/index.html"
         )
-        self.assertIn("Claimlijst:", entry["title"])
+        self.assertIn("Controlelijst:", entry["title"])
 
 
 if __name__ == "__main__":

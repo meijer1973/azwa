@@ -33,7 +33,7 @@ Gebruik deze roadmap als levend werkdocument. Werk na elke sprint de statusregel
 | 27.5 Locality | completed | `src/build_claims_top5.py`, `data/schemas/claim.schema.json`, `data/extracted/data_quality_audit.json`, `docs/completed-plans/phase27-sprint27.5-locality.md` |
 | 27.6 Execution | completed | `src/build_claims_top5.py`, `data/schemas/claim.schema.json`, `data/extracted/data_quality_audit.json`, `docs/completed-plans/phase27-sprint27.6-execution.md` |
 | 27.7 Perspectiefmodel stabilisatie | completed | `src/build_claims_top5.py`, `src/build_structural_extractions.py`, `src/build_data_quality_audit.py`, `config/data_quality_perspectives.json`, `docs/completed-plans/phase27-sprint27.7-perspectiefmodel-stabilisatie.md` |
-| 28.1 Menselijke samenvattingen per update | open |  |
+| 28.1 Menselijke samenvattingen per update | completed | `config/site_updates.json`, `config/site_taxonomy.json`, `src/render_site.py`, `tests/test_site_generation.py`, `docs/completed-plans/phase28-sprint28.1-menselijke-update-samenvattingen.md` |
 | 28.2 Bronverwijzing en autoriteitstaal | open |  |
 | 28.3 Detailpagina's voor drill-down | open |  |
 | 29.1 Tijdlijnregister verdiepen | open |  |
@@ -47,7 +47,7 @@ Gebruik deze roadmap als levend werkdocument. Werk na elke sprint de statusregel
 | 31.3 Reviewronde met menselijke beoordelaars | open |  |
 
 ## Huidige sprintplan
-Fase 27 is de actieve repository-side perspectiefverfijningsfase. Sprint 25.6 blijft geparkeerd omdat post-validatie hardening pas verantwoord is na stakeholdervalidatierecords, lokale/interne documenten, finance/controller bevestiging of een expliciet beleidsbesluit. Dat is geen blocker voor verdere datakwaliteitswerk: de repository kan intussen norm-, tijd-, geld-, governance-, locality- en execution-guardrails verbeteren zonder D6-inhoud te overclaimen.
+Fase 28 is de actieve tekstkwaliteitsfase voor de publieke site. Sprint 25.6 blijft geparkeerd omdat post-validatie hardening pas verantwoord is na stakeholdervalidatierecords, lokale/interne documenten, finance/controller bevestiging of een expliciet beleidsbesluit. Dat is geen blocker voor verdere datakwaliteitswerk: de repository kan intussen publieke samenvattingen, bronverwijzing, autoriteitstaal en drill-down verbeteren zonder D6-inhoud te overclaimen.
 
 Status op 26 april 2026: Sprint 25.2 is afgerond als publieke bronversterkingssprint. `data/extracted/local_source_strengthening_almere.json` maakt zichtbaar welke lokale bronnen in de formele laag zitten, welke publieke bronnen als assessmentmateriaal zijn beoordeeld, en welke vragen naar later in de workflow gaan omdat de publieke bronbasis is uitgeput of omdat een geschoonde validatiestap nodig is. De geselecteerde Documentwijzer-bijlagen voor Visie Gezondheidsbeleid en Maatschappelijke Agenda zijn eerst naar page-markdown omgezet en daarna opgenomen in `data/raw/manifest.json`. Ook de GGD-tabellenboeken voor volwassenen en ouderen, de GGD-valpreventiepagina Almere en de ZonMw-bron zijn opgenomen in `data/raw/manifest.json`, door inventory/extractie/claims/site-viewmodels verwerkt en blijven reviewmateriaal voordat ze bestuurlijk of public-facing worden gebruikt. Niet-publieke informatie, ontbrekende lokale bevestiging en formele besluitvragen blokkeren deze fase niet; ze worden als gaten of carry-over taken zichtbaar gemaakt voor lokale medewerkers en latere besluitvorming.
 
@@ -74,6 +74,8 @@ Status op 29 april 2026: Sprint 27.5 is afgerond als locality-splitsing. Elke cl
 Status op 29 april 2026: Sprint 27.6 is afgerond als execution-splitsing. Elke claim krijgt nu een `execution_status` met onderscheid tussen operationele vereisten, zichtbare uitvoeringsactiviteit, besluitvragen, afhankelijkheden, volgorde-/faseringsvragen, capaciteitsvragen, reviewtaken, uitvoeringscontext en niet-uitvoering. De audit bevat een `execution_status_audit`, site-evidence draagt executionstatus mee, en QC markeert besluitvragen, afhankelijkheden, capaciteit, sequencing, reviewtaken en algemene uitvoeringscontext als reviewpunt zodat mogelijke opvolgacties niet als besloten uitvoering worden gelezen.
 
 Status op 29 april 2026: Sprint 27.7 is afgerond als stabilisatiesprint voordat Fase 28 sitetekst gaat gebruiken. De termlijsten zijn opgeschoond zodat pipeline-metawoorden niet langer als bronsignaal tellen, execution-detectie gebruikt geen subjectnouns meer als operationele vereiste, actorherkenning gebruikt woordgrenzen zodat `gemeente` niet uit `gemeenteraad` wordt afgeleid, wetten.nl actiechrome wordt uit raw-html-blokken gefilterd, en de audit toont nul-tellingen voor statuswaarden en actor-signalen die in de huidige corpusrun niet voorkomen.
+
+Status op 29 april 2026: Sprint 28.1 is afgerond als menselijke update-samenvatting. De updatepagina gebruikt nu gewone bron- en controlewoorden in plaats van pipeline- of datalaagtaal. De drie bestaande updates hebben volledige `human_summary`-velden voor aanleiding, wat er gebeurde, wat inhoudelijk veranderde en waarom dit voor Almere of de werkagenda relevant is. De detailpagina voor betrokken claims is hernoemd naar controlelijst met bronfragmenten, zodat de updatepagina zelf de leesbare duiding blijft en de detailpagina vooral controle en herleidbaarheid biedt.
 
 Afgeronde aanpak voor Sprint 25.4a:
 
@@ -338,7 +340,7 @@ Status: completed.
 Doel: minder technische of ruwe tekst, meer bestuurlijk leesbare Nederlandse samenvattingen.
 
 Sprint 28.1: Menselijke samenvattingen per update
-Status: open.
+Status: completed.
 
 - Elke data-update krijgt een korte, leesbare samenvatting.
 - Leg uit welke publicatie aanleiding was voor de update.

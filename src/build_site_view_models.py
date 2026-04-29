@@ -3001,7 +3001,7 @@ def build_site_manifest(
     pages.extend(
         {
             "page_type": "update_claims",
-            "title": f'Claimlijst: {item["title"]}',
+            "title": f'Controlelijst: {item["title"]}',
             "url": item["claims_page_url"],
         }
         for item in updates_view.get("updates", [])

@@ -9,7 +9,7 @@
       "page_url": "/updates/#upd_d6_almere_gate_remediation_intake_2026_04_27",
       "claims_page_url": "/updates/claims/upd_d6_almere_gate_remediation_intake_2026_04_27/",
       "published_on": "2026-04-27",
-      "title": "D6 gate-remediation intake Almere verwerkt",
+      "title": "D6-verantwoordelijkheidsbronnen Almere aangevuld",
       "summary": "Zes extra publieke bronnen zijn toegevoegd voor de D6-verantwoordelijkheidslaag van Almere: vier Stevige Lokale Teams-bijlagen uit Documentwijzer/Notubiz, de Samenwerkingsprojecten/Samen Sterker-bron en een actuele PGA-bron.",
       "source_reference": {
         "title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin - geamendeerd raadsvoorstel",
@@ -23,15 +23,15 @@
         "page_url": "/sources/slt-geamendeerd-raadsvoorstel/"
       },
       "human_summary": {
-        "intro": "Deze update verwerkt de gate-beslissing dat Sprint 25.4 nog niet door mag naar rapportproductie of bestuurlijke werkagenda-drafting. De toegestane vervolgstap is alleen D6 responsibility implementation/remediation.",
-        "what_happened": "De Documentwijzer bij raadsnummer 26006 is via de achterliggende Spinque/Notubiz-bronnen ontsloten. Vier lokale raadstukken zijn opgeslagen en naar page-markdown geconverteerd. Daarnaast zijn Samenwerkingsprojecten/Samen Sterker in de Wijk en een actuele PGA-homepage aan de formele bronlaag toegevoegd.",
-        "what_changed": "De bronlaag groeit van 52 naar 58 documenten en de claimlaag van 541 naar 598 claims. De lokale decision layer bevat nu een source-backed publieke raadbeslissing voor Stevige Lokale Teams, terwijl de D6-classificatie en precieze lokale eigenaarschap nog als review- en validatiepunt open blijven.",
-        "why_it_matters": "Hiermee verschuift Sprint 25.4 van algemene D6-duiding naar uitvoeringsbewijs: welke lokale besluiten, partners, projecten en geldsporen publiek aantoonbaar zijn, en welke velden later door lokale medewerkers of bestuurlijke besluitvorming moeten worden ingevuld."
+        "intro": "Deze update scherpt de D6-verantwoordelijkheidsvragen voor Almere aan. De informatie is bedoeld als voorbereiding op lokale validatie, niet als definitieve bestuurlijke tekst.",
+        "what_happened": "Bij het raadsdossier over Stevige Lokale Teams zijn vier achterliggende raadstukken toegevoegd. Daarnaast zijn de Almere-pagina over Samenwerkingsprojecten/Samen Sterker in de Wijk en een actuele Positief Gezond Almere-pagina meegenomen.",
+        "what_changed": "Het overzicht kan nu beter laten zien welke lokale besluiten, samenwerkingsprojecten en actuele PGA-informatie publiek vindbaar zijn. Tegelijk blijft open of deze onderdelen formeel als D6-infrastructuur gelden en wie lokaal eigenaar, uitvoerder of financier is.",
+        "why_it_matters": "Voor Almere maakt dit het onderscheid scherper tussen wat openbare bronnen al ondersteunen en welke punten nog door lokale medewerkers of bestuurders moeten worden bevestigd."
       },
       "key_points": [
-        "Niet door naar rapportproductie of bestuurlijke D6-drafting; alleen D6 remediation is toegestaan.",
-        "Zes extra bronnen zijn formeel ingested en verwerkt.",
-        "Stevige Lokale Teams heeft nu lokale besluitdocumenten in de bronlaag.",
+        "Nog niet gebruiken als definitieve D6-rapportage of bestuurlijke werkagendatekst.",
+        "Zes extra bronnen zijn toegevoegd en controleerbaar gemaakt.",
+        "Stevige Lokale Teams heeft nu lokale besluitdocumenten in het openbare bronnenoverzicht.",
         "D6-classificatie, eigenaar, uitvoerder en budgetallocatie blijven lokale validatie- of besluitvelden waar de bronnen dat niet zelf vastleggen."
       ],
       "section_urls": {
@@ -55,8 +55,8 @@
           "detail": "Deze bron ondersteunt de actuele context rond gezonde wijken, duurzame zorg, lerende netwerken, betere samenwerking tussen informele zorg, sociaal en medisch domein en een actueel informatiebeeld."
         },
         {
-          "summary": "De lokale decision layer bevat nu een source-backed publieke raadbeslissing.",
-          "detail": "De beslissing is vastgelegd als publieke besluitroute voor Stevige Lokale Teams; formele D6-classificatie blijft review_needed."
+          "summary": "Er is nu een openbare raadbeslissing rond Stevige Lokale Teams zichtbaar.",
+          "detail": "De beslissing helpt om het lokale besluitspoor te volgen. Zij bewijst nog niet dat Stevige Lokale Teams formeel als D6-infrastructuur zijn aangewezen."
         }
       ],
       "metrics": [
@@ -2960,8 +2960,8 @@
       "page_url": "/updates/#upd_d6_almere_source_intake_2026_04_27",
       "claims_page_url": "/updates/claims/upd_d6_almere_source_intake_2026_04_27/",
       "published_on": "2026-04-27",
-      "title": "D6-bronintake Almere verwerkt in de dataset",
-      "summary": "Zeven publieke bronnen voor de D6-basisinfrastructuur van Almere zijn toegevoegd aan de formele bronlaag en door de pijplijn verwerkt. De update versterkt vooral lokale toegang, wijkteams, Stevige Lokale Teams, GGD/JGZ, monitoring en lokale verantwoordelijkheidsprefill.",
+      "title": "D6-bronintake Almere verwerkt",
+      "summary": "Zeven publieke bronnen voor de D6-basisinfrastructuur van Almere zijn toegevoegd. De update versterkt vooral lokale toegang, wijkteams, Stevige Lokale Teams, GGD/JGZ, monitoring en lokale verantwoordelijkheidspunten.",
       "source_reference": {
         "title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin",
         "publisher": "Raad van Almere",
@@ -2975,13 +2975,13 @@
       },
       "human_summary": {
         "intro": "Deze update legt de eerste formele bronintake vast voor het heropende Sprint 25.4b-spoor: het D6 Almere responsibility pack. De focus ligt niet op een nieuwe algemene D6-samenvatting, maar op lokale uitvoeringsbronnen waarmee verantwoordelijkheid, schaal en validatievelden scherper kunnen worden gemaakt.",
-        "what_happened": "Zeven publieke bronnen zijn lokaal opgeslagen, toegevoegd aan data/raw/manifest.json en daarna verwerkt via inventory, structural extraction, document extraction, claims, current interpretation, D6-lagen, QC, site-viewmodels en het interne dashboard.",
-        "what_changed": "De bronbasis bevat nu formele corpusdocumenten voor Stevige Lokale Teams, Wijkteams Almere, lokale-teamkaders van VNG en Toezicht Sociaal Domein, GGD Flevoland Begroting 2026, GGD Kennis en Advies en het JGZ Almere-profiel. Het D6 responsibility register kan daardoor meer velden als publieke prefill behandelen, terwijl niet-besloten eigenaar-, budget- en uitvoeringsvragen open blijven voor lokale validatie.",
+        "what_happened": "Zeven publieke bronnen zijn toegevoegd aan het bronnenoverzicht: Stevige Lokale Teams, Wijkteams Almere, kaders voor lokale teams, GGD Flevoland Begroting 2026, GGD Kennis en Advies en het JGZ Almere-profiel.",
+        "what_changed": "Het overzicht kan nu beter onderbouwen welke lokale toegang, wijkteams, GGD/JGZ-functies en monitoringsbronnen publiek zichtbaar zijn. Niet-besloten vragen over eigenaar, budget en uitvoering blijven apart staan voor lokale validatie.",
         "why_it_matters": "Voor Almere maakt dit het verschil tussen D6 als beleidsbegrip en D6 als uitvoeringsagenda: welke lokale toegang, teams, GGD/JGZ-functies en monitoringsbronnen publiek zichtbaar zijn, en waar nog expliciet lokaal besluit of medewerkerinvulling nodig is."
       },
       "key_points": [
-        "Zeven D6-bronnen zijn formeel ingested en verwerkt.",
-        "De D6 responsibility register-laag is bijgewerkt met ingested/source-backed status voor de nieuwe bronset.",
+        "Zeven D6-bronnen zijn toegevoegd en controleerbaar gemaakt.",
+        "Het D6-verantwoordelijkheidsoverzicht is bijgewerkt met wat deze bronnen publiek ondersteunen.",
         "Samen Sterker in de Wijk en Almere samenwerkingsprojecten blijven open intakewerk omdat directe download op 27 april 2026 een 404 gaf.",
         "Onderliggende Documentwijzer-stukken voor Stevige Lokale Teams blijven nodig voordat lokale besluiten als volledig settled worden behandeld."
       ],
@@ -2994,8 +2994,8 @@
       },
       "change_highlights": [
         {
-          "summary": "De formele bronlaag groeide van 45 naar 52 documenten door zeven D6-uitvoeringsbronnen toe te voegen.",
-          "detail": "De nieuwe bronnen zijn niet alleen als kandidaat genoemd, maar opgeslagen in data/raw, opgenomen in de manifestlaag en downstream verwerkt."
+          "summary": "Zeven D6-uitvoeringsbronnen zijn toegevoegd aan het openbare bronnenoverzicht.",
+          "detail": "De nieuwe bronnen zijn niet alleen als kandidaat genoemd; ze zijn ook beschikbaar gemaakt voor controle op bronpagina's en in de update-overzichten."
         },
         {
           "summary": "Stevige Lokale Teams en Wijkteams Almere zijn nu als lokale D6-toegangsbronnen zichtbaar.",
@@ -7132,8 +7132,8 @@
       "page_url": "/updates/#upd_vng_financiering_2026_04_23",
       "claims_page_url": "/updates/claims/upd_vng_financiering_2026_04_23/",
       "published_on": "2026-04-23",
-      "title": "VNG-financieringsset van 22 april 2026 verwerkt in de dataset",
-      "summary": "De VNG-webpagina over AZWA-financiering en vijf gekoppelde documenten zijn via de volledige pijplijn verwerkt. Daardoor zijn nieuwe financieringsstappen, werkagenda-momenten en extra 2026-tijdlijnsignalen zichtbaar geworden in de dataset en op de site.",
+      "title": "VNG-financieringsset van 22 april 2026 verwerkt",
+      "summary": "De VNG-webpagina over AZWA-financiering en vijf gekoppelde documenten zijn verwerkt. Daardoor zijn nieuwe financieringsstappen, werkagenda-momenten en extra 2026-tijdlijnsignalen zichtbaar geworden.",
       "source_reference": {
         "title": "VNG-publicatie AZWA-financiering voor gemeenten (Zorgakkoord)",
         "publisher": "VNG",
@@ -7147,7 +7147,7 @@
       },
       "human_summary": {
         "intro": "Deze update is gemaakt naar aanleiding van de VNG-publicatie 'AZWA-financiering voor gemeenten (Zorgakkoord)' van 22 april 2026 en de documenten die daaronder zijn gedeeld. Die publicatie gaf nieuw bestuurlijk houvast over financiering, regionale werkagenda en planning van D5/D6.",
-        "what_happened": "Niet alleen de VNG-webpagina, maar ook de ledenbrief, de VWS-brief en de werkagenda-documenten zijn nu via de volledige pijplijn opgenomen. Daardoor is de lijn tussen landelijke afspraken, regionale werkagenda en gemeentelijke financiering veel concreter geworden.",
+        "what_happened": "Niet alleen de VNG-webpagina, maar ook de ledenbrief, de VWS-brief en de werkagenda-documenten zijn toegevoegd. Daardoor is de lijn tussen landelijke afspraken, regionale werkagenda en gemeentelijke financiering veel concreter geworden.",
         "what_changed": "De belangrijkste inhoudelijke verandering is dat de financieringsroute voor gemeenten scherper is geworden: de nieuwe AZWA-SPUK voor 2027-2029 is explicieter zichtbaar, de regionale werkagenda komt duidelijker naar voren als voorwaarde voor uitkering van middelen in 2026, en de planning van 2026 is aangevuld met concrete uitvoerings- en toelichtingsmomenten.",
         "why_it_matters": "Voor Almere betekent dit dat collega's nu beter kunnen zien welke landelijke publicatie de verandering veroorzaakte, welke momenten in 2026 bestuurlijk relevant zijn en waarom de financierings- en proceslijn serieuzer moet worden gevolgd."
       },
@@ -7155,7 +7155,7 @@
         "De VWS-brief maakt een nieuwe AZWA-SPUK voor gemeenten in 2027-2029 explicieter zichtbaar.",
         "De regionale werkagenda wordt duidelijker zichtbaar als randvoorwaarde voor uitkering van middelen in 2026.",
         "De tijdlijn van 2026 is aangevuld met webinar-, thematafel- en werkagenda-momenten die bestuurlijk relevant zijn voor voorbereiding en afstemming.",
-        "De publieke site laat nu niet alleen nieuwe bronnen zien, maar ook wat die bronset concreet in de dataset veranderde."
+        "De publieke site laat nu niet alleen nieuwe bronnen zien, maar ook wat die bronset inhoudelijk heeft veranderd."
       ],
       "section_urls": {
         "samenvatting": "/updates/#upd_vng_financiering_2026_04_23-samenvatting",
@@ -11868,7 +11868,7 @@
     "page_url": "/updates/#upd_d6_almere_gate_remediation_intake_2026_04_27",
     "claims_page_url": "/updates/claims/upd_d6_almere_gate_remediation_intake_2026_04_27/",
     "published_on": "2026-04-27",
-    "title": "D6 gate-remediation intake Almere verwerkt",
+    "title": "D6-verantwoordelijkheidsbronnen Almere aangevuld",
     "summary": "Zes extra publieke bronnen zijn toegevoegd voor de D6-verantwoordelijkheidslaag van Almere: vier Stevige Lokale Teams-bijlagen uit Documentwijzer/Notubiz, de Samenwerkingsprojecten/Samen Sterker-bron en een actuele PGA-bron.",
     "source_reference": {
       "title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin - geamendeerd raadsvoorstel",
@@ -11882,15 +11882,15 @@
       "page_url": "/sources/slt-geamendeerd-raadsvoorstel/"
     },
     "human_summary": {
-      "intro": "Deze update verwerkt de gate-beslissing dat Sprint 25.4 nog niet door mag naar rapportproductie of bestuurlijke werkagenda-drafting. De toegestane vervolgstap is alleen D6 responsibility implementation/remediation.",
-      "what_happened": "De Documentwijzer bij raadsnummer 26006 is via de achterliggende Spinque/Notubiz-bronnen ontsloten. Vier lokale raadstukken zijn opgeslagen en naar page-markdown geconverteerd. Daarnaast zijn Samenwerkingsprojecten/Samen Sterker in de Wijk en een actuele PGA-homepage aan de formele bronlaag toegevoegd.",
-      "what_changed": "De bronlaag groeit van 52 naar 58 documenten en de claimlaag van 541 naar 598 claims. De lokale decision layer bevat nu een source-backed publieke raadbeslissing voor Stevige Lokale Teams, terwijl de D6-classificatie en precieze lokale eigenaarschap nog als review- en validatiepunt open blijven.",
-      "why_it_matters": "Hiermee verschuift Sprint 25.4 van algemene D6-duiding naar uitvoeringsbewijs: welke lokale besluiten, partners, projecten en geldsporen publiek aantoonbaar zijn, en welke velden later door lokale medewerkers of bestuurlijke besluitvorming moeten worden ingevuld."
+      "intro": "Deze update scherpt de D6-verantwoordelijkheidsvragen voor Almere aan. De informatie is bedoeld als voorbereiding op lokale validatie, niet als definitieve bestuurlijke tekst.",
+      "what_happened": "Bij het raadsdossier over Stevige Lokale Teams zijn vier achterliggende raadstukken toegevoegd. Daarnaast zijn de Almere-pagina over Samenwerkingsprojecten/Samen Sterker in de Wijk en een actuele Positief Gezond Almere-pagina meegenomen.",
+      "what_changed": "Het overzicht kan nu beter laten zien welke lokale besluiten, samenwerkingsprojecten en actuele PGA-informatie publiek vindbaar zijn. Tegelijk blijft open of deze onderdelen formeel als D6-infrastructuur gelden en wie lokaal eigenaar, uitvoerder of financier is.",
+      "why_it_matters": "Voor Almere maakt dit het onderscheid scherper tussen wat openbare bronnen al ondersteunen en welke punten nog door lokale medewerkers of bestuurders moeten worden bevestigd."
     },
     "key_points": [
-      "Niet door naar rapportproductie of bestuurlijke D6-drafting; alleen D6 remediation is toegestaan.",
-      "Zes extra bronnen zijn formeel ingested en verwerkt.",
-      "Stevige Lokale Teams heeft nu lokale besluitdocumenten in de bronlaag.",
+      "Nog niet gebruiken als definitieve D6-rapportage of bestuurlijke werkagendatekst.",
+      "Zes extra bronnen zijn toegevoegd en controleerbaar gemaakt.",
+      "Stevige Lokale Teams heeft nu lokale besluitdocumenten in het openbare bronnenoverzicht.",
       "D6-classificatie, eigenaar, uitvoerder en budgetallocatie blijven lokale validatie- of besluitvelden waar de bronnen dat niet zelf vastleggen."
     ],
     "section_urls": {
@@ -11914,8 +11914,8 @@
         "detail": "Deze bron ondersteunt de actuele context rond gezonde wijken, duurzame zorg, lerende netwerken, betere samenwerking tussen informele zorg, sociaal en medisch domein en een actueel informatiebeeld."
       },
       {
-        "summary": "De lokale decision layer bevat nu een source-backed publieke raadbeslissing.",
-        "detail": "De beslissing is vastgelegd als publieke besluitroute voor Stevige Lokale Teams; formele D6-classificatie blijft review_needed."
+        "summary": "Er is nu een openbare raadbeslissing rond Stevige Lokale Teams zichtbaar.",
+        "detail": "De beslissing helpt om het lokale besluitspoor te volgen. Zij bewijst nog niet dat Stevige Lokale Teams formeel als D6-infrastructuur zijn aangewezen."
       }
     ],
     "metrics": [

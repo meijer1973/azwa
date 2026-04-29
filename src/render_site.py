@@ -835,7 +835,7 @@ def render_updates(route: str, updates_view: dict) -> str:
         return '<section class="section"><div class="empty-state">Nog geen publieke data-updates beschikbaar.</div></section>'
 
     sections = [
-        '<section class="section"><h2>Hoe deze updatepagina te gebruiken</h2><div class="notice">Deze pagina laat zien wat er door nieuwe data in de dataset en op de site is veranderd. De onderliggende bronpagina\'s en tijdlijnmomenten blijven leidend voor de inhoudelijke duiding.</div></section>'
+        '<section class="section"><h2>Hoe deze updatepagina te gebruiken</h2><div class="notice">Deze pagina laat zien wat er door nieuwe bronnen en controles op de site is veranderd. De onderliggende bronpagina\'s en tijdlijnmomenten blijven leidend voor de inhoudelijke duiding.</div></section>'
     ]
 
     for index, update in enumerate(updates_view["updates"]):
@@ -873,10 +873,10 @@ def render_updates(route: str, updates_view: dict) -> str:
             + f'<section class="section section--nested" id="{esc(update["update_id"])}-wijzigingen"><h3>Wat is er veranderd</h3>'
             + render_update_change_highlights(update["update_id"], update["change_highlights"])
             + "</section>"
-            + f'<section class="section section--nested" id="{esc(update["update_id"])}-claims"><h3>Alle betrokken claims ({esc(str(update["affected_claim_count"]))})</h3><div class="notice">De volledige claimlijst staat op een aparte detailpagina. Dat houdt deze updatepagina leesbaar, terwijl de ruwe extractielaag wel volledig raadpleegbaar blijft.</div>'
+            + f'<section class="section section--nested" id="{esc(update["update_id"])}-claims"><h3>Alle betrokken bronfragmenten ({esc(str(update["affected_claim_count"]))})</h3><div class="notice">De volledige controlelijst staat op een aparte detailpagina. Dat houdt deze updatepagina leesbaar, terwijl de onderliggende bronfragmenten raadpleegbaar blijven.</div>'
             + render_link_pills(
                 route,
-                [{"label": "Bekijk volledige claimlijst", "href": update["claims_page_url"]}],
+                [{"label": "Bekijk volledige controlelijst", "href": update["claims_page_url"]}],
             )
             + "</section>"
             + '<section class="section section--nested"><h3>Raakt direct aan</h3>'
@@ -915,9 +915,9 @@ def render_updates(route: str, updates_view: dict) -> str:
 
 def render_update_claims_detail(route: str, update: dict) -> str:
     return (
-        '<section class="section"><h2>Hoe deze claimlijst te lezen</h2><div class="notice">Dit is de ruwe, machine-afgeleide claimlaag die uit de nieuwe bronset is gekomen. Claims zijn hier bewijsfragmenten, niet herschreven bestuurlijke samenvattingen. Daardoor kunnen tabelkoppen, afgebroken PDF-zinnen of korte tekstfragmenten zichtbaar zijn.</div></section>'
-        + '<section class="section"><h2>Waarom sommige claims onvolledige zinnen lijken</h2><p>De claimlaag probeert brongetrouw en atomair te blijven. Bij PDF-tabellen, afgebroken regels en compacte bronpassages levert dat soms halve zinnen of fragmenten op, zoals in tabellen of opsommingen. Voor menselijk leesbare duiding blijft de updatepagina zelf leidend; deze detailpagina is vooral bedoeld voor controle, herleidbaarheid en verdere analyse.</p></section>'
-        + f'<section class="section"><h2>Alle betrokken claims ({esc(str(update["affected_claim_count"]))})</h2>'
+        '<section class="section"><h2>Hoe deze controlelijst te lezen</h2><div class="notice">Dit is de volledige lijst met bronfragmenten die bij deze update horen. De fragmenten zijn bedoeld voor controle en herleidbaarheid, niet als herschreven bestuurlijke samenvatting. Daardoor kunnen tabelkoppen, afgebroken PDF-zinnen of korte tekstfragmenten zichtbaar zijn.</div></section>'
+        + '<section class="section"><h2>Waarom sommige fragmenten onvolledige zinnen lijken</h2><p>De controlelijst blijft dicht bij de bron. Bij PDF-tabellen, afgebroken regels en compacte bronpassages levert dat soms halve zinnen of fragmenten op, zoals in tabellen of opsommingen. Voor menselijk leesbare duiding blijft de updatepagina zelf leidend; deze detailpagina is vooral bedoeld voor controle, herleidbaarheid en verdere analyse.</p></section>'
+        + f'<section class="section"><h2>Alle betrokken bronfragmenten ({esc(str(update["affected_claim_count"]))})</h2>'
         + "".join(
             '<details class="timeline-entry">'
             + '<summary class="timeline-entry__summary">'
@@ -1373,9 +1373,9 @@ def build_search_index(
         },
         {
             "title": "Updates",
-            "subtitle": "Wijzigingen door nieuwe data",
-            "summary": "Overzicht van publieke data-updates en wat die hebben veranderd in dataset, tijdlijn en site.",
-            "aliases": ["updates", "wijzigingen", "data-update"],
+            "subtitle": "Wijzigingen door nieuwe bronnen",
+            "summary": "Overzicht van publieke updates en wat die hebben veranderd in bronnen, tijdlijn en site.",
+            "aliases": ["updates", "wijzigingen", "bronupdate"],
             "themes": [],
             "domains": ["D5", "D6"],
             "url": route_to_output_path("/updates/").as_posix(),
@@ -1492,7 +1492,7 @@ def build_search_index(
                 "title": update["title"],
                 "subtitle": update["published_on"],
                 "summary": update["summary"],
-                "aliases": ["update", "data-update", *[item["label"].lower() for item in update["metrics"]]],
+                "aliases": ["update", "bronupdate", *[item["label"].lower() for item in update["metrics"]]],
                 "themes": [],
                 "domains": ["D5", "D6"],
                 "url": f'{route_to_output_path("/updates/").as_posix()}#{update["update_id"]}',
@@ -1502,10 +1502,10 @@ def build_search_index(
         )
         index.append(
             {
-                "title": f'Claimlijst: {update["title"]}',
-                "subtitle": f'Ruwe claimlaag voor {update["published_on"]}',
-                "summary": "Volledige, brongetrouwe claimlijst voor deze update, gegroepeerd per bron.",
-                "aliases": ["claims", "claimlijst", "ruwe claimlaag"],
+                "title": f'Controlelijst: {update["title"]}',
+                "subtitle": f'Bronfragmenten voor {update["published_on"]}',
+                "summary": "Volledige, brongetrouwe controlelijst voor deze update, gegroepeerd per bron.",
+                "aliases": ["bronfragmenten", "controlelijst", "claims"],
                 "themes": [],
                 "domains": ["D5", "D6"],
                 "url": route_to_output_path(update["claims_page_url"]).as_posix(),
@@ -1642,7 +1642,7 @@ def main() -> None:
             render_page(
                 "/updates/",
                 "Updates",
-                "Overzicht van wat nieuwe data in de dataset, tijdlijn en site heeft veranderd.",
+                "Overzicht van wat nieuwe bronnen en controles in de bronnen, tijdlijn en site hebben veranderd.",
                 render_updates("/updates/", updates_view),
                 navigation,
                 site_info,
@@ -1657,8 +1657,8 @@ def main() -> None:
                 update["claims_page_url"],
                 render_page(
                     update["claims_page_url"],
-                    f'Claimlijst: {update["title"]}',
-                    f'Volledige, brongetrouwe claimlijst voor de update van {update["published_on"]}.',
+                    f'Controlelijst: {update["title"]}',
+                    f'Volledige, brongetrouwe controlelijst voor de update van {update["published_on"]}.',
                     render_update_claims_detail(update["claims_page_url"], update),
                     navigation,
                     site_info,
@@ -1725,7 +1725,7 @@ def main() -> None:
             render_page(
                 "/sources/",
                 "Bronnen",
-                "Volledige index van de bronnen die aan de huidige site en claimlaag ten grondslag liggen.",
+                "Volledige index van de bronnen die aan de huidige site ten grondslag liggen.",
                 render_sources_index("/sources/", sources_view),
                 navigation,
                 site_info,

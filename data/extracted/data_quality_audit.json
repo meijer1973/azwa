@@ -14,7 +14,7 @@
     "high_volume_topic_count": 6,
     "rough_claim_count": 119,
     "site_files_with_rough_claims": 11,
-    "open_review_items": 143
+    "open_review_items": 166
   },
   "perspective_coverage": {
     "claims": {
@@ -710,6 +710,230 @@
         "date_signal": "none",
         "statement_excerpt": "Voor een ingerichte ketenaanpak kansrijke start, valpreventie bij ouderen, de aanpak overgewicht kinderen, gecombineerde leefstijlinterventie bij overgewicht en obesitas van volwassen én welzijn op recept, zoals bedoe...",
         "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron."
+      }
+    ]
+  },
+  "money_status_audit": {
+    "description": "Sprint 27.3 money split for funding routes, application conditions, budget windows, allocation mechanisms, spending scope, accountability rules, local funding gaps, double-counting risks, finance context, and non-financial material.",
+    "status_counts": {
+      "accountability_rule": 44,
+      "allocation_mechanism": 28,
+      "application_condition": 14,
+      "budget_window": 115,
+      "double_counting_risk": 1,
+      "finance_context": 36,
+      "funding_route": 54,
+      "local_funding_gap": 1,
+      "not_financial": 231
+    },
+    "money_perspective_status_counts": {
+      "accountability_rule": 4,
+      "allocation_mechanism": 16,
+      "application_condition": 1,
+      "budget_window": 9,
+      "finance_context": 2,
+      "funding_route": 14
+    },
+    "verification_needed_sample": [
+      {
+        "claim_id": "clm__reg_flevoland_2023_regioplan_iza_d5_001",
+        "source_document_id": "reg_flevoland_2023_regioplan_iza",
+        "topic": "d5.mentale_gezondheidsnetwerken",
+        "money_status": "not_financial",
+        "statement_excerpt": "The plan highlights Ecosysteem Mentale Gezondheid and Samen Sterker in de Wijk as a model for neighbourhood collaboration around psychosocial problems.",
+        "public_wording_guardrail": "Niet gebruiken als financieringsregel."
+      },
+      {
+        "claim_id": "clm__reg_flevoland_2023_regioplan_iza_d5_002",
+        "source_document_id": "reg_flevoland_2023_regioplan_iza",
+        "topic": "d5.cross_domain_collaboration",
+        "money_status": "not_financial",
+        "statement_excerpt": "The plan also explicitly calls integrale domeinoverstijgende samenwerking essential between the social domain, medical domain, long-term care, geriatrics, and wijk care.",
+        "public_wording_guardrail": "Niet gebruiken als financieringsregel."
+      },
+      {
+        "claim_id": "clm__reg_flevoland_2023_regioplan_iza_d6_001",
+        "source_document_id": "reg_flevoland_2023_regioplan_iza",
+        "topic": "d6.digital_and_operational_infrastructure",
+        "money_status": "finance_context",
+        "statement_excerpt": "The Regioplan identifies digital infrastructure as essential and names a regional collaboration organization, a shared data-availability vision, information architecture, and use-case based rollout.",
+        "public_wording_guardrail": "Gebruik als context; controleer sterkere bronnen voordat hier een financieringsregel van wordt gemaakt."
+      },
+      {
+        "claim_id": "clm__mun_almere_pga_transformatieplan_d5_001",
+        "source_document_id": "mun_almere_pga_transformatieplan",
+        "topic": "d5.mentale_gezondheidsnetwerken",
+        "money_status": "not_financial",
+        "statement_excerpt": "The plan explicitly aims for better cooperation between informal care, the social domain, and the medical domain, supported by initiatives such as Voorzorgcirkels, Welzijn op Recept, and Samen Sterker in de Wijk.",
+        "public_wording_guardrail": "Niet gebruiken als financieringsregel."
+      },
+      {
+        "claim_id": "clm__mun_almere_pga_transformatieplan_d5_002",
+        "source_document_id": "mun_almere_pga_transformatieplan",
+        "topic": "d5.health_first_shift",
+        "money_status": "not_financial",
+        "statement_excerpt": "The local shift is framed as moving from care afterwards toward health first and the right help in the right place.",
+        "public_wording_guardrail": "Niet gebruiken als financieringsregel."
+      },
+      {
+        "claim_id": "clm__mun_almere_pga_transformatieplan_d6_001",
+        "source_document_id": "mun_almere_pga_transformatieplan",
+        "topic": "d6.digital_and_operational_infrastructure",
+        "money_status": "accountability_rule",
+        "statement_excerpt": "The local plan names RTP Almere, the RSO, data infrastructure, and Monitoring@home as part of the operational infrastructure needed for care closer to home.",
+        "public_wording_guardrail": "Koppel aan de bronroute en verantwoordingsplicht; maak er geen bestedingsruimte van."
+      },
+      {
+        "claim_id": "clm__mun_almere_pga_transformatieplan_d6_002",
+        "source_document_id": "mun_almere_pga_transformatieplan",
+        "topic": "d6.digital_and_operational_infrastructure",
+        "money_status": "not_financial",
+        "statement_excerpt": "The plan also makes a current shared information picture for professionals part of the local enabling structure.",
+        "public_wording_guardrail": "Niet gebruiken als financieringsregel."
+      },
+      {
+        "claim_id": "clm__mun_almere_pga_transformatieplan_governance_and_finance_001",
+        "source_document_id": "mun_almere_pga_transformatieplan",
+        "topic": "governance.local_coalition",
+        "money_status": "finance_context",
+        "statement_excerpt": "The governance base is a broad local coalition of Almere municipality, wijkteams, care and welfare organizations, and preventive and public-health institutions.",
+        "public_wording_guardrail": "Gebruik als context; controleer sterkere bronnen voordat hier een financieringsregel van wordt gemaakt."
+      },
+      {
+        "claim_id": "clm__mun_almere_pga_transformatieplan_governance_and_finance_002",
+        "source_document_id": "mun_almere_pga_transformatieplan",
+        "topic": "finance.local_alignment_goal",
+        "money_status": "finance_context",
+        "statement_excerpt": "The plan does not set a detailed funding framework, but it does describe a target future balance in which care expenditures and social-domain expenditures are better aligned.",
+        "public_wording_guardrail": "Gebruik als context; controleer sterkere bronnen voordat hier een financieringsregel van wordt gemaakt."
+      },
+      {
+        "claim_id": "clm__nat_azwa_2025_aanbiedingsbrief_d5_001",
+        "source_document_id": "nat_azwa_2025_aanbiedingsbrief",
+        "topic": "d5.other",
+        "money_status": "finance_context",
+        "statement_excerpt": "In het bijzonder hecht ik aan de integrale benadering van het AZWA, waarmee we gezamenlijk voortbouwen op het IZA en de samenwerking over medisch en sociaal domein verder versterken en daarmee bijdragen aan de bewegin...",
+        "public_wording_guardrail": "Gebruik als context; controleer sterkere bronnen voordat hier een financieringsregel van wordt gemaakt."
+      },
+      {
+        "claim_id": "clm__nat_azwa_2025_aanbiedingsbrief_governance_and_finance_001",
+        "source_document_id": "nat_azwa_2025_aanbiedingsbrief",
+        "topic": "governance_and_finance.other",
+        "money_status": "finance_context",
+        "statement_excerpt": "Met partijen zal ik tijdens bestuurlijke overleggen de voortgang bewaken en uw Kamer hierover informeren.",
+        "public_wording_guardrail": "Gebruik als context; controleer sterkere bronnen voordat hier een financieringsregel van wordt gemaakt."
+      },
+      {
+        "claim_id": "clm__nat_azwa_opdracht_werkagenda_d5_2026_d6_001",
+        "source_document_id": "nat_azwa_opdracht_werkagenda_d5_2026",
+        "topic": "d6.basisinfrastructuur",
+        "money_status": "not_financial",
+        "statement_excerpt": "Basisfunctionaliteit Landelijk: (door)ontwikkeling handreikingen Regionaal: doorontwikkeling of start uitvoering Betreft: laagdrempelige steunpunten, sociaal verwijzen, valpreventie, volwassenen met overgewicht en obe...",
+        "public_wording_guardrail": "Niet gebruiken als financieringsregel."
+      },
+      {
+        "claim_id": "clm__nat_azwa_opdracht_werkagenda_d5_2026_d6_003",
+        "source_document_id": "nat_azwa_opdracht_werkagenda_d5_2026",
+        "topic": "d6.basisinfrastructuur",
+        "money_status": "not_financial",
+        "statement_excerpt": "7 Mentale gezondheid Laagdrempelige steunpunten Doelgroep: iedere inwoner die baat heeft bij laagdrempelige ondersteuning rondom zelfregie en herstel, met bijzondere aandacht voor mensen met ernstige of langdurige psy...",
+        "public_wording_guardrail": "Niet gebruiken als financieringsregel."
+      },
+      {
+        "claim_id": "clm__nat_azwa_opdracht_werkagenda_d5_2026_governance_and_finance_002",
+        "source_document_id": "nat_azwa_opdracht_werkagenda_d5_2026",
+        "topic": "governance_and_finance.other",
+        "money_status": "finance_context",
+        "statement_excerpt": "Kansrijke Start Doelgroep: (Toekomstige) ouders in een kwetsbare situatie in de eerste 1000 dagen van het kind (van drie maanden vóór de bevruchting tot ongeveer 2 jaar). Benodigd landelijk dekkend aanbod: • Elke geme...",
+        "public_wording_guardrail": "Gebruik als context; controleer sterkere bronnen voordat hier een financieringsregel van wordt gemaakt."
+      },
+      {
+        "claim_id": "clm__nat_iza_2022_integraal_zorgakkoord_d6_001",
+        "source_document_id": "nat_iza_2022_integraal_zorgakkoord",
+        "topic": "d6.basisinfrastructuur",
+        "money_status": "not_financial",
+        "statement_excerpt": "van laagdrempelige steunpunten zoals herstel- en zelfregiecentra waar iedere inwoner, met name mensen met EPA, toegang tot heeft: gerund door vrijwilligers en ervaringsdeskundigen, ondersteund door sociaalwer­ kers en...",
+        "public_wording_guardrail": "Niet gebruiken als financieringsregel."
+      },
+      {
+        "claim_id": "clm__nat_gala_2023_gezond_en_actief_leven_d5_001",
+        "source_document_id": "nat_gala_2023_gezond_en_actief_leven",
+        "topic": "d5.basisfunctionaliteiten_onderbouwd",
+        "money_status": "finance_context",
+        "statement_excerpt": "Structurele inzet op de coördinatie en organisatie van de in IZA afgesproken domeinoverstijgende keteninter­ venties (waaronder valpreventie bij ouderen, welzijn op recept, aanpak overgewicht bij kinderen, gecombineer...",
+        "public_wording_guardrail": "Gebruik als context; controleer sterkere bronnen voordat hier een financieringsregel van wordt gemaakt."
+      },
+      {
+        "claim_id": "clm__nat_gala_2023_gezond_en_actief_leven_d5_003",
+        "source_document_id": "nat_gala_2023_gezond_en_actief_leven",
+        "topic": "d5.basisfunctionaliteiten_onderbouwd",
+        "money_status": "finance_context",
+        "statement_excerpt": "Voor een ingerichte ketenaanpak kansrijke start, valpreventie bij ouderen, de aanpak overgewicht kinderen, gecombineerde leefstijlinterventie bij overgewicht en obesitas van volwassen én welzijn op recept, zoals bedoe...",
+        "public_wording_guardrail": "Gebruik als context; controleer sterkere bronnen voordat hier een financieringsregel van wordt gemaakt."
+      },
+      {
+        "claim_id": "clm__nat_gala_2023_gezond_en_actief_leven_d6_001",
+        "source_document_id": "nat_gala_2023_gezond_en_actief_leven",
+        "topic": "d6.basisinfrastructuur",
+        "money_status": "not_financial",
+        "statement_excerpt": "Inrichten en bemensen van laagdrempelige steunpunten waar iedere inwoner toegang tot heeft, ondersteund door sociaalwerkers als onderdeel van de regionale infrastructuur.",
+        "public_wording_guardrail": "Niet gebruiken als financieringsregel."
+      },
+      {
+        "claim_id": "clm__nat_gala_2023_gezond_en_actief_leven_d6_002",
+        "source_document_id": "nat_gala_2023_gezond_en_actief_leven",
+        "topic": "d6.basisinfrastructuur",
+        "money_status": "not_financial",
+        "statement_excerpt": "We willen terug naar de nabijheid en de menselijke maat vanuit de lokale sociale basis of de sociale infrastructuur, in samenspraak met de inwoners.",
+        "public_wording_guardrail": "Niet gebruiken als financieringsregel."
+      },
+      {
+        "claim_id": "clm__nat_gala_2023_gezond_en_actief_leven_d6_003",
+        "source_document_id": "nat_gala_2023_gezond_en_actief_leven",
+        "topic": "d6.basisinfrastructuur",
+        "money_status": "not_financial",
+        "statement_excerpt": "Inrichten en bemensen van een dekkend netwerk van laagdrempelige steunpunten in de regio voor mensen met psychische kwetsbaarheid.",
+        "public_wording_guardrail": "Niet gebruiken als financieringsregel."
+      },
+      {
+        "claim_id": "clm__nat_gala_2023_gezond_en_actief_leven_timeline_and_status_003",
+        "source_document_id": "nat_gala_2023_gezond_en_actief_leven",
+        "topic": "timeline.other",
+        "money_status": "finance_context",
+        "statement_excerpt": "Uitgangspunten Bij deze werkagenda geldt een aantal uitgangspunten: • De inzet van gemeenten in het kader van het IZA kan zo­ wel lokaal als in samenwerking met andere gemeenten in de samenwerkingsregio plaatsvinden....",
+        "public_wording_guardrail": "Gebruik als context; controleer sterkere bronnen voordat hier een financieringsregel van wordt gemaakt."
+      },
+      {
+        "claim_id": "clm__mun_almere_pga_seo_businesscase_2024_d5_001",
+        "source_document_id": "mun_almere_pga_seo_businesscase_2024",
+        "topic": "d5.health_first_shift",
+        "money_status": "not_financial",
+        "statement_excerpt": "Het Transformatieplan Positief Gezond Almere beperkt deze druk door in te zetten op passende zorg op de juiste plek en de veerkracht, gezondheid en zelfredzaamheid van inwoners.",
+        "public_wording_guardrail": "Niet gebruiken als financieringsregel."
+      },
+      {
+        "claim_id": "clm__mun_almere_pga_seo_businesscase_2024_d5_002",
+        "source_document_id": "mun_almere_pga_seo_businesscase_2024",
+        "topic": "d5.cross_domain_collaboration",
+        "money_status": "not_financial",
+        "statement_excerpt": "Welzijn op Recept is een alternatief voor mensen met psychosociale en psychosomatische klachten.",
+        "public_wording_guardrail": "Niet gebruiken als financieringsregel."
+      },
+      {
+        "claim_id": "clm__mun_almere_pga_seo_businesscase_2024_d5_003",
+        "source_document_id": "mun_almere_pga_seo_businesscase_2024",
+        "topic": "d5.health_first_shift",
+        "money_status": "not_financial",
+        "statement_excerpt": "Tabel S.1 Vijf pijlers verminderen in samenhang de druk op de zorg in Almere De druk op de zorg in Almere verminderen Met de inwoners naar behoefte hun veerkracht, gezondheid en zelfredzaamheid vergroten Inwoners inte...",
+        "public_wording_guardrail": "Niet gebruiken als financieringsregel."
+      },
+      {
+        "claim_id": "clm__mun_almere_pga_seo_businesscase_2024_d6_001",
+        "source_document_id": "mun_almere_pga_seo_businesscase_2024",
+        "topic": "d6.other",
+        "money_status": "not_financial",
+        "statement_excerpt": "Tabel S.1 Vijf pijlers verminderen in samenhang de druk op de zorg in Almere De druk op de zorg in Almere verminderen Met de inwoners naar behoefte hun veerkracht, gezondheid en zelfredzaamheid vergroten Inwoners inte...",
+        "public_wording_guardrail": "Niet gebruiken als financieringsregel."
       }
     ]
   },
@@ -3153,8 +3377,11 @@
       "related_topics": [],
       "related_review_reasons": [
         "authority_unclear",
+        "double_counting_risk",
         "expected_time_not_deadline",
         "extraction_noise_detected",
+        "finance_context_needs_verification",
+        "local_funding_gap",
         "local_planning_context_not_policy_deadline",
         "lower_authority_norm_signal",
         "missing_d5_content",

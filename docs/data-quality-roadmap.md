@@ -28,7 +28,7 @@ Gebruik deze roadmap als levend werkdocument. Werk na elke sprint de statusregel
 | 26.3 Sentence-boundary en dedup | completed | `src/build_claims_top5.py`, `src/verify_claim_id_references.py`, `data/extracted/claims/sentence_validator_rejects.json`, `data/extracted/claims/dedup_log.json`, `docs/completed-plans/phase26-sprint26.3-sentence-boundary-dedup.md` |
 | 27.1 Norm | completed | `src/build_claims_top5.py`, `data/schemas/claim.schema.json`, `data/extracted/data_quality_audit.json`, `docs/completed-plans/phase27-sprint27.1-norm.md` |
 | 27.2 Tijd | completed | `src/build_claims_top5.py`, `data/schemas/claim.schema.json`, `data/extracted/data_quality_audit.json`, `data/site/timeline_register.json`, `docs/completed-plans/phase27-sprint27.2-tijd.md` |
-| 27.3 Geld | open |  |
+| 27.3 Geld | completed | `src/build_claims_top5.py`, `data/schemas/claim.schema.json`, `data/extracted/data_quality_audit.json`, `docs/completed-plans/phase27-sprint27.3-geld.md` |
 | 27.4 Governance | open |  |
 | 27.5 Locality | open |  |
 | 27.6 Execution | open |  |
@@ -63,6 +63,8 @@ Status op 28 april 2026: Sprint 25.6 is geparkeerd als policy-maker/stakeholder-
 Status op 29 april 2026: Sprint 27.1 is afgerond als norm-splitsing. Elke claim krijgt nu een `normative_status` met de waarden `binding`, `agreement`, `expectation`, `guidance`, `lower_authority_signal` of `contextual`. De audit bevat een `normative_status_audit`, de site-evidence draagt normstatus mee, en QC markeert lagere-autoriteitssignalen expliciet als reviewpunt zodat FAQ's, toelichtingen en regionale/lokale context niet als harde norm worden gelezen.
 
 Status op 29 april 2026: Sprint 27.2 is afgerond als tijd-splitsing. Elke claim krijgt nu een `time_status` met onderscheid tussen formele deadlines, verwachte momenten, review-/actualisatiemomenten, budgetkalendermomenten, implementatiehorizons, lokale planningscontext, bronverankerde tijdmomenten, publicatie-/contextdata en ongedateerde context. De audit bevat een `time_status_audit`, site-evidence en tijdlijnitems dragen tijdstatus mee, en QC markeert verwachte momenten en lokale planningscontext als reviewpunt zodat indicatieve momenten en lokale raadsagenda's niet als harde D5/D6-deadlines worden gelezen.
+
+Status op 29 april 2026: Sprint 27.3 is afgerond als geld-splitsing. Elke claim krijgt nu een `money_status` met onderscheid tussen financieringsroutes, aanvraagvoorwaarden, budgetvensters, verdeelmechanismen, bestedingsruimte, verantwoordingsregels, lokale financieringsgaten, dubbeltellingsrisico's, financiele context en niet-financiele inhoud. De audit bevat een `money_status_audit`, site-evidence draagt geldstatus mee, en QC markeert lokale financieringsgaten, dubbeltellingsrisico's en algemene financiele context als reviewpunt zodat lokale budgetkeuzes of middelenmixen niet uit publieke bronnen worden ingevuld.
 
 Afgeronde aanpak voor Sprint 25.4a:
 
@@ -281,14 +283,14 @@ Status: completed.
 - D6-registerrijen zijn niet inhoudelijk gehard; Sprint 25.6 blijft geparkeerd tot stakeholdervalidatie beschikbaar is.
 
 Sprint 27.2: Tijd
-Status: open.
+Status: completed.
 
 - Maak deadlines, verwachte publicatiemomenten, reviewmomenten en begrotingsmomenten aparte tijdclaims.
 - Sorteer en groepeer tijdlijnitems structureel chronologisch.
 - Markeer verwachte momenten duidelijk anders dan vastgestelde deadlines.
 
 Sprint 27.3: Geld
-Status: open.
+Status: completed.
 
 - Maak claims voor financieringsinstrument, aanvraagvoorwaarde, budgetvenster, verdeelmechanisme, bestedingsruimte en verantwoording.
 - Leg onzekerheden over uitkering, overloop, reservering en besteding apart vast.

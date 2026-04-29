@@ -155,6 +155,48 @@
         "financiering"
       ],
       "page_type_defaults": [],
+      "money_status_values": [
+        {
+          "status": "funding_route",
+          "meaning": "Bron noemt een route waarlangs middelen of bekostiging lopen."
+        },
+        {
+          "status": "application_condition",
+          "meaning": "Bron noemt een aanvraagvoorwaarde, procesvoorwaarde of randvoorwaarde."
+        },
+        {
+          "status": "budget_window",
+          "meaning": "Bron noemt een budgetvenster, financieel tijdvak of meerjarige middelenperiode."
+        },
+        {
+          "status": "allocation_mechanism",
+          "meaning": "Bron noemt verdeling, toekenning, uitkering of verdeelmechanisme."
+        },
+        {
+          "status": "spending_scope",
+          "meaning": "Bron noemt bestedingsruimte, inzet van middelen of cofinancieringslogica."
+        },
+        {
+          "status": "accountability_rule",
+          "meaning": "Bron noemt verantwoording, rapportage, aanlevering of controle."
+        },
+        {
+          "status": "local_funding_gap",
+          "meaning": "Publieke bronbasis laat lokale budgetverdeling, eigenaar of dekking nog open."
+        },
+        {
+          "status": "double_counting_risk",
+          "meaning": "Bron of analyse waarschuwt dat financieringslijnen gescheiden moeten blijven."
+        },
+        {
+          "status": "finance_context",
+          "meaning": "Financiele context zonder zelfstandige financieringsregel."
+        },
+        {
+          "status": "not_financial",
+          "meaning": "Geen zelfstandige financiele claim."
+        }
+      ],
       "editorial_rule": "State what the source says about funding routes, conditions, and windows; keep unverified financial assumptions out of the public layer.",
       "exclusion_rule": "Do not present rumored carry-over rules, local budgets, or scenarios as facts unless a source or verified calculation supports them."
     },

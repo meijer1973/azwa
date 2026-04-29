@@ -111,6 +111,99 @@ IMPLEMENTATION_HORIZON_TERMS = (
     "implementatie",
     "horizon",
 )
+FUNDING_ROUTE_TERMS = (
+    "spuk",
+    "specifieke uitkering",
+    "gemeentefonds",
+    "fondsbeheerder",
+    "vng",
+    "zorgverzekeraar",
+    "zvw",
+    "bekostigingsroute",
+    "financieringsroute",
+    "uitkering",
+)
+APPLICATION_CONDITION_TERMS = (
+    "aanvraag",
+    "aanvragen",
+    "voorwaarde",
+    "voorwaarden",
+    "randvoorwaardelijk",
+    "vereist",
+    "moet worden aangevraagd",
+    "penvoerder",
+)
+BUDGET_WINDOW_TERMS = (
+    "2026",
+    "2027",
+    "2028",
+    "2029",
+    "2030",
+    "2031",
+    "meerjarig",
+    "startpakket",
+    "budget",
+    "budgettair",
+    "begroting",
+    "middelen",
+    "macrokader",
+)
+ALLOCATION_MECHANISM_TERMS = (
+    "verdeeld",
+    "verdeling",
+    "verdeelsleutel",
+    "allocatie",
+    "toegekend",
+    "toekenning",
+    "uitkeren",
+    "uitkering",
+    "beschikbaar gesteld",
+)
+SPENDING_SCOPE_TERMS = (
+    "besteding",
+    "bestedingsruimte",
+    "mag worden besteed",
+    "inzet van middelen",
+    "middelen inzetten",
+    "cofinanciering",
+    "eigen bijdrage",
+)
+ACCOUNTABILITY_RULE_TERMS = (
+    "verantwoording",
+    "verantwoorden",
+    "aanleveren",
+    "rapportage",
+    "siSa",
+    "controle",
+    "monitoring",
+)
+LOCAL_FUNDING_GAP_TERMS = (
+    "lokale verdeling",
+    "lokaal budget",
+    "budgetverdeling",
+    "niet expliciet",
+    "geen expliciete",
+    "nog geen",
+    "niet zichtbaar",
+    "lokale keuze",
+    "onbekend",
+    "needs decision",
+    "needs source",
+    "invulveld",
+)
+DOUBLE_COUNTING_TERMS = (
+    "dubbeltelling",
+    "dubbel",
+    "apart houden",
+    "niet dubbel",
+    "scheiden",
+    "onderscheiden",
+    "pga",
+    "gala",
+    "iza",
+    "azwa-d5",
+    "azwa-d6",
+)
 
 
 def normalize_text(text: str) -> str:
@@ -303,6 +396,98 @@ def time_status_for(
         "source_temporal_anchor": "explicit_text_signal" if date_signal != "none" or is_time_topic else "publication_context",
         "public_wording_guardrail": guardrail,
         "needs_review": status in {"expected_moment", "local_planning_context"} or source_statement_type == "contextual_relevance",
+    }
+
+
+def money_status_for(
+    statement: str,
+    document_id: str,
+    instrument_type: str,
+    source_statement_type: str,
+    topic: str,
+    claim_type: str,
+) -> dict:
+    normalized = normalize_text(statement)
+    is_finance_topic = topic.startswith("finance.") or topic == "governance_and_finance.other"
+    has_funding_route = contains_any(normalized, *FUNDING_ROUTE_TERMS)
+    has_application_condition = contains_any(normalized, *APPLICATION_CONDITION_TERMS)
+    has_budget_window = contains_any(normalized, *BUDGET_WINDOW_TERMS)
+    has_allocation = contains_any(normalized, *ALLOCATION_MECHANISM_TERMS)
+    has_spending_scope = contains_any(normalized, *SPENDING_SCOPE_TERMS)
+    has_accountability = contains_any(normalized, *ACCOUNTABILITY_RULE_TERMS)
+    has_local_gap = contains_any(normalized, *LOCAL_FUNDING_GAP_TERMS)
+    has_double_counting = contains_any(normalized, *DOUBLE_COUNTING_TERMS)
+    has_explicit_double_counting_warning = contains_any(
+        normalized,
+        "dubbeltelling",
+        "niet dubbel",
+        "apart houden",
+        "apart om",
+        "gescheiden",
+        "scheiden",
+    )
+    mentions_money = is_finance_topic or any(
+        (
+            has_funding_route,
+            has_application_condition,
+            has_budget_window,
+            has_allocation,
+            has_spending_scope,
+            has_accountability,
+            has_local_gap,
+            has_double_counting,
+        )
+    )
+
+    if has_double_counting and has_explicit_double_counting_warning:
+        status = "double_counting_risk"
+        label = "Risico op dubbeltelling of verkeerde middelenmix"
+        guardrail = "Houd financieringslijnen gescheiden; presenteer geen gecombineerde lokale dekking zonder bron."
+    elif has_local_gap and mentions_money:
+        status = "local_funding_gap"
+        label = "Lokale financieringslacune"
+        guardrail = "Formuleer als lokaal invul- of besluitpunt; vul geen budget of eigenaar in zonder lokale bron."
+    elif has_accountability:
+        status = "accountability_rule"
+        label = "Verantwoordings- of rapportageregel"
+        guardrail = "Koppel aan de bronroute en verantwoordingsplicht; maak er geen bestedingsruimte van."
+    elif has_application_condition:
+        status = "application_condition"
+        label = "Aanvraagvoorwaarde of randvoorwaarde"
+        guardrail = "Formuleer als aanvraag- of procesvoorwaarde; controleer of de bron formeel of praktisch is."
+    elif has_allocation:
+        status = "allocation_mechanism"
+        label = "Verdeel- of toekenningsmechanisme"
+        guardrail = "Beschrijf alleen het verdeelmechanisme dat de bron noemt; geen lokale verdeling afleiden."
+    elif has_spending_scope:
+        status = "spending_scope"
+        label = "Bestedingsruimte of inzet van middelen"
+        guardrail = "Beschrijf toegestane inzet voorzichtig en houd bronvoorwaarden zichtbaar."
+    elif has_funding_route:
+        status = "funding_route"
+        label = "Financieringsroute"
+        guardrail = "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren."
+    elif has_budget_window and mentions_money:
+        status = "budget_window"
+        label = "Budgetvenster of financieel tijdvak"
+        guardrail = "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron."
+    elif mentions_money:
+        status = "finance_context"
+        label = "Financiele context"
+        guardrail = "Gebruik als context; controleer sterkere bronnen voordat hier een financieringsregel van wordt gemaakt."
+    else:
+        status = "not_financial"
+        label = "Geen zelfstandige financiele claim"
+        guardrail = "Niet gebruiken als financieringsregel."
+
+    return {
+        "status": status,
+        "label": label,
+        "financial_signal": mentions_money,
+        "source_finance_anchor": "explicit_finance_signal" if mentions_money else "none",
+        "public_wording_guardrail": guardrail,
+        "needs_verification": status in {"local_funding_gap", "double_counting_risk", "finance_context"}
+        or source_statement_type == "contextual_relevance",
     }
 
 
@@ -957,6 +1142,9 @@ def build_claim(
         "time_status": time_status_for(
             statement, document_payload["document_id"], instrument_type, source_statement_type, topic, claim_type
         ),
+        "money_status": money_status_for(
+            statement, document_payload["document_id"], instrument_type, source_statement_type, topic, claim_type
+        ),
         "statement": statement,
         "source_document_id": document_payload["document_id"],
         "source_location": extract_source_location(item),
@@ -1139,6 +1327,7 @@ def validate_claims(claims: list[dict], allowed_relation_types: set[str]) -> Non
         "claim_type",
         "normative_status",
         "time_status",
+        "money_status",
         "statement",
         "source_document_id",
         "source_location",

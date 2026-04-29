@@ -26,6 +26,14 @@
         "public_wording_guardrail": "Koppel aan de financiele bronroute; maak geen lokale budgetkeuze zonder lokale bron.",
         "needs_review": false
       },
+      "money_status": {
+        "status": "budget_window",
+        "label": "Budgetvenster of financieel tijdvak",
+        "financial_signal": true,
+        "source_finance_anchor": "explicit_finance_signal",
+        "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+        "needs_verification": false
+      },
       "statement": "In het AZWA zijn basisfunctionaliteiten afgesproken: afspraken en voorzieningen waarmee mensen tijdig passende ondersteuning krijgen, zodat zwaardere zorg wordt voorkomen en middelen kunnen verschuiven van zorg naar gezondheid en welzijn.",
       "source_document_id": "nat_vng_brief_azwa_financiering_webpagina_2026",
       "source_location": {
@@ -83,6 +91,14 @@
         "public_wording_guardrail": "Koppel aan de financiele bronroute; maak geen lokale budgetkeuze zonder lokale bron.",
         "needs_review": false
       },
+      "money_status": {
+        "status": "budget_window",
+        "label": "Budgetvenster of financieel tijdvak",
+        "financial_signal": true,
+        "source_finance_anchor": "explicit_finance_signal",
+        "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+        "needs_verification": false
+      },
       "statement": "In het AZWA zijn basisfunctionaliteiten afgesproken: afspraken en voorzieningen waarmee mensen tijdig passende ondersteuning krijgen, zodat zwaardere zorg wordt voorkomen en middelen kunnen verschuiven van zorg naar gezondheid en welzijn.",
       "source_document_id": "nat_vng_brief_azwa_financiering_webpagina_2026",
       "source_location": {
@@ -139,6 +155,14 @@
         "source_temporal_anchor": "publication_context",
         "public_wording_guardrail": "Gebruik als lokale bestuurlijke context; niet als landelijke of inhoudelijke D5/D6-deadline.",
         "needs_review": true
+      },
+      "money_status": {
+        "status": "finance_context",
+        "label": "Financiele context",
+        "financial_signal": true,
+        "source_finance_anchor": "explicit_finance_signal",
+        "public_wording_guardrail": "Gebruik als context; controleer sterkere bronnen voordat hier een financieringsregel van wordt gemaakt.",
+        "needs_verification": true
       },
       "statement": "Geachte leden van college en gemeenteraad, Met het Integraal Zorgakkoord (IZA) is ingezet op een verschuiving van zorg naar gezondheid en welzijn en op betere regionale samenwerking.",
       "source_document_id": "nat_vng_brief_azwa_financiering_webpagina_2026",

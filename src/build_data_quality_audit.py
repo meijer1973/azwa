@@ -382,6 +382,37 @@ def build_time_status_audit(claims: list[dict], claim_perspectives: dict[str, li
     }
 
 
+def build_money_status_audit(claims: list[dict], claim_perspectives: dict[str, list[str]]) -> dict:
+    status_counts: Counter[str] = Counter()
+    money_perspective_counts: Counter[str] = Counter()
+    verification_sample: list[dict] = []
+
+    for claim in claims:
+        status_payload = claim.get("money_status") or {}
+        status = status_payload.get("status", "missing")
+        status_counts[status] += 1
+        if "money" in claim_perspectives.get(claim["claim_id"], []):
+            money_perspective_counts[status] += 1
+        if status_payload.get("needs_verification") and len(verification_sample) < 25:
+            verification_sample.append(
+                {
+                    "claim_id": claim["claim_id"],
+                    "source_document_id": claim["source_document_id"],
+                    "topic": claim["topic"],
+                    "money_status": status,
+                    "statement_excerpt": claim_excerpt(claim["statement"], limit=220),
+                    "public_wording_guardrail": status_payload.get("public_wording_guardrail"),
+                }
+            )
+
+    return {
+        "description": "Sprint 27.3 money split for funding routes, application conditions, budget windows, allocation mechanisms, spending scope, accountability rules, local funding gaps, double-counting risks, finance context, and non-financial material.",
+        "status_counts": dict(sorted(status_counts.items())),
+        "money_perspective_status_counts": dict(sorted(money_perspective_counts.items())),
+        "verification_needed_sample": verification_sample,
+    }
+
+
 def build_view_model_coverage() -> dict:
     coverage: dict[str, dict] = {}
     for directory_name, group_name in SITE_VIEW_MODEL_GROUPS.items():
@@ -619,6 +650,7 @@ def main() -> None:
     perspective_coverage, claim_perspectives = build_perspective_coverage(claims, perspective_config)
     normative_status_audit = build_normative_status_audit(claims, claim_perspectives)
     time_status_audit = build_time_status_audit(claims, claim_perspectives)
+    money_status_audit = build_money_status_audit(claims, claim_perspectives)
     view_model_coverage = build_view_model_coverage()
     broad_topics = build_broad_topic_bucket_audit(current_interpretation, claims_by_id, claim_perspectives)
     rough_claim_audit, rough_claim_ids = build_rough_claim_audit(claims, claim_perspectives)
@@ -655,6 +687,7 @@ def main() -> None:
         },
         "normative_status_audit": normative_status_audit,
         "time_status_audit": time_status_audit,
+        "money_status_audit": money_status_audit,
         "topic_bucket_audit": broad_topics,
         "rough_publication_claims": rough_claim_audit,
         "site_text_risks": site_text_risks,

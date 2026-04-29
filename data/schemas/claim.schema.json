@@ -10,6 +10,7 @@
     "claim_type",
     "normative_status",
     "time_status",
+    "money_status",
     "statement",
     "source_document_id",
     "source_location",
@@ -128,6 +129,53 @@
           "type": "string"
         },
         "needs_review": {
+          "type": "boolean"
+        }
+      }
+    },
+    "money_status": {
+      "type": "object",
+      "required": [
+        "status",
+        "label",
+        "financial_signal",
+        "source_finance_anchor",
+        "public_wording_guardrail",
+        "needs_verification"
+      ],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "funding_route",
+            "application_condition",
+            "budget_window",
+            "allocation_mechanism",
+            "spending_scope",
+            "accountability_rule",
+            "local_funding_gap",
+            "double_counting_risk",
+            "finance_context",
+            "not_financial"
+          ]
+        },
+        "label": {
+          "type": "string"
+        },
+        "financial_signal": {
+          "type": "boolean"
+        },
+        "source_finance_anchor": {
+          "type": "string",
+          "enum": [
+            "explicit_finance_signal",
+            "none"
+          ]
+        },
+        "public_wording_guardrail": {
+          "type": "string"
+        },
+        "needs_verification": {
           "type": "boolean"
         }
       }

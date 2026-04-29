@@ -26,6 +26,14 @@
         "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
         "needs_review": false
       },
+      "money_status": {
+        "status": "not_financial",
+        "label": "Geen zelfstandige financiele claim",
+        "financial_signal": false,
+        "source_finance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+        "needs_verification": false
+      },
       "statement": "IST / SOLL / GAP | Onderdelen | Uitwerking IST | Urgentie: Wat is er bekend over de urgentie van deze basisfunctionaliteit in de regio?",
       "source_document_id": "nat_azwa_format_werkagenda_d5_2026",
       "source_location": {
@@ -82,6 +90,14 @@
         "source_temporal_anchor": "publication_context",
         "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
         "needs_review": false
+      },
+      "money_status": {
+        "status": "not_financial",
+        "label": "Geen zelfstandige financiele claim",
+        "financial_signal": false,
+        "source_finance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+        "needs_verification": false
       },
       "statement": "IST | Situatie: In hoeverre is deze basisfunctionaliteit (of onderdelen daarvan) al aanwezig in de regio?",
       "source_document_id": "nat_azwa_format_werkagenda_d5_2026",
@@ -140,6 +156,14 @@
         "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
         "needs_review": false
       },
+      "money_status": {
+        "status": "not_financial",
+        "label": "Geen zelfstandige financiele claim",
+        "financial_signal": false,
+        "source_finance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+        "needs_verification": false
+      },
       "statement": "SOLL | Ontwerp: Wat zijn expliciet gemaakte keuzes in de invulling van deze basisfunctionaliteit, en welke keuzes dienen nog gemaakt te worden?",
       "source_document_id": "nat_azwa_format_werkagenda_d5_2026",
       "source_location": {
@@ -196,6 +220,14 @@
         "source_temporal_anchor": "publication_context",
         "public_wording_guardrail": "Koppel aan de financiele bronroute; maak geen lokale budgetkeuze zonder lokale bron.",
         "needs_review": false
+      },
+      "money_status": {
+        "status": "budget_window",
+        "label": "Budgetvenster of financieel tijdvak",
+        "financial_signal": true,
+        "source_finance_anchor": "explicit_finance_signal",
+        "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+        "needs_verification": false
       },
       "statement": "Financiële middelen: Omschrijf de financieringsafspraken over de coördinatie en uitvoering.",
       "source_document_id": "nat_azwa_format_werkagenda_d5_2026",
@@ -254,6 +286,14 @@
         "public_wording_guardrail": "Koppel aan de financiele bronroute; maak geen lokale budgetkeuze zonder lokale bron.",
         "needs_review": false
       },
+      "money_status": {
+        "status": "budget_window",
+        "label": "Budgetvenster of financieel tijdvak",
+        "financial_signal": true,
+        "source_finance_anchor": "explicit_finance_signal",
+        "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+        "needs_verification": false
+      },
       "statement": "GAP (projectplan) | Financieel plan (optioneel): Welke financiële middelen worden ingezet voor dit onderdeel?",
       "source_document_id": "nat_azwa_format_werkagenda_d5_2026",
       "source_location": {
@@ -310,6 +350,14 @@
         "source_temporal_anchor": "explicit_text_signal",
         "public_wording_guardrail": "Formuleer als review- of updatecyclus; niet automatisch als lokaal besluitmoment.",
         "needs_review": false
+      },
+      "money_status": {
+        "status": "accountability_rule",
+        "label": "Verantwoordings- of rapportageregel",
+        "financial_signal": true,
+        "source_finance_anchor": "explicit_finance_signal",
+        "public_wording_guardrail": "Koppel aan de bronroute en verantwoordingsplicht; maak er geen bestedingsruimte van.",
+        "needs_verification": false
       },
       "statement": "Kennis en monitoring: Omschrijf de regionale monitoring van de voortgang op gezondheidsdoelen, digitalisering en de gezamenlijke leer- en datacyclus.",
       "source_document_id": "nat_azwa_format_werkagenda_d5_2026",
@@ -368,6 +416,14 @@
         "public_wording_guardrail": "Formuleer als review- of updatecyclus; niet automatisch als lokaal besluitmoment.",
         "needs_review": false
       },
+      "money_status": {
+        "status": "accountability_rule",
+        "label": "Verantwoordings- of rapportageregel",
+        "financial_signal": true,
+        "source_finance_anchor": "explicit_finance_signal",
+        "public_wording_guardrail": "Koppel aan de bronroute en verantwoordingsplicht; maak er geen bestedingsruimte van.",
+        "needs_verification": false
+      },
       "statement": "GAP (projectplan) | Monitoring (optioneel): Omschrijf de manier waarop de voortgang, prestaties en risico’s worden gevolgd en gerapporteerd.",
       "source_document_id": "nat_azwa_format_werkagenda_d5_2026",
       "source_location": {
@@ -424,6 +480,14 @@
         "source_temporal_anchor": "publication_context",
         "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
         "needs_review": false
+      },
+      "money_status": {
+        "status": "not_financial",
+        "label": "Geen zelfstandige financiele claim",
+        "financial_signal": false,
+        "source_finance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+        "needs_verification": false
       },
       "statement": "Onderdelen RPI | Uitwerking Toelichting op RPI: Omschrijf beknopt hoe de regionale preventie-infrastructuur in jullie regio is georganiseerd (een visuele toelichting, bijvoorbeeld in de vorm van een afbeelding, volstaat ook).",
       "source_document_id": "nat_azwa_format_werkagenda_d5_2026",
@@ -482,6 +546,14 @@
         "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
         "needs_review": false
       },
+      "money_status": {
+        "status": "not_financial",
+        "label": "Geen zelfstandige financiele claim",
+        "financial_signal": false,
+        "source_finance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+        "needs_verification": false
+      },
       "statement": "Regionale gezondheidsdoelen: Omschrijf welke gezamenlijke gezondheidsdoelen in de regio zijn vastgesteld.",
       "source_document_id": "nat_azwa_format_werkagenda_d5_2026",
       "source_location": {
@@ -538,6 +610,14 @@
         "source_temporal_anchor": "publication_context",
         "public_wording_guardrail": "Formuleer als review- of updatecyclus; niet automatisch als lokaal besluitmoment.",
         "needs_review": false
+      },
+      "money_status": {
+        "status": "not_financial",
+        "label": "Geen zelfstandige financiele claim",
+        "financial_signal": false,
+        "source_finance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+        "needs_verification": false
       },
       "statement": "Regionale samenwerkingsafspraken: Omschrijf welke afspraken er zijn gemaakt omtrent verantwoordelijkheid.",
       "source_document_id": "nat_azwa_format_werkagenda_d5_2026",

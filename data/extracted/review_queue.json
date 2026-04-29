@@ -4,12 +4,15 @@
   "summary": {
     "blocking": 0,
     "warning": 6,
-    "review": 143,
-    "item_count": 149,
+    "review": 166,
+    "item_count": 172,
     "issue_counts_by_reason": {
       "authority_unclear": 30,
+      "double_counting_risk": 1,
       "expected_time_not_deadline": 22,
       "extraction_noise_detected": 3,
+      "finance_context_needs_verification": 21,
+      "local_funding_gap": 1,
       "local_planning_context_not_policy_deadline": 10,
       "lower_authority_norm_signal": 37,
       "missing_d5_content": 4,
@@ -302,6 +305,27 @@
       "status": "open",
       "severity": "review",
       "check_id": "claim_payload_integrity",
+      "reason_code": "finance_context_needs_verification",
+      "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst contains 2 finance-context claim(s) without a more specific money status.",
+      "recommended_action": "Review these before treating them as a funding route, condition, budget window, spending rule, or accountability rule.",
+      "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d5_003",
+          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_municipal_translation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_015"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
       "reason_code": "lower_authority_norm_signal",
       "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst contains 6 lower-authority norm signal claim(s).",
       "recommended_action": "Attribute these passages explicitly and do not present them as binding without a stronger source.",
@@ -320,7 +344,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_015"
+      "review_item_id": "rvw_016"
     },
     {
       "status": "open",
@@ -344,7 +368,7 @@
         "topic_count": 2
       },
       "evidence": {},
-      "review_item_id": "rvw_016"
+      "review_item_id": "rvw_017"
     },
     {
       "status": "open",
@@ -365,7 +389,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_017"
+      "review_item_id": "rvw_018"
     },
     {
       "status": "open",
@@ -389,7 +413,28 @@
           "De Visie Gezondheidsbeleid Almere 2024-2026 vast te stellen: 1. waarin de volgende doelstellingen zijn vastgelegd: a. Brede Preventie: Het stimuleren van een gezonde leefstijl en leefomgeving vanuit het gedachtengoed Positieve Gezondheid; b. We verweven gezondheid in alle beleidsterreinen: Health in all policies; c. De toegankelijkheid van de zorg in de toekomst garanderen door alle Almeerders de juiste hulp op de juiste plek te bieden; 2. met daarin de volgende ambities: a. in te zetten op het bevorderen van de samenwerking tussen het medische en het sociale domein; b. bij te dragen aan de zorgtransitie; c. mensen in staat te stellen de vaardigheden te verwerven om beter voor zichzelf ..."
         ]
       },
-      "review_item_id": "rvw_018"
+      "review_item_id": "rvw_019"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "finance_context_needs_verification",
+      "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd contains 2 finance-context claim(s) without a more specific money status.",
+      "recommended_action": "Review these before treating them as a funding route, condition, budget window, spending rule, or accountability rule.",
+      "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_municipal_translation_002",
+          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_municipal_translation_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_020"
     },
     {
       "status": "open",
@@ -411,7 +456,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_019"
+      "review_item_id": "rvw_021"
     },
     {
       "status": "open",
@@ -432,7 +477,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_020"
+      "review_item_id": "rvw_022"
     },
     {
       "status": "open",
@@ -457,7 +502,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_021"
+      "review_item_id": "rvw_023"
     },
     {
       "status": "open",
@@ -477,7 +522,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_022"
+      "review_item_id": "rvw_024"
     },
     {
       "status": "open",
@@ -500,7 +545,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_023"
+      "review_item_id": "rvw_025"
     },
     {
       "status": "open",
@@ -523,7 +568,27 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_024"
+      "review_item_id": "rvw_026"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "finance_context_needs_verification",
+      "summary": "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst contains 1 finance-context claim(s) without a more specific money status.",
+      "recommended_action": "Review these before treating them as a funding route, condition, budget window, spending rule, or accountability rule.",
+      "document_id": "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_monitoring_and_evaluation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_027"
     },
     {
       "status": "open",
@@ -547,7 +612,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_025"
+      "review_item_id": "rvw_028"
     },
     {
       "status": "open",
@@ -570,7 +635,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_026"
+      "review_item_id": "rvw_029"
     },
     {
       "status": "open",
@@ -595,7 +660,27 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_027"
+      "review_item_id": "rvw_030"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "finance_context_needs_verification",
+      "summary": "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie contains 1 finance-context claim(s) without a more specific money status.",
+      "recommended_action": "Review these before treating them as a funding route, condition, budget window, spending rule, or accountability rule.",
+      "document_id": "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie_governance_and_finance_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_031"
     },
     {
       "status": "open",
@@ -615,7 +700,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_028"
+      "review_item_id": "rvw_032"
     },
     {
       "status": "open",
@@ -636,7 +721,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_029"
+      "review_item_id": "rvw_033"
     },
     {
       "status": "open",
@@ -656,7 +741,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_030"
+      "review_item_id": "rvw_034"
     },
     {
       "status": "open",
@@ -676,7 +761,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_031"
+      "review_item_id": "rvw_035"
     },
     {
       "status": "open",
@@ -697,7 +782,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_032"
+      "review_item_id": "rvw_036"
     },
     {
       "status": "open",
@@ -717,7 +802,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_033"
+      "review_item_id": "rvw_037"
     },
     {
       "status": "open",
@@ -738,7 +823,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_034"
+      "review_item_id": "rvw_038"
     },
     {
       "status": "open",
@@ -762,7 +847,27 @@
           "Voorgesteld raadsbesluit 1. De ontwikkeling van de Stevige Lokale Teams in de komende periode te starten op basis van de volgende uitgangspunten: a. één stedelijk kader met maatwerk in de wijk; b. één team per wijk, voor alle leeftijden; c. mandaat en doorlopende regie; d. de organisatievorm en capaciteit volgt de inhoud; e. professionals die zowel verbinden als doen, mét inzet van experts en de sociale basis; f. helder opdrachtgeverschap en een taak op resultaat en financiën; g. aansluiten op bestaande netwerken en werkwijzen. 2. Het college opdracht te geven om: a. naast JGZ Almere ook de wijkteams mee te nemen in de scope van de Stevige Lokale Teams; b. in 2026 te starten met de ..."
         ]
       },
-      "review_item_id": "rvw_035"
+      "review_item_id": "rvw_039"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "finance_context_needs_verification",
+      "summary": "mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel contains 1 finance-context claim(s) without a more specific money status.",
+      "recommended_action": "Review these before treating them as a funding route, condition, budget window, spending rule, or accountability rule.",
+      "document_id": "mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel_governance_and_finance_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_040"
     },
     {
       "status": "open",
@@ -785,7 +890,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_036"
+      "review_item_id": "rvw_041"
     },
     {
       "status": "open",
@@ -807,7 +912,7 @@
         "topic_count": 2
       },
       "evidence": {},
-      "review_item_id": "rvw_037"
+      "review_item_id": "rvw_042"
     },
     {
       "status": "open",
@@ -832,7 +937,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_038"
+      "review_item_id": "rvw_043"
     },
     {
       "status": "open",
@@ -853,7 +958,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_039"
+      "review_item_id": "rvw_044"
     },
     {
       "status": "open",
@@ -875,7 +980,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_040"
+      "review_item_id": "rvw_045"
     },
     {
       "status": "open",
@@ -898,7 +1003,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_041"
+      "review_item_id": "rvw_046"
     },
     {
       "status": "open",
@@ -922,7 +1027,27 @@
           "Voorgesteld raadsbesluit 1. De ontwikkeling van de Stevige Lokale Teams in de komende periode te starten op basis van de volgende uitgangspunten: a. één stedelijk kader met maatwerk in de wijk; b. één team per wijk, voor alle leeftijden; c. mandaat en doorlopende regie; d. de organisatievorm en capaciteit volgt de inhoud; e. professionals die zowel verbinden als doen, mét inzet van experts en de sociale basis; f. helder opdrachtgeverschap en een taak op resultaat en financiën; g. aansluiten op bestaande netwerken en werkwijzen. 2. Het college opdracht te geven om: a. naast JGZ Almere ook de wijkteams mee te nemen in de scope van de Stevige Lokale Teams; b. in 2026 te starten met de ..."
         ]
       },
-      "review_item_id": "rvw_042"
+      "review_item_id": "rvw_047"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "finance_context_needs_verification",
+      "summary": "mun_almere_2026_stevige_lokale_teams_raadsvoorstel contains 1 finance-context claim(s) without a more specific money status.",
+      "recommended_action": "Review these before treating them as a funding route, condition, budget window, spending rule, or accountability rule.",
+      "document_id": "mun_almere_2026_stevige_lokale_teams_raadsvoorstel",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2026_stevige_lokale_teams_raadsvoorstel.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2026_stevige_lokale_teams_raadsvoorstel_governance_and_finance_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_048"
     },
     {
       "status": "open",
@@ -945,7 +1070,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_043"
+      "review_item_id": "rvw_049"
     },
     {
       "status": "open",
@@ -967,7 +1092,7 @@
         "topic_count": 2
       },
       "evidence": {},
-      "review_item_id": "rvw_044"
+      "review_item_id": "rvw_050"
     },
     {
       "status": "open",
@@ -992,7 +1117,27 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_045"
+      "review_item_id": "rvw_051"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "finance_context_needs_verification",
+      "summary": "mun_almere_begroting_2026_webpagina contains 1 finance-context claim(s) without a more specific money status.",
+      "recommended_action": "Review these before treating them as a funding route, condition, budget window, spending rule, or accountability rule.",
+      "document_id": "mun_almere_begroting_2026_webpagina",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_begroting_2026_webpagina.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_begroting_2026_webpagina_governance_and_finance_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_052"
     },
     {
       "status": "open",
@@ -1012,7 +1157,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_046"
+      "review_item_id": "rvw_053"
     },
     {
       "status": "open",
@@ -1033,7 +1178,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_047"
+      "review_item_id": "rvw_054"
     },
     {
       "status": "open",
@@ -1053,7 +1198,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_048"
+      "review_item_id": "rvw_055"
     },
     {
       "status": "open",
@@ -1078,7 +1223,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_049"
+      "review_item_id": "rvw_056"
     },
     {
       "status": "open",
@@ -1102,7 +1247,28 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_050"
+      "review_item_id": "rvw_057"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "finance_context_needs_verification",
+      "summary": "mun_almere_pga_seo_businesscase_2024 contains 2 finance-context claim(s) without a more specific money status.",
+      "recommended_action": "Review these before treating them as a funding route, condition, budget window, spending rule, or accountability rule.",
+      "document_id": "mun_almere_pga_seo_businesscase_2024",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_pga_seo_businesscase_2024.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_pga_seo_businesscase_2024_timeline_and_status_002",
+          "clm__mun_almere_pga_seo_businesscase_2024_timeline_and_status_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_058"
     },
     {
       "status": "open",
@@ -1126,7 +1292,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_051"
+      "review_item_id": "rvw_059"
     },
     {
       "status": "open",
@@ -1151,7 +1317,28 @@
         "topic_count": 5
       },
       "evidence": {},
-      "review_item_id": "rvw_052"
+      "review_item_id": "rvw_060"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "finance_context_needs_verification",
+      "summary": "mun_almere_pga_transformatieplan contains 2 finance-context claim(s) without a more specific money status.",
+      "recommended_action": "Review these before treating them as a funding route, condition, budget window, spending rule, or accountability rule.",
+      "document_id": "mun_almere_pga_transformatieplan",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_pga_transformatieplan.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_pga_transformatieplan_governance_and_finance_001",
+          "clm__mun_almere_pga_transformatieplan_governance_and_finance_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_061"
     },
     {
       "status": "open",
@@ -1175,7 +1362,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_053"
+      "review_item_id": "rvw_062"
     },
     {
       "status": "open",
@@ -1200,7 +1387,7 @@
         "topic_count": 4
       },
       "evidence": {},
-      "review_item_id": "rvw_054"
+      "review_item_id": "rvw_063"
     },
     {
       "status": "open",
@@ -1223,7 +1410,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_055"
+      "review_item_id": "rvw_064"
     },
     {
       "status": "open",
@@ -1244,7 +1431,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_056"
+      "review_item_id": "rvw_065"
     },
     {
       "status": "open",
@@ -1269,7 +1456,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_057"
+      "review_item_id": "rvw_066"
     },
     {
       "status": "open",
@@ -1290,7 +1477,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_058"
+      "review_item_id": "rvw_067"
     },
     {
       "status": "open",
@@ -1311,7 +1498,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_059"
+      "review_item_id": "rvw_068"
     },
     {
       "status": "open",
@@ -1336,7 +1523,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_060"
+      "review_item_id": "rvw_069"
     },
     {
       "status": "open",
@@ -1356,7 +1543,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_061"
+      "review_item_id": "rvw_070"
     },
     {
       "status": "open",
@@ -1377,7 +1564,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_062"
+      "review_item_id": "rvw_071"
     },
     {
       "status": "open",
@@ -1402,7 +1589,7 @@
         "topic_count": 3
       },
       "evidence": {},
-      "review_item_id": "rvw_063"
+      "review_item_id": "rvw_072"
     },
     {
       "status": "open",
@@ -1425,7 +1612,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_064"
+      "review_item_id": "rvw_073"
     },
     {
       "status": "open",
@@ -1448,7 +1635,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_065"
+      "review_item_id": "rvw_074"
     },
     {
       "status": "open",
@@ -1470,7 +1657,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_066"
+      "review_item_id": "rvw_075"
     },
     {
       "status": "open",
@@ -1490,7 +1677,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_067"
+      "review_item_id": "rvw_076"
     },
     {
       "status": "open",
@@ -1511,7 +1698,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_068"
+      "review_item_id": "rvw_077"
     },
     {
       "status": "open",
@@ -1531,7 +1718,28 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_069"
+      "review_item_id": "rvw_078"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "finance_context_needs_verification",
+      "summary": "nat_azwa_2025_aanbiedingsbrief contains 2 finance-context claim(s) without a more specific money status.",
+      "recommended_action": "Review these before treating them as a funding route, condition, budget window, spending rule, or accountability rule.",
+      "document_id": "nat_azwa_2025_aanbiedingsbrief",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_azwa_2025_aanbiedingsbrief.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_azwa_2025_aanbiedingsbrief_d5_001",
+          "clm__nat_azwa_2025_aanbiedingsbrief_governance_and_finance_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_079"
     },
     {
       "status": "open",
@@ -1552,7 +1760,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_070"
+      "review_item_id": "rvw_080"
     },
     {
       "status": "open",
@@ -1574,7 +1782,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_071"
+      "review_item_id": "rvw_081"
     },
     {
       "status": "open",
@@ -1594,7 +1802,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_072"
+      "review_item_id": "rvw_082"
     },
     {
       "status": "open",
@@ -1615,7 +1823,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_073"
+      "review_item_id": "rvw_083"
     },
     {
       "status": "open",
@@ -1636,7 +1844,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_074"
+      "review_item_id": "rvw_084"
     },
     {
       "status": "open",
@@ -1661,7 +1869,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_075"
+      "review_item_id": "rvw_085"
     },
     {
       "status": "open",
@@ -1684,7 +1892,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_076"
+      "review_item_id": "rvw_086"
     },
     {
       "status": "open",
@@ -1705,7 +1913,27 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_077"
+      "review_item_id": "rvw_087"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "finance_context_needs_verification",
+      "summary": "nat_azwa_opdracht_werkagenda_d5_2026 contains 1 finance-context claim(s) without a more specific money status.",
+      "recommended_action": "Review these before treating them as a funding route, condition, budget window, spending rule, or accountability rule.",
+      "document_id": "nat_azwa_opdracht_werkagenda_d5_2026",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_azwa_opdracht_werkagenda_d5_2026.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_governance_and_finance_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_088"
     },
     {
       "status": "open",
@@ -1727,7 +1955,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_078"
+      "review_item_id": "rvw_089"
     },
     {
       "status": "open",
@@ -1752,7 +1980,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_079"
+      "review_item_id": "rvw_090"
     },
     {
       "status": "open",
@@ -1776,7 +2004,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_080"
+      "review_item_id": "rvw_091"
     },
     {
       "status": "open",
@@ -1797,7 +2025,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_081"
+      "review_item_id": "rvw_092"
     },
     {
       "status": "open",
@@ -1822,7 +2050,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_082"
+      "review_item_id": "rvw_093"
     },
     {
       "status": "open",
@@ -1842,7 +2070,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_083"
+      "review_item_id": "rvw_094"
     },
     {
       "status": "open",
@@ -1862,7 +2090,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_084"
+      "review_item_id": "rvw_095"
     },
     {
       "status": "open",
@@ -1887,7 +2115,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_085"
+      "review_item_id": "rvw_096"
     },
     {
       "status": "open",
@@ -1910,7 +2138,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_086"
+      "review_item_id": "rvw_097"
     },
     {
       "status": "open",
@@ -1930,7 +2158,29 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_087"
+      "review_item_id": "rvw_098"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "finance_context_needs_verification",
+      "summary": "nat_gala_2023_gezond_en_actief_leven contains 3 finance-context claim(s) without a more specific money status.",
+      "recommended_action": "Review these before treating them as a funding route, condition, budget window, spending rule, or accountability rule.",
+      "document_id": "nat_gala_2023_gezond_en_actief_leven",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_gala_2023_gezond_en_actief_leven.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_gala_2023_gezond_en_actief_leven_d5_001",
+          "clm__nat_gala_2023_gezond_en_actief_leven_d5_003",
+          "clm__nat_gala_2023_gezond_en_actief_leven_timeline_and_status_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_099"
     },
     {
       "status": "open",
@@ -1955,7 +2205,7 @@
         "topic_count": 2
       },
       "evidence": {},
-      "review_item_id": "rvw_088"
+      "review_item_id": "rvw_100"
     },
     {
       "status": "open",
@@ -1975,7 +2225,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_089"
+      "review_item_id": "rvw_101"
     },
     {
       "status": "open",
@@ -1996,7 +2246,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_090"
+      "review_item_id": "rvw_102"
     },
     {
       "status": "open",
@@ -2021,7 +2271,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_091"
+      "review_item_id": "rvw_103"
     },
     {
       "status": "open",
@@ -2044,7 +2294,27 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_092"
+      "review_item_id": "rvw_104"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "local_funding_gap",
+      "summary": "nat_sociaalwerknl_financiering_iza_azwa_2025 contains 1 local funding gap claim(s).",
+      "recommended_action": "Keep these as local validation or decision points; do not fill local budget, owner, or allocation by inference.",
+      "document_id": "nat_sociaalwerknl_financiering_iza_azwa_2025",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_sociaalwerknl_financiering_iza_azwa_2025.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_municipal_translation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_105"
     },
     {
       "status": "open",
@@ -2068,7 +2338,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_093"
+      "review_item_id": "rvw_106"
     },
     {
       "status": "open",
@@ -2093,7 +2363,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_094"
+      "review_item_id": "rvw_107"
     },
     {
       "status": "open",
@@ -2117,7 +2387,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_095"
+      "review_item_id": "rvw_108"
     },
     {
       "status": "open",
@@ -2142,7 +2412,7 @@
         "topic_count": 2
       },
       "evidence": {},
-      "review_item_id": "rvw_096"
+      "review_item_id": "rvw_109"
     },
     {
       "status": "open",
@@ -2166,7 +2436,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_097"
+      "review_item_id": "rvw_110"
     },
     {
       "status": "open",
@@ -2187,7 +2457,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_098"
+      "review_item_id": "rvw_111"
     },
     {
       "status": "open",
@@ -2210,7 +2480,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_099"
+      "review_item_id": "rvw_112"
     },
     {
       "status": "open",
@@ -2233,7 +2503,27 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_100"
+      "review_item_id": "rvw_113"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "finance_context_needs_verification",
+      "summary": "nat_vng_brief_azwa_financiering_webpagina_2026 contains 1 finance-context claim(s) without a more specific money status.",
+      "recommended_action": "Review these before treating them as a funding route, condition, budget window, spending rule, or accountability rule.",
+      "document_id": "nat_vng_brief_azwa_financiering_webpagina_2026",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_vng_brief_azwa_financiering_webpagina_2026.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_vng_brief_azwa_financiering_webpagina_2026_municipal_translation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_114"
     },
     {
       "status": "open",
@@ -2253,7 +2543,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_101"
+      "review_item_id": "rvw_115"
     },
     {
       "status": "open",
@@ -2274,7 +2564,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_102"
+      "review_item_id": "rvw_116"
     },
     {
       "status": "open",
@@ -2299,7 +2589,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_103"
+      "review_item_id": "rvw_117"
     },
     {
       "status": "open",
@@ -2322,7 +2612,28 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_104"
+      "review_item_id": "rvw_118"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "finance_context_needs_verification",
+      "summary": "nat_vng_gezond_en_actief_leven_2026 contains 2 finance-context claim(s) without a more specific money status.",
+      "recommended_action": "Review these before treating them as a funding route, condition, budget window, spending rule, or accountability rule.",
+      "document_id": "nat_vng_gezond_en_actief_leven_2026",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_vng_gezond_en_actief_leven_2026.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_vng_gezond_en_actief_leven_2026_d5_001",
+          "clm__nat_vng_gezond_en_actief_leven_2026_d6_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_119"
     },
     {
       "status": "open",
@@ -2346,7 +2657,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_105"
+      "review_item_id": "rvw_120"
     },
     {
       "status": "open",
@@ -2371,7 +2682,27 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_106"
+      "review_item_id": "rvw_121"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "finance_context_needs_verification",
+      "summary": "nat_vng_ledenbrief_azwa_financiering_2026 contains 1 finance-context claim(s) without a more specific money status.",
+      "recommended_action": "Review these before treating them as a funding route, condition, budget window, spending rule, or accountability rule.",
+      "document_id": "nat_vng_ledenbrief_azwa_financiering_2026",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_vng_ledenbrief_azwa_financiering_2026.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_vng_ledenbrief_azwa_financiering_2026_governance_and_finance_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_122"
     },
     {
       "status": "open",
@@ -2393,7 +2724,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_107"
+      "review_item_id": "rvw_123"
     },
     {
       "status": "open",
@@ -2418,7 +2749,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_108"
+      "review_item_id": "rvw_124"
     },
     {
       "status": "open",
@@ -2439,7 +2770,27 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_109"
+      "review_item_id": "rvw_125"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "finance_context_needs_verification",
+      "summary": "nat_vng_ledenbrief_onderhandelaarsakkoord_azwa_2025 contains 1 finance-context claim(s) without a more specific money status.",
+      "recommended_action": "Review these before treating them as a funding route, condition, budget window, spending rule, or accountability rule.",
+      "document_id": "nat_vng_ledenbrief_onderhandelaarsakkoord_azwa_2025",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_vng_ledenbrief_onderhandelaarsakkoord_azwa_2025.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_vng_ledenbrief_onderhandelaarsakkoord_azwa_2025_governance_and_finance_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_126"
     },
     {
       "status": "open",
@@ -2459,7 +2810,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_110"
+      "review_item_id": "rvw_127"
     },
     {
       "status": "open",
@@ -2483,7 +2834,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_111"
+      "review_item_id": "rvw_128"
     },
     {
       "status": "open",
@@ -2505,7 +2856,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_112"
+      "review_item_id": "rvw_129"
     },
     {
       "status": "open",
@@ -2526,7 +2877,27 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_113"
+      "review_item_id": "rvw_130"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "double_counting_risk",
+      "summary": "nat_wetten_spuk_transformatiemiddelen_regeling contains 1 double-counting or funding-line separation claim(s).",
+      "recommended_action": "Keep AZWA-D5, AZWA-D6, GALA/SPUK, PGA/IZA, municipal regular budget and Zvw/insurer lines separate unless a source connects them.",
+      "document_id": "nat_wetten_spuk_transformatiemiddelen_regeling",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_wetten_spuk_transformatiemiddelen_regeling.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_wetten_spuk_transformatiemiddelen_regeling_timeline_and_status_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_131"
     },
     {
       "status": "open",
@@ -2551,7 +2922,30 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_114"
+      "review_item_id": "rvw_132"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "finance_context_needs_verification",
+      "summary": "nat_zorgakkoorden_azwa_programmapagina_2025 contains 4 finance-context claim(s) without a more specific money status.",
+      "recommended_action": "Review these before treating them as a funding route, condition, budget window, spending rule, or accountability rule.",
+      "document_id": "nat_zorgakkoorden_azwa_programmapagina_2025",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_zorgakkoorden_azwa_programmapagina_2025.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_zorgakkoorden_azwa_programmapagina_2025_d5_001",
+          "clm__nat_zorgakkoorden_azwa_programmapagina_2025_governance_and_finance_001",
+          "clm__nat_zorgakkoorden_azwa_programmapagina_2025_timeline_and_status_001",
+          "clm__nat_zorgakkoorden_azwa_programmapagina_2025_monitoring_and_evaluation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_133"
     },
     {
       "status": "open",
@@ -2575,7 +2969,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_115"
+      "review_item_id": "rvw_134"
     },
     {
       "status": "open",
@@ -2600,7 +2994,28 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_116"
+      "review_item_id": "rvw_135"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "finance_context_needs_verification",
+      "summary": "reg_flevoland_2023_regiobeeld contains 2 finance-context claim(s) without a more specific money status.",
+      "recommended_action": "Review these before treating them as a funding route, condition, budget window, spending rule, or accountability rule.",
+      "document_id": "reg_flevoland_2023_regiobeeld",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/reg_flevoland_2023_regiobeeld.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__reg_flevoland_2023_regiobeeld_governance_and_finance_001",
+          "clm__reg_flevoland_2023_regiobeeld_monitoring_and_evaluation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_136"
     },
     {
       "status": "open",
@@ -2624,7 +3039,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_117"
+      "review_item_id": "rvw_137"
     },
     {
       "status": "open",
@@ -2647,7 +3062,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_118"
+      "review_item_id": "rvw_138"
     },
     {
       "status": "open",
@@ -2667,7 +3082,27 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_119"
+      "review_item_id": "rvw_139"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "finance_context_needs_verification",
+      "summary": "reg_flevoland_2023_regioplan_iza contains 1 finance-context claim(s) without a more specific money status.",
+      "recommended_action": "Review these before treating them as a funding route, condition, budget window, spending rule, or accountability rule.",
+      "document_id": "reg_flevoland_2023_regioplan_iza",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/reg_flevoland_2023_regioplan_iza.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__reg_flevoland_2023_regioplan_iza_d6_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_140"
     },
     {
       "status": "open",
@@ -2691,7 +3126,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_120"
+      "review_item_id": "rvw_141"
     },
     {
       "status": "open",
@@ -2714,7 +3149,7 @@
         "topic_count": 3
       },
       "evidence": {},
-      "review_item_id": "rvw_121"
+      "review_item_id": "rvw_142"
     },
     {
       "status": "open",
@@ -2739,7 +3174,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_122"
+      "review_item_id": "rvw_143"
     },
     {
       "status": "open",
@@ -2764,7 +3199,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_123"
+      "review_item_id": "rvw_144"
     },
     {
       "status": "open",
@@ -2784,7 +3219,29 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_124"
+      "review_item_id": "rvw_145"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "finance_context_needs_verification",
+      "summary": "reg_ggd_flevoland_begroting_2026 contains 3 finance-context claim(s) without a more specific money status.",
+      "recommended_action": "Review these before treating them as a funding route, condition, budget window, spending rule, or accountability rule.",
+      "document_id": "reg_ggd_flevoland_begroting_2026",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/reg_ggd_flevoland_begroting_2026.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__reg_ggd_flevoland_begroting_2026_governance_and_finance_002",
+          "clm__reg_ggd_flevoland_begroting_2026_municipal_translation_001",
+          "clm__reg_ggd_flevoland_begroting_2026_municipal_translation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_146"
     },
     {
       "status": "open",
@@ -2808,7 +3265,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_125"
+      "review_item_id": "rvw_147"
     },
     {
       "status": "open",
@@ -2832,7 +3289,7 @@
         "topic_count": 3
       },
       "evidence": {},
-      "review_item_id": "rvw_126"
+      "review_item_id": "rvw_148"
     },
     {
       "status": "open",
@@ -2857,7 +3314,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_127"
+      "review_item_id": "rvw_149"
     },
     {
       "status": "open",
@@ -2879,7 +3336,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_128"
+      "review_item_id": "rvw_150"
     },
     {
       "status": "open",
@@ -2902,7 +3359,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_129"
+      "review_item_id": "rvw_151"
     },
     {
       "status": "open",
@@ -2927,7 +3384,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_130"
+      "review_item_id": "rvw_152"
     },
     {
       "status": "open",
@@ -2949,7 +3406,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_131"
+      "review_item_id": "rvw_153"
     },
     {
       "status": "open",
@@ -2972,7 +3429,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_132"
+      "review_item_id": "rvw_154"
     },
     {
       "status": "open",
@@ -2997,7 +3454,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_133"
+      "review_item_id": "rvw_155"
     },
     {
       "status": "open",
@@ -3019,7 +3476,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_134"
+      "review_item_id": "rvw_156"
     },
     {
       "status": "open",
@@ -3042,7 +3499,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_135"
+      "review_item_id": "rvw_157"
     },
     {
       "status": "open",
@@ -3067,7 +3524,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_136"
+      "review_item_id": "rvw_158"
     },
     {
       "status": "open",
@@ -3088,7 +3545,28 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_137"
+      "review_item_id": "rvw_159"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "finance_context_needs_verification",
+      "summary": "reg_zonmw_doorontwikkeling_zorgzaam_flevoland contains 2 finance-context claim(s) without a more specific money status.",
+      "recommended_action": "Review these before treating them as a funding route, condition, budget window, spending rule, or accountability rule.",
+      "document_id": "reg_zonmw_doorontwikkeling_zorgzaam_flevoland",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/reg_zonmw_doorontwikkeling_zorgzaam_flevoland.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__reg_zonmw_doorontwikkeling_zorgzaam_flevoland_governance_and_finance_002",
+          "clm__reg_zonmw_doorontwikkeling_zorgzaam_flevoland_governance_and_finance_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_160"
     },
     {
       "status": "open",
@@ -3108,7 +3586,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_138"
+      "review_item_id": "rvw_161"
     },
     {
       "status": "open",
@@ -3127,7 +3605,7 @@
       "evidence": {
         "table_count": 4
       },
-      "review_item_id": "rvw_139"
+      "review_item_id": "rvw_162"
     },
     {
       "status": "open",
@@ -3158,7 +3636,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_140"
+      "review_item_id": "rvw_163"
     },
     {
       "status": "open",
@@ -3182,7 +3660,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_141"
+      "review_item_id": "rvw_164"
     },
     {
       "status": "open",
@@ -3209,7 +3687,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_142"
+      "review_item_id": "rvw_165"
     },
     {
       "status": "open",
@@ -3240,7 +3718,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_143"
+      "review_item_id": "rvw_166"
     },
     {
       "status": "open",
@@ -3265,7 +3743,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_144"
+      "review_item_id": "rvw_167"
     },
     {
       "status": "open",
@@ -3296,7 +3774,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_145"
+      "review_item_id": "rvw_168"
     },
     {
       "status": "open",
@@ -3326,7 +3804,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_146"
+      "review_item_id": "rvw_169"
     },
     {
       "status": "open",
@@ -3351,7 +3829,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_147"
+      "review_item_id": "rvw_170"
     },
     {
       "status": "open",
@@ -3376,7 +3854,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_148"
+      "review_item_id": "rvw_171"
     },
     {
       "status": "open",
@@ -3399,7 +3877,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_149"
+      "review_item_id": "rvw_172"
     }
   ]
 }

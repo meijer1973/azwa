@@ -85,6 +85,19 @@ ACCEPTED_TIME_STATUSES = {
     "undated_context",
 }
 
+ACCEPTED_MONEY_STATUSES = {
+    "funding_route",
+    "application_condition",
+    "budget_window",
+    "allocation_mechanism",
+    "spending_scope",
+    "accountability_rule",
+    "local_funding_gap",
+    "double_counting_risk",
+    "finance_context",
+    "not_financial",
+}
+
 
 def load_json(path: Path) -> dict | list:
     return json.loads(path.read_text(encoding="utf-8"))
@@ -522,6 +535,11 @@ def check_claim_payloads(
             for claim in claims
             if (claim.get("time_status") or {}).get("status") not in ACCEPTED_TIME_STATUSES
         ]
+        missing_money_status = [
+            claim
+            for claim in claims
+            if (claim.get("money_status") or {}).get("status") not in ACCEPTED_MONEY_STATUSES
+        ]
         lower_authority_norm_claims = [
             claim
             for claim in claims
@@ -536,6 +554,21 @@ def check_claim_payloads(
             claim
             for claim in claims
             if (claim.get("time_status") or {}).get("status") == "local_planning_context"
+        ]
+        local_funding_gap_claims = [
+            claim
+            for claim in claims
+            if (claim.get("money_status") or {}).get("status") == "local_funding_gap"
+        ]
+        double_counting_claims = [
+            claim
+            for claim in claims
+            if (claim.get("money_status") or {}).get("status") == "double_counting_risk"
+        ]
+        finance_context_claims = [
+            claim
+            for claim in claims
+            if (claim.get("money_status") or {}).get("status") == "finance_context"
         ]
 
         if missing_norm_status:
@@ -564,6 +597,20 @@ def check_claim_payloads(
                 document_id=document_id,
                 source_paths=[relative_path(claim_path)],
                 related_ids={"sample_claim_ids": [claim["claim_id"] for claim in missing_time_status[:5]]},
+            )
+
+        if missing_money_status:
+            add_issue(
+                issues,
+                seen,
+                check_id="claim_payload_integrity",
+                severity="blocking",
+                reason_code="missing_or_invalid_money_status",
+                summary=f"{document_id} contains claim(s) without a valid Sprint 27.3 money_status.",
+                recommended_action="Regenerate claims with the money-status classifier before using finance outputs.",
+                document_id=document_id,
+                source_paths=[relative_path(claim_path)],
+                related_ids={"sample_claim_ids": [claim["claim_id"] for claim in missing_money_status[:5]]},
             )
 
         if contextual_claims:
@@ -640,6 +687,48 @@ def check_claim_payloads(
                 document_id=document_id,
                 source_paths=[relative_path(claim_path)],
                 related_ids={"sample_claim_ids": [claim["claim_id"] for claim in local_planning_time_claims[:5]]},
+            )
+
+        if local_funding_gap_claims:
+            add_issue(
+                issues,
+                seen,
+                check_id="claim_payload_integrity",
+                severity="review",
+                reason_code="local_funding_gap",
+                summary=f"{document_id} contains {len(local_funding_gap_claims)} local funding gap claim(s).",
+                recommended_action="Keep these as local validation or decision points; do not fill local budget, owner, or allocation by inference.",
+                document_id=document_id,
+                source_paths=[relative_path(claim_path)],
+                related_ids={"sample_claim_ids": [claim["claim_id"] for claim in local_funding_gap_claims[:5]]},
+            )
+
+        if double_counting_claims:
+            add_issue(
+                issues,
+                seen,
+                check_id="claim_payload_integrity",
+                severity="review",
+                reason_code="double_counting_risk",
+                summary=f"{document_id} contains {len(double_counting_claims)} double-counting or funding-line separation claim(s).",
+                recommended_action="Keep AZWA-D5, AZWA-D6, GALA/SPUK, PGA/IZA, municipal regular budget and Zvw/insurer lines separate unless a source connects them.",
+                document_id=document_id,
+                source_paths=[relative_path(claim_path)],
+                related_ids={"sample_claim_ids": [claim["claim_id"] for claim in double_counting_claims[:5]]},
+            )
+
+        if finance_context_claims:
+            add_issue(
+                issues,
+                seen,
+                check_id="claim_payload_integrity",
+                severity="review",
+                reason_code="finance_context_needs_verification",
+                summary=f"{document_id} contains {len(finance_context_claims)} finance-context claim(s) without a more specific money status.",
+                recommended_action="Review these before treating them as a funding route, condition, budget window, spending rule, or accountability rule.",
+                document_id=document_id,
+                source_paths=[relative_path(claim_path)],
+                related_ids={"sample_claim_ids": [claim["claim_id"] for claim in finance_context_claims[:5]]},
             )
 
         if noisy_claims:

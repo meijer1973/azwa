@@ -419,6 +419,7 @@ Agents MUST:
 - Check `data/extracted/claims/conflict_register.json` before reporting source disagreement.
 - Check each claim's `normative_status` before using norm language; `binding`, `agreement`, `expectation`, `guidance`, `lower_authority_signal`, and `contextual` require different public wording.
 - Check each claim's `time_status` before using timing language; `formal_deadline`, `expected_moment`, `review_or_update_moment`, `budget_calendar_moment`, `implementation_horizon`, `local_planning_context`, `source_dated_moment`, `publication_or_context_date`, and `undated_context` require different public wording.
+- Check each claim's `money_status` before using finance language; `funding_route`, `application_condition`, `budget_window`, `allocation_mechanism`, `spending_scope`, `accountability_rule`, `local_funding_gap`, `double_counting_risk`, `finance_context`, and `not_financial` require different public wording.
 - Use Dutch search terms for corpus text and claims.
 - Use `docs/regional-roles-and-splits-almere-flevoland.md` and `data/curated/regional_roles_and_splits_almere_flevoland.json` before drawing regional conclusions about Almere, Flevoland, mandaatgemeente, GGD-regio, zorgkantoorregio, ROAZ, Zeewolde, or practical task ownership.
 - Use `docs/internal/review-dashboard.html` for internal quality triage when the task is about open review issues, perspective coverage, rough claim text, or Sprint 24.3 cleanup planning.

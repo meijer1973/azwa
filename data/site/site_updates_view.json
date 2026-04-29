@@ -190,6 +190,14 @@
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": true
               },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": true
+              },
               "page_labels": [
                 "5"
               ],
@@ -218,6 +226,14 @@
                 "source_temporal_anchor": "explicit_text_signal",
                 "public_wording_guardrail": "Gebruik als bron- of contextdatum; niet als beleidsdeadline.",
                 "needs_review": true
+              },
+              "money_status": {
+                "status": "budget_window",
+                "label": "Budgetvenster of financieel tijdvak",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+                "needs_verification": true
               },
               "page_labels": [
                 "1"
@@ -248,6 +264,14 @@
                 "public_wording_guardrail": "Koppel aan de financiele bronroute; maak geen lokale budgetkeuze zonder lokale bron.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "finance_context",
+                "label": "Financiele context",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Gebruik als context; controleer sterkere bronnen voordat hier een financieringsregel van wordt gemaakt.",
+                "needs_verification": true
+              },
               "page_labels": [
                 "3"
               ],
@@ -276,6 +300,14 @@
                 "source_temporal_anchor": "publication_context",
                 "public_wording_guardrail": "Koppel aan de financiele bronroute; maak geen lokale budgetkeuze zonder lokale bron.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "budget_window",
+                "label": "Budgetvenster of financieel tijdvak",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+                "needs_verification": false
               },
               "page_labels": [
                 "5"
@@ -306,6 +338,14 @@
                 "public_wording_guardrail": "Formuleer als review- of updatecyclus; niet automatisch als lokaal besluitmoment.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "budget_window",
+                "label": "Budgetvenster of financieel tijdvak",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+                "needs_verification": false
+              },
               "page_labels": [
                 "5"
               ],
@@ -334,6 +374,14 @@
                 "source_temporal_anchor": "explicit_text_signal",
                 "public_wording_guardrail": "Formuleer als review- of updatecyclus; niet automatisch als lokaal besluitmoment.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "budget_window",
+                "label": "Budgetvenster of financieel tijdvak",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+                "needs_verification": false
               },
               "page_labels": [
                 "5"
@@ -364,6 +412,14 @@
                 "public_wording_guardrail": "Formuleer als review- of updatecyclus; niet automatisch als lokaal besluitmoment.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "budget_window",
+                "label": "Budgetvenster of financieel tijdvak",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+                "needs_verification": false
+              },
               "page_labels": [
                 "5"
               ],
@@ -392,6 +448,14 @@
                 "source_temporal_anchor": "publication_context",
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
               },
               "page_labels": [
                 "6"
@@ -422,6 +486,14 @@
                 "public_wording_guardrail": "Gebruik als bron- of contextdatum; niet als beleidsdeadline.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "budget_window",
+                "label": "Budgetvenster of financieel tijdvak",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+                "needs_verification": false
+              },
               "page_labels": [
                 "10"
               ],
@@ -451,6 +523,14 @@
                 "public_wording_guardrail": "Formuleer als horizon of fasering; vermijd precieze lokale planning zonder lokale bron.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "budget_window",
+                "label": "Budgetvenster of financieel tijdvak",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+                "needs_verification": false
+              },
               "page_labels": [
                 "6"
               ],
@@ -479,6 +559,14 @@
                 "source_temporal_anchor": "explicit_text_signal",
                 "public_wording_guardrail": "Formuleer als horizon of fasering; vermijd precieze lokale planning zonder lokale bron.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "budget_window",
+                "label": "Budgetvenster of financieel tijdvak",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+                "needs_verification": false
               },
               "page_labels": [
                 "6"
@@ -519,6 +607,14 @@
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": true
               },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": true
+              },
               "page_labels": [
                 "5"
               ],
@@ -547,6 +643,14 @@
                 "source_temporal_anchor": "explicit_text_signal",
                 "public_wording_guardrail": "Gebruik als bron- of contextdatum; niet als beleidsdeadline.",
                 "needs_review": true
+              },
+              "money_status": {
+                "status": "budget_window",
+                "label": "Budgetvenster of financieel tijdvak",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+                "needs_verification": true
               },
               "page_labels": [
                 "1"
@@ -577,6 +681,14 @@
                 "public_wording_guardrail": "Koppel aan de financiele bronroute; maak geen lokale budgetkeuze zonder lokale bron.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "finance_context",
+                "label": "Financiele context",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Gebruik als context; controleer sterkere bronnen voordat hier een financieringsregel van wordt gemaakt.",
+                "needs_verification": true
+              },
               "page_labels": [
                 "3"
               ],
@@ -605,6 +717,14 @@
                 "source_temporal_anchor": "publication_context",
                 "public_wording_guardrail": "Koppel aan de financiele bronroute; maak geen lokale budgetkeuze zonder lokale bron.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "budget_window",
+                "label": "Budgetvenster of financieel tijdvak",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+                "needs_verification": false
               },
               "page_labels": [
                 "5"
@@ -635,6 +755,14 @@
                 "public_wording_guardrail": "Formuleer als review- of updatecyclus; niet automatisch als lokaal besluitmoment.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "budget_window",
+                "label": "Budgetvenster of financieel tijdvak",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+                "needs_verification": false
+              },
               "page_labels": [
                 "5"
               ],
@@ -663,6 +791,14 @@
                 "source_temporal_anchor": "explicit_text_signal",
                 "public_wording_guardrail": "Formuleer als review- of updatecyclus; niet automatisch als lokaal besluitmoment.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "budget_window",
+                "label": "Budgetvenster of financieel tijdvak",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+                "needs_verification": false
               },
               "page_labels": [
                 "5"
@@ -693,6 +829,14 @@
                 "public_wording_guardrail": "Formuleer als review- of updatecyclus; niet automatisch als lokaal besluitmoment.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "budget_window",
+                "label": "Budgetvenster of financieel tijdvak",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+                "needs_verification": false
+              },
               "page_labels": [
                 "5"
               ],
@@ -721,6 +865,14 @@
                 "source_temporal_anchor": "publication_context",
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
               },
               "page_labels": [
                 "6"
@@ -751,6 +903,14 @@
                 "public_wording_guardrail": "Gebruik als bron- of contextdatum; niet als beleidsdeadline.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "budget_window",
+                "label": "Budgetvenster of financieel tijdvak",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+                "needs_verification": false
+              },
               "page_labels": [
                 "10"
               ],
@@ -780,6 +940,14 @@
                 "public_wording_guardrail": "Formuleer als horizon of fasering; vermijd precieze lokale planning zonder lokale bron.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "budget_window",
+                "label": "Budgetvenster of financieel tijdvak",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+                "needs_verification": false
+              },
               "page_labels": [
                 "6"
               ],
@@ -808,6 +976,14 @@
                 "source_temporal_anchor": "explicit_text_signal",
                 "public_wording_guardrail": "Formuleer als horizon of fasering; vermijd precieze lokale planning zonder lokale bron.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "budget_window",
+                "label": "Budgetvenster of financieel tijdvak",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+                "needs_verification": false
               },
               "page_labels": [
                 "6"
@@ -848,6 +1024,14 @@
                 "public_wording_guardrail": "Formuleer als horizon of fasering; vermijd precieze lokale planning zonder lokale bron.",
                 "needs_review": true
               },
+              "money_status": {
+                "status": "budget_window",
+                "label": "Budgetvenster of financieel tijdvak",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+                "needs_verification": true
+              },
               "page_labels": [
                 "1"
               ],
@@ -877,6 +1061,14 @@
                 "public_wording_guardrail": "Formuleer als horizon of fasering; vermijd precieze lokale planning zonder lokale bron.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "budget_window",
+                "label": "Budgetvenster of financieel tijdvak",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+                "needs_verification": false
+              },
               "page_labels": [
                 "1"
               ],
@@ -905,6 +1097,14 @@
                 "source_temporal_anchor": "explicit_text_signal",
                 "public_wording_guardrail": "Formuleer als horizon of fasering; vermijd precieze lokale planning zonder lokale bron.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "budget_window",
+                "label": "Budgetvenster of financieel tijdvak",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+                "needs_verification": false
               },
               "page_labels": [
                 "1"
@@ -945,6 +1145,14 @@
                 "public_wording_guardrail": "Gebruik als bron- of contextdatum; niet als beleidsdeadline.",
                 "needs_review": true
               },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": true
+              },
               "page_labels": [
                 "1"
               ],
@@ -974,6 +1182,14 @@
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
+              },
               "page_labels": [
                 "1"
               ],
@@ -1002,6 +1218,14 @@
                 "source_temporal_anchor": "explicit_text_signal",
                 "public_wording_guardrail": "Gebruik als bron- of contextdatum; niet als beleidsdeadline.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
               },
               "page_labels": [
                 "1"
@@ -1042,6 +1266,14 @@
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": true
               },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": true
+              },
               "page_labels": [],
               "section_labels": [
                 "Samenwerkingsprojecten / Samen sterker in de wijk"
@@ -1068,6 +1300,14 @@
                 "source_temporal_anchor": "publication_context",
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
               },
               "page_labels": [],
               "section_labels": [
@@ -1096,6 +1336,14 @@
                 "public_wording_guardrail": "Formuleer als review- of updatecyclus; niet automatisch als lokaal besluitmoment.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
+              },
               "page_labels": [],
               "section_labels": [
                 "Samenwerkingsprojecten / Samen sterker in de wijk / Al doende leren"
@@ -1122,6 +1370,14 @@
                 "source_temporal_anchor": "explicit_text_signal",
                 "public_wording_guardrail": "Formuleer als review- of updatecyclus; niet automatisch als lokaal besluitmoment.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
               },
               "page_labels": [],
               "section_labels": [
@@ -1150,6 +1406,14 @@
                 "public_wording_guardrail": "Formuleer als review- of updatecyclus; niet automatisch als lokaal besluitmoment.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
+              },
               "page_labels": [],
               "section_labels": [
                 "Samenwerkingsprojecten / Samen sterker in de wijk / Netwerkteams"
@@ -1176,6 +1440,14 @@
                 "source_temporal_anchor": "publication_context",
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
               },
               "page_labels": [],
               "section_labels": [
@@ -1204,6 +1476,14 @@
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
+              },
               "page_labels": [],
               "section_labels": [
                 "Samenwerkingsprojecten / Samenwerkingsafspraken Thuis in de wijk"
@@ -1230,6 +1510,14 @@
                 "source_temporal_anchor": "publication_context",
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
               },
               "page_labels": [],
               "section_labels": [
@@ -1268,6 +1556,14 @@
                 "public_wording_guardrail": "Formuleer als review- of updatecyclus; niet automatisch als lokaal besluitmoment.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
+              },
               "page_labels": [],
               "section_labels": [
                 "Daar bouwen wij samen aan / Waar bouwen we aan?"
@@ -1294,6 +1590,14 @@
                 "source_temporal_anchor": "publication_context",
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
               },
               "page_labels": [],
               "section_labels": [
@@ -1322,6 +1626,14 @@
                 "public_wording_guardrail": "Formuleer als verwacht, indicatief of bronafhankelijk moment; niet als harde deadline.",
                 "needs_review": true
               },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
+              },
               "page_labels": [],
               "section_labels": [
                 "Daar bouwen wij samen aan / Blijf op de hoogte"
@@ -1348,6 +1660,14 @@
                 "source_temporal_anchor": "publication_context",
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
               },
               "page_labels": [],
               "section_labels": [
@@ -1553,6 +1873,14 @@
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": true
               },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": true
+              },
               "page_labels": [],
               "section_labels": [
                 "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin / Eerdere berichten / Het voorstel is op 19 februari 2026 geamendeerd aangenomen 20-02-2026"
@@ -1579,6 +1907,14 @@
                 "source_temporal_anchor": "publication_context",
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": true
+              },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": true
               },
               "page_labels": [],
               "section_labels": [
@@ -1607,6 +1943,14 @@
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": true
               },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": true
+              },
               "page_labels": [],
               "section_labels": [
                 "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin / Eerdere berichten / De eerte bespreking vond plaats op 15 januari 202616-01-2026"
@@ -1633,6 +1977,14 @@
                 "source_temporal_anchor": "explicit_text_signal",
                 "public_wording_guardrail": "Formuleer als review- of updatecyclus; niet automatisch als lokaal besluitmoment.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
               },
               "page_labels": [],
               "section_labels": [
@@ -1661,6 +2013,14 @@
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
+              },
               "page_labels": [],
               "section_labels": [
                 "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin / Eerdere berichten / De eerte bespreking vond plaats op 15 januari 202616-01-2026"
@@ -1687,6 +2047,14 @@
                 "source_temporal_anchor": "publication_context",
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
               },
               "page_labels": [],
               "section_labels": [
@@ -1715,6 +2083,14 @@
                 "public_wording_guardrail": "Gebruik als lokale bestuurlijke context; niet als landelijke of inhoudelijke D5/D6-deadline.",
                 "needs_review": true
               },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
+              },
               "page_labels": [],
               "section_labels": [
                 "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin"
@@ -1741,6 +2117,14 @@
                 "source_temporal_anchor": "explicit_text_signal",
                 "public_wording_guardrail": "Gebruik als lokale bestuurlijke context; niet als landelijke of inhoudelijke D5/D6-deadline.",
                 "needs_review": true
+              },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
               },
               "page_labels": [],
               "section_labels": [
@@ -1779,6 +2163,14 @@
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": true
               },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": true
+              },
               "page_labels": [],
               "section_labels": [
                 "Wijkteams Almere"
@@ -1805,6 +2197,14 @@
                 "source_temporal_anchor": "publication_context",
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
               },
               "page_labels": [],
               "section_labels": [
@@ -1843,6 +2243,14 @@
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": true
               },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": true
+              },
               "page_labels": [
                 "16"
               ],
@@ -1871,6 +2279,14 @@
                 "source_temporal_anchor": "explicit_text_signal",
                 "public_wording_guardrail": "Formuleer als verwacht, indicatief of bronafhankelijk moment; niet als harde deadline.",
                 "needs_review": true
+              },
+              "money_status": {
+                "status": "funding_route",
+                "label": "Financieringsroute",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
+                "needs_verification": false
               },
               "page_labels": [
                 "8"
@@ -1901,6 +2317,14 @@
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
+              },
               "page_labels": [
                 "6"
               ],
@@ -1929,6 +2353,14 @@
                 "source_temporal_anchor": "publication_context",
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
               },
               "page_labels": [
                 "8"
@@ -1959,6 +2391,14 @@
                 "public_wording_guardrail": "Koppel aan de financiele bronroute; maak geen lokale budgetkeuze zonder lokale bron.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "funding_route",
+                "label": "Financieringsroute",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
+                "needs_verification": false
+              },
               "page_labels": [
                 "3"
               ],
@@ -1987,6 +2427,14 @@
                 "source_temporal_anchor": "explicit_text_signal",
                 "public_wording_guardrail": "Formuleer als review- of updatecyclus; niet automatisch als lokaal besluitmoment.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "budget_window",
+                "label": "Budgetvenster of financieel tijdvak",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+                "needs_verification": false
               },
               "page_labels": [
                 "9"
@@ -2017,6 +2465,14 @@
                 "public_wording_guardrail": "Formuleer als verwacht, indicatief of bronafhankelijk moment; niet als harde deadline.",
                 "needs_review": true
               },
+              "money_status": {
+                "status": "funding_route",
+                "label": "Financieringsroute",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
+                "needs_verification": false
+              },
               "page_labels": [
                 "8"
               ],
@@ -2045,6 +2501,14 @@
                 "source_temporal_anchor": "explicit_text_signal",
                 "public_wording_guardrail": "Formuleer als review- of updatecyclus; niet automatisch als lokaal besluitmoment.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
               },
               "page_labels": [
                 "3"
@@ -2075,6 +2539,14 @@
                 "public_wording_guardrail": "Formuleer als review- of updatecyclus; niet automatisch als lokaal besluitmoment.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
+              },
               "page_labels": [
                 "3"
               ],
@@ -2103,6 +2575,14 @@
                 "source_temporal_anchor": "publication_context",
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
               },
               "page_labels": [
                 "3"
@@ -2133,6 +2613,14 @@
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
+              },
               "page_labels": [
                 "3"
               ],
@@ -2161,6 +2649,14 @@
                 "source_temporal_anchor": "publication_context",
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
               },
               "page_labels": [
                 "6"
@@ -2191,6 +2687,14 @@
                 "public_wording_guardrail": "Formuleer als verwacht, indicatief of bronafhankelijk moment; niet als harde deadline.",
                 "needs_review": true
               },
+              "money_status": {
+                "status": "funding_route",
+                "label": "Financieringsroute",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
+                "needs_verification": false
+              },
               "page_labels": [
                 "8"
               ],
@@ -2219,6 +2723,14 @@
                 "source_temporal_anchor": "explicit_text_signal",
                 "public_wording_guardrail": "Formuleer als horizon of fasering; vermijd precieze lokale planning zonder lokale bron.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "funding_route",
+                "label": "Financieringsroute",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
+                "needs_verification": false
               },
               "page_labels": [
                 "35"
@@ -2259,6 +2771,14 @@
                 "public_wording_guardrail": "Gebruik als bron- of contextdatum; niet als beleidsdeadline.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
+              },
               "page_labels": [],
               "section_labels": [
                 "Basisfuncties voor lokale teams / Download: Basisfuncties voor lokale teams"
@@ -2285,6 +2805,14 @@
                 "source_temporal_anchor": "explicit_text_signal",
                 "public_wording_guardrail": "Gebruik als bron- of contextdatum; niet als beleidsdeadline.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
               },
               "page_labels": [],
               "section_labels": [
@@ -2313,6 +2841,14 @@
                 "public_wording_guardrail": "Gebruik als bron- of contextdatum; niet als beleidsdeadline.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
+              },
               "page_labels": [],
               "section_labels": [
                 "Basisfuncties voor lokale teams"
@@ -2339,6 +2875,14 @@
                 "source_temporal_anchor": "explicit_text_signal",
                 "public_wording_guardrail": "Gebruik als bron- of contextdatum; niet als beleidsdeadline.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
               },
               "page_labels": [],
               "section_labels": [
@@ -2377,6 +2921,14 @@
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": true
               },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": true
+              },
               "page_labels": [
                 "8"
               ],
@@ -2405,6 +2957,14 @@
                 "source_temporal_anchor": "explicit_text_signal",
                 "public_wording_guardrail": "Formuleer als verwacht, indicatief of bronafhankelijk moment; niet als harde deadline.",
                 "needs_review": true
+              },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": true
               },
               "page_labels": [
                 "7"
@@ -2435,6 +2995,14 @@
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": true
               },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": true
+              },
               "page_labels": [
                 "7"
               ],
@@ -2463,6 +3031,14 @@
                 "source_temporal_anchor": "publication_context",
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": true
+              },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": true
               },
               "page_labels": [
                 "14"
@@ -2493,6 +3069,14 @@
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "finance_context",
+                "label": "Financiele context",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Gebruik als context; controleer sterkere bronnen voordat hier een financieringsregel van wordt gemaakt.",
+                "needs_verification": true
+              },
               "page_labels": [
                 "33"
               ],
@@ -2521,6 +3105,14 @@
                 "source_temporal_anchor": "explicit_text_signal",
                 "public_wording_guardrail": "Koppel aan de financiele bronroute; maak geen lokale budgetkeuze zonder lokale bron.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "budget_window",
+                "label": "Budgetvenster of financieel tijdvak",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+                "needs_verification": false
               },
               "page_labels": [
                 "12"
@@ -2551,6 +3143,14 @@
                 "public_wording_guardrail": "Formuleer als review- of updatecyclus; niet automatisch als lokaal besluitmoment.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "accountability_rule",
+                "label": "Verantwoordings- of rapportageregel",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Koppel aan de bronroute en verantwoordingsplicht; maak er geen bestedingsruimte van.",
+                "needs_verification": false
+              },
               "page_labels": [
                 "8"
               ],
@@ -2579,6 +3179,14 @@
                 "source_temporal_anchor": "explicit_text_signal",
                 "public_wording_guardrail": "Formuleer als review- of updatecyclus; niet automatisch als lokaal besluitmoment.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "accountability_rule",
+                "label": "Verantwoordings- of rapportageregel",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Koppel aan de bronroute en verantwoordingsplicht; maak er geen bestedingsruimte van.",
+                "needs_verification": false
               },
               "page_labels": [
                 "7"
@@ -2609,6 +3217,14 @@
                 "public_wording_guardrail": "Gebruik als bron- of contextdatum; niet als beleidsdeadline.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "finance_context",
+                "label": "Financiele context",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Gebruik als context; controleer sterkere bronnen voordat hier een financieringsregel van wordt gemaakt.",
+                "needs_verification": true
+              },
               "page_labels": [
                 "8"
               ],
@@ -2637,6 +3253,14 @@
                 "source_temporal_anchor": "explicit_text_signal",
                 "public_wording_guardrail": "Gebruik als bron- of contextdatum; niet als beleidsdeadline.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "finance_context",
+                "label": "Financiele context",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Gebruik als context; controleer sterkere bronnen voordat hier een financieringsregel van wordt gemaakt.",
+                "needs_verification": true
               },
               "page_labels": [
                 "8"
@@ -2667,6 +3291,14 @@
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
+              },
               "page_labels": [
                 "13"
               ],
@@ -2695,6 +3327,14 @@
                 "source_temporal_anchor": "explicit_text_signal",
                 "public_wording_guardrail": "Koppel aan de financiele bronroute; maak geen lokale budgetkeuze zonder lokale bron.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "budget_window",
+                "label": "Budgetvenster of financieel tijdvak",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+                "needs_verification": false
               },
               "page_labels": [
                 "28"
@@ -2725,6 +3365,14 @@
                 "public_wording_guardrail": "Koppel aan de financiele bronroute; maak geen lokale budgetkeuze zonder lokale bron.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "budget_window",
+                "label": "Budgetvenster of financieel tijdvak",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+                "needs_verification": false
+              },
               "page_labels": [
                 "30"
               ],
@@ -2753,6 +3401,14 @@
                 "source_temporal_anchor": "explicit_text_signal",
                 "public_wording_guardrail": "Koppel aan de financiele bronroute; maak geen lokale budgetkeuze zonder lokale bron.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "budget_window",
+                "label": "Budgetvenster of financieel tijdvak",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+                "needs_verification": false
               },
               "page_labels": [
                 "31"
@@ -2793,6 +3449,14 @@
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": true
               },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": true
+              },
               "page_labels": [],
               "section_labels": [
                 "Kennis en Advies"
@@ -2819,6 +3483,14 @@
                 "source_temporal_anchor": "publication_context",
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": true
+              },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": true
               },
               "page_labels": [],
               "section_labels": [
@@ -2847,6 +3519,14 @@
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": true
               },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": true
+              },
               "page_labels": [],
               "section_labels": [
                 "Kennis en Advies"
@@ -2873,6 +3553,14 @@
                 "source_temporal_anchor": "publication_context",
                 "public_wording_guardrail": "Koppel aan de financiele bronroute; maak geen lokale budgetkeuze zonder lokale bron.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "budget_window",
+                "label": "Budgetvenster of financieel tijdvak",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+                "needs_verification": false
               },
               "page_labels": [],
               "section_labels": [
@@ -2901,6 +3589,14 @@
                 "public_wording_guardrail": "Formuleer als review- of updatecyclus; niet automatisch als lokaal besluitmoment.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "budget_window",
+                "label": "Budgetvenster of financieel tijdvak",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+                "needs_verification": false
+              },
               "page_labels": [],
               "section_labels": [
                 "Kennis en Advies"
@@ -2927,6 +3623,14 @@
                 "source_temporal_anchor": "publication_context",
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
               },
               "page_labels": [],
               "section_labels": [
@@ -2955,6 +3659,14 @@
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
+              },
               "page_labels": [],
               "section_labels": [
                 "Kennis en Advies"
@@ -2981,6 +3693,14 @@
                 "source_temporal_anchor": "publication_context",
                 "public_wording_guardrail": "Koppel aan de financiele bronroute; maak geen lokale budgetkeuze zonder lokale bron.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "budget_window",
+                "label": "Budgetvenster of financieel tijdvak",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+                "needs_verification": false
               },
               "page_labels": [],
               "section_labels": [
@@ -3019,6 +3739,14 @@
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": true
               },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": true
+              },
               "page_labels": [],
               "section_labels": [
                 "Profiel Jeugdgezondheidszorg"
@@ -3045,6 +3773,14 @@
                 "source_temporal_anchor": "publication_context",
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": true
+              },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": true
               },
               "page_labels": [],
               "section_labels": [
@@ -3073,6 +3809,14 @@
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": true
               },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": true
+              },
               "page_labels": [],
               "section_labels": [
                 "Profiel Jeugdgezondheidszorg"
@@ -3099,6 +3843,14 @@
                 "source_temporal_anchor": "explicit_text_signal",
                 "public_wording_guardrail": "Formuleer als review- of updatecyclus; niet automatisch als lokaal besluitmoment.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
               },
               "page_labels": [],
               "section_labels": [
@@ -3127,6 +3879,14 @@
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
+              },
               "page_labels": [],
               "section_labels": [
                 "Profiel Jeugdgezondheidszorg"
@@ -3154,6 +3914,14 @@
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
+              },
               "page_labels": [],
               "section_labels": [
                 "Profiel Jeugdgezondheidszorg"
@@ -3180,6 +3948,14 @@
                 "source_temporal_anchor": "publication_context",
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
               },
               "page_labels": [],
               "section_labels": [
@@ -3374,6 +4150,14 @@
                 "public_wording_guardrail": "Koppel aan de financiele bronroute; maak geen lokale budgetkeuze zonder lokale bron.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "budget_window",
+                "label": "Budgetvenster of financieel tijdvak",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+                "needs_verification": false
+              },
               "page_labels": [],
               "section_labels": [
                 "AZWA-financiering voor gemeenten (Zorgakkoord) / Ledenbrief nummer"
@@ -3401,6 +4185,14 @@
                 "public_wording_guardrail": "Koppel aan de financiele bronroute; maak geen lokale budgetkeuze zonder lokale bron.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "budget_window",
+                "label": "Budgetvenster of financieel tijdvak",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+                "needs_verification": false
+              },
               "page_labels": [],
               "section_labels": [
                 "AZWA-financiering voor gemeenten (Zorgakkoord) / Ledenbrief nummer"
@@ -3427,6 +4219,14 @@
                 "source_temporal_anchor": "publication_context",
                 "public_wording_guardrail": "Gebruik als lokale bestuurlijke context; niet als landelijke of inhoudelijke D5/D6-deadline.",
                 "needs_review": true
+              },
+              "money_status": {
+                "status": "finance_context",
+                "label": "Financiele context",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Gebruik als context; controleer sterkere bronnen voordat hier een financieringsregel van wordt gemaakt.",
+                "needs_verification": true
               },
               "page_labels": [],
               "section_labels": [
@@ -3465,6 +4265,14 @@
                 "public_wording_guardrail": "Koppel aan de financiele bronroute; maak geen lokale budgetkeuze zonder lokale bron.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "budget_window",
+                "label": "Budgetvenster of financieel tijdvak",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+                "needs_verification": false
+              },
               "page_labels": [
                 "1"
               ],
@@ -3493,6 +4301,14 @@
                 "source_temporal_anchor": "explicit_text_signal",
                 "public_wording_guardrail": "Formuleer als horizon of fasering; vermijd precieze lokale planning zonder lokale bron.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "budget_window",
+                "label": "Budgetvenster of financieel tijdvak",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+                "needs_verification": false
               },
               "page_labels": [
                 "1"
@@ -3523,6 +4339,14 @@
                 "public_wording_guardrail": "Koppel aan de financiele bronroute; maak geen lokale budgetkeuze zonder lokale bron.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "budget_window",
+                "label": "Budgetvenster of financieel tijdvak",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+                "needs_verification": false
+              },
               "page_labels": [
                 "1"
               ],
@@ -3551,6 +4375,14 @@
                 "source_temporal_anchor": "explicit_text_signal",
                 "public_wording_guardrail": "Koppel aan de financiele bronroute; maak geen lokale budgetkeuze zonder lokale bron.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "accountability_rule",
+                "label": "Verantwoordings- of rapportageregel",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Koppel aan de bronroute en verantwoordingsplicht; maak er geen bestedingsruimte van.",
+                "needs_verification": false
               },
               "page_labels": [
                 "1"
@@ -3581,6 +4413,14 @@
                 "public_wording_guardrail": "Koppel aan de financiele bronroute; maak geen lokale budgetkeuze zonder lokale bron.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "finance_context",
+                "label": "Financiele context",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Gebruik als context; controleer sterkere bronnen voordat hier een financieringsregel van wordt gemaakt.",
+                "needs_verification": true
+              },
               "page_labels": [
                 "2"
               ],
@@ -3609,6 +4449,14 @@
                 "source_temporal_anchor": "explicit_text_signal",
                 "public_wording_guardrail": "Formuleer als review- of updatecyclus; niet automatisch als lokaal besluitmoment.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "accountability_rule",
+                "label": "Verantwoordings- of rapportageregel",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Koppel aan de bronroute en verantwoordingsplicht; maak er geen bestedingsruimte van.",
+                "needs_verification": false
               },
               "page_labels": [
                 "1"
@@ -3639,6 +4487,14 @@
                 "public_wording_guardrail": "Formuleer als review- of updatecyclus; niet automatisch als lokaal besluitmoment.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "accountability_rule",
+                "label": "Verantwoordings- of rapportageregel",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Koppel aan de bronroute en verantwoordingsplicht; maak er geen bestedingsruimte van.",
+                "needs_verification": false
+              },
               "page_labels": [
                 "1"
               ],
@@ -3667,6 +4523,14 @@
                 "source_temporal_anchor": "publication_context",
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "funding_route",
+                "label": "Financieringsroute",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
+                "needs_verification": false
               },
               "page_labels": [
                 "1"
@@ -3697,6 +4561,14 @@
                 "public_wording_guardrail": "Koppel aan de financiele bronroute; maak geen lokale budgetkeuze zonder lokale bron.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "accountability_rule",
+                "label": "Verantwoordings- of rapportageregel",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Koppel aan de bronroute en verantwoordingsplicht; maak er geen bestedingsruimte van.",
+                "needs_verification": false
+              },
               "page_labels": [
                 "1"
               ],
@@ -3725,6 +4597,14 @@
                 "source_temporal_anchor": "publication_context",
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
               },
               "page_labels": [
                 "2"
@@ -3755,6 +4635,14 @@
                 "public_wording_guardrail": "Koppel aan de financiele bronroute; maak geen lokale budgetkeuze zonder lokale bron.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "application_condition",
+                "label": "Aanvraagvoorwaarde of randvoorwaarde",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Formuleer als aanvraag- of procesvoorwaarde; controleer of de bron formeel of praktisch is.",
+                "needs_verification": false
+              },
               "page_labels": [
                 "1"
               ],
@@ -3784,6 +4672,14 @@
                 "public_wording_guardrail": "Koppel aan de financiele bronroute; maak geen lokale budgetkeuze zonder lokale bron.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "accountability_rule",
+                "label": "Verantwoordings- of rapportageregel",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Koppel aan de bronroute en verantwoordingsplicht; maak er geen bestedingsruimte van.",
+                "needs_verification": false
+              },
               "page_labels": [
                 "1"
               ],
@@ -3812,6 +4708,14 @@
                 "source_temporal_anchor": "explicit_text_signal",
                 "public_wording_guardrail": "Koppel aan de financiele bronroute; maak geen lokale budgetkeuze zonder lokale bron.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "budget_window",
+                "label": "Budgetvenster of financieel tijdvak",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+                "needs_verification": false
               },
               "page_labels": [
                 "1"
@@ -3852,6 +4756,14 @@
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
+              },
               "page_labels": [
                 "3"
               ],
@@ -3880,6 +4792,14 @@
                 "source_temporal_anchor": "publication_context",
                 "public_wording_guardrail": "Koppel aan de financiele bronroute; maak geen lokale budgetkeuze zonder lokale bron.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "funding_route",
+                "label": "Financieringsroute",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
+                "needs_verification": false
               },
               "page_labels": [
                 "4"
@@ -3910,6 +4830,14 @@
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
+              },
               "page_labels": [
                 "3"
               ],
@@ -3938,6 +4866,14 @@
                 "source_temporal_anchor": "publication_context",
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
               },
               "page_labels": [
                 "3"
@@ -3968,6 +4904,14 @@
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
+              },
               "page_labels": [
                 "5"
               ],
@@ -3996,6 +4940,14 @@
                 "source_temporal_anchor": "explicit_text_signal",
                 "public_wording_guardrail": "Koppel aan de financiele bronroute; maak geen lokale budgetkeuze zonder lokale bron.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "allocation_mechanism",
+                "label": "Verdeel- of toekenningsmechanisme",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Beschrijf alleen het verdeelmechanisme dat de bron noemt; geen lokale verdeling afleiden.",
+                "needs_verification": false
               },
               "page_labels": [
                 "1"
@@ -4026,6 +4978,14 @@
                 "public_wording_guardrail": "Koppel aan de financiele bronroute; maak geen lokale budgetkeuze zonder lokale bron.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "funding_route",
+                "label": "Financieringsroute",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
+                "needs_verification": false
+              },
               "page_labels": [
                 "1"
               ],
@@ -4054,6 +5014,14 @@
                 "source_temporal_anchor": "explicit_text_signal",
                 "public_wording_guardrail": "Formuleer als review- of updatecyclus; niet automatisch als lokaal besluitmoment.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "accountability_rule",
+                "label": "Verantwoordings- of rapportageregel",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Koppel aan de bronroute en verantwoordingsplicht; maak er geen bestedingsruimte van.",
+                "needs_verification": false
               },
               "page_labels": [
                 "5"
@@ -4084,6 +5052,14 @@
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "funding_route",
+                "label": "Financieringsroute",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
+                "needs_verification": false
+              },
               "page_labels": [
                 "2"
               ],
@@ -4112,6 +5088,14 @@
                 "source_temporal_anchor": "explicit_text_signal",
                 "public_wording_guardrail": "Koppel aan de financiele bronroute; maak geen lokale budgetkeuze zonder lokale bron.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "funding_route",
+                "label": "Financieringsroute",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
+                "needs_verification": false
               },
               "page_labels": [
                 "1"
@@ -4152,6 +5136,14 @@
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
+              },
               "page_labels": [
                 "5"
               ],
@@ -4180,6 +5172,14 @@
                 "source_temporal_anchor": "publication_context",
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
               },
               "page_labels": [
                 "7"
@@ -4210,6 +5210,14 @@
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": true
               },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": true
+              },
               "page_labels": [
                 "5"
               ],
@@ -4238,6 +5246,14 @@
                 "source_temporal_anchor": "publication_context",
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": true
+              },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": true
               },
               "page_labels": [
                 "7"
@@ -4268,6 +5284,14 @@
                 "public_wording_guardrail": "Formuleer als deadline alleen wanneer de bronpassage zelf de uiterste termijn draagt.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "funding_route",
+                "label": "Financieringsroute",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
+                "needs_verification": false
+              },
               "page_labels": [
                 "6"
               ],
@@ -4296,6 +5320,14 @@
                 "source_temporal_anchor": "explicit_text_signal",
                 "public_wording_guardrail": "Formuleer als verwacht, indicatief of bronafhankelijk moment; niet als harde deadline.",
                 "needs_review": true
+              },
+              "money_status": {
+                "status": "finance_context",
+                "label": "Financiele context",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Gebruik als context; controleer sterkere bronnen voordat hier een financieringsregel van wordt gemaakt.",
+                "needs_verification": true
               },
               "page_labels": [
                 "9"
@@ -4326,6 +5358,14 @@
                 "public_wording_guardrail": "Koppel aan de financiele bronroute; maak geen lokale budgetkeuze zonder lokale bron.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "application_condition",
+                "label": "Aanvraagvoorwaarde of randvoorwaarde",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Formuleer als aanvraag- of procesvoorwaarde; controleer of de bron formeel of praktisch is.",
+                "needs_verification": false
+              },
               "page_labels": [
                 "2"
               ],
@@ -4354,6 +5394,14 @@
                 "source_temporal_anchor": "explicit_text_signal",
                 "public_wording_guardrail": "Formuleer als review- of updatecyclus; niet automatisch als lokaal besluitmoment.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "accountability_rule",
+                "label": "Verantwoordings- of rapportageregel",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Koppel aan de bronroute en verantwoordingsplicht; maak er geen bestedingsruimte van.",
+                "needs_verification": false
               },
               "page_labels": [
                 "4"
@@ -4384,6 +5432,14 @@
                 "public_wording_guardrail": "Formuleer als review- of updatecyclus; niet automatisch als lokaal besluitmoment.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
+              },
               "page_labels": [
                 "4"
               ],
@@ -4412,6 +5468,14 @@
                 "source_temporal_anchor": "publication_context",
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
               },
               "page_labels": [
                 "6"
@@ -4442,6 +5506,14 @@
                 "public_wording_guardrail": "Formuleer als deadline alleen wanneer de bronpassage zelf de uiterste termijn draagt.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "funding_route",
+                "label": "Financieringsroute",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
+                "needs_verification": false
+              },
               "page_labels": [
                 "6"
               ],
@@ -4470,6 +5542,14 @@
                 "source_temporal_anchor": "explicit_text_signal",
                 "public_wording_guardrail": "Koppel aan de financiele bronroute; maak geen lokale budgetkeuze zonder lokale bron.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "application_condition",
+                "label": "Aanvraagvoorwaarde of randvoorwaarde",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Formuleer als aanvraag- of procesvoorwaarde; controleer of de bron formeel of praktisch is.",
+                "needs_verification": false
               },
               "page_labels": [
                 "2"
@@ -4500,6 +5580,14 @@
                 "public_wording_guardrail": "Formuleer als verwacht, indicatief of bronafhankelijk moment; niet als harde deadline.",
                 "needs_review": true
               },
+              "money_status": {
+                "status": "budget_window",
+                "label": "Budgetvenster of financieel tijdvak",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+                "needs_verification": false
+              },
               "page_labels": [
                 "4"
               ],
@@ -4528,6 +5616,14 @@
                 "source_temporal_anchor": "explicit_text_signal",
                 "public_wording_guardrail": "Formuleer als horizon of fasering; vermijd precieze lokale planning zonder lokale bron.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "budget_window",
+                "label": "Budgetvenster of financieel tijdvak",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+                "needs_verification": false
               },
               "page_labels": [
                 "6"
@@ -4568,6 +5664,14 @@
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
+              },
               "page_labels": [],
               "section_labels": [
                 "Tabel 2"
@@ -4594,6 +5698,14 @@
                 "source_temporal_anchor": "publication_context",
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
               },
               "page_labels": [],
               "section_labels": [
@@ -4622,6 +5734,14 @@
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
+              },
               "page_labels": [],
               "section_labels": [
                 "Tabel 2"
@@ -4648,6 +5768,14 @@
                 "source_temporal_anchor": "publication_context",
                 "public_wording_guardrail": "Koppel aan de financiele bronroute; maak geen lokale budgetkeuze zonder lokale bron.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "budget_window",
+                "label": "Budgetvenster of financieel tijdvak",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+                "needs_verification": false
               },
               "page_labels": [],
               "section_labels": [
@@ -4676,6 +5804,14 @@
                 "public_wording_guardrail": "Koppel aan de financiele bronroute; maak geen lokale budgetkeuze zonder lokale bron.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "budget_window",
+                "label": "Budgetvenster of financieel tijdvak",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+                "needs_verification": false
+              },
               "page_labels": [],
               "section_labels": [
                 "Tabel 2"
@@ -4702,6 +5838,14 @@
                 "source_temporal_anchor": "explicit_text_signal",
                 "public_wording_guardrail": "Formuleer als review- of updatecyclus; niet automatisch als lokaal besluitmoment.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "accountability_rule",
+                "label": "Verantwoordings- of rapportageregel",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Koppel aan de bronroute en verantwoordingsplicht; maak er geen bestedingsruimte van.",
+                "needs_verification": false
               },
               "page_labels": [],
               "section_labels": [
@@ -4730,6 +5874,14 @@
                 "public_wording_guardrail": "Formuleer als review- of updatecyclus; niet automatisch als lokaal besluitmoment.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "accountability_rule",
+                "label": "Verantwoordings- of rapportageregel",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Koppel aan de bronroute en verantwoordingsplicht; maak er geen bestedingsruimte van.",
+                "needs_verification": false
+              },
               "page_labels": [],
               "section_labels": [
                 "Tabel 2"
@@ -4756,6 +5908,14 @@
                 "source_temporal_anchor": "publication_context",
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
               },
               "page_labels": [],
               "section_labels": [
@@ -4784,6 +5944,14 @@
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
+              },
               "page_labels": [],
               "section_labels": [
                 "Tabel 1"
@@ -4810,6 +5978,14 @@
                 "source_temporal_anchor": "publication_context",
                 "public_wording_guardrail": "Formuleer als review- of updatecyclus; niet automatisch als lokaal besluitmoment.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
               },
               "page_labels": [],
               "section_labels": [
@@ -4848,6 +6024,14 @@
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
+              },
               "page_labels": [
                 "1"
               ],
@@ -4876,6 +6060,14 @@
                 "source_temporal_anchor": "explicit_text_signal",
                 "public_wording_guardrail": "Koppel aan de financiele bronroute; maak geen lokale budgetkeuze zonder lokale bron.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "budget_window",
+                "label": "Budgetvenster of financieel tijdvak",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+                "needs_verification": false
               },
               "page_labels": [
                 "1"
@@ -4906,6 +6098,14 @@
                 "public_wording_guardrail": "Formuleer als horizon of fasering; vermijd precieze lokale planning zonder lokale bron.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "budget_window",
+                "label": "Budgetvenster of financieel tijdvak",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+                "needs_verification": false
+              },
               "page_labels": [
                 "1"
               ],
@@ -4934,6 +6134,14 @@
                 "source_temporal_anchor": "publication_context",
                 "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
                 "needs_review": true
+              },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": true
               },
               "page_labels": [
                 "1"
@@ -4964,6 +6172,14 @@
                 "public_wording_guardrail": "Koppel aan de financiele bronroute; maak geen lokale budgetkeuze zonder lokale bron.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "funding_route",
+                "label": "Financieringsroute",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
+                "needs_verification": false
+              },
               "page_labels": [
                 "1"
               ],
@@ -4992,6 +6208,14 @@
                 "source_temporal_anchor": "publication_context",
                 "public_wording_guardrail": "Koppel aan de financiele bronroute; maak geen lokale budgetkeuze zonder lokale bron.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "funding_route",
+                "label": "Financieringsroute",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
+                "needs_verification": false
               },
               "page_labels": [
                 "1"
@@ -5022,6 +6246,14 @@
                 "public_wording_guardrail": "Koppel aan de financiele bronroute; maak geen lokale budgetkeuze zonder lokale bron.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "funding_route",
+                "label": "Financieringsroute",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
+                "needs_verification": false
+              },
               "page_labels": [
                 "1"
               ],
@@ -5050,6 +6282,14 @@
                 "source_temporal_anchor": "explicit_text_signal",
                 "public_wording_guardrail": "Formuleer als review- of updatecyclus; niet automatisch als lokaal besluitmoment.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
               },
               "page_labels": [
                 "1"
@@ -5080,6 +6320,14 @@
                 "public_wording_guardrail": "Formuleer als review- of updatecyclus; niet automatisch als lokaal besluitmoment.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "not_financial",
+                "label": "Geen zelfstandige financiele claim",
+                "financial_signal": false,
+                "source_finance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+                "needs_verification": false
+              },
               "page_labels": [
                 "2"
               ],
@@ -5108,6 +6356,14 @@
                 "source_temporal_anchor": "publication_context",
                 "public_wording_guardrail": "Koppel aan de financiele bronroute; maak geen lokale budgetkeuze zonder lokale bron.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "funding_route",
+                "label": "Financieringsroute",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
+                "needs_verification": false
               },
               "page_labels": [
                 "1"
@@ -5138,6 +6394,14 @@
                 "public_wording_guardrail": "Koppel aan de financiele bronroute; maak geen lokale budgetkeuze zonder lokale bron.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "funding_route",
+                "label": "Financieringsroute",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
+                "needs_verification": false
+              },
               "page_labels": [
                 "1"
               ],
@@ -5166,6 +6430,14 @@
                 "source_temporal_anchor": "publication_context",
                 "public_wording_guardrail": "Koppel aan de financiele bronroute; maak geen lokale budgetkeuze zonder lokale bron.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "funding_route",
+                "label": "Financieringsroute",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
+                "needs_verification": false
               },
               "page_labels": [
                 "1"
@@ -5196,6 +6468,14 @@
                 "public_wording_guardrail": "Formuleer als deadline alleen wanneer de bronpassage zelf de uiterste termijn draagt.",
                 "needs_review": false
               },
+              "money_status": {
+                "status": "budget_window",
+                "label": "Budgetvenster of financieel tijdvak",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+                "needs_verification": false
+              },
               "page_labels": [
                 "2"
               ],
@@ -5224,6 +6504,14 @@
                 "source_temporal_anchor": "explicit_text_signal",
                 "public_wording_guardrail": "Formuleer als horizon of fasering; vermijd precieze lokale planning zonder lokale bron.",
                 "needs_review": false
+              },
+              "money_status": {
+                "status": "budget_window",
+                "label": "Budgetvenster of financieel tijdvak",
+                "financial_signal": true,
+                "source_finance_anchor": "explicit_finance_signal",
+                "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+                "needs_verification": false
               },
               "page_labels": [
                 "1"
@@ -5468,6 +6756,14 @@
               "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
               "needs_review": true
             },
+            "money_status": {
+              "status": "not_financial",
+              "label": "Geen zelfstandige financiele claim",
+              "financial_signal": false,
+              "source_finance_anchor": "none",
+              "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+              "needs_verification": true
+            },
             "page_labels": [
               "5"
             ],
@@ -5496,6 +6792,14 @@
               "source_temporal_anchor": "explicit_text_signal",
               "public_wording_guardrail": "Gebruik als bron- of contextdatum; niet als beleidsdeadline.",
               "needs_review": true
+            },
+            "money_status": {
+              "status": "budget_window",
+              "label": "Budgetvenster of financieel tijdvak",
+              "financial_signal": true,
+              "source_finance_anchor": "explicit_finance_signal",
+              "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+              "needs_verification": true
             },
             "page_labels": [
               "1"
@@ -5526,6 +6830,14 @@
               "public_wording_guardrail": "Koppel aan de financiele bronroute; maak geen lokale budgetkeuze zonder lokale bron.",
               "needs_review": false
             },
+            "money_status": {
+              "status": "finance_context",
+              "label": "Financiele context",
+              "financial_signal": true,
+              "source_finance_anchor": "explicit_finance_signal",
+              "public_wording_guardrail": "Gebruik als context; controleer sterkere bronnen voordat hier een financieringsregel van wordt gemaakt.",
+              "needs_verification": true
+            },
             "page_labels": [
               "3"
             ],
@@ -5554,6 +6866,14 @@
               "source_temporal_anchor": "publication_context",
               "public_wording_guardrail": "Koppel aan de financiele bronroute; maak geen lokale budgetkeuze zonder lokale bron.",
               "needs_review": false
+            },
+            "money_status": {
+              "status": "budget_window",
+              "label": "Budgetvenster of financieel tijdvak",
+              "financial_signal": true,
+              "source_finance_anchor": "explicit_finance_signal",
+              "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+              "needs_verification": false
             },
             "page_labels": [
               "5"
@@ -5584,6 +6904,14 @@
               "public_wording_guardrail": "Formuleer als review- of updatecyclus; niet automatisch als lokaal besluitmoment.",
               "needs_review": false
             },
+            "money_status": {
+              "status": "budget_window",
+              "label": "Budgetvenster of financieel tijdvak",
+              "financial_signal": true,
+              "source_finance_anchor": "explicit_finance_signal",
+              "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+              "needs_verification": false
+            },
             "page_labels": [
               "5"
             ],
@@ -5612,6 +6940,14 @@
               "source_temporal_anchor": "explicit_text_signal",
               "public_wording_guardrail": "Formuleer als review- of updatecyclus; niet automatisch als lokaal besluitmoment.",
               "needs_review": false
+            },
+            "money_status": {
+              "status": "budget_window",
+              "label": "Budgetvenster of financieel tijdvak",
+              "financial_signal": true,
+              "source_finance_anchor": "explicit_finance_signal",
+              "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+              "needs_verification": false
             },
             "page_labels": [
               "5"
@@ -5642,6 +6978,14 @@
               "public_wording_guardrail": "Formuleer als review- of updatecyclus; niet automatisch als lokaal besluitmoment.",
               "needs_review": false
             },
+            "money_status": {
+              "status": "budget_window",
+              "label": "Budgetvenster of financieel tijdvak",
+              "financial_signal": true,
+              "source_finance_anchor": "explicit_finance_signal",
+              "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+              "needs_verification": false
+            },
             "page_labels": [
               "5"
             ],
@@ -5670,6 +7014,14 @@
               "source_temporal_anchor": "publication_context",
               "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
               "needs_review": false
+            },
+            "money_status": {
+              "status": "not_financial",
+              "label": "Geen zelfstandige financiele claim",
+              "financial_signal": false,
+              "source_finance_anchor": "none",
+              "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+              "needs_verification": false
             },
             "page_labels": [
               "6"
@@ -5700,6 +7052,14 @@
               "public_wording_guardrail": "Gebruik als bron- of contextdatum; niet als beleidsdeadline.",
               "needs_review": false
             },
+            "money_status": {
+              "status": "budget_window",
+              "label": "Budgetvenster of financieel tijdvak",
+              "financial_signal": true,
+              "source_finance_anchor": "explicit_finance_signal",
+              "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+              "needs_verification": false
+            },
             "page_labels": [
               "10"
             ],
@@ -5729,6 +7089,14 @@
               "public_wording_guardrail": "Formuleer als horizon of fasering; vermijd precieze lokale planning zonder lokale bron.",
               "needs_review": false
             },
+            "money_status": {
+              "status": "budget_window",
+              "label": "Budgetvenster of financieel tijdvak",
+              "financial_signal": true,
+              "source_finance_anchor": "explicit_finance_signal",
+              "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+              "needs_verification": false
+            },
             "page_labels": [
               "6"
             ],
@@ -5757,6 +7125,14 @@
               "source_temporal_anchor": "explicit_text_signal",
               "public_wording_guardrail": "Formuleer als horizon of fasering; vermijd precieze lokale planning zonder lokale bron.",
               "needs_review": false
+            },
+            "money_status": {
+              "status": "budget_window",
+              "label": "Budgetvenster of financieel tijdvak",
+              "financial_signal": true,
+              "source_finance_anchor": "explicit_finance_signal",
+              "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+              "needs_verification": false
             },
             "page_labels": [
               "6"
@@ -5797,6 +7173,14 @@
               "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
               "needs_review": true
             },
+            "money_status": {
+              "status": "not_financial",
+              "label": "Geen zelfstandige financiele claim",
+              "financial_signal": false,
+              "source_finance_anchor": "none",
+              "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+              "needs_verification": true
+            },
             "page_labels": [
               "5"
             ],
@@ -5825,6 +7209,14 @@
               "source_temporal_anchor": "explicit_text_signal",
               "public_wording_guardrail": "Gebruik als bron- of contextdatum; niet als beleidsdeadline.",
               "needs_review": true
+            },
+            "money_status": {
+              "status": "budget_window",
+              "label": "Budgetvenster of financieel tijdvak",
+              "financial_signal": true,
+              "source_finance_anchor": "explicit_finance_signal",
+              "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+              "needs_verification": true
             },
             "page_labels": [
               "1"
@@ -5855,6 +7247,14 @@
               "public_wording_guardrail": "Koppel aan de financiele bronroute; maak geen lokale budgetkeuze zonder lokale bron.",
               "needs_review": false
             },
+            "money_status": {
+              "status": "finance_context",
+              "label": "Financiele context",
+              "financial_signal": true,
+              "source_finance_anchor": "explicit_finance_signal",
+              "public_wording_guardrail": "Gebruik als context; controleer sterkere bronnen voordat hier een financieringsregel van wordt gemaakt.",
+              "needs_verification": true
+            },
             "page_labels": [
               "3"
             ],
@@ -5883,6 +7283,14 @@
               "source_temporal_anchor": "publication_context",
               "public_wording_guardrail": "Koppel aan de financiele bronroute; maak geen lokale budgetkeuze zonder lokale bron.",
               "needs_review": false
+            },
+            "money_status": {
+              "status": "budget_window",
+              "label": "Budgetvenster of financieel tijdvak",
+              "financial_signal": true,
+              "source_finance_anchor": "explicit_finance_signal",
+              "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+              "needs_verification": false
             },
             "page_labels": [
               "5"
@@ -5913,6 +7321,14 @@
               "public_wording_guardrail": "Formuleer als review- of updatecyclus; niet automatisch als lokaal besluitmoment.",
               "needs_review": false
             },
+            "money_status": {
+              "status": "budget_window",
+              "label": "Budgetvenster of financieel tijdvak",
+              "financial_signal": true,
+              "source_finance_anchor": "explicit_finance_signal",
+              "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+              "needs_verification": false
+            },
             "page_labels": [
               "5"
             ],
@@ -5941,6 +7357,14 @@
               "source_temporal_anchor": "explicit_text_signal",
               "public_wording_guardrail": "Formuleer als review- of updatecyclus; niet automatisch als lokaal besluitmoment.",
               "needs_review": false
+            },
+            "money_status": {
+              "status": "budget_window",
+              "label": "Budgetvenster of financieel tijdvak",
+              "financial_signal": true,
+              "source_finance_anchor": "explicit_finance_signal",
+              "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+              "needs_verification": false
             },
             "page_labels": [
               "5"
@@ -5971,6 +7395,14 @@
               "public_wording_guardrail": "Formuleer als review- of updatecyclus; niet automatisch als lokaal besluitmoment.",
               "needs_review": false
             },
+            "money_status": {
+              "status": "budget_window",
+              "label": "Budgetvenster of financieel tijdvak",
+              "financial_signal": true,
+              "source_finance_anchor": "explicit_finance_signal",
+              "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+              "needs_verification": false
+            },
             "page_labels": [
               "5"
             ],
@@ -5999,6 +7431,14 @@
               "source_temporal_anchor": "publication_context",
               "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
               "needs_review": false
+            },
+            "money_status": {
+              "status": "not_financial",
+              "label": "Geen zelfstandige financiele claim",
+              "financial_signal": false,
+              "source_finance_anchor": "none",
+              "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+              "needs_verification": false
             },
             "page_labels": [
               "6"
@@ -6029,6 +7469,14 @@
               "public_wording_guardrail": "Gebruik als bron- of contextdatum; niet als beleidsdeadline.",
               "needs_review": false
             },
+            "money_status": {
+              "status": "budget_window",
+              "label": "Budgetvenster of financieel tijdvak",
+              "financial_signal": true,
+              "source_finance_anchor": "explicit_finance_signal",
+              "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+              "needs_verification": false
+            },
             "page_labels": [
               "10"
             ],
@@ -6058,6 +7506,14 @@
               "public_wording_guardrail": "Formuleer als horizon of fasering; vermijd precieze lokale planning zonder lokale bron.",
               "needs_review": false
             },
+            "money_status": {
+              "status": "budget_window",
+              "label": "Budgetvenster of financieel tijdvak",
+              "financial_signal": true,
+              "source_finance_anchor": "explicit_finance_signal",
+              "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+              "needs_verification": false
+            },
             "page_labels": [
               "6"
             ],
@@ -6086,6 +7542,14 @@
               "source_temporal_anchor": "explicit_text_signal",
               "public_wording_guardrail": "Formuleer als horizon of fasering; vermijd precieze lokale planning zonder lokale bron.",
               "needs_review": false
+            },
+            "money_status": {
+              "status": "budget_window",
+              "label": "Budgetvenster of financieel tijdvak",
+              "financial_signal": true,
+              "source_finance_anchor": "explicit_finance_signal",
+              "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+              "needs_verification": false
             },
             "page_labels": [
               "6"
@@ -6126,6 +7590,14 @@
               "public_wording_guardrail": "Formuleer als horizon of fasering; vermijd precieze lokale planning zonder lokale bron.",
               "needs_review": true
             },
+            "money_status": {
+              "status": "budget_window",
+              "label": "Budgetvenster of financieel tijdvak",
+              "financial_signal": true,
+              "source_finance_anchor": "explicit_finance_signal",
+              "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+              "needs_verification": true
+            },
             "page_labels": [
               "1"
             ],
@@ -6155,6 +7627,14 @@
               "public_wording_guardrail": "Formuleer als horizon of fasering; vermijd precieze lokale planning zonder lokale bron.",
               "needs_review": false
             },
+            "money_status": {
+              "status": "budget_window",
+              "label": "Budgetvenster of financieel tijdvak",
+              "financial_signal": true,
+              "source_finance_anchor": "explicit_finance_signal",
+              "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+              "needs_verification": false
+            },
             "page_labels": [
               "1"
             ],
@@ -6183,6 +7663,14 @@
               "source_temporal_anchor": "explicit_text_signal",
               "public_wording_guardrail": "Formuleer als horizon of fasering; vermijd precieze lokale planning zonder lokale bron.",
               "needs_review": false
+            },
+            "money_status": {
+              "status": "budget_window",
+              "label": "Budgetvenster of financieel tijdvak",
+              "financial_signal": true,
+              "source_finance_anchor": "explicit_finance_signal",
+              "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+              "needs_verification": false
             },
             "page_labels": [
               "1"
@@ -6223,6 +7711,14 @@
               "public_wording_guardrail": "Gebruik als bron- of contextdatum; niet als beleidsdeadline.",
               "needs_review": true
             },
+            "money_status": {
+              "status": "not_financial",
+              "label": "Geen zelfstandige financiele claim",
+              "financial_signal": false,
+              "source_finance_anchor": "none",
+              "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+              "needs_verification": true
+            },
             "page_labels": [
               "1"
             ],
@@ -6252,6 +7748,14 @@
               "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
               "needs_review": false
             },
+            "money_status": {
+              "status": "not_financial",
+              "label": "Geen zelfstandige financiele claim",
+              "financial_signal": false,
+              "source_finance_anchor": "none",
+              "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+              "needs_verification": false
+            },
             "page_labels": [
               "1"
             ],
@@ -6280,6 +7784,14 @@
               "source_temporal_anchor": "explicit_text_signal",
               "public_wording_guardrail": "Gebruik als bron- of contextdatum; niet als beleidsdeadline.",
               "needs_review": false
+            },
+            "money_status": {
+              "status": "not_financial",
+              "label": "Geen zelfstandige financiele claim",
+              "financial_signal": false,
+              "source_finance_anchor": "none",
+              "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+              "needs_verification": false
             },
             "page_labels": [
               "1"
@@ -6320,6 +7832,14 @@
               "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
               "needs_review": true
             },
+            "money_status": {
+              "status": "not_financial",
+              "label": "Geen zelfstandige financiele claim",
+              "financial_signal": false,
+              "source_finance_anchor": "none",
+              "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+              "needs_verification": true
+            },
             "page_labels": [],
             "section_labels": [
               "Samenwerkingsprojecten / Samen sterker in de wijk"
@@ -6346,6 +7866,14 @@
               "source_temporal_anchor": "publication_context",
               "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
               "needs_review": false
+            },
+            "money_status": {
+              "status": "not_financial",
+              "label": "Geen zelfstandige financiele claim",
+              "financial_signal": false,
+              "source_finance_anchor": "none",
+              "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+              "needs_verification": false
             },
             "page_labels": [],
             "section_labels": [
@@ -6374,6 +7902,14 @@
               "public_wording_guardrail": "Formuleer als review- of updatecyclus; niet automatisch als lokaal besluitmoment.",
               "needs_review": false
             },
+            "money_status": {
+              "status": "not_financial",
+              "label": "Geen zelfstandige financiele claim",
+              "financial_signal": false,
+              "source_finance_anchor": "none",
+              "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+              "needs_verification": false
+            },
             "page_labels": [],
             "section_labels": [
               "Samenwerkingsprojecten / Samen sterker in de wijk / Al doende leren"
@@ -6400,6 +7936,14 @@
               "source_temporal_anchor": "explicit_text_signal",
               "public_wording_guardrail": "Formuleer als review- of updatecyclus; niet automatisch als lokaal besluitmoment.",
               "needs_review": false
+            },
+            "money_status": {
+              "status": "not_financial",
+              "label": "Geen zelfstandige financiele claim",
+              "financial_signal": false,
+              "source_finance_anchor": "none",
+              "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+              "needs_verification": false
             },
             "page_labels": [],
             "section_labels": [
@@ -6428,6 +7972,14 @@
               "public_wording_guardrail": "Formuleer als review- of updatecyclus; niet automatisch als lokaal besluitmoment.",
               "needs_review": false
             },
+            "money_status": {
+              "status": "not_financial",
+              "label": "Geen zelfstandige financiele claim",
+              "financial_signal": false,
+              "source_finance_anchor": "none",
+              "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+              "needs_verification": false
+            },
             "page_labels": [],
             "section_labels": [
               "Samenwerkingsprojecten / Samen sterker in de wijk / Netwerkteams"
@@ -6454,6 +8006,14 @@
               "source_temporal_anchor": "publication_context",
               "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
               "needs_review": false
+            },
+            "money_status": {
+              "status": "not_financial",
+              "label": "Geen zelfstandige financiele claim",
+              "financial_signal": false,
+              "source_finance_anchor": "none",
+              "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+              "needs_verification": false
             },
             "page_labels": [],
             "section_labels": [
@@ -6482,6 +8042,14 @@
               "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
               "needs_review": false
             },
+            "money_status": {
+              "status": "not_financial",
+              "label": "Geen zelfstandige financiele claim",
+              "financial_signal": false,
+              "source_finance_anchor": "none",
+              "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+              "needs_verification": false
+            },
             "page_labels": [],
             "section_labels": [
               "Samenwerkingsprojecten / Samenwerkingsafspraken Thuis in de wijk"
@@ -6508,6 +8076,14 @@
               "source_temporal_anchor": "publication_context",
               "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
               "needs_review": false
+            },
+            "money_status": {
+              "status": "not_financial",
+              "label": "Geen zelfstandige financiele claim",
+              "financial_signal": false,
+              "source_finance_anchor": "none",
+              "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+              "needs_verification": false
             },
             "page_labels": [],
             "section_labels": [
@@ -6546,6 +8122,14 @@
               "public_wording_guardrail": "Formuleer als review- of updatecyclus; niet automatisch als lokaal besluitmoment.",
               "needs_review": false
             },
+            "money_status": {
+              "status": "not_financial",
+              "label": "Geen zelfstandige financiele claim",
+              "financial_signal": false,
+              "source_finance_anchor": "none",
+              "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+              "needs_verification": false
+            },
             "page_labels": [],
             "section_labels": [
               "Daar bouwen wij samen aan / Waar bouwen we aan?"
@@ -6572,6 +8156,14 @@
               "source_temporal_anchor": "publication_context",
               "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
               "needs_review": false
+            },
+            "money_status": {
+              "status": "not_financial",
+              "label": "Geen zelfstandige financiele claim",
+              "financial_signal": false,
+              "source_finance_anchor": "none",
+              "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+              "needs_verification": false
             },
             "page_labels": [],
             "section_labels": [
@@ -6600,6 +8192,14 @@
               "public_wording_guardrail": "Formuleer als verwacht, indicatief of bronafhankelijk moment; niet als harde deadline.",
               "needs_review": true
             },
+            "money_status": {
+              "status": "not_financial",
+              "label": "Geen zelfstandige financiele claim",
+              "financial_signal": false,
+              "source_finance_anchor": "none",
+              "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+              "needs_verification": false
+            },
             "page_labels": [],
             "section_labels": [
               "Daar bouwen wij samen aan / Blijf op de hoogte"
@@ -6626,6 +8226,14 @@
               "source_temporal_anchor": "publication_context",
               "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
               "needs_review": false
+            },
+            "money_status": {
+              "status": "not_financial",
+              "label": "Geen zelfstandige financiele claim",
+              "financial_signal": false,
+              "source_finance_anchor": "none",
+              "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+              "needs_verification": false
             },
             "page_labels": [],
             "section_labels": [

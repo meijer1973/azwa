@@ -77,14 +77,17 @@ Check:
 - Does the source define a funding route, budget window, allocation condition, or reporting rule?
 - Is there actual evidence for carry-over, reservation, co-financing, or redistribution?
 - Is a financial interpretation being overstated as fact?
+- Which `money_status` applies: `funding_route`, `application_condition`, `budget_window`, `allocation_mechanism`, `spending_scope`, `accountability_rule`, `local_funding_gap`, `double_counting_risk`, `finance_context`, or `not_financial`?
 
 Common quality problems:
 - Rumored rules presented as settled
 - Budget categories merged too quickly
 - Practical funding guidance treated as norm text
+- Local budget gaps filled by inference
+- AZWA-D5, AZWA-D6, GALA/SPUK, PGA/IZA, municipal regular budget and Zvw/insurer lines blended without source evidence
 
 Editorial rule:
-- Financial rumors stay out of public-facing conclusions until source-backed.
+- Financial rumors and local budget assumptions stay out of public-facing conclusions until source-backed. Keep routes, conditions, windows, spending scope and accountability separate, and treat `local_funding_gap` and `double_counting_risk` as review or decision points.
 
 ### 4. Governance
 Check:

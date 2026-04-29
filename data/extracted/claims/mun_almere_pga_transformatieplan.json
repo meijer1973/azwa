@@ -26,6 +26,14 @@
         "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
         "needs_review": true
       },
+      "money_status": {
+        "status": "not_financial",
+        "label": "Geen zelfstandige financiele claim",
+        "financial_signal": false,
+        "source_finance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+        "needs_verification": true
+      },
       "statement": "The plan explicitly aims for better cooperation between informal care, the social domain, and the medical domain, supported by initiatives such as Voorzorgcirkels, Welzijn op Recept, and Samen Sterker in de Wijk.",
       "source_document_id": "mun_almere_pga_transformatieplan",
       "source_location": {
@@ -88,6 +96,14 @@
         "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
         "needs_review": true
       },
+      "money_status": {
+        "status": "not_financial",
+        "label": "Geen zelfstandige financiele claim",
+        "financial_signal": false,
+        "source_finance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+        "needs_verification": true
+      },
       "statement": "The local shift is framed as moving from care afterwards toward health first and the right help in the right place.",
       "source_document_id": "mun_almere_pga_transformatieplan",
       "source_location": {
@@ -144,6 +160,14 @@
         "source_temporal_anchor": "publication_context",
         "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
         "needs_review": true
+      },
+      "money_status": {
+        "status": "accountability_rule",
+        "label": "Verantwoordings- of rapportageregel",
+        "financial_signal": true,
+        "source_finance_anchor": "explicit_finance_signal",
+        "public_wording_guardrail": "Koppel aan de bronroute en verantwoordingsplicht; maak er geen bestedingsruimte van.",
+        "needs_verification": true
       },
       "statement": "The local plan names RTP Almere, the RSO, data infrastructure, and Monitoring@home as part of the operational infrastructure needed for care closer to home.",
       "source_document_id": "mun_almere_pga_transformatieplan",
@@ -207,6 +231,14 @@
         "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
         "needs_review": true
       },
+      "money_status": {
+        "status": "not_financial",
+        "label": "Geen zelfstandige financiele claim",
+        "financial_signal": false,
+        "source_finance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+        "needs_verification": true
+      },
       "statement": "The plan also makes a current shared information picture for professionals part of the local enabling structure.",
       "source_document_id": "mun_almere_pga_transformatieplan",
       "source_location": {
@@ -261,6 +293,14 @@
         "source_temporal_anchor": "publication_context",
         "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
         "needs_review": false
+      },
+      "money_status": {
+        "status": "finance_context",
+        "label": "Financiele context",
+        "financial_signal": true,
+        "source_finance_anchor": "explicit_finance_signal",
+        "public_wording_guardrail": "Gebruik als context; controleer sterkere bronnen voordat hier een financieringsregel van wordt gemaakt.",
+        "needs_verification": true
       },
       "statement": "The governance base is a broad local coalition of Almere municipality, wijkteams, care and welfare organizations, and preventive and public-health institutions.",
       "source_document_id": "mun_almere_pga_transformatieplan",
@@ -317,6 +357,14 @@
         "public_wording_guardrail": "Koppel aan de financiele bronroute; maak geen lokale budgetkeuze zonder lokale bron.",
         "needs_review": true
       },
+      "money_status": {
+        "status": "finance_context",
+        "label": "Financiele context",
+        "financial_signal": true,
+        "source_finance_anchor": "explicit_finance_signal",
+        "public_wording_guardrail": "Gebruik als context; controleer sterkere bronnen voordat hier een financieringsregel van wordt gemaakt.",
+        "needs_verification": true
+      },
       "statement": "The plan does not set a detailed funding framework, but it does describe a target future balance in which care expenditures and social-domain expenditures are better aligned.",
       "source_document_id": "mun_almere_pga_transformatieplan",
       "source_location": {
@@ -371,6 +419,14 @@
         "source_temporal_anchor": "explicit_text_signal",
         "public_wording_guardrail": "Formuleer als horizon of fasering; vermijd precieze lokale planning zonder lokale bron.",
         "needs_review": false
+      },
+      "money_status": {
+        "status": "budget_window",
+        "label": "Budgetvenster of financieel tijdvak",
+        "financial_signal": true,
+        "source_finance_anchor": "explicit_finance_signal",
+        "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+        "needs_verification": false
       },
       "statement": "The local impact horizon is stated explicitly as 2029.",
       "source_document_id": "mun_almere_pga_transformatieplan",
@@ -427,6 +483,14 @@
         "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
         "needs_review": false
       },
+      "money_status": {
+        "status": "not_financial",
+        "label": "Geen zelfstandige financiele claim",
+        "financial_signal": false,
+        "source_finance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+        "needs_verification": false
+      },
       "statement": "The plan describes itself as a transformation rather than a standalone project, which signals an ongoing implementation status.",
       "source_document_id": "mun_almere_pga_transformatieplan",
       "source_location": {
@@ -481,6 +545,14 @@
         "source_temporal_anchor": "explicit_text_signal",
         "public_wording_guardrail": "Formuleer als review- of updatecyclus; niet automatisch als lokaal besluitmoment.",
         "needs_review": false
+      },
+      "money_status": {
+        "status": "accountability_rule",
+        "label": "Verantwoordings- of rapportageregel",
+        "financial_signal": true,
+        "source_finance_anchor": "explicit_finance_signal",
+        "public_wording_guardrail": "Koppel aan de bronroute en verantwoordingsplicht; maak er geen bestedingsruimte van.",
+        "needs_verification": false
       },
       "statement": "Monitoring and learning are explicit parts of the local model, including 'Samen leren' and 'Monitoren'.",
       "source_document_id": "mun_almere_pga_transformatieplan",
@@ -546,6 +618,14 @@
         "public_wording_guardrail": "Formuleer als review- of updatecyclus; niet automatisch als lokaal besluitmoment.",
         "needs_review": false
       },
+      "money_status": {
+        "status": "accountability_rule",
+        "label": "Verantwoordings- of rapportageregel",
+        "financial_signal": true,
+        "source_finance_anchor": "explicit_finance_signal",
+        "public_wording_guardrail": "Koppel aan de bronroute en verantwoordingsplicht; maak er geen bestedingsruimte van.",
+        "needs_verification": false
+      },
       "statement": "The plan also ties those learning and monitoring efforts to the concrete impact goals it wants to reach by 2029.",
       "source_document_id": "mun_almere_pga_transformatieplan",
       "source_location": {
@@ -600,6 +680,14 @@
         "source_temporal_anchor": "publication_context",
         "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
         "needs_review": false
+      },
+      "money_status": {
+        "status": "not_financial",
+        "label": "Geen zelfstandige financiele claim",
+        "financial_signal": false,
+        "source_finance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+        "needs_verification": false
       },
       "statement": "The plan translates the local agenda into named Almere initiatives such as Voorzorgcirkels, Welzijn op Recept, Leefstijlloket, Samen Sterker in de Wijk, and Opgroeien in een Kansrijke Omgeving.",
       "source_document_id": "mun_almere_pga_transformatieplan",
@@ -656,6 +744,14 @@
         "source_temporal_anchor": "publication_context",
         "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
         "needs_review": false
+      },
+      "money_status": {
+        "status": "not_financial",
+        "label": "Geen zelfstandige financiele claim",
+        "financial_signal": false,
+        "source_finance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+        "needs_verification": false
       },
       "statement": "The local implementation remains anchored in Almere-specific pressures such as population growth, labour-market pressure, and the health of Almeerders.",
       "source_document_id": "mun_almere_pga_transformatieplan",

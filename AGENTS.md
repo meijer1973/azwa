@@ -54,3 +54,4 @@
 - `docs/completed-plans/phase26-sprint26.3-sentence-boundary-dedup.md`: internal note for the completed Sprint 26.3 sentence-boundary and dedup cleanup; use it before changing the claim sentence gate, dedup pass, or claim-id reference verifier.
 - `docs/completed-plans/phase27-sprint27.1-norm.md`: internal note for the completed Sprint 27.1 norm split; use it before changing `normative_status`, authority wording, or lower-authority norm-signal checks.
 - `docs/completed-plans/phase27-sprint27.2-tijd.md`: internal note for the completed Sprint 27.2 time split; use it before changing `time_status`, timeline wording, deadline/expected-moment guardrails, or local planning context checks.
+- `docs/completed-plans/phase27-sprint27.3-geld.md`: internal note for the completed Sprint 27.3 money split; use it before changing `money_status`, funding wording, local funding gap checks, or double-counting guardrails.

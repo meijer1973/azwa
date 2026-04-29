@@ -1247,6 +1247,91 @@ def timeline_counts_as_future(entry: dict) -> bool:
     return entry["temporal_status"] in {"komende stap", "toekomstige referentie"}
 
 
+def budget_cycle_category(entry: dict) -> dict | None:
+    text = " ".join(
+        [
+            entry.get("title", ""),
+            entry.get("summary", ""),
+            entry.get("relation_type", ""),
+            " ".join(entry.get("topic_keys", [])),
+        ]
+    ).lower()
+    if entry.get("primary_perspective", {}).get("perspective_id") != "money" and not any(
+        term in text for term in ("begroting", "gemeentefonds", "circulaire", "spuk", "verantwoording", "middelen")
+    ):
+        return None
+    if "verantwoording" in text:
+        category_id = "accountability"
+        label = "Verantwoording"
+        description = "Momenten waarop aanvraag of uitvoering administratief moet worden verantwoord."
+    elif "gemeentefonds" in text or "circulaire" in text:
+        category_id = "municipal_fund"
+        label = "Gemeentefonds"
+        description = "Landelijke circulairemomenten die het lokale financiele beeld kunnen raken."
+    elif "programmabegroting" in text or "begroting" in text:
+        category_id = "local_budget"
+        label = "Lokale begroting"
+        description = "Lokale Almeerse begrotingsmomenten die relevant zijn voor uitvoeringsruimte."
+    elif "spuk" in text or "subsidie" in text:
+        category_id = "spuk"
+        label = "SPUK en subsidie"
+        description = "Aanvraag-, publicatie- en financieringsmomenten rond specifieke uitkeringen."
+    elif "werkagenda" in text or "middelen" in text:
+        category_id = "workagenda_funding"
+        label = "Werkagenda en middelen"
+        description = "Momenten waar inhoudelijke werkagenda en middelenstroom elkaar raken."
+    else:
+        category_id = "other_money"
+        label = "Overige financiele context"
+        description = "Financiele context die niet in een smallere cycluscategorie valt."
+    return {
+        "category_id": category_id,
+        "label": label,
+        "description": description,
+    }
+
+
+def build_budget_cycle_summary(entries: list[dict]) -> list[dict]:
+    grouped: dict[str, dict] = {}
+    for entry in entries:
+        category = budget_cycle_category(entry)
+        if category is None:
+            continue
+        group = grouped.setdefault(
+            category["category_id"],
+            {
+                **category,
+                "entry_count": 0,
+                "future_count": 0,
+                "entries": [],
+            },
+        )
+        group["entry_count"] += 1
+        if timeline_counts_as_future(entry):
+            group["future_count"] += 1
+        group["entries"].append(
+            {
+                "entry_id": entry["entry_id"],
+                "date_label": entry["date_label"],
+                "sort_key": entry["sort_key"],
+                "title": entry["title"],
+                "moment_type_label": entry["moment_type"]["label"],
+                "authority_label": entry["authority"]["label"],
+                "page_url": entry["page_url"],
+            }
+        )
+
+    order = ["local_budget", "municipal_fund", "spuk", "accountability", "workagenda_funding", "other_money"]
+    return [
+        {
+            **grouped[category_id],
+            "entries": sorted(grouped[category_id]["entries"], key=lambda item: (item["sort_key"], item["title"])),
+        }
+        for category_id in order
+        if category_id in grouped
+    ]
+
+
 def related_timeline_models(
     models: list[dict],
     claim_ids: list[str],
@@ -2272,6 +2357,7 @@ def build_timeline_register(
         "default_open_year": TODAY[:4],
         "entries": entries,
         "years": years,
+        "budget_cycle": build_budget_cycle_summary(entries),
     }
 
 
@@ -2302,6 +2388,7 @@ def build_timeline_view(timeline_register: dict) -> dict:
         "title": "Tijdlijn",
         "default_open_year": timeline_register["default_open_year"],
         "year_summaries": timeline_register["years"],
+        "budget_cycle": timeline_register.get("budget_cycle", []),
         "year_groups": year_groups,
         "entries": timeline_register["entries"],
     }

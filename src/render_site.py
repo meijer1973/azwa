@@ -987,6 +987,34 @@ def render_timeline(route: str, timeline_view: dict) -> str:
             + "</div></details>"
         )
 
+    budget_cycle_html = ""
+    if timeline_view.get("budget_cycle"):
+        cycle_cards = []
+        for group in timeline_view["budget_cycle"]:
+            entry_links = "".join(
+                '<li>'
+                + f'<a href="{esc(relative_link(route, entry["page_url"]))}">{esc(entry["date_label"])} - {esc(entry["title"])}</a>'
+                + f'<br><span class="list-meta">{esc(entry["moment_type_label"])} | {esc(entry["authority_label"])}</span>'
+                + "</li>"
+                for entry in group["entries"][:5]
+            )
+            cycle_cards.append(
+                '<article class="summary-box">'
+                + f'<p class="summary-box__metric">{esc(str(group["entry_count"]))}</p>'
+                + f'<h3>{esc(group["label"])}</h3>'
+                + f'<p>{esc(group["description"])}</p>'
+                + f'<p class="list-meta">{esc(str(group["future_count"]))} komende/toekomstige moment(en)</p>'
+                + f'<ul class="compact-list">{entry_links}</ul>'
+                + "</article>"
+            )
+        budget_cycle_html = (
+            '<section class="section"><h2>Begrotings- en verantwoordingscyclus</h2>'
+            + '<div class="notice">Deze doorsnede groepeert de tijdlijnmomenten die vooral geld, gemeentefonds, SPUK, lokale begroting of verantwoording raken. Verwachte circulaires blijven verwachte momenten totdat de concrete bron is ingelezen.</div>'
+            + '<div class="summary-grid">'
+            + "".join(cycle_cards)
+            + "</div></section>"
+        )
+
     return (
         '<section class="section"><h2>Jaaroverzicht</h2>'
         + '<div class="notice">De tijdlijn groepeert bronmomenten, toekomstige beleidsstappen en uitvoeringshorizons per jaar. '
@@ -996,6 +1024,7 @@ def render_timeline(route: str, timeline_view: dict) -> str:
         + '<section class="section"><h2>Beleidsmomenten en vervolgreferenties</h2>'
         + "".join(year_sections)
         + "</section>"
+        + budget_cycle_html
     )
 
 

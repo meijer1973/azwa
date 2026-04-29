@@ -7977,90 +7977,72 @@
       "timeline_policy_note": "Formele of harde termijn; primair perspectief: Governance. Gebruik dit moment alleen met bronduiding; menselijke interpretatie blijft nodig."
     },
     {
-      "entry_key": "aanvullend_regioplan_q3_2026_vng",
-      "entry_id": "tijdlijn-2026-09-30-aanvullend-regioplan-q3-2026-vng",
+      "entry_key": "septembercirculaire_gemeentefonds_2026_verwacht",
+      "entry_id": "tijdlijn-2026-09-30-septembercirculaire-gemeentefonds-2026-verwacht",
       "year": "2026",
-      "date_label": "Q3 2026",
-      "date_granularity": "quarter",
+      "date_label": "september 2026 (verwacht)",
+      "date_granularity": "month",
       "sort_key": "2026-09-30",
       "temporal_status": "komende stap",
       "time_status": {
-        "status": "expected_moment",
-        "label": "Verwacht of indicatief moment",
-        "date_granularity": "quarter",
-        "public_wording_guardrail": "Formuleer als verwacht, indicatief of bronafhankelijk moment; niet als harde deadline.",
-        "needs_review": true
+        "status": "budget_calendar_moment",
+        "label": "Begrotings- of financieringsmoment",
+        "date_granularity": "month",
+        "public_wording_guardrail": "Koppel aan de financiele bronroute; maak geen lokale budgetkeuze zonder lokale bron.",
+        "needs_review": false
       },
-      "title": "VNG-ledenbrief noemt aanvullend regioplan gereed in Q3 2026",
-      "summary": "De VNG-ledenbrief over het onderhandelaarsakkoord AZWA zegt dat partijen in de regio's onder regie van de (mandaat)gemeente een aanvulling op het regioplan opstellen en dat dit aanvullende plan in het derde kwartaal van 2026 gereed moet zijn.",
+      "title": "Septembercirculaire gemeentefonds 2026 verwacht",
+      "summary": "De officiele gemeentefonds-pagina van BZK zegt dat gemeenten via circulaires in mei, september en december worden geinformeerd over omvang en verdeling van het gemeentefonds.",
       "linked_domain": "D5 en D6",
-      "relation_type": "volgens ledenbrief",
-      "entry_type": "toekomstige beleidsstap",
-      "entry_type_label": "beleidsstap",
-      "consequence_for_almere": "Wijst op een regionaal ijkpunt voor verdere D5/D6-uitwerking en is voor gemeenten bestuurlijk relevanter dan een losse sectorale duidingspagina, maar blijft een VNG-ledenbrief en dus geen nationale normbron.",
-      "timeline_note": "Volgens de VNG-ledenbrief moet het aanvullende regioplan in Q3 2026 gereed zijn; gebruik dit als sterkere gemeentelijke duiding totdat een formele landelijke bron hetzelfde moment expliciet bevestigt.",
+      "relation_type": "financieel ijkpunt",
+      "entry_type": "toekomstige financieringsstap",
+      "entry_type_label": "financieringsstap",
+      "consequence_for_almere": "Een logisch moment om het lokale begrotingsbeeld en eventuele D5/D6-gevolgen opnieuw naast landelijke gemeentefondsinformatie te leggen.",
+      "timeline_note": "Verwacht circulairemoment op basis van de officiele gemeentefonds-pagina; pas concreet maken zodra de Septembercirculaire 2026 zelf als bron is ingelezen.",
       "needs_human_review": true,
       "supporting_claim_ids": [
-        "clm__nat_vng_ledenbrief_onderhandelaarsakkoord_azwa_2025_timeline_and_status_001"
+        "clm__nat_bzk_gemeentefonds_cyclus_governance_and_finance_002"
       ],
       "topic_keys": [
-        "timeline.d5_d6_implementation"
+        "finance.local_alignment_goal",
+        "governance_and_finance.other"
       ],
       "source_basis": [
         {
-          "document_id": "nat_vng_ledenbrief_onderhandelaarsakkoord_azwa_2025",
-          "title": "Ledenbrief onderhandelaarsakkoord AZWA",
-          "publisher": "VNG",
-          "publication_date": "2025-07-11",
-          "document_type": "members_letter",
+          "document_id": "nat_bzk_gemeentefonds_cyclus",
+          "title": "Gemeentefonds",
+          "publisher": "Ministerie van Binnenlandse Zaken en Koninkrijksrelaties",
+          "publication_date": "2026-01-26",
+          "document_type": "government_info_page",
           "jurisdiction_level": "national",
           "status": "supporting",
-          "source_url": "https://vng.nl/sites/default/files/2025-07/20250711-ledenbrief-onderhandelaarsakkoord-azwa.pdf",
-          "page_url": "/sources/vng-ledenbrief-azwa/",
+          "source_url": "https://www.rijksoverheid.nl/onderwerpen/financien-gemeenten-en-provincies/gemeentefonds",
+          "page_url": "/sources/gemeentefonds-cyclus/",
           "topics": [
-            "implementatielijn D5/D6"
+            "overige governance- en financieringslijn"
           ]
         }
       ],
       "source_notes": [
-        "Normstatus: lagere-autoriteitssignaal; expliciet toeschrijven en niet als harde norm presenteren."
+        "Normstatus: toelichting, format, advies of praktische guidance."
       ],
       "linked_decisions": [
         {
-          "decision_id": "dec_monitoring_arrangement",
-          "title": "Mogelijke besluitvraag: monitoringsarrangement voor Almere",
-          "status": "open besluitvraag",
-          "page_url": "/decisions/mogelijke-besluitvraag-monitoringsarrangement-voor-almere/"
-        },
-        {
-          "decision_id": "dec_d5_prioritering",
-          "title": "Mogelijke besluitvraag: prioritering van D5-interventies in Almere",
-          "status": "gedeeltelijk ingevuld",
-          "page_url": "/decisions/mogelijke-besluitvraag-prioritering-van-d5-interventies-in-almere/"
+          "decision_id": "dec_budget_verdeling",
+          "title": "Mogelijke besluitvraag: verdeling van beschikbare middelen over D5 en D6",
+          "status": "geblokkeerd door afhankelijkheid",
+          "page_url": "/decisions/mogelijke-besluitvraag-verdeling-van-beschikbare-middelen-over-d5-en-d6/"
         }
       ],
-      "linked_actions": [
-        {
-          "action_id": "act_d5_werkagenda_expliciteren",
-          "title": "Mogelijke opvolgactie: D5-vertaling voor Almere expliciteren",
-          "status": "in voorbereiding",
-          "page_url": "/actions/mogelijke-opvolgactie-d5-vertaling-voor-almere-expliciteren/"
-        },
-        {
-          "action_id": "act_monitoring_afstemmen",
-          "title": "Mogelijke opvolgactie: monitoringsaanpak voor Almere afstemmen",
-          "status": "in voorbereiding",
-          "page_url": "/actions/mogelijke-opvolgactie-monitoringsaanpak-voor-almere-afstemmen/"
-        }
-      ],
-      "page_url": "/timeline/#tijdlijn-2026-09-30-aanvullend-regioplan-q3-2026-vng",
+      "linked_actions": [],
+      "page_url": "/timeline/#tijdlijn-2026-09-30-septembercirculaire-gemeentefonds-2026-verwacht",
       "moment_type": {
-        "status": "expected_moment",
-        "label": "Verwacht of indicatief moment",
-        "entry_type": "toekomstige beleidsstap",
-        "entry_type_label": "beleidsstap",
+        "status": "budget_calendar_moment",
+        "label": "Begrotings- of financieringsmoment",
+        "entry_type": "toekomstige financieringsstap",
+        "entry_type_label": "financieringsstap",
         "temporal_status": "komende stap",
-        "public_wording_guardrail": "Formuleer als verwacht, indicatief of bronafhankelijk moment; niet als harde deadline."
+        "public_wording_guardrail": "Koppel aan de financiele bronroute; maak geen lokale budgetkeuze zonder lokale bron."
       },
       "source_status": {
         "label": "supporting",
@@ -8068,7 +8050,7 @@
           "supporting"
         ],
         "document_types": [
-          "members_letter"
+          "government_info_page"
         ],
         "jurisdiction_levels": [
           "national"
@@ -8080,17 +8062,19 @@
         "guidance": "Gebruik dit moment alleen met bronduiding; menselijke interpretatie blijft nodig."
       },
       "actor_summary": {
-        "actor_signals": [],
-        "publishers": [
-          "VNG"
+        "actor_signals": [
+          "gemeente"
         ],
-        "label": "VNG"
+        "publishers": [
+          "Ministerie van Binnenlandse Zaken en Koninkrijksrelaties"
+        ],
+        "label": "gemeente"
       },
       "primary_perspective": {
         "perspective_id": "money",
         "label": "Geld"
       },
-      "timeline_policy_note": "Verwacht of indicatief moment; primair perspectief: Geld. Gebruik dit moment alleen met bronduiding; menselijke interpretatie blijft nodig."
+      "timeline_policy_note": "Begrotings- of financieringsmoment; primair perspectief: Geld. Gebruik dit moment alleen met bronduiding; menselijke interpretatie blijft nodig."
     }
   ],
   "featured_themes": [

@@ -351,6 +351,8 @@ class SiteGenerationTests(unittest.TestCase):
         self.assertIn("2027", years)
         self.assertIn("2030", years)
         self.assertIn("Meicirculaire gemeentefonds 2026 verwacht", titles)
+        self.assertIn("Septembercirculaire gemeentefonds 2026 verwacht", titles)
+        self.assertIn("Decembercirculaire gemeentefonds 2026 verwacht", titles)
         self.assertIn("Aanvraagdeadline SPUK transformatiemiddelen voor gemeenten", titles)
         self.assertIn("Uiterste verantwoording over uitgevoerde activiteiten in kalenderjaar 2026", titles)
         self.assertIn("Programmabegroting 2026 aangeboden aan de gemeenteraad", titles)
@@ -404,6 +406,24 @@ class SiteGenerationTests(unittest.TestCase):
         self.assertIn("Autoriteit", html)
         self.assertIn("Actor", html)
         self.assertIn("Veilige tijdlijnlezing", html)
+
+    def test_timeline_budget_cycle_groups_financial_moments(self) -> None:
+        timeline_view = load_json(TIMELINE_VIEW_PATH)
+        html = TIMELINE_PAGE_PATH.read_text(encoding="utf-8")
+        groups = {group["category_id"]: group for group in timeline_view["budget_cycle"]}
+
+        self.assertIn("local_budget", groups)
+        self.assertIn("municipal_fund", groups)
+        self.assertIn("spuk", groups)
+        self.assertIn("accountability", groups)
+        self.assertGreaterEqual(groups["municipal_fund"]["entry_count"], 3)
+        municipal_fund_titles = {entry["title"] for entry in groups["municipal_fund"]["entries"]}
+        self.assertIn("Meicirculaire gemeentefonds 2026 verwacht", municipal_fund_titles)
+        self.assertIn("Septembercirculaire gemeentefonds 2026 verwacht", municipal_fund_titles)
+        self.assertIn("Decembercirculaire gemeentefonds 2026 verwacht", municipal_fund_titles)
+        self.assertIn("Begrotings- en verantwoordingscyclus", html)
+        self.assertIn("Gemeentefonds", html)
+        self.assertIn("SPUK en subsidie", html)
 
     def test_updates_page_contains_current_change_log(self) -> None:
         updates_view = load_json(UPDATES_VIEW_PATH)

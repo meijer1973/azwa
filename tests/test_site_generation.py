@@ -14,6 +14,8 @@ ALMERE_VIEW_PATH = REPO_ROOT / "data" / "site" / "site_almere_view.json"
 DASHBOARD_VIEW_PATH = REPO_ROOT / "data" / "site" / "dashboard_view.json"
 TIMELINE_REGISTER_PATH = REPO_ROOT / "data" / "site" / "timeline_register.json"
 TIMELINE_VIEW_PATH = REPO_ROOT / "data" / "site" / "site_timeline_view.json"
+TIMELINE_CURATION_PATH = REPO_ROOT / "config" / "timeline_curation.json"
+CLAIMS_MASTER_PATH = REPO_ROOT / "data" / "extracted" / "claims" / "claims_master.jsonl"
 THEMES_VIEW_PATH = REPO_ROOT / "data" / "site" / "site_themes_view.json"
 REFERENCE_VIEW_PATH = REPO_ROOT / "data" / "site" / "site_reference_view.json"
 SOURCES_VIEW_PATH = REPO_ROOT / "data" / "site" / "site_sources_view.json"
@@ -50,6 +52,10 @@ DEPLOY_WORKFLOW_PATH = REPO_ROOT / ".github" / "workflows" / "deploy-pages.yml"
 
 def load_json(path: Path) -> dict | list:
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+def load_claim_ids() -> set[str]:
+    return {json.loads(line)["claim_id"] for line in CLAIMS_MASTER_PATH.read_text(encoding="utf-8").splitlines()}
 
 
 class SiteGenerationTests(unittest.TestCase):
@@ -356,6 +362,48 @@ class SiteGenerationTests(unittest.TestCase):
         self.assertIn("Tussentijdse evaluatie van IZA/AZWA", titles)
         self.assertIn("Startpakket sociaal domein en evaluatieperiode", titles)
         self.assertIn("Lokale impacthorizon Positief Gezond Almere", titles)
+
+    def test_timeline_entries_carry_policy_metadata(self) -> None:
+        register = load_json(TIMELINE_REGISTER_PATH)
+        for entry in register["entries"]:
+            self.assertIn("moment_type", entry)
+            self.assertIn("source_status", entry)
+            self.assertIn("authority", entry)
+            self.assertIn("actor_summary", entry)
+            self.assertIn("primary_perspective", entry)
+            self.assertIn("timeline_policy_note", entry)
+            self.assertIn(entry["primary_perspective"]["perspective_id"], {"time", "money", "governance", "execution"})
+            self.assertTrue(entry["consequence_for_almere"])
+
+        by_title = {entry["title"]: entry for entry in register["entries"]}
+        self.assertEqual(
+            by_title["Aanvraagdeadline SPUK transformatiemiddelen voor gemeenten"]["primary_perspective"]["perspective_id"],
+            "money",
+        )
+        self.assertEqual(
+            by_title["Gemeenteraadsverkiezingen 2026 in Almere"]["primary_perspective"]["perspective_id"],
+            "governance",
+        )
+
+    def test_timeline_curation_claim_ids_resolve(self) -> None:
+        curation = load_json(TIMELINE_CURATION_PATH)
+        claim_ids = load_claim_ids()
+        missing = []
+        for entry in curation["claim_entries"]:
+            for claim_id in entry.get("claim_ids", []):
+                if claim_id not in claim_ids:
+                    missing.append((entry["entry_key"], claim_id))
+
+        self.assertEqual(missing, [])
+
+    def test_timeline_page_renders_policy_metadata(self) -> None:
+        html = TIMELINE_PAGE_PATH.read_text(encoding="utf-8")
+        self.assertIn("Type moment", html)
+        self.assertIn("Primair perspectief", html)
+        self.assertIn("Bronstatus", html)
+        self.assertIn("Autoriteit", html)
+        self.assertIn("Actor", html)
+        self.assertIn("Veilige tijdlijnlezing", html)
 
     def test_updates_page_contains_current_change_log(self) -> None:
         updates_view = load_json(UPDATES_VIEW_PATH)

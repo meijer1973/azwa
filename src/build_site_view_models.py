@@ -999,6 +999,187 @@ def timeline_time_status(entry_type: str, date_granularity: str, relation_type: 
     }
 
 
+PERSPECTIVE_LABELS = {
+    "time": "Tijd",
+    "money": "Geld",
+    "governance": "Governance",
+    "execution": "Execution",
+}
+
+
+def timeline_moment_type(time_status: dict, entry_type: str, temporal_status: str) -> dict:
+    return {
+        "status": time_status["status"],
+        "label": time_status["label"],
+        "entry_type": entry_type,
+        "entry_type_label": timeline_entry_type_label(entry_type),
+        "temporal_status": temporal_status,
+        "public_wording_guardrail": time_status["public_wording_guardrail"],
+    }
+
+
+def timeline_source_status(source_basis: list[dict]) -> dict:
+    if not source_basis:
+        return {
+            "label": "geen bron in corpus",
+            "document_statuses": [],
+            "document_types": [],
+            "jurisdiction_levels": [],
+        }
+    statuses = dedupe([source.get("status", "unknown") for source in source_basis])
+    document_types = dedupe([source.get("document_type", "unknown") for source in source_basis])
+    jurisdiction_levels = dedupe([source.get("jurisdiction_level", "unknown") for source in source_basis])
+    return {
+        "label": ", ".join(statuses),
+        "document_statuses": statuses,
+        "document_types": document_types,
+        "jurisdiction_levels": jurisdiction_levels,
+    }
+
+
+def timeline_authority_profile(
+    source_basis: list[dict],
+    source_notes: list[str] | None = None,
+    needs_human_review: bool = False,
+) -> dict:
+    source_notes = source_notes or []
+    document_types = {source.get("document_type", "") for source in source_basis}
+    jurisdiction_levels = {source.get("jurisdiction_level", "") for source in source_basis}
+    note_text = " ".join(source_notes).lower()
+
+    if needs_human_review or "lagere autoriteit" in note_text:
+        level = "review_needed"
+        label = "Review nodig"
+        guidance = "Gebruik dit moment alleen met bronduiding; menselijke interpretatie blijft nodig."
+    elif "municipal" in jurisdiction_levels or any("municipal" in value for value in document_types):
+        level = "local_authority"
+        label = "Lokale bron"
+        guidance = "Gebruik als lokaal bronmoment voor zover de bron zelf dit draagt."
+    elif "national" in jurisdiction_levels and document_types.intersection({"law", "regulation", "agreement", "ministerial_letter"}):
+        level = "national_authority"
+        label = "Landelijke bron"
+        guidance = "Gebruik als landelijke beleids- of regelbron; vertaal niet automatisch naar lokale vaststelling."
+    elif "regional" in jurisdiction_levels:
+        level = "regional_authority"
+        label = "Regionale bron"
+        guidance = "Benoem de regionale schaal en leid geen Almeerse keuze af zonder lokale bron."
+    else:
+        level = "contextual_source"
+        label = "Contextbron"
+        guidance = "Gebruik als context en controleer de bronbasis voor sterker taalgebruik."
+
+    return {
+        "level": level,
+        "label": label,
+        "guidance": guidance,
+    }
+
+
+def timeline_actor_summary_from_sources(source_basis: list[dict]) -> dict:
+    publishers = dedupe([source.get("publisher", "") for source in source_basis if source.get("publisher")])
+    return {
+        "actor_signals": [],
+        "publishers": publishers,
+        "label": join_titles([{"title": publisher} for publisher in publishers], max_items=2) if publishers else "Geen actor uit bronbasis",
+    }
+
+
+def timeline_actor_summary_from_claims(claim_ids: list[str], claims: dict[str, dict], source_basis: list[dict]) -> dict:
+    actor_signals: list[str] = []
+    for claim_id in claim_ids:
+        claim = claims.get(claim_id)
+        if not claim:
+            continue
+        actor_signals.extend((claim.get("governance_status") or {}).get("actor_signals", []))
+    actor_signals = dedupe(actor_signals)
+    source_actor_summary = timeline_actor_summary_from_sources(source_basis)
+    if actor_signals:
+        label = ", ".join(actor_signals)
+    else:
+        label = source_actor_summary["label"]
+    return {
+        "actor_signals": actor_signals,
+        "publishers": source_actor_summary["publishers"],
+        "label": label,
+    }
+
+
+def timeline_primary_perspective_from_claims(
+    claim_ids: list[str],
+    claims: dict[str, dict],
+    topic_keys: list[str] | None = None,
+    fallback: str = "time",
+) -> dict:
+    relevant_claims = [claims[claim_id] for claim_id in claim_ids if claim_id in claims]
+    topic_keys = topic_keys or []
+    if any(topic in {"timeline.local_governance_calendar", "municipal.role_allocation"} or topic.startswith("governance.") for topic in topic_keys):
+        perspective_id = "governance"
+    elif any(topic.startswith("finance.") for topic in topic_keys):
+        perspective_id = "money"
+    elif any((claim.get("money_status") or {}).get("status") not in {None, "not_financial"} for claim in relevant_claims):
+        perspective_id = "money"
+    elif any((claim.get("governance_status") or {}).get("status") not in {None, "not_governance"} for claim in relevant_claims):
+        perspective_id = "governance"
+    elif any((claim.get("execution_status") or {}).get("status") not in {None, "not_execution"} for claim in relevant_claims):
+        perspective_id = "execution"
+    elif any(topic == "governance_and_finance.other" for topic in topic_keys):
+        perspective_id = "money"
+    elif any(topic.startswith(("d5.", "d6.", "municipal.", "monitoring.")) for topic in topic_keys):
+        perspective_id = "execution"
+    else:
+        perspective_id = fallback
+    return {
+        "perspective_id": perspective_id,
+        "label": PERSPECTIVE_LABELS[perspective_id],
+    }
+
+
+def timeline_primary_perspective_from_entry(entry_type: str, relation_type: str, linked_domain: str) -> dict:
+    text = " ".join([entry_type, relation_type, linked_domain]).lower()
+    if any(term in text for term in ("bestuurlijk", "besluit", "vaststel", "raad", "governance", "regie")):
+        perspective_id = "governance"
+    elif any(term in text for term in ("financier", "budget", "begroting", "spuk", "middelen", "verantwoording")):
+        perspective_id = "money"
+    elif any(term in text for term in ("uitvoering", "werkagenda", "proces", "implementatie", "horizon")):
+        perspective_id = "execution"
+    else:
+        perspective_id = "time"
+    return {
+        "perspective_id": perspective_id,
+        "label": PERSPECTIVE_LABELS[perspective_id],
+    }
+
+
+def attach_timeline_policy_metadata(
+    entry: dict,
+    *,
+    claim_ids: list[str] | None = None,
+    claims: dict[str, dict] | None = None,
+) -> dict:
+    claim_ids = claim_ids or []
+    claims = claims or {}
+    source_basis = entry.get("source_basis", [])
+    source_notes = entry.get("source_notes", [])
+    entry["moment_type"] = timeline_moment_type(entry["time_status"], entry["entry_type"], entry["temporal_status"])
+    entry["source_status"] = timeline_source_status(source_basis)
+    entry["authority"] = timeline_authority_profile(source_basis, source_notes, entry.get("needs_human_review", False))
+    if claim_ids:
+        entry["actor_summary"] = timeline_actor_summary_from_claims(claim_ids, claims, source_basis)
+        entry["primary_perspective"] = timeline_primary_perspective_from_claims(claim_ids, claims, entry.get("topic_keys", []))
+    else:
+        entry["actor_summary"] = timeline_actor_summary_from_sources(source_basis)
+        entry["primary_perspective"] = timeline_primary_perspective_from_entry(
+            entry["entry_type"],
+            entry["relation_type"],
+            entry["linked_domain"],
+        )
+    entry["timeline_policy_note"] = (
+        f'{entry["moment_type"]["label"]}; primair perspectief: {entry["primary_perspective"]["label"]}. '
+        f'{entry["authority"]["guidance"]}'
+    )
+    return entry
+
+
 def timeline_entry_type_label(value: str) -> str:
     labels = {
         "bronmoment": "brondocument",
@@ -1115,7 +1296,7 @@ def document_timeline_entry_from_spec(spec: dict, documents: dict[str, dict]) ->
     entry_id = timeline_anchor(f"{document['publication_date']}-{document['document_id']}")
     temporal_status = timeline_temporal_status(document["publication_date"])
     time_status = timeline_time_status("bronmoment", "date", spec["relation_type"], temporal_status)
-    return {
+    entry = {
         "entry_key": document["document_id"],
         "entry_id": entry_id,
         "year": timeline_year(document["publication_date"]),
@@ -1139,6 +1320,7 @@ def document_timeline_entry_from_spec(spec: dict, documents: dict[str, dict]) ->
         "linked_actions": [],
         "page_url": f"/timeline/#{entry_id}",
     }
+    return attach_timeline_policy_metadata(entry)
 
 
 def reference_timeline_entry_from_spec(
@@ -1157,7 +1339,7 @@ def reference_timeline_entry_from_spec(
     entry_id = timeline_anchor(f"{spec['sort_key']}-{spec['entry_key']}")
     temporal_status = timeline_temporal_status(spec["sort_key"])
     time_status = timeline_time_status(spec["entry_type"], spec["date_granularity"], spec["relation_type"], temporal_status)
-    return {
+    entry = {
         "entry_key": spec["entry_key"],
         "entry_id": entry_id,
         "year": timeline_year(spec["sort_key"]),
@@ -1183,6 +1365,7 @@ def reference_timeline_entry_from_spec(
         "linked_actions": related_timeline_models(action_models, claim_ids, topic_keys, claims, "action_id"),
         "page_url": f"/timeline/#{entry_id}",
     }
+    return attach_timeline_policy_metadata(entry, claim_ids=claim_ids, claims=claims)
 
 
 def external_timeline_entry_from_spec(
@@ -1193,7 +1376,7 @@ def external_timeline_entry_from_spec(
     entry_id = timeline_anchor(f"{spec['sort_key']}-{spec['entry_key']}")
     temporal_status = timeline_temporal_status(spec["sort_key"])
     time_status = timeline_time_status(spec["entry_type"], spec["date_granularity"], spec["relation_type"], temporal_status)
-    return {
+    entry = {
         "entry_key": spec["entry_key"],
         "entry_id": entry_id,
         "year": timeline_year(spec["sort_key"]),
@@ -1226,6 +1409,7 @@ def external_timeline_entry_from_spec(
         ),
         "page_url": f"/timeline/#{entry_id}",
     }
+    return attach_timeline_policy_metadata(entry)
 
 
 def ordered_timeline_years(years: list[str], current_year: str) -> list[str]:

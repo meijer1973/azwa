@@ -910,6 +910,8 @@ def render_timeline(route: str, timeline_view: dict) -> str:
                 item["linked_domain"],
                 item["relation_type"],
                 item["temporal_status"],
+                item["moment_type"]["label"],
+                item["primary_perspective"]["label"],
             ]
             if item.get("needs_human_review"):
                 tags.append("menselijke duiding")
@@ -923,6 +925,15 @@ def render_timeline(route: str, timeline_view: dict) -> str:
                     notes.append(item["timeline_note"])
                 notes.extend(item.get("source_notes", []))
                 notes_html = '<p class="list-meta">' + " ".join(esc(note) for note in notes) + "</p>"
+            policy_meta_html = (
+                '<dl class="evidence-meta">'
+                + f'<div><dt>Type moment</dt><dd>{esc(item["moment_type"]["label"])}</dd></div>'
+                + f'<div><dt>Primair perspectief</dt><dd>{esc(item["primary_perspective"]["label"])}</dd></div>'
+                + f'<div><dt>Bronstatus</dt><dd>{esc(item["source_status"]["label"])}</dd></div>'
+                + f'<div><dt>Autoriteit</dt><dd>{esc(item["authority"]["label"])}</dd></div>'
+                + f'<div><dt>Actor</dt><dd>{esc(item["actor_summary"]["label"])}</dd></div>'
+                + "</dl>"
+            )
 
             entries_html.append(
                 '<details class="timeline-entry" id="'
@@ -937,7 +948,9 @@ def render_timeline(route: str, timeline_view: dict) -> str:
                 + '<div class="timeline-entry__body">'
                 + render_tag_row(route, tags)
                 + f'<p>{esc(item["summary"])}</p>'
+                + policy_meta_html
                 + f'<p class="timeline-entry__impact"><strong>Gevolg voor Almere:</strong> {esc(item["consequence_for_almere"])}</p>'
+                + f'<p class="list-meta"><strong>Veilige tijdlijnlezing:</strong> {esc(item["timeline_policy_note"])}</p>'
                 + notes_html
                 + (
                     f'<p class="list-meta"><strong>Bronbasis:</strong> {source_links}</p>'

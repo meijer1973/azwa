@@ -5,12 +5,16 @@ import unittest
 from src.build_document_extractions import clean_candidate_statement, is_hard_noise_candidate, is_noise_candidate
 from src.build_claims_top5 import (
     apply_claim_dedup,
+    actor_signals_for,
     has_invalid_sentence_start,
+    normalize_text,
     should_reject_for_sentence_boundary,
 )
 from src.build_structural_extractions import (
+    is_wetten_action_text,
     is_structural_noise_line,
     repair_mojibake,
+    should_skip_html_block,
     voting_records_from_text,
 )
 
@@ -20,6 +24,18 @@ class Phase26TextCleanupTests(unittest.TestCase):
         self.assertTrue(is_structural_noise_line("1.3 Totstandkoming van de keuzes van Almere voor 2024-2026 6"))
         self.assertTrue(is_structural_noise_line("[###### GGD Flevoland 2023-07-07](/article/ggd-flevoland)"))
         self.assertTrue(is_structural_noise_line("Het amendement is met 21 stemmen voor en 19 stemmen tegen aangenomen."))
+
+    def test_wetten_action_chrome_is_removed_from_raw_html_blocks(self) -> None:
+        self.assertTrue(is_wetten_action_text("- Toon relaties in LiDO"))
+        self.assertTrue(is_wetten_action_text("Druk het regelingonderdeel af"))
+        self.assertFalse(is_wetten_action_text("Een specifieke uitkering wordt op aanvraag verleend."))
+        self.assertTrue(should_skip_html_block("- ..."))
+
+    def test_actor_detection_does_not_count_gemeente_inside_gemeenteraad(self) -> None:
+        signals = actor_signals_for(normalize_text("De gemeenteraad heeft het raadsvoorstel vastgesteld."))
+
+        self.assertIn("gemeenteraad", signals)
+        self.assertNotIn("gemeente", signals)
 
     def test_mojibake_repair_handles_common_pdf_artifacts(self) -> None:
         repaired, counts = repair_mojibake("Zie â€œAnalyseâ€ en verwijder\x07 controle.")

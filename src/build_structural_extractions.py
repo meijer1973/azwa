@@ -49,6 +49,16 @@ VOTING_RESULT_PATTERN = re.compile(
     r"\b(?:motie|amendement)\b.{0,160}\b(?:is\s+)?met\s+\d+\s+stemmen",
     re.IGNORECASE,
 )
+WETTEN_ACTION_TEXTS = {
+    "toon relaties in lido",
+    "maak een permanente link",
+    "toon wetstechnische informatie",
+    "vergelijk met andere versie tekst regeling",
+    "druk de regeling af",
+    "sla de regeling op",
+    "druk het regelingonderdeel af",
+    "sla het regelingonderdeel op",
+}
 
 
 def load_manifest() -> list[dict]:
@@ -130,6 +140,11 @@ def is_voting_result_text(text: str) -> bool:
 
 def is_structural_noise_line(line: str) -> bool:
     return is_toc_line(line) or is_drupal_article_link(line) or is_voting_result_text(line)
+
+
+def is_wetten_action_text(text: str) -> bool:
+    normalized = normalize_inline_text(text).lower().strip(" -")
+    return normalized in WETTEN_ACTION_TEXTS
 
 
 def voting_records_from_text(entry: dict, text: str) -> list[dict]:
@@ -294,6 +309,10 @@ def title_from_html(html_text: str) -> str | None:
 def should_skip_html_block(text: str) -> bool:
     stripped = normalize_inline_text(text)
     if not stripped:
+        return True
+    if stripped in {"...", "- ..."}:
+        return True
+    if is_wetten_action_text(stripped):
         return True
     if stripped.startswith("- ") and stripped.count("- ") >= 3 and not any(token in stripped for token in (".", ":", ";")):
         return True

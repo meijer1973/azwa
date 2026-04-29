@@ -102,6 +102,19 @@ SITE_VIEW_MODEL_GROUPS = {
     "source_view_models": "source_detail",
 }
 
+KNOWN_GOVERNANCE_ACTOR_SIGNALS = [
+    "ministerie",
+    "vng",
+    "fondsbeheerder",
+    "mandaatgemeente",
+    "regio",
+    "gemeente",
+    "gemeenteraad",
+    "college",
+    "zorgverzekeraar",
+    "uitvoeringspartner",
+]
+
 
 def load_json(path: Path) -> dict | list:
     return json.loads(path.read_text(encoding="utf-8"))
@@ -445,6 +458,9 @@ def build_governance_status_audit(claims: list[dict], claim_perspectives: dict[s
         "status_counts": dict(sorted(status_counts.items())),
         "governance_perspective_status_counts": dict(sorted(governance_perspective_counts.items())),
         "actor_signal_counts": dict(sorted(actor_signal_counts.items())),
+        "zero_count_actor_signals": [
+            actor for actor in KNOWN_GOVERNANCE_ACTOR_SIGNALS if actor_signal_counts.get(actor, 0) == 0
+        ],
         "verification_needed_sample": verification_sample,
     }
 
@@ -484,6 +500,20 @@ def build_locality_status_audit(claims: list[dict], claim_perspectives: dict[str
         "regional_split_counts": dict(sorted(regional_split_counts.items())),
         "verification_needed_sample": verification_sample,
     }
+
+
+def perspective_status_values(perspective_config: dict, perspective_id: str, field_name: str) -> list[str]:
+    for perspective in perspective_config["perspectives"]:
+        if perspective["perspective_id"] == perspective_id:
+            return [item["status"] for item in perspective.get(field_name, [])]
+    return []
+
+
+def add_zero_count_statuses(audit_payload: dict, expected_statuses: list[str]) -> dict:
+    status_counts = audit_payload.get("status_counts", {})
+    enriched = dict(audit_payload)
+    enriched["zero_count_statuses"] = [status for status in expected_statuses if status_counts.get(status, 0) == 0]
+    return enriched
 
 
 def build_execution_status_audit(claims: list[dict], claim_perspectives: dict[str, list[str]]) -> dict:
@@ -757,12 +787,30 @@ def main() -> None:
     review_queue = load_json(REVIEW_QUEUE_PATH)
 
     perspective_coverage, claim_perspectives = build_perspective_coverage(claims, perspective_config)
-    normative_status_audit = build_normative_status_audit(claims, claim_perspectives)
-    time_status_audit = build_time_status_audit(claims, claim_perspectives)
-    money_status_audit = build_money_status_audit(claims, claim_perspectives)
-    governance_status_audit = build_governance_status_audit(claims, claim_perspectives)
-    locality_status_audit = build_locality_status_audit(claims, claim_perspectives)
-    execution_status_audit = build_execution_status_audit(claims, claim_perspectives)
+    normative_status_audit = add_zero_count_statuses(
+        build_normative_status_audit(claims, claim_perspectives),
+        perspective_status_values(perspective_config, "norm", "normative_status_values"),
+    )
+    time_status_audit = add_zero_count_statuses(
+        build_time_status_audit(claims, claim_perspectives),
+        perspective_status_values(perspective_config, "time", "time_status_values"),
+    )
+    money_status_audit = add_zero_count_statuses(
+        build_money_status_audit(claims, claim_perspectives),
+        perspective_status_values(perspective_config, "money", "money_status_values"),
+    )
+    governance_status_audit = add_zero_count_statuses(
+        build_governance_status_audit(claims, claim_perspectives),
+        perspective_status_values(perspective_config, "governance", "governance_status_values"),
+    )
+    locality_status_audit = add_zero_count_statuses(
+        build_locality_status_audit(claims, claim_perspectives),
+        perspective_status_values(perspective_config, "locality", "locality_status_values"),
+    )
+    execution_status_audit = add_zero_count_statuses(
+        build_execution_status_audit(claims, claim_perspectives),
+        perspective_status_values(perspective_config, "execution", "execution_status_values"),
+    )
     view_model_coverage = build_view_model_coverage()
     broad_topics = build_broad_topic_bucket_audit(current_interpretation, claims_by_id, claim_perspectives)
     rough_claim_audit, rough_claim_ids = build_rough_claim_audit(claims, claim_perspectives)

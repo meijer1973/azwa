@@ -58,10 +58,8 @@
       "execution_status": {
         "status": "operational_requirement",
         "label": "Operationele vereiste of inrichting",
-        "execution_need_signals": [
-          "operational_requirement"
-        ],
-        "source_execution_anchor": "explicit_execution_signal",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
         "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
         "needs_verification": false
       },
@@ -248,14 +246,12 @@
         "needs_verification": false
       },
       "execution_status": {
-        "status": "operational_requirement",
-        "label": "Operationele vereiste of inrichting",
-        "execution_need_signals": [
-          "operational_requirement"
-        ],
-        "source_execution_anchor": "explicit_execution_signal",
-        "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
-        "needs_verification": false
+        "status": "execution_context",
+        "label": "Uitvoeringscontext",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
+        "public_wording_guardrail": "Gebruik als uitvoeringscontext; maak er geen actie, eigenaar of planning van zonder sterker bewijs.",
+        "needs_verification": true
       },
       "statement": "Basisinfrastructuur en basisfunctionaliteiten Voor het sociaal werk staan de belangrijkste afspraken in het onderhandelaarsakkoord AZWA op pagina’s 68 t/m 74, namelijk over de inzet van enkele basisfunctionaliteiten (D5) en een daaraan gekoppelde sociale basisinfrastructuur (D6).",
       "source_document_id": "nat_sociaalwerknl_financiering_iza_azwa_2025",
@@ -346,10 +342,8 @@
       "execution_status": {
         "status": "operational_requirement",
         "label": "Operationele vereiste of inrichting",
-        "execution_need_signals": [
-          "operational_requirement"
-        ],
-        "source_execution_anchor": "explicit_execution_signal",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
         "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
         "needs_verification": false
       },
@@ -443,7 +437,6 @@
         "status": "dependency",
         "label": "Uitvoering heeft afhankelijkheid of randvoorwaarde",
         "execution_need_signals": [
-          "operational_requirement",
           "dependency"
         ],
         "source_execution_anchor": "explicit_execution_signal",
@@ -637,13 +630,11 @@
         "needs_verification": false
       },
       "execution_status": {
-        "status": "operational_requirement",
-        "label": "Operationele vereiste of inrichting",
-        "execution_need_signals": [
-          "operational_requirement"
-        ],
-        "source_execution_anchor": "explicit_execution_signal",
-        "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
+        "status": "not_execution",
+        "label": "Geen zelfstandige uitvoeringsclaim",
+        "execution_need_signals": [],
+        "source_execution_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als actie- of implementatieclaim.",
         "needs_verification": false
       },
       "statement": "Gemeenten mogen maximaal tien procent van de niet-bestede Brede SPUK GALA-middelen ontschot meenemen van 2025 naar 2026 - 18 miljoen euro uit het HLO voor mantelzorgondersteuning en respijtzorg, via gemeenten 2027 - SPUK IZA 135 miljoen euro wordt structureel onderdeel van de AZWA-financiering - 100 miljoen euro extra voor basisfunctionaliteiten en basisinfrastructuur (doorbraakmiddelen) - 90 miljoen euro aanvullend uit GALA (structureel) - 25 miljoen euro uit het HLO voor mantelzorgondersteuning en ...",
@@ -1022,7 +1013,6 @@
         "status": "sequencing_need",
         "label": "Uitvoering vraagt fasering of volgorde",
         "execution_need_signals": [
-          "operational_requirement",
           "implementation_activity",
           "sequencing"
         ],
@@ -1121,13 +1111,11 @@
         "needs_verification": false
       },
       "execution_status": {
-        "status": "operational_requirement",
-        "label": "Operationele vereiste of inrichting",
-        "execution_need_signals": [
-          "operational_requirement"
-        ],
-        "source_execution_anchor": "explicit_execution_signal",
-        "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
+        "status": "not_execution",
+        "label": "Geen zelfstandige uitvoeringsclaim",
+        "execution_need_signals": [],
+        "source_execution_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als actie- of implementatieclaim.",
         "needs_verification": false
       },
       "statement": "Gemeenten mogen maximaal tien procent van de niet-bestede Brede SPUK GALA-middelen ontschot meenemen van 2025 naar 2026 - 18 miljoen euro uit het HLO voor mantelzorgondersteuning en respijtzorg, via gemeenten 2027 - SPUK IZA 135 miljoen euro wordt structureel onderdeel van de AZWA-financiering - 100 miljoen euro extra voor basisfunctionaliteiten en basisinfrastructuur (doorbraakmiddelen) - 90 miljoen euro aanvullend uit GALA (structureel) - 25 miljoen euro uit het HLO voor mantelzorgondersteuning en ...",
@@ -1219,10 +1207,8 @@
       "execution_status": {
         "status": "operational_requirement",
         "label": "Operationele vereiste of inrichting",
-        "execution_need_signals": [
-          "operational_requirement"
-        ],
-        "source_execution_anchor": "explicit_execution_signal",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
         "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
         "needs_verification": false
       },
@@ -1295,8 +1281,7 @@
         "status": "governance_gap",
         "label": "Governance- of rolverdelingsgat",
         "actor_signals": [
-          "gemeente",
-          "gemeenteraad"
+          "gemeente"
         ],
         "source_governance_anchor": "explicit_governance_signal",
         "public_wording_guardrail": "Formuleer als validatie- of besluitvraag; vul actor, mandaat of eigenaar niet in zonder bron.",

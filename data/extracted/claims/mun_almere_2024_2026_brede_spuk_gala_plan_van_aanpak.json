@@ -600,9 +600,7 @@
       "governance_status": {
         "status": "execution_role",
         "label": "Uitvoeringsrol",
-        "actor_signals": [
-          "gemeente"
-        ],
+        "actor_signals": [],
         "source_governance_anchor": "explicit_governance_signal",
         "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt.",
         "needs_verification": false,
@@ -1087,13 +1085,11 @@
         "needs_verification": false
       },
       "execution_status": {
-        "status": "operational_requirement",
-        "label": "Operationele vereiste of inrichting",
-        "execution_need_signals": [
-          "operational_requirement"
-        ],
-        "source_execution_anchor": "explicit_execution_signal",
-        "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
+        "status": "not_execution",
+        "label": "Geen zelfstandige uitvoeringsclaim",
+        "execution_need_signals": [],
+        "source_execution_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als actie- of implementatieclaim.",
         "needs_verification": false
       },
       "statement": "Tot en met 2026 is er ruim € 12 miljoen beschikbaar voor onze stad, waarbij het deels gaat om nieuwe middelen.",
@@ -1162,9 +1158,7 @@
       "governance_status": {
         "status": "execution_role",
         "label": "Uitvoeringsrol",
-        "actor_signals": [
-          "gemeenteraad"
-        ],
+        "actor_signals": [],
         "source_governance_anchor": "explicit_governance_signal",
         "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt.",
         "needs_verification": false,

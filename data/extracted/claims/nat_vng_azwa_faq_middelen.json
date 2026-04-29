@@ -61,7 +61,6 @@
         "status": "decision_question",
         "label": "Uitvoering vraagt besluit of keuze",
         "execution_need_signals": [
-          "operational_requirement",
           "implementation_activity",
           "decision_question"
         ],
@@ -257,7 +256,6 @@
         "status": "decision_question",
         "label": "Uitvoering vraagt besluit of keuze",
         "execution_need_signals": [
-          "operational_requirement",
           "implementation_activity",
           "decision_question"
         ],
@@ -352,13 +350,11 @@
         "needs_verification": true
       },
       "execution_status": {
-        "status": "operational_requirement",
-        "label": "Operationele vereiste of inrichting",
-        "execution_need_signals": [
-          "operational_requirement"
-        ],
-        "source_execution_anchor": "explicit_execution_signal",
-        "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
+        "status": "not_execution",
+        "label": "Geen zelfstandige uitvoeringsclaim",
+        "execution_need_signals": [],
+        "source_execution_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als actie- of implementatieclaim.",
         "needs_verification": true
       },
       "statement": "Voor 2026 is afgesproken dat de extra middelen die beschikbaar komen (50 miljoen voor 2026 vanuit het AZWA en 18 miljoen vanuit het HLO), worden verstrekt via de bestaande SPUKS.",
@@ -644,10 +640,8 @@
       "execution_status": {
         "status": "operational_requirement",
         "label": "Operationele vereiste of inrichting",
-        "execution_need_signals": [
-          "operational_requirement"
-        ],
-        "source_execution_anchor": "explicit_execution_signal",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
         "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
         "needs_verification": true
       },

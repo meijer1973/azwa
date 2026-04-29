@@ -6,6 +6,38 @@
     "human_checklist": "docs/data-quality-checklist.md",
     "generated_outputs": "data/site/*.json"
   },
+  "status_field_contracts": {
+    "normative_status": {
+      "review_flag": "needs_attribution",
+      "anchor_field": "source_authority",
+      "rationale": "Norm labels need an attribution flag because lower-authority and guidance sources may be usable when explicitly attributed, even when they do not need factual verification."
+    },
+    "time_status": {
+      "review_flag": "needs_review",
+      "anchor_field": "source_temporal_anchor",
+      "rationale": "Time labels distinguish hard dates from expected or local-planning context; the flag means editorial review is needed before using a time signal as a deadline."
+    },
+    "money_status": {
+      "review_flag": "needs_verification",
+      "anchor_field": "source_finance_anchor",
+      "rationale": "Money labels use verification language because funding, allocation, spending and accountability claims can create financial overclaiming if not checked against the exact source route."
+    },
+    "governance_status": {
+      "review_flag": "needs_verification",
+      "anchor_field": "source_governance_anchor",
+      "rationale": "Governance labels need verification before actor mentions become decision, coordination, ownership, approval or execution language."
+    },
+    "locality_status": {
+      "review_flag": "needs_verification",
+      "anchor_field": "locality_scope",
+      "rationale": "Locality labels need verification when national or regional lines are relevant to Almere but not explicitly adopted in local public sources."
+    },
+    "execution_status": {
+      "review_flag": "needs_verification",
+      "anchor_field": "source_execution_anchor",
+      "rationale": "Execution labels need verification before possible actions, dependencies, capacity needs or sequencing signals become action language."
+    }
+  },
   "classifications": [
     {
       "classification_id": "source_fact",

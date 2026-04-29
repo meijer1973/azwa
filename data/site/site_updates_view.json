@@ -295,7 +295,6 @@
                 "status": "capacity_need",
                 "label": "Uitvoering vraagt capaciteit of bemensing",
                 "execution_need_signals": [
-                  "operational_requirement",
                   "implementation_activity",
                   "sequencing",
                   "capacity"
@@ -370,7 +369,6 @@
                 "status": "implementation_activity",
                 "label": "Uitvoeringsactiviteit zichtbaar",
                 "execution_need_signals": [
-                  "operational_requirement",
                   "implementation_activity"
                 ],
                 "source_execution_anchor": "explicit_execution_signal",
@@ -417,9 +415,7 @@
               "governance_status": {
                 "status": "actor_context",
                 "label": "Actor- of governancecontext",
-                "actor_signals": [
-                  "gemeente"
-                ],
+                "actor_signals": [],
                 "source_governance_anchor": "explicit_governance_signal",
                 "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
                 "needs_verification": true,
@@ -716,7 +712,6 @@
                 "status": "dependency",
                 "label": "Uitvoering heeft afhankelijkheid of randvoorwaarde",
                 "execution_need_signals": [
-                  "operational_requirement",
                   "implementation_activity",
                   "dependency",
                   "sequencing"
@@ -791,10 +786,8 @@
               "execution_status": {
                 "status": "operational_requirement",
                 "label": "Operationele vereiste of inrichting",
-                "execution_need_signals": [
-                  "operational_requirement"
-                ],
-                "source_execution_anchor": "explicit_execution_signal",
+                "execution_need_signals": [],
+                "source_execution_anchor": "topic_context",
                 "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
                 "needs_verification": false
               },
@@ -862,7 +855,6 @@
                 "status": "sequencing_need",
                 "label": "Uitvoering vraagt fasering of volgorde",
                 "execution_need_signals": [
-                  "operational_requirement",
                   "implementation_activity",
                   "sequencing"
                 ],
@@ -1080,7 +1072,6 @@
                 "status": "capacity_need",
                 "label": "Uitvoering vraagt capaciteit of bemensing",
                 "execution_need_signals": [
-                  "operational_requirement",
                   "implementation_activity",
                   "sequencing",
                   "capacity"
@@ -1155,7 +1146,6 @@
                 "status": "implementation_activity",
                 "label": "Uitvoeringsactiviteit zichtbaar",
                 "execution_need_signals": [
-                  "operational_requirement",
                   "implementation_activity"
                 ],
                 "source_execution_anchor": "explicit_execution_signal",
@@ -1202,9 +1192,7 @@
               "governance_status": {
                 "status": "actor_context",
                 "label": "Actor- of governancecontext",
-                "actor_signals": [
-                  "gemeente"
-                ],
+                "actor_signals": [],
                 "source_governance_anchor": "explicit_governance_signal",
                 "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
                 "needs_verification": true,
@@ -1501,7 +1489,6 @@
                 "status": "dependency",
                 "label": "Uitvoering heeft afhankelijkheid of randvoorwaarde",
                 "execution_need_signals": [
-                  "operational_requirement",
                   "implementation_activity",
                   "dependency",
                   "sequencing"
@@ -1576,10 +1563,8 @@
               "execution_status": {
                 "status": "operational_requirement",
                 "label": "Operationele vereiste of inrichting",
-                "execution_need_signals": [
-                  "operational_requirement"
-                ],
-                "source_execution_anchor": "explicit_execution_signal",
+                "execution_need_signals": [],
+                "source_execution_anchor": "topic_context",
                 "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
                 "needs_verification": false
               },
@@ -1647,7 +1632,6 @@
                 "status": "sequencing_need",
                 "label": "Uitvoering vraagt fasering of volgorde",
                 "execution_need_signals": [
-                  "operational_requirement",
                   "implementation_activity",
                   "sequencing"
                 ],
@@ -1792,10 +1776,8 @@
               "execution_status": {
                 "status": "operational_requirement",
                 "label": "Operationele vereiste of inrichting",
-                "execution_need_signals": [
-                  "operational_requirement"
-                ],
-                "source_execution_anchor": "explicit_execution_signal",
+                "execution_need_signals": [],
+                "source_execution_anchor": "topic_context",
                 "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
                 "needs_verification": true
               },
@@ -1860,10 +1842,8 @@
               "execution_status": {
                 "status": "operational_requirement",
                 "label": "Operationele vereiste of inrichting",
-                "execution_need_signals": [
-                  "operational_requirement"
-                ],
-                "source_execution_anchor": "explicit_execution_signal",
+                "execution_need_signals": [],
+                "source_execution_anchor": "topic_context",
                 "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
                 "needs_verification": false
               },
@@ -1926,14 +1906,12 @@
                 "needs_verification": false
               },
               "execution_status": {
-                "status": "operational_requirement",
-                "label": "Operationele vereiste of inrichting",
-                "execution_need_signals": [
-                  "operational_requirement"
-                ],
-                "source_execution_anchor": "explicit_execution_signal",
-                "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
-                "needs_verification": false
+                "status": "execution_context",
+                "label": "Uitvoeringscontext",
+                "execution_need_signals": [],
+                "source_execution_anchor": "topic_context",
+                "public_wording_guardrail": "Gebruik als uitvoeringscontext; maak er geen actie, eigenaar of planning van zonder sterker bewijs.",
+                "needs_verification": true
               },
               "page_labels": [
                 "1"
@@ -2011,10 +1989,8 @@
               "execution_status": {
                 "status": "operational_requirement",
                 "label": "Operationele vereiste of inrichting",
-                "execution_need_signals": [
-                  "operational_requirement"
-                ],
-                "source_execution_anchor": "explicit_execution_signal",
+                "execution_need_signals": [],
+                "source_execution_anchor": "topic_context",
                 "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
                 "needs_verification": true
               },
@@ -2150,10 +2126,8 @@
               "execution_status": {
                 "status": "operational_requirement",
                 "label": "Operationele vereiste of inrichting",
-                "execution_need_signals": [
-                  "operational_requirement"
-                ],
-                "source_execution_anchor": "explicit_execution_signal",
+                "execution_need_signals": [],
+                "source_execution_anchor": "topic_context",
                 "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
                 "needs_verification": false
               },
@@ -2607,8 +2581,7 @@
                 "status": "actor_context",
                 "label": "Actor- of governancecontext",
                 "actor_signals": [
-                  "gemeente",
-                  "uitvoeringspartner"
+                  "gemeente"
                 ],
                 "source_governance_anchor": "explicit_governance_signal",
                 "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
@@ -3186,9 +3159,7 @@
               "governance_status": {
                 "status": "decision_role",
                 "label": "Besluitvormende rol",
-                "actor_signals": [
-                  "gemeenteraad"
-                ],
+                "actor_signals": [],
                 "source_governance_anchor": "explicit_governance_signal",
                 "public_wording_guardrail": "Splits besluitvorming van coordinatie en uitvoering; noem de beslissende actor alleen als de bron dat draagt.",
                 "needs_verification": true,
@@ -3209,10 +3180,8 @@
               "execution_status": {
                 "status": "operational_requirement",
                 "label": "Operationele vereiste of inrichting",
-                "execution_need_signals": [
-                  "operational_requirement"
-                ],
-                "source_execution_anchor": "explicit_execution_signal",
+                "execution_need_signals": [],
+                "source_execution_anchor": "topic_context",
                 "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
                 "needs_verification": true
               },
@@ -3278,7 +3247,6 @@
                 "status": "sequencing_need",
                 "label": "Uitvoering vraagt fasering of volgorde",
                 "execution_need_signals": [
-                  "operational_requirement",
                   "sequencing"
                 ],
                 "source_execution_anchor": "explicit_execution_signal",
@@ -3344,10 +3312,8 @@
               "execution_status": {
                 "status": "operational_requirement",
                 "label": "Operationele vereiste of inrichting",
-                "execution_need_signals": [
-                  "operational_requirement"
-                ],
-                "source_execution_anchor": "explicit_execution_signal",
+                "execution_need_signals": [],
+                "source_execution_anchor": "topic_context",
                 "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
                 "needs_verification": true
               },
@@ -3481,10 +3447,8 @@
               "execution_status": {
                 "status": "operational_requirement",
                 "label": "Operationele vereiste of inrichting",
-                "execution_need_signals": [
-                  "operational_requirement"
-                ],
-                "source_execution_anchor": "explicit_execution_signal",
+                "execution_need_signals": [],
+                "source_execution_anchor": "topic_context",
                 "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
                 "needs_verification": false
               },
@@ -3528,7 +3492,6 @@
                 "label": "Actor- of governancecontext",
                 "actor_signals": [
                   "regio",
-                  "gemeenteraad",
                   "college"
                 ],
                 "source_governance_anchor": "explicit_governance_signal",
@@ -3553,10 +3516,8 @@
               "execution_status": {
                 "status": "operational_requirement",
                 "label": "Operationele vereiste of inrichting",
-                "execution_need_signals": [
-                  "operational_requirement"
-                ],
-                "source_execution_anchor": "explicit_execution_signal",
+                "execution_need_signals": [],
+                "source_execution_anchor": "topic_context",
                 "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
                 "needs_verification": false
               },
@@ -3764,10 +3725,8 @@
               "execution_status": {
                 "status": "operational_requirement",
                 "label": "Operationele vereiste of inrichting",
-                "execution_need_signals": [
-                  "operational_requirement"
-                ],
-                "source_execution_anchor": "explicit_execution_signal",
+                "execution_need_signals": [],
+                "source_execution_anchor": "topic_context",
                 "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
                 "needs_verification": true
               },
@@ -3830,10 +3789,8 @@
               "execution_status": {
                 "status": "operational_requirement",
                 "label": "Operationele vereiste of inrichting",
-                "execution_need_signals": [
-                  "operational_requirement"
-                ],
-                "source_execution_anchor": "explicit_execution_signal",
+                "execution_need_signals": [],
+                "source_execution_anchor": "topic_context",
                 "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
                 "needs_verification": false
               },
@@ -3978,10 +3935,8 @@
               "execution_status": {
                 "status": "operational_requirement",
                 "label": "Operationele vereiste of inrichting",
-                "execution_need_signals": [
-                  "operational_requirement"
-                ],
-                "source_execution_anchor": "explicit_execution_signal",
+                "execution_need_signals": [],
+                "source_execution_anchor": "topic_context",
                 "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
                 "needs_verification": false
               },
@@ -4047,7 +4002,6 @@
                 "status": "implementation_activity",
                 "label": "Uitvoeringsactiviteit zichtbaar",
                 "execution_need_signals": [
-                  "operational_requirement",
                   "implementation_activity"
                 ],
                 "source_execution_anchor": "explicit_execution_signal",
@@ -4119,10 +4073,8 @@
               "execution_status": {
                 "status": "operational_requirement",
                 "label": "Operationele vereiste of inrichting",
-                "execution_need_signals": [
-                  "operational_requirement"
-                ],
-                "source_execution_anchor": "explicit_execution_signal",
+                "execution_need_signals": [],
+                "source_execution_anchor": "topic_context",
                 "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
                 "needs_verification": false
               },
@@ -4185,13 +4137,11 @@
                 "needs_verification": false
               },
               "execution_status": {
-                "status": "operational_requirement",
-                "label": "Operationele vereiste of inrichting",
-                "execution_need_signals": [
-                  "operational_requirement"
-                ],
-                "source_execution_anchor": "explicit_execution_signal",
-                "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
+                "status": "not_execution",
+                "label": "Geen zelfstandige uitvoeringsclaim",
+                "execution_need_signals": [],
+                "source_execution_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als actie- of implementatieclaim.",
                 "needs_verification": false
               },
               "page_labels": [
@@ -4261,7 +4211,6 @@
                 "status": "dependency",
                 "label": "Uitvoering heeft afhankelijkheid of randvoorwaarde",
                 "execution_need_signals": [
-                  "operational_requirement",
                   "dependency"
                 ],
                 "source_execution_anchor": "explicit_execution_signal",
@@ -4333,13 +4282,11 @@
                 "needs_verification": false
               },
               "execution_status": {
-                "status": "operational_requirement",
-                "label": "Operationele vereiste of inrichting",
-                "execution_need_signals": [
-                  "operational_requirement"
-                ],
-                "source_execution_anchor": "explicit_execution_signal",
-                "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
+                "status": "not_execution",
+                "label": "Geen zelfstandige uitvoeringsclaim",
+                "execution_need_signals": [],
+                "source_execution_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als actie- of implementatieclaim.",
                 "needs_verification": false
               },
               "page_labels": [
@@ -4454,14 +4401,12 @@
                 "needs_verification": false
               },
               "governance_status": {
-                "status": "actor_context",
-                "label": "Actor- of governancecontext",
-                "actor_signals": [
-                  "gemeente"
-                ],
-                "source_governance_anchor": "explicit_governance_signal",
-                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
-                "needs_verification": true,
+                "status": "not_governance",
+                "label": "Geen zelfstandige governanceclaim",
+                "actor_signals": [],
+                "source_governance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+                "needs_verification": false,
                 "vague_region_only": false
               },
               "locality_status": {
@@ -4482,7 +4427,6 @@
                 "status": "review_task",
                 "label": "Uitvoering vraagt review, monitoring of validatie",
                 "execution_need_signals": [
-                  "operational_requirement",
                   "review"
                 ],
                 "source_execution_anchor": "explicit_execution_signal",
@@ -4555,7 +4499,6 @@
                 "status": "decision_question",
                 "label": "Uitvoering vraagt besluit of keuze",
                 "execution_need_signals": [
-                  "operational_requirement",
                   "decision_question",
                   "dependency"
                 ],
@@ -4628,10 +4571,8 @@
               "execution_status": {
                 "status": "operational_requirement",
                 "label": "Operationele vereiste of inrichting",
-                "execution_need_signals": [
-                  "operational_requirement"
-                ],
-                "source_execution_anchor": "explicit_execution_signal",
+                "execution_need_signals": [],
+                "source_execution_anchor": "topic_context",
                 "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
                 "needs_verification": false
               },
@@ -4700,10 +4641,8 @@
               "execution_status": {
                 "status": "operational_requirement",
                 "label": "Operationele vereiste of inrichting",
-                "execution_need_signals": [
-                  "operational_requirement"
-                ],
-                "source_execution_anchor": "explicit_execution_signal",
+                "execution_need_signals": [],
+                "source_execution_anchor": "topic_context",
                 "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
                 "needs_verification": false
               },
@@ -4772,13 +4711,11 @@
                 "needs_verification": false
               },
               "execution_status": {
-                "status": "operational_requirement",
-                "label": "Operationele vereiste of inrichting",
-                "execution_need_signals": [
-                  "operational_requirement"
-                ],
-                "source_execution_anchor": "explicit_execution_signal",
-                "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
+                "status": "not_execution",
+                "label": "Geen zelfstandige uitvoeringsclaim",
+                "execution_need_signals": [],
+                "source_execution_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als actie- of implementatieclaim.",
                 "needs_verification": false
               },
               "page_labels": [
@@ -4930,10 +4867,8 @@
               "execution_status": {
                 "status": "operational_requirement",
                 "label": "Operationele vereiste of inrichting",
-                "execution_need_signals": [
-                  "operational_requirement"
-                ],
-                "source_execution_anchor": "explicit_execution_signal",
+                "execution_need_signals": [],
+                "source_execution_anchor": "topic_context",
                 "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
                 "needs_verification": false
               },
@@ -5001,7 +4936,6 @@
                 "status": "dependency",
                 "label": "Uitvoering heeft afhankelijkheid of randvoorwaarde",
                 "execution_need_signals": [
-                  "operational_requirement",
                   "dependency"
                 ],
                 "source_execution_anchor": "explicit_execution_signal",
@@ -5141,10 +5075,8 @@
               "execution_status": {
                 "status": "operational_requirement",
                 "label": "Operationele vereiste of inrichting",
-                "execution_need_signals": [
-                  "operational_requirement"
-                ],
-                "source_execution_anchor": "explicit_execution_signal",
+                "execution_need_signals": [],
+                "source_execution_anchor": "topic_context",
                 "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
                 "needs_verification": false
               },
@@ -5356,10 +5288,8 @@
               "execution_status": {
                 "status": "operational_requirement",
                 "label": "Operationele vereiste of inrichting",
-                "execution_need_signals": [
-                  "operational_requirement"
-                ],
-                "source_execution_anchor": "explicit_execution_signal",
+                "execution_need_signals": [],
+                "source_execution_anchor": "topic_context",
                 "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
                 "needs_verification": true
               },
@@ -5426,10 +5356,8 @@
               "execution_status": {
                 "status": "operational_requirement",
                 "label": "Operationele vereiste of inrichting",
-                "execution_need_signals": [
-                  "operational_requirement"
-                ],
-                "source_execution_anchor": "explicit_execution_signal",
+                "execution_need_signals": [],
+                "source_execution_anchor": "topic_context",
                 "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
                 "needs_verification": true
               },
@@ -5750,7 +5678,6 @@
                 "status": "actor_context",
                 "label": "Actor- of governancecontext",
                 "actor_signals": [
-                  "regio",
                   "gemeente"
                 ],
                 "source_governance_anchor": "explicit_governance_signal",
@@ -5824,7 +5751,6 @@
                 "status": "decision_role",
                 "label": "Besluitvormende rol",
                 "actor_signals": [
-                  "regio",
                   "gemeente"
                 ],
                 "source_governance_anchor": "explicit_governance_signal",
@@ -6393,8 +6319,7 @@
                 "status": "actor_context",
                 "label": "Actor- of governancecontext",
                 "actor_signals": [
-                  "gemeente",
-                  "gemeenteraad"
+                  "gemeente"
                 ],
                 "source_governance_anchor": "explicit_governance_signal",
                 "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
@@ -6464,8 +6389,7 @@
                 "status": "actor_context",
                 "label": "Actor- of governancecontext",
                 "actor_signals": [
-                  "gemeente",
-                  "gemeenteraad"
+                  "gemeente"
                 ],
                 "source_governance_anchor": "explicit_governance_signal",
                 "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
@@ -6673,8 +6597,7 @@
                 "status": "actor_context",
                 "label": "Actor- of governancecontext",
                 "actor_signals": [
-                  "gemeente",
-                  "gemeenteraad"
+                  "gemeente"
                 ],
                 "source_governance_anchor": "explicit_governance_signal",
                 "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
@@ -7418,10 +7341,8 @@
               "execution_status": {
                 "status": "operational_requirement",
                 "label": "Operationele vereiste of inrichting",
-                "execution_need_signals": [
-                  "operational_requirement"
-                ],
-                "source_execution_anchor": "explicit_execution_signal",
+                "execution_need_signals": [],
+                "source_execution_anchor": "topic_context",
                 "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
                 "needs_verification": false
               },
@@ -7482,13 +7403,11 @@
                 "needs_verification": false
               },
               "execution_status": {
-                "status": "operational_requirement",
-                "label": "Operationele vereiste of inrichting",
-                "execution_need_signals": [
-                  "operational_requirement"
-                ],
-                "source_execution_anchor": "explicit_execution_signal",
-                "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
+                "status": "not_execution",
+                "label": "Geen zelfstandige uitvoeringsclaim",
+                "execution_need_signals": [],
+                "source_execution_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als actie- of implementatieclaim.",
                 "needs_verification": false
               },
               "page_labels": [],
@@ -7531,7 +7450,6 @@
                 "label": "Goedkeurings- of vaststellingsrol",
                 "actor_signals": [
                   "regio",
-                  "gemeente",
                   "gemeenteraad",
                   "college"
                 ],
@@ -7631,10 +7549,8 @@
               "execution_status": {
                 "status": "operational_requirement",
                 "label": "Operationele vereiste of inrichting",
-                "execution_need_signals": [
-                  "operational_requirement"
-                ],
-                "source_execution_anchor": "explicit_execution_signal",
+                "execution_need_signals": [],
+                "source_execution_anchor": "topic_context",
                 "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
                 "needs_verification": false
               },
@@ -7701,10 +7617,8 @@
               "execution_status": {
                 "status": "operational_requirement",
                 "label": "Operationele vereiste of inrichting",
-                "execution_need_signals": [
-                  "operational_requirement"
-                ],
-                "source_execution_anchor": "explicit_execution_signal",
+                "execution_need_signals": [],
+                "source_execution_anchor": "topic_context",
                 "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
                 "needs_verification": false
               },
@@ -7842,7 +7756,6 @@
                 "status": "sequencing_need",
                 "label": "Uitvoering vraagt fasering of volgorde",
                 "execution_need_signals": [
-                  "operational_requirement",
                   "sequencing",
                   "review"
                 ],
@@ -7913,13 +7826,11 @@
                 "needs_verification": true
               },
               "execution_status": {
-                "status": "operational_requirement",
-                "label": "Operationele vereiste of inrichting",
-                "execution_need_signals": [
-                  "operational_requirement"
-                ],
-                "source_execution_anchor": "explicit_execution_signal",
-                "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
+                "status": "not_execution",
+                "label": "Geen zelfstandige uitvoeringsclaim",
+                "execution_need_signals": [],
+                "source_execution_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als actie- of implementatieclaim.",
                 "needs_verification": false
               },
               "page_labels": [
@@ -8062,7 +7973,6 @@
                 "status": "sequencing_need",
                 "label": "Uitvoering vraagt fasering of volgorde",
                 "execution_need_signals": [
-                  "operational_requirement",
                   "sequencing",
                   "review"
                 ],
@@ -8213,7 +8123,6 @@
                 "status": "sequencing_need",
                 "label": "Uitvoering vraagt fasering of volgorde",
                 "execution_need_signals": [
-                  "operational_requirement",
                   "sequencing",
                   "review"
                 ],
@@ -8335,8 +8244,7 @@
                 "label": "Besluitvormende rol",
                 "actor_signals": [
                   "mandaatgemeente",
-                  "gemeente",
-                  "college"
+                  "gemeente"
                 ],
                 "source_governance_anchor": "explicit_governance_signal",
                 "public_wording_guardrail": "Splits besluitvorming van coordinatie en uitvoering; noem de beslissende actor alleen als de bron dat draagt.",
@@ -8436,7 +8344,6 @@
                 "status": "sequencing_need",
                 "label": "Uitvoering vraagt fasering of volgorde",
                 "execution_need_signals": [
-                  "operational_requirement",
                   "sequencing",
                   "review"
                 ],
@@ -8650,7 +8557,6 @@
                 "status": "sequencing_need",
                 "label": "Uitvoering vraagt fasering of volgorde",
                 "execution_need_signals": [
-                  "operational_requirement",
                   "implementation_activity",
                   "sequencing"
                 ],
@@ -8858,7 +8764,6 @@
                 "status": "dependency",
                 "label": "Uitvoering heeft afhankelijkheid of randvoorwaarde",
                 "execution_need_signals": [
-                  "operational_requirement",
                   "dependency"
                 ],
                 "source_execution_anchor": "explicit_execution_signal",
@@ -9356,14 +9261,12 @@
                 "needs_verification": false
               },
               "execution_status": {
-                "status": "operational_requirement",
-                "label": "Operationele vereiste of inrichting",
-                "execution_need_signals": [
-                  "operational_requirement"
-                ],
-                "source_execution_anchor": "explicit_execution_signal",
-                "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
-                "needs_verification": false
+                "status": "execution_context",
+                "label": "Uitvoeringscontext",
+                "execution_need_signals": [],
+                "source_execution_anchor": "topic_context",
+                "public_wording_guardrail": "Gebruik als uitvoeringscontext; maak er geen actie, eigenaar of planning van zonder sterker bewijs.",
+                "needs_verification": true
               },
               "page_labels": [
                 "7"
@@ -9545,8 +9448,6 @@
                 "actor_signals": [
                   "mandaatgemeente",
                   "regio",
-                  "gemeente",
-                  "college",
                   "zorgverzekeraar"
                 ],
                 "source_governance_anchor": "explicit_governance_signal",
@@ -9725,7 +9626,6 @@
                 "status": "dependency",
                 "label": "Uitvoering heeft afhankelijkheid of randvoorwaarde",
                 "execution_need_signals": [
-                  "operational_requirement",
                   "dependency"
                 ],
                 "source_execution_anchor": "explicit_execution_signal",
@@ -9919,8 +9819,7 @@
                 "label": "Besluitvormende rol",
                 "actor_signals": [
                   "regio",
-                  "gemeente",
-                  "college"
+                  "gemeente"
                 ],
                 "source_governance_anchor": "explicit_governance_signal",
                 "public_wording_guardrail": "Splits besluitvorming van coordinatie en uitvoering; noem de beslissende actor alleen als de bron dat draagt.",
@@ -9993,8 +9892,6 @@
                 "actor_signals": [
                   "mandaatgemeente",
                   "regio",
-                  "gemeente",
-                  "college",
                   "zorgverzekeraar"
                 ],
                 "source_governance_anchor": "explicit_governance_signal",
@@ -10097,7 +9994,6 @@
                 "status": "dependency",
                 "label": "Uitvoering heeft afhankelijkheid of randvoorwaarde",
                 "execution_need_signals": [
-                  "operational_requirement",
                   "dependency"
                 ],
                 "source_execution_anchor": "explicit_execution_signal",
@@ -10142,15 +10038,13 @@
                 "needs_verification": false
               },
               "governance_status": {
-                "status": "actor_context",
-                "label": "Actor- of governancecontext",
-                "actor_signals": [
-                  "regio"
-                ],
-                "source_governance_anchor": "explicit_governance_signal",
-                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
-                "needs_verification": true,
-                "vague_region_only": true
+                "status": "not_governance",
+                "label": "Geen zelfstandige governanceclaim",
+                "actor_signals": [],
+                "source_governance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+                "needs_verification": false,
+                "vague_region_only": false
               },
               "locality_status": {
                 "status": "national_general",
@@ -10990,10 +10884,8 @@
               "execution_status": {
                 "status": "operational_requirement",
                 "label": "Operationele vereiste of inrichting",
-                "execution_need_signals": [
-                  "operational_requirement"
-                ],
-                "source_execution_anchor": "explicit_execution_signal",
+                "execution_need_signals": [],
+                "source_execution_anchor": "topic_context",
                 "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
                 "needs_verification": false
               },
@@ -11062,10 +10954,8 @@
               "execution_status": {
                 "status": "operational_requirement",
                 "label": "Operationele vereiste of inrichting",
-                "execution_need_signals": [
-                  "operational_requirement"
-                ],
-                "source_execution_anchor": "explicit_execution_signal",
+                "execution_need_signals": [],
+                "source_execution_anchor": "topic_context",
                 "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
                 "needs_verification": false
               },
@@ -11135,7 +11025,6 @@
                 "status": "implementation_activity",
                 "label": "Uitvoeringsactiviteit zichtbaar",
                 "execution_need_signals": [
-                  "operational_requirement",
                   "implementation_activity"
                 ],
                 "source_execution_anchor": "explicit_execution_signal",
@@ -11208,10 +11097,8 @@
               "execution_status": {
                 "status": "operational_requirement",
                 "label": "Operationele vereiste of inrichting",
-                "execution_need_signals": [
-                  "operational_requirement"
-                ],
-                "source_execution_anchor": "explicit_execution_signal",
+                "execution_need_signals": [],
+                "source_execution_anchor": "topic_context",
                 "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
                 "needs_verification": true
               },
@@ -11256,7 +11143,6 @@
                 "status": "actor_context",
                 "label": "Actor- of governancecontext",
                 "actor_signals": [
-                  "regio",
                   "gemeente"
                 ],
                 "source_governance_anchor": "explicit_governance_signal",
@@ -11468,15 +11354,13 @@
                 "needs_verification": false
               },
               "governance_status": {
-                "status": "actor_context",
-                "label": "Actor- of governancecontext",
-                "actor_signals": [
-                  "regio"
-                ],
-                "source_governance_anchor": "explicit_governance_signal",
-                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
-                "needs_verification": true,
-                "vague_region_only": true
+                "status": "not_governance",
+                "label": "Geen zelfstandige governanceclaim",
+                "actor_signals": [],
+                "source_governance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+                "needs_verification": false,
+                "vague_region_only": false
               },
               "locality_status": {
                 "status": "national_general",
@@ -11536,15 +11420,13 @@
                 "needs_verification": false
               },
               "governance_status": {
-                "status": "actor_context",
-                "label": "Actor- of governancecontext",
-                "actor_signals": [
-                  "regio"
-                ],
-                "source_governance_anchor": "explicit_governance_signal",
-                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
-                "needs_verification": true,
-                "vague_region_only": true
+                "status": "not_governance",
+                "label": "Geen zelfstandige governanceclaim",
+                "actor_signals": [],
+                "source_governance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+                "needs_verification": false,
+                "vague_region_only": false
               },
               "locality_status": {
                 "status": "national_general",
@@ -11751,7 +11633,6 @@
                 "status": "actor_context",
                 "label": "Actor- of governancecontext",
                 "actor_signals": [
-                  "regio",
                   "gemeente"
                 ],
                 "source_governance_anchor": "explicit_governance_signal",
@@ -11823,13 +11704,12 @@
                 "status": "decision_role",
                 "label": "Besluitvormende rol",
                 "actor_signals": [
-                  "regio",
-                  "college"
+                  "regio"
                 ],
                 "source_governance_anchor": "explicit_governance_signal",
                 "public_wording_guardrail": "Splits besluitvorming van coordinatie en uitvoering; noem de beslissende actor alleen als de bron dat draagt.",
-                "needs_verification": false,
-                "vague_region_only": false
+                "needs_verification": true,
+                "vague_region_only": true
               },
               "locality_status": {
                 "status": "regional_split_context",
@@ -11920,7 +11800,6 @@
                 "status": "implementation_activity",
                 "label": "Uitvoeringsactiviteit zichtbaar",
                 "execution_need_signals": [
-                  "operational_requirement",
                   "implementation_activity"
                 ],
                 "source_execution_anchor": "explicit_execution_signal",
@@ -12275,7 +12154,6 @@
               "status": "capacity_need",
               "label": "Uitvoering vraagt capaciteit of bemensing",
               "execution_need_signals": [
-                "operational_requirement",
                 "implementation_activity",
                 "sequencing",
                 "capacity"
@@ -12350,7 +12228,6 @@
               "status": "implementation_activity",
               "label": "Uitvoeringsactiviteit zichtbaar",
               "execution_need_signals": [
-                "operational_requirement",
                 "implementation_activity"
               ],
               "source_execution_anchor": "explicit_execution_signal",
@@ -12397,9 +12274,7 @@
             "governance_status": {
               "status": "actor_context",
               "label": "Actor- of governancecontext",
-              "actor_signals": [
-                "gemeente"
-              ],
+              "actor_signals": [],
               "source_governance_anchor": "explicit_governance_signal",
               "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
               "needs_verification": true,
@@ -12696,7 +12571,6 @@
               "status": "dependency",
               "label": "Uitvoering heeft afhankelijkheid of randvoorwaarde",
               "execution_need_signals": [
-                "operational_requirement",
                 "implementation_activity",
                 "dependency",
                 "sequencing"
@@ -12771,10 +12645,8 @@
             "execution_status": {
               "status": "operational_requirement",
               "label": "Operationele vereiste of inrichting",
-              "execution_need_signals": [
-                "operational_requirement"
-              ],
-              "source_execution_anchor": "explicit_execution_signal",
+              "execution_need_signals": [],
+              "source_execution_anchor": "topic_context",
               "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
               "needs_verification": false
             },
@@ -12842,7 +12714,6 @@
               "status": "sequencing_need",
               "label": "Uitvoering vraagt fasering of volgorde",
               "execution_need_signals": [
-                "operational_requirement",
                 "implementation_activity",
                 "sequencing"
               ],
@@ -13060,7 +12931,6 @@
               "status": "capacity_need",
               "label": "Uitvoering vraagt capaciteit of bemensing",
               "execution_need_signals": [
-                "operational_requirement",
                 "implementation_activity",
                 "sequencing",
                 "capacity"
@@ -13135,7 +13005,6 @@
               "status": "implementation_activity",
               "label": "Uitvoeringsactiviteit zichtbaar",
               "execution_need_signals": [
-                "operational_requirement",
                 "implementation_activity"
               ],
               "source_execution_anchor": "explicit_execution_signal",
@@ -13182,9 +13051,7 @@
             "governance_status": {
               "status": "actor_context",
               "label": "Actor- of governancecontext",
-              "actor_signals": [
-                "gemeente"
-              ],
+              "actor_signals": [],
               "source_governance_anchor": "explicit_governance_signal",
               "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
               "needs_verification": true,
@@ -13481,7 +13348,6 @@
               "status": "dependency",
               "label": "Uitvoering heeft afhankelijkheid of randvoorwaarde",
               "execution_need_signals": [
-                "operational_requirement",
                 "implementation_activity",
                 "dependency",
                 "sequencing"
@@ -13556,10 +13422,8 @@
             "execution_status": {
               "status": "operational_requirement",
               "label": "Operationele vereiste of inrichting",
-              "execution_need_signals": [
-                "operational_requirement"
-              ],
-              "source_execution_anchor": "explicit_execution_signal",
+              "execution_need_signals": [],
+              "source_execution_anchor": "topic_context",
               "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
               "needs_verification": false
             },
@@ -13627,7 +13491,6 @@
               "status": "sequencing_need",
               "label": "Uitvoering vraagt fasering of volgorde",
               "execution_need_signals": [
-                "operational_requirement",
                 "implementation_activity",
                 "sequencing"
               ],
@@ -13772,10 +13635,8 @@
             "execution_status": {
               "status": "operational_requirement",
               "label": "Operationele vereiste of inrichting",
-              "execution_need_signals": [
-                "operational_requirement"
-              ],
-              "source_execution_anchor": "explicit_execution_signal",
+              "execution_need_signals": [],
+              "source_execution_anchor": "topic_context",
               "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
               "needs_verification": true
             },
@@ -13840,10 +13701,8 @@
             "execution_status": {
               "status": "operational_requirement",
               "label": "Operationele vereiste of inrichting",
-              "execution_need_signals": [
-                "operational_requirement"
-              ],
-              "source_execution_anchor": "explicit_execution_signal",
+              "execution_need_signals": [],
+              "source_execution_anchor": "topic_context",
               "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
               "needs_verification": false
             },
@@ -13906,14 +13765,12 @@
               "needs_verification": false
             },
             "execution_status": {
-              "status": "operational_requirement",
-              "label": "Operationele vereiste of inrichting",
-              "execution_need_signals": [
-                "operational_requirement"
-              ],
-              "source_execution_anchor": "explicit_execution_signal",
-              "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
-              "needs_verification": false
+              "status": "execution_context",
+              "label": "Uitvoeringscontext",
+              "execution_need_signals": [],
+              "source_execution_anchor": "topic_context",
+              "public_wording_guardrail": "Gebruik als uitvoeringscontext; maak er geen actie, eigenaar of planning van zonder sterker bewijs.",
+              "needs_verification": true
             },
             "page_labels": [
               "1"
@@ -13991,10 +13848,8 @@
             "execution_status": {
               "status": "operational_requirement",
               "label": "Operationele vereiste of inrichting",
-              "execution_need_signals": [
-                "operational_requirement"
-              ],
-              "source_execution_anchor": "explicit_execution_signal",
+              "execution_need_signals": [],
+              "source_execution_anchor": "topic_context",
               "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
               "needs_verification": true
             },
@@ -14130,10 +13985,8 @@
             "execution_status": {
               "status": "operational_requirement",
               "label": "Operationele vereiste of inrichting",
-              "execution_need_signals": [
-                "operational_requirement"
-              ],
-              "source_execution_anchor": "explicit_execution_signal",
+              "execution_need_signals": [],
+              "source_execution_anchor": "topic_context",
               "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
               "needs_verification": false
             },
@@ -14587,8 +14440,7 @@
               "status": "actor_context",
               "label": "Actor- of governancecontext",
               "actor_signals": [
-                "gemeente",
-                "uitvoeringspartner"
+                "gemeente"
               ],
               "source_governance_anchor": "explicit_governance_signal",
               "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",

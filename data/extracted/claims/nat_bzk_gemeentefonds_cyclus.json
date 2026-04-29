@@ -135,9 +135,7 @@
       "governance_status": {
         "status": "decision_role",
         "label": "Besluitvormende rol",
-        "actor_signals": [
-          "gemeente"
-        ],
+        "actor_signals": [],
         "source_governance_anchor": "explicit_governance_signal",
         "public_wording_guardrail": "Splits besluitvorming van coordinatie en uitvoering; noem de beslissende actor alleen als de bron dat draagt.",
         "needs_verification": false,
@@ -430,7 +428,6 @@
         "status": "actor_context",
         "label": "Actor- of governancecontext",
         "actor_signals": [
-          "gemeente",
           "gemeenteraad"
         ],
         "source_governance_anchor": "explicit_governance_signal",

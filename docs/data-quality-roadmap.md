@@ -32,6 +32,7 @@ Gebruik deze roadmap als levend werkdocument. Werk na elke sprint de statusregel
 | 27.4 Governance | completed | `src/build_claims_top5.py`, `data/schemas/claim.schema.json`, `data/extracted/data_quality_audit.json`, `docs/completed-plans/phase27-sprint27.4-governance.md` |
 | 27.5 Locality | completed | `src/build_claims_top5.py`, `data/schemas/claim.schema.json`, `data/extracted/data_quality_audit.json`, `docs/completed-plans/phase27-sprint27.5-locality.md` |
 | 27.6 Execution | completed | `src/build_claims_top5.py`, `data/schemas/claim.schema.json`, `data/extracted/data_quality_audit.json`, `docs/completed-plans/phase27-sprint27.6-execution.md` |
+| 27.7 Perspectiefmodel stabilisatie | completed | `src/build_claims_top5.py`, `src/build_structural_extractions.py`, `src/build_data_quality_audit.py`, `config/data_quality_perspectives.json`, `docs/completed-plans/phase27-sprint27.7-perspectiefmodel-stabilisatie.md` |
 | 28.1 Menselijke samenvattingen per update | open |  |
 | 28.2 Bronverwijzing en autoriteitstaal | open |  |
 | 28.3 Detailpagina's voor drill-down | open |  |
@@ -71,6 +72,8 @@ Status op 29 april 2026: Sprint 27.4 is afgerond als governance-splitsing. Elke 
 Status op 29 april 2026: Sprint 27.5 is afgerond als locality-splitsing. Elke claim krijgt nu een `locality_status` met onderscheid tussen expliciet Almere, expliciet Flevoland, regionale split-context, algemeen landelijk, landelijk-met-lokale-relevantie, afgeleide lokale relevantie, lokale adoptie-/documentatiegaten, gemeentelijke context en geen locality-signaal. De audit bevat een `locality_status_audit`, site-evidence draagt localitystatus mee, en QC markeert nationale claims met lokale relevantie, afgeleide lokale relevantie, adoptiegaten en regionale split-context als reviewpunt zodat landelijke of regionale lijnen niet als Almeerse vaststelling worden gelezen.
 
 Status op 29 april 2026: Sprint 27.6 is afgerond als execution-splitsing. Elke claim krijgt nu een `execution_status` met onderscheid tussen operationele vereisten, zichtbare uitvoeringsactiviteit, besluitvragen, afhankelijkheden, volgorde-/faseringsvragen, capaciteitsvragen, reviewtaken, uitvoeringscontext en niet-uitvoering. De audit bevat een `execution_status_audit`, site-evidence draagt executionstatus mee, en QC markeert besluitvragen, afhankelijkheden, capaciteit, sequencing, reviewtaken en algemene uitvoeringscontext als reviewpunt zodat mogelijke opvolgacties niet als besloten uitvoering worden gelezen.
+
+Status op 29 april 2026: Sprint 27.7 is afgerond als stabilisatiesprint voordat Fase 28 sitetekst gaat gebruiken. De termlijsten zijn opgeschoond zodat pipeline-metawoorden niet langer als bronsignaal tellen, execution-detectie gebruikt geen subjectnouns meer als operationele vereiste, actorherkenning gebruikt woordgrenzen zodat `gemeente` niet uit `gemeenteraad` wordt afgeleid, wetten.nl actiechrome wordt uit raw-html-blokken gefilterd, en de audit toont nul-tellingen voor statuswaarden en actor-signalen die in de huidige corpusrun niet voorkomen.
 
 Afgeronde aanpak voor Sprint 25.4a:
 
@@ -322,6 +325,14 @@ Status: completed.
 - Vertaal bronclaims naar mogelijke uitvoeringsvragen zonder beleidsadvies toe te voegen.
 - Splits mogelijke besluitvragen, mogelijke opvolgacties, afhankelijkheden en reviewvragen.
 - Laat de site niet suggereren dat een actie al is besloten als alleen de bronbasis aanleiding geeft om deze te onderzoeken.
+
+Sprint 27.7: Perspectiefmodel stabilisatie
+Status: completed.
+
+- Controleer nul-tellingen en mogelijk onbereikbare enumwaarden voordat Phase 28 site-teksten op de zes statusvelden leunen.
+- Verwijder pipeline-metawoorden uit classifier-termlijsten.
+- Filter wetten.nl actiechrome die als regelgevingstekst in claims terechtkwam.
+- Documenteer waarom de statusvelden nog verschillende reviewflags gebruiken.
 
 ## Fase 28 - Tekstkwaliteit van de website
 Doel: minder technische of ruwe tekst, meer bestuurlijk leesbare Nederlandse samenvattingen.

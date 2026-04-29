@@ -58,10 +58,8 @@
       "execution_status": {
         "status": "operational_requirement",
         "label": "Operationele vereiste of inrichting",
-        "execution_need_signals": [
-          "operational_requirement"
-        ],
-        "source_execution_anchor": "explicit_execution_signal",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
         "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
         "needs_verification": true
       },
@@ -233,8 +231,7 @@
         "label": "Actor- of governancecontext",
         "actor_signals": [
           "ministerie",
-          "zorgverzekeraar",
-          "uitvoeringspartner"
+          "zorgverzekeraar"
         ],
         "source_governance_anchor": "explicit_governance_signal",
         "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
@@ -254,13 +251,11 @@
         "needs_verification": false
       },
       "execution_status": {
-        "status": "operational_requirement",
-        "label": "Operationele vereiste of inrichting",
-        "execution_need_signals": [
-          "operational_requirement"
-        ],
-        "source_execution_anchor": "explicit_execution_signal",
-        "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
+        "status": "not_execution",
+        "label": "Geen zelfstandige uitvoeringsclaim",
+        "execution_need_signals": [],
+        "source_execution_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als actie- of implementatieclaim.",
         "needs_verification": false
       },
       "statement": "De verwachting is dat de uitgaven in 2023 beperkter zullen zijn dan in latere jaren voor de VWS-begroting 2023 is geraamd: € 280 miljoen als zorguitgaven onder het UPZ en € 22,2 miljoen via de VWS-begroting. De resterende transformatiemiddelen uit 2023 blijven beschikbaar voor de transformatie.4 geoormerkt naar rato van hun gebudgetteerde omzet in 2023. Alle aan een sector toe te rekenen transformatiemid­ delen tellen mee in deze 50%, ongeacht of die transforma­ tiemiddelen via VWS of via zorgverzekeraars of anderszins worden betaald aan de betrokken zorgaanbieders. Als de beschikbare transformatiemiddelen in een bepaalde sector niet wordt uitgeput, komen deze beschikbaar voor andere ...",
@@ -622,8 +617,7 @@
         "status": "accountability_role",
         "label": "Verantwoordings- of eigenaarschapsrol",
         "actor_signals": [
-          "zorgverzekeraar",
-          "uitvoeringspartner"
+          "zorgverzekeraar"
         ],
         "source_governance_anchor": "explicit_governance_signal",
         "public_wording_guardrail": "Maak duidelijk of het gaat om eigenaarschap, aanspreekbaarheid of verantwoording.",
@@ -826,10 +820,8 @@
         "status": "actor_context",
         "label": "Actor- of governancecontext",
         "actor_signals": [
-          "regio",
           "gemeente",
-          "zorgverzekeraar",
-          "uitvoeringspartner"
+          "zorgverzekeraar"
         ],
         "source_governance_anchor": "explicit_governance_signal",
         "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",

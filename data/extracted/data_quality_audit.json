@@ -12,9 +12,9 @@
     "claims_without_perspectives": 18,
     "broad_rest_topic_count": 5,
     "high_volume_topic_count": 6,
-    "rough_claim_count": 119,
+    "rough_claim_count": 121,
     "site_files_with_rough_claims": 11,
-    "open_review_items": 394
+    "open_review_items": 389
   },
   "perspective_coverage": {
     "claims": {
@@ -213,10 +213,10 @@
     "description": "Sprint 27.1 norm-strength split for binding text, agreement text, expectations, guidance, lower-authority signals, and contextual material.",
     "status_counts": {
       "agreement": 74,
-      "binding": 2,
+      "binding": 1,
       "contextual": 74,
       "expectation": 34,
-      "guidance": 190,
+      "guidance": 191,
       "lower_authority_signal": 150
     },
     "norm_perspective_status_counts": {
@@ -452,14 +452,15 @@
         "statement_excerpt": "Basisfunctionaliteit Landelijk: (door)ontwikkeling handreikingen Regionaal: doorontwikkeling of start uitvoering Betreft: laagdrempelige steunpunten, sociaal verwijzen, valpreventie, volwassenen met overgewicht en obe...",
         "public_wording_guardrail": "Formuleer als toelichting, format, advies of handreiking."
       }
-    ]
+    ],
+    "zero_count_statuses": []
   },
   "time_status_audit": {
     "description": "Sprint 27.2 time split for formal deadlines, expected moments, review/update cycles, budget-calendar moments, implementation horizons, local planning context, source-dated moments, publication/context dates, and undated context.",
     "status_counts": {
-      "budget_calendar_moment": 120,
+      "budget_calendar_moment": 121,
       "expected_moment": 52,
-      "formal_deadline": 8,
+      "formal_deadline": 7,
       "implementation_horizon": 25,
       "local_planning_context": 16,
       "publication_or_context_date": 19,
@@ -468,9 +469,9 @@
       "undated_context": 176
     },
     "time_perspective_status_counts": {
-      "budget_calendar_moment": 19,
+      "budget_calendar_moment": 20,
       "expected_moment": 15,
-      "formal_deadline": 5,
+      "formal_deadline": 4,
       "implementation_horizon": 17,
       "local_planning_context": 8,
       "review_or_update_moment": 93,
@@ -478,12 +479,12 @@
       "undated_context": 3
     },
     "date_signal_counts": {
-      "exact_date": 37,
+      "exact_date": 39,
       "month_or_cycle": 52,
-      "none": 306,
+      "none": 305,
       "period": 27,
       "quarter": 6,
-      "year": 96
+      "year": 95
     },
     "review_needed_sample": [
       {
@@ -711,16 +712,16 @@
         "statement_excerpt": "Voor een ingerichte ketenaanpak kansrijke start, valpreventie bij ouderen, de aanpak overgewicht kinderen, gecombineerde leefstijlinterventie bij overgewicht en obesitas van volwassen én welzijn op recept, zoals bedoe...",
         "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron."
       }
-    ]
+    ],
+    "zero_count_statuses": []
   },
   "money_status_audit": {
     "description": "Sprint 27.3 money split for funding routes, application conditions, budget windows, allocation mechanisms, spending scope, accountability rules, local funding gaps, double-counting risks, finance context, and non-financial material.",
     "status_counts": {
       "accountability_rule": 44,
-      "allocation_mechanism": 28,
+      "allocation_mechanism": 29,
       "application_condition": 14,
       "budget_window": 115,
-      "double_counting_risk": 1,
       "finance_context": 36,
       "funding_route": 54,
       "local_funding_gap": 1,
@@ -935,20 +936,24 @@
         "statement_excerpt": "Tabel S.1 Vijf pijlers verminderen in samenhang de druk op de zorg in Almere De druk op de zorg in Almere verminderen Met de inwoners naar behoefte hun veerkracht, gezondheid en zelfredzaamheid vergroten Inwoners inte...",
         "public_wording_guardrail": "Niet gebruiken als financieringsregel."
       }
+    ],
+    "zero_count_statuses": [
+      "spending_scope",
+      "double_counting_risk"
     ]
   },
   "governance_status_audit": {
     "description": "Sprint 27.4 governance split for decision, coordination, application, execution, accountability, approval, review, governance gaps, actor context, and non-governance material.",
     "status_counts": {
       "accountability_role": 8,
-      "actor_context": 148,
+      "actor_context": 135,
       "application_role": 11,
-      "approval_role": 43,
+      "approval_role": 42,
       "coordination_role": 53,
-      "decision_role": 35,
+      "decision_role": 37,
       "execution_role": 47,
       "governance_gap": 1,
-      "not_governance": 145,
+      "not_governance": 157,
       "review_role": 33
     },
     "governance_perspective_status_counts": {
@@ -956,41 +961,20 @@
       "actor_context": 6
     },
     "actor_signal_counts": {
-      "college": 18,
-      "gemeente": 171,
-      "gemeenteraad": 39,
+      "college": 13,
+      "gemeente": 152,
+      "gemeenteraad": 31,
       "mandaatgemeente": 5,
-      "ministerie": 22,
-      "regio": 95,
-      "uitvoeringspartner": 20,
+      "ministerie": 23,
+      "regio": 67,
+      "uitvoeringspartner": 12,
       "vng": 20,
       "zorgverzekeraar": 26
     },
+    "zero_count_actor_signals": [
+      "fondsbeheerder"
+    ],
     "verification_needed_sample": [
-      {
-        "claim_id": "clm__nat_azwa_2025_definitief_d5_003",
-        "source_document_id": "nat_azwa_2025_definitief",
-        "topic": "d5.regional_workagenda",
-        "governance_status": "actor_context",
-        "actor_signals": [
-          "regio"
-        ],
-        "vague_region_only": true,
-        "statement_excerpt": "Regional workagendas must specify which health goals are pursued, how basisfunctionaliteiten are used, and which interventions from the gereedschapskist are locally applied.",
-        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt."
-      },
-      {
-        "claim_id": "clm__nat_azwa_2025_definitief_d6_002",
-        "source_document_id": "nat_azwa_2025_definitief",
-        "topic": "d6.local_teams",
-        "governance_status": "actor_context",
-        "actor_signals": [
-          "regio"
-        ],
-        "vague_region_only": true,
-        "statement_excerpt": "The D6 local structure is concretized through strong local teams in hechte wijkverbanden and regional agreements about ketenaanpak governance by Q1 2026.",
-        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt."
-      },
       {
         "claim_id": "clm__nat_azwa_2025_definitief_governance_and_finance_003",
         "source_document_id": "nat_azwa_2025_definitief",
@@ -1004,88 +988,15 @@
         "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt."
       },
       {
-        "claim_id": "clm__nat_azwa_2025_definitief_municipal_translation_001",
-        "source_document_id": "nat_azwa_2025_definitief",
-        "topic": "municipal.implementation_translation",
-        "governance_status": "actor_context",
-        "actor_signals": [
-          "regio"
-        ],
-        "vague_region_only": true,
-        "statement_excerpt": "Municipal and care parties are expected to translate D5 into region-specific workagendas and to use the gereedschapskist for local implementation choices.",
-        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt."
-      },
-      {
-        "claim_id": "clm__nat_azwa_2025_onderhandelaarsakkoord_d5_002",
-        "source_document_id": "nat_azwa_2025_onderhandelaarsakkoord",
-        "topic": "d5.regional_workagenda",
-        "governance_status": "accountability_role",
-        "actor_signals": [
-          "regio"
-        ],
-        "vague_region_only": true,
-        "statement_excerpt": "Regions and municipalities must work out goals, choose interventions from a gereedschapskist, and are made mutually aanspreekbaar on the resulting cooperation.",
-        "public_wording_guardrail": "Maak duidelijk of het gaat om eigenaarschap, aanspreekbaarheid of verantwoording."
-      },
-      {
-        "claim_id": "clm__nat_azwa_2025_onderhandelaarsakkoord_d5_003",
-        "source_document_id": "nat_azwa_2025_onderhandelaarsakkoord",
-        "topic": "d5.implementation_enablers",
-        "governance_status": "approval_role",
-        "actor_signals": [
-          "regio"
-        ],
-        "vague_region_only": true,
-        "statement_excerpt": "The onderhandelaarsakkoord already links D5 to structural financing conditions, a regional monitor, and a content update of the basisfunctionaliteiten in 2028.",
-        "public_wording_guardrail": "Gebruik als goedkeurings- of vaststellingsrol; niet automatisch als uitvoeringsverantwoordelijkheid."
-      },
-      {
-        "claim_id": "clm__nat_azwa_2025_onderhandelaarsakkoord_d6_001",
-        "source_document_id": "nat_azwa_2025_onderhandelaarsakkoord",
-        "topic": "d6.basisinfrastructuur",
-        "governance_status": "actor_context",
-        "actor_signals": [
-          "regio"
-        ],
-        "vague_region_only": true,
-        "statement_excerpt": "D6 is defined as a basisinfrastructuur with inloopvoorzieningen, stronger local teams, support for citizen initiatives, healthy-school work, and regional GGD coordination.",
-        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt."
-      },
-      {
-        "claim_id": "clm__nat_azwa_2025_onderhandelaarsakkoord_monitoring_and_evaluation_001",
-        "source_document_id": "nat_azwa_2025_onderhandelaarsakkoord",
-        "topic": "monitoring.update_2028",
-        "governance_status": "approval_role",
-        "actor_signals": [
-          "regio"
-        ],
-        "vague_region_only": true,
-        "statement_excerpt": "The onderhandelaarsakkoord already says that regional D5 implementation will be monitored and that the content of the basisfunctionaliteiten will be updated in 2028.",
-        "public_wording_guardrail": "Gebruik als goedkeurings- of vaststellingsrol; niet automatisch als uitvoeringsverantwoordelijkheid."
-      },
-      {
         "claim_id": "clm__nat_azwa_2025_onderhandelaarsakkoord_municipal_translation_001",
         "source_document_id": "nat_azwa_2025_onderhandelaarsakkoord",
         "topic": "municipal.implementation_translation",
         "governance_status": "actor_context",
         "actor_signals": [
-          "regio",
           "gemeente"
         ],
         "vague_region_only": false,
         "statement_excerpt": "The negotiation text expects every region or gemeente to make D5 operational through a workagenda, local intervention choice, and mutual accountability between municipalities, insurers, and providers.",
-        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt."
-      },
-      {
-        "claim_id": "clm__nat_azwa_2026_cw31_kader_d5_d6_d5_002",
-        "source_document_id": "nat_azwa_2026_cw31_kader_d5_d6",
-        "topic": "d5.basisfunctionaliteiten_onderbouwd",
-        "governance_status": "actor_context",
-        "actor_signals": [
-          "regio"
-        ],
-        "vague_region_only": true,
-        "statement_excerpt": "The sheet describes D5 as a way to implement proven effective basisfunctionaliteiten such as sociaal verwijzen and valpreventie on a regional scale.",
         "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt."
       },
       {
@@ -1114,18 +1025,6 @@
         "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt."
       },
       {
-        "claim_id": "clm__nat_azwa_2026_cw31_kader_d5_d6_municipal_translation_002",
-        "source_document_id": "nat_azwa_2026_cw31_kader_d5_d6",
-        "topic": "municipal.implementation_translation",
-        "governance_status": "actor_context",
-        "actor_signals": [
-          "regio"
-        ],
-        "vague_region_only": true,
-        "statement_excerpt": "The justification also frames D6 as a required neighbourhood and regional structure for municipal implementation.",
-        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt."
-      },
-      {
         "claim_id": "clm__reg_flevoland_2023_regioplan_iza_d5_001",
         "source_document_id": "reg_flevoland_2023_regioplan_iza",
         "topic": "d5.mentale_gezondheidsnetwerken",
@@ -1149,13 +1048,11 @@
         "claim_id": "clm__reg_flevoland_2023_regioplan_iza_d6_001",
         "source_document_id": "reg_flevoland_2023_regioplan_iza",
         "topic": "d6.digital_and_operational_infrastructure",
-        "governance_status": "actor_context",
-        "actor_signals": [
-          "regio"
-        ],
-        "vague_region_only": true,
+        "governance_status": "not_governance",
+        "actor_signals": [],
+        "vague_region_only": false,
         "statement_excerpt": "The Regioplan identifies digital infrastructure as essential and names a regional collaboration organization, a shared data-availability vision, information architecture, and use-case based rollout.",
-        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt."
+        "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim."
       },
       {
         "claim_id": "clm__reg_flevoland_2023_regioplan_iza_governance_and_finance_001",
@@ -1165,30 +1062,6 @@
         "actor_signals": [],
         "vague_region_only": false,
         "statement_excerpt": "The Verbindende Coalitie, workgroups, and an expert team are used to shape the transformatieagenda and test financial feasibility.",
-        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt."
-      },
-      {
-        "claim_id": "clm__reg_flevoland_2023_regioplan_iza_monitoring_and_evaluation_001",
-        "source_document_id": "reg_flevoland_2023_regioplan_iza",
-        "topic": "monitoring.regional_monitoring_plan",
-        "governance_status": "review_role",
-        "actor_signals": [
-          "regio"
-        ],
-        "vague_region_only": true,
-        "statement_excerpt": "The Regioplan calls for a 2024 monitoringsplan to show whether the transformatie is visible and whether the region is on course.",
-        "public_wording_guardrail": "Gebruik als toetsing, monitoring of evaluatie; niet als besluitvorming."
-      },
-      {
-        "claim_id": "clm__reg_flevoland_2023_regioplan_iza_municipal_translation_001",
-        "source_document_id": "reg_flevoland_2023_regioplan_iza",
-        "topic": "municipal.implementation_translation",
-        "governance_status": "actor_context",
-        "actor_signals": [
-          "regio"
-        ],
-        "vague_region_only": true,
-        "statement_excerpt": "The Regioplan explicitly combines regional cooperation with local tailoring and says it must keep building on local needs and existing initiatives.",
         "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt."
       },
       {
@@ -1250,8 +1123,133 @@
         "vague_region_only": false,
         "statement_excerpt": "The governance base is a broad local coalition of Almere municipality, wijkteams, care and welfare organizations, and preventive and public-health institutions.",
         "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt."
+      },
+      {
+        "claim_id": "clm__mun_almere_pga_transformatieplan_governance_and_finance_002",
+        "source_document_id": "mun_almere_pga_transformatieplan",
+        "topic": "finance.local_alignment_goal",
+        "governance_status": "not_governance",
+        "actor_signals": [],
+        "vague_region_only": false,
+        "statement_excerpt": "The plan does not set a detailed funding framework, but it does describe a target future balance in which care expenditures and social-domain expenditures are better aligned.",
+        "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim."
+      },
+      {
+        "claim_id": "clm__nat_azwa_2026_voortgang_kamerbrief_d6_003",
+        "source_document_id": "nat_azwa_2026_voortgang_kamerbrief",
+        "topic": "d6.basisinfrastructuur",
+        "governance_status": "actor_context",
+        "actor_signals": [
+          "ministerie",
+          "vng",
+          "gemeente"
+        ],
+        "vague_region_only": false,
+        "statement_excerpt": "Er wordt dit voorjaar door onder meer de VNG, GGD GHOR NL, Sociaal Werk Nederland (SWN) en het ministerie van VWS toegewerkt naar oplevering van een richtinggevend document voor het onderdeel inloopvoorzieningen socia...",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt."
+      },
+      {
+        "claim_id": "clm__nat_azwa_2025_aanbiedingsbrief_d5_001",
+        "source_document_id": "nat_azwa_2025_aanbiedingsbrief",
+        "topic": "d5.other",
+        "governance_status": "coordination_role",
+        "actor_signals": [],
+        "vague_region_only": false,
+        "statement_excerpt": "In het bijzonder hecht ik aan de integrale benadering van het AZWA, waarmee we gezamenlijk voortbouwen op het IZA en de samenwerking over medisch en sociaal domein verder versterken en daarmee bijdragen aan de bewegin...",
+        "public_wording_guardrail": "Gebruik als coordinatie/regie; niet vermengen met besluitvorming of uitvoering."
+      },
+      {
+        "claim_id": "clm__nat_azwa_2025_aanbiedingsbrief_governance_and_finance_001",
+        "source_document_id": "nat_azwa_2025_aanbiedingsbrief",
+        "topic": "governance_and_finance.other",
+        "governance_status": "actor_context",
+        "actor_signals": [],
+        "vague_region_only": false,
+        "statement_excerpt": "Met partijen zal ik tijdens bestuurlijke overleggen de voortgang bewaken en uw Kamer hierover informeren.",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt."
+      },
+      {
+        "claim_id": "clm__nat_azwa_2025_aanbiedingsbrief_municipal_translation_002",
+        "source_document_id": "nat_azwa_2025_aanbiedingsbrief",
+        "topic": "municipal.implementation_translation",
+        "governance_status": "actor_context",
+        "actor_signals": [
+          "zorgverzekeraar"
+        ],
+        "vague_region_only": false,
+        "statement_excerpt": "Zorgverzekeraars ontkomen er niet aan om de premie te verhogen als de kosten van de zorg stijgen.",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt."
+      },
+      {
+        "claim_id": "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d6_001",
+        "source_document_id": "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026",
+        "topic": "d6.local_teams",
+        "governance_status": "actor_context",
+        "actor_signals": [
+          "gemeente"
+        ],
+        "vague_region_only": false,
+        "statement_excerpt": "Ondersteuning van gemeenten bij AZWA-activiteiten Op onderdelen zal ondersteuning voor gemeenten nodig zijn, bijvoorbeeld voor de verbinding van lokale teams met hechte wijkverbanden of de gelijkgerichte mantelzorgond...",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt."
+      },
+      {
+        "claim_id": "clm__nat_azwa_opdracht_werkagenda_d5_2026_d5_001",
+        "source_document_id": "nat_azwa_opdracht_werkagenda_d5_2026",
+        "topic": "d5.basisfunctionaliteiten_onderbouwd",
+        "governance_status": "execution_role",
+        "actor_signals": [
+          "regio"
+        ],
+        "vague_region_only": true,
+        "statement_excerpt": "Basisfunctionaliteit Landelijk: (door)ontwikkeling handreikingen Regionaal: doorontwikkeling of start uitvoering Betreft: laagdrempelige steunpunten, sociaal verwijzen, valpreventie, volwassenen met overgewicht en obe...",
+        "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt."
+      },
+      {
+        "claim_id": "clm__nat_azwa_opdracht_werkagenda_d5_2026_d6_001",
+        "source_document_id": "nat_azwa_opdracht_werkagenda_d5_2026",
+        "topic": "d6.basisinfrastructuur",
+        "governance_status": "execution_role",
+        "actor_signals": [
+          "regio"
+        ],
+        "vague_region_only": true,
+        "statement_excerpt": "Basisfunctionaliteit Landelijk: (door)ontwikkeling handreikingen Regionaal: doorontwikkeling of start uitvoering Betreft: laagdrempelige steunpunten, sociaal verwijzen, valpreventie, volwassenen met overgewicht en obe...",
+        "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt."
+      },
+      {
+        "claim_id": "clm__nat_azwa_opdracht_werkagenda_d5_2026_d6_003",
+        "source_document_id": "nat_azwa_opdracht_werkagenda_d5_2026",
+        "topic": "d6.basisinfrastructuur",
+        "governance_status": "coordination_role",
+        "actor_signals": [],
+        "vague_region_only": false,
+        "statement_excerpt": "7 Mentale gezondheid Laagdrempelige steunpunten Doelgroep: iedere inwoner die baat heeft bij laagdrempelige ondersteuning rondom zelfregie en herstel, met bijzondere aandacht voor mensen met ernstige of langdurige psy...",
+        "public_wording_guardrail": "Gebruik als coordinatie/regie; niet vermengen met besluitvorming of uitvoering."
+      },
+      {
+        "claim_id": "clm__nat_azwa_opdracht_werkagenda_d5_2026_monitoring_and_evaluation_003",
+        "source_document_id": "nat_azwa_opdracht_werkagenda_d5_2026",
+        "topic": "monitoring.other",
+        "governance_status": "execution_role",
+        "actor_signals": [
+          "regio"
+        ],
+        "vague_region_only": true,
+        "statement_excerpt": "Daarnaast zijn in de werkagenda afspraken nodig over hoe partijen elkaar aanspreken als ze plannen onvoldoende uitvoeren.7 Lerende cyclus Zowel regionaal als landelijk is de bedoeling dat we leren van het AZWA, een tr...",
+        "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt."
+      },
+      {
+        "claim_id": "clm__nat_iza_2022_integraal_zorgakkoord_d6_001",
+        "source_document_id": "nat_iza_2022_integraal_zorgakkoord",
+        "topic": "d6.basisinfrastructuur",
+        "governance_status": "coordination_role",
+        "actor_signals": [],
+        "vague_region_only": false,
+        "statement_excerpt": "van laagdrempelige steunpunten zoals herstel- en zelfregiecentra waar iedere inwoner, met name mensen met EPA, toegang tot heeft: gerund door vrijwilligers en ervaringsdeskundigen, ondersteund door sociaalwer­ kers en...",
+        "public_wording_guardrail": "Gebruik als coordinatie/regie; niet vermengen met besluitvorming of uitvoering."
       }
-    ]
+    ],
+    "zero_count_statuses": []
   },
   "locality_status_audit": {
     "description": "Sprint 27.5 locality split for explicit Almere, explicit Flevoland, regional split context, national general, national with local relevance, inferred local relevance, local adoption gaps, municipal context, and no locality signal.",
@@ -1274,7 +1272,7 @@
       "GGD-regio": 27,
       "IZA/AZWA-regio": 36,
       "ROAZ/subregio": 6,
-      "gemeentelijk": 180,
+      "gemeentelijk": 179,
       "provincie": 2
     },
     "verification_needed_sample": [
@@ -1657,6 +1655,11 @@
         "statement_excerpt": "Onderdelen RPI | Uitwerking Toelichting op RPI: Omschrijf beknopt hoe de regionale preventie-infrastructuur in jullie regio is georganiseerd (een visuele toelichting, bijvoorbeeld in de vorm van een afbeelding, volsta...",
         "public_wording_guardrail": "Formuleer als landelijke lijn met relevantie voor Almere; niet als lokale vaststelling."
       }
+    ],
+    "zero_count_statuses": [
+      "inferred_local_relevance",
+      "municipal_context",
+      "no_locality_signal"
     ]
   },
   "execution_status_audit": {
@@ -1665,10 +1668,10 @@
       "capacity_need": 16,
       "decision_question": 18,
       "dependency": 34,
-      "execution_context": 52,
-      "implementation_activity": 46,
-      "not_execution": 71,
-      "operational_requirement": 181,
+      "execution_context": 64,
+      "implementation_activity": 48,
+      "not_execution": 83,
+      "operational_requirement": 155,
       "review_task": 60,
       "sequencing_need": 46
     },
@@ -1676,9 +1679,9 @@
       "capacity_need": 12,
       "decision_question": 4,
       "dependency": 20,
-      "execution_context": 41,
+      "execution_context": 51,
       "implementation_activity": 24,
-      "operational_requirement": 163,
+      "operational_requirement": 153,
       "review_task": 53,
       "sequencing_need": 29
     },
@@ -1686,12 +1689,22 @@
       "capacity": 16,
       "decision_question": 18,
       "dependency": 36,
-      "implementation_activity": 91,
-      "operational_requirement": 142,
+      "implementation_activity": 93,
+      "operational_requirement": 26,
       "review": 83,
       "sequencing": 62
     },
     "verification_needed_sample": [
+      {
+        "claim_id": "clm__nat_azwa_2025_definitief_d5_001",
+        "source_document_id": "nat_azwa_2025_definitief",
+        "topic": "d5.definition",
+        "execution_status": "execution_context",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
+        "statement_excerpt": "The D5 basisfunctionaliteiten are organized around five life domains: kansrijk opgroeien, gezonde leefstijl, mentale gezondheid, vitaal ouder worden, and gezondheidsachterstanden verminderen with selfredzaamheid as a...",
+        "public_wording_guardrail": "Gebruik als uitvoeringscontext; maak er geen actie, eigenaar of planning van zonder sterker bewijs."
+      },
       {
         "claim_id": "clm__nat_azwa_2025_definitief_d5_002",
         "source_document_id": "nat_azwa_2025_definitief",
@@ -1730,7 +1743,6 @@
         "topic": "timeline.rollout_2030",
         "execution_status": "dependency",
         "execution_need_signals": [
-          "operational_requirement",
           "dependency"
         ],
         "source_execution_anchor": "explicit_execution_signal",
@@ -1794,6 +1806,16 @@
         "public_wording_guardrail": "Gebruik als uitvoeringscontext; maak er geen actie, eigenaar of planning van zonder sterker bewijs."
       },
       {
+        "claim_id": "clm__nat_azwa_2025_onderhandelaarsakkoord_d5_003",
+        "source_document_id": "nat_azwa_2025_onderhandelaarsakkoord",
+        "topic": "d5.implementation_enablers",
+        "execution_status": "execution_context",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
+        "statement_excerpt": "The onderhandelaarsakkoord already links D5 to structural financing conditions, a regional monitor, and a content update of the basisfunctionaliteiten in 2028.",
+        "public_wording_guardrail": "Gebruik als uitvoeringscontext; maak er geen actie, eigenaar of planning van zonder sterker bewijs."
+      },
+      {
         "claim_id": "clm__nat_azwa_2025_onderhandelaarsakkoord_timeline_and_status_001",
         "source_document_id": "nat_azwa_2025_onderhandelaarsakkoord",
         "topic": "timeline.d5_d6_implementation",
@@ -1804,6 +1826,26 @@
         "source_execution_anchor": "explicit_execution_signal",
         "statement_excerpt": "The negotiating text already sets the D5 timetable: Q4 2025 for the landelijk kader, Q1 2026 for governance and further plans, and periodic herijking after that.",
         "public_wording_guardrail": "Formuleer als capaciteitsvraag; vul geen fte, team of eigenaar in zonder bron."
+      },
+      {
+        "claim_id": "clm__nat_azwa_2025_onderhandelaarsakkoord_timeline_and_status_002",
+        "source_document_id": "nat_azwa_2025_onderhandelaarsakkoord",
+        "topic": "timeline.rollout_2030",
+        "execution_status": "execution_context",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
+        "statement_excerpt": "The negotiation text already aims for landelijke dekking of the known basisfunctionaliteiten by 2030.",
+        "public_wording_guardrail": "Gebruik als uitvoeringscontext; maak er geen actie, eigenaar of planning van zonder sterker bewijs."
+      },
+      {
+        "claim_id": "clm__nat_azwa_2025_onderhandelaarsakkoord_monitoring_and_evaluation_001",
+        "source_document_id": "nat_azwa_2025_onderhandelaarsakkoord",
+        "topic": "monitoring.update_2028",
+        "execution_status": "execution_context",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
+        "statement_excerpt": "The onderhandelaarsakkoord already says that regional D5 implementation will be monitored and that the content of the basisfunctionaliteiten will be updated in 2028.",
+        "public_wording_guardrail": "Gebruik als uitvoeringscontext; maak er geen actie, eigenaar of planning van zonder sterker bewijs."
       },
       {
         "claim_id": "clm__nat_azwa_2025_onderhandelaarsakkoord_monitoring_and_evaluation_002",
@@ -1828,12 +1870,31 @@
         "public_wording_guardrail": "Gebruik als uitvoeringscontext; maak er geen actie, eigenaar of planning van zonder sterker bewijs."
       },
       {
+        "claim_id": "clm__nat_azwa_2026_cw31_kader_d5_d6_d5_002",
+        "source_document_id": "nat_azwa_2026_cw31_kader_d5_d6",
+        "topic": "d5.basisfunctionaliteiten_onderbouwd",
+        "execution_status": "execution_context",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
+        "statement_excerpt": "The sheet describes D5 as a way to implement proven effective basisfunctionaliteiten such as sociaal verwijzen and valpreventie on a regional scale.",
+        "public_wording_guardrail": "Gebruik als uitvoeringscontext; maak er geen actie, eigenaar of planning van zonder sterker bewijs."
+      },
+      {
+        "claim_id": "clm__nat_azwa_2026_cw31_kader_d5_d6_d6_001",
+        "source_document_id": "nat_azwa_2026_cw31_kader_d5_d6",
+        "topic": "d6.basisinfrastructuur",
+        "execution_status": "execution_context",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
+        "statement_excerpt": "D6 is framed as the basis in wijk and regio that must support the execution of the basisfunctionaliteiten.",
+        "public_wording_guardrail": "Gebruik als uitvoeringscontext; maak er geen actie, eigenaar of planning van zonder sterker bewijs."
+      },
+      {
         "claim_id": "clm__nat_azwa_2026_cw31_kader_d5_d6_monitoring_and_evaluation_001",
         "source_document_id": "nat_azwa_2026_cw31_kader_d5_d6",
         "topic": "monitoring.update_2028",
         "execution_status": "review_task",
         "execution_need_signals": [
-          "operational_requirement",
           "review"
         ],
         "source_execution_anchor": "explicit_execution_signal",
@@ -1905,72 +1966,9 @@
         "source_execution_anchor": "explicit_execution_signal",
         "statement_excerpt": "The monitoring approach combines process, output, and outcome monitoring and aims to surface the results in a dashboard while reusing existing data sources where possible.",
         "public_wording_guardrail": "Formuleer als review-, monitorings- of validatietaak; niet als besluit of uitvoeringseigenaarschap."
-      },
-      {
-        "claim_id": "clm__reg_flevoland_2023_regioplan_iza_municipal_translation_002",
-        "source_document_id": "reg_flevoland_2023_regioplan_iza",
-        "topic": "municipal.role_allocation",
-        "execution_status": "execution_context",
-        "execution_need_signals": [],
-        "source_execution_anchor": "topic_context",
-        "statement_excerpt": "A key follow-up issue for municipal implementation is clarifying roles and responsibilities between municipality, social domain, insurers, and providers.",
-        "public_wording_guardrail": "Gebruik als uitvoeringscontext; maak er geen actie, eigenaar of planning van zonder sterker bewijs."
-      },
-      {
-        "claim_id": "clm__mun_almere_pga_transformatieplan_d5_001",
-        "source_document_id": "mun_almere_pga_transformatieplan",
-        "topic": "d5.mentale_gezondheidsnetwerken",
-        "execution_status": "execution_context",
-        "execution_need_signals": [],
-        "source_execution_anchor": "topic_context",
-        "statement_excerpt": "The plan explicitly aims for better cooperation between informal care, the social domain, and the medical domain, supported by initiatives such as Voorzorgcirkels, Welzijn op Recept, and Samen Sterker in de Wijk.",
-        "public_wording_guardrail": "Gebruik als uitvoeringscontext; maak er geen actie, eigenaar of planning van zonder sterker bewijs."
-      },
-      {
-        "claim_id": "clm__mun_almere_pga_transformatieplan_d5_002",
-        "source_document_id": "mun_almere_pga_transformatieplan",
-        "topic": "d5.health_first_shift",
-        "execution_status": "capacity_need",
-        "execution_need_signals": [
-          "capacity"
-        ],
-        "source_execution_anchor": "explicit_execution_signal",
-        "statement_excerpt": "The local shift is framed as moving from care afterwards toward health first and the right help in the right place.",
-        "public_wording_guardrail": "Formuleer als capaciteitsvraag; vul geen fte, team of eigenaar in zonder bron."
-      },
-      {
-        "claim_id": "clm__mun_almere_pga_transformatieplan_d6_001",
-        "source_document_id": "mun_almere_pga_transformatieplan",
-        "topic": "d6.digital_and_operational_infrastructure",
-        "execution_status": "review_task",
-        "execution_need_signals": [
-          "review"
-        ],
-        "source_execution_anchor": "explicit_execution_signal",
-        "statement_excerpt": "The local plan names RTP Almere, the RSO, data infrastructure, and Monitoring@home as part of the operational infrastructure needed for care closer to home.",
-        "public_wording_guardrail": "Formuleer als review-, monitorings- of validatietaak; niet als besluit of uitvoeringseigenaarschap."
-      },
-      {
-        "claim_id": "clm__mun_almere_pga_transformatieplan_d6_002",
-        "source_document_id": "mun_almere_pga_transformatieplan",
-        "topic": "d6.digital_and_operational_infrastructure",
-        "execution_status": "execution_context",
-        "execution_need_signals": [],
-        "source_execution_anchor": "topic_context",
-        "statement_excerpt": "The plan also makes a current shared information picture for professionals part of the local enabling structure.",
-        "public_wording_guardrail": "Gebruik als uitvoeringscontext; maak er geen actie, eigenaar of planning van zonder sterker bewijs."
-      },
-      {
-        "claim_id": "clm__mun_almere_pga_transformatieplan_governance_and_finance_002",
-        "source_document_id": "mun_almere_pga_transformatieplan",
-        "topic": "finance.local_alignment_goal",
-        "execution_status": "not_execution",
-        "execution_need_signals": [],
-        "source_execution_anchor": "none",
-        "statement_excerpt": "The plan does not set a detailed funding framework, but it does describe a target future balance in which care expenditures and social-domain expenditures are better aligned.",
-        "public_wording_guardrail": "Niet gebruiken als actie- of implementatieclaim."
       }
-    ]
+    ],
+    "zero_count_statuses": []
   },
   "topic_bucket_audit": {
     "broad_rest_topics": [
@@ -2035,15 +2033,16 @@
       },
       {
         "topic": "timeline.other",
-        "current_claim_count": 42,
+        "current_claim_count": 41,
         "historical_claim_count": 4,
         "needs_human_review": true,
-        "confidence": 0.41,
+        "confidence": 0.4,
         "perspective_ids": [
           "locality",
           "time"
         ],
         "sample_documents": [
+          "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
           "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst",
           "nat_azwa_2026_voortgang_kamerbrief",
           "nat_azwa_opdracht_werkagenda_d5_2026",
@@ -2052,15 +2051,15 @@
         ],
         "sample_claim_ids": [
           "clm__nat_wetten_spuk_transformatiemiddelen_regeling_timeline_and_status_003",
-          "clm__nat_wetten_spuk_transformatiemiddelen_regeling_timeline_and_status_001",
           "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_timeline_and_status_001",
           "clm__nat_azwa_opdracht_werkagenda_d5_2026_timeline_and_status_002",
           "clm__nat_azwa_opdracht_werkagenda_d5_2026_timeline_and_status_001",
           "clm__nat_azwa_2026_voortgang_kamerbrief_timeline_and_status_003",
           "clm__nat_azwa_2026_voortgang_kamerbrief_timeline_and_status_002",
-          "clm__nat_azwa_2026_voortgang_kamerbrief_timeline_and_status_001"
+          "clm__nat_azwa_2026_voortgang_kamerbrief_timeline_and_status_001",
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_timeline_and_status_003"
         ],
-        "interpretation_summary": "Current view combines 42 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
+        "interpretation_summary": "Current view combines 41 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
       },
       {
         "topic": "d5.other",
@@ -2184,21 +2183,21 @@
       },
       {
         "topic": "timeline.other",
-        "current_claim_count": 42,
+        "current_claim_count": 41,
         "historical_claim_count": 4,
         "needs_human_review": true,
-        "confidence": 0.41,
+        "confidence": 0.4,
         "sample_claim_ids": [
           "clm__nat_wetten_spuk_transformatiemiddelen_regeling_timeline_and_status_003",
-          "clm__nat_wetten_spuk_transformatiemiddelen_regeling_timeline_and_status_001",
           "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_timeline_and_status_001",
           "clm__nat_azwa_opdracht_werkagenda_d5_2026_timeline_and_status_002",
           "clm__nat_azwa_opdracht_werkagenda_d5_2026_timeline_and_status_001",
           "clm__nat_azwa_2026_voortgang_kamerbrief_timeline_and_status_003",
           "clm__nat_azwa_2026_voortgang_kamerbrief_timeline_and_status_002",
-          "clm__nat_azwa_2026_voortgang_kamerbrief_timeline_and_status_001"
+          "clm__nat_azwa_2026_voortgang_kamerbrief_timeline_and_status_001",
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_timeline_and_status_003"
         ],
-        "interpretation_summary": "Current view combines 42 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
+        "interpretation_summary": "Current view combines 41 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
       },
       {
         "topic": "finance.d5_d6.funding_instrument",
@@ -2249,11 +2248,11 @@
     },
     "issue_counts": {
       "english_summary": 61,
-      "unverified_extraction_length": 40,
-      "bullet_or_heading_fragment": 12,
+      "unverified_extraction_length": 43,
+      "bullet_or_heading_fragment": 11,
       "fragment_too_short": 6
     },
-    "claim_count": 119,
+    "claim_count": 121,
     "claims": [
       {
         "claim_id": "clm__mun_almere_pga_transformatieplan_d5_001",
@@ -3321,19 +3320,6 @@
         "statement_excerpt": "• Laagdrempelige steunpunten EPA • Sociaal Venvilzen • Valpreventie • Ketenaanpak overgewicht en obesitas volwassenen • Kansrijke start integrale gezinspoli en Nu Niet Zwanger 1. Mentale Gezondheid 2. Vitaal ouder worden/ ouderen 3. Leefstijl 4. Kansrijk opgroeien Directie Maatschappelijke Ondersteuning D5 Basis- D5 ontwikkel- Ontwikkel- D6 Basis- functionaliteit agenda 1 agenda deel 2 Infrastr..."
       },
       {
-        "claim_id": "clm__nat_wetten_spuk_transformatiemiddelen_regeling_timeline_and_status_001",
-        "topic": "timeline.other",
-        "document_id": "nat_wetten_spuk_transformatiemiddelen_regeling",
-        "jurisdiction_level": "national",
-        "perspective_ids": [
-          "time"
-        ],
-        "issue_codes": [
-          "bullet_or_heading_fragment"
-        ],
-        "statement_excerpt": "- Toon relaties in LiDO - Maak een permanente link - Toon wetstechnische informatie - ... - Druk het regelingonderdeel af - Sla het regelingonderdeel op 1 Een specifieke uitkering wordt op aanvraag verleend. 2 Indien meerdere gemeenten deelnemen aan een transformatieplan kan een van de deelnemende gemeenten als penvoerder de aanvraag mede namens de andere deelnemende gemeente of gemeenten indie..."
-      },
-      {
         "claim_id": "clm__nat_wetten_spuk_transformatiemiddelen_regeling_timeline_and_status_002",
         "topic": "timeline.rollout_2030",
         "document_id": "nat_wetten_spuk_transformatiemiddelen_regeling",
@@ -3766,6 +3752,47 @@
           "unverified_extraction_length"
         ],
         "statement_excerpt": "De werkagenda bevat in elk geval: • Regionale doelen op gezondheid en welzijn • Prioritering en ambitie voor de basisfunctionaliteiten en voor de regio relevante ontwikkelagenda-aanpakken richting 2030 • Concrete afspraken over inzet, planning en financiering (zonder volledige begroting) • Rol- en verantwoordelijkheidsverdeling tussen partijen • Afspraken over leren, monitoring en bijsturing Aa..."
+      },
+      {
+        "claim_id": "clm__nat_wetten_spuk_transformatiemiddelen_regeling_governance_and_finance_001",
+        "topic": "finance.d5_d6.funding_instrument",
+        "document_id": "nat_wetten_spuk_transformatiemiddelen_regeling",
+        "jurisdiction_level": "national",
+        "perspective_ids": [
+          "money",
+          "norm"
+        ],
+        "issue_codes": [
+          "unverified_extraction_length"
+        ],
+        "statement_excerpt": "[Regeling vervalt per 16-07-2030.] Geraadpleegd op 22-04-2026. Geldend van 01-04-2026 t/m heden. Regeling van de Minister van Volksgezondheid, Welzijn en Sport van 15 mei 2024, kenmerk 3821421-1065214-DMO, houdende een specifieke uitkering voor de uitvoering van transformatieplannen in het kader van het Integraal Zorgakkoord (Regeling specifieke uitkering transformatiemiddelen IZA 2024-2027) De..."
+      },
+      {
+        "claim_id": "clm__nat_wetten_spuk_transformatiemiddelen_regeling_governance_and_finance_002",
+        "topic": "finance.d5_d6.funding_instrument",
+        "document_id": "nat_wetten_spuk_transformatiemiddelen_regeling",
+        "jurisdiction_level": "national",
+        "perspective_ids": [
+          "money",
+          "norm"
+        ],
+        "issue_codes": [
+          "unverified_extraction_length"
+        ],
+        "statement_excerpt": "Regeling van de Minister van Volksgezondheid, Welzijn en Sport van 15 mei 2024, kenmerk 3821421-1065214-DMO, houdende een specifieke uitkering voor de uitvoering van transformatieplannen in het kader van het Integraal Zorgakkoord (Regeling specifieke uitkering transformatiemiddelen IZA 2024-2027) De Minister van Volksgezondheid, Welzijn en Sport, Gelet op de artikelen 3 en 5 van de Kaderwet VWS..."
+      },
+      {
+        "claim_id": "clm__nat_wetten_spuk_transformatiemiddelen_regeling_timeline_and_status_001",
+        "topic": "timeline.rollout_2030",
+        "document_id": "nat_wetten_spuk_transformatiemiddelen_regeling",
+        "jurisdiction_level": "national",
+        "perspective_ids": [
+          "time"
+        ],
+        "issue_codes": [
+          "unverified_extraction_length"
+        ],
+        "statement_excerpt": "[Regeling vervalt per 16-07-2030.] Geraadpleegd op 22-04-2026. Geldend van 01-04-2026 t/m heden. Regeling van de Minister van Volksgezondheid, Welzijn en Sport van 15 mei 2024, kenmerk 3821421-1065214-DMO, houdende een specifieke uitkering voor de uitvoering van transformatieplannen in het kader van het Integraal Zorgakkoord (Regeling specifieke uitkering transformatiemiddelen IZA 2024-2027) De..."
       },
       {
         "claim_id": "clm__reg_flevoland_2023_regiobeeld_d5_002",
@@ -4413,7 +4440,6 @@
       "related_review_reasons": [
         "actor_context_needs_role_split",
         "authority_unclear",
-        "double_counting_risk",
         "execution_capacity_need",
         "execution_context_needs_action_split",
         "execution_decision_question",

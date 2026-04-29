@@ -187,9 +187,6 @@ LOCAL_FUNDING_GAP_TERMS = (
     "niet zichtbaar",
     "lokale keuze",
     "onbekend",
-    "needs decision",
-    "needs source",
-    "invulveld",
 )
 DOUBLE_COUNTING_TERMS = (
     "dubbeltelling",
@@ -282,9 +279,6 @@ GOVERNANCE_GAP_TERMS = (
     "geen expliciete",
     "nog geen",
     "moet worden verduidelijkt",
-    "needs validation",
-    "needs decision",
-    "review_needed",
 )
 ALMERE_TERMS = ("almere", "almeerse", "gemeente almere", "raad van almere")
 FLEVOLAND_TERMS = ("flevoland", "flevolandse", "ggd flevoland", "zorgzaam flevoland")
@@ -304,9 +298,6 @@ LOCAL_ADOPTION_GAP_TERMS = (
     "geen expliciete",
     "nog geen",
     "niet zichtbaar",
-    "adoptiegat",
-    "documentatiegat",
-    "lokale validatie",
 )
 EXECUTION_OPERATIONAL_REQUIREMENT_TERMS = (
     "moet worden georganiseerd",
@@ -317,13 +308,6 @@ EXECUTION_OPERATIONAL_REQUIREMENT_TERMS = (
     "ontwikkelen",
     "versterken",
     "voorbereiden",
-    "beschikbaar",
-    "basisfunctionaliteiten",
-    "basisinfrastructuur",
-    "inloop",
-    "toegang",
-    "lokale teams",
-    "wijkteams",
 )
 EXECUTION_ACTIVITY_TERMS = (
     "uitvoering",
@@ -347,7 +331,6 @@ EXECUTION_DECISION_TERMS = (
     "besluitvorming",
     "vaststellen",
     "prioriteren",
-    "decision_needed",
 )
 EXECUTION_DEPENDENCY_TERMS = (
     "afhankelijk",
@@ -448,6 +431,11 @@ def should_reject_for_sentence_boundary(statement: str) -> tuple[bool, list[str]
 
 def contains_any(normalized_text: str, *terms: str) -> bool:
     return any(normalize_text(term) in normalized_text for term in terms)
+
+
+def contains_term(normalized_text: str, term: str) -> bool:
+    normalized_term = normalize_text(term)
+    return bool(re.search(rf"(?<!\w){re.escape(normalized_term)}(?!\w)", normalized_text))
 
 
 def normative_status_for(
@@ -681,7 +669,7 @@ def actor_signals_for(normalized_statement: str) -> list[str]:
     signals = [
         actor
         for actor, terms in GOVERNANCE_ACTOR_TERMS.items()
-        if any(normalize_text(term) in normalized_statement for term in terms)
+        if any(contains_term(normalized_statement, term) for term in terms)
     ]
     return unique_preserving_order(signals)
 

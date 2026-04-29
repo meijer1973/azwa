@@ -649,7 +649,6 @@
         "status": "dependency",
         "label": "Uitvoering heeft afhankelijkheid of randvoorwaarde",
         "execution_need_signals": [
-          "operational_requirement",
           "dependency"
         ],
         "source_execution_anchor": "explicit_execution_signal",
@@ -749,13 +748,11 @@
         "needs_verification": false
       },
       "execution_status": {
-        "status": "operational_requirement",
-        "label": "Operationele vereiste of inrichting",
-        "execution_need_signals": [
-          "operational_requirement"
-        ],
-        "source_execution_anchor": "explicit_execution_signal",
-        "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
+        "status": "not_execution",
+        "label": "Geen zelfstandige uitvoeringsclaim",
+        "execution_need_signals": [],
+        "source_execution_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als actie- of implementatieclaim.",
         "needs_verification": false
       },
       "statement": "• VNG stimuleert dat de onderdelen van de ketenaanpak die door het Zorginstituut als ‘niet zijnde Zvw’ zijn geduid en/of als ‘sociaal/publiek domein’ zijn geadviseerd, door gemeenten bij de diverse professionals/instanties wor­ den ingekocht. Landelijke dekking is het uitgangspunt. • Zorgverzekeraars en gemeenten hebben een gezamen­ lijke inspanningsverplichting om ervoor te zorgen dat er voldoende aanbod beschikbaar is om in te kopen (bijv. door benutting van bepaalde (zorg)professionals). In de inkoopcontracten wordt naar elkaar verwezen en deze sluiten op elkaar aan. Hierin zijn afspraken opgenomen over de samenwerking tussen de diverse zorgprofessionals. Tijdpad: vanaf 1-4-2023 ...",
@@ -853,7 +850,6 @@
         "status": "review_task",
         "label": "Uitvoering vraagt review, monitoring of validatie",
         "execution_need_signals": [
-          "operational_requirement",
           "review"
         ],
         "source_execution_anchor": "explicit_execution_signal",
@@ -929,7 +925,6 @@
         "status": "coordination_role",
         "label": "Coordinatie- of regierol",
         "actor_signals": [
-          "regio",
           "gemeente"
         ],
         "source_governance_anchor": "explicit_governance_signal",
@@ -1358,7 +1353,6 @@
         "status": "implementation_activity",
         "label": "Uitvoeringsactiviteit zichtbaar",
         "execution_need_signals": [
-          "operational_requirement",
           "implementation_activity"
         ],
         "source_execution_anchor": "explicit_execution_signal",

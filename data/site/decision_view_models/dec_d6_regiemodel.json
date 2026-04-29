@@ -358,13 +358,11 @@
         "needs_verification": false
       },
       "execution_status": {
-        "status": "operational_requirement",
-        "label": "Operationele vereiste of inrichting",
-        "execution_need_signals": [
-          "operational_requirement"
-        ],
-        "source_execution_anchor": "explicit_execution_signal",
-        "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
+        "status": "not_execution",
+        "label": "Geen zelfstandige uitvoeringsclaim",
+        "execution_need_signals": [],
+        "source_execution_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als actie- of implementatieclaim.",
         "needs_verification": false
       },
       "needs_human_review": false
@@ -407,15 +405,13 @@
         "needs_verification": false
       },
       "governance_status": {
-        "status": "actor_context",
-        "label": "Actor- of governancecontext",
-        "actor_signals": [
-          "regio"
-        ],
-        "source_governance_anchor": "explicit_governance_signal",
-        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
-        "needs_verification": true,
-        "vague_region_only": true
+        "status": "not_governance",
+        "label": "Geen zelfstandige governanceclaim",
+        "actor_signals": [],
+        "source_governance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+        "needs_verification": false,
+        "vague_region_only": false
       },
       "locality_status": {
         "status": "national_general",
@@ -505,7 +501,6 @@
         "status": "dependency",
         "label": "Uitvoering heeft afhankelijkheid of randvoorwaarde",
         "execution_need_signals": [
-          "operational_requirement",
           "dependency"
         ],
         "source_execution_anchor": "explicit_execution_signal",

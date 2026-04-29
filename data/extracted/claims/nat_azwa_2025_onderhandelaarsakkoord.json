@@ -131,13 +131,11 @@
       "governance_status": {
         "status": "accountability_role",
         "label": "Verantwoordings- of eigenaarschapsrol",
-        "actor_signals": [
-          "regio"
-        ],
+        "actor_signals": [],
         "source_governance_anchor": "explicit_governance_signal",
         "public_wording_guardrail": "Maak duidelijk of het gaat om eigenaarschap, aanspreekbaarheid of verantwoording.",
-        "needs_verification": true,
-        "vague_region_only": true
+        "needs_verification": false,
+        "vague_region_only": false
       },
       "locality_status": {
         "status": "national_general",
@@ -228,13 +226,11 @@
       "governance_status": {
         "status": "approval_role",
         "label": "Goedkeurings- of vaststellingsrol",
-        "actor_signals": [
-          "regio"
-        ],
+        "actor_signals": [],
         "source_governance_anchor": "explicit_governance_signal",
         "public_wording_guardrail": "Gebruik als goedkeurings- of vaststellingsrol; niet automatisch als uitvoeringsverantwoordelijkheid.",
-        "needs_verification": true,
-        "vague_region_only": true
+        "needs_verification": false,
+        "vague_region_only": false
       },
       "locality_status": {
         "status": "national_general",
@@ -249,14 +245,12 @@
         "needs_verification": false
       },
       "execution_status": {
-        "status": "operational_requirement",
-        "label": "Operationele vereiste of inrichting",
-        "execution_need_signals": [
-          "operational_requirement"
-        ],
-        "source_execution_anchor": "explicit_execution_signal",
-        "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
-        "needs_verification": false
+        "status": "execution_context",
+        "label": "Uitvoeringscontext",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
+        "public_wording_guardrail": "Gebruik als uitvoeringscontext; maak er geen actie, eigenaar of planning van zonder sterker bewijs.",
+        "needs_verification": true
       },
       "statement": "The onderhandelaarsakkoord already links D5 to structural financing conditions, a regional monitor, and a content update of the basisfunctionaliteiten in 2028.",
       "source_document_id": "nat_azwa_2025_onderhandelaarsakkoord",
@@ -325,15 +319,13 @@
         "needs_verification": false
       },
       "governance_status": {
-        "status": "actor_context",
-        "label": "Actor- of governancecontext",
-        "actor_signals": [
-          "regio"
-        ],
-        "source_governance_anchor": "explicit_governance_signal",
-        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
-        "needs_verification": true,
-        "vague_region_only": true
+        "status": "not_governance",
+        "label": "Geen zelfstandige governanceclaim",
+        "actor_signals": [],
+        "source_governance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+        "needs_verification": false,
+        "vague_region_only": false
       },
       "locality_status": {
         "status": "national_general",
@@ -350,10 +342,8 @@
       "execution_status": {
         "status": "operational_requirement",
         "label": "Operationele vereiste of inrichting",
-        "execution_need_signals": [
-          "operational_requirement"
-        ],
-        "source_execution_anchor": "explicit_execution_signal",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
         "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
         "needs_verification": false
       },
@@ -829,14 +819,12 @@
         "needs_verification": false
       },
       "execution_status": {
-        "status": "operational_requirement",
-        "label": "Operationele vereiste of inrichting",
-        "execution_need_signals": [
-          "operational_requirement"
-        ],
-        "source_execution_anchor": "explicit_execution_signal",
-        "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
-        "needs_verification": false
+        "status": "execution_context",
+        "label": "Uitvoeringscontext",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
+        "public_wording_guardrail": "Gebruik als uitvoeringscontext; maak er geen actie, eigenaar of planning van zonder sterker bewijs.",
+        "needs_verification": true
       },
       "statement": "The negotiation text already aims for landelijke dekking of the known basisfunctionaliteiten by 2030.",
       "source_document_id": "nat_azwa_2025_onderhandelaarsakkoord",
@@ -906,13 +894,11 @@
       "governance_status": {
         "status": "approval_role",
         "label": "Goedkeurings- of vaststellingsrol",
-        "actor_signals": [
-          "regio"
-        ],
+        "actor_signals": [],
         "source_governance_anchor": "explicit_governance_signal",
         "public_wording_guardrail": "Gebruik als goedkeurings- of vaststellingsrol; niet automatisch als uitvoeringsverantwoordelijkheid.",
-        "needs_verification": true,
-        "vague_region_only": true
+        "needs_verification": false,
+        "vague_region_only": false
       },
       "locality_status": {
         "status": "national_general",
@@ -927,14 +913,12 @@
         "needs_verification": false
       },
       "execution_status": {
-        "status": "operational_requirement",
-        "label": "Operationele vereiste of inrichting",
-        "execution_need_signals": [
-          "operational_requirement"
-        ],
-        "source_execution_anchor": "explicit_execution_signal",
-        "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
-        "needs_verification": false
+        "status": "execution_context",
+        "label": "Uitvoeringscontext",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
+        "public_wording_guardrail": "Gebruik als uitvoeringscontext; maak er geen actie, eigenaar of planning van zonder sterker bewijs.",
+        "needs_verification": true
       },
       "statement": "The onderhandelaarsakkoord already says that regional D5 implementation will be monitored and that the content of the basisfunctionaliteiten will be updated in 2028.",
       "source_document_id": "nat_azwa_2025_onderhandelaarsakkoord",
@@ -1103,7 +1087,6 @@
         "status": "actor_context",
         "label": "Actor- of governancecontext",
         "actor_signals": [
-          "regio",
           "gemeente"
         ],
         "source_governance_anchor": "explicit_governance_signal",

@@ -63,10 +63,8 @@
       "execution_status": {
         "status": "operational_requirement",
         "label": "Operationele vereiste of inrichting",
-        "execution_need_signals": [
-          "operational_requirement"
-        ],
-        "source_execution_anchor": "explicit_execution_signal",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
         "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
         "needs_verification": false
       },
@@ -163,10 +161,8 @@
       "execution_status": {
         "status": "operational_requirement",
         "label": "Operationele vereiste of inrichting",
-        "execution_need_signals": [
-          "operational_requirement"
-        ],
-        "source_execution_anchor": "explicit_execution_signal",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
         "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
         "needs_verification": false
       },
@@ -264,7 +260,6 @@
         "status": "implementation_activity",
         "label": "Uitvoeringsactiviteit zichtbaar",
         "execution_need_signals": [
-          "operational_requirement",
           "implementation_activity"
         ],
         "source_execution_anchor": "explicit_execution_signal",
@@ -365,10 +360,8 @@
       "execution_status": {
         "status": "operational_requirement",
         "label": "Operationele vereiste of inrichting",
-        "execution_need_signals": [
-          "operational_requirement"
-        ],
-        "source_execution_anchor": "explicit_execution_signal",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
         "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
         "needs_verification": true
       },
@@ -441,7 +434,6 @@
         "status": "actor_context",
         "label": "Actor- of governancecontext",
         "actor_signals": [
-          "regio",
           "gemeente"
         ],
         "source_governance_anchor": "explicit_governance_signal",
@@ -740,13 +732,12 @@
         "status": "decision_role",
         "label": "Besluitvormende rol",
         "actor_signals": [
-          "regio",
-          "college"
+          "regio"
         ],
         "source_governance_anchor": "explicit_governance_signal",
         "public_wording_guardrail": "Splits besluitvorming van coordinatie en uitvoering; noem de beslissende actor alleen als de bron dat draagt.",
-        "needs_verification": false,
-        "vague_region_only": false
+        "needs_verification": true,
+        "vague_region_only": true
       },
       "locality_status": {
         "status": "regional_split_context",
@@ -865,7 +856,6 @@
         "status": "implementation_activity",
         "label": "Uitvoeringsactiviteit zichtbaar",
         "execution_need_signals": [
-          "operational_requirement",
           "implementation_activity"
         ],
         "source_execution_anchor": "explicit_execution_signal",
@@ -938,15 +928,13 @@
         "needs_verification": false
       },
       "governance_status": {
-        "status": "actor_context",
-        "label": "Actor- of governancecontext",
-        "actor_signals": [
-          "regio"
-        ],
-        "source_governance_anchor": "explicit_governance_signal",
-        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
-        "needs_verification": true,
-        "vague_region_only": true
+        "status": "not_governance",
+        "label": "Geen zelfstandige governanceclaim",
+        "actor_signals": [],
+        "source_governance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+        "needs_verification": false,
+        "vague_region_only": false
       },
       "locality_status": {
         "status": "national_general",
@@ -1034,15 +1022,13 @@
         "needs_verification": false
       },
       "governance_status": {
-        "status": "actor_context",
-        "label": "Actor- of governancecontext",
-        "actor_signals": [
-          "regio"
-        ],
-        "source_governance_anchor": "explicit_governance_signal",
-        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
-        "needs_verification": true,
-        "vague_region_only": true
+        "status": "not_governance",
+        "label": "Geen zelfstandige governanceclaim",
+        "actor_signals": [],
+        "source_governance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+        "needs_verification": false,
+        "vague_region_only": false
       },
       "locality_status": {
         "status": "national_general",
@@ -1333,7 +1319,6 @@
         "status": "actor_context",
         "label": "Actor- of governancecontext",
         "actor_signals": [
-          "regio",
           "gemeente"
         ],
         "source_governance_anchor": "explicit_governance_signal",

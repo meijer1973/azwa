@@ -58,10 +58,8 @@
       "execution_status": {
         "status": "operational_requirement",
         "label": "Operationele vereiste of inrichting",
-        "execution_need_signals": [
-          "operational_requirement"
-        ],
-        "source_execution_anchor": "explicit_execution_signal",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
         "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
         "needs_verification": false
       },
@@ -152,13 +150,11 @@
         "needs_verification": false
       },
       "execution_status": {
-        "status": "operational_requirement",
-        "label": "Operationele vereiste of inrichting",
-        "execution_need_signals": [
-          "operational_requirement"
-        ],
-        "source_execution_anchor": "explicit_execution_signal",
-        "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
+        "status": "not_execution",
+        "label": "Geen zelfstandige uitvoeringsclaim",
+        "execution_need_signals": [],
+        "source_execution_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als actie- of implementatieclaim.",
         "needs_verification": false
       },
       "statement": "In het AZWA zijn basisfunctionaliteiten afgesproken: afspraken en voorzieningen waarmee mensen tijdig passende ondersteuning krijgen, zodat zwaardere zorg wordt voorkomen en middelen kunnen verschuiven van zorg naar gezondheid en welzijn.",
@@ -231,7 +227,6 @@
         "label": "Goedkeurings- of vaststellingsrol",
         "actor_signals": [
           "regio",
-          "gemeente",
           "gemeenteraad",
           "college"
         ],

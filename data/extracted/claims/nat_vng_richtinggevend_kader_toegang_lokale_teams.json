@@ -158,10 +158,8 @@
       "execution_status": {
         "status": "operational_requirement",
         "label": "Operationele vereiste of inrichting",
-        "execution_need_signals": [
-          "operational_requirement"
-        ],
-        "source_execution_anchor": "explicit_execution_signal",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
         "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
         "needs_verification": false
       },
@@ -255,7 +253,6 @@
         "status": "implementation_activity",
         "label": "Uitvoeringsactiviteit zichtbaar",
         "execution_need_signals": [
-          "operational_requirement",
           "implementation_activity"
         ],
         "source_execution_anchor": "explicit_execution_signal",
@@ -355,10 +352,8 @@
       "execution_status": {
         "status": "operational_requirement",
         "label": "Operationele vereiste of inrichting",
-        "execution_need_signals": [
-          "operational_requirement"
-        ],
-        "source_execution_anchor": "explicit_execution_signal",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
         "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
         "needs_verification": false
       },
@@ -457,7 +452,6 @@
         "status": "dependency",
         "label": "Uitvoering heeft afhankelijkheid of randvoorwaarde",
         "execution_need_signals": [
-          "operational_requirement",
           "dependency"
         ],
         "source_execution_anchor": "explicit_execution_signal",
@@ -551,13 +545,11 @@
         "needs_verification": false
       },
       "execution_status": {
-        "status": "operational_requirement",
-        "label": "Operationele vereiste of inrichting",
-        "execution_need_signals": [
-          "operational_requirement"
-        ],
-        "source_execution_anchor": "explicit_execution_signal",
-        "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
+        "status": "not_execution",
+        "label": "Geen zelfstandige uitvoeringsclaim",
+        "execution_need_signals": [],
+        "source_execution_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als actie- of implementatieclaim.",
         "needs_verification": false
       },
       "statement": "Dat betekent concreet bijvoorbeeld geen (toekomstige) tegenstrijdige signalen over lokale teams en een financieringswijze die de (nieuwe) domeinoverstijgende aanpak stimuleert (dus geen SPUKS meer op afzonderlijke onderdelen, maar toereikende samenhangende structurele en dus voorspelbare financiering).",
@@ -653,13 +645,11 @@
         "needs_verification": false
       },
       "execution_status": {
-        "status": "operational_requirement",
-        "label": "Operationele vereiste of inrichting",
-        "execution_need_signals": [
-          "operational_requirement"
-        ],
-        "source_execution_anchor": "explicit_execution_signal",
-        "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
+        "status": "not_execution",
+        "label": "Geen zelfstandige uitvoeringsclaim",
+        "execution_need_signals": [],
+        "source_execution_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als actie- of implementatieclaim.",
         "needs_verification": false
       },
       "statement": "4 Uit de Hervormingsagenda Jeugd: ‘De VNG ontwikkelt een bestuurlijk kader in de vorm van een convenant ‘Stevige lokale teams’, gericht op zowel Jeugd als Wmo. Hierin zal ook de transitie richting stevige lokale teams inzichtelijk gemaakt worden. Het convenant wordt ontwikkeld in nauwe afstemming met onder andere de gemeenten, de Associatie Wijkteams, de SBJ, cliënt- en brancheorganisaties, VWS en partijen uit de brede sociale basis. Het streven is dit convenant in 2025 te ondertekenen door VNG en VWS, mogelijk aangevuld met bovengenoemde partijen.’ Hervormingsagenda jeugd 2023-2028 (2023) 5 Denk aan: vraagverheldering, mogelijk indiceren, het maken van een plan met de inwoner, ...",
@@ -857,13 +847,11 @@
         "needs_verification": false
       },
       "execution_status": {
-        "status": "operational_requirement",
-        "label": "Operationele vereiste of inrichting",
-        "execution_need_signals": [
-          "operational_requirement"
-        ],
-        "source_execution_anchor": "explicit_execution_signal",
-        "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
+        "status": "not_execution",
+        "label": "Geen zelfstandige uitvoeringsclaim",
+        "execution_need_signals": [],
+        "source_execution_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als actie- of implementatieclaim.",
         "needs_verification": false
       },
       "statement": "4 Uit de Hervormingsagenda Jeugd: ‘De VNG ontwikkelt een bestuurlijk kader in de vorm van een convenant ‘Stevige lokale teams’, gericht op zowel Jeugd als Wmo. Hierin zal ook de transitie richting stevige lokale teams inzichtelijk gemaakt worden. Het convenant wordt ontwikkeld in nauwe afstemming met onder andere de gemeenten, de Associatie Wijkteams, de SBJ, cliënt- en brancheorganisaties, VWS en partijen uit de brede sociale basis. Het streven is dit convenant in 2025 te ondertekenen door VNG en VWS, mogelijk aangevuld met bovengenoemde partijen.’ Hervormingsagenda jeugd 2023-2028 (2023) 5 Denk aan: vraagverheldering, mogelijk indiceren, het maken van een plan met de inwoner, ...",
@@ -1034,14 +1022,12 @@
         "needs_verification": false
       },
       "governance_status": {
-        "status": "actor_context",
-        "label": "Actor- of governancecontext",
-        "actor_signals": [
-          "gemeente"
-        ],
-        "source_governance_anchor": "explicit_governance_signal",
-        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
-        "needs_verification": true,
+        "status": "not_governance",
+        "label": "Geen zelfstandige governanceclaim",
+        "actor_signals": [],
+        "source_governance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+        "needs_verification": false,
         "vague_region_only": false
       },
       "locality_status": {
@@ -1062,7 +1048,6 @@
         "status": "review_task",
         "label": "Uitvoering vraagt review, monitoring of validatie",
         "execution_need_signals": [
-          "operational_requirement",
           "review"
         ],
         "source_execution_anchor": "explicit_execution_signal",
@@ -1163,7 +1148,6 @@
         "status": "decision_question",
         "label": "Uitvoering vraagt besluit of keuze",
         "execution_need_signals": [
-          "operational_requirement",
           "decision_question",
           "dependency"
         ],
@@ -1264,10 +1248,8 @@
       "execution_status": {
         "status": "operational_requirement",
         "label": "Operationele vereiste of inrichting",
-        "execution_need_signals": [
-          "operational_requirement"
-        ],
-        "source_execution_anchor": "explicit_execution_signal",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
         "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
         "needs_verification": false
       },
@@ -1364,10 +1346,8 @@
       "execution_status": {
         "status": "operational_requirement",
         "label": "Operationele vereiste of inrichting",
-        "execution_need_signals": [
-          "operational_requirement"
-        ],
-        "source_execution_anchor": "explicit_execution_signal",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
         "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
         "needs_verification": false
       },

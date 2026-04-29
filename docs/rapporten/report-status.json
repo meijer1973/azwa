@@ -1,0 +1,41 @@
+{
+  "generated_on": "2026-04-29",
+  "purpose": "Declare which report markdown files are current public-review candidates and which are superseded/internal drafts for Sprint 30.3 grounding checks.",
+  "reports": [
+    {
+      "path": "docs/rapporten/plan-van-aanpak-v3.md",
+      "title": "Plan van aanpak AZWA Almere v3",
+      "status": "current_public_review_candidate",
+      "public_facing_candidate": true,
+      "notes": "Current cautious concept version; should avoid internal datalayer terms and unsupported concrete capacity, budget or planning claims."
+    },
+    {
+      "path": "docs/rapporten/bestuurlijke-planning-azwa-almere-2026.md",
+      "title": "Bestuurlijke planning AZWA 2026 voor Almere",
+      "status": "current_public_review_candidate",
+      "public_facing_candidate": true,
+      "notes": "Current planning concept; internal planning boundaries must remain explicitly non-formal and for review."
+    },
+    {
+      "path": "docs/rapporten/plan-van-aanpak-v1.md",
+      "title": "Plan van aanpak AZWA Almere v1",
+      "status": "superseded_reference",
+      "public_facing_candidate": false,
+      "notes": "Older concept retained for traceability; use v3 for public-review style."
+    },
+    {
+      "path": "docs/rapporten/plan-van-aanpak-v2.md",
+      "title": "Plan van aanpak AZWA Almere v2",
+      "status": "superseded_do_not_use_publicly",
+      "public_facing_candidate": false,
+      "notes": "Superseded draft with known internal datalayer language, exact FTEs, invented appendices and self-chosen planning examples. Retained only as a cautionary reference."
+    },
+    {
+      "path": "docs/rapporten/schrijfrichtlijn-plan-van-aanpak.md",
+      "title": "Schrijfrichtlijn Plan van Aanpak",
+      "status": "internal_guideline",
+      "public_facing_candidate": false,
+      "notes": "Guideline for writing and checking report text; not itself a public-facing report."
+    }
+  ]
+}

@@ -1,5 +1,8 @@
 # Plan van aanpak AZWA Almere
 
+> **Status: vervallen concept, niet gebruiken als public-facing of bestuurlijke versie.**
+> Deze versie is bewaard voor traceerbaarheid, maar bevat bekende anti-patronen zoals interne datalaagtaal, indicatieve fte's, zelfgekozen planning en bijlagen die niet als aparte stukken zijn vastgelegd. Gebruik `plan-van-aanpak-v3.md` als actuele conceptbasis.
+
 **Versie 2: uitgebreider**  
 Peildatum: 2026-04-22.  
 Datagrondslag: `data/site/site_almere_view.json`, `data/extracted/municipal/almere_current_view.json`, `data/extracted/qc_report.json` en de gekoppelde bronset in de repository.

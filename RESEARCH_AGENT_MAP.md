@@ -20,6 +20,8 @@ For Almere local-gap reasoning, use `data/extracted/municipal/almere_current_vie
 
 Decision and action site view models are human-readable choice-question layers. Their `source_basis_summary` explains what the public source base raises; `almere_choice_space` explains what Almere still has to decide or validate. Do not treat possible follow-up actions as assigned tasks unless a canonical source or validation record supports that.
 
+For report use, check `docs/rapporten/report-status.json` before treating a markdown report as current. Superseded drafts are retained for traceability and may contain known anti-patterns; current public-review candidates must avoid internal datalayer language and unsupported exact capacity, budget, appendix or internal-planning claims.
+
 ## Access Layer
 
 Base URL:

@@ -43,13 +43,13 @@ Gebruik deze roadmap als levend werkdocument. Werk na elke sprint de statusregel
 | 29.3 Handreikingen en uitvoeringsmomenten | completed | `config/timeline_curation.json`, `src/build_site_view_models.py`, `src/render_site.py`, `data/site/site_timeline_view.json`, `docs/completed-plans/phase29-sprint29.3-handreikingen-uitvoeringsmomenten.md` |
 | 30.1 Lokale lacunes | completed | `src/build_site_view_models.py`, `src/render_site.py`, `data/site/site_almere_view.json`, `dist/almere/index.html`, `docs/completed-plans/phase30-sprint30.1-lokale-lacunes.md` |
 | 30.2 Besluitvragen en mogelijke opvolgacties | completed | `src/build_site_view_models.py`, `src/render_site.py`, `data/site/decision_view_models/*.json`, `data/site/action_view_models/*.json`, `docs/completed-plans/phase30-sprint30.2-besluitvragen-opvolgacties.md` |
-| 30.3 Beleidsdocumenten en rapporten | open |  |
+| 30.3 Beleidsdocumenten en rapporten | completed | `docs/rapporten/report-status.json`, `src/audit_report_grounding.py`, `docs/internal/report-grounding-audit-2026-04-29.md`, `tests/test_report_grounding.py`, `docs/completed-plans/phase30-sprint30.3-beleidsdocumenten-rapporten.md` |
 | 31.1 Updateprotocol | open |  |
 | 31.2 Maandelijkse bronaudit | open |  |
 | 31.3 Reviewronde met menselijke beoordelaars | open |  |
 
 ## Huidige sprintplan
-Sprint 30.2 is afgerond. Besluitvragen en mogelijke opvolgacties tonen nu expliciet wat de openbare bronbasis oproept, wat Almere zelf moet invullen en hoe de pagina veilig gebruikt moet worden zonder de vraag als vastgesteld advies of besluit te lezen. De huidige sprint is Sprint 30.3: beleidsdocumenten en rapporten. Sprint 25.6 blijft geparkeerd omdat post-validatie hardening pas verantwoord is na stakeholdervalidatierecords, lokale/interne documenten, finance/controller bevestiging of een expliciet beleidsbesluit. Dat blokkeert Fase 30 niet, zolang lokale lacunes niet als opgeloste D6-validatievragen worden gepresenteerd.
+Sprint 30.3 is afgerond. De rapportlaag heeft nu een statusmanifest, een interne grounding-audit en regressietests die actuele public-review kandidaten controleren op interne datalaagtaal, exacte fte-claims, niet-bestaande bijlagen en te definitief klinkende interne planning. De huidige sprint is Sprint 31.1: updateprotocol. Sprint 25.6 blijft geparkeerd omdat post-validatie hardening pas verantwoord is na stakeholdervalidatierecords, lokale/interne documenten, finance/controller bevestiging of een expliciet beleidsbesluit. Dat blokkeert Fase 31 niet, zolang lokale lacunes niet als opgeloste D6-validatievragen worden gepresenteerd.
 
 Status op 26 april 2026: Sprint 25.2 is afgerond als publieke bronversterkingssprint. `data/extracted/local_source_strengthening_almere.json` maakt zichtbaar welke lokale bronnen in de formele laag zitten, welke publieke bronnen als assessmentmateriaal zijn beoordeeld, en welke vragen naar later in de workflow gaan omdat de publieke bronbasis is uitgeput of omdat een geschoonde validatiestap nodig is. De geselecteerde Documentwijzer-bijlagen voor Visie Gezondheidsbeleid en Maatschappelijke Agenda zijn eerst naar page-markdown omgezet en daarna opgenomen in `data/raw/manifest.json`. Ook de GGD-tabellenboeken voor volwassenen en ouderen, de GGD-valpreventiepagina Almere en de ZonMw-bron zijn opgenomen in `data/raw/manifest.json`, door inventory/extractie/claims/site-viewmodels verwerkt en blijven reviewmateriaal voordat ze bestuurlijk of public-facing worden gebruikt. Niet-publieke informatie, ontbrekende lokale bevestiging en formele besluitvragen blokkeren deze fase niet; ze worden als gaten of carry-over taken zichtbaar gemaakt voor lokale medewerkers en latere besluitvorming.
 
@@ -96,6 +96,8 @@ Status op 29 april 2026: Sprint 29.3 is afgerond. Het format voor de D5-werkagen
 Status op 29 april 2026: Sprint 30.1 is afgerond. De Almerepagina maakt lokale lacunes per thema zichtbaar zonder oordeelstaal: D5-werkagenda, financiering, monitoring en de D6-validatiegrens tonen nu wat de openbare bronbasis ondersteunt, wat zij niet bewijst, welke vervolgvraag resteert en welke formulering veilig is zolang lokale validatie ontbreekt. De D6-lacune gebruikt het D6 responsibility register als validatiegrens en blijft expliciet op nul `settled` rijen.
 
 Status op 29 april 2026: Sprint 30.2 is afgerond. Besluitvraag- en opvolgactiepagina's hebben nu een vaste sectie `Bronbasis en lokale keuze`. Kaarten en detailpagina's scheiden de bronaanleiding van de Almeerse invulruimte, tonen de relevante perspectieven en waarschuwen dat de pagina geen vastgesteld besluit, opdracht of planning is. Opvolgacties gebruiken verkenningstaal in plaats van opdracht- of adviesformuleringen.
+
+Status op 29 april 2026: Sprint 30.3 is afgerond. `docs/rapporten/report-status.json` onderscheidt actuele public-review kandidaten van vervallen concepten. `plan-van-aanpak-v2.md` is expliciet gemarkeerd als vervallen concept dat niet public-facing gebruikt moet worden. `src/audit_report_grounding.py` en `tests/test_report_grounding.py` bewaken dat actuele rapportkandidaten geen interne datalaagtaal, exacte fte-claims, niet-bestaande bijlagen of te definitieve interne planning bevatten. De interne controle-uitkomst staat in `docs/internal/report-grounding-audit-2026-04-29.md`.
 
 Afgeronde aanpak voor Sprint 25.4a:
 
@@ -438,11 +440,12 @@ Status: completed.
 - Opvolgacties zijn herformuleerd naar verkenningstaal en blijven zichtbaar als mogelijke werklijn, niet als vastgestelde opdracht.
 
 Sprint 30.3: Beleidsdocumenten en rapporten
-Status: open.
+Status: completed.
 
-- Laat public-facing rapporten alleen publieke bronnen noemen, geen interne datalagen.
-- Controleer plannen van aanpak op verzonnen bijlagen, bedragen, FTE's, deadlines en scenario's.
-- Houd een aparte interne notitie bij voor technische controles.
+- Actuele public-review kandidaten staan in `docs/rapporten/report-status.json`; vervallen concepten worden niet als public-facing kandidaat behandeld.
+- De rapport-audit controleert actuele kandidaten op interne datalaagtaal, exacte fte-claims, bijlagenlijsten en te definitief klinkende interne planning.
+- De interne controle staat in `docs/internal/report-grounding-audit-2026-04-29.md`.
+- `plan-van-aanpak-v2.md` is expliciet gemarkeerd als vervallen concept met bekende anti-patronen.
 
 ## Fase 31 - Periodieke actualisatie
 Doel: zorgen dat de site meebeweegt met nieuwe bronnen zonder dat oude informatie wordt overschreven.

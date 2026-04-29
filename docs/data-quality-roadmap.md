@@ -42,14 +42,14 @@ Gebruik deze roadmap als levend werkdocument. Werk na elke sprint de statusregel
 | 29.2 Begrotings- en verantwoordingscyclus | completed | `config/timeline_curation.json`, `src/build_site_view_models.py`, `src/render_site.py`, `data/site/site_timeline_view.json`, `docs/completed-plans/phase29-sprint29.2-begrotings-verantwoordingscyclus.md` |
 | 29.3 Handreikingen en uitvoeringsmomenten | completed | `config/timeline_curation.json`, `src/build_site_view_models.py`, `src/render_site.py`, `data/site/site_timeline_view.json`, `docs/completed-plans/phase29-sprint29.3-handreikingen-uitvoeringsmomenten.md` |
 | 30.1 Lokale lacunes | completed | `src/build_site_view_models.py`, `src/render_site.py`, `data/site/site_almere_view.json`, `dist/almere/index.html`, `docs/completed-plans/phase30-sprint30.1-lokale-lacunes.md` |
-| 30.2 Besluitvragen en mogelijke opvolgacties | open |  |
+| 30.2 Besluitvragen en mogelijke opvolgacties | completed | `src/build_site_view_models.py`, `src/render_site.py`, `data/site/decision_view_models/*.json`, `data/site/action_view_models/*.json`, `docs/completed-plans/phase30-sprint30.2-besluitvragen-opvolgacties.md` |
 | 30.3 Beleidsdocumenten en rapporten | open |  |
 | 31.1 Updateprotocol | open |  |
 | 31.2 Maandelijkse bronaudit | open |  |
 | 31.3 Reviewronde met menselijke beoordelaars | open |  |
 
 ## Huidige sprintplan
-Sprint 30.1 is afgerond. De Almerepagina toont lokale lacunes nu per thema als openklapbare, menselijk leesbare onderdelen met wat openbare bronnen wel laten zien, wat zij niet bewijzen, een vervolgvraag, veilige formulering en bronbasis. De huidige sprint is Sprint 30.2: besluitvragen en mogelijke opvolgacties. Sprint 25.6 blijft geparkeerd omdat post-validatie hardening pas verantwoord is na stakeholdervalidatierecords, lokale/interne documenten, finance/controller bevestiging of een expliciet beleidsbesluit. Dat blokkeert Fase 30 niet, zolang lokale lacunes niet als opgeloste D6-validatievragen worden gepresenteerd.
+Sprint 30.2 is afgerond. Besluitvragen en mogelijke opvolgacties tonen nu expliciet wat de openbare bronbasis oproept, wat Almere zelf moet invullen en hoe de pagina veilig gebruikt moet worden zonder de vraag als vastgesteld advies of besluit te lezen. De huidige sprint is Sprint 30.3: beleidsdocumenten en rapporten. Sprint 25.6 blijft geparkeerd omdat post-validatie hardening pas verantwoord is na stakeholdervalidatierecords, lokale/interne documenten, finance/controller bevestiging of een expliciet beleidsbesluit. Dat blokkeert Fase 30 niet, zolang lokale lacunes niet als opgeloste D6-validatievragen worden gepresenteerd.
 
 Status op 26 april 2026: Sprint 25.2 is afgerond als publieke bronversterkingssprint. `data/extracted/local_source_strengthening_almere.json` maakt zichtbaar welke lokale bronnen in de formele laag zitten, welke publieke bronnen als assessmentmateriaal zijn beoordeeld, en welke vragen naar later in de workflow gaan omdat de publieke bronbasis is uitgeput of omdat een geschoonde validatiestap nodig is. De geselecteerde Documentwijzer-bijlagen voor Visie Gezondheidsbeleid en Maatschappelijke Agenda zijn eerst naar page-markdown omgezet en daarna opgenomen in `data/raw/manifest.json`. Ook de GGD-tabellenboeken voor volwassenen en ouderen, de GGD-valpreventiepagina Almere en de ZonMw-bron zijn opgenomen in `data/raw/manifest.json`, door inventory/extractie/claims/site-viewmodels verwerkt en blijven reviewmateriaal voordat ze bestuurlijk of public-facing worden gebruikt. Niet-publieke informatie, ontbrekende lokale bevestiging en formele besluitvragen blokkeren deze fase niet; ze worden als gaten of carry-over taken zichtbaar gemaakt voor lokale medewerkers en latere besluitvorming.
 
@@ -94,6 +94,8 @@ Status op 29 april 2026: Sprint 29.2 is afgerond. De bestaande gemeentefondsbron
 Status op 29 april 2026: Sprint 29.3 is afgerond. Het format voor de D5-werkagenda is toegevoegd als eigen tijdlijnmoment en de tijdlijnview bevat nu een `execution_support`-doorsnede voor formatdocumenten, proces-/toelichtingsdocumenten, werkagenda-proces, webinars, handreiking/thematafel en ondersteuningspagina's. De publieke tijdlijn toont deze doorsnede apart zodat handreikingen en uitvoeringsduiding niet als formele besluiten of harde normen worden gelezen.
 
 Status op 29 april 2026: Sprint 30.1 is afgerond. De Almerepagina maakt lokale lacunes per thema zichtbaar zonder oordeelstaal: D5-werkagenda, financiering, monitoring en de D6-validatiegrens tonen nu wat de openbare bronbasis ondersteunt, wat zij niet bewijst, welke vervolgvraag resteert en welke formulering veilig is zolang lokale validatie ontbreekt. De D6-lacune gebruikt het D6 responsibility register als validatiegrens en blijft expliciet op nul `settled` rijen.
+
+Status op 29 april 2026: Sprint 30.2 is afgerond. Besluitvraag- en opvolgactiepagina's hebben nu een vaste sectie `Bronbasis en lokale keuze`. Kaarten en detailpagina's scheiden de bronaanleiding van de Almeerse invulruimte, tonen de relevante perspectieven en waarschuwen dat de pagina geen vastgesteld besluit, opdracht of planning is. Opvolgacties gebruiken verkenningstaal in plaats van opdracht- of adviesformuleringen.
 
 Afgeronde aanpak voor Sprint 25.4a:
 
@@ -429,11 +431,11 @@ Status: completed.
 - Elke lacune is gekoppeld aan bronbasis via evidence-references in `data/site/site_almere_view.json`.
 
 Sprint 30.2: Besluitvragen en mogelijke opvolgacties
-Status: open.
+Status: completed.
 
-- Herclassificeer bestaande besluitvragen en opvolgacties langs de zes perspectieven.
-- Maak duidelijk welke vraag door bronbasis wordt opgeroepen en welke invulling aan Almere is.
-- Verwijder of herformuleer items die te veel als advies klinken.
+- Besluitvragen en mogelijke opvolgacties dragen expliciet `source_basis_summary`, `almere_choice_space`, `safe_use_note` en `perspective_summary`.
+- Kaarten en detailpagina's tonen wat de bronbasis oproept en wat Almere zelf moet invullen.
+- Opvolgacties zijn herformuleerd naar verkenningstaal en blijven zichtbaar als mogelijke werklijn, niet als vastgestelde opdracht.
 
 Sprint 30.3: Beleidsdocumenten en rapporten
 Status: open.

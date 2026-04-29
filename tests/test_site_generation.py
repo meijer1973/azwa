@@ -154,6 +154,22 @@ class SiteGenerationTests(unittest.TestCase):
         self.assertIn("money", source["perspective_ids"])
         self.assertTrue(source["quality_perspectives"])
 
+    def test_decision_and_action_models_separate_source_basis_from_almere_choice(self) -> None:
+        decision = load_json(DECISION_DIR / "dec_d6_regiemodel.json")
+        action = load_json(ACTION_DIR / "act_middelen_en_eigenaarschap_vastleggen.json")
+
+        for model in [decision, action]:
+            self.assertIn("source_basis_summary", model)
+            self.assertIn("almere_choice_space", model)
+            self.assertIn("safe_use_note", model)
+            self.assertIn("perspective_summary", model)
+            self.assertIn("Raakt aan:", model["perspective_summary"])
+            self.assertIn("Almere", model["almere_choice_space"])
+            self.assertIn("geen vastgestelde", model["scope_note"])
+
+        self.assertIn("Verken", action["action_statement"])
+        self.assertNotRegex(action["action_statement"], r"^(Werk|Leg|Breng)\b")
+
     def test_rendered_pages_exist(self) -> None:
         for path in [
             INDEX_PATH,
@@ -271,6 +287,11 @@ class SiteGenerationTests(unittest.TestCase):
         self.assertIn("Bronhouder: Zorgzaam Flevoland / Flever", evidence_html)
         self.assertIn("Bronstatus: Lagere-autoriteitssignaal", evidence_html)
         self.assertIn("Veilige formulering: Altijd expliciet toeschrijven", evidence_html)
+
+        self.assertIn("Bronbasis en lokale keuze", detail_html)
+        self.assertIn("Wat de bronbasis oproept", detail_html)
+        self.assertIn("Wat Almere zelf moet invullen", detail_html)
+        self.assertIn("Gebruik deze pagina als voorbereiding op een keuze", detail_html)
 
     def test_logical_clickability_regression(self) -> None:
         home_html = INDEX_PATH.read_text(encoding="utf-8")

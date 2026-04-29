@@ -18,6 +18,8 @@ For workagenda filling, use public sources as far as they go. When a field requi
 
 For Almere local-gap reasoning, use `data/extracted/municipal/almere_current_view.json` and `data/extracted/municipal/almere_d6_responsibility_register.json` as the structured basis. `data/site/site_almere_view.json` contains a human-readable local-gap synthesis with what public sources show, what they do not prove, and safe wording, but it remains an orientation layer rather than primary evidence.
 
+Decision and action site view models are human-readable choice-question layers. Their `source_basis_summary` explains what the public source base raises; `almere_choice_space` explains what Almere still has to decide or validate. Do not treat possible follow-up actions as assigned tasks unless a canonical source or validation record supports that.
+
 ## Access Layer
 
 Base URL:

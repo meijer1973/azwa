@@ -342,8 +342,8 @@ ACTION_BLUEPRINTS = [
         "linked_domain": "D5",
         "status": "in_preparation",
         "title": "Mogelijke opvolgactie: D5-vertaling voor Almere expliciteren",
-        "action_statement": "Werk expliciet uit hoe de landelijke D5-basisfunctionaliteiten in Almere worden vertaald naar doelgroepen, interventies en lokale of regionale werksporen.",
-        "intended_outcome": "Een expliciete lokale vertaling van D5 in openbare beleids- of uitvoeringsstukken.",
+        "action_statement": "Verken of en hoe Almere de landelijke D5-basisfunctionaliteiten expliciet wil vertalen naar doelgroepen, interventies en lokale of regionale werksporen.",
+        "intended_outcome": "Een mogelijk vast te leggen lokale vertaling van D5 in openbare beleids- of uitvoeringsstukken.",
         "consequence": "Zonder explicitering blijft de lokale vertaling van D5 impliciet en moeilijk bestuurlijk te volgen.",
     },
     {
@@ -356,8 +356,8 @@ ACTION_BLUEPRINTS = [
         "linked_domain": "D6",
         "status": "in_preparation",
         "title": "Mogelijke opvolgactie: lokale D6-structuur bestuurlijk verduidelijken",
-        "action_statement": "Breng bestuurlijk en organisatorisch in kaart hoe Almere lokale teams, wijkverbanden en regie rond D6 expliciet wil positioneren.",
-        "intended_outcome": "Een expliciete beschrijving van de lokale D6-structuur en de bestuurlijke rolverdeling.",
+        "action_statement": "Verken welke lokale teams, wijkverbanden en regierollen Almere eventueel als D6-structuur wil positioneren.",
+        "intended_outcome": "Een mogelijk vast te leggen beschrijving van de lokale D6-structuur en de bestuurlijke rolverdeling.",
         "consequence": "Zonder expliciete beschrijving blijft onduidelijk welke lokale structuur als D6-basis geldt.",
     },
     {
@@ -370,8 +370,8 @@ ACTION_BLUEPRINTS = [
         "linked_domain": "beide",
         "status": "blocked",
         "title": "Mogelijke opvolgactie: inzet van middelen en eigenaarschap vastleggen",
-        "action_statement": "Leg vast hoe Almere beschikbare middelen wil inzetten, wie bestuurlijk trekker is en hoe die inzet aansluit op landelijke en regionale bekostigingsroutes.",
-        "intended_outcome": "Een bestuurlijk uitlegbare koppeling tussen middelen, eigenaarschap en lokale uitvoeringsrichting.",
+        "action_statement": "Verken welke informatie nodig is om later vast te leggen hoe Almere middelen inzet, wie bestuurlijk trekker is en hoe die inzet aansluit op landelijke en regionale bekostigingsroutes.",
+        "intended_outcome": "Een mogelijk vast te leggen koppeling tussen middelen, eigenaarschap en lokale uitvoeringsrichting.",
         "consequence": "Zonder vastlegging blijft financiele doorvertaling voor Almere beperkt zichtbaar.",
     },
     {
@@ -384,8 +384,8 @@ ACTION_BLUEPRINTS = [
         "linked_domain": "beide",
         "status": "in_preparation",
         "title": "Mogelijke opvolgactie: monitoringsaanpak voor Almere afstemmen",
-        "action_statement": "Werk uit hoe lokale monitoring, het Flevolandse monitoringsspoor en landelijke evaluatiemomenten bestuurlijk met elkaar verbonden worden.",
-        "intended_outcome": "Een bestuurlijk bruikbare monitorings- en leerstructuur voor Almere.",
+        "action_statement": "Verken hoe lokale monitoring, het Flevolandse monitoringsspoor en landelijke evaluatiemomenten bestuurlijk met elkaar verbonden kunnen worden.",
+        "intended_outcome": "Een mogelijk vast te leggen monitorings- en leerstructuur voor Almere.",
         "consequence": "Zonder afstemming blijven lokale voortgang en regionale/landelijke vergelijkbaarheid beperkt.",
     },
     {
@@ -398,8 +398,8 @@ ACTION_BLUEPRINTS = [
         "linked_domain": "D6",
         "status": "blocked",
         "title": "Mogelijke opvolgactie: regionale digitale aansluiting concretiseren",
-        "action_statement": "Breng in kaart hoe Almere aansluit op de Flevolandse digitale infrastructuur, gegevensuitwisseling en informatiearchitectuur die voor D6 randvoorwaardelijk zijn.",
-        "intended_outcome": "Duidelijkheid over regionale randvoorwaarden en lokale aansluitstappen.",
+        "action_statement": "Verken welke lokale aansluitvragen Almere heeft rond Flevolandse digitale infrastructuur, gegevensuitwisseling en informatiearchitectuur.",
+        "intended_outcome": "Duidelijkheid over regionale randvoorwaarden en mogelijke lokale aansluitstappen.",
         "consequence": "Zonder concretisering blijft onduidelijk welke regionale infrastructuur beschikbaar is voor lokale uitvoering.",
     },
 ]
@@ -2130,6 +2130,68 @@ def why_decision_required(blueprint: dict, gap_entries: list[dict], dependency_e
     return gap_part
 
 
+def source_basis_summary_for_decision(gap_entries: list[dict], dependency_entries: list[dict]) -> str:
+    parts: list[str] = []
+    if gap_entries:
+        parts.append(
+            "De openbare bronbasis markeert een lokale lacune: "
+            + GAP_LABELS[gap_entries[0]["gap_id"]]["summary"]
+        )
+    else:
+        parts.append("De openbare bronbasis bevat aanknopingspunten, maar geen volledig lokaal besluitspoor.")
+    if dependency_entries:
+        parts.append(
+            "Daarnaast is er een afhankelijkheid zichtbaar: "
+            + DEPENDENCY_LABELS[dependency_entries[0]["dependency_id"]]["summary"]
+        )
+    return " ".join(parts)
+
+
+def almere_choice_space_for_decision(decision_id: str) -> str:
+    mapping = {
+        "dec_d5_prioritering": "Almere moet zelf bepalen welke D5-onderdelen lokaal prioriteit krijgen, voor welke doelgroep en via welk werkspoor.",
+        "dec_d6_regiemodel": "Almere moet zelf valideren welke structuren formeel D6-infrastructuur zijn en wie eigenaar, uitvoerder en coordinator is.",
+        "dec_budget_verdeling": "Almere moet zelf budgetverdeling, eigenaarschap en eventuele dubbeltellingsrisico's met bestaande programma's laten bevestigen.",
+        "dec_monitoring_arrangement": "Almere moet zelf bepalen welke indicatoren, eigenaar en bestuurlijk ritme voor lokale monitoring gelden.",
+    }
+    return mapping[decision_id]
+
+
+def safe_use_note_for_decision() -> str:
+    return (
+        "Gebruik deze pagina als voorbereiding op een keuze of validatiegesprek. De pagina bewijst niet dat "
+        "Almere deze keuze al heeft gemaakt."
+    )
+
+
+def source_basis_summary_for_action(source_label: str, dependency_entries: list[dict]) -> str:
+    parts = [f"Deze mogelijke opvolgactie komt voort uit deze openbare bronlacune of afhankelijkheid: {source_label}"]
+    if dependency_entries:
+        parts.append(
+            "De belangrijkste afhankelijkheid is: "
+            + DEPENDENCY_LABELS[dependency_entries[0]["dependency_id"]]["summary"]
+        )
+    return " ".join(parts)
+
+
+def almere_choice_space_for_action(action_id: str) -> str:
+    mapping = {
+        "act_d5_werkagenda_expliciteren": "Almere moet bepalen of deze verkenning leidt tot lokale vastlegging, regionale werkagenda-afspraken of een later besluit.",
+        "act_d6_lokale_structuur_verduidelijken": "Almere moet bepalen welke lokale structuren worden gevalideerd als D6-onderdeel en welke alleen context of ondersteuning zijn.",
+        "act_middelen_en_eigenaarschap_vastleggen": "Almere moet bepalen welke finance/controller- of bestuurlijke bevestiging nodig is voordat middelen en eigenaarschap worden vastgelegd.",
+        "act_monitoring_afstemmen": "Almere moet bepalen welke monitoringsafspraken lokaal, regionaal of via GGD/Flevoland worden belegd.",
+        "act_regionale_digitale_aansluiting": "Almere moet bepalen welke regionale digitale randvoorwaarden lokaal relevant zijn en wie de aansluiting bevestigt.",
+    }
+    return mapping[action_id]
+
+
+def safe_use_note_for_action() -> str:
+    return (
+        "Gebruik deze pagina als mogelijke werklijn. Het is geen opdracht, besluit of vastgestelde planning "
+        "zolang de bronbasis of lokale validatie dat niet ondersteunt."
+    )
+
+
 def next_formal_step_for_decision(status: str) -> str:
     if status == "blocked":
         return "Eerst verduidelijken welke landelijke of regionale afhankelijkheid bepalend is, daarna lokale keuze expliciteren."
@@ -2159,10 +2221,10 @@ def consequences_for_action(action: dict, dependency_entries: list[dict]) -> str
 
 def owner_label(action: dict) -> str:
     if action["action_id"] in {"act_d5_werkagenda_expliciteren", "act_d6_lokale_structuur_verduidelijken"}:
-        return "Nog niet expliciet benoemd in de bronbasis; gemeentelijke regie ligt voor de hand."
+        return "Niet vastgesteld in de bronbasis; lokaal eigenaarschap moet worden bevestigd."
     if action["action_id"] == "act_regionale_digitale_aansluiting":
-        return "Nog niet expliciet benoemd in de bronbasis; regionale en gemeentelijke afstemming lijkt nodig."
-    return "Nog niet expliciet benoemd in de bronbasis; bestuurlijk en ambtelijk eigenaarschap moet nog worden verduidelijkt."
+        return "Niet vastgesteld in de bronbasis; regionale en gemeentelijke rolverdeling moet worden bevestigd."
+    return "Niet vastgesteld in de bronbasis; bestuurlijk en ambtelijk eigenaarschap moet worden verduidelijkt."
 
 
 def milestone_for_action(action_id: str) -> str:
@@ -2230,6 +2292,9 @@ def build_decision_models(
             "linked_theme_ids": linked_theme_ids,
             "decision_question": blueprint["decision_question"],
             "why_decision_required": why_decision_required(blueprint, gap_entries, dependency_entries),
+            "source_basis_summary": source_basis_summary_for_decision(gap_entries, dependency_entries),
+            "almere_choice_space": almere_choice_space_for_decision(blueprint["decision_id"]),
+            "safe_use_note": safe_use_note_for_decision(),
             "current_working_direction": current_working_direction(blueprint, document_refs),
             "why_it_matters_for_leadership": blueprint["matter"],
             "policy_basis": document_refs[:6],
@@ -2258,6 +2323,8 @@ def build_decision_models(
             "content_classification": quality_classification_ref("human_choice_question"),
             "perspective_ids": perspective_ids,
             "quality_perspectives": quality_perspective_refs(perspective_ids),
+            "perspective_summary": "Raakt aan: "
+            + ", ".join(item["title"] for item in quality_perspective_refs(perspective_ids)),
         }
         models.append(model)
 
@@ -2282,12 +2349,14 @@ def build_action_models(
                 continue
             source_claim_ids = list(source_item["supporting_claim_ids"])
             current_status_detail = GAP_LABELS[blueprint["source_id"]]["summary"]
+            source_label = current_status_detail
         else:
             source_item = dependencies.get(blueprint["source_id"])
             if source_item is None:
                 continue
             source_claim_ids = list(source_item["supporting_claim_ids"])
             current_status_detail = DEPENDENCY_LABELS[blueprint["source_id"]]["summary"]
+            source_label = current_status_detail
 
         dependency_entries = [dependencies[dep_id] for dep_id in blueprint["dependency_ids"] if dep_id in dependencies]
         claim_ids = [
@@ -2319,12 +2388,15 @@ def build_action_models(
             "linked_decision_titles": [decision_map[decision_id]["title"] for decision_id in blueprint["linked_decision_ids"]],
             "linked_theme_ids": blueprint["theme_ids"],
             "action_statement": blueprint["action_statement"],
+            "source_basis_summary": source_basis_summary_for_action(source_label, dependency_entries),
+            "almere_choice_space": almere_choice_space_for_action(blueprint["action_id"]),
+            "safe_use_note": safe_use_note_for_action(),
             "why_leadership_action_required": current_status_detail,
             "intended_outcome": blueprint["intended_outcome"],
             "current_status_detail": current_status_detail,
             "participants": [
-                "Gemeente Almere",
-                "Regionale partners in Flevoland" if any(dep["dependency_id"] == "dep_regional_role_allocation" for dep in dependency_entries) else "Regionale of landelijke partners waar relevant",
+                "Te valideren: Gemeente Almere",
+                "Te valideren: regionale partners in Flevoland" if any(dep["dependency_id"] == "dep_regional_role_allocation" for dep in dependency_entries) else "Te valideren: regionale of landelijke partners waar relevant",
             ],
             "dependencies": [
                 {
@@ -2350,6 +2422,8 @@ def build_action_models(
             "content_classification": quality_classification_ref("human_choice_question"),
             "perspective_ids": perspective_ids,
             "quality_perspectives": quality_perspective_refs(perspective_ids),
+            "perspective_summary": "Raakt aan: "
+            + ", ".join(item["title"] for item in quality_perspective_refs(perspective_ids)),
         }
         models.append(model)
     return models

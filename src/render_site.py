@@ -471,6 +471,8 @@ def render_decision_card(current_route: str, decision: dict) -> str:
     tags = [decision["status"], decision["linked_domain_label"]]
     body = (
         f"{esc(decision['decision_question'])}<br>"
+        f'<span class="list-meta">Bronbasis: {esc(decision["source_basis_summary"])}</span><br>'
+        f'<span class="list-meta">Invulling aan Almere: {esc(decision["almere_choice_space"])}</span><br>'
         f'<span class="list-meta">Waarom nodig: {esc(decision["why_decision_required"])}</span><br>'
         f'<span class="list-meta">Volgende formele stap: {esc(decision["next_formal_step"])}</span><br>'
         f'<span class="list-meta">Gevolg bij uitblijven: {esc(decision["consequences_of_non_decision"])}</span>'
@@ -498,6 +500,8 @@ def render_action_card(current_route: str, action: dict) -> str:
     tags = [action["status"], action["linked_domain_label"]]
     body = (
         f"{esc(action['action_statement'])}<br>"
+        f'<span class="list-meta">Bronbasis: {esc(action["source_basis_summary"])}</span><br>'
+        f'<span class="list-meta">Invulling aan Almere: {esc(action["almere_choice_space"])}</span><br>'
         f'<span class="list-meta">Beoogd resultaat: {esc(action["intended_outcome"])}</span><br>'
         f'<span class="list-meta">Volgende mijlpaal: {esc(action["next_milestone"])}</span><br>'
         f'<span class="list-meta">Gevolg bij uitblijven: {esc(action["consequences_if_not_followed_up"])}</span>'
@@ -862,6 +866,12 @@ def render_detail_page(route: str, model: dict, page_type: str) -> str:
         sections.extend(
             [
                 f'<section class="section"><h2>Besluitvraag</h2><p>{esc(model["decision_question"])}</p></section>',
+                '<section class="section"><h2>Bronbasis en lokale keuze</h2>'
+                + f'<p><strong>Wat de bronbasis oproept:</strong> {esc(model["source_basis_summary"])}</p>'
+                + f'<p><strong>Wat Almere zelf moet invullen:</strong> {esc(model["almere_choice_space"])}</p>'
+                + f'<p class="notice">{esc(model["safe_use_note"])}</p>'
+                + f'<p class="list-meta">{esc(model["perspective_summary"])}</p>'
+                + "</section>",
                 f'<section class="section"><h2>Huidige werkrichting</h2><p>{esc(model["current_working_direction"])}</p></section>',
                 f'<section class="section"><h2>Waarom dit bestuurlijk relevant is</h2><p>{esc(model["why_it_matters_for_leadership"])}</p></section>',
                 '<section class="section"><h2>Huidige beleidsbasis</h2>' + render_policy_basis_summary(route, model) + "</section>",
@@ -904,6 +914,12 @@ def render_detail_page(route: str, model: dict, page_type: str) -> str:
         sections.extend(
             [
                 f'<section class="section"><h2>Opvolgactie</h2><p>{esc(model["action_statement"])}</p></section>',
+                '<section class="section"><h2>Bronbasis en lokale keuze</h2>'
+                + f'<p><strong>Wat de bronbasis oproept:</strong> {esc(model["source_basis_summary"])}</p>'
+                + f'<p><strong>Wat Almere zelf moet invullen:</strong> {esc(model["almere_choice_space"])}</p>'
+                + f'<p class="notice">{esc(model["safe_use_note"])}</p>'
+                + f'<p class="list-meta">{esc(model["perspective_summary"])}</p>'
+                + "</section>",
                 f'<section class="section"><h2>Waarom bestuurlijke actie nodig is</h2><p>{esc(model["why_leadership_action_required"])}</p></section>',
                 f'<section class="section"><h2>Beoogd resultaat</h2><p>{esc(model["intended_outcome"])}</p></section>',
                 f'<section class="section"><h2>Huidige status</h2><p>{esc(model["current_status_detail"])}</p></section>',

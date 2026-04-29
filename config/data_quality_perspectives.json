@@ -218,6 +218,48 @@
         "decision",
         "action"
       ],
+      "governance_status_values": [
+        {
+          "status": "decision_role",
+          "meaning": "Bron noemt besluitvorming, vaststelling of instemming."
+        },
+        {
+          "status": "coordination_role",
+          "meaning": "Bron noemt coordinatie, regie of afstemming."
+        },
+        {
+          "status": "application_role",
+          "meaning": "Bron noemt aanvraag, indiening, aanlevering of penvoerderschap."
+        },
+        {
+          "status": "execution_role",
+          "meaning": "Bron noemt uitvoering, organisatie, implementatie of realisatie."
+        },
+        {
+          "status": "accountability_role",
+          "meaning": "Bron noemt verantwoording, eigenaarschap, aanspreekbaarheid of verantwoordelijkheid."
+        },
+        {
+          "status": "approval_role",
+          "meaning": "Bron noemt goedkeuring, akkoord of formele vaststelling."
+        },
+        {
+          "status": "review_role",
+          "meaning": "Bron noemt toetsing, monitoring, evaluatie of controle."
+        },
+        {
+          "status": "governance_gap",
+          "meaning": "Publieke bronbasis laat rol, mandaat, eigenaar of besluitroute nog open."
+        },
+        {
+          "status": "actor_context",
+          "meaning": "Bron noemt actor(en), maar niet genoeg om een specifieke rol te claimen."
+        },
+        {
+          "status": "not_governance",
+          "meaning": "Geen zelfstandige governanceclaim."
+        }
+      ],
       "editorial_rule": "Separate decision-making, coordination, execution, and accountability roles wherever the source base allows.",
       "exclusion_rule": "Do not collapse actors into vague labels like 'the region' if the source is more specific."
     },

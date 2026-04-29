@@ -34,6 +34,15 @@
         "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
         "needs_verification": true
       },
+      "governance_status": {
+        "status": "coordination_role",
+        "label": "Coordinatie- of regierol",
+        "actor_signals": [],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als coordinatie/regie; niet vermengen met besluitvorming of uitvoering.",
+        "needs_verification": true,
+        "vague_region_only": false
+      },
       "statement": "Enkele voorbeelden: GGD Flevoland heeft een belangrijke rol in het ontwikkelen en/ of coördineren van ketenaanpakken zoals valpreventie, gezond gewicht en Kansrijke Start, bij inhoudelijke thema’s zoals mentale gezondheid, het verminderen van gezondheidsver­ schillen, gezonde leefomgeving en positief ouder worden en bij de transformatie van zorg naar (positieve) gezondheid.",
       "source_document_id": "reg_ggd_flevoland_begroting_2026",
       "source_location": {
@@ -97,6 +106,15 @@
         "source_finance_anchor": "none",
         "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
         "needs_verification": true
+      },
+      "governance_status": {
+        "status": "not_governance",
+        "label": "Geen zelfstandige governanceclaim",
+        "actor_signals": [],
+        "source_governance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+        "needs_verification": true,
+        "vague_region_only": false
       },
       "statement": "De toenemende zorgkosten maken het noodzakelijk om minder in te zetten op zorg en meer op preventie en welzijn (versterking van het voorveld van het sociaal domein) en het medisch en sociaal domein beter te verbinden.",
       "source_document_id": "reg_ggd_flevoland_begroting_2026",
@@ -162,6 +180,17 @@
         "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
         "needs_verification": true
       },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [
+          "uitvoeringspartner"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": false
+      },
       "statement": "In de hervormingsagenda jeugd wordt de JGZ daarom genoemd als belangrijke partner bij de ontwikkeling van Stevige Lokale Teams.",
       "source_document_id": "reg_ggd_flevoland_begroting_2026",
       "source_location": {
@@ -225,6 +254,15 @@
         "source_finance_anchor": "none",
         "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
         "needs_verification": true
+      },
+      "governance_status": {
+        "status": "not_governance",
+        "label": "Geen zelfstandige governanceclaim",
+        "actor_signals": [],
+        "source_governance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+        "needs_verification": true,
+        "vague_region_only": false
       },
       "statement": "JGZ Almere is nauw betrokken bij de ontwikkeling van Stevige Lokale Teams en bij het Toekomstscenario Jeugd- en gezinsbescherming.",
       "source_document_id": "reg_ggd_flevoland_begroting_2026",
@@ -290,6 +328,15 @@
         "public_wording_guardrail": "Gebruik als context; controleer sterkere bronnen voordat hier een financieringsregel van wordt gemaakt.",
         "needs_verification": true
       },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": false
+      },
       "statement": "Risicocategorie Oorzaak Ongewenste gebeurtenis Gevolg (E) max effect (K) kans risico (R) (KxE) Beheersmaatregel Restrisico Bedrijfsvoering 1a Huisvesting Integraal Huisvestings Plan Leegstand huisvesting en/ of kosten van vervroegde afschrijving of achterstallig onderhoud Hogere huisves­ tingskosten 1.017 25% 254 254 1b Huisvesting Integraal Huisvestings Plan Voorbereidings­ kosten Hogere huisves­ tingskosten 100 100% 100 75 25 2 Verzuim Ziekte Langdurig verzuim Vervanging personeel 24.925 8,5% 2.112 1.901 317 ...",
       "source_document_id": "reg_ggd_flevoland_begroting_2026",
       "source_location": {
@@ -353,6 +400,17 @@
         "source_finance_anchor": "explicit_finance_signal",
         "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
         "needs_verification": false
+      },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [
+          "gemeente"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": false
       },
       "statement": "Vanaf 2026 wordt richting 2029 een gehele afbouw van de landelijke VIP gelden door dit kabinet beoogt. Tijdens de uitrol in 2022-2024 van de VIP-gelden is er een toezegging gedaan voor een structurele financiering. Mocht deze vorm van financiering niet worden voortgezet zal er gekeken moeten worden naar een alternatieve vorm van financiering om de continuering van zorgverlening voort te zetten. Een mogelijkheid bestaat wanneer dit niet uit landelijke middelen kan komen, een beroep zal worden gedaan op de gemeente. 7. Zorg en veiligheid",
       "source_document_id": "reg_ggd_flevoland_begroting_2026",
@@ -418,6 +476,17 @@
         "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [
+          "gemeente"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": false
+      },
       "statement": "7. Financiën Mutatie inwonerbijdrage per gemeente (x € 1.000) boekjaar (T) 2026 2027 2028 2029 Almere 482 81 90 91 Dronten 95 16 18 18 Lelystad 165 30 33 34 NOP 108 18 20 20 Urk 45 8 9 9 Zeewolde 52 9 10 10 Totaal ophoging gemeentelijke inwonerbijdrage ontwerpbegroting boekjaar T (inclusief wijzigingen I en II) 945 161 179 181 Totale inwonerbijdrage per gemeenten (x € 1.000) boekjaar (T) 2026 2027 2028 2029 Almere 6.947 7.029 7.118 7.209 Dronten 1.358 1.374 1.392 1.410 Lelystad 2.564 2.594 2.627 2.661 NOP 1.537 1.555 1.575 1.595 Urk 671 679 688 696 Zeewolde 735 744 753 763 Totaal gemeentelijke inwonerbijdrage ontwerpbegroting boekjaar T (inclusief wijzigingen I en II) 13.813 13.975 ...",
       "source_document_id": "reg_ggd_flevoland_begroting_2026",
       "source_location": {
@@ -481,6 +550,15 @@
         "source_finance_anchor": "explicit_finance_signal",
         "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
         "needs_verification": false
+      },
+      "governance_status": {
+        "status": "not_governance",
+        "label": "Geen zelfstandige governanceclaim",
+        "actor_signals": [],
+        "source_governance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+        "needs_verification": false,
+        "vague_region_only": false
       },
       "statement": "7. Financiën 7.3 Geprognotiseerde balans en EMU-saldo Geprognostiseerde balans Begrotingsjaar T 2026 Bedragen x € 1.000 T-2 T-1 T T+1 T+2 T+3 Activa 31-12-2024 31-12-2025 31-12-2026 31-12-2027 31-12-2028 31-12-2029 (im) Materiële vaste activa 17.455 22.408 21.287 20.603 17.791 19.884 Totaal Vaste Activa 17.455 22.408 21.287 20.603 17.791 19.884 Uitzettingen <1 jaar 7.426 8.909 10.003 11.263 11.074 11.980 Liquide middelen 203 203 203 203 203 203 Overlopende activa 4.024 4.024 4.024 4.024 4.024 4.024 Totaal Vlottende Activa 11.652 13.136 14.229 15.489 15.301 16.206 Totaal Activa 29.108 35.544 35.516 36.092 33.091 36.090 Passiva 31-12-2024 31-12-2025 31-12-2026 31-12-2027 31-12-2028 ...",
       "source_document_id": "reg_ggd_flevoland_begroting_2026",
@@ -546,6 +624,15 @@
         "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "not_governance",
+        "label": "Geen zelfstandige governanceclaim",
+        "actor_signals": [],
+        "source_governance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+        "needs_verification": false,
+        "vague_region_only": false
+      },
       "statement": "6. Ambulancehulpverlening en meldkamer EMU-saldo T-1 T T+1 T+2 T+3 2025 2026 2027 2028 2029 EMU-SALDO -5.040 1.094 661 2.812 -2.093 EMU-SALDO referentiewaarde Verschil EMU-saldo & referentiewaarde -5.040 1.094 661 2.812 -2.093 Mutaties (1 januari tot 31 december) Activa Financiële vaste activa Kapitaal- verstrekkingen en leningen 0 0 0 0 0 Uitzettingen 0 0 0 0 0 Vlottende activa Uitzettingen 1.484 1.093 1.260 -189 906 Liquide middelen 0 0 0 0 0 Overlopende activa 0 0 0 0 0 Passiva Vaste Passiva Vaste schuld 6.524 -1 599 -3.001 2.999 Vlottende passiva Vlottende schuld 0 0 0 0 0 Overlopende passiva 0 0 0 0 0 Eventuele boekwinst bij verkoop effecten en (im)materiële vaste activa GGD ...",
       "source_document_id": "reg_ggd_flevoland_begroting_2026",
       "source_location": {
@@ -609,6 +696,15 @@
         "source_finance_anchor": "explicit_finance_signal",
         "public_wording_guardrail": "Koppel aan de bronroute en verantwoordingsplicht; maak er geen bestedingsruimte van.",
         "needs_verification": false
+      },
+      "governance_status": {
+        "status": "review_role",
+        "label": "Review-, monitorings- of toetsrol",
+        "actor_signals": [],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als toetsing, monitoring of evaluatie; niet als besluitvorming.",
+        "needs_verification": false,
+        "vague_region_only": false
       },
       "statement": "Monitoring, onderzoek en evaluatie: de vraag naar inzicht in de lokale problematiek, wat een effectieve preventieve aanpak is en wat de effecten van beleid, projecten en activi­ teiten zijn neemt sterk toe.",
       "source_document_id": "reg_ggd_flevoland_begroting_2026",
@@ -674,6 +770,15 @@
         "public_wording_guardrail": "Koppel aan de bronroute en verantwoordingsplicht; maak er geen bestedingsruimte van.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "review_role",
+        "label": "Review-, monitorings- of toetsrol",
+        "actor_signals": [],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als toetsing, monitoring of evaluatie; niet als besluitvorming.",
+        "needs_verification": false,
+        "vague_region_only": false
+      },
       "statement": "De GGD heeft een belangrijke rol in monitoring, surveillance en bestrijding van infectieziekten.",
       "source_document_id": "reg_ggd_flevoland_begroting_2026",
       "source_location": {
@@ -737,6 +842,18 @@
         "source_finance_anchor": "explicit_finance_signal",
         "public_wording_guardrail": "Gebruik als context; controleer sterkere bronnen voordat hier een financieringsregel van wordt gemaakt.",
         "needs_verification": true
+      },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [
+          "regio",
+          "gemeente"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": false
       },
       "statement": "Zo is GGD Flevoland nauw betrokken bij de lokale GALA plannen van de gemeenten, het Regiobeeld7 en Regioplan8, de transformatieagenda’s die in 2024 en 2025 zijn opgesteld vanuit het Regioplan in de drie subregio’s (Almere, Lelystad/Dronten en Noordoostpolder/Urk), en de preventiecoa­ litie Flevoland Gezond en Wel.",
       "source_document_id": "reg_ggd_flevoland_begroting_2026",
@@ -802,6 +919,18 @@
         "public_wording_guardrail": "Gebruik als context; controleer sterkere bronnen voordat hier een financieringsregel van wordt gemaakt.",
         "needs_verification": true
       },
+      "governance_status": {
+        "status": "decision_role",
+        "label": "Besluitvormende rol",
+        "actor_signals": [
+          "regio",
+          "gemeente"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Splits besluitvorming van coordinatie en uitvoering; noem de beslissende actor alleen als de bron dat draagt.",
+        "needs_verification": false,
+        "vague_region_only": false
+      },
       "statement": "3. Maatschappelijke en organisatorische ontwikkelingen Het Gezond en Actief Leven Akkoord4 en het Integraal Zorgakkoord5 zijn in 2023 landelijk vastgesteld om uitvoering te geven aan deze transformatie. GGD Flevoland heeft hierin vanuit de Wet Publieke Gezondheid6 (Wpg) en haar takenpakket een belangrijke rol. Zo is GGD Flevoland nauw betrokken bij de lokale GALA plannen van de gemeenten, het Regiobeeld7 en Regioplan8, de transformatieagenda’s die in 2024 en 2025 zijn opgesteld vanuit het Regioplan in de drie subregio’s (Almere, Lelystad/Dronten en Noordoostpolder/Urk), en de preventiecoa­ litie Flevoland Gezond en Wel. Enkele voorbeelden: GGD Flevoland heeft een belangrijke rol in het ...",
       "source_document_id": "reg_ggd_flevoland_begroting_2026",
       "source_location": {
@@ -865,6 +994,18 @@
         "source_finance_anchor": "none",
         "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
         "needs_verification": false
+      },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [
+          "regio",
+          "gemeente"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": false
       },
       "statement": "van de Beld Bevolking: 456.446 inwoners 6 regionale vestigingen in: Aantal inwoners Inwonerbijdrage per gemeente (x € 1.000) Almere 229.570 6.947 Dronten 44.883 1.358 Lelystad 84.722 2.564 Noordoostpolder 50.803 1.537 Urk 22.172 671 Zeewolde 24.296 735 Totaal 456.446 13.813 18% 32% 50% Inwonerbijdrage Plustaken gemeenten Taken derden Baten o.b.v.",
       "source_document_id": "reg_ggd_flevoland_begroting_2026",

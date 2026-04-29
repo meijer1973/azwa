@@ -34,6 +34,15 @@
         "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "not_governance",
+        "label": "Geen zelfstandige governanceclaim",
+        "actor_signals": [],
+        "source_governance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+        "needs_verification": false,
+        "vague_region_only": false
+      },
       "statement": "The negotiation text already names the directly implementable D5 items and the ontwikkelagenda split, including sociaal verwijzen, valpreventie, and a short-term development path for other approaches.",
       "source_document_id": "nat_azwa_2025_onderhandelaarsakkoord",
       "source_location": {
@@ -98,6 +107,17 @@
         "source_finance_anchor": "none",
         "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
         "needs_verification": false
+      },
+      "governance_status": {
+        "status": "accountability_role",
+        "label": "Verantwoordings- of eigenaarschapsrol",
+        "actor_signals": [
+          "regio"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Maak duidelijk of het gaat om eigenaarschap, aanspreekbaarheid of verantwoording.",
+        "needs_verification": true,
+        "vague_region_only": true
       },
       "statement": "Regions and municipalities must work out goals, choose interventions from a gereedschapskist, and are made mutually aanspreekbaar on the resulting cooperation.",
       "source_document_id": "nat_azwa_2025_onderhandelaarsakkoord",
@@ -165,6 +185,17 @@
         "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "approval_role",
+        "label": "Goedkeurings- of vaststellingsrol",
+        "actor_signals": [
+          "regio"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als goedkeurings- of vaststellingsrol; niet automatisch als uitvoeringsverantwoordelijkheid.",
+        "needs_verification": true,
+        "vague_region_only": true
+      },
       "statement": "The onderhandelaarsakkoord already links D5 to structural financing conditions, a regional monitor, and a content update of the basisfunctionaliteiten in 2028.",
       "source_document_id": "nat_azwa_2025_onderhandelaarsakkoord",
       "source_location": {
@@ -231,6 +262,17 @@
         "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [
+          "regio"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": true
+      },
       "statement": "D6 is defined as a basisinfrastructuur with inloopvoorzieningen, stronger local teams, support for citizen initiatives, healthy-school work, and regional GGD coordination.",
       "source_document_id": "nat_azwa_2025_onderhandelaarsakkoord",
       "source_location": {
@@ -295,6 +337,17 @@
         "source_finance_anchor": "explicit_finance_signal",
         "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
         "needs_verification": false
+      },
+      "governance_status": {
+        "status": "approval_role",
+        "label": "Goedkeurings- of vaststellingsrol",
+        "actor_signals": [
+          "vng"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als goedkeurings- of vaststellingsrol; niet automatisch als uitvoeringsverantwoordelijkheid.",
+        "needs_verification": false,
+        "vague_region_only": false
       },
       "statement": "The onderhandelaarsakkoord already routes social-domain middelen through municipalities and ties the choice of financing form to a process with VNG, the fund managers, and the responsible ministry.",
       "source_document_id": "nat_azwa_2025_onderhandelaarsakkoord",
@@ -361,6 +414,15 @@
         "source_finance_anchor": "explicit_finance_signal",
         "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
         "needs_verification": false
+      },
+      "governance_status": {
+        "status": "not_governance",
+        "label": "Geen zelfstandige governanceclaim",
+        "actor_signals": [],
+        "source_governance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+        "needs_verification": false,
+        "vague_region_only": false
       },
       "statement": "The financial framework already runs through 2028 and sets sectoral growth and remgeld allocations that are tied to the AZWA goals.",
       "source_document_id": "nat_azwa_2025_onderhandelaarsakkoord",
@@ -430,6 +492,15 @@
         "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "approval_role",
+        "label": "Goedkeurings- of vaststellingsrol",
+        "actor_signals": [],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als goedkeurings- of vaststellingsrol; niet automatisch als uitvoeringsverantwoordelijkheid.",
+        "needs_verification": false,
+        "vague_region_only": false
+      },
       "statement": "The onderhandelaarsakkoord also earmarks doorbraakmiddelen for the social domain to accelerate D5 and D6 implementation.",
       "source_document_id": "nat_azwa_2025_onderhandelaarsakkoord",
       "source_location": {
@@ -494,6 +565,15 @@
         "source_finance_anchor": "explicit_finance_signal",
         "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
         "needs_verification": false
+      },
+      "governance_status": {
+        "status": "not_governance",
+        "label": "Geen zelfstandige governanceclaim",
+        "actor_signals": [],
+        "source_governance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+        "needs_verification": false,
+        "vague_region_only": false
       },
       "statement": "The negotiating text already sets the D5 timetable: Q4 2025 for the landelijk kader, Q1 2026 for governance and further plans, and periodic herijking after that.",
       "source_document_id": "nat_azwa_2025_onderhandelaarsakkoord",
@@ -561,6 +641,15 @@
         "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "not_governance",
+        "label": "Geen zelfstandige governanceclaim",
+        "actor_signals": [],
+        "source_governance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+        "needs_verification": false,
+        "vague_region_only": false
+      },
       "statement": "The negotiation text already aims for landelijke dekking of the known basisfunctionaliteiten by 2030.",
       "source_document_id": "nat_azwa_2025_onderhandelaarsakkoord",
       "source_location": {
@@ -625,6 +714,17 @@
         "source_finance_anchor": "explicit_finance_signal",
         "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
         "needs_verification": false
+      },
+      "governance_status": {
+        "status": "approval_role",
+        "label": "Goedkeurings- of vaststellingsrol",
+        "actor_signals": [
+          "regio"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als goedkeurings- of vaststellingsrol; niet automatisch als uitvoeringsverantwoordelijkheid.",
+        "needs_verification": true,
+        "vague_region_only": true
       },
       "statement": "The onderhandelaarsakkoord already says that regional D5 implementation will be monitored and that the content of the basisfunctionaliteiten will be updated in 2028.",
       "source_document_id": "nat_azwa_2025_onderhandelaarsakkoord",
@@ -692,6 +792,15 @@
         "public_wording_guardrail": "Koppel aan de bronroute en verantwoordingsplicht; maak er geen bestedingsruimte van.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "review_role",
+        "label": "Review-, monitorings- of toetsrol",
+        "actor_signals": [],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als toetsing, monitoring of evaluatie; niet als besluitvorming.",
+        "needs_verification": false,
+        "vague_region_only": false
+      },
       "statement": "The overall monitoring chapter builds on the IZA monitor, keeps process-output-outcome levels, and asks for a workafspraak on transitiedoelen before the end of 2025.",
       "source_document_id": "nat_azwa_2025_onderhandelaarsakkoord",
       "source_location": {
@@ -757,6 +866,18 @@
         "source_finance_anchor": "none",
         "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
         "needs_verification": false
+      },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [
+          "regio",
+          "gemeente"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": false
       },
       "statement": "The negotiation text expects every region or gemeente to make D5 operational through a workagenda, local intervention choice, and mutual accountability between municipalities, insurers, and providers.",
       "source_document_id": "nat_azwa_2025_onderhandelaarsakkoord",
@@ -825,6 +946,15 @@
         "source_finance_anchor": "none",
         "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
         "needs_verification": false
+      },
+      "governance_status": {
+        "status": "not_governance",
+        "label": "Geen zelfstandige governanceclaim",
+        "actor_signals": [],
+        "source_governance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+        "needs_verification": false,
+        "vague_region_only": false
       },
       "statement": "Municipal implementation on the D6 side is tied to local teams, public-health links, and neighbourhood-level voorzieningen.",
       "source_document_id": "nat_azwa_2025_onderhandelaarsakkoord",

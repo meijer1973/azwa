@@ -34,6 +34,17 @@
         "public_wording_guardrail": "Beschrijf alleen het verdeelmechanisme dat de bron noemt; geen lokale verdeling afleiden.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [
+          "gemeente"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": false
+      },
       "statement": "De Rijksoverheid informeert de gemeenten via circulaires in mei, september en december over de omvang en de verdeling van het gemeentefonds.",
       "source_document_id": "nat_bzk_gemeentefonds_cyclus",
       "source_location": {
@@ -98,6 +109,17 @@
         "source_finance_anchor": "explicit_finance_signal",
         "public_wording_guardrail": "Beschrijf alleen het verdeelmechanisme dat de bron noemt; geen lokale verdeling afleiden.",
         "needs_verification": false
+      },
+      "governance_status": {
+        "status": "decision_role",
+        "label": "Besluitvormende rol",
+        "actor_signals": [
+          "gemeente"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Splits besluitvorming van coordinatie en uitvoering; noem de beslissende actor alleen als de bron dat draagt.",
+        "needs_verification": false,
+        "vague_region_only": false
       },
       "statement": "De bedragen per eenheid voor de algemene uitkering uit het gemeentefonds over 2022 zijn opgenomen in dit ontwerpbesluit. ... Besluit | 04-11-2024",
       "source_document_id": "nat_bzk_gemeentefonds_cyclus",
@@ -164,6 +186,17 @@
         "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [
+          "gemeente"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": false
+      },
       "statement": "Gemeenten krijgen geld van de Rijksoverheid uit het gemeentefonds.",
       "source_document_id": "nat_bzk_gemeentefonds_cyclus",
       "source_location": {
@@ -229,6 +262,17 @@
         "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [
+          "gemeente"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": false
+      },
       "statement": "Gemeenten bepalen zelf waar ze dit geld aan besteden.",
       "source_document_id": "nat_bzk_gemeentefonds_cyclus",
       "source_location": {
@@ -293,6 +337,18 @@
         "source_finance_anchor": "none",
         "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
         "needs_verification": false
+      },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [
+          "gemeente",
+          "gemeenteraad"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": false
       },
       "statement": "Zij moeten dit wel uitleggen aan de gemeenteraad.",
       "source_document_id": "nat_bzk_gemeentefonds_cyclus",

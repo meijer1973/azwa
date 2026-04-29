@@ -406,6 +406,15 @@
             "public_wording_guardrail": "Koppel aan de bronroute en verantwoordingsplicht; maak er geen bestedingsruimte van.",
             "needs_verification": false
           },
+          "governance_status": {
+            "status": "review_role",
+            "label": "Review-, monitorings- of toetsrol",
+            "actor_signals": [],
+            "source_governance_anchor": "explicit_governance_signal",
+            "public_wording_guardrail": "Gebruik als toetsing, monitoring of evaluatie; niet als besluitvorming.",
+            "needs_verification": false,
+            "vague_region_only": false
+          },
           "needs_human_review": false
         },
         {
@@ -444,6 +453,17 @@
             "source_finance_anchor": "none",
             "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
             "needs_verification": false
+          },
+          "governance_status": {
+            "status": "execution_role",
+            "label": "Uitvoeringsrol",
+            "actor_signals": [
+              "uitvoeringspartner"
+            ],
+            "source_governance_anchor": "explicit_governance_signal",
+            "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt.",
+            "needs_verification": false,
+            "vague_region_only": false
           },
           "needs_human_review": false
         },
@@ -484,6 +504,15 @@
             "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
             "needs_verification": false
           },
+          "governance_status": {
+            "status": "not_governance",
+            "label": "Geen zelfstandige governanceclaim",
+            "actor_signals": [],
+            "source_governance_anchor": "none",
+            "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+            "needs_verification": false,
+            "vague_region_only": false
+          },
           "needs_human_review": false
         },
         {
@@ -522,6 +551,17 @@
             "source_finance_anchor": "none",
             "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
             "needs_verification": false
+          },
+          "governance_status": {
+            "status": "actor_context",
+            "label": "Actor- of governancecontext",
+            "actor_signals": [
+              "regio"
+            ],
+            "source_governance_anchor": "explicit_governance_signal",
+            "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+            "needs_verification": true,
+            "vague_region_only": true
           },
           "needs_human_review": false
         },
@@ -562,6 +602,15 @@
             "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
             "needs_verification": false
           },
+          "governance_status": {
+            "status": "not_governance",
+            "label": "Geen zelfstandige governanceclaim",
+            "actor_signals": [],
+            "source_governance_anchor": "none",
+            "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+            "needs_verification": false,
+            "vague_region_only": false
+          },
           "needs_human_review": false
         },
         {
@@ -600,6 +649,15 @@
             "source_finance_anchor": "explicit_finance_signal",
             "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
             "needs_verification": false
+          },
+          "governance_status": {
+            "status": "execution_role",
+            "label": "Uitvoeringsrol",
+            "actor_signals": [],
+            "source_governance_anchor": "explicit_governance_signal",
+            "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt.",
+            "needs_verification": false,
+            "vague_region_only": false
           },
           "needs_human_review": false
         }
@@ -1054,6 +1112,15 @@
             "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
             "needs_verification": false
           },
+          "governance_status": {
+            "status": "actor_context",
+            "label": "Actor- of governancecontext",
+            "actor_signals": [],
+            "source_governance_anchor": "explicit_governance_signal",
+            "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+            "needs_verification": true,
+            "vague_region_only": false
+          },
           "needs_human_review": false
         },
         {
@@ -1092,6 +1159,15 @@
             "source_finance_anchor": "none",
             "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
             "needs_verification": false
+          },
+          "governance_status": {
+            "status": "actor_context",
+            "label": "Actor- of governancecontext",
+            "actor_signals": [],
+            "source_governance_anchor": "explicit_governance_signal",
+            "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+            "needs_verification": true,
+            "vague_region_only": false
           },
           "needs_human_review": false
         },
@@ -1132,6 +1208,15 @@
             "public_wording_guardrail": "Gebruik als context; controleer sterkere bronnen voordat hier een financieringsregel van wordt gemaakt.",
             "needs_verification": true
           },
+          "governance_status": {
+            "status": "actor_context",
+            "label": "Actor- of governancecontext",
+            "actor_signals": [],
+            "source_governance_anchor": "explicit_governance_signal",
+            "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+            "needs_verification": true,
+            "vague_region_only": false
+          },
           "needs_human_review": false
         },
         {
@@ -1170,6 +1255,17 @@
             "source_finance_anchor": "explicit_finance_signal",
             "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
             "needs_verification": false
+          },
+          "governance_status": {
+            "status": "actor_context",
+            "label": "Actor- of governancecontext",
+            "actor_signals": [
+              "regio"
+            ],
+            "source_governance_anchor": "explicit_governance_signal",
+            "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+            "needs_verification": true,
+            "vague_region_only": true
           },
           "needs_human_review": false
         },
@@ -1210,6 +1306,17 @@
             "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
             "needs_verification": false
           },
+          "governance_status": {
+            "status": "actor_context",
+            "label": "Actor- of governancecontext",
+            "actor_signals": [
+              "gemeente"
+            ],
+            "source_governance_anchor": "explicit_governance_signal",
+            "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+            "needs_verification": true,
+            "vague_region_only": false
+          },
           "needs_human_review": false
         },
         {
@@ -1248,6 +1355,15 @@
             "source_finance_anchor": "none",
             "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
             "needs_verification": false
+          },
+          "governance_status": {
+            "status": "actor_context",
+            "label": "Actor- of governancecontext",
+            "actor_signals": [],
+            "source_governance_anchor": "explicit_governance_signal",
+            "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+            "needs_verification": true,
+            "vague_region_only": false
           },
           "needs_human_review": true
         }
@@ -1626,6 +1742,15 @@
             "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
             "needs_verification": false
           },
+          "governance_status": {
+            "status": "not_governance",
+            "label": "Geen zelfstandige governanceclaim",
+            "actor_signals": [],
+            "source_governance_anchor": "none",
+            "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+            "needs_verification": false,
+            "vague_region_only": false
+          },
           "needs_human_review": false
         },
         {
@@ -1664,6 +1789,17 @@
             "source_finance_anchor": "explicit_finance_signal",
             "public_wording_guardrail": "Beschrijf alleen het verdeelmechanisme dat de bron noemt; geen lokale verdeling afleiden.",
             "needs_verification": false
+          },
+          "governance_status": {
+            "status": "execution_role",
+            "label": "Uitvoeringsrol",
+            "actor_signals": [
+              "gemeenteraad"
+            ],
+            "source_governance_anchor": "explicit_governance_signal",
+            "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt.",
+            "needs_verification": false,
+            "vague_region_only": false
           },
           "needs_human_review": false
         },
@@ -1704,6 +1840,17 @@
             "public_wording_guardrail": "Beschrijf alleen het verdeelmechanisme dat de bron noemt; geen lokale verdeling afleiden.",
             "needs_verification": false
           },
+          "governance_status": {
+            "status": "execution_role",
+            "label": "Uitvoeringsrol",
+            "actor_signals": [
+              "gemeente"
+            ],
+            "source_governance_anchor": "explicit_governance_signal",
+            "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt.",
+            "needs_verification": false,
+            "vague_region_only": false
+          },
           "needs_human_review": false
         },
         {
@@ -1742,6 +1889,15 @@
             "source_finance_anchor": "explicit_finance_signal",
             "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
             "needs_verification": false
+          },
+          "governance_status": {
+            "status": "not_governance",
+            "label": "Geen zelfstandige governanceclaim",
+            "actor_signals": [],
+            "source_governance_anchor": "none",
+            "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+            "needs_verification": false,
+            "vague_region_only": false
           },
           "needs_human_review": false
         },
@@ -1782,6 +1938,17 @@
             "public_wording_guardrail": "Beschrijf alleen het verdeelmechanisme dat de bron noemt; geen lokale verdeling afleiden.",
             "needs_verification": false
           },
+          "governance_status": {
+            "status": "approval_role",
+            "label": "Goedkeurings- of vaststellingsrol",
+            "actor_signals": [
+              "regio"
+            ],
+            "source_governance_anchor": "explicit_governance_signal",
+            "public_wording_guardrail": "Gebruik als goedkeurings- of vaststellingsrol; niet automatisch als uitvoeringsverantwoordelijkheid.",
+            "needs_verification": true,
+            "vague_region_only": true
+          },
           "needs_human_review": false
         },
         {
@@ -1820,6 +1987,17 @@
             "source_finance_anchor": "explicit_finance_signal",
             "public_wording_guardrail": "Beschrijf alleen het verdeelmechanisme dat de bron noemt; geen lokale verdeling afleiden.",
             "needs_verification": false
+          },
+          "governance_status": {
+            "status": "approval_role",
+            "label": "Goedkeurings- of vaststellingsrol",
+            "actor_signals": [
+              "gemeente"
+            ],
+            "source_governance_anchor": "explicit_governance_signal",
+            "public_wording_guardrail": "Gebruik als goedkeurings- of vaststellingsrol; niet automatisch als uitvoeringsverantwoordelijkheid.",
+            "needs_verification": false,
+            "vague_region_only": false
           },
           "needs_human_review": false
         }
@@ -2263,6 +2441,15 @@
             "public_wording_guardrail": "Koppel aan de bronroute en verantwoordingsplicht; maak er geen bestedingsruimte van.",
             "needs_verification": false
           },
+          "governance_status": {
+            "status": "review_role",
+            "label": "Review-, monitorings- of toetsrol",
+            "actor_signals": [],
+            "source_governance_anchor": "explicit_governance_signal",
+            "public_wording_guardrail": "Gebruik als toetsing, monitoring of evaluatie; niet als besluitvorming.",
+            "needs_verification": false,
+            "vague_region_only": false
+          },
           "needs_human_review": false
         },
         {
@@ -2301,6 +2488,18 @@
             "source_finance_anchor": "none",
             "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
             "needs_verification": false
+          },
+          "governance_status": {
+            "status": "review_role",
+            "label": "Review-, monitorings- of toetsrol",
+            "actor_signals": [
+              "regio",
+              "gemeente"
+            ],
+            "source_governance_anchor": "explicit_governance_signal",
+            "public_wording_guardrail": "Gebruik als toetsing, monitoring of evaluatie; niet als besluitvorming.",
+            "needs_verification": false,
+            "vague_region_only": false
           },
           "needs_human_review": false
         },
@@ -2341,6 +2540,15 @@
             "public_wording_guardrail": "Koppel aan de bronroute en verantwoordingsplicht; maak er geen bestedingsruimte van.",
             "needs_verification": false
           },
+          "governance_status": {
+            "status": "review_role",
+            "label": "Review-, monitorings- of toetsrol",
+            "actor_signals": [],
+            "source_governance_anchor": "explicit_governance_signal",
+            "public_wording_guardrail": "Gebruik als toetsing, monitoring of evaluatie; niet als besluitvorming.",
+            "needs_verification": false,
+            "vague_region_only": false
+          },
           "needs_human_review": false
         },
         {
@@ -2379,6 +2587,15 @@
             "source_finance_anchor": "none",
             "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
             "needs_verification": false
+          },
+          "governance_status": {
+            "status": "actor_context",
+            "label": "Actor- of governancecontext",
+            "actor_signals": [],
+            "source_governance_anchor": "explicit_governance_signal",
+            "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+            "needs_verification": true,
+            "vague_region_only": false
           },
           "needs_human_review": false
         },
@@ -2419,6 +2636,15 @@
             "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
             "needs_verification": false
           },
+          "governance_status": {
+            "status": "actor_context",
+            "label": "Actor- of governancecontext",
+            "actor_signals": [],
+            "source_governance_anchor": "explicit_governance_signal",
+            "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+            "needs_verification": true,
+            "vague_region_only": false
+          },
           "needs_human_review": false
         },
         {
@@ -2457,6 +2683,17 @@
             "source_finance_anchor": "none",
             "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
             "needs_verification": false
+          },
+          "governance_status": {
+            "status": "execution_role",
+            "label": "Uitvoeringsrol",
+            "actor_signals": [
+              "uitvoeringspartner"
+            ],
+            "source_governance_anchor": "explicit_governance_signal",
+            "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt.",
+            "needs_verification": false,
+            "vague_region_only": false
           },
           "needs_human_review": false
         }
@@ -2698,6 +2935,15 @@
             "public_wording_guardrail": "Koppel aan de bronroute en verantwoordingsplicht; maak er geen bestedingsruimte van.",
             "needs_verification": false
           },
+          "governance_status": {
+            "status": "review_role",
+            "label": "Review-, monitorings- of toetsrol",
+            "actor_signals": [],
+            "source_governance_anchor": "explicit_governance_signal",
+            "public_wording_guardrail": "Gebruik als toetsing, monitoring of evaluatie; niet als besluitvorming.",
+            "needs_verification": false,
+            "vague_region_only": false
+          },
           "needs_human_review": false
         },
         {
@@ -2736,6 +2982,17 @@
             "source_finance_anchor": "none",
             "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
             "needs_verification": false
+          },
+          "governance_status": {
+            "status": "execution_role",
+            "label": "Uitvoeringsrol",
+            "actor_signals": [
+              "uitvoeringspartner"
+            ],
+            "source_governance_anchor": "explicit_governance_signal",
+            "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt.",
+            "needs_verification": false,
+            "vague_region_only": false
           },
           "needs_human_review": false
         },
@@ -2776,6 +3033,15 @@
             "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
             "needs_verification": false
           },
+          "governance_status": {
+            "status": "not_governance",
+            "label": "Geen zelfstandige governanceclaim",
+            "actor_signals": [],
+            "source_governance_anchor": "none",
+            "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+            "needs_verification": false,
+            "vague_region_only": false
+          },
           "needs_human_review": false
         },
         {
@@ -2814,6 +3080,17 @@
             "source_finance_anchor": "none",
             "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
             "needs_verification": false
+          },
+          "governance_status": {
+            "status": "actor_context",
+            "label": "Actor- of governancecontext",
+            "actor_signals": [
+              "regio"
+            ],
+            "source_governance_anchor": "explicit_governance_signal",
+            "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+            "needs_verification": true,
+            "vague_region_only": true
           },
           "needs_human_review": false
         },
@@ -2854,6 +3131,15 @@
             "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
             "needs_verification": false
           },
+          "governance_status": {
+            "status": "not_governance",
+            "label": "Geen zelfstandige governanceclaim",
+            "actor_signals": [],
+            "source_governance_anchor": "none",
+            "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+            "needs_verification": false,
+            "vague_region_only": false
+          },
           "needs_human_review": false
         },
         {
@@ -2892,6 +3178,15 @@
             "source_finance_anchor": "explicit_finance_signal",
             "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
             "needs_verification": false
+          },
+          "governance_status": {
+            "status": "execution_role",
+            "label": "Uitvoeringsrol",
+            "actor_signals": [],
+            "source_governance_anchor": "explicit_governance_signal",
+            "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt.",
+            "needs_verification": false,
+            "vague_region_only": false
           },
           "needs_human_review": false
         }
@@ -3068,6 +3363,15 @@
             "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
             "needs_verification": false
           },
+          "governance_status": {
+            "status": "not_governance",
+            "label": "Geen zelfstandige governanceclaim",
+            "actor_signals": [],
+            "source_governance_anchor": "none",
+            "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+            "needs_verification": false,
+            "vague_region_only": false
+          },
           "needs_human_review": false
         },
         {
@@ -3106,6 +3410,17 @@
             "source_finance_anchor": "explicit_finance_signal",
             "public_wording_guardrail": "Beschrijf alleen het verdeelmechanisme dat de bron noemt; geen lokale verdeling afleiden.",
             "needs_verification": false
+          },
+          "governance_status": {
+            "status": "execution_role",
+            "label": "Uitvoeringsrol",
+            "actor_signals": [
+              "gemeenteraad"
+            ],
+            "source_governance_anchor": "explicit_governance_signal",
+            "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt.",
+            "needs_verification": false,
+            "vague_region_only": false
           },
           "needs_human_review": false
         },
@@ -3146,6 +3461,17 @@
             "public_wording_guardrail": "Beschrijf alleen het verdeelmechanisme dat de bron noemt; geen lokale verdeling afleiden.",
             "needs_verification": false
           },
+          "governance_status": {
+            "status": "execution_role",
+            "label": "Uitvoeringsrol",
+            "actor_signals": [
+              "gemeente"
+            ],
+            "source_governance_anchor": "explicit_governance_signal",
+            "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt.",
+            "needs_verification": false,
+            "vague_region_only": false
+          },
           "needs_human_review": false
         },
         {
@@ -3184,6 +3510,15 @@
             "source_finance_anchor": "explicit_finance_signal",
             "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
             "needs_verification": false
+          },
+          "governance_status": {
+            "status": "not_governance",
+            "label": "Geen zelfstandige governanceclaim",
+            "actor_signals": [],
+            "source_governance_anchor": "none",
+            "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+            "needs_verification": false,
+            "vague_region_only": false
           },
           "needs_human_review": false
         },
@@ -3224,6 +3559,17 @@
             "public_wording_guardrail": "Beschrijf alleen het verdeelmechanisme dat de bron noemt; geen lokale verdeling afleiden.",
             "needs_verification": false
           },
+          "governance_status": {
+            "status": "approval_role",
+            "label": "Goedkeurings- of vaststellingsrol",
+            "actor_signals": [
+              "regio"
+            ],
+            "source_governance_anchor": "explicit_governance_signal",
+            "public_wording_guardrail": "Gebruik als goedkeurings- of vaststellingsrol; niet automatisch als uitvoeringsverantwoordelijkheid.",
+            "needs_verification": true,
+            "vague_region_only": true
+          },
           "needs_human_review": false
         },
         {
@@ -3262,6 +3608,17 @@
             "source_finance_anchor": "explicit_finance_signal",
             "public_wording_guardrail": "Beschrijf alleen het verdeelmechanisme dat de bron noemt; geen lokale verdeling afleiden.",
             "needs_verification": false
+          },
+          "governance_status": {
+            "status": "approval_role",
+            "label": "Goedkeurings- of vaststellingsrol",
+            "actor_signals": [
+              "gemeente"
+            ],
+            "source_governance_anchor": "explicit_governance_signal",
+            "public_wording_guardrail": "Gebruik als goedkeurings- of vaststellingsrol; niet automatisch als uitvoeringsverantwoordelijkheid.",
+            "needs_verification": false,
+            "vague_region_only": false
           },
           "needs_human_review": false
         }
@@ -3424,6 +3781,15 @@
             "public_wording_guardrail": "Koppel aan de bronroute en verantwoordingsplicht; maak er geen bestedingsruimte van.",
             "needs_verification": false
           },
+          "governance_status": {
+            "status": "review_role",
+            "label": "Review-, monitorings- of toetsrol",
+            "actor_signals": [],
+            "source_governance_anchor": "explicit_governance_signal",
+            "public_wording_guardrail": "Gebruik als toetsing, monitoring of evaluatie; niet als besluitvorming.",
+            "needs_verification": false,
+            "vague_region_only": false
+          },
           "needs_human_review": false
         },
         {
@@ -3462,6 +3828,18 @@
             "source_finance_anchor": "none",
             "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
             "needs_verification": false
+          },
+          "governance_status": {
+            "status": "review_role",
+            "label": "Review-, monitorings- of toetsrol",
+            "actor_signals": [
+              "regio",
+              "gemeente"
+            ],
+            "source_governance_anchor": "explicit_governance_signal",
+            "public_wording_guardrail": "Gebruik als toetsing, monitoring of evaluatie; niet als besluitvorming.",
+            "needs_verification": false,
+            "vague_region_only": false
           },
           "needs_human_review": false
         },
@@ -3502,6 +3880,15 @@
             "public_wording_guardrail": "Koppel aan de bronroute en verantwoordingsplicht; maak er geen bestedingsruimte van.",
             "needs_verification": false
           },
+          "governance_status": {
+            "status": "review_role",
+            "label": "Review-, monitorings- of toetsrol",
+            "actor_signals": [],
+            "source_governance_anchor": "explicit_governance_signal",
+            "public_wording_guardrail": "Gebruik als toetsing, monitoring of evaluatie; niet als besluitvorming.",
+            "needs_verification": false,
+            "vague_region_only": false
+          },
           "needs_human_review": false
         },
         {
@@ -3540,6 +3927,15 @@
             "source_finance_anchor": "none",
             "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
             "needs_verification": false
+          },
+          "governance_status": {
+            "status": "actor_context",
+            "label": "Actor- of governancecontext",
+            "actor_signals": [],
+            "source_governance_anchor": "explicit_governance_signal",
+            "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+            "needs_verification": true,
+            "vague_region_only": false
           },
           "needs_human_review": false
         },
@@ -3580,6 +3976,15 @@
             "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
             "needs_verification": false
           },
+          "governance_status": {
+            "status": "actor_context",
+            "label": "Actor- of governancecontext",
+            "actor_signals": [],
+            "source_governance_anchor": "explicit_governance_signal",
+            "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+            "needs_verification": true,
+            "vague_region_only": false
+          },
           "needs_human_review": false
         },
         {
@@ -3618,6 +4023,17 @@
             "source_finance_anchor": "none",
             "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
             "needs_verification": false
+          },
+          "governance_status": {
+            "status": "execution_role",
+            "label": "Uitvoeringsrol",
+            "actor_signals": [
+              "uitvoeringspartner"
+            ],
+            "source_governance_anchor": "explicit_governance_signal",
+            "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt.",
+            "needs_verification": false,
+            "vague_region_only": false
           },
           "needs_human_review": false
         }
@@ -3772,6 +4188,17 @@
             "public_wording_guardrail": "Gebruik als context; controleer sterkere bronnen voordat hier een financieringsregel van wordt gemaakt.",
             "needs_verification": true
           },
+          "governance_status": {
+            "status": "actor_context",
+            "label": "Actor- of governancecontext",
+            "actor_signals": [
+              "regio"
+            ],
+            "source_governance_anchor": "explicit_governance_signal",
+            "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+            "needs_verification": true,
+            "vague_region_only": true
+          },
           "needs_human_review": true
         },
         {
@@ -3810,6 +4237,15 @@
             "source_finance_anchor": "none",
             "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
             "needs_verification": true
+          },
+          "governance_status": {
+            "status": "not_governance",
+            "label": "Geen zelfstandige governanceclaim",
+            "actor_signals": [],
+            "source_governance_anchor": "none",
+            "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+            "needs_verification": true,
+            "vague_region_only": false
           },
           "needs_human_review": true
         },
@@ -3850,6 +4286,15 @@
             "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
             "needs_verification": true
           },
+          "governance_status": {
+            "status": "not_governance",
+            "label": "Geen zelfstandige governanceclaim",
+            "actor_signals": [],
+            "source_governance_anchor": "none",
+            "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+            "needs_verification": true,
+            "vague_region_only": false
+          },
           "needs_human_review": true
         },
         {
@@ -3888,6 +4333,15 @@
             "source_finance_anchor": "explicit_finance_signal",
             "public_wording_guardrail": "Koppel aan de bronroute en verantwoordingsplicht; maak er geen bestedingsruimte van.",
             "needs_verification": true
+          },
+          "governance_status": {
+            "status": "review_role",
+            "label": "Review-, monitorings- of toetsrol",
+            "actor_signals": [],
+            "source_governance_anchor": "explicit_governance_signal",
+            "public_wording_guardrail": "Gebruik als toetsing, monitoring of evaluatie; niet als besluitvorming.",
+            "needs_verification": true,
+            "vague_region_only": false
           },
           "needs_human_review": true
         }
@@ -4026,6 +4480,18 @@
     },
     {
       "review_item_id": "rvw_007",
+      "reason_code": "actor_context_needs_role_split",
+      "reason_anchor": "review-actor-context-needs-role-split",
+      "reason_label": "actor context needs role split",
+      "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
+      "document_title": "Plan van aanpak 2024-2026 Brede SPUK/GALA Almere",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_008",
       "reason_code": "expected_time_not_deadline",
       "reason_anchor": "review-expected-time-not-deadline",
       "reason_label": "expected time not deadline",
@@ -4037,7 +4503,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_008",
+      "review_item_id": "rvw_009",
       "reason_code": "lower_authority_norm_signal",
       "reason_anchor": "review-lower-authority-norm-signal",
       "reason_label": "lower authority norm signal",
@@ -4049,7 +4515,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_009",
+      "review_item_id": "rvw_010",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -4061,7 +4527,31 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_010",
+      "review_item_id": "rvw_011",
+      "reason_code": "vague_region_actor",
+      "reason_anchor": "review-vague-region-actor",
+      "reason_label": "vague region actor",
+      "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
+      "document_title": "Plan van aanpak 2024-2026 Brede SPUK/GALA Almere",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_012",
+      "reason_code": "actor_context_needs_role_split",
+      "reason_anchor": "review-actor-context-needs-role-split",
+      "reason_label": "actor context needs role split",
+      "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid",
+      "document_title": "Visie Gezondheidsbeleid Almere 2024-2026",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_013",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -4073,7 +4563,7 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_011",
+      "review_item_id": "rvw_014",
       "reason_code": "expected_time_not_deadline",
       "reason_anchor": "review-expected-time-not-deadline",
       "reason_label": "expected time not deadline",
@@ -4085,7 +4575,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_012",
+      "review_item_id": "rvw_015",
       "reason_code": "local_planning_context_not_policy_deadline",
       "reason_anchor": "review-local-planning-context-not-policy-deadline",
       "reason_label": "local planning context not policy deadline",
@@ -4097,7 +4587,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_013",
+      "review_item_id": "rvw_016",
       "reason_code": "lower_authority_norm_signal",
       "reason_anchor": "review-lower-authority-norm-signal",
       "reason_label": "lower authority norm signal",
@@ -4109,7 +4599,19 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_014",
+      "review_item_id": "rvw_017",
+      "reason_code": "actor_context_needs_role_split",
+      "reason_anchor": "review-actor-context-needs-role-split",
+      "reason_label": "actor context needs role split",
+      "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
+      "document_title": "Samen werken aan gezondheid en zorg - Visie gezondheidsbeleid Almere 2024-2026",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_018",
       "reason_code": "expected_time_not_deadline",
       "reason_anchor": "review-expected-time-not-deadline",
       "reason_label": "expected time not deadline",
@@ -4121,7 +4623,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_015",
+      "review_item_id": "rvw_019",
       "reason_code": "finance_context_needs_verification",
       "reason_anchor": "review-finance-context-needs-verification",
       "reason_label": "finance context needs verification",
@@ -4133,7 +4635,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_016",
+      "review_item_id": "rvw_020",
       "reason_code": "lower_authority_norm_signal",
       "reason_anchor": "review-lower-authority-norm-signal",
       "reason_label": "lower authority norm signal",
@@ -4145,7 +4647,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_017",
+      "review_item_id": "rvw_021",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -4157,7 +4659,31 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_018",
+      "review_item_id": "rvw_022",
+      "reason_code": "vague_region_actor",
+      "reason_anchor": "review-vague-region-actor",
+      "reason_label": "vague region actor",
+      "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
+      "document_title": "Samen werken aan gezondheid en zorg - Visie gezondheidsbeleid Almere 2024-2026",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_023",
+      "reason_code": "actor_context_needs_role_split",
+      "reason_anchor": "review-actor-context-needs-role-split",
+      "reason_label": "actor context needs role split",
+      "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd",
+      "document_title": "Raadsvoorstel Visie Gezondheidsbeleid Almere 2024-2026 - geamendeerd",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_024",
       "reason_code": "expected_time_not_deadline",
       "reason_anchor": "review-expected-time-not-deadline",
       "reason_label": "expected time not deadline",
@@ -4169,7 +4695,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_019",
+      "review_item_id": "rvw_025",
       "reason_code": "extraction_noise_detected",
       "reason_anchor": "review-extraction-noise-detected",
       "reason_label": "extraction noise detected",
@@ -4181,7 +4707,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_020",
+      "review_item_id": "rvw_026",
       "reason_code": "finance_context_needs_verification",
       "reason_anchor": "review-finance-context-needs-verification",
       "reason_label": "finance context needs verification",
@@ -4193,7 +4719,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_021",
+      "review_item_id": "rvw_027",
       "reason_code": "lower_authority_norm_signal",
       "reason_anchor": "review-lower-authority-norm-signal",
       "reason_label": "lower authority norm signal",
@@ -4205,7 +4731,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_022",
+      "review_item_id": "rvw_028",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -4217,7 +4743,31 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_023",
+      "review_item_id": "rvw_029",
+      "reason_code": "vague_region_actor",
+      "reason_anchor": "review-vague-region-actor",
+      "reason_label": "vague region actor",
+      "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd",
+      "document_title": "Raadsvoorstel Visie Gezondheidsbeleid Almere 2024-2026 - geamendeerd",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_030",
+      "reason_code": "actor_context_needs_role_split",
+      "reason_anchor": "review-actor-context-needs-role-split",
+      "reason_label": "actor context needs role split",
+      "document_id": "mun_almere_2024_2034_maatschappelijke_agenda",
+      "document_title": "Maatschappelijke agenda 2024-2034",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_031",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -4229,7 +4779,7 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_024",
+      "review_item_id": "rvw_032",
       "reason_code": "expected_time_not_deadline",
       "reason_anchor": "review-expected-time-not-deadline",
       "reason_label": "expected time not deadline",
@@ -4241,7 +4791,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_025",
+      "review_item_id": "rvw_033",
       "reason_code": "local_planning_context_not_policy_deadline",
       "reason_anchor": "review-local-planning-context-not-policy-deadline",
       "reason_label": "local planning context not policy deadline",
@@ -4253,7 +4803,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_026",
+      "review_item_id": "rvw_034",
       "reason_code": "expected_time_not_deadline",
       "reason_anchor": "review-expected-time-not-deadline",
       "reason_label": "expected time not deadline",
@@ -4265,7 +4815,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_027",
+      "review_item_id": "rvw_035",
       "reason_code": "finance_context_needs_verification",
       "reason_anchor": "review-finance-context-needs-verification",
       "reason_label": "finance context needs verification",
@@ -4277,7 +4827,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_028",
+      "review_item_id": "rvw_036",
       "reason_code": "lower_authority_norm_signal",
       "reason_anchor": "review-lower-authority-norm-signal",
       "reason_label": "lower authority norm signal",
@@ -4289,7 +4839,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_029",
+      "review_item_id": "rvw_037",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -4301,7 +4851,19 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_030",
+      "review_item_id": "rvw_038",
+      "reason_code": "actor_context_needs_role_split",
+      "reason_anchor": "review-actor-context-needs-role-split",
+      "reason_label": "actor context needs role split",
+      "document_id": "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie",
+      "document_title": "Opzet procesevaluatie en monitor Sociaal Domein",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_039",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -4313,7 +4875,7 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_031",
+      "review_item_id": "rvw_040",
       "reason_code": "finance_context_needs_verification",
       "reason_anchor": "review-finance-context-needs-verification",
       "reason_label": "finance context needs verification",
@@ -4325,7 +4887,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_032",
+      "review_item_id": "rvw_041",
       "reason_code": "lower_authority_norm_signal",
       "reason_anchor": "review-lower-authority-norm-signal",
       "reason_label": "lower authority norm signal",
@@ -4337,7 +4899,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_033",
+      "review_item_id": "rvw_042",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -4349,7 +4911,19 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_034",
+      "review_item_id": "rvw_043",
+      "reason_code": "actor_context_needs_role_split",
+      "reason_anchor": "review-actor-context-needs-role-split",
+      "reason_label": "actor context needs role split",
+      "document_id": "mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd",
+      "document_title": "Raadsvoorstel Maatschappelijke agenda 2024-2034 - geamendeerd",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_044",
       "reason_code": "lower_authority_norm_signal",
       "reason_anchor": "review-lower-authority-norm-signal",
       "reason_label": "lower authority norm signal",
@@ -4361,7 +4935,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_035",
+      "review_item_id": "rvw_045",
       "reason_code": "lower_authority_norm_signal",
       "reason_anchor": "review-lower-authority-norm-signal",
       "reason_label": "lower authority norm signal",
@@ -4373,7 +4947,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_036",
+      "review_item_id": "rvw_046",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -4385,7 +4959,7 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_037",
+      "review_item_id": "rvw_047",
       "reason_code": "lower_authority_norm_signal",
       "reason_anchor": "review-lower-authority-norm-signal",
       "reason_label": "lower authority norm signal",
@@ -4397,7 +4971,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_038",
+      "review_item_id": "rvw_048",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -4409,7 +4983,19 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_039",
+      "review_item_id": "rvw_049",
+      "reason_code": "actor_context_needs_role_split",
+      "reason_anchor": "review-actor-context-needs-role-split",
+      "reason_label": "actor context needs role split",
+      "document_id": "mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel",
+      "document_title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin - geamendeerd raadsvoorstel",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_050",
       "reason_code": "extraction_noise_detected",
       "reason_anchor": "review-extraction-noise-detected",
       "reason_label": "extraction noise detected",
@@ -4421,7 +5007,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_040",
+      "review_item_id": "rvw_051",
       "reason_code": "finance_context_needs_verification",
       "reason_anchor": "review-finance-context-needs-verification",
       "reason_label": "finance context needs verification",
@@ -4433,7 +5019,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_041",
+      "review_item_id": "rvw_052",
       "reason_code": "lower_authority_norm_signal",
       "reason_anchor": "review-lower-authority-norm-signal",
       "reason_label": "lower authority norm signal",
@@ -4445,7 +5031,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_042",
+      "review_item_id": "rvw_053",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -4457,7 +5043,19 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_043",
+      "review_item_id": "rvw_054",
+      "reason_code": "actor_context_needs_role_split",
+      "reason_anchor": "review-actor-context-needs-role-split",
+      "reason_label": "actor context needs role split",
+      "document_id": "mun_almere_2026_stevige_lokale_teams_raad",
+      "document_title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_055",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -4469,7 +5067,7 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_044",
+      "review_item_id": "rvw_056",
       "reason_code": "local_planning_context_not_policy_deadline",
       "reason_anchor": "review-local-planning-context-not-policy-deadline",
       "reason_label": "local planning context not policy deadline",
@@ -4481,7 +5079,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_045",
+      "review_item_id": "rvw_057",
       "reason_code": "lower_authority_norm_signal",
       "reason_anchor": "review-lower-authority-norm-signal",
       "reason_label": "lower authority norm signal",
@@ -4493,7 +5091,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_046",
+      "review_item_id": "rvw_058",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -4505,7 +5103,19 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_047",
+      "review_item_id": "rvw_059",
+      "reason_code": "actor_context_needs_role_split",
+      "reason_anchor": "review-actor-context-needs-role-split",
+      "reason_label": "actor context needs role split",
+      "document_id": "mun_almere_2026_stevige_lokale_teams_raadsvoorstel",
+      "document_title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin - raadsvoorstel",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_060",
       "reason_code": "extraction_noise_detected",
       "reason_anchor": "review-extraction-noise-detected",
       "reason_label": "extraction noise detected",
@@ -4517,7 +5127,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_048",
+      "review_item_id": "rvw_061",
       "reason_code": "finance_context_needs_verification",
       "reason_anchor": "review-finance-context-needs-verification",
       "reason_label": "finance context needs verification",
@@ -4529,7 +5139,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_049",
+      "review_item_id": "rvw_062",
       "reason_code": "lower_authority_norm_signal",
       "reason_anchor": "review-lower-authority-norm-signal",
       "reason_label": "lower authority norm signal",
@@ -4541,7 +5151,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_050",
+      "review_item_id": "rvw_063",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -4553,7 +5163,19 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_051",
+      "review_item_id": "rvw_064",
+      "reason_code": "actor_context_needs_role_split",
+      "reason_anchor": "review-actor-context-needs-role-split",
+      "reason_label": "actor context needs role split",
+      "document_id": "mun_almere_begroting_2026_webpagina",
+      "document_title": "Begroting 2026",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_065",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -4565,7 +5187,7 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_052",
+      "review_item_id": "rvw_066",
       "reason_code": "finance_context_needs_verification",
       "reason_anchor": "review-finance-context-needs-verification",
       "reason_label": "finance context needs verification",
@@ -4577,7 +5199,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_053",
+      "review_item_id": "rvw_067",
       "reason_code": "local_planning_context_not_policy_deadline",
       "reason_anchor": "review-local-planning-context-not-policy-deadline",
       "reason_label": "local planning context not policy deadline",
@@ -4589,7 +5211,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_054",
+      "review_item_id": "rvw_068",
       "reason_code": "lower_authority_norm_signal",
       "reason_anchor": "review-lower-authority-norm-signal",
       "reason_label": "lower authority norm signal",
@@ -4601,7 +5223,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_055",
+      "review_item_id": "rvw_069",
       "reason_code": "expected_time_not_deadline",
       "reason_anchor": "review-expected-time-not-deadline",
       "reason_label": "expected time not deadline",
@@ -4613,7 +5235,19 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_056",
+      "review_item_id": "rvw_070",
+      "reason_code": "actor_context_needs_role_split",
+      "reason_anchor": "review-actor-context-needs-role-split",
+      "reason_label": "actor context needs role split",
+      "document_id": "mun_almere_pga_seo_businesscase_2024",
+      "document_title": "Naar een positief gezond Almere; Beleidstheorie en businesscase transformatieplan",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_071",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -4625,7 +5259,7 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_057",
+      "review_item_id": "rvw_072",
       "reason_code": "expected_time_not_deadline",
       "reason_anchor": "review-expected-time-not-deadline",
       "reason_label": "expected time not deadline",
@@ -4637,7 +5271,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_058",
+      "review_item_id": "rvw_073",
       "reason_code": "finance_context_needs_verification",
       "reason_anchor": "review-finance-context-needs-verification",
       "reason_label": "finance context needs verification",
@@ -4649,7 +5283,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_059",
+      "review_item_id": "rvw_074",
       "reason_code": "lower_authority_norm_signal",
       "reason_anchor": "review-lower-authority-norm-signal",
       "reason_label": "lower authority norm signal",
@@ -4661,7 +5295,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_060",
+      "review_item_id": "rvw_075",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -4673,7 +5307,31 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_061",
+      "review_item_id": "rvw_076",
+      "reason_code": "vague_region_actor",
+      "reason_anchor": "review-vague-region-actor",
+      "reason_label": "vague region actor",
+      "document_id": "mun_almere_pga_seo_businesscase_2024",
+      "document_title": "Naar een positief gezond Almere; Beleidstheorie en businesscase transformatieplan",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_077",
+      "reason_code": "actor_context_needs_role_split",
+      "reason_anchor": "review-actor-context-needs-role-split",
+      "reason_label": "actor context needs role split",
+      "document_id": "mun_almere_pga_transformatieplan",
+      "document_title": "Transformatieplan Positief Gezond Almere",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_078",
       "reason_code": "finance_context_needs_verification",
       "reason_anchor": "review-finance-context-needs-verification",
       "reason_label": "finance context needs verification",
@@ -4685,7 +5343,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_062",
+      "review_item_id": "rvw_079",
       "reason_code": "lower_authority_norm_signal",
       "reason_anchor": "review-lower-authority-norm-signal",
       "reason_label": "lower authority norm signal",
@@ -4697,7 +5355,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_063",
+      "review_item_id": "rvw_080",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -4709,7 +5367,19 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_064",
+      "review_item_id": "rvw_081",
+      "reason_code": "actor_context_needs_role_split",
+      "reason_anchor": "review-actor-context-needs-role-split",
+      "reason_label": "actor context needs role split",
+      "document_id": "mun_almere_raad_vergaderschema_2026",
+      "document_title": "Vergaderschema Raad van Almere 2026",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_082",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -4721,7 +5391,7 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_065",
+      "review_item_id": "rvw_083",
       "reason_code": "local_planning_context_not_policy_deadline",
       "reason_anchor": "review-local-planning-context-not-policy-deadline",
       "reason_label": "local planning context not policy deadline",
@@ -4733,7 +5403,19 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_066",
+      "review_item_id": "rvw_084",
+      "reason_code": "actor_context_needs_role_split",
+      "reason_anchor": "review-actor-context-needs-role-split",
+      "reason_label": "actor context needs role split",
+      "document_id": "mun_almere_samenwerkingsprojecten",
+      "document_title": "Samenwerkingsprojecten",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_085",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -4745,7 +5427,7 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_067",
+      "review_item_id": "rvw_086",
       "reason_code": "lower_authority_norm_signal",
       "reason_anchor": "review-lower-authority-norm-signal",
       "reason_label": "lower authority norm signal",
@@ -4757,7 +5439,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_068",
+      "review_item_id": "rvw_087",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -4769,7 +5451,19 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_069",
+      "review_item_id": "rvw_088",
+      "reason_code": "actor_context_needs_role_split",
+      "reason_anchor": "review-actor-context-needs-role-split",
+      "reason_label": "actor context needs role split",
+      "document_id": "mun_almere_sociaal_domein_informatiepagina",
+      "document_title": "Informatiepagina Sociaal Domein",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_089",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -4781,7 +5475,7 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_070",
+      "review_item_id": "rvw_090",
       "reason_code": "local_planning_context_not_policy_deadline",
       "reason_anchor": "review-local-planning-context-not-policy-deadline",
       "reason_label": "local planning context not policy deadline",
@@ -4793,7 +5487,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_071",
+      "review_item_id": "rvw_091",
       "reason_code": "lower_authority_norm_signal",
       "reason_anchor": "review-lower-authority-norm-signal",
       "reason_label": "lower authority norm signal",
@@ -4805,7 +5499,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_072",
+      "review_item_id": "rvw_092",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -4817,7 +5511,19 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_073",
+      "review_item_id": "rvw_093",
+      "reason_code": "actor_context_needs_role_split",
+      "reason_anchor": "review-actor-context-needs-role-split",
+      "reason_label": "actor context needs role split",
+      "document_id": "mun_almere_sociale_staat_gateway",
+      "document_title": "Sociale staat van Almere",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_094",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -4829,7 +5535,7 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_074",
+      "review_item_id": "rvw_095",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -4841,7 +5547,7 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_075",
+      "review_item_id": "rvw_096",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -4853,7 +5559,7 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_076",
+      "review_item_id": "rvw_097",
       "reason_code": "lower_authority_norm_signal",
       "reason_anchor": "review-lower-authority-norm-signal",
       "reason_label": "lower authority norm signal",
@@ -4865,7 +5571,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_077",
+      "review_item_id": "rvw_098",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -4877,7 +5583,19 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_078",
+      "review_item_id": "rvw_099",
+      "reason_code": "actor_context_needs_role_split",
+      "reason_anchor": "review-actor-context-needs-role-split",
+      "reason_label": "actor context needs role split",
+      "document_id": "nat_azwa_2025_aanbiedingsbrief",
+      "document_title": "Kamerbrief aanbieding Aanvullend Zorg- en Welzijnsakkoord (AZWA)",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_100",
       "reason_code": "expected_time_not_deadline",
       "reason_anchor": "review-expected-time-not-deadline",
       "reason_label": "expected time not deadline",
@@ -4889,7 +5607,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_079",
+      "review_item_id": "rvw_101",
       "reason_code": "finance_context_needs_verification",
       "reason_anchor": "review-finance-context-needs-verification",
       "reason_label": "finance context needs verification",
@@ -4901,7 +5619,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_080",
+      "review_item_id": "rvw_102",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -4913,7 +5631,19 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_081",
+      "review_item_id": "rvw_103",
+      "reason_code": "actor_context_needs_role_split",
+      "reason_anchor": "review-actor-context-needs-role-split",
+      "reason_label": "actor context needs role split",
+      "document_id": "nat_azwa_2025_definitief",
+      "document_title": "Aanvullend Zorg- en Welzijnsakkoord (AZWA) (Definitief)",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_104",
       "reason_code": "expected_time_not_deadline",
       "reason_anchor": "review-expected-time-not-deadline",
       "reason_label": "expected time not deadline",
@@ -4925,7 +5655,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_082",
+      "review_item_id": "rvw_105",
       "reason_code": "local_planning_context_not_policy_deadline",
       "reason_anchor": "review-local-planning-context-not-policy-deadline",
       "reason_label": "local planning context not policy deadline",
@@ -4937,7 +5667,67 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_083",
+      "review_item_id": "rvw_106",
+      "reason_code": "vague_region_actor",
+      "reason_anchor": "review-vague-region-actor",
+      "reason_label": "vague region actor",
+      "document_id": "nat_azwa_2025_definitief",
+      "document_title": "Aanvullend Zorg- en Welzijnsakkoord (AZWA) (Definitief)",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_107",
+      "reason_code": "actor_context_needs_role_split",
+      "reason_anchor": "review-actor-context-needs-role-split",
+      "reason_label": "actor context needs role split",
+      "document_id": "nat_azwa_2025_onderhandelaarsakkoord",
+      "document_title": "Aanvullend Zorg- en Welzijnsakkoord - onderhandelaarsakkoord",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_108",
+      "reason_code": "vague_region_actor",
+      "reason_anchor": "review-vague-region-actor",
+      "reason_label": "vague region actor",
+      "document_id": "nat_azwa_2025_onderhandelaarsakkoord",
+      "document_title": "Aanvullend Zorg- en Welzijnsakkoord - onderhandelaarsakkoord",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_109",
+      "reason_code": "actor_context_needs_role_split",
+      "reason_anchor": "review-actor-context-needs-role-split",
+      "reason_label": "actor context needs role split",
+      "document_id": "nat_azwa_2026_cw31_kader_d5_d6",
+      "document_title": "CW 3.1 kader basisfunctionaliteiten en basisinfrastructuur D5 en D6",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_110",
+      "reason_code": "vague_region_actor",
+      "reason_anchor": "review-vague-region-actor",
+      "reason_label": "vague region actor",
+      "document_id": "nat_azwa_2026_cw31_kader_d5_d6",
+      "document_title": "CW 3.1 kader basisfunctionaliteiten en basisinfrastructuur D5 en D6",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_111",
       "reason_code": "expected_time_not_deadline",
       "reason_anchor": "review-expected-time-not-deadline",
       "reason_label": "expected time not deadline",
@@ -4949,7 +5739,19 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_084",
+      "review_item_id": "rvw_112",
+      "reason_code": "actor_context_needs_role_split",
+      "reason_anchor": "review-actor-context-needs-role-split",
+      "reason_label": "actor context needs role split",
+      "document_id": "nat_azwa_2026_voortgang_kamerbrief",
+      "document_title": "Kamerbrief inzake voortgang Integraal Zorgakkoord (IZA) en Aanvullend Zorg- en Welzijnsakkoord (AZWA)",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_113",
       "reason_code": "expected_time_not_deadline",
       "reason_anchor": "review-expected-time-not-deadline",
       "reason_label": "expected time not deadline",
@@ -4961,7 +5763,31 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_085",
+      "review_item_id": "rvw_114",
+      "reason_code": "vague_region_actor",
+      "reason_anchor": "review-vague-region-actor",
+      "reason_label": "vague region actor",
+      "document_id": "nat_azwa_2026_voortgang_kamerbrief",
+      "document_title": "Kamerbrief inzake voortgang Integraal Zorgakkoord (IZA) en Aanvullend Zorg- en Welzijnsakkoord (AZWA)",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_115",
+      "reason_code": "actor_context_needs_role_split",
+      "reason_anchor": "review-actor-context-needs-role-split",
+      "reason_label": "actor context needs role split",
+      "document_id": "nat_azwa_format_werkagenda_d5_2026",
+      "document_title": "Format werkagenda basisfunctionaliteiten AZWA",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_116",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -4973,7 +5799,7 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_086",
+      "review_item_id": "rvw_117",
       "reason_code": "lower_authority_norm_signal",
       "reason_anchor": "review-lower-authority-norm-signal",
       "reason_label": "lower authority norm signal",
@@ -4985,7 +5811,31 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_087",
+      "review_item_id": "rvw_118",
+      "reason_code": "vague_region_actor",
+      "reason_anchor": "review-vague-region-actor",
+      "reason_label": "vague region actor",
+      "document_id": "nat_azwa_format_werkagenda_d5_2026",
+      "document_title": "Format werkagenda basisfunctionaliteiten AZWA",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_119",
+      "reason_code": "actor_context_needs_role_split",
+      "reason_anchor": "review-actor-context-needs-role-split",
+      "reason_label": "actor context needs role split",
+      "document_id": "nat_azwa_opdracht_werkagenda_d5_2026",
+      "document_title": "Opdracht voor de werkagenda samenwerking zorg en sociaal domein voor D5 AZWA",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_120",
       "reason_code": "expected_time_not_deadline",
       "reason_anchor": "review-expected-time-not-deadline",
       "reason_label": "expected time not deadline",
@@ -4997,7 +5847,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_088",
+      "review_item_id": "rvw_121",
       "reason_code": "finance_context_needs_verification",
       "reason_anchor": "review-finance-context-needs-verification",
       "reason_label": "finance context needs verification",
@@ -5009,7 +5859,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_089",
+      "review_item_id": "rvw_122",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -5021,7 +5871,31 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_090",
+      "review_item_id": "rvw_123",
+      "reason_code": "vague_region_actor",
+      "reason_anchor": "review-vague-region-actor",
+      "reason_label": "vague region actor",
+      "document_id": "nat_azwa_opdracht_werkagenda_d5_2026",
+      "document_title": "Opdracht voor de werkagenda samenwerking zorg en sociaal domein voor D5 AZWA",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_124",
+      "reason_code": "actor_context_needs_role_split",
+      "reason_anchor": "review-actor-context-needs-role-split",
+      "reason_label": "actor context needs role split",
+      "document_id": "nat_azwa_toelichting_producten_proces_2026",
+      "document_title": "Toelichting producten en proces",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_125",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -5033,7 +5907,7 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_091",
+      "review_item_id": "rvw_126",
       "reason_code": "lower_authority_norm_signal",
       "reason_anchor": "review-lower-authority-norm-signal",
       "reason_label": "lower authority norm signal",
@@ -5045,7 +5919,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_092",
+      "review_item_id": "rvw_127",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -5057,7 +5931,31 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_093",
+      "review_item_id": "rvw_128",
+      "reason_code": "vague_region_actor",
+      "reason_anchor": "review-vague-region-actor",
+      "reason_label": "vague region actor",
+      "document_id": "nat_azwa_toelichting_producten_proces_2026",
+      "document_title": "Toelichting producten en proces",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_129",
+      "reason_code": "actor_context_needs_role_split",
+      "reason_anchor": "review-actor-context-needs-role-split",
+      "reason_label": "actor context needs role split",
+      "document_id": "nat_bzk_gemeentefonds_cyclus",
+      "document_title": "Gemeentefonds",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_130",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -5069,7 +5967,7 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_094",
+      "review_item_id": "rvw_131",
       "reason_code": "local_planning_context_not_policy_deadline",
       "reason_anchor": "review-local-planning-context-not-policy-deadline",
       "reason_label": "local planning context not policy deadline",
@@ -5081,7 +5979,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_095",
+      "review_item_id": "rvw_132",
       "reason_code": "lower_authority_norm_signal",
       "reason_anchor": "review-lower-authority-norm-signal",
       "reason_label": "lower authority norm signal",
@@ -5093,7 +5991,19 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_096",
+      "review_item_id": "rvw_133",
+      "reason_code": "actor_context_needs_role_split",
+      "reason_anchor": "review-actor-context-needs-role-split",
+      "reason_label": "actor context needs role split",
+      "document_id": "nat_dusi_spuk_transformatiemiddelen_2024_2028",
+      "document_title": "Specifieke uitkering transformatiemiddelen IZA & AZWA 2024-2028",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_134",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -5105,7 +6015,7 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_097",
+      "review_item_id": "rvw_135",
       "reason_code": "lower_authority_norm_signal",
       "reason_anchor": "review-lower-authority-norm-signal",
       "reason_label": "lower authority norm signal",
@@ -5117,7 +6027,19 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_098",
+      "review_item_id": "rvw_136",
+      "reason_code": "actor_context_needs_role_split",
+      "reason_anchor": "review-actor-context-needs-role-split",
+      "reason_label": "actor context needs role split",
+      "document_id": "nat_gala_2023_gezond_en_actief_leven",
+      "document_title": "GALA - Gezond en Actief Leven Akkoord",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_137",
       "reason_code": "expected_time_not_deadline",
       "reason_anchor": "review-expected-time-not-deadline",
       "reason_label": "expected time not deadline",
@@ -5129,7 +6051,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_099",
+      "review_item_id": "rvw_138",
       "reason_code": "finance_context_needs_verification",
       "reason_anchor": "review-finance-context-needs-verification",
       "reason_label": "finance context needs verification",
@@ -5141,7 +6063,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_100",
+      "review_item_id": "rvw_139",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -5153,7 +6075,31 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_101",
+      "review_item_id": "rvw_140",
+      "reason_code": "vague_region_actor",
+      "reason_anchor": "review-vague-region-actor",
+      "reason_label": "vague region actor",
+      "document_id": "nat_gala_2023_gezond_en_actief_leven",
+      "document_title": "GALA - Gezond en Actief Leven Akkoord",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_141",
+      "reason_code": "actor_context_needs_role_split",
+      "reason_anchor": "review-actor-context-needs-role-split",
+      "reason_label": "actor context needs role split",
+      "document_id": "nat_iza_2022_integraal_zorgakkoord",
+      "document_title": "Integraal Zorgakkoord: Samen werken aan gezonde zorg",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_142",
       "reason_code": "expected_time_not_deadline",
       "reason_anchor": "review-expected-time-not-deadline",
       "reason_label": "expected time not deadline",
@@ -5165,7 +6111,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_102",
+      "review_item_id": "rvw_143",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -5177,7 +6123,19 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_103",
+      "review_item_id": "rvw_144",
+      "reason_code": "actor_context_needs_role_split",
+      "reason_anchor": "review-actor-context-needs-role-split",
+      "reason_label": "actor context needs role split",
+      "document_id": "nat_sociaalwerknl_financiering_iza_azwa_2025",
+      "document_title": "Financiering IZA en AZWA: hoe zit het precies?",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_145",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -5189,7 +6147,7 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_104",
+      "review_item_id": "rvw_146",
       "reason_code": "expected_time_not_deadline",
       "reason_anchor": "review-expected-time-not-deadline",
       "reason_label": "expected time not deadline",
@@ -5201,7 +6159,19 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_105",
+      "review_item_id": "rvw_147",
+      "reason_code": "governance_gap",
+      "reason_anchor": "review-governance-gap",
+      "reason_label": "governance gap",
+      "document_id": "nat_sociaalwerknl_financiering_iza_azwa_2025",
+      "document_title": "Financiering IZA en AZWA: hoe zit het precies?",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_148",
       "reason_code": "local_funding_gap",
       "reason_anchor": "review-local-funding-gap",
       "reason_label": "local funding gap",
@@ -5213,7 +6183,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_106",
+      "review_item_id": "rvw_149",
       "reason_code": "lower_authority_norm_signal",
       "reason_anchor": "review-lower-authority-norm-signal",
       "reason_label": "lower authority norm signal",
@@ -5225,7 +6195,31 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_107",
+      "review_item_id": "rvw_150",
+      "reason_code": "actor_context_needs_role_split",
+      "reason_anchor": "review-actor-context-needs-role-split",
+      "reason_label": "actor context needs role split",
+      "document_id": "nat_tsd_basisfuncties_lokale_teams",
+      "document_title": "Basisfuncties voor lokale teams",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_151",
+      "reason_code": "actor_context_needs_role_split",
+      "reason_anchor": "review-actor-context-needs-role-split",
+      "reason_label": "actor context needs role split",
+      "document_id": "nat_vng_azwa_faq_middelen",
+      "document_title": "Welke middelen zijn beschikbaar in het AZWA en hoe worden deze middelen verdeeld?",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_152",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -5237,7 +6231,7 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_108",
+      "review_item_id": "rvw_153",
       "reason_code": "lower_authority_norm_signal",
       "reason_anchor": "review-lower-authority-norm-signal",
       "reason_label": "lower authority norm signal",
@@ -5249,7 +6243,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_109",
+      "review_item_id": "rvw_154",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -5261,7 +6255,31 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_110",
+      "review_item_id": "rvw_155",
+      "reason_code": "vague_region_actor",
+      "reason_anchor": "review-vague-region-actor",
+      "reason_label": "vague region actor",
+      "document_id": "nat_vng_azwa_faq_middelen",
+      "document_title": "Welke middelen zijn beschikbaar in het AZWA en hoe worden deze middelen verdeeld?",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_156",
+      "reason_code": "actor_context_needs_role_split",
+      "reason_anchor": "review-actor-context-needs-role-split",
+      "reason_label": "actor context needs role split",
+      "document_id": "nat_vng_azwa_faq_uitvoeringscapaciteit",
+      "document_title": "Is er rekening gehouden met de benodigde uitvoeringscapaciteit van gemeenten bij het AZWA?",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_157",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -5273,7 +6291,7 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_111",
+      "review_item_id": "rvw_158",
       "reason_code": "lower_authority_norm_signal",
       "reason_anchor": "review-lower-authority-norm-signal",
       "reason_label": "lower authority norm signal",
@@ -5285,7 +6303,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_112",
+      "review_item_id": "rvw_159",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -5297,7 +6315,19 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_113",
+      "review_item_id": "rvw_160",
+      "reason_code": "actor_context_needs_role_split",
+      "reason_anchor": "review-actor-context-needs-role-split",
+      "reason_label": "actor context needs role split",
+      "document_id": "nat_vng_brief_azwa_financiering_webpagina_2026",
+      "document_title": "AZWA-financiering voor gemeenten (Zorgakkoord)",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_161",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -5309,7 +6339,7 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_114",
+      "review_item_id": "rvw_162",
       "reason_code": "finance_context_needs_verification",
       "reason_anchor": "review-finance-context-needs-verification",
       "reason_label": "finance context needs verification",
@@ -5321,7 +6351,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_115",
+      "review_item_id": "rvw_163",
       "reason_code": "local_planning_context_not_policy_deadline",
       "reason_anchor": "review-local-planning-context-not-policy-deadline",
       "reason_label": "local planning context not policy deadline",
@@ -5333,7 +6363,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_116",
+      "review_item_id": "rvw_164",
       "reason_code": "lower_authority_norm_signal",
       "reason_anchor": "review-lower-authority-norm-signal",
       "reason_label": "lower authority norm signal",
@@ -5345,7 +6375,19 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_117",
+      "review_item_id": "rvw_165",
+      "reason_code": "actor_context_needs_role_split",
+      "reason_anchor": "review-actor-context-needs-role-split",
+      "reason_label": "actor context needs role split",
+      "document_id": "nat_vng_gezond_en_actief_leven_2026",
+      "document_title": "Gezond en actief leven",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_166",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -5357,7 +6399,7 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_118",
+      "review_item_id": "rvw_167",
       "reason_code": "expected_time_not_deadline",
       "reason_anchor": "review-expected-time-not-deadline",
       "reason_label": "expected time not deadline",
@@ -5369,7 +6411,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_119",
+      "review_item_id": "rvw_168",
       "reason_code": "finance_context_needs_verification",
       "reason_anchor": "review-finance-context-needs-verification",
       "reason_label": "finance context needs verification",
@@ -5381,7 +6423,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_120",
+      "review_item_id": "rvw_169",
       "reason_code": "lower_authority_norm_signal",
       "reason_anchor": "review-lower-authority-norm-signal",
       "reason_label": "lower authority norm signal",
@@ -5393,7 +6435,31 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_121",
+      "review_item_id": "rvw_170",
+      "reason_code": "vague_region_actor",
+      "reason_anchor": "review-vague-region-actor",
+      "reason_label": "vague region actor",
+      "document_id": "nat_vng_gezond_en_actief_leven_2026",
+      "document_title": "Gezond en actief leven",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_171",
+      "reason_code": "actor_context_needs_role_split",
+      "reason_anchor": "review-actor-context-needs-role-split",
+      "reason_label": "actor context needs role split",
+      "document_id": "nat_vng_ledenbrief_azwa_financiering_2026",
+      "document_title": "AZWA-financiering voor gemeenten (Zorgakkoord)",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_172",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -5405,7 +6471,7 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_122",
+      "review_item_id": "rvw_173",
       "reason_code": "finance_context_needs_verification",
       "reason_anchor": "review-finance-context-needs-verification",
       "reason_label": "finance context needs verification",
@@ -5417,7 +6483,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_123",
+      "review_item_id": "rvw_174",
       "reason_code": "lower_authority_norm_signal",
       "reason_anchor": "review-lower-authority-norm-signal",
       "reason_label": "lower authority norm signal",
@@ -5429,7 +6495,31 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_124",
+      "review_item_id": "rvw_175",
+      "reason_code": "vague_region_actor",
+      "reason_anchor": "review-vague-region-actor",
+      "reason_label": "vague region actor",
+      "document_id": "nat_vng_ledenbrief_azwa_financiering_2026",
+      "document_title": "AZWA-financiering voor gemeenten (Zorgakkoord)",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_176",
+      "reason_code": "actor_context_needs_role_split",
+      "reason_anchor": "review-actor-context-needs-role-split",
+      "reason_label": "actor context needs role split",
+      "document_id": "nat_vng_ledenbrief_onderhandelaarsakkoord_azwa_2025",
+      "document_title": "Ledenbrief onderhandelaarsakkoord AZWA",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_177",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -5441,7 +6531,7 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_125",
+      "review_item_id": "rvw_178",
       "reason_code": "expected_time_not_deadline",
       "reason_anchor": "review-expected-time-not-deadline",
       "reason_label": "expected time not deadline",
@@ -5453,7 +6543,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_126",
+      "review_item_id": "rvw_179",
       "reason_code": "finance_context_needs_verification",
       "reason_anchor": "review-finance-context-needs-verification",
       "reason_label": "finance context needs verification",
@@ -5465,7 +6555,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_127",
+      "review_item_id": "rvw_180",
       "reason_code": "local_planning_context_not_policy_deadline",
       "reason_anchor": "review-local-planning-context-not-policy-deadline",
       "reason_label": "local planning context not policy deadline",
@@ -5477,7 +6567,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_128",
+      "review_item_id": "rvw_181",
       "reason_code": "lower_authority_norm_signal",
       "reason_anchor": "review-lower-authority-norm-signal",
       "reason_label": "lower authority norm signal",
@@ -5489,7 +6579,19 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_129",
+      "review_item_id": "rvw_182",
+      "reason_code": "actor_context_needs_role_split",
+      "reason_anchor": "review-actor-context-needs-role-split",
+      "reason_label": "actor context needs role split",
+      "document_id": "nat_vng_richtinggevend_kader_toegang_lokale_teams",
+      "document_title": "Richtinggevend kader toegang, lokale teams en integrale dienstverlening",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_183",
       "reason_code": "expected_time_not_deadline",
       "reason_anchor": "review-expected-time-not-deadline",
       "reason_label": "expected time not deadline",
@@ -5501,7 +6603,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_130",
+      "review_item_id": "rvw_184",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -5513,7 +6615,31 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_131",
+      "review_item_id": "rvw_185",
+      "reason_code": "actor_context_needs_role_split",
+      "reason_anchor": "review-actor-context-needs-role-split",
+      "reason_label": "actor context needs role split",
+      "document_id": "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026",
+      "document_title": "AZWA-afspraken D5 en D6 en financieringsinstrument",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_186",
+      "reason_code": "actor_context_needs_role_split",
+      "reason_anchor": "review-actor-context-needs-role-split",
+      "reason_label": "actor context needs role split",
+      "document_id": "nat_wetten_spuk_transformatiemiddelen_regeling",
+      "document_title": "Regeling specifieke uitkering transformatiemiddelen IZA & AZWA 2024-2028",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_187",
       "reason_code": "double_counting_risk",
       "reason_anchor": "review-double-counting-risk",
       "reason_label": "double counting risk",
@@ -5525,7 +6651,19 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_132",
+      "review_item_id": "rvw_188",
+      "reason_code": "actor_context_needs_role_split",
+      "reason_anchor": "review-actor-context-needs-role-split",
+      "reason_label": "actor context needs role split",
+      "document_id": "nat_zorgakkoorden_azwa_programmapagina_2025",
+      "document_title": "Aanvullend Zorg- en Welzijnsakkoord",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_189",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -5537,7 +6675,7 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_133",
+      "review_item_id": "rvw_190",
       "reason_code": "finance_context_needs_verification",
       "reason_anchor": "review-finance-context-needs-verification",
       "reason_label": "finance context needs verification",
@@ -5549,7 +6687,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_134",
+      "review_item_id": "rvw_191",
       "reason_code": "lower_authority_norm_signal",
       "reason_anchor": "review-lower-authority-norm-signal",
       "reason_label": "lower authority norm signal",
@@ -5561,7 +6699,31 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_135",
+      "review_item_id": "rvw_192",
+      "reason_code": "vague_region_actor",
+      "reason_anchor": "review-vague-region-actor",
+      "reason_label": "vague region actor",
+      "document_id": "nat_zorgakkoorden_azwa_programmapagina_2025",
+      "document_title": "Aanvullend Zorg- en Welzijnsakkoord",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_193",
+      "reason_code": "actor_context_needs_role_split",
+      "reason_anchor": "review-actor-context-needs-role-split",
+      "reason_label": "actor context needs role split",
+      "document_id": "reg_flevoland_2023_regiobeeld",
+      "document_title": "Regiobeeld Flevoland 2023",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_194",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -5573,7 +6735,7 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_136",
+      "review_item_id": "rvw_195",
       "reason_code": "finance_context_needs_verification",
       "reason_anchor": "review-finance-context-needs-verification",
       "reason_label": "finance context needs verification",
@@ -5585,7 +6747,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_137",
+      "review_item_id": "rvw_196",
       "reason_code": "lower_authority_norm_signal",
       "reason_anchor": "review-lower-authority-norm-signal",
       "reason_label": "lower authority norm signal",
@@ -5597,7 +6759,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_138",
+      "review_item_id": "rvw_197",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -5609,7 +6771,19 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_139",
+      "review_item_id": "rvw_198",
+      "reason_code": "actor_context_needs_role_split",
+      "reason_anchor": "review-actor-context-needs-role-split",
+      "reason_label": "actor context needs role split",
+      "document_id": "reg_flevoland_2023_regioplan_iza",
+      "document_title": "Zorgzaam Flevoland 2023 Regioplan IZA Flevoland",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_199",
       "reason_code": "expected_time_not_deadline",
       "reason_anchor": "review-expected-time-not-deadline",
       "reason_label": "expected time not deadline",
@@ -5621,7 +6795,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_140",
+      "review_item_id": "rvw_200",
       "reason_code": "finance_context_needs_verification",
       "reason_anchor": "review-finance-context-needs-verification",
       "reason_label": "finance context needs verification",
@@ -5633,7 +6807,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_141",
+      "review_item_id": "rvw_201",
       "reason_code": "lower_authority_norm_signal",
       "reason_anchor": "review-lower-authority-norm-signal",
       "reason_label": "lower authority norm signal",
@@ -5645,7 +6819,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_142",
+      "review_item_id": "rvw_202",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -5657,7 +6831,19 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_143",
+      "review_item_id": "rvw_203",
+      "reason_code": "vague_region_actor",
+      "reason_anchor": "review-vague-region-actor",
+      "reason_label": "vague region actor",
+      "document_id": "reg_flevoland_2023_regioplan_iza",
+      "document_title": "Zorgzaam Flevoland 2023 Regioplan IZA Flevoland",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_204",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -5669,7 +6855,7 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_144",
+      "review_item_id": "rvw_205",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -5681,7 +6867,19 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_145",
+      "review_item_id": "rvw_206",
+      "reason_code": "actor_context_needs_role_split",
+      "reason_anchor": "review-actor-context-needs-role-split",
+      "reason_label": "actor context needs role split",
+      "document_id": "reg_ggd_flevoland_begroting_2026",
+      "document_title": "Begroting 2026 GGD Flevoland",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_207",
       "reason_code": "expected_time_not_deadline",
       "reason_anchor": "review-expected-time-not-deadline",
       "reason_label": "expected time not deadline",
@@ -5693,7 +6891,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_146",
+      "review_item_id": "rvw_208",
       "reason_code": "finance_context_needs_verification",
       "reason_anchor": "review-finance-context-needs-verification",
       "reason_label": "finance context needs verification",
@@ -5705,7 +6903,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_147",
+      "review_item_id": "rvw_209",
       "reason_code": "lower_authority_norm_signal",
       "reason_anchor": "review-lower-authority-norm-signal",
       "reason_label": "lower authority norm signal",
@@ -5717,7 +6915,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_148",
+      "review_item_id": "rvw_210",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -5729,7 +6927,19 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_149",
+      "review_item_id": "rvw_211",
+      "reason_code": "actor_context_needs_role_split",
+      "reason_anchor": "review-actor-context-needs-role-split",
+      "reason_label": "actor context needs role split",
+      "document_id": "reg_ggd_flevoland_jgz_almere_profile",
+      "document_title": "Profiel Jeugdgezondheidszorg",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_212",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -5741,7 +6951,7 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_150",
+      "review_item_id": "rvw_213",
       "reason_code": "lower_authority_norm_signal",
       "reason_anchor": "review-lower-authority-norm-signal",
       "reason_label": "lower authority norm signal",
@@ -5753,7 +6963,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_151",
+      "review_item_id": "rvw_214",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -5765,7 +6975,19 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_152",
+      "review_item_id": "rvw_215",
+      "reason_code": "actor_context_needs_role_split",
+      "reason_anchor": "review-actor-context-needs-role-split",
+      "reason_label": "actor context needs role split",
+      "document_id": "reg_ggd_flevoland_kennis_en_advies",
+      "document_title": "Kennis en Advies",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_216",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -5777,7 +6999,7 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_153",
+      "review_item_id": "rvw_217",
       "reason_code": "lower_authority_norm_signal",
       "reason_anchor": "review-lower-authority-norm-signal",
       "reason_label": "lower authority norm signal",
@@ -5789,7 +7011,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_154",
+      "review_item_id": "rvw_218",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -5801,7 +7023,19 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_155",
+      "review_item_id": "rvw_219",
+      "reason_code": "actor_context_needs_role_split",
+      "reason_anchor": "review-actor-context-needs-role-split",
+      "reason_label": "actor context needs role split",
+      "document_id": "reg_ggd_flevoland_valpreventie_almere",
+      "document_title": "Valpreventie Gemeente Almere",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_220",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -5813,7 +7047,7 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_156",
+      "review_item_id": "rvw_221",
       "reason_code": "lower_authority_norm_signal",
       "reason_anchor": "review-lower-authority-norm-signal",
       "reason_label": "lower authority norm signal",
@@ -5825,7 +7059,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_157",
+      "review_item_id": "rvw_222",
       "reason_code": "municipality_relevance_inferred",
       "reason_anchor": "review-municipality-relevance-inferred",
       "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -5837,7 +7071,19 @@
       "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
     },
     {
-      "review_item_id": "rvw_158",
+      "review_item_id": "rvw_223",
+      "reason_code": "actor_context_needs_role_split",
+      "reason_anchor": "review-actor-context-needs-role-split",
+      "reason_label": "actor context needs role split",
+      "document_id": "reg_zonmw_doorontwikkeling_zorgzaam_flevoland",
+      "document_title": "Doorontwikkeling Zorgzaam Flevoland naar een toekomstbestendige samenwerkingsstructuur",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_224",
       "reason_code": "authority_unclear",
       "reason_anchor": "review-authority-unclear",
       "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -5849,7 +7095,7 @@
       "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
     },
     {
-      "review_item_id": "rvw_159",
+      "review_item_id": "rvw_225",
       "reason_code": "expected_time_not_deadline",
       "reason_anchor": "review-expected-time-not-deadline",
       "reason_label": "expected time not deadline",
@@ -5861,7 +7107,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_160",
+      "review_item_id": "rvw_226",
       "reason_code": "finance_context_needs_verification",
       "reason_anchor": "review-finance-context-needs-verification",
       "reason_label": "finance context needs verification",
@@ -5873,7 +7119,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_161",
+      "review_item_id": "rvw_227",
       "reason_code": "lower_authority_norm_signal",
       "reason_anchor": "review-lower-authority-norm-signal",
       "reason_label": "lower authority norm signal",
@@ -5885,7 +7131,19 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_162",
+      "review_item_id": "rvw_228",
+      "reason_code": "vague_region_actor",
+      "reason_anchor": "review-vague-region-actor",
+      "reason_label": "vague region actor",
+      "document_id": "reg_zonmw_doorontwikkeling_zorgzaam_flevoland",
+      "document_title": "Doorontwikkeling Zorgzaam Flevoland naar een toekomstbestendige samenwerkingsstructuur",
+      "topic": null,
+      "topic_label": null,
+      "summary": "Voor deze bronrelatie is nog menselijke duiding nodig omdat begrippen, definities of lokale vertalingen in meerdere contexten worden gebruikt.",
+      "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
+    },
+    {
+      "review_item_id": "rvw_229",
       "reason_code": "table_content_not_promoted",
       "reason_anchor": "review-table-content-not-promoted",
       "reason_label": "table content not promoted",
@@ -5897,7 +7155,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_163",
+      "review_item_id": "rvw_230",
       "reason_code": "unresolved_conflict",
       "reason_anchor": "review-unresolved-conflict",
       "reason_label": "begrips- of interpretatieduiding nodig",
@@ -5909,7 +7167,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_164",
+      "review_item_id": "rvw_231",
       "reason_code": "unresolved_conflict",
       "reason_anchor": "review-unresolved-conflict",
       "reason_label": "begrips- of interpretatieduiding nodig",
@@ -5921,7 +7179,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_165",
+      "review_item_id": "rvw_232",
       "reason_code": "unresolved_conflict",
       "reason_anchor": "review-unresolved-conflict",
       "reason_label": "begrips- of interpretatieduiding nodig",
@@ -5933,7 +7191,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_166",
+      "review_item_id": "rvw_233",
       "reason_code": "unresolved_conflict",
       "reason_anchor": "review-unresolved-conflict",
       "reason_label": "begrips- of interpretatieduiding nodig",
@@ -5945,7 +7203,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_167",
+      "review_item_id": "rvw_234",
       "reason_code": "unresolved_conflict",
       "reason_anchor": "review-unresolved-conflict",
       "reason_label": "begrips- of interpretatieduiding nodig",
@@ -5957,7 +7215,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_168",
+      "review_item_id": "rvw_235",
       "reason_code": "unresolved_conflict",
       "reason_anchor": "review-unresolved-conflict",
       "reason_label": "begrips- of interpretatieduiding nodig",
@@ -5969,7 +7227,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_169",
+      "review_item_id": "rvw_236",
       "reason_code": "unresolved_conflict",
       "reason_anchor": "review-unresolved-conflict",
       "reason_label": "begrips- of interpretatieduiding nodig",
@@ -5981,7 +7239,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_170",
+      "review_item_id": "rvw_237",
       "reason_code": "unresolved_conflict",
       "reason_anchor": "review-unresolved-conflict",
       "reason_label": "begrips- of interpretatieduiding nodig",
@@ -5993,7 +7251,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_171",
+      "review_item_id": "rvw_238",
       "reason_code": "unresolved_conflict",
       "reason_anchor": "review-unresolved-conflict",
       "reason_label": "begrips- of interpretatieduiding nodig",
@@ -6005,7 +7263,7 @@
       "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
     },
     {
-      "review_item_id": "rvw_172",
+      "review_item_id": "rvw_239",
       "reason_code": "unresolved_conflict",
       "reason_anchor": "review-unresolved-conflict",
       "reason_label": "begrips- of interpretatieduiding nodig",
@@ -6025,7 +7283,7 @@
       "summary": "Brondocumenten met lagere autoriteit vragen expliciete bronduiding in menselijke samenvattingen.",
       "items": [
         {
-          "review_item_id": "rvw_010",
+          "review_item_id": "rvw_013",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -6037,7 +7295,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_023",
+          "review_item_id": "rvw_031",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -6049,7 +7307,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_030",
+          "review_item_id": "rvw_039",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -6061,7 +7319,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_043",
+          "review_item_id": "rvw_055",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -6073,7 +7331,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_051",
+          "review_item_id": "rvw_065",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -6085,7 +7343,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_056",
+          "review_item_id": "rvw_071",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -6097,7 +7355,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_064",
+          "review_item_id": "rvw_082",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -6109,7 +7367,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_066",
+          "review_item_id": "rvw_085",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -6121,7 +7379,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_069",
+          "review_item_id": "rvw_089",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -6133,7 +7391,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_073",
+          "review_item_id": "rvw_094",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -6145,7 +7403,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_075",
+          "review_item_id": "rvw_096",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -6157,7 +7415,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_085",
+          "review_item_id": "rvw_116",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -6169,7 +7427,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_090",
+          "review_item_id": "rvw_125",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -6181,7 +7439,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_093",
+          "review_item_id": "rvw_130",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -6193,7 +7451,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_096",
+          "review_item_id": "rvw_134",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -6205,7 +7463,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_103",
+          "review_item_id": "rvw_145",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -6217,7 +7475,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_107",
+          "review_item_id": "rvw_152",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -6229,7 +7487,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_110",
+          "review_item_id": "rvw_157",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -6241,7 +7499,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_113",
+          "review_item_id": "rvw_161",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -6253,7 +7511,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_117",
+          "review_item_id": "rvw_166",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -6265,7 +7523,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_121",
+          "review_item_id": "rvw_172",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -6277,7 +7535,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_124",
+          "review_item_id": "rvw_177",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -6289,7 +7547,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_132",
+          "review_item_id": "rvw_189",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -6301,7 +7559,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_135",
+          "review_item_id": "rvw_194",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -6313,7 +7571,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_143",
+          "review_item_id": "rvw_204",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -6325,7 +7583,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_144",
+          "review_item_id": "rvw_205",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -6337,7 +7595,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_149",
+          "review_item_id": "rvw_212",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -6349,7 +7607,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_152",
+          "review_item_id": "rvw_216",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -6361,7 +7619,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_155",
+          "review_item_id": "rvw_220",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -6373,7 +7631,7 @@
           "recommended_action": "Gebruik dit voorlopig als context en benoem de bron expliciet, tenzij een sterkere bron dezelfde lijn bevestigt."
         },
         {
-          "review_item_id": "rvw_158",
+          "review_item_id": "rvw_224",
           "reason_code": "authority_unclear",
           "reason_anchor": "review-authority-unclear",
           "reason_label": "lagere autoriteit vraagt menselijke duiding",
@@ -6393,7 +7651,7 @@
       "summary": "Er is een landelijk of regionaal spoor zichtbaar, maar in openbare Almere-documenten is lokale overname nog niet expliciet vastgelegd.",
       "items": [
         {
-          "review_item_id": "rvw_009",
+          "review_item_id": "rvw_010",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -6405,7 +7663,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_017",
+          "review_item_id": "rvw_021",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -6417,7 +7675,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_022",
+          "review_item_id": "rvw_028",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -6429,7 +7687,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_029",
+          "review_item_id": "rvw_037",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -6441,7 +7699,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_033",
+          "review_item_id": "rvw_042",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -6453,7 +7711,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_036",
+          "review_item_id": "rvw_046",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -6465,7 +7723,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_038",
+          "review_item_id": "rvw_048",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -6477,7 +7735,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_042",
+          "review_item_id": "rvw_053",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -6489,7 +7747,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_046",
+          "review_item_id": "rvw_058",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -6501,7 +7759,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_050",
+          "review_item_id": "rvw_063",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -6513,7 +7771,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_060",
+          "review_item_id": "rvw_075",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -6525,7 +7783,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_063",
+          "review_item_id": "rvw_080",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -6537,7 +7795,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_068",
+          "review_item_id": "rvw_087",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -6549,7 +7807,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_072",
+          "review_item_id": "rvw_092",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -6561,7 +7819,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_074",
+          "review_item_id": "rvw_095",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -6573,7 +7831,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_077",
+          "review_item_id": "rvw_098",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -6585,7 +7843,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_080",
+          "review_item_id": "rvw_102",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -6597,7 +7855,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_089",
+          "review_item_id": "rvw_122",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -6609,7 +7867,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_092",
+          "review_item_id": "rvw_127",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -6621,7 +7879,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_100",
+          "review_item_id": "rvw_139",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -6633,7 +7891,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_102",
+          "review_item_id": "rvw_143",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -6645,7 +7903,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_109",
+          "review_item_id": "rvw_154",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -6657,7 +7915,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_112",
+          "review_item_id": "rvw_159",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -6669,7 +7927,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_130",
+          "review_item_id": "rvw_184",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -6681,7 +7939,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_138",
+          "review_item_id": "rvw_197",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -6693,7 +7951,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_142",
+          "review_item_id": "rvw_202",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -6705,7 +7963,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_148",
+          "review_item_id": "rvw_210",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -6717,7 +7975,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_151",
+          "review_item_id": "rvw_214",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -6729,7 +7987,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_154",
+          "review_item_id": "rvw_218",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -6741,7 +7999,7 @@
           "recommended_action": "Beoordeel of Almere deze lijn bestuurlijk of beleidsmatig expliciet wil overnemen in openbare stukken."
         },
         {
-          "review_item_id": "rvw_157",
+          "review_item_id": "rvw_222",
           "reason_code": "municipality_relevance_inferred",
           "reason_anchor": "review-municipality-relevance-inferred",
           "reason_label": "lokale overname is nog niet expliciet zichtbaar",
@@ -6761,7 +8019,7 @@
       "summary": "Begrippen of lokale vertalingen worden in meerdere contexten gebruikt en vragen bestuurlijke of beleidsmatige duiding.",
       "items": [
         {
-          "review_item_id": "rvw_163",
+          "review_item_id": "rvw_230",
           "reason_code": "unresolved_conflict",
           "reason_anchor": "review-unresolved-conflict",
           "reason_label": "begrips- of interpretatieduiding nodig",
@@ -6773,7 +8031,7 @@
           "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
         },
         {
-          "review_item_id": "rvw_164",
+          "review_item_id": "rvw_231",
           "reason_code": "unresolved_conflict",
           "reason_anchor": "review-unresolved-conflict",
           "reason_label": "begrips- of interpretatieduiding nodig",
@@ -6785,7 +8043,7 @@
           "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
         },
         {
-          "review_item_id": "rvw_165",
+          "review_item_id": "rvw_232",
           "reason_code": "unresolved_conflict",
           "reason_anchor": "review-unresolved-conflict",
           "reason_label": "begrips- of interpretatieduiding nodig",
@@ -6797,7 +8055,7 @@
           "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
         },
         {
-          "review_item_id": "rvw_166",
+          "review_item_id": "rvw_233",
           "reason_code": "unresolved_conflict",
           "reason_anchor": "review-unresolved-conflict",
           "reason_label": "begrips- of interpretatieduiding nodig",
@@ -6809,7 +8067,7 @@
           "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
         },
         {
-          "review_item_id": "rvw_167",
+          "review_item_id": "rvw_234",
           "reason_code": "unresolved_conflict",
           "reason_anchor": "review-unresolved-conflict",
           "reason_label": "begrips- of interpretatieduiding nodig",
@@ -6821,7 +8079,7 @@
           "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
         },
         {
-          "review_item_id": "rvw_168",
+          "review_item_id": "rvw_235",
           "reason_code": "unresolved_conflict",
           "reason_anchor": "review-unresolved-conflict",
           "reason_label": "begrips- of interpretatieduiding nodig",
@@ -6833,7 +8091,7 @@
           "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
         },
         {
-          "review_item_id": "rvw_169",
+          "review_item_id": "rvw_236",
           "reason_code": "unresolved_conflict",
           "reason_anchor": "review-unresolved-conflict",
           "reason_label": "begrips- of interpretatieduiding nodig",
@@ -6845,7 +8103,7 @@
           "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
         },
         {
-          "review_item_id": "rvw_170",
+          "review_item_id": "rvw_237",
           "reason_code": "unresolved_conflict",
           "reason_anchor": "review-unresolved-conflict",
           "reason_label": "begrips- of interpretatieduiding nodig",
@@ -6857,7 +8115,7 @@
           "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
         },
         {
-          "review_item_id": "rvw_171",
+          "review_item_id": "rvw_238",
           "reason_code": "unresolved_conflict",
           "reason_anchor": "review-unresolved-conflict",
           "reason_label": "begrips- of interpretatieduiding nodig",
@@ -6869,7 +8127,7 @@
           "recommended_action": "Maak expliciet welke beleidsdefinitie wordt bedoeld en hoe de landelijke basis zich verhoudt tot de lokale of regionale vertaling."
         },
         {
-          "review_item_id": "rvw_172",
+          "review_item_id": "rvw_239",
           "reason_code": "unresolved_conflict",
           "reason_anchor": "review-unresolved-conflict",
           "reason_label": "begrips- of interpretatieduiding nodig",
@@ -6947,6 +8205,15 @@
         "public_wording_guardrail": "Koppel aan de bronroute en verantwoordingsplicht; maak er geen bestedingsruimte van.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "review_role",
+        "label": "Review-, monitorings- of toetsrol",
+        "actor_signals": [],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als toetsing, monitoring of evaluatie; niet als besluitvorming.",
+        "needs_verification": false,
+        "vague_region_only": false
+      },
       "needs_human_review": false
     },
     {
@@ -6985,6 +8252,15 @@
         "source_finance_anchor": "explicit_finance_signal",
         "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
         "needs_verification": false
+      },
+      "governance_status": {
+        "status": "execution_role",
+        "label": "Uitvoeringsrol",
+        "actor_signals": [],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt.",
+        "needs_verification": false,
+        "vague_region_only": false
       },
       "needs_human_review": false
     },
@@ -7025,6 +8301,17 @@
         "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [
+          "regio"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": true
+      },
       "needs_human_review": false
     },
     {
@@ -7063,6 +8350,15 @@
         "source_finance_anchor": "explicit_finance_signal",
         "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
         "needs_verification": false
+      },
+      "governance_status": {
+        "status": "not_governance",
+        "label": "Geen zelfstandige governanceclaim",
+        "actor_signals": [],
+        "source_governance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+        "needs_verification": false,
+        "vague_region_only": false
       },
       "needs_human_review": false
     },
@@ -7103,6 +8399,15 @@
         "public_wording_guardrail": "Koppel aan de bronroute en verantwoordingsplicht; maak er geen bestedingsruimte van.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "review_role",
+        "label": "Review-, monitorings- of toetsrol",
+        "actor_signals": [],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als toetsing, monitoring of evaluatie; niet als besluitvorming.",
+        "needs_verification": false,
+        "vague_region_only": false
+      },
       "needs_human_review": false
     },
     {
@@ -7141,6 +8446,15 @@
         "source_finance_anchor": "explicit_finance_signal",
         "public_wording_guardrail": "Koppel aan de bronroute en verantwoordingsplicht; maak er geen bestedingsruimte van.",
         "needs_verification": false
+      },
+      "governance_status": {
+        "status": "review_role",
+        "label": "Review-, monitorings- of toetsrol",
+        "actor_signals": [],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als toetsing, monitoring of evaluatie; niet als besluitvorming.",
+        "needs_verification": false,
+        "vague_region_only": false
       },
       "needs_human_review": false
     }

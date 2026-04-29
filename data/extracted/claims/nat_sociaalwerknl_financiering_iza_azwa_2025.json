@@ -34,6 +34,15 @@
         "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "approval_role",
+        "label": "Goedkeurings- of vaststellingsrol",
+        "actor_signals": [],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als goedkeurings- of vaststellingsrol; niet automatisch als uitvoeringsverantwoordelijkheid.",
+        "needs_verification": false,
+        "vague_region_only": false
+      },
       "statement": "Basisinfrastructuur en basisfunctionaliteiten Voor het sociaal werk staan de belangrijkste afspraken in het onderhandelaarsakkoord AZWA op pagina’s 68 t/m 74, namelijk over de inzet van enkele basisfunctionaliteiten (D5) en een daaraan gekoppelde sociale ...",
       "source_document_id": "nat_sociaalwerknl_financiering_iza_azwa_2025",
       "source_location": {
@@ -98,6 +107,15 @@
         "source_finance_anchor": "none",
         "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
         "needs_verification": false
+      },
+      "governance_status": {
+        "status": "execution_role",
+        "label": "Uitvoeringsrol",
+        "actor_signals": [],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt.",
+        "needs_verification": false,
+        "vague_region_only": false
       },
       "statement": "Het gaat hierbij om de brede implementatie van domeinoverstijgende ketenaanpakken zoals sociaal verwijzen (waaronder Welzijn op Recept) en laagdrempelige steunpunten voor mensen met psychische problematiek.",
       "source_document_id": "nat_sociaalwerknl_financiering_iza_azwa_2025",
@@ -164,6 +182,15 @@
         "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "approval_role",
+        "label": "Goedkeurings- of vaststellingsrol",
+        "actor_signals": [],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als goedkeurings- of vaststellingsrol; niet automatisch als uitvoeringsverantwoordelijkheid.",
+        "needs_verification": false,
+        "vague_region_only": false
+      },
       "statement": "Basisinfrastructuur en basisfunctionaliteiten Voor het sociaal werk staan de belangrijkste afspraken in het onderhandelaarsakkoord AZWA op pagina’s 68 t/m 74, namelijk over de inzet van enkele basisfunctionaliteiten (D5) en een daaraan gekoppelde sociale basisinfrastructuur (D6).",
       "source_document_id": "nat_sociaalwerknl_financiering_iza_azwa_2025",
       "source_location": {
@@ -228,6 +255,15 @@
         "source_finance_anchor": "none",
         "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
         "needs_verification": false
+      },
+      "governance_status": {
+        "status": "approval_role",
+        "label": "Goedkeurings- of vaststellingsrol",
+        "actor_signals": [],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als goedkeurings- of vaststellingsrol; niet automatisch als uitvoeringsverantwoordelijkheid.",
+        "needs_verification": false,
+        "vague_region_only": false
       },
       "statement": "Basisinfrastructuur en basisfunctionaliteiten Voor het sociaal werk staan de belangrijkste afspraken in het onderhandelaarsakkoord AZWA op pagina’s 68 t/m 74, namelijk over de inzet van enkele basisfunctionaliteiten (D5) en een daaraan gekoppelde sociale ...",
       "source_document_id": "nat_sociaalwerknl_financiering_iza_azwa_2025",
@@ -294,6 +330,15 @@
         "public_wording_guardrail": "Formuleer als aanvraag- of procesvoorwaarde; controleer of de bron formeel of praktisch is.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "not_governance",
+        "label": "Geen zelfstandige governanceclaim",
+        "actor_signals": [],
+        "source_governance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+        "needs_verification": false,
+        "vague_region_only": false
+      },
       "statement": "En om de sociale infrastructuur die hiervoor randvoorwaardelijk is, zoals de aanwezigheid van lokale teams en eenduidige voorzieningen in wijken en buurten op gebied van gezondheid, ondersteuning en welzijn.",
       "source_document_id": "nat_sociaalwerknl_financiering_iza_azwa_2025",
       "source_location": {
@@ -358,6 +403,15 @@
         "source_finance_anchor": "none",
         "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
         "needs_verification": false
+      },
+      "governance_status": {
+        "status": "execution_role",
+        "label": "Uitvoeringsrol",
+        "actor_signals": [],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt.",
+        "needs_verification": false,
+        "vague_region_only": false
       },
       "statement": "Het gaat hierbij om de brede implementatie van domeinoverstijgende ketenaanpakken zoals sociaal verwijzen (waaronder Welzijn op Recept) en laagdrempelige steunpunten voor mensen met psychische problematiek.",
       "source_document_id": "nat_sociaalwerknl_financiering_iza_azwa_2025",
@@ -424,6 +478,17 @@
         "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [
+          "gemeente"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": false
+      },
       "statement": "Gemeenten mogen maximaal tien procent van de niet-bestede Brede SPUK GALA-middelen ontschot meenemen van 2025 naar 2026 - 18 miljoen euro uit het HLO voor mantelzorgondersteuning en respijtzorg, via gemeenten 2027 - SPUK IZA 135 miljoen euro wordt structureel onderdeel van de AZWA-financiering - 100 miljoen euro extra voor basisfunctionaliteiten en basisinfrastructuur (doorbraakmiddelen) - 90 miljoen euro aanvullend uit GALA (structureel) - 25 miljoen euro uit het HLO voor mantelzorgondersteuning en ...",
       "source_document_id": "nat_sociaalwerknl_financiering_iza_azwa_2025",
       "source_location": {
@@ -488,6 +553,15 @@
         "source_finance_anchor": "explicit_finance_signal",
         "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
         "needs_verification": false
+      },
+      "governance_status": {
+        "status": "not_governance",
+        "label": "Geen zelfstandige governanceclaim",
+        "actor_signals": [],
+        "source_governance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+        "needs_verification": false,
+        "vague_region_only": false
       },
       "statement": "En 1 miljoen euro voor professionalisering van het sociaal werk (jaarlijks t/m 2030) Structurele extra middelen voor sociaal domein Vanaf 2027 wordt de SPUK IZA dus structureel onderdeel van de financiering van het AZWA.",
       "source_document_id": "nat_sociaalwerknl_financiering_iza_azwa_2025",
@@ -554,6 +628,17 @@
         "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [
+          "gemeente"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": false
+      },
       "statement": "50 miljoen euro extra voor gemeenten, aanvullend op de bestaande SPUK IZA en de Brede SPUK GALA. Deze middelen zijn onder andere bedoeld voor de ketenaanpak Kind naar Gezonder Gewicht en de Gecombineerde Leefstijlinterventie (GLI) voor volwassenen, die ...",
       "source_document_id": "nat_sociaalwerknl_financiering_iza_azwa_2025",
       "source_location": {
@@ -618,6 +703,15 @@
         "source_finance_anchor": "explicit_finance_signal",
         "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
         "needs_verification": false
+      },
+      "governance_status": {
+        "status": "not_governance",
+        "label": "Geen zelfstandige governanceclaim",
+        "actor_signals": [],
+        "source_governance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+        "needs_verification": false,
+        "vague_region_only": false
       },
       "statement": "Dit aanvullende plan moet in het derde kwartaal van 2026 gereed zijn.",
       "source_document_id": "nat_sociaalwerknl_financiering_iza_azwa_2025",
@@ -684,6 +778,15 @@
         "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "execution_role",
+        "label": "Uitvoeringsrol",
+        "actor_signals": [],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt.",
+        "needs_verification": false,
+        "vague_region_only": false
+      },
       "statement": "Ingroeimodel Er wordt gestart met een aantal basisfunctionaliteiten waarvan we al weten dat ze werken en waarvoor structurele middelen beschikbaar komen (zie AZWA bijlage 2, p.103). Voor de implementatie van de basisfunctionaliteiten en ...",
       "source_document_id": "nat_sociaalwerknl_financiering_iza_azwa_2025",
       "source_location": {
@@ -748,6 +851,17 @@
         "source_finance_anchor": "explicit_finance_signal",
         "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
         "needs_verification": false
+      },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [
+          "gemeente"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": false
       },
       "statement": "Gemeenten mogen maximaal tien procent van de niet-bestede Brede SPUK GALA-middelen ontschot meenemen van 2025 naar 2026 - 18 miljoen euro uit het HLO voor mantelzorgondersteuning en respijtzorg, via gemeenten 2027 - SPUK IZA 135 miljoen euro wordt structureel onderdeel van de AZWA-financiering - 100 miljoen euro extra voor basisfunctionaliteiten en basisinfrastructuur (doorbraakmiddelen) - 90 miljoen euro aanvullend uit GALA (structureel) - 25 miljoen euro uit het HLO voor mantelzorgondersteuning en ...",
       "source_document_id": "nat_sociaalwerknl_financiering_iza_azwa_2025",
@@ -814,6 +928,15 @@
         "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "approval_role",
+        "label": "Goedkeurings- of vaststellingsrol",
+        "actor_signals": [],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als goedkeurings- of vaststellingsrol; niet automatisch als uitvoeringsverantwoordelijkheid.",
+        "needs_verification": false,
+        "vague_region_only": false
+      },
       "statement": "Basisinfrastructuur en basisfunctionaliteiten Voor het sociaal werk staan de belangrijkste afspraken in het onderhandelaarsakkoord AZWA op pagina’s 68 t/m 74, namelijk over de inzet van enkele basisfunctionaliteiten (D5) en een daaraan gekoppelde sociale ...",
       "source_document_id": "nat_sociaalwerknl_financiering_iza_azwa_2025",
       "source_location": {
@@ -879,6 +1002,18 @@
         "public_wording_guardrail": "Formuleer als lokaal invul- of besluitpunt; vul geen budget of eigenaar in zonder lokale bron.",
         "needs_verification": true
       },
+      "governance_status": {
+        "status": "governance_gap",
+        "label": "Governance- of rolverdelingsgat",
+        "actor_signals": [
+          "gemeente",
+          "gemeenteraad"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Formuleer als validatie- of besluitvraag; vul actor, mandaat of eigenaar niet in zonder bron.",
+        "needs_verification": true,
+        "vague_region_only": false
+      },
       "statement": "Dit onderhandelaarsakkoord is nog geen bindend akkoord: de zestien partijen vanuit zorg, gemeenten en sociaal domein raadplegen in de zomer hun achterbannen.",
       "source_document_id": "nat_sociaalwerknl_financiering_iza_azwa_2025",
       "source_location": {
@@ -943,6 +1078,15 @@
         "source_finance_anchor": "none",
         "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
         "needs_verification": false
+      },
+      "governance_status": {
+        "status": "execution_role",
+        "label": "Uitvoeringsrol",
+        "actor_signals": [],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt.",
+        "needs_verification": false,
+        "vague_region_only": false
       },
       "statement": "Het gaat hierbij om de brede implementatie van domeinoverstijgende ketenaanpakken zoals sociaal verwijzen (waaronder Welzijn op Recept) en laagdrempelige steunpunten voor mensen met psychische problematiek.",
       "source_document_id": "nat_sociaalwerknl_financiering_iza_azwa_2025",

@@ -34,6 +34,18 @@
         "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [
+          "regio",
+          "gemeente"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": false
+      },
       "statement": "Iedere regio en gemeente geeft hieraan invulling via de zogenoemde basisfunctionaliteiten (D5) en investeert in de basisinfrastructuur via onder meer inloopvoorzieningen en lokale teams (D6).",
       "source_document_id": "nat_azwa_toelichting_producten_proces_2026",
       "source_location": {
@@ -98,6 +110,17 @@
         "source_finance_anchor": "explicit_finance_signal",
         "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
         "needs_verification": false
+      },
+      "governance_status": {
+        "status": "execution_role",
+        "label": "Uitvoeringsrol",
+        "actor_signals": [
+          "gemeente"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt.",
+        "needs_verification": false,
+        "vague_region_only": false
       },
       "statement": "Gemeenten ontvangen middelen voor de inzet binnen het sociaal domein, waaronder doorbraakmiddelen, om de opbouw van de basisfunctionaliteiten te versnellen.",
       "source_document_id": "nat_azwa_toelichting_producten_proces_2026",
@@ -164,6 +187,17 @@
         "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [
+          "regio"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": true
+      },
       "statement": "Met het opstellen van de werkagenda werken regio’s toe naar een regionaal dekkend aanbod voor basisfunctionaliteiten in 2030 en het (verder) implementeren van lopende aanpakken op de ontwikkelagenda.",
       "source_document_id": "nat_azwa_toelichting_producten_proces_2026",
       "source_location": {
@@ -228,6 +262,18 @@
         "source_finance_anchor": "none",
         "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
         "needs_verification": true
+      },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [
+          "regio",
+          "gemeente"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": false
       },
       "statement": "Iedere regio en gemeente geeft hieraan invulling via de zogenoemde basisfunctionaliteiten (D5) en investeert in de basisinfrastructuur via onder meer inloopvoorzieningen en lokale teams (D6).",
       "source_document_id": "nat_azwa_toelichting_producten_proces_2026",
@@ -294,6 +340,18 @@
         "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [
+          "regio",
+          "gemeente"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": false
+      },
       "statement": "1. Opdracht aan regio’s voor het opstellen van de werkagenda; 2. Format voor de werkagenda; 3. Voor gemeenten: proces en inzicht in AZWA-middelen gemeenten via een nieuwe SPUK- regeling die later dit jaar wordt gepubliceerd.",
       "source_document_id": "nat_azwa_toelichting_producten_proces_2026",
       "source_location": {
@@ -358,6 +416,17 @@
         "source_finance_anchor": "explicit_finance_signal",
         "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
         "needs_verification": false
+      },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [
+          "gemeente"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": false
       },
       "statement": "De werkagenda is tevens nodig om de middelen via een nieuwe SPUK toe te kennen aan de (mandaat)gemeenten.",
       "source_document_id": "nat_azwa_toelichting_producten_proces_2026",
@@ -424,6 +493,17 @@
         "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [
+          "gemeente"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": false
+      },
       "statement": "Voor gemeenten: proces en inzicht in AZWA-middelen gemeenten via een nieuwe SPUKregeling die later dit jaar wordt gepubliceerd.",
       "source_document_id": "nat_azwa_toelichting_producten_proces_2026",
       "source_location": {
@@ -488,6 +568,18 @@
         "source_finance_anchor": "explicit_finance_signal",
         "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
         "needs_verification": false
+      },
+      "governance_status": {
+        "status": "decision_role",
+        "label": "Besluitvormende rol",
+        "actor_signals": [
+          "regio",
+          "college"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Splits besluitvorming van coordinatie en uitvoering; noem de beslissende actor alleen als de bron dat draagt.",
+        "needs_verification": false,
+        "vague_region_only": false
       },
       "statement": "3 De regionale werkagenda moet uiterlijk op 15 november 2026 door de colleges zijn vastgesteld.",
       "source_document_id": "nat_azwa_toelichting_producten_proces_2026",
@@ -554,6 +646,17 @@
         "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [
+          "regio"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": true
+      },
       "statement": "Met het opstellen van de werkagenda werken regio’s toe naar een regionaal dekkend aanbod voor basisfunctionaliteiten in 2030 en het (verder) implementeren van lopende aanpakken op de ontwikkelagenda.",
       "source_document_id": "nat_azwa_toelichting_producten_proces_2026",
       "source_location": {
@@ -618,6 +721,17 @@
         "source_finance_anchor": "none",
         "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
         "needs_verification": false
+      },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [
+          "regio"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": true
       },
       "statement": "Deze producten zijn tot stand gekomen met dank aan de input uit de regioscan en de werkgroepen die betrokken zijn bij de handreikingen.",
       "source_document_id": "nat_azwa_toelichting_producten_proces_2026",
@@ -684,6 +798,17 @@
         "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [
+          "regio"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": true
+      },
       "statement": "Na de thematafel Medisch-Sociaal en Preventie van 26 mei: Advies op basis van de regioscan Dit is een faciliterend advies, niet dwingend.",
       "source_document_id": "nat_azwa_toelichting_producten_proces_2026",
       "source_location": {
@@ -748,6 +873,17 @@
         "source_finance_anchor": "explicit_finance_signal",
         "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
         "needs_verification": false
+      },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [
+          "gemeente"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": false
       },
       "statement": "De werkagenda is tevens nodig om de middelen via een nieuwe SPUK toe te kennen aan de (mandaat)gemeenten.",
       "source_document_id": "nat_azwa_toelichting_producten_proces_2026",
@@ -814,6 +950,18 @@
         "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [
+          "gemeente",
+          "zorgverzekeraar"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": false
+      },
       "statement": "De (mandaat) gemeenten en zorgverzekeraars gaan over de financiële middelen.",
       "source_document_id": "nat_azwa_toelichting_producten_proces_2026",
       "source_location": {
@@ -878,6 +1026,18 @@
         "source_finance_anchor": "explicit_finance_signal",
         "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
         "needs_verification": false
+      },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [
+          "regio",
+          "gemeente"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": false
       },
       "statement": "1. Opdracht aan regio’s voor het opstellen van de werkagenda; 2. Format voor de werkagenda; 3. Voor gemeenten: proces en inzicht in AZWA-middelen gemeenten via een nieuwe SPUK- regeling die later dit jaar wordt gepubliceerd.",
       "source_document_id": "nat_azwa_toelichting_producten_proces_2026",

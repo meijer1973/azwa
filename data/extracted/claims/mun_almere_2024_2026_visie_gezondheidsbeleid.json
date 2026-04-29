@@ -34,6 +34,15 @@
         "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": false
+      },
       "statement": "Almere te maken heeft met specifieke uitdagingen zoals een snel groeiende en verouderende bevolking, een hoge zorgvraag en beperkte middelen vanuit het Rijk.",
       "source_document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid",
       "source_location": {
@@ -96,6 +105,15 @@
         "source_finance_anchor": "explicit_finance_signal",
         "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
         "needs_verification": false
+      },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": false
       },
       "statement": "Zo heeft Almere te kampen met een beperkt budget, waardoor er echt keuzes gemaakt moeten worden.",
       "source_document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid",
@@ -160,6 +178,17 @@
         "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "decision_role",
+        "label": "Besluitvormende rol",
+        "actor_signals": [
+          "gemeenteraad"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Splits besluitvorming van coordinatie en uitvoering; noem de beslissende actor alleen als de bron dat draagt.",
+        "needs_verification": false,
+        "vague_region_only": false
+      },
       "statement": "(24118.007) AANGENOMEN35/8 - Motie: Noodplan huisartsentekort (24118.009) AANGENOMEN 43/0 - Motie: Werken aan gezondheidsvaardigheden (24118.010) AANGENOMEN 38/5 De raad besprak tijdens deze editie van de Politieke Markt meerdere moties over zowel het Gezondheidsbeleid als de Maatschappelijke Agenda.",
       "source_document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid",
       "source_location": {
@@ -222,6 +251,17 @@
         "source_finance_anchor": "none",
         "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
         "needs_verification": false
+      },
+      "governance_status": {
+        "status": "decision_role",
+        "label": "Besluitvormende rol",
+        "actor_signals": [
+          "gemeenteraad"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Splits besluitvorming van coordinatie en uitvoering; noem de beslissende actor alleen als de bron dat draagt.",
+        "needs_verification": false,
+        "vague_region_only": false
       },
       "statement": "De moties en amendementen zijn klaar voor besluitvorming en de raad zal hierover stemmen tijdens de Politieke Markt van 10 oktober 2024.",
       "source_document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid",
@@ -286,6 +326,15 @@
         "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "not_governance",
+        "label": "Geen zelfstandige governanceclaim",
+        "actor_signals": [],
+        "source_governance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+        "needs_verification": false,
+        "vague_region_only": false
+      },
       "statement": "De visie richt zich op het verbeteren van de gezondheid van alle Almeerders door een gezonde leefstijl en een gezonde leefomgeving te stimuleren.",
       "source_document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid",
       "source_location": {
@@ -349,6 +398,17 @@
         "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [
+          "gemeente"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": false
+      },
       "statement": "De Gemeente Almere heeft een nieuwe visie op het gezondheidsbeleid voor 2024-2026 ontwikkeld, waarbij de nadruk ligt op preventie, integratie van gezondheid in alle beleidsterreinen en het bieden van de juiste zorg op de juiste plek.",
       "source_document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid",
       "source_location": {
@@ -411,6 +471,15 @@
         "source_finance_anchor": "none",
         "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
         "needs_verification": false
+      },
+      "governance_status": {
+        "status": "coordination_role",
+        "label": "Coordinatie- of regierol",
+        "actor_signals": [],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als coordinatie/regie; niet vermengen met besluitvorming of uitvoering.",
+        "needs_verification": false,
+        "vague_region_only": false
       },
       "statement": "Ook de samenwerking tussen verschillende zorg- en welzijnsdomeinen krijgt extra aandacht, om de zorg toegankelijker en veerkrachtiger te maken voor de groeiende en veranderende bevolking van Almere.",
       "source_document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid",

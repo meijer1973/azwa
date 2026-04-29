@@ -4,14 +4,16 @@
   "summary": {
     "blocking": 0,
     "warning": 6,
-    "review": 166,
-    "item_count": 172,
+    "review": 233,
+    "item_count": 239,
     "issue_counts_by_reason": {
+      "actor_context_needs_role_split": 48,
       "authority_unclear": 30,
       "double_counting_risk": 1,
       "expected_time_not_deadline": 22,
       "extraction_noise_detected": 3,
       "finance_context_needs_verification": 21,
+      "governance_gap": 1,
       "local_funding_gap": 1,
       "local_planning_context_not_policy_deadline": 10,
       "lower_authority_norm_signal": 37,
@@ -19,7 +21,8 @@
       "missing_d6_content": 2,
       "municipality_relevance_inferred": 30,
       "table_content_not_promoted": 1,
-      "unresolved_conflict": 10
+      "unresolved_conflict": 10,
+      "vague_region_actor": 18
     }
   },
   "items": [
@@ -123,6 +126,28 @@
       "status": "open",
       "severity": "review",
       "check_id": "claim_payload_integrity",
+      "reason_code": "actor_context_needs_role_split",
+      "summary": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 3 actor-context claim(s) without a more specific governance role.",
+      "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+      "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_governance_and_finance_002",
+          "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_municipal_translation_001",
+          "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_municipal_translation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_007"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
       "reason_code": "expected_time_not_deadline",
       "summary": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 3 expected or indicative time claim(s).",
       "recommended_action": "Keep these as expected moments unless a stronger source establishes a formal deadline.",
@@ -139,7 +164,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_007"
+      "review_item_id": "rvw_008"
     },
     {
       "status": "open",
@@ -163,7 +188,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_008"
+      "review_item_id": "rvw_009"
     },
     {
       "status": "open",
@@ -188,7 +213,49 @@
         "topic_count": 4
       },
       "evidence": {},
-      "review_item_id": "rvw_009"
+      "review_item_id": "rvw_010"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "vague_region_actor",
+      "summary": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 1 claim(s) where 'regio' is the only detected actor signal.",
+      "recommended_action": "Clarify whether the source means IZA/AZWA-regio, GGD-regio, zorgkantoorregio, ROAZ/subregio, province, mandaatgemeente, or practical execution structure before using this as a role claim.",
+      "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d5_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_011"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "actor_context_needs_role_split",
+      "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid contains 3 actor-context claim(s) without a more specific governance role.",
+      "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+      "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2024_2026_visie_gezondheidsbeleid.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_governance_and_finance_001",
+          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_governance_and_finance_002",
+          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_municipal_translation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_012"
     },
     {
       "status": "open",
@@ -213,7 +280,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_010"
+      "review_item_id": "rvw_013"
     },
     {
       "status": "open",
@@ -234,7 +301,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_011"
+      "review_item_id": "rvw_014"
     },
     {
       "status": "open",
@@ -255,7 +322,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_012"
+      "review_item_id": "rvw_015"
     },
     {
       "status": "open",
@@ -275,7 +342,27 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_013"
+      "review_item_id": "rvw_016"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "actor_context_needs_role_split",
+      "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst contains 1 actor-context claim(s) without a more specific governance role.",
+      "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+      "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_municipal_translation_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_017"
     },
     {
       "status": "open",
@@ -299,7 +386,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_014"
+      "review_item_id": "rvw_018"
     },
     {
       "status": "open",
@@ -320,7 +407,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_015"
+      "review_item_id": "rvw_019"
     },
     {
       "status": "open",
@@ -344,7 +431,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_016"
+      "review_item_id": "rvw_020"
     },
     {
       "status": "open",
@@ -368,7 +455,47 @@
         "topic_count": 2
       },
       "evidence": {},
-      "review_item_id": "rvw_017"
+      "review_item_id": "rvw_021"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "vague_region_actor",
+      "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst contains 1 claim(s) where 'regio' is the only detected actor signal.",
+      "recommended_action": "Clarify whether the source means IZA/AZWA-regio, GGD-regio, zorgkantoorregio, ROAZ/subregio, province, mandaatgemeente, or practical execution structure before using this as a role claim.",
+      "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_governance_and_finance_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_022"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "actor_context_needs_role_split",
+      "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd contains 1 actor-context claim(s) without a more specific governance role.",
+      "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+      "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_municipal_translation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_023"
     },
     {
       "status": "open",
@@ -389,7 +516,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_018"
+      "review_item_id": "rvw_024"
     },
     {
       "status": "open",
@@ -413,7 +540,7 @@
           "De Visie Gezondheidsbeleid Almere 2024-2026 vast te stellen: 1. waarin de volgende doelstellingen zijn vastgelegd: a. Brede Preventie: Het stimuleren van een gezonde leefstijl en leefomgeving vanuit het gedachtengoed Positieve Gezondheid; b. We verweven gezondheid in alle beleidsterreinen: Health in all policies; c. De toegankelijkheid van de zorg in de toekomst garanderen door alle Almeerders de juiste hulp op de juiste plek te bieden; 2. met daarin de volgende ambities: a. in te zetten op het bevorderen van de samenwerking tussen het medische en het sociale domein; b. bij te dragen aan de zorgtransitie; c. mensen in staat te stellen de vaardigheden te verwerven om beter voor zichzelf ..."
         ]
       },
-      "review_item_id": "rvw_019"
+      "review_item_id": "rvw_025"
     },
     {
       "status": "open",
@@ -434,7 +561,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_020"
+      "review_item_id": "rvw_026"
     },
     {
       "status": "open",
@@ -456,7 +583,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_021"
+      "review_item_id": "rvw_027"
     },
     {
       "status": "open",
@@ -477,7 +604,51 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_022"
+      "review_item_id": "rvw_028"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "vague_region_actor",
+      "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd contains 1 claim(s) where 'regio' is the only detected actor signal.",
+      "recommended_action": "Clarify whether the source means IZA/AZWA-regio, GGD-regio, zorgkantoorregio, ROAZ/subregio, province, mandaatgemeente, or practical execution structure before using this as a role claim.",
+      "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_municipal_translation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_029"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "actor_context_needs_role_split",
+      "summary": "mun_almere_2024_2034_maatschappelijke_agenda contains 5 actor-context claim(s) without a more specific governance role.",
+      "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+      "document_id": "mun_almere_2024_2034_maatschappelijke_agenda",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2024_2034_maatschappelijke_agenda.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_governance_and_finance_001",
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_governance_and_finance_002",
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_timeline_and_status_001",
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_municipal_translation_001",
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_municipal_translation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_030"
     },
     {
       "status": "open",
@@ -502,7 +673,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_023"
+      "review_item_id": "rvw_031"
     },
     {
       "status": "open",
@@ -522,7 +693,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_024"
+      "review_item_id": "rvw_032"
     },
     {
       "status": "open",
@@ -545,7 +716,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_025"
+      "review_item_id": "rvw_033"
     },
     {
       "status": "open",
@@ -568,7 +739,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_026"
+      "review_item_id": "rvw_034"
     },
     {
       "status": "open",
@@ -588,7 +759,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_027"
+      "review_item_id": "rvw_035"
     },
     {
       "status": "open",
@@ -612,7 +783,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_028"
+      "review_item_id": "rvw_036"
     },
     {
       "status": "open",
@@ -635,7 +806,27 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_029"
+      "review_item_id": "rvw_037"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "actor_context_needs_role_split",
+      "summary": "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie contains 1 actor-context claim(s) without a more specific governance role.",
+      "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+      "document_id": "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie_governance_and_finance_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_038"
     },
     {
       "status": "open",
@@ -660,7 +851,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_030"
+      "review_item_id": "rvw_039"
     },
     {
       "status": "open",
@@ -680,7 +871,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_031"
+      "review_item_id": "rvw_040"
     },
     {
       "status": "open",
@@ -700,7 +891,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_032"
+      "review_item_id": "rvw_041"
     },
     {
       "status": "open",
@@ -721,7 +912,29 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_033"
+      "review_item_id": "rvw_042"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "actor_context_needs_role_split",
+      "summary": "mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd contains 3 actor-context claim(s) without a more specific governance role.",
+      "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+      "document_id": "mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd_governance_and_finance_001",
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd_governance_and_finance_002",
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd_municipal_translation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_043"
     },
     {
       "status": "open",
@@ -741,7 +954,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_034"
+      "review_item_id": "rvw_044"
     },
     {
       "status": "open",
@@ -761,7 +974,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_035"
+      "review_item_id": "rvw_045"
     },
     {
       "status": "open",
@@ -782,7 +995,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_036"
+      "review_item_id": "rvw_046"
     },
     {
       "status": "open",
@@ -802,7 +1015,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_037"
+      "review_item_id": "rvw_047"
     },
     {
       "status": "open",
@@ -823,7 +1036,28 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_038"
+      "review_item_id": "rvw_048"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "actor_context_needs_role_split",
+      "summary": "mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel contains 2 actor-context claim(s) without a more specific governance role.",
+      "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+      "document_id": "mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel_governance_and_finance_002",
+          "clm__mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel_municipal_translation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_049"
     },
     {
       "status": "open",
@@ -847,7 +1081,7 @@
           "Voorgesteld raadsbesluit 1. De ontwikkeling van de Stevige Lokale Teams in de komende periode te starten op basis van de volgende uitgangspunten: a. één stedelijk kader met maatwerk in de wijk; b. één team per wijk, voor alle leeftijden; c. mandaat en doorlopende regie; d. de organisatievorm en capaciteit volgt de inhoud; e. professionals die zowel verbinden als doen, mét inzet van experts en de sociale basis; f. helder opdrachtgeverschap en een taak op resultaat en financiën; g. aansluiten op bestaande netwerken en werkwijzen. 2. Het college opdracht te geven om: a. naast JGZ Almere ook de wijkteams mee te nemen in de scope van de Stevige Lokale Teams; b. in 2026 te starten met de ..."
         ]
       },
-      "review_item_id": "rvw_039"
+      "review_item_id": "rvw_050"
     },
     {
       "status": "open",
@@ -867,7 +1101,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_040"
+      "review_item_id": "rvw_051"
     },
     {
       "status": "open",
@@ -890,7 +1124,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_041"
+      "review_item_id": "rvw_052"
     },
     {
       "status": "open",
@@ -912,7 +1146,29 @@
         "topic_count": 2
       },
       "evidence": {},
-      "review_item_id": "rvw_042"
+      "review_item_id": "rvw_053"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "actor_context_needs_role_split",
+      "summary": "mun_almere_2026_stevige_lokale_teams_raad contains 3 actor-context claim(s) without a more specific governance role.",
+      "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+      "document_id": "mun_almere_2026_stevige_lokale_teams_raad",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2026_stevige_lokale_teams_raad.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2026_stevige_lokale_teams_raad_timeline_and_status_001",
+          "clm__mun_almere_2026_stevige_lokale_teams_raad_monitoring_and_evaluation_001",
+          "clm__mun_almere_2026_stevige_lokale_teams_raad_municipal_translation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_054"
     },
     {
       "status": "open",
@@ -937,7 +1193,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_043"
+      "review_item_id": "rvw_055"
     },
     {
       "status": "open",
@@ -958,7 +1214,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_044"
+      "review_item_id": "rvw_056"
     },
     {
       "status": "open",
@@ -980,7 +1236,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_045"
+      "review_item_id": "rvw_057"
     },
     {
       "status": "open",
@@ -1003,7 +1259,28 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_046"
+      "review_item_id": "rvw_058"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "actor_context_needs_role_split",
+      "summary": "mun_almere_2026_stevige_lokale_teams_raadsvoorstel contains 2 actor-context claim(s) without a more specific governance role.",
+      "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+      "document_id": "mun_almere_2026_stevige_lokale_teams_raadsvoorstel",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2026_stevige_lokale_teams_raadsvoorstel.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2026_stevige_lokale_teams_raadsvoorstel_governance_and_finance_002",
+          "clm__mun_almere_2026_stevige_lokale_teams_raadsvoorstel_municipal_translation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_059"
     },
     {
       "status": "open",
@@ -1027,7 +1304,7 @@
           "Voorgesteld raadsbesluit 1. De ontwikkeling van de Stevige Lokale Teams in de komende periode te starten op basis van de volgende uitgangspunten: a. één stedelijk kader met maatwerk in de wijk; b. één team per wijk, voor alle leeftijden; c. mandaat en doorlopende regie; d. de organisatievorm en capaciteit volgt de inhoud; e. professionals die zowel verbinden als doen, mét inzet van experts en de sociale basis; f. helder opdrachtgeverschap en een taak op resultaat en financiën; g. aansluiten op bestaande netwerken en werkwijzen. 2. Het college opdracht te geven om: a. naast JGZ Almere ook de wijkteams mee te nemen in de scope van de Stevige Lokale Teams; b. in 2026 te starten met de ..."
         ]
       },
-      "review_item_id": "rvw_047"
+      "review_item_id": "rvw_060"
     },
     {
       "status": "open",
@@ -1047,7 +1324,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_048"
+      "review_item_id": "rvw_061"
     },
     {
       "status": "open",
@@ -1070,7 +1347,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_049"
+      "review_item_id": "rvw_062"
     },
     {
       "status": "open",
@@ -1092,7 +1369,31 @@
         "topic_count": 2
       },
       "evidence": {},
-      "review_item_id": "rvw_050"
+      "review_item_id": "rvw_063"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "actor_context_needs_role_split",
+      "summary": "mun_almere_begroting_2026_webpagina contains 7 actor-context claim(s) without a more specific governance role.",
+      "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+      "document_id": "mun_almere_begroting_2026_webpagina",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_begroting_2026_webpagina.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_begroting_2026_webpagina_governance_and_finance_002",
+          "clm__mun_almere_begroting_2026_webpagina_governance_and_finance_003",
+          "clm__mun_almere_begroting_2026_webpagina_timeline_and_status_001",
+          "clm__mun_almere_begroting_2026_webpagina_timeline_and_status_002",
+          "clm__mun_almere_begroting_2026_webpagina_municipal_translation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_064"
     },
     {
       "status": "open",
@@ -1117,7 +1418,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_051"
+      "review_item_id": "rvw_065"
     },
     {
       "status": "open",
@@ -1137,7 +1438,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_052"
+      "review_item_id": "rvw_066"
     },
     {
       "status": "open",
@@ -1157,7 +1458,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_053"
+      "review_item_id": "rvw_067"
     },
     {
       "status": "open",
@@ -1178,7 +1479,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_054"
+      "review_item_id": "rvw_068"
     },
     {
       "status": "open",
@@ -1198,7 +1499,29 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_055"
+      "review_item_id": "rvw_069"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "actor_context_needs_role_split",
+      "summary": "mun_almere_pga_seo_businesscase_2024 contains 3 actor-context claim(s) without a more specific governance role.",
+      "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+      "document_id": "mun_almere_pga_seo_businesscase_2024",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_pga_seo_businesscase_2024.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_pga_seo_businesscase_2024_d6_003",
+          "clm__mun_almere_pga_seo_businesscase_2024_governance_and_finance_002",
+          "clm__mun_almere_pga_seo_businesscase_2024_timeline_and_status_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_070"
     },
     {
       "status": "open",
@@ -1223,7 +1546,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_056"
+      "review_item_id": "rvw_071"
     },
     {
       "status": "open",
@@ -1247,7 +1570,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_057"
+      "review_item_id": "rvw_072"
     },
     {
       "status": "open",
@@ -1268,7 +1591,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_058"
+      "review_item_id": "rvw_073"
     },
     {
       "status": "open",
@@ -1292,7 +1615,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_059"
+      "review_item_id": "rvw_074"
     },
     {
       "status": "open",
@@ -1317,7 +1640,47 @@
         "topic_count": 5
       },
       "evidence": {},
-      "review_item_id": "rvw_060"
+      "review_item_id": "rvw_075"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "vague_region_actor",
+      "summary": "mun_almere_pga_seo_businesscase_2024 contains 1 claim(s) where 'regio' is the only detected actor signal.",
+      "recommended_action": "Clarify whether the source means IZA/AZWA-regio, GGD-regio, zorgkantoorregio, ROAZ/subregio, province, mandaatgemeente, or practical execution structure before using this as a role claim.",
+      "document_id": "mun_almere_pga_seo_businesscase_2024",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_pga_seo_businesscase_2024.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_pga_seo_businesscase_2024_timeline_and_status_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_076"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "actor_context_needs_role_split",
+      "summary": "mun_almere_pga_transformatieplan contains 1 actor-context claim(s) without a more specific governance role.",
+      "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+      "document_id": "mun_almere_pga_transformatieplan",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_pga_transformatieplan.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_pga_transformatieplan_governance_and_finance_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_077"
     },
     {
       "status": "open",
@@ -1338,7 +1701,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_061"
+      "review_item_id": "rvw_078"
     },
     {
       "status": "open",
@@ -1362,7 +1725,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_062"
+      "review_item_id": "rvw_079"
     },
     {
       "status": "open",
@@ -1387,7 +1750,27 @@
         "topic_count": 4
       },
       "evidence": {},
-      "review_item_id": "rvw_063"
+      "review_item_id": "rvw_080"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "actor_context_needs_role_split",
+      "summary": "mun_almere_raad_vergaderschema_2026 contains 1 actor-context claim(s) without a more specific governance role.",
+      "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+      "document_id": "mun_almere_raad_vergaderschema_2026",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_raad_vergaderschema_2026.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_raad_vergaderschema_2026_monitoring_and_evaluation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_081"
     },
     {
       "status": "open",
@@ -1410,7 +1793,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_064"
+      "review_item_id": "rvw_082"
     },
     {
       "status": "open",
@@ -1431,7 +1814,29 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_065"
+      "review_item_id": "rvw_083"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "actor_context_needs_role_split",
+      "summary": "mun_almere_samenwerkingsprojecten contains 3 actor-context claim(s) without a more specific governance role.",
+      "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+      "document_id": "mun_almere_samenwerkingsprojecten",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_samenwerkingsprojecten.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_samenwerkingsprojecten_governance_and_finance_001",
+          "clm__mun_almere_samenwerkingsprojecten_municipal_translation_001",
+          "clm__mun_almere_samenwerkingsprojecten_municipal_translation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_084"
     },
     {
       "status": "open",
@@ -1456,7 +1861,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_066"
+      "review_item_id": "rvw_085"
     },
     {
       "status": "open",
@@ -1477,7 +1882,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_067"
+      "review_item_id": "rvw_086"
     },
     {
       "status": "open",
@@ -1498,7 +1903,29 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_068"
+      "review_item_id": "rvw_087"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "actor_context_needs_role_split",
+      "summary": "mun_almere_sociaal_domein_informatiepagina contains 3 actor-context claim(s) without a more specific governance role.",
+      "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+      "document_id": "mun_almere_sociaal_domein_informatiepagina",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_sociaal_domein_informatiepagina.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_sociaal_domein_informatiepagina_governance_and_finance_001",
+          "clm__mun_almere_sociaal_domein_informatiepagina_municipal_translation_001",
+          "clm__mun_almere_sociaal_domein_informatiepagina_municipal_translation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_088"
     },
     {
       "status": "open",
@@ -1523,7 +1950,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_069"
+      "review_item_id": "rvw_089"
     },
     {
       "status": "open",
@@ -1543,7 +1970,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_070"
+      "review_item_id": "rvw_090"
     },
     {
       "status": "open",
@@ -1564,7 +1991,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_071"
+      "review_item_id": "rvw_091"
     },
     {
       "status": "open",
@@ -1589,7 +2016,28 @@
         "topic_count": 3
       },
       "evidence": {},
-      "review_item_id": "rvw_072"
+      "review_item_id": "rvw_092"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "actor_context_needs_role_split",
+      "summary": "mun_almere_sociale_staat_gateway contains 2 actor-context claim(s) without a more specific governance role.",
+      "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+      "document_id": "mun_almere_sociale_staat_gateway",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_sociale_staat_gateway.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_sociale_staat_gateway_municipal_translation_001",
+          "clm__mun_almere_sociale_staat_gateway_municipal_translation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_093"
     },
     {
       "status": "open",
@@ -1612,7 +2060,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_073"
+      "review_item_id": "rvw_094"
     },
     {
       "status": "open",
@@ -1635,7 +2083,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_074"
+      "review_item_id": "rvw_095"
     },
     {
       "status": "open",
@@ -1657,7 +2105,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_075"
+      "review_item_id": "rvw_096"
     },
     {
       "status": "open",
@@ -1677,7 +2125,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_076"
+      "review_item_id": "rvw_097"
     },
     {
       "status": "open",
@@ -1698,7 +2146,28 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_077"
+      "review_item_id": "rvw_098"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "actor_context_needs_role_split",
+      "summary": "nat_azwa_2025_aanbiedingsbrief contains 2 actor-context claim(s) without a more specific governance role.",
+      "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+      "document_id": "nat_azwa_2025_aanbiedingsbrief",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_azwa_2025_aanbiedingsbrief.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_azwa_2025_aanbiedingsbrief_governance_and_finance_001",
+          "clm__nat_azwa_2025_aanbiedingsbrief_municipal_translation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_099"
     },
     {
       "status": "open",
@@ -1718,7 +2187,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_078"
+      "review_item_id": "rvw_100"
     },
     {
       "status": "open",
@@ -1739,7 +2208,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_079"
+      "review_item_id": "rvw_101"
     },
     {
       "status": "open",
@@ -1760,7 +2229,30 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_080"
+      "review_item_id": "rvw_102"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "actor_context_needs_role_split",
+      "summary": "nat_azwa_2025_definitief contains 4 actor-context claim(s) without a more specific governance role.",
+      "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+      "document_id": "nat_azwa_2025_definitief",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_azwa_2025_definitief.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_azwa_2025_definitief_d5_003",
+          "clm__nat_azwa_2025_definitief_d6_002",
+          "clm__nat_azwa_2025_definitief_governance_and_finance_003",
+          "clm__nat_azwa_2025_definitief_municipal_translation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_103"
     },
     {
       "status": "open",
@@ -1782,7 +2274,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_081"
+      "review_item_id": "rvw_104"
     },
     {
       "status": "open",
@@ -1802,7 +2294,118 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_082"
+      "review_item_id": "rvw_105"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "vague_region_actor",
+      "summary": "nat_azwa_2025_definitief contains 3 claim(s) where 'regio' is the only detected actor signal.",
+      "recommended_action": "Clarify whether the source means IZA/AZWA-regio, GGD-regio, zorgkantoorregio, ROAZ/subregio, province, mandaatgemeente, or practical execution structure before using this as a role claim.",
+      "document_id": "nat_azwa_2025_definitief",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_azwa_2025_definitief.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_azwa_2025_definitief_d5_003",
+          "clm__nat_azwa_2025_definitief_d6_002",
+          "clm__nat_azwa_2025_definitief_municipal_translation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_106"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "actor_context_needs_role_split",
+      "summary": "nat_azwa_2025_onderhandelaarsakkoord contains 2 actor-context claim(s) without a more specific governance role.",
+      "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+      "document_id": "nat_azwa_2025_onderhandelaarsakkoord",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_azwa_2025_onderhandelaarsakkoord.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_azwa_2025_onderhandelaarsakkoord_d6_001",
+          "clm__nat_azwa_2025_onderhandelaarsakkoord_municipal_translation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_107"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "vague_region_actor",
+      "summary": "nat_azwa_2025_onderhandelaarsakkoord contains 4 claim(s) where 'regio' is the only detected actor signal.",
+      "recommended_action": "Clarify whether the source means IZA/AZWA-regio, GGD-regio, zorgkantoorregio, ROAZ/subregio, province, mandaatgemeente, or practical execution structure before using this as a role claim.",
+      "document_id": "nat_azwa_2025_onderhandelaarsakkoord",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_azwa_2025_onderhandelaarsakkoord.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_azwa_2025_onderhandelaarsakkoord_d5_002",
+          "clm__nat_azwa_2025_onderhandelaarsakkoord_d5_003",
+          "clm__nat_azwa_2025_onderhandelaarsakkoord_d6_001",
+          "clm__nat_azwa_2025_onderhandelaarsakkoord_monitoring_and_evaluation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_108"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "actor_context_needs_role_split",
+      "summary": "nat_azwa_2026_cw31_kader_d5_d6 contains 4 actor-context claim(s) without a more specific governance role.",
+      "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+      "document_id": "nat_azwa_2026_cw31_kader_d5_d6",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_azwa_2026_cw31_kader_d5_d6.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_azwa_2026_cw31_kader_d5_d6_d5_002",
+          "clm__nat_azwa_2026_cw31_kader_d5_d6_d6_001",
+          "clm__nat_azwa_2026_cw31_kader_d5_d6_governance_and_finance_001",
+          "clm__nat_azwa_2026_cw31_kader_d5_d6_municipal_translation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_109"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "vague_region_actor",
+      "summary": "nat_azwa_2026_cw31_kader_d5_d6 contains 3 claim(s) where 'regio' is the only detected actor signal.",
+      "recommended_action": "Clarify whether the source means IZA/AZWA-regio, GGD-regio, zorgkantoorregio, ROAZ/subregio, province, mandaatgemeente, or practical execution structure before using this as a role claim.",
+      "document_id": "nat_azwa_2026_cw31_kader_d5_d6",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_azwa_2026_cw31_kader_d5_d6.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_azwa_2026_cw31_kader_d5_d6_d5_002",
+          "clm__nat_azwa_2026_cw31_kader_d5_d6_d6_001",
+          "clm__nat_azwa_2026_cw31_kader_d5_d6_municipal_translation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_110"
     },
     {
       "status": "open",
@@ -1823,7 +2426,27 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_083"
+      "review_item_id": "rvw_111"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "actor_context_needs_role_split",
+      "summary": "nat_azwa_2026_voortgang_kamerbrief contains 1 actor-context claim(s) without a more specific governance role.",
+      "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+      "document_id": "nat_azwa_2026_voortgang_kamerbrief",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_azwa_2026_voortgang_kamerbrief.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_azwa_2026_voortgang_kamerbrief_d6_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_112"
     },
     {
       "status": "open",
@@ -1844,7 +2467,53 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_084"
+      "review_item_id": "rvw_113"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "vague_region_actor",
+      "summary": "nat_azwa_2026_voortgang_kamerbrief contains 4 claim(s) where 'regio' is the only detected actor signal.",
+      "recommended_action": "Clarify whether the source means IZA/AZWA-regio, GGD-regio, zorgkantoorregio, ROAZ/subregio, province, mandaatgemeente, or practical execution structure before using this as a role claim.",
+      "document_id": "nat_azwa_2026_voortgang_kamerbrief",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_azwa_2026_voortgang_kamerbrief.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_azwa_2026_voortgang_kamerbrief_d5_003",
+          "clm__nat_azwa_2026_voortgang_kamerbrief_timeline_and_status_002",
+          "clm__nat_azwa_2026_voortgang_kamerbrief_monitoring_and_evaluation_002",
+          "clm__nat_azwa_2026_voortgang_kamerbrief_municipal_translation_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_114"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "actor_context_needs_role_split",
+      "summary": "nat_azwa_format_werkagenda_d5_2026 contains 4 actor-context claim(s) without a more specific governance role.",
+      "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+      "document_id": "nat_azwa_format_werkagenda_d5_2026",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_azwa_format_werkagenda_d5_2026.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_azwa_format_werkagenda_d5_2026_d5_001",
+          "clm__nat_azwa_format_werkagenda_d5_2026_d5_002",
+          "clm__nat_azwa_format_werkagenda_d5_2026_governance_and_finance_002",
+          "clm__nat_azwa_format_werkagenda_d5_2026_municipal_translation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_115"
     },
     {
       "status": "open",
@@ -1869,7 +2538,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_085"
+      "review_item_id": "rvw_116"
     },
     {
       "status": "open",
@@ -1892,7 +2561,51 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_086"
+      "review_item_id": "rvw_117"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "vague_region_actor",
+      "summary": "nat_azwa_format_werkagenda_d5_2026 contains 6 claim(s) where 'regio' is the only detected actor signal.",
+      "recommended_action": "Clarify whether the source means IZA/AZWA-regio, GGD-regio, zorgkantoorregio, ROAZ/subregio, province, mandaatgemeente, or practical execution structure before using this as a role claim.",
+      "document_id": "nat_azwa_format_werkagenda_d5_2026",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_azwa_format_werkagenda_d5_2026.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_azwa_format_werkagenda_d5_2026_d5_001",
+          "clm__nat_azwa_format_werkagenda_d5_2026_d5_002",
+          "clm__nat_azwa_format_werkagenda_d5_2026_monitoring_and_evaluation_001",
+          "clm__nat_azwa_format_werkagenda_d5_2026_municipal_translation_001",
+          "clm__nat_azwa_format_werkagenda_d5_2026_municipal_translation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_118"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "actor_context_needs_role_split",
+      "summary": "nat_azwa_opdracht_werkagenda_d5_2026 contains 1 actor-context claim(s) without a more specific governance role.",
+      "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+      "document_id": "nat_azwa_opdracht_werkagenda_d5_2026",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_azwa_opdracht_werkagenda_d5_2026.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_timeline_and_status_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_119"
     },
     {
       "status": "open",
@@ -1913,7 +2626,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_087"
+      "review_item_id": "rvw_120"
     },
     {
       "status": "open",
@@ -1933,7 +2646,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_088"
+      "review_item_id": "rvw_121"
     },
     {
       "status": "open",
@@ -1955,7 +2668,54 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_089"
+      "review_item_id": "rvw_122"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "vague_region_actor",
+      "summary": "nat_azwa_opdracht_werkagenda_d5_2026 contains 4 claim(s) where 'regio' is the only detected actor signal.",
+      "recommended_action": "Clarify whether the source means IZA/AZWA-regio, GGD-regio, zorgkantoorregio, ROAZ/subregio, province, mandaatgemeente, or practical execution structure before using this as a role claim.",
+      "document_id": "nat_azwa_opdracht_werkagenda_d5_2026",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_azwa_opdracht_werkagenda_d5_2026.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_d5_001",
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_d6_001",
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_timeline_and_status_002",
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_monitoring_and_evaluation_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_123"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "actor_context_needs_role_split",
+      "summary": "nat_azwa_toelichting_producten_proces_2026 contains 12 actor-context claim(s) without a more specific governance role.",
+      "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+      "document_id": "nat_azwa_toelichting_producten_proces_2026",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_azwa_toelichting_producten_proces_2026.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_azwa_toelichting_producten_proces_2026_d5_001",
+          "clm__nat_azwa_toelichting_producten_proces_2026_d5_003",
+          "clm__nat_azwa_toelichting_producten_proces_2026_d6_001",
+          "clm__nat_azwa_toelichting_producten_proces_2026_governance_and_finance_001",
+          "clm__nat_azwa_toelichting_producten_proces_2026_governance_and_finance_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_124"
     },
     {
       "status": "open",
@@ -1980,7 +2740,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_090"
+      "review_item_id": "rvw_125"
     },
     {
       "status": "open",
@@ -2004,7 +2764,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_091"
+      "review_item_id": "rvw_126"
     },
     {
       "status": "open",
@@ -2025,7 +2785,53 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_092"
+      "review_item_id": "rvw_127"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "vague_region_actor",
+      "summary": "nat_azwa_toelichting_producten_proces_2026 contains 4 claim(s) where 'regio' is the only detected actor signal.",
+      "recommended_action": "Clarify whether the source means IZA/AZWA-regio, GGD-regio, zorgkantoorregio, ROAZ/subregio, province, mandaatgemeente, or practical execution structure before using this as a role claim.",
+      "document_id": "nat_azwa_toelichting_producten_proces_2026",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_azwa_toelichting_producten_proces_2026.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_azwa_toelichting_producten_proces_2026_d5_003",
+          "clm__nat_azwa_toelichting_producten_proces_2026_timeline_and_status_003",
+          "clm__nat_azwa_toelichting_producten_proces_2026_monitoring_and_evaluation_001",
+          "clm__nat_azwa_toelichting_producten_proces_2026_monitoring_and_evaluation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_128"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "actor_context_needs_role_split",
+      "summary": "nat_bzk_gemeentefonds_cyclus contains 4 actor-context claim(s) without a more specific governance role.",
+      "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+      "document_id": "nat_bzk_gemeentefonds_cyclus",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_bzk_gemeentefonds_cyclus.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_bzk_gemeentefonds_cyclus_governance_and_finance_002",
+          "clm__nat_bzk_gemeentefonds_cyclus_municipal_translation_001",
+          "clm__nat_bzk_gemeentefonds_cyclus_municipal_translation_002",
+          "clm__nat_bzk_gemeentefonds_cyclus_municipal_translation_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_129"
     },
     {
       "status": "open",
@@ -2050,7 +2856,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_093"
+      "review_item_id": "rvw_130"
     },
     {
       "status": "open",
@@ -2070,7 +2876,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_094"
+      "review_item_id": "rvw_131"
     },
     {
       "status": "open",
@@ -2090,7 +2896,27 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_095"
+      "review_item_id": "rvw_132"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "actor_context_needs_role_split",
+      "summary": "nat_dusi_spuk_transformatiemiddelen_2024_2028 contains 1 actor-context claim(s) without a more specific governance role.",
+      "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+      "document_id": "nat_dusi_spuk_transformatiemiddelen_2024_2028",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_dusi_spuk_transformatiemiddelen_2024_2028.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_monitoring_and_evaluation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_133"
     },
     {
       "status": "open",
@@ -2115,7 +2941,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_096"
+      "review_item_id": "rvw_134"
     },
     {
       "status": "open",
@@ -2138,7 +2964,28 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_097"
+      "review_item_id": "rvw_135"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "actor_context_needs_role_split",
+      "summary": "nat_gala_2023_gezond_en_actief_leven contains 2 actor-context claim(s) without a more specific governance role.",
+      "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+      "document_id": "nat_gala_2023_gezond_en_actief_leven",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_gala_2023_gezond_en_actief_leven.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_gala_2023_gezond_en_actief_leven_d6_001",
+          "clm__nat_gala_2023_gezond_en_actief_leven_d6_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_136"
     },
     {
       "status": "open",
@@ -2158,7 +3005,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_098"
+      "review_item_id": "rvw_137"
     },
     {
       "status": "open",
@@ -2180,7 +3027,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_099"
+      "review_item_id": "rvw_138"
     },
     {
       "status": "open",
@@ -2205,7 +3052,49 @@
         "topic_count": 2
       },
       "evidence": {},
-      "review_item_id": "rvw_100"
+      "review_item_id": "rvw_139"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "vague_region_actor",
+      "summary": "nat_gala_2023_gezond_en_actief_leven contains 2 claim(s) where 'regio' is the only detected actor signal.",
+      "recommended_action": "Clarify whether the source means IZA/AZWA-regio, GGD-regio, zorgkantoorregio, ROAZ/subregio, province, mandaatgemeente, or practical execution structure before using this as a role claim.",
+      "document_id": "nat_gala_2023_gezond_en_actief_leven",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_gala_2023_gezond_en_actief_leven.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_gala_2023_gezond_en_actief_leven_d6_001",
+          "clm__nat_gala_2023_gezond_en_actief_leven_d6_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_140"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "actor_context_needs_role_split",
+      "summary": "nat_iza_2022_integraal_zorgakkoord contains 2 actor-context claim(s) without a more specific governance role.",
+      "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+      "document_id": "nat_iza_2022_integraal_zorgakkoord",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_iza_2022_integraal_zorgakkoord.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_iza_2022_integraal_zorgakkoord_governance_and_finance_003",
+          "clm__nat_iza_2022_integraal_zorgakkoord_municipal_translation_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_141"
     },
     {
       "status": "open",
@@ -2225,7 +3114,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_101"
+      "review_item_id": "rvw_142"
     },
     {
       "status": "open",
@@ -2246,7 +3135,29 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_102"
+      "review_item_id": "rvw_143"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "actor_context_needs_role_split",
+      "summary": "nat_sociaalwerknl_financiering_iza_azwa_2025 contains 3 actor-context claim(s) without a more specific governance role.",
+      "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+      "document_id": "nat_sociaalwerknl_financiering_iza_azwa_2025",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_sociaalwerknl_financiering_iza_azwa_2025.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_governance_and_finance_001",
+          "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_governance_and_finance_003",
+          "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_timeline_and_status_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_144"
     },
     {
       "status": "open",
@@ -2271,7 +3182,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_103"
+      "review_item_id": "rvw_145"
     },
     {
       "status": "open",
@@ -2294,7 +3205,27 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_104"
+      "review_item_id": "rvw_146"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "governance_gap",
+      "summary": "nat_sociaalwerknl_financiering_iza_azwa_2025 contains 1 governance gap claim(s).",
+      "recommended_action": "Keep these as validation or decision points; do not fill mandate, owner, or role by inference.",
+      "document_id": "nat_sociaalwerknl_financiering_iza_azwa_2025",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_sociaalwerknl_financiering_iza_azwa_2025.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_municipal_translation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_147"
     },
     {
       "status": "open",
@@ -2314,7 +3245,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_105"
+      "review_item_id": "rvw_148"
     },
     {
       "status": "open",
@@ -2338,7 +3269,49 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_106"
+      "review_item_id": "rvw_149"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "actor_context_needs_role_split",
+      "summary": "nat_tsd_basisfuncties_lokale_teams contains 3 actor-context claim(s) without a more specific governance role.",
+      "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+      "document_id": "nat_tsd_basisfuncties_lokale_teams",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_tsd_basisfuncties_lokale_teams.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_tsd_basisfuncties_lokale_teams_d6_001",
+          "clm__nat_tsd_basisfuncties_lokale_teams_d6_003",
+          "clm__nat_tsd_basisfuncties_lokale_teams_municipal_translation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_150"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "actor_context_needs_role_split",
+      "summary": "nat_vng_azwa_faq_middelen contains 1 actor-context claim(s) without a more specific governance role.",
+      "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+      "document_id": "nat_vng_azwa_faq_middelen",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_vng_azwa_faq_middelen.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_vng_azwa_faq_middelen_municipal_translation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_151"
     },
     {
       "status": "open",
@@ -2363,7 +3336,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_107"
+      "review_item_id": "rvw_152"
     },
     {
       "status": "open",
@@ -2387,7 +3360,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_108"
+      "review_item_id": "rvw_153"
     },
     {
       "status": "open",
@@ -2412,7 +3385,49 @@
         "topic_count": 2
       },
       "evidence": {},
-      "review_item_id": "rvw_109"
+      "review_item_id": "rvw_154"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "vague_region_actor",
+      "summary": "nat_vng_azwa_faq_middelen contains 2 claim(s) where 'regio' is the only detected actor signal.",
+      "recommended_action": "Clarify whether the source means IZA/AZWA-regio, GGD-regio, zorgkantoorregio, ROAZ/subregio, province, mandaatgemeente, or practical execution structure before using this as a role claim.",
+      "document_id": "nat_vng_azwa_faq_middelen",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_vng_azwa_faq_middelen.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_vng_azwa_faq_middelen_governance_and_finance_001",
+          "clm__nat_vng_azwa_faq_middelen_timeline_and_status_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_155"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "actor_context_needs_role_split",
+      "summary": "nat_vng_azwa_faq_uitvoeringscapaciteit contains 2 actor-context claim(s) without a more specific governance role.",
+      "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+      "document_id": "nat_vng_azwa_faq_uitvoeringscapaciteit",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_vng_azwa_faq_uitvoeringscapaciteit.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_vng_azwa_faq_uitvoeringscapaciteit_governance_and_finance_001",
+          "clm__nat_vng_azwa_faq_uitvoeringscapaciteit_municipal_translation_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_156"
     },
     {
       "status": "open",
@@ -2436,7 +3451,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_110"
+      "review_item_id": "rvw_157"
     },
     {
       "status": "open",
@@ -2457,7 +3472,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_111"
+      "review_item_id": "rvw_158"
     },
     {
       "status": "open",
@@ -2480,7 +3495,27 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_112"
+      "review_item_id": "rvw_159"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "actor_context_needs_role_split",
+      "summary": "nat_vng_brief_azwa_financiering_webpagina_2026 contains 1 actor-context claim(s) without a more specific governance role.",
+      "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+      "document_id": "nat_vng_brief_azwa_financiering_webpagina_2026",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_vng_brief_azwa_financiering_webpagina_2026.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_vng_brief_azwa_financiering_webpagina_2026_governance_and_finance_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_160"
     },
     {
       "status": "open",
@@ -2503,7 +3538,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_113"
+      "review_item_id": "rvw_161"
     },
     {
       "status": "open",
@@ -2523,7 +3558,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_114"
+      "review_item_id": "rvw_162"
     },
     {
       "status": "open",
@@ -2543,7 +3578,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_115"
+      "review_item_id": "rvw_163"
     },
     {
       "status": "open",
@@ -2564,7 +3599,31 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_116"
+      "review_item_id": "rvw_164"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "actor_context_needs_role_split",
+      "summary": "nat_vng_gezond_en_actief_leven_2026 contains 7 actor-context claim(s) without a more specific governance role.",
+      "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+      "document_id": "nat_vng_gezond_en_actief_leven_2026",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_vng_gezond_en_actief_leven_2026.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_vng_gezond_en_actief_leven_2026_d5_001",
+          "clm__nat_vng_gezond_en_actief_leven_2026_d6_001",
+          "clm__nat_vng_gezond_en_actief_leven_2026_governance_and_finance_002",
+          "clm__nat_vng_gezond_en_actief_leven_2026_timeline_and_status_002",
+          "clm__nat_vng_gezond_en_actief_leven_2026_timeline_and_status_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_165"
     },
     {
       "status": "open",
@@ -2589,7 +3648,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_117"
+      "review_item_id": "rvw_166"
     },
     {
       "status": "open",
@@ -2612,7 +3671,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_118"
+      "review_item_id": "rvw_167"
     },
     {
       "status": "open",
@@ -2633,7 +3692,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_119"
+      "review_item_id": "rvw_168"
     },
     {
       "status": "open",
@@ -2657,7 +3716,51 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_120"
+      "review_item_id": "rvw_169"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "vague_region_actor",
+      "summary": "nat_vng_gezond_en_actief_leven_2026 contains 2 claim(s) where 'regio' is the only detected actor signal.",
+      "recommended_action": "Clarify whether the source means IZA/AZWA-regio, GGD-regio, zorgkantoorregio, ROAZ/subregio, province, mandaatgemeente, or practical execution structure before using this as a role claim.",
+      "document_id": "nat_vng_gezond_en_actief_leven_2026",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_vng_gezond_en_actief_leven_2026.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_vng_gezond_en_actief_leven_2026_monitoring_and_evaluation_002",
+          "clm__nat_vng_gezond_en_actief_leven_2026_municipal_translation_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_170"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "actor_context_needs_role_split",
+      "summary": "nat_vng_ledenbrief_azwa_financiering_2026 contains 4 actor-context claim(s) without a more specific governance role.",
+      "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+      "document_id": "nat_vng_ledenbrief_azwa_financiering_2026",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_vng_ledenbrief_azwa_financiering_2026.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_vng_ledenbrief_azwa_financiering_2026_d5_002",
+          "clm__nat_vng_ledenbrief_azwa_financiering_2026_governance_and_finance_001",
+          "clm__nat_vng_ledenbrief_azwa_financiering_2026_municipal_translation_001",
+          "clm__nat_vng_ledenbrief_azwa_financiering_2026_municipal_translation_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_171"
     },
     {
       "status": "open",
@@ -2682,7 +3785,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_121"
+      "review_item_id": "rvw_172"
     },
     {
       "status": "open",
@@ -2702,7 +3805,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_122"
+      "review_item_id": "rvw_173"
     },
     {
       "status": "open",
@@ -2724,7 +3827,50 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_123"
+      "review_item_id": "rvw_174"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "vague_region_actor",
+      "summary": "nat_vng_ledenbrief_azwa_financiering_2026 contains 1 claim(s) where 'regio' is the only detected actor signal.",
+      "recommended_action": "Clarify whether the source means IZA/AZWA-regio, GGD-regio, zorgkantoorregio, ROAZ/subregio, province, mandaatgemeente, or practical execution structure before using this as a role claim.",
+      "document_id": "nat_vng_ledenbrief_azwa_financiering_2026",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_vng_ledenbrief_azwa_financiering_2026.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_vng_ledenbrief_azwa_financiering_2026_d5_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_175"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "actor_context_needs_role_split",
+      "summary": "nat_vng_ledenbrief_onderhandelaarsakkoord_azwa_2025 contains 4 actor-context claim(s) without a more specific governance role.",
+      "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+      "document_id": "nat_vng_ledenbrief_onderhandelaarsakkoord_azwa_2025",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_vng_ledenbrief_onderhandelaarsakkoord_azwa_2025.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_vng_ledenbrief_onderhandelaarsakkoord_azwa_2025_governance_and_finance_001",
+          "clm__nat_vng_ledenbrief_onderhandelaarsakkoord_azwa_2025_governance_and_finance_002",
+          "clm__nat_vng_ledenbrief_onderhandelaarsakkoord_azwa_2025_governance_and_finance_003",
+          "clm__nat_vng_ledenbrief_onderhandelaarsakkoord_azwa_2025_municipal_translation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_176"
     },
     {
       "status": "open",
@@ -2749,7 +3895,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_124"
+      "review_item_id": "rvw_177"
     },
     {
       "status": "open",
@@ -2770,7 +3916,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_125"
+      "review_item_id": "rvw_178"
     },
     {
       "status": "open",
@@ -2790,7 +3936,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_126"
+      "review_item_id": "rvw_179"
     },
     {
       "status": "open",
@@ -2810,7 +3956,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_127"
+      "review_item_id": "rvw_180"
     },
     {
       "status": "open",
@@ -2834,7 +3980,31 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_128"
+      "review_item_id": "rvw_181"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "actor_context_needs_role_split",
+      "summary": "nat_vng_richtinggevend_kader_toegang_lokale_teams contains 5 actor-context claim(s) without a more specific governance role.",
+      "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+      "document_id": "nat_vng_richtinggevend_kader_toegang_lokale_teams",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_vng_richtinggevend_kader_toegang_lokale_teams.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_vng_richtinggevend_kader_toegang_lokale_teams_d6_003",
+          "clm__nat_vng_richtinggevend_kader_toegang_lokale_teams_timeline_and_status_001",
+          "clm__nat_vng_richtinggevend_kader_toegang_lokale_teams_monitoring_and_evaluation_002",
+          "clm__nat_vng_richtinggevend_kader_toegang_lokale_teams_municipal_translation_001",
+          "clm__nat_vng_richtinggevend_kader_toegang_lokale_teams_municipal_translation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_182"
     },
     {
       "status": "open",
@@ -2856,7 +4026,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_129"
+      "review_item_id": "rvw_183"
     },
     {
       "status": "open",
@@ -2877,7 +4047,47 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_130"
+      "review_item_id": "rvw_184"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "actor_context_needs_role_split",
+      "summary": "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026 contains 1 actor-context claim(s) without a more specific governance role.",
+      "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+      "document_id": "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d6_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_185"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "actor_context_needs_role_split",
+      "summary": "nat_wetten_spuk_transformatiemiddelen_regeling contains 1 actor-context claim(s) without a more specific governance role.",
+      "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+      "document_id": "nat_wetten_spuk_transformatiemiddelen_regeling",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_wetten_spuk_transformatiemiddelen_regeling.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_wetten_spuk_transformatiemiddelen_regeling_timeline_and_status_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_186"
     },
     {
       "status": "open",
@@ -2897,7 +4107,27 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_131"
+      "review_item_id": "rvw_187"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "actor_context_needs_role_split",
+      "summary": "nat_zorgakkoorden_azwa_programmapagina_2025 contains 1 actor-context claim(s) without a more specific governance role.",
+      "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+      "document_id": "nat_zorgakkoorden_azwa_programmapagina_2025",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_zorgakkoorden_azwa_programmapagina_2025.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_zorgakkoorden_azwa_programmapagina_2025_municipal_translation_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_188"
     },
     {
       "status": "open",
@@ -2922,7 +4152,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_132"
+      "review_item_id": "rvw_189"
     },
     {
       "status": "open",
@@ -2945,7 +4175,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_133"
+      "review_item_id": "rvw_190"
     },
     {
       "status": "open",
@@ -2969,7 +4199,54 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_134"
+      "review_item_id": "rvw_191"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "vague_region_actor",
+      "summary": "nat_zorgakkoorden_azwa_programmapagina_2025 contains 5 claim(s) where 'regio' is the only detected actor signal.",
+      "recommended_action": "Clarify whether the source means IZA/AZWA-regio, GGD-regio, zorgkantoorregio, ROAZ/subregio, province, mandaatgemeente, or practical execution structure before using this as a role claim.",
+      "document_id": "nat_zorgakkoorden_azwa_programmapagina_2025",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_zorgakkoorden_azwa_programmapagina_2025.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_zorgakkoorden_azwa_programmapagina_2025_d5_001",
+          "clm__nat_zorgakkoorden_azwa_programmapagina_2025_d6_001",
+          "clm__nat_zorgakkoorden_azwa_programmapagina_2025_governance_and_finance_001",
+          "clm__nat_zorgakkoorden_azwa_programmapagina_2025_timeline_and_status_001",
+          "clm__nat_zorgakkoorden_azwa_programmapagina_2025_monitoring_and_evaluation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_192"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "actor_context_needs_role_split",
+      "summary": "reg_flevoland_2023_regiobeeld contains 4 actor-context claim(s) without a more specific governance role.",
+      "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+      "document_id": "reg_flevoland_2023_regiobeeld",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/reg_flevoland_2023_regiobeeld.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__reg_flevoland_2023_regiobeeld_d5_003",
+          "clm__reg_flevoland_2023_regiobeeld_governance_and_finance_002",
+          "clm__reg_flevoland_2023_regiobeeld_governance_and_finance_003",
+          "clm__reg_flevoland_2023_regiobeeld_municipal_translation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_193"
     },
     {
       "status": "open",
@@ -2994,7 +4271,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_135"
+      "review_item_id": "rvw_194"
     },
     {
       "status": "open",
@@ -3015,7 +4292,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_136"
+      "review_item_id": "rvw_195"
     },
     {
       "status": "open",
@@ -3039,7 +4316,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_137"
+      "review_item_id": "rvw_196"
     },
     {
       "status": "open",
@@ -3062,7 +4339,30 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_138"
+      "review_item_id": "rvw_197"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "actor_context_needs_role_split",
+      "summary": "reg_flevoland_2023_regioplan_iza contains 4 actor-context claim(s) without a more specific governance role.",
+      "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+      "document_id": "reg_flevoland_2023_regioplan_iza",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/reg_flevoland_2023_regioplan_iza.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__reg_flevoland_2023_regioplan_iza_d6_001",
+          "clm__reg_flevoland_2023_regioplan_iza_governance_and_finance_001",
+          "clm__reg_flevoland_2023_regioplan_iza_municipal_translation_001",
+          "clm__reg_flevoland_2023_regioplan_iza_municipal_translation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_198"
     },
     {
       "status": "open",
@@ -3082,7 +4382,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_139"
+      "review_item_id": "rvw_199"
     },
     {
       "status": "open",
@@ -3102,7 +4402,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_140"
+      "review_item_id": "rvw_200"
     },
     {
       "status": "open",
@@ -3126,7 +4426,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_141"
+      "review_item_id": "rvw_201"
     },
     {
       "status": "open",
@@ -3149,7 +4449,29 @@
         "topic_count": 3
       },
       "evidence": {},
-      "review_item_id": "rvw_142"
+      "review_item_id": "rvw_202"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "vague_region_actor",
+      "summary": "reg_flevoland_2023_regioplan_iza contains 3 claim(s) where 'regio' is the only detected actor signal.",
+      "recommended_action": "Clarify whether the source means IZA/AZWA-regio, GGD-regio, zorgkantoorregio, ROAZ/subregio, province, mandaatgemeente, or practical execution structure before using this as a role claim.",
+      "document_id": "reg_flevoland_2023_regioplan_iza",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/reg_flevoland_2023_regioplan_iza.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__reg_flevoland_2023_regioplan_iza_d6_001",
+          "clm__reg_flevoland_2023_regioplan_iza_monitoring_and_evaluation_001",
+          "clm__reg_flevoland_2023_regioplan_iza_municipal_translation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_203"
     },
     {
       "status": "open",
@@ -3174,7 +4496,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_143"
+      "review_item_id": "rvw_204"
     },
     {
       "status": "open",
@@ -3199,7 +4521,31 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_144"
+      "review_item_id": "rvw_205"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "actor_context_needs_role_split",
+      "summary": "reg_ggd_flevoland_begroting_2026 contains 6 actor-context claim(s) without a more specific governance role.",
+      "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+      "document_id": "reg_ggd_flevoland_begroting_2026",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/reg_ggd_flevoland_begroting_2026.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__reg_ggd_flevoland_begroting_2026_d6_001",
+          "clm__reg_ggd_flevoland_begroting_2026_governance_and_finance_002",
+          "clm__reg_ggd_flevoland_begroting_2026_governance_and_finance_003",
+          "clm__reg_ggd_flevoland_begroting_2026_timeline_and_status_001",
+          "clm__reg_ggd_flevoland_begroting_2026_municipal_translation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_206"
     },
     {
       "status": "open",
@@ -3219,7 +4565,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_145"
+      "review_item_id": "rvw_207"
     },
     {
       "status": "open",
@@ -3241,7 +4587,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_146"
+      "review_item_id": "rvw_208"
     },
     {
       "status": "open",
@@ -3265,7 +4611,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_147"
+      "review_item_id": "rvw_209"
     },
     {
       "status": "open",
@@ -3289,7 +4635,31 @@
         "topic_count": 3
       },
       "evidence": {},
-      "review_item_id": "rvw_148"
+      "review_item_id": "rvw_210"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "actor_context_needs_role_split",
+      "summary": "reg_ggd_flevoland_jgz_almere_profile contains 5 actor-context claim(s) without a more specific governance role.",
+      "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+      "document_id": "reg_ggd_flevoland_jgz_almere_profile",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/reg_ggd_flevoland_jgz_almere_profile.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__reg_ggd_flevoland_jgz_almere_profile_d6_001",
+          "clm__reg_ggd_flevoland_jgz_almere_profile_d6_002",
+          "clm__reg_ggd_flevoland_jgz_almere_profile_municipal_translation_001",
+          "clm__reg_ggd_flevoland_jgz_almere_profile_municipal_translation_002",
+          "clm__reg_ggd_flevoland_jgz_almere_profile_municipal_translation_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_211"
     },
     {
       "status": "open",
@@ -3314,7 +4684,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_149"
+      "review_item_id": "rvw_212"
     },
     {
       "status": "open",
@@ -3336,7 +4706,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_150"
+      "review_item_id": "rvw_213"
     },
     {
       "status": "open",
@@ -3359,7 +4729,31 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_151"
+      "review_item_id": "rvw_214"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "actor_context_needs_role_split",
+      "summary": "reg_ggd_flevoland_kennis_en_advies contains 7 actor-context claim(s) without a more specific governance role.",
+      "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+      "document_id": "reg_ggd_flevoland_kennis_en_advies",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/reg_ggd_flevoland_kennis_en_advies.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__reg_ggd_flevoland_kennis_en_advies_d6_001",
+          "clm__reg_ggd_flevoland_kennis_en_advies_d6_002",
+          "clm__reg_ggd_flevoland_kennis_en_advies_governance_and_finance_001",
+          "clm__reg_ggd_flevoland_kennis_en_advies_monitoring_and_evaluation_001",
+          "clm__reg_ggd_flevoland_kennis_en_advies_municipal_translation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_215"
     },
     {
       "status": "open",
@@ -3384,7 +4778,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_152"
+      "review_item_id": "rvw_216"
     },
     {
       "status": "open",
@@ -3406,7 +4800,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_153"
+      "review_item_id": "rvw_217"
     },
     {
       "status": "open",
@@ -3429,7 +4823,28 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_154"
+      "review_item_id": "rvw_218"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "actor_context_needs_role_split",
+      "summary": "reg_ggd_flevoland_valpreventie_almere contains 2 actor-context claim(s) without a more specific governance role.",
+      "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+      "document_id": "reg_ggd_flevoland_valpreventie_almere",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/reg_ggd_flevoland_valpreventie_almere.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__reg_ggd_flevoland_valpreventie_almere_municipal_translation_001",
+          "clm__reg_ggd_flevoland_valpreventie_almere_municipal_translation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_219"
     },
     {
       "status": "open",
@@ -3454,7 +4869,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_155"
+      "review_item_id": "rvw_220"
     },
     {
       "status": "open",
@@ -3476,7 +4891,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_156"
+      "review_item_id": "rvw_221"
     },
     {
       "status": "open",
@@ -3499,7 +4914,30 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_157"
+      "review_item_id": "rvw_222"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "actor_context_needs_role_split",
+      "summary": "reg_zonmw_doorontwikkeling_zorgzaam_flevoland contains 4 actor-context claim(s) without a more specific governance role.",
+      "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+      "document_id": "reg_zonmw_doorontwikkeling_zorgzaam_flevoland",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/reg_zonmw_doorontwikkeling_zorgzaam_flevoland.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__reg_zonmw_doorontwikkeling_zorgzaam_flevoland_governance_and_finance_001",
+          "clm__reg_zonmw_doorontwikkeling_zorgzaam_flevoland_governance_and_finance_002",
+          "clm__reg_zonmw_doorontwikkeling_zorgzaam_flevoland_governance_and_finance_003",
+          "clm__reg_zonmw_doorontwikkeling_zorgzaam_flevoland_monitoring_and_evaluation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_223"
     },
     {
       "status": "open",
@@ -3524,7 +4962,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_158"
+      "review_item_id": "rvw_224"
     },
     {
       "status": "open",
@@ -3545,7 +4983,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_159"
+      "review_item_id": "rvw_225"
     },
     {
       "status": "open",
@@ -3566,7 +5004,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_160"
+      "review_item_id": "rvw_226"
     },
     {
       "status": "open",
@@ -3586,7 +5024,29 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_161"
+      "review_item_id": "rvw_227"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "vague_region_actor",
+      "summary": "reg_zonmw_doorontwikkeling_zorgzaam_flevoland contains 3 claim(s) where 'regio' is the only detected actor signal.",
+      "recommended_action": "Clarify whether the source means IZA/AZWA-regio, GGD-regio, zorgkantoorregio, ROAZ/subregio, province, mandaatgemeente, or practical execution structure before using this as a role claim.",
+      "document_id": "reg_zonmw_doorontwikkeling_zorgzaam_flevoland",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/reg_zonmw_doorontwikkeling_zorgzaam_flevoland.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__reg_zonmw_doorontwikkeling_zorgzaam_flevoland_governance_and_finance_002",
+          "clm__reg_zonmw_doorontwikkeling_zorgzaam_flevoland_monitoring_and_evaluation_001",
+          "clm__reg_zonmw_doorontwikkeling_zorgzaam_flevoland_municipal_translation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_228"
     },
     {
       "status": "open",
@@ -3605,7 +5065,7 @@
       "evidence": {
         "table_count": 4
       },
-      "review_item_id": "rvw_162"
+      "review_item_id": "rvw_229"
     },
     {
       "status": "open",
@@ -3636,7 +5096,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_163"
+      "review_item_id": "rvw_230"
     },
     {
       "status": "open",
@@ -3660,7 +5120,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_164"
+      "review_item_id": "rvw_231"
     },
     {
       "status": "open",
@@ -3687,7 +5147,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_165"
+      "review_item_id": "rvw_232"
     },
     {
       "status": "open",
@@ -3718,7 +5178,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_166"
+      "review_item_id": "rvw_233"
     },
     {
       "status": "open",
@@ -3743,7 +5203,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_167"
+      "review_item_id": "rvw_234"
     },
     {
       "status": "open",
@@ -3774,7 +5234,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_168"
+      "review_item_id": "rvw_235"
     },
     {
       "status": "open",
@@ -3804,7 +5264,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_169"
+      "review_item_id": "rvw_236"
     },
     {
       "status": "open",
@@ -3829,7 +5289,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_170"
+      "review_item_id": "rvw_237"
     },
     {
       "status": "open",
@@ -3854,7 +5314,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_171"
+      "review_item_id": "rvw_238"
     },
     {
       "status": "open",
@@ -3877,7 +5337,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_172"
+      "review_item_id": "rvw_239"
     }
   ]
 }

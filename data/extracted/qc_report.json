@@ -5,17 +5,19 @@
   "summary": {
     "blocking": 0,
     "warning": 6,
-    "review": 166,
-    "review_queue_item_count": 172,
+    "review": 233,
+    "review_queue_item_count": 239,
     "document_count": 58,
     "master_claim_count": 524,
     "interpretation_topic_count": 44,
     "issue_counts_by_reason": {
+      "actor_context_needs_role_split": 48,
       "authority_unclear": 30,
       "double_counting_risk": 1,
       "expected_time_not_deadline": 22,
       "extraction_noise_detected": 3,
       "finance_context_needs_verification": 21,
+      "governance_gap": 1,
       "local_funding_gap": 1,
       "local_planning_context_not_policy_deadline": 10,
       "lower_authority_norm_signal": 37,
@@ -23,7 +25,8 @@
       "missing_d6_content": 2,
       "municipality_relevance_inferred": 30,
       "table_content_not_promoted": 1,
-      "unresolved_conflict": 10
+      "unresolved_conflict": 10,
+      "vague_region_actor": 18
     }
   },
   "checks": [
@@ -40,10 +43,10 @@
       "check_id": "claim_payload_integrity",
       "description": "Per-document claim outputs, review-heavy contextual claims, and suspicious extraction noise.",
       "status": "warn",
-      "issue_count": 155,
+      "issue_count": 222,
       "blocking_issue_count": 0,
       "warning_issue_count": 0,
-      "review_issue_count": 155
+      "review_issue_count": 222
     },
     {
       "check_id": "claim_master_integrity",

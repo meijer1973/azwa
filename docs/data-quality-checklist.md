@@ -96,12 +96,15 @@ Check:
 - Who owns implementation?
 - Who must approve or account?
 - Which regional role is meant: formal mandate, coordination, execution, or review signal?
+- Which `governance_status` applies: `decision_role`, `coordination_role`, `application_role`, `execution_role`, `accountability_role`, `approval_role`, `review_role`, `governance_gap`, `actor_context`, or `not_governance`?
+- Which actor signal is actually present: ministerie, VNG, fondsbeheerder, mandaatgemeente, regio, gemeente, gemeenteraad, college, zorgverzekeraar, or uitvoeringspartner?
 
 Common quality problems:
 - Actor labels are too vague
 - Decision, coordination, and execution are blended together
 - Regional governance is described without saying which party actually acts
 - `mandaatgemeente` is treated as if it also means practical task owner or project lead
+- `regio` is used without specifying IZA/AZWA-regio, GGD-regio, zorgkantoorregio, ROAZ/subregio, province, mandaatgemeente, or practical execution structure
 
 Editorial rule:
 - Keep ownership, coordination, and approval distinct.

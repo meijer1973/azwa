@@ -34,6 +34,17 @@
         "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
         "needs_verification": true
       },
+      "governance_status": {
+        "status": "decision_role",
+        "label": "Besluitvormende rol",
+        "actor_signals": [
+          "gemeenteraad"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Splits besluitvorming van coordinatie en uitvoering; noem de beslissende actor alleen als de bron dat draagt.",
+        "needs_verification": true,
+        "vague_region_only": false
+      },
       "statement": "Raadsvoorstel Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin (26006) Het geamendeerde raadsvoorstel is met algemene stemmen aangenomen.",
       "source_document_id": "mun_almere_2026_stevige_lokale_teams_raad",
       "source_location": {
@@ -96,6 +107,17 @@
         "source_finance_anchor": "none",
         "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
         "needs_verification": true
+      },
+      "governance_status": {
+        "status": "execution_role",
+        "label": "Uitvoeringsrol",
+        "actor_signals": [
+          "gemeenteraad"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt.",
+        "needs_verification": true,
+        "vague_region_only": false
       },
       "statement": "Op 15 januarisprakde raad voor het eerstoverhet raadsvoorstelStevige Lokale Teams en inzet Investeringsfonds Jeugd en Gezin.",
       "source_document_id": "mun_almere_2026_stevige_lokale_teams_raad",
@@ -160,6 +182,15 @@
         "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
         "needs_verification": true
       },
+      "governance_status": {
+        "status": "not_governance",
+        "label": "Geen zelfstandige governanceclaim",
+        "actor_signals": [],
+        "source_governance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+        "needs_verification": true,
+        "vague_region_only": false
+      },
       "statement": "De avond begon met een inspreker die namensArti Care Almere zorgen uitte over de koers van de Stevige Lokale Teams.",
       "source_document_id": "mun_almere_2026_stevige_lokale_teams_raad",
       "source_location": {
@@ -222,6 +253,18 @@
         "source_finance_anchor": "none",
         "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
         "needs_verification": false
+      },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [
+          "gemeenteraad",
+          "college"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": false
       },
       "statement": "Home - Onderwerpen op de agenda - Agenda Politieke Markt - Nieuwsoverzicht - Activiteitenkalender - Ingekomen stukken - Raadsleden - Fractieassistenten - Politieke fracties - Portefeuilles - Raadswerkgroepen - Raadsenquête Floriade - Presidium - Accountant - Rekenkamer - College van burgemeester en wethouders - Griffie - Politieke Markt - Hoe we vergaderen - Raadsinstrumenten - Bezoek de raad - Scholenprogramma - Invloed - Goede raad luistert - Anders monitoren in het sociaal domein - Contact - AANMELDEN - ...",
       "source_document_id": "mun_almere_2026_stevige_lokale_teams_raad",
@@ -286,6 +329,15 @@
         "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "not_governance",
+        "label": "Geen zelfstandige governanceclaim",
+        "actor_signals": [],
+        "source_governance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+        "needs_verification": false,
+        "vague_region_only": false
+      },
       "statement": "Deze worden tijdens de Politieke Markt van 5 februari besproken.",
       "source_document_id": "mun_almere_2026_stevige_lokale_teams_raad",
       "source_location": {
@@ -348,6 +400,18 @@
         "source_finance_anchor": "none",
         "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
         "needs_verification": false
+      },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [
+          "gemeenteraad",
+          "college"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": false
       },
       "statement": "Home - Onderwerpen op de agenda - Agenda Politieke Markt - Nieuwsoverzicht - Activiteitenkalender - Ingekomen stukken - Raadsleden - Fractieassistenten - Politieke fracties - Portefeuilles - Raadswerkgroepen - Raadsenquête Floriade - Presidium - Accountant - Rekenkamer - College van burgemeester en wethouders - Griffie - Politieke Markt - Hoe we vergaderen - Raadsinstrumenten - Bezoek de raad - Scholenprogramma - Invloed - Goede raad luistert - Anders monitoren in het sociaal domein - Contact - AANMELDEN - ...",
       "source_document_id": "mun_almere_2026_stevige_lokale_teams_raad",
@@ -412,6 +476,15 @@
         "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "not_governance",
+        "label": "Geen zelfstandige governanceclaim",
+        "actor_signals": [],
+        "source_governance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+        "needs_verification": false,
+        "vague_region_only": false
+      },
       "statement": "De avond begon met een inspreker die namensArti Care Almere zorgen uitte over de koers van de Stevige Lokale Teams.",
       "source_document_id": "mun_almere_2026_stevige_lokale_teams_raad",
       "source_location": {
@@ -474,6 +547,19 @@
         "source_finance_anchor": "none",
         "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
         "needs_verification": false
+      },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [
+          "regio",
+          "gemeenteraad",
+          "college"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": false
       },
       "statement": "Het college benadrukte hierop dat de ontwikkeling van de Stevige Lokale Teams nog volop in beweging is.Volgende week komt het college met een raadsbrief over de aanpassingen op de regionale inkoopstrategie.",
       "source_document_id": "mun_almere_2026_stevige_lokale_teams_raad",

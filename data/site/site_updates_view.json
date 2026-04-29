@@ -198,6 +198,15 @@
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": true
               },
+              "governance_status": {
+                "status": "not_governance",
+                "label": "Geen zelfstandige governanceclaim",
+                "actor_signals": [],
+                "source_governance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+                "needs_verification": true,
+                "vague_region_only": false
+              },
               "page_labels": [
                 "5"
               ],
@@ -234,6 +243,18 @@
                 "source_finance_anchor": "explicit_finance_signal",
                 "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
                 "needs_verification": true
+              },
+              "governance_status": {
+                "status": "decision_role",
+                "label": "Besluitvormende rol",
+                "actor_signals": [
+                  "gemeenteraad",
+                  "college"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Splits besluitvorming van coordinatie en uitvoering; noem de beslissende actor alleen als de bron dat draagt.",
+                "needs_verification": true,
+                "vague_region_only": false
               },
               "page_labels": [
                 "1"
@@ -272,6 +293,17 @@
                 "public_wording_guardrail": "Gebruik als context; controleer sterkere bronnen voordat hier een financieringsregel van wordt gemaakt.",
                 "needs_verification": true
               },
+              "governance_status": {
+                "status": "coordination_role",
+                "label": "Coordinatie- of regierol",
+                "actor_signals": [
+                  "gemeente"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als coordinatie/regie; niet vermengen met besluitvorming of uitvoering.",
+                "needs_verification": false,
+                "vague_region_only": false
+              },
               "page_labels": [
                 "3"
               ],
@@ -308,6 +340,17 @@
                 "source_finance_anchor": "explicit_finance_signal",
                 "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [
+                  "gemeente"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": false
               },
               "page_labels": [
                 "5"
@@ -346,6 +389,15 @@
                 "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "execution_role",
+                "label": "Uitvoeringsrol",
+                "actor_signals": [],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt.",
+                "needs_verification": false,
+                "vague_region_only": false
+              },
               "page_labels": [
                 "5"
               ],
@@ -382,6 +434,15 @@
                 "source_finance_anchor": "explicit_finance_signal",
                 "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "not_governance",
+                "label": "Geen zelfstandige governanceclaim",
+                "actor_signals": [],
+                "source_governance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+                "needs_verification": false,
+                "vague_region_only": false
               },
               "page_labels": [
                 "5"
@@ -420,6 +481,15 @@
                 "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "execution_role",
+                "label": "Uitvoeringsrol",
+                "actor_signals": [],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt.",
+                "needs_verification": false,
+                "vague_region_only": false
+              },
               "page_labels": [
                 "5"
               ],
@@ -456,6 +526,17 @@
                 "source_finance_anchor": "none",
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [
+                  "gemeente"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": false
               },
               "page_labels": [
                 "6"
@@ -494,6 +575,18 @@
                 "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "decision_role",
+                "label": "Besluitvormende rol",
+                "actor_signals": [
+                  "gemeente",
+                  "gemeenteraad"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Splits besluitvorming van coordinatie en uitvoering; noem de beslissende actor alleen als de bron dat draagt.",
+                "needs_verification": false,
+                "vague_region_only": false
+              },
               "page_labels": [
                 "10"
               ],
@@ -531,6 +624,15 @@
                 "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "coordination_role",
+                "label": "Coordinatie- of regierol",
+                "actor_signals": [],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als coordinatie/regie; niet vermengen met besluitvorming of uitvoering.",
+                "needs_verification": false,
+                "vague_region_only": false
+              },
               "page_labels": [
                 "6"
               ],
@@ -567,6 +669,15 @@
                 "source_finance_anchor": "explicit_finance_signal",
                 "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "not_governance",
+                "label": "Geen zelfstandige governanceclaim",
+                "actor_signals": [],
+                "source_governance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+                "needs_verification": false,
+                "vague_region_only": false
               },
               "page_labels": [
                 "6"
@@ -615,6 +726,15 @@
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": true
               },
+              "governance_status": {
+                "status": "not_governance",
+                "label": "Geen zelfstandige governanceclaim",
+                "actor_signals": [],
+                "source_governance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+                "needs_verification": true,
+                "vague_region_only": false
+              },
               "page_labels": [
                 "5"
               ],
@@ -651,6 +771,18 @@
                 "source_finance_anchor": "explicit_finance_signal",
                 "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
                 "needs_verification": true
+              },
+              "governance_status": {
+                "status": "decision_role",
+                "label": "Besluitvormende rol",
+                "actor_signals": [
+                  "gemeenteraad",
+                  "college"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Splits besluitvorming van coordinatie en uitvoering; noem de beslissende actor alleen als de bron dat draagt.",
+                "needs_verification": true,
+                "vague_region_only": false
               },
               "page_labels": [
                 "1"
@@ -689,6 +821,17 @@
                 "public_wording_guardrail": "Gebruik als context; controleer sterkere bronnen voordat hier een financieringsregel van wordt gemaakt.",
                 "needs_verification": true
               },
+              "governance_status": {
+                "status": "coordination_role",
+                "label": "Coordinatie- of regierol",
+                "actor_signals": [
+                  "gemeente"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als coordinatie/regie; niet vermengen met besluitvorming of uitvoering.",
+                "needs_verification": false,
+                "vague_region_only": false
+              },
               "page_labels": [
                 "3"
               ],
@@ -725,6 +868,17 @@
                 "source_finance_anchor": "explicit_finance_signal",
                 "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [
+                  "gemeente"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": false
               },
               "page_labels": [
                 "5"
@@ -763,6 +917,15 @@
                 "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "execution_role",
+                "label": "Uitvoeringsrol",
+                "actor_signals": [],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt.",
+                "needs_verification": false,
+                "vague_region_only": false
+              },
               "page_labels": [
                 "5"
               ],
@@ -799,6 +962,15 @@
                 "source_finance_anchor": "explicit_finance_signal",
                 "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "not_governance",
+                "label": "Geen zelfstandige governanceclaim",
+                "actor_signals": [],
+                "source_governance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+                "needs_verification": false,
+                "vague_region_only": false
               },
               "page_labels": [
                 "5"
@@ -837,6 +1009,15 @@
                 "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "execution_role",
+                "label": "Uitvoeringsrol",
+                "actor_signals": [],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt.",
+                "needs_verification": false,
+                "vague_region_only": false
+              },
               "page_labels": [
                 "5"
               ],
@@ -873,6 +1054,17 @@
                 "source_finance_anchor": "none",
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [
+                  "gemeente"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": false
               },
               "page_labels": [
                 "6"
@@ -911,6 +1103,18 @@
                 "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "decision_role",
+                "label": "Besluitvormende rol",
+                "actor_signals": [
+                  "gemeente",
+                  "gemeenteraad"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Splits besluitvorming van coordinatie en uitvoering; noem de beslissende actor alleen als de bron dat draagt.",
+                "needs_verification": false,
+                "vague_region_only": false
+              },
               "page_labels": [
                 "10"
               ],
@@ -948,6 +1152,15 @@
                 "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "coordination_role",
+                "label": "Coordinatie- of regierol",
+                "actor_signals": [],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als coordinatie/regie; niet vermengen met besluitvorming of uitvoering.",
+                "needs_verification": false,
+                "vague_region_only": false
+              },
               "page_labels": [
                 "6"
               ],
@@ -984,6 +1197,15 @@
                 "source_finance_anchor": "explicit_finance_signal",
                 "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "not_governance",
+                "label": "Geen zelfstandige governanceclaim",
+                "actor_signals": [],
+                "source_governance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+                "needs_verification": false,
+                "vague_region_only": false
               },
               "page_labels": [
                 "6"
@@ -1032,6 +1254,15 @@
                 "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
                 "needs_verification": true
               },
+              "governance_status": {
+                "status": "execution_role",
+                "label": "Uitvoeringsrol",
+                "actor_signals": [],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt.",
+                "needs_verification": true,
+                "vague_region_only": false
+              },
               "page_labels": [
                 "1"
               ],
@@ -1069,6 +1300,15 @@
                 "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "execution_role",
+                "label": "Uitvoeringsrol",
+                "actor_signals": [],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt.",
+                "needs_verification": false,
+                "vague_region_only": false
+              },
               "page_labels": [
                 "1"
               ],
@@ -1105,6 +1345,15 @@
                 "source_finance_anchor": "explicit_finance_signal",
                 "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "execution_role",
+                "label": "Uitvoeringsrol",
+                "actor_signals": [],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt.",
+                "needs_verification": false,
+                "vague_region_only": false
               },
               "page_labels": [
                 "1"
@@ -1153,6 +1402,18 @@
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": true
               },
+              "governance_status": {
+                "status": "decision_role",
+                "label": "Besluitvormende rol",
+                "actor_signals": [
+                  "gemeenteraad",
+                  "college"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Splits besluitvorming van coordinatie en uitvoering; noem de beslissende actor alleen als de bron dat draagt.",
+                "needs_verification": true,
+                "vague_region_only": false
+              },
               "page_labels": [
                 "1"
               ],
@@ -1190,6 +1451,15 @@
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "not_governance",
+                "label": "Geen zelfstandige governanceclaim",
+                "actor_signals": [],
+                "source_governance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+                "needs_verification": false,
+                "vague_region_only": false
+              },
               "page_labels": [
                 "1"
               ],
@@ -1226,6 +1496,18 @@
                 "source_finance_anchor": "none",
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "decision_role",
+                "label": "Besluitvormende rol",
+                "actor_signals": [
+                  "gemeenteraad",
+                  "college"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Splits besluitvorming van coordinatie en uitvoering; noem de beslissende actor alleen als de bron dat draagt.",
+                "needs_verification": false,
+                "vague_region_only": false
               },
               "page_labels": [
                 "1"
@@ -1274,6 +1556,15 @@
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": true
               },
+              "governance_status": {
+                "status": "not_governance",
+                "label": "Geen zelfstandige governanceclaim",
+                "actor_signals": [],
+                "source_governance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+                "needs_verification": true,
+                "vague_region_only": false
+              },
               "page_labels": [],
               "section_labels": [
                 "Samenwerkingsprojecten / Samen sterker in de wijk"
@@ -1308,6 +1599,15 @@
                 "source_finance_anchor": "none",
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": false
               },
               "page_labels": [],
               "section_labels": [
@@ -1344,6 +1644,15 @@
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "not_governance",
+                "label": "Geen zelfstandige governanceclaim",
+                "actor_signals": [],
+                "source_governance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+                "needs_verification": false,
+                "vague_region_only": false
+              },
               "page_labels": [],
               "section_labels": [
                 "Samenwerkingsprojecten / Samen sterker in de wijk / Al doende leren"
@@ -1378,6 +1687,15 @@
                 "source_finance_anchor": "none",
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "not_governance",
+                "label": "Geen zelfstandige governanceclaim",
+                "actor_signals": [],
+                "source_governance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+                "needs_verification": false,
+                "vague_region_only": false
               },
               "page_labels": [],
               "section_labels": [
@@ -1414,6 +1732,15 @@
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "execution_role",
+                "label": "Uitvoeringsrol",
+                "actor_signals": [],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt.",
+                "needs_verification": false,
+                "vague_region_only": false
+              },
               "page_labels": [],
               "section_labels": [
                 "Samenwerkingsprojecten / Samen sterker in de wijk / Netwerkteams"
@@ -1448,6 +1775,17 @@
                 "source_finance_anchor": "none",
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [
+                  "gemeente"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": false
               },
               "page_labels": [],
               "section_labels": [
@@ -1484,6 +1822,18 @@
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [
+                  "gemeente",
+                  "uitvoeringspartner"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": false
+              },
               "page_labels": [],
               "section_labels": [
                 "Samenwerkingsprojecten / Samenwerkingsafspraken Thuis in de wijk"
@@ -1518,6 +1868,15 @@
                 "source_finance_anchor": "none",
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "not_governance",
+                "label": "Geen zelfstandige governanceclaim",
+                "actor_signals": [],
+                "source_governance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+                "needs_verification": false,
+                "vague_region_only": false
               },
               "page_labels": [],
               "section_labels": [
@@ -1564,6 +1923,15 @@
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "not_governance",
+                "label": "Geen zelfstandige governanceclaim",
+                "actor_signals": [],
+                "source_governance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+                "needs_verification": false,
+                "vague_region_only": false
+              },
               "page_labels": [],
               "section_labels": [
                 "Daar bouwen wij samen aan / Waar bouwen we aan?"
@@ -1598,6 +1966,15 @@
                 "source_finance_anchor": "none",
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "not_governance",
+                "label": "Geen zelfstandige governanceclaim",
+                "actor_signals": [],
+                "source_governance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+                "needs_verification": false,
+                "vague_region_only": false
               },
               "page_labels": [],
               "section_labels": [
@@ -1634,6 +2011,15 @@
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "not_governance",
+                "label": "Geen zelfstandige governanceclaim",
+                "actor_signals": [],
+                "source_governance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+                "needs_verification": false,
+                "vague_region_only": false
+              },
               "page_labels": [],
               "section_labels": [
                 "Daar bouwen wij samen aan / Blijf op de hoogte"
@@ -1668,6 +2054,15 @@
                 "source_finance_anchor": "none",
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "not_governance",
+                "label": "Geen zelfstandige governanceclaim",
+                "actor_signals": [],
+                "source_governance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+                "needs_verification": false,
+                "vague_region_only": false
               },
               "page_labels": [],
               "section_labels": [
@@ -1881,6 +2276,17 @@
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": true
               },
+              "governance_status": {
+                "status": "decision_role",
+                "label": "Besluitvormende rol",
+                "actor_signals": [
+                  "gemeenteraad"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Splits besluitvorming van coordinatie en uitvoering; noem de beslissende actor alleen als de bron dat draagt.",
+                "needs_verification": true,
+                "vague_region_only": false
+              },
               "page_labels": [],
               "section_labels": [
                 "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin / Eerdere berichten / Het voorstel is op 19 februari 2026 geamendeerd aangenomen 20-02-2026"
@@ -1915,6 +2321,17 @@
                 "source_finance_anchor": "none",
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": true
+              },
+              "governance_status": {
+                "status": "execution_role",
+                "label": "Uitvoeringsrol",
+                "actor_signals": [
+                  "gemeenteraad"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt.",
+                "needs_verification": true,
+                "vague_region_only": false
               },
               "page_labels": [],
               "section_labels": [
@@ -1951,6 +2368,15 @@
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": true
               },
+              "governance_status": {
+                "status": "not_governance",
+                "label": "Geen zelfstandige governanceclaim",
+                "actor_signals": [],
+                "source_governance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+                "needs_verification": true,
+                "vague_region_only": false
+              },
               "page_labels": [],
               "section_labels": [
                 "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin / Eerdere berichten / De eerte bespreking vond plaats op 15 januari 202616-01-2026"
@@ -1985,6 +2411,18 @@
                 "source_finance_anchor": "none",
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [
+                  "gemeenteraad",
+                  "college"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": false
               },
               "page_labels": [],
               "section_labels": [
@@ -2021,6 +2459,15 @@
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "not_governance",
+                "label": "Geen zelfstandige governanceclaim",
+                "actor_signals": [],
+                "source_governance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+                "needs_verification": false,
+                "vague_region_only": false
+              },
               "page_labels": [],
               "section_labels": [
                 "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin / Eerdere berichten / De eerte bespreking vond plaats op 15 januari 202616-01-2026"
@@ -2055,6 +2502,19 @@
                 "source_finance_anchor": "none",
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [
+                  "regio",
+                  "gemeenteraad",
+                  "college"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": false
               },
               "page_labels": [],
               "section_labels": [
@@ -2091,6 +2551,18 @@
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [
+                  "gemeenteraad",
+                  "college"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": false
+              },
               "page_labels": [],
               "section_labels": [
                 "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin"
@@ -2125,6 +2597,15 @@
                 "source_finance_anchor": "none",
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "not_governance",
+                "label": "Geen zelfstandige governanceclaim",
+                "actor_signals": [],
+                "source_governance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+                "needs_verification": false,
+                "vague_region_only": false
               },
               "page_labels": [],
               "section_labels": [
@@ -2171,6 +2652,15 @@
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": true
               },
+              "governance_status": {
+                "status": "not_governance",
+                "label": "Geen zelfstandige governanceclaim",
+                "actor_signals": [],
+                "source_governance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+                "needs_verification": true,
+                "vague_region_only": false
+              },
               "page_labels": [],
               "section_labels": [
                 "Wijkteams Almere"
@@ -2205,6 +2695,15 @@
                 "source_finance_anchor": "none",
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "not_governance",
+                "label": "Geen zelfstandige governanceclaim",
+                "actor_signals": [],
+                "source_governance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+                "needs_verification": false,
+                "vague_region_only": false
               },
               "page_labels": [],
               "section_labels": [
@@ -2251,6 +2750,15 @@
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": true
               },
+              "governance_status": {
+                "status": "not_governance",
+                "label": "Geen zelfstandige governanceclaim",
+                "actor_signals": [],
+                "source_governance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+                "needs_verification": true,
+                "vague_region_only": false
+              },
               "page_labels": [
                 "16"
               ],
@@ -2287,6 +2795,19 @@
                 "source_finance_anchor": "explicit_finance_signal",
                 "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "coordination_role",
+                "label": "Coordinatie- of regierol",
+                "actor_signals": [
+                  "ministerie",
+                  "vng",
+                  "gemeente"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als coordinatie/regie; niet vermengen met besluitvorming of uitvoering.",
+                "needs_verification": false,
+                "vague_region_only": false
               },
               "page_labels": [
                 "8"
@@ -2325,6 +2846,15 @@
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "not_governance",
+                "label": "Geen zelfstandige governanceclaim",
+                "actor_signals": [],
+                "source_governance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+                "needs_verification": false,
+                "vague_region_only": false
+              },
               "page_labels": [
                 "6"
               ],
@@ -2361,6 +2891,17 @@
                 "source_finance_anchor": "none",
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [
+                  "gemeente"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": false
               },
               "page_labels": [
                 "8"
@@ -2399,6 +2940,15 @@
                 "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "not_governance",
+                "label": "Geen zelfstandige governanceclaim",
+                "actor_signals": [],
+                "source_governance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+                "needs_verification": false,
+                "vague_region_only": false
+              },
               "page_labels": [
                 "3"
               ],
@@ -2435,6 +2985,18 @@
                 "source_finance_anchor": "explicit_finance_signal",
                 "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "coordination_role",
+                "label": "Coordinatie- of regierol",
+                "actor_signals": [
+                  "gemeente",
+                  "uitvoeringspartner"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als coordinatie/regie; niet vermengen met besluitvorming of uitvoering.",
+                "needs_verification": false,
+                "vague_region_only": false
               },
               "page_labels": [
                 "9"
@@ -2473,6 +3035,19 @@
                 "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "coordination_role",
+                "label": "Coordinatie- of regierol",
+                "actor_signals": [
+                  "ministerie",
+                  "vng",
+                  "gemeente"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als coordinatie/regie; niet vermengen met besluitvorming of uitvoering.",
+                "needs_verification": false,
+                "vague_region_only": false
+              },
               "page_labels": [
                 "8"
               ],
@@ -2509,6 +3084,17 @@
                 "source_finance_anchor": "none",
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "execution_role",
+                "label": "Uitvoeringsrol",
+                "actor_signals": [
+                  "gemeente"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt.",
+                "needs_verification": false,
+                "vague_region_only": false
               },
               "page_labels": [
                 "3"
@@ -2547,6 +3133,17 @@
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [
+                  "gemeente"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": false
+              },
               "page_labels": [
                 "3"
               ],
@@ -2583,6 +3180,17 @@
                 "source_finance_anchor": "none",
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [
+                  "gemeente"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": false
               },
               "page_labels": [
                 "3"
@@ -2621,6 +3229,17 @@
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [
+                  "gemeente"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": false
+              },
               "page_labels": [
                 "3"
               ],
@@ -2657,6 +3276,17 @@
                 "source_finance_anchor": "none",
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "approval_role",
+                "label": "Goedkeurings- of vaststellingsrol",
+                "actor_signals": [
+                  "gemeente"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als goedkeurings- of vaststellingsrol; niet automatisch als uitvoeringsverantwoordelijkheid.",
+                "needs_verification": false,
+                "vague_region_only": false
               },
               "page_labels": [
                 "6"
@@ -2695,6 +3325,19 @@
                 "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "coordination_role",
+                "label": "Coordinatie- of regierol",
+                "actor_signals": [
+                  "ministerie",
+                  "vng",
+                  "gemeente"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als coordinatie/regie; niet vermengen met besluitvorming of uitvoering.",
+                "needs_verification": false,
+                "vague_region_only": false
+              },
               "page_labels": [
                 "8"
               ],
@@ -2731,6 +3374,18 @@
                 "source_finance_anchor": "explicit_finance_signal",
                 "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [
+                  "vng",
+                  "gemeente"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": false
               },
               "page_labels": [
                 "35"
@@ -2779,6 +3434,17 @@
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [
+                  "gemeente"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": false
+              },
               "page_labels": [],
               "section_labels": [
                 "Basisfuncties voor lokale teams / Download: Basisfuncties voor lokale teams"
@@ -2813,6 +3479,17 @@
                 "source_finance_anchor": "none",
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [
+                  "gemeente"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": false
               },
               "page_labels": [],
               "section_labels": [
@@ -2849,6 +3526,17 @@
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "execution_role",
+                "label": "Uitvoeringsrol",
+                "actor_signals": [
+                  "gemeente"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt.",
+                "needs_verification": false,
+                "vague_region_only": false
+              },
               "page_labels": [],
               "section_labels": [
                 "Basisfuncties voor lokale teams"
@@ -2883,6 +3571,17 @@
                 "source_finance_anchor": "none",
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [
+                  "gemeente"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": false
               },
               "page_labels": [],
               "section_labels": [
@@ -2929,6 +3628,15 @@
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": true
               },
+              "governance_status": {
+                "status": "coordination_role",
+                "label": "Coordinatie- of regierol",
+                "actor_signals": [],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als coordinatie/regie; niet vermengen met besluitvorming of uitvoering.",
+                "needs_verification": true,
+                "vague_region_only": false
+              },
               "page_labels": [
                 "8"
               ],
@@ -2965,6 +3673,15 @@
                 "source_finance_anchor": "none",
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": true
+              },
+              "governance_status": {
+                "status": "not_governance",
+                "label": "Geen zelfstandige governanceclaim",
+                "actor_signals": [],
+                "source_governance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+                "needs_verification": true,
+                "vague_region_only": false
               },
               "page_labels": [
                 "7"
@@ -3003,6 +3720,17 @@
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": true
               },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [
+                  "uitvoeringspartner"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": false
+              },
               "page_labels": [
                 "7"
               ],
@@ -3039,6 +3767,15 @@
                 "source_finance_anchor": "none",
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": true
+              },
+              "governance_status": {
+                "status": "not_governance",
+                "label": "Geen zelfstandige governanceclaim",
+                "actor_signals": [],
+                "source_governance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+                "needs_verification": true,
+                "vague_region_only": false
               },
               "page_labels": [
                 "14"
@@ -3077,6 +3814,15 @@
                 "public_wording_guardrail": "Gebruik als context; controleer sterkere bronnen voordat hier een financieringsregel van wordt gemaakt.",
                 "needs_verification": true
               },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": false
+              },
               "page_labels": [
                 "33"
               ],
@@ -3113,6 +3859,17 @@
                 "source_finance_anchor": "explicit_finance_signal",
                 "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [
+                  "gemeente"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": false
               },
               "page_labels": [
                 "12"
@@ -3151,6 +3908,15 @@
                 "public_wording_guardrail": "Koppel aan de bronroute en verantwoordingsplicht; maak er geen bestedingsruimte van.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "review_role",
+                "label": "Review-, monitorings- of toetsrol",
+                "actor_signals": [],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als toetsing, monitoring of evaluatie; niet als besluitvorming.",
+                "needs_verification": false,
+                "vague_region_only": false
+              },
               "page_labels": [
                 "8"
               ],
@@ -3187,6 +3953,15 @@
                 "source_finance_anchor": "explicit_finance_signal",
                 "public_wording_guardrail": "Koppel aan de bronroute en verantwoordingsplicht; maak er geen bestedingsruimte van.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "review_role",
+                "label": "Review-, monitorings- of toetsrol",
+                "actor_signals": [],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als toetsing, monitoring of evaluatie; niet als besluitvorming.",
+                "needs_verification": false,
+                "vague_region_only": false
               },
               "page_labels": [
                 "7"
@@ -3225,6 +4000,18 @@
                 "public_wording_guardrail": "Gebruik als context; controleer sterkere bronnen voordat hier een financieringsregel van wordt gemaakt.",
                 "needs_verification": true
               },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [
+                  "regio",
+                  "gemeente"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": false
+              },
               "page_labels": [
                 "8"
               ],
@@ -3261,6 +4048,18 @@
                 "source_finance_anchor": "explicit_finance_signal",
                 "public_wording_guardrail": "Gebruik als context; controleer sterkere bronnen voordat hier een financieringsregel van wordt gemaakt.",
                 "needs_verification": true
+              },
+              "governance_status": {
+                "status": "decision_role",
+                "label": "Besluitvormende rol",
+                "actor_signals": [
+                  "regio",
+                  "gemeente"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Splits besluitvorming van coordinatie en uitvoering; noem de beslissende actor alleen als de bron dat draagt.",
+                "needs_verification": false,
+                "vague_region_only": false
               },
               "page_labels": [
                 "8"
@@ -3299,6 +4098,18 @@
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [
+                  "regio",
+                  "gemeente"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": false
+              },
               "page_labels": [
                 "13"
               ],
@@ -3335,6 +4146,17 @@
                 "source_finance_anchor": "explicit_finance_signal",
                 "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [
+                  "gemeente"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": false
               },
               "page_labels": [
                 "28"
@@ -3373,6 +4195,15 @@
                 "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "not_governance",
+                "label": "Geen zelfstandige governanceclaim",
+                "actor_signals": [],
+                "source_governance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+                "needs_verification": false,
+                "vague_region_only": false
+              },
               "page_labels": [
                 "30"
               ],
@@ -3409,6 +4240,15 @@
                 "source_finance_anchor": "explicit_finance_signal",
                 "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "not_governance",
+                "label": "Geen zelfstandige governanceclaim",
+                "actor_signals": [],
+                "source_governance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+                "needs_verification": false,
+                "vague_region_only": false
               },
               "page_labels": [
                 "31"
@@ -3457,6 +4297,17 @@
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": true
               },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [
+                  "gemeente"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": false
+              },
               "page_labels": [],
               "section_labels": [
                 "Kennis en Advies"
@@ -3491,6 +4342,17 @@
                 "source_finance_anchor": "none",
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": true
+              },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [
+                  "gemeente"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": false
               },
               "page_labels": [],
               "section_labels": [
@@ -3527,6 +4389,15 @@
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": true
               },
+              "governance_status": {
+                "status": "coordination_role",
+                "label": "Coordinatie- of regierol",
+                "actor_signals": [],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als coordinatie/regie; niet vermengen met besluitvorming of uitvoering.",
+                "needs_verification": true,
+                "vague_region_only": false
+              },
               "page_labels": [],
               "section_labels": [
                 "Kennis en Advies"
@@ -3561,6 +4432,18 @@
                 "source_finance_anchor": "explicit_finance_signal",
                 "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [
+                  "gemeente",
+                  "gemeenteraad"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": false
               },
               "page_labels": [],
               "section_labels": [
@@ -3597,6 +4480,18 @@
                 "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [
+                  "gemeente",
+                  "gemeenteraad"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": false
+              },
               "page_labels": [],
               "section_labels": [
                 "Kennis en Advies"
@@ -3631,6 +4526,17 @@
                 "source_finance_anchor": "none",
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [
+                  "gemeente"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": false
               },
               "page_labels": [],
               "section_labels": [
@@ -3667,6 +4573,17 @@
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [
+                  "gemeente"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": false
+              },
               "page_labels": [],
               "section_labels": [
                 "Kennis en Advies"
@@ -3701,6 +4618,18 @@
                 "source_finance_anchor": "explicit_finance_signal",
                 "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [
+                  "gemeente",
+                  "gemeenteraad"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": false
               },
               "page_labels": [],
               "section_labels": [
@@ -3747,6 +4676,17 @@
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": true
               },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [
+                  "gemeente"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": false
+              },
               "page_labels": [],
               "section_labels": [
                 "Profiel Jeugdgezondheidszorg"
@@ -3781,6 +4721,17 @@
                 "source_finance_anchor": "none",
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": true
+              },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [
+                  "gemeente"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": false
               },
               "page_labels": [],
               "section_labels": [
@@ -3817,6 +4768,15 @@
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": true
               },
+              "governance_status": {
+                "status": "not_governance",
+                "label": "Geen zelfstandige governanceclaim",
+                "actor_signals": [],
+                "source_governance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+                "needs_verification": true,
+                "vague_region_only": false
+              },
               "page_labels": [],
               "section_labels": [
                 "Profiel Jeugdgezondheidszorg"
@@ -3851,6 +4811,15 @@
                 "source_finance_anchor": "none",
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "not_governance",
+                "label": "Geen zelfstandige governanceclaim",
+                "actor_signals": [],
+                "source_governance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+                "needs_verification": false,
+                "vague_region_only": false
               },
               "page_labels": [],
               "section_labels": [
@@ -3887,6 +4856,17 @@
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [
+                  "gemeente"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": false
+              },
               "page_labels": [],
               "section_labels": [
                 "Profiel Jeugdgezondheidszorg"
@@ -3922,6 +4902,17 @@
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [
+                  "gemeente"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": false
+              },
               "page_labels": [],
               "section_labels": [
                 "Profiel Jeugdgezondheidszorg"
@@ -3956,6 +4947,17 @@
                 "source_finance_anchor": "none",
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [
+                  "gemeente"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": false
               },
               "page_labels": [],
               "section_labels": [
@@ -4158,6 +5160,15 @@
                 "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "not_governance",
+                "label": "Geen zelfstandige governanceclaim",
+                "actor_signals": [],
+                "source_governance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+                "needs_verification": false,
+                "vague_region_only": false
+              },
               "page_labels": [],
               "section_labels": [
                 "AZWA-financiering voor gemeenten (Zorgakkoord) / Ledenbrief nummer"
@@ -4193,6 +5204,15 @@
                 "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": false
+              },
               "page_labels": [],
               "section_labels": [
                 "AZWA-financiering voor gemeenten (Zorgakkoord) / Ledenbrief nummer"
@@ -4227,6 +5247,20 @@
                 "source_finance_anchor": "explicit_finance_signal",
                 "public_wording_guardrail": "Gebruik als context; controleer sterkere bronnen voordat hier een financieringsregel van wordt gemaakt.",
                 "needs_verification": true
+              },
+              "governance_status": {
+                "status": "approval_role",
+                "label": "Goedkeurings- of vaststellingsrol",
+                "actor_signals": [
+                  "regio",
+                  "gemeente",
+                  "gemeenteraad",
+                  "college"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als goedkeurings- of vaststellingsrol; niet automatisch als uitvoeringsverantwoordelijkheid.",
+                "needs_verification": false,
+                "vague_region_only": false
               },
               "page_labels": [],
               "section_labels": [
@@ -4273,6 +5307,15 @@
                 "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "not_governance",
+                "label": "Geen zelfstandige governanceclaim",
+                "actor_signals": [],
+                "source_governance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+                "needs_verification": false,
+                "vague_region_only": false
+              },
               "page_labels": [
                 "1"
               ],
@@ -4309,6 +5352,17 @@
                 "source_finance_anchor": "explicit_finance_signal",
                 "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [
+                  "regio"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": true
               },
               "page_labels": [
                 "1"
@@ -4347,6 +5401,15 @@
                 "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": false
+              },
               "page_labels": [
                 "1"
               ],
@@ -4383,6 +5446,18 @@
                 "source_finance_anchor": "explicit_finance_signal",
                 "public_wording_guardrail": "Koppel aan de bronroute en verantwoordingsplicht; maak er geen bestedingsruimte van.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "approval_role",
+                "label": "Goedkeurings- of vaststellingsrol",
+                "actor_signals": [
+                  "regio",
+                  "gemeente"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als goedkeurings- of vaststellingsrol; niet automatisch als uitvoeringsverantwoordelijkheid.",
+                "needs_verification": false,
+                "vague_region_only": false
               },
               "page_labels": [
                 "1"
@@ -4421,6 +5496,17 @@
                 "public_wording_guardrail": "Gebruik als context; controleer sterkere bronnen voordat hier een financieringsregel van wordt gemaakt.",
                 "needs_verification": true
               },
+              "governance_status": {
+                "status": "coordination_role",
+                "label": "Coordinatie- of regierol",
+                "actor_signals": [
+                  "ministerie"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als coordinatie/regie; niet vermengen met besluitvorming of uitvoering.",
+                "needs_verification": false,
+                "vague_region_only": false
+              },
               "page_labels": [
                 "2"
               ],
@@ -4457,6 +5543,17 @@
                 "source_finance_anchor": "explicit_finance_signal",
                 "public_wording_guardrail": "Koppel aan de bronroute en verantwoordingsplicht; maak er geen bestedingsruimte van.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "approval_role",
+                "label": "Goedkeurings- of vaststellingsrol",
+                "actor_signals": [
+                  "gemeente"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als goedkeurings- of vaststellingsrol; niet automatisch als uitvoeringsverantwoordelijkheid.",
+                "needs_verification": false,
+                "vague_region_only": false
               },
               "page_labels": [
                 "1"
@@ -4495,6 +5592,18 @@
                 "public_wording_guardrail": "Koppel aan de bronroute en verantwoordingsplicht; maak er geen bestedingsruimte van.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "approval_role",
+                "label": "Goedkeurings- of vaststellingsrol",
+                "actor_signals": [
+                  "regio",
+                  "gemeente"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als goedkeurings- of vaststellingsrol; niet automatisch als uitvoeringsverantwoordelijkheid.",
+                "needs_verification": false,
+                "vague_region_only": false
+              },
               "page_labels": [
                 "1"
               ],
@@ -4531,6 +5640,19 @@
                 "source_finance_anchor": "explicit_finance_signal",
                 "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [
+                  "regio",
+                  "gemeente",
+                  "zorgverzekeraar"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": false
               },
               "page_labels": [
                 "1"
@@ -4569,6 +5691,18 @@
                 "public_wording_guardrail": "Koppel aan de bronroute en verantwoordingsplicht; maak er geen bestedingsruimte van.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "approval_role",
+                "label": "Goedkeurings- of vaststellingsrol",
+                "actor_signals": [
+                  "regio",
+                  "gemeente"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als goedkeurings- of vaststellingsrol; niet automatisch als uitvoeringsverantwoordelijkheid.",
+                "needs_verification": false,
+                "vague_region_only": false
+              },
               "page_labels": [
                 "1"
               ],
@@ -4605,6 +5739,18 @@
                 "source_finance_anchor": "none",
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [
+                  "regio",
+                  "gemeente"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": false
               },
               "page_labels": [
                 "2"
@@ -4643,6 +5789,19 @@
                 "public_wording_guardrail": "Formuleer als aanvraag- of procesvoorwaarde; controleer of de bron formeel of praktisch is.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "decision_role",
+                "label": "Besluitvormende rol",
+                "actor_signals": [
+                  "mandaatgemeente",
+                  "gemeente",
+                  "college"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Splits besluitvorming van coordinatie en uitvoering; noem de beslissende actor alleen als de bron dat draagt.",
+                "needs_verification": false,
+                "vague_region_only": false
+              },
               "page_labels": [
                 "1"
               ],
@@ -4680,6 +5839,18 @@
                 "public_wording_guardrail": "Koppel aan de bronroute en verantwoordingsplicht; maak er geen bestedingsruimte van.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "approval_role",
+                "label": "Goedkeurings- of vaststellingsrol",
+                "actor_signals": [
+                  "regio",
+                  "gemeente"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als goedkeurings- of vaststellingsrol; niet automatisch als uitvoeringsverantwoordelijkheid.",
+                "needs_verification": false,
+                "vague_region_only": false
+              },
               "page_labels": [
                 "1"
               ],
@@ -4716,6 +5887,15 @@
                 "source_finance_anchor": "explicit_finance_signal",
                 "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "not_governance",
+                "label": "Geen zelfstandige governanceclaim",
+                "actor_signals": [],
+                "source_governance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+                "needs_verification": false,
+                "vague_region_only": false
               },
               "page_labels": [
                 "1"
@@ -4764,6 +5944,15 @@
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "not_governance",
+                "label": "Geen zelfstandige governanceclaim",
+                "actor_signals": [],
+                "source_governance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+                "needs_verification": false,
+                "vague_region_only": false
+              },
               "page_labels": [
                 "3"
               ],
@@ -4800,6 +5989,15 @@
                 "source_finance_anchor": "explicit_finance_signal",
                 "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "approval_role",
+                "label": "Goedkeurings- of vaststellingsrol",
+                "actor_signals": [],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als goedkeurings- of vaststellingsrol; niet automatisch als uitvoeringsverantwoordelijkheid.",
+                "needs_verification": false,
+                "vague_region_only": false
               },
               "page_labels": [
                 "4"
@@ -4838,6 +6036,15 @@
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "not_governance",
+                "label": "Geen zelfstandige governanceclaim",
+                "actor_signals": [],
+                "source_governance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+                "needs_verification": false,
+                "vague_region_only": false
+              },
               "page_labels": [
                 "3"
               ],
@@ -4874,6 +6081,15 @@
                 "source_finance_anchor": "none",
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "not_governance",
+                "label": "Geen zelfstandige governanceclaim",
+                "actor_signals": [],
+                "source_governance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+                "needs_verification": false,
+                "vague_region_only": false
               },
               "page_labels": [
                 "3"
@@ -4912,6 +6128,17 @@
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [
+                  "gemeente"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": false
+              },
               "page_labels": [
                 "5"
               ],
@@ -4948,6 +6175,15 @@
                 "source_finance_anchor": "explicit_finance_signal",
                 "public_wording_guardrail": "Beschrijf alleen het verdeelmechanisme dat de bron noemt; geen lokale verdeling afleiden.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "not_governance",
+                "label": "Geen zelfstandige governanceclaim",
+                "actor_signals": [],
+                "source_governance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+                "needs_verification": false,
+                "vague_region_only": false
               },
               "page_labels": [
                 "1"
@@ -4986,6 +6222,19 @@
                 "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "approval_role",
+                "label": "Goedkeurings- of vaststellingsrol",
+                "actor_signals": [
+                  "ministerie",
+                  "vng",
+                  "gemeente"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als goedkeurings- of vaststellingsrol; niet automatisch als uitvoeringsverantwoordelijkheid.",
+                "needs_verification": false,
+                "vague_region_only": false
+              },
               "page_labels": [
                 "1"
               ],
@@ -5022,6 +6271,15 @@
                 "source_finance_anchor": "explicit_finance_signal",
                 "public_wording_guardrail": "Koppel aan de bronroute en verantwoordingsplicht; maak er geen bestedingsruimte van.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "accountability_role",
+                "label": "Verantwoordings- of eigenaarschapsrol",
+                "actor_signals": [],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Maak duidelijk of het gaat om eigenaarschap, aanspreekbaarheid of verantwoording.",
+                "needs_verification": false,
+                "vague_region_only": false
               },
               "page_labels": [
                 "5"
@@ -5060,6 +6318,19 @@
                 "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "coordination_role",
+                "label": "Coordinatie- of regierol",
+                "actor_signals": [
+                  "regio",
+                  "gemeente",
+                  "zorgverzekeraar"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als coordinatie/regie; niet vermengen met besluitvorming of uitvoering.",
+                "needs_verification": false,
+                "vague_region_only": false
+              },
               "page_labels": [
                 "2"
               ],
@@ -5096,6 +6367,19 @@
                 "source_finance_anchor": "explicit_finance_signal",
                 "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "approval_role",
+                "label": "Goedkeurings- of vaststellingsrol",
+                "actor_signals": [
+                  "ministerie",
+                  "vng",
+                  "gemeente"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als goedkeurings- of vaststellingsrol; niet automatisch als uitvoeringsverantwoordelijkheid.",
+                "needs_verification": false,
+                "vague_region_only": false
               },
               "page_labels": [
                 "1"
@@ -5144,6 +6428,17 @@
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "execution_role",
+                "label": "Uitvoeringsrol",
+                "actor_signals": [
+                  "regio"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt.",
+                "needs_verification": true,
+                "vague_region_only": true
+              },
               "page_labels": [
                 "5"
               ],
@@ -5180,6 +6475,15 @@
                 "source_finance_anchor": "none",
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "not_governance",
+                "label": "Geen zelfstandige governanceclaim",
+                "actor_signals": [],
+                "source_governance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+                "needs_verification": false,
+                "vague_region_only": false
               },
               "page_labels": [
                 "7"
@@ -5218,6 +6522,17 @@
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": true
               },
+              "governance_status": {
+                "status": "execution_role",
+                "label": "Uitvoeringsrol",
+                "actor_signals": [
+                  "regio"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt.",
+                "needs_verification": true,
+                "vague_region_only": true
+              },
               "page_labels": [
                 "5"
               ],
@@ -5254,6 +6569,15 @@
                 "source_finance_anchor": "none",
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": true
+              },
+              "governance_status": {
+                "status": "coordination_role",
+                "label": "Coordinatie- of regierol",
+                "actor_signals": [],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als coordinatie/regie; niet vermengen met besluitvorming of uitvoering.",
+                "needs_verification": true,
+                "vague_region_only": false
               },
               "page_labels": [
                 "7"
@@ -5292,6 +6616,21 @@
                 "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "decision_role",
+                "label": "Besluitvormende rol",
+                "actor_signals": [
+                  "mandaatgemeente",
+                  "regio",
+                  "gemeente",
+                  "college",
+                  "zorgverzekeraar"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Splits besluitvorming van coordinatie en uitvoering; noem de beslissende actor alleen als de bron dat draagt.",
+                "needs_verification": false,
+                "vague_region_only": false
+              },
               "page_labels": [
                 "6"
               ],
@@ -5328,6 +6667,18 @@
                 "source_finance_anchor": "explicit_finance_signal",
                 "public_wording_guardrail": "Gebruik als context; controleer sterkere bronnen voordat hier een financieringsregel van wordt gemaakt.",
                 "needs_verification": true
+              },
+              "governance_status": {
+                "status": "coordination_role",
+                "label": "Coordinatie- of regierol",
+                "actor_signals": [
+                  "regio",
+                  "gemeente"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als coordinatie/regie; niet vermengen met besluitvorming of uitvoering.",
+                "needs_verification": false,
+                "vague_region_only": false
               },
               "page_labels": [
                 "9"
@@ -5366,6 +6717,19 @@
                 "public_wording_guardrail": "Formuleer als aanvraag- of procesvoorwaarde; controleer of de bron formeel of praktisch is.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "application_role",
+                "label": "Aanvraag- of indieningsrol",
+                "actor_signals": [
+                  "mandaatgemeente",
+                  "regio",
+                  "gemeente"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als aanvraag- of penvoerdersrol; niet automatisch als inhoudelijke eigenaar.",
+                "needs_verification": false,
+                "vague_region_only": false
+              },
               "page_labels": [
                 "2"
               ],
@@ -5402,6 +6766,15 @@
                 "source_finance_anchor": "explicit_finance_signal",
                 "public_wording_guardrail": "Koppel aan de bronroute en verantwoordingsplicht; maak er geen bestedingsruimte van.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "execution_role",
+                "label": "Uitvoeringsrol",
+                "actor_signals": [],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt.",
+                "needs_verification": false,
+                "vague_region_only": false
               },
               "page_labels": [
                 "4"
@@ -5440,6 +6813,17 @@
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "execution_role",
+                "label": "Uitvoeringsrol",
+                "actor_signals": [
+                  "regio"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt.",
+                "needs_verification": true,
+                "vague_region_only": true
+              },
               "page_labels": [
                 "4"
               ],
@@ -5476,6 +6860,19 @@
                 "source_finance_anchor": "none",
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "decision_role",
+                "label": "Besluitvormende rol",
+                "actor_signals": [
+                  "regio",
+                  "gemeente",
+                  "college"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Splits besluitvorming van coordinatie en uitvoering; noem de beslissende actor alleen als de bron dat draagt.",
+                "needs_verification": false,
+                "vague_region_only": false
               },
               "page_labels": [
                 "6"
@@ -5514,6 +6911,21 @@
                 "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "decision_role",
+                "label": "Besluitvormende rol",
+                "actor_signals": [
+                  "mandaatgemeente",
+                  "regio",
+                  "gemeente",
+                  "college",
+                  "zorgverzekeraar"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Splits besluitvorming van coordinatie en uitvoering; noem de beslissende actor alleen als de bron dat draagt.",
+                "needs_verification": false,
+                "vague_region_only": false
+              },
               "page_labels": [
                 "6"
               ],
@@ -5550,6 +6962,19 @@
                 "source_finance_anchor": "explicit_finance_signal",
                 "public_wording_guardrail": "Formuleer als aanvraag- of procesvoorwaarde; controleer of de bron formeel of praktisch is.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "application_role",
+                "label": "Aanvraag- of indieningsrol",
+                "actor_signals": [
+                  "mandaatgemeente",
+                  "regio",
+                  "gemeente"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als aanvraag- of penvoerdersrol; niet automatisch als inhoudelijke eigenaar.",
+                "needs_verification": false,
+                "vague_region_only": false
               },
               "page_labels": [
                 "2"
@@ -5588,6 +7013,17 @@
                 "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [
+                  "regio"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": true
+              },
               "page_labels": [
                 "4"
               ],
@@ -5624,6 +7060,15 @@
                 "source_finance_anchor": "explicit_finance_signal",
                 "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "execution_role",
+                "label": "Uitvoeringsrol",
+                "actor_signals": [],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt.",
+                "needs_verification": false,
+                "vague_region_only": false
               },
               "page_labels": [
                 "6"
@@ -5672,6 +7117,17 @@
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [
+                  "regio"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": true
+              },
               "page_labels": [],
               "section_labels": [
                 "Tabel 2"
@@ -5706,6 +7162,17 @@
                 "source_finance_anchor": "none",
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [
+                  "regio"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": true
               },
               "page_labels": [],
               "section_labels": [
@@ -5742,6 +7209,15 @@
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "not_governance",
+                "label": "Geen zelfstandige governanceclaim",
+                "actor_signals": [],
+                "source_governance_anchor": "none",
+                "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+                "needs_verification": false,
+                "vague_region_only": false
+              },
               "page_labels": [],
               "section_labels": [
                 "Tabel 2"
@@ -5776,6 +7252,15 @@
                 "source_finance_anchor": "explicit_finance_signal",
                 "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "coordination_role",
+                "label": "Coordinatie- of regierol",
+                "actor_signals": [],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als coordinatie/regie; niet vermengen met besluitvorming of uitvoering.",
+                "needs_verification": false,
+                "vague_region_only": false
               },
               "page_labels": [],
               "section_labels": [
@@ -5812,6 +7297,15 @@
                 "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": false
+              },
               "page_labels": [],
               "section_labels": [
                 "Tabel 2"
@@ -5846,6 +7340,17 @@
                 "source_finance_anchor": "explicit_finance_signal",
                 "public_wording_guardrail": "Koppel aan de bronroute en verantwoordingsplicht; maak er geen bestedingsruimte van.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "review_role",
+                "label": "Review-, monitorings- of toetsrol",
+                "actor_signals": [
+                  "regio"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als toetsing, monitoring of evaluatie; niet als besluitvorming.",
+                "needs_verification": true,
+                "vague_region_only": true
               },
               "page_labels": [],
               "section_labels": [
@@ -5882,6 +7387,15 @@
                 "public_wording_guardrail": "Koppel aan de bronroute en verantwoordingsplicht; maak er geen bestedingsruimte van.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "review_role",
+                "label": "Review-, monitorings- of toetsrol",
+                "actor_signals": [],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als toetsing, monitoring of evaluatie; niet als besluitvorming.",
+                "needs_verification": false,
+                "vague_region_only": false
+              },
               "page_labels": [],
               "section_labels": [
                 "Tabel 2"
@@ -5916,6 +7430,17 @@
                 "source_finance_anchor": "none",
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [
+                  "regio"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": true
               },
               "page_labels": [],
               "section_labels": [
@@ -5952,6 +7477,17 @@
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "decision_role",
+                "label": "Besluitvormende rol",
+                "actor_signals": [
+                  "regio"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Splits besluitvorming van coordinatie en uitvoering; noem de beslissende actor alleen als de bron dat draagt.",
+                "needs_verification": true,
+                "vague_region_only": true
+              },
               "page_labels": [],
               "section_labels": [
                 "Tabel 1"
@@ -5986,6 +7522,17 @@
                 "source_finance_anchor": "none",
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "accountability_role",
+                "label": "Verantwoordings- of eigenaarschapsrol",
+                "actor_signals": [
+                  "regio"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Maak duidelijk of het gaat om eigenaarschap, aanspreekbaarheid of verantwoording.",
+                "needs_verification": true,
+                "vague_region_only": true
               },
               "page_labels": [],
               "section_labels": [
@@ -6032,6 +7579,18 @@
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [
+                  "regio",
+                  "gemeente"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": false
+              },
               "page_labels": [
                 "1"
               ],
@@ -6068,6 +7627,17 @@
                 "source_finance_anchor": "explicit_finance_signal",
                 "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "execution_role",
+                "label": "Uitvoeringsrol",
+                "actor_signals": [
+                  "gemeente"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt.",
+                "needs_verification": false,
+                "vague_region_only": false
               },
               "page_labels": [
                 "1"
@@ -6106,6 +7676,17 @@
                 "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [
+                  "regio"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": true
+              },
               "page_labels": [
                 "1"
               ],
@@ -6142,6 +7723,18 @@
                 "source_finance_anchor": "none",
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": true
+              },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [
+                  "regio",
+                  "gemeente"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": false
               },
               "page_labels": [
                 "1"
@@ -6180,6 +7773,18 @@
                 "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [
+                  "regio",
+                  "gemeente"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": false
+              },
               "page_labels": [
                 "1"
               ],
@@ -6216,6 +7821,17 @@
                 "source_finance_anchor": "explicit_finance_signal",
                 "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [
+                  "gemeente"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": false
               },
               "page_labels": [
                 "1"
@@ -6254,6 +7870,17 @@
                 "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [
+                  "gemeente"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": false
+              },
               "page_labels": [
                 "1"
               ],
@@ -6290,6 +7917,17 @@
                 "source_finance_anchor": "none",
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [
+                  "regio"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": true
               },
               "page_labels": [
                 "1"
@@ -6328,6 +7966,17 @@
                 "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [
+                  "regio"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": true
+              },
               "page_labels": [
                 "2"
               ],
@@ -6364,6 +8013,17 @@
                 "source_finance_anchor": "explicit_finance_signal",
                 "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [
+                  "gemeente"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": false
               },
               "page_labels": [
                 "1"
@@ -6402,6 +8062,18 @@
                 "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [
+                  "gemeente",
+                  "zorgverzekeraar"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": false
+              },
               "page_labels": [
                 "1"
               ],
@@ -6438,6 +8110,18 @@
                 "source_finance_anchor": "explicit_finance_signal",
                 "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [
+                  "regio",
+                  "gemeente"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": false
               },
               "page_labels": [
                 "1"
@@ -6476,6 +8160,18 @@
                 "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
                 "needs_verification": false
               },
+              "governance_status": {
+                "status": "decision_role",
+                "label": "Besluitvormende rol",
+                "actor_signals": [
+                  "regio",
+                  "college"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Splits besluitvorming van coordinatie en uitvoering; noem de beslissende actor alleen als de bron dat draagt.",
+                "needs_verification": false,
+                "vague_region_only": false
+              },
               "page_labels": [
                 "2"
               ],
@@ -6512,6 +8208,17 @@
                 "source_finance_anchor": "explicit_finance_signal",
                 "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
                 "needs_verification": false
+              },
+              "governance_status": {
+                "status": "actor_context",
+                "label": "Actor- of governancecontext",
+                "actor_signals": [
+                  "regio"
+                ],
+                "source_governance_anchor": "explicit_governance_signal",
+                "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+                "needs_verification": true,
+                "vague_region_only": true
               },
               "page_labels": [
                 "1"
@@ -6764,6 +8471,15 @@
               "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
               "needs_verification": true
             },
+            "governance_status": {
+              "status": "not_governance",
+              "label": "Geen zelfstandige governanceclaim",
+              "actor_signals": [],
+              "source_governance_anchor": "none",
+              "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+              "needs_verification": true,
+              "vague_region_only": false
+            },
             "page_labels": [
               "5"
             ],
@@ -6800,6 +8516,18 @@
               "source_finance_anchor": "explicit_finance_signal",
               "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
               "needs_verification": true
+            },
+            "governance_status": {
+              "status": "decision_role",
+              "label": "Besluitvormende rol",
+              "actor_signals": [
+                "gemeenteraad",
+                "college"
+              ],
+              "source_governance_anchor": "explicit_governance_signal",
+              "public_wording_guardrail": "Splits besluitvorming van coordinatie en uitvoering; noem de beslissende actor alleen als de bron dat draagt.",
+              "needs_verification": true,
+              "vague_region_only": false
             },
             "page_labels": [
               "1"
@@ -6838,6 +8566,17 @@
               "public_wording_guardrail": "Gebruik als context; controleer sterkere bronnen voordat hier een financieringsregel van wordt gemaakt.",
               "needs_verification": true
             },
+            "governance_status": {
+              "status": "coordination_role",
+              "label": "Coordinatie- of regierol",
+              "actor_signals": [
+                "gemeente"
+              ],
+              "source_governance_anchor": "explicit_governance_signal",
+              "public_wording_guardrail": "Gebruik als coordinatie/regie; niet vermengen met besluitvorming of uitvoering.",
+              "needs_verification": false,
+              "vague_region_only": false
+            },
             "page_labels": [
               "3"
             ],
@@ -6874,6 +8613,17 @@
               "source_finance_anchor": "explicit_finance_signal",
               "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
               "needs_verification": false
+            },
+            "governance_status": {
+              "status": "actor_context",
+              "label": "Actor- of governancecontext",
+              "actor_signals": [
+                "gemeente"
+              ],
+              "source_governance_anchor": "explicit_governance_signal",
+              "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+              "needs_verification": true,
+              "vague_region_only": false
             },
             "page_labels": [
               "5"
@@ -6912,6 +8662,15 @@
               "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
               "needs_verification": false
             },
+            "governance_status": {
+              "status": "execution_role",
+              "label": "Uitvoeringsrol",
+              "actor_signals": [],
+              "source_governance_anchor": "explicit_governance_signal",
+              "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt.",
+              "needs_verification": false,
+              "vague_region_only": false
+            },
             "page_labels": [
               "5"
             ],
@@ -6948,6 +8707,15 @@
               "source_finance_anchor": "explicit_finance_signal",
               "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
               "needs_verification": false
+            },
+            "governance_status": {
+              "status": "not_governance",
+              "label": "Geen zelfstandige governanceclaim",
+              "actor_signals": [],
+              "source_governance_anchor": "none",
+              "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+              "needs_verification": false,
+              "vague_region_only": false
             },
             "page_labels": [
               "5"
@@ -6986,6 +8754,15 @@
               "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
               "needs_verification": false
             },
+            "governance_status": {
+              "status": "execution_role",
+              "label": "Uitvoeringsrol",
+              "actor_signals": [],
+              "source_governance_anchor": "explicit_governance_signal",
+              "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt.",
+              "needs_verification": false,
+              "vague_region_only": false
+            },
             "page_labels": [
               "5"
             ],
@@ -7022,6 +8799,17 @@
               "source_finance_anchor": "none",
               "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
               "needs_verification": false
+            },
+            "governance_status": {
+              "status": "actor_context",
+              "label": "Actor- of governancecontext",
+              "actor_signals": [
+                "gemeente"
+              ],
+              "source_governance_anchor": "explicit_governance_signal",
+              "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+              "needs_verification": true,
+              "vague_region_only": false
             },
             "page_labels": [
               "6"
@@ -7060,6 +8848,18 @@
               "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
               "needs_verification": false
             },
+            "governance_status": {
+              "status": "decision_role",
+              "label": "Besluitvormende rol",
+              "actor_signals": [
+                "gemeente",
+                "gemeenteraad"
+              ],
+              "source_governance_anchor": "explicit_governance_signal",
+              "public_wording_guardrail": "Splits besluitvorming van coordinatie en uitvoering; noem de beslissende actor alleen als de bron dat draagt.",
+              "needs_verification": false,
+              "vague_region_only": false
+            },
             "page_labels": [
               "10"
             ],
@@ -7097,6 +8897,15 @@
               "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
               "needs_verification": false
             },
+            "governance_status": {
+              "status": "coordination_role",
+              "label": "Coordinatie- of regierol",
+              "actor_signals": [],
+              "source_governance_anchor": "explicit_governance_signal",
+              "public_wording_guardrail": "Gebruik als coordinatie/regie; niet vermengen met besluitvorming of uitvoering.",
+              "needs_verification": false,
+              "vague_region_only": false
+            },
             "page_labels": [
               "6"
             ],
@@ -7133,6 +8942,15 @@
               "source_finance_anchor": "explicit_finance_signal",
               "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
               "needs_verification": false
+            },
+            "governance_status": {
+              "status": "not_governance",
+              "label": "Geen zelfstandige governanceclaim",
+              "actor_signals": [],
+              "source_governance_anchor": "none",
+              "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+              "needs_verification": false,
+              "vague_region_only": false
             },
             "page_labels": [
               "6"
@@ -7181,6 +8999,15 @@
               "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
               "needs_verification": true
             },
+            "governance_status": {
+              "status": "not_governance",
+              "label": "Geen zelfstandige governanceclaim",
+              "actor_signals": [],
+              "source_governance_anchor": "none",
+              "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+              "needs_verification": true,
+              "vague_region_only": false
+            },
             "page_labels": [
               "5"
             ],
@@ -7217,6 +9044,18 @@
               "source_finance_anchor": "explicit_finance_signal",
               "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
               "needs_verification": true
+            },
+            "governance_status": {
+              "status": "decision_role",
+              "label": "Besluitvormende rol",
+              "actor_signals": [
+                "gemeenteraad",
+                "college"
+              ],
+              "source_governance_anchor": "explicit_governance_signal",
+              "public_wording_guardrail": "Splits besluitvorming van coordinatie en uitvoering; noem de beslissende actor alleen als de bron dat draagt.",
+              "needs_verification": true,
+              "vague_region_only": false
             },
             "page_labels": [
               "1"
@@ -7255,6 +9094,17 @@
               "public_wording_guardrail": "Gebruik als context; controleer sterkere bronnen voordat hier een financieringsregel van wordt gemaakt.",
               "needs_verification": true
             },
+            "governance_status": {
+              "status": "coordination_role",
+              "label": "Coordinatie- of regierol",
+              "actor_signals": [
+                "gemeente"
+              ],
+              "source_governance_anchor": "explicit_governance_signal",
+              "public_wording_guardrail": "Gebruik als coordinatie/regie; niet vermengen met besluitvorming of uitvoering.",
+              "needs_verification": false,
+              "vague_region_only": false
+            },
             "page_labels": [
               "3"
             ],
@@ -7291,6 +9141,17 @@
               "source_finance_anchor": "explicit_finance_signal",
               "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
               "needs_verification": false
+            },
+            "governance_status": {
+              "status": "actor_context",
+              "label": "Actor- of governancecontext",
+              "actor_signals": [
+                "gemeente"
+              ],
+              "source_governance_anchor": "explicit_governance_signal",
+              "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+              "needs_verification": true,
+              "vague_region_only": false
             },
             "page_labels": [
               "5"
@@ -7329,6 +9190,15 @@
               "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
               "needs_verification": false
             },
+            "governance_status": {
+              "status": "execution_role",
+              "label": "Uitvoeringsrol",
+              "actor_signals": [],
+              "source_governance_anchor": "explicit_governance_signal",
+              "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt.",
+              "needs_verification": false,
+              "vague_region_only": false
+            },
             "page_labels": [
               "5"
             ],
@@ -7365,6 +9235,15 @@
               "source_finance_anchor": "explicit_finance_signal",
               "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
               "needs_verification": false
+            },
+            "governance_status": {
+              "status": "not_governance",
+              "label": "Geen zelfstandige governanceclaim",
+              "actor_signals": [],
+              "source_governance_anchor": "none",
+              "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+              "needs_verification": false,
+              "vague_region_only": false
             },
             "page_labels": [
               "5"
@@ -7403,6 +9282,15 @@
               "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
               "needs_verification": false
             },
+            "governance_status": {
+              "status": "execution_role",
+              "label": "Uitvoeringsrol",
+              "actor_signals": [],
+              "source_governance_anchor": "explicit_governance_signal",
+              "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt.",
+              "needs_verification": false,
+              "vague_region_only": false
+            },
             "page_labels": [
               "5"
             ],
@@ -7439,6 +9327,17 @@
               "source_finance_anchor": "none",
               "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
               "needs_verification": false
+            },
+            "governance_status": {
+              "status": "actor_context",
+              "label": "Actor- of governancecontext",
+              "actor_signals": [
+                "gemeente"
+              ],
+              "source_governance_anchor": "explicit_governance_signal",
+              "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+              "needs_verification": true,
+              "vague_region_only": false
             },
             "page_labels": [
               "6"
@@ -7477,6 +9376,18 @@
               "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
               "needs_verification": false
             },
+            "governance_status": {
+              "status": "decision_role",
+              "label": "Besluitvormende rol",
+              "actor_signals": [
+                "gemeente",
+                "gemeenteraad"
+              ],
+              "source_governance_anchor": "explicit_governance_signal",
+              "public_wording_guardrail": "Splits besluitvorming van coordinatie en uitvoering; noem de beslissende actor alleen als de bron dat draagt.",
+              "needs_verification": false,
+              "vague_region_only": false
+            },
             "page_labels": [
               "10"
             ],
@@ -7514,6 +9425,15 @@
               "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
               "needs_verification": false
             },
+            "governance_status": {
+              "status": "coordination_role",
+              "label": "Coordinatie- of regierol",
+              "actor_signals": [],
+              "source_governance_anchor": "explicit_governance_signal",
+              "public_wording_guardrail": "Gebruik als coordinatie/regie; niet vermengen met besluitvorming of uitvoering.",
+              "needs_verification": false,
+              "vague_region_only": false
+            },
             "page_labels": [
               "6"
             ],
@@ -7550,6 +9470,15 @@
               "source_finance_anchor": "explicit_finance_signal",
               "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
               "needs_verification": false
+            },
+            "governance_status": {
+              "status": "not_governance",
+              "label": "Geen zelfstandige governanceclaim",
+              "actor_signals": [],
+              "source_governance_anchor": "none",
+              "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+              "needs_verification": false,
+              "vague_region_only": false
             },
             "page_labels": [
               "6"
@@ -7598,6 +9527,15 @@
               "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
               "needs_verification": true
             },
+            "governance_status": {
+              "status": "execution_role",
+              "label": "Uitvoeringsrol",
+              "actor_signals": [],
+              "source_governance_anchor": "explicit_governance_signal",
+              "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt.",
+              "needs_verification": true,
+              "vague_region_only": false
+            },
             "page_labels": [
               "1"
             ],
@@ -7635,6 +9573,15 @@
               "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
               "needs_verification": false
             },
+            "governance_status": {
+              "status": "execution_role",
+              "label": "Uitvoeringsrol",
+              "actor_signals": [],
+              "source_governance_anchor": "explicit_governance_signal",
+              "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt.",
+              "needs_verification": false,
+              "vague_region_only": false
+            },
             "page_labels": [
               "1"
             ],
@@ -7671,6 +9618,15 @@
               "source_finance_anchor": "explicit_finance_signal",
               "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
               "needs_verification": false
+            },
+            "governance_status": {
+              "status": "execution_role",
+              "label": "Uitvoeringsrol",
+              "actor_signals": [],
+              "source_governance_anchor": "explicit_governance_signal",
+              "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt.",
+              "needs_verification": false,
+              "vague_region_only": false
             },
             "page_labels": [
               "1"
@@ -7719,6 +9675,18 @@
               "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
               "needs_verification": true
             },
+            "governance_status": {
+              "status": "decision_role",
+              "label": "Besluitvormende rol",
+              "actor_signals": [
+                "gemeenteraad",
+                "college"
+              ],
+              "source_governance_anchor": "explicit_governance_signal",
+              "public_wording_guardrail": "Splits besluitvorming van coordinatie en uitvoering; noem de beslissende actor alleen als de bron dat draagt.",
+              "needs_verification": true,
+              "vague_region_only": false
+            },
             "page_labels": [
               "1"
             ],
@@ -7756,6 +9724,15 @@
               "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
               "needs_verification": false
             },
+            "governance_status": {
+              "status": "not_governance",
+              "label": "Geen zelfstandige governanceclaim",
+              "actor_signals": [],
+              "source_governance_anchor": "none",
+              "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+              "needs_verification": false,
+              "vague_region_only": false
+            },
             "page_labels": [
               "1"
             ],
@@ -7792,6 +9769,18 @@
               "source_finance_anchor": "none",
               "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
               "needs_verification": false
+            },
+            "governance_status": {
+              "status": "decision_role",
+              "label": "Besluitvormende rol",
+              "actor_signals": [
+                "gemeenteraad",
+                "college"
+              ],
+              "source_governance_anchor": "explicit_governance_signal",
+              "public_wording_guardrail": "Splits besluitvorming van coordinatie en uitvoering; noem de beslissende actor alleen als de bron dat draagt.",
+              "needs_verification": false,
+              "vague_region_only": false
             },
             "page_labels": [
               "1"
@@ -7840,6 +9829,15 @@
               "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
               "needs_verification": true
             },
+            "governance_status": {
+              "status": "not_governance",
+              "label": "Geen zelfstandige governanceclaim",
+              "actor_signals": [],
+              "source_governance_anchor": "none",
+              "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+              "needs_verification": true,
+              "vague_region_only": false
+            },
             "page_labels": [],
             "section_labels": [
               "Samenwerkingsprojecten / Samen sterker in de wijk"
@@ -7874,6 +9872,15 @@
               "source_finance_anchor": "none",
               "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
               "needs_verification": false
+            },
+            "governance_status": {
+              "status": "actor_context",
+              "label": "Actor- of governancecontext",
+              "actor_signals": [],
+              "source_governance_anchor": "explicit_governance_signal",
+              "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+              "needs_verification": true,
+              "vague_region_only": false
             },
             "page_labels": [],
             "section_labels": [
@@ -7910,6 +9917,15 @@
               "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
               "needs_verification": false
             },
+            "governance_status": {
+              "status": "not_governance",
+              "label": "Geen zelfstandige governanceclaim",
+              "actor_signals": [],
+              "source_governance_anchor": "none",
+              "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+              "needs_verification": false,
+              "vague_region_only": false
+            },
             "page_labels": [],
             "section_labels": [
               "Samenwerkingsprojecten / Samen sterker in de wijk / Al doende leren"
@@ -7944,6 +9960,15 @@
               "source_finance_anchor": "none",
               "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
               "needs_verification": false
+            },
+            "governance_status": {
+              "status": "not_governance",
+              "label": "Geen zelfstandige governanceclaim",
+              "actor_signals": [],
+              "source_governance_anchor": "none",
+              "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+              "needs_verification": false,
+              "vague_region_only": false
             },
             "page_labels": [],
             "section_labels": [
@@ -7980,6 +10005,15 @@
               "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
               "needs_verification": false
             },
+            "governance_status": {
+              "status": "execution_role",
+              "label": "Uitvoeringsrol",
+              "actor_signals": [],
+              "source_governance_anchor": "explicit_governance_signal",
+              "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt.",
+              "needs_verification": false,
+              "vague_region_only": false
+            },
             "page_labels": [],
             "section_labels": [
               "Samenwerkingsprojecten / Samen sterker in de wijk / Netwerkteams"
@@ -8014,6 +10048,17 @@
               "source_finance_anchor": "none",
               "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
               "needs_verification": false
+            },
+            "governance_status": {
+              "status": "actor_context",
+              "label": "Actor- of governancecontext",
+              "actor_signals": [
+                "gemeente"
+              ],
+              "source_governance_anchor": "explicit_governance_signal",
+              "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+              "needs_verification": true,
+              "vague_region_only": false
             },
             "page_labels": [],
             "section_labels": [
@@ -8050,6 +10095,18 @@
               "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
               "needs_verification": false
             },
+            "governance_status": {
+              "status": "actor_context",
+              "label": "Actor- of governancecontext",
+              "actor_signals": [
+                "gemeente",
+                "uitvoeringspartner"
+              ],
+              "source_governance_anchor": "explicit_governance_signal",
+              "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+              "needs_verification": true,
+              "vague_region_only": false
+            },
             "page_labels": [],
             "section_labels": [
               "Samenwerkingsprojecten / Samenwerkingsafspraken Thuis in de wijk"
@@ -8084,6 +10141,15 @@
               "source_finance_anchor": "none",
               "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
               "needs_verification": false
+            },
+            "governance_status": {
+              "status": "not_governance",
+              "label": "Geen zelfstandige governanceclaim",
+              "actor_signals": [],
+              "source_governance_anchor": "none",
+              "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+              "needs_verification": false,
+              "vague_region_only": false
             },
             "page_labels": [],
             "section_labels": [
@@ -8130,6 +10196,15 @@
               "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
               "needs_verification": false
             },
+            "governance_status": {
+              "status": "not_governance",
+              "label": "Geen zelfstandige governanceclaim",
+              "actor_signals": [],
+              "source_governance_anchor": "none",
+              "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+              "needs_verification": false,
+              "vague_region_only": false
+            },
             "page_labels": [],
             "section_labels": [
               "Daar bouwen wij samen aan / Waar bouwen we aan?"
@@ -8164,6 +10239,15 @@
               "source_finance_anchor": "none",
               "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
               "needs_verification": false
+            },
+            "governance_status": {
+              "status": "not_governance",
+              "label": "Geen zelfstandige governanceclaim",
+              "actor_signals": [],
+              "source_governance_anchor": "none",
+              "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+              "needs_verification": false,
+              "vague_region_only": false
             },
             "page_labels": [],
             "section_labels": [
@@ -8200,6 +10284,15 @@
               "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
               "needs_verification": false
             },
+            "governance_status": {
+              "status": "not_governance",
+              "label": "Geen zelfstandige governanceclaim",
+              "actor_signals": [],
+              "source_governance_anchor": "none",
+              "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+              "needs_verification": false,
+              "vague_region_only": false
+            },
             "page_labels": [],
             "section_labels": [
               "Daar bouwen wij samen aan / Blijf op de hoogte"
@@ -8234,6 +10327,15 @@
               "source_finance_anchor": "none",
               "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
               "needs_verification": false
+            },
+            "governance_status": {
+              "status": "not_governance",
+              "label": "Geen zelfstandige governanceclaim",
+              "actor_signals": [],
+              "source_governance_anchor": "none",
+              "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+              "needs_verification": false,
+              "vague_region_only": false
             },
             "page_labels": [],
             "section_labels": [

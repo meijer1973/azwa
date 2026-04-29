@@ -29,7 +29,7 @@ Gebruik deze roadmap als levend werkdocument. Werk na elke sprint de statusregel
 | 27.1 Norm | completed | `src/build_claims_top5.py`, `data/schemas/claim.schema.json`, `data/extracted/data_quality_audit.json`, `docs/completed-plans/phase27-sprint27.1-norm.md` |
 | 27.2 Tijd | completed | `src/build_claims_top5.py`, `data/schemas/claim.schema.json`, `data/extracted/data_quality_audit.json`, `data/site/timeline_register.json`, `docs/completed-plans/phase27-sprint27.2-tijd.md` |
 | 27.3 Geld | completed | `src/build_claims_top5.py`, `data/schemas/claim.schema.json`, `data/extracted/data_quality_audit.json`, `docs/completed-plans/phase27-sprint27.3-geld.md` |
-| 27.4 Governance | open |  |
+| 27.4 Governance | completed | `src/build_claims_top5.py`, `data/schemas/claim.schema.json`, `data/extracted/data_quality_audit.json`, `docs/completed-plans/phase27-sprint27.4-governance.md` |
 | 27.5 Locality | open |  |
 | 27.6 Execution | open |  |
 | 28.1 Menselijke samenvattingen per update | open |  |
@@ -65,6 +65,8 @@ Status op 29 april 2026: Sprint 27.1 is afgerond als norm-splitsing. Elke claim 
 Status op 29 april 2026: Sprint 27.2 is afgerond als tijd-splitsing. Elke claim krijgt nu een `time_status` met onderscheid tussen formele deadlines, verwachte momenten, review-/actualisatiemomenten, budgetkalendermomenten, implementatiehorizons, lokale planningscontext, bronverankerde tijdmomenten, publicatie-/contextdata en ongedateerde context. De audit bevat een `time_status_audit`, site-evidence en tijdlijnitems dragen tijdstatus mee, en QC markeert verwachte momenten en lokale planningscontext als reviewpunt zodat indicatieve momenten en lokale raadsagenda's niet als harde D5/D6-deadlines worden gelezen.
 
 Status op 29 april 2026: Sprint 27.3 is afgerond als geld-splitsing. Elke claim krijgt nu een `money_status` met onderscheid tussen financieringsroutes, aanvraagvoorwaarden, budgetvensters, verdeelmechanismen, bestedingsruimte, verantwoordingsregels, lokale financieringsgaten, dubbeltellingsrisico's, financiele context en niet-financiele inhoud. De audit bevat een `money_status_audit`, site-evidence draagt geldstatus mee, en QC markeert lokale financieringsgaten, dubbeltellingsrisico's en algemene financiele context als reviewpunt zodat lokale budgetkeuzes of middelenmixen niet uit publieke bronnen worden ingevuld.
+
+Status op 29 april 2026: Sprint 27.4 is afgerond als governance-splitsing. Elke claim krijgt nu een `governance_status` met onderscheid tussen besluitvorming, coordinatie/regie, aanvraag/indiening, uitvoering, verantwoording/eigenaarschap, goedkeuring/vaststelling, review/monitoring, governancegaten, actorcontext en niet-governance. De audit bevat een `governance_status_audit`, site-evidence draagt governancestatus mee, en QC markeert governancegaten, actorcontext en vage `regio`-actoren als reviewpunt zodat `regio`, `mandaatgemeente`, gemeente, raad, college, zorgverzekeraar en uitvoeringspartners niet door elkaar worden gehaald.
 
 Afgeronde aanpak voor Sprint 25.4a:
 
@@ -297,7 +299,7 @@ Status: completed.
 - Voeg een zoekbare categorie toe voor "te verifieren financieringsregel".
 
 Sprint 27.4: Governance
-Status: open.
+Status: completed.
 
 - Maak rollen expliciet: ministerie, VNG, fondsbeheerder, mandaatgemeente, regio, gemeente, raad, college, zorgverzekeraar, uitvoeringspartner.
 - Splits besluitvorming, coordinatie, aanvraag, uitvoering en verantwoording.

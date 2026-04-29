@@ -11,6 +11,7 @@
     "normative_status",
     "time_status",
     "money_status",
+    "governance_status",
     "statement",
     "source_document_id",
     "source_location",
@@ -176,6 +177,72 @@
           "type": "string"
         },
         "needs_verification": {
+          "type": "boolean"
+        }
+      }
+    },
+    "governance_status": {
+      "type": "object",
+      "required": [
+        "status",
+        "label",
+        "actor_signals",
+        "source_governance_anchor",
+        "public_wording_guardrail",
+        "needs_verification",
+        "vague_region_only"
+      ],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "decision_role",
+            "coordination_role",
+            "application_role",
+            "execution_role",
+            "accountability_role",
+            "approval_role",
+            "review_role",
+            "governance_gap",
+            "actor_context",
+            "not_governance"
+          ]
+        },
+        "label": {
+          "type": "string"
+        },
+        "actor_signals": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "ministerie",
+              "vng",
+              "fondsbeheerder",
+              "mandaatgemeente",
+              "regio",
+              "gemeente",
+              "gemeenteraad",
+              "college",
+              "zorgverzekeraar",
+              "uitvoeringspartner"
+            ]
+          }
+        },
+        "source_governance_anchor": {
+          "type": "string",
+          "enum": [
+            "explicit_governance_signal",
+            "none"
+          ]
+        },
+        "public_wording_guardrail": {
+          "type": "string"
+        },
+        "needs_verification": {
+          "type": "boolean"
+        },
+        "vague_region_only": {
           "type": "boolean"
         }
       }

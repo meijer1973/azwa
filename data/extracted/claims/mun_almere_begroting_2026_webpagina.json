@@ -34,6 +34,15 @@
         "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "approval_role",
+        "label": "Goedkeurings- of vaststellingsrol",
+        "actor_signals": [],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als goedkeurings- of vaststellingsrol; niet automatisch als uitvoeringsverantwoordelijkheid.",
+        "needs_verification": false,
+        "vague_region_only": false
+      },
       "statement": "Deze begroting staat in het teken van het doorwerken aan de uitvoering van het coalitieakkoord van 2025.",
       "source_document_id": "mun_almere_begroting_2026_webpagina",
       "source_location": {
@@ -96,6 +105,17 @@
         "source_finance_anchor": "explicit_finance_signal",
         "public_wording_guardrail": "Gebruik als context; controleer sterkere bronnen voordat hier een financieringsregel van wordt gemaakt.",
         "needs_verification": true
+      },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [
+          "gemeente"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": false
       },
       "statement": "Het kabinet moet zorgen dat de gemeente Almere voldoende gefinancierd wordt voor de taken die zij heeft.",
       "source_document_id": "mun_almere_begroting_2026_webpagina",
@@ -160,6 +180,15 @@
         "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": false
+      },
       "statement": "Ook komen er extra boa’s en komt er in de begroting extra geld voor het wijkbudget.",
       "source_document_id": "mun_almere_begroting_2026_webpagina",
       "source_location": {
@@ -222,6 +251,19 @@
         "source_finance_anchor": "explicit_finance_signal",
         "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
         "needs_verification": false
+      },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [
+          "gemeente",
+          "gemeenteraad",
+          "college"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": false
       },
       "statement": "Op 9 oktober 2025 bood het college van burgemeester en wethouders de Programmabegroting 2026 aan de gemeenteraad aan. De inkomsten en uitgaven zijn in 2026 op orde. De begroting laat zien waar in 2026 het geld naartoe gaat en wat de gemeente doet voor stad en inwoners. De gemeenteraad heeft op 13 november 2025 met de begroting ingestemd. De Programmabegroting 2026 is de laatste begroting in deze raadsperiode. In maart 2026 zijn er verkiezingen voor de nieuwe gemeenteraad. Wethouder financiën Kees Ahles: “Voor de komende twee jaar is de begroting op orde. Ook blijven onze reserves op het afgesproken niveau. Het college doet daarmee wat beloofd is. Er is beperkt ruimte voor eenmalige ...",
       "source_document_id": "mun_almere_begroting_2026_webpagina",
@@ -286,6 +328,19 @@
         "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [
+          "gemeente",
+          "gemeenteraad",
+          "college"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": false
+      },
       "statement": "Op 9 oktober 2025 bood het college van burgemeester en wethouders de Programmabegroting 2026 aan de gemeenteraad aan.",
       "source_document_id": "mun_almere_begroting_2026_webpagina",
       "source_location": {
@@ -348,6 +403,15 @@
         "source_finance_anchor": "explicit_finance_signal",
         "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
         "needs_verification": false
+      },
+      "governance_status": {
+        "status": "not_governance",
+        "label": "Geen zelfstandige governanceclaim",
+        "actor_signals": [],
+        "source_governance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+        "needs_verification": false,
+        "vague_region_only": false
       },
       "statement": "De inkomsten en uitgaven zijn in 2026 op orde.",
       "source_document_id": "mun_almere_begroting_2026_webpagina",
@@ -412,6 +476,19 @@
         "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [
+          "gemeente",
+          "gemeenteraad",
+          "college"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": false
+      },
       "statement": "Op 9 oktober 2025 bood het college van burgemeester en wethouders de Programmabegroting 2026 aan de gemeenteraad aan.",
       "source_document_id": "mun_almere_begroting_2026_webpagina",
       "source_location": {
@@ -475,6 +552,18 @@
         "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [
+          "gemeente",
+          "gemeenteraad"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": false
+      },
       "statement": "De gemeenteraad heeft op 13 november 2025 met de begroting ingestemd.",
       "source_document_id": "mun_almere_begroting_2026_webpagina",
       "source_location": {
@@ -537,6 +626,18 @@
         "source_finance_anchor": "explicit_finance_signal",
         "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
         "needs_verification": false
+      },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [
+          "gemeente",
+          "gemeenteraad"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": false
       },
       "statement": "In maart 2026 zijn er verkiezingen voor de nieuwe gemeenteraad.",
       "source_document_id": "mun_almere_begroting_2026_webpagina",

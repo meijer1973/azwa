@@ -204,6 +204,88 @@ DOUBLE_COUNTING_TERMS = (
     "azwa-d5",
     "azwa-d6",
 )
+GOVERNANCE_ACTOR_TERMS = {
+    "ministerie": ("ministerie", "vws", "minister"),
+    "vng": ("vng",),
+    "fondsbeheerder": ("fondsbeheerder", "fondsbeheerders"),
+    "mandaatgemeente": ("mandaatgemeente", "mandaathouder"),
+    "regio": ("regio", "regionaal", "regionale"),
+    "gemeente": ("gemeente", "gemeenten", "gemeentelijk"),
+    "gemeenteraad": ("gemeenteraad", "raad", "raadsbesluit", "besluitenlijst"),
+    "college": ("college", "college van b&w", "college van burgemeester"),
+    "zorgverzekeraar": ("zorgverzekeraar", "zorgverzekeraars", "zn", "zvw"),
+    "uitvoeringspartner": ("aanbieder", "aanbieders", "uitvoerder", "uitvoerders", "partner", "partners"),
+}
+DECISION_ROLE_TERMS = (
+    "besluit",
+    "besluiten",
+    "besluitvorming",
+    "vastgesteld",
+    "vaststellen",
+    "instemmen",
+    "aangenomen",
+    "amendement",
+)
+COORDINATION_ROLE_TERMS = (
+    "coordineert",
+    "coordinatie",
+    "coordineren",
+    "regie",
+    "regisseur",
+    "onder regie",
+    "afstemming",
+    "samenwerking",
+)
+APPLICATION_ROLE_TERMS = (
+    "aanvraag",
+    "aanvragen",
+    "penvoerder",
+    "indienen",
+    "aanleveren",
+)
+EXECUTION_ROLE_TERMS = (
+    "uitvoering",
+    "uitvoeren",
+    "organiseren",
+    "implementatie",
+    "realiseren",
+    "leveren",
+    "inzet",
+)
+ACCOUNTABILITY_ROLE_TERMS = (
+    "verantwoording",
+    "verantwoorden",
+    "aanspreekbaar",
+    "eigenaar",
+    "eigenaarschap",
+    "verantwoordelijk",
+    "verantwoordelijkheid",
+)
+APPROVAL_ROLE_TERMS = (
+    "goedkeuren",
+    "goedkeuring",
+    "akkoord",
+    "instemming",
+    "vaststelling",
+)
+REVIEW_ROLE_TERMS = (
+    "toets",
+    "toetsen",
+    "review",
+    "evaluatie",
+    "monitoring",
+    "controle",
+)
+GOVERNANCE_GAP_TERMS = (
+    "onduidelijk",
+    "niet expliciet",
+    "geen expliciete",
+    "nog geen",
+    "moet worden verduidelijkt",
+    "needs validation",
+    "needs decision",
+    "review_needed",
+)
 
 
 def normalize_text(text: str) -> str:
@@ -488,6 +570,105 @@ def money_status_for(
         "public_wording_guardrail": guardrail,
         "needs_verification": status in {"local_funding_gap", "double_counting_risk", "finance_context"}
         or source_statement_type == "contextual_relevance",
+    }
+
+
+def actor_signals_for(normalized_statement: str) -> list[str]:
+    signals = [
+        actor
+        for actor, terms in GOVERNANCE_ACTOR_TERMS.items()
+        if any(normalize_text(term) in normalized_statement for term in terms)
+    ]
+    return unique_preserving_order(signals)
+
+
+def governance_status_for(
+    statement: str,
+    document_id: str,
+    instrument_type: str,
+    source_statement_type: str,
+    topic: str,
+    claim_type: str,
+) -> dict:
+    normalized = normalize_text(statement)
+    actor_signals = actor_signals_for(normalized)
+    is_governance_topic = topic.startswith("governance.") or topic in {
+        "governance_and_finance.other",
+        "municipal.role_allocation",
+    }
+    has_decision = contains_any(normalized, *DECISION_ROLE_TERMS)
+    has_coordination = contains_any(normalized, *COORDINATION_ROLE_TERMS)
+    has_application = contains_any(normalized, *APPLICATION_ROLE_TERMS)
+    has_execution = contains_any(normalized, *EXECUTION_ROLE_TERMS)
+    has_accountability = contains_any(normalized, *ACCOUNTABILITY_ROLE_TERMS)
+    has_approval = contains_any(normalized, *APPROVAL_ROLE_TERMS)
+    has_review = contains_any(normalized, *REVIEW_ROLE_TERMS)
+    has_gap = contains_any(normalized, *GOVERNANCE_GAP_TERMS)
+    has_governance_signal = is_governance_topic or bool(actor_signals) or any(
+        (
+            has_decision,
+            has_coordination,
+            has_application,
+            has_execution,
+            has_accountability,
+            has_approval,
+            has_review,
+            has_gap,
+        )
+    )
+
+    if has_gap and has_governance_signal:
+        status = "governance_gap"
+        label = "Governance- of rolverdelingsgat"
+        guardrail = "Formuleer als validatie- of besluitvraag; vul actor, mandaat of eigenaar niet in zonder bron."
+    elif has_decision:
+        status = "decision_role"
+        label = "Besluitvormende rol"
+        guardrail = "Splits besluitvorming van coordinatie en uitvoering; noem de beslissende actor alleen als de bron dat draagt."
+    elif has_approval:
+        status = "approval_role"
+        label = "Goedkeurings- of vaststellingsrol"
+        guardrail = "Gebruik als goedkeurings- of vaststellingsrol; niet automatisch als uitvoeringsverantwoordelijkheid."
+    elif has_application:
+        status = "application_role"
+        label = "Aanvraag- of indieningsrol"
+        guardrail = "Gebruik als aanvraag- of penvoerdersrol; niet automatisch als inhoudelijke eigenaar."
+    elif has_accountability:
+        status = "accountability_role"
+        label = "Verantwoordings- of eigenaarschapsrol"
+        guardrail = "Maak duidelijk of het gaat om eigenaarschap, aanspreekbaarheid of verantwoording."
+    elif has_coordination:
+        status = "coordination_role"
+        label = "Coordinatie- of regierol"
+        guardrail = "Gebruik als coordinatie/regie; niet vermengen met besluitvorming of uitvoering."
+    elif has_execution:
+        status = "execution_role"
+        label = "Uitvoeringsrol"
+        guardrail = "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt."
+    elif has_review:
+        status = "review_role"
+        label = "Review-, monitorings- of toetsrol"
+        guardrail = "Gebruik als toetsing, monitoring of evaluatie; niet als besluitvorming."
+    elif has_governance_signal:
+        status = "actor_context"
+        label = "Actor- of governancecontext"
+        guardrail = "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt."
+    else:
+        status = "not_governance"
+        label = "Geen zelfstandige governanceclaim"
+        guardrail = "Niet gebruiken als rol- of besluitclaim."
+
+    vague_region_only = actor_signals == ["regio"]
+
+    return {
+        "status": status,
+        "label": label,
+        "actor_signals": actor_signals,
+        "source_governance_anchor": "explicit_governance_signal" if has_governance_signal else "none",
+        "public_wording_guardrail": guardrail,
+        "needs_verification": status in {"governance_gap", "actor_context"} or vague_region_only
+        or source_statement_type == "contextual_relevance",
+        "vague_region_only": vague_region_only,
     }
 
 
@@ -1145,6 +1326,9 @@ def build_claim(
         "money_status": money_status_for(
             statement, document_payload["document_id"], instrument_type, source_statement_type, topic, claim_type
         ),
+        "governance_status": governance_status_for(
+            statement, document_payload["document_id"], instrument_type, source_statement_type, topic, claim_type
+        ),
         "statement": statement,
         "source_document_id": document_payload["document_id"],
         "source_location": extract_source_location(item),
@@ -1328,6 +1512,7 @@ def validate_claims(claims: list[dict], allowed_relation_types: set[str]) -> Non
         "normative_status",
         "time_status",
         "money_status",
+        "governance_status",
         "statement",
         "source_document_id",
         "source_location",

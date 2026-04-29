@@ -98,6 +98,19 @@ ACCEPTED_MONEY_STATUSES = {
     "not_financial",
 }
 
+ACCEPTED_GOVERNANCE_STATUSES = {
+    "decision_role",
+    "coordination_role",
+    "application_role",
+    "execution_role",
+    "accountability_role",
+    "approval_role",
+    "review_role",
+    "governance_gap",
+    "actor_context",
+    "not_governance",
+}
+
 
 def load_json(path: Path) -> dict | list:
     return json.loads(path.read_text(encoding="utf-8"))
@@ -540,6 +553,11 @@ def check_claim_payloads(
             for claim in claims
             if (claim.get("money_status") or {}).get("status") not in ACCEPTED_MONEY_STATUSES
         ]
+        missing_governance_status = [
+            claim
+            for claim in claims
+            if (claim.get("governance_status") or {}).get("status") not in ACCEPTED_GOVERNANCE_STATUSES
+        ]
         lower_authority_norm_claims = [
             claim
             for claim in claims
@@ -569,6 +587,21 @@ def check_claim_payloads(
             claim
             for claim in claims
             if (claim.get("money_status") or {}).get("status") == "finance_context"
+        ]
+        governance_gap_claims = [
+            claim
+            for claim in claims
+            if (claim.get("governance_status") or {}).get("status") == "governance_gap"
+        ]
+        actor_context_claims = [
+            claim
+            for claim in claims
+            if (claim.get("governance_status") or {}).get("status") == "actor_context"
+        ]
+        vague_region_claims = [
+            claim
+            for claim in claims
+            if (claim.get("governance_status") or {}).get("vague_region_only")
         ]
 
         if missing_norm_status:
@@ -611,6 +644,20 @@ def check_claim_payloads(
                 document_id=document_id,
                 source_paths=[relative_path(claim_path)],
                 related_ids={"sample_claim_ids": [claim["claim_id"] for claim in missing_money_status[:5]]},
+            )
+
+        if missing_governance_status:
+            add_issue(
+                issues,
+                seen,
+                check_id="claim_payload_integrity",
+                severity="blocking",
+                reason_code="missing_or_invalid_governance_status",
+                summary=f"{document_id} contains claim(s) without a valid Sprint 27.4 governance_status.",
+                recommended_action="Regenerate claims with the governance-status classifier before using role, decision, or accountability outputs.",
+                document_id=document_id,
+                source_paths=[relative_path(claim_path)],
+                related_ids={"sample_claim_ids": [claim["claim_id"] for claim in missing_governance_status[:5]]},
             )
 
         if contextual_claims:
@@ -729,6 +776,48 @@ def check_claim_payloads(
                 document_id=document_id,
                 source_paths=[relative_path(claim_path)],
                 related_ids={"sample_claim_ids": [claim["claim_id"] for claim in finance_context_claims[:5]]},
+            )
+
+        if governance_gap_claims:
+            add_issue(
+                issues,
+                seen,
+                check_id="claim_payload_integrity",
+                severity="review",
+                reason_code="governance_gap",
+                summary=f"{document_id} contains {len(governance_gap_claims)} governance gap claim(s).",
+                recommended_action="Keep these as validation or decision points; do not fill mandate, owner, or role by inference.",
+                document_id=document_id,
+                source_paths=[relative_path(claim_path)],
+                related_ids={"sample_claim_ids": [claim["claim_id"] for claim in governance_gap_claims[:5]]},
+            )
+
+        if actor_context_claims:
+            add_issue(
+                issues,
+                seen,
+                check_id="claim_payload_integrity",
+                severity="review",
+                reason_code="actor_context_needs_role_split",
+                summary=f"{document_id} contains {len(actor_context_claims)} actor-context claim(s) without a more specific governance role.",
+                recommended_action="Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+                document_id=document_id,
+                source_paths=[relative_path(claim_path)],
+                related_ids={"sample_claim_ids": [claim["claim_id"] for claim in actor_context_claims[:5]]},
+            )
+
+        if vague_region_claims:
+            add_issue(
+                issues,
+                seen,
+                check_id="claim_payload_integrity",
+                severity="review",
+                reason_code="vague_region_actor",
+                summary=f"{document_id} contains {len(vague_region_claims)} claim(s) where 'regio' is the only detected actor signal.",
+                recommended_action="Clarify whether the source means IZA/AZWA-regio, GGD-regio, zorgkantoorregio, ROAZ/subregio, province, mandaatgemeente, or practical execution structure before using this as a role claim.",
+                document_id=document_id,
+                source_paths=[relative_path(claim_path)],
+                related_ids={"sample_claim_ids": [claim["claim_id"] for claim in vague_region_claims[:5]]},
             )
 
         if noisy_claims:

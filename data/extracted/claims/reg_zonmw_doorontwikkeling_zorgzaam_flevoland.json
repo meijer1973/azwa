@@ -34,6 +34,15 @@
         "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": false
+      },
       "statement": "De aanpak omvat3 hoofdlijnen: - De bestuurlijke Verbindende Coalitie doorloopt een eigen ontwikkelpad met waar nodig externe expertise.",
       "source_document_id": "reg_zonmw_doorontwikkeling_zorgzaam_flevoland",
       "source_location": {
@@ -97,6 +106,17 @@
         "source_finance_anchor": "explicit_finance_signal",
         "public_wording_guardrail": "Gebruik als context; controleer sterkere bronnen voordat hier een financieringsregel van wordt gemaakt.",
         "needs_verification": true
+      },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [
+          "regio"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": true
       },
       "statement": "Flevoland heeft gekozen voor een lichte governance structuur waarin regionaal het creëren van overzicht, samenhang en een lerend netwerk centraal staat.",
       "source_document_id": "reg_zonmw_doorontwikkeling_zorgzaam_flevoland",
@@ -162,6 +182,15 @@
         "public_wording_guardrail": "Gebruik als context; controleer sterkere bronnen voordat hier een financieringsregel van wordt gemaakt.",
         "needs_verification": true
       },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": false
+      },
       "statement": "Ze zetten daarbij expertise over governance en domeinoverstijgend samenwerken in.",
       "source_document_id": "reg_zonmw_doorontwikkeling_zorgzaam_flevoland",
       "source_location": {
@@ -225,6 +254,17 @@
         "source_finance_anchor": "none",
         "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
         "needs_verification": false
+      },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [
+          "regio"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": true
       },
       "statement": "Flevoland heeft gekozen voor een lichte governance structuur waarin regionaal het creëren van overzicht, samenhang en een lerend netwerk centraal staat.",
       "source_document_id": "reg_zonmw_doorontwikkeling_zorgzaam_flevoland",
@@ -290,6 +330,15 @@
         "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "not_governance",
+        "label": "Geen zelfstandige governanceclaim",
+        "actor_signals": [],
+        "source_governance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+        "needs_verification": false,
+        "vague_region_only": false
+      },
       "statement": "de andere bouwstenen voor transformatie, in het bijzonder ‘Lerend vermogen’ en ‘Samenwerken met inwoners’, omdat en zodat dit kan bijdragen aan subdoel 1 en 2.",
       "source_document_id": "reg_zonmw_doorontwikkeling_zorgzaam_flevoland",
       "source_location": {
@@ -353,6 +402,15 @@
         "source_finance_anchor": "none",
         "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
         "needs_verification": false
+      },
+      "governance_status": {
+        "status": "coordination_role",
+        "label": "Coordinatie- of regierol",
+        "actor_signals": [],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als coordinatie/regie; niet vermengen met besluitvorming of uitvoering.",
+        "needs_verification": false,
+        "vague_region_only": false
       },
       "statement": "De doorontwikkeling van het lerend vermogen en de samenwerking met inwoners.",
       "source_document_id": "reg_zonmw_doorontwikkeling_zorgzaam_flevoland",
@@ -418,6 +476,19 @@
         "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "coordination_role",
+        "label": "Coordinatie- of regierol",
+        "actor_signals": [
+          "regio",
+          "gemeente",
+          "zorgverzekeraar"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als coordinatie/regie; niet vermengen met besluitvorming of uitvoering.",
+        "needs_verification": false,
+        "vague_region_only": false
+      },
       "statement": "Op regionaal niveau zijn de in het Regioplan betrokken partijen vertegenwoordigd in het samenwerkingsverband Zorgzaam Flevoland: gemeenten, de preferente zorgverzekeraar, zorgpartijen (GGZ, ziekenhuis, VVT, paramedische zorg, apothekers, huisartsen), provincie, GGD, jeugdzorg, ROS,-en, arbeidsmarktorganisatie, sociaal domein en inwoners- en patiëntenvertegenwoordiging.",
       "source_document_id": "reg_zonmw_doorontwikkeling_zorgzaam_flevoland",
       "source_location": {
@@ -481,6 +552,17 @@
         "source_finance_anchor": "none",
         "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
         "needs_verification": false
+      },
+      "governance_status": {
+        "status": "coordination_role",
+        "label": "Coordinatie- of regierol",
+        "actor_signals": [
+          "regio"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als coordinatie/regie; niet vermengen met besluitvorming of uitvoering.",
+        "needs_verification": true,
+        "vague_region_only": true
       },
       "statement": "Er staan 3 stevige subregionale samenwerkingsverbanden, met ieder een concrete werkagenda en bijbehorende samenwerkingsafspraken.",
       "source_document_id": "reg_zonmw_doorontwikkeling_zorgzaam_flevoland",

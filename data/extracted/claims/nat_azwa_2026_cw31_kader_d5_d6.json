@@ -34,6 +34,15 @@
         "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "not_governance",
+        "label": "Geen zelfstandige governanceclaim",
+        "actor_signals": [],
+        "source_governance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+        "needs_verification": false,
+        "vague_region_only": false
+      },
       "statement": "The D5 objective is to strengthen care-social cooperation so people get equal access to the care and support they need, with sociaal verwijzen named as an example.",
       "source_document_id": "nat_azwa_2026_cw31_kader_d5_d6",
       "source_location": {
@@ -104,6 +113,17 @@
         "source_finance_anchor": "none",
         "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
         "needs_verification": false
+      },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [
+          "regio"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": true
       },
       "statement": "The sheet describes D5 as a way to implement proven effective basisfunctionaliteiten such as sociaal verwijzen and valpreventie on a regional scale.",
       "source_document_id": "nat_azwa_2026_cw31_kader_d5_d6",
@@ -176,6 +196,17 @@
         "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [
+          "regio"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": true
+      },
       "statement": "D6 is framed as the basis in wijk and regio that must support the execution of the basisfunctionaliteiten.",
       "source_document_id": "nat_azwa_2026_cw31_kader_d5_d6",
       "source_location": {
@@ -246,6 +277,18 @@
         "source_finance_anchor": "explicit_finance_signal",
         "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
         "needs_verification": false
+      },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [
+          "ministerie",
+          "vng"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": false
       },
       "statement": "The policy instrument is a bestuurlijke afspraak between care and social-domain parties, with the funding instrument to be chosen through VNG, the fund managers, and VWS under the Financiele-verhoudingswet.",
       "source_document_id": "nat_azwa_2026_cw31_kader_d5_d6",
@@ -319,6 +362,15 @@
         "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "not_governance",
+        "label": "Geen zelfstandige governanceclaim",
+        "actor_signals": [],
+        "source_governance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+        "needs_verification": false,
+        "vague_region_only": false
+      },
       "statement": "The sheet presents a multi-year funding horizon for D5 and D6, covering 2026 through 2031.",
       "source_document_id": "nat_azwa_2026_cw31_kader_d5_d6",
       "source_location": {
@@ -385,6 +437,15 @@
         "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "not_governance",
+        "label": "Geen zelfstandige governanceclaim",
+        "actor_signals": [],
+        "source_governance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+        "needs_verification": false,
+        "vague_region_only": false
+      },
       "statement": "The CW 3.1 sheet gives a phased financing horizon from 2026 to 2031 for the D5/D6 package.",
       "source_document_id": "nat_azwa_2026_cw31_kader_d5_d6",
       "source_location": {
@@ -449,6 +510,15 @@
         "source_finance_anchor": "explicit_finance_signal",
         "public_wording_guardrail": "Koppel aan de bronroute en verantwoordingsplicht; maak er geen bestedingsruimte van.",
         "needs_verification": false
+      },
+      "governance_status": {
+        "status": "review_role",
+        "label": "Review-, monitorings- of toetsrol",
+        "actor_signals": [],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als toetsing, monitoring of evaluatie; niet als besluitvorming.",
+        "needs_verification": false,
+        "vague_region_only": false
       },
       "statement": "The progress of implementation is to be monitored nationally and the content of the basisfunctionaliteiten is to be updated in 2028 based on monitoring and evaluation.",
       "source_document_id": "nat_azwa_2026_cw31_kader_d5_d6",
@@ -522,6 +592,15 @@
         "public_wording_guardrail": "Koppel aan de bronroute en verantwoordingsplicht; maak er geen bestedingsruimte van.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "review_role",
+        "label": "Review-, monitorings- of toetsrol",
+        "actor_signals": [],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als toetsing, monitoring of evaluatie; niet als besluitvorming.",
+        "needs_verification": false,
+        "vague_region_only": false
+      },
       "statement": "The D5/D6 evaluation is also tied back to the broader IZA-based AZWA monitoring and evaluation framework.",
       "source_document_id": "nat_azwa_2026_cw31_kader_d5_d6",
       "source_location": {
@@ -587,6 +666,15 @@
         "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "not_governance",
+        "label": "Geen zelfstandige governanceclaim",
+        "actor_signals": [],
+        "source_governance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+        "needs_verification": false,
+        "vague_region_only": false
+      },
       "statement": "The CW 3.1 justification makes municipalities the operational channel for the D5/D6 middelen.",
       "source_document_id": "nat_azwa_2026_cw31_kader_d5_d6",
       "source_location": {
@@ -651,6 +739,17 @@
         "source_finance_anchor": "none",
         "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
         "needs_verification": false
+      },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [
+          "regio"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": true
       },
       "statement": "The justification also frames D6 as a required neighbourhood and regional structure for municipal implementation.",
       "source_document_id": "nat_azwa_2026_cw31_kader_d5_d6",

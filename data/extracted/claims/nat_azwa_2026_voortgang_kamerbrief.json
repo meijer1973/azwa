@@ -34,6 +34,15 @@
         "public_wording_guardrail": "Beschrijf alleen het verdeelmechanisme dat de bron noemt; geen lokale verdeling afleiden.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "not_governance",
+        "label": "Geen zelfstandige governanceclaim",
+        "actor_signals": [],
+        "source_governance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+        "needs_verification": false,
+        "vague_region_only": false
+      },
       "statement": "Op peildatum 6 maart 2026 zijn er in totaal 180 transformatieplannen die transformatiemiddelen toegekend hebben gekregen. Daarmee zijn de transformatiemiddelen uitgeput. Omdat het bedrag dat samenhangt met het aantal goedgekeurde plannen (totaal 224) ...",
       "source_document_id": "nat_azwa_2026_voortgang_kamerbrief",
       "source_location": {
@@ -98,6 +107,15 @@
         "source_finance_anchor": "explicit_finance_signal",
         "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
         "needs_verification": false
+      },
+      "governance_status": {
+        "status": "execution_role",
+        "label": "Uitvoeringsrol",
+        "actor_signals": [],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt.",
+        "needs_verification": false,
+        "vague_region_only": false
       },
       "statement": "Voor de basisfunctionaliteiten (zoals valpreventie en sociaal verwijzen) is in het AZWA afgesproken om een versnelling te maken in de implementatie en toe te werken naar een landelijke dekking van de (nu bekende) basisfunctionaliteiten in 2030.",
       "source_document_id": "nat_azwa_2026_voortgang_kamerbrief",
@@ -164,6 +182,17 @@
         "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "decision_role",
+        "label": "Besluitvormende rol",
+        "actor_signals": [
+          "regio"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Splits besluitvorming van coordinatie en uitvoering; noem de beslissende actor alleen als de bron dat draagt.",
+        "needs_verification": true,
+        "vague_region_only": true
+      },
       "statement": "Ook is afgesproken dat ten behoeve van deze herijking in 2026 een nieuwe set van criteria wordt vastgesteld voor deze beelden en plannen. Regio’s worden daarbij waar mogelijk ondersteund met landelijk beschikbare data over de nieuw vastgestelde criteria. ...",
       "source_document_id": "nat_azwa_2026_voortgang_kamerbrief",
       "source_location": {
@@ -228,6 +257,15 @@
         "source_finance_anchor": "explicit_finance_signal",
         "public_wording_guardrail": "Beschrijf alleen het verdeelmechanisme dat de bron noemt; geen lokale verdeling afleiden.",
         "needs_verification": false
+      },
+      "governance_status": {
+        "status": "not_governance",
+        "label": "Geen zelfstandige governanceclaim",
+        "actor_signals": [],
+        "source_governance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+        "needs_verification": false,
+        "vague_region_only": false
       },
       "statement": "Op peildatum 6 maart 2026 zijn er in totaal 180 transformatieplannen die transformatiemiddelen toegekend hebben gekregen. Daarmee zijn de transformatiemiddelen uitgeput. Omdat het bedrag dat samenhangt met het aantal goedgekeurde plannen (totaal 224) ...",
       "source_document_id": "nat_azwa_2026_voortgang_kamerbrief",
@@ -294,6 +332,15 @@
         "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "not_governance",
+        "label": "Geen zelfstandige governanceclaim",
+        "actor_signals": [],
+        "source_governance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+        "needs_verification": false,
+        "vague_region_only": false
+      },
       "statement": "De basisinfrastructuur gaat over basisvoorzieningen in wijken en buurten op het gebied van gezondheid, ondersteuning, welzijn en zorg (zoals inloopvoorzieningen sociaal en gezond in de wijk en mentaal gezonde school).",
       "source_document_id": "nat_azwa_2026_voortgang_kamerbrief",
       "source_location": {
@@ -358,6 +405,19 @@
         "source_finance_anchor": "explicit_finance_signal",
         "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
         "needs_verification": false
+      },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [
+          "ministerie",
+          "vng",
+          "gemeente"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": false
       },
       "statement": "Er wordt dit voorjaar door onder meer de VNG, GGD GHOR NL, Sociaal Werk Nederland (SWN) en het ministerie van VWS toegewerkt naar oplevering van een richtinggevend document voor het onderdeel inloopvoorzieningen sociaal en gezond, zodat gemeenten weten wat er van hen verwacht wordt.",
       "source_document_id": "nat_azwa_2026_voortgang_kamerbrief",
@@ -424,6 +484,15 @@
         "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "execution_role",
+        "label": "Uitvoeringsrol",
+        "actor_signals": [],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt.",
+        "needs_verification": false,
+        "vague_region_only": false
+      },
       "statement": "om deze afspraken te realiseren voor eind 2028 in de gezamenlijke intensiveringsagenda digitale en hybride zorg. De afspraken worden door verschillende instrumenten ondersteund, zoals via ZonMw programma’s, Zorg voor Innoveren, de Vliegwielcoalitie en Digizo.nu. Voor Digizo.nu vindt bestuurlijk overleg plaats over het vervolg na 2026, aangezien de financiering vanuit de IZAtransformatiemiddelen na 2026 eindigt. Ook worden gezamenlijke keuzes gemaakt voor herinrichting zorgpaden, de inrichtingsprincipes voor Zorg en Medische Service Centra en de integratie (en bekostiging) van gezondheids- en zorgapps in zorgprocessen en -paden. Monitor Digitale Zorg De Monitor Digitale Zorg 2025 wordt ...",
       "source_document_id": "nat_azwa_2026_voortgang_kamerbrief",
       "source_location": {
@@ -488,6 +557,17 @@
         "source_finance_anchor": "explicit_finance_signal",
         "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
         "needs_verification": false
+      },
+      "governance_status": {
+        "status": "execution_role",
+        "label": "Uitvoeringsrol",
+        "actor_signals": [
+          "zorgverzekeraar"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt.",
+        "needs_verification": false,
+        "vague_region_only": false
       },
       "statement": "Domeinoverstijgend indiceren In het AZWA hebben partijen afgesproken om domeinoverstijgend indiceren tussen de Zvw (wijkverpleging) en Wmo (hulpmiddelen) op te schalen, waarbij het uitgangspunt de minste arbeidsinzet is. Zo wordt de inzet van ...",
       "source_document_id": "nat_azwa_2026_voortgang_kamerbrief",
@@ -554,6 +634,15 @@
         "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "execution_role",
+        "label": "Uitvoeringsrol",
+        "actor_signals": [],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt.",
+        "needs_verification": false,
+        "vague_region_only": false
+      },
       "statement": "om deze afspraken te realiseren voor eind 2028 in de gezamenlijke intensiveringsagenda digitale en hybride zorg. De afspraken worden door verschillende instrumenten ondersteund, zoals via ZonMw programma’s, Zorg voor Innoveren, de Vliegwielcoalitie en ...",
       "source_document_id": "nat_azwa_2026_voortgang_kamerbrief",
       "source_location": {
@@ -618,6 +707,15 @@
         "source_finance_anchor": "explicit_finance_signal",
         "public_wording_guardrail": "Beschrijf alleen het verdeelmechanisme dat de bron noemt; geen lokale verdeling afleiden.",
         "needs_verification": false
+      },
+      "governance_status": {
+        "status": "not_governance",
+        "label": "Geen zelfstandige governanceclaim",
+        "actor_signals": [],
+        "source_governance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+        "needs_verification": false,
+        "vague_region_only": false
       },
       "statement": "Op peildatum 6 maart 2026 zijn er in totaal 180 transformatieplannen die transformatiemiddelen toegekend hebben gekregen. Daarmee zijn de transformatiemiddelen uitgeput. Omdat het bedrag dat samenhangt met het aantal goedgekeurde plannen (totaal 224) ...",
       "source_document_id": "nat_azwa_2026_voortgang_kamerbrief",
@@ -684,6 +782,17 @@
         "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "decision_role",
+        "label": "Besluitvormende rol",
+        "actor_signals": [
+          "regio"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Splits besluitvorming van coordinatie en uitvoering; noem de beslissende actor alleen als de bron dat draagt.",
+        "needs_verification": true,
+        "vague_region_only": true
+      },
       "statement": "Ook is afgesproken dat ten behoeve van deze herijking in 2026 een nieuwe set van criteria wordt vastgesteld voor deze beelden en plannen. Regio’s worden daarbij waar mogelijk ondersteund met landelijk beschikbare data over de nieuw vastgestelde criteria. ...",
       "source_document_id": "nat_azwa_2026_voortgang_kamerbrief",
       "source_location": {
@@ -748,6 +857,15 @@
         "source_finance_anchor": "explicit_finance_signal",
         "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
         "needs_verification": false
+      },
+      "governance_status": {
+        "status": "decision_role",
+        "label": "Besluitvormende rol",
+        "actor_signals": [],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Splits besluitvorming van coordinatie en uitvoering; noem de beslissende actor alleen als de bron dat draagt.",
+        "needs_verification": false,
+        "vague_region_only": false
       },
       "statement": "In het kader van concentratie en spreiding van zorg zijn (volume)normen voor geselecteerde oncologische en vaatchirurgische interventies vastgesteld. Deze krijgen vanaf 2026 of 2027 een plek in de contracten. Dit draagt zo bij om te komen tot passende ...",
       "source_document_id": "nat_azwa_2026_voortgang_kamerbrief",
@@ -814,6 +932,15 @@
         "public_wording_guardrail": "Koppel aan de bronroute en verantwoordingsplicht; maak er geen bestedingsruimte van.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "review_role",
+        "label": "Review-, monitorings- of toetsrol",
+        "actor_signals": [],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als toetsing, monitoring of evaluatie; niet als besluitvorming.",
+        "needs_verification": false,
+        "vague_region_only": false
+      },
       "statement": "Uit de mid-term review IZA en monitoring van digitale en hybride zorg is gebleken dat de beweging naar digitale en hybride zorg niet snel genoeg gaat.",
       "source_document_id": "nat_azwa_2026_voortgang_kamerbrief",
       "source_location": {
@@ -878,6 +1005,17 @@
         "source_finance_anchor": "explicit_finance_signal",
         "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
         "needs_verification": false
+      },
+      "governance_status": {
+        "status": "decision_role",
+        "label": "Besluitvormende rol",
+        "actor_signals": [
+          "regio"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Splits besluitvorming van coordinatie en uitvoering; noem de beslissende actor alleen als de bron dat draagt.",
+        "needs_verification": true,
+        "vague_region_only": true
       },
       "statement": "Ook is afgesproken dat ten behoeve van deze herijking in 2026 een nieuwe set van criteria wordt vastgesteld voor deze beelden en plannen. Regio’s worden daarbij waar mogelijk ondersteund met landelijk beschikbare data over de nieuw vastgestelde criteria. ...",
       "source_document_id": "nat_azwa_2026_voortgang_kamerbrief",
@@ -944,6 +1082,15 @@
         "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "execution_role",
+        "label": "Uitvoeringsrol",
+        "actor_signals": [],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt.",
+        "needs_verification": false,
+        "vague_region_only": false
+      },
       "statement": "om deze afspraken te realiseren voor eind 2028 in de gezamenlijke intensiveringsagenda digitale en hybride zorg. De afspraken worden door verschillende instrumenten ondersteund, zoals via ZonMw programma’s, Zorg voor Innoveren, de Vliegwielcoalitie en ...",
       "source_document_id": "nat_azwa_2026_voortgang_kamerbrief",
       "source_location": {
@@ -1008,6 +1155,15 @@
         "source_finance_anchor": "explicit_finance_signal",
         "public_wording_guardrail": "Beschrijf alleen het verdeelmechanisme dat de bron noemt; geen lokale verdeling afleiden.",
         "needs_verification": false
+      },
+      "governance_status": {
+        "status": "not_governance",
+        "label": "Geen zelfstandige governanceclaim",
+        "actor_signals": [],
+        "source_governance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+        "needs_verification": false,
+        "vague_region_only": false
       },
       "statement": "Op peildatum 6 maart 2026 zijn er in totaal 180 transformatieplannen die transformatiemiddelen toegekend hebben gekregen. Daarmee zijn de transformatiemiddelen uitgeput. Omdat het bedrag dat samenhangt met het aantal goedgekeurde plannen (totaal 224) ...",
       "source_document_id": "nat_azwa_2026_voortgang_kamerbrief",
@@ -1074,6 +1230,17 @@
         "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
         "needs_verification": false
       },
+      "governance_status": {
+        "status": "execution_role",
+        "label": "Uitvoeringsrol",
+        "actor_signals": [
+          "zorgverzekeraar"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt.",
+        "needs_verification": false,
+        "vague_region_only": false
+      },
       "statement": "Domeinoverstijgend indiceren In het AZWA hebben partijen afgesproken om domeinoverstijgend indiceren tussen de Zvw (wijkverpleging) en Wmo (hulpmiddelen) op te schalen, waarbij het uitgangspunt de minste arbeidsinzet is. Zo wordt de inzet van ...",
       "source_document_id": "nat_azwa_2026_voortgang_kamerbrief",
       "source_location": {
@@ -1138,6 +1305,17 @@
         "source_finance_anchor": "explicit_finance_signal",
         "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
         "needs_verification": false
+      },
+      "governance_status": {
+        "status": "decision_role",
+        "label": "Besluitvormende rol",
+        "actor_signals": [
+          "regio"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Splits besluitvorming van coordinatie en uitvoering; noem de beslissende actor alleen als de bron dat draagt.",
+        "needs_verification": true,
+        "vague_region_only": true
       },
       "statement": "Ook is afgesproken dat ten behoeve van deze herijking in 2026 een nieuwe set van criteria wordt vastgesteld voor deze beelden en plannen. Regio’s worden daarbij waar mogelijk ondersteund met landelijk beschikbare data over de nieuw vastgestelde criteria. ...",
       "source_document_id": "nat_azwa_2026_voortgang_kamerbrief",

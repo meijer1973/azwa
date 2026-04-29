@@ -44,12 +44,12 @@ Gebruik deze roadmap als levend werkdocument. Werk na elke sprint de statusregel
 | 30.1 Lokale lacunes | completed | `src/build_site_view_models.py`, `src/render_site.py`, `data/site/site_almere_view.json`, `dist/almere/index.html`, `docs/completed-plans/phase30-sprint30.1-lokale-lacunes.md` |
 | 30.2 Besluitvragen en mogelijke opvolgacties | completed | `src/build_site_view_models.py`, `src/render_site.py`, `data/site/decision_view_models/*.json`, `data/site/action_view_models/*.json`, `docs/completed-plans/phase30-sprint30.2-besluitvragen-opvolgacties.md` |
 | 30.3 Beleidsdocumenten en rapporten | completed | `docs/rapporten/report-status.json`, `src/audit_report_grounding.py`, `docs/internal/report-grounding-audit-2026-04-29.md`, `tests/test_report_grounding.py`, `docs/completed-plans/phase30-sprint30.3-beleidsdocumenten-rapporten.md` |
-| 31.1 Updateprotocol | open |  |
+| 31.1 Updateprotocol | completed | `docs/updateprotocol.md`, `src/validate_update_protocol.py`, `docs/internal/update-protocol-check-2026-04-29.md`, `tests/test_update_protocol.py`, `docs/completed-plans/phase31-sprint31.1-updateprotocol.md` |
 | 31.2 Maandelijkse bronaudit | open |  |
 | 31.3 Reviewronde met menselijke beoordelaars | open |  |
 
 ## Huidige sprintplan
-Sprint 30.3 is afgerond. De rapportlaag heeft nu een statusmanifest, een interne grounding-audit en regressietests die actuele public-review kandidaten controleren op interne datalaagtaal, exacte fte-claims, niet-bestaande bijlagen en te definitief klinkende interne planning. De huidige sprint is Sprint 31.1: updateprotocol. Sprint 25.6 blijft geparkeerd omdat post-validatie hardening pas verantwoord is na stakeholdervalidatierecords, lokale/interne documenten, finance/controller bevestiging of een expliciet beleidsbesluit. Dat blokkeert Fase 31 niet, zolang lokale lacunes niet als opgeloste D6-validatievragen worden gepresenteerd.
+Sprint 31.1 is afgerond. Nieuwe broninformatie heeft nu een vast updateprotocol, een validator voor `config/site_updates.json` en een interne controle-uitkomst. De huidige sprint is Sprint 31.2: maandelijkse bronaudit. Sprint 25.6 blijft geparkeerd omdat post-validatie hardening pas verantwoord is na stakeholdervalidatierecords, lokale/interne documenten, finance/controller bevestiging of een expliciet beleidsbesluit. Dat blokkeert Fase 31 niet, zolang lokale lacunes niet als opgeloste D6-validatievragen worden gepresenteerd.
 
 Status op 26 april 2026: Sprint 25.2 is afgerond als publieke bronversterkingssprint. `data/extracted/local_source_strengthening_almere.json` maakt zichtbaar welke lokale bronnen in de formele laag zitten, welke publieke bronnen als assessmentmateriaal zijn beoordeeld, en welke vragen naar later in de workflow gaan omdat de publieke bronbasis is uitgeput of omdat een geschoonde validatiestap nodig is. De geselecteerde Documentwijzer-bijlagen voor Visie Gezondheidsbeleid en Maatschappelijke Agenda zijn eerst naar page-markdown omgezet en daarna opgenomen in `data/raw/manifest.json`. Ook de GGD-tabellenboeken voor volwassenen en ouderen, de GGD-valpreventiepagina Almere en de ZonMw-bron zijn opgenomen in `data/raw/manifest.json`, door inventory/extractie/claims/site-viewmodels verwerkt en blijven reviewmateriaal voordat ze bestuurlijk of public-facing worden gebruikt. Niet-publieke informatie, ontbrekende lokale bevestiging en formele besluitvragen blokkeren deze fase niet; ze worden als gaten of carry-over taken zichtbaar gemaakt voor lokale medewerkers en latere besluitvorming.
 
@@ -98,6 +98,8 @@ Status op 29 april 2026: Sprint 30.1 is afgerond. De Almerepagina maakt lokale l
 Status op 29 april 2026: Sprint 30.2 is afgerond. Besluitvraag- en opvolgactiepagina's hebben nu een vaste sectie `Bronbasis en lokale keuze`. Kaarten en detailpagina's scheiden de bronaanleiding van de Almeerse invulruimte, tonen de relevante perspectieven en waarschuwen dat de pagina geen vastgesteld besluit, opdracht of planning is. Opvolgacties gebruiken verkenningstaal in plaats van opdracht- of adviesformuleringen.
 
 Status op 29 april 2026: Sprint 30.3 is afgerond. `docs/rapporten/report-status.json` onderscheidt actuele public-review kandidaten van vervallen concepten. `plan-van-aanpak-v2.md` is expliciet gemarkeerd als vervallen concept dat niet public-facing gebruikt moet worden. `src/audit_report_grounding.py` en `tests/test_report_grounding.py` bewaken dat actuele rapportkandidaten geen interne datalaagtaal, exacte fte-claims, niet-bestaande bijlagen of te definitieve interne planning bevatten. De interne controle-uitkomst staat in `docs/internal/report-grounding-audit-2026-04-29.md`.
+
+Status op 29 april 2026: Sprint 31.1 is afgerond. `docs/updateprotocol.md` legt vast wanneer een bron- of datawijziging een publieke update nodig heeft, welke velden `config/site_updates.json` moet bevatten, hoe oude claims behouden blijven en welke verificatie hoort bij bronintake. `src/validate_update_protocol.py` controleert de bestaande updates op verplichte velden, menselijke samenvatting, metrics, betrokken pagina's en bestaande document-id's. De interne controle staat in `docs/internal/update-protocol-check-2026-04-29.md`.
 
 Afgeronde aanpak voor Sprint 25.4a:
 
@@ -451,11 +453,11 @@ Status: completed.
 Doel: zorgen dat de site meebeweegt met nieuwe bronnen zonder dat oude informatie wordt overschreven.
 
 Sprint 31.1: Updateprotocol
-Status: open.
+Status: completed.
 
-- Maak een vaste procedure voor nieuwe publicaties.
-- Nieuwe broninformatie krijgt altijd een changelog met inhoudelijke delta.
-- Oude claims blijven bewaard; nieuwe claims kunnen aanvullen, verduidelijken, beperken of tegenspreken.
+- `docs/updateprotocol.md` beschrijft wanneer een update nodig is, welke changelogvelden verplicht zijn en hoe oude claims behouden blijven.
+- `src/validate_update_protocol.py` controleert `config/site_updates.json` op volledigheid, menselijke samenvatting, metrics, pagina's en bestaande document-id's.
+- De bestaande drie publieke updates voldoen aan het protocol; de controle-uitkomst staat in `docs/internal/update-protocol-check-2026-04-29.md`.
 
 Sprint 31.2: Maandelijkse bronaudit
 Status: open.

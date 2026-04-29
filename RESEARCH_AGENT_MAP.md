@@ -22,6 +22,8 @@ Decision and action site view models are human-readable choice-question layers. 
 
 For report use, check `docs/rapporten/report-status.json` before treating a markdown report as current. Superseded drafts are retained for traceability and may contain known anti-patterns; current public-review candidates must avoid internal datalayer language and unsupported exact capacity, budget, appendix or internal-planning claims.
 
+For source-intake and public update history, follow `docs/updateprotocol.md`. A source intake or source correction that changes public interpretation, claims, timeline moments, review status, report-readiness or public pages must be recorded in `config/site_updates.json` and regenerated into `data/site/site_updates_view.json`, the public `/updates/` page and the internal dashboard mirror.
+
 ## Access Layer
 
 Base URL:

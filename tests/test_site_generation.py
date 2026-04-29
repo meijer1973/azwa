@@ -360,6 +360,7 @@ class SiteGenerationTests(unittest.TestCase):
         self.assertIn("Benoeming van de raad 2026-2030", titles)
         self.assertIn("VWS en VNG-webinar over AZWA-middelen en regionale werkagenda", titles)
         self.assertIn("Landelijke thematafel Medisch-Sociaal en Preventie", titles)
+        self.assertIn("Format werkagenda basisfunctionaliteiten AZWA", titles)
         self.assertIn("VNG-ledenbrief noemt aanvullend regioplan gereed in Q3 2026", titles)
         self.assertIn("Tussentijdse evaluatie van IZA/AZWA", titles)
         self.assertIn("Startpakket sociaal domein en evaluatieperiode", titles)
@@ -424,6 +425,24 @@ class SiteGenerationTests(unittest.TestCase):
         self.assertIn("Begrotings- en verantwoordingscyclus", html)
         self.assertIn("Gemeentefonds", html)
         self.assertIn("SPUK en subsidie", html)
+
+    def test_timeline_execution_support_groups_guidance_moments(self) -> None:
+        timeline_view = load_json(TIMELINE_VIEW_PATH)
+        html = TIMELINE_PAGE_PATH.read_text(encoding="utf-8")
+        groups = {group["category_id"]: group for group in timeline_view["execution_support"]}
+
+        self.assertIn("format", groups)
+        self.assertIn("process_note", groups)
+        self.assertIn("webinar", groups)
+        self.assertIn("guidance_release", groups)
+        format_titles = {entry["title"] for entry in groups["format"]["entries"]}
+        webinar_titles = {entry["title"] for entry in groups["webinar"]["entries"]}
+        guidance_titles = {entry["title"] for entry in groups["guidance_release"]["entries"]}
+        self.assertIn("Format werkagenda basisfunctionaliteiten AZWA", format_titles)
+        self.assertIn("VWS en VNG-webinar over AZWA-middelen en regionale werkagenda", webinar_titles)
+        self.assertIn("Landelijke thematafel Medisch-Sociaal en Preventie", guidance_titles)
+        self.assertIn("Handreikingen en uitvoeringsmomenten", html)
+        self.assertIn("niet als formeel besluit of harde norm", html)
 
     def test_updates_page_contains_current_change_log(self) -> None:
         updates_view = load_json(UPDATES_VIEW_PATH)

@@ -40,7 +40,7 @@ Gebruik deze roadmap als levend werkdocument. Werk na elke sprint de statusregel
 | 29.0 Perspectiefschema zero-count cleanup | completed | `src/build_claims_top5.py`, `config/data_quality_perspectives.json`, `data/schemas/claim.schema.json`, `src/build_quality_control.py`, `data/extracted/data_quality_audit.json`, `docs/completed-plans/phase29-sprint29.0-perspectiefschema-zero-count-cleanup.md` |
 | 29.1 Tijdlijnregister verdiepen | completed | `src/build_site_view_models.py`, `src/render_site.py`, `config/timeline_curation.json`, `data/site/timeline_register.json`, `docs/completed-plans/phase29-sprint29.1-tijdlijnregister-verdiepen.md` |
 | 29.2 Begrotings- en verantwoordingscyclus | completed | `config/timeline_curation.json`, `src/build_site_view_models.py`, `src/render_site.py`, `data/site/site_timeline_view.json`, `docs/completed-plans/phase29-sprint29.2-begrotings-verantwoordingscyclus.md` |
-| 29.3 Handreikingen en uitvoeringsmomenten | open |  |
+| 29.3 Handreikingen en uitvoeringsmomenten | completed | `config/timeline_curation.json`, `src/build_site_view_models.py`, `src/render_site.py`, `data/site/site_timeline_view.json`, `docs/completed-plans/phase29-sprint29.3-handreikingen-uitvoeringsmomenten.md` |
 | 30.1 Lokale lacunes | open |  |
 | 30.2 Besluitvragen en mogelijke opvolgacties | open |  |
 | 30.3 Beleidsdocumenten en rapporten | open |  |
@@ -49,7 +49,7 @@ Gebruik deze roadmap als levend werkdocument. Werk na elke sprint de statusregel
 | 31.3 Reviewronde met menselijke beoordelaars | open |  |
 
 ## Huidige sprintplan
-Sprint 29.2 is afgerond. De tijdlijn bevat nu ook Septembercirculaire en Decembercirculaire 2026 als verwachte gemeentefondsmomenten op basis van de bestaande BZK-bron, en de tijdlijnpagina heeft een begrotings- en verantwoordingsdoorsnede voor lokale begroting, gemeentefonds, SPUK/subsidie, verantwoording en werkagenda/middelen. De huidige sprint is Sprint 29.3: handreikingen en uitvoeringsmomenten. Sprint 25.6 blijft geparkeerd omdat post-validatie hardening pas verantwoord is na stakeholdervalidatierecords, lokale/interne documenten, finance/controller bevestiging of een expliciet beleidsbesluit. Dat blokkeert Fase 29 niet, zolang de tijdlijn geen D6-validatievragen als opgelost presenteert.
+Fase 29 is afgerond. De tijdlijn onderscheidt nu chronologische momenten, beleidsmetadata, begrotings-/verantwoordingscyclus en handreikingen/uitvoeringsmomenten. De huidige sprint is Sprint 30.1: lokale lacunes. Sprint 25.6 blijft geparkeerd omdat post-validatie hardening pas verantwoord is na stakeholdervalidatierecords, lokale/interne documenten, finance/controller bevestiging of een expliciet beleidsbesluit. Dat blokkeert Fase 30 niet, zolang lokale lacunes niet als opgeloste D6-validatievragen worden gepresenteerd.
 
 Status op 26 april 2026: Sprint 25.2 is afgerond als publieke bronversterkingssprint. `data/extracted/local_source_strengthening_almere.json` maakt zichtbaar welke lokale bronnen in de formele laag zitten, welke publieke bronnen als assessmentmateriaal zijn beoordeeld, en welke vragen naar later in de workflow gaan omdat de publieke bronbasis is uitgeput of omdat een geschoonde validatiestap nodig is. De geselecteerde Documentwijzer-bijlagen voor Visie Gezondheidsbeleid en Maatschappelijke Agenda zijn eerst naar page-markdown omgezet en daarna opgenomen in `data/raw/manifest.json`. Ook de GGD-tabellenboeken voor volwassenen en ouderen, de GGD-valpreventiepagina Almere en de ZonMw-bron zijn opgenomen in `data/raw/manifest.json`, door inventory/extractie/claims/site-viewmodels verwerkt en blijven reviewmateriaal voordat ze bestuurlijk of public-facing worden gebruikt. Niet-publieke informatie, ontbrekende lokale bevestiging en formele besluitvragen blokkeren deze fase niet; ze worden als gaten of carry-over taken zichtbaar gemaakt voor lokale medewerkers en latere besluitvorming.
 
@@ -90,6 +90,8 @@ Status op 29 april 2026: Sprint 29.0 is afgerond. De dode waarden `spending_scop
 Status op 29 april 2026: Sprint 29.1 is afgerond. Het tijdlijnregister is verdiept met `moment_type`, `source_status`, `authority`, `actor_summary`, `primary_perspective` en `timeline_policy_note` per item. De tijdlijnpagina toont deze velden in een compacte leeslaag, zodat formele deadlines, lokale bestuurlijke context, financieringsmomenten en uitvoeringshorizons minder snel door elkaar worden gelezen. De curatie verwijst bovendien weer alleen naar bestaande claim-id's.
 
 Status op 29 april 2026: Sprint 29.2 is afgerond. De bestaande gemeentefondsbron draagt nu drie verwachte circulairemomenten voor 2026: mei, september en december. De tijdlijnview maakt daarnaast een `budget_cycle`-doorsnede met lokale begroting, gemeentefonds, SPUK/subsidie, verantwoording, werkagenda/middelen en overige financiele context. Deze doorsnede staat onder de chronologische tijdlijn zodat datumvolgorde in de hoofdsectie intact blijft.
+
+Status op 29 april 2026: Sprint 29.3 is afgerond. Het format voor de D5-werkagenda is toegevoegd als eigen tijdlijnmoment en de tijdlijnview bevat nu een `execution_support`-doorsnede voor formatdocumenten, proces-/toelichtingsdocumenten, werkagenda-proces, webinars, handreiking/thematafel en ondersteuningspagina's. De publieke tijdlijn toont deze doorsnede apart zodat handreikingen en uitvoeringsduiding niet als formele besluiten of harde normen worden gelezen.
 
 Afgeronde aanpak voor Sprint 25.4a:
 
@@ -407,7 +409,7 @@ Status: completed.
 - Markeer waar menselijke beoordeling nodig is om een extern moment naar lokale planning te vertalen.
 
 Sprint 29.3: Handreikingen en uitvoeringsmomenten
-Status: open.
+Status: completed.
 
 - Houd handreikingen, webinars, thematafels en formatdocumenten apart van formele besluiten.
 - Gebruik deze bronnen wel voor uitvoering en voorbereiding, maar niet als harde norm.

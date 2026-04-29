@@ -1015,6 +1015,35 @@ def render_timeline(route: str, timeline_view: dict) -> str:
             + "</div></section>"
         )
 
+    execution_support_html = ""
+    if timeline_view.get("execution_support"):
+        support_cards = []
+        for group in timeline_view["execution_support"]:
+            entry_links = "".join(
+                '<li>'
+                + f'<a href="{esc(relative_link(route, entry["page_url"]))}">{esc(entry["date_label"])} - {esc(entry["title"])}</a>'
+                + f'<br><span class="list-meta">{esc(entry["moment_type_label"])} | {esc(entry["authority_label"])}</span>'
+                + "</li>"
+                for entry in group["entries"][:5]
+            )
+            support_cards.append(
+                '<article class="summary-box">'
+                + f'<p class="summary-box__metric">{esc(str(group["entry_count"]))}</p>'
+                + f'<h3>{esc(group["label"])}</h3>'
+                + f'<p>{esc(group["description"])}</p>'
+                + f'<p class="list-meta">{esc(group["safe_use"])}</p>'
+                + f'<p class="list-meta">{esc(str(group["review_count"]))} moment(en) met reviewduiding</p>'
+                + f'<ul class="compact-list">{entry_links}</ul>'
+                + "</article>"
+            )
+        execution_support_html = (
+            '<section class="section"><h2>Handreikingen en uitvoeringsmomenten</h2>'
+            + '<div class="notice">Deze doorsnede houdt formats, procesnotities, webinars, thematafels en andere uitvoeringsduiding apart van formele besluiten of harde deadlines.</div>'
+            + '<div class="summary-grid">'
+            + "".join(support_cards)
+            + "</div></section>"
+        )
+
     return (
         '<section class="section"><h2>Jaaroverzicht</h2>'
         + '<div class="notice">De tijdlijn groepeert bronmomenten, toekomstige beleidsstappen en uitvoeringshorizons per jaar. '
@@ -1024,6 +1053,7 @@ def render_timeline(route: str, timeline_view: dict) -> str:
         + '<section class="section"><h2>Beleidsmomenten en vervolgreferenties</h2>'
         + "".join(year_sections)
         + "</section>"
+        + execution_support_html
         + budget_cycle_html
     )
 

@@ -1291,6 +1291,52 @@ def budget_cycle_category(entry: dict) -> dict | None:
     }
 
 
+def execution_support_category(entry: dict) -> dict | None:
+    text = " ".join(
+        [
+            entry.get("title", ""),
+            entry.get("summary", ""),
+            entry.get("relation_type", ""),
+            entry.get("entry_type", ""),
+            " ".join(entry.get("topic_keys", [])),
+            " ".join(source.get("document_type", "") for source in entry.get("source_basis", [])),
+        ]
+    ).lower()
+    if "webinar" in text:
+        category_id = "webinar"
+        label = "Webinar"
+        description = "Toelichtingsmomenten die helpen bij interpretatie, maar geen besluit of norm zijn."
+    elif "thematafel" in text or "handreiking" in text:
+        category_id = "guidance_release"
+        label = "Handreiking of thematafel"
+        description = "Landelijke ondersteuningsmomenten rond handreikingen of verdere uitwerking."
+    elif "format" in text or "template" in text:
+        category_id = "format"
+        label = "Format"
+        description = "Invul- of formatdocumenten die structuur geven aan de werkagenda."
+    elif "toelichting" in text or "process_note" in text or "procespad" in text:
+        category_id = "process_note"
+        label = "Proces- of toelichtingsdocument"
+        description = "Procesduiding die helpt plannen, maar niet vanzelf een lokale deadline of besluit is."
+    elif "opdracht" in text or "werkagenda" in text:
+        category_id = "workagenda_process"
+        label = "Werkagenda-proces"
+        description = "Procesmomenten rond de regionale werkagenda en de voorbereiding daarvan."
+    elif "ondersteuning" in text or "informatiepagina" in text or "zorgakkoorden" in text:
+        category_id = "support_page"
+        label = "Ondersteuningspagina"
+        description = "Praktische informatiepagina's die uitvoeringsduiding geven."
+    else:
+        return None
+
+    return {
+        "category_id": category_id,
+        "label": label,
+        "description": description,
+        "safe_use": "Gebruik als voorbereiding of duiding; niet als formeel besluit of harde norm zonder aparte bron.",
+    }
+
+
 def build_budget_cycle_summary(entries: list[dict]) -> list[dict]:
     grouped: dict[str, dict] = {}
     for entry in entries:
@@ -1322,6 +1368,47 @@ def build_budget_cycle_summary(entries: list[dict]) -> list[dict]:
         )
 
     order = ["local_budget", "municipal_fund", "spuk", "accountability", "workagenda_funding", "other_money"]
+    return [
+        {
+            **grouped[category_id],
+            "entries": sorted(grouped[category_id]["entries"], key=lambda item: (item["sort_key"], item["title"])),
+        }
+        for category_id in order
+        if category_id in grouped
+    ]
+
+
+def build_execution_support_summary(entries: list[dict]) -> list[dict]:
+    grouped: dict[str, dict] = {}
+    for entry in entries:
+        category = execution_support_category(entry)
+        if category is None:
+            continue
+        group = grouped.setdefault(
+            category["category_id"],
+            {
+                **category,
+                "entry_count": 0,
+                "review_count": 0,
+                "entries": [],
+            },
+        )
+        group["entry_count"] += 1
+        if entry.get("needs_human_review") or entry["authority"]["level"] == "review_needed":
+            group["review_count"] += 1
+        group["entries"].append(
+            {
+                "entry_id": entry["entry_id"],
+                "date_label": entry["date_label"],
+                "sort_key": entry["sort_key"],
+                "title": entry["title"],
+                "moment_type_label": entry["moment_type"]["label"],
+                "authority_label": entry["authority"]["label"],
+                "page_url": entry["page_url"],
+            }
+        )
+
+    order = ["format", "process_note", "workagenda_process", "webinar", "guidance_release", "support_page"]
     return [
         {
             **grouped[category_id],
@@ -2358,6 +2445,7 @@ def build_timeline_register(
         "entries": entries,
         "years": years,
         "budget_cycle": build_budget_cycle_summary(entries),
+        "execution_support": build_execution_support_summary(entries),
     }
 
 
@@ -2389,6 +2477,7 @@ def build_timeline_view(timeline_register: dict) -> dict:
         "default_open_year": timeline_register["default_open_year"],
         "year_summaries": timeline_register["years"],
         "budget_cycle": timeline_register.get("budget_cycle", []),
+        "execution_support": timeline_register.get("execution_support", []),
         "year_groups": year_groups,
         "entries": timeline_register["entries"],
     }

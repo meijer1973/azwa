@@ -117,6 +117,8 @@ Check:
 - Is it only nationally relevant but not yet publicly adopted locally?
 - Is a local implication inferred rather than visible in a local source?
 - Which regional split is meant: IZA/AZWA-regio, GGD-regio, zorgkantoorregio, ROAZ/subregio, province, or subregional project?
+- Which `locality_status` applies: `explicit_almere`, `explicit_flevoland`, `regional_split_context`, `national_general`, `national_with_local_relevance`, `inferred_local_relevance`, `local_adoption_gap`, `municipal_context`, or `no_locality_signal`?
+- Which regional split signal is present: IZA/AZWA-regio, GGD-regio, zorgkantoorregio, ROAZ/subregio, provincie, or gemeentelijk?
 
 Common quality problems:
 - National goals are presented as if Almere already adopted them
@@ -128,6 +130,7 @@ Common quality problems:
 Editorial rule:
 - Frame these as adoption or documentation gaps, not as failures of the database.
 - Do not write `de regio` or `Flevolandse structuur` where Almere's role depends on the regional split. Name the relevant scale in plain language.
+- Treat `national_with_local_relevance` and `inferred_local_relevance` as useful orientation, not as explicit Almere policy.
 
 ### 6. Execution
 Check:

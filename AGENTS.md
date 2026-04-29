@@ -57,3 +57,4 @@
 - `docs/completed-plans/phase27-sprint27.2-tijd.md`: internal note for the completed Sprint 27.2 time split; use it before changing `time_status`, timeline wording, deadline/expected-moment guardrails, or local planning context checks.
 - `docs/completed-plans/phase27-sprint27.3-geld.md`: internal note for the completed Sprint 27.3 money split; use it before changing `money_status`, funding wording, local funding gap checks, or double-counting guardrails.
 - `docs/completed-plans/phase27-sprint27.4-governance.md`: internal note for the completed Sprint 27.4 governance split; use it before changing `governance_status`, actor-signal detection, vague-region checks, or role wording.
+- `docs/completed-plans/phase27-sprint27.5-locality.md`: internal note for the completed Sprint 27.5 locality split; use it before changing `locality_status`, regional split detection, local adoption-gap checks, or Almere/Flevoland wording.

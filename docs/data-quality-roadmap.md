@@ -30,7 +30,7 @@ Gebruik deze roadmap als levend werkdocument. Werk na elke sprint de statusregel
 | 27.2 Tijd | completed | `src/build_claims_top5.py`, `data/schemas/claim.schema.json`, `data/extracted/data_quality_audit.json`, `data/site/timeline_register.json`, `docs/completed-plans/phase27-sprint27.2-tijd.md` |
 | 27.3 Geld | completed | `src/build_claims_top5.py`, `data/schemas/claim.schema.json`, `data/extracted/data_quality_audit.json`, `docs/completed-plans/phase27-sprint27.3-geld.md` |
 | 27.4 Governance | completed | `src/build_claims_top5.py`, `data/schemas/claim.schema.json`, `data/extracted/data_quality_audit.json`, `docs/completed-plans/phase27-sprint27.4-governance.md` |
-| 27.5 Locality | open |  |
+| 27.5 Locality | completed | `src/build_claims_top5.py`, `data/schemas/claim.schema.json`, `data/extracted/data_quality_audit.json`, `docs/completed-plans/phase27-sprint27.5-locality.md` |
 | 27.6 Execution | open |  |
 | 28.1 Menselijke samenvattingen per update | open |  |
 | 28.2 Bronverwijzing en autoriteitstaal | open |  |
@@ -67,6 +67,8 @@ Status op 29 april 2026: Sprint 27.2 is afgerond als tijd-splitsing. Elke claim 
 Status op 29 april 2026: Sprint 27.3 is afgerond als geld-splitsing. Elke claim krijgt nu een `money_status` met onderscheid tussen financieringsroutes, aanvraagvoorwaarden, budgetvensters, verdeelmechanismen, bestedingsruimte, verantwoordingsregels, lokale financieringsgaten, dubbeltellingsrisico's, financiele context en niet-financiele inhoud. De audit bevat een `money_status_audit`, site-evidence draagt geldstatus mee, en QC markeert lokale financieringsgaten, dubbeltellingsrisico's en algemene financiele context als reviewpunt zodat lokale budgetkeuzes of middelenmixen niet uit publieke bronnen worden ingevuld.
 
 Status op 29 april 2026: Sprint 27.4 is afgerond als governance-splitsing. Elke claim krijgt nu een `governance_status` met onderscheid tussen besluitvorming, coordinatie/regie, aanvraag/indiening, uitvoering, verantwoording/eigenaarschap, goedkeuring/vaststelling, review/monitoring, governancegaten, actorcontext en niet-governance. De audit bevat een `governance_status_audit`, site-evidence draagt governancestatus mee, en QC markeert governancegaten, actorcontext en vage `regio`-actoren als reviewpunt zodat `regio`, `mandaatgemeente`, gemeente, raad, college, zorgverzekeraar en uitvoeringspartners niet door elkaar worden gehaald.
+
+Status op 29 april 2026: Sprint 27.5 is afgerond als locality-splitsing. Elke claim krijgt nu een `locality_status` met onderscheid tussen expliciet Almere, expliciet Flevoland, regionale split-context, algemeen landelijk, landelijk-met-lokale-relevantie, afgeleide lokale relevantie, lokale adoptie-/documentatiegaten, gemeentelijke context en geen locality-signaal. De audit bevat een `locality_status_audit`, site-evidence draagt localitystatus mee, en QC markeert nationale claims met lokale relevantie, afgeleide lokale relevantie, adoptiegaten en regionale split-context als reviewpunt zodat landelijke of regionale lijnen niet als Almeerse vaststelling worden gelezen.
 
 Afgeronde aanpak voor Sprint 25.4a:
 
@@ -306,7 +308,7 @@ Status: completed.
 - Voorkom dat "regio" als actor wordt gebruikt als de bron specifieker is.
 
 Sprint 27.5: Locality
-Status: open.
+Status: completed.
 
 - Markeer claims die expliciet over Almere gaan anders dan claims die alleen algemeen voor gemeenten gelden.
 - Markeer Flevolandse claims apart van Almeerse claims.

@@ -278,6 +278,44 @@
       "page_type_defaults": [
         "almere"
       ],
+      "locality_status_values": [
+        {
+          "status": "explicit_almere",
+          "meaning": "Bron of passage gaat expliciet over Almere."
+        },
+        {
+          "status": "explicit_flevoland",
+          "meaning": "Bron of passage gaat expliciet over Flevoland of GGD/Zorgzaam Flevoland."
+        },
+        {
+          "status": "regional_split_context",
+          "meaning": "Regionale context waarbij de schaal moet worden benoemd."
+        },
+        {
+          "status": "national_general",
+          "meaning": "Algemene landelijke lijn zonder zelfstandige lokale claim."
+        },
+        {
+          "status": "national_with_local_relevance",
+          "meaning": "Landelijke lijn die relevant is voor Almere, maar geen lokale vaststelling is."
+        },
+        {
+          "status": "inferred_local_relevance",
+          "meaning": "Lokale relevantie is afgeleid en vraagt lokale verificatie."
+        },
+        {
+          "status": "local_adoption_gap",
+          "meaning": "Landelijke of regionale lijn zichtbaar, maar lokale openbare overname of documentatie ontbreekt."
+        },
+        {
+          "status": "municipal_context",
+          "meaning": "Gemeentelijke context waarbij moet worden gecontroleerd of het Almere betreft."
+        },
+        {
+          "status": "no_locality_signal",
+          "meaning": "Geen zelfstandig locality-signaal."
+        }
+      ],
       "editorial_rule": "Show clearly whether something is explicitly local, regionally translated, or only nationally visible so far.",
       "exclusion_rule": "Do not imply that Almere has formally adopted a line if the local public source base does not yet show that."
     },

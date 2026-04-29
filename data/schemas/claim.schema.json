@@ -12,6 +12,7 @@
     "time_status",
     "money_status",
     "governance_status",
+    "locality_status",
     "statement",
     "source_document_id",
     "source_location",
@@ -243,6 +244,75 @@
           "type": "boolean"
         },
         "vague_region_only": {
+          "type": "boolean"
+        }
+      }
+    },
+    "locality_status": {
+      "type": "object",
+      "required": [
+        "status",
+        "label",
+        "locality_scope",
+        "regional_split_signals",
+        "explicit_location_signals",
+        "public_wording_guardrail",
+        "needs_verification"
+      ],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "explicit_almere",
+            "explicit_flevoland",
+            "regional_split_context",
+            "national_general",
+            "national_with_local_relevance",
+            "inferred_local_relevance",
+            "local_adoption_gap",
+            "municipal_context",
+            "no_locality_signal"
+          ]
+        },
+        "label": {
+          "type": "string"
+        },
+        "locality_scope": {
+          "type": "string"
+        },
+        "regional_split_signals": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "IZA/AZWA-regio",
+              "GGD-regio",
+              "zorgkantoorregio",
+              "ROAZ/subregio",
+              "provincie",
+              "gemeentelijk"
+            ]
+          }
+        },
+        "explicit_location_signals": {
+          "type": "object",
+          "required": [
+            "almere",
+            "flevoland"
+          ],
+          "properties": {
+            "almere": {
+              "type": "boolean"
+            },
+            "flevoland": {
+              "type": "boolean"
+            }
+          }
+        },
+        "public_wording_guardrail": {
+          "type": "string"
+        },
+        "needs_verification": {
           "type": "boolean"
         }
       }

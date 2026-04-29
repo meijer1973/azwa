@@ -111,6 +111,18 @@ ACCEPTED_GOVERNANCE_STATUSES = {
     "not_governance",
 }
 
+ACCEPTED_LOCALITY_STATUSES = {
+    "explicit_almere",
+    "explicit_flevoland",
+    "regional_split_context",
+    "national_general",
+    "national_with_local_relevance",
+    "inferred_local_relevance",
+    "local_adoption_gap",
+    "municipal_context",
+    "no_locality_signal",
+}
+
 
 def load_json(path: Path) -> dict | list:
     return json.loads(path.read_text(encoding="utf-8"))
@@ -558,6 +570,11 @@ def check_claim_payloads(
             for claim in claims
             if (claim.get("governance_status") or {}).get("status") not in ACCEPTED_GOVERNANCE_STATUSES
         ]
+        missing_locality_status = [
+            claim
+            for claim in claims
+            if (claim.get("locality_status") or {}).get("status") not in ACCEPTED_LOCALITY_STATUSES
+        ]
         lower_authority_norm_claims = [
             claim
             for claim in claims
@@ -602,6 +619,26 @@ def check_claim_payloads(
             claim
             for claim in claims
             if (claim.get("governance_status") or {}).get("vague_region_only")
+        ]
+        national_local_relevance_claims = [
+            claim
+            for claim in claims
+            if (claim.get("locality_status") or {}).get("status") == "national_with_local_relevance"
+        ]
+        inferred_local_claims = [
+            claim
+            for claim in claims
+            if (claim.get("locality_status") or {}).get("status") == "inferred_local_relevance"
+        ]
+        local_adoption_gap_claims = [
+            claim
+            for claim in claims
+            if (claim.get("locality_status") or {}).get("status") == "local_adoption_gap"
+        ]
+        regional_split_claims = [
+            claim
+            for claim in claims
+            if (claim.get("locality_status") or {}).get("status") == "regional_split_context"
         ]
 
         if missing_norm_status:
@@ -658,6 +695,20 @@ def check_claim_payloads(
                 document_id=document_id,
                 source_paths=[relative_path(claim_path)],
                 related_ids={"sample_claim_ids": [claim["claim_id"] for claim in missing_governance_status[:5]]},
+            )
+
+        if missing_locality_status:
+            add_issue(
+                issues,
+                seen,
+                check_id="claim_payload_integrity",
+                severity="blocking",
+                reason_code="missing_or_invalid_locality_status",
+                summary=f"{document_id} contains claim(s) without a valid Sprint 27.5 locality_status.",
+                recommended_action="Regenerate claims with the locality-status classifier before using local or regional outputs.",
+                document_id=document_id,
+                source_paths=[relative_path(claim_path)],
+                related_ids={"sample_claim_ids": [claim["claim_id"] for claim in missing_locality_status[:5]]},
             )
 
         if contextual_claims:
@@ -818,6 +869,62 @@ def check_claim_payloads(
                 document_id=document_id,
                 source_paths=[relative_path(claim_path)],
                 related_ids={"sample_claim_ids": [claim["claim_id"] for claim in vague_region_claims[:5]]},
+            )
+
+        if national_local_relevance_claims:
+            add_issue(
+                issues,
+                seen,
+                check_id="claim_payload_integrity",
+                severity="review",
+                reason_code="national_claim_local_relevance",
+                summary=f"{document_id} contains {len(national_local_relevance_claims)} national claim(s) with local relevance.",
+                recommended_action="Frame these as national lines relevant to Almere; do not present them as local adoption without local evidence.",
+                document_id=document_id,
+                source_paths=[relative_path(claim_path)],
+                related_ids={"sample_claim_ids": [claim["claim_id"] for claim in national_local_relevance_claims[:5]]},
+            )
+
+        if inferred_local_claims:
+            add_issue(
+                issues,
+                seen,
+                check_id="claim_payload_integrity",
+                severity="review",
+                reason_code="inferred_local_relevance",
+                summary=f"{document_id} contains {len(inferred_local_claims)} claim(s) where local relevance is inferred.",
+                recommended_action="Verify local adoption or explicit local documentation before using these as Almere facts.",
+                document_id=document_id,
+                source_paths=[relative_path(claim_path)],
+                related_ids={"sample_claim_ids": [claim["claim_id"] for claim in inferred_local_claims[:5]]},
+            )
+
+        if local_adoption_gap_claims:
+            add_issue(
+                issues,
+                seen,
+                check_id="claim_payload_integrity",
+                severity="review",
+                reason_code="local_adoption_gap",
+                summary=f"{document_id} contains {len(local_adoption_gap_claims)} local adoption or documentation gap claim(s).",
+                recommended_action="Keep these visible as local validation or decision questions; do not resolve them by inference.",
+                document_id=document_id,
+                source_paths=[relative_path(claim_path)],
+                related_ids={"sample_claim_ids": [claim["claim_id"] for claim in local_adoption_gap_claims[:5]]},
+            )
+
+        if regional_split_claims:
+            add_issue(
+                issues,
+                seen,
+                check_id="claim_payload_integrity",
+                severity="review",
+                reason_code="regional_split_context",
+                summary=f"{document_id} contains {len(regional_split_claims)} regional split context claim(s).",
+                recommended_action="Name the relevant regional scale before drawing conclusions for Almere.",
+                document_id=document_id,
+                source_paths=[relative_path(claim_path)],
+                related_ids={"sample_claim_ids": [claim["claim_id"] for claim in regional_split_claims[:5]]},
             )
 
         if noisy_claims:

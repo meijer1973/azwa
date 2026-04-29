@@ -14,7 +14,7 @@
     "high_volume_topic_count": 6,
     "rough_claim_count": 119,
     "site_files_with_rough_claims": 11,
-    "open_review_items": 233
+    "open_review_items": 266
   },
   "perspective_coverage": {
     "claims": {
@@ -1250,6 +1250,412 @@
         "vague_region_only": false,
         "statement_excerpt": "The governance base is a broad local coalition of Almere municipality, wijkteams, care and welfare organizations, and preventive and public-health institutions.",
         "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt."
+      }
+    ]
+  },
+  "locality_status_audit": {
+    "description": "Sprint 27.5 locality split for explicit Almere, explicit Flevoland, regional split context, national general, national with local relevance, inferred local relevance, local adoption gaps, municipal context, and no locality signal.",
+    "status_counts": {
+      "explicit_almere": 212,
+      "explicit_flevoland": 49,
+      "local_adoption_gap": 1,
+      "national_general": 170,
+      "national_with_local_relevance": 58,
+      "regional_split_context": 34
+    },
+    "locality_perspective_status_counts": {
+      "explicit_almere": 212,
+      "explicit_flevoland": 49,
+      "local_adoption_gap": 1,
+      "national_with_local_relevance": 44,
+      "regional_split_context": 18
+    },
+    "regional_split_counts": {
+      "GGD-regio": 27,
+      "IZA/AZWA-regio": 36,
+      "ROAZ/subregio": 6,
+      "gemeentelijk": 180,
+      "provincie": 2
+    },
+    "verification_needed_sample": [
+      {
+        "claim_id": "clm__nat_azwa_2025_definitief_municipal_translation_001",
+        "source_document_id": "nat_azwa_2025_definitief",
+        "topic": "municipal.implementation_translation",
+        "locality_status": "national_with_local_relevance",
+        "locality_scope": "national to local",
+        "regional_split_signals": [],
+        "explicit_location_signals": {
+          "almere": false,
+          "flevoland": false
+        },
+        "statement_excerpt": "Municipal and care parties are expected to translate D5 into region-specific workagendas and to use the gereedschapskist for local implementation choices.",
+        "public_wording_guardrail": "Formuleer als landelijke lijn met relevantie voor Almere; niet als lokale vaststelling."
+      },
+      {
+        "claim_id": "clm__nat_azwa_2025_definitief_municipal_translation_002",
+        "source_document_id": "nat_azwa_2025_definitief",
+        "topic": "municipal.implementation_translation",
+        "locality_status": "national_with_local_relevance",
+        "locality_scope": "national to local",
+        "regional_split_signals": [
+          "gemeentelijk"
+        ],
+        "explicit_location_signals": {
+          "almere": false,
+          "flevoland": false
+        },
+        "statement_excerpt": "Municipal implementation also carries local accountability features: funding goes to municipalities, monitoring should rely on existing data sources, and accountability should fit regular reporting to the gemeenteraad.",
+        "public_wording_guardrail": "Formuleer als landelijke lijn met relevantie voor Almere; niet als lokale vaststelling."
+      },
+      {
+        "claim_id": "clm__nat_azwa_2025_onderhandelaarsakkoord_municipal_translation_001",
+        "source_document_id": "nat_azwa_2025_onderhandelaarsakkoord",
+        "topic": "municipal.implementation_translation",
+        "locality_status": "national_with_local_relevance",
+        "locality_scope": "national to local",
+        "regional_split_signals": [
+          "gemeentelijk"
+        ],
+        "explicit_location_signals": {
+          "almere": false,
+          "flevoland": false
+        },
+        "statement_excerpt": "The negotiation text expects every region or gemeente to make D5 operational through a workagenda, local intervention choice, and mutual accountability between municipalities, insurers, and providers.",
+        "public_wording_guardrail": "Formuleer als landelijke lijn met relevantie voor Almere; niet als lokale vaststelling."
+      },
+      {
+        "claim_id": "clm__nat_azwa_2025_onderhandelaarsakkoord_municipal_translation_002",
+        "source_document_id": "nat_azwa_2025_onderhandelaarsakkoord",
+        "topic": "municipal.local_structure",
+        "locality_status": "national_with_local_relevance",
+        "locality_scope": "national to local",
+        "regional_split_signals": [],
+        "explicit_location_signals": {
+          "almere": false,
+          "flevoland": false
+        },
+        "statement_excerpt": "Municipal implementation on the D6 side is tied to local teams, public-health links, and neighbourhood-level voorzieningen.",
+        "public_wording_guardrail": "Formuleer als landelijke lijn met relevantie voor Almere; niet als lokale vaststelling."
+      },
+      {
+        "claim_id": "clm__nat_azwa_2026_cw31_kader_d5_d6_municipal_translation_001",
+        "source_document_id": "nat_azwa_2026_cw31_kader_d5_d6",
+        "topic": "municipal.implementation_translation",
+        "locality_status": "national_with_local_relevance",
+        "locality_scope": "national to local",
+        "regional_split_signals": [],
+        "explicit_location_signals": {
+          "almere": false,
+          "flevoland": false
+        },
+        "statement_excerpt": "The CW 3.1 justification makes municipalities the operational channel for the D5/D6 middelen.",
+        "public_wording_guardrail": "Formuleer als landelijke lijn met relevantie voor Almere; niet als lokale vaststelling."
+      },
+      {
+        "claim_id": "clm__nat_azwa_2026_cw31_kader_d5_d6_municipal_translation_002",
+        "source_document_id": "nat_azwa_2026_cw31_kader_d5_d6",
+        "topic": "municipal.implementation_translation",
+        "locality_status": "national_with_local_relevance",
+        "locality_scope": "national to local",
+        "regional_split_signals": [],
+        "explicit_location_signals": {
+          "almere": false,
+          "flevoland": false
+        },
+        "statement_excerpt": "The justification also frames D6 as a required neighbourhood and regional structure for municipal implementation.",
+        "public_wording_guardrail": "Formuleer als landelijke lijn met relevantie voor Almere; niet als lokale vaststelling."
+      },
+      {
+        "claim_id": "clm__nat_azwa_2026_voortgang_kamerbrief_municipal_translation_001",
+        "source_document_id": "nat_azwa_2026_voortgang_kamerbrief",
+        "topic": "municipal.implementation_translation",
+        "locality_status": "national_with_local_relevance",
+        "locality_scope": "national to local",
+        "regional_split_signals": [],
+        "explicit_location_signals": {
+          "almere": false,
+          "flevoland": false
+        },
+        "statement_excerpt": "Op peildatum 6 maart 2026 zijn er in totaal 180 transformatieplannen die transformatiemiddelen toegekend hebben gekregen. Daarmee zijn de transformatiemiddelen uitgeput. Omdat het bedrag dat samenhangt met het aantal...",
+        "public_wording_guardrail": "Formuleer als landelijke lijn met relevantie voor Almere; niet als lokale vaststelling."
+      },
+      {
+        "claim_id": "clm__nat_azwa_2026_voortgang_kamerbrief_municipal_translation_002",
+        "source_document_id": "nat_azwa_2026_voortgang_kamerbrief",
+        "topic": "municipal.implementation_translation",
+        "locality_status": "national_with_local_relevance",
+        "locality_scope": "national to local",
+        "regional_split_signals": [],
+        "explicit_location_signals": {
+          "almere": false,
+          "flevoland": false
+        },
+        "statement_excerpt": "Domeinoverstijgend indiceren In het AZWA hebben partijen afgesproken om domeinoverstijgend indiceren tussen de Zvw (wijkverpleging) en Wmo (hulpmiddelen) op te schalen, waarbij het uitgangspunt de minste arbeidsinzet...",
+        "public_wording_guardrail": "Formuleer als landelijke lijn met relevantie voor Almere; niet als lokale vaststelling."
+      },
+      {
+        "claim_id": "clm__nat_azwa_2026_voortgang_kamerbrief_municipal_translation_003",
+        "source_document_id": "nat_azwa_2026_voortgang_kamerbrief",
+        "topic": "municipal.implementation_translation",
+        "locality_status": "national_with_local_relevance",
+        "locality_scope": "national to local",
+        "regional_split_signals": [],
+        "explicit_location_signals": {
+          "almere": false,
+          "flevoland": false
+        },
+        "statement_excerpt": "Ook is afgesproken dat ten behoeve van deze herijking in 2026 een nieuwe set van criteria wordt vastgesteld voor deze beelden en plannen. Regio’s worden daarbij waar mogelijk ondersteund met landelijk beschikbare data...",
+        "public_wording_guardrail": "Formuleer als landelijke lijn met relevantie voor Almere; niet als lokale vaststelling."
+      },
+      {
+        "claim_id": "clm__nat_azwa_2025_aanbiedingsbrief_d5_001",
+        "source_document_id": "nat_azwa_2025_aanbiedingsbrief",
+        "topic": "d5.other",
+        "locality_status": "national_with_local_relevance",
+        "locality_scope": "national to local",
+        "regional_split_signals": [],
+        "explicit_location_signals": {
+          "almere": false,
+          "flevoland": false
+        },
+        "statement_excerpt": "In het bijzonder hecht ik aan de integrale benadering van het AZWA, waarmee we gezamenlijk voortbouwen op het IZA en de samenwerking over medisch en sociaal domein verder versterken en daarmee bijdragen aan de bewegin...",
+        "public_wording_guardrail": "Formuleer als landelijke lijn met relevantie voor Almere; niet als lokale vaststelling."
+      },
+      {
+        "claim_id": "clm__nat_azwa_2025_aanbiedingsbrief_municipal_translation_001",
+        "source_document_id": "nat_azwa_2025_aanbiedingsbrief",
+        "topic": "municipal.implementation_translation",
+        "locality_status": "national_with_local_relevance",
+        "locality_scope": "national to local",
+        "regional_split_signals": [],
+        "explicit_location_signals": {
+          "almere": false,
+          "flevoland": false
+        },
+        "statement_excerpt": "De regering gaat niet over de hoogte van de premies van zorgverzekeringen; die worden door zorgverzekeraars vastgesteld.",
+        "public_wording_guardrail": "Formuleer als landelijke lijn met relevantie voor Almere; niet als lokale vaststelling."
+      },
+      {
+        "claim_id": "clm__nat_azwa_2025_aanbiedingsbrief_municipal_translation_002",
+        "source_document_id": "nat_azwa_2025_aanbiedingsbrief",
+        "topic": "municipal.implementation_translation",
+        "locality_status": "national_with_local_relevance",
+        "locality_scope": "national to local",
+        "regional_split_signals": [],
+        "explicit_location_signals": {
+          "almere": false,
+          "flevoland": false
+        },
+        "statement_excerpt": "Zorgverzekeraars ontkomen er niet aan om de premie te verhogen als de kosten van de zorg stijgen.",
+        "public_wording_guardrail": "Formuleer als landelijke lijn met relevantie voor Almere; niet als lokale vaststelling."
+      },
+      {
+        "claim_id": "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_municipal_translation_001",
+        "source_document_id": "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026",
+        "topic": "municipal.implementation_translation",
+        "locality_status": "regional_split_context",
+        "locality_scope": "regional split",
+        "regional_split_signals": [
+          "IZA/AZWA-regio",
+          "gemeentelijk"
+        ],
+        "explicit_location_signals": {
+          "almere": false,
+          "flevoland": false
+        },
+        "statement_excerpt": "Deze opgave wordt dit jaar uitgewerkt in een werkagenda in regionale samenwerking tussen gemeenten en zorgverzekeraar, waarbij zorgen welzijnspartijen worden betrokken.",
+        "public_wording_guardrail": "Benoem welke regionale schaal bedoeld is; gebruik niet alleen 'de regio'."
+      },
+      {
+        "claim_id": "clm__nat_azwa_opdracht_werkagenda_d5_2026_d6_001",
+        "source_document_id": "nat_azwa_opdracht_werkagenda_d5_2026",
+        "topic": "d6.basisinfrastructuur",
+        "locality_status": "national_with_local_relevance",
+        "locality_scope": "national to local",
+        "regional_split_signals": [],
+        "explicit_location_signals": {
+          "almere": false,
+          "flevoland": false
+        },
+        "statement_excerpt": "Basisfunctionaliteit Landelijk: (door)ontwikkeling handreikingen Regionaal: doorontwikkeling of start uitvoering Betreft: laagdrempelige steunpunten, sociaal verwijzen, valpreventie, volwassenen met overgewicht en obe...",
+        "public_wording_guardrail": "Formuleer als landelijke lijn met relevantie voor Almere; niet als lokale vaststelling."
+      },
+      {
+        "claim_id": "clm__nat_azwa_opdracht_werkagenda_d5_2026_d6_003",
+        "source_document_id": "nat_azwa_opdracht_werkagenda_d5_2026",
+        "topic": "d6.basisinfrastructuur",
+        "locality_status": "national_with_local_relevance",
+        "locality_scope": "national to local",
+        "regional_split_signals": [],
+        "explicit_location_signals": {
+          "almere": false,
+          "flevoland": false
+        },
+        "statement_excerpt": "7 Mentale gezondheid Laagdrempelige steunpunten Doelgroep: iedere inwoner die baat heeft bij laagdrempelige ondersteuning rondom zelfregie en herstel, met bijzondere aandacht voor mensen met ernstige of langdurige psy...",
+        "public_wording_guardrail": "Formuleer als landelijke lijn met relevantie voor Almere; niet als lokale vaststelling."
+      },
+      {
+        "claim_id": "clm__nat_azwa_opdracht_werkagenda_d5_2026_governance_and_finance_001",
+        "source_document_id": "nat_azwa_opdracht_werkagenda_d5_2026",
+        "topic": "governance_and_finance.other",
+        "locality_status": "regional_split_context",
+        "locality_scope": "regional split",
+        "regional_split_signals": [
+          "IZA/AZWA-regio",
+          "gemeentelijk"
+        ],
+        "explicit_location_signals": {
+          "almere": false,
+          "flevoland": false
+        },
+        "statement_excerpt": "Komen tot een werkagenda De IZA-regiotafel10 is de centrale plek waar alle doelen en opgaven van de werkagenda integraal worden afgewogen. De mandaatgemeente en preferente zorgverzekeraar hebben – als financiers van h...",
+        "public_wording_guardrail": "Benoem welke regionale schaal bedoeld is; gebruik niet alleen 'de regio'."
+      },
+      {
+        "claim_id": "clm__nat_azwa_opdracht_werkagenda_d5_2026_governance_and_finance_003",
+        "source_document_id": "nat_azwa_opdracht_werkagenda_d5_2026",
+        "topic": "governance_and_finance.other",
+        "locality_status": "regional_split_context",
+        "locality_scope": "regional split",
+        "regional_split_signals": [
+          "IZA/AZWA-regio",
+          "gemeentelijk"
+        ],
+        "explicit_location_signals": {
+          "almere": false,
+          "flevoland": false
+        },
+        "statement_excerpt": "1 Een mandaatgemeente is de gemeente die namens alle gemeenten in een IZA-regio de regionale middelen aanvraagt en verantwoordt, en hierover afspraken kan maken met andere partijen. 2 Handreiking Regionale Preventie I...",
+        "public_wording_guardrail": "Benoem welke regionale schaal bedoeld is; gebruik niet alleen 'de regio'."
+      },
+      {
+        "claim_id": "clm__nat_azwa_opdracht_werkagenda_d5_2026_timeline_and_status_001",
+        "source_document_id": "nat_azwa_opdracht_werkagenda_d5_2026",
+        "topic": "timeline.other",
+        "locality_status": "regional_split_context",
+        "locality_scope": "regional split",
+        "regional_split_signals": [
+          "IZA/AZWA-regio",
+          "gemeentelijk"
+        ],
+        "explicit_location_signals": {
+          "almere": false,
+          "flevoland": false
+        },
+        "statement_excerpt": "1 Een mandaatgemeente is de gemeente die namens alle gemeenten in een IZA-regio de regionale middelen aanvraagt en verantwoordt, en hierover afspraken kan maken met andere partijen. 2 Handreiking Regionale Preventie I...",
+        "public_wording_guardrail": "Benoem welke regionale schaal bedoeld is; gebruik niet alleen 'de regio'."
+      },
+      {
+        "claim_id": "clm__nat_azwa_opdracht_werkagenda_d5_2026_monitoring_and_evaluation_003",
+        "source_document_id": "nat_azwa_opdracht_werkagenda_d5_2026",
+        "topic": "monitoring.other",
+        "locality_status": "regional_split_context",
+        "locality_scope": "regional split",
+        "regional_split_signals": [
+          "IZA/AZWA-regio"
+        ],
+        "explicit_location_signals": {
+          "almere": false,
+          "flevoland": false
+        },
+        "statement_excerpt": "Daarnaast zijn in de werkagenda afspraken nodig over hoe partijen elkaar aanspreken als ze plannen onvoldoende uitvoeren.7 Lerende cyclus Zowel regionaal als landelijk is de bedoeling dat we leren van het AZWA, een tr...",
+        "public_wording_guardrail": "Benoem welke regionale schaal bedoeld is; gebruik niet alleen 'de regio'."
+      },
+      {
+        "claim_id": "clm__nat_azwa_opdracht_werkagenda_d5_2026_municipal_translation_002",
+        "source_document_id": "nat_azwa_opdracht_werkagenda_d5_2026",
+        "topic": "municipal.implementation_translation",
+        "locality_status": "regional_split_context",
+        "locality_scope": "regional split",
+        "regional_split_signals": [
+          "IZA/AZWA-regio",
+          "gemeentelijk"
+        ],
+        "explicit_location_signals": {
+          "almere": false,
+          "flevoland": false
+        },
+        "statement_excerpt": "R plannen indienen bi orgver ekeraar erkagenda vastgesteld aan tafel en verst rd naar colleges gemeenten Regionale werkagenda s vastgesteld en verst rd naar elderheid over ontwikkelagenda deel tart itvoering van de we...",
+        "public_wording_guardrail": "Benoem welke regionale schaal bedoeld is; gebruik niet alleen 'de regio'."
+      },
+      {
+        "claim_id": "clm__nat_azwa_opdracht_werkagenda_d5_2026_municipal_translation_003",
+        "source_document_id": "nat_azwa_opdracht_werkagenda_d5_2026",
+        "topic": "municipal.implementation_translation",
+        "locality_status": "regional_split_context",
+        "locality_scope": "regional split",
+        "regional_split_signals": [
+          "IZA/AZWA-regio",
+          "gemeentelijk"
+        ],
+        "explicit_location_signals": {
+          "almere": false,
+          "flevoland": false
+        },
+        "statement_excerpt": "Komen tot een werkagenda De IZA-regiotafel10 is de centrale plek waar alle doelen en opgaven van de werkagenda integraal worden afgewogen. De mandaatgemeente en preferente zorgverzekeraar hebben – als financiers van h...",
+        "public_wording_guardrail": "Benoem welke regionale schaal bedoeld is; gebruik niet alleen 'de regio'."
+      },
+      {
+        "claim_id": "clm__nat_iza_2022_integraal_zorgakkoord_d6_001",
+        "source_document_id": "nat_iza_2022_integraal_zorgakkoord",
+        "topic": "d6.basisinfrastructuur",
+        "locality_status": "national_with_local_relevance",
+        "locality_scope": "national to local",
+        "regional_split_signals": [],
+        "explicit_location_signals": {
+          "almere": false,
+          "flevoland": false
+        },
+        "statement_excerpt": "van laagdrempelige steunpunten zoals herstel- en zelfregiecentra waar iedere inwoner, met name mensen met EPA, toegang tot heeft: gerund door vrijwilligers en ervaringsdeskundigen, ondersteund door sociaalwer­ kers en...",
+        "public_wording_guardrail": "Formuleer als landelijke lijn met relevantie voor Almere; niet als lokale vaststelling."
+      },
+      {
+        "claim_id": "clm__nat_iza_2022_integraal_zorgakkoord_municipal_translation_002",
+        "source_document_id": "nat_iza_2022_integraal_zorgakkoord",
+        "topic": "municipal.implementation_translation",
+        "locality_status": "national_with_local_relevance",
+        "locality_scope": "national to local",
+        "regional_split_signals": [
+          "gemeentelijk"
+        ],
+        "explicit_location_signals": {
+          "almere": false,
+          "flevoland": false
+        },
+        "statement_excerpt": "Vanuit het bestaande traject van ZN, VNG en VWS dat gericht is op het realiseren van een regionale preventie-in­ frastructuur zal worden uitgewerkt hoe de lokale situatie binnen gemeenten op het terrein van preventie...",
+        "public_wording_guardrail": "Formuleer als landelijke lijn met relevantie voor Almere; niet als lokale vaststelling."
+      },
+      {
+        "claim_id": "clm__nat_iza_2022_integraal_zorgakkoord_municipal_translation_003",
+        "source_document_id": "nat_iza_2022_integraal_zorgakkoord",
+        "topic": "municipal.implementation_translation",
+        "locality_status": "regional_split_context",
+        "locality_scope": "regional split",
+        "regional_split_signals": [
+          "IZA/AZWA-regio",
+          "gemeentelijk"
+        ],
+        "explicit_location_signals": {
+          "almere": false,
+          "flevoland": false
+        },
+        "statement_excerpt": "Zorgverzekeraars, gemeenten, zorgaanbieders en burger- en patiëntorganisaties behouden de ruimte om aanvullende transformatieafspraken, netwerken en initiatieven voor te stellen; ook over zaken die niet in de regiopla...",
+        "public_wording_guardrail": "Benoem welke regionale schaal bedoeld is; gebruik niet alleen 'de regio'."
+      },
+      {
+        "claim_id": "clm__nat_azwa_format_werkagenda_d5_2026_municipal_translation_001",
+        "source_document_id": "nat_azwa_format_werkagenda_d5_2026",
+        "topic": "municipal.implementation_translation",
+        "locality_status": "national_with_local_relevance",
+        "locality_scope": "national to local",
+        "regional_split_signals": [],
+        "explicit_location_signals": {
+          "almere": false,
+          "flevoland": false
+        },
+        "statement_excerpt": "Onderdelen RPI | Uitwerking Toelichting op RPI: Omschrijf beknopt hoe de regionale preventie-infrastructuur in jullie regio is georganiseerd (een visuele toelichting, bijvoorbeeld in de vorm van een afbeelding, volsta...",
+        "public_wording_guardrail": "Formuleer als landelijke lijn met relevantie voor Almere; niet als lokale vaststelling."
       }
     ]
   },
@@ -3699,12 +4105,15 @@
         "extraction_noise_detected",
         "finance_context_needs_verification",
         "governance_gap",
+        "local_adoption_gap",
         "local_funding_gap",
         "local_planning_context_not_policy_deadline",
         "lower_authority_norm_signal",
         "missing_d5_content",
         "missing_d6_content",
         "municipality_relevance_inferred",
+        "national_claim_local_relevance",
+        "regional_split_context",
         "table_content_not_promoted",
         "unresolved_conflict",
         "vague_region_actor"

@@ -286,6 +286,28 @@ GOVERNANCE_GAP_TERMS = (
     "needs decision",
     "review_needed",
 )
+ALMERE_TERMS = ("almere", "almeerse", "gemeente almere", "raad van almere")
+FLEVOLAND_TERMS = ("flevoland", "flevolandse", "ggd flevoland", "zorgzaam flevoland")
+REGIONAL_SPLIT_TERMS = {
+    "IZA/AZWA-regio": ("iza-regio", "azwa-regio", "regioplan", "werkagenda", "mandaatgemeente"),
+    "GGD-regio": ("ggd-regio", "ggd flevoland", "jgz almere", "publieke gezondheid"),
+    "zorgkantoorregio": ("zorgkantoor", "zorgkantoorregio"),
+    "ROAZ/subregio": ("roaz", "subregio", "noord-veluwe", "zeewolde"),
+    "provincie": ("provincie", "provinciaal"),
+    "gemeentelijk": ("gemeente", "gemeenten", "gemeenteraad", "college"),
+}
+LOCAL_ADOPTION_GAP_TERMS = (
+    "lokale overname",
+    "lokale uitwerking",
+    "lokaal vastgelegd",
+    "niet expliciet",
+    "geen expliciete",
+    "nog geen",
+    "niet zichtbaar",
+    "adoptiegat",
+    "documentatiegat",
+    "lokale validatie",
+)
 
 
 def normalize_text(text: str) -> str:
@@ -669,6 +691,102 @@ def governance_status_for(
         "needs_verification": status in {"governance_gap", "actor_context"} or vague_region_only
         or source_statement_type == "contextual_relevance",
         "vague_region_only": vague_region_only,
+    }
+
+
+def regional_split_signals_for(normalized_statement: str) -> list[str]:
+    signals = [
+        split
+        for split, terms in REGIONAL_SPLIT_TERMS.items()
+        if any(normalize_text(term) in normalized_statement for term in terms)
+    ]
+    return unique_preserving_order(signals)
+
+
+def locality_status_for(
+    statement: str,
+    document_id: str,
+    jurisdiction_level: str,
+    source_statement_type: str,
+    topic: str,
+) -> dict:
+    normalized = normalize_text(statement)
+    explicit_almere = contains_any(normalized, *ALMERE_TERMS) or document_id.startswith("mun_almere_")
+    explicit_flevoland = contains_any(normalized, *FLEVOLAND_TERMS) or document_id.startswith("reg_flevoland_") or document_id.startswith("reg_ggd_flevoland_")
+    regional_splits = regional_split_signals_for(normalized)
+    substantive_regional_splits = [split for split in regional_splits if split != "gemeentelijk"]
+    national_source = document_id.startswith("nat_") or jurisdiction_level == "national"
+    municipal_source = document_id.startswith("mun_") or jurisdiction_level == "municipal"
+    regional_source = document_id.startswith("reg_") or jurisdiction_level == "regional"
+    has_adoption_gap = contains_any(normalized, *LOCAL_ADOPTION_GAP_TERMS)
+    is_locality_topic = topic.startswith("municipal.") or topic.startswith("governance.local")
+    inferred_local = source_statement_type == "contextual_relevance" or (
+        national_source and ("Almere" in applies_to_for(document_id) or is_locality_topic)
+    )
+
+    if has_adoption_gap and (explicit_almere or explicit_flevoland or is_locality_topic or inferred_local):
+        status = "local_adoption_gap"
+        label = "Lokale adoptie- of documentatiegap"
+        scope = "Almere/Flevoland validation"
+        guardrail = "Formuleer als lokale adoptie- of documentatiegap; niet als lokaal vastgesteld beleid."
+    elif explicit_almere:
+        status = "explicit_almere"
+        label = "Expliciet Almeers"
+        scope = "Almere"
+        guardrail = "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt."
+    elif explicit_flevoland:
+        status = "explicit_flevoland"
+        label = "Expliciet Flevolands"
+        scope = "Flevoland"
+        guardrail = "Formuleer als Flevolandse of GGD/Flevolandse bronlijn; niet automatisch als Almeerse keuze."
+    elif substantive_regional_splits or regional_source:
+        status = "regional_split_context"
+        label = "Regionale split-context"
+        scope = "regional split"
+        guardrail = "Benoem welke regionale schaal bedoeld is; gebruik niet alleen 'de regio'."
+    elif national_source and inferred_local:
+        status = "national_with_local_relevance"
+        label = "Landelijk met lokale relevantie"
+        scope = "national to local"
+        guardrail = "Formuleer als landelijke lijn met relevantie voor Almere; niet als lokale vaststelling."
+    elif national_source:
+        status = "national_general"
+        label = "Algemeen landelijk"
+        scope = "Netherlands"
+        guardrail = "Gebruik als landelijke context; lokale toepassing vraagt aparte bron of interpretatie."
+    elif inferred_local:
+        status = "inferred_local_relevance"
+        label = "Afgeleide lokale relevantie"
+        scope = "inferred local"
+        guardrail = "Formuleer als afgeleide relevantie en controleer lokale bron voordat dit Almeers beleid wordt."
+    elif municipal_source:
+        status = "municipal_context"
+        label = "Gemeentelijke context"
+        scope = "municipal"
+        guardrail = "Gemeentelijke broncontext; controleer of het Almere betreft voordat dit lokaal wordt gebruikt."
+    else:
+        status = "no_locality_signal"
+        label = "Geen zelfstandig locality-signaal"
+        scope = "unspecified"
+        guardrail = "Niet gebruiken als lokale of regionale claim zonder aanvullende bron."
+
+    return {
+        "status": status,
+        "label": label,
+        "locality_scope": scope,
+        "regional_split_signals": regional_splits,
+        "explicit_location_signals": {
+            "almere": explicit_almere,
+            "flevoland": explicit_flevoland,
+        },
+        "public_wording_guardrail": guardrail,
+        "needs_verification": status in {
+            "local_adoption_gap",
+            "national_with_local_relevance",
+            "inferred_local_relevance",
+            "regional_split_context",
+            "municipal_context",
+        },
     }
 
 
@@ -1329,6 +1447,9 @@ def build_claim(
         "governance_status": governance_status_for(
             statement, document_payload["document_id"], instrument_type, source_statement_type, topic, claim_type
         ),
+        "locality_status": locality_status_for(
+            statement, document_payload["document_id"], metadata["jurisdiction_level"], source_statement_type, topic
+        ),
         "statement": statement,
         "source_document_id": document_payload["document_id"],
         "source_location": extract_source_location(item),
@@ -1513,6 +1634,7 @@ def validate_claims(claims: list[dict], allowed_relation_types: set[str]) -> Non
         "time_status",
         "money_status",
         "governance_status",
+        "locality_status",
         "statement",
         "source_document_id",
         "source_location",

@@ -212,6 +212,18 @@
         "needs_verification": false,
         "vague_region_only": false
       },
+      "locality_status": {
+        "status": "explicit_almere",
+        "label": "Expliciet Almeers",
+        "locality_scope": "Almere",
+        "regional_split_signals": [],
+        "explicit_location_signals": {
+          "almere": true,
+          "flevoland": false
+        },
+        "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
+        "needs_verification": false
+      },
       "needs_human_review": false
     },
     {
@@ -261,6 +273,18 @@
         "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt.",
         "needs_verification": false,
         "vague_region_only": false
+      },
+      "locality_status": {
+        "status": "explicit_almere",
+        "label": "Expliciet Almeers",
+        "locality_scope": "Almere",
+        "regional_split_signals": [],
+        "explicit_location_signals": {
+          "almere": true,
+          "flevoland": false
+        },
+        "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
+        "needs_verification": false
       },
       "needs_human_review": false
     },
@@ -312,6 +336,20 @@
         "needs_verification": false,
         "vague_region_only": false
       },
+      "locality_status": {
+        "status": "explicit_almere",
+        "label": "Expliciet Almeers",
+        "locality_scope": "Almere",
+        "regional_split_signals": [
+          "gemeentelijk"
+        ],
+        "explicit_location_signals": {
+          "almere": true,
+          "flevoland": false
+        },
+        "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
+        "needs_verification": false
+      },
       "needs_human_review": false
     },
     {
@@ -359,6 +397,18 @@
         "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
         "needs_verification": false,
         "vague_region_only": false
+      },
+      "locality_status": {
+        "status": "explicit_flevoland",
+        "label": "Expliciet Flevolands",
+        "locality_scope": "Flevoland",
+        "regional_split_signals": [],
+        "explicit_location_signals": {
+          "almere": false,
+          "flevoland": true
+        },
+        "public_wording_guardrail": "Formuleer als Flevolandse of GGD/Flevolandse bronlijn; niet automatisch als Almeerse keuze.",
+        "needs_verification": false
       },
       "needs_human_review": false
     },
@@ -410,6 +460,18 @@
         "needs_verification": true,
         "vague_region_only": true
       },
+      "locality_status": {
+        "status": "explicit_almere",
+        "label": "Expliciet Almeers",
+        "locality_scope": "Almere",
+        "regional_split_signals": [],
+        "explicit_location_signals": {
+          "almere": true,
+          "flevoland": false
+        },
+        "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
+        "needs_verification": false
+      },
       "needs_human_review": false
     },
     {
@@ -459,6 +521,20 @@
         "public_wording_guardrail": "Gebruik als goedkeurings- of vaststellingsrol; niet automatisch als uitvoeringsverantwoordelijkheid.",
         "needs_verification": false,
         "vague_region_only": false
+      },
+      "locality_status": {
+        "status": "explicit_almere",
+        "label": "Expliciet Almeers",
+        "locality_scope": "Almere",
+        "regional_split_signals": [
+          "gemeentelijk"
+        ],
+        "explicit_location_signals": {
+          "almere": true,
+          "flevoland": false
+        },
+        "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
+        "needs_verification": false
       },
       "needs_human_review": false
     }

@@ -310,7 +310,6 @@ Decision view models:
 Action view models:
 
 - `data/site/action_view_models/act_d5_werkagenda_expliciteren.json`
-- `data/site/action_view_models/act_d6_lokale_structuur_verduidelijken.json`
 - `data/site/action_view_models/act_middelen_en_eigenaarschap_vastleggen.json`
 - `data/site/action_view_models/act_monitoring_afstemmen.json`
 - `data/site/action_view_models/act_regionale_digitale_aansluiting.json`

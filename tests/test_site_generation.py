@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import re
 import subprocess
 import sys
 import unittest
@@ -378,26 +379,52 @@ class SiteGenerationTests(unittest.TestCase):
 
     def test_update_human_summaries_avoid_pipeline_language(self) -> None:
         updates_view = load_json(UPDATES_VIEW_PATH)
-        forbidden_terms = [
-            "dataset",
-            "claimlaag",
-            "bronlaag",
-            "pijplijn",
-            "data/raw",
-            "manifest",
-            "site-viewmodels",
-            "review_needed",
-            "source-backed",
-            "ingested",
-        ]
+        forbidden_pattern = re.compile(
+            r"dataset|claim\s*laag|bron\s*laag|pijplijn|pipeline|data/raw|manifest|"
+            r"view\s*model|site-viewmodels|review_needed|source-backed|ingest(?:ed|ie|en|ion)?|"
+            r"\bjson\b|\bqc\b|machine-gegenereerd",
+            re.IGNORECASE,
+        )
+        dutch_markers = {
+            "aan",
+            "als",
+            "bij",
+            "dat",
+            "de",
+            "deze",
+            "die",
+            "een",
+            "en",
+            "het",
+            "in",
+            "is",
+            "met",
+            "niet",
+            "ook",
+            "openbare",
+            "over",
+            "voor",
+            "van",
+            "zijn",
+        }
 
         for update in updates_view["updates"]:
             summary = update["human_summary"]
             for field_name in ["intro", "what_happened", "what_changed", "why_it_matters"]:
                 self.assertIn(field_name, summary)
-                value = summary[field_name].lower()
-                for term in forbidden_terms:
-                    self.assertNotIn(term, value, f"{term} found in {update['update_id']} {field_name}")
+                value = summary[field_name]
+                self.assertIsInstance(value, str)
+                self.assertGreaterEqual(len(value), 80, f"{update['update_id']} {field_name} is too short")
+                normalized_words = set(re.findall(r"[a-zA-ZÀ-ÿ]+", value.lower()))
+                self.assertGreaterEqual(
+                    len(normalized_words & dutch_markers),
+                    3,
+                    f"{update['update_id']} {field_name} does not look like Dutch prose",
+                )
+                self.assertIsNone(
+                    forbidden_pattern.search(value),
+                    f"technical jargon found in {update['update_id']} {field_name}",
+                )
 
     def test_update_claims_detail_page_contains_full_claim_list(self) -> None:
         html = VNG_FINANCING_UPDATE_CLAIMS_PAGE_PATH.read_text(encoding="utf-8")

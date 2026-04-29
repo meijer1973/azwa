@@ -36,6 +36,8 @@ Gebruik deze roadmap als levend werkdocument. Werk na elke sprint de statusregel
 | 28.1 Menselijke samenvattingen per update | completed | `config/site_updates.json`, `config/site_taxonomy.json`, `src/render_site.py`, `tests/test_site_generation.py`, `docs/completed-plans/phase28-sprint28.1-menselijke-update-samenvattingen.md` |
 | 28.2 Bronverwijzing en autoriteitstaal | completed | `src/render_site.py`, `src/build_site_view_models.py`, `tests/test_site_generation.py`, `docs/completed-plans/phase28-sprint28.2-bronverwijzing-autoriteitstaal.md` |
 | 28.3 Detailpagina's voor drill-down | completed | `src/render_site.py`, `src/build_site_view_models.py`, `tests/test_site_generation.py`, `docs/completed-plans/phase28-sprint28.3-drilldown-detailpaginas.md` |
+| 28.4 Pre-29 follow-up cleanup | completed | `RESEARCH_AGENT_MAP.md`, `src/render_site.py`, `tests/test_site_generation.py`, `docs/completed-plans/phase28-sprint28.4-pre29-followup-cleanup.md` |
+| 29.0 Perspectiefschema zero-count cleanup | open | Tijdelijke cleanup-sprint voor `zero_count_statuses` en `zero_count_actor_signals` voordat Sprint 29.1 de tijdlijn sterker op statusvelden laat leunen |
 | 29.1 Tijdlijnregister verdiepen | open |  |
 | 29.2 Begrotings- en verantwoordingscyclus | open |  |
 | 29.3 Handreikingen en uitvoeringsmomenten | open |  |
@@ -47,7 +49,7 @@ Gebruik deze roadmap als levend werkdocument. Werk na elke sprint de statusregel
 | 31.3 Reviewronde met menselijke beoordelaars | open |  |
 
 ## Huidige sprintplan
-Fase 28 is de actieve tekstkwaliteitsfase voor de publieke site. Sprint 25.6 blijft geparkeerd omdat post-validatie hardening pas verantwoord is na stakeholdervalidatierecords, lokale/interne documenten, finance/controller bevestiging of een expliciet beleidsbesluit. Dat is geen blocker voor verdere datakwaliteitswerk: de repository kan intussen publieke samenvattingen, bronverwijzing, autoriteitstaal en drill-down verbeteren zonder D6-inhoud te overclaimen.
+Fase 28 is afgerond. Voor de start van Sprint 29.1 is Sprint 29.0 toegevoegd als tijdelijke cleanup-sprint voor `zero_count_statuses` en `zero_count_actor_signals`. Die velden blijven dus een backlogsignaal, geen permanent onderdeel van de gewenste eindstaat. Sprint 25.6 blijft geparkeerd omdat post-validatie hardening pas verantwoord is na stakeholdervalidatierecords, lokale/interne documenten, finance/controller bevestiging of een expliciet beleidsbesluit. Dat blokkeert Fase 29 niet, zolang de tijdlijn geen D6-validatievragen als opgelost presenteert.
 
 Status op 26 april 2026: Sprint 25.2 is afgerond als publieke bronversterkingssprint. `data/extracted/local_source_strengthening_almere.json` maakt zichtbaar welke lokale bronnen in de formele laag zitten, welke publieke bronnen als assessmentmateriaal zijn beoordeeld, en welke vragen naar later in de workflow gaan omdat de publieke bronbasis is uitgeput of omdat een geschoonde validatiestap nodig is. De geselecteerde Documentwijzer-bijlagen voor Visie Gezondheidsbeleid en Maatschappelijke Agenda zijn eerst naar page-markdown omgezet en daarna opgenomen in `data/raw/manifest.json`. Ook de GGD-tabellenboeken voor volwassenen en ouderen, de GGD-valpreventiepagina Almere en de ZonMw-bron zijn opgenomen in `data/raw/manifest.json`, door inventory/extractie/claims/site-viewmodels verwerkt en blijven reviewmateriaal voordat ze bestuurlijk of public-facing worden gebruikt. Niet-publieke informatie, ontbrekende lokale bevestiging en formele besluitvragen blokkeren deze fase niet; ze worden als gaten of carry-over taken zichtbaar gemaakt voor lokale medewerkers en latere besluitvorming.
 
@@ -80,6 +82,8 @@ Status op 29 april 2026: Sprint 28.1 is afgerond als menselijke update-samenvatt
 Status op 29 april 2026: Sprint 28.2 is afgerond als bronverwijzings- en autoriteitstaalsprint. Publieke bronlijsten en controlelijsten tonen nu explicieter de bronhouder, bronstatus, soort bron en veilige formulering. Lagere-autoriteitsfragmenten worden in controlelijsten toegeschreven met formuleringen als `Volgens Raad van Almere:`, zodat de site minder snel contextuele of lokale bronnen als harde norm laat klinken.
 
 Status op 29 april 2026: Sprint 28.3 is afgerond als drill-down sprint. Besluitvraag- en opvolgactiepagina's houden de hoofdtekst korter en verwijzen voor bronbasis, beleidsbasis en reviewdetails naar aparte `onderbouwing`-pagina's. Reviewtags op kaarten linken nu direct naar de menselijke-duidingsectie op die onderbouwingspagina's, en de zoekindex en sitemap kennen deze pagina's als aparte onderbouwingslaag.
+
+Status op 29 april 2026: Sprint 28.4 is afgerond als pre-29 follow-up cleanup. De research-agent map verwijst niet meer naar de vervallen D6-actieview, `src/render_site.py` ruimt `dist/` op voordat pagina's opnieuw worden geschreven zodat lokale builds geen orphan HTML-pagina's houden, de menselijke-update-test combineert een bredere jargoncheck met positieve vormcriteria, en `zero_count_statuses` is expliciet als tijdelijke cleanup-opgave ingepland in Sprint 29.0.
 
 Afgeronde aanpak voor Sprint 25.4a:
 
@@ -364,8 +368,23 @@ Status: completed.
 - Lange claimlijsten, bronlijsten en reviewdetails gaan naar aparte detailpagina's.
 - Elke klikbare tegel of telling moet naar de onderliggende items leiden.
 
+Sprint 28.4: Pre-29 follow-up cleanup
+Status: completed.
+
+- Verwijder verouderde research-agent verwijzingen naar niet meer gegenereerde view models.
+- Laat de site-renderer lokale orphan HTML-pagina's opruimen voordat nieuwe pagina's worden geschreven.
+- Versterk de menselijke update-samenvattingstest met positieve vormcriteria en bredere jargonpatronen.
+- Behandel `zero_count_statuses` als tijdelijke cleanup-opgave en plan die expliciet voor Fase 29.
+
 ## Fase 29 - Tijdlijn als beleidsinstrument
 Doel: de tijdlijn gebruiken voor bestuurlijke orientatie, niet alleen als chronologische lijst.
+
+Sprint 29.0: Perspectiefschema zero-count cleanup
+Status: open.
+
+- Audit alle `zero_count_statuses` en `zero_count_actor_signals` voordat de tijdlijn sterker op statusvelden gaat sturen.
+- Beslis per nulwaarde: behouden als bewust schema-veld, herstellen in classifierlogica, of verwijderen uit schema/config.
+- Werk documentatie en tests bij zodat nulwaarden geen onduidelijke permanente backlog blijven.
 
 Sprint 29.1: Tijdlijnregister verdiepen
 Status: open.

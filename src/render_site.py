@@ -3,6 +3,7 @@ from __future__ import annotations
 import html
 import json
 import posixpath
+import shutil
 from pathlib import Path, PurePosixPath
 from string import Template
 
@@ -1709,7 +1710,18 @@ def copy_assets() -> None:
         write_text(target_path, source_path.read_text(encoding="utf-8"))
 
 
+def reset_dist_dir() -> None:
+    resolved_dist = DIST_DIR.resolve()
+    resolved_repo = REPO_ROOT.resolve()
+    if resolved_dist == resolved_repo or resolved_repo not in resolved_dist.parents:
+        raise RuntimeError(f"Refusing to clear unexpected dist path: {resolved_dist}")
+    if DIST_DIR.exists():
+        shutil.rmtree(DIST_DIR)
+    DIST_DIR.mkdir(parents=True, exist_ok=True)
+
+
 def main() -> None:
+    reset_dist_dir()
     navigation = load_json(TAXONOMY_PATH)["navigation"]
     site_info = load_json(TAXONOMY_PATH)["site"]
     home_view = load_json(DATA_DIR / "site_home_view.json")

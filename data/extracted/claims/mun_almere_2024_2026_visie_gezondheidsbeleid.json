@@ -55,6 +55,14 @@
         "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
         "needs_verification": false
       },
+      "execution_status": {
+        "status": "not_execution",
+        "label": "Geen zelfstandige uitvoeringsclaim",
+        "execution_need_signals": [],
+        "source_execution_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als actie- of implementatieclaim.",
+        "needs_verification": false
+      },
       "statement": "Almere te maken heeft met specifieke uitdagingen zoals een snel groeiende en verouderende bevolking, een hoge zorgvraag en beperkte middelen vanuit het Rijk.",
       "source_document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid",
       "source_location": {
@@ -138,6 +146,16 @@
         },
         "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
         "needs_verification": false
+      },
+      "execution_status": {
+        "status": "decision_question",
+        "label": "Uitvoering vraagt besluit of keuze",
+        "execution_need_signals": [
+          "decision_question"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
+        "public_wording_guardrail": "Formuleer als besluit- of keuzevraag; schrijf niet dat uitvoering al besloten is.",
+        "needs_verification": true
       },
       "statement": "Zo heeft Almere te kampen met een beperkt budget, waardoor er echt keuzes gemaakt moeten worden.",
       "source_document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid",
@@ -223,6 +241,14 @@
           "flevoland": false
         },
         "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
+        "needs_verification": false
+      },
+      "execution_status": {
+        "status": "not_execution",
+        "label": "Geen zelfstandige uitvoeringsclaim",
+        "execution_need_signals": [],
+        "source_execution_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als actie- of implementatieclaim.",
         "needs_verification": false
       },
       "statement": "(24118.007) AANGENOMEN35/8 - Motie: Noodplan huisartsentekort (24118.009) AANGENOMEN 43/0 - Motie: Werken aan gezondheidsvaardigheden (24118.010) AANGENOMEN 38/5 De raad besprak tijdens deze editie van de Politieke Markt meerdere moties over zowel het Gezondheidsbeleid als de Maatschappelijke Agenda.",
@@ -311,6 +337,16 @@
         "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
         "needs_verification": false
       },
+      "execution_status": {
+        "status": "decision_question",
+        "label": "Uitvoering vraagt besluit of keuze",
+        "execution_need_signals": [
+          "decision_question"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
+        "public_wording_guardrail": "Formuleer als besluit- of keuzevraag; schrijf niet dat uitvoering al besloten is.",
+        "needs_verification": true
+      },
       "statement": "De moties en amendementen zijn klaar voor besluitvorming en de raad zal hierover stemmen tijdens de Politieke Markt van 10 oktober 2024.",
       "source_document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid",
       "source_location": {
@@ -394,6 +430,16 @@
         },
         "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
         "needs_verification": false
+      },
+      "execution_status": {
+        "status": "review_task",
+        "label": "Uitvoering vraagt review, monitoring of validatie",
+        "execution_need_signals": [
+          "review"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
+        "public_wording_guardrail": "Formuleer als review-, monitorings- of validatietaak; niet als besluit of uitvoeringseigenaarschap.",
+        "needs_verification": true
       },
       "statement": "De visie richt zich op het verbeteren van de gezondheid van alle Almeerders door een gezonde leefstijl en een gezonde leefomgeving te stimuleren.",
       "source_document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid",
@@ -483,6 +529,14 @@
         "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
         "needs_verification": false
       },
+      "execution_status": {
+        "status": "operational_requirement",
+        "label": "Operationele vereiste of inrichting",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
+        "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
+        "needs_verification": false
+      },
       "statement": "De Gemeente Almere heeft een nieuwe visie op het gezondheidsbeleid voor 2024-2026 ontwikkeld, waarbij de nadruk ligt op preventie, integratie van gezondheid in alle beleidsterreinen en het bieden van de juiste zorg op de juiste plek.",
       "source_document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid",
       "source_location": {
@@ -565,6 +619,14 @@
           "flevoland": false
         },
         "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
+        "needs_verification": false
+      },
+      "execution_status": {
+        "status": "operational_requirement",
+        "label": "Operationele vereiste of inrichting",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
+        "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
         "needs_verification": false
       },
       "statement": "Ook de samenwerking tussen verschillende zorg- en welzijnsdomeinen krijgt extra aandacht, om de zorg toegankelijker en veerkrachtiger te maken voor de groeiende en veranderende bevolking van Almere.",

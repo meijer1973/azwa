@@ -308,6 +308,88 @@ LOCAL_ADOPTION_GAP_TERMS = (
     "documentatiegat",
     "lokale validatie",
 )
+EXECUTION_OPERATIONAL_REQUIREMENT_TERMS = (
+    "moet worden georganiseerd",
+    "moeten worden georganiseerd",
+    "organiseren",
+    "inrichten",
+    "uitwerken",
+    "ontwikkelen",
+    "versterken",
+    "voorbereiden",
+    "beschikbaar",
+    "basisfunctionaliteiten",
+    "basisinfrastructuur",
+    "inloop",
+    "toegang",
+    "lokale teams",
+    "wijkteams",
+)
+EXECUTION_ACTIVITY_TERMS = (
+    "uitvoering",
+    "uitvoeren",
+    "implementatie",
+    "realisatie",
+    "realiseren",
+    "gestart",
+    "loopt",
+    "lopende",
+    "in gang",
+    "pilot",
+    "project",
+    "programma",
+)
+EXECUTION_DECISION_TERMS = (
+    "besluitvraag",
+    "keuze",
+    "besluit nodig",
+    "moet besluiten",
+    "besluitvorming",
+    "vaststellen",
+    "prioriteren",
+    "decision_needed",
+)
+EXECUTION_DEPENDENCY_TERMS = (
+    "afhankelijk",
+    "voorwaarde",
+    "randvoorwaarde",
+    "vereist",
+    "nodig",
+    "mits",
+    "alleen als",
+    "aansluiting",
+)
+EXECUTION_SEQUENCING_TERMS = (
+    "fasering",
+    "fase",
+    "volgorde",
+    "stap",
+    "eerst",
+    "daarna",
+    "planning",
+    "mijlpaal",
+    "start",
+    "voorbereiding",
+)
+EXECUTION_CAPACITY_TERMS = (
+    "capaciteit",
+    "uitvoeringscapaciteit",
+    "fte",
+    "personeel",
+    "bemensing",
+    "arbeidsmarkt",
+)
+EXECUTION_REVIEW_TERMS = (
+    "review",
+    "toets",
+    "toetsen",
+    "valideren",
+    "validatie",
+    "monitoring",
+    "evaluatie",
+    "leren",
+    "dashboard",
+)
 
 
 def normalize_text(text: str) -> str:
@@ -787,6 +869,101 @@ def locality_status_for(
             "regional_split_context",
             "municipal_context",
         },
+    }
+
+
+def execution_need_signals_for(normalized_statement: str) -> list[str]:
+    signals: list[str] = []
+    if contains_any(normalized_statement, *EXECUTION_OPERATIONAL_REQUIREMENT_TERMS):
+        signals.append("operational_requirement")
+    if contains_any(normalized_statement, *EXECUTION_ACTIVITY_TERMS):
+        signals.append("implementation_activity")
+    if contains_any(normalized_statement, *EXECUTION_DECISION_TERMS):
+        signals.append("decision_question")
+    if contains_any(normalized_statement, *EXECUTION_DEPENDENCY_TERMS):
+        signals.append("dependency")
+    if contains_any(normalized_statement, *EXECUTION_SEQUENCING_TERMS):
+        signals.append("sequencing")
+    if contains_any(normalized_statement, *EXECUTION_CAPACITY_TERMS):
+        signals.append("capacity")
+    if contains_any(normalized_statement, *EXECUTION_REVIEW_TERMS):
+        signals.append("review")
+    return unique_preserving_order(signals)
+
+
+def execution_status_for(
+    statement: str,
+    document_id: str,
+    source_statement_type: str,
+    topic: str,
+    claim_type: str,
+) -> dict:
+    normalized = normalize_text(statement)
+    need_signals = execution_need_signals_for(normalized)
+    is_execution_topic = topic.startswith(("d5.", "d6.", "municipal.", "monitoring.")) or topic in {
+        "timeline.d5_d6_implementation",
+        "timeline.implementation_status",
+        "timeline.rollout_2030",
+        "timeline.almere_2029",
+    }
+    has_explicit_execution_signal = bool(need_signals)
+    has_execution_signal = has_explicit_execution_signal or is_execution_topic or claim_type == "implementation_requirement"
+
+    if "decision_question" in need_signals:
+        status = "decision_question"
+        label = "Uitvoering vraagt besluit of keuze"
+        guardrail = "Formuleer als besluit- of keuzevraag; schrijf niet dat uitvoering al besloten is."
+    elif "dependency" in need_signals:
+        status = "dependency"
+        label = "Uitvoering heeft afhankelijkheid of randvoorwaarde"
+        guardrail = "Benoem de afhankelijkheid; los haar niet op zonder bron of validatie."
+    elif "capacity" in need_signals:
+        status = "capacity_need"
+        label = "Uitvoering vraagt capaciteit of bemensing"
+        guardrail = "Formuleer als capaciteitsvraag; vul geen fte, team of eigenaar in zonder bron."
+    elif "sequencing" in need_signals:
+        status = "sequencing_need"
+        label = "Uitvoering vraagt fasering of volgorde"
+        guardrail = "Formuleer als fasering of volgordevraag; maak er geen harde planning van zonder bron."
+    elif "review" in need_signals:
+        status = "review_task"
+        label = "Uitvoering vraagt review, monitoring of validatie"
+        guardrail = "Formuleer als review-, monitorings- of validatietaak; niet als besluit of uitvoeringseigenaarschap."
+    elif "implementation_activity" in need_signals:
+        status = "implementation_activity"
+        label = "Uitvoeringsactiviteit zichtbaar"
+        guardrail = "Beschrijf alleen de activiteit die de bron noemt; voeg geen eigenaar, bereik of vervolgplanning toe."
+    elif "operational_requirement" in need_signals or claim_type == "implementation_requirement":
+        status = "operational_requirement"
+        label = "Operationele vereiste of inrichting"
+        guardrail = "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie."
+    elif has_execution_signal:
+        status = "execution_context"
+        label = "Uitvoeringscontext"
+        guardrail = "Gebruik als uitvoeringscontext; maak er geen actie, eigenaar of planning van zonder sterker bewijs."
+    else:
+        status = "not_execution"
+        label = "Geen zelfstandige uitvoeringsclaim"
+        guardrail = "Niet gebruiken als actie- of implementatieclaim."
+
+    return {
+        "status": status,
+        "label": label,
+        "execution_need_signals": need_signals,
+        "source_execution_anchor": "explicit_execution_signal" if has_explicit_execution_signal else (
+            "topic_context" if has_execution_signal else "none"
+        ),
+        "public_wording_guardrail": guardrail,
+        "needs_verification": status
+        in {
+            "decision_question",
+            "dependency",
+            "capacity_need",
+            "sequencing_need",
+            "review_task",
+            "execution_context",
+        }
+        or source_statement_type == "contextual_relevance",
     }
 
 
@@ -1450,6 +1627,9 @@ def build_claim(
         "locality_status": locality_status_for(
             statement, document_payload["document_id"], metadata["jurisdiction_level"], source_statement_type, topic
         ),
+        "execution_status": execution_status_for(
+            statement, document_payload["document_id"], source_statement_type, topic, claim_type
+        ),
         "statement": statement,
         "source_document_id": document_payload["document_id"],
         "source_location": extract_source_location(item),
@@ -1635,6 +1815,7 @@ def validate_claims(claims: list[dict], allowed_relation_types: set[str]) -> Non
         "money_status",
         "governance_status",
         "locality_status",
+        "execution_status",
         "statement",
         "source_document_id",
         "source_location",

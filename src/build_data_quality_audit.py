@@ -486,6 +486,42 @@ def build_locality_status_audit(claims: list[dict], claim_perspectives: dict[str
     }
 
 
+def build_execution_status_audit(claims: list[dict], claim_perspectives: dict[str, list[str]]) -> dict:
+    status_counts: Counter[str] = Counter()
+    execution_perspective_counts: Counter[str] = Counter()
+    need_signal_counts: Counter[str] = Counter()
+    verification_sample: list[dict] = []
+
+    for claim in claims:
+        status_payload = claim.get("execution_status") or {}
+        status = status_payload.get("status", "missing")
+        status_counts[status] += 1
+        need_signal_counts.update(status_payload.get("execution_need_signals", []))
+        if "execution" in claim_perspectives.get(claim["claim_id"], []):
+            execution_perspective_counts[status] += 1
+        if status_payload.get("needs_verification") and len(verification_sample) < 25:
+            verification_sample.append(
+                {
+                    "claim_id": claim["claim_id"],
+                    "source_document_id": claim["source_document_id"],
+                    "topic": claim["topic"],
+                    "execution_status": status,
+                    "execution_need_signals": status_payload.get("execution_need_signals", []),
+                    "source_execution_anchor": status_payload.get("source_execution_anchor"),
+                    "statement_excerpt": claim_excerpt(claim["statement"], limit=220),
+                    "public_wording_guardrail": status_payload.get("public_wording_guardrail"),
+                }
+            )
+
+    return {
+        "description": "Sprint 27.6 execution split for operational requirements, implementation activity, decision questions, dependencies, sequencing needs, capacity needs, review tasks, execution context, and non-execution material.",
+        "status_counts": dict(sorted(status_counts.items())),
+        "execution_perspective_status_counts": dict(sorted(execution_perspective_counts.items())),
+        "execution_need_signal_counts": dict(sorted(need_signal_counts.items())),
+        "verification_needed_sample": verification_sample,
+    }
+
+
 def build_view_model_coverage() -> dict:
     coverage: dict[str, dict] = {}
     for directory_name, group_name in SITE_VIEW_MODEL_GROUPS.items():
@@ -726,6 +762,7 @@ def main() -> None:
     money_status_audit = build_money_status_audit(claims, claim_perspectives)
     governance_status_audit = build_governance_status_audit(claims, claim_perspectives)
     locality_status_audit = build_locality_status_audit(claims, claim_perspectives)
+    execution_status_audit = build_execution_status_audit(claims, claim_perspectives)
     view_model_coverage = build_view_model_coverage()
     broad_topics = build_broad_topic_bucket_audit(current_interpretation, claims_by_id, claim_perspectives)
     rough_claim_audit, rough_claim_ids = build_rough_claim_audit(claims, claim_perspectives)
@@ -765,6 +802,7 @@ def main() -> None:
         "money_status_audit": money_status_audit,
         "governance_status_audit": governance_status_audit,
         "locality_status_audit": locality_status_audit,
+        "execution_status_audit": execution_status_audit,
         "topic_bucket_audit": broad_topics,
         "rough_publication_claims": rough_claim_audit,
         "site_text_risks": site_text_risks,

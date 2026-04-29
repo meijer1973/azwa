@@ -59,6 +59,14 @@
         "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
         "needs_verification": false
       },
+      "execution_status": {
+        "status": "not_execution",
+        "label": "Geen zelfstandige uitvoeringsclaim",
+        "execution_need_signals": [],
+        "source_execution_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als actie- of implementatieclaim.",
+        "needs_verification": false
+      },
       "statement": "De gemeente streeft naar een integrale aanpak waarbij economische, fysieke en sociale aspecten met elkaar verbonden worden, zodat middelen effectiever ingezet kunnen worden en de kwaliteit van leven in Almere verbeterd kan worden.",
       "source_document_id": "mun_almere_2024_2034_maatschappelijke_agenda",
       "source_location": {
@@ -143,6 +151,16 @@
           "flevoland": false
         },
         "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
+        "needs_verification": false
+      },
+      "execution_status": {
+        "status": "implementation_activity",
+        "label": "Uitvoeringsactiviteit zichtbaar",
+        "execution_need_signals": [
+          "implementation_activity"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
+        "public_wording_guardrail": "Beschrijf alleen de activiteit die de bron noemt; voeg geen eigenaar, bereik of vervolgplanning toe.",
         "needs_verification": false
       },
       "statement": "Het is belangrijk voor de raad om een actieve rol te spelen in dit proces, omdat hun beslissingen direct invloed hebben op hoe middelen worden toegewezen en welke projecten prioriteit krijgen.",
@@ -231,6 +249,14 @@
         "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
         "needs_verification": false
       },
+      "execution_status": {
+        "status": "not_execution",
+        "label": "Geen zelfstandige uitvoeringsclaim",
+        "execution_need_signals": [],
+        "source_execution_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als actie- of implementatieclaim.",
+        "needs_verification": false
+      },
       "statement": "De raad besprak tijdens deze editie van de Politieke Markt meerdere moties over zowel het Gezondheidsbeleid als de Maatschappelijke Agenda.",
       "source_document_id": "mun_almere_2024_2034_maatschappelijke_agenda",
       "source_location": {
@@ -317,6 +343,16 @@
         "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
         "needs_verification": false
       },
+      "execution_status": {
+        "status": "decision_question",
+        "label": "Uitvoering vraagt besluit of keuze",
+        "execution_need_signals": [
+          "decision_question"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
+        "public_wording_guardrail": "Formuleer als besluit- of keuzevraag; schrijf niet dat uitvoering al besloten is.",
+        "needs_verification": true
+      },
       "statement": "De moties en amendementen zijn klaar voor besluitvorming en de raad zal hierover stemmen tijdens de Politieke Markt van 10 oktober 24.",
       "source_document_id": "mun_almere_2024_2034_maatschappelijke_agenda",
       "source_location": {
@@ -402,6 +438,16 @@
         },
         "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
         "needs_verification": false
+      },
+      "execution_status": {
+        "status": "decision_question",
+        "label": "Uitvoering vraagt besluit of keuze",
+        "execution_need_signals": [
+          "decision_question"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
+        "public_wording_guardrail": "Formuleer als besluit- of keuzevraag; schrijf niet dat uitvoering al besloten is.",
+        "needs_verification": true
       },
       "statement": "De moties en amendementen zijn klaar voor besluitvorming en de raad zal hierover stemmen tijdens de Politieke Markt van 10 okt.",
       "source_document_id": "mun_almere_2024_2034_maatschappelijke_agenda",
@@ -492,6 +538,16 @@
         "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
         "needs_verification": false
       },
+      "execution_status": {
+        "status": "implementation_activity",
+        "label": "Uitvoeringsactiviteit zichtbaar",
+        "execution_need_signals": [
+          "implementation_activity"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
+        "public_wording_guardrail": "Beschrijf alleen de activiteit die de bron noemt; voeg geen eigenaar, bereik of vervolgplanning toe.",
+        "needs_verification": false
+      },
       "statement": "De gemeenteraad van Almere bespreekt deze Maatschappelijke agenda omdat ze richting en structuur biedt voor de sociale projecten en beleidsvorming voor de komende tien jaar.",
       "source_document_id": "mun_almere_2024_2034_maatschappelijke_agenda",
       "source_location": {
@@ -578,6 +634,14 @@
           "flevoland": false
         },
         "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
+        "needs_verification": false
+      },
+      "execution_status": {
+        "status": "operational_requirement",
+        "label": "Operationele vereiste of inrichting",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
+        "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
         "needs_verification": false
       },
       "statement": "De gemeente Almere heeft een nieuwe Maatschappelijke agenda voor de periode 2024-2034 ontwikkeld, gericht op het verbeteren van de sociale staat van de stad en het bevorderen van de brede welvaart van de inwoners.",
@@ -668,6 +732,16 @@
         },
         "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
         "needs_verification": false
+      },
+      "execution_status": {
+        "status": "capacity_need",
+        "label": "Uitvoering vraagt capaciteit of bemensing",
+        "execution_need_signals": [
+          "capacity"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
+        "public_wording_guardrail": "Formuleer als capaciteitsvraag; vul geen fte, team of eigenaar in zonder bron.",
+        "needs_verification": true
       },
       "statement": "Deze agenda legt de nadruk op het benutten van bestaande sociale bewegingen, het verbeteren van de samenwerking tussen de gemeente, inwoners en partners, en een wijkgerichte aanpak om specifieke lokale behoeften aan te pakken.",
       "source_document_id": "mun_almere_2024_2034_maatschappelijke_agenda",

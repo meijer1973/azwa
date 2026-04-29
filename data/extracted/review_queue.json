@@ -4,12 +4,18 @@
   "summary": {
     "blocking": 0,
     "warning": 6,
-    "review": 266,
-    "item_count": 272,
+    "review": 394,
+    "item_count": 400,
     "issue_counts_by_reason": {
       "actor_context_needs_role_split": 48,
       "authority_unclear": 30,
       "double_counting_risk": 1,
+      "execution_capacity_need": 13,
+      "execution_context_needs_action_split": 26,
+      "execution_decision_question": 12,
+      "execution_dependency": 23,
+      "execution_review_task": 31,
+      "execution_sequencing_need": 23,
       "expected_time_not_deadline": 22,
       "extraction_noise_detected": 3,
       "finance_context_needs_verification": 21,
@@ -151,6 +157,91 @@
       "status": "open",
       "severity": "review",
       "check_id": "claim_payload_integrity",
+      "reason_code": "execution_capacity_need",
+      "summary": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 1 execution capacity claim(s).",
+      "recommended_action": "Use these as capacity questions; do not infer staffing, fte, or ownership.",
+      "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d6_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_008"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_dependency",
+      "summary": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 1 execution dependency claim(s).",
+      "recommended_action": "Name the dependency and keep it open unless a source shows it has been resolved.",
+      "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_municipal_translation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_009"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_review_task",
+      "summary": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 4 execution review or monitoring claim(s).",
+      "recommended_action": "Keep these as review, monitoring, or validation tasks; do not present them as settled implementation choices.",
+      "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_governance_and_finance_003",
+          "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_monitoring_and_evaluation_001",
+          "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_monitoring_and_evaluation_002",
+          "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_monitoring_and_evaluation_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_010"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_sequencing_need",
+      "summary": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 3 execution sequencing claim(s).",
+      "recommended_action": "Treat these as sequencing or phasing signals; do not turn them into a hard local implementation plan without source evidence.",
+      "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d5_001",
+          "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d5_003",
+          "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d6_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_011"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
       "reason_code": "expected_time_not_deadline",
       "summary": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 3 expected or indicative time claim(s).",
       "recommended_action": "Keep these as expected moments unless a stronger source establishes a formal deadline.",
@@ -167,7 +258,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_008"
+      "review_item_id": "rvw_012"
     },
     {
       "status": "open",
@@ -191,7 +282,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_009"
+      "review_item_id": "rvw_013"
     },
     {
       "status": "open",
@@ -216,7 +307,7 @@
         "topic_count": 4
       },
       "evidence": {},
-      "review_item_id": "rvw_010"
+      "review_item_id": "rvw_014"
     },
     {
       "status": "open",
@@ -236,7 +327,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_011"
+      "review_item_id": "rvw_015"
     },
     {
       "status": "open",
@@ -258,7 +349,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_012"
+      "review_item_id": "rvw_016"
     },
     {
       "status": "open",
@@ -283,7 +374,48 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_013"
+      "review_item_id": "rvw_017"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_decision_question",
+      "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid contains 2 execution decision-question claim(s).",
+      "recommended_action": "Keep these as possible decision questions; do not present them as decided actions.",
+      "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2024_2026_visie_gezondheidsbeleid.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_governance_and_finance_002",
+          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_timeline_and_status_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_018"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_review_task",
+      "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid contains 1 execution review or monitoring claim(s).",
+      "recommended_action": "Keep these as review, monitoring, or validation tasks; do not present them as settled implementation choices.",
+      "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2024_2026_visie_gezondheidsbeleid.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_monitoring_and_evaluation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_019"
     },
     {
       "status": "open",
@@ -304,7 +436,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_014"
+      "review_item_id": "rvw_020"
     },
     {
       "status": "open",
@@ -325,7 +457,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_015"
+      "review_item_id": "rvw_021"
     },
     {
       "status": "open",
@@ -345,7 +477,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_016"
+      "review_item_id": "rvw_022"
     },
     {
       "status": "open",
@@ -365,7 +497,91 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_017"
+      "review_item_id": "rvw_023"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_context_needs_action_split",
+      "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst contains 2 execution-context claim(s) without a more specific execution status.",
+      "recommended_action": "Review these before turning context into an action, dependency, owner, sequence, or capacity need.",
+      "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d5_003",
+          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_monitoring_and_evaluation_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_024"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_decision_question",
+      "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst contains 2 execution decision-question claim(s).",
+      "recommended_action": "Keep these as possible decision questions; do not present them as decided actions.",
+      "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_governance_and_finance_003",
+          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_timeline_and_status_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_025"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_dependency",
+      "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst contains 2 execution dependency claim(s).",
+      "recommended_action": "Name the dependency and keep it open unless a source shows it has been resolved.",
+      "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d6_001",
+          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_monitoring_and_evaluation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_026"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_sequencing_need",
+      "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst contains 2 execution sequencing claim(s).",
+      "recommended_action": "Treat these as sequencing or phasing signals; do not turn them into a hard local implementation plan without source evidence.",
+      "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d5_002",
+          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_governance_and_finance_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_027"
     },
     {
       "status": "open",
@@ -389,7 +605,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_018"
+      "review_item_id": "rvw_028"
     },
     {
       "status": "open",
@@ -410,7 +626,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_019"
+      "review_item_id": "rvw_029"
     },
     {
       "status": "open",
@@ -434,7 +650,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_020"
+      "review_item_id": "rvw_030"
     },
     {
       "status": "open",
@@ -458,7 +674,7 @@
         "topic_count": 2
       },
       "evidence": {},
-      "review_item_id": "rvw_021"
+      "review_item_id": "rvw_031"
     },
     {
       "status": "open",
@@ -478,7 +694,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_022"
+      "review_item_id": "rvw_032"
     },
     {
       "status": "open",
@@ -498,7 +714,49 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_023"
+      "review_item_id": "rvw_033"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_context_needs_action_split",
+      "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd contains 1 execution-context claim(s) without a more specific execution status.",
+      "recommended_action": "Review these before turning context into an action, dependency, owner, sequence, or capacity need.",
+      "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_monitoring_and_evaluation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_034"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_review_task",
+      "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd contains 3 execution review or monitoring claim(s).",
+      "recommended_action": "Keep these as review, monitoring, or validation tasks; do not present them as settled implementation choices.",
+      "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_timeline_and_status_003",
+          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_monitoring_and_evaluation_001",
+          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_monitoring_and_evaluation_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_035"
     },
     {
       "status": "open",
@@ -519,7 +777,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_024"
+      "review_item_id": "rvw_036"
     },
     {
       "status": "open",
@@ -543,7 +801,7 @@
           "De Visie Gezondheidsbeleid Almere 2024-2026 vast te stellen: 1. waarin de volgende doelstellingen zijn vastgelegd: a. Brede Preventie: Het stimuleren van een gezonde leefstijl en leefomgeving vanuit het gedachtengoed Positieve Gezondheid; b. We verweven gezondheid in alle beleidsterreinen: Health in all policies; c. De toegankelijkheid van de zorg in de toekomst garanderen door alle Almeerders de juiste hulp op de juiste plek te bieden; 2. met daarin de volgende ambities: a. in te zetten op het bevorderen van de samenwerking tussen het medische en het sociale domein; b. bij te dragen aan de zorgtransitie; c. mensen in staat te stellen de vaardigheden te verwerven om beter voor zichzelf ..."
         ]
       },
-      "review_item_id": "rvw_025"
+      "review_item_id": "rvw_037"
     },
     {
       "status": "open",
@@ -564,7 +822,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_026"
+      "review_item_id": "rvw_038"
     },
     {
       "status": "open",
@@ -586,7 +844,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_027"
+      "review_item_id": "rvw_039"
     },
     {
       "status": "open",
@@ -607,7 +865,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_028"
+      "review_item_id": "rvw_040"
     },
     {
       "status": "open",
@@ -627,7 +885,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_029"
+      "review_item_id": "rvw_041"
     },
     {
       "status": "open",
@@ -651,7 +909,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_030"
+      "review_item_id": "rvw_042"
     },
     {
       "status": "open",
@@ -676,7 +934,48 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_031"
+      "review_item_id": "rvw_043"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_capacity_need",
+      "summary": "mun_almere_2024_2034_maatschappelijke_agenda contains 1 execution capacity claim(s).",
+      "recommended_action": "Use these as capacity questions; do not infer staffing, fte, or ownership.",
+      "document_id": "mun_almere_2024_2034_maatschappelijke_agenda",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2024_2034_maatschappelijke_agenda.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_municipal_translation_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_044"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_decision_question",
+      "summary": "mun_almere_2024_2034_maatschappelijke_agenda contains 2 execution decision-question claim(s).",
+      "recommended_action": "Keep these as possible decision questions; do not present them as decided actions.",
+      "document_id": "mun_almere_2024_2034_maatschappelijke_agenda",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2024_2034_maatschappelijke_agenda.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_timeline_and_status_002",
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_timeline_and_status_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_045"
     },
     {
       "status": "open",
@@ -696,7 +995,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_032"
+      "review_item_id": "rvw_046"
     },
     {
       "status": "open",
@@ -719,7 +1018,91 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_033"
+      "review_item_id": "rvw_047"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_decision_question",
+      "summary": "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst contains 2 execution decision-question claim(s).",
+      "recommended_action": "Keep these as possible decision questions; do not present them as decided actions.",
+      "document_id": "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_governance_and_finance_003",
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_timeline_and_status_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_048"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_dependency",
+      "summary": "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst contains 3 execution dependency claim(s).",
+      "recommended_action": "Name the dependency and keep it open unless a source shows it has been resolved.",
+      "document_id": "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_governance_and_finance_001",
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_governance_and_finance_002",
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_timeline_and_status_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_049"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_review_task",
+      "summary": "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst contains 2 execution review or monitoring claim(s).",
+      "recommended_action": "Keep these as review, monitoring, or validation tasks; do not present them as settled implementation choices.",
+      "document_id": "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_monitoring_and_evaluation_002",
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_monitoring_and_evaluation_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_050"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_sequencing_need",
+      "summary": "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst contains 1 execution sequencing claim(s).",
+      "recommended_action": "Treat these as sequencing or phasing signals; do not turn them into a hard local implementation plan without source evidence.",
+      "document_id": "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_monitoring_and_evaluation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_051"
     },
     {
       "status": "open",
@@ -742,7 +1125,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_034"
+      "review_item_id": "rvw_052"
     },
     {
       "status": "open",
@@ -762,7 +1145,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_035"
+      "review_item_id": "rvw_053"
     },
     {
       "status": "open",
@@ -786,7 +1169,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_036"
+      "review_item_id": "rvw_054"
     },
     {
       "status": "open",
@@ -809,7 +1192,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_037"
+      "review_item_id": "rvw_055"
     },
     {
       "status": "open",
@@ -829,7 +1212,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_038"
+      "review_item_id": "rvw_056"
     },
     {
       "status": "open",
@@ -854,7 +1237,69 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_039"
+      "review_item_id": "rvw_057"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_capacity_need",
+      "summary": "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie contains 1 execution capacity claim(s).",
+      "recommended_action": "Use these as capacity questions; do not infer staffing, fte, or ownership.",
+      "document_id": "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie_municipal_translation_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_058"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_review_task",
+      "summary": "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie contains 3 execution review or monitoring claim(s).",
+      "recommended_action": "Keep these as review, monitoring, or validation tasks; do not present them as settled implementation choices.",
+      "document_id": "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie_monitoring_and_evaluation_001",
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie_monitoring_and_evaluation_003",
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie_municipal_translation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_059"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_sequencing_need",
+      "summary": "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie contains 1 execution sequencing claim(s).",
+      "recommended_action": "Treat these as sequencing or phasing signals; do not turn them into a hard local implementation plan without source evidence.",
+      "document_id": "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie_monitoring_and_evaluation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_060"
     },
     {
       "status": "open",
@@ -874,7 +1319,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_040"
+      "review_item_id": "rvw_061"
     },
     {
       "status": "open",
@@ -894,7 +1339,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_041"
+      "review_item_id": "rvw_062"
     },
     {
       "status": "open",
@@ -915,7 +1360,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_042"
+      "review_item_id": "rvw_063"
     },
     {
       "status": "open",
@@ -937,7 +1382,48 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_043"
+      "review_item_id": "rvw_064"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_context_needs_action_split",
+      "summary": "mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd contains 2 execution-context claim(s) without a more specific execution status.",
+      "recommended_action": "Review these before turning context into an action, dependency, owner, sequence, or capacity need.",
+      "document_id": "mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd_monitoring_and_evaluation_002",
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd_monitoring_and_evaluation_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_065"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_review_task",
+      "summary": "mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd contains 1 execution review or monitoring claim(s).",
+      "recommended_action": "Keep these as review, monitoring, or validation tasks; do not present them as settled implementation choices.",
+      "document_id": "mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd_monitoring_and_evaluation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_066"
     },
     {
       "status": "open",
@@ -957,7 +1443,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_044"
+      "review_item_id": "rvw_067"
     },
     {
       "status": "open",
@@ -977,7 +1463,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_045"
+      "review_item_id": "rvw_068"
     },
     {
       "status": "open",
@@ -998,7 +1484,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_046"
+      "review_item_id": "rvw_069"
     },
     {
       "status": "open",
@@ -1018,7 +1504,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_047"
+      "review_item_id": "rvw_070"
     },
     {
       "status": "open",
@@ -1039,7 +1525,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_048"
+      "review_item_id": "rvw_071"
     },
     {
       "status": "open",
@@ -1060,7 +1546,89 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_049"
+      "review_item_id": "rvw_072"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_capacity_need",
+      "summary": "mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel contains 1 execution capacity claim(s).",
+      "recommended_action": "Use these as capacity questions; do not infer staffing, fte, or ownership.",
+      "document_id": "mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel_d6_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_073"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_context_needs_action_split",
+      "summary": "mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel contains 3 execution-context claim(s) without a more specific execution status.",
+      "recommended_action": "Review these before turning context into an action, dependency, owner, sequence, or capacity need.",
+      "document_id": "mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel_d5_001",
+          "clm__mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel_timeline_and_status_002",
+          "clm__mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel_monitoring_and_evaluation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_074"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_dependency",
+      "summary": "mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel contains 1 execution dependency claim(s).",
+      "recommended_action": "Name the dependency and keep it open unless a source shows it has been resolved.",
+      "document_id": "mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel_municipal_translation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_075"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_sequencing_need",
+      "summary": "mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel contains 1 execution sequencing claim(s).",
+      "recommended_action": "Treat these as sequencing or phasing signals; do not turn them into a hard local implementation plan without source evidence.",
+      "document_id": "mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel_timeline_and_status_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_076"
     },
     {
       "status": "open",
@@ -1084,7 +1652,7 @@
           "Voorgesteld raadsbesluit 1. De ontwikkeling van de Stevige Lokale Teams in de komende periode te starten op basis van de volgende uitgangspunten: a. één stedelijk kader met maatwerk in de wijk; b. één team per wijk, voor alle leeftijden; c. mandaat en doorlopende regie; d. de organisatievorm en capaciteit volgt de inhoud; e. professionals die zowel verbinden als doen, mét inzet van experts en de sociale basis; f. helder opdrachtgeverschap en een taak op resultaat en financiën; g. aansluiten op bestaande netwerken en werkwijzen. 2. Het college opdracht te geven om: a. naast JGZ Almere ook de wijkteams mee te nemen in de scope van de Stevige Lokale Teams; b. in 2026 te starten met de ..."
         ]
       },
-      "review_item_id": "rvw_050"
+      "review_item_id": "rvw_077"
     },
     {
       "status": "open",
@@ -1104,7 +1672,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_051"
+      "review_item_id": "rvw_078"
     },
     {
       "status": "open",
@@ -1127,7 +1695,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_052"
+      "review_item_id": "rvw_079"
     },
     {
       "status": "open",
@@ -1149,7 +1717,7 @@
         "topic_count": 2
       },
       "evidence": {},
-      "review_item_id": "rvw_053"
+      "review_item_id": "rvw_080"
     },
     {
       "status": "open",
@@ -1171,7 +1739,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_054"
+      "review_item_id": "rvw_081"
     },
     {
       "status": "open",
@@ -1196,7 +1764,27 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_055"
+      "review_item_id": "rvw_082"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_sequencing_need",
+      "summary": "mun_almere_2026_stevige_lokale_teams_raad contains 1 execution sequencing claim(s).",
+      "recommended_action": "Treat these as sequencing or phasing signals; do not turn them into a hard local implementation plan without source evidence.",
+      "document_id": "mun_almere_2026_stevige_lokale_teams_raad",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2026_stevige_lokale_teams_raad.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2026_stevige_lokale_teams_raad_d6_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_083"
     },
     {
       "status": "open",
@@ -1217,7 +1805,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_056"
+      "review_item_id": "rvw_084"
     },
     {
       "status": "open",
@@ -1239,7 +1827,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_057"
+      "review_item_id": "rvw_085"
     },
     {
       "status": "open",
@@ -1262,7 +1850,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_058"
+      "review_item_id": "rvw_086"
     },
     {
       "status": "open",
@@ -1283,7 +1871,89 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_059"
+      "review_item_id": "rvw_087"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_capacity_need",
+      "summary": "mun_almere_2026_stevige_lokale_teams_raadsvoorstel contains 1 execution capacity claim(s).",
+      "recommended_action": "Use these as capacity questions; do not infer staffing, fte, or ownership.",
+      "document_id": "mun_almere_2026_stevige_lokale_teams_raadsvoorstel",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2026_stevige_lokale_teams_raadsvoorstel.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2026_stevige_lokale_teams_raadsvoorstel_d6_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_088"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_context_needs_action_split",
+      "summary": "mun_almere_2026_stevige_lokale_teams_raadsvoorstel contains 3 execution-context claim(s) without a more specific execution status.",
+      "recommended_action": "Review these before turning context into an action, dependency, owner, sequence, or capacity need.",
+      "document_id": "mun_almere_2026_stevige_lokale_teams_raadsvoorstel",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2026_stevige_lokale_teams_raadsvoorstel.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2026_stevige_lokale_teams_raadsvoorstel_d5_001",
+          "clm__mun_almere_2026_stevige_lokale_teams_raadsvoorstel_timeline_and_status_002",
+          "clm__mun_almere_2026_stevige_lokale_teams_raadsvoorstel_monitoring_and_evaluation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_089"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_dependency",
+      "summary": "mun_almere_2026_stevige_lokale_teams_raadsvoorstel contains 1 execution dependency claim(s).",
+      "recommended_action": "Name the dependency and keep it open unless a source shows it has been resolved.",
+      "document_id": "mun_almere_2026_stevige_lokale_teams_raadsvoorstel",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2026_stevige_lokale_teams_raadsvoorstel.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2026_stevige_lokale_teams_raadsvoorstel_municipal_translation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_090"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_sequencing_need",
+      "summary": "mun_almere_2026_stevige_lokale_teams_raadsvoorstel contains 1 execution sequencing claim(s).",
+      "recommended_action": "Treat these as sequencing or phasing signals; do not turn them into a hard local implementation plan without source evidence.",
+      "document_id": "mun_almere_2026_stevige_lokale_teams_raadsvoorstel",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_2026_stevige_lokale_teams_raadsvoorstel.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_2026_stevige_lokale_teams_raadsvoorstel_timeline_and_status_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_091"
     },
     {
       "status": "open",
@@ -1307,7 +1977,7 @@
           "Voorgesteld raadsbesluit 1. De ontwikkeling van de Stevige Lokale Teams in de komende periode te starten op basis van de volgende uitgangspunten: a. één stedelijk kader met maatwerk in de wijk; b. één team per wijk, voor alle leeftijden; c. mandaat en doorlopende regie; d. de organisatievorm en capaciteit volgt de inhoud; e. professionals die zowel verbinden als doen, mét inzet van experts en de sociale basis; f. helder opdrachtgeverschap en een taak op resultaat en financiën; g. aansluiten op bestaande netwerken en werkwijzen. 2. Het college opdracht te geven om: a. naast JGZ Almere ook de wijkteams mee te nemen in de scope van de Stevige Lokale Teams; b. in 2026 te starten met de ..."
         ]
       },
-      "review_item_id": "rvw_060"
+      "review_item_id": "rvw_092"
     },
     {
       "status": "open",
@@ -1327,7 +1997,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_061"
+      "review_item_id": "rvw_093"
     },
     {
       "status": "open",
@@ -1350,7 +2020,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_062"
+      "review_item_id": "rvw_094"
     },
     {
       "status": "open",
@@ -1372,7 +2042,7 @@
         "topic_count": 2
       },
       "evidence": {},
-      "review_item_id": "rvw_063"
+      "review_item_id": "rvw_095"
     },
     {
       "status": "open",
@@ -1396,7 +2066,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_064"
+      "review_item_id": "rvw_096"
     },
     {
       "status": "open",
@@ -1421,7 +2091,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_065"
+      "review_item_id": "rvw_097"
     },
     {
       "status": "open",
@@ -1441,7 +2111,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_066"
+      "review_item_id": "rvw_098"
     },
     {
       "status": "open",
@@ -1461,7 +2131,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_067"
+      "review_item_id": "rvw_099"
     },
     {
       "status": "open",
@@ -1482,7 +2152,27 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_068"
+      "review_item_id": "rvw_100"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_review_task",
+      "summary": "mun_almere_pga_current_home contains 1 execution review or monitoring claim(s).",
+      "recommended_action": "Keep these as review, monitoring, or validation tasks; do not present them as settled implementation choices.",
+      "document_id": "mun_almere_pga_current_home",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_pga_current_home.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_pga_current_home_monitoring_and_evaluation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_101"
     },
     {
       "status": "open",
@@ -1502,7 +2192,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_069"
+      "review_item_id": "rvw_102"
     },
     {
       "status": "open",
@@ -1524,7 +2214,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_070"
+      "review_item_id": "rvw_103"
     },
     {
       "status": "open",
@@ -1549,7 +2239,95 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_071"
+      "review_item_id": "rvw_104"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_capacity_need",
+      "summary": "mun_almere_pga_seo_businesscase_2024 contains 4 execution capacity claim(s).",
+      "recommended_action": "Use these as capacity questions; do not infer staffing, fte, or ownership.",
+      "document_id": "mun_almere_pga_seo_businesscase_2024",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_pga_seo_businesscase_2024.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_pga_seo_businesscase_2024_d5_003",
+          "clm__mun_almere_pga_seo_businesscase_2024_d6_001",
+          "clm__mun_almere_pga_seo_businesscase_2024_timeline_and_status_002",
+          "clm__mun_almere_pga_seo_businesscase_2024_municipal_translation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_105"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_context_needs_action_split",
+      "summary": "mun_almere_pga_seo_businesscase_2024 contains 4 execution-context claim(s) without a more specific execution status.",
+      "recommended_action": "Review these before turning context into an action, dependency, owner, sequence, or capacity need.",
+      "document_id": "mun_almere_pga_seo_businesscase_2024",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_pga_seo_businesscase_2024.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_pga_seo_businesscase_2024_d5_001",
+          "clm__mun_almere_pga_seo_businesscase_2024_d5_002",
+          "clm__mun_almere_pga_seo_businesscase_2024_d6_002",
+          "clm__mun_almere_pga_seo_businesscase_2024_monitoring_and_evaluation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_106"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_review_task",
+      "summary": "mun_almere_pga_seo_businesscase_2024 contains 3 execution review or monitoring claim(s).",
+      "recommended_action": "Keep these as review, monitoring, or validation tasks; do not present them as settled implementation choices.",
+      "document_id": "mun_almere_pga_seo_businesscase_2024",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_pga_seo_businesscase_2024.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_pga_seo_businesscase_2024_governance_and_finance_003",
+          "clm__mun_almere_pga_seo_businesscase_2024_monitoring_and_evaluation_001",
+          "clm__mun_almere_pga_seo_businesscase_2024_monitoring_and_evaluation_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_107"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_sequencing_need",
+      "summary": "mun_almere_pga_seo_businesscase_2024 contains 1 execution sequencing claim(s).",
+      "recommended_action": "Treat these as sequencing or phasing signals; do not turn them into a hard local implementation plan without source evidence.",
+      "document_id": "mun_almere_pga_seo_businesscase_2024",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_pga_seo_businesscase_2024.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_pga_seo_businesscase_2024_timeline_and_status_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_108"
     },
     {
       "status": "open",
@@ -1573,7 +2351,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_072"
+      "review_item_id": "rvw_109"
     },
     {
       "status": "open",
@@ -1594,7 +2372,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_073"
+      "review_item_id": "rvw_110"
     },
     {
       "status": "open",
@@ -1618,7 +2396,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_074"
+      "review_item_id": "rvw_111"
     },
     {
       "status": "open",
@@ -1643,7 +2421,7 @@
         "topic_count": 5
       },
       "evidence": {},
-      "review_item_id": "rvw_075"
+      "review_item_id": "rvw_112"
     },
     {
       "status": "open",
@@ -1663,7 +2441,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_076"
+      "review_item_id": "rvw_113"
     },
     {
       "status": "open",
@@ -1683,7 +2461,73 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_077"
+      "review_item_id": "rvw_114"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_capacity_need",
+      "summary": "mun_almere_pga_transformatieplan contains 1 execution capacity claim(s).",
+      "recommended_action": "Use these as capacity questions; do not infer staffing, fte, or ownership.",
+      "document_id": "mun_almere_pga_transformatieplan",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_pga_transformatieplan.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_pga_transformatieplan_d5_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_115"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_context_needs_action_split",
+      "summary": "mun_almere_pga_transformatieplan contains 5 execution-context claim(s) without a more specific execution status.",
+      "recommended_action": "Review these before turning context into an action, dependency, owner, sequence, or capacity need.",
+      "document_id": "mun_almere_pga_transformatieplan",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_pga_transformatieplan.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_pga_transformatieplan_d5_001",
+          "clm__mun_almere_pga_transformatieplan_d6_002",
+          "clm__mun_almere_pga_transformatieplan_timeline_and_status_001",
+          "clm__mun_almere_pga_transformatieplan_municipal_translation_001",
+          "clm__mun_almere_pga_transformatieplan_municipal_translation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_116"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_review_task",
+      "summary": "mun_almere_pga_transformatieplan contains 3 execution review or monitoring claim(s).",
+      "recommended_action": "Keep these as review, monitoring, or validation tasks; do not present them as settled implementation choices.",
+      "document_id": "mun_almere_pga_transformatieplan",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_pga_transformatieplan.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_pga_transformatieplan_d6_001",
+          "clm__mun_almere_pga_transformatieplan_monitoring_and_evaluation_001",
+          "clm__mun_almere_pga_transformatieplan_monitoring_and_evaluation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_117"
     },
     {
       "status": "open",
@@ -1704,7 +2548,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_078"
+      "review_item_id": "rvw_118"
     },
     {
       "status": "open",
@@ -1728,7 +2572,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_079"
+      "review_item_id": "rvw_119"
     },
     {
       "status": "open",
@@ -1753,7 +2597,7 @@
         "topic_count": 4
       },
       "evidence": {},
-      "review_item_id": "rvw_080"
+      "review_item_id": "rvw_120"
     },
     {
       "status": "open",
@@ -1773,7 +2617,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_081"
+      "review_item_id": "rvw_121"
     },
     {
       "status": "open",
@@ -1796,7 +2640,28 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_082"
+      "review_item_id": "rvw_122"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_decision_question",
+      "summary": "mun_almere_raad_vergaderschema_2026 contains 2 execution decision-question claim(s).",
+      "recommended_action": "Keep these as possible decision questions; do not present them as decided actions.",
+      "document_id": "mun_almere_raad_vergaderschema_2026",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_raad_vergaderschema_2026.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_raad_vergaderschema_2026_timeline_and_status_001",
+          "clm__mun_almere_raad_vergaderschema_2026_municipal_translation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_123"
     },
     {
       "status": "open",
@@ -1817,7 +2682,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_083"
+      "review_item_id": "rvw_124"
     },
     {
       "status": "open",
@@ -1839,7 +2704,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_084"
+      "review_item_id": "rvw_125"
     },
     {
       "status": "open",
@@ -1864,7 +2729,48 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_085"
+      "review_item_id": "rvw_126"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_dependency",
+      "summary": "mun_almere_samenwerkingsprojecten contains 2 execution dependency claim(s).",
+      "recommended_action": "Name the dependency and keep it open unless a source shows it has been resolved.",
+      "document_id": "mun_almere_samenwerkingsprojecten",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_samenwerkingsprojecten.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_samenwerkingsprojecten_monitoring_and_evaluation_002",
+          "clm__mun_almere_samenwerkingsprojecten_monitoring_and_evaluation_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_127"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_review_task",
+      "summary": "mun_almere_samenwerkingsprojecten contains 1 execution review or monitoring claim(s).",
+      "recommended_action": "Keep these as review, monitoring, or validation tasks; do not present them as settled implementation choices.",
+      "document_id": "mun_almere_samenwerkingsprojecten",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_samenwerkingsprojecten.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_samenwerkingsprojecten_monitoring_and_evaluation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_128"
     },
     {
       "status": "open",
@@ -1885,7 +2791,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_086"
+      "review_item_id": "rvw_129"
     },
     {
       "status": "open",
@@ -1906,7 +2812,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_087"
+      "review_item_id": "rvw_130"
     },
     {
       "status": "open",
@@ -1928,7 +2834,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_088"
+      "review_item_id": "rvw_131"
     },
     {
       "status": "open",
@@ -1953,7 +2859,28 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_089"
+      "review_item_id": "rvw_132"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_dependency",
+      "summary": "mun_almere_sociaal_domein_informatiepagina contains 2 execution dependency claim(s).",
+      "recommended_action": "Name the dependency and keep it open unless a source shows it has been resolved.",
+      "document_id": "mun_almere_sociaal_domein_informatiepagina",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_sociaal_domein_informatiepagina.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_sociaal_domein_informatiepagina_d6_001",
+          "clm__mun_almere_sociaal_domein_informatiepagina_timeline_and_status_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_133"
     },
     {
       "status": "open",
@@ -1973,7 +2900,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_090"
+      "review_item_id": "rvw_134"
     },
     {
       "status": "open",
@@ -1994,7 +2921,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_091"
+      "review_item_id": "rvw_135"
     },
     {
       "status": "open",
@@ -2019,7 +2946,7 @@
         "topic_count": 3
       },
       "evidence": {},
-      "review_item_id": "rvw_092"
+      "review_item_id": "rvw_136"
     },
     {
       "status": "open",
@@ -2040,7 +2967,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_093"
+      "review_item_id": "rvw_137"
     },
     {
       "status": "open",
@@ -2063,7 +2990,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_094"
+      "review_item_id": "rvw_138"
     },
     {
       "status": "open",
@@ -2086,7 +3013,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_095"
+      "review_item_id": "rvw_139"
     },
     {
       "status": "open",
@@ -2108,7 +3035,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_096"
+      "review_item_id": "rvw_140"
     },
     {
       "status": "open",
@@ -2128,7 +3055,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_097"
+      "review_item_id": "rvw_141"
     },
     {
       "status": "open",
@@ -2149,7 +3076,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_098"
+      "review_item_id": "rvw_142"
     },
     {
       "status": "open",
@@ -2170,7 +3097,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_099"
+      "review_item_id": "rvw_143"
     },
     {
       "status": "open",
@@ -2190,7 +3117,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_100"
+      "review_item_id": "rvw_144"
     },
     {
       "status": "open",
@@ -2211,7 +3138,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_101"
+      "review_item_id": "rvw_145"
     },
     {
       "status": "open",
@@ -2232,7 +3159,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_102"
+      "review_item_id": "rvw_146"
     },
     {
       "status": "open",
@@ -2254,7 +3181,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_103"
+      "review_item_id": "rvw_147"
     },
     {
       "status": "open",
@@ -2277,7 +3204,91 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_104"
+      "review_item_id": "rvw_148"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_context_needs_action_split",
+      "summary": "nat_azwa_2025_definitief contains 3 execution-context claim(s) without a more specific execution status.",
+      "recommended_action": "Review these before turning context into an action, dependency, owner, sequence, or capacity need.",
+      "document_id": "nat_azwa_2025_definitief",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_azwa_2025_definitief.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_azwa_2025_definitief_d5_002",
+          "clm__nat_azwa_2025_definitief_timeline_and_status_001",
+          "clm__nat_azwa_2025_definitief_monitoring_and_evaluation_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_149"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_dependency",
+      "summary": "nat_azwa_2025_definitief contains 1 execution dependency claim(s).",
+      "recommended_action": "Name the dependency and keep it open unless a source shows it has been resolved.",
+      "document_id": "nat_azwa_2025_definitief",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_azwa_2025_definitief.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_azwa_2025_definitief_timeline_and_status_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_150"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_review_task",
+      "summary": "nat_azwa_2025_definitief contains 3 execution review or monitoring claim(s).",
+      "recommended_action": "Keep these as review, monitoring, or validation tasks; do not present them as settled implementation choices.",
+      "document_id": "nat_azwa_2025_definitief",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_azwa_2025_definitief.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_azwa_2025_definitief_monitoring_and_evaluation_001",
+          "clm__nat_azwa_2025_definitief_monitoring_and_evaluation_002",
+          "clm__nat_azwa_2025_definitief_municipal_translation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_151"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_sequencing_need",
+      "summary": "nat_azwa_2025_definitief contains 1 execution sequencing claim(s).",
+      "recommended_action": "Treat these as sequencing or phasing signals; do not turn them into a hard local implementation plan without source evidence.",
+      "document_id": "nat_azwa_2025_definitief",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_azwa_2025_definitief.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_azwa_2025_definitief_governance_and_finance_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_152"
     },
     {
       "status": "open",
@@ -2299,7 +3310,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_105"
+      "review_item_id": "rvw_153"
     },
     {
       "status": "open",
@@ -2319,7 +3330,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_106"
+      "review_item_id": "rvw_154"
     },
     {
       "status": "open",
@@ -2340,7 +3351,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_107"
+      "review_item_id": "rvw_155"
     },
     {
       "status": "open",
@@ -2362,7 +3373,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_108"
+      "review_item_id": "rvw_156"
     },
     {
       "status": "open",
@@ -2383,7 +3394,67 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_109"
+      "review_item_id": "rvw_157"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_capacity_need",
+      "summary": "nat_azwa_2025_onderhandelaarsakkoord contains 1 execution capacity claim(s).",
+      "recommended_action": "Use these as capacity questions; do not infer staffing, fte, or ownership.",
+      "document_id": "nat_azwa_2025_onderhandelaarsakkoord",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_azwa_2025_onderhandelaarsakkoord.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_azwa_2025_onderhandelaarsakkoord_timeline_and_status_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_158"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_context_needs_action_split",
+      "summary": "nat_azwa_2025_onderhandelaarsakkoord contains 1 execution-context claim(s) without a more specific execution status.",
+      "recommended_action": "Review these before turning context into an action, dependency, owner, sequence, or capacity need.",
+      "document_id": "nat_azwa_2025_onderhandelaarsakkoord",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_azwa_2025_onderhandelaarsakkoord.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_azwa_2025_onderhandelaarsakkoord_d5_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_159"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_review_task",
+      "summary": "nat_azwa_2025_onderhandelaarsakkoord contains 1 execution review or monitoring claim(s).",
+      "recommended_action": "Keep these as review, monitoring, or validation tasks; do not present them as settled implementation choices.",
+      "document_id": "nat_azwa_2025_onderhandelaarsakkoord",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_azwa_2025_onderhandelaarsakkoord.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_azwa_2025_onderhandelaarsakkoord_monitoring_and_evaluation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_160"
     },
     {
       "status": "open",
@@ -2404,7 +3475,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_110"
+      "review_item_id": "rvw_161"
     },
     {
       "status": "open",
@@ -2427,7 +3498,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_111"
+      "review_item_id": "rvw_162"
     },
     {
       "status": "open",
@@ -2450,7 +3521,48 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_112"
+      "review_item_id": "rvw_163"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_context_needs_action_split",
+      "summary": "nat_azwa_2026_cw31_kader_d5_d6 contains 1 execution-context claim(s) without a more specific execution status.",
+      "recommended_action": "Review these before turning context into an action, dependency, owner, sequence, or capacity need.",
+      "document_id": "nat_azwa_2026_cw31_kader_d5_d6",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_azwa_2026_cw31_kader_d5_d6.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_azwa_2026_cw31_kader_d5_d6_d5_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_164"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_review_task",
+      "summary": "nat_azwa_2026_cw31_kader_d5_d6 contains 2 execution review or monitoring claim(s).",
+      "recommended_action": "Keep these as review, monitoring, or validation tasks; do not present them as settled implementation choices.",
+      "document_id": "nat_azwa_2026_cw31_kader_d5_d6",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_azwa_2026_cw31_kader_d5_d6.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_azwa_2026_cw31_kader_d5_d6_monitoring_and_evaluation_001",
+          "clm__nat_azwa_2026_cw31_kader_d5_d6_monitoring_and_evaluation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_165"
     },
     {
       "status": "open",
@@ -2471,7 +3583,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_113"
+      "review_item_id": "rvw_166"
     },
     {
       "status": "open",
@@ -2493,7 +3605,47 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_114"
+      "review_item_id": "rvw_167"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_decision_question",
+      "summary": "nat_azwa_2026_cw31_kamerbrief contains 1 execution decision-question claim(s).",
+      "recommended_action": "Keep these as possible decision questions; do not present them as decided actions.",
+      "document_id": "nat_azwa_2026_cw31_kamerbrief",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_azwa_2026_cw31_kamerbrief.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_azwa_2026_cw31_kamerbrief_monitoring_and_evaluation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_168"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_review_task",
+      "summary": "nat_azwa_2026_cw31_kamerbrief contains 1 execution review or monitoring claim(s).",
+      "recommended_action": "Keep these as review, monitoring, or validation tasks; do not present them as settled implementation choices.",
+      "document_id": "nat_azwa_2026_cw31_kamerbrief",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_azwa_2026_cw31_kamerbrief.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_azwa_2026_cw31_kamerbrief_monitoring_and_evaluation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_169"
     },
     {
       "status": "open",
@@ -2514,7 +3666,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_115"
+      "review_item_id": "rvw_170"
     },
     {
       "status": "open",
@@ -2534,7 +3686,67 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_116"
+      "review_item_id": "rvw_171"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_context_needs_action_split",
+      "summary": "nat_azwa_2026_voortgang_kamerbrief contains 1 execution-context claim(s) without a more specific execution status.",
+      "recommended_action": "Review these before turning context into an action, dependency, owner, sequence, or capacity need.",
+      "document_id": "nat_azwa_2026_voortgang_kamerbrief",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_azwa_2026_voortgang_kamerbrief.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_azwa_2026_voortgang_kamerbrief_monitoring_and_evaluation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_172"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_decision_question",
+      "summary": "nat_azwa_2026_voortgang_kamerbrief contains 1 execution decision-question claim(s).",
+      "recommended_action": "Keep these as possible decision questions; do not present them as decided actions.",
+      "document_id": "nat_azwa_2026_voortgang_kamerbrief",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_azwa_2026_voortgang_kamerbrief.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_azwa_2026_voortgang_kamerbrief_governance_and_finance_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_173"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_review_task",
+      "summary": "nat_azwa_2026_voortgang_kamerbrief contains 1 execution review or monitoring claim(s).",
+      "recommended_action": "Keep these as review, monitoring, or validation tasks; do not present them as settled implementation choices.",
+      "document_id": "nat_azwa_2026_voortgang_kamerbrief",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_azwa_2026_voortgang_kamerbrief.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_azwa_2026_voortgang_kamerbrief_monitoring_and_evaluation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_174"
     },
     {
       "status": "open",
@@ -2555,7 +3767,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_117"
+      "review_item_id": "rvw_175"
     },
     {
       "status": "open",
@@ -2577,7 +3789,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_118"
+      "review_item_id": "rvw_176"
     },
     {
       "status": "open",
@@ -2600,7 +3812,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_119"
+      "review_item_id": "rvw_177"
     },
     {
       "status": "open",
@@ -2623,7 +3835,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_120"
+      "review_item_id": "rvw_178"
     },
     {
       "status": "open",
@@ -2648,7 +3860,48 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_121"
+      "review_item_id": "rvw_179"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_decision_question",
+      "summary": "nat_azwa_format_werkagenda_d5_2026 contains 1 execution decision-question claim(s).",
+      "recommended_action": "Keep these as possible decision questions; do not present them as decided actions.",
+      "document_id": "nat_azwa_format_werkagenda_d5_2026",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_azwa_format_werkagenda_d5_2026.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_azwa_format_werkagenda_d5_2026_d5_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_180"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_review_task",
+      "summary": "nat_azwa_format_werkagenda_d5_2026 contains 2 execution review or monitoring claim(s).",
+      "recommended_action": "Keep these as review, monitoring, or validation tasks; do not present them as settled implementation choices.",
+      "document_id": "nat_azwa_format_werkagenda_d5_2026",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_azwa_format_werkagenda_d5_2026.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_azwa_format_werkagenda_d5_2026_monitoring_and_evaluation_001",
+          "clm__nat_azwa_format_werkagenda_d5_2026_monitoring_and_evaluation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_181"
     },
     {
       "status": "open",
@@ -2671,7 +3924,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_122"
+      "review_item_id": "rvw_182"
     },
     {
       "status": "open",
@@ -2693,7 +3946,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_123"
+      "review_item_id": "rvw_183"
     },
     {
       "status": "open",
@@ -2717,7 +3970,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_124"
+      "review_item_id": "rvw_184"
     },
     {
       "status": "open",
@@ -2737,7 +3990,74 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_125"
+      "review_item_id": "rvw_185"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_decision_question",
+      "summary": "nat_azwa_opdracht_werkagenda_d5_2026 contains 1 execution decision-question claim(s).",
+      "recommended_action": "Keep these as possible decision questions; do not present them as decided actions.",
+      "document_id": "nat_azwa_opdracht_werkagenda_d5_2026",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_azwa_opdracht_werkagenda_d5_2026.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_governance_and_finance_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_186"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_dependency",
+      "summary": "nat_azwa_opdracht_werkagenda_d5_2026 contains 4 execution dependency claim(s).",
+      "recommended_action": "Name the dependency and keep it open unless a source shows it has been resolved.",
+      "document_id": "nat_azwa_opdracht_werkagenda_d5_2026",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_azwa_opdracht_werkagenda_d5_2026.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_governance_and_finance_003",
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_timeline_and_status_001",
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_monitoring_and_evaluation_001",
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_monitoring_and_evaluation_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_187"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_sequencing_need",
+      "summary": "nat_azwa_opdracht_werkagenda_d5_2026 contains 5 execution sequencing claim(s).",
+      "recommended_action": "Treat these as sequencing or phasing signals; do not turn them into a hard local implementation plan without source evidence.",
+      "document_id": "nat_azwa_opdracht_werkagenda_d5_2026",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_azwa_opdracht_werkagenda_d5_2026.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_d5_001",
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_d6_001",
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_governance_and_finance_001",
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_timeline_and_status_003",
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_municipal_translation_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_188"
     },
     {
       "status": "open",
@@ -2758,7 +4078,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_126"
+      "review_item_id": "rvw_189"
     },
     {
       "status": "open",
@@ -2778,7 +4098,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_127"
+      "review_item_id": "rvw_190"
     },
     {
       "status": "open",
@@ -2800,7 +4120,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_128"
+      "review_item_id": "rvw_191"
     },
     {
       "status": "open",
@@ -2821,7 +4141,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_129"
+      "review_item_id": "rvw_192"
     },
     {
       "status": "open",
@@ -2845,7 +4165,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_130"
+      "review_item_id": "rvw_193"
     },
     {
       "status": "open",
@@ -2868,7 +4188,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_131"
+      "review_item_id": "rvw_194"
     },
     {
       "status": "open",
@@ -2892,7 +4212,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_132"
+      "review_item_id": "rvw_195"
     },
     {
       "status": "open",
@@ -2917,7 +4237,49 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_133"
+      "review_item_id": "rvw_196"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_context_needs_action_split",
+      "summary": "nat_azwa_toelichting_producten_proces_2026 contains 2 execution-context claim(s) without a more specific execution status.",
+      "recommended_action": "Review these before turning context into an action, dependency, owner, sequence, or capacity need.",
+      "document_id": "nat_azwa_toelichting_producten_proces_2026",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_azwa_toelichting_producten_proces_2026.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_azwa_toelichting_producten_proces_2026_monitoring_and_evaluation_001",
+          "clm__nat_azwa_toelichting_producten_proces_2026_monitoring_and_evaluation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_197"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_dependency",
+      "summary": "nat_azwa_toelichting_producten_proces_2026 contains 2 execution dependency claim(s).",
+      "recommended_action": "Name the dependency and keep it open unless a source shows it has been resolved.",
+      "document_id": "nat_azwa_toelichting_producten_proces_2026",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_azwa_toelichting_producten_proces_2026.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_azwa_toelichting_producten_proces_2026_governance_and_finance_002",
+          "clm__nat_azwa_toelichting_producten_proces_2026_municipal_translation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_198"
     },
     {
       "status": "open",
@@ -2941,7 +4303,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_134"
+      "review_item_id": "rvw_199"
     },
     {
       "status": "open",
@@ -2962,7 +4324,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_135"
+      "review_item_id": "rvw_200"
     },
     {
       "status": "open",
@@ -2983,7 +4345,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_136"
+      "review_item_id": "rvw_201"
     },
     {
       "status": "open",
@@ -3007,7 +4369,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_137"
+      "review_item_id": "rvw_202"
     },
     {
       "status": "open",
@@ -3030,7 +4392,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_138"
+      "review_item_id": "rvw_203"
     },
     {
       "status": "open",
@@ -3053,7 +4415,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_139"
+      "review_item_id": "rvw_204"
     },
     {
       "status": "open",
@@ -3078,7 +4440,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_140"
+      "review_item_id": "rvw_205"
     },
     {
       "status": "open",
@@ -3098,7 +4460,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_141"
+      "review_item_id": "rvw_206"
     },
     {
       "status": "open",
@@ -3118,7 +4480,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_142"
+      "review_item_id": "rvw_207"
     },
     {
       "status": "open",
@@ -3140,7 +4502,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_143"
+      "review_item_id": "rvw_208"
     },
     {
       "status": "open",
@@ -3160,7 +4522,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_144"
+      "review_item_id": "rvw_209"
     },
     {
       "status": "open",
@@ -3185,7 +4547,67 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_145"
+      "review_item_id": "rvw_210"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_context_needs_action_split",
+      "summary": "nat_dusi_spuk_transformatiemiddelen_2024_2028 contains 1 execution-context claim(s) without a more specific execution status.",
+      "recommended_action": "Review these before turning context into an action, dependency, owner, sequence, or capacity need.",
+      "document_id": "nat_dusi_spuk_transformatiemiddelen_2024_2028",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_dusi_spuk_transformatiemiddelen_2024_2028.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_monitoring_and_evaluation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_211"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_dependency",
+      "summary": "nat_dusi_spuk_transformatiemiddelen_2024_2028 contains 1 execution dependency claim(s).",
+      "recommended_action": "Name the dependency and keep it open unless a source shows it has been resolved.",
+      "document_id": "nat_dusi_spuk_transformatiemiddelen_2024_2028",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_dusi_spuk_transformatiemiddelen_2024_2028.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_timeline_and_status_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_212"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_sequencing_need",
+      "summary": "nat_dusi_spuk_transformatiemiddelen_2024_2028 contains 1 execution sequencing claim(s).",
+      "recommended_action": "Treat these as sequencing or phasing signals; do not turn them into a hard local implementation plan without source evidence.",
+      "document_id": "nat_dusi_spuk_transformatiemiddelen_2024_2028",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_dusi_spuk_transformatiemiddelen_2024_2028.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_dusi_spuk_transformatiemiddelen_2024_2028_timeline_and_status_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_213"
     },
     {
       "status": "open",
@@ -3208,7 +4630,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_146"
+      "review_item_id": "rvw_214"
     },
     {
       "status": "open",
@@ -3230,7 +4652,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_147"
+      "review_item_id": "rvw_215"
     },
     {
       "status": "open",
@@ -3251,7 +4673,71 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_148"
+      "review_item_id": "rvw_216"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_dependency",
+      "summary": "nat_gala_2023_gezond_en_actief_leven contains 2 execution dependency claim(s).",
+      "recommended_action": "Name the dependency and keep it open unless a source shows it has been resolved.",
+      "document_id": "nat_gala_2023_gezond_en_actief_leven",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_gala_2023_gezond_en_actief_leven.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_gala_2023_gezond_en_actief_leven_governance_and_finance_002",
+          "clm__nat_gala_2023_gezond_en_actief_leven_monitoring_and_evaluation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_217"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_review_task",
+      "summary": "nat_gala_2023_gezond_en_actief_leven contains 3 execution review or monitoring claim(s).",
+      "recommended_action": "Keep these as review, monitoring, or validation tasks; do not present them as settled implementation choices.",
+      "document_id": "nat_gala_2023_gezond_en_actief_leven",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_gala_2023_gezond_en_actief_leven.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_gala_2023_gezond_en_actief_leven_timeline_and_status_002",
+          "clm__nat_gala_2023_gezond_en_actief_leven_monitoring_and_evaluation_002",
+          "clm__nat_gala_2023_gezond_en_actief_leven_monitoring_and_evaluation_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_218"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_sequencing_need",
+      "summary": "nat_gala_2023_gezond_en_actief_leven contains 2 execution sequencing claim(s).",
+      "recommended_action": "Treat these as sequencing or phasing signals; do not turn them into a hard local implementation plan without source evidence.",
+      "document_id": "nat_gala_2023_gezond_en_actief_leven",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_gala_2023_gezond_en_actief_leven.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_gala_2023_gezond_en_actief_leven_d5_001",
+          "clm__nat_gala_2023_gezond_en_actief_leven_d5_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_219"
     },
     {
       "status": "open",
@@ -3271,7 +4757,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_149"
+      "review_item_id": "rvw_220"
     },
     {
       "status": "open",
@@ -3293,7 +4779,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_150"
+      "review_item_id": "rvw_221"
     },
     {
       "status": "open",
@@ -3318,7 +4804,7 @@
         "topic_count": 2
       },
       "evidence": {},
-      "review_item_id": "rvw_151"
+      "review_item_id": "rvw_222"
     },
     {
       "status": "open",
@@ -3342,7 +4828,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_152"
+      "review_item_id": "rvw_223"
     },
     {
       "status": "open",
@@ -3363,7 +4849,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_153"
+      "review_item_id": "rvw_224"
     },
     {
       "status": "open",
@@ -3384,7 +4870,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_154"
+      "review_item_id": "rvw_225"
     },
     {
       "status": "open",
@@ -3405,7 +4891,67 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_155"
+      "review_item_id": "rvw_226"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_decision_question",
+      "summary": "nat_iza_2022_integraal_zorgakkoord contains 1 execution decision-question claim(s).",
+      "recommended_action": "Keep these as possible decision questions; do not present them as decided actions.",
+      "document_id": "nat_iza_2022_integraal_zorgakkoord",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_iza_2022_integraal_zorgakkoord.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_iza_2022_integraal_zorgakkoord_timeline_and_status_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_227"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_dependency",
+      "summary": "nat_iza_2022_integraal_zorgakkoord contains 1 execution dependency claim(s).",
+      "recommended_action": "Name the dependency and keep it open unless a source shows it has been resolved.",
+      "document_id": "nat_iza_2022_integraal_zorgakkoord",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_iza_2022_integraal_zorgakkoord.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_iza_2022_integraal_zorgakkoord_monitoring_and_evaluation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_228"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_review_task",
+      "summary": "nat_iza_2022_integraal_zorgakkoord contains 1 execution review or monitoring claim(s).",
+      "recommended_action": "Keep these as review, monitoring, or validation tasks; do not present them as settled implementation choices.",
+      "document_id": "nat_iza_2022_integraal_zorgakkoord",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_iza_2022_integraal_zorgakkoord.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_iza_2022_integraal_zorgakkoord_monitoring_and_evaluation_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_229"
     },
     {
       "status": "open",
@@ -3425,7 +4971,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_156"
+      "review_item_id": "rvw_230"
     },
     {
       "status": "open",
@@ -3446,7 +4992,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_157"
+      "review_item_id": "rvw_231"
     },
     {
       "status": "open",
@@ -3467,7 +5013,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_158"
+      "review_item_id": "rvw_232"
     },
     {
       "status": "open",
@@ -3487,7 +5033,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_159"
+      "review_item_id": "rvw_233"
     },
     {
       "status": "open",
@@ -3509,7 +5055,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_160"
+      "review_item_id": "rvw_234"
     },
     {
       "status": "open",
@@ -3534,7 +5080,67 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_161"
+      "review_item_id": "rvw_235"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_context_needs_action_split",
+      "summary": "nat_sociaalwerknl_financiering_iza_azwa_2025 contains 1 execution-context claim(s) without a more specific execution status.",
+      "recommended_action": "Review these before turning context into an action, dependency, owner, sequence, or capacity need.",
+      "document_id": "nat_sociaalwerknl_financiering_iza_azwa_2025",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_sociaalwerknl_financiering_iza_azwa_2025.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_timeline_and_status_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_236"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_dependency",
+      "summary": "nat_sociaalwerknl_financiering_iza_azwa_2025 contains 1 execution dependency claim(s).",
+      "recommended_action": "Name the dependency and keep it open unless a source shows it has been resolved.",
+      "document_id": "nat_sociaalwerknl_financiering_iza_azwa_2025",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_sociaalwerknl_financiering_iza_azwa_2025.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_d6_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_237"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_sequencing_need",
+      "summary": "nat_sociaalwerknl_financiering_iza_azwa_2025 contains 1 execution sequencing claim(s).",
+      "recommended_action": "Treat these as sequencing or phasing signals; do not turn them into a hard local implementation plan without source evidence.",
+      "document_id": "nat_sociaalwerknl_financiering_iza_azwa_2025",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_sociaalwerknl_financiering_iza_azwa_2025.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_timeline_and_status_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_238"
     },
     {
       "status": "open",
@@ -3557,7 +5163,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_162"
+      "review_item_id": "rvw_239"
     },
     {
       "status": "open",
@@ -3577,7 +5183,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_163"
+      "review_item_id": "rvw_240"
     },
     {
       "status": "open",
@@ -3597,7 +5203,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_164"
+      "review_item_id": "rvw_241"
     },
     {
       "status": "open",
@@ -3617,7 +5223,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_165"
+      "review_item_id": "rvw_242"
     },
     {
       "status": "open",
@@ -3641,7 +5247,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_166"
+      "review_item_id": "rvw_243"
     },
     {
       "status": "open",
@@ -3662,7 +5268,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_167"
+      "review_item_id": "rvw_244"
     },
     {
       "status": "open",
@@ -3684,7 +5290,27 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_168"
+      "review_item_id": "rvw_245"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_dependency",
+      "summary": "nat_tsd_basisfuncties_lokale_teams contains 1 execution dependency claim(s).",
+      "recommended_action": "Name the dependency and keep it open unless a source shows it has been resolved.",
+      "document_id": "nat_tsd_basisfuncties_lokale_teams",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_tsd_basisfuncties_lokale_teams.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_tsd_basisfuncties_lokale_teams_d6_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_246"
     },
     {
       "status": "open",
@@ -3705,7 +5331,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_169"
+      "review_item_id": "rvw_247"
     },
     {
       "status": "open",
@@ -3725,7 +5351,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_170"
+      "review_item_id": "rvw_248"
     },
     {
       "status": "open",
@@ -3750,7 +5376,28 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_171"
+      "review_item_id": "rvw_249"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_decision_question",
+      "summary": "nat_vng_azwa_faq_middelen contains 2 execution decision-question claim(s).",
+      "recommended_action": "Keep these as possible decision questions; do not present them as decided actions.",
+      "document_id": "nat_vng_azwa_faq_middelen",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_vng_azwa_faq_middelen.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_vng_azwa_faq_middelen_governance_and_finance_001",
+          "clm__nat_vng_azwa_faq_middelen_timeline_and_status_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_250"
     },
     {
       "status": "open",
@@ -3774,7 +5421,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_172"
+      "review_item_id": "rvw_251"
     },
     {
       "status": "open",
@@ -3799,7 +5446,7 @@
         "topic_count": 2
       },
       "evidence": {},
-      "review_item_id": "rvw_173"
+      "review_item_id": "rvw_252"
     },
     {
       "status": "open",
@@ -3823,7 +5470,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_174"
+      "review_item_id": "rvw_253"
     },
     {
       "status": "open",
@@ -3844,7 +5491,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_175"
+      "review_item_id": "rvw_254"
     },
     {
       "status": "open",
@@ -3865,7 +5512,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_176"
+      "review_item_id": "rvw_255"
     },
     {
       "status": "open",
@@ -3889,7 +5536,48 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_177"
+      "review_item_id": "rvw_256"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_capacity_need",
+      "summary": "nat_vng_azwa_faq_uitvoeringscapaciteit contains 1 execution capacity claim(s).",
+      "recommended_action": "Use these as capacity questions; do not infer staffing, fte, or ownership.",
+      "document_id": "nat_vng_azwa_faq_uitvoeringscapaciteit",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_vng_azwa_faq_uitvoeringscapaciteit.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_vng_azwa_faq_uitvoeringscapaciteit_municipal_translation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_257"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_sequencing_need",
+      "summary": "nat_vng_azwa_faq_uitvoeringscapaciteit contains 2 execution sequencing claim(s).",
+      "recommended_action": "Treat these as sequencing or phasing signals; do not turn them into a hard local implementation plan without source evidence.",
+      "document_id": "nat_vng_azwa_faq_uitvoeringscapaciteit",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_vng_azwa_faq_uitvoeringscapaciteit.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_vng_azwa_faq_uitvoeringscapaciteit_governance_and_finance_001",
+          "clm__nat_vng_azwa_faq_uitvoeringscapaciteit_municipal_translation_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_258"
     },
     {
       "status": "open",
@@ -3910,7 +5598,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_178"
+      "review_item_id": "rvw_259"
     },
     {
       "status": "open",
@@ -3933,7 +5621,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_179"
+      "review_item_id": "rvw_260"
     },
     {
       "status": "open",
@@ -3955,7 +5643,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_180"
+      "review_item_id": "rvw_261"
     },
     {
       "status": "open",
@@ -3975,7 +5663,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_181"
+      "review_item_id": "rvw_262"
     },
     {
       "status": "open",
@@ -3998,7 +5686,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_182"
+      "review_item_id": "rvw_263"
     },
     {
       "status": "open",
@@ -4018,7 +5706,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_183"
+      "review_item_id": "rvw_264"
     },
     {
       "status": "open",
@@ -4038,7 +5726,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_184"
+      "review_item_id": "rvw_265"
     },
     {
       "status": "open",
@@ -4059,7 +5747,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_185"
+      "review_item_id": "rvw_266"
     },
     {
       "status": "open",
@@ -4079,7 +5767,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_186"
+      "review_item_id": "rvw_267"
     },
     {
       "status": "open",
@@ -4103,7 +5791,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_187"
+      "review_item_id": "rvw_268"
     },
     {
       "status": "open",
@@ -4128,7 +5816,72 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_188"
+      "review_item_id": "rvw_269"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_context_needs_action_split",
+      "summary": "nat_vng_gezond_en_actief_leven_2026 contains 2 execution-context claim(s) without a more specific execution status.",
+      "recommended_action": "Review these before turning context into an action, dependency, owner, sequence, or capacity need.",
+      "document_id": "nat_vng_gezond_en_actief_leven_2026",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_vng_gezond_en_actief_leven_2026.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_vng_gezond_en_actief_leven_2026_d5_001",
+          "clm__nat_vng_gezond_en_actief_leven_2026_timeline_and_status_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_270"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_dependency",
+      "summary": "nat_vng_gezond_en_actief_leven_2026 contains 1 execution dependency claim(s).",
+      "recommended_action": "Name the dependency and keep it open unless a source shows it has been resolved.",
+      "document_id": "nat_vng_gezond_en_actief_leven_2026",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_vng_gezond_en_actief_leven_2026.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_vng_gezond_en_actief_leven_2026_timeline_and_status_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_271"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_sequencing_need",
+      "summary": "nat_vng_gezond_en_actief_leven_2026 contains 6 execution sequencing claim(s).",
+      "recommended_action": "Treat these as sequencing or phasing signals; do not turn them into a hard local implementation plan without source evidence.",
+      "document_id": "nat_vng_gezond_en_actief_leven_2026",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_vng_gezond_en_actief_leven_2026.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_vng_gezond_en_actief_leven_2026_d5_002",
+          "clm__nat_vng_gezond_en_actief_leven_2026_d5_003",
+          "clm__nat_vng_gezond_en_actief_leven_2026_governance_and_finance_001",
+          "clm__nat_vng_gezond_en_actief_leven_2026_timeline_and_status_003",
+          "clm__nat_vng_gezond_en_actief_leven_2026_monitoring_and_evaluation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_272"
     },
     {
       "status": "open",
@@ -4151,7 +5904,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_189"
+      "review_item_id": "rvw_273"
     },
     {
       "status": "open",
@@ -4172,7 +5925,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_190"
+      "review_item_id": "rvw_274"
     },
     {
       "status": "open",
@@ -4196,7 +5949,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_191"
+      "review_item_id": "rvw_275"
     },
     {
       "status": "open",
@@ -4216,7 +5969,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_192"
+      "review_item_id": "rvw_276"
     },
     {
       "status": "open",
@@ -4237,7 +5990,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_193"
+      "review_item_id": "rvw_277"
     },
     {
       "status": "open",
@@ -4258,7 +6011,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_194"
+      "review_item_id": "rvw_278"
     },
     {
       "status": "open",
@@ -4281,7 +6034,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_195"
+      "review_item_id": "rvw_279"
     },
     {
       "status": "open",
@@ -4306,7 +6059,90 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_196"
+      "review_item_id": "rvw_280"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_context_needs_action_split",
+      "summary": "nat_vng_ledenbrief_azwa_financiering_2026 contains 1 execution-context claim(s) without a more specific execution status.",
+      "recommended_action": "Review these before turning context into an action, dependency, owner, sequence, or capacity need.",
+      "document_id": "nat_vng_ledenbrief_azwa_financiering_2026",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_vng_ledenbrief_azwa_financiering_2026.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_vng_ledenbrief_azwa_financiering_2026_timeline_and_status_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_281"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_dependency",
+      "summary": "nat_vng_ledenbrief_azwa_financiering_2026 contains 1 execution dependency claim(s).",
+      "recommended_action": "Name the dependency and keep it open unless a source shows it has been resolved.",
+      "document_id": "nat_vng_ledenbrief_azwa_financiering_2026",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_vng_ledenbrief_azwa_financiering_2026.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_vng_ledenbrief_azwa_financiering_2026_timeline_and_status_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_282"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_review_task",
+      "summary": "nat_vng_ledenbrief_azwa_financiering_2026 contains 1 execution review or monitoring claim(s).",
+      "recommended_action": "Keep these as review, monitoring, or validation tasks; do not present them as settled implementation choices.",
+      "document_id": "nat_vng_ledenbrief_azwa_financiering_2026",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_vng_ledenbrief_azwa_financiering_2026.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_vng_ledenbrief_azwa_financiering_2026_monitoring_and_evaluation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_283"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_sequencing_need",
+      "summary": "nat_vng_ledenbrief_azwa_financiering_2026 contains 4 execution sequencing claim(s).",
+      "recommended_action": "Treat these as sequencing or phasing signals; do not turn them into a hard local implementation plan without source evidence.",
+      "document_id": "nat_vng_ledenbrief_azwa_financiering_2026",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_vng_ledenbrief_azwa_financiering_2026.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_vng_ledenbrief_azwa_financiering_2026_governance_and_finance_002",
+          "clm__nat_vng_ledenbrief_azwa_financiering_2026_timeline_and_status_001",
+          "clm__nat_vng_ledenbrief_azwa_financiering_2026_monitoring_and_evaluation_003",
+          "clm__nat_vng_ledenbrief_azwa_financiering_2026_municipal_translation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_284"
     },
     {
       "status": "open",
@@ -4326,7 +6162,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_197"
+      "review_item_id": "rvw_285"
     },
     {
       "status": "open",
@@ -4348,7 +6184,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_198"
+      "review_item_id": "rvw_286"
     },
     {
       "status": "open",
@@ -4372,7 +6208,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_199"
+      "review_item_id": "rvw_287"
     },
     {
       "status": "open",
@@ -4392,7 +6228,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_200"
+      "review_item_id": "rvw_288"
     },
     {
       "status": "open",
@@ -4415,7 +6251,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_201"
+      "review_item_id": "rvw_289"
     },
     {
       "status": "open",
@@ -4440,7 +6276,87 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_202"
+      "review_item_id": "rvw_290"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_capacity_need",
+      "summary": "nat_vng_ledenbrief_onderhandelaarsakkoord_azwa_2025 contains 1 execution capacity claim(s).",
+      "recommended_action": "Use these as capacity questions; do not infer staffing, fte, or ownership.",
+      "document_id": "nat_vng_ledenbrief_onderhandelaarsakkoord_azwa_2025",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_vng_ledenbrief_onderhandelaarsakkoord_azwa_2025.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_vng_ledenbrief_onderhandelaarsakkoord_azwa_2025_governance_and_finance_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_291"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_context_needs_action_split",
+      "summary": "nat_vng_ledenbrief_onderhandelaarsakkoord_azwa_2025 contains 1 execution-context claim(s) without a more specific execution status.",
+      "recommended_action": "Review these before turning context into an action, dependency, owner, sequence, or capacity need.",
+      "document_id": "nat_vng_ledenbrief_onderhandelaarsakkoord_azwa_2025",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_vng_ledenbrief_onderhandelaarsakkoord_azwa_2025.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_vng_ledenbrief_onderhandelaarsakkoord_azwa_2025_timeline_and_status_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_292"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_dependency",
+      "summary": "nat_vng_ledenbrief_onderhandelaarsakkoord_azwa_2025 contains 1 execution dependency claim(s).",
+      "recommended_action": "Name the dependency and keep it open unless a source shows it has been resolved.",
+      "document_id": "nat_vng_ledenbrief_onderhandelaarsakkoord_azwa_2025",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_vng_ledenbrief_onderhandelaarsakkoord_azwa_2025.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_vng_ledenbrief_onderhandelaarsakkoord_azwa_2025_d6_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_293"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_sequencing_need",
+      "summary": "nat_vng_ledenbrief_onderhandelaarsakkoord_azwa_2025 contains 1 execution sequencing claim(s).",
+      "recommended_action": "Treat these as sequencing or phasing signals; do not turn them into a hard local implementation plan without source evidence.",
+      "document_id": "nat_vng_ledenbrief_onderhandelaarsakkoord_azwa_2025",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_vng_ledenbrief_onderhandelaarsakkoord_azwa_2025.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_vng_ledenbrief_onderhandelaarsakkoord_azwa_2025_municipal_translation_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_294"
     },
     {
       "status": "open",
@@ -4461,7 +6377,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_203"
+      "review_item_id": "rvw_295"
     },
     {
       "status": "open",
@@ -4481,7 +6397,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_204"
+      "review_item_id": "rvw_296"
     },
     {
       "status": "open",
@@ -4501,7 +6417,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_205"
+      "review_item_id": "rvw_297"
     },
     {
       "status": "open",
@@ -4525,7 +6441,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_206"
+      "review_item_id": "rvw_298"
     },
     {
       "status": "open",
@@ -4546,7 +6462,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_207"
+      "review_item_id": "rvw_299"
     },
     {
       "status": "open",
@@ -4566,7 +6482,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_208"
+      "review_item_id": "rvw_300"
     },
     {
       "status": "open",
@@ -4590,7 +6506,108 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_209"
+      "review_item_id": "rvw_301"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_context_needs_action_split",
+      "summary": "nat_vng_richtinggevend_kader_toegang_lokale_teams contains 1 execution-context claim(s) without a more specific execution status.",
+      "recommended_action": "Review these before turning context into an action, dependency, owner, sequence, or capacity need.",
+      "document_id": "nat_vng_richtinggevend_kader_toegang_lokale_teams",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_vng_richtinggevend_kader_toegang_lokale_teams.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_vng_richtinggevend_kader_toegang_lokale_teams_d5_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_302"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_decision_question",
+      "summary": "nat_vng_richtinggevend_kader_toegang_lokale_teams contains 1 execution decision-question claim(s).",
+      "recommended_action": "Keep these as possible decision questions; do not present them as decided actions.",
+      "document_id": "nat_vng_richtinggevend_kader_toegang_lokale_teams",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_vng_richtinggevend_kader_toegang_lokale_teams.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_vng_richtinggevend_kader_toegang_lokale_teams_municipal_translation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_303"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_dependency",
+      "summary": "nat_vng_richtinggevend_kader_toegang_lokale_teams contains 2 execution dependency claim(s).",
+      "recommended_action": "Name the dependency and keep it open unless a source shows it has been resolved.",
+      "document_id": "nat_vng_richtinggevend_kader_toegang_lokale_teams",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_vng_richtinggevend_kader_toegang_lokale_teams.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_vng_richtinggevend_kader_toegang_lokale_teams_governance_and_finance_001",
+          "clm__nat_vng_richtinggevend_kader_toegang_lokale_teams_monitoring_and_evaluation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_304"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_review_task",
+      "summary": "nat_vng_richtinggevend_kader_toegang_lokale_teams contains 1 execution review or monitoring claim(s).",
+      "recommended_action": "Keep these as review, monitoring, or validation tasks; do not present them as settled implementation choices.",
+      "document_id": "nat_vng_richtinggevend_kader_toegang_lokale_teams",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_vng_richtinggevend_kader_toegang_lokale_teams.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_vng_richtinggevend_kader_toegang_lokale_teams_monitoring_and_evaluation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_305"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_sequencing_need",
+      "summary": "nat_vng_richtinggevend_kader_toegang_lokale_teams contains 1 execution sequencing claim(s).",
+      "recommended_action": "Treat these as sequencing or phasing signals; do not turn them into a hard local implementation plan without source evidence.",
+      "document_id": "nat_vng_richtinggevend_kader_toegang_lokale_teams",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_vng_richtinggevend_kader_toegang_lokale_teams.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_vng_richtinggevend_kader_toegang_lokale_teams_timeline_and_status_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_306"
     },
     {
       "status": "open",
@@ -4612,7 +6629,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_210"
+      "review_item_id": "rvw_307"
     },
     {
       "status": "open",
@@ -4633,7 +6650,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_211"
+      "review_item_id": "rvw_308"
     },
     {
       "status": "open",
@@ -4656,7 +6673,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_212"
+      "review_item_id": "rvw_309"
     },
     {
       "status": "open",
@@ -4676,7 +6693,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_213"
+      "review_item_id": "rvw_310"
     },
     {
       "status": "open",
@@ -4696,7 +6713,89 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_214"
+      "review_item_id": "rvw_311"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_context_needs_action_split",
+      "summary": "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026 contains 1 execution-context claim(s) without a more specific execution status.",
+      "recommended_action": "Review these before turning context into an action, dependency, owner, sequence, or capacity need.",
+      "document_id": "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d5_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_312"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_dependency",
+      "summary": "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026 contains 1 execution dependency claim(s).",
+      "recommended_action": "Name the dependency and keep it open unless a source shows it has been resolved.",
+      "document_id": "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d6_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_313"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_review_task",
+      "summary": "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026 contains 1 execution review or monitoring claim(s).",
+      "recommended_action": "Keep these as review, monitoring, or validation tasks; do not present them as settled implementation choices.",
+      "document_id": "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_monitoring_and_evaluation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_314"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_sequencing_need",
+      "summary": "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026 contains 3 execution sequencing claim(s).",
+      "recommended_action": "Treat these as sequencing or phasing signals; do not turn them into a hard local implementation plan without source evidence.",
+      "document_id": "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d5_001",
+          "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d5_002",
+          "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d6_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_315"
     },
     {
       "status": "open",
@@ -4716,7 +6815,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_215"
+      "review_item_id": "rvw_316"
     },
     {
       "status": "open",
@@ -4736,7 +6835,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_216"
+      "review_item_id": "rvw_317"
     },
     {
       "status": "open",
@@ -4756,7 +6855,87 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_217"
+      "review_item_id": "rvw_318"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_context_needs_action_split",
+      "summary": "nat_wetten_spuk_transformatiemiddelen_regeling contains 1 execution-context claim(s) without a more specific execution status.",
+      "recommended_action": "Review these before turning context into an action, dependency, owner, sequence, or capacity need.",
+      "document_id": "nat_wetten_spuk_transformatiemiddelen_regeling",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_wetten_spuk_transformatiemiddelen_regeling.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_wetten_spuk_transformatiemiddelen_regeling_timeline_and_status_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_319"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_dependency",
+      "summary": "nat_wetten_spuk_transformatiemiddelen_regeling contains 1 execution dependency claim(s).",
+      "recommended_action": "Name the dependency and keep it open unless a source shows it has been resolved.",
+      "document_id": "nat_wetten_spuk_transformatiemiddelen_regeling",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_wetten_spuk_transformatiemiddelen_regeling.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_wetten_spuk_transformatiemiddelen_regeling_municipal_translation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_320"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_review_task",
+      "summary": "nat_wetten_spuk_transformatiemiddelen_regeling contains 1 execution review or monitoring claim(s).",
+      "recommended_action": "Keep these as review, monitoring, or validation tasks; do not present them as settled implementation choices.",
+      "document_id": "nat_wetten_spuk_transformatiemiddelen_regeling",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_wetten_spuk_transformatiemiddelen_regeling.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_wetten_spuk_transformatiemiddelen_regeling_monitoring_and_evaluation_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_321"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_sequencing_need",
+      "summary": "nat_wetten_spuk_transformatiemiddelen_regeling contains 1 execution sequencing claim(s).",
+      "recommended_action": "Treat these as sequencing or phasing signals; do not turn them into a hard local implementation plan without source evidence.",
+      "document_id": "nat_wetten_spuk_transformatiemiddelen_regeling",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_wetten_spuk_transformatiemiddelen_regeling.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_wetten_spuk_transformatiemiddelen_regeling_monitoring_and_evaluation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_322"
     },
     {
       "status": "open",
@@ -4777,7 +6956,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_218"
+      "review_item_id": "rvw_323"
     },
     {
       "status": "open",
@@ -4797,7 +6976,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_219"
+      "review_item_id": "rvw_324"
     },
     {
       "status": "open",
@@ -4822,7 +7001,51 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_220"
+      "review_item_id": "rvw_325"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_review_task",
+      "summary": "nat_zorgakkoorden_azwa_programmapagina_2025 contains 2 execution review or monitoring claim(s).",
+      "recommended_action": "Keep these as review, monitoring, or validation tasks; do not present them as settled implementation choices.",
+      "document_id": "nat_zorgakkoorden_azwa_programmapagina_2025",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_zorgakkoorden_azwa_programmapagina_2025.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_zorgakkoorden_azwa_programmapagina_2025_d6_002",
+          "clm__nat_zorgakkoorden_azwa_programmapagina_2025_monitoring_and_evaluation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_326"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_sequencing_need",
+      "summary": "nat_zorgakkoorden_azwa_programmapagina_2025 contains 4 execution sequencing claim(s).",
+      "recommended_action": "Treat these as sequencing or phasing signals; do not turn them into a hard local implementation plan without source evidence.",
+      "document_id": "nat_zorgakkoorden_azwa_programmapagina_2025",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_zorgakkoorden_azwa_programmapagina_2025.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_zorgakkoorden_azwa_programmapagina_2025_d5_001",
+          "clm__nat_zorgakkoorden_azwa_programmapagina_2025_governance_and_finance_001",
+          "clm__nat_zorgakkoorden_azwa_programmapagina_2025_timeline_and_status_001",
+          "clm__nat_zorgakkoorden_azwa_programmapagina_2025_monitoring_and_evaluation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_327"
     },
     {
       "status": "open",
@@ -4845,7 +7068,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_221"
+      "review_item_id": "rvw_328"
     },
     {
       "status": "open",
@@ -4869,7 +7092,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_222"
+      "review_item_id": "rvw_329"
     },
     {
       "status": "open",
@@ -4891,7 +7114,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_223"
+      "review_item_id": "rvw_330"
     },
     {
       "status": "open",
@@ -4915,7 +7138,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_224"
+      "review_item_id": "rvw_331"
     },
     {
       "status": "open",
@@ -4938,7 +7161,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_225"
+      "review_item_id": "rvw_332"
     },
     {
       "status": "open",
@@ -4963,7 +7186,91 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_226"
+      "review_item_id": "rvw_333"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_capacity_need",
+      "summary": "reg_flevoland_2023_regiobeeld contains 1 execution capacity claim(s).",
+      "recommended_action": "Use these as capacity questions; do not infer staffing, fte, or ownership.",
+      "document_id": "reg_flevoland_2023_regiobeeld",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/reg_flevoland_2023_regiobeeld.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__reg_flevoland_2023_regiobeeld_d5_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_334"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_context_needs_action_split",
+      "summary": "reg_flevoland_2023_regiobeeld contains 3 execution-context claim(s) without a more specific execution status.",
+      "recommended_action": "Review these before turning context into an action, dependency, owner, sequence, or capacity need.",
+      "document_id": "reg_flevoland_2023_regiobeeld",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/reg_flevoland_2023_regiobeeld.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__reg_flevoland_2023_regiobeeld_timeline_and_status_002",
+          "clm__reg_flevoland_2023_regiobeeld_monitoring_and_evaluation_001",
+          "clm__reg_flevoland_2023_regiobeeld_monitoring_and_evaluation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_335"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_review_task",
+      "summary": "reg_flevoland_2023_regiobeeld contains 2 execution review or monitoring claim(s).",
+      "recommended_action": "Keep these as review, monitoring, or validation tasks; do not present them as settled implementation choices.",
+      "document_id": "reg_flevoland_2023_regiobeeld",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/reg_flevoland_2023_regiobeeld.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__reg_flevoland_2023_regiobeeld_governance_and_finance_001",
+          "clm__reg_flevoland_2023_regiobeeld_municipal_translation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_336"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_sequencing_need",
+      "summary": "reg_flevoland_2023_regiobeeld contains 2 execution sequencing claim(s).",
+      "recommended_action": "Treat these as sequencing or phasing signals; do not turn them into a hard local implementation plan without source evidence.",
+      "document_id": "reg_flevoland_2023_regiobeeld",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/reg_flevoland_2023_regiobeeld.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__reg_flevoland_2023_regiobeeld_d5_001",
+          "clm__reg_flevoland_2023_regiobeeld_d5_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_337"
     },
     {
       "status": "open",
@@ -4984,7 +7291,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_227"
+      "review_item_id": "rvw_338"
     },
     {
       "status": "open",
@@ -5008,7 +7315,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_228"
+      "review_item_id": "rvw_339"
     },
     {
       "status": "open",
@@ -5031,7 +7338,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_229"
+      "review_item_id": "rvw_340"
     },
     {
       "status": "open",
@@ -5054,7 +7361,51 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_230"
+      "review_item_id": "rvw_341"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_context_needs_action_split",
+      "summary": "reg_flevoland_2023_regioplan_iza contains 4 execution-context claim(s) without a more specific execution status.",
+      "recommended_action": "Review these before turning context into an action, dependency, owner, sequence, or capacity need.",
+      "document_id": "reg_flevoland_2023_regioplan_iza",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/reg_flevoland_2023_regioplan_iza.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__reg_flevoland_2023_regioplan_iza_d5_001",
+          "clm__reg_flevoland_2023_regioplan_iza_d5_002",
+          "clm__reg_flevoland_2023_regioplan_iza_d6_001",
+          "clm__reg_flevoland_2023_regioplan_iza_municipal_translation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_342"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_review_task",
+      "summary": "reg_flevoland_2023_regioplan_iza contains 2 execution review or monitoring claim(s).",
+      "recommended_action": "Keep these as review, monitoring, or validation tasks; do not present them as settled implementation choices.",
+      "document_id": "reg_flevoland_2023_regioplan_iza",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/reg_flevoland_2023_regioplan_iza.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__reg_flevoland_2023_regioplan_iza_monitoring_and_evaluation_001",
+          "clm__reg_flevoland_2023_regioplan_iza_monitoring_and_evaluation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_343"
     },
     {
       "status": "open",
@@ -5074,7 +7425,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_231"
+      "review_item_id": "rvw_344"
     },
     {
       "status": "open",
@@ -5094,7 +7445,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_232"
+      "review_item_id": "rvw_345"
     },
     {
       "status": "open",
@@ -5118,7 +7469,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_233"
+      "review_item_id": "rvw_346"
     },
     {
       "status": "open",
@@ -5141,7 +7492,7 @@
         "topic_count": 3
       },
       "evidence": {},
-      "review_item_id": "rvw_234"
+      "review_item_id": "rvw_347"
     },
     {
       "status": "open",
@@ -5163,7 +7514,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_235"
+      "review_item_id": "rvw_348"
     },
     {
       "status": "open",
@@ -5188,7 +7539,50 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_236"
+      "review_item_id": "rvw_349"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_context_needs_action_split",
+      "summary": "reg_ggd_flevoland_2024_ouderen_gemeenten contains 3 execution-context claim(s) without a more specific execution status.",
+      "recommended_action": "Review these before turning context into an action, dependency, owner, sequence, or capacity need.",
+      "document_id": "reg_ggd_flevoland_2024_ouderen_gemeenten",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/reg_ggd_flevoland_2024_ouderen_gemeenten.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__reg_ggd_flevoland_2024_ouderen_gemeenten_monitoring_and_evaluation_001",
+          "clm__reg_ggd_flevoland_2024_ouderen_gemeenten_monitoring_and_evaluation_002",
+          "clm__reg_ggd_flevoland_2024_ouderen_gemeenten_monitoring_and_evaluation_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_350"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_review_task",
+      "summary": "reg_ggd_flevoland_2024_ouderen_gemeenten contains 2 execution review or monitoring claim(s).",
+      "recommended_action": "Keep these as review, monitoring, or validation tasks; do not present them as settled implementation choices.",
+      "document_id": "reg_ggd_flevoland_2024_ouderen_gemeenten",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/reg_ggd_flevoland_2024_ouderen_gemeenten.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__reg_ggd_flevoland_2024_ouderen_gemeenten_municipal_translation_001",
+          "clm__reg_ggd_flevoland_2024_ouderen_gemeenten_municipal_translation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_351"
     },
     {
       "status": "open",
@@ -5213,7 +7607,50 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_237"
+      "review_item_id": "rvw_352"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_context_needs_action_split",
+      "summary": "reg_ggd_flevoland_2024_volwassenen_gemeenten contains 3 execution-context claim(s) without a more specific execution status.",
+      "recommended_action": "Review these before turning context into an action, dependency, owner, sequence, or capacity need.",
+      "document_id": "reg_ggd_flevoland_2024_volwassenen_gemeenten",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/reg_ggd_flevoland_2024_volwassenen_gemeenten.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__reg_ggd_flevoland_2024_volwassenen_gemeenten_monitoring_and_evaluation_001",
+          "clm__reg_ggd_flevoland_2024_volwassenen_gemeenten_monitoring_and_evaluation_002",
+          "clm__reg_ggd_flevoland_2024_volwassenen_gemeenten_monitoring_and_evaluation_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_353"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_review_task",
+      "summary": "reg_ggd_flevoland_2024_volwassenen_gemeenten contains 2 execution review or monitoring claim(s).",
+      "recommended_action": "Keep these as review, monitoring, or validation tasks; do not present them as settled implementation choices.",
+      "document_id": "reg_ggd_flevoland_2024_volwassenen_gemeenten",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/reg_ggd_flevoland_2024_volwassenen_gemeenten.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__reg_ggd_flevoland_2024_volwassenen_gemeenten_municipal_translation_001",
+          "clm__reg_ggd_flevoland_2024_volwassenen_gemeenten_municipal_translation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_354"
     },
     {
       "status": "open",
@@ -5237,7 +7674,88 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_238"
+      "review_item_id": "rvw_355"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_capacity_need",
+      "summary": "reg_ggd_flevoland_begroting_2026 contains 1 execution capacity claim(s).",
+      "recommended_action": "Use these as capacity questions; do not infer staffing, fte, or ownership.",
+      "document_id": "reg_ggd_flevoland_begroting_2026",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/reg_ggd_flevoland_begroting_2026.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__reg_ggd_flevoland_begroting_2026_governance_and_finance_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_356"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_context_needs_action_split",
+      "summary": "reg_ggd_flevoland_begroting_2026 contains 1 execution-context claim(s) without a more specific execution status.",
+      "recommended_action": "Review these before turning context into an action, dependency, owner, sequence, or capacity need.",
+      "document_id": "reg_ggd_flevoland_begroting_2026",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/reg_ggd_flevoland_begroting_2026.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__reg_ggd_flevoland_begroting_2026_timeline_and_status_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_357"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_review_task",
+      "summary": "reg_ggd_flevoland_begroting_2026 contains 2 execution review or monitoring claim(s).",
+      "recommended_action": "Keep these as review, monitoring, or validation tasks; do not present them as settled implementation choices.",
+      "document_id": "reg_ggd_flevoland_begroting_2026",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/reg_ggd_flevoland_begroting_2026.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__reg_ggd_flevoland_begroting_2026_monitoring_and_evaluation_001",
+          "clm__reg_ggd_flevoland_begroting_2026_monitoring_and_evaluation_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_358"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_sequencing_need",
+      "summary": "reg_ggd_flevoland_begroting_2026 contains 1 execution sequencing claim(s).",
+      "recommended_action": "Treat these as sequencing or phasing signals; do not turn them into a hard local implementation plan without source evidence.",
+      "document_id": "reg_ggd_flevoland_begroting_2026",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/reg_ggd_flevoland_begroting_2026.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__reg_ggd_flevoland_begroting_2026_d5_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_359"
     },
     {
       "status": "open",
@@ -5257,7 +7775,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_239"
+      "review_item_id": "rvw_360"
     },
     {
       "status": "open",
@@ -5279,7 +7797,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_240"
+      "review_item_id": "rvw_361"
     },
     {
       "status": "open",
@@ -5303,7 +7821,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_241"
+      "review_item_id": "rvw_362"
     },
     {
       "status": "open",
@@ -5327,7 +7845,7 @@
         "topic_count": 3
       },
       "evidence": {},
-      "review_item_id": "rvw_242"
+      "review_item_id": "rvw_363"
     },
     {
       "status": "open",
@@ -5351,7 +7869,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_243"
+      "review_item_id": "rvw_364"
     },
     {
       "status": "open",
@@ -5376,7 +7894,27 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_244"
+      "review_item_id": "rvw_365"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_review_task",
+      "summary": "reg_ggd_flevoland_jgz_almere_profile contains 1 execution review or monitoring claim(s).",
+      "recommended_action": "Keep these as review, monitoring, or validation tasks; do not present them as settled implementation choices.",
+      "document_id": "reg_ggd_flevoland_jgz_almere_profile",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/reg_ggd_flevoland_jgz_almere_profile.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__reg_ggd_flevoland_jgz_almere_profile_monitoring_and_evaluation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_366"
     },
     {
       "status": "open",
@@ -5398,7 +7936,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_245"
+      "review_item_id": "rvw_367"
     },
     {
       "status": "open",
@@ -5421,7 +7959,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_246"
+      "review_item_id": "rvw_368"
     },
     {
       "status": "open",
@@ -5445,7 +7983,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_247"
+      "review_item_id": "rvw_369"
     },
     {
       "status": "open",
@@ -5470,7 +8008,29 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_248"
+      "review_item_id": "rvw_370"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_review_task",
+      "summary": "reg_ggd_flevoland_kennis_en_advies contains 3 execution review or monitoring claim(s).",
+      "recommended_action": "Keep these as review, monitoring, or validation tasks; do not present them as settled implementation choices.",
+      "document_id": "reg_ggd_flevoland_kennis_en_advies",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/reg_ggd_flevoland_kennis_en_advies.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__reg_ggd_flevoland_kennis_en_advies_governance_and_finance_001",
+          "clm__reg_ggd_flevoland_kennis_en_advies_monitoring_and_evaluation_001",
+          "clm__reg_ggd_flevoland_kennis_en_advies_municipal_translation_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_371"
     },
     {
       "status": "open",
@@ -5492,7 +8052,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_249"
+      "review_item_id": "rvw_372"
     },
     {
       "status": "open",
@@ -5515,7 +8075,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_250"
+      "review_item_id": "rvw_373"
     },
     {
       "status": "open",
@@ -5536,7 +8096,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_251"
+      "review_item_id": "rvw_374"
     },
     {
       "status": "open",
@@ -5561,7 +8121,47 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_252"
+      "review_item_id": "rvw_375"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_context_needs_action_split",
+      "summary": "reg_ggd_flevoland_valpreventie_almere contains 1 execution-context claim(s) without a more specific execution status.",
+      "recommended_action": "Review these before turning context into an action, dependency, owner, sequence, or capacity need.",
+      "document_id": "reg_ggd_flevoland_valpreventie_almere",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/reg_ggd_flevoland_valpreventie_almere.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__reg_ggd_flevoland_valpreventie_almere_d5_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_376"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_dependency",
+      "summary": "reg_ggd_flevoland_valpreventie_almere contains 1 execution dependency claim(s).",
+      "recommended_action": "Name the dependency and keep it open unless a source shows it has been resolved.",
+      "document_id": "reg_ggd_flevoland_valpreventie_almere",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/reg_ggd_flevoland_valpreventie_almere.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__reg_ggd_flevoland_valpreventie_almere_d5_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_377"
     },
     {
       "status": "open",
@@ -5583,7 +8183,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_253"
+      "review_item_id": "rvw_378"
     },
     {
       "status": "open",
@@ -5606,7 +8206,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_254"
+      "review_item_id": "rvw_379"
     },
     {
       "status": "open",
@@ -5629,7 +8229,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_255"
+      "review_item_id": "rvw_380"
     },
     {
       "status": "open",
@@ -5654,7 +8254,70 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_256"
+      "review_item_id": "rvw_381"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_capacity_need",
+      "summary": "reg_zonmw_doorontwikkeling_zorgzaam_flevoland contains 1 execution capacity claim(s).",
+      "recommended_action": "Use these as capacity questions; do not infer staffing, fte, or ownership.",
+      "document_id": "reg_zonmw_doorontwikkeling_zorgzaam_flevoland",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/reg_zonmw_doorontwikkeling_zorgzaam_flevoland.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__reg_zonmw_doorontwikkeling_zorgzaam_flevoland_municipal_translation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_382"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_dependency",
+      "summary": "reg_zonmw_doorontwikkeling_zorgzaam_flevoland contains 1 execution dependency claim(s).",
+      "recommended_action": "Name the dependency and keep it open unless a source shows it has been resolved.",
+      "document_id": "reg_zonmw_doorontwikkeling_zorgzaam_flevoland",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/reg_zonmw_doorontwikkeling_zorgzaam_flevoland.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__reg_zonmw_doorontwikkeling_zorgzaam_flevoland_governance_and_finance_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_383"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_review_task",
+      "summary": "reg_zonmw_doorontwikkeling_zorgzaam_flevoland contains 4 execution review or monitoring claim(s).",
+      "recommended_action": "Keep these as review, monitoring, or validation tasks; do not present them as settled implementation choices.",
+      "document_id": "reg_zonmw_doorontwikkeling_zorgzaam_flevoland",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/reg_zonmw_doorontwikkeling_zorgzaam_flevoland.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__reg_zonmw_doorontwikkeling_zorgzaam_flevoland_governance_and_finance_002",
+          "clm__reg_zonmw_doorontwikkeling_zorgzaam_flevoland_monitoring_and_evaluation_001",
+          "clm__reg_zonmw_doorontwikkeling_zorgzaam_flevoland_monitoring_and_evaluation_002",
+          "clm__reg_zonmw_doorontwikkeling_zorgzaam_flevoland_monitoring_and_evaluation_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_384"
     },
     {
       "status": "open",
@@ -5675,7 +8338,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_257"
+      "review_item_id": "rvw_385"
     },
     {
       "status": "open",
@@ -5696,7 +8359,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_258"
+      "review_item_id": "rvw_386"
     },
     {
       "status": "open",
@@ -5716,7 +8379,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_259"
+      "review_item_id": "rvw_387"
     },
     {
       "status": "open",
@@ -5740,7 +8403,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_260"
+      "review_item_id": "rvw_388"
     },
     {
       "status": "open",
@@ -5762,7 +8425,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_261"
+      "review_item_id": "rvw_389"
     },
     {
       "status": "open",
@@ -5781,7 +8444,7 @@
       "evidence": {
         "table_count": 4
       },
-      "review_item_id": "rvw_262"
+      "review_item_id": "rvw_390"
     },
     {
       "status": "open",
@@ -5812,7 +8475,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_263"
+      "review_item_id": "rvw_391"
     },
     {
       "status": "open",
@@ -5836,7 +8499,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_264"
+      "review_item_id": "rvw_392"
     },
     {
       "status": "open",
@@ -5863,7 +8526,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_265"
+      "review_item_id": "rvw_393"
     },
     {
       "status": "open",
@@ -5894,7 +8557,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_266"
+      "review_item_id": "rvw_394"
     },
     {
       "status": "open",
@@ -5919,7 +8582,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_267"
+      "review_item_id": "rvw_395"
     },
     {
       "status": "open",
@@ -5950,7 +8613,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_268"
+      "review_item_id": "rvw_396"
     },
     {
       "status": "open",
@@ -5980,7 +8643,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_269"
+      "review_item_id": "rvw_397"
     },
     {
       "status": "open",
@@ -6005,7 +8668,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_270"
+      "review_item_id": "rvw_398"
     },
     {
       "status": "open",
@@ -6030,7 +8693,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_271"
+      "review_item_id": "rvw_399"
     },
     {
       "status": "open",
@@ -6053,7 +8716,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_272"
+      "review_item_id": "rvw_400"
     }
   ]
 }

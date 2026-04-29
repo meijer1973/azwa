@@ -14,7 +14,7 @@
     "high_volume_topic_count": 6,
     "rough_claim_count": 119,
     "site_files_with_rough_claims": 11,
-    "open_review_items": 266
+    "open_review_items": 394
   },
   "perspective_coverage": {
     "claims": {
@@ -1656,6 +1656,319 @@
         },
         "statement_excerpt": "Onderdelen RPI | Uitwerking Toelichting op RPI: Omschrijf beknopt hoe de regionale preventie-infrastructuur in jullie regio is georganiseerd (een visuele toelichting, bijvoorbeeld in de vorm van een afbeelding, volsta...",
         "public_wording_guardrail": "Formuleer als landelijke lijn met relevantie voor Almere; niet als lokale vaststelling."
+      }
+    ]
+  },
+  "execution_status_audit": {
+    "description": "Sprint 27.6 execution split for operational requirements, implementation activity, decision questions, dependencies, sequencing needs, capacity needs, review tasks, execution context, and non-execution material.",
+    "status_counts": {
+      "capacity_need": 16,
+      "decision_question": 18,
+      "dependency": 34,
+      "execution_context": 52,
+      "implementation_activity": 46,
+      "not_execution": 71,
+      "operational_requirement": 181,
+      "review_task": 60,
+      "sequencing_need": 46
+    },
+    "execution_perspective_status_counts": {
+      "capacity_need": 12,
+      "decision_question": 4,
+      "dependency": 20,
+      "execution_context": 41,
+      "implementation_activity": 24,
+      "operational_requirement": 163,
+      "review_task": 53,
+      "sequencing_need": 29
+    },
+    "execution_need_signal_counts": {
+      "capacity": 16,
+      "decision_question": 18,
+      "dependency": 36,
+      "implementation_activity": 91,
+      "operational_requirement": 142,
+      "review": 83,
+      "sequencing": 62
+    },
+    "verification_needed_sample": [
+      {
+        "claim_id": "clm__nat_azwa_2025_definitief_d5_002",
+        "source_document_id": "nat_azwa_2025_definitief",
+        "topic": "d5.ontwikkelagenda",
+        "execution_status": "execution_context",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
+        "statement_excerpt": "The directly underbouwde D5 set already includes examples such as sociaal verwijzen and valpreventie, while other approaches sit on ontwikkelagenda 1 or deel 2.",
+        "public_wording_guardrail": "Gebruik als uitvoeringscontext; maak er geen actie, eigenaar of planning van zonder sterker bewijs."
+      },
+      {
+        "claim_id": "clm__nat_azwa_2025_definitief_governance_and_finance_002",
+        "source_document_id": "nat_azwa_2025_definitief",
+        "topic": "finance.d5_d6.municipal_funding",
+        "execution_status": "sequencing_need",
+        "execution_need_signals": [
+          "sequencing"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
+        "statement_excerpt": "For the social domain, a two-year start package for 2027-2028 is used to work out and evaluate the measures, with a route to structural funding if the evaluation and plans are positive.",
+        "public_wording_guardrail": "Formuleer als fasering of volgordevraag; maak er geen harde planning van zonder bron."
+      },
+      {
+        "claim_id": "clm__nat_azwa_2025_definitief_timeline_and_status_001",
+        "source_document_id": "nat_azwa_2025_definitief",
+        "topic": "timeline.d5_d6_implementation",
+        "execution_status": "execution_context",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
+        "statement_excerpt": "The landelijk kader for D5 is to be fixed in BO IZA/AZWA in Q4 2025, with governance and further elaboration in Q1 2026.",
+        "public_wording_guardrail": "Gebruik als uitvoeringscontext; maak er geen actie, eigenaar of planning van zonder sterker bewijs."
+      },
+      {
+        "claim_id": "clm__nat_azwa_2025_definitief_timeline_and_status_002",
+        "source_document_id": "nat_azwa_2025_definitief",
+        "topic": "timeline.rollout_2030",
+        "execution_status": "dependency",
+        "execution_need_signals": [
+          "operational_requirement",
+          "dependency"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
+        "statement_excerpt": "The agreement aims for landelijke dekking of the known basisfunctionaliteiten by 2030, while local-team aansluiting in hechte wijkverbanden must be in place by Q4 2028.",
+        "public_wording_guardrail": "Benoem de afhankelijkheid; los haar niet op zonder bron of validatie."
+      },
+      {
+        "claim_id": "clm__nat_azwa_2025_definitief_monitoring_and_evaluation_001",
+        "source_document_id": "nat_azwa_2025_definitief",
+        "topic": "monitoring.framework",
+        "execution_status": "review_task",
+        "execution_need_signals": [
+          "review"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
+        "statement_excerpt": "AZWA extends the IZA monitoring model across proces, beweging, and doelgroepen, using existing data where possible to limit administrative burden.",
+        "public_wording_guardrail": "Formuleer als review-, monitorings- of validatietaak; niet als besluit of uitvoeringseigenaarschap."
+      },
+      {
+        "claim_id": "clm__nat_azwa_2025_definitief_monitoring_and_evaluation_002",
+        "source_document_id": "nat_azwa_2025_definitief",
+        "topic": "monitoring.mid_term_review",
+        "execution_status": "review_task",
+        "execution_need_signals": [
+          "review"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
+        "statement_excerpt": "A mid-term review is scheduled for early 2027 and can trigger sharper afspraken, different middeleninzet, or budget-neutral shifts between sectors before decisions for 2028.",
+        "public_wording_guardrail": "Formuleer als review-, monitorings- of validatietaak; niet als besluit of uitvoeringseigenaarschap."
+      },
+      {
+        "claim_id": "clm__nat_azwa_2025_definitief_monitoring_and_evaluation_003",
+        "source_document_id": "nat_azwa_2025_definitief",
+        "topic": "monitoring.d5_operational_monitoring",
+        "execution_status": "execution_context",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
+        "statement_excerpt": "The D5 annex itself says the mechanism and implementation will be monitored so parties can be aangesproken or the afspraken can be adjusted.",
+        "public_wording_guardrail": "Gebruik als uitvoeringscontext; maak er geen actie, eigenaar of planning van zonder sterker bewijs."
+      },
+      {
+        "claim_id": "clm__nat_azwa_2025_definitief_municipal_translation_002",
+        "source_document_id": "nat_azwa_2025_definitief",
+        "topic": "municipal.implementation_translation",
+        "execution_status": "review_task",
+        "execution_need_signals": [
+          "review"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
+        "statement_excerpt": "Municipal implementation also carries local accountability features: funding goes to municipalities, monitoring should rely on existing data sources, and accountability should fit regular reporting to the gemeenteraad.",
+        "public_wording_guardrail": "Formuleer als review-, monitorings- of validatietaak; niet als besluit of uitvoeringseigenaarschap."
+      },
+      {
+        "claim_id": "clm__nat_azwa_2025_onderhandelaarsakkoord_d5_001",
+        "source_document_id": "nat_azwa_2025_onderhandelaarsakkoord",
+        "topic": "d5.ontwikkelagenda",
+        "execution_status": "execution_context",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
+        "statement_excerpt": "The negotiation text already names the directly implementable D5 items and the ontwikkelagenda split, including sociaal verwijzen, valpreventie, and a short-term development path for other approaches.",
+        "public_wording_guardrail": "Gebruik als uitvoeringscontext; maak er geen actie, eigenaar of planning van zonder sterker bewijs."
+      },
+      {
+        "claim_id": "clm__nat_azwa_2025_onderhandelaarsakkoord_timeline_and_status_001",
+        "source_document_id": "nat_azwa_2025_onderhandelaarsakkoord",
+        "topic": "timeline.d5_d6_implementation",
+        "execution_status": "capacity_need",
+        "execution_need_signals": [
+          "capacity"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
+        "statement_excerpt": "The negotiating text already sets the D5 timetable: Q4 2025 for the landelijk kader, Q1 2026 for governance and further plans, and periodic herijking after that.",
+        "public_wording_guardrail": "Formuleer als capaciteitsvraag; vul geen fte, team of eigenaar in zonder bron."
+      },
+      {
+        "claim_id": "clm__nat_azwa_2025_onderhandelaarsakkoord_monitoring_and_evaluation_002",
+        "source_document_id": "nat_azwa_2025_onderhandelaarsakkoord",
+        "topic": "monitoring.framework",
+        "execution_status": "review_task",
+        "execution_need_signals": [
+          "review"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
+        "statement_excerpt": "The overall monitoring chapter builds on the IZA monitor, keeps process-output-outcome levels, and asks for a workafspraak on transitiedoelen before the end of 2025.",
+        "public_wording_guardrail": "Formuleer als review-, monitorings- of validatietaak; niet als besluit of uitvoeringseigenaarschap."
+      },
+      {
+        "claim_id": "clm__nat_azwa_2026_cw31_kader_d5_d6_d5_001",
+        "source_document_id": "nat_azwa_2026_cw31_kader_d5_d6",
+        "topic": "d5.basisfunctionaliteiten_onderbouwd",
+        "execution_status": "execution_context",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
+        "statement_excerpt": "The D5 objective is to strengthen care-social cooperation so people get equal access to the care and support they need, with sociaal verwijzen named as an example.",
+        "public_wording_guardrail": "Gebruik als uitvoeringscontext; maak er geen actie, eigenaar of planning van zonder sterker bewijs."
+      },
+      {
+        "claim_id": "clm__nat_azwa_2026_cw31_kader_d5_d6_monitoring_and_evaluation_001",
+        "source_document_id": "nat_azwa_2026_cw31_kader_d5_d6",
+        "topic": "monitoring.update_2028",
+        "execution_status": "review_task",
+        "execution_need_signals": [
+          "operational_requirement",
+          "review"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
+        "statement_excerpt": "The progress of implementation is to be monitored nationally and the content of the basisfunctionaliteiten is to be updated in 2028 based on monitoring and evaluation.",
+        "public_wording_guardrail": "Formuleer als review-, monitorings- of validatietaak; niet als besluit of uitvoeringseigenaarschap."
+      },
+      {
+        "claim_id": "clm__nat_azwa_2026_cw31_kader_d5_d6_monitoring_and_evaluation_002",
+        "source_document_id": "nat_azwa_2026_cw31_kader_d5_d6",
+        "topic": "monitoring.framework",
+        "execution_status": "review_task",
+        "execution_need_signals": [
+          "review"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
+        "statement_excerpt": "The D5/D6 evaluation is also tied back to the broader IZA-based AZWA monitoring and evaluation framework.",
+        "public_wording_guardrail": "Formuleer als review-, monitorings- of validatietaak; niet als besluit of uitvoeringseigenaarschap."
+      },
+      {
+        "claim_id": "clm__reg_flevoland_2023_regioplan_iza_d5_001",
+        "source_document_id": "reg_flevoland_2023_regioplan_iza",
+        "topic": "d5.mentale_gezondheidsnetwerken",
+        "execution_status": "execution_context",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
+        "statement_excerpt": "The plan highlights Ecosysteem Mentale Gezondheid and Samen Sterker in de Wijk as a model for neighbourhood collaboration around psychosocial problems.",
+        "public_wording_guardrail": "Gebruik als uitvoeringscontext; maak er geen actie, eigenaar of planning van zonder sterker bewijs."
+      },
+      {
+        "claim_id": "clm__reg_flevoland_2023_regioplan_iza_d5_002",
+        "source_document_id": "reg_flevoland_2023_regioplan_iza",
+        "topic": "d5.cross_domain_collaboration",
+        "execution_status": "execution_context",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
+        "statement_excerpt": "The plan also explicitly calls integrale domeinoverstijgende samenwerking essential between the social domain, medical domain, long-term care, geriatrics, and wijk care.",
+        "public_wording_guardrail": "Gebruik als uitvoeringscontext; maak er geen actie, eigenaar of planning van zonder sterker bewijs."
+      },
+      {
+        "claim_id": "clm__reg_flevoland_2023_regioplan_iza_d6_001",
+        "source_document_id": "reg_flevoland_2023_regioplan_iza",
+        "topic": "d6.digital_and_operational_infrastructure",
+        "execution_status": "execution_context",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
+        "statement_excerpt": "The Regioplan identifies digital infrastructure as essential and names a regional collaboration organization, a shared data-availability vision, information architecture, and use-case based rollout.",
+        "public_wording_guardrail": "Gebruik als uitvoeringscontext; maak er geen actie, eigenaar of planning van zonder sterker bewijs."
+      },
+      {
+        "claim_id": "clm__reg_flevoland_2023_regioplan_iza_monitoring_and_evaluation_001",
+        "source_document_id": "reg_flevoland_2023_regioplan_iza",
+        "topic": "monitoring.regional_monitoring_plan",
+        "execution_status": "review_task",
+        "execution_need_signals": [
+          "review"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
+        "statement_excerpt": "The Regioplan calls for a 2024 monitoringsplan to show whether the transformatie is visible and whether the region is on course.",
+        "public_wording_guardrail": "Formuleer als review-, monitorings- of validatietaak; niet als besluit of uitvoeringseigenaarschap."
+      },
+      {
+        "claim_id": "clm__reg_flevoland_2023_regioplan_iza_monitoring_and_evaluation_002",
+        "source_document_id": "reg_flevoland_2023_regioplan_iza",
+        "topic": "monitoring.framework",
+        "execution_status": "review_task",
+        "execution_need_signals": [
+          "review"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
+        "statement_excerpt": "The monitoring approach combines process, output, and outcome monitoring and aims to surface the results in a dashboard while reusing existing data sources where possible.",
+        "public_wording_guardrail": "Formuleer als review-, monitorings- of validatietaak; niet als besluit of uitvoeringseigenaarschap."
+      },
+      {
+        "claim_id": "clm__reg_flevoland_2023_regioplan_iza_municipal_translation_002",
+        "source_document_id": "reg_flevoland_2023_regioplan_iza",
+        "topic": "municipal.role_allocation",
+        "execution_status": "execution_context",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
+        "statement_excerpt": "A key follow-up issue for municipal implementation is clarifying roles and responsibilities between municipality, social domain, insurers, and providers.",
+        "public_wording_guardrail": "Gebruik als uitvoeringscontext; maak er geen actie, eigenaar of planning van zonder sterker bewijs."
+      },
+      {
+        "claim_id": "clm__mun_almere_pga_transformatieplan_d5_001",
+        "source_document_id": "mun_almere_pga_transformatieplan",
+        "topic": "d5.mentale_gezondheidsnetwerken",
+        "execution_status": "execution_context",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
+        "statement_excerpt": "The plan explicitly aims for better cooperation between informal care, the social domain, and the medical domain, supported by initiatives such as Voorzorgcirkels, Welzijn op Recept, and Samen Sterker in de Wijk.",
+        "public_wording_guardrail": "Gebruik als uitvoeringscontext; maak er geen actie, eigenaar of planning van zonder sterker bewijs."
+      },
+      {
+        "claim_id": "clm__mun_almere_pga_transformatieplan_d5_002",
+        "source_document_id": "mun_almere_pga_transformatieplan",
+        "topic": "d5.health_first_shift",
+        "execution_status": "capacity_need",
+        "execution_need_signals": [
+          "capacity"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
+        "statement_excerpt": "The local shift is framed as moving from care afterwards toward health first and the right help in the right place.",
+        "public_wording_guardrail": "Formuleer als capaciteitsvraag; vul geen fte, team of eigenaar in zonder bron."
+      },
+      {
+        "claim_id": "clm__mun_almere_pga_transformatieplan_d6_001",
+        "source_document_id": "mun_almere_pga_transformatieplan",
+        "topic": "d6.digital_and_operational_infrastructure",
+        "execution_status": "review_task",
+        "execution_need_signals": [
+          "review"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
+        "statement_excerpt": "The local plan names RTP Almere, the RSO, data infrastructure, and Monitoring@home as part of the operational infrastructure needed for care closer to home.",
+        "public_wording_guardrail": "Formuleer als review-, monitorings- of validatietaak; niet als besluit of uitvoeringseigenaarschap."
+      },
+      {
+        "claim_id": "clm__mun_almere_pga_transformatieplan_d6_002",
+        "source_document_id": "mun_almere_pga_transformatieplan",
+        "topic": "d6.digital_and_operational_infrastructure",
+        "execution_status": "execution_context",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
+        "statement_excerpt": "The plan also makes a current shared information picture for professionals part of the local enabling structure.",
+        "public_wording_guardrail": "Gebruik als uitvoeringscontext; maak er geen actie, eigenaar of planning van zonder sterker bewijs."
+      },
+      {
+        "claim_id": "clm__mun_almere_pga_transformatieplan_governance_and_finance_002",
+        "source_document_id": "mun_almere_pga_transformatieplan",
+        "topic": "finance.local_alignment_goal",
+        "execution_status": "not_execution",
+        "execution_need_signals": [],
+        "source_execution_anchor": "none",
+        "statement_excerpt": "The plan does not set a detailed funding framework, but it does describe a target future balance in which care expenditures and social-domain expenditures are better aligned.",
+        "public_wording_guardrail": "Niet gebruiken als actie- of implementatieclaim."
       }
     ]
   },
@@ -4101,6 +4414,12 @@
         "actor_context_needs_role_split",
         "authority_unclear",
         "double_counting_risk",
+        "execution_capacity_need",
+        "execution_context_needs_action_split",
+        "execution_decision_question",
+        "execution_dependency",
+        "execution_review_task",
+        "execution_sequencing_need",
         "expected_time_not_deadline",
         "extraction_noise_detected",
         "finance_context_needs_verification",

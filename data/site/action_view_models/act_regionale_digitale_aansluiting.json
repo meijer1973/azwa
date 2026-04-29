@@ -107,6 +107,14 @@
         "public_wording_guardrail": "Formuleer als Flevolandse of GGD/Flevolandse bronlijn; niet automatisch als Almeerse keuze.",
         "needs_verification": false
       },
+      "execution_status": {
+        "status": "execution_context",
+        "label": "Uitvoeringscontext",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
+        "public_wording_guardrail": "Gebruik als uitvoeringscontext; maak er geen actie, eigenaar of planning van zonder sterker bewijs.",
+        "needs_verification": true
+      },
       "needs_human_review": true
     },
     {
@@ -166,6 +174,14 @@
         },
         "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
         "needs_verification": false
+      },
+      "execution_status": {
+        "status": "execution_context",
+        "label": "Uitvoeringscontext",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
+        "public_wording_guardrail": "Gebruik als uitvoeringscontext; maak er geen actie, eigenaar of planning van zonder sterker bewijs.",
+        "needs_verification": true
       },
       "needs_human_review": true
     },
@@ -227,6 +243,14 @@
         "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
         "needs_verification": false
       },
+      "execution_status": {
+        "status": "execution_context",
+        "label": "Uitvoeringscontext",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
+        "public_wording_guardrail": "Gebruik als uitvoeringscontext; maak er geen actie, eigenaar of planning van zonder sterker bewijs.",
+        "needs_verification": true
+      },
       "needs_human_review": true
     },
     {
@@ -286,6 +310,16 @@
         },
         "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
         "needs_verification": false
+      },
+      "execution_status": {
+        "status": "review_task",
+        "label": "Uitvoering vraagt review, monitoring of validatie",
+        "execution_need_signals": [
+          "review"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
+        "public_wording_guardrail": "Formuleer als review-, monitorings- of validatietaak; niet als besluit of uitvoeringseigenaarschap.",
+        "needs_verification": true
       },
       "needs_human_review": true
     }

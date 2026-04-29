@@ -341,6 +341,44 @@
         "action",
         "dashboard"
       ],
+      "execution_status_values": [
+        {
+          "status": "operational_requirement",
+          "meaning": "Bron noemt wat ingericht, voorbereid of georganiseerd moet worden."
+        },
+        {
+          "status": "implementation_activity",
+          "meaning": "Bron beschrijft een zichtbare uitvoeringsactiviteit, programma, project of implementatie."
+        },
+        {
+          "status": "decision_question",
+          "meaning": "Uitvoering vraagt een besluit, keuze of prioritering voordat wording sterker kan worden."
+        },
+        {
+          "status": "dependency",
+          "meaning": "Uitvoering hangt af van een randvoorwaarde, aansluiting, andere actor of nog te vervullen voorwaarde."
+        },
+        {
+          "status": "sequencing_need",
+          "meaning": "Bron geeft fasering, volgorde, stap of planning als uitvoeringssignaal."
+        },
+        {
+          "status": "capacity_need",
+          "meaning": "Bron raakt capaciteit, fte, bemensing of uitvoeringskracht."
+        },
+        {
+          "status": "review_task",
+          "meaning": "Bron vraagt review, monitoring, validatie, toetsing, leren of evaluatie."
+        },
+        {
+          "status": "execution_context",
+          "meaning": "Bron is relevant voor uitvoering, maar noemt geen specifieke actie, afhankelijkheid of status."
+        },
+        {
+          "status": "not_execution",
+          "meaning": "Geen zelfstandige uitvoeringsclaim."
+        }
+      ],
       "editorial_rule": "Phrase execution as what must be organized, clarified, prepared, or sequenced, while keeping ownership and decision status explicit.",
       "exclusion_rule": "Do not turn the generator into a policymaker by inventing staffing, internal milestones, or implementation advice."
     }

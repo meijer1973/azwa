@@ -57,6 +57,14 @@
         "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
         "needs_verification": false
       },
+      "execution_status": {
+        "status": "operational_requirement",
+        "label": "Operationele vereiste of inrichting",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
+        "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
+        "needs_verification": true
+      },
       "statement": "Triade, GGZ Centraal, Amethist, Kwintes, het Leger des Heils en GGD Flevoland hebben zich verenigd in het Zorgplatform Flevoland om psychisch kwetsbare inwoners zo gewoon mogelijk in de wijk te laten wonen.",
       "source_document_id": "mun_almere_samenwerkingsprojecten",
       "source_location": {
@@ -139,6 +147,14 @@
           "flevoland": false
         },
         "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
+        "needs_verification": false
+      },
+      "execution_status": {
+        "status": "not_execution",
+        "label": "Geen zelfstandige uitvoeringsclaim",
+        "execution_need_signals": [],
+        "source_execution_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als actie- of implementatieclaim.",
         "needs_verification": false
       },
       "statement": "Het bestuurlijk overleg Wonen & Zorg, met corporaties en zorgpartijen, is opdrachtgever van deze afspraken.",
@@ -225,6 +241,16 @@
         "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
         "needs_verification": false
       },
+      "execution_status": {
+        "status": "review_task",
+        "label": "Uitvoering vraagt review, monitoring of validatie",
+        "execution_need_signals": [
+          "review"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
+        "public_wording_guardrail": "Formuleer als review-, monitorings- of validatietaak; niet als besluit of uitvoeringseigenaarschap.",
+        "needs_verification": true
+      },
       "statement": "Door al doende te leren in de praktijk ontstaat inzicht in mogelijkheden, belemmeringen en eventuele lacunes in de huidige infrastructuur van zorg- en ondersteuning.",
       "source_document_id": "mun_almere_samenwerkingsprojecten",
       "source_location": {
@@ -309,6 +335,17 @@
         "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
         "needs_verification": false
       },
+      "execution_status": {
+        "status": "dependency",
+        "label": "Uitvoering heeft afhankelijkheid of randvoorwaarde",
+        "execution_need_signals": [
+          "implementation_activity",
+          "dependency"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
+        "public_wording_guardrail": "Benoem de afhankelijkheid; los haar niet op zonder bron of validatie.",
+        "needs_verification": true
+      },
       "statement": "Gedurende de pilot maakt een onafhankelijke partij de effecten op drie niveaus inzichtelijk: inwoners, professionals en maatschappelijke kosten.",
       "source_document_id": "mun_almere_samenwerkingsprojecten",
       "source_location": {
@@ -392,6 +429,18 @@
         },
         "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
         "needs_verification": false
+      },
+      "execution_status": {
+        "status": "dependency",
+        "label": "Uitvoering heeft afhankelijkheid of randvoorwaarde",
+        "execution_need_signals": [
+          "operational_requirement",
+          "dependency",
+          "review"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
+        "public_wording_guardrail": "Benoem de afhankelijkheid; los haar niet op zonder bron of validatie.",
+        "needs_verification": true
       },
       "statement": "Op deze manier blijven betrokkenen leren van elkaar en ontstaat meer helderheid over wat nodig is om mensgerichte zorg te organiseren.",
       "source_document_id": "mun_almere_samenwerkingsprojecten",
@@ -479,6 +528,14 @@
           "flevoland": false
         },
         "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
+        "needs_verification": false
+      },
+      "execution_status": {
+        "status": "operational_requirement",
+        "label": "Operationele vereiste of inrichting",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
+        "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
         "needs_verification": false
       },
       "statement": "Ook lokale ervaringsdeskundigen, zorg- en welzijnsorganisaties en medewerkers van de gemeente zijn betrokken.",
@@ -570,6 +627,14 @@
         "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
         "needs_verification": false
       },
+      "execution_status": {
+        "status": "operational_requirement",
+        "label": "Operationele vereiste of inrichting",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
+        "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
+        "needs_verification": false
+      },
       "statement": "De gemeente Almere, corporaties en zorgaanbieders zetten zich hier samen voor in.",
       "source_document_id": "mun_almere_samenwerkingsprojecten",
       "source_location": {
@@ -652,6 +717,16 @@
           "flevoland": false
         },
         "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
+        "needs_verification": false
+      },
+      "execution_status": {
+        "status": "implementation_activity",
+        "label": "Uitvoeringsactiviteit zichtbaar",
+        "execution_need_signals": [
+          "implementation_activity"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
+        "public_wording_guardrail": "Beschrijf alleen de activiteit die de bron noemt; voeg geen eigenaar, bereik of vervolgplanning toe.",
         "needs_verification": false
       },
       "statement": "Voor deze inwoners hebben de genoemde partijen samen de pilot Samen sterker in de wijk ontwikkeld.",

@@ -123,6 +123,18 @@ ACCEPTED_LOCALITY_STATUSES = {
     "no_locality_signal",
 }
 
+ACCEPTED_EXECUTION_STATUSES = {
+    "operational_requirement",
+    "implementation_activity",
+    "decision_question",
+    "dependency",
+    "sequencing_need",
+    "capacity_need",
+    "review_task",
+    "execution_context",
+    "not_execution",
+}
+
 
 def load_json(path: Path) -> dict | list:
     return json.loads(path.read_text(encoding="utf-8"))
@@ -575,6 +587,11 @@ def check_claim_payloads(
             for claim in claims
             if (claim.get("locality_status") or {}).get("status") not in ACCEPTED_LOCALITY_STATUSES
         ]
+        missing_execution_status = [
+            claim
+            for claim in claims
+            if (claim.get("execution_status") or {}).get("status") not in ACCEPTED_EXECUTION_STATUSES
+        ]
         lower_authority_norm_claims = [
             claim
             for claim in claims
@@ -639,6 +656,36 @@ def check_claim_payloads(
             claim
             for claim in claims
             if (claim.get("locality_status") or {}).get("status") == "regional_split_context"
+        ]
+        execution_decision_claims = [
+            claim
+            for claim in claims
+            if (claim.get("execution_status") or {}).get("status") == "decision_question"
+        ]
+        execution_dependency_claims = [
+            claim
+            for claim in claims
+            if (claim.get("execution_status") or {}).get("status") == "dependency"
+        ]
+        execution_capacity_claims = [
+            claim
+            for claim in claims
+            if (claim.get("execution_status") or {}).get("status") == "capacity_need"
+        ]
+        execution_sequencing_claims = [
+            claim
+            for claim in claims
+            if (claim.get("execution_status") or {}).get("status") == "sequencing_need"
+        ]
+        execution_review_claims = [
+            claim
+            for claim in claims
+            if (claim.get("execution_status") or {}).get("status") == "review_task"
+        ]
+        execution_context_claims = [
+            claim
+            for claim in claims
+            if (claim.get("execution_status") or {}).get("status") == "execution_context"
         ]
 
         if missing_norm_status:
@@ -709,6 +756,20 @@ def check_claim_payloads(
                 document_id=document_id,
                 source_paths=[relative_path(claim_path)],
                 related_ids={"sample_claim_ids": [claim["claim_id"] for claim in missing_locality_status[:5]]},
+            )
+
+        if missing_execution_status:
+            add_issue(
+                issues,
+                seen,
+                check_id="claim_payload_integrity",
+                severity="blocking",
+                reason_code="missing_or_invalid_execution_status",
+                summary=f"{document_id} contains claim(s) without a valid Sprint 27.6 execution_status.",
+                recommended_action="Regenerate claims with the execution-status classifier before using action, dependency, or implementation outputs.",
+                document_id=document_id,
+                source_paths=[relative_path(claim_path)],
+                related_ids={"sample_claim_ids": [claim["claim_id"] for claim in missing_execution_status[:5]]},
             )
 
         if contextual_claims:
@@ -925,6 +986,90 @@ def check_claim_payloads(
                 document_id=document_id,
                 source_paths=[relative_path(claim_path)],
                 related_ids={"sample_claim_ids": [claim["claim_id"] for claim in regional_split_claims[:5]]},
+            )
+
+        if execution_decision_claims:
+            add_issue(
+                issues,
+                seen,
+                check_id="claim_payload_integrity",
+                severity="review",
+                reason_code="execution_decision_question",
+                summary=f"{document_id} contains {len(execution_decision_claims)} execution decision-question claim(s).",
+                recommended_action="Keep these as possible decision questions; do not present them as decided actions.",
+                document_id=document_id,
+                source_paths=[relative_path(claim_path)],
+                related_ids={"sample_claim_ids": [claim["claim_id"] for claim in execution_decision_claims[:5]]},
+            )
+
+        if execution_dependency_claims:
+            add_issue(
+                issues,
+                seen,
+                check_id="claim_payload_integrity",
+                severity="review",
+                reason_code="execution_dependency",
+                summary=f"{document_id} contains {len(execution_dependency_claims)} execution dependency claim(s).",
+                recommended_action="Name the dependency and keep it open unless a source shows it has been resolved.",
+                document_id=document_id,
+                source_paths=[relative_path(claim_path)],
+                related_ids={"sample_claim_ids": [claim["claim_id"] for claim in execution_dependency_claims[:5]]},
+            )
+
+        if execution_capacity_claims:
+            add_issue(
+                issues,
+                seen,
+                check_id="claim_payload_integrity",
+                severity="review",
+                reason_code="execution_capacity_need",
+                summary=f"{document_id} contains {len(execution_capacity_claims)} execution capacity claim(s).",
+                recommended_action="Use these as capacity questions; do not infer staffing, fte, or ownership.",
+                document_id=document_id,
+                source_paths=[relative_path(claim_path)],
+                related_ids={"sample_claim_ids": [claim["claim_id"] for claim in execution_capacity_claims[:5]]},
+            )
+
+        if execution_sequencing_claims:
+            add_issue(
+                issues,
+                seen,
+                check_id="claim_payload_integrity",
+                severity="review",
+                reason_code="execution_sequencing_need",
+                summary=f"{document_id} contains {len(execution_sequencing_claims)} execution sequencing claim(s).",
+                recommended_action="Treat these as sequencing or phasing signals; do not turn them into a hard local implementation plan without source evidence.",
+                document_id=document_id,
+                source_paths=[relative_path(claim_path)],
+                related_ids={"sample_claim_ids": [claim["claim_id"] for claim in execution_sequencing_claims[:5]]},
+            )
+
+        if execution_review_claims:
+            add_issue(
+                issues,
+                seen,
+                check_id="claim_payload_integrity",
+                severity="review",
+                reason_code="execution_review_task",
+                summary=f"{document_id} contains {len(execution_review_claims)} execution review or monitoring claim(s).",
+                recommended_action="Keep these as review, monitoring, or validation tasks; do not present them as settled implementation choices.",
+                document_id=document_id,
+                source_paths=[relative_path(claim_path)],
+                related_ids={"sample_claim_ids": [claim["claim_id"] for claim in execution_review_claims[:5]]},
+            )
+
+        if execution_context_claims:
+            add_issue(
+                issues,
+                seen,
+                check_id="claim_payload_integrity",
+                severity="review",
+                reason_code="execution_context_needs_action_split",
+                summary=f"{document_id} contains {len(execution_context_claims)} execution-context claim(s) without a more specific execution status.",
+                recommended_action="Review these before turning context into an action, dependency, owner, sequence, or capacity need.",
+                document_id=document_id,
+                source_paths=[relative_path(claim_path)],
+                related_ids={"sample_claim_ids": [claim["claim_id"] for claim in execution_context_claims[:5]]},
             )
 
         if noisy_claims:

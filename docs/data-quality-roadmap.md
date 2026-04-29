@@ -31,7 +31,7 @@ Gebruik deze roadmap als levend werkdocument. Werk na elke sprint de statusregel
 | 27.3 Geld | completed | `src/build_claims_top5.py`, `data/schemas/claim.schema.json`, `data/extracted/data_quality_audit.json`, `docs/completed-plans/phase27-sprint27.3-geld.md` |
 | 27.4 Governance | completed | `src/build_claims_top5.py`, `data/schemas/claim.schema.json`, `data/extracted/data_quality_audit.json`, `docs/completed-plans/phase27-sprint27.4-governance.md` |
 | 27.5 Locality | completed | `src/build_claims_top5.py`, `data/schemas/claim.schema.json`, `data/extracted/data_quality_audit.json`, `docs/completed-plans/phase27-sprint27.5-locality.md` |
-| 27.6 Execution | open |  |
+| 27.6 Execution | completed | `src/build_claims_top5.py`, `data/schemas/claim.schema.json`, `data/extracted/data_quality_audit.json`, `docs/completed-plans/phase27-sprint27.6-execution.md` |
 | 28.1 Menselijke samenvattingen per update | open |  |
 | 28.2 Bronverwijzing en autoriteitstaal | open |  |
 | 28.3 Detailpagina's voor drill-down | open |  |
@@ -69,6 +69,8 @@ Status op 29 april 2026: Sprint 27.3 is afgerond als geld-splitsing. Elke claim 
 Status op 29 april 2026: Sprint 27.4 is afgerond als governance-splitsing. Elke claim krijgt nu een `governance_status` met onderscheid tussen besluitvorming, coordinatie/regie, aanvraag/indiening, uitvoering, verantwoording/eigenaarschap, goedkeuring/vaststelling, review/monitoring, governancegaten, actorcontext en niet-governance. De audit bevat een `governance_status_audit`, site-evidence draagt governancestatus mee, en QC markeert governancegaten, actorcontext en vage `regio`-actoren als reviewpunt zodat `regio`, `mandaatgemeente`, gemeente, raad, college, zorgverzekeraar en uitvoeringspartners niet door elkaar worden gehaald.
 
 Status op 29 april 2026: Sprint 27.5 is afgerond als locality-splitsing. Elke claim krijgt nu een `locality_status` met onderscheid tussen expliciet Almere, expliciet Flevoland, regionale split-context, algemeen landelijk, landelijk-met-lokale-relevantie, afgeleide lokale relevantie, lokale adoptie-/documentatiegaten, gemeentelijke context en geen locality-signaal. De audit bevat een `locality_status_audit`, site-evidence draagt localitystatus mee, en QC markeert nationale claims met lokale relevantie, afgeleide lokale relevantie, adoptiegaten en regionale split-context als reviewpunt zodat landelijke of regionale lijnen niet als Almeerse vaststelling worden gelezen.
+
+Status op 29 april 2026: Sprint 27.6 is afgerond als execution-splitsing. Elke claim krijgt nu een `execution_status` met onderscheid tussen operationele vereisten, zichtbare uitvoeringsactiviteit, besluitvragen, afhankelijkheden, volgorde-/faseringsvragen, capaciteitsvragen, reviewtaken, uitvoeringscontext en niet-uitvoering. De audit bevat een `execution_status_audit`, site-evidence draagt executionstatus mee, en QC markeert besluitvragen, afhankelijkheden, capaciteit, sequencing, reviewtaken en algemene uitvoeringscontext als reviewpunt zodat mogelijke opvolgacties niet als besloten uitvoering worden gelezen.
 
 Afgeronde aanpak voor Sprint 25.4a:
 
@@ -315,7 +317,7 @@ Status: completed.
 - Houd adoptiegaten zichtbaar: landelijk doel aanwezig, lokale openbare uitwerking nog niet gevonden.
 
 Sprint 27.6: Execution
-Status: open.
+Status: completed.
 
 - Vertaal bronclaims naar mogelijke uitvoeringsvragen zonder beleidsadvies toe te voegen.
 - Splits mogelijke besluitvragen, mogelijke opvolgacties, afhankelijkheden en reviewvragen.

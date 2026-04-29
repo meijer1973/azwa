@@ -882,6 +882,7 @@ def evidence_entries(claim_ids: list[str], claims: dict[str, dict], documents: d
                 "money_status": claim.get("money_status"),
                 "governance_status": claim.get("governance_status"),
                 "locality_status": claim.get("locality_status"),
+                "execution_status": claim.get("execution_status"),
                 "needs_human_review": claim.get("human_review_status") == "needs_human_review",
             }
         )
@@ -1963,6 +1964,7 @@ def build_site_updates_view(documents: dict[str, dict], timeline_register: dict,
                             "money_status": claim.get("money_status"),
                             "governance_status": claim.get("governance_status"),
                             "locality_status": claim.get("locality_status"),
+                            "execution_status": claim.get("execution_status"),
                             "page_labels": [
                                 str(page)
                                 for page in claim.get("source_location", {}).get("pages", [])

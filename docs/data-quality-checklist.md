@@ -137,14 +137,18 @@ Check:
 - What must be organized, clarified, sequenced, or prepared?
 - Does the source actually support that follow-up?
 - Is the wording drifting into invented implementation advice?
+- Which `execution_status` applies: `operational_requirement`, `implementation_activity`, `decision_question`, `dependency`, `sequencing_need`, `capacity_need`, `review_task`, `execution_context`, or `not_execution`?
+- Is the claim an actual source-backed activity, or only a possible decision, dependency, sequence, capacity or review question?
 
 Common quality problems:
 - Generator invents staffing or milestones
 - Site language sounds like a formal instruction instead of a possible follow-up
 - Action pages imply an owner that the source does not explicitly provide
+- Dependencies, capacity needs and sequencing signals are written as if they are already resolved
 
 Editorial rule:
 - Use careful wording like “possible follow-up action” unless the source clearly establishes the action.
+- Treat `decision_question`, `dependency`, `capacity_need`, `sequencing_need`, `review_task` and `execution_context` as review or validation material before turning them into public action language.
 
 ## Review Pass Sequence
 When reviewing a source or page, use this order:

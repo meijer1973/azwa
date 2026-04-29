@@ -223,6 +223,17 @@
         "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
         "needs_verification": false
       },
+      "execution_status": {
+        "status": "review_task",
+        "label": "Uitvoering vraagt review, monitoring of validatie",
+        "execution_need_signals": [
+          "implementation_activity",
+          "review"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
+        "public_wording_guardrail": "Formuleer als review-, monitorings- of validatietaak; niet als besluit of uitvoeringseigenaarschap.",
+        "needs_verification": true
+      },
       "needs_human_review": false
     },
     {
@@ -285,6 +296,18 @@
         "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
         "needs_verification": false
       },
+      "execution_status": {
+        "status": "dependency",
+        "label": "Uitvoering heeft afhankelijkheid of randvoorwaarde",
+        "execution_need_signals": [
+          "implementation_activity",
+          "dependency",
+          "sequencing"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
+        "public_wording_guardrail": "Benoem de afhankelijkheid; los haar niet op zonder bron of validatie.",
+        "needs_verification": true
+      },
       "needs_human_review": false
     },
     {
@@ -344,6 +367,14 @@
         },
         "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
         "needs_verification": false
+      },
+      "execution_status": {
+        "status": "execution_context",
+        "label": "Uitvoeringscontext",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
+        "public_wording_guardrail": "Gebruik als uitvoeringscontext; maak er geen actie, eigenaar of planning van zonder sterker bewijs.",
+        "needs_verification": true
       },
       "needs_human_review": false
     },
@@ -407,6 +438,16 @@
         "public_wording_guardrail": "Gebruik als landelijke context; lokale toepassing vraagt aparte bron of interpretatie.",
         "needs_verification": false
       },
+      "execution_status": {
+        "status": "operational_requirement",
+        "label": "Operationele vereiste of inrichting",
+        "execution_need_signals": [
+          "operational_requirement"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
+        "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
+        "needs_verification": false
+      },
       "needs_human_review": false
     },
     {
@@ -467,6 +508,14 @@
         "public_wording_guardrail": "Gebruik als landelijke context; lokale toepassing vraagt aparte bron of interpretatie.",
         "needs_verification": false
       },
+      "execution_status": {
+        "status": "execution_context",
+        "label": "Uitvoeringscontext",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
+        "public_wording_guardrail": "Gebruik als uitvoeringscontext; maak er geen actie, eigenaar of planning van zonder sterker bewijs.",
+        "needs_verification": true
+      },
       "needs_human_review": false
     },
     {
@@ -526,6 +575,16 @@
         },
         "public_wording_guardrail": "Gebruik als landelijke context; lokale toepassing vraagt aparte bron of interpretatie.",
         "needs_verification": false
+      },
+      "execution_status": {
+        "status": "review_task",
+        "label": "Uitvoering vraagt review, monitoring of validatie",
+        "execution_need_signals": [
+          "review"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
+        "public_wording_guardrail": "Formuleer als review-, monitorings- of validatietaak; niet als besluit of uitvoeringseigenaarschap.",
+        "needs_verification": true
       },
       "needs_human_review": false
     }

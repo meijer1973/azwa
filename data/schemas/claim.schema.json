@@ -13,6 +13,7 @@
     "money_status",
     "governance_status",
     "locality_status",
+    "execution_status",
     "statement",
     "source_document_id",
     "source_location",
@@ -308,6 +309,65 @@
               "type": "boolean"
             }
           }
+        },
+        "public_wording_guardrail": {
+          "type": "string"
+        },
+        "needs_verification": {
+          "type": "boolean"
+        }
+      }
+    },
+    "execution_status": {
+      "type": "object",
+      "required": [
+        "status",
+        "label",
+        "execution_need_signals",
+        "source_execution_anchor",
+        "public_wording_guardrail",
+        "needs_verification"
+      ],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "operational_requirement",
+            "implementation_activity",
+            "decision_question",
+            "dependency",
+            "sequencing_need",
+            "capacity_need",
+            "review_task",
+            "execution_context",
+            "not_execution"
+          ]
+        },
+        "label": {
+          "type": "string"
+        },
+        "execution_need_signals": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "operational_requirement",
+              "implementation_activity",
+              "decision_question",
+              "dependency",
+              "sequencing",
+              "capacity",
+              "review"
+            ]
+          }
+        },
+        "source_execution_anchor": {
+          "type": "string",
+          "enum": [
+            "explicit_execution_signal",
+            "topic_context",
+            "none"
+          ]
         },
         "public_wording_guardrail": {
           "type": "string"

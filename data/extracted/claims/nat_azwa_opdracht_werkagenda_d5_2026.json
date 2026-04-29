@@ -57,6 +57,17 @@
         "public_wording_guardrail": "Gebruik als landelijke context; lokale toepassing vraagt aparte bron of interpretatie.",
         "needs_verification": false
       },
+      "execution_status": {
+        "status": "sequencing_need",
+        "label": "Uitvoering vraagt fasering of volgorde",
+        "execution_need_signals": [
+          "implementation_activity",
+          "sequencing"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
+        "public_wording_guardrail": "Formuleer als fasering of volgordevraag; maak er geen harde planning van zonder bron.",
+        "needs_verification": true
+      },
       "statement": "Basisfunctionaliteit Landelijk: (door)ontwikkeling handreikingen Regionaal: doorontwikkeling of start uitvoering Betreft: laagdrempelige steunpunten, sociaal verwijzen, valpreventie, volwassenen met overgewicht en obesitas, kansrijke start, integrale gezinspoli, nu niet zwanger .",
       "source_document_id": "nat_azwa_opdracht_werkagenda_d5_2026",
       "source_location": {
@@ -141,6 +152,16 @@
           "flevoland": false
         },
         "public_wording_guardrail": "Gebruik als landelijke context; lokale toepassing vraagt aparte bron of interpretatie.",
+        "needs_verification": false
+      },
+      "execution_status": {
+        "status": "operational_requirement",
+        "label": "Operationele vereiste of inrichting",
+        "execution_need_signals": [
+          "operational_requirement"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
+        "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
         "needs_verification": false
       },
       "statement": "Samenhang met andere basisfunctionaliteiten/aanpakken: mentale gezondheidsnetwerken (inclusief verkennend gesprek), ketenaanpak overgewicht en obesitas volwassenen",
@@ -231,6 +252,17 @@
         "public_wording_guardrail": "Formuleer als landelijke lijn met relevantie voor Almere; niet als lokale vaststelling.",
         "needs_verification": true
       },
+      "execution_status": {
+        "status": "sequencing_need",
+        "label": "Uitvoering vraagt fasering of volgorde",
+        "execution_need_signals": [
+          "implementation_activity",
+          "sequencing"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
+        "public_wording_guardrail": "Formuleer als fasering of volgordevraag; maak er geen harde planning van zonder bron.",
+        "needs_verification": true
+      },
       "statement": "Basisfunctionaliteit Landelijk: (door)ontwikkeling handreikingen Regionaal: doorontwikkeling of start uitvoering Betreft: laagdrempelige steunpunten, sociaal verwijzen, valpreventie, volwassenen met overgewicht en obesitas, kansrijke start, integrale gezinspoli, nu niet zwanger .",
       "source_document_id": "nat_azwa_opdracht_werkagenda_d5_2026",
       "source_location": {
@@ -315,6 +347,14 @@
           "flevoland": false
         },
         "public_wording_guardrail": "Formuleer als landelijke lijn met relevantie voor Almere; niet als lokale vaststelling.",
+        "needs_verification": true
+      },
+      "execution_status": {
+        "status": "operational_requirement",
+        "label": "Operationele vereiste of inrichting",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
+        "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
         "needs_verification": true
       },
       "statement": "7 Mentale gezondheid Laagdrempelige steunpunten Doelgroep: iedere inwoner die baat heeft bij laagdrempelige ondersteuning rondom zelfregie en herstel, met bijzondere aandacht voor mensen met ernstige of langdurige psychische kwetsbaarheid (EPA) en/of sociaal-emotionele kwetsbaarheid en hun naasten.",
@@ -412,6 +452,17 @@
         "public_wording_guardrail": "Benoem welke regionale schaal bedoeld is; gebruik niet alleen 'de regio'.",
         "needs_verification": true
       },
+      "execution_status": {
+        "status": "sequencing_need",
+        "label": "Uitvoering vraagt fasering of volgorde",
+        "execution_need_signals": [
+          "implementation_activity",
+          "sequencing"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
+        "public_wording_guardrail": "Formuleer als fasering of volgordevraag; maak er geen harde planning van zonder bron.",
+        "needs_verification": true
+      },
       "statement": "Komen tot een werkagenda De IZA-regiotafel10 is de centrale plek waar alle doelen en opgaven van de werkagenda integraal worden afgewogen. De mandaatgemeente en preferente zorgverzekeraar hebben – als financiers van het AZWA D5 – regie op de totstandkoming van de werkagenda. De gemeentelijke middelen betreffen zowel lokale als regionale middelen. Daarom moet de werkagenda vastgesteld worden door alle colleges van B&W in de regio nadat deze binnen de IZA- governance is vastgesteld. De deadline van 15 november betekent in de praktijk dus dat de werkagenda half september klaar moet zijn. Wat te verwachten de komende tijd? We werken toe van de start van de uitvoering van de aanvullende ...",
       "source_document_id": "nat_azwa_opdracht_werkagenda_d5_2026",
       "source_location": {
@@ -502,6 +553,19 @@
         },
         "public_wording_guardrail": "Gebruik als landelijke context; lokale toepassing vraagt aparte bron of interpretatie.",
         "needs_verification": false
+      },
+      "execution_status": {
+        "status": "decision_question",
+        "label": "Uitvoering vraagt besluit of keuze",
+        "execution_need_signals": [
+          "implementation_activity",
+          "decision_question",
+          "dependency",
+          "sequencing"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
+        "public_wording_guardrail": "Formuleer als besluit- of keuzevraag; schrijf niet dat uitvoering al besloten is.",
+        "needs_verification": true
       },
       "statement": "Kansrijke Start Doelgroep: (Toekomstige) ouders in een kwetsbare situatie in de eerste 1000 dagen van het kind (van drie maanden vóór de bevruchting tot ongeveer 2 jaar). Benodigd landelijk dekkend aanbod: • Elke gemeente en regio heeft een coalitie Kansrijke Start, bestaande uit partijen uit medisch, sociaal, publiek en informeel domein. • Op basis van de situatie in de regio en gemeente maken partijen onderbouwde keuzes welk hulp- en ondersteuningsaanbod en welke interventies nodig zijn en kopen deze in bij de betrokken organisaties. • Samenwerkingsafspraken op uitvoerings-, organisatie- en bestuurlijk niveau, zowel lokaal als regionaal. Belangrijkste inhoudelijke ...",
       "source_document_id": "nat_azwa_opdracht_werkagenda_d5_2026",
@@ -594,6 +658,17 @@
           "flevoland": false
         },
         "public_wording_guardrail": "Benoem welke regionale schaal bedoeld is; gebruik niet alleen 'de regio'.",
+        "needs_verification": true
+      },
+      "execution_status": {
+        "status": "dependency",
+        "label": "Uitvoering heeft afhankelijkheid of randvoorwaarde",
+        "execution_need_signals": [
+          "operational_requirement",
+          "dependency"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
+        "public_wording_guardrail": "Benoem de afhankelijkheid; los haar niet op zonder bron of validatie.",
         "needs_verification": true
       },
       "statement": "1 Een mandaatgemeente is de gemeente die namens alle gemeenten in een IZA-regio de regionale middelen aanvraagt en verantwoordt, en hierover afspraken kan maken met andere partijen. 2 Handreiking Regionale Preventie Infrastructuur, maart 2026. 3 Afhankelijk van de uitwerking van de basisfunctionaliteiten op de ont wikkelagenda is het wellicht nog wel nodig om nieuwe NZa prestaties op te stellen.",
@@ -689,6 +764,17 @@
         "public_wording_guardrail": "Benoem welke regionale schaal bedoeld is; gebruik niet alleen 'de regio'.",
         "needs_verification": true
       },
+      "execution_status": {
+        "status": "dependency",
+        "label": "Uitvoering heeft afhankelijkheid of randvoorwaarde",
+        "execution_need_signals": [
+          "operational_requirement",
+          "dependency"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
+        "public_wording_guardrail": "Benoem de afhankelijkheid; los haar niet op zonder bron of validatie.",
+        "needs_verification": true
+      },
       "statement": "1 Een mandaatgemeente is de gemeente die namens alle gemeenten in een IZA-regio de regionale middelen aanvraagt en verantwoordt, en hierover afspraken kan maken met andere partijen. 2 Handreiking Regionale Preventie Infrastructuur, maart 2026. 3 Afhankelijk van de uitwerking van de basisfunctionaliteiten op de ont wikkelagenda is het wellicht nog wel nodig om nieuwe NZa prestaties op te stellen.",
       "source_document_id": "nat_azwa_opdracht_werkagenda_d5_2026",
       "source_location": {
@@ -777,6 +863,14 @@
         "public_wording_guardrail": "Gebruik als landelijke context; lokale toepassing vraagt aparte bron of interpretatie.",
         "needs_verification": false
       },
+      "execution_status": {
+        "status": "not_execution",
+        "label": "Geen zelfstandige uitvoeringsclaim",
+        "execution_need_signals": [],
+        "source_execution_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als actie- of implementatieclaim.",
+        "needs_verification": false
+      },
       "statement": "De regioscan zal eind 2027 en eind 2028 herhaald worden.",
       "source_document_id": "nat_azwa_opdracht_werkagenda_d5_2026",
       "source_location": {
@@ -863,6 +957,17 @@
         "public_wording_guardrail": "Gebruik als landelijke context; lokale toepassing vraagt aparte bron of interpretatie.",
         "needs_verification": false
       },
+      "execution_status": {
+        "status": "sequencing_need",
+        "label": "Uitvoering vraagt fasering of volgorde",
+        "execution_need_signals": [
+          "implementation_activity",
+          "sequencing"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
+        "public_wording_guardrail": "Formuleer als fasering of volgordevraag; maak er geen harde planning van zonder bron.",
+        "needs_verification": true
+      },
       "statement": "We werken toe van de start van de uitvoering van de aanvullende afspraken in 2027 naar structurele borging in 2030.",
       "source_document_id": "nat_azwa_opdracht_werkagenda_d5_2026",
       "source_location": {
@@ -948,6 +1053,18 @@
         },
         "public_wording_guardrail": "Gebruik als landelijke context; lokale toepassing vraagt aparte bron of interpretatie.",
         "needs_verification": false
+      },
+      "execution_status": {
+        "status": "dependency",
+        "label": "Uitvoering heeft afhankelijkheid of randvoorwaarde",
+        "execution_need_signals": [
+          "implementation_activity",
+          "dependency",
+          "review"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
+        "public_wording_guardrail": "Benoem de afhankelijkheid; los haar niet op zonder bron of validatie.",
+        "needs_verification": true
       },
       "statement": "Daarvoor is monitoring en evaluatie nodig, zowel van de implementatie als van de resultaten en effecten.",
       "source_document_id": "nat_azwa_opdracht_werkagenda_d5_2026",
@@ -1037,6 +1154,19 @@
           "flevoland": false
         },
         "public_wording_guardrail": "Benoem welke regionale schaal bedoeld is; gebruik niet alleen 'de regio'.",
+        "needs_verification": true
+      },
+      "execution_status": {
+        "status": "dependency",
+        "label": "Uitvoering heeft afhankelijkheid of randvoorwaarde",
+        "execution_need_signals": [
+          "implementation_activity",
+          "dependency",
+          "sequencing",
+          "review"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
+        "public_wording_guardrail": "Benoem de afhankelijkheid; los haar niet op zonder bron of validatie.",
         "needs_verification": true
       },
       "statement": "Daarnaast zijn in de werkagenda afspraken nodig over hoe partijen elkaar aanspreken als ze plannen onvoldoende uitvoeren.7 Lerende cyclus Zowel regionaal als landelijk is de bedoeling dat we leren van het AZWA, een transformatie (verder) inzetten naar anders werken en kennis delen.",
@@ -1132,6 +1262,14 @@
         "public_wording_guardrail": "Benoem welke regionale schaal bedoeld is; gebruik niet alleen 'de regio'.",
         "needs_verification": true
       },
+      "execution_status": {
+        "status": "operational_requirement",
+        "label": "Operationele vereiste of inrichting",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
+        "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
+        "needs_verification": false
+      },
       "statement": "R plannen indienen bi orgver ekeraar erkagenda vastgesteld aan tafel en verst rd naar colleges gemeenten Regionale werkagenda s vastgesteld en verst rd naar elderheid over ontwikkelagenda deel tart itvoering van de werkagenda elderheid over proces voor beproevende regio s",
       "source_document_id": "nat_azwa_opdracht_werkagenda_d5_2026",
       "source_location": {
@@ -1225,6 +1363,17 @@
           "flevoland": false
         },
         "public_wording_guardrail": "Benoem welke regionale schaal bedoeld is; gebruik niet alleen 'de regio'.",
+        "needs_verification": true
+      },
+      "execution_status": {
+        "status": "sequencing_need",
+        "label": "Uitvoering vraagt fasering of volgorde",
+        "execution_need_signals": [
+          "implementation_activity",
+          "sequencing"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
+        "public_wording_guardrail": "Formuleer als fasering of volgordevraag; maak er geen harde planning van zonder bron.",
         "needs_verification": true
       },
       "statement": "Komen tot een werkagenda De IZA-regiotafel10 is de centrale plek waar alle doelen en opgaven van de werkagenda integraal worden afgewogen. De mandaatgemeente en preferente zorgverzekeraar hebben – als financiers van het AZWA D5 – regie op de totstandkoming van de werkagenda. De gemeentelijke middelen betreffen zowel lokale als regionale middelen. Daarom moet de werkagenda vastgesteld worden door alle colleges van B&W in de regio nadat deze binnen de IZA- governance is vastgesteld. De deadline van 15 november betekent in de praktijk dus dat de werkagenda half september klaar moet zijn. Wat te verwachten de komende tijd? We werken toe van de start van de uitvoering van de aanvullende ...",

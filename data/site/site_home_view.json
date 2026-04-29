@@ -219,6 +219,14 @@
               "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
               "needs_verification": false
             },
+            "execution_status": {
+              "status": "execution_context",
+              "label": "Uitvoeringscontext",
+              "execution_need_signals": [],
+              "source_execution_anchor": "topic_context",
+              "public_wording_guardrail": "Gebruik als uitvoeringscontext; maak er geen actie, eigenaar of planning van zonder sterker bewijs.",
+              "needs_verification": true
+            },
             "page_labels": [
               "5"
             ],
@@ -283,6 +291,19 @@
               "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
               "needs_verification": false
             },
+            "execution_status": {
+              "status": "capacity_need",
+              "label": "Uitvoering vraagt capaciteit of bemensing",
+              "execution_need_signals": [
+                "operational_requirement",
+                "implementation_activity",
+                "sequencing",
+                "capacity"
+              ],
+              "source_execution_anchor": "explicit_execution_signal",
+              "public_wording_guardrail": "Formuleer als capaciteitsvraag; vul geen fte, team of eigenaar in zonder bron.",
+              "needs_verification": true
+            },
             "page_labels": [
               "1"
             ],
@@ -343,6 +364,17 @@
                 "flevoland": false
               },
               "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
+              "needs_verification": false
+            },
+            "execution_status": {
+              "status": "implementation_activity",
+              "label": "Uitvoeringsactiviteit zichtbaar",
+              "execution_need_signals": [
+                "operational_requirement",
+                "implementation_activity"
+              ],
+              "source_execution_anchor": "explicit_execution_signal",
+              "public_wording_guardrail": "Beschrijf alleen de activiteit die de bron noemt; voeg geen eigenaar, bereik of vervolgplanning toe.",
               "needs_verification": false
             },
             "page_labels": [
@@ -407,6 +439,14 @@
               "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
               "needs_verification": false
             },
+            "execution_status": {
+              "status": "not_execution",
+              "label": "Geen zelfstandige uitvoeringsclaim",
+              "execution_need_signals": [],
+              "source_execution_anchor": "none",
+              "public_wording_guardrail": "Niet gebruiken als actie- of implementatieclaim.",
+              "needs_verification": false
+            },
             "page_labels": [
               "5"
             ],
@@ -463,6 +503,16 @@
                 "flevoland": false
               },
               "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
+              "needs_verification": false
+            },
+            "execution_status": {
+              "status": "operational_requirement",
+              "label": "Operationele vereiste of inrichting",
+              "execution_need_signals": [
+                "operational_requirement"
+              ],
+              "source_execution_anchor": "explicit_execution_signal",
+              "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
               "needs_verification": false
             },
             "page_labels": [
@@ -523,6 +573,14 @@
               "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
               "needs_verification": false
             },
+            "execution_status": {
+              "status": "execution_context",
+              "label": "Uitvoeringscontext",
+              "execution_need_signals": [],
+              "source_execution_anchor": "topic_context",
+              "public_wording_guardrail": "Gebruik als uitvoeringscontext; maak er geen actie, eigenaar of planning van zonder sterker bewijs.",
+              "needs_verification": true
+            },
             "page_labels": [
               "5"
             ],
@@ -579,6 +637,16 @@
                 "flevoland": false
               },
               "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
+              "needs_verification": false
+            },
+            "execution_status": {
+              "status": "operational_requirement",
+              "label": "Operationele vereiste of inrichting",
+              "execution_need_signals": [
+                "operational_requirement"
+              ],
+              "source_execution_anchor": "explicit_execution_signal",
+              "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
               "needs_verification": false
             },
             "page_labels": [
@@ -644,6 +712,19 @@
               "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
               "needs_verification": false
             },
+            "execution_status": {
+              "status": "dependency",
+              "label": "Uitvoering heeft afhankelijkheid of randvoorwaarde",
+              "execution_need_signals": [
+                "operational_requirement",
+                "implementation_activity",
+                "dependency",
+                "sequencing"
+              ],
+              "source_execution_anchor": "explicit_execution_signal",
+              "public_wording_guardrail": "Benoem de afhankelijkheid; los haar niet op zonder bron of validatie.",
+              "needs_verification": true
+            },
             "page_labels": [
               "6"
             ],
@@ -707,6 +788,16 @@
               "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
               "needs_verification": false
             },
+            "execution_status": {
+              "status": "operational_requirement",
+              "label": "Operationele vereiste of inrichting",
+              "execution_need_signals": [
+                "operational_requirement"
+              ],
+              "source_execution_anchor": "explicit_execution_signal",
+              "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
+              "needs_verification": false
+            },
             "page_labels": [
               "10"
             ],
@@ -767,6 +858,18 @@
               "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
               "needs_verification": false
             },
+            "execution_status": {
+              "status": "sequencing_need",
+              "label": "Uitvoering vraagt fasering of volgorde",
+              "execution_need_signals": [
+                "operational_requirement",
+                "implementation_activity",
+                "sequencing"
+              ],
+              "source_execution_anchor": "explicit_execution_signal",
+              "public_wording_guardrail": "Formuleer als fasering of volgordevraag; maak er geen harde planning van zonder bron.",
+              "needs_verification": true
+            },
             "page_labels": [
               "6"
             ],
@@ -824,6 +927,14 @@
               },
               "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
               "needs_verification": false
+            },
+            "execution_status": {
+              "status": "execution_context",
+              "label": "Uitvoeringscontext",
+              "execution_need_signals": [],
+              "source_execution_anchor": "topic_context",
+              "public_wording_guardrail": "Gebruik als uitvoeringscontext; maak er geen actie, eigenaar of planning van zonder sterker bewijs.",
+              "needs_verification": true
             },
             "page_labels": [
               "6"
@@ -893,6 +1004,14 @@
               "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
               "needs_verification": false
             },
+            "execution_status": {
+              "status": "execution_context",
+              "label": "Uitvoeringscontext",
+              "execution_need_signals": [],
+              "source_execution_anchor": "topic_context",
+              "public_wording_guardrail": "Gebruik als uitvoeringscontext; maak er geen actie, eigenaar of planning van zonder sterker bewijs.",
+              "needs_verification": true
+            },
             "page_labels": [
               "5"
             ],
@@ -957,6 +1076,19 @@
               "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
               "needs_verification": false
             },
+            "execution_status": {
+              "status": "capacity_need",
+              "label": "Uitvoering vraagt capaciteit of bemensing",
+              "execution_need_signals": [
+                "operational_requirement",
+                "implementation_activity",
+                "sequencing",
+                "capacity"
+              ],
+              "source_execution_anchor": "explicit_execution_signal",
+              "public_wording_guardrail": "Formuleer als capaciteitsvraag; vul geen fte, team of eigenaar in zonder bron.",
+              "needs_verification": true
+            },
             "page_labels": [
               "1"
             ],
@@ -1017,6 +1149,17 @@
                 "flevoland": false
               },
               "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
+              "needs_verification": false
+            },
+            "execution_status": {
+              "status": "implementation_activity",
+              "label": "Uitvoeringsactiviteit zichtbaar",
+              "execution_need_signals": [
+                "operational_requirement",
+                "implementation_activity"
+              ],
+              "source_execution_anchor": "explicit_execution_signal",
+              "public_wording_guardrail": "Beschrijf alleen de activiteit die de bron noemt; voeg geen eigenaar, bereik of vervolgplanning toe.",
               "needs_verification": false
             },
             "page_labels": [
@@ -1081,6 +1224,14 @@
               "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
               "needs_verification": false
             },
+            "execution_status": {
+              "status": "not_execution",
+              "label": "Geen zelfstandige uitvoeringsclaim",
+              "execution_need_signals": [],
+              "source_execution_anchor": "none",
+              "public_wording_guardrail": "Niet gebruiken als actie- of implementatieclaim.",
+              "needs_verification": false
+            },
             "page_labels": [
               "5"
             ],
@@ -1137,6 +1288,16 @@
                 "flevoland": false
               },
               "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
+              "needs_verification": false
+            },
+            "execution_status": {
+              "status": "operational_requirement",
+              "label": "Operationele vereiste of inrichting",
+              "execution_need_signals": [
+                "operational_requirement"
+              ],
+              "source_execution_anchor": "explicit_execution_signal",
+              "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
               "needs_verification": false
             },
             "page_labels": [
@@ -1197,6 +1358,14 @@
               "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
               "needs_verification": false
             },
+            "execution_status": {
+              "status": "execution_context",
+              "label": "Uitvoeringscontext",
+              "execution_need_signals": [],
+              "source_execution_anchor": "topic_context",
+              "public_wording_guardrail": "Gebruik als uitvoeringscontext; maak er geen actie, eigenaar of planning van zonder sterker bewijs.",
+              "needs_verification": true
+            },
             "page_labels": [
               "5"
             ],
@@ -1253,6 +1422,16 @@
                 "flevoland": false
               },
               "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
+              "needs_verification": false
+            },
+            "execution_status": {
+              "status": "operational_requirement",
+              "label": "Operationele vereiste of inrichting",
+              "execution_need_signals": [
+                "operational_requirement"
+              ],
+              "source_execution_anchor": "explicit_execution_signal",
+              "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
               "needs_verification": false
             },
             "page_labels": [
@@ -1318,6 +1497,19 @@
               "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
               "needs_verification": false
             },
+            "execution_status": {
+              "status": "dependency",
+              "label": "Uitvoering heeft afhankelijkheid of randvoorwaarde",
+              "execution_need_signals": [
+                "operational_requirement",
+                "implementation_activity",
+                "dependency",
+                "sequencing"
+              ],
+              "source_execution_anchor": "explicit_execution_signal",
+              "public_wording_guardrail": "Benoem de afhankelijkheid; los haar niet op zonder bron of validatie.",
+              "needs_verification": true
+            },
             "page_labels": [
               "6"
             ],
@@ -1381,6 +1573,16 @@
               "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
               "needs_verification": false
             },
+            "execution_status": {
+              "status": "operational_requirement",
+              "label": "Operationele vereiste of inrichting",
+              "execution_need_signals": [
+                "operational_requirement"
+              ],
+              "source_execution_anchor": "explicit_execution_signal",
+              "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
+              "needs_verification": false
+            },
             "page_labels": [
               "10"
             ],
@@ -1441,6 +1643,18 @@
               "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
               "needs_verification": false
             },
+            "execution_status": {
+              "status": "sequencing_need",
+              "label": "Uitvoering vraagt fasering of volgorde",
+              "execution_need_signals": [
+                "operational_requirement",
+                "implementation_activity",
+                "sequencing"
+              ],
+              "source_execution_anchor": "explicit_execution_signal",
+              "public_wording_guardrail": "Formuleer als fasering of volgordevraag; maak er geen harde planning van zonder bron.",
+              "needs_verification": true
+            },
             "page_labels": [
               "6"
             ],
@@ -1498,6 +1712,14 @@
               },
               "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
               "needs_verification": false
+            },
+            "execution_status": {
+              "status": "execution_context",
+              "label": "Uitvoeringscontext",
+              "execution_need_signals": [],
+              "source_execution_anchor": "topic_context",
+              "public_wording_guardrail": "Gebruik als uitvoeringscontext; maak er geen actie, eigenaar of planning van zonder sterker bewijs.",
+              "needs_verification": true
             },
             "page_labels": [
               "6"
@@ -1567,6 +1789,16 @@
               "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
               "needs_verification": false
             },
+            "execution_status": {
+              "status": "operational_requirement",
+              "label": "Operationele vereiste of inrichting",
+              "execution_need_signals": [
+                "operational_requirement"
+              ],
+              "source_execution_anchor": "explicit_execution_signal",
+              "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
+              "needs_verification": true
+            },
             "page_labels": [
               "1"
             ],
@@ -1625,6 +1857,16 @@
               "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
               "needs_verification": false
             },
+            "execution_status": {
+              "status": "operational_requirement",
+              "label": "Operationele vereiste of inrichting",
+              "execution_need_signals": [
+                "operational_requirement"
+              ],
+              "source_execution_anchor": "explicit_execution_signal",
+              "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
+              "needs_verification": false
+            },
             "page_labels": [
               "1"
             ],
@@ -1681,6 +1923,16 @@
                 "flevoland": false
               },
               "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
+              "needs_verification": false
+            },
+            "execution_status": {
+              "status": "operational_requirement",
+              "label": "Operationele vereiste of inrichting",
+              "execution_need_signals": [
+                "operational_requirement"
+              ],
+              "source_execution_anchor": "explicit_execution_signal",
+              "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
               "needs_verification": false
             },
             "page_labels": [
@@ -1756,6 +2008,16 @@
               "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
               "needs_verification": false
             },
+            "execution_status": {
+              "status": "operational_requirement",
+              "label": "Operationele vereiste of inrichting",
+              "execution_need_signals": [
+                "operational_requirement"
+              ],
+              "source_execution_anchor": "explicit_execution_signal",
+              "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
+              "needs_verification": true
+            },
             "page_labels": [
               "1"
             ],
@@ -1812,6 +2074,14 @@
                 "flevoland": false
               },
               "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
+              "needs_verification": false
+            },
+            "execution_status": {
+              "status": "operational_requirement",
+              "label": "Operationele vereiste of inrichting",
+              "execution_need_signals": [],
+              "source_execution_anchor": "topic_context",
+              "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
               "needs_verification": false
             },
             "page_labels": [
@@ -1875,6 +2145,16 @@
                 "flevoland": false
               },
               "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
+              "needs_verification": false
+            },
+            "execution_status": {
+              "status": "operational_requirement",
+              "label": "Operationele vereiste of inrichting",
+              "execution_need_signals": [
+                "operational_requirement"
+              ],
+              "source_execution_anchor": "explicit_execution_signal",
+              "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
               "needs_verification": false
             },
             "page_labels": [
@@ -1947,6 +2227,14 @@
               "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
               "needs_verification": false
             },
+            "execution_status": {
+              "status": "operational_requirement",
+              "label": "Operationele vereiste of inrichting",
+              "execution_need_signals": [],
+              "source_execution_anchor": "topic_context",
+              "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
+              "needs_verification": true
+            },
             "page_labels": [],
             "section_labels": [
               "Samenwerkingsprojecten / Samen sterker in de wijk"
@@ -2001,6 +2289,14 @@
                 "flevoland": false
               },
               "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
+              "needs_verification": false
+            },
+            "execution_status": {
+              "status": "not_execution",
+              "label": "Geen zelfstandige uitvoeringsclaim",
+              "execution_need_signals": [],
+              "source_execution_anchor": "none",
+              "public_wording_guardrail": "Niet gebruiken als actie- of implementatieclaim.",
               "needs_verification": false
             },
             "page_labels": [],
@@ -2059,6 +2355,16 @@
               "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
               "needs_verification": false
             },
+            "execution_status": {
+              "status": "review_task",
+              "label": "Uitvoering vraagt review, monitoring of validatie",
+              "execution_need_signals": [
+                "review"
+              ],
+              "source_execution_anchor": "explicit_execution_signal",
+              "public_wording_guardrail": "Formuleer als review-, monitorings- of validatietaak; niet als besluit of uitvoeringseigenaarschap.",
+              "needs_verification": true
+            },
             "page_labels": [],
             "section_labels": [
               "Samenwerkingsprojecten / Samen sterker in de wijk / Al doende leren"
@@ -2115,6 +2421,17 @@
               "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
               "needs_verification": false
             },
+            "execution_status": {
+              "status": "dependency",
+              "label": "Uitvoering heeft afhankelijkheid of randvoorwaarde",
+              "execution_need_signals": [
+                "implementation_activity",
+                "dependency"
+              ],
+              "source_execution_anchor": "explicit_execution_signal",
+              "public_wording_guardrail": "Benoem de afhankelijkheid; los haar niet op zonder bron of validatie.",
+              "needs_verification": true
+            },
             "page_labels": [],
             "section_labels": [
               "Samenwerkingsprojecten / Samen sterker in de wijk / Netwerkteams"
@@ -2170,6 +2487,18 @@
               },
               "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
               "needs_verification": false
+            },
+            "execution_status": {
+              "status": "dependency",
+              "label": "Uitvoering heeft afhankelijkheid of randvoorwaarde",
+              "execution_need_signals": [
+                "operational_requirement",
+                "dependency",
+                "review"
+              ],
+              "source_execution_anchor": "explicit_execution_signal",
+              "public_wording_guardrail": "Benoem de afhankelijkheid; los haar niet op zonder bron of validatie.",
+              "needs_verification": true
             },
             "page_labels": [],
             "section_labels": [
@@ -2229,6 +2558,14 @@
                 "flevoland": false
               },
               "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
+              "needs_verification": false
+            },
+            "execution_status": {
+              "status": "operational_requirement",
+              "label": "Operationele vereiste of inrichting",
+              "execution_need_signals": [],
+              "source_execution_anchor": "topic_context",
+              "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
               "needs_verification": false
             },
             "page_labels": [],
@@ -2292,6 +2629,14 @@
               "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
               "needs_verification": false
             },
+            "execution_status": {
+              "status": "operational_requirement",
+              "label": "Operationele vereiste of inrichting",
+              "execution_need_signals": [],
+              "source_execution_anchor": "topic_context",
+              "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
+              "needs_verification": false
+            },
             "page_labels": [],
             "section_labels": [
               "Samenwerkingsprojecten / Samenwerkingsafspraken Thuis in de wijk"
@@ -2346,6 +2691,16 @@
                 "flevoland": false
               },
               "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
+              "needs_verification": false
+            },
+            "execution_status": {
+              "status": "implementation_activity",
+              "label": "Uitvoeringsactiviteit zichtbaar",
+              "execution_need_signals": [
+                "implementation_activity"
+              ],
+              "source_execution_anchor": "explicit_execution_signal",
+              "public_wording_guardrail": "Beschrijf alleen de activiteit die de bron noemt; voeg geen eigenaar, bereik of vervolgplanning toe.",
               "needs_verification": false
             },
             "page_labels": [],
@@ -2414,6 +2769,16 @@
               "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
               "needs_verification": false
             },
+            "execution_status": {
+              "status": "review_task",
+              "label": "Uitvoering vraagt review, monitoring of validatie",
+              "execution_need_signals": [
+                "review"
+              ],
+              "source_execution_anchor": "explicit_execution_signal",
+              "public_wording_guardrail": "Formuleer als review-, monitorings- of validatietaak; niet als besluit of uitvoeringseigenaarschap.",
+              "needs_verification": true
+            },
             "page_labels": [],
             "section_labels": [
               "Daar bouwen wij samen aan / Waar bouwen we aan?"
@@ -2468,6 +2833,14 @@
                 "flevoland": false
               },
               "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
+              "needs_verification": false
+            },
+            "execution_status": {
+              "status": "operational_requirement",
+              "label": "Operationele vereiste of inrichting",
+              "execution_need_signals": [],
+              "source_execution_anchor": "topic_context",
+              "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
               "needs_verification": false
             },
             "page_labels": [],
@@ -2526,6 +2899,14 @@
               "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
               "needs_verification": false
             },
+            "execution_status": {
+              "status": "operational_requirement",
+              "label": "Operationele vereiste of inrichting",
+              "execution_need_signals": [],
+              "source_execution_anchor": "topic_context",
+              "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
+              "needs_verification": false
+            },
             "page_labels": [],
             "section_labels": [
               "Daar bouwen wij samen aan / Blijf op de hoogte"
@@ -2580,6 +2961,14 @@
                 "flevoland": false
               },
               "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
+              "needs_verification": false
+            },
+            "execution_status": {
+              "status": "operational_requirement",
+              "label": "Operationele vereiste of inrichting",
+              "execution_need_signals": [],
+              "source_execution_anchor": "topic_context",
+              "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
               "needs_verification": false
             },
             "page_labels": [],
@@ -2819,6 +3208,17 @@
             "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
             "needs_verification": false
           },
+          "execution_status": {
+            "status": "review_task",
+            "label": "Uitvoering vraagt review, monitoring of validatie",
+            "execution_need_signals": [
+              "implementation_activity",
+              "review"
+            ],
+            "source_execution_anchor": "explicit_execution_signal",
+            "public_wording_guardrail": "Formuleer als review-, monitorings- of validatietaak; niet als besluit of uitvoeringseigenaarschap.",
+            "needs_verification": true
+          },
           "needs_human_review": false
         },
         {
@@ -2881,6 +3281,18 @@
             "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
             "needs_verification": false
           },
+          "execution_status": {
+            "status": "dependency",
+            "label": "Uitvoering heeft afhankelijkheid of randvoorwaarde",
+            "execution_need_signals": [
+              "implementation_activity",
+              "dependency",
+              "sequencing"
+            ],
+            "source_execution_anchor": "explicit_execution_signal",
+            "public_wording_guardrail": "Benoem de afhankelijkheid; los haar niet op zonder bron of validatie.",
+            "needs_verification": true
+          },
           "needs_human_review": false
         },
         {
@@ -2940,6 +3352,14 @@
             },
             "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
             "needs_verification": false
+          },
+          "execution_status": {
+            "status": "execution_context",
+            "label": "Uitvoeringscontext",
+            "execution_need_signals": [],
+            "source_execution_anchor": "topic_context",
+            "public_wording_guardrail": "Gebruik als uitvoeringscontext; maak er geen actie, eigenaar of planning van zonder sterker bewijs.",
+            "needs_verification": true
           },
           "needs_human_review": false
         },
@@ -3003,6 +3423,16 @@
             "public_wording_guardrail": "Gebruik als landelijke context; lokale toepassing vraagt aparte bron of interpretatie.",
             "needs_verification": false
           },
+          "execution_status": {
+            "status": "operational_requirement",
+            "label": "Operationele vereiste of inrichting",
+            "execution_need_signals": [
+              "operational_requirement"
+            ],
+            "source_execution_anchor": "explicit_execution_signal",
+            "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
+            "needs_verification": false
+          },
           "needs_human_review": false
         },
         {
@@ -3063,6 +3493,14 @@
             "public_wording_guardrail": "Gebruik als landelijke context; lokale toepassing vraagt aparte bron of interpretatie.",
             "needs_verification": false
           },
+          "execution_status": {
+            "status": "execution_context",
+            "label": "Uitvoeringscontext",
+            "execution_need_signals": [],
+            "source_execution_anchor": "topic_context",
+            "public_wording_guardrail": "Gebruik als uitvoeringscontext; maak er geen actie, eigenaar of planning van zonder sterker bewijs.",
+            "needs_verification": true
+          },
           "needs_human_review": false
         },
         {
@@ -3122,6 +3560,16 @@
             },
             "public_wording_guardrail": "Gebruik als landelijke context; lokale toepassing vraagt aparte bron of interpretatie.",
             "needs_verification": false
+          },
+          "execution_status": {
+            "status": "review_task",
+            "label": "Uitvoering vraagt review, monitoring of validatie",
+            "execution_need_signals": [
+              "review"
+            ],
+            "source_execution_anchor": "explicit_execution_signal",
+            "public_wording_guardrail": "Formuleer als review-, monitorings- of validatietaak; niet als besluit of uitvoeringseigenaarschap.",
+            "needs_verification": true
           },
           "needs_human_review": false
         }
@@ -3597,6 +4045,14 @@
             "public_wording_guardrail": "Formuleer als Flevolandse of GGD/Flevolandse bronlijn; niet automatisch als Almeerse keuze.",
             "needs_verification": false
           },
+          "execution_status": {
+            "status": "execution_context",
+            "label": "Uitvoeringscontext",
+            "execution_need_signals": [],
+            "source_execution_anchor": "topic_context",
+            "public_wording_guardrail": "Gebruik als uitvoeringscontext; maak er geen actie, eigenaar of planning van zonder sterker bewijs.",
+            "needs_verification": true
+          },
           "needs_human_review": false
         },
         {
@@ -3655,6 +4111,14 @@
               "flevoland": true
             },
             "public_wording_guardrail": "Formuleer als Flevolandse of GGD/Flevolandse bronlijn; niet automatisch als Almeerse keuze.",
+            "needs_verification": false
+          },
+          "execution_status": {
+            "status": "not_execution",
+            "label": "Geen zelfstandige uitvoeringsclaim",
+            "execution_need_signals": [],
+            "source_execution_anchor": "none",
+            "public_wording_guardrail": "Niet gebruiken als actie- of implementatieclaim.",
             "needs_verification": false
           },
           "needs_human_review": false
@@ -3717,6 +4181,16 @@
             "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
             "needs_verification": false
           },
+          "execution_status": {
+            "status": "operational_requirement",
+            "label": "Operationele vereiste of inrichting",
+            "execution_need_signals": [
+              "operational_requirement"
+            ],
+            "source_execution_anchor": "explicit_execution_signal",
+            "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
+            "needs_verification": false
+          },
           "needs_human_review": false
         },
         {
@@ -3777,6 +4251,14 @@
               "flevoland": false
             },
             "public_wording_guardrail": "Gebruik als landelijke context; lokale toepassing vraagt aparte bron of interpretatie.",
+            "needs_verification": false
+          },
+          "execution_status": {
+            "status": "operational_requirement",
+            "label": "Operationele vereiste of inrichting",
+            "execution_need_signals": [],
+            "source_execution_anchor": "topic_context",
+            "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
             "needs_verification": false
           },
           "needs_human_review": false
@@ -3843,6 +4325,17 @@
             "public_wording_guardrail": "Gebruik als landelijke context; lokale toepassing vraagt aparte bron of interpretatie.",
             "needs_verification": false
           },
+          "execution_status": {
+            "status": "dependency",
+            "label": "Uitvoering heeft afhankelijkheid of randvoorwaarde",
+            "execution_need_signals": [
+              "operational_requirement",
+              "dependency"
+            ],
+            "source_execution_anchor": "explicit_execution_signal",
+            "public_wording_guardrail": "Benoem de afhankelijkheid; los haar niet op zonder bron of validatie.",
+            "needs_verification": true
+          },
           "needs_human_review": false
         },
         {
@@ -3901,6 +4394,17 @@
               "flevoland": false
             },
             "public_wording_guardrail": "Benoem welke regionale schaal bedoeld is; gebruik niet alleen 'de regio'.",
+            "needs_verification": true
+          },
+          "execution_status": {
+            "status": "dependency",
+            "label": "Uitvoering heeft afhankelijkheid of randvoorwaarde",
+            "execution_need_signals": [
+              "implementation_activity",
+              "dependency"
+            ],
+            "source_execution_anchor": "explicit_execution_signal",
+            "public_wording_guardrail": "Benoem de afhankelijkheid; los haar niet op zonder bron of validatie.",
             "needs_verification": true
           },
           "needs_human_review": true
@@ -4301,6 +4805,14 @@
             "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
             "needs_verification": false
           },
+          "execution_status": {
+            "status": "not_execution",
+            "label": "Geen zelfstandige uitvoeringsclaim",
+            "execution_need_signals": [],
+            "source_execution_anchor": "none",
+            "public_wording_guardrail": "Niet gebruiken als actie- of implementatieclaim.",
+            "needs_verification": false
+          },
           "needs_human_review": false
         },
         {
@@ -4361,6 +4873,16 @@
               "flevoland": false
             },
             "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
+            "needs_verification": false
+          },
+          "execution_status": {
+            "status": "implementation_activity",
+            "label": "Uitvoeringsactiviteit zichtbaar",
+            "execution_need_signals": [
+              "implementation_activity"
+            ],
+            "source_execution_anchor": "explicit_execution_signal",
+            "public_wording_guardrail": "Beschrijf alleen de activiteit die de bron noemt; voeg geen eigenaar, bereik of vervolgplanning toe.",
             "needs_verification": false
           },
           "needs_human_review": false
@@ -4427,6 +4949,14 @@
             "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
             "needs_verification": false
           },
+          "execution_status": {
+            "status": "not_execution",
+            "label": "Geen zelfstandige uitvoeringsclaim",
+            "execution_need_signals": [],
+            "source_execution_anchor": "none",
+            "public_wording_guardrail": "Niet gebruiken als actie- of implementatieclaim.",
+            "needs_verification": false
+          },
           "needs_human_review": false
         },
         {
@@ -4485,6 +5015,14 @@
               "flevoland": true
             },
             "public_wording_guardrail": "Formuleer als Flevolandse of GGD/Flevolandse bronlijn; niet automatisch als Almeerse keuze.",
+            "needs_verification": false
+          },
+          "execution_status": {
+            "status": "not_execution",
+            "label": "Geen zelfstandige uitvoeringsclaim",
+            "execution_need_signals": [],
+            "source_execution_anchor": "none",
+            "public_wording_guardrail": "Niet gebruiken als actie- of implementatieclaim.",
             "needs_verification": false
           },
           "needs_human_review": false
@@ -4547,6 +5085,14 @@
               "flevoland": false
             },
             "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
+            "needs_verification": false
+          },
+          "execution_status": {
+            "status": "not_execution",
+            "label": "Geen zelfstandige uitvoeringsclaim",
+            "execution_need_signals": [],
+            "source_execution_anchor": "none",
+            "public_wording_guardrail": "Niet gebruiken als actie- of implementatieclaim.",
             "needs_verification": false
           },
           "needs_human_review": false
@@ -4612,6 +5158,18 @@
             },
             "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
             "needs_verification": false
+          },
+          "execution_status": {
+            "status": "sequencing_need",
+            "label": "Uitvoering vraagt fasering of volgorde",
+            "execution_need_signals": [
+              "operational_requirement",
+              "implementation_activity",
+              "sequencing"
+            ],
+            "source_execution_anchor": "explicit_execution_signal",
+            "public_wording_guardrail": "Formuleer als fasering of volgordevraag; maak er geen harde planning van zonder bron.",
+            "needs_verification": true
           },
           "needs_human_review": false
         }
@@ -4955,6 +5513,17 @@
             "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
             "needs_verification": false
           },
+          "execution_status": {
+            "status": "review_task",
+            "label": "Uitvoering vraagt review, monitoring of validatie",
+            "execution_need_signals": [
+              "implementation_activity",
+              "review"
+            ],
+            "source_execution_anchor": "explicit_execution_signal",
+            "public_wording_guardrail": "Formuleer als review-, monitorings- of validatietaak; niet als besluit of uitvoeringseigenaarschap.",
+            "needs_verification": true
+          },
           "needs_human_review": false
         },
         {
@@ -5017,6 +5586,18 @@
             "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
             "needs_verification": false
           },
+          "execution_status": {
+            "status": "dependency",
+            "label": "Uitvoering heeft afhankelijkheid of randvoorwaarde",
+            "execution_need_signals": [
+              "implementation_activity",
+              "dependency",
+              "sequencing"
+            ],
+            "source_execution_anchor": "explicit_execution_signal",
+            "public_wording_guardrail": "Benoem de afhankelijkheid; los haar niet op zonder bron of validatie.",
+            "needs_verification": true
+          },
           "needs_human_review": false
         },
         {
@@ -5076,6 +5657,14 @@
             },
             "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
             "needs_verification": false
+          },
+          "execution_status": {
+            "status": "execution_context",
+            "label": "Uitvoeringscontext",
+            "execution_need_signals": [],
+            "source_execution_anchor": "topic_context",
+            "public_wording_guardrail": "Gebruik als uitvoeringscontext; maak er geen actie, eigenaar of planning van zonder sterker bewijs.",
+            "needs_verification": true
           },
           "needs_human_review": false
         },
@@ -5139,6 +5728,16 @@
             "public_wording_guardrail": "Gebruik als landelijke context; lokale toepassing vraagt aparte bron of interpretatie.",
             "needs_verification": false
           },
+          "execution_status": {
+            "status": "operational_requirement",
+            "label": "Operationele vereiste of inrichting",
+            "execution_need_signals": [
+              "operational_requirement"
+            ],
+            "source_execution_anchor": "explicit_execution_signal",
+            "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
+            "needs_verification": false
+          },
           "needs_human_review": false
         },
         {
@@ -5199,6 +5798,14 @@
             "public_wording_guardrail": "Gebruik als landelijke context; lokale toepassing vraagt aparte bron of interpretatie.",
             "needs_verification": false
           },
+          "execution_status": {
+            "status": "execution_context",
+            "label": "Uitvoeringscontext",
+            "execution_need_signals": [],
+            "source_execution_anchor": "topic_context",
+            "public_wording_guardrail": "Gebruik als uitvoeringscontext; maak er geen actie, eigenaar of planning van zonder sterker bewijs.",
+            "needs_verification": true
+          },
           "needs_human_review": false
         },
         {
@@ -5258,6 +5865,16 @@
             },
             "public_wording_guardrail": "Gebruik als landelijke context; lokale toepassing vraagt aparte bron of interpretatie.",
             "needs_verification": false
+          },
+          "execution_status": {
+            "status": "review_task",
+            "label": "Uitvoering vraagt review, monitoring of validatie",
+            "execution_need_signals": [
+              "review"
+            ],
+            "source_execution_anchor": "explicit_execution_signal",
+            "public_wording_guardrail": "Formuleer als review-, monitorings- of validatietaak; niet als besluit of uitvoeringseigenaarschap.",
+            "needs_verification": true
           },
           "needs_human_review": false
         }
@@ -5455,6 +6072,14 @@
             "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
             "needs_verification": false
           },
+          "execution_status": {
+            "status": "not_execution",
+            "label": "Geen zelfstandige uitvoeringsclaim",
+            "execution_need_signals": [],
+            "source_execution_anchor": "none",
+            "public_wording_guardrail": "Niet gebruiken als actie- of implementatieclaim.",
+            "needs_verification": false
+          },
           "needs_human_review": false
         },
         {
@@ -5515,6 +6140,16 @@
               "flevoland": false
             },
             "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
+            "needs_verification": false
+          },
+          "execution_status": {
+            "status": "implementation_activity",
+            "label": "Uitvoeringsactiviteit zichtbaar",
+            "execution_need_signals": [
+              "implementation_activity"
+            ],
+            "source_execution_anchor": "explicit_execution_signal",
+            "public_wording_guardrail": "Beschrijf alleen de activiteit die de bron noemt; voeg geen eigenaar, bereik of vervolgplanning toe.",
             "needs_verification": false
           },
           "needs_human_review": false
@@ -5581,6 +6216,14 @@
             "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
             "needs_verification": false
           },
+          "execution_status": {
+            "status": "not_execution",
+            "label": "Geen zelfstandige uitvoeringsclaim",
+            "execution_need_signals": [],
+            "source_execution_anchor": "none",
+            "public_wording_guardrail": "Niet gebruiken als actie- of implementatieclaim.",
+            "needs_verification": false
+          },
           "needs_human_review": false
         },
         {
@@ -5639,6 +6282,14 @@
               "flevoland": true
             },
             "public_wording_guardrail": "Formuleer als Flevolandse of GGD/Flevolandse bronlijn; niet automatisch als Almeerse keuze.",
+            "needs_verification": false
+          },
+          "execution_status": {
+            "status": "not_execution",
+            "label": "Geen zelfstandige uitvoeringsclaim",
+            "execution_need_signals": [],
+            "source_execution_anchor": "none",
+            "public_wording_guardrail": "Niet gebruiken als actie- of implementatieclaim.",
             "needs_verification": false
           },
           "needs_human_review": false
@@ -5701,6 +6352,14 @@
               "flevoland": false
             },
             "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
+            "needs_verification": false
+          },
+          "execution_status": {
+            "status": "not_execution",
+            "label": "Geen zelfstandige uitvoeringsclaim",
+            "execution_need_signals": [],
+            "source_execution_anchor": "none",
+            "public_wording_guardrail": "Niet gebruiken als actie- of implementatieclaim.",
             "needs_verification": false
           },
           "needs_human_review": false
@@ -5766,6 +6425,18 @@
             },
             "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
             "needs_verification": false
+          },
+          "execution_status": {
+            "status": "sequencing_need",
+            "label": "Uitvoering vraagt fasering of volgorde",
+            "execution_need_signals": [
+              "operational_requirement",
+              "implementation_activity",
+              "sequencing"
+            ],
+            "source_execution_anchor": "explicit_execution_signal",
+            "public_wording_guardrail": "Formuleer als fasering of volgordevraag; maak er geen harde planning van zonder bron.",
+            "needs_verification": true
           },
           "needs_human_review": false
         }
@@ -5949,6 +6620,17 @@
             "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
             "needs_verification": false
           },
+          "execution_status": {
+            "status": "review_task",
+            "label": "Uitvoering vraagt review, monitoring of validatie",
+            "execution_need_signals": [
+              "implementation_activity",
+              "review"
+            ],
+            "source_execution_anchor": "explicit_execution_signal",
+            "public_wording_guardrail": "Formuleer als review-, monitorings- of validatietaak; niet als besluit of uitvoeringseigenaarschap.",
+            "needs_verification": true
+          },
           "needs_human_review": false
         },
         {
@@ -6014,6 +6696,17 @@
             "public_wording_guardrail": "Gebruik als landelijke context; lokale toepassing vraagt aparte bron of interpretatie.",
             "needs_verification": false
           },
+          "execution_status": {
+            "status": "dependency",
+            "label": "Uitvoering heeft afhankelijkheid of randvoorwaarde",
+            "execution_need_signals": [
+              "dependency",
+              "review"
+            ],
+            "source_execution_anchor": "explicit_execution_signal",
+            "public_wording_guardrail": "Benoem de afhankelijkheid; los haar niet op zonder bron of validatie.",
+            "needs_verification": true
+          },
           "needs_human_review": false
         },
         {
@@ -6073,6 +6766,16 @@
             },
             "public_wording_guardrail": "Formuleer als Flevolandse of GGD/Flevolandse bronlijn; niet automatisch als Almeerse keuze.",
             "needs_verification": false
+          },
+          "execution_status": {
+            "status": "review_task",
+            "label": "Uitvoering vraagt review, monitoring of validatie",
+            "execution_need_signals": [
+              "review"
+            ],
+            "source_execution_anchor": "explicit_execution_signal",
+            "public_wording_guardrail": "Formuleer als review-, monitorings- of validatietaak; niet als besluit of uitvoeringseigenaarschap.",
+            "needs_verification": true
           },
           "needs_human_review": false
         },
@@ -6134,6 +6837,14 @@
             "public_wording_guardrail": "Formuleer als Flevolandse of GGD/Flevolandse bronlijn; niet automatisch als Almeerse keuze.",
             "needs_verification": false
           },
+          "execution_status": {
+            "status": "execution_context",
+            "label": "Uitvoeringscontext",
+            "execution_need_signals": [],
+            "source_execution_anchor": "topic_context",
+            "public_wording_guardrail": "Gebruik als uitvoeringscontext; maak er geen actie, eigenaar of planning van zonder sterker bewijs.",
+            "needs_verification": true
+          },
           "needs_human_review": false
         },
         {
@@ -6192,6 +6903,14 @@
               "flevoland": true
             },
             "public_wording_guardrail": "Formuleer als Flevolandse of GGD/Flevolandse bronlijn; niet automatisch als Almeerse keuze.",
+            "needs_verification": false
+          },
+          "execution_status": {
+            "status": "not_execution",
+            "label": "Geen zelfstandige uitvoeringsclaim",
+            "execution_need_signals": [],
+            "source_execution_anchor": "none",
+            "public_wording_guardrail": "Niet gebruiken als actie- of implementatieclaim.",
             "needs_verification": false
           },
           "needs_human_review": false
@@ -6255,6 +6974,18 @@
             },
             "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
             "needs_verification": false
+          },
+          "execution_status": {
+            "status": "dependency",
+            "label": "Uitvoering heeft afhankelijkheid of randvoorwaarde",
+            "execution_need_signals": [
+              "implementation_activity",
+              "dependency",
+              "sequencing"
+            ],
+            "source_execution_anchor": "explicit_execution_signal",
+            "public_wording_guardrail": "Benoem de afhankelijkheid; los haar niet op zonder bron of validatie.",
+            "needs_verification": true
           },
           "needs_human_review": false
         }
@@ -6347,7 +7078,7 @@
     },
     {
       "title": "Menselijke duiding nodig",
-      "metric": 266,
+      "metric": 394,
       "summary": "Een deel van de bronbasis vraagt nog om menselijke duiding over autoriteit, lokale overname of begripsafbakening.",
       "page_url": "/almere/#menselijke-duiding"
     }

@@ -55,6 +55,14 @@
         "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
         "needs_verification": false
       },
+      "execution_status": {
+        "status": "execution_context",
+        "label": "Uitvoeringscontext",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
+        "public_wording_guardrail": "Gebruik als uitvoeringscontext; maak er geen actie, eigenaar of planning van zonder sterker bewijs.",
+        "needs_verification": true
+      },
       "statement": "The plan explicitly aims for better cooperation between informal care, the social domain, and the medical domain, supported by initiatives such as Voorzorgcirkels, Welzijn op Recept, and Samen Sterker in de Wijk.",
       "source_document_id": "mun_almere_pga_transformatieplan",
       "source_location": {
@@ -146,6 +154,16 @@
         "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
         "needs_verification": false
       },
+      "execution_status": {
+        "status": "capacity_need",
+        "label": "Uitvoering vraagt capaciteit of bemensing",
+        "execution_need_signals": [
+          "capacity"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
+        "public_wording_guardrail": "Formuleer als capaciteitsvraag; vul geen fte, team of eigenaar in zonder bron.",
+        "needs_verification": true
+      },
       "statement": "The local shift is framed as moving from care afterwards toward health first and the right help in the right place.",
       "source_document_id": "mun_almere_pga_transformatieplan",
       "source_location": {
@@ -231,6 +249,16 @@
         },
         "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
         "needs_verification": false
+      },
+      "execution_status": {
+        "status": "review_task",
+        "label": "Uitvoering vraagt review, monitoring of validatie",
+        "execution_need_signals": [
+          "review"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
+        "public_wording_guardrail": "Formuleer als review-, monitorings- of validatietaak; niet als besluit of uitvoeringseigenaarschap.",
+        "needs_verification": true
       },
       "statement": "The local plan names RTP Almere, the RSO, data infrastructure, and Monitoring@home as part of the operational infrastructure needed for care closer to home.",
       "source_document_id": "mun_almere_pga_transformatieplan",
@@ -323,6 +351,14 @@
         "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
         "needs_verification": false
       },
+      "execution_status": {
+        "status": "execution_context",
+        "label": "Uitvoeringscontext",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
+        "public_wording_guardrail": "Gebruik als uitvoeringscontext; maak er geen actie, eigenaar of planning van zonder sterker bewijs.",
+        "needs_verification": true
+      },
       "statement": "The plan also makes a current shared information picture for professionals part of the local enabling structure.",
       "source_document_id": "mun_almere_pga_transformatieplan",
       "source_location": {
@@ -405,6 +441,16 @@
           "flevoland": false
         },
         "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
+        "needs_verification": false
+      },
+      "execution_status": {
+        "status": "operational_requirement",
+        "label": "Operationele vereiste of inrichting",
+        "execution_need_signals": [
+          "operational_requirement"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
+        "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
         "needs_verification": false
       },
       "statement": "The governance base is a broad local coalition of Almere municipality, wijkteams, care and welfare organizations, and preventive and public-health institutions.",
@@ -491,6 +537,14 @@
         "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
         "needs_verification": false
       },
+      "execution_status": {
+        "status": "not_execution",
+        "label": "Geen zelfstandige uitvoeringsclaim",
+        "execution_need_signals": [],
+        "source_execution_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als actie- of implementatieclaim.",
+        "needs_verification": true
+      },
       "statement": "The plan does not set a detailed funding framework, but it does describe a target future balance in which care expenditures and social-domain expenditures are better aligned.",
       "source_document_id": "mun_almere_pga_transformatieplan",
       "source_location": {
@@ -574,6 +628,14 @@
         },
         "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
         "needs_verification": false
+      },
+      "execution_status": {
+        "status": "execution_context",
+        "label": "Uitvoeringscontext",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
+        "public_wording_guardrail": "Gebruik als uitvoeringscontext; maak er geen actie, eigenaar of planning van zonder sterker bewijs.",
+        "needs_verification": true
       },
       "statement": "The local impact horizon is stated explicitly as 2029.",
       "source_document_id": "mun_almere_pga_transformatieplan",
@@ -659,6 +721,16 @@
         "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
         "needs_verification": false
       },
+      "execution_status": {
+        "status": "implementation_activity",
+        "label": "Uitvoeringsactiviteit zichtbaar",
+        "execution_need_signals": [
+          "implementation_activity"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
+        "public_wording_guardrail": "Beschrijf alleen de activiteit die de bron noemt; voeg geen eigenaar, bereik of vervolgplanning toe.",
+        "needs_verification": false
+      },
       "statement": "The plan describes itself as a transformation rather than a standalone project, which signals an ongoing implementation status.",
       "source_document_id": "mun_almere_pga_transformatieplan",
       "source_location": {
@@ -742,6 +814,16 @@
         },
         "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
         "needs_verification": false
+      },
+      "execution_status": {
+        "status": "review_task",
+        "label": "Uitvoering vraagt review, monitoring of validatie",
+        "execution_need_signals": [
+          "review"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
+        "public_wording_guardrail": "Formuleer als review-, monitorings- of validatietaak; niet als besluit of uitvoeringseigenaarschap.",
+        "needs_verification": true
       },
       "statement": "Monitoring and learning are explicit parts of the local model, including 'Samen leren' and 'Monitoren'.",
       "source_document_id": "mun_almere_pga_transformatieplan",
@@ -836,6 +918,16 @@
         "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
         "needs_verification": false
       },
+      "execution_status": {
+        "status": "review_task",
+        "label": "Uitvoering vraagt review, monitoring of validatie",
+        "execution_need_signals": [
+          "review"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
+        "public_wording_guardrail": "Formuleer als review-, monitorings- of validatietaak; niet als besluit of uitvoeringseigenaarschap.",
+        "needs_verification": true
+      },
       "statement": "The plan also ties those learning and monitoring efforts to the concrete impact goals it wants to reach by 2029.",
       "source_document_id": "mun_almere_pga_transformatieplan",
       "source_location": {
@@ -919,6 +1011,14 @@
         },
         "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
         "needs_verification": false
+      },
+      "execution_status": {
+        "status": "execution_context",
+        "label": "Uitvoeringscontext",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
+        "public_wording_guardrail": "Gebruik als uitvoeringscontext; maak er geen actie, eigenaar of planning van zonder sterker bewijs.",
+        "needs_verification": true
       },
       "statement": "The plan translates the local agenda into named Almere initiatives such as Voorzorgcirkels, Welzijn op Recept, Leefstijlloket, Samen Sterker in de Wijk, and Opgroeien in een Kansrijke Omgeving.",
       "source_document_id": "mun_almere_pga_transformatieplan",
@@ -1004,6 +1104,14 @@
         },
         "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
         "needs_verification": false
+      },
+      "execution_status": {
+        "status": "execution_context",
+        "label": "Uitvoeringscontext",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
+        "public_wording_guardrail": "Gebruik als uitvoeringscontext; maak er geen actie, eigenaar of planning van zonder sterker bewijs.",
+        "needs_verification": true
       },
       "statement": "The local implementation remains anchored in Almere-specific pressures such as population growth, labour-market pressure, and the health of Almeerders.",
       "source_document_id": "mun_almere_pga_transformatieplan",

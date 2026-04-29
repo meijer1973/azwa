@@ -2962,9 +2962,25 @@ def build_site_manifest(
     )
     pages.extend(
         {
+            "page_type": "decision_evidence",
+            "title": f'Onderbouwing: {item["title"]}',
+            "url": item["page_url"].rstrip("/") + "/onderbouwing/",
+        }
+        for item in decisions
+    )
+    pages.extend(
+        {
             "page_type": "action_detail",
             "title": item["title"],
             "url": item["page_url"],
+        }
+        for item in actions
+    )
+    pages.extend(
+        {
+            "page_type": "action_evidence",
+            "title": f'Onderbouwing: {item["title"]}',
+            "url": item["page_url"].rstrip("/") + "/onderbouwing/",
         }
         for item in actions
     )

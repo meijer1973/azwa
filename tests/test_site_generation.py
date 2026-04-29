@@ -208,17 +208,30 @@ class SiteGenerationTests(unittest.TestCase):
 
     def test_decision_cards_link_review_tags_to_detail_sections(self) -> None:
         html = INDEX_PATH.read_text(encoding="utf-8")
-        self.assertIn('#menselijke-duiding">Menselijke duiding nodig:', html)
+        self.assertIn('/onderbouwing/index.html#menselijke-duiding">Menselijke duiding nodig:', html)
 
         detail_pages = list(DECISION_DIR.glob("*.json"))
         self.assertTrue(detail_pages)
-        detail_html = (DIST_DIR / "decisions" / "mogelijke-besluitvraag-regiemodel-voor-d6-en-lokale-teams" / "index.html").read_text(encoding="utf-8")
-        self.assertIn('id="menselijke-duiding"', detail_html)
-        self.assertIn("Bronnen die extra duiding vragen", detail_html)
-        self.assertIn("Aanbevolen vervolgstap", detail_html)
-        self.assertIn("Bronhouder: Zorgzaam Flevoland / Flever", detail_html)
-        self.assertIn("Bronstatus: Lagere-autoriteitssignaal", detail_html)
-        self.assertIn("Veilige formulering: Altijd expliciet toeschrijven", detail_html)
+        detail_path = DIST_DIR / "decisions" / "mogelijke-besluitvraag-regiemodel-voor-d6-en-lokale-teams" / "index.html"
+        evidence_path = detail_path.parent / "onderbouwing" / "index.html"
+        detail_html = detail_path.read_text(encoding="utf-8")
+        evidence_html = evidence_path.read_text(encoding="utf-8")
+
+        self.assertIn('id="onderbouwing"', detail_html)
+        self.assertIn("Onderbouwing en drill-down", detail_html)
+        self.assertIn('href="onderbouwing/index.html#bronbasis"', detail_html)
+        self.assertIn('href="onderbouwing/index.html#menselijke-duiding"', detail_html)
+        self.assertIn("Bekijk volledige beleidsbasis", detail_html)
+        self.assertNotIn("Bronnen die extra duiding vragen", detail_html)
+
+        self.assertIn('id="menselijke-duiding"', evidence_html)
+        self.assertIn('id="bronbasis"', evidence_html)
+        self.assertIn("Terug naar hoofdtekst", evidence_html)
+        self.assertIn("Bronnen die extra duiding vragen", evidence_html)
+        self.assertIn("Aanbevolen vervolgstap", evidence_html)
+        self.assertIn("Bronhouder: Zorgzaam Flevoland / Flever", evidence_html)
+        self.assertIn("Bronstatus: Lagere-autoriteitssignaal", evidence_html)
+        self.assertIn("Veilige formulering: Altijd expliciet toeschrijven", evidence_html)
 
     def test_logical_clickability_regression(self) -> None:
         home_html = INDEX_PATH.read_text(encoding="utf-8")
@@ -420,6 +433,8 @@ class SiteGenerationTests(unittest.TestCase):
         self.assertNotIn("D6 regional coordination", titles)
         self.assertIn("Updates", titles)
         self.assertIn("Controlelijst: VNG-financieringsset van 22 april 2026 verwerkt", titles)
+        self.assertIn("Onderbouwing: Mogelijke besluitvraag: regiemodel voor D6 en lokale teams", titles)
+        self.assertIn("Onderbouwing: Mogelijke opvolgactie: monitoringsaanpak voor Almere afstemmen", titles)
         self.assertIn("overige D6-lijn", titles)
         self.assertIn("regionale coördinatie voor D6", titles)
 
@@ -464,6 +479,8 @@ class SiteGenerationTests(unittest.TestCase):
         self.assertIn("updates", page_types)
         self.assertIn("update", page_types)
         self.assertIn("update_claims", page_types)
+        self.assertIn("decision_evidence", page_types)
+        self.assertIn("action_evidence", page_types)
         self.assertIn("reference_topic", page_types)
         self.assertIn("source", page_types)
 

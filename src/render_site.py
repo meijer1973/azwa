@@ -332,6 +332,140 @@ def render_evidence_refs(current_route: str, evidence_refs: list[dict]) -> str:
     return '<ul class="stack-list">' + "".join(items) + "</ul>"
 
 
+def evidence_page_url(model: dict) -> str:
+    return model["page_url"].rstrip("/") + "/onderbouwing/"
+
+
+def review_issue_count(model: dict) -> int:
+    review = model.get("review_details") or {}
+    return len(review.get("issues", [])) + len(review.get("source_signals", []))
+
+
+def render_evidence_drilldown_summary(current_route: str, model: dict) -> str:
+    evidence_url = evidence_page_url(model)
+    boxes = [
+        {
+            "metric": len(model.get("supporting_evidence", [])),
+            "title": "Bronverwijzingen",
+            "summary": "Open de volledige bronbasis met bronhouder, status en veilige formulering.",
+            "page_url": evidence_url + "#bronbasis",
+        }
+    ]
+    if model.get("policy_basis"):
+        boxes.append(
+            {
+                "metric": len(model["policy_basis"]),
+                "title": "Beleidsbasis",
+                "summary": "Open de volledige lijst met beleidsbronnen achter deze hoofdtekst.",
+                "page_url": evidence_url + "#beleidsbasis",
+            }
+        )
+    review_count = review_issue_count(model)
+    if review_count:
+        boxes.append(
+            {
+                "metric": review_count,
+                "title": "Reviewpunten",
+                "summary": "Open de volledige menselijke-duidingpunten en bronnen die extra duiding vragen.",
+                "page_url": evidence_url + "#menselijke-duiding",
+            }
+        )
+    return (
+        '<section class="section" id="onderbouwing"><h2>Onderbouwing en drill-down</h2>'
+        + '<div class="notice">De hoofdtekst blijft kort. De volledige bronbasis en eventuele reviewdetails staan op een aparte onderbouwingspagina.</div>'
+        + render_summary_boxes(current_route, boxes)
+        + "</section>"
+    )
+
+
+def render_policy_basis_summary(current_route: str, model: dict) -> str:
+    policy_basis = model.get("policy_basis", [])
+    if not policy_basis:
+        return '<div class="empty-state">Geen beleidsbasis beschikbaar.</div>'
+    visible = policy_basis[:3]
+    more_count = len(policy_basis) - len(visible)
+    return (
+        render_document_refs(current_route, visible)
+        + (
+            render_link_pills(
+                current_route,
+                [
+                    {
+                        "label": f"Bekijk volledige beleidsbasis ({len(policy_basis)})",
+                        "href": evidence_page_url(model) + "#beleidsbasis",
+                    }
+                ],
+            )
+            if more_count > 0
+            else ""
+        )
+    )
+
+
+def render_review_details(current_route: str, model: dict) -> str:
+    if not model.get("review_details"):
+        return ""
+    review = model["review_details"]
+    return (
+        '<section class="section" id="menselijke-duiding"><h2>Menselijke duiding</h2>'
+        + f'<div class="notice">{esc(review["note"])}</div>'
+        + '<ul class="stack-list">'
+        + "".join(
+            "<li>"
+            + f'<strong>{esc(item["topic_label"])}</strong><br>'
+            + f'<span class="list-meta">{esc(item["reason_label"])}</span><br>'
+            + esc(item["summary"])
+            + "<br>"
+            + f'<span class="list-meta">Aanbevolen vervolgstap: {esc(item["recommended_action"])}</span>'
+            + "</li>"
+            for item in review["issues"]
+        )
+        + "</ul>"
+        + (
+            '<h3>Bronnen die extra duiding vragen</h3><ul class="stack-list">'
+            + "".join(
+                "<li>"
+                + f'<strong>{esc(item["document_title"])}</strong><br>'
+                + f'<span class="list-meta">{esc(item["publication_date"] or "datum onbekend")} | {esc(item["topic_label"])}</span>'
+                + render_authority_context(
+                    item.get("publisher"),
+                    item.get("normative_status"),
+                    item.get("authority_note"),
+                )
+                + "<br>"
+                + esc(item["summary"])
+                + "</li>"
+                for item in review["source_signals"]
+            )
+            + "</ul>"
+            if review["source_signals"]
+            else ""
+        )
+        + "</section>"
+    )
+
+
+def render_evidence_drilldown_page(route: str, model: dict, page_type: str) -> str:
+    issue_label = "besluitvraag" if page_type == "decision" else "opvolgactie"
+    return (
+        '<section class="section"><h2>Hoe deze onderbouwing te gebruiken</h2>'
+        + f'<div class="notice">Deze pagina bevat de bron- en reviewlaag achter de {esc(issue_label)}. Gebruik haar voor controle en herleidbaarheid; de hoofdtekst blijft de korte bestuurlijke leeslaag.</div>'
+        + render_link_pills(route, [{"label": "Terug naar hoofdtekst", "href": model["page_url"]}])
+        + "</section>"
+        + render_review_details(route, model)
+        + (
+            '<section class="section" id="beleidsbasis"><h2>Beleidsbasis</h2>'
+            + render_document_refs(route, model["policy_basis"])
+            + "</section>"
+            if model.get("policy_basis")
+            else ""
+        )
+        + '<section class="section" id="bronbasis"><h2>Bronbasis</h2>'
+        + render_evidence_refs(route, model["supporting_evidence"])
+        + "</section>"
+    )
+
+
 def render_decision_card(current_route: str, decision: dict) -> str:
     tags = [decision["status"], decision["linked_domain_label"]]
     body = (
@@ -342,7 +476,7 @@ def render_decision_card(current_route: str, decision: dict) -> str:
     )
     review_href = None
     if decision.get("review_note") and decision.get("review_details"):
-        review_href = f'{decision["page_url"]}{decision["review_details"]["section_url"]}'
+        review_href = f'{evidence_page_url(decision)}{decision["review_details"]["section_url"]}'
     footer = render_tag_row(current_route, tags, decision.get("review_note"), review_href=review_href)
     card_html = render_card(
         decision["title"],
@@ -682,7 +816,7 @@ def render_detail_page(route: str, model: dict, page_type: str) -> str:
                 f'<section class="section"><h2>Besluitvraag</h2><p>{esc(model["decision_question"])}</p></section>',
                 f'<section class="section"><h2>Huidige werkrichting</h2><p>{esc(model["current_working_direction"])}</p></section>',
                 f'<section class="section"><h2>Waarom dit bestuurlijk relevant is</h2><p>{esc(model["why_it_matters_for_leadership"])}</p></section>',
-                '<section class="section"><h2>Huidige beleidsbasis</h2>' + render_document_refs(route, model["policy_basis"]) + "</section>",
+                '<section class="section"><h2>Huidige beleidsbasis</h2>' + render_policy_basis_summary(route, model) + "</section>",
                 f'<section class="section"><h2>Huidige situatie in Almere</h2><p>{esc(model["current_situation_almere"]["summary"])}</p></section>',
                 '<section class="section"><h2>Mogelijke opties op basis van de huidige bronbasis</h2><ul class="stack-list">'
                 + "".join(
@@ -717,45 +851,7 @@ def render_detail_page(route: str, model: dict, page_type: str) -> str:
                 f'<section class="section"><h2>Volgende formele stap</h2><p>{esc(model["next_formal_step"])}</p></section>',
             ]
         )
-        if model.get("review_details"):
-            sections.append(
-                '<section class="section" id="menselijke-duiding"><h2>Menselijke duiding</h2>'
-                + f'<div class="notice">{esc(model["review_details"]["note"])}</div>'
-                + '<ul class="stack-list">'
-                + "".join(
-                    "<li>"
-                    + f'<strong>{esc(item["topic_label"])}</strong><br>'
-                    + f'<span class="list-meta">{esc(item["reason_label"])}</span><br>'
-                    + esc(item["summary"])
-                    + "<br>"
-                    + f'<span class="list-meta">Aanbevolen vervolgstap: {esc(item["recommended_action"])}</span>'
-                    + "</li>"
-                    for item in model["review_details"]["issues"]
-                )
-                + "</ul>"
-                + (
-                    '<h3>Bronnen die extra duiding vragen</h3><ul class="stack-list">'
-                    + "".join(
-                        "<li>"
-                        + f'<strong>{esc(item["document_title"])}</strong><br>'
-                        + f'<span class="list-meta">{esc(item["publication_date"] or "datum onbekend")} | {esc(item["topic_label"])}</span>'
-                        + render_authority_context(
-                            item.get("publisher"),
-                            item.get("normative_status"),
-                            item.get("authority_note"),
-                        )
-                        + "<br>"
-                        + esc(item["summary"])
-                        + "</li>"
-                        for item in model["review_details"]["source_signals"]
-                    )
-                    + "</ul>"
-                    if model["review_details"]["source_signals"]
-                    else ""
-                )
-                + "</section>"
-            )
-        sections.append('<section class="section"><h2>Bronbasis</h2>' + render_evidence_refs(route, model["supporting_evidence"]) + "</section>")
+        sections.append(render_evidence_drilldown_summary(route, model))
     else:
         sections.extend(
             [
@@ -787,7 +883,7 @@ def render_detail_page(route: str, model: dict, page_type: str) -> str:
                 )
                 + "</ul></section>",
                 f'<section class="section"><h2>Gevolgen als de actie niet wordt opgepakt</h2><p>{esc(model["consequences_if_not_followed_up"])}</p></section>',
-                '<section class="section"><h2>Bronbasis</h2>' + render_evidence_refs(route, model["supporting_evidence"]) + "</section>",
+                render_evidence_drilldown_summary(route, model),
             ]
         )
     return "".join(sections)
@@ -1494,6 +1590,19 @@ def build_search_index(
                 "page_type_label": "Besluitvraag",
             }
         )
+        index.append(
+            {
+                "title": f'Onderbouwing: {decision["title"]}',
+                "subtitle": "Bronbasis en reviewdetails",
+                "summary": "Volledige bronverwijzingen, autoriteitsduiding en menselijke-reviewpunten achter deze mogelijke besluitvraag.",
+                "aliases": [*decision["linked_theme_ids"], "onderbouwing", "bronbasis", "review"],
+                "themes": decision["linked_theme_ids"],
+                "domains": [decision["linked_domain_label"]],
+                "url": route_to_output_path(evidence_page_url(decision)).as_posix(),
+                "page_type": "decision_evidence",
+                "page_type_label": "Onderbouwing",
+            }
+        )
     for action in actions:
         index.append(
             {
@@ -1506,6 +1615,19 @@ def build_search_index(
                 "url": route_to_output_path(action["page_url"]).as_posix(),
                 "page_type": "action",
                 "page_type_label": "Opvolgactie",
+            }
+        )
+        index.append(
+            {
+                "title": f'Onderbouwing: {action["title"]}',
+                "subtitle": "Bronbasis en reviewdetails",
+                "summary": "Volledige bronverwijzingen, autoriteitsduiding en menselijke-reviewpunten achter deze mogelijke opvolgactie.",
+                "aliases": [*action["linked_theme_ids"], "onderbouwing", "bronbasis", "review"],
+                "themes": action["linked_theme_ids"],
+                "domains": [action["linked_domain_label"]],
+                "url": route_to_output_path(evidence_page_url(action)).as_posix(),
+                "page_type": "action_evidence",
+                "page_type_label": "Onderbouwing",
             }
         )
     for theme in themes_view["themes"]:
@@ -1819,6 +1941,28 @@ def main() -> None:
                 ),
             )
         )
+        pages.append(
+            (
+                evidence_page_url(decision),
+                render_page(
+                    evidence_page_url(decision),
+                    f'Onderbouwing: {decision["title"]}',
+                    "Bronbasis en reviewdetails achter deze mogelijke besluitvraag.",
+                    render_evidence_drilldown_page(evidence_page_url(decision), decision, "decision"),
+                    navigation,
+                    site_info,
+                    decision["as_of_date"],
+                    home_view["generated_on"],
+                    "page-decision-detail page-evidence-detail",
+                    crumbs=[
+                        ("Start", "/"),
+                        ("Besluitvragen", "/decisions/"),
+                        (decision["title"], decision["page_url"]),
+                        ("Onderbouwing", evidence_page_url(decision)),
+                    ],
+                ),
+            )
+        )
 
     for action in actions:
         pages.append(
@@ -1835,6 +1979,28 @@ def main() -> None:
                     home_view["generated_on"],
                     "page-action-detail",
                     crumbs=[("Start", "/"), ("Opvolgacties", "/actions/"), (action["title"], action["page_url"])],
+                ),
+            )
+        )
+        pages.append(
+            (
+                evidence_page_url(action),
+                render_page(
+                    evidence_page_url(action),
+                    f'Onderbouwing: {action["title"]}',
+                    "Bronbasis en reviewdetails achter deze mogelijke opvolgactie.",
+                    render_evidence_drilldown_page(evidence_page_url(action), action, "action"),
+                    navigation,
+                    site_info,
+                    action["as_of_date"],
+                    home_view["generated_on"],
+                    "page-action-detail page-evidence-detail",
+                    crumbs=[
+                        ("Start", "/"),
+                        ("Opvolgacties", "/actions/"),
+                        (action["title"], action["page_url"]),
+                        ("Onderbouwing", evidence_page_url(action)),
+                    ],
                 ),
             )
         )

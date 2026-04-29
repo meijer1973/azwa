@@ -35,7 +35,7 @@ Gebruik deze roadmap als levend werkdocument. Werk na elke sprint de statusregel
 | 27.7 Perspectiefmodel stabilisatie | completed | `src/build_claims_top5.py`, `src/build_structural_extractions.py`, `src/build_data_quality_audit.py`, `config/data_quality_perspectives.json`, `docs/completed-plans/phase27-sprint27.7-perspectiefmodel-stabilisatie.md` |
 | 28.1 Menselijke samenvattingen per update | completed | `config/site_updates.json`, `config/site_taxonomy.json`, `src/render_site.py`, `tests/test_site_generation.py`, `docs/completed-plans/phase28-sprint28.1-menselijke-update-samenvattingen.md` |
 | 28.2 Bronverwijzing en autoriteitstaal | completed | `src/render_site.py`, `src/build_site_view_models.py`, `tests/test_site_generation.py`, `docs/completed-plans/phase28-sprint28.2-bronverwijzing-autoriteitstaal.md` |
-| 28.3 Detailpagina's voor drill-down | open |  |
+| 28.3 Detailpagina's voor drill-down | completed | `src/render_site.py`, `src/build_site_view_models.py`, `tests/test_site_generation.py`, `docs/completed-plans/phase28-sprint28.3-drilldown-detailpaginas.md` |
 | 29.1 Tijdlijnregister verdiepen | open |  |
 | 29.2 Begrotings- en verantwoordingscyclus | open |  |
 | 29.3 Handreikingen en uitvoeringsmomenten | open |  |
@@ -78,6 +78,8 @@ Status op 29 april 2026: Sprint 27.7 is afgerond als stabilisatiesprint voordat 
 Status op 29 april 2026: Sprint 28.1 is afgerond als menselijke update-samenvatting. De updatepagina gebruikt nu gewone bron- en controlewoorden in plaats van pipeline- of datalaagtaal. De drie bestaande updates hebben volledige `human_summary`-velden voor aanleiding, wat er gebeurde, wat inhoudelijk veranderde en waarom dit voor Almere of de werkagenda relevant is. De detailpagina voor betrokken claims is hernoemd naar controlelijst met bronfragmenten, zodat de updatepagina zelf de leesbare duiding blijft en de detailpagina vooral controle en herleidbaarheid biedt.
 
 Status op 29 april 2026: Sprint 28.2 is afgerond als bronverwijzings- en autoriteitstaalsprint. Publieke bronlijsten en controlelijsten tonen nu explicieter de bronhouder, bronstatus, soort bron en veilige formulering. Lagere-autoriteitsfragmenten worden in controlelijsten toegeschreven met formuleringen als `Volgens Raad van Almere:`, zodat de site minder snel contextuele of lokale bronnen als harde norm laat klinken.
+
+Status op 29 april 2026: Sprint 28.3 is afgerond als drill-down sprint. Besluitvraag- en opvolgactiepagina's houden de hoofdtekst korter en verwijzen voor bronbasis, beleidsbasis en reviewdetails naar aparte `onderbouwing`-pagina's. Reviewtags op kaarten linken nu direct naar de menselijke-duidingsectie op die onderbouwingspagina's, en de zoekindex en sitemap kennen deze pagina's als aparte onderbouwingslaag.
 
 Afgeronde aanpak voor Sprint 25.4a:
 
@@ -356,7 +358,7 @@ Status: completed.
 - Onzekerheden blijven zichtbaar zonder dramatische woorden als urgent of kritisch.
 
 Sprint 28.3: Detailpagina's voor drill-down
-Status: open.
+Status: completed.
 
 - Overzichtspagina's blijven kort.
 - Lange claimlijsten, bronlijsten en reviewdetails gaan naar aparte detailpagina's.

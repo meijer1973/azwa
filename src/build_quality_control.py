@@ -90,10 +90,8 @@ ACCEPTED_MONEY_STATUSES = {
     "application_condition",
     "budget_window",
     "allocation_mechanism",
-    "spending_scope",
     "accountability_rule",
     "local_funding_gap",
-    "double_counting_risk",
     "finance_context",
     "not_financial",
 }
@@ -117,10 +115,7 @@ ACCEPTED_LOCALITY_STATUSES = {
     "regional_split_context",
     "national_general",
     "national_with_local_relevance",
-    "inferred_local_relevance",
     "local_adoption_gap",
-    "municipal_context",
-    "no_locality_signal",
 }
 
 ACCEPTED_EXECUTION_STATUSES = {
@@ -612,11 +607,6 @@ def check_claim_payloads(
             for claim in claims
             if (claim.get("money_status") or {}).get("status") == "local_funding_gap"
         ]
-        double_counting_claims = [
-            claim
-            for claim in claims
-            if (claim.get("money_status") or {}).get("status") == "double_counting_risk"
-        ]
         finance_context_claims = [
             claim
             for claim in claims
@@ -641,11 +631,6 @@ def check_claim_payloads(
             claim
             for claim in claims
             if (claim.get("locality_status") or {}).get("status") == "national_with_local_relevance"
-        ]
-        inferred_local_claims = [
-            claim
-            for claim in claims
-            if (claim.get("locality_status") or {}).get("status") == "inferred_local_relevance"
         ]
         local_adoption_gap_claims = [
             claim
@@ -862,20 +847,6 @@ def check_claim_payloads(
                 related_ids={"sample_claim_ids": [claim["claim_id"] for claim in local_funding_gap_claims[:5]]},
             )
 
-        if double_counting_claims:
-            add_issue(
-                issues,
-                seen,
-                check_id="claim_payload_integrity",
-                severity="review",
-                reason_code="double_counting_risk",
-                summary=f"{document_id} contains {len(double_counting_claims)} double-counting or funding-line separation claim(s).",
-                recommended_action="Keep AZWA-D5, AZWA-D6, GALA/SPUK, PGA/IZA, municipal regular budget and Zvw/insurer lines separate unless a source connects them.",
-                document_id=document_id,
-                source_paths=[relative_path(claim_path)],
-                related_ids={"sample_claim_ids": [claim["claim_id"] for claim in double_counting_claims[:5]]},
-            )
-
         if finance_context_claims:
             add_issue(
                 issues,
@@ -944,20 +915,6 @@ def check_claim_payloads(
                 document_id=document_id,
                 source_paths=[relative_path(claim_path)],
                 related_ids={"sample_claim_ids": [claim["claim_id"] for claim in national_local_relevance_claims[:5]]},
-            )
-
-        if inferred_local_claims:
-            add_issue(
-                issues,
-                seen,
-                check_id="claim_payload_integrity",
-                severity="review",
-                reason_code="inferred_local_relevance",
-                summary=f"{document_id} contains {len(inferred_local_claims)} claim(s) where local relevance is inferred.",
-                recommended_action="Verify local adoption or explicit local documentation before using these as Almere facts.",
-                document_id=document_id,
-                source_paths=[relative_path(claim_path)],
-                related_ids={"sample_claim_ids": [claim["claim_id"] for claim in inferred_local_claims[:5]]},
             )
 
         if local_adoption_gap_claims:

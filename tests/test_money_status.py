@@ -31,9 +31,9 @@ class MoneyStatusTests(unittest.TestCase):
 
         self.assertEqual(status["status"], "application_condition")
 
-    def test_double_counting_risk_needs_verification(self) -> None:
+    def test_double_counting_language_is_finance_context_until_sourced_as_status(self) -> None:
         status = money_status_for(
-            "Houd GALA/SPUK, PGA/IZA-transformatiemiddelen en AZWA-D5/SPUK middelen apart om dubbeltelling te voorkomen.",
+            "Houd verschillende financiele lijnen apart om verwarring te voorkomen.",
             "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026",
             "ministerial_letter",
             "direct_extraction",
@@ -41,7 +41,7 @@ class MoneyStatusTests(unittest.TestCase):
             "finance_arrangement",
         )
 
-        self.assertEqual(status["status"], "double_counting_risk")
+        self.assertEqual(status["status"], "finance_context")
         self.assertTrue(status["needs_verification"])
 
     def test_local_funding_gap_is_searchable(self) -> None:
@@ -56,6 +56,19 @@ class MoneyStatusTests(unittest.TestCase):
 
         self.assertEqual(status["status"], "local_funding_gap")
         self.assertTrue(status["needs_verification"])
+
+    def test_finance_context_terms_fall_back_to_finance_context(self) -> None:
+        status = money_status_for(
+            "De inzet van middelen moet lokaal worden toegelicht.",
+            "mun_almere_pga_transformatieplan",
+            "implementation_plan",
+            "direct_extraction",
+            "finance.local_alignment_goal",
+            "finance_arrangement",
+        )
+
+        self.assertEqual(status["status"], "finance_context")
+        self.assertTrue(status["financial_signal"])
 
     def test_non_financial_claim_stays_not_financial(self) -> None:
         status = money_status_for(

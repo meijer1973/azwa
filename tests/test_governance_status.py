@@ -58,6 +58,20 @@ class GovernanceStatusTests(unittest.TestCase):
         self.assertTrue(status["vague_region_only"])
         self.assertTrue(status["needs_verification"])
 
+    def test_fondsbeheerder_is_not_advertised_as_actor_signal(self) -> None:
+        status = governance_status_for(
+            "Afspraken tussen VNG, fondsbeheerders en VWS blijven nodig.",
+            "nat_vng_ledenbrief_azwa_financiering_2026",
+            "members_letter",
+            "direct_extraction",
+            "governance.regional_coordination",
+            "governance_arrangement",
+        )
+
+        self.assertIn("vng", status["actor_signals"])
+        self.assertIn("ministerie", status["actor_signals"])
+        self.assertNotIn("fondsbeheerder", status["actor_signals"])
+
     def test_non_governance_claim_stays_not_governance(self) -> None:
         status = governance_status_for(
             "De publicatie noemt een lokale impacthorizon voor 2029.",

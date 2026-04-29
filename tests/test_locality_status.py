@@ -64,6 +64,18 @@ class LocalityStatusTests(unittest.TestCase):
 
         self.assertEqual(status["status"], "national_general")
 
+    def test_unmatched_source_uses_general_context_not_dead_enum(self) -> None:
+        status = locality_status_for(
+            "Algemene samenwerking zonder lokale plaatsnaam.",
+            "external_unknown",
+            "other",
+            "direct_extraction",
+            "d5.definition",
+        )
+
+        self.assertEqual(status["status"], "national_general")
+        self.assertEqual(status["locality_scope"], "general")
+
 
 if __name__ == "__main__":
     unittest.main()

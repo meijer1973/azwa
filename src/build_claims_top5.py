@@ -159,7 +159,7 @@ ALLOCATION_MECHANISM_TERMS = (
     "uitkering",
     "beschikbaar gesteld",
 )
-SPENDING_SCOPE_TERMS = (
+FINANCE_CONTEXT_TERMS = (
     "besteding",
     "bestedingsruimte",
     "mag worden besteed",
@@ -188,23 +188,9 @@ LOCAL_FUNDING_GAP_TERMS = (
     "lokale keuze",
     "onbekend",
 )
-DOUBLE_COUNTING_TERMS = (
-    "dubbeltelling",
-    "dubbel",
-    "apart houden",
-    "niet dubbel",
-    "scheiden",
-    "onderscheiden",
-    "pga",
-    "gala",
-    "iza",
-    "azwa-d5",
-    "azwa-d6",
-)
 GOVERNANCE_ACTOR_TERMS = {
     "ministerie": ("ministerie", "vws", "minister"),
     "vng": ("vng",),
-    "fondsbeheerder": ("fondsbeheerder", "fondsbeheerders"),
     "mandaatgemeente": ("mandaatgemeente", "mandaathouder"),
     "regio": ("regio", "regionaal", "regionale"),
     "gemeente": ("gemeente", "gemeenten", "gemeentelijk"),
@@ -587,37 +573,22 @@ def money_status_for(
     has_application_condition = contains_any(normalized, *APPLICATION_CONDITION_TERMS)
     has_budget_window = contains_any(normalized, *BUDGET_WINDOW_TERMS)
     has_allocation = contains_any(normalized, *ALLOCATION_MECHANISM_TERMS)
-    has_spending_scope = contains_any(normalized, *SPENDING_SCOPE_TERMS)
+    has_finance_context = contains_any(normalized, *FINANCE_CONTEXT_TERMS)
     has_accountability = contains_any(normalized, *ACCOUNTABILITY_RULE_TERMS)
     has_local_gap = contains_any(normalized, *LOCAL_FUNDING_GAP_TERMS)
-    has_double_counting = contains_any(normalized, *DOUBLE_COUNTING_TERMS)
-    has_explicit_double_counting_warning = contains_any(
-        normalized,
-        "dubbeltelling",
-        "niet dubbel",
-        "apart houden",
-        "apart om",
-        "gescheiden",
-        "scheiden",
-    )
     mentions_money = is_finance_topic or any(
         (
             has_funding_route,
             has_application_condition,
             has_budget_window,
             has_allocation,
-            has_spending_scope,
+            has_finance_context,
             has_accountability,
             has_local_gap,
-            has_double_counting,
         )
     )
 
-    if has_double_counting and has_explicit_double_counting_warning:
-        status = "double_counting_risk"
-        label = "Risico op dubbeltelling of verkeerde middelenmix"
-        guardrail = "Houd financieringslijnen gescheiden; presenteer geen gecombineerde lokale dekking zonder bron."
-    elif has_local_gap and mentions_money:
+    if has_local_gap and mentions_money:
         status = "local_funding_gap"
         label = "Lokale financieringslacune"
         guardrail = "Formuleer als lokaal invul- of besluitpunt; vul geen budget of eigenaar in zonder lokale bron."
@@ -633,15 +604,11 @@ def money_status_for(
         status = "allocation_mechanism"
         label = "Verdeel- of toekenningsmechanisme"
         guardrail = "Beschrijf alleen het verdeelmechanisme dat de bron noemt; geen lokale verdeling afleiden."
-    elif has_spending_scope:
-        status = "spending_scope"
-        label = "Bestedingsruimte of inzet van middelen"
-        guardrail = "Beschrijf toegestane inzet voorzichtig en houd bronvoorwaarden zichtbaar."
     elif has_funding_route:
         status = "funding_route"
         label = "Financieringsroute"
         guardrail = "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren."
-    elif has_budget_window and mentions_money:
+    elif has_budget_window and mentions_money and not has_finance_context:
         status = "budget_window"
         label = "Budgetvenster of financieel tijdvak"
         guardrail = "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron."
@@ -660,7 +627,7 @@ def money_status_for(
         "financial_signal": mentions_money,
         "source_finance_anchor": "explicit_finance_signal" if mentions_money else "none",
         "public_wording_guardrail": guardrail,
-        "needs_verification": status in {"local_funding_gap", "double_counting_risk", "finance_context"}
+        "needs_verification": status in {"local_funding_gap", "finance_context"}
         or source_statement_type == "contextual_relevance",
     }
 
@@ -824,21 +791,11 @@ def locality_status_for(
         label = "Algemeen landelijk"
         scope = "Netherlands"
         guardrail = "Gebruik als landelijke context; lokale toepassing vraagt aparte bron of interpretatie."
-    elif inferred_local:
-        status = "inferred_local_relevance"
-        label = "Afgeleide lokale relevantie"
-        scope = "inferred local"
-        guardrail = "Formuleer als afgeleide relevantie en controleer lokale bron voordat dit Almeers beleid wordt."
-    elif municipal_source:
-        status = "municipal_context"
-        label = "Gemeentelijke context"
-        scope = "municipal"
-        guardrail = "Gemeentelijke broncontext; controleer of het Almere betreft voordat dit lokaal wordt gebruikt."
     else:
-        status = "no_locality_signal"
-        label = "Geen zelfstandig locality-signaal"
-        scope = "unspecified"
-        guardrail = "Niet gebruiken als lokale of regionale claim zonder aanvullende bron."
+        status = "national_general"
+        label = "Algemene broncontext"
+        scope = "general"
+        guardrail = "Gebruik als algemene context; lokale toepassing vraagt aparte bron of interpretatie."
 
     return {
         "status": status,
@@ -853,9 +810,7 @@ def locality_status_for(
         "needs_verification": status in {
             "local_adoption_gap",
             "national_with_local_relevance",
-            "inferred_local_relevance",
             "regional_split_context",
-            "municipal_context",
         },
     }
 

@@ -1080,12 +1080,12 @@
         "needs_review": false
       },
       "money_status": {
-        "status": "finance_context",
-        "label": "Financiele context",
-        "financial_signal": true,
-        "source_finance_anchor": "explicit_finance_signal",
-        "public_wording_guardrail": "Gebruik als context; controleer sterkere bronnen voordat hier een financieringsregel van wordt gemaakt.",
-        "needs_verification": true
+        "status": "not_financial",
+        "label": "Geen zelfstandige financiele claim",
+        "financial_signal": false,
+        "source_finance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+        "needs_verification": false
       },
       "governance_status": {
         "status": "actor_context",
@@ -1180,12 +1180,12 @@
         "needs_review": false
       },
       "money_status": {
-        "status": "finance_context",
-        "label": "Financiele context",
-        "financial_signal": true,
-        "source_finance_anchor": "explicit_finance_signal",
-        "public_wording_guardrail": "Gebruik als context; controleer sterkere bronnen voordat hier een financieringsregel van wordt gemaakt.",
-        "needs_verification": true
+        "status": "not_financial",
+        "label": "Geen zelfstandige financiele claim",
+        "financial_signal": false,
+        "source_finance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+        "needs_verification": false
       },
       "governance_status": {
         "status": "decision_role",

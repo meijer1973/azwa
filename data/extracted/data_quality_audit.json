@@ -14,7 +14,7 @@
     "high_volume_topic_count": 6,
     "rough_claim_count": 121,
     "site_files_with_rough_claims": 11,
-    "open_review_items": 389
+    "open_review_items": 381
   },
   "perspective_coverage": {
     "claims": {
@@ -722,10 +722,10 @@
       "allocation_mechanism": 29,
       "application_condition": 14,
       "budget_window": 115,
-      "finance_context": 36,
+      "finance_context": 14,
       "funding_route": 54,
       "local_funding_gap": 1,
-      "not_financial": 231
+      "not_financial": 253
     },
     "money_perspective_status_counts": {
       "accountability_rule": 4,
@@ -756,9 +756,9 @@
         "claim_id": "clm__reg_flevoland_2023_regioplan_iza_d6_001",
         "source_document_id": "reg_flevoland_2023_regioplan_iza",
         "topic": "d6.digital_and_operational_infrastructure",
-        "money_status": "finance_context",
+        "money_status": "not_financial",
         "statement_excerpt": "The Regioplan identifies digital infrastructure as essential and names a regional collaboration organization, a shared data-availability vision, information architecture, and use-case based rollout.",
-        "public_wording_guardrail": "Gebruik als context; controleer sterkere bronnen voordat hier een financieringsregel van wordt gemaakt."
+        "public_wording_guardrail": "Niet gebruiken als financieringsregel."
       },
       {
         "claim_id": "clm__mun_almere_pga_transformatieplan_d5_001",
@@ -793,14 +793,6 @@
         "public_wording_guardrail": "Niet gebruiken als financieringsregel."
       },
       {
-        "claim_id": "clm__mun_almere_pga_transformatieplan_governance_and_finance_001",
-        "source_document_id": "mun_almere_pga_transformatieplan",
-        "topic": "governance.local_coalition",
-        "money_status": "finance_context",
-        "statement_excerpt": "The governance base is a broad local coalition of Almere municipality, wijkteams, care and welfare organizations, and preventive and public-health institutions.",
-        "public_wording_guardrail": "Gebruik als context; controleer sterkere bronnen voordat hier een financieringsregel van wordt gemaakt."
-      },
-      {
         "claim_id": "clm__mun_almere_pga_transformatieplan_governance_and_finance_002",
         "source_document_id": "mun_almere_pga_transformatieplan",
         "topic": "finance.local_alignment_goal",
@@ -812,9 +804,9 @@
         "claim_id": "clm__nat_azwa_2025_aanbiedingsbrief_d5_001",
         "source_document_id": "nat_azwa_2025_aanbiedingsbrief",
         "topic": "d5.other",
-        "money_status": "finance_context",
+        "money_status": "not_financial",
         "statement_excerpt": "In het bijzonder hecht ik aan de integrale benadering van het AZWA, waarmee we gezamenlijk voortbouwen op het IZA en de samenwerking over medisch en sociaal domein verder versterken en daarmee bijdragen aan de bewegin...",
-        "public_wording_guardrail": "Gebruik als context; controleer sterkere bronnen voordat hier een financieringsregel van wordt gemaakt."
+        "public_wording_guardrail": "Niet gebruiken als financieringsregel."
       },
       {
         "claim_id": "clm__nat_azwa_2025_aanbiedingsbrief_governance_and_finance_001",
@@ -860,17 +852,17 @@
         "claim_id": "clm__nat_gala_2023_gezond_en_actief_leven_d5_001",
         "source_document_id": "nat_gala_2023_gezond_en_actief_leven",
         "topic": "d5.basisfunctionaliteiten_onderbouwd",
-        "money_status": "finance_context",
+        "money_status": "not_financial",
         "statement_excerpt": "Structurele inzet op de coördinatie en organisatie van de in IZA afgesproken domeinoverstijgende keteninter­ venties (waaronder valpreventie bij ouderen, welzijn op recept, aanpak overgewicht bij kinderen, gecombineer...",
-        "public_wording_guardrail": "Gebruik als context; controleer sterkere bronnen voordat hier een financieringsregel van wordt gemaakt."
+        "public_wording_guardrail": "Niet gebruiken als financieringsregel."
       },
       {
         "claim_id": "clm__nat_gala_2023_gezond_en_actief_leven_d5_003",
         "source_document_id": "nat_gala_2023_gezond_en_actief_leven",
         "topic": "d5.basisfunctionaliteiten_onderbouwd",
-        "money_status": "finance_context",
+        "money_status": "not_financial",
         "statement_excerpt": "Voor een ingerichte ketenaanpak kansrijke start, valpreventie bij ouderen, de aanpak overgewicht kinderen, gecombineerde leefstijlinterventie bij overgewicht en obesitas van volwassen én welzijn op recept, zoals bedoe...",
-        "public_wording_guardrail": "Gebruik als context; controleer sterkere bronnen voordat hier een financieringsregel van wordt gemaakt."
+        "public_wording_guardrail": "Niet gebruiken als financieringsregel."
       },
       {
         "claim_id": "clm__nat_gala_2023_gezond_en_actief_leven_d6_001",
@@ -895,14 +887,6 @@
         "money_status": "not_financial",
         "statement_excerpt": "Inrichten en bemensen van een dekkend netwerk van laagdrempelige steunpunten in de regio voor mensen met psychische kwetsbaarheid.",
         "public_wording_guardrail": "Niet gebruiken als financieringsregel."
-      },
-      {
-        "claim_id": "clm__nat_gala_2023_gezond_en_actief_leven_timeline_and_status_003",
-        "source_document_id": "nat_gala_2023_gezond_en_actief_leven",
-        "topic": "timeline.other",
-        "money_status": "finance_context",
-        "statement_excerpt": "Uitgangspunten Bij deze werkagenda geldt een aantal uitgangspunten: • De inzet van gemeenten in het kader van het IZA kan zo­ wel lokaal als in samenwerking met andere gemeenten in de samenwerkingsregio plaatsvinden....",
-        "public_wording_guardrail": "Gebruik als context; controleer sterkere bronnen voordat hier een financieringsregel van wordt gemaakt."
       },
       {
         "claim_id": "clm__mun_almere_pga_seo_businesscase_2024_d5_001",
@@ -935,12 +919,25 @@
         "money_status": "not_financial",
         "statement_excerpt": "Tabel S.1 Vijf pijlers verminderen in samenhang de druk op de zorg in Almere De druk op de zorg in Almere verminderen Met de inwoners naar behoefte hun veerkracht, gezondheid en zelfredzaamheid vergroten Inwoners inte...",
         "public_wording_guardrail": "Niet gebruiken als financieringsregel."
+      },
+      {
+        "claim_id": "clm__mun_almere_pga_seo_businesscase_2024_d6_002",
+        "source_document_id": "mun_almere_pga_seo_businesscase_2024",
+        "topic": "d6.digital_and_operational_infrastructure",
+        "money_status": "not_financial",
+        "statement_excerpt": "Hiertoe wordt een digitale gegevensuitwisselingsorganisatie opgezet en een data-infrastructuur geïmplementeerd die hiertoe als ruggengraat dient.",
+        "public_wording_guardrail": "Niet gebruiken als financieringsregel."
+      },
+      {
+        "claim_id": "clm__mun_almere_pga_seo_businesscase_2024_d6_003",
+        "source_document_id": "mun_almere_pga_seo_businesscase_2024",
+        "topic": "d6.regional_coordination",
+        "money_status": "not_financial",
+        "statement_excerpt": "Binnen Almere zijn momenteel al verschillende partners betrokken bij de pilotprojecten: De Schoor, GGZ Centraal, Kwintes, Leger des Heils, Triade Vitree, Amethist, GGD, Eigenwijze Compagnie en de wijkteams.",
+        "public_wording_guardrail": "Niet gebruiken als financieringsregel."
       }
     ],
-    "zero_count_statuses": [
-      "spending_scope",
-      "double_counting_risk"
-    ]
+    "zero_count_statuses": []
   },
   "governance_status_audit": {
     "description": "Sprint 27.4 governance split for decision, coordination, application, execution, accountability, approval, review, governance gaps, actor context, and non-governance material.",
@@ -971,9 +968,7 @@
       "vng": 20,
       "zorgverzekeraar": 26
     },
-    "zero_count_actor_signals": [
-      "fondsbeheerder"
-    ],
+    "zero_count_actor_signals": [],
     "verification_needed_sample": [
       {
         "claim_id": "clm__nat_azwa_2025_definitief_governance_and_finance_003",
@@ -1656,11 +1651,7 @@
         "public_wording_guardrail": "Formuleer als landelijke lijn met relevantie voor Almere; niet als lokale vaststelling."
       }
     ],
-    "zero_count_statuses": [
-      "inferred_local_relevance",
-      "municipal_context",
-      "no_locality_signal"
-    ]
+    "zero_count_statuses": []
   },
   "execution_status_audit": {
     "description": "Sprint 27.6 execution split for operational requirements, implementation activity, decision questions, dependencies, sequencing needs, capacity needs, review tasks, execution context, and non-execution material.",

@@ -77,7 +77,7 @@ Check:
 - Does the source define a funding route, budget window, allocation condition, or reporting rule?
 - Is there actual evidence for carry-over, reservation, co-financing, or redistribution?
 - Is a financial interpretation being overstated as fact?
-- Which `money_status` applies: `funding_route`, `application_condition`, `budget_window`, `allocation_mechanism`, `spending_scope`, `accountability_rule`, `local_funding_gap`, `double_counting_risk`, `finance_context`, or `not_financial`?
+- Which `money_status` applies: `funding_route`, `application_condition`, `budget_window`, `allocation_mechanism`, `accountability_rule`, `local_funding_gap`, `finance_context`, or `not_financial`?
 
 Common quality problems:
 - Rumored rules presented as settled
@@ -87,7 +87,7 @@ Common quality problems:
 - AZWA-D5, AZWA-D6, GALA/SPUK, PGA/IZA, municipal regular budget and Zvw/insurer lines blended without source evidence
 
 Editorial rule:
-- Financial rumors and local budget assumptions stay out of public-facing conclusions until source-backed. Keep routes, conditions, windows, spending scope and accountability separate, and treat `local_funding_gap` and `double_counting_risk` as review or decision points.
+- Financial rumors and local budget assumptions stay out of public-facing conclusions until source-backed. Keep routes, conditions, windows, accountability, and general financial context separate, and treat `local_funding_gap` as a review or decision point.
 
 ### 4. Governance
 Check:
@@ -97,7 +97,7 @@ Check:
 - Who must approve or account?
 - Which regional role is meant: formal mandate, coordination, execution, or review signal?
 - Which `governance_status` applies: `decision_role`, `coordination_role`, `application_role`, `execution_role`, `accountability_role`, `approval_role`, `review_role`, `governance_gap`, `actor_context`, or `not_governance`?
-- Which actor signal is actually present: ministerie, VNG, fondsbeheerder, mandaatgemeente, regio, gemeente, gemeenteraad, college, zorgverzekeraar, or uitvoeringspartner?
+- Which actor signal is actually present: ministerie, VNG, mandaatgemeente, regio, gemeente, gemeenteraad, college, zorgverzekeraar, or uitvoeringspartner?
 
 Common quality problems:
 - Actor labels are too vague
@@ -117,7 +117,7 @@ Check:
 - Is it only nationally relevant but not yet publicly adopted locally?
 - Is a local implication inferred rather than visible in a local source?
 - Which regional split is meant: IZA/AZWA-regio, GGD-regio, zorgkantoorregio, ROAZ/subregio, province, or subregional project?
-- Which `locality_status` applies: `explicit_almere`, `explicit_flevoland`, `regional_split_context`, `national_general`, `national_with_local_relevance`, `inferred_local_relevance`, `local_adoption_gap`, `municipal_context`, or `no_locality_signal`?
+- Which `locality_status` applies: `explicit_almere`, `explicit_flevoland`, `regional_split_context`, `national_general`, `national_with_local_relevance`, or `local_adoption_gap`?
 - Which regional split signal is present: IZA/AZWA-regio, GGD-regio, zorgkantoorregio, ROAZ/subregio, provincie, or gemeentelijk?
 
 Common quality problems:
@@ -130,7 +130,7 @@ Common quality problems:
 Editorial rule:
 - Frame these as adoption or documentation gaps, not as failures of the database.
 - Do not write `de regio` or `Flevolandse structuur` where Almere's role depends on the regional split. Name the relevant scale in plain language.
-- Treat `national_with_local_relevance` and `inferred_local_relevance` as useful orientation, not as explicit Almere policy.
+- Treat `national_with_local_relevance` as useful orientation, not as explicit Almere policy.
 
 ### 6. Execution
 Check:

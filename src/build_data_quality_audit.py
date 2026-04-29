@@ -105,7 +105,6 @@ SITE_VIEW_MODEL_GROUPS = {
 KNOWN_GOVERNANCE_ACTOR_SIGNALS = [
     "ministerie",
     "vng",
-    "fondsbeheerder",
     "mandaatgemeente",
     "regio",
     "gemeente",

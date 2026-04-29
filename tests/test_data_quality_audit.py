@@ -1,8 +1,13 @@
 from __future__ import annotations
 
 import unittest
+import json
+from pathlib import Path
 
 from src.build_data_quality_audit import claim_excerpt, detect_rough_issues
+
+
+REPO_ROOT = Path(__file__).resolve().parents[1]
 
 
 class DataQualityAuditTests(unittest.TestCase):
@@ -45,6 +50,20 @@ class DataQualityAuditTests(unittest.TestCase):
 
         self.assertEqual(len(excerpt), 400)
         self.assertTrue(excerpt.endswith("..."))
+
+    def test_active_perspective_contract_has_no_zero_count_statuses(self) -> None:
+        audit = json.loads((REPO_ROOT / "data" / "extracted" / "data_quality_audit.json").read_text(encoding="utf-8"))
+
+        for key in (
+            "normative_status_audit",
+            "time_status_audit",
+            "money_status_audit",
+            "governance_status_audit",
+            "locality_status_audit",
+            "execution_status_audit",
+        ):
+            self.assertEqual(audit[key]["zero_count_statuses"], [], key)
+        self.assertEqual(audit["governance_status_audit"]["zero_count_actor_signals"], [])
 
 
 if __name__ == "__main__":

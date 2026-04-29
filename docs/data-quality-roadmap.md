@@ -37,7 +37,7 @@ Gebruik deze roadmap als levend werkdocument. Werk na elke sprint de statusregel
 | 28.2 Bronverwijzing en autoriteitstaal | completed | `src/render_site.py`, `src/build_site_view_models.py`, `tests/test_site_generation.py`, `docs/completed-plans/phase28-sprint28.2-bronverwijzing-autoriteitstaal.md` |
 | 28.3 Detailpagina's voor drill-down | completed | `src/render_site.py`, `src/build_site_view_models.py`, `tests/test_site_generation.py`, `docs/completed-plans/phase28-sprint28.3-drilldown-detailpaginas.md` |
 | 28.4 Pre-29 follow-up cleanup | completed | `RESEARCH_AGENT_MAP.md`, `src/render_site.py`, `tests/test_site_generation.py`, `docs/completed-plans/phase28-sprint28.4-pre29-followup-cleanup.md` |
-| 29.0 Perspectiefschema zero-count cleanup | open | Tijdelijke cleanup-sprint voor `zero_count_statuses` en `zero_count_actor_signals` voordat Sprint 29.1 de tijdlijn sterker op statusvelden laat leunen |
+| 29.0 Perspectiefschema zero-count cleanup | completed | `src/build_claims_top5.py`, `config/data_quality_perspectives.json`, `data/schemas/claim.schema.json`, `src/build_quality_control.py`, `data/extracted/data_quality_audit.json`, `docs/completed-plans/phase29-sprint29.0-perspectiefschema-zero-count-cleanup.md` |
 | 29.1 Tijdlijnregister verdiepen | open |  |
 | 29.2 Begrotings- en verantwoordingscyclus | open |  |
 | 29.3 Handreikingen en uitvoeringsmomenten | open |  |
@@ -49,7 +49,7 @@ Gebruik deze roadmap als levend werkdocument. Werk na elke sprint de statusregel
 | 31.3 Reviewronde met menselijke beoordelaars | open |  |
 
 ## Huidige sprintplan
-Fase 28 is afgerond. Voor de start van Sprint 29.1 is Sprint 29.0 toegevoegd als tijdelijke cleanup-sprint voor `zero_count_statuses` en `zero_count_actor_signals`. Die velden blijven dus een backlogsignaal, geen permanent onderdeel van de gewenste eindstaat. Sprint 25.6 blijft geparkeerd omdat post-validatie hardening pas verantwoord is na stakeholdervalidatierecords, lokale/interne documenten, finance/controller bevestiging of een expliciet beleidsbesluit. Dat blokkeert Fase 29 niet, zolang de tijdlijn geen D6-validatievragen als opgelost presenteert.
+Sprint 29.0 is afgerond. De actieve perspectiefschema's adverteren nu alleen status- en actorsignaalwaarden die de huidige claimlaag ook werkelijk produceert; `zero_count_statuses` en `zero_count_actor_signals` zijn leeg in de audit. De huidige sprint is Sprint 29.1: het tijdlijnregister verdiepen met bronstatus, autoriteit, actor, type moment en gevolg voor Almere. Sprint 25.6 blijft geparkeerd omdat post-validatie hardening pas verantwoord is na stakeholdervalidatierecords, lokale/interne documenten, finance/controller bevestiging of een expliciet beleidsbesluit. Dat blokkeert Fase 29 niet, zolang de tijdlijn geen D6-validatievragen als opgelost presenteert.
 
 Status op 26 april 2026: Sprint 25.2 is afgerond als publieke bronversterkingssprint. `data/extracted/local_source_strengthening_almere.json` maakt zichtbaar welke lokale bronnen in de formele laag zitten, welke publieke bronnen als assessmentmateriaal zijn beoordeeld, en welke vragen naar later in de workflow gaan omdat de publieke bronbasis is uitgeput of omdat een geschoonde validatiestap nodig is. De geselecteerde Documentwijzer-bijlagen voor Visie Gezondheidsbeleid en Maatschappelijke Agenda zijn eerst naar page-markdown omgezet en daarna opgenomen in `data/raw/manifest.json`. Ook de GGD-tabellenboeken voor volwassenen en ouderen, de GGD-valpreventiepagina Almere en de ZonMw-bron zijn opgenomen in `data/raw/manifest.json`, door inventory/extractie/claims/site-viewmodels verwerkt en blijven reviewmateriaal voordat ze bestuurlijk of public-facing worden gebruikt. Niet-publieke informatie, ontbrekende lokale bevestiging en formele besluitvragen blokkeren deze fase niet; ze worden als gaten of carry-over taken zichtbaar gemaakt voor lokale medewerkers en latere besluitvorming.
 
@@ -84,6 +84,8 @@ Status op 29 april 2026: Sprint 28.2 is afgerond als bronverwijzings- en autorit
 Status op 29 april 2026: Sprint 28.3 is afgerond als drill-down sprint. Besluitvraag- en opvolgactiepagina's houden de hoofdtekst korter en verwijzen voor bronbasis, beleidsbasis en reviewdetails naar aparte `onderbouwing`-pagina's. Reviewtags op kaarten linken nu direct naar de menselijke-duidingsectie op die onderbouwingspagina's, en de zoekindex en sitemap kennen deze pagina's als aparte onderbouwingslaag.
 
 Status op 29 april 2026: Sprint 28.4 is afgerond als pre-29 follow-up cleanup. De research-agent map verwijst niet meer naar de vervallen D6-actieview, `src/render_site.py` ruimt `dist/` op voordat pagina's opnieuw worden geschreven zodat lokale builds geen orphan HTML-pagina's houden, de menselijke-update-test combineert een bredere jargoncheck met positieve vormcriteria, en `zero_count_statuses` is expliciet als tijdelijke cleanup-opgave ingepland in Sprint 29.0.
+
+Status op 29 april 2026: Sprint 29.0 is afgerond. De dode waarden `spending_scope`, `double_counting_risk`, `inferred_local_relevance`, `municipal_context`, `no_locality_signal` en het governance-actorsignaal `fondsbeheerder` zijn uit het actieve perspectiefcontract gehaald. Algemene bestedings- of dubbelingswaarschuwingen vallen nu terug op `finance_context` of op bestaande reviewdocumenten totdat de claimlaag daarvoor een bronverankerde status nodig heeft. De audit rapporteert geen zero-count status- of actorsignaalwaarden meer.
 
 Afgeronde aanpak voor Sprint 25.4a:
 
@@ -318,7 +320,7 @@ Status: completed.
 Sprint 27.4: Governance
 Status: completed.
 
-- Maak rollen expliciet: ministerie, VNG, fondsbeheerder, mandaatgemeente, regio, gemeente, raad, college, zorgverzekeraar, uitvoeringspartner.
+- Maak rollen expliciet: ministerie, VNG, mandaatgemeente, regio, gemeente, raad, college, zorgverzekeraar, uitvoeringspartner.
 - Splits besluitvorming, coordinatie, aanvraag, uitvoering en verantwoording.
 - Voorkom dat "regio" als actor wordt gebruikt als de bron specifieker is.
 
@@ -380,7 +382,7 @@ Status: completed.
 Doel: de tijdlijn gebruiken voor bestuurlijke orientatie, niet alleen als chronologische lijst.
 
 Sprint 29.0: Perspectiefschema zero-count cleanup
-Status: open.
+Status: completed.
 
 - Audit alle `zero_count_statuses` en `zero_count_actor_signals` voordat de tijdlijn sterker op statusvelden gaat sturen.
 - Beslis per nulwaarde: behouden als bewust schema-veld, herstellen in classifierlogica, of verwijderen uit schema/config.

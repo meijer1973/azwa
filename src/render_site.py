@@ -79,6 +79,55 @@ def esc(value: str | None) -> str:
     return html.escape(value or "")
 
 
+SOURCE_AUTHORITY_LABELS = {
+    "agreement": "akkoordtekst",
+    "binding": "bindende of formele bron",
+    "commentary": "toelichtende bron",
+    "framework": "kader of uitwerkingsdocument",
+    "implementation_plan": "implementatie- of programmaplan",
+    "municipal_policy": "lokaal beleids- of raadsstuk",
+    "regional_plan": "regionaal plan",
+}
+
+
+def source_authority_label(value: str | None) -> str | None:
+    if not value:
+        return None
+    return SOURCE_AUTHORITY_LABELS.get(value, value.replace("_", " "))
+
+
+def normative_attribution_prefix(publisher: str | None, normative_status: dict | None) -> str:
+    status = (normative_status or {}).get("status")
+    needs_attribution = bool((normative_status or {}).get("needs_attribution"))
+    if publisher and (needs_attribution or status in {"lower_authority_signal", "guidance", "expectation", "agreement"}):
+        return f"Volgens {publisher}: "
+    return ""
+
+
+def render_authority_context(
+    publisher: str | None,
+    normative_status: dict | None,
+    authority_note: str | None = None,
+) -> str:
+    norm = normative_status or {}
+    lines: list[str] = []
+    if publisher:
+        lines.append(f"Bronhouder: {publisher}")
+    if norm.get("label"):
+        lines.append(f"Bronstatus: {norm['label']}")
+    source_authority = source_authority_label(norm.get("source_authority"))
+    if source_authority:
+        lines.append(f"Soort bron: {source_authority}")
+    if authority_note:
+        lines.append(f"Let op: {authority_note}")
+    guardrail = norm.get("public_wording_guardrail")
+    if guardrail:
+        lines.append(f"Veilige formulering: {guardrail}")
+    if not lines:
+        return ""
+    return "".join(f'<br><span class="list-meta">{esc(line)}</span>' for line in lines)
+
+
 def render_navigation(current_route: str, navigation: list[dict]) -> str:
     links = []
     for item in navigation:
@@ -268,12 +317,16 @@ def render_evidence_refs(current_route: str, evidence_refs: list[dict]) -> str:
             continue
         seen.add(dedupe_key)
         target = relative_link(current_route, evidence["page_url"]) if evidence.get("page_url") else evidence["source_url"]
-        note = f'<br><span class="list-meta">{esc(evidence["authority_note"])}</span>' if evidence.get("authority_note") else ""
+        authority_context = render_authority_context(
+            evidence.get("publisher"),
+            evidence.get("normative_status"),
+            evidence.get("authority_note"),
+        )
         items.append(
             "<li>"
             + f'<strong><a href="{esc(target)}">{esc(evidence["document_title"])}</a></strong><br>'
-            + f'<span class="list-meta">{esc(evidence["publisher"])} | {esc(evidence["publication_date"] or "datum onbekend")} | {esc(evidence["topic_label"])}</span>'
-            + note
+            + f'<span class="list-meta">{esc(evidence["publication_date"] or "datum onbekend")} | {esc(evidence["topic_label"])}</span>'
+            + authority_context
             + "</li>"
         )
     return '<ul class="stack-list">' + "".join(items) + "</ul>"
@@ -685,7 +738,13 @@ def render_detail_page(route: str, model: dict, page_type: str) -> str:
                     + "".join(
                         "<li>"
                         + f'<strong>{esc(item["document_title"])}</strong><br>'
-                        + f'<span class="list-meta">{esc(item["publisher"])} | {esc(item["publication_date"] or "datum onbekend")} | {esc(item["topic_label"])}</span><br>'
+                        + f'<span class="list-meta">{esc(item["publication_date"] or "datum onbekend")} | {esc(item["topic_label"])}</span>'
+                        + render_authority_context(
+                            item.get("publisher"),
+                            item.get("normative_status"),
+                            item.get("authority_note"),
+                        )
+                        + "<br>"
                         + esc(item["summary"])
                         + "</li>"
                         for item in model["review_details"]["source_signals"]
@@ -934,8 +993,13 @@ def render_update_claims_detail(route: str, update: dict) -> str:
                 "<li>"
                 + f'<strong>{esc(claim["topic_label"])}</strong>'
                 + (f' <span class="list-meta">[{esc(claim["claim_id"])}]</span>' if claim.get("claim_id") else "")
+                + render_authority_context(
+                    group.get("publisher"),
+                    claim.get("normative_status"),
+                    None,
+                )
                 + "<br>"
-                + esc(claim["statement"])
+                + esc(normative_attribution_prefix(group.get("publisher"), claim.get("normative_status")) + claim["statement"])
                 + (
                     f'<br><span class="list-meta">Pagina(s): {esc(", ".join(claim["page_labels"]))}</span>'
                     if claim.get("page_labels")

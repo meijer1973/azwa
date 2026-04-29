@@ -216,6 +216,9 @@ class SiteGenerationTests(unittest.TestCase):
         self.assertIn('id="menselijke-duiding"', detail_html)
         self.assertIn("Bronnen die extra duiding vragen", detail_html)
         self.assertIn("Aanbevolen vervolgstap", detail_html)
+        self.assertIn("Bronhouder: Zorgzaam Flevoland / Flever", detail_html)
+        self.assertIn("Bronstatus: Lagere-autoriteitssignaal", detail_html)
+        self.assertIn("Veilige formulering: Altijd expliciet toeschrijven", detail_html)
 
     def test_logical_clickability_regression(self) -> None:
         home_html = INDEX_PATH.read_text(encoding="utf-8")
@@ -393,6 +396,13 @@ class SiteGenerationTests(unittest.TestCase):
         self.assertIn("10 claims", html)
         self.assertIn("clm__nat_vng_ledenbrief_azwa_financiering_2026_d5_001", html)
         self.assertIn("brongetrouwe", html)
+
+    def test_update_claims_detail_explicitly_attributes_lower_authority_fragments(self) -> None:
+        html = LATEST_UPDATE_CLAIMS_PAGE_PATH.read_text(encoding="utf-8")
+        self.assertIn("Bronhouder: Raad van Almere", html)
+        self.assertIn("Soort bron: lokaal beleids- of raadsstuk", html)
+        self.assertIn("Veilige formulering: Altijd expliciet toeschrijven", html)
+        self.assertIn("Volgens Raad van Almere:", html)
 
     def test_timeline_register_is_chronological_within_each_year(self) -> None:
         register = load_json(TIMELINE_REGISTER_PATH)

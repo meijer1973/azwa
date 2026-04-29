@@ -1344,6 +1344,8 @@ def review_details_for_topics(
                 "publisher": evidence["publisher"],
                 "publication_date": evidence["publication_date"],
                 "topic_label": evidence["topic_label"],
+                "authority_note": evidence.get("authority_note"),
+                "normative_status": evidence.get("normative_status"),
                 "summary": evidence.get("authority_note")
                 or "Menselijke duiding nodig voordat deze passage als expliciete lokale vastlegging kan worden gepresenteerd.",
             }

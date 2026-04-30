@@ -473,8 +473,8 @@
     },
     {
       "claim_id": "clm__mun_almere_pga_seo_businesscase_2024_d6_003",
-      "topic": "d6.regional_coordination",
-      "subtopic": "ggd_and_regional_coordination",
+      "topic": "d6.other",
+      "subtopic": "uncategorized",
       "claim_type": "implementation_requirement",
       "normative_status": {
         "status": "lower_authority_signal",
@@ -485,11 +485,11 @@
         "needs_attribution": true
       },
       "time_status": {
-        "status": "undated_context",
-        "label": "Geen zelfstandig tijdmoment",
-        "date_signal": "none",
-        "source_temporal_anchor": "publication_context",
-        "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
+        "status": "expected_moment",
+        "label": "Verwacht of indicatief moment",
+        "date_signal": "month_or_cycle",
+        "source_temporal_anchor": "explicit_text_signal",
+        "public_wording_guardrail": "Formuleer als verwacht, indicatief of bronafhankelijk moment; niet als harde deadline.",
         "needs_review": true
       },
       "money_status": {
@@ -501,13 +501,11 @@
         "needs_verification": true
       },
       "governance_status": {
-        "status": "actor_context",
-        "label": "Actor- of governancecontext",
-        "actor_signals": [
-          "uitvoeringspartner"
-        ],
-        "source_governance_anchor": "explicit_governance_signal",
-        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "status": "not_governance",
+        "label": "Geen zelfstandige governanceclaim",
+        "actor_signals": [],
+        "source_governance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
         "needs_verification": true,
         "vague_region_only": false
       },
@@ -524,16 +522,14 @@
         "needs_verification": false
       },
       "execution_status": {
-        "status": "implementation_activity",
-        "label": "Uitvoeringsactiviteit zichtbaar",
-        "execution_need_signals": [
-          "implementation_activity"
-        ],
-        "source_execution_anchor": "explicit_execution_signal",
-        "public_wording_guardrail": "Beschrijf alleen de activiteit die de bron noemt; voeg geen eigenaar, bereik of vervolgplanning toe.",
+        "status": "operational_requirement",
+        "label": "Operationele vereiste of inrichting",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
+        "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
         "needs_verification": true
       },
-      "statement": "Binnen Almere zijn momenteel al verschillende partners betrokken bij de pilotprojecten: De Schoor, GGZ Centraal, Kwintes, Leger des Heils, Triade Vitree, Amethist, GGD, Eigenwijze Compagnie en de wijkteams.",
+      "statement": "SSidW is een domeinoverstijgende manier van werken tussen sociaal domein in de wijk en curatieve zorg, gericht op mensen met mentale klachten. Kern is dat hulpverleners laagdrempelig en vroegtijdig met de inwoner in gesprek gaan en advies op maat gegeven ...",
       "source_document_id": "mun_almere_pga_seo_businesscase_2024",
       "source_location": {
         "source_statement_ids": [
@@ -546,7 +542,7 @@
           "Page 15"
         ],
         "evidence_quotes": [
-          "Binnen Almere zijn momenteel al verschillende partners betrokken bij de pilotprojecten: De Schoor, GGZ Centraal, Kwintes, Leger des Heils, Triade Vitree, Amethist, GGD, Eigenwijze Compagnie en de wijkteams."
+          "SSidW is een domeinoverstijgende manier van werken tussen sociaal domein in de wijk en curatieve zorg, gericht op mensen met mentale klachten. Kern is dat hulpverleners laagdrempelig en vroegtijdig met de inwoner in gesprek gaan en advies op maat gegeven ..."
         ]
       },
       "publisher": "SEO Economisch Onderzoek",
@@ -561,7 +557,7 @@
       "applies_to": [
         "Almere"
       ],
-      "confidence": 0.68,
+      "confidence": 0.5,
       "human_review_status": "needs_human_review",
       "source_statement_type": "contextual_relevance",
       "claim_extraction_run_id": "phase4_all_docs_claims_v3",

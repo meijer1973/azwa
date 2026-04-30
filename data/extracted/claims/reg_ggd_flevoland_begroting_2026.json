@@ -3,7 +3,7 @@
   "claim_extraction_run_id": "phase4_all_docs_claims_v3",
   "generated_on": "2026-04-30",
   "source_extraction_run_id": "phase3_all_docs_v3",
-  "claim_count": 14,
+  "claim_count": 15,
   "claims": [
     {
       "claim_id": "clm__reg_ggd_flevoland_begroting_2026_d5_001",
@@ -365,6 +365,104 @@
         ],
         "evidence_quotes": [
           "JGZ Almere is nauw betrokken bij de ontwikkeling van Stevige Lokale Teams en bij het Toekomstscenario Jeugd- en gezinsbescherming."
+        ]
+      },
+      "publisher": "GGD Flevoland",
+      "instrument_type": "regional_plan",
+      "jurisdiction_level": "regional",
+      "document_status": "current",
+      "authority_weight": 0.56,
+      "publication_date": "2025-10-14",
+      "effective_from": "2025-10-14",
+      "effective_to": null,
+      "validity_status": "contextual_active",
+      "applies_to": [
+        "Flevoland",
+        "Almere"
+      ],
+      "confidence": 0.68,
+      "human_review_status": "needs_human_review",
+      "source_statement_type": "contextual_relevance",
+      "claim_extraction_run_id": "phase4_all_docs_claims_v3",
+      "relations": []
+    },
+    {
+      "claim_id": "clm__reg_ggd_flevoland_begroting_2026_d6_003",
+      "topic": "d6.regional_coordination",
+      "subtopic": "ggd_and_regional_coordination",
+      "claim_type": "implementation_requirement",
+      "normative_status": {
+        "status": "lower_authority_signal",
+        "label": "Lagere-autoriteitssignaal",
+        "source_authority": "regional_plan",
+        "has_normative_language": false,
+        "public_wording_guardrail": "Altijd expliciet toeschrijven aan de bron; niet als harde norm presenteren zonder sterkere bron.",
+        "needs_attribution": true
+      },
+      "time_status": {
+        "status": "budget_calendar_moment",
+        "label": "Begrotings- of financieringsmoment",
+        "date_signal": "year",
+        "source_temporal_anchor": "explicit_text_signal",
+        "public_wording_guardrail": "Koppel aan de financiele bronroute; maak geen lokale budgetkeuze zonder lokale bron.",
+        "needs_review": true
+      },
+      "money_status": {
+        "status": "budget_window",
+        "label": "Budgetvenster of financieel tijdvak",
+        "financial_signal": true,
+        "source_finance_anchor": "explicit_finance_signal",
+        "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+        "needs_verification": true
+      },
+      "governance_status": {
+        "status": "coordination_role",
+        "label": "Coordinatie- of regierol",
+        "actor_signals": [
+          "regio"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als coordinatie/regie; niet vermengen met besluitvorming of uitvoering.",
+        "needs_verification": true,
+        "vague_region_only": true
+      },
+      "locality_status": {
+        "status": "explicit_flevoland",
+        "label": "Expliciet Flevolands",
+        "locality_scope": "Flevoland",
+        "regional_split_signals": [],
+        "explicit_location_signals": {
+          "almere": false,
+          "flevoland": true
+        },
+        "public_wording_guardrail": "Formuleer als Flevolandse of GGD/Flevolandse bronlijn; niet automatisch als Almeerse keuze.",
+        "needs_verification": false
+      },
+      "execution_status": {
+        "status": "implementation_activity",
+        "label": "Uitvoeringsactiviteit zichtbaar",
+        "execution_need_signals": [
+          "operational_requirement",
+          "implementation_activity"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
+        "public_wording_guardrail": "Beschrijf alleen de activiteit die de bron noemt; voeg geen eigenaar, bereik of vervolgplanning toe.",
+        "needs_verification": true
+      },
+      "statement": "Omschrijving Financier Afdeling Bestuurs­ begroting 2024 Realisatie 2024 Prognose 2025 Bestuurs­ begroting 2026 Wettelijke basis Gezonde school Dronten gl 10.285 6.582 6.582 14.792 WPG invulling gem Nu Niet Zwanger Dronten mz 22.886 27.000 27.864 nee Ophogen gezondheidsmonitor Dronten gb 5.565 Versterken kennisfunctie GGD Dronten k&a 5.485 5.485 5.307 WPG invulling gem Coördinatie regionale aanpak preventie Dronten gl 16.016 16.017 15.497 WPG invulling gem Toezicht Kinderopvang Dronten tz 110.292 100.690 ...",
+      "source_document_id": "reg_ggd_flevoland_begroting_2026",
+      "source_location": {
+        "source_statement_ids": [
+          "reg_ggd_flevoland_begroting_2026_d6_003"
+        ],
+        "pages": [
+          46
+        ],
+        "sections": [
+          "Page 46"
+        ],
+        "evidence_quotes": [
+          "Omschrijving Financier Afdeling Bestuurs­ begroting 2024 Realisatie 2024 Prognose 2025 Bestuurs­ begroting 2026 Wettelijke basis Gezonde school Dronten gl 10.285 6.582 6.582 14.792 WPG invulling gem Nu Niet Zwanger Dronten mz 22.886 27.000 27.864 nee Ophogen gezondheidsmonitor Dronten gb 5.565 Versterken kennisfunctie GGD Dronten k&a 5.485 5.485 5.307 WPG invulling gem Coördinatie regionale aanpak preventie Dronten gl 16.016 16.017 15.497 WPG invulling gem Toezicht Kinderopvang Dronten tz 110.292 100.690 ..."
         ]
       },
       "publisher": "GGD Flevoland",

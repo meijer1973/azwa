@@ -10,10 +10,10 @@
       "Longer claims missing terminal sentence punctuation are retained but logged for later cleanup."
     ]
   },
-  "input_claim_count": 667,
-  "kept_claim_count": 581,
-  "rejected_claim_count": 86,
-  "review_only_count": 41,
+  "input_claim_count": 733,
+  "kept_claim_count": 643,
+  "rejected_claim_count": 90,
+  "review_only_count": 46,
   "rejected_claims": [
     {
       "claim_id": "clm__nat_azwa_2026_cw31_kamerbrief_timeline_and_status_001",
@@ -255,6 +255,19 @@
       ]
     },
     {
+      "claim_id": "clm__nat_iza_2022_integraal_zorgakkoord_d6_001",
+      "source_document_id": "nat_iza_2022_integraal_zorgakkoord",
+      "topic": "d6.other",
+      "subtopic": "uncategorized",
+      "reasons": [
+        "lowercase_mid_sentence_start"
+      ],
+      "statement": "samen met de patiënt, pakket en kwaliteit 12 3.2 Regionale samenwerking 13 3.2.1 Algemeen 13 3.2.2 Samenwerking in de acute zorg 13 3.2.3 Toekomstbestendig zorglandschap door concentratie en spreiding 13 3.3 Versterking organisatie eerstelijnszorg 14 3.4 Samenwerking sociaal domein, huisartsenzorg en ggz 14 3.5 Gezond leven en preventie 14 3.6 Arbeidsmarkt en ontzorgen zorgprofessionals 14 3.7 Digitalisering en gegevensuitwisseling 15 3.8 Contractering 15 4 Financiën 16 4.1 Algemeen 17 4.1.1 Algemene ...",
+      "source_statement_ids": [
+        "nat_iza_2022_integraal_zorgakkoord_d6_001"
+      ]
+    },
+    {
       "claim_id": "clm__nat_iza_2022_integraal_zorgakkoord_governance_and_finance_002",
       "source_document_id": "nat_iza_2022_integraal_zorgakkoord",
       "topic": "governance_and_finance.other",
@@ -399,7 +412,20 @@
       ]
     },
     {
-      "claim_id": "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d6_002",
+      "claim_id": "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d6_001",
+      "source_document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
+      "topic": "d6.digital_and_operational_infrastructure",
+      "subtopic": "data_and_transfer_infrastructure",
+      "reasons": [
+        "lowercase_mid_sentence_start"
+      ],
+      "statement": "eind 2022 zijn sleutelpersonen in het dagelijks leven van jongeren beter in staat om signalen te herkennen van mentale problemen bij jongeren (waaronder zelfmoordgedachten), na herkenning van signalen van mentale problemen ook een adequate opvolging te bieden aan jongeren (een vorm van lichte hulpverlening), en zijn er 10 gezonde scholen met een vignet voor welbevinden.",
+      "source_statement_ids": [
+        "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d6_001"
+      ]
+    },
+    {
+      "claim_id": "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d6_003",
       "source_document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
       "topic": "d6.other",
       "subtopic": "uncategorized",
@@ -408,19 +434,6 @@
         "missing_sentence_terminal"
       ],
       "statement": "jeugdgezondheidszorg, Wijkteams, JGZ, AMW, politie, maakt dat het hele leven in het teken komt te staan van",
-      "source_statement_ids": [
-        "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d6_002"
-      ]
-    },
-    {
-      "claim_id": "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d6_003",
-      "source_document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
-      "topic": "d6.digital_and_operational_infrastructure",
-      "subtopic": "data_and_transfer_infrastructure",
-      "reasons": [
-        "lowercase_mid_sentence_start"
-      ],
-      "statement": "eind 2022 zijn sleutelpersonen in het dagelijks leven van jongeren beter in staat om signalen te herkennen van mentale problemen bij jongeren (waaronder zelfmoordgedachten), na herkenning van signalen van mentale problemen ook een adequate opvolging te bieden aan jongeren (een vorm van lichte hulpverlening), en zijn er 10 gezonde scholen met een vignet voor welbevinden.",
       "source_statement_ids": [
         "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d6_003"
       ]
@@ -862,19 +875,6 @@
       ]
     },
     {
-      "claim_id": "clm__reg_ggd_flevoland_begroting_2026_d6_003",
-      "source_document_id": "reg_ggd_flevoland_begroting_2026",
-      "topic": "d6.local_teams",
-      "subtopic": "wijkverbanden",
-      "reasons": [
-        "lowercase_mid_sentence_start"
-      ],
-      "statement": "belangrijke partner bij de ontwikkeling van Stevige Lokale Teams.",
-      "source_statement_ids": [
-        "reg_ggd_flevoland_begroting_2026_d6_003"
-      ]
-    },
-    {
       "claim_id": "clm__reg_ggd_flevoland_begroting_2026_governance_and_finance_001",
       "source_document_id": "reg_ggd_flevoland_begroting_2026",
       "topic": "governance_and_finance.other",
@@ -1148,6 +1148,59 @@
       "source_statement_ids": [
         "mun_almere_gezond_in_almere_d6_001"
       ]
+    },
+    {
+      "claim_id": "clm__reg_flevoziekenhuis_rtp_flevoland_2025_d6_001",
+      "source_document_id": "reg_flevoziekenhuis_rtp_flevoland_2025",
+      "topic": "d6.digital_and_operational_infrastructure",
+      "subtopic": "data_and_transfer_infrastructure",
+      "reasons": [
+        "lowercase_mid_sentence_start",
+        "missing_sentence_terminal"
+      ],
+      "statement": "verwijzers - Regionaal Transferpunt Flevoland van start",
+      "source_statement_ids": [
+        "reg_flevoziekenhuis_rtp_flevoland_2025_d6_001"
+      ]
+    },
+    {
+      "claim_id": "clm__reg_rtp_flevoland_home_timeline_and_status_001",
+      "source_document_id": "reg_rtp_flevoland_home",
+      "topic": "timeline.other",
+      "subtopic": "uncategorized",
+      "reasons": [
+        "missing_sentence_terminal"
+      ],
+      "statement": "Copyright 2026 RTP Flevoland Powered By Toomba Digital Agency Privacybeleid",
+      "source_statement_ids": [
+        "reg_rtp_flevoland_home_timeline_and_status_001"
+      ]
+    },
+    {
+      "claim_id": "clm__reg_npz_almere_pilot_viewer_acp_municipal_translation_003",
+      "source_document_id": "reg_npz_almere_pilot_viewer_acp",
+      "topic": "municipal.implementation_translation",
+      "subtopic": "regional_local_tailoring",
+      "reasons": [
+        "missing_sentence_terminal"
+      ],
+      "statement": "Voor patiënten en naasten Voor zorgverleners Zorg in Almere",
+      "source_statement_ids": [
+        "reg_npz_almere_pilot_viewer_acp_municipal_translation_003"
+      ]
+    },
+    {
+      "claim_id": "clm__nat_palliaweb_digitale_initiatieven_pzp_timeline_and_status_002",
+      "source_document_id": "nat_palliaweb_digitale_initiatieven_pzp",
+      "topic": "timeline.other",
+      "subtopic": "uncategorized",
+      "reasons": [
+        "missing_sentence_terminal"
+      ],
+      "statement": "31 maart 2027",
+      "source_statement_ids": [
+        "nat_palliaweb_digitale_initiatieven_pzp_timeline_and_status_002"
+      ]
     }
   ],
   "review_only_claims": [
@@ -1175,6 +1228,19 @@
       "statement": "R plannen indienen bi orgver ekeraar erkagenda vastgesteld aan tafel en verst rd naar colleges gemeenten Regionale werkagenda s vastgesteld en verst rd naar elderheid over ontwikkelagenda deel tart itvoering van de werkagenda elderheid over proces voor beproevende regio s",
       "source_statement_ids": [
         "nat_azwa_opdracht_werkagenda_d5_2026_municipal_translation_002"
+      ]
+    },
+    {
+      "claim_id": "clm__nat_iza_2022_integraal_zorgakkoord_d6_002",
+      "source_document_id": "nat_iza_2022_integraal_zorgakkoord",
+      "topic": "d6.other",
+      "subtopic": "uncategorized",
+      "reasons": [
+        "missing_sentence_terminal"
+      ],
+      "statement": "De komende jaren wordt actief ingezet op gegevensuitwisseling’ wordt vanuit de medisch speci­ alistische zorg ingezet op telemonitoring van patiënten Integraal Zorgakkoord 2022 | 49",
+      "source_statement_ids": [
+        "nat_iza_2022_integraal_zorgakkoord_d6_002"
       ]
     },
     {
@@ -1682,6 +1748,58 @@
       "statement": "Kinderopvang - ’s Heeren Loo - Islamitische Basisschool Al Iman - Het Baken - Hogeschool Windesheim - JGZ Almere - Kidak - Partou - Prisma Almere - Passend Onderwijs Almere - ROC van Amsterdam – Flevoland - Second Home Kinderopvang - School van Vrede - Shri Ganesha School - Stichting Katholiek Onderwijs Flevoland-Veluwe - Triade Vitree - Taalcentrum Almere - Vrije School Almere",
       "source_statement_ids": [
         "mun_almere_lea_2024_2028_d6_003"
+      ]
+    },
+    {
+      "claim_id": "clm__mun_almere_pga_regionaal_transferpunt_d5_001",
+      "source_document_id": "mun_almere_pga_regionaal_transferpunt",
+      "topic": "d5.cross_domain_collaboration",
+      "subtopic": "care_social_cooperation_goal",
+      "reasons": [
+        "missing_sentence_terminal"
+      ],
+      "statement": "Zorgen voor snellere doorstroom van patiënten naar tijdelijke zorg - Eén aanspreekpunt creëren voor huisartsen, SEH en andere verwijzers - Zorgmedewerkers ontlasten door minder bel- en regelwerk - Voorkomen dat patiënten onnodig op de spoedeisende hulp of in het ziekenhuis belanden - Bevorderen van passende zorg op de juiste plek, thuis of in een tijdelijke instelling",
+      "source_statement_ids": [
+        "mun_almere_pga_regionaal_transferpunt_d5_001"
+      ]
+    },
+    {
+      "claim_id": "clm__reg_rtp_flevoland_home_municipal_translation_001",
+      "source_document_id": "reg_rtp_flevoland_home",
+      "topic": "municipal.implementation_translation",
+      "subtopic": "regional_and_municipal_execution",
+      "reasons": [
+        "missing_sentence_terminal"
+      ],
+      "statement": "Ondersteuning bij verwijsproces acute zorg Efficiënte doorstroom in zorgketen Verbinden van ketenparners Inzicht in vraag en aanbod zorgplekken Grip op de regionale opnamecapaciteit",
+      "source_statement_ids": [
+        "reg_rtp_flevoland_home_municipal_translation_001"
+      ]
+    },
+    {
+      "claim_id": "clm__reg_flevoziekenhuis_thuismonitoring_d6_003",
+      "source_document_id": "reg_flevoziekenhuis_thuismonitoring",
+      "topic": "d6.other",
+      "subtopic": "uncategorized",
+      "reasons": [
+        "missing_sentence_terminal"
+      ],
+      "statement": "Home - Aandoening, onderzoek en behandeling - Afdelingen - Opname bezoek - mijnFlevoziekenhuis - Organisatie - Zorgverleners - Werken bij Flevoziekenhuis - Verwijzers - English - Contact - Home - Aandoening, onderzoek en behandeling - Afdelingen - Opname bezoek - mijnFlevoziekenhuis - Home - Opname bezoek - Thuismonitoring en het Flevoziekenhuis",
+      "source_statement_ids": [
+        "reg_flevoziekenhuis_thuismonitoring_d6_003"
+      ]
+    },
+    {
+      "claim_id": "clm__reg_flevoziekenhuis_thuismonitoring_monitoring_and_evaluation_001",
+      "source_document_id": "reg_flevoziekenhuis_thuismonitoring",
+      "topic": "monitoring.other",
+      "subtopic": "uncategorized",
+      "reasons": [
+        "missing_sentence_terminal"
+      ],
+      "statement": "Home - Aandoening, onderzoek en behandeling - Afdelingen - Opname bezoek - mijnFlevoziekenhuis - Organisatie - Zorgverleners - Werken bij Flevoziekenhuis - Verwijzers - English - Contact - Home - Aandoening, onderzoek en behandeling - Afdelingen - Opname bezoek - mijnFlevoziekenhuis - Home - Opname bezoek - Thuismonitoring en het Flevoziekenhuis",
+      "source_statement_ids": [
+        "reg_flevoziekenhuis_thuismonitoring_monitoring_and_evaluation_001"
       ]
     }
   ]

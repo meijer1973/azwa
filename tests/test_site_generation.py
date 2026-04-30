@@ -41,7 +41,7 @@ REFERENCE_PAGE_PATH = DIST_DIR / "reference" / "index.html"
 REFERENCE_TOPICS_PAGE_PATH = DIST_DIR / "reference" / "topics" / "index.html"
 SOURCES_PAGE_PATH = DIST_DIR / "sources" / "index.html"
 UPDATES_PAGE_PATH = DIST_DIR / "updates" / "index.html"
-LATEST_UPDATE_ID = "upd_gezonde_school_deep_research_intake_2026_04_30"
+LATEST_UPDATE_ID = "upd_digitale_operationele_infrastructuur_intake_2026_04_30"
 LATEST_UPDATE_CLAIMS_PAGE_PATH = DIST_DIR / "updates" / "claims" / LATEST_UPDATE_ID / "index.html"
 VNG_FINANCING_UPDATE_ID = "upd_vng_financiering_2026_04_23"
 VNG_FINANCING_UPDATE_CLAIMS_PAGE_PATH = DIST_DIR / "updates" / "claims" / VNG_FINANCING_UPDATE_ID / "index.html"
@@ -502,17 +502,17 @@ class SiteGenerationTests(unittest.TestCase):
         html = UPDATES_PAGE_PATH.read_text(encoding="utf-8")
 
         self.assertEqual(updates_view["latest_update"]["update_id"], LATEST_UPDATE_ID)
-        self.assertIn("Gezonde School-bronnen voor Almere verwerkt", html)
+        self.assertIn("Digitale en operationele infrastructuurbronnen verwerkt", html)
         self.assertIn("Kort samengevat", html)
-        self.assertIn("Vijf publieke bronnen rond Gezonde School", html)
-        self.assertIn('../sources/gezonde-scholen-almere/index.html', html)
-        self.assertIn("63", html)
+        self.assertIn("Twaalf publieke bronnen rond RTP", html)
+        self.assertIn('../sources/pga-regionaal-transferpunt/index.html', html)
+        self.assertIn("75", html)
         self.assertIn("Bekijk volledige controlelijst", html)
         self.assertIn("Wat is er veranderd", html)
         self.assertIn("Meer duiding", html)
-        self.assertIn("Gezonde School heeft nu Almere-specifieke publieke bronbasis", html)
-        self.assertIn("GGD Flevoland is toegevoegd als uitvoerings- en ondersteuningsbron", html)
-        self.assertIn("De LEA-bron maakt schoolwelzijn en partnercontext zichtbaarder", html)
+        self.assertIn("RTP is nu met publieke implementatiebronnen onderbouwd", html)
+        self.assertIn("RSO/data-infrastructuur is als PGA-werkspoor zichtbaar", html)
+        self.assertIn("ACP/PZP-datadeling is als concrete use case toegevoegd", html)
         self.assertIn("Tijdlijn", html)
         self.assertIn(f'claims/{LATEST_UPDATE_ID}/index.html', html)
         self.assertIn(f'id="{VNG_FINANCING_UPDATE_ID}"', html)
@@ -580,12 +580,12 @@ class SiteGenerationTests(unittest.TestCase):
 
     def test_update_claims_detail_explicitly_attributes_lower_authority_fragments(self) -> None:
         html = LATEST_UPDATE_CLAIMS_PAGE_PATH.read_text(encoding="utf-8")
-        self.assertIn("Bronhouder: Gemeente Almere", html)
-        self.assertIn("Bronhouder: GGD Flevoland", html)
+        self.assertIn("Bronhouder: Positief Gezond Almere", html)
+        self.assertIn("Bronhouder: Flevoziekenhuis", html)
         self.assertIn("Soort bron: toelichtende bron", html)
         self.assertIn("Veilige formulering: Altijd expliciet toeschrijven", html)
-        self.assertIn("Volgens Gemeente Almere:", html)
-        self.assertIn("Volgens GGD Flevoland:", html)
+        self.assertIn("Volgens Positief Gezond Almere:", html)
+        self.assertIn("Volgens Flevoziekenhuis:", html)
 
     def test_timeline_register_is_chronological_within_each_year(self) -> None:
         register = load_json(TIMELINE_REGISTER_PATH)

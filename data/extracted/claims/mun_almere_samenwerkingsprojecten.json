@@ -3,10 +3,102 @@
   "claim_extraction_run_id": "phase4_all_docs_claims_v3",
   "generated_on": "2026-04-30",
   "source_extraction_run_id": "phase3_all_docs_v3",
-  "claim_count": 8,
+  "claim_count": 9,
   "claims": [
     {
       "claim_id": "clm__mun_almere_samenwerkingsprojecten_d6_001",
+      "topic": "d6.digital_and_operational_infrastructure",
+      "subtopic": "data_and_transfer_infrastructure",
+      "claim_type": "implementation_condition",
+      "normative_status": {
+        "status": "lower_authority_signal",
+        "label": "Lagere-autoriteitssignaal",
+        "source_authority": "commentary",
+        "has_normative_language": true,
+        "public_wording_guardrail": "Altijd expliciet toeschrijven aan de bron; niet als harde norm presenteren zonder sterkere bron.",
+        "needs_attribution": true
+      },
+      "time_status": {
+        "status": "publication_or_context_date",
+        "label": "Publicatie- of contextdatum",
+        "date_signal": "year",
+        "source_temporal_anchor": "explicit_text_signal",
+        "public_wording_guardrail": "Gebruik als bron- of contextdatum; niet als beleidsdeadline.",
+        "needs_review": true
+      },
+      "money_status": {
+        "status": "not_financial",
+        "label": "Geen zelfstandige financiele claim",
+        "financial_signal": false,
+        "source_finance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+        "needs_verification": true
+      },
+      "governance_status": {
+        "status": "decision_role",
+        "label": "Besluitvormende rol",
+        "actor_signals": [],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Splits besluitvorming van coordinatie en uitvoering; noem de beslissende actor alleen als de bron dat draagt.",
+        "needs_verification": true,
+        "vague_region_only": false
+      },
+      "locality_status": {
+        "status": "explicit_almere",
+        "label": "Expliciet Almeers",
+        "locality_scope": "Almere",
+        "regional_split_signals": [],
+        "explicit_location_signals": {
+          "almere": true,
+          "flevoland": false
+        },
+        "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
+        "needs_verification": false
+      },
+      "execution_status": {
+        "status": "execution_context",
+        "label": "Uitvoeringscontext",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
+        "public_wording_guardrail": "Gebruik als uitvoeringscontext; maak er geen actie, eigenaar of planning van zonder sterker bewijs.",
+        "needs_verification": true
+      },
+      "statement": "Thuis in de wijk is een van de deelresultaten van het addendum op de woonvisie, de bestuursopdracht wonen en zorg, vastgesteld in 2021.",
+      "source_document_id": "mun_almere_samenwerkingsprojecten",
+      "source_location": {
+        "source_statement_ids": [
+          "mun_almere_samenwerkingsprojecten_d6_001"
+        ],
+        "pages": [
+          null
+        ],
+        "sections": [
+          "Samenwerkingsprojecten / Samenwerkingsafspraken Thuis in de wijk"
+        ],
+        "evidence_quotes": [
+          "Thuis in de wijk is een van de deelresultaten van het addendum op de woonvisie, de bestuursopdracht wonen en zorg, vastgesteld in 2021."
+        ]
+      },
+      "publisher": "Gemeente Almere",
+      "instrument_type": "commentary",
+      "jurisdiction_level": "municipal",
+      "document_status": "current",
+      "authority_weight": 0.25,
+      "publication_date": null,
+      "effective_from": null,
+      "effective_to": null,
+      "validity_status": "contextual_active",
+      "applies_to": [
+        "Almere"
+      ],
+      "confidence": 0.68,
+      "human_review_status": "needs_human_review",
+      "source_statement_type": "contextual_relevance",
+      "claim_extraction_run_id": "phase4_all_docs_claims_v3",
+      "relations": []
+    },
+    {
+      "claim_id": "clm__mun_almere_samenwerkingsprojecten_d6_002",
       "topic": "d6.regional_coordination",
       "subtopic": "ggd_and_regional_coordination",
       "claim_type": "implementation_requirement",
@@ -69,7 +161,7 @@
       "source_document_id": "mun_almere_samenwerkingsprojecten",
       "source_location": {
         "source_statement_ids": [
-          "mun_almere_samenwerkingsprojecten_d6_001"
+          "mun_almere_samenwerkingsprojecten_d6_002"
         ],
         "pages": [
           null

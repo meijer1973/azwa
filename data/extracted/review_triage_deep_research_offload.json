@@ -1,0 +1,638 @@
+{
+  "triage_id": "phase31_4_review_triage_deep_research_offload",
+  "generated_on": "2026-04-30",
+  "current_sprint": "Sprint 31.4 - Review triage and deep-research offload",
+  "inputs": [
+    "data/extracted/review_queue.json",
+    "data/extracted/human_review_round.json",
+    "data/extracted/municipal/almere_d6_responsibility_register.json",
+    "docs/review/*.md"
+  ],
+  "summary": {
+    "review_queue_items": 387,
+    "human_review_round_items": 387,
+    "bucket_counts": {
+      "pipeline_or_extraction_cleanup": 10,
+      "mixed_public_search_then_human": 120,
+      "human_only": 58,
+      "deep_research_candidate": 199
+    },
+    "deep_research_assignment_count": 6,
+    "d6_rows_requiring_human_validation": 12,
+    "d6_rows_with_named_public_search_gap": 3
+  },
+  "bucket_definitions": {
+    "human_only": {
+      "description": "Requires policy judgement, stakeholder validation, finance/controller confirmation, or local mandate clarification.",
+      "reason_codes": [
+        "execution_capacity_need",
+        "execution_decision_question",
+        "execution_review_task",
+        "governance_gap",
+        "local_funding_gap"
+      ],
+      "item_count": 58,
+      "top_reason_codes": {
+        "execution_review_task": 31,
+        "execution_capacity_need": 13,
+        "execution_decision_question": 12,
+        "governance_gap": 1,
+        "local_funding_gap": 1
+      },
+      "sample_items": [
+        {
+          "review_item_id": "rvw_008",
+          "reason_code": "execution_capacity_need",
+          "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
+          "summary": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 1 execution capacity claim(s).",
+          "recommended_action": "Use these as capacity questions; do not infer staffing, fte, or ownership.",
+          "sample_claim_ids": [
+            "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d6_001"
+          ]
+        },
+        {
+          "review_item_id": "rvw_010",
+          "reason_code": "execution_review_task",
+          "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
+          "summary": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 4 execution review or monitoring claim(s).",
+          "recommended_action": "Keep these as review, monitoring, or validation tasks; do not present them as settled implementation choices.",
+          "sample_claim_ids": [
+            "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_governance_and_finance_003",
+            "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_monitoring_and_evaluation_001",
+            "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_monitoring_and_evaluation_002",
+            "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_monitoring_and_evaluation_003"
+          ]
+        },
+        {
+          "review_item_id": "rvw_018",
+          "reason_code": "execution_decision_question",
+          "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid",
+          "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid contains 2 execution decision-question claim(s).",
+          "recommended_action": "Keep these as possible decision questions; do not present them as decided actions.",
+          "sample_claim_ids": [
+            "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_governance_and_finance_002",
+            "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_timeline_and_status_002"
+          ]
+        },
+        {
+          "review_item_id": "rvw_019",
+          "reason_code": "execution_review_task",
+          "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid",
+          "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid contains 1 execution review or monitoring claim(s).",
+          "recommended_action": "Keep these as review, monitoring, or validation tasks; do not present them as settled implementation choices.",
+          "sample_claim_ids": [
+            "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_monitoring_and_evaluation_001"
+          ]
+        },
+        {
+          "review_item_id": "rvw_025",
+          "reason_code": "execution_decision_question",
+          "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
+          "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst contains 2 execution decision-question claim(s).",
+          "recommended_action": "Keep these as possible decision questions; do not present them as decided actions.",
+          "sample_claim_ids": [
+            "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_governance_and_finance_003",
+            "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_timeline_and_status_002"
+          ]
+        },
+        {
+          "review_item_id": "rvw_034",
+          "reason_code": "execution_review_task",
+          "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd",
+          "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd contains 3 execution review or monitoring claim(s).",
+          "recommended_action": "Keep these as review, monitoring, or validation tasks; do not present them as settled implementation choices.",
+          "sample_claim_ids": [
+            "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_timeline_and_status_003",
+            "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_monitoring_and_evaluation_001",
+            "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_monitoring_and_evaluation_003"
+          ]
+        },
+        {
+          "review_item_id": "rvw_042",
+          "reason_code": "execution_capacity_need",
+          "document_id": "mun_almere_2024_2034_maatschappelijke_agenda",
+          "summary": "mun_almere_2024_2034_maatschappelijke_agenda contains 1 execution capacity claim(s).",
+          "recommended_action": "Use these as capacity questions; do not infer staffing, fte, or ownership.",
+          "sample_claim_ids": [
+            "clm__mun_almere_2024_2034_maatschappelijke_agenda_municipal_translation_003"
+          ]
+        },
+        {
+          "review_item_id": "rvw_043",
+          "reason_code": "execution_decision_question",
+          "document_id": "mun_almere_2024_2034_maatschappelijke_agenda",
+          "summary": "mun_almere_2024_2034_maatschappelijke_agenda contains 2 execution decision-question claim(s).",
+          "recommended_action": "Keep these as possible decision questions; do not present them as decided actions.",
+          "sample_claim_ids": [
+            "clm__mun_almere_2024_2034_maatschappelijke_agenda_timeline_and_status_002",
+            "clm__mun_almere_2024_2034_maatschappelijke_agenda_timeline_and_status_003"
+          ]
+        }
+      ]
+    },
+    "deep_research_candidate": {
+      "description": "May be reducible by a careful public-source search for stronger sources, clearer dates, actor scope, or explicit local adoption.",
+      "reason_codes": [
+        "authority_unclear",
+        "expected_time_not_deadline",
+        "finance_context_needs_verification",
+        "local_adoption_gap",
+        "local_planning_context_not_policy_deadline",
+        "lower_authority_norm_signal",
+        "municipality_relevance_inferred",
+        "national_claim_local_relevance",
+        "regional_split_context",
+        "unresolved_conflict",
+        "vague_region_actor"
+      ],
+      "item_count": 199,
+      "top_reason_codes": {
+        "lower_authority_norm_signal": 37,
+        "municipality_relevance_inferred": 30,
+        "authority_unclear": 30,
+        "expected_time_not_deadline": 22,
+        "national_claim_local_relevance": 22,
+        "vague_region_actor": 14,
+        "finance_context_needs_verification": 13,
+        "local_planning_context_not_policy_deadline": 10,
+        "regional_split_context": 10,
+        "unresolved_conflict": 10,
+        "local_adoption_gap": 1
+      },
+      "sample_items": [
+        {
+          "review_item_id": "rvw_012",
+          "reason_code": "expected_time_not_deadline",
+          "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
+          "summary": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 3 expected or indicative time claim(s).",
+          "recommended_action": "Keep these as expected moments unless a stronger source establishes a formal deadline.",
+          "sample_claim_ids": [
+            "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d5_002",
+            "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_timeline_and_status_001",
+            "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_timeline_and_status_002"
+          ]
+        },
+        {
+          "review_item_id": "rvw_013",
+          "reason_code": "lower_authority_norm_signal",
+          "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
+          "summary": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 10 lower-authority norm signal claim(s).",
+          "recommended_action": "Attribute these passages explicitly and do not present them as binding without a stronger source.",
+          "sample_claim_ids": [
+            "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d5_001",
+            "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d5_002",
+            "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d5_003",
+            "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d6_001",
+            "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d6_002"
+          ]
+        },
+        {
+          "review_item_id": "rvw_014",
+          "reason_code": "municipality_relevance_inferred",
+          "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
+          "summary": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 6 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
+          "recommended_action": "Review these claims before treating them as firm municipal obligations or implementation facts.",
+          "sample_claim_ids": [
+            "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d5_001",
+            "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d5_002",
+            "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d5_003",
+            "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d6_001",
+            "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d6_002"
+          ]
+        },
+        {
+          "review_item_id": "rvw_015",
+          "reason_code": "vague_region_actor",
+          "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
+          "summary": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 1 claim(s) where 'regio' is the only detected actor signal.",
+          "recommended_action": "Clarify whether the source means IZA/AZWA-regio, GGD-regio, zorgkantoorregio, ROAZ/subregio, province, mandaatgemeente, or practical execution structure before using this as a role claim.",
+          "sample_claim_ids": [
+            "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d5_001"
+          ]
+        },
+        {
+          "review_item_id": "rvw_017",
+          "reason_code": "authority_unclear",
+          "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid",
+          "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid contributes lower-authority claims that still require human review.",
+          "recommended_action": "Keep these claims as contextual support only until a stronger primary source confirms or replaces them.",
+          "sample_claim_ids": [
+            "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_governance_and_finance_001",
+            "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_governance_and_finance_002",
+            "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_timeline_and_status_001",
+            "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_timeline_and_status_002",
+            "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_monitoring_and_evaluation_001"
+          ]
+        },
+        {
+          "review_item_id": "rvw_020",
+          "reason_code": "expected_time_not_deadline",
+          "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid",
+          "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid contains 2 expected or indicative time claim(s).",
+          "recommended_action": "Keep these as expected moments unless a stronger source establishes a formal deadline.",
+          "sample_claim_ids": [
+            "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_municipal_translation_001",
+            "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_municipal_translation_003"
+          ]
+        },
+        {
+          "review_item_id": "rvw_021",
+          "reason_code": "local_planning_context_not_policy_deadline",
+          "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid",
+          "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid contains 2 local planning context claim(s).",
+          "recommended_action": "Use these as local governance context and do not present them as substantive D5/D6 deadlines.",
+          "sample_claim_ids": [
+            "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_timeline_and_status_001",
+            "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_timeline_and_status_002"
+          ]
+        },
+        {
+          "review_item_id": "rvw_022",
+          "reason_code": "lower_authority_norm_signal",
+          "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid",
+          "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid contains 1 lower-authority norm signal claim(s).",
+          "recommended_action": "Attribute these passages explicitly and do not present them as binding without a stronger source.",
+          "sample_claim_ids": [
+            "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_governance_and_finance_002"
+          ]
+        }
+      ]
+    },
+    "mixed_public_search_then_human": {
+      "description": "Public search may clarify the source basis, but final role, action, sequencing or responsibility language may still need human validation.",
+      "reason_codes": [
+        "actor_context_needs_role_split",
+        "execution_context_needs_action_split",
+        "execution_dependency",
+        "execution_sequencing_need"
+      ],
+      "item_count": 120,
+      "top_reason_codes": {
+        "actor_context_needs_role_split": 46,
+        "execution_context_needs_action_split": 28,
+        "execution_dependency": 23,
+        "execution_sequencing_need": 23
+      },
+      "sample_items": [
+        {
+          "review_item_id": "rvw_007",
+          "reason_code": "actor_context_needs_role_split",
+          "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
+          "summary": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 3 actor-context claim(s) without a more specific governance role.",
+          "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+          "sample_claim_ids": [
+            "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_governance_and_finance_002",
+            "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_municipal_translation_001",
+            "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_municipal_translation_002"
+          ]
+        },
+        {
+          "review_item_id": "rvw_009",
+          "reason_code": "execution_dependency",
+          "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
+          "summary": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 1 execution dependency claim(s).",
+          "recommended_action": "Name the dependency and keep it open unless a source shows it has been resolved.",
+          "sample_claim_ids": [
+            "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_municipal_translation_001"
+          ]
+        },
+        {
+          "review_item_id": "rvw_011",
+          "reason_code": "execution_sequencing_need",
+          "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
+          "summary": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 3 execution sequencing claim(s).",
+          "recommended_action": "Treat these as sequencing or phasing signals; do not turn them into a hard local implementation plan without source evidence.",
+          "sample_claim_ids": [
+            "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d5_001",
+            "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d5_003",
+            "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d6_002"
+          ]
+        },
+        {
+          "review_item_id": "rvw_016",
+          "reason_code": "actor_context_needs_role_split",
+          "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid",
+          "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid contains 3 actor-context claim(s) without a more specific governance role.",
+          "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+          "sample_claim_ids": [
+            "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_governance_and_finance_001",
+            "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_governance_and_finance_002",
+            "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_municipal_translation_001"
+          ]
+        },
+        {
+          "review_item_id": "rvw_023",
+          "reason_code": "actor_context_needs_role_split",
+          "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
+          "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst contains 1 actor-context claim(s) without a more specific governance role.",
+          "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+          "sample_claim_ids": [
+            "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_municipal_translation_003"
+          ]
+        },
+        {
+          "review_item_id": "rvw_024",
+          "reason_code": "execution_context_needs_action_split",
+          "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
+          "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst contains 2 execution-context claim(s) without a more specific execution status.",
+          "recommended_action": "Review these before turning context into an action, dependency, owner, sequence, or capacity need.",
+          "sample_claim_ids": [
+            "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d5_003",
+            "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_monitoring_and_evaluation_003"
+          ]
+        },
+        {
+          "review_item_id": "rvw_026",
+          "reason_code": "execution_dependency",
+          "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
+          "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst contains 2 execution dependency claim(s).",
+          "recommended_action": "Name the dependency and keep it open unless a source shows it has been resolved.",
+          "sample_claim_ids": [
+            "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d6_001",
+            "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_monitoring_and_evaluation_001"
+          ]
+        },
+        {
+          "review_item_id": "rvw_027",
+          "reason_code": "execution_sequencing_need",
+          "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
+          "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst contains 2 execution sequencing claim(s).",
+          "recommended_action": "Treat these as sequencing or phasing signals; do not turn them into a hard local implementation plan without source evidence.",
+          "sample_claim_ids": [
+            "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d5_002",
+            "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_governance_and_finance_001"
+          ]
+        }
+      ]
+    },
+    "pipeline_or_extraction_cleanup": {
+      "description": "Mostly repository/pipeline cleanup rather than policy review.",
+      "reason_codes": [
+        "extraction_noise_detected",
+        "missing_d5_content",
+        "missing_d6_content",
+        "table_content_not_promoted"
+      ],
+      "item_count": 10,
+      "top_reason_codes": {
+        "missing_d5_content": 4,
+        "extraction_noise_detected": 3,
+        "missing_d6_content": 2,
+        "table_content_not_promoted": 1
+      },
+      "sample_items": [
+        {
+          "review_item_id": "rvw_001",
+          "reason_code": "missing_d5_content",
+          "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd",
+          "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd is expected to contain D5 material, but the extraction produced no D5 items.",
+          "recommended_action": "Review the source and improve the D5 extraction rules for this document.",
+          "sample_claim_ids": []
+        },
+        {
+          "review_item_id": "rvw_002",
+          "reason_code": "missing_d5_content",
+          "document_id": "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst",
+          "summary": "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst is expected to contain D5 material, but the extraction produced no D5 items.",
+          "recommended_action": "Review the source and improve the D5 extraction rules for this document.",
+          "sample_claim_ids": []
+        },
+        {
+          "review_item_id": "rvw_003",
+          "reason_code": "missing_d5_content",
+          "document_id": "mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd",
+          "summary": "mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd is expected to contain D5 material, but the extraction produced no D5 items.",
+          "recommended_action": "Review the source and improve the D5 extraction rules for this document.",
+          "sample_claim_ids": []
+        },
+        {
+          "review_item_id": "rvw_004",
+          "reason_code": "missing_d6_content",
+          "document_id": "mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd",
+          "summary": "mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd is expected to contain D6 material, but the extraction produced no D6 items.",
+          "recommended_action": "Review the source and improve the D6 extraction rules for this document.",
+          "sample_claim_ids": []
+        },
+        {
+          "review_item_id": "rvw_005",
+          "reason_code": "missing_d5_content",
+          "document_id": "mun_almere_pga_current_home",
+          "summary": "mun_almere_pga_current_home is expected to contain D5 material, but the extraction produced no D5 items.",
+          "recommended_action": "Review the source and improve the D5 extraction rules for this document.",
+          "sample_claim_ids": []
+        },
+        {
+          "review_item_id": "rvw_006",
+          "reason_code": "missing_d6_content",
+          "document_id": "mun_almere_pga_current_home",
+          "summary": "mun_almere_pga_current_home is expected to contain D6 material, but the extraction produced no D6 items.",
+          "recommended_action": "Review the source and improve the D6 extraction rules for this document.",
+          "sample_claim_ids": []
+        },
+        {
+          "review_item_id": "rvw_036",
+          "reason_code": "extraction_noise_detected",
+          "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd",
+          "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd contains 1 suspicious claim statement(s) with navigation text, encoding noise, or over-concatenated list content.",
+          "recommended_action": "Manually review these claims and tighten the extraction filters before promoting them to briefings or dashboards.",
+          "sample_claim_ids": [
+            "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_timeline_and_status_003"
+          ]
+        },
+        {
+          "review_item_id": "rvw_075",
+          "reason_code": "extraction_noise_detected",
+          "document_id": "mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel",
+          "summary": "mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel contains 1 suspicious claim statement(s) with navigation text, encoding noise, or over-concatenated list content.",
+          "recommended_action": "Manually review these claims and tighten the extraction filters before promoting them to briefings or dashboards.",
+          "sample_claim_ids": [
+            "clm__mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel_d6_003"
+          ]
+        }
+      ]
+    }
+  },
+  "human_only_d6_rows": [
+    "Burgerinitiatieven en informele steun",
+    "Digitale en operationele infrastructuur",
+    "Financiering en budgetafbakening",
+    "GGD Flevoland-coordinatie",
+    "Gezonde School / mentale gezonde school",
+    "Inloopvoorzieningen sociaal en gezond",
+    "JGZ Almere",
+    "Kennis & Advies / monitoring / dashboards",
+    "Positief Gezond Almere / Zorgzaam Flevoland-interface",
+    "Samen Sterker in de Wijk / mentale-gezondheidswijkinfrastructuur",
+    "Stevige Lokale Teams",
+    "Wijkteams Almere"
+  ],
+  "public_search_gap_d6_rows": [
+    "Burgerinitiatieven en informele steun",
+    "Digitale en operationele infrastructuur",
+    "Gezonde School / mentale gezonde school"
+  ],
+  "deep_research_assignments": [
+    {
+      "assignment_id": "dr_gezonde_school_almere",
+      "title": "Gezonde School / mentale gezonde school Almere",
+      "d6_rows": [
+        "Gezonde School / mentale gezonde school",
+        "JGZ Almere"
+      ],
+      "question": "Find public Almere, GGD/JGZ, school-board or programme sources that show whether and how Gezonde School or mental-health school prevention is implemented in Almere, who coordinates it, and whether it is linked to D6, JGZ or SLT.",
+      "likely_sources": [
+        "Gemeente Almere",
+        "GGD Flevoland",
+        "JGZ Almere",
+        "school-board pages",
+        "Gezonde School programme pages"
+      ],
+      "may_resolve": [
+        "public-source gap",
+        "implementation evidence",
+        "candidate owner/executor evidence"
+      ],
+      "must_not_resolve": [
+        "formal D6 classification",
+        "funding allocation",
+        "mandate without local validation"
+      ]
+    },
+    {
+      "assignment_id": "dr_digitale_operationele_infrastructuur",
+      "title": "Digital and operational infrastructure for D6 Almere/Flevoland",
+      "d6_rows": [
+        "Digitale en operationele infrastructuur",
+        "Kennis & Advies / monitoring / dashboards"
+      ],
+      "question": "Find public sources for RTP Almere, RSO, Monitoring@home, shared information picture, regional data infrastructure or digital cooperation that are relevant to D5/D6 execution in Almere/Flevoland.",
+      "likely_sources": [
+        "Gemeente Almere",
+        "Zorgzaam Flevoland",
+        "Flever",
+        "GGD Flevoland",
+        "regional digital/data partnerships",
+        "IZA/AZWA regional pages"
+      ],
+      "may_resolve": [
+        "named-source gap",
+        "actor/context evidence",
+        "scope evidence"
+      ],
+      "must_not_resolve": [
+        "D6 ownership",
+        "budget split",
+        "formal governance role"
+      ]
+    },
+    {
+      "assignment_id": "dr_burgerinitiatieven_informele_steun",
+      "title": "Burgerinitiatieven, informele steun and social-base access",
+      "d6_rows": [
+        "Burgerinitiatieven en informele steun",
+        "Inloopvoorzieningen sociaal en gezond"
+      ],
+      "question": "Find public Almere sources that identify social-base partners, volunteer support, citizen initiatives, informal care, walk-in/access points or inloopvoorzieningen relevant to D6 basisinfrastructuur.",
+      "likely_sources": [
+        "Gemeente Almere",
+        "De Schoor",
+        "VMCA",
+        "MEE Samen",
+        "wijkteams pages",
+        "social-base programme pages"
+      ],
+      "may_resolve": [
+        "local inventory candidates",
+        "public-source evidence",
+        "partner mapping"
+      ],
+      "must_not_resolve": [
+        "formal D6 classification",
+        "assigned responsibility",
+        "confirmed funding"
+      ]
+    },
+    {
+      "assignment_id": "dr_pga_zorgzaam_flever_interface",
+      "title": "PGA / Zorgzaam Flevoland / Flever interface",
+      "d6_rows": [
+        "Positief Gezond Almere / Zorgzaam Flevoland-interface",
+        "Financiering en budgetafbakening"
+      ],
+      "question": "Find public sources that clarify the relation between Positief Gezond Almere, Zorgzaam Flevoland, Flever, IZA/AZWA work-agenda governance, transformation funding and D5/D6 execution.",
+      "likely_sources": [
+        "Positief Gezond Almere",
+        "Zorgzaam Flevoland",
+        "Flever",
+        "ZonMw",
+        "Gemeente Almere",
+        "regional governance pages"
+      ],
+      "may_resolve": [
+        "programme-role evidence",
+        "public funding context",
+        "interface terminology"
+      ],
+      "must_not_resolve": [
+        "component-level budget allocation",
+        "formal D6 governance vehicle",
+        "controller validation"
+      ]
+    },
+    {
+      "assignment_id": "dr_samen_sterker_wijk",
+      "title": "Samen Sterker in de Wijk source strengthening",
+      "d6_rows": [
+        "Samen Sterker in de Wijk / mentale-gezondheidswijkinfrastructuur"
+      ],
+      "question": "Find public sources beyond the current Almere page that describe Samen Sterker in de Wijk governance, project status, partners, funding, evaluation, or relation to mental-health neighbourhood infrastructure.",
+      "likely_sources": [
+        "Gemeente Almere",
+        "Zorgplatform Flevoland",
+        "GGZ Centraal",
+        "Kwintes",
+        "Triade",
+        "Amethist",
+        "Leger des Heils",
+        "GGD Flevoland"
+      ],
+      "may_resolve": [
+        "project evidence",
+        "partner evidence",
+        "public implementation context"
+      ],
+      "must_not_resolve": [
+        "formal D6 status",
+        "owner/coordinator without validation",
+        "funding assignment"
+      ]
+    },
+    {
+      "assignment_id": "dr_stronger_authority_sources",
+      "title": "Stronger public source hunt for review-queue authority/adoption items",
+      "d6_rows": [],
+      "question": "For high-volume review reasons such as authority_unclear, lower_authority_norm_signal, municipality_relevance_inferred and national_claim_local_relevance, search whether stronger public sources exist in the corpus domains or official publisher sites.",
+      "likely_sources": [
+        "Rijksoverheid",
+        "VNG",
+        "Zorgakkoorden",
+        "DUS-I",
+        "wetten.nl",
+        "Gemeente Almere",
+        "GGD Flevoland"
+      ],
+      "may_resolve": [
+        "authority hierarchy",
+        "public-source replacement",
+        "explicit local adoption evidence"
+      ],
+      "must_not_resolve": [
+        "human policy judgement",
+        "non-public decision status",
+        "local validation"
+      ]
+    }
+  ],
+  "routing_rule": "Send only public-source gaps, authority/source hierarchy checks, explicit local adoption searches and source-replacement searches to deep research agents. Keep ownership, mandate, funding, D6 classification and settled-status decisions with human stakeholders or policy owners.",
+  "d6_guardrail": "No D6 responsibility-register row may move to settled from a deep research result alone. A deep research result can add source candidates or reduce public-source gaps; formal classification, ownership, mandate and funding still need validation evidence."
+}

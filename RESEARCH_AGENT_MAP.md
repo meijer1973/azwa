@@ -28,6 +28,8 @@ For monthly source monitoring, use `config/monthly_source_audit.json`, `data/ext
 
 For human review routing, use `data/extracted/human_review_round.json` and `docs/review/phase31.3-human-review-round.md`. Reviewer decisions must be recorded as human review decisions or validation records; they do not become source claims unless backed by a canonical source or explicit validation evidence.
 
+For deep-research delegation, use `data/extracted/review_triage_deep_research_offload.json`, `docs/review/phase31.4-review-triage-deep-research-offload.md`, and `docs/review/phase31.4-deep-research-agent-prompts.md`. Deep research agents may reduce public-source gaps and source-authority uncertainty, but they must not settle D6 classification, ownership, mandate, funding, safe wording, or register status.
+
 ## Access Layer
 
 Base URL:
@@ -144,6 +146,7 @@ Machine-readable:
       "data/extracted/data_quality_audit.json",
       "data/extracted/monthly_source_audit.json",
       "data/extracted/human_review_round.json",
+      "data/extracted/review_triage_deep_research_offload.json",
       "data/extracted/claims/claims_master.jsonl",
       "data/extracted/claims/sentence_validator_rejects.json",
       "data/extracted/claims/dedup_log.json",
@@ -216,6 +219,8 @@ Machine-readable:
     "docs/review/almere_d6_funding_gap_table.md",
     "docs/review/almere_d6_safe_wording.md",
     "docs/review/phase31.3-human-review-round.md",
+    "docs/review/phase31.4-review-triage-deep-research-offload.md",
+    "docs/review/phase31.4-deep-research-agent-prompts.md",
     "docs/human-review-guidance.md",
     "docs/internal/monthly-source-audit-2026-04-30.md",
     "docs/internal/review-dashboard.html"

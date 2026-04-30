@@ -10,6 +10,8 @@ D6 rows with named public-search gaps: 3.
 
 Send only public-source gaps, authority/source hierarchy checks, explicit local adoption searches and source-replacement searches to deep research agents. Keep ownership, mandate, funding, D6 classification and settled-status decisions with human stakeholders or policy owners.
 
+Deep-research reports are source-discovery inputs only. Repository staff must ingest selected public sources through the manifest/pipeline and verify the resulting findings in top data layers before treating an assignment as processed.
+
 ## Triage Buckets
 
 | Bucket | Item count | What it means | Top reason codes |

@@ -830,6 +830,82 @@ ANNOTATIONS = {
             "for the formal PGA transformation plan."
         ),
     },
+    "mun_almere_gezonde_scholen": {
+        "source_classification": "primary",
+        "curation_bucket": "canonical",
+        "contains_d5": False,
+        "contains_d6": True,
+        "contains_structured_tables": False,
+        "contains_financing_logic": False,
+        "contains_governance_logic": True,
+        "contains_monitoring_evaluation_logic": False,
+        "contains_municipal_implications": True,
+        "inventory_notes": (
+            "Municipal public page for Gezonde scholen in Almere. Use as source-backed local implementation "
+            "evidence for the Gezonde School D6 validation row, not as formal D6 classification."
+        ),
+    },
+    "mun_almere_gezond_in_almere": {
+        "source_classification": "primary",
+        "curation_bucket": "canonical",
+        "contains_d5": False,
+        "contains_d6": True,
+        "contains_structured_tables": False,
+        "contains_financing_logic": False,
+        "contains_governance_logic": True,
+        "contains_monitoring_evaluation_logic": False,
+        "contains_municipal_implications": True,
+        "inventory_notes": (
+            "Municipal health/prevention gateway that places Gezonde School and mentale gezondheid in the "
+            "same Almere public-health context. Use as context, not as owner or funding evidence."
+        ),
+    },
+    "reg_ggd_flevoland_gezonde_school": {
+        "source_classification": "primary",
+        "curation_bucket": "canonical",
+        "contains_d5": False,
+        "contains_d6": True,
+        "contains_structured_tables": False,
+        "contains_financing_logic": False,
+        "contains_governance_logic": True,
+        "contains_monitoring_evaluation_logic": True,
+        "contains_municipal_implications": True,
+        "inventory_notes": (
+            "GGD Flevoland page for Gezonde School advisers and school health/wellbeing support. Use as "
+            "regional implementation evidence; D6 ownership and mandate still need validation."
+        ),
+    },
+    "reg_ggd_flevoland_ketenaanpak_gezond_gewicht_almere": {
+        "source_classification": "primary",
+        "curation_bucket": "canonical",
+        "contains_d5": False,
+        "contains_d6": True,
+        "contains_structured_tables": False,
+        "contains_financing_logic": True,
+        "contains_governance_logic": True,
+        "contains_monitoring_evaluation_logic": True,
+        "contains_municipal_implications": True,
+        "inventory_notes": (
+            "GGD Flevoland page for Gezond Gewicht Almere and the Pact met impact reference. Use as stable "
+            "public anchor for the healthy-school/collective-prevention evidence cluster when the referenced "
+            "PDF URL is unavailable to the local pipeline."
+        ),
+    },
+    "mun_almere_lea_2024_2028": {
+        "source_classification": "primary",
+        "curation_bucket": "canonical",
+        "contains_d5": False,
+        "contains_d6": True,
+        "contains_structured_tables": False,
+        "contains_financing_logic": True,
+        "contains_governance_logic": True,
+        "contains_monitoring_evaluation_logic": True,
+        "contains_municipal_implications": True,
+        "inventory_notes": (
+            "Local Education Agenda page for Almere 2024-2028. Use for school-wellbeing, LEA partner and "
+            "budget-context evidence; do not treat it as a D6 ownership decision."
+        ),
+    },
 }
 
 

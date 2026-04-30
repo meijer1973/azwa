@@ -163,6 +163,68 @@ PUBLIC_SOURCE_CANDIDATES = [
         "why_it_matters": "Current public PGA source for cooperation themes, healthy neighbourhoods, learning networks and professional information picture.",
         "intake_action": "Use as current implementation context; keep separate from formal PGA transformation-plan evidence.",
     },
+    {
+        "source_id": "mun_almere_gezonde_scholen",
+        "title": "Gezonde scholen",
+        "publisher": "Gemeente Almere",
+        "source_url": "https://www.almere.nl/zorg-en-welzijn/gezond-in-almere/gezonde-scholen",
+        "repository_status": "ingested_formal_corpus",
+        "verification_status": "downloaded_2026_04_30",
+        "why_it_matters": (
+            "Municipal public page showing Almere-specific school-health support, including the GGD Gezonde "
+            "School adviser and referral to central support for children and families around healthy weight."
+        ),
+        "intake_action": "Use as local implementation evidence; do not use as formal D6 owner or funding decision.",
+    },
+    {
+        "source_id": "mun_almere_gezond_in_almere",
+        "title": "Gezond in Almere",
+        "publisher": "Gemeente Almere",
+        "source_url": "https://www.almere.nl/zorg-en-welzijn/gezond-in-almere",
+        "repository_status": "ingested_formal_corpus",
+        "verification_status": "downloaded_2026_04_30",
+        "why_it_matters": "Municipal health/prevention gateway that places Gezonde School and mentale gezondheid in the same public context.",
+        "intake_action": "Use as context for prevention framing; do not use as a D6 responsibility decision.",
+    },
+    {
+        "source_id": "reg_ggd_flevoland_gezonde_school",
+        "title": "De Gezonde School",
+        "publisher": "GGD Flevoland",
+        "source_url": "https://www.ggdflevoland.nl/professional/scholen-en-kinderopvang/gezonde-school/",
+        "repository_status": "ingested_formal_corpus",
+        "verification_status": "downloaded_2026_04_30",
+        "why_it_matters": (
+            "Regional public-health source for Gezonde School advisers, school wellbeing, health themes and "
+            "GGD support to schools."
+        ),
+        "intake_action": "Use as GGD-side implementation evidence; keep D6 mandate and funding open.",
+    },
+    {
+        "source_id": "reg_ggd_flevoland_ketenaanpak_gezond_gewicht_almere",
+        "title": "Ketenaanpak gezond gewicht - Gezond Gewicht Almere",
+        "publisher": "GGD Flevoland",
+        "source_url": "https://www.ggdflevoland.nl/professional/gemeenten/ketenaanpak-gezond-gewicht/",
+        "repository_status": "ingested_formal_corpus",
+        "verification_status": "downloaded_2026_04_30",
+        "why_it_matters": (
+            "Stable public GGD page for Gezond Gewicht Almere, collective prevention, JGZ route and Pact met "
+            "impact reference. The referenced PDF remains a candidate if a stable downloadable URL is available."
+        ),
+        "intake_action": "Use as source-backed prevention/JGZ context; do not use to settle D6 funding.",
+    },
+    {
+        "source_id": "mun_almere_lea_2024_2028",
+        "title": "LEA 2024-2028",
+        "publisher": "Sociaal Domein Almere / Gemeente Almere",
+        "source_url": "https://sociaaldomein.almere.nl/onderwijs/lea-2024-2028",
+        "repository_status": "ingested_formal_corpus",
+        "verification_status": "downloaded_2026_04_30",
+        "why_it_matters": (
+            "Local education-agenda source for school wellbeing, youth-health/youth-help partner involvement, "
+            "joint responsibility and budget-context caveats."
+        ),
+        "intake_action": "Use as school-wellbeing and governance-context evidence; do not use as D6 classification.",
+    },
 ]
 
 
@@ -220,15 +282,24 @@ COMPONENTS = [
     {
         "component_id": "jgz_almere",
         "component_label": "JGZ Almere",
-        "existing_almere_provision": "GGD Flevoland public profile describes JGZ Almere as 0-18 jeugdgezondheidszorg with broader local configuration.",
-        "required_upgrade": "Link JGZ Almere to SLT, school, Kansrijke Start, mental-health prevention and local team roles.",
+        "existing_almere_provision": (
+            "GGD Flevoland public profile describes JGZ Almere as 0-18 jeugdgezondheidszorg with broader local "
+            "configuration; Gezonde School and LEA sources add school/prevention context."
+        ),
+        "required_upgrade": "Validate which JGZ school, SLT, Kansrijke Start, mental-health prevention and local-team roles are D6-specific.",
         "owner": "JGZ Almere / GGD Flevoland, municipal governance needs confirmation",
         "executors": ["JGZ Almere"],
         "cooperation_partners": ["schools", "huisartsen", "Passend Onderwijs", "wijkteams", "jeugdhulp"],
         "scale": "almere_local_with_ggd_flevoland_governance",
         "funding_sources": ["GGD/JGZ funding needs source-specific split"],
         "decision_status": "source_backed_prefill",
-        "evidence_sources": ["reg_ggd_flevoland_jgz_almere_profile", "reg_ggd_flevoland_begroting_2026"],
+        "evidence_sources": [
+            "reg_ggd_flevoland_jgz_almere_profile",
+            "reg_ggd_flevoland_begroting_2026",
+            "reg_ggd_flevoland_gezonde_school",
+            "reg_ggd_flevoland_ketenaanpak_gezond_gewicht_almere",
+            "mun_almere_lea_2024_2028",
+        ],
         "confidence": "medium",
         "open_issue": "Operational role is public, but exact D6 ownership and budget status need local validation.",
     },
@@ -250,17 +321,34 @@ COMPONENTS = [
     {
         "component_id": "gezonde_school_mentale_gezonde_school",
         "component_label": "Gezonde School / mentale gezonde school",
-        "existing_almere_provision": None,
-        "required_upgrade": "Find Almere-specific implementation source and link to GGD/JGZ and schools.",
+        "existing_almere_provision": (
+            "Municipal and GGD public pages now show Almere-specific Gezonde School support, GGD Gezonde "
+            "School advisers, school wellbeing/prevention context and JGZ/LEA partner links."
+        ),
+        "required_upgrade": (
+            "Validate whether this is formal D6 infrastructure, adjacent school-prevention infrastructure or "
+            "candidate infrastructure, and confirm owner, coordinator, mandate and funding."
+        ),
         "owner": None,
-        "executors": ["GGD/JGZ candidate", "schools candidate"],
-        "cooperation_partners": ["schools", "GGD/JGZ", "municipality", "youth partners"],
+        "executors": ["GGD Gezonde School advisers candidate", "schools candidate", "JGZ Almere candidate"],
+        "cooperation_partners": ["schools", "GGD Flevoland", "JGZ Almere", "Gemeente Almere", "youth partners"],
         "scale": "almere_local_or_ggd_regio_needs_validation",
         "funding_sources": ["unknown_needs_decision"],
-        "decision_status": "review_needed",
-        "evidence_sources": ["reg_ggd_flevoland_jgz_almere_profile"],
-        "confidence": "low",
-        "open_issue": "National D6 direction is clear, but local Almere implementation evidence still needs source intake.",
+        "decision_status": "source_backed_prefill",
+        "evidence_sources": [
+            "mun_almere_gezonde_scholen",
+            "mun_almere_gezond_in_almere",
+            "reg_ggd_flevoland_gezonde_school",
+            "reg_ggd_flevoland_ketenaanpak_gezond_gewicht_almere",
+            "mun_almere_lea_2024_2028",
+            "reg_ggd_flevoland_jgz_almere_profile",
+            "reg_ggd_flevoland_begroting_2026",
+        ],
+        "confidence": "medium",
+        "open_issue": (
+            "Public-source gap is reduced, but formal D6 classification, accountable owner, mandate, scale and "
+            "component-level funding remain local validation questions."
+        ),
     },
     {
         "component_id": "kennis_advies_monitoring_dashboards",

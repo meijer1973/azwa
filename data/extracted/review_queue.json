@@ -1,31 +1,31 @@
 {
   "review_run_id": "phase11_quality_control_v1",
-  "generated_on": "2026-04-29",
+  "generated_on": "2026-04-30",
   "summary": {
     "blocking": 0,
     "warning": 6,
-    "review": 381,
-    "item_count": 387,
+    "review": 408,
+    "item_count": 414,
     "issue_counts_by_reason": {
-      "actor_context_needs_role_split": 46,
-      "authority_unclear": 30,
+      "actor_context_needs_role_split": 50,
+      "authority_unclear": 35,
       "execution_capacity_need": 13,
       "execution_context_needs_action_split": 28,
       "execution_decision_question": 12,
       "execution_dependency": 23,
-      "execution_review_task": 31,
-      "execution_sequencing_need": 23,
-      "expected_time_not_deadline": 22,
+      "execution_review_task": 34,
+      "execution_sequencing_need": 26,
+      "expected_time_not_deadline": 25,
       "extraction_noise_detected": 3,
       "finance_context_needs_verification": 13,
       "governance_gap": 1,
       "local_adoption_gap": 1,
       "local_funding_gap": 1,
-      "local_planning_context_not_policy_deadline": 10,
-      "lower_authority_norm_signal": 37,
+      "local_planning_context_not_policy_deadline": 11,
+      "lower_authority_norm_signal": 41,
       "missing_d5_content": 4,
       "missing_d6_content": 2,
-      "municipality_relevance_inferred": 30,
+      "municipality_relevance_inferred": 34,
       "national_claim_local_relevance": 22,
       "regional_split_context": 10,
       "table_content_not_promoted": 1,
@@ -545,7 +545,7 @@
       "severity": "review",
       "check_id": "claim_payload_integrity",
       "reason_code": "execution_dependency",
-      "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst contains 2 execution dependency claim(s).",
+      "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst contains 1 execution dependency claim(s).",
       "recommended_action": "Name the dependency and keep it open unless a source shows it has been resolved.",
       "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
       "topic": null,
@@ -554,7 +554,6 @@
       ],
       "related_ids": {
         "sample_claim_ids": [
-          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d6_001",
           "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_monitoring_and_evaluation_001"
         ]
       },
@@ -611,7 +610,7 @@
       "severity": "review",
       "check_id": "claim_payload_integrity",
       "reason_code": "lower_authority_norm_signal",
-      "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst contains 6 lower-authority norm signal claim(s).",
+      "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst contains 5 lower-authority norm signal claim(s).",
       "recommended_action": "Attribute these passages explicitly and do not present them as binding without a stronger source.",
       "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
       "topic": null,
@@ -623,8 +622,8 @@
           "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d5_002",
           "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d5_003",
           "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d6_001",
-          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d6_003",
-          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_governance_and_finance_001"
+          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_governance_and_finance_001",
+          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_governance_and_finance_002"
         ]
       },
       "evidence": {},
@@ -635,7 +634,7 @@
       "severity": "review",
       "check_id": "claim_payload_integrity",
       "reason_code": "municipality_relevance_inferred",
-      "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst contains 4 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
+      "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst contains 3 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
       "recommended_action": "Review these claims before treating them as firm municipal obligations or implementation facts.",
       "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
       "topic": null,
@@ -646,8 +645,7 @@
         "sample_claim_ids": [
           "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d5_002",
           "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d5_003",
-          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d6_001",
-          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d6_003"
+          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d6_001"
         ],
         "topic_count": 2
       },
@@ -786,7 +784,7 @@
       "severity": "review",
       "check_id": "claim_payload_integrity",
       "reason_code": "lower_authority_norm_signal",
-      "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd contains 3 lower-authority norm signal claim(s).",
+      "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd contains 5 lower-authority norm signal claim(s).",
       "recommended_action": "Attribute these passages explicitly and do not present them as binding without a stronger source.",
       "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd",
       "topic": null,
@@ -796,6 +794,8 @@
       "related_ids": {
         "sample_claim_ids": [
           "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_d6_001",
+          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_d6_002",
+          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_d6_003",
           "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_governance_and_finance_001",
           "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_governance_and_finance_002"
         ]
@@ -808,7 +808,7 @@
       "severity": "review",
       "check_id": "claim_payload_integrity",
       "reason_code": "municipality_relevance_inferred",
-      "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd contains 1 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
+      "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd contains 3 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
       "recommended_action": "Review these claims before treating them as firm municipal obligations or implementation facts.",
       "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd",
       "topic": null,
@@ -817,9 +817,11 @@
       ],
       "related_ids": {
         "sample_claim_ids": [
-          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_d6_001"
+          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_d6_001",
+          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_d6_002",
+          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_d6_003"
         ],
-        "topic_count": 1
+        "topic_count": 2
       },
       "evidence": {},
       "review_item_id": "rvw_038"
@@ -829,7 +831,7 @@
       "severity": "review",
       "check_id": "claim_payload_integrity",
       "reason_code": "vague_region_actor",
-      "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd contains 1 claim(s) where 'regio' is the only detected actor signal.",
+      "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd contains 2 claim(s) where 'regio' is the only detected actor signal.",
       "recommended_action": "Clarify whether the source means IZA/AZWA-regio, GGD-regio, zorgkantoorregio, ROAZ/subregio, province, mandaatgemeente, or practical execution structure before using this as a role claim.",
       "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd",
       "topic": null,
@@ -838,6 +840,7 @@
       ],
       "related_ids": {
         "sample_claim_ids": [
+          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_d6_002",
           "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_municipal_translation_001"
         ]
       },
@@ -1164,13 +1167,13 @@
         "data/extracted/claims/mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie.json"
       ],
       "related_ids": {
-        "review_claim_count": 7,
+        "review_claim_count": 8,
         "sample_claim_ids": [
           "clm__mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie_d6_002",
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie_d6_003",
           "clm__mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie_governance_and_finance_001",
           "clm__mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie_monitoring_and_evaluation_001",
-          "clm__mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie_monitoring_and_evaluation_002",
-          "clm__mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie_monitoring_and_evaluation_003"
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie_monitoring_and_evaluation_002"
         ]
       },
       "evidence": {},
@@ -1201,7 +1204,7 @@
       "severity": "review",
       "check_id": "claim_payload_integrity",
       "reason_code": "execution_review_task",
-      "summary": "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie contains 3 execution review or monitoring claim(s).",
+      "summary": "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie contains 4 execution review or monitoring claim(s).",
       "recommended_action": "Keep these as review, monitoring, or validation tasks; do not present them as settled implementation choices.",
       "document_id": "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie",
       "topic": null,
@@ -1210,6 +1213,7 @@
       ],
       "related_ids": {
         "sample_claim_ids": [
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie_d6_003",
           "clm__mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie_monitoring_and_evaluation_001",
           "clm__mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie_monitoring_and_evaluation_003",
           "clm__mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie_municipal_translation_001"
@@ -1263,7 +1267,7 @@
       "severity": "review",
       "check_id": "claim_payload_integrity",
       "reason_code": "lower_authority_norm_signal",
-      "summary": "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie contains 1 lower-authority norm signal claim(s).",
+      "summary": "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie contains 2 lower-authority norm signal claim(s).",
       "recommended_action": "Attribute these passages explicitly and do not present them as binding without a stronger source.",
       "document_id": "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie",
       "topic": null,
@@ -1272,7 +1276,8 @@
       ],
       "related_ids": {
         "sample_claim_ids": [
-          "clm__mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie_d6_002"
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie_d6_002",
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie_d6_003"
         ]
       },
       "evidence": {},
@@ -1283,7 +1288,7 @@
       "severity": "review",
       "check_id": "claim_payload_integrity",
       "reason_code": "municipality_relevance_inferred",
-      "summary": "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie contains 1 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
+      "summary": "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie contains 2 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
       "recommended_action": "Review these claims before treating them as firm municipal obligations or implementation facts.",
       "document_id": "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie",
       "topic": null,
@@ -1292,7 +1297,8 @@
       ],
       "related_ids": {
         "sample_claim_ids": [
-          "clm__mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie_d6_002"
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie_d6_002",
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie_d6_003"
         ],
         "topic_count": 1
       },
@@ -2115,6 +2121,339 @@
       "status": "open",
       "severity": "review",
       "check_id": "claim_payload_integrity",
+      "reason_code": "actor_context_needs_role_split",
+      "summary": "mun_almere_gezond_in_almere contains 1 actor-context claim(s) without a more specific governance role.",
+      "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+      "document_id": "mun_almere_gezond_in_almere",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_gezond_in_almere.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_gezond_in_almere_municipal_translation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_099"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "authority_unclear",
+      "summary": "mun_almere_gezond_in_almere contributes lower-authority claims that still require human review.",
+      "recommended_action": "Keep these claims as contextual support only until a stronger primary source confirms or replaces them.",
+      "document_id": "mun_almere_gezond_in_almere",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_gezond_in_almere.json"
+      ],
+      "related_ids": {
+        "review_claim_count": 3,
+        "sample_claim_ids": [
+          "clm__mun_almere_gezond_in_almere_municipal_translation_001",
+          "clm__mun_almere_gezond_in_almere_municipal_translation_002",
+          "clm__mun_almere_gezond_in_almere_municipal_translation_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_100"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_sequencing_need",
+      "summary": "mun_almere_gezond_in_almere contains 1 execution sequencing claim(s).",
+      "recommended_action": "Treat these as sequencing or phasing signals; do not turn them into a hard local implementation plan without source evidence.",
+      "document_id": "mun_almere_gezond_in_almere",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_gezond_in_almere.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_gezond_in_almere_municipal_translation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_101"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "expected_time_not_deadline",
+      "summary": "mun_almere_gezond_in_almere contains 1 expected or indicative time claim(s).",
+      "recommended_action": "Keep these as expected moments unless a stronger source establishes a formal deadline.",
+      "document_id": "mun_almere_gezond_in_almere",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_gezond_in_almere.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_gezond_in_almere_municipal_translation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_102"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "authority_unclear",
+      "summary": "mun_almere_gezonde_scholen contributes lower-authority claims that still require human review.",
+      "recommended_action": "Keep these claims as contextual support only until a stronger primary source confirms or replaces them.",
+      "document_id": "mun_almere_gezonde_scholen",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_gezonde_scholen.json"
+      ],
+      "related_ids": {
+        "review_claim_count": 9,
+        "sample_claim_ids": [
+          "clm__mun_almere_gezonde_scholen_d6_001",
+          "clm__mun_almere_gezonde_scholen_d6_002",
+          "clm__mun_almere_gezonde_scholen_d6_003",
+          "clm__mun_almere_gezonde_scholen_monitoring_and_evaluation_001",
+          "clm__mun_almere_gezonde_scholen_monitoring_and_evaluation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_103"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_review_task",
+      "summary": "mun_almere_gezonde_scholen contains 2 execution review or monitoring claim(s).",
+      "recommended_action": "Keep these as review, monitoring, or validation tasks; do not present them as settled implementation choices.",
+      "document_id": "mun_almere_gezonde_scholen",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_gezonde_scholen.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_gezonde_scholen_monitoring_and_evaluation_001",
+          "clm__mun_almere_gezonde_scholen_monitoring_and_evaluation_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_104"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_sequencing_need",
+      "summary": "mun_almere_gezonde_scholen contains 1 execution sequencing claim(s).",
+      "recommended_action": "Treat these as sequencing or phasing signals; do not turn them into a hard local implementation plan without source evidence.",
+      "document_id": "mun_almere_gezonde_scholen",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_gezonde_scholen.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_gezonde_scholen_monitoring_and_evaluation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_105"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "lower_authority_norm_signal",
+      "summary": "mun_almere_gezonde_scholen contains 3 lower-authority norm signal claim(s).",
+      "recommended_action": "Attribute these passages explicitly and do not present them as binding without a stronger source.",
+      "document_id": "mun_almere_gezonde_scholen",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_gezonde_scholen.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_gezonde_scholen_d6_001",
+          "clm__mun_almere_gezonde_scholen_d6_002",
+          "clm__mun_almere_gezonde_scholen_d6_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_106"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "municipality_relevance_inferred",
+      "summary": "mun_almere_gezonde_scholen contains 3 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
+      "recommended_action": "Review these claims before treating them as firm municipal obligations or implementation facts.",
+      "document_id": "mun_almere_gezonde_scholen",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_gezonde_scholen.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_gezonde_scholen_d6_001",
+          "clm__mun_almere_gezonde_scholen_d6_002",
+          "clm__mun_almere_gezonde_scholen_d6_003"
+        ],
+        "topic_count": 2
+      },
+      "evidence": {},
+      "review_item_id": "rvw_107"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "actor_context_needs_role_split",
+      "summary": "mun_almere_lea_2024_2028 contains 9 actor-context claim(s) without a more specific governance role.",
+      "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+      "document_id": "mun_almere_lea_2024_2028",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_lea_2024_2028.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_lea_2024_2028_d6_001",
+          "clm__mun_almere_lea_2024_2028_governance_and_finance_001",
+          "clm__mun_almere_lea_2024_2028_governance_and_finance_002",
+          "clm__mun_almere_lea_2024_2028_governance_and_finance_003",
+          "clm__mun_almere_lea_2024_2028_timeline_and_status_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_108"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "authority_unclear",
+      "summary": "mun_almere_lea_2024_2028 contributes lower-authority claims that still require human review.",
+      "recommended_action": "Keep these claims as contextual support only until a stronger primary source confirms or replaces them.",
+      "document_id": "mun_almere_lea_2024_2028",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_lea_2024_2028.json"
+      ],
+      "related_ids": {
+        "review_claim_count": 15,
+        "sample_claim_ids": [
+          "clm__mun_almere_lea_2024_2028_d6_001",
+          "clm__mun_almere_lea_2024_2028_d6_002",
+          "clm__mun_almere_lea_2024_2028_d6_003",
+          "clm__mun_almere_lea_2024_2028_governance_and_finance_001",
+          "clm__mun_almere_lea_2024_2028_governance_and_finance_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_109"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_review_task",
+      "summary": "mun_almere_lea_2024_2028 contains 6 execution review or monitoring claim(s).",
+      "recommended_action": "Keep these as review, monitoring, or validation tasks; do not present them as settled implementation choices.",
+      "document_id": "mun_almere_lea_2024_2028",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_lea_2024_2028.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_lea_2024_2028_timeline_and_status_001",
+          "clm__mun_almere_lea_2024_2028_timeline_and_status_002",
+          "clm__mun_almere_lea_2024_2028_monitoring_and_evaluation_001",
+          "clm__mun_almere_lea_2024_2028_monitoring_and_evaluation_002",
+          "clm__mun_almere_lea_2024_2028_monitoring_and_evaluation_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_110"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "local_planning_context_not_policy_deadline",
+      "summary": "mun_almere_lea_2024_2028 contains 2 local planning context claim(s).",
+      "recommended_action": "Use these as local governance context and do not present them as substantive D5/D6 deadlines.",
+      "document_id": "mun_almere_lea_2024_2028",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_lea_2024_2028.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_lea_2024_2028_d6_001",
+          "clm__mun_almere_lea_2024_2028_municipal_translation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_111"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "lower_authority_norm_signal",
+      "summary": "mun_almere_lea_2024_2028 contains 3 lower-authority norm signal claim(s).",
+      "recommended_action": "Attribute these passages explicitly and do not present them as binding without a stronger source.",
+      "document_id": "mun_almere_lea_2024_2028",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_lea_2024_2028.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_lea_2024_2028_d6_001",
+          "clm__mun_almere_lea_2024_2028_d6_002",
+          "clm__mun_almere_lea_2024_2028_d6_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_112"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "municipality_relevance_inferred",
+      "summary": "mun_almere_lea_2024_2028 contains 3 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
+      "recommended_action": "Review these claims before treating them as firm municipal obligations or implementation facts.",
+      "document_id": "mun_almere_lea_2024_2028",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_lea_2024_2028.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_lea_2024_2028_d6_001",
+          "clm__mun_almere_lea_2024_2028_d6_002",
+          "clm__mun_almere_lea_2024_2028_d6_003"
+        ],
+        "topic_count": 1
+      },
+      "evidence": {},
+      "review_item_id": "rvw_113"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
       "reason_code": "execution_review_task",
       "summary": "mun_almere_pga_current_home contains 1 execution review or monitoring claim(s).",
       "recommended_action": "Keep these as review, monitoring, or validation tasks; do not present them as settled implementation choices.",
@@ -2129,7 +2468,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_099"
+      "review_item_id": "rvw_114"
     },
     {
       "status": "open",
@@ -2149,7 +2488,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_100"
+      "review_item_id": "rvw_115"
     },
     {
       "status": "open",
@@ -2171,7 +2510,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_101"
+      "review_item_id": "rvw_116"
     },
     {
       "status": "open",
@@ -2196,7 +2535,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_102"
+      "review_item_id": "rvw_117"
     },
     {
       "status": "open",
@@ -2219,7 +2558,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_103"
+      "review_item_id": "rvw_118"
     },
     {
       "status": "open",
@@ -2242,7 +2581,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_104"
+      "review_item_id": "rvw_119"
     },
     {
       "status": "open",
@@ -2264,7 +2603,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_105"
+      "review_item_id": "rvw_120"
     },
     {
       "status": "open",
@@ -2284,7 +2623,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_106"
+      "review_item_id": "rvw_121"
     },
     {
       "status": "open",
@@ -2308,7 +2647,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_107"
+      "review_item_id": "rvw_122"
     },
     {
       "status": "open",
@@ -2332,7 +2671,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_108"
+      "review_item_id": "rvw_123"
     },
     {
       "status": "open",
@@ -2357,7 +2696,7 @@
         "topic_count": 5
       },
       "evidence": {},
-      "review_item_id": "rvw_109"
+      "review_item_id": "rvw_124"
     },
     {
       "status": "open",
@@ -2377,7 +2716,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_110"
+      "review_item_id": "rvw_125"
     },
     {
       "status": "open",
@@ -2397,7 +2736,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_111"
+      "review_item_id": "rvw_126"
     },
     {
       "status": "open",
@@ -2417,7 +2756,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_112"
+      "review_item_id": "rvw_127"
     },
     {
       "status": "open",
@@ -2441,7 +2780,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_113"
+      "review_item_id": "rvw_128"
     },
     {
       "status": "open",
@@ -2463,7 +2802,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_114"
+      "review_item_id": "rvw_129"
     },
     {
       "status": "open",
@@ -2483,7 +2822,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_115"
+      "review_item_id": "rvw_130"
     },
     {
       "status": "open",
@@ -2507,7 +2846,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_116"
+      "review_item_id": "rvw_131"
     },
     {
       "status": "open",
@@ -2532,7 +2871,7 @@
         "topic_count": 4
       },
       "evidence": {},
-      "review_item_id": "rvw_117"
+      "review_item_id": "rvw_132"
     },
     {
       "status": "open",
@@ -2552,7 +2891,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_118"
+      "review_item_id": "rvw_133"
     },
     {
       "status": "open",
@@ -2575,7 +2914,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_119"
+      "review_item_id": "rvw_134"
     },
     {
       "status": "open",
@@ -2596,7 +2935,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_120"
+      "review_item_id": "rvw_135"
     },
     {
       "status": "open",
@@ -2617,7 +2956,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_121"
+      "review_item_id": "rvw_136"
     },
     {
       "status": "open",
@@ -2639,7 +2978,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_122"
+      "review_item_id": "rvw_137"
     },
     {
       "status": "open",
@@ -2664,7 +3003,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_123"
+      "review_item_id": "rvw_138"
     },
     {
       "status": "open",
@@ -2685,7 +3024,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_124"
+      "review_item_id": "rvw_139"
     },
     {
       "status": "open",
@@ -2705,7 +3044,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_125"
+      "review_item_id": "rvw_140"
     },
     {
       "status": "open",
@@ -2726,7 +3065,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_126"
+      "review_item_id": "rvw_141"
     },
     {
       "status": "open",
@@ -2747,7 +3086,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_127"
+      "review_item_id": "rvw_142"
     },
     {
       "status": "open",
@@ -2769,7 +3108,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_128"
+      "review_item_id": "rvw_143"
     },
     {
       "status": "open",
@@ -2794,7 +3133,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_129"
+      "review_item_id": "rvw_144"
     },
     {
       "status": "open",
@@ -2815,7 +3154,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_130"
+      "review_item_id": "rvw_145"
     },
     {
       "status": "open",
@@ -2835,7 +3174,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_131"
+      "review_item_id": "rvw_146"
     },
     {
       "status": "open",
@@ -2856,7 +3195,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_132"
+      "review_item_id": "rvw_147"
     },
     {
       "status": "open",
@@ -2881,7 +3220,7 @@
         "topic_count": 3
       },
       "evidence": {},
-      "review_item_id": "rvw_133"
+      "review_item_id": "rvw_148"
     },
     {
       "status": "open",
@@ -2902,7 +3241,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_134"
+      "review_item_id": "rvw_149"
     },
     {
       "status": "open",
@@ -2925,7 +3264,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_135"
+      "review_item_id": "rvw_150"
     },
     {
       "status": "open",
@@ -2948,7 +3287,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_136"
+      "review_item_id": "rvw_151"
     },
     {
       "status": "open",
@@ -2970,7 +3309,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_137"
+      "review_item_id": "rvw_152"
     },
     {
       "status": "open",
@@ -2990,7 +3329,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_138"
+      "review_item_id": "rvw_153"
     },
     {
       "status": "open",
@@ -3011,7 +3350,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_139"
+      "review_item_id": "rvw_154"
     },
     {
       "status": "open",
@@ -3032,7 +3371,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_140"
+      "review_item_id": "rvw_155"
     },
     {
       "status": "open",
@@ -3052,7 +3391,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_141"
+      "review_item_id": "rvw_156"
     },
     {
       "status": "open",
@@ -3072,7 +3411,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_142"
+      "review_item_id": "rvw_157"
     },
     {
       "status": "open",
@@ -3093,7 +3432,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_143"
+      "review_item_id": "rvw_158"
     },
     {
       "status": "open",
@@ -3115,7 +3454,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_144"
+      "review_item_id": "rvw_159"
     },
     {
       "status": "open",
@@ -3135,7 +3474,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_145"
+      "review_item_id": "rvw_160"
     },
     {
       "status": "open",
@@ -3158,7 +3497,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_146"
+      "review_item_id": "rvw_161"
     },
     {
       "status": "open",
@@ -3178,7 +3517,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_147"
+      "review_item_id": "rvw_162"
     },
     {
       "status": "open",
@@ -3200,7 +3539,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_148"
+      "review_item_id": "rvw_163"
     },
     {
       "status": "open",
@@ -3220,7 +3559,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_149"
+      "review_item_id": "rvw_164"
     },
     {
       "status": "open",
@@ -3242,7 +3581,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_150"
+      "review_item_id": "rvw_165"
     },
     {
       "status": "open",
@@ -3262,7 +3601,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_151"
+      "review_item_id": "rvw_166"
     },
     {
       "status": "open",
@@ -3283,7 +3622,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_152"
+      "review_item_id": "rvw_167"
     },
     {
       "status": "open",
@@ -3303,7 +3642,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_153"
+      "review_item_id": "rvw_168"
     },
     {
       "status": "open",
@@ -3323,7 +3662,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_154"
+      "review_item_id": "rvw_169"
     },
     {
       "status": "open",
@@ -3346,7 +3685,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_155"
+      "review_item_id": "rvw_170"
     },
     {
       "status": "open",
@@ -3366,7 +3705,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_156"
+      "review_item_id": "rvw_171"
     },
     {
       "status": "open",
@@ -3387,7 +3726,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_157"
+      "review_item_id": "rvw_172"
     },
     {
       "status": "open",
@@ -3408,7 +3747,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_158"
+      "review_item_id": "rvw_173"
     },
     {
       "status": "open",
@@ -3430,7 +3769,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_159"
+      "review_item_id": "rvw_174"
     },
     {
       "status": "open",
@@ -3451,7 +3790,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_160"
+      "review_item_id": "rvw_175"
     },
     {
       "status": "open",
@@ -3472,7 +3811,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_161"
+      "review_item_id": "rvw_176"
     },
     {
       "status": "open",
@@ -3492,7 +3831,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_162"
+      "review_item_id": "rvw_177"
     },
     {
       "status": "open",
@@ -3512,7 +3851,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_163"
+      "review_item_id": "rvw_178"
     },
     {
       "status": "open",
@@ -3532,7 +3871,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_164"
+      "review_item_id": "rvw_179"
     },
     {
       "status": "open",
@@ -3553,7 +3892,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_165"
+      "review_item_id": "rvw_180"
     },
     {
       "status": "open",
@@ -3573,7 +3912,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_166"
+      "review_item_id": "rvw_181"
     },
     {
       "status": "open",
@@ -3594,7 +3933,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_167"
+      "review_item_id": "rvw_182"
     },
     {
       "status": "open",
@@ -3614,7 +3953,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_168"
+      "review_item_id": "rvw_183"
     },
     {
       "status": "open",
@@ -3634,7 +3973,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_169"
+      "review_item_id": "rvw_184"
     },
     {
       "status": "open",
@@ -3655,7 +3994,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_170"
+      "review_item_id": "rvw_185"
     },
     {
       "status": "open",
@@ -3677,7 +4016,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_171"
+      "review_item_id": "rvw_186"
     },
     {
       "status": "open",
@@ -3700,7 +4039,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_172"
+      "review_item_id": "rvw_187"
     },
     {
       "status": "open",
@@ -3725,7 +4064,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_173"
+      "review_item_id": "rvw_188"
     },
     {
       "status": "open",
@@ -3745,7 +4084,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_174"
+      "review_item_id": "rvw_189"
     },
     {
       "status": "open",
@@ -3766,7 +4105,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_175"
+      "review_item_id": "rvw_190"
     },
     {
       "status": "open",
@@ -3789,7 +4128,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_176"
+      "review_item_id": "rvw_191"
     },
     {
       "status": "open",
@@ -3811,7 +4150,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_177"
+      "review_item_id": "rvw_192"
     },
     {
       "status": "open",
@@ -3835,7 +4174,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_178"
+      "review_item_id": "rvw_193"
     },
     {
       "status": "open",
@@ -3855,7 +4194,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_179"
+      "review_item_id": "rvw_194"
     },
     {
       "status": "open",
@@ -3875,7 +4214,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_180"
+      "review_item_id": "rvw_195"
     },
     {
       "status": "open",
@@ -3898,7 +4237,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_181"
+      "review_item_id": "rvw_196"
     },
     {
       "status": "open",
@@ -3922,7 +4261,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_182"
+      "review_item_id": "rvw_197"
     },
     {
       "status": "open",
@@ -3943,7 +4282,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_183"
+      "review_item_id": "rvw_198"
     },
     {
       "status": "open",
@@ -3963,7 +4302,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_184"
+      "review_item_id": "rvw_199"
     },
     {
       "status": "open",
@@ -3985,7 +4324,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_185"
+      "review_item_id": "rvw_200"
     },
     {
       "status": "open",
@@ -4006,7 +4345,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_186"
+      "review_item_id": "rvw_201"
     },
     {
       "status": "open",
@@ -4030,7 +4369,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_187"
+      "review_item_id": "rvw_202"
     },
     {
       "status": "open",
@@ -4052,7 +4391,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_188"
+      "review_item_id": "rvw_203"
     },
     {
       "status": "open",
@@ -4076,7 +4415,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_189"
+      "review_item_id": "rvw_204"
     },
     {
       "status": "open",
@@ -4101,7 +4440,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_190"
+      "review_item_id": "rvw_205"
     },
     {
       "status": "open",
@@ -4122,7 +4461,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_191"
+      "review_item_id": "rvw_206"
     },
     {
       "status": "open",
@@ -4143,7 +4482,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_192"
+      "review_item_id": "rvw_207"
     },
     {
       "status": "open",
@@ -4167,7 +4506,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_193"
+      "review_item_id": "rvw_208"
     },
     {
       "status": "open",
@@ -4188,7 +4527,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_194"
+      "review_item_id": "rvw_209"
     },
     {
       "status": "open",
@@ -4209,7 +4548,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_195"
+      "review_item_id": "rvw_210"
     },
     {
       "status": "open",
@@ -4233,7 +4572,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_196"
+      "review_item_id": "rvw_211"
     },
     {
       "status": "open",
@@ -4255,7 +4594,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_197"
+      "review_item_id": "rvw_212"
     },
     {
       "status": "open",
@@ -4278,7 +4617,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_198"
+      "review_item_id": "rvw_213"
     },
     {
       "status": "open",
@@ -4303,7 +4642,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_199"
+      "review_item_id": "rvw_214"
     },
     {
       "status": "open",
@@ -4323,7 +4662,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_200"
+      "review_item_id": "rvw_215"
     },
     {
       "status": "open",
@@ -4343,7 +4682,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_201"
+      "review_item_id": "rvw_216"
     },
     {
       "status": "open",
@@ -4365,7 +4704,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_202"
+      "review_item_id": "rvw_217"
     },
     {
       "status": "open",
@@ -4385,7 +4724,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_203"
+      "review_item_id": "rvw_218"
     },
     {
       "status": "open",
@@ -4410,7 +4749,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_204"
+      "review_item_id": "rvw_219"
     },
     {
       "status": "open",
@@ -4430,7 +4769,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_205"
+      "review_item_id": "rvw_220"
     },
     {
       "status": "open",
@@ -4450,7 +4789,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_206"
+      "review_item_id": "rvw_221"
     },
     {
       "status": "open",
@@ -4470,7 +4809,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_207"
+      "review_item_id": "rvw_222"
     },
     {
       "status": "open",
@@ -4493,7 +4832,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_208"
+      "review_item_id": "rvw_223"
     },
     {
       "status": "open",
@@ -4515,7 +4854,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_209"
+      "review_item_id": "rvw_224"
     },
     {
       "status": "open",
@@ -4536,7 +4875,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_210"
+      "review_item_id": "rvw_225"
     },
     {
       "status": "open",
@@ -4557,7 +4896,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_211"
+      "review_item_id": "rvw_226"
     },
     {
       "status": "open",
@@ -4579,7 +4918,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_212"
+      "review_item_id": "rvw_227"
     },
     {
       "status": "open",
@@ -4600,7 +4939,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_213"
+      "review_item_id": "rvw_228"
     },
     {
       "status": "open",
@@ -4620,7 +4959,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_214"
+      "review_item_id": "rvw_229"
     },
     {
       "status": "open",
@@ -4642,10 +4981,10 @@
           "clm__nat_gala_2023_gezond_en_actief_leven_d6_002",
           "clm__nat_gala_2023_gezond_en_actief_leven_d6_003"
         ],
-        "topic_count": 2
+        "topic_count": 3
       },
       "evidence": {},
-      "review_item_id": "rvw_215"
+      "review_item_id": "rvw_230"
     },
     {
       "status": "open",
@@ -4669,7 +5008,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_216"
+      "review_item_id": "rvw_231"
     },
     {
       "status": "open",
@@ -4690,14 +5029,14 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_217"
+      "review_item_id": "rvw_232"
     },
     {
       "status": "open",
       "severity": "review",
       "check_id": "claim_payload_integrity",
       "reason_code": "vague_region_actor",
-      "summary": "nat_gala_2023_gezond_en_actief_leven contains 2 claim(s) where 'regio' is the only detected actor signal.",
+      "summary": "nat_gala_2023_gezond_en_actief_leven contains 1 claim(s) where 'regio' is the only detected actor signal.",
       "recommended_action": "Clarify whether the source means IZA/AZWA-regio, GGD-regio, zorgkantoorregio, ROAZ/subregio, province, mandaatgemeente, or practical execution structure before using this as a role claim.",
       "document_id": "nat_gala_2023_gezond_en_actief_leven",
       "topic": null,
@@ -4706,12 +5045,11 @@
       ],
       "related_ids": {
         "sample_claim_ids": [
-          "clm__nat_gala_2023_gezond_en_actief_leven_d6_001",
-          "clm__nat_gala_2023_gezond_en_actief_leven_d6_003"
+          "clm__nat_gala_2023_gezond_en_actief_leven_d6_001"
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_218"
+      "review_item_id": "rvw_233"
     },
     {
       "status": "open",
@@ -4732,7 +5070,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_219"
+      "review_item_id": "rvw_234"
     },
     {
       "status": "open",
@@ -4752,7 +5090,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_220"
+      "review_item_id": "rvw_235"
     },
     {
       "status": "open",
@@ -4772,7 +5110,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_221"
+      "review_item_id": "rvw_236"
     },
     {
       "status": "open",
@@ -4792,7 +5130,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_222"
+      "review_item_id": "rvw_237"
     },
     {
       "status": "open",
@@ -4812,7 +5150,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_223"
+      "review_item_id": "rvw_238"
     },
     {
       "status": "open",
@@ -4833,7 +5171,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_224"
+      "review_item_id": "rvw_239"
     },
     {
       "status": "open",
@@ -4854,7 +5192,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_225"
+      "review_item_id": "rvw_240"
     },
     {
       "status": "open",
@@ -4874,7 +5212,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_226"
+      "review_item_id": "rvw_241"
     },
     {
       "status": "open",
@@ -4896,7 +5234,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_227"
+      "review_item_id": "rvw_242"
     },
     {
       "status": "open",
@@ -4921,7 +5259,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_228"
+      "review_item_id": "rvw_243"
     },
     {
       "status": "open",
@@ -4942,7 +5280,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_229"
+      "review_item_id": "rvw_244"
     },
     {
       "status": "open",
@@ -4962,7 +5300,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_230"
+      "review_item_id": "rvw_245"
     },
     {
       "status": "open",
@@ -4982,7 +5320,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_231"
+      "review_item_id": "rvw_246"
     },
     {
       "status": "open",
@@ -5005,7 +5343,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_232"
+      "review_item_id": "rvw_247"
     },
     {
       "status": "open",
@@ -5025,7 +5363,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_233"
+      "review_item_id": "rvw_248"
     },
     {
       "status": "open",
@@ -5045,7 +5383,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_234"
+      "review_item_id": "rvw_249"
     },
     {
       "status": "open",
@@ -5065,7 +5403,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_235"
+      "review_item_id": "rvw_250"
     },
     {
       "status": "open",
@@ -5089,7 +5427,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_236"
+      "review_item_id": "rvw_251"
     },
     {
       "status": "open",
@@ -5110,7 +5448,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_237"
+      "review_item_id": "rvw_252"
     },
     {
       "status": "open",
@@ -5132,7 +5470,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_238"
+      "review_item_id": "rvw_253"
     },
     {
       "status": "open",
@@ -5152,7 +5490,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_239"
+      "review_item_id": "rvw_254"
     },
     {
       "status": "open",
@@ -5173,7 +5511,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_240"
+      "review_item_id": "rvw_255"
     },
     {
       "status": "open",
@@ -5193,7 +5531,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_241"
+      "review_item_id": "rvw_256"
     },
     {
       "status": "open",
@@ -5218,7 +5556,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_242"
+      "review_item_id": "rvw_257"
     },
     {
       "status": "open",
@@ -5239,7 +5577,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_243"
+      "review_item_id": "rvw_258"
     },
     {
       "status": "open",
@@ -5263,7 +5601,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_244"
+      "review_item_id": "rvw_259"
     },
     {
       "status": "open",
@@ -5288,7 +5626,7 @@
         "topic_count": 2
       },
       "evidence": {},
-      "review_item_id": "rvw_245"
+      "review_item_id": "rvw_260"
     },
     {
       "status": "open",
@@ -5312,7 +5650,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_246"
+      "review_item_id": "rvw_261"
     },
     {
       "status": "open",
@@ -5333,7 +5671,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_247"
+      "review_item_id": "rvw_262"
     },
     {
       "status": "open",
@@ -5354,7 +5692,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_248"
+      "review_item_id": "rvw_263"
     },
     {
       "status": "open",
@@ -5378,7 +5716,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_249"
+      "review_item_id": "rvw_264"
     },
     {
       "status": "open",
@@ -5398,7 +5736,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_250"
+      "review_item_id": "rvw_265"
     },
     {
       "status": "open",
@@ -5419,7 +5757,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_251"
+      "review_item_id": "rvw_266"
     },
     {
       "status": "open",
@@ -5440,7 +5778,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_252"
+      "review_item_id": "rvw_267"
     },
     {
       "status": "open",
@@ -5463,7 +5801,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_253"
+      "review_item_id": "rvw_268"
     },
     {
       "status": "open",
@@ -5485,7 +5823,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_254"
+      "review_item_id": "rvw_269"
     },
     {
       "status": "open",
@@ -5505,7 +5843,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_255"
+      "review_item_id": "rvw_270"
     },
     {
       "status": "open",
@@ -5528,7 +5866,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_256"
+      "review_item_id": "rvw_271"
     },
     {
       "status": "open",
@@ -5548,7 +5886,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_257"
+      "review_item_id": "rvw_272"
     },
     {
       "status": "open",
@@ -5569,7 +5907,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_258"
+      "review_item_id": "rvw_273"
     },
     {
       "status": "open",
@@ -5589,7 +5927,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_259"
+      "review_item_id": "rvw_274"
     },
     {
       "status": "open",
@@ -5613,7 +5951,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_260"
+      "review_item_id": "rvw_275"
     },
     {
       "status": "open",
@@ -5638,7 +5976,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_261"
+      "review_item_id": "rvw_276"
     },
     {
       "status": "open",
@@ -5659,7 +5997,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_262"
+      "review_item_id": "rvw_277"
     },
     {
       "status": "open",
@@ -5679,7 +6017,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_263"
+      "review_item_id": "rvw_278"
     },
     {
       "status": "open",
@@ -5703,7 +6041,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_264"
+      "review_item_id": "rvw_279"
     },
     {
       "status": "open",
@@ -5726,7 +6064,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_265"
+      "review_item_id": "rvw_280"
     },
     {
       "status": "open",
@@ -5750,7 +6088,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_266"
+      "review_item_id": "rvw_281"
     },
     {
       "status": "open",
@@ -5770,7 +6108,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_267"
+      "review_item_id": "rvw_282"
     },
     {
       "status": "open",
@@ -5791,7 +6129,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_268"
+      "review_item_id": "rvw_283"
     },
     {
       "status": "open",
@@ -5812,7 +6150,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_269"
+      "review_item_id": "rvw_284"
     },
     {
       "status": "open",
@@ -5835,7 +6173,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_270"
+      "review_item_id": "rvw_285"
     },
     {
       "status": "open",
@@ -5860,7 +6198,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_271"
+      "review_item_id": "rvw_286"
     },
     {
       "status": "open",
@@ -5880,7 +6218,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_272"
+      "review_item_id": "rvw_287"
     },
     {
       "status": "open",
@@ -5900,7 +6238,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_273"
+      "review_item_id": "rvw_288"
     },
     {
       "status": "open",
@@ -5920,7 +6258,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_274"
+      "review_item_id": "rvw_289"
     },
     {
       "status": "open",
@@ -5943,7 +6281,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_275"
+      "review_item_id": "rvw_290"
     },
     {
       "status": "open",
@@ -5963,7 +6301,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_276"
+      "review_item_id": "rvw_291"
     },
     {
       "status": "open",
@@ -5985,7 +6323,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_277"
+      "review_item_id": "rvw_292"
     },
     {
       "status": "open",
@@ -6009,7 +6347,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_278"
+      "review_item_id": "rvw_293"
     },
     {
       "status": "open",
@@ -6029,7 +6367,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_279"
+      "review_item_id": "rvw_294"
     },
     {
       "status": "open",
@@ -6052,7 +6390,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_280"
+      "review_item_id": "rvw_295"
     },
     {
       "status": "open",
@@ -6077,7 +6415,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_281"
+      "review_item_id": "rvw_296"
     },
     {
       "status": "open",
@@ -6097,7 +6435,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_282"
+      "review_item_id": "rvw_297"
     },
     {
       "status": "open",
@@ -6117,7 +6455,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_283"
+      "review_item_id": "rvw_298"
     },
     {
       "status": "open",
@@ -6137,7 +6475,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_284"
+      "review_item_id": "rvw_299"
     },
     {
       "status": "open",
@@ -6157,7 +6495,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_285"
+      "review_item_id": "rvw_300"
     },
     {
       "status": "open",
@@ -6178,7 +6516,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_286"
+      "review_item_id": "rvw_301"
     },
     {
       "status": "open",
@@ -6198,7 +6536,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_287"
+      "review_item_id": "rvw_302"
     },
     {
       "status": "open",
@@ -6218,7 +6556,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_288"
+      "review_item_id": "rvw_303"
     },
     {
       "status": "open",
@@ -6242,7 +6580,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_289"
+      "review_item_id": "rvw_304"
     },
     {
       "status": "open",
@@ -6263,7 +6601,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_290"
+      "review_item_id": "rvw_305"
     },
     {
       "status": "open",
@@ -6283,7 +6621,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_291"
+      "review_item_id": "rvw_306"
     },
     {
       "status": "open",
@@ -6306,7 +6644,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_292"
+      "review_item_id": "rvw_307"
     },
     {
       "status": "open",
@@ -6326,7 +6664,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_293"
+      "review_item_id": "rvw_308"
     },
     {
       "status": "open",
@@ -6346,7 +6684,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_294"
+      "review_item_id": "rvw_309"
     },
     {
       "status": "open",
@@ -6367,7 +6705,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_295"
+      "review_item_id": "rvw_310"
     },
     {
       "status": "open",
@@ -6387,7 +6725,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_296"
+      "review_item_id": "rvw_311"
     },
     {
       "status": "open",
@@ -6407,7 +6745,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_297"
+      "review_item_id": "rvw_312"
     },
     {
       "status": "open",
@@ -6429,7 +6767,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_298"
+      "review_item_id": "rvw_313"
     },
     {
       "status": "open",
@@ -6450,7 +6788,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_299"
+      "review_item_id": "rvw_314"
     },
     {
       "status": "open",
@@ -6473,7 +6811,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_300"
+      "review_item_id": "rvw_315"
     },
     {
       "status": "open",
@@ -6493,7 +6831,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_301"
+      "review_item_id": "rvw_316"
     },
     {
       "status": "open",
@@ -6513,7 +6851,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_302"
+      "review_item_id": "rvw_317"
     },
     {
       "status": "open",
@@ -6533,7 +6871,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_303"
+      "review_item_id": "rvw_318"
     },
     {
       "status": "open",
@@ -6553,7 +6891,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_304"
+      "review_item_id": "rvw_319"
     },
     {
       "status": "open",
@@ -6573,14 +6911,14 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_305"
+      "review_item_id": "rvw_320"
     },
     {
       "status": "open",
       "severity": "review",
       "check_id": "claim_payload_integrity",
       "reason_code": "execution_sequencing_need",
-      "summary": "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026 contains 3 execution sequencing claim(s).",
+      "summary": "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026 contains 2 execution sequencing claim(s).",
       "recommended_action": "Treat these as sequencing or phasing signals; do not turn them into a hard local implementation plan without source evidence.",
       "document_id": "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026",
       "topic": null,
@@ -6590,12 +6928,11 @@
       "related_ids": {
         "sample_claim_ids": [
           "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d5_001",
-          "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d5_002",
-          "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d6_003"
+          "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d5_002"
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_306"
+      "review_item_id": "rvw_321"
     },
     {
       "status": "open",
@@ -6615,7 +6952,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_307"
+      "review_item_id": "rvw_322"
     },
     {
       "status": "open",
@@ -6635,7 +6972,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_308"
+      "review_item_id": "rvw_323"
     },
     {
       "status": "open",
@@ -6655,7 +6992,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_309"
+      "review_item_id": "rvw_324"
     },
     {
       "status": "open",
@@ -6675,7 +7012,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_310"
+      "review_item_id": "rvw_325"
     },
     {
       "status": "open",
@@ -6695,7 +7032,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_311"
+      "review_item_id": "rvw_326"
     },
     {
       "status": "open",
@@ -6716,7 +7053,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_312"
+      "review_item_id": "rvw_327"
     },
     {
       "status": "open",
@@ -6736,7 +7073,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_313"
+      "review_item_id": "rvw_328"
     },
     {
       "status": "open",
@@ -6761,7 +7098,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_314"
+      "review_item_id": "rvw_329"
     },
     {
       "status": "open",
@@ -6782,7 +7119,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_315"
+      "review_item_id": "rvw_330"
     },
     {
       "status": "open",
@@ -6805,7 +7142,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_316"
+      "review_item_id": "rvw_331"
     },
     {
       "status": "open",
@@ -6825,7 +7162,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_317"
+      "review_item_id": "rvw_332"
     },
     {
       "status": "open",
@@ -6849,7 +7186,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_318"
+      "review_item_id": "rvw_333"
     },
     {
       "status": "open",
@@ -6871,7 +7208,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_319"
+      "review_item_id": "rvw_334"
     },
     {
       "status": "open",
@@ -6895,7 +7232,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_320"
+      "review_item_id": "rvw_335"
     },
     {
       "status": "open",
@@ -6918,7 +7255,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_321"
+      "review_item_id": "rvw_336"
     },
     {
       "status": "open",
@@ -6943,7 +7280,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_322"
+      "review_item_id": "rvw_337"
     },
     {
       "status": "open",
@@ -6963,7 +7300,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_323"
+      "review_item_id": "rvw_338"
     },
     {
       "status": "open",
@@ -6986,7 +7323,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_324"
+      "review_item_id": "rvw_339"
     },
     {
       "status": "open",
@@ -7007,7 +7344,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_325"
+      "review_item_id": "rvw_340"
     },
     {
       "status": "open",
@@ -7028,7 +7365,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_326"
+      "review_item_id": "rvw_341"
     },
     {
       "status": "open",
@@ -7048,7 +7385,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_327"
+      "review_item_id": "rvw_342"
     },
     {
       "status": "open",
@@ -7072,7 +7409,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_328"
+      "review_item_id": "rvw_343"
     },
     {
       "status": "open",
@@ -7095,7 +7432,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_329"
+      "review_item_id": "rvw_344"
     },
     {
       "status": "open",
@@ -7116,7 +7453,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_330"
+      "review_item_id": "rvw_345"
     },
     {
       "status": "open",
@@ -7139,7 +7476,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_331"
+      "review_item_id": "rvw_346"
     },
     {
       "status": "open",
@@ -7160,7 +7497,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_332"
+      "review_item_id": "rvw_347"
     },
     {
       "status": "open",
@@ -7180,7 +7517,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_333"
+      "review_item_id": "rvw_348"
     },
     {
       "status": "open",
@@ -7204,7 +7541,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_334"
+      "review_item_id": "rvw_349"
     },
     {
       "status": "open",
@@ -7227,7 +7564,7 @@
         "topic_count": 3
       },
       "evidence": {},
-      "review_item_id": "rvw_335"
+      "review_item_id": "rvw_350"
     },
     {
       "status": "open",
@@ -7252,7 +7589,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_336"
+      "review_item_id": "rvw_351"
     },
     {
       "status": "open",
@@ -7274,7 +7611,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_337"
+      "review_item_id": "rvw_352"
     },
     {
       "status": "open",
@@ -7295,7 +7632,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_338"
+      "review_item_id": "rvw_353"
     },
     {
       "status": "open",
@@ -7320,7 +7657,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_339"
+      "review_item_id": "rvw_354"
     },
     {
       "status": "open",
@@ -7342,7 +7679,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_340"
+      "review_item_id": "rvw_355"
     },
     {
       "status": "open",
@@ -7363,7 +7700,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_341"
+      "review_item_id": "rvw_356"
     },
     {
       "status": "open",
@@ -7387,7 +7724,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_342"
+      "review_item_id": "rvw_357"
     },
     {
       "status": "open",
@@ -7407,7 +7744,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_343"
+      "review_item_id": "rvw_358"
     },
     {
       "status": "open",
@@ -7427,7 +7764,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_344"
+      "review_item_id": "rvw_359"
     },
     {
       "status": "open",
@@ -7448,7 +7785,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_345"
+      "review_item_id": "rvw_360"
     },
     {
       "status": "open",
@@ -7468,7 +7805,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_346"
+      "review_item_id": "rvw_361"
     },
     {
       "status": "open",
@@ -7488,7 +7825,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_347"
+      "review_item_id": "rvw_362"
     },
     {
       "status": "open",
@@ -7508,7 +7845,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_348"
+      "review_item_id": "rvw_363"
     },
     {
       "status": "open",
@@ -7527,12 +7864,12 @@
           "clm__reg_ggd_flevoland_begroting_2026_d5_001",
           "clm__reg_ggd_flevoland_begroting_2026_d5_002",
           "clm__reg_ggd_flevoland_begroting_2026_d6_001",
-          "clm__reg_ggd_flevoland_begroting_2026_d6_003",
+          "clm__reg_ggd_flevoland_begroting_2026_d6_002",
           "clm__reg_ggd_flevoland_begroting_2026_governance_and_finance_003"
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_349"
+      "review_item_id": "rvw_364"
     },
     {
       "status": "open",
@@ -7551,19 +7888,171 @@
           "clm__reg_ggd_flevoland_begroting_2026_d5_001",
           "clm__reg_ggd_flevoland_begroting_2026_d5_002",
           "clm__reg_ggd_flevoland_begroting_2026_d6_001",
-          "clm__reg_ggd_flevoland_begroting_2026_d6_003"
+          "clm__reg_ggd_flevoland_begroting_2026_d6_002"
         ],
         "topic_count": 3
       },
       "evidence": {},
-      "review_item_id": "rvw_350"
+      "review_item_id": "rvw_365"
     },
     {
       "status": "open",
       "severity": "review",
       "check_id": "claim_payload_integrity",
       "reason_code": "actor_context_needs_role_split",
-      "summary": "reg_ggd_flevoland_jgz_almere_profile contains 5 actor-context claim(s) without a more specific governance role.",
+      "summary": "reg_ggd_flevoland_gezonde_school contains 3 actor-context claim(s) without a more specific governance role.",
+      "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+      "document_id": "reg_ggd_flevoland_gezonde_school",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/reg_ggd_flevoland_gezonde_school.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__reg_ggd_flevoland_gezonde_school_municipal_translation_001",
+          "clm__reg_ggd_flevoland_gezonde_school_municipal_translation_002",
+          "clm__reg_ggd_flevoland_gezonde_school_municipal_translation_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_366"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "authority_unclear",
+      "summary": "reg_ggd_flevoland_gezonde_school contributes lower-authority claims that still require human review.",
+      "recommended_action": "Keep these claims as contextual support only until a stronger primary source confirms or replaces them.",
+      "document_id": "reg_ggd_flevoland_gezonde_school",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/reg_ggd_flevoland_gezonde_school.json"
+      ],
+      "related_ids": {
+        "review_claim_count": 7,
+        "sample_claim_ids": [
+          "clm__reg_ggd_flevoland_gezonde_school_d6_001",
+          "clm__reg_ggd_flevoland_gezonde_school_d6_002",
+          "clm__reg_ggd_flevoland_gezonde_school_d6_003",
+          "clm__reg_ggd_flevoland_gezonde_school_monitoring_and_evaluation_001",
+          "clm__reg_ggd_flevoland_gezonde_school_municipal_translation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_367"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_review_task",
+      "summary": "reg_ggd_flevoland_gezonde_school contains 1 execution review or monitoring claim(s).",
+      "recommended_action": "Keep these as review, monitoring, or validation tasks; do not present them as settled implementation choices.",
+      "document_id": "reg_ggd_flevoland_gezonde_school",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/reg_ggd_flevoland_gezonde_school.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__reg_ggd_flevoland_gezonde_school_monitoring_and_evaluation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_368"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_sequencing_need",
+      "summary": "reg_ggd_flevoland_gezonde_school contains 1 execution sequencing claim(s).",
+      "recommended_action": "Treat these as sequencing or phasing signals; do not turn them into a hard local implementation plan without source evidence.",
+      "document_id": "reg_ggd_flevoland_gezonde_school",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/reg_ggd_flevoland_gezonde_school.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__reg_ggd_flevoland_gezonde_school_d6_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_369"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "expected_time_not_deadline",
+      "summary": "reg_ggd_flevoland_gezonde_school contains 1 expected or indicative time claim(s).",
+      "recommended_action": "Keep these as expected moments unless a stronger source establishes a formal deadline.",
+      "document_id": "reg_ggd_flevoland_gezonde_school",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/reg_ggd_flevoland_gezonde_school.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__reg_ggd_flevoland_gezonde_school_municipal_translation_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_370"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "lower_authority_norm_signal",
+      "summary": "reg_ggd_flevoland_gezonde_school contains 3 lower-authority norm signal claim(s).",
+      "recommended_action": "Attribute these passages explicitly and do not present them as binding without a stronger source.",
+      "document_id": "reg_ggd_flevoland_gezonde_school",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/reg_ggd_flevoland_gezonde_school.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__reg_ggd_flevoland_gezonde_school_d6_001",
+          "clm__reg_ggd_flevoland_gezonde_school_d6_002",
+          "clm__reg_ggd_flevoland_gezonde_school_d6_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_371"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "municipality_relevance_inferred",
+      "summary": "reg_ggd_flevoland_gezonde_school contains 3 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
+      "recommended_action": "Review these claims before treating them as firm municipal obligations or implementation facts.",
+      "document_id": "reg_ggd_flevoland_gezonde_school",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/reg_ggd_flevoland_gezonde_school.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__reg_ggd_flevoland_gezonde_school_d6_001",
+          "clm__reg_ggd_flevoland_gezonde_school_d6_002",
+          "clm__reg_ggd_flevoland_gezonde_school_d6_003"
+        ],
+        "topic_count": 2
+      },
+      "evidence": {},
+      "review_item_id": "rvw_372"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "actor_context_needs_role_split",
+      "summary": "reg_ggd_flevoland_jgz_almere_profile contains 4 actor-context claim(s) without a more specific governance role.",
       "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
       "document_id": "reg_ggd_flevoland_jgz_almere_profile",
       "topic": null,
@@ -7572,7 +8061,6 @@
       ],
       "related_ids": {
         "sample_claim_ids": [
-          "clm__reg_ggd_flevoland_jgz_almere_profile_d6_001",
           "clm__reg_ggd_flevoland_jgz_almere_profile_d6_002",
           "clm__reg_ggd_flevoland_jgz_almere_profile_municipal_translation_001",
           "clm__reg_ggd_flevoland_jgz_almere_profile_municipal_translation_002",
@@ -7580,7 +8068,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_351"
+      "review_item_id": "rvw_373"
     },
     {
       "status": "open",
@@ -7605,7 +8093,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_352"
+      "review_item_id": "rvw_374"
     },
     {
       "status": "open",
@@ -7625,7 +8113,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_353"
+      "review_item_id": "rvw_375"
     },
     {
       "status": "open",
@@ -7647,7 +8135,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_354"
+      "review_item_id": "rvw_376"
     },
     {
       "status": "open",
@@ -7670,7 +8158,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_355"
+      "review_item_id": "rvw_377"
     },
     {
       "status": "open",
@@ -7694,7 +8182,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_356"
+      "review_item_id": "rvw_378"
     },
     {
       "status": "open",
@@ -7719,7 +8207,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_357"
+      "review_item_id": "rvw_379"
     },
     {
       "status": "open",
@@ -7741,7 +8229,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_358"
+      "review_item_id": "rvw_380"
     },
     {
       "status": "open",
@@ -7763,7 +8251,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_359"
+      "review_item_id": "rvw_381"
     },
     {
       "status": "open",
@@ -7786,14 +8274,130 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_360"
+      "review_item_id": "rvw_382"
     },
     {
       "status": "open",
       "severity": "review",
       "check_id": "claim_payload_integrity",
       "reason_code": "actor_context_needs_role_split",
-      "summary": "reg_ggd_flevoland_valpreventie_almere contains 2 actor-context claim(s) without a more specific governance role.",
+      "summary": "reg_ggd_flevoland_ketenaanpak_gezond_gewicht_almere contains 6 actor-context claim(s) without a more specific governance role.",
+      "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+      "document_id": "reg_ggd_flevoland_ketenaanpak_gezond_gewicht_almere",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/reg_ggd_flevoland_ketenaanpak_gezond_gewicht_almere.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__reg_ggd_flevoland_ketenaanpak_gezond_gewicht_almere_d6_001",
+          "clm__reg_ggd_flevoland_ketenaanpak_gezond_gewicht_almere_d6_002",
+          "clm__reg_ggd_flevoland_ketenaanpak_gezond_gewicht_almere_d6_003",
+          "clm__reg_ggd_flevoland_ketenaanpak_gezond_gewicht_almere_timeline_and_status_001",
+          "clm__reg_ggd_flevoland_ketenaanpak_gezond_gewicht_almere_municipal_translation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_383"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "authority_unclear",
+      "summary": "reg_ggd_flevoland_ketenaanpak_gezond_gewicht_almere contributes lower-authority claims that still require human review.",
+      "recommended_action": "Keep these claims as contextual support only until a stronger primary source confirms or replaces them.",
+      "document_id": "reg_ggd_flevoland_ketenaanpak_gezond_gewicht_almere",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/reg_ggd_flevoland_ketenaanpak_gezond_gewicht_almere.json"
+      ],
+      "related_ids": {
+        "review_claim_count": 10,
+        "sample_claim_ids": [
+          "clm__reg_ggd_flevoland_ketenaanpak_gezond_gewicht_almere_d6_001",
+          "clm__reg_ggd_flevoland_ketenaanpak_gezond_gewicht_almere_d6_002",
+          "clm__reg_ggd_flevoland_ketenaanpak_gezond_gewicht_almere_d6_003",
+          "clm__reg_ggd_flevoland_ketenaanpak_gezond_gewicht_almere_governance_and_finance_001",
+          "clm__reg_ggd_flevoland_ketenaanpak_gezond_gewicht_almere_timeline_and_status_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_384"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "expected_time_not_deadline",
+      "summary": "reg_ggd_flevoland_ketenaanpak_gezond_gewicht_almere contains 3 expected or indicative time claim(s).",
+      "recommended_action": "Keep these as expected moments unless a stronger source establishes a formal deadline.",
+      "document_id": "reg_ggd_flevoland_ketenaanpak_gezond_gewicht_almere",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/reg_ggd_flevoland_ketenaanpak_gezond_gewicht_almere.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__reg_ggd_flevoland_ketenaanpak_gezond_gewicht_almere_d6_003",
+          "clm__reg_ggd_flevoland_ketenaanpak_gezond_gewicht_almere_timeline_and_status_001",
+          "clm__reg_ggd_flevoland_ketenaanpak_gezond_gewicht_almere_timeline_and_status_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_385"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "lower_authority_norm_signal",
+      "summary": "reg_ggd_flevoland_ketenaanpak_gezond_gewicht_almere contains 3 lower-authority norm signal claim(s).",
+      "recommended_action": "Attribute these passages explicitly and do not present them as binding without a stronger source.",
+      "document_id": "reg_ggd_flevoland_ketenaanpak_gezond_gewicht_almere",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/reg_ggd_flevoland_ketenaanpak_gezond_gewicht_almere.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__reg_ggd_flevoland_ketenaanpak_gezond_gewicht_almere_d6_001",
+          "clm__reg_ggd_flevoland_ketenaanpak_gezond_gewicht_almere_d6_002",
+          "clm__reg_ggd_flevoland_ketenaanpak_gezond_gewicht_almere_d6_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_386"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "municipality_relevance_inferred",
+      "summary": "reg_ggd_flevoland_ketenaanpak_gezond_gewicht_almere contains 3 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
+      "recommended_action": "Review these claims before treating them as firm municipal obligations or implementation facts.",
+      "document_id": "reg_ggd_flevoland_ketenaanpak_gezond_gewicht_almere",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/reg_ggd_flevoland_ketenaanpak_gezond_gewicht_almere.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__reg_ggd_flevoland_ketenaanpak_gezond_gewicht_almere_d6_001",
+          "clm__reg_ggd_flevoland_ketenaanpak_gezond_gewicht_almere_d6_002",
+          "clm__reg_ggd_flevoland_ketenaanpak_gezond_gewicht_almere_d6_003"
+        ],
+        "topic_count": 2
+      },
+      "evidence": {},
+      "review_item_id": "rvw_387"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "actor_context_needs_role_split",
+      "summary": "reg_ggd_flevoland_valpreventie_almere contains 4 actor-context claim(s) without a more specific governance role.",
       "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
       "document_id": "reg_ggd_flevoland_valpreventie_almere",
       "topic": null,
@@ -7802,12 +8406,14 @@
       ],
       "related_ids": {
         "sample_claim_ids": [
+          "clm__reg_ggd_flevoland_valpreventie_almere_d6_001",
+          "clm__reg_ggd_flevoland_valpreventie_almere_d6_002",
           "clm__reg_ggd_flevoland_valpreventie_almere_municipal_translation_001",
           "clm__reg_ggd_flevoland_valpreventie_almere_municipal_translation_002"
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_361"
+      "review_item_id": "rvw_388"
     },
     {
       "status": "open",
@@ -7822,17 +8428,17 @@
         "data/extracted/claims/reg_ggd_flevoland_valpreventie_almere.json"
       ],
       "related_ids": {
-        "review_claim_count": 5,
+        "review_claim_count": 7,
         "sample_claim_ids": [
           "clm__reg_ggd_flevoland_valpreventie_almere_d5_001",
           "clm__reg_ggd_flevoland_valpreventie_almere_d5_002",
           "clm__reg_ggd_flevoland_valpreventie_almere_d5_003",
-          "clm__reg_ggd_flevoland_valpreventie_almere_municipal_translation_001",
-          "clm__reg_ggd_flevoland_valpreventie_almere_municipal_translation_002"
+          "clm__reg_ggd_flevoland_valpreventie_almere_d6_001",
+          "clm__reg_ggd_flevoland_valpreventie_almere_d6_002"
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_362"
+      "review_item_id": "rvw_389"
     },
     {
       "status": "open",
@@ -7853,7 +8459,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_363"
+      "review_item_id": "rvw_390"
     },
     {
       "status": "open",
@@ -7873,14 +8479,14 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_364"
+      "review_item_id": "rvw_391"
     },
     {
       "status": "open",
       "severity": "review",
       "check_id": "claim_payload_integrity",
       "reason_code": "lower_authority_norm_signal",
-      "summary": "reg_ggd_flevoland_valpreventie_almere contains 3 lower-authority norm signal claim(s).",
+      "summary": "reg_ggd_flevoland_valpreventie_almere contains 5 lower-authority norm signal claim(s).",
       "recommended_action": "Attribute these passages explicitly and do not present them as binding without a stronger source.",
       "document_id": "reg_ggd_flevoland_valpreventie_almere",
       "topic": null,
@@ -7891,18 +8497,20 @@
         "sample_claim_ids": [
           "clm__reg_ggd_flevoland_valpreventie_almere_d5_001",
           "clm__reg_ggd_flevoland_valpreventie_almere_d5_002",
-          "clm__reg_ggd_flevoland_valpreventie_almere_d5_003"
+          "clm__reg_ggd_flevoland_valpreventie_almere_d5_003",
+          "clm__reg_ggd_flevoland_valpreventie_almere_d6_001",
+          "clm__reg_ggd_flevoland_valpreventie_almere_d6_002"
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_365"
+      "review_item_id": "rvw_392"
     },
     {
       "status": "open",
       "severity": "review",
       "check_id": "claim_payload_integrity",
       "reason_code": "municipality_relevance_inferred",
-      "summary": "reg_ggd_flevoland_valpreventie_almere contains 3 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
+      "summary": "reg_ggd_flevoland_valpreventie_almere contains 5 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
       "recommended_action": "Review these claims before treating them as firm municipal obligations or implementation facts.",
       "document_id": "reg_ggd_flevoland_valpreventie_almere",
       "topic": null,
@@ -7913,12 +8521,14 @@
         "sample_claim_ids": [
           "clm__reg_ggd_flevoland_valpreventie_almere_d5_001",
           "clm__reg_ggd_flevoland_valpreventie_almere_d5_002",
-          "clm__reg_ggd_flevoland_valpreventie_almere_d5_003"
+          "clm__reg_ggd_flevoland_valpreventie_almere_d5_003",
+          "clm__reg_ggd_flevoland_valpreventie_almere_d6_001",
+          "clm__reg_ggd_flevoland_valpreventie_almere_d6_002"
         ],
-        "topic_count": 1
+        "topic_count": 2
       },
       "evidence": {},
-      "review_item_id": "rvw_366"
+      "review_item_id": "rvw_393"
     },
     {
       "status": "open",
@@ -7941,7 +8551,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_367"
+      "review_item_id": "rvw_394"
     },
     {
       "status": "open",
@@ -7966,7 +8576,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_368"
+      "review_item_id": "rvw_395"
     },
     {
       "status": "open",
@@ -7986,7 +8596,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_369"
+      "review_item_id": "rvw_396"
     },
     {
       "status": "open",
@@ -8006,7 +8616,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_370"
+      "review_item_id": "rvw_397"
     },
     {
       "status": "open",
@@ -8029,7 +8639,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_371"
+      "review_item_id": "rvw_398"
     },
     {
       "status": "open",
@@ -8050,7 +8660,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_372"
+      "review_item_id": "rvw_399"
     },
     {
       "status": "open",
@@ -8071,7 +8681,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_373"
+      "review_item_id": "rvw_400"
     },
     {
       "status": "open",
@@ -8091,7 +8701,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_374"
+      "review_item_id": "rvw_401"
     },
     {
       "status": "open",
@@ -8115,7 +8725,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_375"
+      "review_item_id": "rvw_402"
     },
     {
       "status": "open",
@@ -8136,7 +8746,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_376"
+      "review_item_id": "rvw_403"
     },
     {
       "status": "open",
@@ -8155,7 +8765,7 @@
       "evidence": {
         "table_count": 4
       },
-      "review_item_id": "rvw_377"
+      "review_item_id": "rvw_404"
     },
     {
       "status": "open",
@@ -8186,7 +8796,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_378"
+      "review_item_id": "rvw_405"
     },
     {
       "status": "open",
@@ -8210,7 +8820,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_379"
+      "review_item_id": "rvw_406"
     },
     {
       "status": "open",
@@ -8237,7 +8847,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_380"
+      "review_item_id": "rvw_407"
     },
     {
       "status": "open",
@@ -8268,7 +8878,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_381"
+      "review_item_id": "rvw_408"
     },
     {
       "status": "open",
@@ -8293,7 +8903,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_382"
+      "review_item_id": "rvw_409"
     },
     {
       "status": "open",
@@ -8315,16 +8925,16 @@
           "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_d6_003",
           "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_d6_002",
           "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_d6_001",
-          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d6_003",
           "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d6_001",
           "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d6_002",
           "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d6_001",
-          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_d6_001",
+          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_d6_003",
+          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_d6_002",
           "clm__mun_almere_pga_seo_businesscase_2024_d6_001"
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_383"
+      "review_item_id": "rvw_410"
     },
     {
       "status": "open",
@@ -8342,19 +8952,20 @@
       "related_ids": {
         "conflict_id": "conflict__d6__regional_coordination",
         "claim_ids": [
+          "clm__nat_gala_2023_gezond_en_actief_leven_d6_003",
+          "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d6_003",
+          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_d6_001",
           "clm__mun_almere_pga_seo_businesscase_2024_d6_003",
+          "clm__reg_ggd_flevoland_valpreventie_almere_d6_002",
+          "clm__reg_ggd_flevoland_valpreventie_almere_d6_001",
+          "clm__reg_ggd_flevoland_ketenaanpak_gezond_gewicht_almere_d6_002",
+          "clm__reg_ggd_flevoland_ketenaanpak_gezond_gewicht_almere_d6_001",
           "clm__reg_ggd_flevoland_kennis_en_advies_d6_003",
-          "clm__reg_ggd_flevoland_kennis_en_advies_d6_002",
-          "clm__reg_ggd_flevoland_kennis_en_advies_d6_001",
-          "clm__reg_ggd_flevoland_jgz_almere_profile_d6_003",
-          "clm__reg_ggd_flevoland_jgz_almere_profile_d6_002",
-          "clm__reg_ggd_flevoland_jgz_almere_profile_d6_001",
-          "clm__nat_zorgakkoorden_azwa_programmapagina_2025_d6_003",
-          "clm__mun_almere_samenwerkingsprojecten_d6_001"
+          "clm__reg_ggd_flevoland_kennis_en_advies_d6_002"
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_384"
+      "review_item_id": "rvw_411"
     },
     {
       "status": "open",
@@ -8379,7 +8990,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_385"
+      "review_item_id": "rvw_412"
     },
     {
       "status": "open",
@@ -8404,7 +9015,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_386"
+      "review_item_id": "rvw_413"
     },
     {
       "status": "open",
@@ -8427,7 +9038,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_387"
+      "review_item_id": "rvw_414"
     }
   ]
 }

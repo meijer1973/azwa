@@ -1,7 +1,7 @@
 {
   "document_id": "nat_zorgakkoorden_azwa_programmapagina_2025",
   "claim_extraction_run_id": "phase4_all_docs_claims_v3",
-  "generated_on": "2026-04-29",
+  "generated_on": "2026-04-30",
   "source_extraction_run_id": "phase3_all_docs_v3",
   "claim_count": 12,
   "claims": [
@@ -397,8 +397,8 @@
     },
     {
       "claim_id": "clm__nat_zorgakkoorden_azwa_programmapagina_2025_d6_003",
-      "topic": "d6.regional_coordination",
-      "subtopic": "ggd_and_regional_coordination",
+      "topic": "d6.other",
+      "subtopic": "uncategorized",
       "claim_type": "implementation_requirement",
       "normative_status": {
         "status": "lower_authority_signal",
@@ -425,13 +425,11 @@
         "needs_verification": false
       },
       "governance_status": {
-        "status": "approval_role",
-        "label": "Goedkeurings- of vaststellingsrol",
-        "actor_signals": [
-          "gemeente"
-        ],
-        "source_governance_anchor": "explicit_governance_signal",
-        "public_wording_guardrail": "Gebruik als goedkeurings- of vaststellingsrol; niet automatisch als uitvoeringsverantwoordelijkheid.",
+        "status": "not_governance",
+        "label": "Geen zelfstandige governanceclaim",
+        "actor_signals": [],
+        "source_governance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
         "needs_verification": false,
         "vague_region_only": false
       },
@@ -439,9 +437,7 @@
         "status": "national_general",
         "label": "Algemeen landelijk",
         "locality_scope": "Netherlands",
-        "regional_split_signals": [
-          "gemeentelijk"
-        ],
+        "regional_split_signals": [],
         "explicit_location_signals": {
           "almere": false,
           "flevoland": false
@@ -457,7 +453,7 @@
         "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
         "needs_verification": false
       },
-      "statement": "Bij de totstandkoming van de afspraken in het Aanvullend Zorg- en Welzijnsakkoord (AZWA) zijn de volgende organisaties betrokken: - ActiZ - De Nederlandse ggz - Federatie Medisch Specialisten - GGD GHOR Nederland - InEen - Landelijke Huisartsen Vereniging - MIND - Nederlandse Federatie van Universitair Medische Centra - Patiëntenfederatie Nederland - Nederlandse Vereniging van Ziekenhuizen - Sociaal Werk Nederland - Vereniging van Nederlandse Gemeenten - Zelfstandige Klinieken Nederland - Verpleegkundigen ...",
+      "statement": "Ook het ondersteunen van burgerinitiatieven en een gezonde schoolomgeving horen hierbij.",
       "source_document_id": "nat_zorgakkoorden_azwa_programmapagina_2025",
       "source_location": {
         "source_statement_ids": [
@@ -467,10 +463,10 @@
           null
         ],
         "sections": [
-          "Aanvullend Zorg- en Welzijnsakkoord / Betrokken partijen"
+          "Aanvullend Zorg- en Welzijnsakkoord / Samenwerking met het sociaal domein"
         ],
         "evidence_quotes": [
-          "Bij de totstandkoming van de afspraken in het Aanvullend Zorg- en Welzijnsakkoord (AZWA) zijn de volgende organisaties betrokken: - ActiZ - De Nederlandse ggz - Federatie Medisch Specialisten - GGD GHOR Nederland - InEen - Landelijke Huisartsen Vereniging - MIND - Nederlandse Federatie van Universitair Medische Centra - Patiëntenfederatie Nederland - Nederlandse Vereniging van Ziekenhuizen - Sociaal Werk Nederland - Vereniging van Nederlandse Gemeenten - Zelfstandige Klinieken Nederland - Verpleegkundigen ..."
+          "Ook het ondersteunen van burgerinitiatieven en een gezonde schoolomgeving horen hierbij."
         ]
       },
       "publisher": "Zorgakkoorden.nl (VWS)",
@@ -487,7 +483,7 @@
         "all_regions",
         "all_municipalities"
       ],
-      "confidence": 0.56,
+      "confidence": 0.38,
       "human_review_status": "needs_human_review",
       "source_statement_type": "direct_extraction",
       "claim_extraction_run_id": "phase4_all_docs_claims_v3",

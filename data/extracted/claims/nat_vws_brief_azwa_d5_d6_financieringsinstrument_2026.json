@@ -1,7 +1,7 @@
 {
   "document_id": "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026",
   "claim_extraction_run_id": "phase4_all_docs_claims_v3",
-  "generated_on": "2026-04-29",
+  "generated_on": "2026-04-30",
   "source_extraction_run_id": "phase3_all_docs_v3",
   "claim_count": 10,
   "claims": [
@@ -394,31 +394,31 @@
     },
     {
       "claim_id": "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d6_003",
-      "topic": "d6.basisinfrastructuur",
-      "subtopic": "wijk_en_regio_basis",
+      "topic": "d6.regional_coordination",
+      "subtopic": "ggd_and_regional_coordination",
       "claim_type": "implementation_requirement",
       "normative_status": {
-        "status": "guidance",
-        "label": "Toelichting of praktische guidance",
+        "status": "expectation",
+        "label": "Verwachting of richtinggevende norm",
         "source_authority": "framework",
         "has_normative_language": false,
-        "public_wording_guardrail": "Formuleer als toelichting, format, advies of handreiking.",
-        "needs_attribution": true
+        "public_wording_guardrail": "Formuleer als verwachting, richting of uitwerkingskader; vermijd verplichtende taal.",
+        "needs_attribution": false
       },
       "time_status": {
-        "status": "undated_context",
-        "label": "Geen zelfstandig tijdmoment",
-        "date_signal": "none",
-        "source_temporal_anchor": "publication_context",
-        "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
+        "status": "budget_calendar_moment",
+        "label": "Begrotings- of financieringsmoment",
+        "date_signal": "year",
+        "source_temporal_anchor": "explicit_text_signal",
+        "public_wording_guardrail": "Koppel aan de financiele bronroute; maak geen lokale budgetkeuze zonder lokale bron.",
         "needs_review": false
       },
       "money_status": {
-        "status": "not_financial",
-        "label": "Geen zelfstandige financiele claim",
-        "financial_signal": false,
-        "source_finance_anchor": "none",
-        "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+        "status": "budget_window",
+        "label": "Budgetvenster of financieel tijdvak",
+        "financial_signal": true,
+        "source_finance_anchor": "explicit_finance_signal",
+        "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
         "needs_verification": false
       },
       "governance_status": {
@@ -443,29 +443,27 @@
         "needs_verification": false
       },
       "execution_status": {
-        "status": "sequencing_need",
-        "label": "Uitvoering vraagt fasering of volgorde",
-        "execution_need_signals": [
-          "sequencing"
-        ],
-        "source_execution_anchor": "explicit_execution_signal",
-        "public_wording_guardrail": "Formuleer als fasering of volgordevraag; maak er geen harde planning van zonder bron.",
-        "needs_verification": true
+        "status": "operational_requirement",
+        "label": "Operationele vereiste of inrichting",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
+        "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
+        "needs_verification": false
       },
-      "statement": "• Laagdrempelige steunpunten EPA • Sociaal Venvilzen • Valpreventie • Ketenaanpak overgewicht en obesitas volwassenen • Kansrijke start integrale gezinspoli en Nu Niet Zwanger 1. Mentale Gezondheid 2. Vitaal ouder worden/ ouderen 3. Leefstijl 4. Kansrijk opgroeien Directie Maatschappelijke Ondersteuning D5 Basis- D5 ontwikkel- Ontwikkel- D6 Basis- functionaliteit agenda 1 agenda deel 2 Infrastructuur onderbouwd Leefgebied Maatregel Maatregel Maatregel Maatregel • Mentale Gezond- heidsnetwerken (onder andere verkennend gesprek) • Ketenaanpak dementie (incl. preventie) • Nicotinevrij • Ketenaanpak overgewicht en obesitas kinderen • Kansrijke start Rookvrije stal • Aanpak eenzaamheid • ...",
+      "statement": "Voor 2027 gaan de middelen voor mentale gezonde school naar de Gezonde School subsidie aan de GGD GHOR NL.",
       "source_document_id": "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026",
       "source_location": {
         "source_statement_ids": [
           "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d6_003"
         ],
         "pages": [
-          3
+          4
         ],
         "sections": [
-          "Page 3"
+          "Page 4"
         ],
         "evidence_quotes": [
-          "• Laagdrempelige steunpunten EPA • Sociaal Venvilzen • Valpreventie • Ketenaanpak overgewicht en obesitas volwassenen • Kansrijke start integrale gezinspoli en Nu Niet Zwanger 1. Mentale Gezondheid 2. Vitaal ouder worden/ ouderen 3. Leefstijl 4. Kansrijk opgroeien Directie Maatschappelijke Ondersteuning D5 Basis- D5 ontwikkel- Ontwikkel- D6 Basis- functionaliteit agenda 1 agenda deel 2 Infrastructuur onderbouwd Leefgebied Maatregel Maatregel Maatregel Maatregel • Mentale Gezond- heidsnetwerken (onder andere verkennend gesprek) • Ketenaanpak dementie (incl. preventie) • Nicotinevrij • Ketenaanpak overgewicht en obesitas kinderen • Kansrijke start Rookvrije stal • Aanpak eenzaamheid • ..."
+          "Voor 2027 gaan de middelen voor mentale gezonde school naar de Gezonde School subsidie aan de GGD GHOR NL."
         ]
       },
       "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
@@ -482,7 +480,7 @@
         "all_regions",
         "all_municipalities"
       ],
-      "confidence": 0.95,
+      "confidence": 0.93,
       "human_review_status": "seeded_from_document_extraction",
       "source_statement_type": "direct_extraction",
       "claim_extraction_run_id": "phase4_all_docs_claims_v3",

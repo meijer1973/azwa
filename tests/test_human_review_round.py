@@ -12,10 +12,10 @@ class HumanReviewRoundTests(unittest.TestCase):
         summary = review_round["summary"]
 
         self.assertEqual(review_round["current_sprint"], "Sprint 31.3 - Reviewronde met menselijke beoordelaars")
-        self.assertEqual(summary["review_item_count"], 387)
+        self.assertEqual(summary["review_item_count"], 414)
         self.assertEqual(summary["blocking_count"], 0)
         self.assertEqual(summary["warning_count"], 6)
-        self.assertEqual(summary["review_count"], 381)
+        self.assertEqual(summary["review_count"], 408)
         self.assertEqual({item["perspective_id"] for item in review_round["perspectives"]}, {"norm", "time", "money", "governance", "locality", "execution"})
 
     def test_review_round_keeps_boundaries_visible(self) -> None:

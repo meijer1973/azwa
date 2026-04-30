@@ -24,10 +24,10 @@ Source register: `data/extracted/municipal/almere_d6_responsibility_register.jso
 | --- | ---: |
 | Register rows | 12 |
 | `settled` rows | 0 |
-| `inferred` rows | 6 |
+| `inferred` rows | 7 |
 | `proposed` rows | 0 |
 | `unknown` rows | 1 |
-| `review_needed` rows | 5 |
+| `review_needed` rows | 4 |
 | Rows needing human review | 12 |
 | Rows without owner | 4 |
 | Rows with unknown or needs-decision funding | 9 |
@@ -73,7 +73,7 @@ The public source base is now strong enough to prepare validation questions. It 
 | Stevige Lokale Teams | What exactly is settled by the council decision, and does it classify SLT as formal D6 infrastructure? | `inferred` | Gemeente Almere, council/college, JGZ Almere, Wijkteams Almere | Almere council/college line needs source-passage confirmation | JGZ Almere, wijkteams, schools and childcare partners | Almere local | Investeringsfonds Jeugd en Gezin candidate; split needs confirmation | SLT council page, amended proposal, budget amendment, decision list |
 | JGZ Almere | Which JGZ roles are D6, which are regular JGZ, and which are part of SLT development? | `inferred` | GGD Flevoland, JGZ Almere, Gemeente Almere | JGZ Almere / GGD Flevoland, municipal governance needs confirmation | JGZ Almere | Almere local with GGD Flevoland governance | GGD/JGZ funding split needs source-specific review | `reg_ggd_flevoland_jgz_almere_profile`, `reg_ggd_flevoland_begroting_2026` |
 | GGD Flevoland-coordinatie | Which GGD tasks belong to D6 for Almere versus broader GGD public-health tasks? | `inferred` | GGD Flevoland, Flevoland municipalities | GGD Flevoland under six-municipality governance | GGD Flevoland | GGD Flevoland | Inwonerbijdrage, subsidies/plustaken, other source-specific funding | `reg_ggd_flevoland_begroting_2026` |
-| Gezonde School / mentale gezonde school | What is the Almere-specific implementation source and who owns delivery? | `review_needed` | GGD/JGZ, schools, Gemeente Almere | Unknown | GGD/JGZ and schools candidates | Almere local or GGD region, needs validation | Unknown | `reg_ggd_flevoland_jgz_almere_profile` |
+| Gezonde School / mentale gezonde school | Does the source-backed school/prevention cluster count as formal D6 infrastructure, adjacent infrastructure or candidate infrastructure? | `inferred` | GGD/JGZ, schools, Gemeente Almere | Unknown | GGD Gezonde School advisers, schools and JGZ Almere candidates | Almere local or GGD region, needs validation | Unknown | `mun_almere_gezonde_scholen`, `mun_almere_gezond_in_almere`, `reg_ggd_flevoland_gezonde_school`, `reg_ggd_flevoland_ketenaanpak_gezond_gewicht_almere`, `mun_almere_lea_2024_2028`, `reg_ggd_flevoland_jgz_almere_profile`, `reg_ggd_flevoland_begroting_2026` |
 | Kennis & Advies / monitoring / dashboards | Which dashboards and monitors steer D6, and who owns reporting? | `inferred` | GGD Flevoland, Gemeente Almere, regional programme governance | GGD Flevoland candidate, decision owner needs confirmation | GGD Flevoland Kennis en Advies | GGD Flevoland with Almere use | Unknown/source-specific split needed | `reg_ggd_flevoland_kennis_en_advies`, `reg_ggd_flevoland_begroting_2026` |
 | Samen Sterker in de Wijk / mentale-gezondheidswijkinfrastructuur | Is this formal D6 infrastructure, supporting infrastructure, or a separate implementation project? | `inferred` | Gemeente Almere, GGD Flevoland, GGZ/welfare partners, Zorgplatform Flevoland | Shared responsibility needs validation | Zorgplatform Flevoland partners, local professionals, ervaringsdeskundigen | Almere local and regional project scale | Unknown | `mun_almere_samenwerkingsprojecten` |
 | Positief Gezond Almere / Zorgzaam Flevoland-interface | How are PGA, Zorgzaam/Flever and AZWA work-agenda roles separated? | `review_needed` | PGA/Zorgzaam Flevoland/Flever, Gemeente Almere, regional governance | Shared programme roles need validation | Not settled | Almere local and IZA/AZWA Flevoland | PGA transformation funding candidate; AZWA/D5/D6 split needed | `mun_almere_pga_transformatieplan`, `mun_almere_pga_current_home`, `reg_zonmw_doorontwikkeling_zorgzaam_flevoland` |
@@ -92,7 +92,7 @@ No stakeholder validation session has been recorded yet. All rows remain in thei
 | Stevige Lokale Teams | `inferred` | Not yet validated | No | The SLT council route is relevant to D6 validation and touches JGZ Almere and wijkteams. | The SLT council decision settles D6 ownership or classification. |
 | JGZ Almere | `inferred` | Not yet validated | No | JGZ Almere is a public-source-backed actor to validate for D6/JGZ and SLT-related roles. | JGZ Almere owns the D6 JGZ component. |
 | GGD Flevoland-coordinatie | `inferred` | Not yet validated | No | GGD Flevoland has public-source-backed relevance for coordination, monitoring and prevention validation. | GGD Flevoland is confirmed as D6 owner for Almere. |
-| Gezonde School / mentale gezonde school | `review_needed` | Not yet validated | No | Local implementation and ownership still need validation. | Almere has a settled D6 Gezonde School arrangement. |
+| Gezonde School / mentale gezonde school | `inferred` | Not yet validated | No | Gezonde School / school wellbeing is now source-backed as an Almere/GGD/JGZ validation candidate; classification, owner and funding still need validation. | Almere has a settled D6 Gezonde School arrangement. |
 | Kennis & Advies / monitoring / dashboards | `inferred` | Not yet validated | No | GGD Kennis & Advies is a candidate monitoring/data actor requiring D6-specific validation. | GGD Kennis & Advies owns D6 monitoring. |
 | Samen Sterker in de Wijk | `inferred` | Not yet validated | No | Samen Sterker is a public-source-backed candidate for mental-health wijkinfrastructure validation. | Samen Sterker is formal D6 infrastructure. |
 | PGA / Zorgzaam Flevoland-interface | `review_needed` | Not yet validated | No | PGA/Zorgzaam roles must be separated from AZWA/D5/D6 roles before drafting. | PGA/Zorgzaam is the D6 governance vehicle. |
@@ -114,13 +114,13 @@ Rows remaining `inferred`:
 - Stevige Lokale Teams.
 - JGZ Almere.
 - GGD Flevoland-coordinatie.
+- Gezonde School / mentale gezonde school.
 - Kennis & Advies / monitoring / dashboards.
 - Samen Sterker in de Wijk / mentale-gezondheidswijkinfrastructuur.
 
 Rows remaining `review_needed`:
 
 - Inloopvoorzieningen sociaal en gezond.
-- Gezonde School / mentale gezonde school.
 - Positief Gezond Almere / Zorgzaam Flevoland-interface.
 - Digitale en operationele infrastructuur.
 - Burgerinitiatieven en informele steun.

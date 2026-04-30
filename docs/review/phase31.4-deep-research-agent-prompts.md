@@ -5,6 +5,8 @@ Current sprint: Sprint 31.4 - Review triage and deep-research offload.
 
 Use these prompts for public-source deep research only. Agents may find and assess public sources, source gaps, authority hierarchy and conflicts. They may not decide local ownership, D6 classification, mandate, funding allocation, or settled status.
 
+Repository intake rule: deep-research reports are not evidence. After a report is returned, repository staff must ingest selected public sources through the manifest/pipeline and test whether the report's findings appear in top data layers before marking the report processed.
+
 ## dr_gezonde_school_almere - Gezonde School / mentale gezonde school Almere
 
 You are researching the AZWA/IZA/GALA policy corpus for the Almere case.
@@ -29,6 +31,7 @@ Deliver:
 - Clear conclusions.
 - Public sources found, with URLs and publication/source-holder details.
 - Whether each source is already present in `data/raw/manifest.json` or should be added.
+- Which reported findings should be tested against top data layers after source intake.
 - What public sources prove, suggest, and do not prove.
 - Important uncertainties, conflicts, dead links or replacement sources.
 - Practical implications for Almere.
@@ -58,6 +61,7 @@ Deliver:
 - Clear conclusions.
 - Public sources found, with URLs and publication/source-holder details.
 - Whether each source is already present in `data/raw/manifest.json` or should be added.
+- Which reported findings should be tested against top data layers after source intake.
 - What public sources prove, suggest, and do not prove.
 - Important uncertainties, conflicts, dead links or replacement sources.
 - Practical implications for Almere.
@@ -87,6 +91,7 @@ Deliver:
 - Clear conclusions.
 - Public sources found, with URLs and publication/source-holder details.
 - Whether each source is already present in `data/raw/manifest.json` or should be added.
+- Which reported findings should be tested against top data layers after source intake.
 - What public sources prove, suggest, and do not prove.
 - Important uncertainties, conflicts, dead links or replacement sources.
 - Practical implications for Almere.
@@ -116,6 +121,7 @@ Deliver:
 - Clear conclusions.
 - Public sources found, with URLs and publication/source-holder details.
 - Whether each source is already present in `data/raw/manifest.json` or should be added.
+- Which reported findings should be tested against top data layers after source intake.
 - What public sources prove, suggest, and do not prove.
 - Important uncertainties, conflicts, dead links or replacement sources.
 - Practical implications for Almere.
@@ -145,6 +151,7 @@ Deliver:
 - Clear conclusions.
 - Public sources found, with URLs and publication/source-holder details.
 - Whether each source is already present in `data/raw/manifest.json` or should be added.
+- Which reported findings should be tested against top data layers after source intake.
 - What public sources prove, suggest, and do not prove.
 - Important uncertainties, conflicts, dead links or replacement sources.
 - Practical implications for Almere.
@@ -174,6 +181,7 @@ Deliver:
 - Clear conclusions.
 - Public sources found, with URLs and publication/source-holder details.
 - Whether each source is already present in `data/raw/manifest.json` or should be added.
+- Which reported findings should be tested against top data layers after source intake.
 - What public sources prove, suggest, and do not prove.
 - Important uncertainties, conflicts, dead links or replacement sources.
 - Practical implications for Almere.

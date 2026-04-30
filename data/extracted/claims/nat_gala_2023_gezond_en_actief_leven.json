@@ -1,7 +1,7 @@
 {
   "document_id": "nat_gala_2023_gezond_en_actief_leven",
   "claim_extraction_run_id": "phase4_all_docs_claims_v3",
-  "generated_on": "2026-04-29",
+  "generated_on": "2026-04-30",
   "source_extraction_run_id": "phase3_all_docs_v3",
   "claim_count": 15,
   "claims": [
@@ -391,8 +391,8 @@
     },
     {
       "claim_id": "clm__nat_gala_2023_gezond_en_actief_leven_d6_003",
-      "topic": "d6.basisinfrastructuur",
-      "subtopic": "wijk_en_regio_basis",
+      "topic": "d6.regional_coordination",
+      "subtopic": "ggd_and_regional_coordination",
       "claim_type": "implementation_requirement",
       "normative_status": {
         "status": "agreement",
@@ -411,29 +411,34 @@
         "needs_review": true
       },
       "money_status": {
-        "status": "not_financial",
-        "label": "Geen zelfstandige financiele claim",
-        "financial_signal": false,
-        "source_finance_anchor": "none",
-        "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+        "status": "funding_route",
+        "label": "Financieringsroute",
+        "financial_signal": true,
+        "source_finance_anchor": "explicit_finance_signal",
+        "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
         "needs_verification": true
       },
       "governance_status": {
         "status": "actor_context",
         "label": "Actor- of governancecontext",
         "actor_signals": [
-          "regio"
+          "ministerie",
+          "regio",
+          "gemeente",
+          "zorgverzekeraar"
         ],
         "source_governance_anchor": "explicit_governance_signal",
         "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
         "needs_verification": true,
-        "vague_region_only": true
+        "vague_region_only": false
       },
       "locality_status": {
         "status": "national_with_local_relevance",
         "label": "Landelijk met lokale relevantie",
         "locality_scope": "national to local",
-        "regional_split_signals": [],
+        "regional_split_signals": [
+          "gemeentelijk"
+        ],
         "explicit_location_signals": {
           "almere": false,
           "flevoland": false
@@ -444,27 +449,25 @@
       "execution_status": {
         "status": "operational_requirement",
         "label": "Operationele vereiste of inrichting",
-        "execution_need_signals": [
-          "operational_requirement"
-        ],
-        "source_execution_anchor": "explicit_execution_signal",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
         "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
         "needs_verification": true
       },
-      "statement": "Inrichten en bemensen van een dekkend netwerk van laagdrempelige steunpunten in de regio voor mensen met psychische kwetsbaarheid.",
+      "statement": "VWS, gemeenten, GGD’en en zorgverzekeraars maken minder vrijblijvende afspraken gericht op de vertaling van landelijke doelen op het gebied van gezondheid en welbevinden naar lande­ lijke, regionale en lokale resultaten.",
       "source_document_id": "nat_gala_2023_gezond_en_actief_leven",
       "source_location": {
         "source_statement_ids": [
           "nat_gala_2023_gezond_en_actief_leven_d6_003"
         ],
         "pages": [
-          49
+          10
         ],
         "sections": [
-          "Page 49"
+          "Page 10"
         ],
         "evidence_quotes": [
-          "Inrichten en bemensen van een dekkend netwerk van laagdrempelige steunpunten in de regio voor mensen met psychische kwetsbaarheid."
+          "VWS, gemeenten, GGD’en en zorgverzekeraars maken minder vrijblijvende afspraken gericht op de vertaling van landelijke doelen op het gebied van gezondheid en welbevinden naar lande­ lijke, regionale en lokale resultaten."
         ]
       },
       "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
@@ -481,7 +484,7 @@
         "all_regions",
         "all_municipalities"
       ],
-      "confidence": 0.7,
+      "confidence": 0.68,
       "human_review_status": "needs_human_review",
       "source_statement_type": "contextual_relevance",
       "claim_extraction_run_id": "phase4_all_docs_claims_v3",

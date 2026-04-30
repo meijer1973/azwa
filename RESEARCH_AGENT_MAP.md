@@ -30,6 +30,8 @@ For human review routing, use `data/extracted/human_review_round.json` and `docs
 
 For deep-research delegation, use `data/extracted/review_triage_deep_research_offload.json`, `docs/review/phase31.4-review-triage-deep-research-offload.md`, and `docs/review/phase31.4-deep-research-agent-prompts.md`. Deep research agents may reduce public-source gaps and source-authority uncertainty, but they must not settle D6 classification, ownership, mandate, funding, safe wording, or register status.
 
+For deep-research intake, use `docs/dr/README.md`. Reports placed in `docs/dr/` are not corpus evidence. Treat them as source-discovery signals: ingest selected public sources through the raw manifest and pipeline, then verify that the findings appear in top data layers before marking the report processed.
+
 ## Access Layer
 
 Base URL:
@@ -221,6 +223,8 @@ Machine-readable:
     "docs/review/phase31.3-human-review-round.md",
     "docs/review/phase31.4-review-triage-deep-research-offload.md",
     "docs/review/phase31.4-deep-research-agent-prompts.md",
+    "docs/dr/README.md",
+    "docs/source-intake/phase31.5-healthy-school-deep-research-intake.md",
     "docs/human-review-guidance.md",
     "docs/internal/monthly-source-audit-2026-04-30.md",
     "docs/internal/review-dashboard.html"

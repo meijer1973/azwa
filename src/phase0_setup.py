@@ -443,6 +443,76 @@ DOCUMENTS = [
         "priority_rank": 40,
         "selected_source_file": "sources/58-positief-gezond-almere-current-home.html",
     },
+    {
+        "source_number": 59,
+        "document_id": "mun_almere_gezonde_scholen",
+        "title": "Gezonde scholen",
+        "short_title": "Gezonde scholen Almere",
+        "publisher": "Gemeente Almere",
+        "publication_date": None,
+        "document_type": "municipal_info_page",
+        "jurisdiction_level": "municipal",
+        "source_url": "https://www.almere.nl/zorg-en-welzijn/gezond-in-almere/gezonde-scholen",
+        "status": "current",
+        "priority_rank": 41,
+        "selected_source_file": "sources/59-gezonde-scholen-almere.html",
+    },
+    {
+        "source_number": 60,
+        "document_id": "mun_almere_gezond_in_almere",
+        "title": "Gezond in Almere",
+        "short_title": "Gezond in Almere",
+        "publisher": "Gemeente Almere",
+        "publication_date": None,
+        "document_type": "municipal_info_page",
+        "jurisdiction_level": "municipal",
+        "source_url": "https://www.almere.nl/zorg-en-welzijn/gezond-in-almere",
+        "status": "current",
+        "priority_rank": 42,
+        "selected_source_file": "sources/60-gezond-in-almere.html",
+    },
+    {
+        "source_number": 61,
+        "document_id": "reg_ggd_flevoland_gezonde_school",
+        "title": "De Gezonde School",
+        "short_title": "GGD Flevoland Gezonde School",
+        "publisher": "GGD Flevoland",
+        "publication_date": None,
+        "document_type": "regional_service_page",
+        "jurisdiction_level": "regional",
+        "source_url": "https://www.ggdflevoland.nl/professional/scholen-en-kinderopvang/gezonde-school/",
+        "status": "current",
+        "priority_rank": 43,
+        "selected_source_file": "sources/61-gezonde-school-ggd-flevoland.html",
+    },
+    {
+        "source_number": 62,
+        "document_id": "reg_ggd_flevoland_ketenaanpak_gezond_gewicht_almere",
+        "title": "Ketenaanpak gezond gewicht - Gezond Gewicht Almere",
+        "short_title": "GGD Ketenaanpak Gezond Gewicht Almere",
+        "publisher": "GGD Flevoland",
+        "publication_date": None,
+        "document_type": "regional_service_page",
+        "jurisdiction_level": "regional",
+        "source_url": "https://www.ggdflevoland.nl/professional/gemeenten/ketenaanpak-gezond-gewicht/",
+        "status": "current",
+        "priority_rank": 44,
+        "selected_source_file": "sources/62-ketenaanpak-gezond-gewicht-ggd-flevoland.html",
+    },
+    {
+        "source_number": 63,
+        "document_id": "mun_almere_lea_2024_2028",
+        "title": "LEA 2024-2028",
+        "short_title": "LEA 2024-2028 Almere",
+        "publisher": "Sociaal Domein Almere / Gemeente Almere",
+        "publication_date": None,
+        "document_type": "municipal_info_page",
+        "jurisdiction_level": "municipal",
+        "source_url": "https://sociaaldomein.almere.nl/onderwijs/lea-2024-2028",
+        "status": "current",
+        "priority_rank": 45,
+        "selected_source_file": "sources/63-lea-2024-2028-sociaal-domein-almere.html",
+    },
 ]
 
 
@@ -468,6 +538,49 @@ def write_gitkeep(directory: Path) -> None:
     gitkeep.write_text("", encoding="utf-8")
 
 
+def manifest_entry_for_document(doc: dict, level_dirs: dict[str, Path]) -> dict:
+    source_path = REPO_ROOT / doc["selected_source_file"]
+    if not source_path.exists():
+        raise FileNotFoundError(f"Missing source file: {source_path}")
+
+    ext = source_path.suffix.lower()
+    destination_dir = level_dirs[doc["jurisdiction_level"]]
+    destination_path = destination_dir / f"{doc['document_id']}{ext}"
+    copy2(source_path, destination_path)
+
+    return {
+        "document_id": doc["document_id"],
+        "title": doc["title"],
+        "short_title": doc["short_title"],
+        "publisher": doc["publisher"],
+        "publication_date": doc["publication_date"],
+        "document_type": doc["document_type"],
+        "jurisdiction_level": doc["jurisdiction_level"],
+        "file_path": destination_path.relative_to(REPO_ROOT).as_posix(),
+        "source_url": doc["source_url"],
+        "status": doc["status"],
+        "priority_rank": doc["priority_rank"],
+        "source_number": doc["source_number"],
+        "selected_source_file": doc["selected_source_file"],
+    }
+
+
+def load_preserved_manifest_entries(manifest_path: Path, managed_document_ids: set[str]) -> list[dict]:
+    if not manifest_path.exists():
+        return []
+
+    entries = json.loads(manifest_path.read_text(encoding="utf-8"))
+    preserved = []
+    for entry in entries:
+        if entry["document_id"] in managed_document_ids:
+            continue
+        raw_path = REPO_ROOT / entry["file_path"]
+        if not raw_path.exists():
+            raise FileNotFoundError(f"Existing manifest entry points to missing raw file: {raw_path}")
+        preserved.append(entry)
+    return preserved
+
+
 def main() -> None:
     raw_root = REPO_ROOT / "data" / "raw"
     level_dirs = {
@@ -482,38 +595,12 @@ def main() -> None:
     for relative_dir in TRACKED_EMPTY_DIRECTORIES:
         write_gitkeep(REPO_ROOT / relative_dir)
 
-    manifest_entries = []
-
-    for doc in DOCUMENTS:
-        source_path = REPO_ROOT / doc["selected_source_file"]
-        if not source_path.exists():
-            raise FileNotFoundError(f"Missing source file: {source_path}")
-
-        ext = source_path.suffix.lower()
-        destination_dir = level_dirs[doc["jurisdiction_level"]]
-        destination_path = destination_dir / f"{doc['document_id']}{ext}"
-        copy2(source_path, destination_path)
-
-        manifest_entries.append(
-            {
-                "document_id": doc["document_id"],
-                "title": doc["title"],
-                "short_title": doc["short_title"],
-                "publisher": doc["publisher"],
-                "publication_date": doc["publication_date"],
-                "document_type": doc["document_type"],
-                "jurisdiction_level": doc["jurisdiction_level"],
-                "file_path": destination_path.relative_to(REPO_ROOT).as_posix(),
-                "source_url": doc["source_url"],
-                "status": doc["status"],
-                "priority_rank": doc["priority_rank"],
-                "source_number": doc["source_number"],
-                "selected_source_file": doc["selected_source_file"],
-            }
-        )
+    manifest_path = raw_root / "manifest.json"
+    managed_document_ids = {doc["document_id"] for doc in DOCUMENTS}
+    manifest_entries = load_preserved_manifest_entries(manifest_path, managed_document_ids)
+    manifest_entries.extend(manifest_entry_for_document(doc, level_dirs) for doc in DOCUMENTS)
 
     manifest_entries.sort(key=lambda item: item["priority_rank"])
-    manifest_path = raw_root / "manifest.json"
     manifest_path.write_text(
         json.dumps(manifest_entries, indent=2, ensure_ascii=False) + "\n",
         encoding="utf-8",

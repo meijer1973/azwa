@@ -1,12 +1,204 @@
 {
   "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd",
   "claim_extraction_run_id": "phase4_all_docs_claims_v3",
-  "generated_on": "2026-04-29",
+  "generated_on": "2026-04-30",
   "source_extraction_run_id": "phase3_all_docs_v3",
-  "claim_count": 11,
+  "claim_count": 13,
   "claims": [
     {
       "claim_id": "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_d6_001",
+      "topic": "d6.regional_coordination",
+      "subtopic": "ggd_and_regional_coordination",
+      "claim_type": "implementation_requirement",
+      "normative_status": {
+        "status": "lower_authority_signal",
+        "label": "Lagere-autoriteitssignaal",
+        "source_authority": "municipal_policy",
+        "has_normative_language": false,
+        "public_wording_guardrail": "Altijd expliciet toeschrijven aan de bron; niet als harde norm presenteren zonder sterkere bron.",
+        "needs_attribution": true
+      },
+      "time_status": {
+        "status": "undated_context",
+        "label": "Geen zelfstandig tijdmoment",
+        "date_signal": "none",
+        "source_temporal_anchor": "publication_context",
+        "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
+        "needs_review": true
+      },
+      "money_status": {
+        "status": "not_financial",
+        "label": "Geen zelfstandige financiele claim",
+        "financial_signal": false,
+        "source_finance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+        "needs_verification": true
+      },
+      "governance_status": {
+        "status": "not_governance",
+        "label": "Geen zelfstandige governanceclaim",
+        "actor_signals": [],
+        "source_governance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+        "needs_verification": true,
+        "vague_region_only": false
+      },
+      "locality_status": {
+        "status": "explicit_almere",
+        "label": "Expliciet Almeers",
+        "locality_scope": "Almere",
+        "regional_split_signals": [
+          "GGD-regio"
+        ],
+        "explicit_location_signals": {
+          "almere": true,
+          "flevoland": false
+        },
+        "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
+        "needs_verification": false
+      },
+      "execution_status": {
+        "status": "implementation_activity",
+        "label": "Uitvoeringsactiviteit zichtbaar",
+        "execution_need_signals": [
+          "implementation_activity"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
+        "public_wording_guardrail": "Beschrijf alleen de activiteit die de bron noemt; voeg geen eigenaar, bereik of vervolgplanning toe.",
+        "needs_verification": true
+      },
+      "statement": "Denk aan sport, welzijn, publieke gezondheid vanuit JGZ en GGD, en programma's gericht op gezonde scholen, gezond gewicht en het omgaan met mentale problemen bij de jeugd.",
+      "source_document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd",
+      "source_location": {
+        "source_statement_ids": [
+          "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_d6_001"
+        ],
+        "pages": [
+          3
+        ],
+        "sections": [
+          "Page 3"
+        ],
+        "evidence_quotes": [
+          "Denk aan sport, welzijn, publieke gezondheid vanuit JGZ en GGD, en programma's gericht op gezonde scholen, gezond gewicht en het omgaan met mentale problemen bij de jeugd."
+        ]
+      },
+      "publisher": "Raad van Almere",
+      "instrument_type": "municipal_policy",
+      "jurisdiction_level": "municipal",
+      "document_status": "current",
+      "authority_weight": 0.48,
+      "publication_date": null,
+      "effective_from": null,
+      "effective_to": null,
+      "validity_status": "contextual_active",
+      "applies_to": [
+        "Almere"
+      ],
+      "confidence": 0.68,
+      "human_review_status": "needs_human_review",
+      "source_statement_type": "contextual_relevance",
+      "claim_extraction_run_id": "phase4_all_docs_claims_v3",
+      "relations": []
+    },
+    {
+      "claim_id": "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_d6_002",
+      "topic": "d6.other",
+      "subtopic": "uncategorized",
+      "claim_type": "implementation_requirement",
+      "normative_status": {
+        "status": "lower_authority_signal",
+        "label": "Lagere-autoriteitssignaal",
+        "source_authority": "municipal_policy",
+        "has_normative_language": false,
+        "public_wording_guardrail": "Altijd expliciet toeschrijven aan de bron; niet als harde norm presenteren zonder sterkere bron.",
+        "needs_attribution": true
+      },
+      "time_status": {
+        "status": "undated_context",
+        "label": "Geen zelfstandig tijdmoment",
+        "date_signal": "none",
+        "source_temporal_anchor": "publication_context",
+        "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
+        "needs_review": true
+      },
+      "money_status": {
+        "status": "not_financial",
+        "label": "Geen zelfstandige financiele claim",
+        "financial_signal": false,
+        "source_finance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+        "needs_verification": true
+      },
+      "governance_status": {
+        "status": "approval_role",
+        "label": "Goedkeurings- of vaststellingsrol",
+        "actor_signals": [
+          "regio"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als goedkeurings- of vaststellingsrol; niet automatisch als uitvoeringsverantwoordelijkheid.",
+        "needs_verification": true,
+        "vague_region_only": true
+      },
+      "locality_status": {
+        "status": "explicit_almere",
+        "label": "Expliciet Almeers",
+        "locality_scope": "Almere",
+        "regional_split_signals": [],
+        "explicit_location_signals": {
+          "almere": true,
+          "flevoland": false
+        },
+        "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
+        "needs_verification": false
+      },
+      "execution_status": {
+        "status": "implementation_activity",
+        "label": "Uitvoeringsactiviteit zichtbaar",
+        "execution_need_signals": [
+          "implementation_activity"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
+        "public_wording_guardrail": "Beschrijf alleen de activiteit die de bron noemt; voeg geen eigenaar, bereik of vervolgplanning toe.",
+        "needs_verification": true
+      },
+      "statement": "Participatie vindt tijdens de uitvoering plaats middels het programma Positief Gezond Almere, het Lokaal Preventieakkoord (het Almeers Preventieakkoord) maar ook in een aantal andere netwerken zoals de Preventiecoalitie (regionaal) en projecten als Pact Gezond Gewicht en Gezonde Schoolaanpak.",
+      "source_document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd",
+      "source_location": {
+        "source_statement_ids": [
+          "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_d6_002"
+        ],
+        "pages": [
+          6
+        ],
+        "sections": [
+          "Page 6"
+        ],
+        "evidence_quotes": [
+          "Participatie vindt tijdens de uitvoering plaats middels het programma Positief Gezond Almere, het Lokaal Preventieakkoord (het Almeers Preventieakkoord) maar ook in een aantal andere netwerken zoals de Preventiecoalitie (regionaal) en projecten als Pact Gezond Gewicht en Gezonde Schoolaanpak."
+        ]
+      },
+      "publisher": "Raad van Almere",
+      "instrument_type": "municipal_policy",
+      "jurisdiction_level": "municipal",
+      "document_status": "current",
+      "authority_weight": 0.48,
+      "publication_date": null,
+      "effective_from": null,
+      "effective_to": null,
+      "validity_status": "contextual_active",
+      "applies_to": [
+        "Almere"
+      ],
+      "confidence": 0.5,
+      "human_review_status": "needs_human_review",
+      "source_statement_type": "contextual_relevance",
+      "claim_extraction_run_id": "phase4_all_docs_claims_v3",
+      "relations": []
+    },
+    {
+      "claim_id": "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_d6_003",
       "topic": "d6.other",
       "subtopic": "uncategorized",
       "claim_type": "implementation_requirement",
@@ -67,7 +259,7 @@
       "source_document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd",
       "source_location": {
         "source_statement_ids": [
-          "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_d6_001"
+          "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_d6_003"
         ],
         "pages": [
           7

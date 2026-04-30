@@ -26,6 +26,8 @@ For source-intake and public update history, follow `docs/updateprotocol.md`. A 
 
 For monthly source monitoring, use `config/monthly_source_audit.json`, `data/extracted/monthly_source_audit.json`, and `docs/internal/monthly-source-audit-2026-04-30.md`. Watchlist rows, expected publications and pending intake candidates are not public evidence until source intake, manifest registration and pipeline processing have happened.
 
+For human review routing, use `data/extracted/human_review_round.json` and `docs/review/phase31.3-human-review-round.md`. Reviewer decisions must be recorded as human review decisions or validation records; they do not become source claims unless backed by a canonical source or explicit validation evidence.
+
 ## Access Layer
 
 Base URL:
@@ -141,6 +143,7 @@ Machine-readable:
       "data/extracted/review_queue.json",
       "data/extracted/data_quality_audit.json",
       "data/extracted/monthly_source_audit.json",
+      "data/extracted/human_review_round.json",
       "data/extracted/claims/claims_master.jsonl",
       "data/extracted/claims/sentence_validator_rejects.json",
       "data/extracted/claims/dedup_log.json",
@@ -212,6 +215,7 @@ Machine-readable:
     "docs/review/almere_d6_decision_needed.md",
     "docs/review/almere_d6_funding_gap_table.md",
     "docs/review/almere_d6_safe_wording.md",
+    "docs/review/phase31.3-human-review-round.md",
     "docs/human-review-guidance.md",
     "docs/internal/monthly-source-audit-2026-04-30.md",
     "docs/internal/review-dashboard.html"

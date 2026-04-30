@@ -164,6 +164,46 @@ PUBLIC_SOURCE_CANDIDATES = [
         "intake_action": "Use as current implementation context; keep separate from formal PGA transformation-plan evidence.",
     },
     {
+        "source_id": "reg_ggd_flevoland_kadernota_2025",
+        "title": "Kadernota GGD Flevoland 2025",
+        "publisher": "GGD Flevoland",
+        "source_url": "https://www.ggdflevoland.nl/app/uploads/sites/6/2024/04/3.2-Kadernota-kern-GGD-2025-v-29mrt2024-gg10042024_.pdf",
+        "repository_status": "ingested_formal_corpus",
+        "verification_status": "pdf_downloaded_2026_04_30",
+        "why_it_matters": "Regional public-authority source for GGD involvement in local GALA plans, Regiobeeld/Regioplan, PGA monitoring and prevention infrastructure.",
+        "intake_action": "Use as GGD interface and monitoring/advisory evidence; do not use as final D6 mandate or budget split.",
+    },
+    {
+        "source_id": "reg_flever_zorgzaam_flevoland_project",
+        "title": "Zorgzaam Flevoland",
+        "publisher": "Flever",
+        "source_url": "https://flever.nl/project/zorgzaam-flevoland/",
+        "repository_status": "ingested_formal_corpus",
+        "verification_status": "downloaded_2026_04_30",
+        "why_it_matters": "Public Flever source distinguishing Zorgzaam Flevoland as regional IZA movement and Flever as resident-perspective support actor.",
+        "intake_action": "Use for PGA/Zorgzaam/Flever role splitting; keep formal ownership and mandate open.",
+    },
+    {
+        "source_id": "reg_flever_meerjarenplan_2025_2028",
+        "title": "Meerjarenplan Flever 2025-2028",
+        "publisher": "Flever",
+        "source_url": "https://flever.nl/wp-content/uploads/2025/04/Meerjarenplan-Flever-JvG5-DEF.pdf",
+        "repository_status": "ingested_formal_corpus",
+        "verification_status": "pdf_downloaded_2026_04_30",
+        "why_it_matters": "Flever policy source for support, participation, network and research roles in Flevoland.",
+        "intake_action": "Use as supporting role/context evidence below official regional and municipal sources.",
+    },
+    {
+        "source_id": "reg_flever_inwoners_onderdeel_pga",
+        "title": "Inwoners onderdeel van Positief Gezond Almere (PGA)",
+        "publisher": "Flever",
+        "source_url": "https://flever.nl/sterk-met-inwoners/",
+        "repository_status": "ingested_formal_corpus",
+        "verification_status": "downloaded_2026_04_30",
+        "why_it_matters": "Public source for Flever's project-lead role around inwonerparticipatie within PGA.",
+        "intake_action": "Use as narrow Flever-PGA partner-role evidence; do not infer formal D6 coordinator responsibility.",
+    },
+    {
         "source_id": "mun_almere_gezonde_scholen",
         "title": "Gezonde scholen",
         "publisher": "Gemeente Almere",
@@ -677,21 +717,38 @@ COMPONENTS = [
     {
         "component_id": "pga_zorgzaam_flevoland_interface",
         "component_label": "Positief Gezond Almere / Zorgzaam Flevoland-interface",
-        "existing_almere_provision": "Existing corpus includes PGA/Zorgzaam context and a current public PGA page with cooperation themes.",
-        "required_upgrade": "Update current cooperation evidence and separate PGA, Zorgzaam Flevoland/Flever and AZWA workagenda roles.",
-        "owner": "shared programme roles need validation",
-        "executors": [],
-        "cooperation_partners": ["Gemeente Almere", "Zorgzaam Flevoland/Flever", "care and welfare partners"],
+        "existing_almere_provision": (
+            "Public sources now support a role split: PGA as local transformation programme with an approved IZA plan, "
+            "Zorgzaam Flevoland as regional IZA/regioplan movement and governance-development structure, Flever as "
+            "supporting resident-participation and connecting actor, and GGD Flevoland as monitoring/advisory partner."
+        ),
+        "required_upgrade": (
+            "Validate whether these structures are formal D6 infrastructure, adjacent programme infrastructure or "
+            "implementation support, and separate PGA transformation funding from D5/D6/AZWA and regular budgets."
+        ),
+        "owner": "shared programme and regional roles need validation",
+        "executors": ["PGA programme candidate", "Zorgzaam Flevoland regional structure candidate", "Flever participation-support candidate", "GGD Flevoland monitoring/advice candidate"],
+        "cooperation_partners": ["Gemeente Almere", "PGA partners", "Zorgzaam Flevoland", "Flever", "GGD Flevoland", "care and welfare partners"],
         "scale": "almere_local_and_iza_azwa_regio_flevoland",
-        "funding_sources": ["PGA transformation funding candidate", "AZWA/D5/D6 funding needs separation"],
-        "decision_status": "review_needed",
+        "funding_sources": ["IZA/PGA transformation funding context", "GALA/SPUK prevention and knowledge context", "AZWA/D5/D6 funding needs separation"],
+        "decision_status": "source_backed_prefill",
         "evidence_sources": [
             "mun_almere_pga_transformatieplan",
             "mun_almere_pga_current_home",
+            "nat_zorgakkoorden_pga_20_miljoen_2024",
+            "reg_flevoland_2023_regioplan_iza",
             "reg_zonmw_doorontwikkeling_zorgzaam_flevoland",
+            "reg_ggd_flevoland_kadernota_2025",
+            "reg_ggd_flevoland_begroting_2026",
+            "reg_flever_zorgzaam_flevoland_project",
+            "reg_flever_meerjarenplan_2025_2028",
+            "reg_flever_inwoners_onderdeel_pga",
         ],
         "confidence": "medium",
-        "open_issue": "Avoid merging PGA transformation plan, AZWA workagenda and regular municipal funding without source-specific evidence.",
+        "open_issue": (
+            "Public evidence is stronger, but formal D6 classification, final owner/coordinator, mandate, continuity "
+            "after current funding and component-level budget split remain validation questions."
+        ),
     },
     {
         "component_id": "digital_operational_infrastructure",

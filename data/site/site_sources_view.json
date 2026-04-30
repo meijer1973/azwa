@@ -3036,12 +3036,12 @@
           "page_url": "/sources/ggd-tabellenboek-ouderen-2024/"
         },
         {
-          "title": "Valpreventie Gemeente Almere",
-          "page_url": "/sources/ggd-valpreventie-almere/"
+          "title": "Kadernota GGD Flevoland 2025",
+          "page_url": "/sources/ggd-kadernota-2025/"
         },
         {
-          "title": "Profiel Jeugdgezondheidszorg",
-          "page_url": "/sources/jgz-almere-profiel/"
+          "title": "Valpreventie Gemeente Almere",
+          "page_url": "/sources/ggd-valpreventie-almere/"
         }
       ],
       "structured_signals": {
@@ -3070,6 +3070,140 @@
           "perspective_id": "locality",
           "title": "Locality",
           "question": "What matters specifically for Almere or Flevoland?"
+        }
+      ]
+    },
+    {
+      "source_id": "reg_flever_inwoners_onderdeel_pga",
+      "slug": "flever-inwoners-pga",
+      "page_url": "/sources/flever-inwoners-pga/",
+      "metadata": {
+        "document_id": "reg_flever_inwoners_onderdeel_pga",
+        "source_number": 95,
+        "title": "Inwoners onderdeel van Positief Gezond Almere (PGA)",
+        "short_title": "Flever inwoners PGA",
+        "publisher": "Flever",
+        "publication_date": "2025-12-08",
+        "document_type": "provider_news_page",
+        "jurisdiction_level": "regional",
+        "status": "current",
+        "source_url": "https://flever.nl/sterk-met-inwoners/",
+        "file_path": "data/raw/regional/reg_flever_inwoners_onderdeel_pga.html",
+        "source_format": "html",
+        "traceability_mode": "section_chunk_based",
+        "source_classification": "primary",
+        "curation_bucket": "context",
+        "contains_d5": true,
+        "contains_d6": true,
+        "contains_structured_tables": false,
+        "contains_financing_logic": false,
+        "contains_governance_logic": true,
+        "contains_monitoring_evaluation_logic": false,
+        "contains_municipal_implications": true,
+        "priority_rank": 77,
+        "extraction_priority": "low",
+        "inventory_notes": "Flever page naming project-lead support for resident participation within PGA; use for narrow partner role evidence only.",
+        "document_type_label": "provider news page",
+        "source_classification_label": "primaire bron"
+      },
+      "summary": "Deze bron bevat expliciete informatie over zowel D5 als D6 en wordt in de huidige site gebruikt voor bestuurlijke duiding en traceerbaarheid.",
+      "what_changed_or_added": "Deze bron laat zien hoe landelijke lijnen regionaal in Flevoland worden vertaald.",
+      "d5_relevance": "Bevat expliciete D5-passages in de huidige extractie.",
+      "d6_relevance": "Bevat expliciete D6-passages in de huidige extractie.",
+      "linked_claims": [
+        {
+          "topic": "municipal.implementation_translation",
+          "title": "lokale vertaling in openbare stukken",
+          "claim_count": 3,
+          "page_url": "/reference/topics/municipal-implementation-translation/"
+        },
+        {
+          "topic": "monitoring.other",
+          "title": "overige monitoringslijn",
+          "claim_count": 1,
+          "page_url": "/reference/topics/monitoring-other/"
+        }
+      ],
+      "linked_decisions": [],
+      "linked_actions": [],
+      "linked_themes": [
+        {
+          "theme_id": "monitoring-en-leren",
+          "title": "Monitoring en leren",
+          "page_url": "/themes/monitoring-en-leren/"
+        },
+        {
+          "theme_id": "governance-en-regie",
+          "title": "Governance en regie",
+          "page_url": "/themes/governance-en-regie/"
+        }
+      ],
+      "related_sources": [
+        {
+          "title": "Toelichting producten en proces",
+          "page_url": "/sources/toelichting-werkagenda-d5-azwa/"
+        },
+        {
+          "title": "Opdracht voor de werkagenda samenwerking zorg en sociaal domein voor D5 AZWA",
+          "page_url": "/sources/opdracht-werkagenda-d5-azwa/"
+        },
+        {
+          "title": "Format werkagenda basisfunctionaliteiten AZWA",
+          "page_url": "/sources/format-werkagenda-azwa/"
+        },
+        {
+          "title": "AZWA-financiering voor gemeenten (Zorgakkoord)",
+          "page_url": "/sources/vng-ledenbrief-azwa-financiering/"
+        },
+        {
+          "title": "AZWA-afspraken D5 en D6 en financieringsinstrument",
+          "page_url": "/sources/vws-brief-d5-d6-financieringsinstrument/"
+        }
+      ],
+      "structured_signals": {
+        "contains_structured_table": false,
+        "d5_item_count": 0,
+        "d6_item_count": 0,
+        "governance_item_count": 0,
+        "timeline_item_count": 0
+      },
+      "content_classification": {
+        "classification_id": "source_fact",
+        "label": "Source fact",
+        "description": "Use when the statement is presented as grounded in a source document, source quote, explicit table item, or directly verified timeline moment."
+      },
+      "perspective_ids": [
+        "norm",
+        "time",
+        "governance",
+        "locality",
+        "execution"
+      ],
+      "quality_perspectives": [
+        {
+          "perspective_id": "norm",
+          "title": "Norm",
+          "question": "What is required, allowed, expected, or binding?"
+        },
+        {
+          "perspective_id": "time",
+          "title": "Time",
+          "question": "Which dates, deadlines, phasing, review moments, and budget-calendar alignments matter?"
+        },
+        {
+          "perspective_id": "governance",
+          "title": "Governance",
+          "question": "Who decides, who coordinates, who owns, and who must approve?"
+        },
+        {
+          "perspective_id": "locality",
+          "title": "Locality",
+          "question": "What matters specifically for Almere or Flevoland?"
+        },
+        {
+          "perspective_id": "execution",
+          "title": "Execution",
+          "question": "What must policymakers actually organize, prepare, or sequence?"
         }
       ]
     },
@@ -5012,6 +5146,90 @@
       ]
     },
     {
+      "source_id": "reg_flever_meerjarenplan_2025_2028",
+      "slug": "flever-meerjarenplan",
+      "page_url": "/sources/flever-meerjarenplan/",
+      "metadata": {
+        "document_id": "reg_flever_meerjarenplan_2025_2028",
+        "source_number": 94,
+        "title": "Meerjarenplan Flever 2025-2028",
+        "short_title": "Flever meerjarenplan",
+        "publisher": "Flever",
+        "publication_date": "2025-04-07",
+        "document_type": "provider_policy_plan",
+        "jurisdiction_level": "regional",
+        "status": "current",
+        "source_url": "https://flever.nl/wp-content/uploads/2025/04/Meerjarenplan-Flever-JvG5-DEF.pdf",
+        "file_path": "data/raw/regional/reg_flever_meerjarenplan_2025_2028.pdf",
+        "source_format": "pdf",
+        "traceability_mode": "page_based",
+        "source_classification": "primary",
+        "curation_bucket": "context",
+        "contains_d5": true,
+        "contains_d6": true,
+        "contains_structured_tables": false,
+        "contains_financing_logic": true,
+        "contains_governance_logic": true,
+        "contains_monitoring_evaluation_logic": true,
+        "contains_municipal_implications": true,
+        "priority_rank": 76,
+        "extraction_priority": "low",
+        "inventory_notes": "Flever policy plan for regional support, participation, network and research functions; useful for actor role-splitting, weaker than official governance sources.",
+        "document_type_label": "provider policy plan",
+        "source_classification_label": "primaire bron"
+      },
+      "summary": "Deze bron bevat expliciete informatie over zowel D5 als D6 en wordt in de huidige site gebruikt voor bestuurlijke duiding en traceerbaarheid.",
+      "what_changed_or_added": "Deze bron laat zien hoe landelijke lijnen regionaal in Flevoland worden vertaald.",
+      "d5_relevance": "Bevat expliciete D5-passages in de huidige extractie.",
+      "d6_relevance": "Bevat expliciete D6-passages in de huidige extractie.",
+      "linked_claims": [],
+      "linked_decisions": [],
+      "linked_actions": [],
+      "linked_themes": [],
+      "related_sources": [
+        {
+          "title": "Inwoners onderdeel van Positief Gezond Almere (PGA)",
+          "page_url": "/sources/flever-inwoners-pga/"
+        },
+        {
+          "title": "Regiobeeld Flevoland 2023",
+          "page_url": "/sources/regiobeeld-flevoland-2023/"
+        },
+        {
+          "title": "Zorgzaam Flevoland",
+          "page_url": "/sources/flever-zorgzaam-flevoland/"
+        }
+      ],
+      "structured_signals": {
+        "contains_structured_table": false,
+        "d5_item_count": 0,
+        "d6_item_count": 0,
+        "governance_item_count": 0,
+        "timeline_item_count": 0
+      },
+      "content_classification": {
+        "classification_id": "source_fact",
+        "label": "Source fact",
+        "description": "Use when the statement is presented as grounded in a source document, source quote, explicit table item, or directly verified timeline moment."
+      },
+      "perspective_ids": [
+        "norm",
+        "locality"
+      ],
+      "quality_perspectives": [
+        {
+          "perspective_id": "norm",
+          "title": "Norm",
+          "question": "What is required, allowed, expected, or binding?"
+        },
+        {
+          "perspective_id": "locality",
+          "title": "Locality",
+          "question": "What matters specifically for Almere or Flevoland?"
+        }
+      ]
+    },
+    {
       "source_id": "reg_flevoziekenhuis_rtp_flevoland_2025",
       "slug": "flevoziekenhuis-rtp-flevoland",
       "page_url": "/sources/flevoziekenhuis-rtp-flevoland/",
@@ -6363,6 +6581,98 @@
           "perspective_id": "execution",
           "title": "Execution",
           "question": "What must policymakers actually organize, prepare, or sequence?"
+        }
+      ]
+    },
+    {
+      "source_id": "reg_ggd_flevoland_kadernota_2025",
+      "slug": "ggd-kadernota-2025",
+      "page_url": "/sources/ggd-kadernota-2025/",
+      "metadata": {
+        "document_id": "reg_ggd_flevoland_kadernota_2025",
+        "source_number": 92,
+        "title": "Kadernota GGD Flevoland 2025",
+        "short_title": "GGD kadernota 2025",
+        "publisher": "GGD Flevoland",
+        "publication_date": "2024-03-29",
+        "document_type": "regional_budget_framework",
+        "jurisdiction_level": "regional",
+        "status": "historical",
+        "source_url": "https://www.ggdflevoland.nl/app/uploads/sites/6/2024/04/3.2-Kadernota-kern-GGD-2025-v-29mrt2024-gg10042024_.pdf",
+        "file_path": "data/raw/regional/reg_ggd_flevoland_kadernota_2025.pdf",
+        "source_format": "pdf",
+        "traceability_mode": "page_based",
+        "source_classification": "primary",
+        "curation_bucket": "canonical",
+        "contains_d5": true,
+        "contains_d6": true,
+        "contains_structured_tables": false,
+        "contains_financing_logic": true,
+        "contains_governance_logic": true,
+        "contains_monitoring_evaluation_logic": true,
+        "contains_municipal_implications": true,
+        "priority_rank": 74,
+        "extraction_priority": "low",
+        "inventory_notes": "GGD budget-framework source for GALA, Regiobeeld/Regioplan, PGA monitoring and public-health advisory roles; use as interface evidence, not as final D6 mandate.",
+        "document_type_label": "regional budget framework",
+        "source_classification_label": "primaire bron"
+      },
+      "summary": "Deze bron bevat expliciete informatie over zowel D5 als D6 en wordt in de huidige site gebruikt voor bestuurlijke duiding en traceerbaarheid.",
+      "what_changed_or_added": "Deze bron laat zien hoe landelijke lijnen regionaal in Flevoland worden vertaald.",
+      "d5_relevance": "Bevat expliciete D5-passages in de huidige extractie.",
+      "d6_relevance": "Bevat expliciete D6-passages in de huidige extractie.",
+      "linked_claims": [],
+      "linked_decisions": [],
+      "linked_actions": [],
+      "linked_themes": [],
+      "related_sources": [
+        {
+          "title": "Kadernota 2027 GGD Flevoland",
+          "page_url": "/sources/ggd-flevoland-kadernota-2027/"
+        },
+        {
+          "title": "Begroting 2026 GGD Flevoland",
+          "page_url": "/sources/ggd-flevoland-begroting-2026/"
+        },
+        {
+          "title": "Gezondheidsmonitor volwassenen en ouderen 2024 - Tabellenboek volwassenen Flevoland gemeenten",
+          "page_url": "/sources/ggd-tabellenboek-volwassenen-2024/"
+        },
+        {
+          "title": "Gezondheidsmonitor volwassenen en ouderen 2024 - Tabellenboek ouderen Flevoland gemeenten",
+          "page_url": "/sources/ggd-tabellenboek-ouderen-2024/"
+        },
+        {
+          "title": "Valpreventie Gemeente Almere",
+          "page_url": "/sources/ggd-valpreventie-almere/"
+        }
+      ],
+      "structured_signals": {
+        "contains_structured_table": false,
+        "d5_item_count": 0,
+        "d6_item_count": 0,
+        "governance_item_count": 0,
+        "timeline_item_count": 0
+      },
+      "content_classification": {
+        "classification_id": "source_fact",
+        "label": "Source fact",
+        "description": "Use when the statement is presented as grounded in a source document, source quote, explicit table item, or directly verified timeline moment."
+      },
+      "perspective_ids": [
+        "norm",
+        "locality"
+      ],
+      "quality_perspectives": [
+        {
+          "perspective_id": "norm",
+          "title": "Norm",
+          "question": "What is required, allowed, expected, or binding?"
+        },
+        {
+          "perspective_id": "locality",
+          "title": "Locality",
+          "question": "What matters specifically for Almere or Flevoland?"
         }
       ]
     },
@@ -8476,6 +8786,140 @@
           "perspective_id": "locality",
           "title": "Locality",
           "question": "What matters specifically for Almere or Flevoland?"
+        }
+      ]
+    },
+    {
+      "source_id": "reg_flever_zorgzaam_flevoland_project",
+      "slug": "flever-zorgzaam-flevoland",
+      "page_url": "/sources/flever-zorgzaam-flevoland/",
+      "metadata": {
+        "document_id": "reg_flever_zorgzaam_flevoland_project",
+        "source_number": 93,
+        "title": "Zorgzaam Flevoland",
+        "short_title": "Flever Zorgzaam Flevoland",
+        "publisher": "Flever",
+        "publication_date": null,
+        "document_type": "regional_project_page",
+        "jurisdiction_level": "regional",
+        "status": "current",
+        "source_url": "https://flever.nl/project/zorgzaam-flevoland/",
+        "file_path": "data/raw/regional/reg_flever_zorgzaam_flevoland_project.html",
+        "source_format": "html",
+        "traceability_mode": "section_chunk_based",
+        "source_classification": "primary",
+        "curation_bucket": "canonical",
+        "contains_d5": true,
+        "contains_d6": true,
+        "contains_structured_tables": false,
+        "contains_financing_logic": false,
+        "contains_governance_logic": true,
+        "contains_monitoring_evaluation_logic": false,
+        "contains_municipal_implications": true,
+        "priority_rank": 75,
+        "extraction_priority": "low",
+        "inventory_notes": "Flever project page describing Zorgzaam Flevoland as regional IZA-regioplan movement and Flever's resident-perspective support role; supporting role-split evidence.",
+        "document_type_label": "regional project page",
+        "source_classification_label": "primaire bron"
+      },
+      "summary": "Deze bron bevat expliciete informatie over zowel D5 als D6 en wordt in de huidige site gebruikt voor bestuurlijke duiding en traceerbaarheid.",
+      "what_changed_or_added": "Deze bron laat zien hoe landelijke lijnen regionaal in Flevoland worden vertaald.",
+      "d5_relevance": "Bevat expliciete D5-passages in de huidige extractie.",
+      "d6_relevance": "Bevat expliciete D6-passages in de huidige extractie.",
+      "linked_claims": [
+        {
+          "topic": "municipal.implementation_translation",
+          "title": "lokale vertaling in openbare stukken",
+          "claim_count": 3,
+          "page_url": "/reference/topics/municipal-implementation-translation/"
+        },
+        {
+          "topic": "monitoring.other",
+          "title": "overige monitoringslijn",
+          "claim_count": 2,
+          "page_url": "/reference/topics/monitoring-other/"
+        }
+      ],
+      "linked_decisions": [],
+      "linked_actions": [],
+      "linked_themes": [
+        {
+          "theme_id": "monitoring-en-leren",
+          "title": "Monitoring en leren",
+          "page_url": "/themes/monitoring-en-leren/"
+        },
+        {
+          "theme_id": "governance-en-regie",
+          "title": "Governance en regie",
+          "page_url": "/themes/governance-en-regie/"
+        }
+      ],
+      "related_sources": [
+        {
+          "title": "Toelichting producten en proces",
+          "page_url": "/sources/toelichting-werkagenda-d5-azwa/"
+        },
+        {
+          "title": "Opdracht voor de werkagenda samenwerking zorg en sociaal domein voor D5 AZWA",
+          "page_url": "/sources/opdracht-werkagenda-d5-azwa/"
+        },
+        {
+          "title": "Format werkagenda basisfunctionaliteiten AZWA",
+          "page_url": "/sources/format-werkagenda-azwa/"
+        },
+        {
+          "title": "AZWA-financiering voor gemeenten (Zorgakkoord)",
+          "page_url": "/sources/vng-ledenbrief-azwa-financiering/"
+        },
+        {
+          "title": "AZWA-afspraken D5 en D6 en financieringsinstrument",
+          "page_url": "/sources/vws-brief-d5-d6-financieringsinstrument/"
+        }
+      ],
+      "structured_signals": {
+        "contains_structured_table": false,
+        "d5_item_count": 0,
+        "d6_item_count": 0,
+        "governance_item_count": 0,
+        "timeline_item_count": 0
+      },
+      "content_classification": {
+        "classification_id": "source_fact",
+        "label": "Source fact",
+        "description": "Use when the statement is presented as grounded in a source document, source quote, explicit table item, or directly verified timeline moment."
+      },
+      "perspective_ids": [
+        "norm",
+        "time",
+        "governance",
+        "locality",
+        "execution"
+      ],
+      "quality_perspectives": [
+        {
+          "perspective_id": "norm",
+          "title": "Norm",
+          "question": "What is required, allowed, expected, or binding?"
+        },
+        {
+          "perspective_id": "time",
+          "title": "Time",
+          "question": "Which dates, deadlines, phasing, review moments, and budget-calendar alignments matter?"
+        },
+        {
+          "perspective_id": "governance",
+          "title": "Governance",
+          "question": "Who decides, who coordinates, who owns, and who must approve?"
+        },
+        {
+          "perspective_id": "locality",
+          "title": "Locality",
+          "question": "What matters specifically for Almere or Flevoland?"
+        },
+        {
+          "perspective_id": "execution",
+          "title": "Execution",
+          "question": "What must policymakers actually organize, prepare, or sequence?"
         }
       ]
     },

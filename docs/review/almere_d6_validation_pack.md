@@ -24,13 +24,13 @@ Source register: `data/extracted/municipal/almere_d6_responsibility_register.jso
 | --- | ---: |
 | Register rows | 12 |
 | `settled` rows | 0 |
-| `inferred` rows | 8 |
+| `inferred` rows | 10 |
 | `proposed` rows | 0 |
 | `unknown` rows | 1 |
-| `review_needed` rows | 3 |
+| `review_needed` rows | 1 |
 | Rows needing human review | 12 |
-| Rows without owner | 3 |
-| Rows with unknown or needs-decision funding | 9 |
+| Rows without owner | 1 |
+| Rows with unknown or needs-decision funding | 11 |
 
 Validation artifacts:
 
@@ -41,18 +41,18 @@ Validation artifacts:
 
 Rows without owner:
 
-- Inloopvoorzieningen sociaal en gezond.
 - Gezonde School / mentale gezonde school.
-- Burgerinitiatieven en informele steun.
 
 Rows with unknown or needs-decision funding:
 
 - Inloopvoorzieningen sociaal en gezond.
 - Wijkteams Almere.
 - Stevige Lokale Teams.
+- JGZ Almere.
 - Gezonde School / mentale gezonde school.
 - Kennis & Advies / monitoring / dashboards.
 - Samen Sterker in de Wijk / mentale-gezondheidswijkinfrastructuur.
+- Positief Gezond Almere / Zorgzaam Flevoland-interface.
 - Digitale en operationele infrastructuur.
 - Burgerinitiatieven en informele steun.
 - Financiering en budgetafbakening.
@@ -67,7 +67,7 @@ The public source base is now strong enough to prepare validation questions. It 
 
 | D6 component | Open question | Status | Who must validate | Owner / owner question | Executor(s) | Scale | Funding | Evidence |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Inloopvoorzieningen sociaal en gezond | Which existing Almere inloop or social-base facilities formally count as D6 infrastructure? | `review_needed` | Gemeente Almere, social-base partners, GGD/JGZ | Unknown | Social work, GGD/JGZ, citizen initiatives, informal support candidates | Almere local, needs validation | Unknown | `data/extracted/d6_governance_collaboration.json` |
+| Inloopvoorzieningen sociaal en gezond | Which existing Almere inloop or social-base facilities formally count as D6 infrastructure? | `inferred` | Gemeente Almere, social-base partners, GGD/JGZ | Gemeente Almere and social-base partner roles need validation | Wijkteams, De Schoor and resident-led meeting-place initiatives are candidates | Almere local, needs validation | Buurtontmoeting subsidy, wijkbudget and social-base budgets are candidates; split unknown | `mun_almere_welzijnskader_2020`, `mun_almere_subsidie_buurtontmoeting`, `mun_almere_nadere_regels_buurtontmoeting`, `mun_almere_wijkteams_ontmoeting`, `mun_deschoor_buurtkamers` |
 | Wijkteams Almere | Are Wijkteams formal D6 infrastructure, adjacent infrastructure, or candidate infrastructure needing upgrade? | `inferred` | Gemeente Almere, Wijkteams Almere | Gemeente Almere needs confirmation | Wijkwerkers and represented care/welfare organizations | Almere local | Unknown | `mun_almere_wijkteams` |
 | Stevige Lokale Teams | What exactly is settled by the council decision, and does it classify SLT as formal D6 infrastructure? | `inferred` | Gemeente Almere, council/college, JGZ Almere, Wijkteams Almere | Almere council/college line needs source-passage confirmation | JGZ Almere, wijkteams, schools and childcare partners | Almere local | Investeringsfonds Jeugd en Gezin candidate; split needs confirmation | SLT council page, amended proposal, budget amendment, decision list |
 | JGZ Almere | Which JGZ roles are D6, which are regular JGZ, and which are part of SLT development? | `inferred` | GGD Flevoland, JGZ Almere, Gemeente Almere | JGZ Almere / GGD Flevoland, municipal governance needs confirmation | JGZ Almere | Almere local with GGD Flevoland governance | GGD/JGZ funding split needs source-specific review | `reg_ggd_flevoland_jgz_almere_profile`, `reg_ggd_flevoland_begroting_2026` |
@@ -77,7 +77,7 @@ The public source base is now strong enough to prepare validation questions. It 
 | Samen Sterker in de Wijk / mentale-gezondheidswijkinfrastructuur | Is this formal D6 infrastructure, supporting infrastructure, or a separate implementation project? | `inferred` | Gemeente Almere, GGD Flevoland, GGZ/welfare partners, Zorgplatform Flevoland | Shared responsibility needs validation | Zorgplatform Flevoland partners, local professionals, ervaringsdeskundigen | Almere local and regional project scale | Unknown | `mun_almere_samenwerkingsprojecten` |
 | Positief Gezond Almere / Zorgzaam Flevoland-interface | How are PGA, Zorgzaam/Flever and AZWA work-agenda roles separated? | `review_needed` | PGA/Zorgzaam Flevoland/Flever, Gemeente Almere, regional governance | Shared programme roles need validation | Not settled | Almere local and IZA/AZWA Flevoland | PGA transformation funding candidate; AZWA/D5/D6 split needed | `mun_almere_pga_transformatieplan`, `mun_almere_pga_current_home`, `reg_zonmw_doorontwikkeling_zorgzaam_flevoland` |
 | Digitale en operationele infrastructuur | How should RTP, RSO/data-infrastructure, thuismonitoring, GGD monitoring and ACP/PZP data-sharing use cases be split, classified, owned and funded? | `inferred` | Gemeente Almere, regional digital/data leads, PGA/RSO, GGD, providers and finance/controller roles | Mixed owner candidates; formal D6 owner needs validation | RTP Flevoland, Flevoziekenhuis, PGA/RSO workstream, GGD Flevoland and NPZ/PZP pilot partners are candidates | Programme or project scale, needs validation | Unknown | `reg_flevoland_2023_regioplan_iza`, `mun_almere_pga_transformatieplan`, `nat_zorgakkoorden_pga_20_miljoen_2024`, RTP/PGA/RSO/Flevoziekenhuis/GGD/NPZ/Palliaweb sources |
-| Burgerinitiatieven en informele steun | Which public local sources identify social-base partners, citizen initiatives and informal networks? | `review_needed` | Gemeente Almere, De Schoor/VMCA/social-base partners | Unknown | Citizen initiatives and volunteer/informal support candidates | Almere local | Unknown | `data/extracted/d6_governance_collaboration.json` |
+| Burgerinitiatieven en informele steun | Which public local sources identify social-base partners, citizen initiatives and informal networks? | `inferred` | Gemeente Almere, De Schoor/VMCA/social-base partners | Mixed public actors; final coordination owner needs validation | Resident initiatives, VMCA, De Schoor and Humanitas are candidates | Almere local | Wijkbudget, buurtontmoeting support and volunteer/mantelzorg support are candidates; split unknown | `mun_almere_wijkbudget`, `mun_almere_ondersteuning_mantelzorg`, `mun_almere_mantelzorgwaardering`, `mun_deschoor_buurtkracht`, `mun_deschoor_opbouwwerk_almere`, `mun_vmca_meerjarenvisie_2022_2025`, `mun_humanitas_almere` |
 | Financiering en budgetafbakening | How are AZWA-D6, D5, SPUK/GALA, PGA, municipal regular budget and Zvw/insurer funding separated per component? | `unknown` | Gemeente Almere finance, mandaatgemeente/regional table, insurer/work-agenda governance | Municipality and regional work-agenda governance need component-specific validation | Not settled | Mixed scale, must be split | Unknown | `data/extracted/workagenda_d5_operational_requirements.json` |
 
 ## Validation Status Per Row
@@ -86,7 +86,7 @@ No stakeholder validation session has been recorded yet. All rows remain in thei
 
 | D6 component | Current status | Validation status | Ready to become `settled`? | Safe work-agenda wording | Unsafe wording |
 | --- | --- | --- | --- | --- | --- |
-| Inloopvoorzieningen sociaal en gezond | `review_needed` | Not yet validated | No | Almere must validate which inloop and social-base facilities are relevant to D6. | Almere has already designated specific inloopvoorzieningen as D6 infrastructure. |
+| Inloopvoorzieningen sociaal en gezond | `inferred` | Not yet validated | No | Public sources show buurtontmoeting subsidy routes, wijkteam social-contact access, De Schoor buurtkamers and social-base context as validation candidates. | Almere has already designated specific inloopvoorzieningen as D6 infrastructure. |
 | Wijkteams Almere | `inferred` | Not yet validated | No | Wijkteams Almere are a public-source-backed candidate for local access/social infrastructure validation. | Wijkteams Almere are formal D6 infrastructure. |
 | Stevige Lokale Teams | `inferred` | Not yet validated | No | The SLT council route is relevant to D6 validation and touches JGZ Almere and wijkteams. | The SLT council decision settles D6 ownership or classification. |
 | JGZ Almere | `inferred` | Not yet validated | No | JGZ Almere is a public-source-backed actor to validate for D6/JGZ and SLT-related roles. | JGZ Almere owns the D6 JGZ component. |
@@ -96,7 +96,7 @@ No stakeholder validation session has been recorded yet. All rows remain in thei
 | Samen Sterker in de Wijk | `inferred` | Not yet validated | No | Samen Sterker is a public-source-backed candidate for mental-health wijkinfrastructure validation. | Samen Sterker is formal D6 infrastructure. |
 | PGA / Zorgzaam Flevoland-interface | `review_needed` | Not yet validated | No | PGA/Zorgzaam roles must be separated from AZWA/D5/D6 roles before drafting. | PGA/Zorgzaam is the D6 governance vehicle. |
 | Digitale en operationele infrastructuur | `inferred` | Not yet validated | No | Public sources show several relevant digital and operational components around Almere/Flevoland; they are validation candidates for D6-related execution support. | RTP/RSO/Monitoring@home are confirmed formal D6 infrastructure for Almere, or one party owns all digital and operational infrastructure. |
-| Burgerinitiatieven en informele steun | `review_needed` | Not yet validated | No | Informal support and citizen initiatives need inventory and classification. | Named informal-support actors are D6 owners. |
+| Burgerinitiatieven en informele steun | `inferred` | Not yet validated | No | Public sources show wijkbudget, resident-led meeting support, VMCA, De Schoor, Humanitas and prevention-network context as validation candidates. | Named informal-support actors are D6 owners. |
 | Financiering en budgetafbakening | `unknown` | Not yet validated | No | Funding must be mapped per component to prevent double counting. | D6 funding is already locally allocated. |
 
 ## Stakeholder Feedback Summary
@@ -109,6 +109,7 @@ Rows ready to become `settled`: none.
 
 Rows remaining `inferred`:
 
+- Inloopvoorzieningen sociaal en gezond.
 - Wijkteams Almere.
 - Stevige Lokale Teams.
 - JGZ Almere.
@@ -117,12 +118,11 @@ Rows remaining `inferred`:
 - Kennis & Advies / monitoring / dashboards.
 - Samen Sterker in de Wijk / mentale-gezondheidswijkinfrastructuur.
 - Digitale en operationele infrastructuur.
+- Burgerinitiatieven en informele steun.
 
 Rows remaining `review_needed`:
 
-- Inloopvoorzieningen sociaal en gezond.
 - Positief Gezond Almere / Zorgzaam Flevoland-interface.
-- Burgerinitiatieven en informele steun.
 
 Rows remaining `unknown`:
 

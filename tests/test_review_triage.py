@@ -12,16 +12,16 @@ class ReviewTriageTests(unittest.TestCase):
         summary = triage["summary"]
 
         self.assertEqual(triage["current_sprint"], "Sprint 31.4 - Review triage and deep-research offload")
-        self.assertEqual(summary["review_queue_items"], 484)
-        self.assertEqual(summary["human_review_round_items"], 387)
+        self.assertEqual(summary["review_queue_items"], 565)
+        self.assertEqual(summary["human_review_round_items"], 565)
         self.assertEqual(summary["deep_research_assignment_count"], 6)
         self.assertEqual(
             summary["bucket_counts"],
             {
-                "pipeline_or_extraction_cleanup": 15,
-                "mixed_public_search_then_human": 144,
-                "human_only": 66,
-                "deep_research_candidate": 259,
+                "pipeline_or_extraction_cleanup": 17,
+                "mixed_public_search_then_human": 163,
+                "human_only": 76,
+                "deep_research_candidate": 309,
             },
         )
 
@@ -29,7 +29,7 @@ class ReviewTriageTests(unittest.TestCase):
         triage = review_triage.build_review_triage(date(2026, 4, 30))
 
         self.assertEqual(triage["summary"]["d6_rows_requiring_human_validation"], 12)
-        self.assertEqual(triage["summary"]["d6_rows_with_named_public_search_gap"], 3)
+        self.assertEqual(triage["summary"]["d6_rows_with_named_public_search_gap"], 0)
         self.assertIn("No D6 responsibility-register row may move to settled", triage["d6_guardrail"])
         for assignment in triage["deep_research_assignments"]:
             self.assertTrue(assignment["may_resolve"])

@@ -199,6 +199,102 @@
     },
     {
       "claim_id": "clm__nat_gala_2023_gezond_en_actief_leven_d6_001",
+      "topic": "d6.other",
+      "subtopic": "uncategorized",
+      "claim_type": "implementation_requirement",
+      "normative_status": {
+        "status": "agreement",
+        "label": "Afspraak of akkoordtekst",
+        "source_authority": "agreement",
+        "has_normative_language": false,
+        "public_wording_guardrail": "Formuleer als afspraak tussen akkoordpartijen; niet automatisch als wettelijke plicht voor Almere.",
+        "needs_attribution": true
+      },
+      "time_status": {
+        "status": "undated_context",
+        "label": "Geen zelfstandig tijdmoment",
+        "date_signal": "none",
+        "source_temporal_anchor": "publication_context",
+        "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
+        "needs_review": true
+      },
+      "money_status": {
+        "status": "not_financial",
+        "label": "Geen zelfstandige financiele claim",
+        "financial_signal": false,
+        "source_finance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+        "needs_verification": true
+      },
+      "governance_status": {
+        "status": "coordination_role",
+        "label": "Coordinatie- of regierol",
+        "actor_signals": [],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als coordinatie/regie; niet vermengen met besluitvorming of uitvoering.",
+        "needs_verification": true,
+        "vague_region_only": false
+      },
+      "locality_status": {
+        "status": "national_with_local_relevance",
+        "label": "Landelijk met lokale relevantie",
+        "locality_scope": "national to local",
+        "regional_split_signals": [],
+        "explicit_location_signals": {
+          "almere": false,
+          "flevoland": false
+        },
+        "public_wording_guardrail": "Formuleer als landelijke lijn met relevantie voor Almere; niet als lokale vaststelling.",
+        "needs_verification": true
+      },
+      "execution_status": {
+        "status": "dependency",
+        "label": "Uitvoering heeft afhankelijkheid of randvoorwaarde",
+        "execution_need_signals": [
+          "dependency"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
+        "public_wording_guardrail": "Benoem de afhankelijkheid; los haar niet op zonder bron of validatie.",
+        "needs_verification": true
+      },
+      "statement": "Een zogenaamde sociale basis die bestaat uit familie, naasten uit het sociaal netwerk, mantelzorgers, vrijwilligers, het welzijnswerk, burgerinitiatieven (waaronder zelfregie – of zelfhulpgroepen) en andere relevante organisaties die een rol hebben en een individu of een gezin helpt als het nodig is.",
+      "source_document_id": "nat_gala_2023_gezond_en_actief_leven",
+      "source_location": {
+        "source_statement_ids": [
+          "nat_gala_2023_gezond_en_actief_leven_d6_001"
+        ],
+        "pages": [
+          7
+        ],
+        "sections": [
+          "Page 7"
+        ],
+        "evidence_quotes": [
+          "Een zogenaamde sociale basis die bestaat uit familie, naasten uit het sociaal netwerk, mantelzorgers, vrijwilligers, het welzijnswerk, burgerinitiatieven (waaronder zelfregie – of zelfhulpgroepen) en andere relevante organisaties die een rol hebben en een individu of een gezin helpt als het nodig is."
+        ]
+      },
+      "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
+      "instrument_type": "agreement",
+      "jurisdiction_level": "national",
+      "document_status": "reference",
+      "authority_weight": 0.82,
+      "publication_date": "2023-01-31",
+      "effective_from": "2023-01-31",
+      "effective_to": null,
+      "validity_status": "contextual_active",
+      "applies_to": [
+        "Netherlands",
+        "all_regions",
+        "all_municipalities"
+      ],
+      "confidence": 0.5,
+      "human_review_status": "needs_human_review",
+      "source_statement_type": "contextual_relevance",
+      "claim_extraction_run_id": "phase4_all_docs_claims_v3",
+      "relations": []
+    },
+    {
+      "claim_id": "clm__nat_gala_2023_gezond_en_actief_leven_d6_002",
       "topic": "d6.basisinfrastructuur",
       "subtopic": "wijk_en_regio_basis",
       "claim_type": "implementation_requirement",
@@ -263,7 +359,7 @@
       "source_document_id": "nat_gala_2023_gezond_en_actief_leven",
       "source_location": {
         "source_statement_ids": [
-          "nat_gala_2023_gezond_en_actief_leven_d6_001"
+          "nat_gala_2023_gezond_en_actief_leven_d6_002"
         ],
         "pages": [
           51
@@ -296,9 +392,9 @@
       "relations": []
     },
     {
-      "claim_id": "clm__nat_gala_2023_gezond_en_actief_leven_d6_002",
-      "topic": "d6.basisinfrastructuur",
-      "subtopic": "wijk_en_regio_basis",
+      "claim_id": "clm__nat_gala_2023_gezond_en_actief_leven_d6_003",
+      "topic": "d6.other",
+      "subtopic": "uncategorized",
       "claim_type": "implementation_requirement",
       "normative_status": {
         "status": "agreement",
@@ -325,11 +421,11 @@
         "needs_verification": true
       },
       "governance_status": {
-        "status": "not_governance",
-        "label": "Geen zelfstandige governanceclaim",
+        "status": "execution_role",
+        "label": "Uitvoeringsrol",
         "actor_signals": [],
-        "source_governance_anchor": "none",
-        "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt.",
         "needs_verification": true,
         "vague_region_only": false
       },
@@ -348,126 +444,27 @@
       "execution_status": {
         "status": "operational_requirement",
         "label": "Operationele vereiste of inrichting",
-        "execution_need_signals": [],
-        "source_execution_anchor": "topic_context",
+        "execution_need_signals": [
+          "operational_requirement"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
         "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
         "needs_verification": true
       },
-      "statement": "We willen terug naar de nabijheid en de menselijke maat vanuit de lokale sociale basis of de sociale infrastructuur, in samenspraak met de inwoners.",
-      "source_document_id": "nat_gala_2023_gezond_en_actief_leven",
-      "source_location": {
-        "source_statement_ids": [
-          "nat_gala_2023_gezond_en_actief_leven_d6_002"
-        ],
-        "pages": [
-          7
-        ],
-        "sections": [
-          "Page 7"
-        ],
-        "evidence_quotes": [
-          "We willen terug naar de nabijheid en de menselijke maat vanuit de lokale sociale basis of de sociale infrastructuur, in samenspraak met de inwoners."
-        ]
-      },
-      "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
-      "instrument_type": "agreement",
-      "jurisdiction_level": "national",
-      "document_status": "reference",
-      "authority_weight": 0.82,
-      "publication_date": "2023-01-31",
-      "effective_from": "2023-01-31",
-      "effective_to": null,
-      "validity_status": "contextual_active",
-      "applies_to": [
-        "Netherlands",
-        "all_regions",
-        "all_municipalities"
-      ],
-      "confidence": 0.7,
-      "human_review_status": "needs_human_review",
-      "source_statement_type": "contextual_relevance",
-      "claim_extraction_run_id": "phase4_all_docs_claims_v3",
-      "relations": []
-    },
-    {
-      "claim_id": "clm__nat_gala_2023_gezond_en_actief_leven_d6_003",
-      "topic": "d6.regional_coordination",
-      "subtopic": "ggd_and_regional_coordination",
-      "claim_type": "implementation_requirement",
-      "normative_status": {
-        "status": "agreement",
-        "label": "Afspraak of akkoordtekst",
-        "source_authority": "agreement",
-        "has_normative_language": false,
-        "public_wording_guardrail": "Formuleer als afspraak tussen akkoordpartijen; niet automatisch als wettelijke plicht voor Almere.",
-        "needs_attribution": true
-      },
-      "time_status": {
-        "status": "undated_context",
-        "label": "Geen zelfstandig tijdmoment",
-        "date_signal": "none",
-        "source_temporal_anchor": "publication_context",
-        "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
-        "needs_review": true
-      },
-      "money_status": {
-        "status": "funding_route",
-        "label": "Financieringsroute",
-        "financial_signal": true,
-        "source_finance_anchor": "explicit_finance_signal",
-        "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
-        "needs_verification": true
-      },
-      "governance_status": {
-        "status": "actor_context",
-        "label": "Actor- of governancecontext",
-        "actor_signals": [
-          "ministerie",
-          "regio",
-          "gemeente",
-          "zorgverzekeraar"
-        ],
-        "source_governance_anchor": "explicit_governance_signal",
-        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
-        "needs_verification": true,
-        "vague_region_only": false
-      },
-      "locality_status": {
-        "status": "national_with_local_relevance",
-        "label": "Landelijk met lokale relevantie",
-        "locality_scope": "national to local",
-        "regional_split_signals": [
-          "gemeentelijk"
-        ],
-        "explicit_location_signals": {
-          "almere": false,
-          "flevoland": false
-        },
-        "public_wording_guardrail": "Formuleer als landelijke lijn met relevantie voor Almere; niet als lokale vaststelling.",
-        "needs_verification": true
-      },
-      "execution_status": {
-        "status": "operational_requirement",
-        "label": "Operationele vereiste of inrichting",
-        "execution_need_signals": [],
-        "source_execution_anchor": "topic_context",
-        "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
-        "needs_verification": true
-      },
-      "statement": "VWS, gemeenten, GGD’en en zorgverzekeraars maken minder vrijblijvende afspraken gericht op de vertaling van landelijke doelen op het gebied van gezondheid en welbevinden naar lande­ lijke, regionale en lokale resultaten.",
+      "statement": "3C Versterken van de sociale basis De sociale basis kan bestaan dankzij de onmisbare inzet van bij de samenleving betrokken inwoners, vrijwilligers en mantelzorgers.",
       "source_document_id": "nat_gala_2023_gezond_en_actief_leven",
       "source_location": {
         "source_statement_ids": [
           "nat_gala_2023_gezond_en_actief_leven_d6_003"
         ],
         "pages": [
-          10
+          18
         ],
         "sections": [
-          "Page 10"
+          "Page 18"
         ],
         "evidence_quotes": [
-          "VWS, gemeenten, GGD’en en zorgverzekeraars maken minder vrijblijvende afspraken gericht op de vertaling van landelijke doelen op het gebied van gezondheid en welbevinden naar lande­ lijke, regionale en lokale resultaten."
+          "3C Versterken van de sociale basis De sociale basis kan bestaan dankzij de onmisbare inzet van bij de samenleving betrokken inwoners, vrijwilligers en mantelzorgers."
         ]
       },
       "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
@@ -484,7 +481,7 @@
         "all_regions",
         "all_municipalities"
       ],
-      "confidence": 0.68,
+      "confidence": 0.5,
       "human_review_status": "needs_human_review",
       "source_statement_type": "contextual_relevance",
       "claim_extraction_run_id": "phase4_all_docs_claims_v3",

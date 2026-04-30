@@ -6,15 +6,15 @@
     "sprint_note": "docs/completed-plans/phase24-sprint24.2-audit.md"
   },
   "summary": {
-    "claim_count": 634,
+    "claim_count": 751,
     "topic_count": 44,
-    "claims_with_perspectives": 612,
+    "claims_with_perspectives": 729,
     "claims_without_perspectives": 22,
     "broad_rest_topic_count": 5,
-    "high_volume_topic_count": 7,
-    "rough_claim_count": 133,
-    "site_files_with_rough_claims": 11,
-    "open_review_items": 472
+    "high_volume_topic_count": 9,
+    "rough_claim_count": 145,
+    "site_files_with_rough_claims": 10,
+    "open_review_items": 550
   },
   "perspective_coverage": {
     "claims": {
@@ -22,7 +22,7 @@
         {
           "perspective_id": "norm",
           "title": "Norm",
-          "claim_count": 202,
+          "claim_count": 253,
           "topic_count": 17,
           "sample_topics": [
             "d5.basisfunctionaliteiten_onderbouwd",
@@ -38,7 +38,7 @@
         {
           "perspective_id": "time",
           "title": "Time",
-          "claim_count": 194,
+          "claim_count": 220,
           "topic_count": 16,
           "sample_topics": [
             "monitoring.d5_operational_monitoring",
@@ -54,7 +54,7 @@
         {
           "perspective_id": "money",
           "title": "Money",
-          "claim_count": 46,
+          "claim_count": 47,
           "topic_count": 5,
           "sample_topics": [
             "finance.azwa_macro_framework",
@@ -79,23 +79,23 @@
         {
           "perspective_id": "locality",
           "title": "Locality",
-          "claim_count": 416,
-          "topic_count": 36,
+          "claim_count": 532,
+          "topic_count": 35,
           "sample_topics": [
             "d5.basisfunctionaliteiten_onderbouwd",
             "d5.cross_domain_collaboration",
             "d5.health_first_shift",
             "d5.mentale_gezondheidsnetwerken",
             "d5.other",
-            "d6.basisinfrastructuur",
             "d6.digital_and_operational_infrastructure",
-            "d6.local_teams"
+            "d6.local_teams",
+            "d6.other"
           ]
         },
         {
           "perspective_id": "execution",
           "title": "Execution",
-          "claim_count": 434,
+          "claim_count": 528,
           "topic_count": 27,
           "sample_topics": [
             "d5.basisfunctionaliteiten_onderbouwd",
@@ -109,7 +109,7 @@
           ]
         }
       ],
-      "claims_with_perspectives": 612,
+      "claims_with_perspectives": 729,
       "claims_without_perspectives": 22,
       "unmapped_topics": [],
       "topic_mapping_gaps": [
@@ -192,19 +192,19 @@
         }
       },
       "source_detail": {
-        "file_count": 75,
-        "labeled_file_count": 75,
+        "file_count": 91,
+        "labeled_file_count": 91,
         "unlabeled_file_count": 0,
         "perspective_counts": {
-          "norm": 75,
-          "time": 56,
-          "money": 23,
-          "governance": 67,
-          "locality": 74,
-          "execution": 69
+          "norm": 91,
+          "time": 68,
+          "governance": 79,
+          "locality": 90,
+          "execution": 83,
+          "money": 24
         },
         "classification_counts": {
-          "source_fact": 75
+          "source_fact": 91
         }
       }
     }
@@ -212,19 +212,19 @@
   "normative_status_audit": {
     "description": "Sprint 27.1 norm-strength split for binding text, agreement text, expectations, guidance, lower-authority signals, and contextual material.",
     "status_counts": {
-      "agreement": 75,
+      "agreement": 76,
       "binding": 1,
-      "contextual": 77,
-      "expectation": 35,
-      "guidance": 256,
-      "lower_authority_signal": 190
+      "contextual": 78,
+      "expectation": 34,
+      "guidance": 311,
+      "lower_authority_signal": 251
     },
     "norm_perspective_status_counts": {
-      "agreement": 26,
+      "agreement": 27,
       "contextual": 1,
-      "expectation": 18,
+      "expectation": 17,
       "guidance": 8,
-      "lower_authority_signal": 149
+      "lower_authority_signal": 200
     },
     "attribution_needed_sample": [
       {
@@ -437,20 +437,20 @@
       {
         "claim_id": "clm__nat_azwa_opdracht_werkagenda_d5_2026_d6_001",
         "source_document_id": "nat_azwa_opdracht_werkagenda_d5_2026",
+        "topic": "d6.other",
+        "normative_status": "agreement",
+        "source_authority": "framework",
+        "statement_excerpt": "Samenwerkingsafspraken over hoe informele steunorganisaties met vrijwilligers en ervaringsdeskundigen kunnen worden benut om (aanstaande) gezinnen te ondersteunen.",
+        "public_wording_guardrail": "Formuleer als afspraak tussen akkoordpartijen; niet automatisch als wettelijke plicht voor Almere."
+      },
+      {
+        "claim_id": "clm__nat_azwa_opdracht_werkagenda_d5_2026_d6_002",
+        "source_document_id": "nat_azwa_opdracht_werkagenda_d5_2026",
         "topic": "d6.basisinfrastructuur",
         "normative_status": "guidance",
         "source_authority": "framework",
         "statement_excerpt": "Basisfunctionaliteit Landelijk: (door)ontwikkeling handreikingen Regionaal: doorontwikkeling of start uitvoering Betreft: laagdrempelige steunpunten, sociaal verwijzen, valpreventie, volwassenen met overgewicht en obe...",
         "public_wording_guardrail": "Formuleer als toelichting, format, advies of handreiking."
-      },
-      {
-        "claim_id": "clm__nat_azwa_opdracht_werkagenda_d5_2026_d6_003",
-        "source_document_id": "nat_azwa_opdracht_werkagenda_d5_2026",
-        "topic": "d6.basisinfrastructuur",
-        "normative_status": "expectation",
-        "source_authority": "framework",
-        "statement_excerpt": "7 Mentale gezondheid Laagdrempelige steunpunten Doelgroep: iedere inwoner die baat heeft bij laagdrempelige ondersteuning rondom zelfregie en herstel, met bijzondere aandacht voor mensen met ernstige of langdurige psy...",
-        "public_wording_guardrail": "Formuleer als verwachting, richting of uitwerkingskader; vermijd verplichtende taal."
       }
     ],
     "zero_count_statuses": []
@@ -458,33 +458,33 @@
   "time_status_audit": {
     "description": "Sprint 27.2 time split for formal deadlines, expected moments, review/update cycles, budget-calendar moments, implementation horizons, local planning context, source-dated moments, publication/context dates, and undated context.",
     "status_counts": {
-      "budget_calendar_moment": 135,
-      "expected_moment": 62,
-      "formal_deadline": 7,
+      "budget_calendar_moment": 145,
+      "expected_moment": 68,
+      "formal_deadline": 9,
       "implementation_horizon": 28,
       "local_planning_context": 18,
-      "publication_or_context_date": 23,
-      "review_or_update_moment": 121,
-      "source_dated_moment": 9,
-      "undated_context": 231
+      "publication_or_context_date": 41,
+      "review_or_update_moment": 133,
+      "source_dated_moment": 15,
+      "undated_context": 294
     },
     "time_perspective_status_counts": {
-      "budget_calendar_moment": 24,
-      "expected_moment": 18,
-      "formal_deadline": 4,
+      "budget_calendar_moment": 26,
+      "expected_moment": 21,
+      "formal_deadline": 6,
       "implementation_horizon": 19,
       "local_planning_context": 8,
-      "review_or_update_moment": 109,
-      "source_dated_moment": 9,
-      "undated_context": 3
+      "review_or_update_moment": 121,
+      "source_dated_moment": 15,
+      "undated_context": 4
     },
     "date_signal_counts": {
-      "exact_date": 45,
-      "month_or_cycle": 60,
-      "none": 380,
-      "period": 34,
+      "exact_date": 49,
+      "month_or_cycle": 62,
+      "none": 463,
+      "period": 36,
       "quarter": 7,
-      "year": 108
+      "year": 134
     },
     "review_needed_sample": [
       {
@@ -643,19 +643,19 @@
       {
         "claim_id": "clm__nat_azwa_opdracht_werkagenda_d5_2026_d6_001",
         "source_document_id": "nat_azwa_opdracht_werkagenda_d5_2026",
-        "topic": "d6.basisinfrastructuur",
+        "topic": "d6.other",
         "time_status": "undated_context",
         "date_signal": "none",
-        "statement_excerpt": "Basisfunctionaliteit Landelijk: (door)ontwikkeling handreikingen Regionaal: doorontwikkeling of start uitvoering Betreft: laagdrempelige steunpunten, sociaal verwijzen, valpreventie, volwassenen met overgewicht en obe...",
+        "statement_excerpt": "Samenwerkingsafspraken over hoe informele steunorganisaties met vrijwilligers en ervaringsdeskundigen kunnen worden benut om (aanstaande) gezinnen te ondersteunen.",
         "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron."
       },
       {
-        "claim_id": "clm__nat_azwa_opdracht_werkagenda_d5_2026_d6_003",
+        "claim_id": "clm__nat_azwa_opdracht_werkagenda_d5_2026_d6_002",
         "source_document_id": "nat_azwa_opdracht_werkagenda_d5_2026",
         "topic": "d6.basisinfrastructuur",
         "time_status": "undated_context",
         "date_signal": "none",
-        "statement_excerpt": "7 Mentale gezondheid Laagdrempelige steunpunten Doelgroep: iedere inwoner die baat heeft bij laagdrempelige ondersteuning rondom zelfregie en herstel, met bijzondere aandacht voor mensen met ernstige of langdurige psy...",
+        "statement_excerpt": "Basisfunctionaliteit Landelijk: (door)ontwikkeling handreikingen Regionaal: doorontwikkeling of start uitvoering Betreft: laagdrempelige steunpunten, sociaal verwijzen, valpreventie, volwassenen met overgewicht en obe...",
         "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron."
       },
       {
@@ -677,22 +677,22 @@
         "public_wording_guardrail": "Formuleer als verwacht, indicatief of bronafhankelijk moment; niet als harde deadline."
       },
       {
-        "claim_id": "clm__nat_iza_2022_integraal_zorgakkoord_d6_002",
-        "source_document_id": "nat_iza_2022_integraal_zorgakkoord",
-        "topic": "d6.other",
-        "time_status": "publication_or_context_date",
-        "date_signal": "year",
-        "statement_excerpt": "De komende jaren wordt actief ingezet op gegevensuitwisseling’ wordt vanuit de medisch speci­ alistische zorg ingezet op telemonitoring van patiënten Integraal Zorgakkoord 2022 | 49",
-        "public_wording_guardrail": "Gebruik als bron- of contextdatum; niet als beleidsdeadline."
-      },
-      {
-        "claim_id": "clm__nat_iza_2022_integraal_zorgakkoord_d6_003",
+        "claim_id": "clm__nat_iza_2022_integraal_zorgakkoord_d6_001",
         "source_document_id": "nat_iza_2022_integraal_zorgakkoord",
         "topic": "d6.basisinfrastructuur",
         "time_status": "undated_context",
         "date_signal": "none",
         "statement_excerpt": "van laagdrempelige steunpunten zoals herstel- en zelfregiecentra waar iedere inwoner, met name mensen met EPA, toegang tot heeft: gerund door vrijwilligers en ervaringsdeskundigen, ondersteund door sociaalwer­ kers en...",
         "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron."
+      },
+      {
+        "claim_id": "clm__nat_iza_2022_integraal_zorgakkoord_d6_003",
+        "source_document_id": "nat_iza_2022_integraal_zorgakkoord",
+        "topic": "d6.other",
+        "time_status": "expected_moment",
+        "date_signal": "month_or_cycle",
+        "statement_excerpt": "Gemeenten zijn – gezien hun brede verantwoordelijkheid in het sociale en preventieve domein – goed in staat om passende en integrale ondersteuning en zorg te bieden aan (kwetsbare) mensen en de sociale basis, waar­ on...",
+        "public_wording_guardrail": "Formuleer als verwacht, indicatief of bronafhankelijk moment; niet als harde deadline."
       },
       {
         "claim_id": "clm__nat_iza_2022_integraal_zorgakkoord_municipal_translation_002",
@@ -718,18 +718,18 @@
   "money_status_audit": {
     "description": "Sprint 27.3 money split for funding routes, application conditions, budget windows, allocation mechanisms, spending scope, accountability rules, local funding gaps, double-counting risks, finance context, and non-financial material.",
     "status_counts": {
-      "accountability_rule": 54,
-      "allocation_mechanism": 31,
-      "application_condition": 14,
-      "budget_window": 133,
-      "finance_context": 19,
-      "funding_route": 56,
+      "accountability_rule": 55,
+      "allocation_mechanism": 33,
+      "application_condition": 26,
+      "budget_window": 164,
+      "finance_context": 22,
+      "funding_route": 54,
       "local_funding_gap": 1,
-      "not_financial": 326
+      "not_financial": 396
     },
     "money_perspective_status_counts": {
       "accountability_rule": 4,
-      "allocation_mechanism": 16,
+      "allocation_mechanism": 17,
       "application_condition": 1,
       "budget_window": 9,
       "finance_context": 2,
@@ -819,17 +819,17 @@
       {
         "claim_id": "clm__nat_azwa_opdracht_werkagenda_d5_2026_d6_001",
         "source_document_id": "nat_azwa_opdracht_werkagenda_d5_2026",
-        "topic": "d6.basisinfrastructuur",
+        "topic": "d6.other",
         "money_status": "not_financial",
-        "statement_excerpt": "Basisfunctionaliteit Landelijk: (door)ontwikkeling handreikingen Regionaal: doorontwikkeling of start uitvoering Betreft: laagdrempelige steunpunten, sociaal verwijzen, valpreventie, volwassenen met overgewicht en obe...",
+        "statement_excerpt": "Samenwerkingsafspraken over hoe informele steunorganisaties met vrijwilligers en ervaringsdeskundigen kunnen worden benut om (aanstaande) gezinnen te ondersteunen.",
         "public_wording_guardrail": "Niet gebruiken als financieringsregel."
       },
       {
-        "claim_id": "clm__nat_azwa_opdracht_werkagenda_d5_2026_d6_003",
+        "claim_id": "clm__nat_azwa_opdracht_werkagenda_d5_2026_d6_002",
         "source_document_id": "nat_azwa_opdracht_werkagenda_d5_2026",
         "topic": "d6.basisinfrastructuur",
         "money_status": "not_financial",
-        "statement_excerpt": "7 Mentale gezondheid Laagdrempelige steunpunten Doelgroep: iedere inwoner die baat heeft bij laagdrempelige ondersteuning rondom zelfregie en herstel, met bijzondere aandacht voor mensen met ernstige of langdurige psy...",
+        "statement_excerpt": "Basisfunctionaliteit Landelijk: (door)ontwikkeling handreikingen Regionaal: doorontwikkeling of start uitvoering Betreft: laagdrempelige steunpunten, sociaal verwijzen, valpreventie, volwassenen met overgewicht en obe...",
         "public_wording_guardrail": "Niet gebruiken als financieringsregel."
       },
       {
@@ -841,19 +841,19 @@
         "public_wording_guardrail": "Gebruik als context; controleer sterkere bronnen voordat hier een financieringsregel van wordt gemaakt."
       },
       {
-        "claim_id": "clm__nat_iza_2022_integraal_zorgakkoord_d6_002",
-        "source_document_id": "nat_iza_2022_integraal_zorgakkoord",
-        "topic": "d6.other",
-        "money_status": "accountability_rule",
-        "statement_excerpt": "De komende jaren wordt actief ingezet op gegevensuitwisseling’ wordt vanuit de medisch speci­ alistische zorg ingezet op telemonitoring van patiënten Integraal Zorgakkoord 2022 | 49",
-        "public_wording_guardrail": "Koppel aan de bronroute en verantwoordingsplicht; maak er geen bestedingsruimte van."
-      },
-      {
-        "claim_id": "clm__nat_iza_2022_integraal_zorgakkoord_d6_003",
+        "claim_id": "clm__nat_iza_2022_integraal_zorgakkoord_d6_001",
         "source_document_id": "nat_iza_2022_integraal_zorgakkoord",
         "topic": "d6.basisinfrastructuur",
         "money_status": "not_financial",
         "statement_excerpt": "van laagdrempelige steunpunten zoals herstel- en zelfregiecentra waar iedere inwoner, met name mensen met EPA, toegang tot heeft: gerund door vrijwilligers en ervaringsdeskundigen, ondersteund door sociaalwer­ kers en...",
+        "public_wording_guardrail": "Niet gebruiken als financieringsregel."
+      },
+      {
+        "claim_id": "clm__nat_iza_2022_integraal_zorgakkoord_d6_003",
+        "source_document_id": "nat_iza_2022_integraal_zorgakkoord",
+        "topic": "d6.other",
+        "money_status": "not_financial",
+        "statement_excerpt": "Gemeenten zijn – gezien hun brede verantwoordelijkheid in het sociale en preventieve domein – goed in staat om passende en integrale ondersteuning en zorg te bieden aan (kwetsbare) mensen en de sociale basis, waar­ on...",
         "public_wording_guardrail": "Niet gebruiken als financieringsregel."
       },
       {
@@ -875,9 +875,9 @@
       {
         "claim_id": "clm__nat_gala_2023_gezond_en_actief_leven_d6_001",
         "source_document_id": "nat_gala_2023_gezond_en_actief_leven",
-        "topic": "d6.basisinfrastructuur",
+        "topic": "d6.other",
         "money_status": "not_financial",
-        "statement_excerpt": "Inrichten en bemensen van laagdrempelige steunpunten waar iedere inwoner toegang tot heeft, ondersteund door sociaalwerkers als onderdeel van de regionale infrastructuur.",
+        "statement_excerpt": "Een zogenaamde sociale basis die bestaat uit familie, naasten uit het sociaal netwerk, mantelzorgers, vrijwilligers, het welzijnswerk, burgerinitiatieven (waaronder zelfregie – of zelfhulpgroepen) en andere relevante...",
         "public_wording_guardrail": "Niet gebruiken als financieringsregel."
       },
       {
@@ -885,16 +885,16 @@
         "source_document_id": "nat_gala_2023_gezond_en_actief_leven",
         "topic": "d6.basisinfrastructuur",
         "money_status": "not_financial",
-        "statement_excerpt": "We willen terug naar de nabijheid en de menselijke maat vanuit de lokale sociale basis of de sociale infrastructuur, in samenspraak met de inwoners.",
+        "statement_excerpt": "Inrichten en bemensen van laagdrempelige steunpunten waar iedere inwoner toegang tot heeft, ondersteund door sociaalwerkers als onderdeel van de regionale infrastructuur.",
         "public_wording_guardrail": "Niet gebruiken als financieringsregel."
       },
       {
         "claim_id": "clm__nat_gala_2023_gezond_en_actief_leven_d6_003",
         "source_document_id": "nat_gala_2023_gezond_en_actief_leven",
-        "topic": "d6.regional_coordination",
-        "money_status": "funding_route",
-        "statement_excerpt": "VWS, gemeenten, GGD’en en zorgverzekeraars maken minder vrijblijvende afspraken gericht op de vertaling van landelijke doelen op het gebied van gezondheid en welbevinden naar lande­ lijke, regionale en lokale resultaten.",
-        "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren."
+        "topic": "d6.other",
+        "money_status": "not_financial",
+        "statement_excerpt": "3C Versterken van de sociale basis De sociale basis kan bestaan dankzij de onmisbare inzet van bij de samenleving betrokken inwoners, vrijwilligers en mantelzorgers.",
+        "public_wording_guardrail": "Niet gebruiken als financieringsregel."
       },
       {
         "claim_id": "clm__mun_almere_pga_seo_businesscase_2024_d5_001",
@@ -942,31 +942,31 @@
   "governance_status_audit": {
     "description": "Sprint 27.4 governance split for decision, coordination, application, execution, accountability, approval, review, governance gaps, actor context, and non-governance material.",
     "status_counts": {
-      "accountability_role": 9,
-      "actor_context": 166,
-      "application_role": 11,
-      "approval_role": 48,
-      "coordination_role": 64,
-      "decision_role": 38,
-      "execution_role": 52,
+      "accountability_role": 12,
+      "actor_context": 186,
+      "application_role": 22,
+      "approval_role": 53,
+      "coordination_role": 67,
+      "decision_role": 39,
+      "execution_role": 59,
       "governance_gap": 1,
-      "not_governance": 205,
-      "review_role": 40
+      "not_governance": 270,
+      "review_role": 42
     },
     "governance_perspective_status_counts": {
       "accountability_role": 1,
       "actor_context": 6
     },
     "actor_signal_counts": {
-      "college": 13,
-      "gemeente": 166,
+      "college": 16,
+      "gemeente": 186,
       "gemeenteraad": 33,
       "mandaatgemeente": 5,
-      "ministerie": 27,
-      "regio": 88,
-      "uitvoeringspartner": 17,
+      "ministerie": 26,
+      "regio": 87,
+      "uitvoeringspartner": 20,
       "vng": 20,
-      "zorgverzekeraar": 28
+      "zorgverzekeraar": 27
     },
     "zero_count_actor_signals": [],
     "verification_needed_sample": [
@@ -1202,6 +1202,16 @@
       {
         "claim_id": "clm__nat_azwa_opdracht_werkagenda_d5_2026_d6_001",
         "source_document_id": "nat_azwa_opdracht_werkagenda_d5_2026",
+        "topic": "d6.other",
+        "governance_status": "coordination_role",
+        "actor_signals": [],
+        "vague_region_only": false,
+        "statement_excerpt": "Samenwerkingsafspraken over hoe informele steunorganisaties met vrijwilligers en ervaringsdeskundigen kunnen worden benut om (aanstaande) gezinnen te ondersteunen.",
+        "public_wording_guardrail": "Gebruik als coordinatie/regie; niet vermengen met besluitvorming of uitvoering."
+      },
+      {
+        "claim_id": "clm__nat_azwa_opdracht_werkagenda_d5_2026_d6_002",
+        "source_document_id": "nat_azwa_opdracht_werkagenda_d5_2026",
         "topic": "d6.basisinfrastructuur",
         "governance_status": "execution_role",
         "actor_signals": [
@@ -1210,16 +1220,6 @@
         "vague_region_only": true,
         "statement_excerpt": "Basisfunctionaliteit Landelijk: (door)ontwikkeling handreikingen Regionaal: doorontwikkeling of start uitvoering Betreft: laagdrempelige steunpunten, sociaal verwijzen, valpreventie, volwassenen met overgewicht en obe...",
         "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt."
-      },
-      {
-        "claim_id": "clm__nat_azwa_opdracht_werkagenda_d5_2026_d6_003",
-        "source_document_id": "nat_azwa_opdracht_werkagenda_d5_2026",
-        "topic": "d6.basisinfrastructuur",
-        "governance_status": "coordination_role",
-        "actor_signals": [],
-        "vague_region_only": false,
-        "statement_excerpt": "7 Mentale gezondheid Laagdrempelige steunpunten Doelgroep: iedere inwoner die baat heeft bij laagdrempelige ondersteuning rondom zelfregie en herstel, met bijzondere aandacht voor mensen met ernstige of langdurige psy...",
-        "public_wording_guardrail": "Gebruik als coordinatie/regie; niet vermengen met besluitvorming of uitvoering."
       },
       {
         "claim_id": "clm__nat_azwa_opdracht_werkagenda_d5_2026_monitoring_and_evaluation_003",
@@ -1234,14 +1234,14 @@
         "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt."
       },
       {
-        "claim_id": "clm__nat_iza_2022_integraal_zorgakkoord_d6_002",
+        "claim_id": "clm__nat_iza_2022_integraal_zorgakkoord_d6_001",
         "source_document_id": "nat_iza_2022_integraal_zorgakkoord",
-        "topic": "d6.other",
-        "governance_status": "approval_role",
+        "topic": "d6.basisinfrastructuur",
+        "governance_status": "coordination_role",
         "actor_signals": [],
         "vague_region_only": false,
-        "statement_excerpt": "De komende jaren wordt actief ingezet op gegevensuitwisseling’ wordt vanuit de medisch speci­ alistische zorg ingezet op telemonitoring van patiënten Integraal Zorgakkoord 2022 | 49",
-        "public_wording_guardrail": "Gebruik als goedkeurings- of vaststellingsrol; niet automatisch als uitvoeringsverantwoordelijkheid."
+        "statement_excerpt": "van laagdrempelige steunpunten zoals herstel- en zelfregiecentra waar iedere inwoner, met name mensen met EPA, toegang tot heeft: gerund door vrijwilligers en ervaringsdeskundigen, ondersteund door sociaalwer­ kers en...",
+        "public_wording_guardrail": "Gebruik als coordinatie/regie; niet vermengen met besluitvorming of uitvoering."
       }
     ],
     "zero_count_statuses": []
@@ -1249,25 +1249,26 @@
   "locality_status_audit": {
     "description": "Sprint 27.5 locality split for explicit Almere, explicit Flevoland, regional split context, national general, national with local relevance, inferred local relevance, local adoption gaps, municipal context, and no locality signal.",
     "status_counts": {
-      "explicit_almere": 273,
-      "explicit_flevoland": 62,
+      "explicit_almere": 369,
+      "explicit_flevoland": 67,
       "local_adoption_gap": 1,
-      "national_general": 177,
+      "national_general": 193,
       "national_with_local_relevance": 72,
       "regional_split_context": 49
     },
     "locality_perspective_status_counts": {
-      "explicit_almere": 272,
-      "explicit_flevoland": 62,
+      "explicit_almere": 368,
+      "explicit_flevoland": 67,
       "local_adoption_gap": 1,
+      "national_general": 15,
       "national_with_local_relevance": 48,
       "regional_split_context": 33
     },
     "regional_split_counts": {
-      "GGD-regio": 41,
+      "GGD-regio": 42,
       "IZA/AZWA-regio": 36,
-      "ROAZ/subregio": 6,
-      "gemeentelijk": 198,
+      "ROAZ/subregio": 8,
+      "gemeentelijk": 226,
       "provincie": 2
     },
     "verification_needed_sample": [
@@ -1463,7 +1464,7 @@
       {
         "claim_id": "clm__nat_azwa_opdracht_werkagenda_d5_2026_d6_001",
         "source_document_id": "nat_azwa_opdracht_werkagenda_d5_2026",
-        "topic": "d6.basisinfrastructuur",
+        "topic": "d6.other",
         "locality_status": "national_with_local_relevance",
         "locality_scope": "national to local",
         "regional_split_signals": [],
@@ -1471,11 +1472,11 @@
           "almere": false,
           "flevoland": false
         },
-        "statement_excerpt": "Basisfunctionaliteit Landelijk: (door)ontwikkeling handreikingen Regionaal: doorontwikkeling of start uitvoering Betreft: laagdrempelige steunpunten, sociaal verwijzen, valpreventie, volwassenen met overgewicht en obe...",
+        "statement_excerpt": "Samenwerkingsafspraken over hoe informele steunorganisaties met vrijwilligers en ervaringsdeskundigen kunnen worden benut om (aanstaande) gezinnen te ondersteunen.",
         "public_wording_guardrail": "Formuleer als landelijke lijn met relevantie voor Almere; niet als lokale vaststelling."
       },
       {
-        "claim_id": "clm__nat_azwa_opdracht_werkagenda_d5_2026_d6_003",
+        "claim_id": "clm__nat_azwa_opdracht_werkagenda_d5_2026_d6_002",
         "source_document_id": "nat_azwa_opdracht_werkagenda_d5_2026",
         "topic": "d6.basisinfrastructuur",
         "locality_status": "national_with_local_relevance",
@@ -1485,7 +1486,7 @@
           "almere": false,
           "flevoland": false
         },
-        "statement_excerpt": "7 Mentale gezondheid Laagdrempelige steunpunten Doelgroep: iedere inwoner die baat heeft bij laagdrempelige ondersteuning rondom zelfregie en herstel, met bijzondere aandacht voor mensen met ernstige of langdurige psy...",
+        "statement_excerpt": "Basisfunctionaliteit Landelijk: (door)ontwikkeling handreikingen Regionaal: doorontwikkeling of start uitvoering Betreft: laagdrempelige steunpunten, sociaal verwijzen, valpreventie, volwassenen met overgewicht en obe...",
         "public_wording_guardrail": "Formuleer als landelijke lijn met relevantie voor Almere; niet als lokale vaststelling."
       },
       {
@@ -1590,21 +1591,7 @@
         "public_wording_guardrail": "Benoem welke regionale schaal bedoeld is; gebruik niet alleen 'de regio'."
       },
       {
-        "claim_id": "clm__nat_iza_2022_integraal_zorgakkoord_d6_002",
-        "source_document_id": "nat_iza_2022_integraal_zorgakkoord",
-        "topic": "d6.other",
-        "locality_status": "national_with_local_relevance",
-        "locality_scope": "national to local",
-        "regional_split_signals": [],
-        "explicit_location_signals": {
-          "almere": false,
-          "flevoland": false
-        },
-        "statement_excerpt": "De komende jaren wordt actief ingezet op gegevensuitwisseling’ wordt vanuit de medisch speci­ alistische zorg ingezet op telemonitoring van patiënten Integraal Zorgakkoord 2022 | 49",
-        "public_wording_guardrail": "Formuleer als landelijke lijn met relevantie voor Almere; niet als lokale vaststelling."
-      },
-      {
-        "claim_id": "clm__nat_iza_2022_integraal_zorgakkoord_d6_003",
+        "claim_id": "clm__nat_iza_2022_integraal_zorgakkoord_d6_001",
         "source_document_id": "nat_iza_2022_integraal_zorgakkoord",
         "topic": "d6.basisinfrastructuur",
         "locality_status": "national_with_local_relevance",
@@ -1615,6 +1602,22 @@
           "flevoland": false
         },
         "statement_excerpt": "van laagdrempelige steunpunten zoals herstel- en zelfregiecentra waar iedere inwoner, met name mensen met EPA, toegang tot heeft: gerund door vrijwilligers en ervaringsdeskundigen, ondersteund door sociaalwer­ kers en...",
+        "public_wording_guardrail": "Formuleer als landelijke lijn met relevantie voor Almere; niet als lokale vaststelling."
+      },
+      {
+        "claim_id": "clm__nat_iza_2022_integraal_zorgakkoord_d6_003",
+        "source_document_id": "nat_iza_2022_integraal_zorgakkoord",
+        "topic": "d6.other",
+        "locality_status": "national_with_local_relevance",
+        "locality_scope": "national to local",
+        "regional_split_signals": [
+          "gemeentelijk"
+        ],
+        "explicit_location_signals": {
+          "almere": false,
+          "flevoland": false
+        },
+        "statement_excerpt": "Gemeenten zijn – gezien hun brede verantwoordelijkheid in het sociale en preventieve domein – goed in staat om passende en integrale ondersteuning en zorg te bieden aan (kwetsbare) mensen en de sociale basis, waar­ on...",
         "public_wording_guardrail": "Formuleer als landelijke lijn met relevantie voor Almere; niet als lokale vaststelling."
       },
       {
@@ -1656,34 +1659,34 @@
   "execution_status_audit": {
     "description": "Sprint 27.6 execution split for operational requirements, implementation activity, decision questions, dependencies, sequencing needs, capacity needs, review tasks, execution context, and non-execution material.",
     "status_counts": {
-      "capacity_need": 19,
-      "decision_question": 18,
-      "dependency": 37,
-      "execution_context": 77,
-      "implementation_activity": 53,
-      "not_execution": 92,
-      "operational_requirement": 193,
-      "review_task": 78,
+      "capacity_need": 24,
+      "decision_question": 19,
+      "dependency": 43,
+      "execution_context": 94,
+      "implementation_activity": 56,
+      "not_execution": 108,
+      "operational_requirement": 253,
+      "review_task": 87,
       "sequencing_need": 67
     },
     "execution_perspective_status_counts": {
-      "capacity_need": 15,
-      "decision_question": 4,
-      "dependency": 22,
-      "execution_context": 64,
-      "implementation_activity": 28,
-      "operational_requirement": 189,
-      "review_task": 69,
+      "capacity_need": 19,
+      "decision_question": 5,
+      "dependency": 26,
+      "execution_context": 80,
+      "implementation_activity": 30,
+      "operational_requirement": 247,
+      "review_task": 78,
       "sequencing_need": 43
     },
     "execution_need_signal_counts": {
-      "capacity": 19,
-      "decision_question": 18,
-      "dependency": 39,
-      "implementation_activity": 109,
-      "operational_requirement": 38,
-      "review": 108,
-      "sequencing": 85
+      "capacity": 24,
+      "decision_question": 19,
+      "dependency": 45,
+      "implementation_activity": 113,
+      "operational_requirement": 43,
+      "review": 118,
+      "sequencing": 86
     },
     "verification_needed_sample": [
       {
@@ -1965,10 +1968,10 @@
     "broad_rest_topics": [
       {
         "topic": "monitoring.other",
-        "current_claim_count": 70,
+        "current_claim_count": 82,
         "historical_claim_count": 6,
         "needs_human_review": true,
-        "confidence": 0.39,
+        "confidence": 0.37,
         "perspective_ids": [
           "execution",
           "locality",
@@ -1992,42 +1995,14 @@
           "clm__nat_azwa_2026_voortgang_kamerbrief_monitoring_and_evaluation_002",
           "clm__nat_azwa_2026_cw31_kamerbrief_monitoring_and_evaluation_002"
         ],
-        "interpretation_summary": "Current view combines 70 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
-      },
-      {
-        "topic": "governance_and_finance.other",
-        "current_claim_count": 53,
-        "historical_claim_count": 3,
-        "needs_human_review": true,
-        "confidence": 0.38,
-        "perspective_ids": [
-          "locality"
-        ],
-        "sample_documents": [
-          "mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel",
-          "nat_azwa_2026_voortgang_kamerbrief",
-          "nat_azwa_opdracht_werkagenda_d5_2026",
-          "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026",
-          "reg_ggd_flevoland_begroting_2026"
-        ],
-        "sample_claim_ids": [
-          "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_governance_and_finance_003",
-          "clm__nat_azwa_opdracht_werkagenda_d5_2026_governance_and_finance_003",
-          "clm__nat_azwa_opdracht_werkagenda_d5_2026_governance_and_finance_002",
-          "clm__nat_azwa_opdracht_werkagenda_d5_2026_governance_and_finance_001",
-          "clm__nat_azwa_2026_voortgang_kamerbrief_governance_and_finance_003",
-          "clm__nat_azwa_2026_voortgang_kamerbrief_governance_and_finance_002",
-          "clm__reg_ggd_flevoland_begroting_2026_governance_and_finance_003",
-          "clm__reg_ggd_flevoland_begroting_2026_governance_and_finance_002"
-        ],
-        "interpretation_summary": "Current view combines 53 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
+        "interpretation_summary": "Current view combines 82 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
       },
       {
         "topic": "timeline.other",
-        "current_claim_count": 53,
+        "current_claim_count": 66,
         "historical_claim_count": 4,
         "needs_human_review": true,
-        "confidence": 0.38,
+        "confidence": 0.36,
         "perspective_ids": [
           "locality",
           "time"
@@ -2050,14 +2025,42 @@
           "clm__nat_azwa_2026_voortgang_kamerbrief_timeline_and_status_001",
           "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_timeline_and_status_003"
         ],
-        "interpretation_summary": "Current view combines 53 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
+        "interpretation_summary": "Current view combines 66 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
+      },
+      {
+        "topic": "governance_and_finance.other",
+        "current_claim_count": 61,
+        "historical_claim_count": 3,
+        "needs_human_review": true,
+        "confidence": 0.37,
+        "perspective_ids": [
+          "locality"
+        ],
+        "sample_documents": [
+          "mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel",
+          "nat_azwa_2026_voortgang_kamerbrief",
+          "nat_azwa_opdracht_werkagenda_d5_2026",
+          "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026",
+          "reg_ggd_flevoland_begroting_2026"
+        ],
+        "sample_claim_ids": [
+          "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_governance_and_finance_003",
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_governance_and_finance_003",
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_governance_and_finance_002",
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_governance_and_finance_001",
+          "clm__nat_azwa_2026_voortgang_kamerbrief_governance_and_finance_003",
+          "clm__nat_azwa_2026_voortgang_kamerbrief_governance_and_finance_002",
+          "clm__reg_ggd_flevoland_begroting_2026_governance_and_finance_003",
+          "clm__reg_ggd_flevoland_begroting_2026_governance_and_finance_002"
+        ],
+        "interpretation_summary": "Current view combines 61 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
       },
       {
         "topic": "d6.other",
-        "current_claim_count": 31,
+        "current_claim_count": 59,
         "historical_claim_count": 0,
         "needs_human_review": true,
-        "confidence": 0.38,
+        "confidence": 0.39,
         "perspective_ids": [
           "execution",
           "locality",
@@ -2066,26 +2069,27 @@
         "sample_documents": [
           "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
           "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
-          "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd",
           "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst",
           "nat_azwa_2026_voortgang_kamerbrief",
+          "nat_azwa_opdracht_werkagenda_d5_2026",
+          "nat_gala_2023_gezond_en_actief_leven",
           "nat_iza_2022_integraal_zorgakkoord"
         ],
         "sample_claim_ids": [
-          "clm__nat_iza_2022_integraal_zorgakkoord_d6_002",
+          "clm__nat_gala_2023_gezond_en_actief_leven_d6_003",
+          "clm__nat_gala_2023_gezond_en_actief_leven_d6_001",
+          "clm__nat_iza_2022_integraal_zorgakkoord_d6_003",
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_d6_001",
           "clm__nat_azwa_2026_voortgang_kamerbrief_d6_001",
           "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_d6_003",
           "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_d6_002",
-          "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_d6_001",
-          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d6_002",
-          "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d6_002",
-          "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d6_001"
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_d6_001"
         ],
-        "interpretation_summary": "Current view combines 31 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
+        "interpretation_summary": "Current view combines 59 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
       },
       {
         "topic": "d5.other",
-        "current_claim_count": 17,
+        "current_claim_count": 18,
         "historical_claim_count": 0,
         "needs_human_review": true,
         "confidence": 0.35,
@@ -2114,16 +2118,16 @@
           "clm__nat_vng_ledenbrief_azwa_financiering_2026_d5_002",
           "clm__nat_vng_ledenbrief_azwa_financiering_2026_d5_001"
         ],
-        "interpretation_summary": "Current view combines 17 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
+        "interpretation_summary": "Current view combines 18 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
       }
     ],
     "high_volume_topics": [
       {
         "topic": "municipal.implementation_translation",
-        "current_claim_count": 137,
+        "current_claim_count": 163,
         "historical_claim_count": 8,
         "needs_human_review": true,
-        "confidence": 0.54,
+        "confidence": 0.53,
         "sample_claim_ids": [
           "clm__nat_wetten_spuk_transformatiemiddelen_regeling_municipal_translation_003",
           "clm__nat_wetten_spuk_transformatiemiddelen_regeling_municipal_translation_002",
@@ -2134,14 +2138,14 @@
           "clm__nat_azwa_opdracht_werkagenda_d5_2026_municipal_translation_002",
           "clm__nat_azwa_2026_cw31_kader_d5_d6_municipal_translation_002"
         ],
-        "interpretation_summary": "Current view combines 137 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
+        "interpretation_summary": "Current view combines 163 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
       },
       {
         "topic": "monitoring.other",
-        "current_claim_count": 70,
+        "current_claim_count": 82,
         "historical_claim_count": 6,
         "needs_human_review": true,
-        "confidence": 0.39,
+        "confidence": 0.37,
         "sample_claim_ids": [
           "clm__nat_wetten_spuk_transformatiemiddelen_regeling_monitoring_and_evaluation_003",
           "clm__nat_wetten_spuk_transformatiemiddelen_regeling_monitoring_and_evaluation_001",
@@ -2152,32 +2156,14 @@
           "clm__nat_azwa_2026_voortgang_kamerbrief_monitoring_and_evaluation_002",
           "clm__nat_azwa_2026_cw31_kamerbrief_monitoring_and_evaluation_002"
         ],
-        "interpretation_summary": "Current view combines 70 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
-      },
-      {
-        "topic": "governance_and_finance.other",
-        "current_claim_count": 53,
-        "historical_claim_count": 3,
-        "needs_human_review": true,
-        "confidence": 0.38,
-        "sample_claim_ids": [
-          "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_governance_and_finance_003",
-          "clm__nat_azwa_opdracht_werkagenda_d5_2026_governance_and_finance_003",
-          "clm__nat_azwa_opdracht_werkagenda_d5_2026_governance_and_finance_002",
-          "clm__nat_azwa_opdracht_werkagenda_d5_2026_governance_and_finance_001",
-          "clm__nat_azwa_2026_voortgang_kamerbrief_governance_and_finance_003",
-          "clm__nat_azwa_2026_voortgang_kamerbrief_governance_and_finance_002",
-          "clm__reg_ggd_flevoland_begroting_2026_governance_and_finance_003",
-          "clm__reg_ggd_flevoland_begroting_2026_governance_and_finance_002"
-        ],
-        "interpretation_summary": "Current view combines 53 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
+        "interpretation_summary": "Current view combines 82 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
       },
       {
         "topic": "timeline.other",
-        "current_claim_count": 53,
+        "current_claim_count": 66,
         "historical_claim_count": 4,
         "needs_human_review": true,
-        "confidence": 0.38,
+        "confidence": 0.36,
         "sample_claim_ids": [
           "clm__nat_wetten_spuk_transformatiemiddelen_regeling_timeline_and_status_003",
           "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_timeline_and_status_001",
@@ -2188,47 +2174,47 @@
           "clm__nat_azwa_2026_voortgang_kamerbrief_timeline_and_status_001",
           "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_timeline_and_status_003"
         ],
-        "interpretation_summary": "Current view combines 53 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
+        "interpretation_summary": "Current view combines 66 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
+      },
+      {
+        "topic": "governance_and_finance.other",
+        "current_claim_count": 61,
+        "historical_claim_count": 3,
+        "needs_human_review": true,
+        "confidence": 0.37,
+        "sample_claim_ids": [
+          "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_governance_and_finance_003",
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_governance_and_finance_003",
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_governance_and_finance_002",
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_governance_and_finance_001",
+          "clm__nat_azwa_2026_voortgang_kamerbrief_governance_and_finance_003",
+          "clm__nat_azwa_2026_voortgang_kamerbrief_governance_and_finance_002",
+          "clm__reg_ggd_flevoland_begroting_2026_governance_and_finance_003",
+          "clm__reg_ggd_flevoland_begroting_2026_governance_and_finance_002"
+        ],
+        "interpretation_summary": "Current view combines 61 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
       },
       {
         "topic": "d6.other",
-        "current_claim_count": 31,
+        "current_claim_count": 59,
         "historical_claim_count": 0,
         "needs_human_review": true,
-        "confidence": 0.38,
+        "confidence": 0.39,
         "sample_claim_ids": [
-          "clm__nat_iza_2022_integraal_zorgakkoord_d6_002",
+          "clm__nat_gala_2023_gezond_en_actief_leven_d6_003",
+          "clm__nat_gala_2023_gezond_en_actief_leven_d6_001",
+          "clm__nat_iza_2022_integraal_zorgakkoord_d6_003",
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_d6_001",
           "clm__nat_azwa_2026_voortgang_kamerbrief_d6_001",
           "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_d6_003",
           "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_d6_002",
-          "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_d6_001",
-          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d6_002",
-          "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d6_002",
-          "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d6_001"
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_d6_001"
         ],
-        "interpretation_summary": "Current view combines 31 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
-      },
-      {
-        "topic": "finance.d5_d6.funding_instrument",
-        "current_claim_count": 27,
-        "historical_claim_count": 4,
-        "needs_human_review": true,
-        "confidence": 0.61,
-        "sample_claim_ids": [
-          "clm__nat_wetten_spuk_transformatiemiddelen_regeling_governance_and_finance_003",
-          "clm__nat_wetten_spuk_transformatiemiddelen_regeling_governance_and_finance_002",
-          "clm__nat_wetten_spuk_transformatiemiddelen_regeling_governance_and_finance_001",
-          "clm__nat_azwa_2025_definitief_governance_and_finance_003",
-          "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_governance_and_finance_001",
-          "clm__nat_azwa_2026_cw31_kader_d5_d6_governance_and_finance_001",
-          "clm__reg_flevoland_2023_regioplan_iza_governance_and_finance_002",
-          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_governance_and_finance_002"
-        ],
-        "interpretation_summary": "Current view combines 27 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
+        "interpretation_summary": "Current view combines 59 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
       },
       {
         "topic": "d5.basisfunctionaliteiten_onderbouwd",
-        "current_claim_count": 26,
+        "current_claim_count": 34,
         "historical_claim_count": 0,
         "needs_human_review": true,
         "confidence": 0.6,
@@ -2242,7 +2228,61 @@
           "clm__nat_azwa_2026_cw31_kader_d5_d6_d5_001",
           "clm__nat_vng_richtinggevend_kader_toegang_lokale_teams_d5_001"
         ],
-        "interpretation_summary": "Current view combines 26 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
+        "interpretation_summary": "Current view combines 34 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
+      },
+      {
+        "topic": "d6.digital_and_operational_infrastructure",
+        "current_claim_count": 29,
+        "historical_claim_count": 0,
+        "needs_human_review": true,
+        "confidence": 0.57,
+        "sample_claim_ids": [
+          "clm__reg_flevoland_2023_regioplan_iza_d6_001",
+          "clm__mun_almere_nadere_regels_buurtontmoeting_d6_002",
+          "clm__mun_almere_nadere_regels_buurtontmoeting_d6_001",
+          "clm__mun_almere_pga_transformatieplan_d6_002",
+          "clm__mun_almere_pga_transformatieplan_d6_001",
+          "clm__mun_almere_pga_rso_data_infrastructuur_d6_003",
+          "clm__mun_almere_pga_rso_data_infrastructuur_d6_002",
+          "clm__mun_almere_pga_rso_data_infrastructuur_d6_001"
+        ],
+        "interpretation_summary": "Current view combines 29 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
+      },
+      {
+        "topic": "finance.d5_d6.funding_instrument",
+        "current_claim_count": 28,
+        "historical_claim_count": 4,
+        "needs_human_review": true,
+        "confidence": 0.6,
+        "sample_claim_ids": [
+          "clm__nat_wetten_spuk_transformatiemiddelen_regeling_governance_and_finance_003",
+          "clm__nat_wetten_spuk_transformatiemiddelen_regeling_governance_and_finance_002",
+          "clm__nat_wetten_spuk_transformatiemiddelen_regeling_governance_and_finance_001",
+          "clm__nat_azwa_2025_definitief_governance_and_finance_003",
+          "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_governance_and_finance_001",
+          "clm__nat_azwa_2026_cw31_kader_d5_d6_governance_and_finance_001",
+          "clm__reg_flevoland_2023_regioplan_iza_governance_and_finance_002",
+          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_governance_and_finance_002"
+        ],
+        "interpretation_summary": "Current view combines 28 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
+      },
+      {
+        "topic": "d6.regional_coordination",
+        "current_claim_count": 21,
+        "historical_claim_count": 0,
+        "needs_human_review": true,
+        "confidence": 0.58,
+        "sample_claim_ids": [
+          "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d6_003",
+          "clm__reg_ggd_flevoland_begroting_2026_d6_003",
+          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_d6_001",
+          "clm__reg_flevoland_2023_regiobeeld_d6_002",
+          "clm__reg_ggd_flevoland_valpreventie_almere_d6_002",
+          "clm__reg_ggd_flevoland_valpreventie_almere_d6_001",
+          "clm__reg_ggd_flevoland_ketenaanpak_gezond_gewicht_almere_d6_002",
+          "clm__reg_ggd_flevoland_ketenaanpak_gezond_gewicht_almere_d6_001"
+        ],
+        "interpretation_summary": "Current view combines 21 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
       }
     ]
   },
@@ -2256,12 +2296,12 @@
       "unverified_extraction_length": "Claim is long and also has a suspicious extraction signal: lowercase fragment start, missing terminal punctuation, or table/column merge fingerprint."
     },
     "issue_counts": {
-      "english_summary": 66,
-      "unverified_extraction_length": 50,
+      "english_summary": 65,
+      "unverified_extraction_length": 61,
       "bullet_or_heading_fragment": 10,
-      "fragment_too_short": 7
+      "fragment_too_short": 9
     },
-    "claim_count": 133,
+    "claim_count": 145,
     "claims": [
       {
         "claim_id": "clm__mun_almere_pga_current_home_d6_001",
@@ -2292,21 +2332,6 @@
           "english_summary"
         ],
         "statement_excerpt": "Keyboard Navigation Profile (Motor-Impaired): this profile enables motor-impaired persons to operate the website using the keyboard Tab, Shift+Tab, and the Enter keys."
-      },
-      {
-        "claim_id": "clm__mun_almere_pga_regionaal_transferpunt_d6_003",
-        "topic": "d6.digital_and_operational_infrastructure",
-        "document_id": "mun_almere_pga_regionaal_transferpunt",
-        "jurisdiction_level": "municipal",
-        "perspective_ids": [
-          "execution",
-          "locality",
-          "norm"
-        ],
-        "issue_codes": [
-          "english_summary"
-        ],
-        "statement_excerpt": "We utilize an accessibility interface that allows persons with specific disabilities to adjust the website’s UI (user interface) and design it to their personal needs."
       },
       {
         "claim_id": "clm__mun_almere_pga_rso_data_infrastructuur_d6_001",
@@ -3417,6 +3442,36 @@
         "statement_excerpt": "[Regeling vervalt per 16-07-2030.] Geraadpleegd op 22-04-2026."
       },
       {
+        "claim_id": "clm__reg_ggd_flevoland_2024_ouderen_gemeenten_d6_002",
+        "topic": "d6.other",
+        "document_id": "reg_ggd_flevoland_2024_ouderen_gemeenten",
+        "jurisdiction_level": "regional",
+        "perspective_ids": [
+          "execution",
+          "locality",
+          "norm"
+        ],
+        "issue_codes": [
+          "fragment_too_short"
+        ],
+        "statement_excerpt": "15 Mantelzorg en vrijwilligerswerk .........................................................................................................................................................................."
+      },
+      {
+        "claim_id": "clm__reg_ggd_flevoland_2024_volwassenen_gemeenten_d6_002",
+        "topic": "d6.other",
+        "document_id": "reg_ggd_flevoland_2024_volwassenen_gemeenten",
+        "jurisdiction_level": "regional",
+        "perspective_ids": [
+          "execution",
+          "locality",
+          "norm"
+        ],
+        "issue_codes": [
+          "fragment_too_short"
+        ],
+        "statement_excerpt": "15 Mantelzorg en vrijwilligerswerk .........................................................................................................................................................................."
+      },
+      {
         "claim_id": "clm__reg_ggd_flevoland_begroting_2026_municipal_translation_002",
         "topic": "municipal.implementation_translation",
         "document_id": "reg_ggd_flevoland_begroting_2026",
@@ -3585,6 +3640,35 @@
         "statement_excerpt": "Investeringsplan jeugd en gezin (bedragen x € 1.000) 2025 2026 2027 2028 2029 1. Project herindicering jeugdhulp 200 300 2. Start Stevige lokale teams in twee wijken 200 400 Investeringen reeds opgenomen in Q2 400 700 3. (Tijdelijke) versterking toegang en regiefunctie JGZ Almere 700 4. Doelmatigheid jeugdhulp 400 500 500 5. Inrichting Stevige lokale teams 300 1.200 1.200 1.200 6. Regie jeugdhu..."
       },
       {
+        "claim_id": "clm__mun_almere_almeers_preventieakkoord_d6_001",
+        "topic": "d6.other",
+        "document_id": "mun_almere_almeers_preventieakkoord",
+        "jurisdiction_level": "municipal",
+        "perspective_ids": [
+          "execution",
+          "locality",
+          "norm"
+        ],
+        "issue_codes": [
+          "unverified_extraction_length"
+        ],
+        "statement_excerpt": "Kinderen groeien gezond en veilig op - Meer Almeerders hebben een gezonde leefstijl, met voldoende beweging en gezonde voeding - Een rookvrije Almeerse generatie in 2040 - Een groter mentaal welbevinden - Iedereen doet naar eigen kunnen mee - Meer Almeerders hebben toegang tot gezonde informatie, advies, bemiddeling, ondersteuning en zorg - Het aanbod van gezonde voorzieningen is beter afgestem..."
+      },
+      {
+        "claim_id": "clm__mun_almere_almeers_preventieakkoord_timeline_and_status_001",
+        "topic": "timeline.other",
+        "document_id": "mun_almere_almeers_preventieakkoord",
+        "jurisdiction_level": "municipal",
+        "perspective_ids": [
+          "locality",
+          "time"
+        ],
+        "issue_codes": [
+          "unverified_extraction_length"
+        ],
+        "statement_excerpt": "Kinderen groeien gezond en veilig op - Meer Almeerders hebben een gezonde leefstijl, met voldoende beweging en gezonde voeding - Een rookvrije Almeerse generatie in 2040 - Een groter mentaal welbevinden - Iedereen doet naar eigen kunnen mee - Meer Almeerders hebben toegang tot gezonde informatie, advies, bemiddeling, ondersteuning en zorg - Het aanbod van gezonde voorzieningen is beter afgestem..."
+      },
+      {
         "claim_id": "clm__mun_almere_lea_2024_2028_d6_003",
         "topic": "d6.other",
         "document_id": "mun_almere_lea_2024_2028",
@@ -3598,6 +3682,20 @@
           "unverified_extraction_length"
         ],
         "statement_excerpt": "Kinderopvang - ’s Heeren Loo - Islamitische Basisschool Al Iman - Het Baken - Hogeschool Windesheim - JGZ Almere - Kidak - Partou - Prisma Almere - Passend Onderwijs Almere - ROC van Amsterdam – Flevoland - Second Home Kinderopvang - School van Vrede - Shri Ganesha School - Stichting Katholiek Onderwijs Flevoland-Veluwe - Triade Vitree - Taalcentrum Almere - Vrije School Almere"
+      },
+      {
+        "claim_id": "clm__mun_almere_nadere_regels_buurtontmoeting_municipal_translation_001",
+        "topic": "municipal.implementation_translation",
+        "document_id": "mun_almere_nadere_regels_buurtontmoeting",
+        "jurisdiction_level": "municipal",
+        "perspective_ids": [
+          "execution",
+          "locality"
+        ],
+        "issue_codes": [
+          "unverified_extraction_length"
+        ],
+        "statement_excerpt": "Het college van burgemeester en wethouders van de gemeente Almere; - gelet op titel 4.2 van de Algemene wet bestuursrecht en artikel 3 van de Algemene subsidieverordening Almere 2025; - besluit: vast te stellen de navolgende Nadere regels (buurt)ontmoetingsplekken en -activiteiten"
       },
       {
         "claim_id": "clm__mun_almere_pga_current_home_municipal_translation_002",
@@ -3627,6 +3725,21 @@
           "unverified_extraction_length"
         ],
         "statement_excerpt": "Zorgen voor snellere doorstroom van patiënten naar tijdelijke zorg - Eén aanspreekpunt creëren voor huisartsen, SEH en andere verwijzers - Zorgmedewerkers ontlasten door minder bel- en regelwerk - Voorkomen dat patiënten onnodig op de spoedeisende hulp of in het ziekenhuis belanden - Bevorderen van passende zorg op de juiste plek, thuis of in een tijdelijke instelling"
+      },
+      {
+        "claim_id": "clm__mun_almere_pga_regionaal_transferpunt_d6_003",
+        "topic": "d6.other",
+        "document_id": "mun_almere_pga_regionaal_transferpunt",
+        "jurisdiction_level": "municipal",
+        "perspective_ids": [
+          "execution",
+          "locality",
+          "norm"
+        ],
+        "issue_codes": [
+          "unverified_extraction_length"
+        ],
+        "statement_excerpt": "Dit project is bedoeld voor iedereen in Almere die bijdraagt aan gezondheid en welzijn: professionals, inwoners vrijwilligers, studenten, beleidsmakers en bestuurders Start Livegang: Januari 2024 Projectleider Rosa Kimman Doelgroep Almere-inwoners met een tijdelijke zorgvraag buiten het ziekenhuis Partners Woonzorg Flevoland, Zorggroep Almere, Flevoziekenhuis, ReHA, (toekomst: ambulance)"
       },
       {
         "claim_id": "clm__mun_almere_pga_seo_businesscase_2024_governance_and_finance_002",
@@ -3671,6 +3784,21 @@
         "statement_excerpt": "5 februari 2026 | Politieke Markt en besluitvorming 12 februari 2026 | Politieke Markt 19 februari 2026 | Politieke Markt en besluitvorming 26 februari 2026 | Geen Politieke Markt 5 maart 2026 | Politieke Markt en besluitvorming 12 maart 2026 | Geen Politieke Markt 18 maart 2026 | Gemeenteraadsverkiezingen 2026 19 maart 2026 | Geen Politieke Markt 26 maart 2026 | Geen Politieke Markt Dinsdag 31..."
       },
       {
+        "claim_id": "clm__mun_almere_sociaal_domein_aanbod_jeugd_gezin_d6_001",
+        "topic": "d6.other",
+        "document_id": "mun_almere_sociaal_domein_aanbod_jeugd_gezin",
+        "jurisdiction_level": "municipal",
+        "perspective_ids": [
+          "execution",
+          "locality",
+          "norm"
+        ],
+        "issue_codes": [
+          "unverified_extraction_length"
+        ],
+        "statement_excerpt": "Armoede en schulden - Gezin en scheiding - Gezonde leefstijl - Huiselijk geweld - Leerproblemen - Lichamelijke gezondheid - Opvoedingsondersteuning - Overlijden en rouwverwerking - Mantelzorg - Zwangerschap voorkomen en onbedoelde zwangerschap - Ontmoeten en samenleven - Verslaving"
+      },
+      {
         "claim_id": "clm__mun_almere_sociaal_domein_informatiepagina_timeline_and_status_001",
         "topic": "timeline.other",
         "document_id": "mun_almere_sociaal_domein_informatiepagina",
@@ -3683,6 +3811,93 @@
           "unverified_extraction_length"
         ],
         "statement_excerpt": "2028 - Programma Toekomstscenario Jeugd- en Gezinsbescherming - Wet Publieke Gezondheid (WPG) - Landelijke zorgakkoorden:Integraal Zorgakkoord (IZA), Het Gezond en Actief Leven Akkoord (GALA), het Aanvullend Zorg – en Welzijnsakkoord (AZWA), het programma Wonen, Ondersteuning en Zorg voor Ouderen (WOZO) en het Hoofdlijnenakkoord Ouderenzorg (HLO)"
+      },
+      {
+        "claim_id": "clm__mun_deschoor_buurtkamers_d5_003",
+        "topic": "d5.basisfunctionaliteiten_onderbouwd",
+        "document_id": "mun_deschoor_buurtkamers",
+        "jurisdiction_level": "municipal",
+        "perspective_ids": [
+          "execution",
+          "locality",
+          "norm"
+        ],
+        "issue_codes": [
+          "unverified_extraction_length"
+        ],
+        "statement_excerpt": "OVER: ► duurzaamheid ► eenzaamheid ► geld/schulden ► mijn buurt ► ondersteuning vanuit de wijkteams ► ouder worden ► relatie/scheiding | ► sociaal/juridische zaken ► taalondersteuning ► toeslagenaffaire ► vervoer ► Welzijn op Recept ► werk/opleiding ► wonen"
+      },
+      {
+        "claim_id": "clm__mun_deschoor_buurtkamers_municipal_translation_003",
+        "topic": "municipal.local_structure",
+        "document_id": "mun_deschoor_buurtkamers",
+        "jurisdiction_level": "municipal",
+        "perspective_ids": [
+          "execution",
+          "locality"
+        ],
+        "issue_codes": [
+          "unverified_extraction_length"
+        ],
+        "statement_excerpt": "OVER: ► duurzaamheid ► eenzaamheid ► geld/schulden ► mijn buurt ► ondersteuning vanuit de wijkteams ► ouder worden ► relatie/scheiding | ► sociaal/juridische zaken ► taalondersteuning ► toeslagenaffaire ► vervoer ► Welzijn op Recept ► werk/opleiding ► wonen"
+      },
+      {
+        "claim_id": "clm__mun_deschoor_buurtkracht_d5_003",
+        "topic": "d5.basisfunctionaliteiten_onderbouwd",
+        "document_id": "mun_deschoor_buurtkracht",
+        "jurisdiction_level": "municipal",
+        "perspective_ids": [
+          "execution",
+          "locality",
+          "norm"
+        ],
+        "issue_codes": [
+          "unverified_extraction_length"
+        ],
+        "statement_excerpt": "OVER: ► duurzaamheid ► eenzaamheid ► geld/schulden ► mijn buurt ► ondersteuning vanuit de wijkteams ► ouder worden ► relatie/scheiding | ► sociaal/juridische zaken ► taalondersteuning ► toeslagenaffaire ► vervoer ► Welzijn op Recept ► werk/opleiding ► wonen"
+      },
+      {
+        "claim_id": "clm__mun_deschoor_buurtkracht_municipal_translation_003",
+        "topic": "municipal.local_structure",
+        "document_id": "mun_deschoor_buurtkracht",
+        "jurisdiction_level": "municipal",
+        "perspective_ids": [
+          "execution",
+          "locality"
+        ],
+        "issue_codes": [
+          "unverified_extraction_length"
+        ],
+        "statement_excerpt": "OVER: ► duurzaamheid ► eenzaamheid ► geld/schulden ► mijn buurt ► ondersteuning vanuit de wijkteams ► ouder worden ► relatie/scheiding | ► sociaal/juridische zaken ► taalondersteuning ► toeslagenaffaire ► vervoer ► Welzijn op Recept ► werk/opleiding ► wonen"
+      },
+      {
+        "claim_id": "clm__mun_deschoor_initiatievenbureau_d5_003",
+        "topic": "d5.basisfunctionaliteiten_onderbouwd",
+        "document_id": "mun_deschoor_initiatievenbureau",
+        "jurisdiction_level": "municipal",
+        "perspective_ids": [
+          "execution",
+          "locality",
+          "norm"
+        ],
+        "issue_codes": [
+          "unverified_extraction_length"
+        ],
+        "statement_excerpt": "OVER: ► duurzaamheid ► eenzaamheid ► geld/schulden ► mijn buurt ► ondersteuning vanuit de wijkteams ► ouder worden ► relatie/scheiding | ► sociaal/juridische zaken ► taalondersteuning ► toeslagenaffaire ► vervoer ► Welzijn op Recept ► werk/opleiding ► wonen"
+      },
+      {
+        "claim_id": "clm__mun_deschoor_initiatievenbureau_municipal_translation_003",
+        "topic": "municipal.local_structure",
+        "document_id": "mun_deschoor_initiatievenbureau",
+        "jurisdiction_level": "municipal",
+        "perspective_ids": [
+          "execution",
+          "locality"
+        ],
+        "issue_codes": [
+          "unverified_extraction_length"
+        ],
+        "statement_excerpt": "OVER: ► duurzaamheid ► eenzaamheid ► geld/schulden ► mijn buurt ► ondersteuning vanuit de wijkteams ► ouder worden ► relatie/scheiding | ► sociaal/juridische zaken ► taalondersteuning ► toeslagenaffaire ► vervoer ► Welzijn op Recept ► werk/opleiding ► wonen"
       },
       {
         "claim_id": "clm__nat_azwa_2026_voortgang_kamerbrief_governance_and_finance_001",
@@ -3737,7 +3952,7 @@
         "statement_excerpt": "R plannen indienen bi orgver ekeraar erkagenda vastgesteld aan tafel en verst rd naar colleges gemeenten Regionale werkagenda s vastgesteld en verst rd naar elderheid over ontwikkelagenda deel tart itvoering van de werkagenda elderheid over proces voor beproevende regio s"
       },
       {
-        "claim_id": "clm__nat_iza_2022_integraal_zorgakkoord_d6_003",
+        "claim_id": "clm__nat_iza_2022_integraal_zorgakkoord_d6_001",
         "topic": "d6.basisinfrastructuur",
         "document_id": "nat_iza_2022_integraal_zorgakkoord",
         "jurisdiction_level": "national",
@@ -4126,82 +4341,145 @@
     ]
   },
   "site_text_risks": {
-    "file_count": 11,
+    "file_count": 10,
     "page_group_counts": {
-      "action_detail": 14,
+      "action_detail": 11,
       "decision_detail": 15,
-      "site_almere_view": 22,
-      "site_home_view": 19,
-      "site_updates_view": 42
+      "site_almere_view": 19,
+      "site_home_view": 22,
+      "site_updates_view": 52
     },
     "files": [
       {
         "path": "data/site/site_updates_view.json",
         "page_group": "site_updates_view",
-        "rough_claim_count": 42,
+        "rough_claim_count": 52,
         "sample_claims": [
           {
-            "claim_id": "clm__mun_almere_pga_regionaal_transferpunt_d5_001",
+            "claim_id": "clm__mun_almere_nadere_regels_buurtontmoeting_municipal_translation_001",
             "issue_codes": [
               "unverified_extraction_length"
             ],
-            "statement_excerpt": "Zorgen voor snellere doorstroom van patiënten naar tijdelijke zorg - Eén aanspreekpunt creëren voor huisartsen, SEH en andere verwijzers - Zorgmedewerkers ontlasten door minder bel- en regelwerk - Voorkomen dat patiënten onnodig op de spoedeisende hulp of in het ziekenhuis belanden - Bevorderen van passende zorg op de juiste plek, thuis of in een tijdelijke instelling"
+            "statement_excerpt": "Het college van burgemeester en wethouders van de gemeente Almere; - gelet op titel 4.2 van de Algemene wet bestuursrecht en artikel 3 van de Algemene subsidieverordening Almere 2025; - besluit: vast te stellen de navolgende Nadere regels (buurt)ontmoetingsplekken en -activiteiten"
           },
           {
-            "claim_id": "clm__mun_almere_pga_regionaal_transferpunt_d6_003",
-            "issue_codes": [
-              "english_summary"
-            ],
-            "statement_excerpt": "We utilize an accessibility interface that allows persons with specific disabilities to adjust the website’s UI (user interface) and design it to their personal needs."
-          },
-          {
-            "claim_id": "clm__mun_almere_pga_rso_data_infrastructuur_d6_001",
-            "issue_codes": [
-              "english_summary"
-            ],
-            "statement_excerpt": "Regionale Samenwerkingsorganisatie (RSO) Zorgorganisaties werken samen aan betere gegevensuitwisseling en digitale ondersteuning."
-          },
-          {
-            "claim_id": "clm__mun_almere_pga_rso_data_infrastructuur_d6_002",
-            "issue_codes": [
-              "fragment_too_short"
-            ],
-            "statement_excerpt": "We werken aan een sterke digitale infrastructuur."
-          },
-          {
-            "claim_id": "clm__mun_almere_pga_rso_data_infrastructuur_municipal_translation_002",
-            "issue_codes": [
-              "english_summary"
-            ],
-            "statement_excerpt": "Regionale Samenwerkingsorganisatie (RSO) Zorgorganisaties werken samen aan betere gegevensuitwisseling en digitale ondersteuning."
-          },
-          {
-            "claim_id": "clm__reg_flevoziekenhuis_thuismonitoring_d6_003",
+            "claim_id": "clm__mun_almere_sociaal_domein_aanbod_jeugd_gezin_d6_001",
             "issue_codes": [
               "unverified_extraction_length"
             ],
-            "statement_excerpt": "Home - Aandoening, onderzoek en behandeling - Afdelingen - Opname bezoek - mijnFlevoziekenhuis - Organisatie - Zorgverleners - Werken bij Flevoziekenhuis - Verwijzers - English - Contact - Home - Aandoening, onderzoek en behandeling - Afdelingen - Opname bezoek - mijnFlevoziekenhuis - Home - Opname bezoek - Thuismonitoring en het Flevoziekenhuis"
+            "statement_excerpt": "Armoede en schulden - Gezin en scheiding - Gezonde leefstijl - Huiselijk geweld - Leerproblemen - Lichamelijke gezondheid - Opvoedingsondersteuning - Overlijden en rouwverwerking - Mantelzorg - Zwangerschap voorkomen en onbedoelde zwangerschap - Ontmoeten en samenleven - Verslaving"
           },
           {
-            "claim_id": "clm__reg_flevoziekenhuis_thuismonitoring_monitoring_and_evaluation_001",
+            "claim_id": "clm__mun_deschoor_buurtkamers_d5_003",
             "issue_codes": [
               "unverified_extraction_length"
             ],
-            "statement_excerpt": "Home - Aandoening, onderzoek en behandeling - Afdelingen - Opname bezoek - mijnFlevoziekenhuis - Organisatie - Zorgverleners - Werken bij Flevoziekenhuis - Verwijzers - English - Contact - Home - Aandoening, onderzoek en behandeling - Afdelingen - Opname bezoek - mijnFlevoziekenhuis - Home - Opname bezoek - Thuismonitoring en het Flevoziekenhuis"
+            "statement_excerpt": "OVER: ► duurzaamheid ► eenzaamheid ► geld/schulden ► mijn buurt ► ondersteuning vanuit de wijkteams ► ouder worden ► relatie/scheiding | ► sociaal/juridische zaken ► taalondersteuning ► toeslagenaffaire ► vervoer ► Welzijn op Recept ► werk/opleiding ► wonen"
           },
           {
-            "claim_id": "clm__reg_ggd_flevoland_gezonde_school_municipal_translation_002",
+            "claim_id": "clm__mun_deschoor_buurtkamers_municipal_translation_003",
             "issue_codes": [
               "unverified_extraction_length"
             ],
-            "statement_excerpt": "Infectieziekten - Liefde en Seks - Mijn Kind 0-4 jaar - Mijn kind 4-18 jaar - JGZ Almere - Maatschappelijke zorg - Toezicht - Gezond leven - Vitaal Ouder Worden - Milieu en gezondheid - Onderzoek - Reizigersadvies en -vaccinatie - Tuberculose (Tbc) - Maatschappelijke zorg - Toezicht - Zorgprofessionals - Gemeenten - Scholen en kinderopvang - Kennis en Advies - Gezond Leven - Technische Hygiënez..."
+            "statement_excerpt": "OVER: ► duurzaamheid ► eenzaamheid ► geld/schulden ► mijn buurt ► ondersteuning vanuit de wijkteams ► ouder worden ► relatie/scheiding | ► sociaal/juridische zaken ► taalondersteuning ► toeslagenaffaire ► vervoer ► Welzijn op Recept ► werk/opleiding ► wonen"
+          },
+          {
+            "claim_id": "clm__mun_deschoor_initiatievenbureau_d5_003",
+            "issue_codes": [
+              "unverified_extraction_length"
+            ],
+            "statement_excerpt": "OVER: ► duurzaamheid ► eenzaamheid ► geld/schulden ► mijn buurt ► ondersteuning vanuit de wijkteams ► ouder worden ► relatie/scheiding | ► sociaal/juridische zaken ► taalondersteuning ► toeslagenaffaire ► vervoer ► Welzijn op Recept ► werk/opleiding ► wonen"
+          },
+          {
+            "claim_id": "clm__mun_deschoor_initiatievenbureau_municipal_translation_003",
+            "issue_codes": [
+              "unverified_extraction_length"
+            ],
+            "statement_excerpt": "OVER: ► duurzaamheid ► eenzaamheid ► geld/schulden ► mijn buurt ► ondersteuning vanuit de wijkteams ► ouder worden ► relatie/scheiding | ► sociaal/juridische zaken ► taalondersteuning ► toeslagenaffaire ► vervoer ► Welzijn op Recept ► werk/opleiding ► wonen"
+          },
+          {
+            "claim_id": "clm__mun_deschoor_buurtkracht_d5_003",
+            "issue_codes": [
+              "unverified_extraction_length"
+            ],
+            "statement_excerpt": "OVER: ► duurzaamheid ► eenzaamheid ► geld/schulden ► mijn buurt ► ondersteuning vanuit de wijkteams ► ouder worden ► relatie/scheiding | ► sociaal/juridische zaken ► taalondersteuning ► toeslagenaffaire ► vervoer ► Welzijn op Recept ► werk/opleiding ► wonen"
+          },
+          {
+            "claim_id": "clm__mun_deschoor_buurtkracht_municipal_translation_003",
+            "issue_codes": [
+              "unverified_extraction_length"
+            ],
+            "statement_excerpt": "OVER: ► duurzaamheid ► eenzaamheid ► geld/schulden ► mijn buurt ► ondersteuning vanuit de wijkteams ► ouder worden ► relatie/scheiding | ► sociaal/juridische zaken ► taalondersteuning ► toeslagenaffaire ► vervoer ► Welzijn op Recept ► werk/opleiding ► wonen"
+          }
+        ]
+      },
+      {
+        "path": "data/site/site_home_view.json",
+        "page_group": "site_home_view",
+        "rough_claim_count": 22,
+        "sample_claims": [
+          {
+            "claim_id": "clm__mun_almere_nadere_regels_buurtontmoeting_municipal_translation_001",
+            "issue_codes": [
+              "unverified_extraction_length"
+            ],
+            "statement_excerpt": "Het college van burgemeester en wethouders van de gemeente Almere; - gelet op titel 4.2 van de Algemene wet bestuursrecht en artikel 3 van de Algemene subsidieverordening Almere 2025; - besluit: vast te stellen de navolgende Nadere regels (buurt)ontmoetingsplekken en -activiteiten"
+          },
+          {
+            "claim_id": "clm__mun_almere_sociaal_domein_aanbod_jeugd_gezin_d6_001",
+            "issue_codes": [
+              "unverified_extraction_length"
+            ],
+            "statement_excerpt": "Armoede en schulden - Gezin en scheiding - Gezonde leefstijl - Huiselijk geweld - Leerproblemen - Lichamelijke gezondheid - Opvoedingsondersteuning - Overlijden en rouwverwerking - Mantelzorg - Zwangerschap voorkomen en onbedoelde zwangerschap - Ontmoeten en samenleven - Verslaving"
+          },
+          {
+            "claim_id": "clm__mun_deschoor_buurtkamers_d5_003",
+            "issue_codes": [
+              "unverified_extraction_length"
+            ],
+            "statement_excerpt": "OVER: ► duurzaamheid ► eenzaamheid ► geld/schulden ► mijn buurt ► ondersteuning vanuit de wijkteams ► ouder worden ► relatie/scheiding | ► sociaal/juridische zaken ► taalondersteuning ► toeslagenaffaire ► vervoer ► Welzijn op Recept ► werk/opleiding ► wonen"
+          },
+          {
+            "claim_id": "clm__mun_deschoor_buurtkamers_municipal_translation_003",
+            "issue_codes": [
+              "unverified_extraction_length"
+            ],
+            "statement_excerpt": "OVER: ► duurzaamheid ► eenzaamheid ► geld/schulden ► mijn buurt ► ondersteuning vanuit de wijkteams ► ouder worden ► relatie/scheiding | ► sociaal/juridische zaken ► taalondersteuning ► toeslagenaffaire ► vervoer ► Welzijn op Recept ► werk/opleiding ► wonen"
+          },
+          {
+            "claim_id": "clm__mun_deschoor_initiatievenbureau_d5_003",
+            "issue_codes": [
+              "unverified_extraction_length"
+            ],
+            "statement_excerpt": "OVER: ► duurzaamheid ► eenzaamheid ► geld/schulden ► mijn buurt ► ondersteuning vanuit de wijkteams ► ouder worden ► relatie/scheiding | ► sociaal/juridische zaken ► taalondersteuning ► toeslagenaffaire ► vervoer ► Welzijn op Recept ► werk/opleiding ► wonen"
+          },
+          {
+            "claim_id": "clm__mun_deschoor_initiatievenbureau_municipal_translation_003",
+            "issue_codes": [
+              "unverified_extraction_length"
+            ],
+            "statement_excerpt": "OVER: ► duurzaamheid ► eenzaamheid ► geld/schulden ► mijn buurt ► ondersteuning vanuit de wijkteams ► ouder worden ► relatie/scheiding | ► sociaal/juridische zaken ► taalondersteuning ► toeslagenaffaire ► vervoer ► Welzijn op Recept ► werk/opleiding ► wonen"
+          },
+          {
+            "claim_id": "clm__mun_deschoor_buurtkracht_d5_003",
+            "issue_codes": [
+              "unverified_extraction_length"
+            ],
+            "statement_excerpt": "OVER: ► duurzaamheid ► eenzaamheid ► geld/schulden ► mijn buurt ► ondersteuning vanuit de wijkteams ► ouder worden ► relatie/scheiding | ► sociaal/juridische zaken ► taalondersteuning ► toeslagenaffaire ► vervoer ► Welzijn op Recept ► werk/opleiding ► wonen"
+          },
+          {
+            "claim_id": "clm__mun_deschoor_buurtkracht_municipal_translation_003",
+            "issue_codes": [
+              "unverified_extraction_length"
+            ],
+            "statement_excerpt": "OVER: ► duurzaamheid ► eenzaamheid ► geld/schulden ► mijn buurt ► ondersteuning vanuit de wijkteams ► ouder worden ► relatie/scheiding | ► sociaal/juridische zaken ► taalondersteuning ► toeslagenaffaire ► vervoer ► Welzijn op Recept ► werk/opleiding ► wonen"
           }
         ]
       },
       {
         "path": "data/site/site_almere_view.json",
         "page_group": "site_almere_view",
-        "rough_claim_count": 22,
+        "rough_claim_count": 19,
         "sample_claims": [
           {
             "claim_id": "clm__mun_almere_pga_transformatieplan_municipal_translation_001",
@@ -4258,69 +4536,6 @@
               "english_summary"
             ],
             "statement_excerpt": "Monitoring and learning are explicit parts of the local model, including 'Samen leren' and 'Monitoren'."
-          }
-        ]
-      },
-      {
-        "path": "data/site/site_home_view.json",
-        "page_group": "site_home_view",
-        "rough_claim_count": 19,
-        "sample_claims": [
-          {
-            "claim_id": "clm__mun_almere_pga_regionaal_transferpunt_d5_001",
-            "issue_codes": [
-              "unverified_extraction_length"
-            ],
-            "statement_excerpt": "Zorgen voor snellere doorstroom van patiënten naar tijdelijke zorg - Eén aanspreekpunt creëren voor huisartsen, SEH en andere verwijzers - Zorgmedewerkers ontlasten door minder bel- en regelwerk - Voorkomen dat patiënten onnodig op de spoedeisende hulp of in het ziekenhuis belanden - Bevorderen van passende zorg op de juiste plek, thuis of in een tijdelijke instelling"
-          },
-          {
-            "claim_id": "clm__mun_almere_pga_regionaal_transferpunt_d6_003",
-            "issue_codes": [
-              "english_summary"
-            ],
-            "statement_excerpt": "We utilize an accessibility interface that allows persons with specific disabilities to adjust the website’s UI (user interface) and design it to their personal needs."
-          },
-          {
-            "claim_id": "clm__mun_almere_pga_rso_data_infrastructuur_d6_001",
-            "issue_codes": [
-              "english_summary"
-            ],
-            "statement_excerpt": "Regionale Samenwerkingsorganisatie (RSO) Zorgorganisaties werken samen aan betere gegevensuitwisseling en digitale ondersteuning."
-          },
-          {
-            "claim_id": "clm__mun_almere_pga_rso_data_infrastructuur_d6_002",
-            "issue_codes": [
-              "fragment_too_short"
-            ],
-            "statement_excerpt": "We werken aan een sterke digitale infrastructuur."
-          },
-          {
-            "claim_id": "clm__mun_almere_pga_rso_data_infrastructuur_municipal_translation_002",
-            "issue_codes": [
-              "english_summary"
-            ],
-            "statement_excerpt": "Regionale Samenwerkingsorganisatie (RSO) Zorgorganisaties werken samen aan betere gegevensuitwisseling en digitale ondersteuning."
-          },
-          {
-            "claim_id": "clm__reg_flevoziekenhuis_thuismonitoring_d6_003",
-            "issue_codes": [
-              "unverified_extraction_length"
-            ],
-            "statement_excerpt": "Home - Aandoening, onderzoek en behandeling - Afdelingen - Opname bezoek - mijnFlevoziekenhuis - Organisatie - Zorgverleners - Werken bij Flevoziekenhuis - Verwijzers - English - Contact - Home - Aandoening, onderzoek en behandeling - Afdelingen - Opname bezoek - mijnFlevoziekenhuis - Home - Opname bezoek - Thuismonitoring en het Flevoziekenhuis"
-          },
-          {
-            "claim_id": "clm__reg_flevoziekenhuis_thuismonitoring_monitoring_and_evaluation_001",
-            "issue_codes": [
-              "unverified_extraction_length"
-            ],
-            "statement_excerpt": "Home - Aandoening, onderzoek en behandeling - Afdelingen - Opname bezoek - mijnFlevoziekenhuis - Organisatie - Zorgverleners - Werken bij Flevoziekenhuis - Verwijzers - English - Contact - Home - Aandoening, onderzoek en behandeling - Afdelingen - Opname bezoek - mijnFlevoziekenhuis - Home - Opname bezoek - Thuismonitoring en het Flevoziekenhuis"
-          },
-          {
-            "claim_id": "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_timeline_and_status_001",
-            "issue_codes": [
-              "unverified_extraction_length"
-            ],
-            "statement_excerpt": "Doelstellingen Proces 1. Uiterlijk in het vierde kwartaal van 2024 leveren we een uitvoeringsagenda op die samen met partners en inwoners tot stand is gebracht. 2. Uiterlijk in het vierde kwartaal van 2024 leveren we een sociale investeringsagenda op. Deze geeft een haalbaar en in tijd uitgezet perspectief op het realiseren van een voldoende voorzieningenniveau in alle Almeerse wijken. 3. We ev..."
           }
         ]
       },
@@ -4514,34 +4729,6 @@
         ]
       },
       {
-        "path": "data/site/action_view_models/act_regionale_digitale_aansluiting.json",
-        "page_group": "action_detail",
-        "rough_claim_count": 3,
-        "sample_claims": [
-          {
-            "claim_id": "clm__mun_almere_pga_current_home_d6_002",
-            "issue_codes": [
-              "english_summary"
-            ],
-            "statement_excerpt": "Keyboard Navigation Profile (Motor-Impaired): this profile enables motor-impaired persons to operate the website using the keyboard Tab, Shift+Tab, and the Enter keys."
-          },
-          {
-            "claim_id": "clm__mun_almere_pga_current_home_d6_001",
-            "issue_codes": [
-              "english_summary"
-            ],
-            "statement_excerpt": "We utilize an accessibility interface that allows persons with specific disabilities to adjust the website’s UI (user interface) and design it to their personal needs."
-          },
-          {
-            "claim_id": "clm__mun_almere_pga_regionaal_transferpunt_d6_003",
-            "issue_codes": [
-              "english_summary"
-            ],
-            "statement_excerpt": "We utilize an accessibility interface that allows persons with specific disabilities to adjust the website’s UI (user interface) and design it to their personal needs."
-          }
-        ]
-      },
-      {
         "path": "data/site/action_view_models/act_middelen_en_eigenaarschap_vastleggen.json",
         "page_group": "action_detail",
         "rough_claim_count": 2,
@@ -4592,8 +4779,8 @@
       "reason": "The audit still finds broad rest categories that mix multiple policy lines into one topic.",
       "related_topics": [
         "monitoring.other",
-        "governance_and_finance.other",
         "timeline.other",
+        "governance_and_finance.other",
         "d6.other",
         "d5.other"
       ],
@@ -4610,8 +4797,8 @@
         "d6.digital_and_operational_infrastructure",
         "d6.digital_and_operational_infrastructure",
         "d6.digital_and_operational_infrastructure",
-        "d6.digital_and_operational_infrastructure",
-        "municipal.implementation_translation"
+        "municipal.implementation_translation",
+        "d5.mentale_gezondheidsnetwerken"
       ],
       "related_review_reasons": [
         "authority_unclear",
@@ -4646,7 +4833,6 @@
         "municipality_relevance_inferred",
         "national_claim_local_relevance",
         "regional_split_context",
-        "table_content_not_promoted",
         "table_extraction_missing",
         "unresolved_conflict",
         "vague_region_actor"
@@ -4654,8 +4840,8 @@
       "suggested_sprint": "28.3",
       "related_files": [
         "data/site/site_updates_view.json",
-        "data/site/site_almere_view.json",
         "data/site/site_home_view.json",
+        "data/site/site_almere_view.json",
         "data/site/action_view_models/act_d5_werkagenda_expliciteren.json",
         "data/site/decision_view_models/dec_d5_prioritering.json",
         "data/site/action_view_models/act_monitoring_afstemmen.json"

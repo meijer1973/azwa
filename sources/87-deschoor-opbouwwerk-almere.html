@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<!-- pid = 2141 -->
+<HTML>
+<HEAD>
+<base href="https://www.deschoor.nl/html/">
+<meta property="og:type" content="website" /> 
+<meta property="og:url" content="http://www.deschoor.nl/opbouwwerkalmere" /> 
+<meta property="og:title" content="De Schoor - " /> 
+<meta property="og:site_name" content="De Schoor" /> 
+<TITLE>De Schoor</TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="nl-NL" http-equiv="Content-Language">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<META NAME="designer" CONTENT="info@digisites.nl, 2020">
+<LINK href="style/bootstrap.css?t=1777566360" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="style/cssreset.css?t=1777566360" />
+<link rel="stylesheet" type="text/css" href="style/index_style.css.php?kleurID=&t=1777566360" />
+<script type="text/javascript" src="formenprint.js"></script>
+<link rel="stylesheet" href="style/style.css?t=1777566360" />
+<link rel='stylesheet' id='style-dynamic-css' href='style/menu.css.php?ver=1.11.0' type='text/css' media='' />
+<script type='text/javascript' src='style/jquery.js?ver=1.11.1'></script>
+<script type='text/javascript' src='style/jquery.touchSwipe.min.js?ver=1.0'></script>
+<script type='text/javascript' src='style/slider.js?ver=6.2.1'></script>
+<script type='text/javascript' src='style/smoothscroll.js?ver=5.3.3'></script>
+<!--script type='text/javascript' src='style/jquery.dotdotdot.js?ver=4.6.1'></script-->
+<script type="text/javascript" src='style/menu.js?a=1' language="javascript"></script>
+<style>
+.grotebalk { display:none; }
+.grotebalkcell { display:none; }
+.kleinebalk { display:block; }
+.blauwblok { float:left; }
+#logo { transform: scale(0.5, 0.5); }
+@media (min-width: 1200px) {
+	.grotebalk { display:block; }
+	.grotebalkcell { display:table-cell; }
+	.kleinebalk { display:none; }
+	#logo { transform: scale(1.0, 1.0); }
+	.blauwblok { float:right; }
+}
+BODY, TD {
+/*	font-family:Futura;*/
+	font-size:17px;
+}
+.topbalk {
+	background-color:#cccccc;
+}
+.footerbalk {
+	background-color:#cccccc;
+}
+.hoofdmenudda A {
+	font-weight:normal !important;
+}
+@font-face {
+    font-family: 'Futura Md BT';
+    src: url('/fonts/FuturaBT-Bold.eot');
+    src: url('/fonts/FuturaBT-Bold.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/FuturaBT-Bold.woff2') format('woff2'),
+        url('/fonts/FuturaBT-Bold.woff') format('woff'),
+        url('/fonts/FuturaBT-Bold.ttf') format('truetype'),
+        url('/fonts/FuturaBT-Bold.svg#FuturaBT-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Futura Bk BT';
+    src: url('/fonts/FuturaBT-Book.eot');
+    src: url('/fonts/FuturaBT-Book.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/FuturaBT-Book.woff2') format('woff2'),
+        url('/fonts/FuturaBT-Book.woff') format('woff'),
+        url('/fonts/FuturaBT-Book.ttf') format('truetype'),
+        url('/fonts/FuturaBT-Book.svg#FuturaBT-Book') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+H1, .contentHeader1 {
+	font-weight:bold;
+	font-size:17px;
+}
+H2, .contentHeader2 {
+	font-style:italic;
+	font-size:17px;
+}
+H3, .contentHeader3 {
+	font-weight:bold;
+	font-style:italic;
+	font-size:17px;
+}
+TD {
+	padding-left:3px;
+}
+</style>
+
+    <!--link rel="stylesheet" href="colorpicker/bootstrap.min.css"-->
+    <!--link rel="stylesheet" href="colorpicker/light.min.css"-->
+	
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <!--script src="colorpicker/default-picker.min.js"></script-->
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+	integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin=""/>
+<!-- Make sure you put this AFTER Leaflet's CSS -->
+<script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+	integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
+
+<script src="https://www.google.com/recaptcha/api.js?render=6LfiDxglAAAAAB4Pf60_FiCEHXHFasUyiAnJoqci"></script>
+</HEAD>
+<BODY style="background-color:#ffffff; overflow-y: scroll;">
+<DIV class="tolkie-ignore">			   
+<script language=javascript>
+function ajaxFunction () {
+	// Zie voor meerdere aanroepen tegelijk:
+	// http://stackoverflow.com/questions/8227174/two-ajax-calls-on-one-page-return-only-one-result
+
+	/* Create a new XMLHttpRequest object to talk to the Web server */
+	var xmlHttp = false; 
+	// cc = 'Conditional Compilation': zie http://www.javascriptkit.com/javatutors/conditionalcompile.shtml
+	/*@cc_on @*/
+	/*@if (@_jscript_version >= 5) try { xmlHttp = new ActiveXObject("Msxml2.XMLHTTP"); } 
+	catch (e) {
+		try { xmlHttp = new ActiveXObject("Microsoft.XMLHTTP"); } 
+		catch (e2) { xmlHttp = false; }
+	} 
+	@end @*/
+	if (!xmlHttp && typeof XMLHttpRequest != 'undefined') { xmlHttp = new XMLHttpRequest(); } 
+	return xmlHttp;
+}
+function callServer (id, type) { 
+
+//alert("id = "+id);
+	if (type=="content") {
+		callS(id, encodeURIComponent(CKEDITOR.instances[id].getData()));
+	} else if (type=="datum") {
+		dezejaar = document.getElementById('sorteerjaar').value;
+		if (dezejaar=="") { dezejaar=2026; }
+		dezemaand = document.getElementById('sorteermaand').value;
+		if (dezemaand=="") { dezemaand=04; }
+		dezedag = document.getElementById('sorteerdag').value;
+		if (dezedag=="") { dezedag=30; }
+		callS('sorteerdatum', dezejaar + "-" + dezemaand + "-" + dezedag);
+	} else if (type=="afbeelding") {
+		callS(id, encodeURIComponent(document.getElementById(id).innerHTML));
+	} else if ((type=="film") || (type=="script") || (type=="text")) {
+		callS(id, encodeURIComponent(document.getElementById(id).value));
+	} else if (type=="check") {
+		if (document.getElementById(id).checked==true) { waarde = 1; } else { waarde = 0; }
+		callS(id, waarde);
+	}
+} 
+
+function callS (veld, waarde) { 
+//alert(veld);
+	phpfile = 'ajax.post.php';
+	var xmlHttp = ajaxFunction();
+//alert("phpfile = "+phpfile);
+	getstring = "pid=2141&veld=" + veld + "&waarde=" + waarde;
+//alert(getstring);
+	
+	xmlHttp.open("POST", phpfile, true); // true = async
+	xmlHttp.onreadystatechange = function () {
+		if (xmlHttp.readyState == 4) { 
+			var response = xmlHttp.responseText; 
+//tekst = response.substring(0, 5000);
+//alert(tekst);
+			eval(response);
+		} 
+	}	
+	xmlHttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");    
+	xmlHttp.send(getstring);
+} 
+</script>
+<!-- strlen = 46805 -->
+<!-- tekstopmaken! -->
+<script>
+function pageig (toggle) {
+	if (toggle==0) {
+		divsopen='none';
+		divsdicht='block';
+	} else {
+		divsopen='block';
+		divsdicht='none';
+	}
+	document.getElementById('pageigplus').style.display=divsdicht; 
+	document.getElementById('pageigmin').style.display=divsopen;
+	document.getElementById('pageigblok').style.display=divsopen;
+}
+</script>
+<link rel="stylesheet" href="datepicker5/datepicker.min.css">
+<script src="datepicker5/datepicker.min.js"></script>
+<script>
+function clearVlakken () {
+	document.getElementById('blauwvlak').style.display='none';
+	document.getElementById('groenvlak').style.display='none';
+}
+</script>
+<DIV style="position:relative; padding:0; width:100%; background-color:rgb(169,169,169);"><DIV class="container" style="position:relative; padding:0;">
+<DIV class="row" style="min-height:37px; background-color:rgb(169,169,169); padding:0; margin:0;" onClick="clearVlakken();">
+<DIV class="col-sm-6" style="text-align:left; line-height:37px; padding:0;">
+	<a href="tel:+31365278500" style="font-weight:bold; color:#fff; text-decoration:none;"><img src="images/telefoon.jpg" style="border:0; margin:4px 4px 4px 0px;"> 036 - 52 78 500</a>
+</DIV>
+<DIV class="col-sm-6" style="text-align:right; padding:0;">
+	<a href="https://www.facebook.com/DeSchoorAlmere" target="_blank"><img src="images/facebook.jpg" style="border:0; margin:4px;"></a>
+	<!--a href="https://twitter.com/deschoor" target="_blank"><img src="images/twitter.jpg" style="border:0; margin:4px;"></a-->
+	<!--a href="https://twitter.com/deschoor" target="_blank"><img src="images/x-logo-white.png" style="width:20px; height:20px; border:0; margin:9px;"></a-->
+	<a href="https://www.linkedin.com/company/deschooralmere/" target="_blank"><img src="images/linkedin.jpg" style="border:0; margin:4px;"></a>
+	<a href="https://www.instagram.com/deschoorwelzijninalmere/" target="_blank"><img src="images/instagram.jpg" style="border:0; margin:4px 40px 4px 4px;"></a>
+</DIV>
+</DIV>
+
+<DIV class="row" style="padding:0; margin:0;">
+<DIV class="col-sm-3" style="">
+</DIV>
+<DIV class="col-sm-3" style="">
+</DIV>
+<DIV class="col-sm-3" style="">
+</DIV>
+<DIV class="col-sm-3" style="">
+</DIV>
+</DIV>
+</DIV></DIV>
+<DIV class="container grotebalk" style="position:relative; padding:0;">
+<DIV class="row" style="height:108px; background-color:#fff;">
+<DIV class="col-sm-3" style="text-align:left;">
+	<a href="index.php" target=_top><img src="images/logo.jpg" style="border:0; margin-top:18px;"></a>
+</DIV>
+<DIV class="col-sm-6" style="text-align:center;">
+	<a href="index.php" target=_top><img src="images/titel.jpg" style="border:0; margin-top:20px;"></a>
+</DIV>
+<DIV class="col-sm-3" style="height:100%; text-align:right;">
+	<FORM method=get action="index.php" style="border:0px solid #333; height:35px; margin:0; padding:0; margin-top:37px;">
+	<input type=hidden name=themaID value=11>
+	<input type=hidden name=htmlweb value=on><!--Typ hier je zoekterm -->
+	<INPUT type=text name=trefwoord id=trefwoord style="position:absolute; top:37px; left:15px; width:200px; height:25px; border:2px solid #ccc;" value="" onFocus="this.value='';">
+	<INPUT TYPE=image SRC="images/loep.jpg" style="position:absolute; top:37px; right:10px;">
+	<!--INPUT TYPE=image SRC="images/loep.jpg" style="position:absolute; top:42px; right:50px; height:15px;"-->
+	</FORM>
+	<!--a href="/"><IMG src="images/aaa.jpg" style="margin-right:30px;"></a-->
+	<SPAN style="margin-right:30px;">
+	<a href="/opbouwwerkalmere?fontsize=-2" style="font-size:15px; color:#000; text-decoration:none; font-weight:bold;">A</a>
+	<a href="/opbouwwerkalmere?fontsize=0" style="font-size:17px; color:#000; text-decoration:none; font-weight:bold;">A</a>
+	<a href="/opbouwwerkalmere?fontsize=+2" style="font-size:19px; color:#000; text-decoration:none; font-weight:bold;">A</a>
+	</SPAN>
+</DIV>
+</DIV>
+</DIV>
+<DIV class="container kleinebalk" style="position:relative; padding:0;" onClick="clearVlakken();">
+
+<DIV style="float:left; text-align:left;">
+	<a href="index.php" target=_top><img src="images/logo.jpg" style="border:0; margin-top:18px; margin-left:40px;"></a>
+</DIV>
+<DIV style="float:right; text-align:right;">
+	<div class="stickyMenu transition">
+		<a class="menu-btn js_menu-btn transition" style="display:flex; vertical-align: middle; text-align:right;">
+				<span class="bars transition" style="margin:20px 40px 0 0; text-align:right;">
+					<span class="bar1 transition">&nbsp;</span>
+					<span class="bar2 transition">&nbsp;</span>
+					<span class="bar3 transition">&nbsp;</span>
+				</span> 
+				<!--span class="hidden-xs" style="font-family:arial; color:#000; margin-top:auto; margin-bottom:auto;">Menu</span-->
+		</a>
+	</div>
+
+	<div class="js_main-menu main-menu transition">
+		<div class="menu-dsapps_menu_ex-container">
+			<ul id="menu-dsapps_menu_ex" class="menu transition">
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="/overons" target="_top"><div class="subitems"></div>Over ons</a>
+<ul class="sub-menu" style="margin-top:0;">
+<li class="menu-item menu-item-type-custom menu-item-object-custom" style="padding:0; background-color:#ffffff; border:1px solid #ffffff; list-style-type:none; text-align:left;"><a href="/overons" target=""><div class="subitems"></div>Over ons</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom" style="padding:0; background-color:#ffffff; border:1px solid #ffffff; list-style-type:none; text-align:left;"><p><a href="/overons"><span style="font-size:16px"><span style="color:#ff0000">► Intro</span></span></a></p>
+
+<p><span style="font-size:16px"><a href="/201"><span style="color:#ff0000">►</span> Missie en visie</a><a href="/50jaarwelzijninalmere"><span style="color:#ff0000">► </span>Uitgave<em> 50 jaar welzijn in Almere</em></a><a href="/inbeeld"><span style="color:#ff0000">►&nbsp;</span>De Schoor in filmpjes</a><a href="/schoormagazine"><span style="color:#ff0000">►&nbsp;</span>Schoormagazine</a></span></p>
+
+<p><span style="font-size:16px"><a href="/privacy"><span style="color:#ff0000">►&nbsp;</span>Omgaan met elkaar</a></span></p>
+
+<p><span style="font-size:16px"><a href="/dekrachtvanverschil"><span style="color:#ff0000">►&nbsp;</span><span style="color:#000000">De kracht van verschil</span></a></span></p>
+
+<p><span style="font-size:16px"><a href="/klachtenregeling"><span style="color:#ff0000">►</span>&nbsp;Klachtenregeling</a></span><span style="font-size:16px"><a href="/49"><span style="color:#ff0000">►</span> Keurmerk SWN</a></span></p>
+
+<p><span style="font-size:16px"><span style="color:#ff0000">►&nbsp;</span></span><a href="/anbi" style="font-weight: inherit; background-color: rgb(255, 255, 255); display: inline !important;">ANBI</a><span style="font-size:16px"><a href="/bestuurentoezicht"><span style="color:#ff0000">►</span><span style="color:#000000"> Bestuur en toezicht</span></a></span></p>
+
+<p><span style="font-size:16px"><a href="/cookies"><span style="color:#ff0000">►</span><span style="color:#000000"> Cookies op deze site</span></a></span></p>
+
+<p>&nbsp;</p>
+</li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/contact" target="_top"><div class="subitems"></div>Contact</a>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="/accommodaties" target="_top"><div class="subitems"></div>Locaties</a>
+<ul class="sub-menu" style="margin-top:0;">
+<li class="menu-item menu-item-type-custom menu-item-object-custom" style="padding:0; background-color:#ffffff; border:1px solid #ffffff; list-style-type:none; text-align:left;"><a href="/accommodaties" target=""><div class="subitems"></div>Locaties</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom" style="padding:0; background-color:#ffffff; border:1px solid #ffffff; list-style-type:none; text-align:left;"><p><a href="/accommodaties"><span style="color:#ff0000">►</span>&nbsp;Intro</a><a href="/accommodaties/tarievenwijzer"><span style="color:#ff0000">►</span> Algemene informatie</a></p>
+
+<p><a href="/almerebuiten"><span style="color:#ff0000">►&nbsp;</span>Almere Buiten</a></p>
+
+<p><a href="/60"><span style="color:#ff0000">►</span> Almere Haven</a></p>
+
+<p><a href="/almerepoort"><span style="color:#ff0000">►</span> Almere Poort</a></p>
+
+<p><a href="/59" target="_blank"><span style="color:#ff0000">►&nbsp;</span>Almere Stad</a></p>
+
+<p><a href="/buurtkamers"><span style="color:#ff0000">►</span> Buurtkamers</a></p>
+
+<p><a href="/initiatievenbureau"><span style="color:#ff0000">►</span> Initiatievenbureau</a></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+</li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="/vrijwilligers" target="_top"><div class="subitems"></div>Vrijwilligers</a>
+<ul class="sub-menu" style="margin-top:0;">
+<li class="menu-item menu-item-type-custom menu-item-object-custom" style="padding:0; background-color:#ffffff; border:1px solid #ffffff; list-style-type:none; text-align:left;"><a href="/vrijwilligers" target=""><div class="subitems"></div>Vrijwilligers</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom" style="padding:0; background-color:#ffffff; border:1px solid #ffffff; list-style-type:none; text-align:left;"><p><a href="/vrijwilligers"><span style="color:#ff0000">►</span>&nbsp;Intro</a></p>
+
+<p><a href="/vrijwilligers/aanmelden"><span style="color:#ff0000">► </span>Vrijwilligerswerk bij De Schoor</a></p>
+
+<p><a href="/vrijwilligers/vacatures"><span style="color:#ff0000">► </span>Vrijwilligersvacatures</a></p>
+
+<p><a href="/45"><span style="color:#ff0000">► </span>Vrijwilligersgids</a></p>
+
+<p><a href="/vrijwilligersbeleid"><span style="color:#ff0000">► </span>Vrijwilligersbeleid</a></p>
+
+<p><a href="/47"><span style="color:#ff0000">► </span>Opleidingen &amp; cursussen</a></p>
+
+<p><a href="/202"><span style="color:#ff0000">►&nbsp;</span>Vrijwilligers met een uitkering</a></p>
+
+<p><a href="/415"><span style="color:#ff0000">►</span> OCO Almere</a></p>
+
+<p><a href="/mdt"><span style="color:#ff0000">►</span> Maatschappelijke diensttijd</a></p>
+
+<p>&nbsp;</p>
+</li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="/stage" target="_top"><div class="subitems"></div>Werk & Stage</a>
+<ul class="sub-menu" style="margin-top:0;">
+<li class="menu-item menu-item-type-custom menu-item-object-custom" style="padding:0; background-color:#ffffff; border:1px solid #ffffff; list-style-type:none; text-align:left;"><a href="/stage" target=""><div class="subitems"></div>Werk & Stage</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom" style="padding:0; background-color:#ffffff; border:1px solid #ffffff; list-style-type:none; text-align:left;"><p><a href="/stage"><span style="color:#ff0000">►</span>&nbsp;Intro</a></p>
+
+<p><a href="/81"><span style="color:#ff0000">►</span> Werken bij De Schoor</a></p>
+
+<p>&nbsp;</p>
+
+<p><a href="/stage"><span style="color:#ff0000">►</span> Stage lopen bij De Schoor</a></p>
+
+<p><a href="/78"><span style="color:#ff0000">►</span> Stage: Veelgestelde vragen</a></p>
+
+<p><a href="/stagevacatures"><span style="color:#ff0000">►</span> Stagevacatures De Schoor</a></p>
+
+<p><a href="/stagevacatures/wijkteams"><span style="color:#ff0000">►</span> Stagevacatures Wijkteams</a></p>
+
+<p>&nbsp;</p>
+</li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="/buurtkracht" target="_top"><div class="subitems"></div>Buurtkracht</a>
+<ul class="sub-menu" style="margin-top:0;">
+<li class="menu-item menu-item-type-custom menu-item-object-custom" style="padding:0; background-color:#ffffff; border:1px solid #ffffff; list-style-type:none; text-align:left;"><a href="/buurtkracht" target=""><div class="subitems"></div>Buurtkracht</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom" style="padding:0; background-color:#ffffff; border:1px solid #ffffff; list-style-type:none; text-align:left;"><p><a href="/buurtkracht"><span style="color:#ff0000">►</span> Intro</a></p>
+
+<p><a href="/repaircafe"><span style="color:#ff0000">►</span> Repair Caf&eacute;</a><a href="/rommelroutes"><span style="color:#ff0000">►</span> Rommelroutes</a><a href="/1570"><span style="color:#e74c3c">►</span> Buurtpreventie</a></p>
+
+<p><a href="/ruilenweggeven"><span style="color:#e74c3c">►</span> Ruil- en weggeefinitiatieven</a></p>
+
+<p><a href="/1575"><span style="color:#e74c3c">►</span> Buurtkrachtacties</a><a href="/1472"><span style="color:#e74c3c">►</span> Buurtkrachtblogs</a></p>
+
+<p><a href="/buurtkrachtverhalen"><span style="color:#ff0000">►</span> Buurtkrachtverhalen</a></p>
+
+<p><span style="color:#ff0000">►&nbsp;</span><a href="/2029" style="font-weight: inherit; background-color: rgb(255, 255, 255); display: inline !important;">Digitale nieuwsbrief</a></p>
+
+<p>&nbsp;</p>
+
+<p><a href="/opbouwwerk"><span style="color:#ff0000">►</span> Opbouwwerk in de wijkteams</a></p>
+</li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="/6" target="_top"><div class="subitems"></div>Voor Netwerkpartners</a>
+<ul class="sub-menu" style="margin-top:0;">
+<li class="menu-item menu-item-type-custom menu-item-object-custom" style="padding:0; background-color:#ffffff; border:1px solid #ffffff; list-style-type:none; text-align:left;"><a href="/6" target=""><div class="subitems"></div>Voor Netwerkpartners</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom" style="padding:0; background-color:#ffffff; border:1px solid #ffffff; list-style-type:none; text-align:left;"><p><a href="/6"><span style="color:#ff0000">►</span> Intro</a></p>
+
+<p><a href="/verantwoording"><span style="color:#ff0000">►&nbsp;</span>Verantwoording 2024</a></p>
+
+<p><a href="/koersplan"><span style="color:#ff0000">►</span> Strategische koers</a></p>
+
+<p><a href="/podcast"><span style="color:#ff0000">►</span> Podcastserie <em>In Almere</em></a></p>
+
+<p><a href="/raadsperiode20222026"><span style="color:#ff0000">►</span> Raadsperiode 2022 - 2026</a></p>
+
+<p>&nbsp;</p>
+
+<p><a href="/nieuwsbrief/netwerkpartners"><span style="color:#ff0000">►</span> Nieuwsbrief netwerkpartners</a></p>
+
+<p>&nbsp;</p>
+
+<p><strong>Jeugd</strong></p>
+
+<p><a href="/coachesvve"><span style="color:#ff0000">►</span> Coaches VE</a></p>
+
+<p><a href="/143"><span style="color:#ff0000">►</span> Toeleiding voorscholen</a><a href="/246"><span style="color:#ff0000">►</span> Sterk in Kinderwerk</a></p>
+
+<p><a href="/handreiking"><span style="color:#ff0000">►</span> Dynamisch Jongerenwerk</a></p>
+
+<p>&nbsp;</p>
+
+<p><strong>Wijk &amp; Welzijn</strong></p>
+
+<p><a href="/opbouwwerkalmere"><span style="color:#ff0000">►</span> Opbouwwerk</a><a href="/welzijnoprecept"><span style="color:#ff0000">►</span> Welzijn op Recept</a></p>
+
+<p><a href="/269"><span style="color:#ff0000">►</span> Outreachend Werk (Maatschappelijk Werk)</a></p>
+
+<p>&nbsp;</p>
+</li>
+</ul>
+</li>
+			</ul>
+		</div>
+	</div>
+</DIV>
+
+<DIV style="clear:both;"></DIV>
+<DIV style="position:relative; display:block; text-align:center; border:0px solid #f00; margin-top:20px;">
+	<FORM method=get action="index.php" style="border:0px solid #333; height:35px; margin:0; padding:0; vertical-align:middle;">
+	<input type=hidden name=themaID value=11>
+	<input type=hidden name=htmlweb value=on>
+	<INPUT type=text name=trefwoord id=trefwoord style="width:200px; height:25px; border:2px solid #ccc; margin:0 0 0 40px; vertical-align:top;" value="" onFocus="this.value='';">
+	<INPUT TYPE=image SRC="images/loep.jpg" style="margin-top:3px;">
+	</FORM>
+</DIV>
+
+<DIV style="clear:both;"></DIV>
+<DIV style="display:block; width:100%; text-align:center;">
+	<a href="index.php" target=_top><img src="images/titel.jpg" style="border:0; margin-top:20px;"></a>
+</DIV>
+</DIV>
+
+<script>
+function toonMenuLayer (nummer) {
+	coll=document.getElementsByTagName("DIV");
+	for (i=0; i<coll.length; i++) {
+		if (coll[i].id.substring(0,9)=="menulayer") {
+			if (coll[i].id.substring(10)==nummer) {
+				coll[i].style.display="block";
+			} else {
+				coll[i].style.display="none";
+			}
+		}
+	}
+}
+</script>
+<DIV class="grotebalk" style="width:100%; height:55px; background-color:#fff; z-index:99;">
+<DIV style="position:relative; margin:0 auto; width:1206px; height:78px; text-align:center;">
+<UL class="hoofdmenu" style="margin-left:-19px; display:inline-block; font-family:'Futura Md BT';">
+<LI style="position:relative;" onMouseOver="toonMenuLayer(1);" onMouseOut="toonMenuLayer(0);">
+<DIV id="menulayera1" class="hoofdmenudda" onMouseOver="toonMenuLayer(1);" onMouseOut="toonMenuLayer(0);" style="background-color:#ffffff; border:1px solid #ffffff;">
+<DIV style="font-size:14px; font-weight:normal;" class="edittussen" id="submenucontent1"><p><a href="/overons"><span style="font-size:16px"><span style="color:#ff0000">► Intro</span></span></a></p>
+
+<p><span style="font-size:16px"><a href="/201"><span style="color:#ff0000">►</span> Missie en visie</a><a href="/50jaarwelzijninalmere"><span style="color:#ff0000">► </span>Uitgave<em> 50 jaar welzijn in Almere</em></a><a href="/inbeeld"><span style="color:#ff0000">►&nbsp;</span>De Schoor in filmpjes</a><a href="/schoormagazine"><span style="color:#ff0000">►&nbsp;</span>Schoormagazine</a></span></p>
+
+<p><span style="font-size:16px"><a href="/privacy"><span style="color:#ff0000">►&nbsp;</span>Omgaan met elkaar</a></span></p>
+
+<p><span style="font-size:16px"><a href="/dekrachtvanverschil"><span style="color:#ff0000">►&nbsp;</span><span style="color:#000000">De kracht van verschil</span></a></span></p>
+
+<p><span style="font-size:16px"><a href="/klachtenregeling"><span style="color:#ff0000">►</span>&nbsp;Klachtenregeling</a></span><span style="font-size:16px"><a href="/49"><span style="color:#ff0000">►</span> Keurmerk SWN</a></span></p>
+
+<p><span style="font-size:16px"><span style="color:#ff0000">►&nbsp;</span></span><a href="/anbi" style="font-weight: inherit; background-color: rgb(255, 255, 255); display: inline !important;">ANBI</a><span style="font-size:16px"><a href="/bestuurentoezicht"><span style="color:#ff0000">►</span><span style="color:#000000"> Bestuur en toezicht</span></a></span></p>
+
+<p><span style="font-size:16px"><a href="/cookies"><span style="color:#ff0000">►</span><span style="color:#000000"> Cookies op deze site</span></a></span></p>
+
+<p>&nbsp;</p>
+</DIV>
+</DIV>
+<DIV id="menulayerb1" class="hoofdmenuddb" onMouseOver="toonMenuLayer(1);" onMouseOut="toonMenuLayer(0);">
+<TABLE><TR><TD><a href="/overons" style="font-family:'Futura Md BT';  color:rgb(218,10,23); border-bottom:4px solid rgb(218,10,23);">OVER ONS</a></TD></TR></TABLE>
+</DIV>
+<a href="/overons" onMouseOver="toonMenuLayer(1);" onMouseOut="toonMenuLayer(0);" style="">OVER ONS</a>
+</LI>
+
+<LI style="position:relative;" onMouseOver="toonMenuLayer(2);" onMouseOut="toonMenuLayer(0);">
+<DIV id="menulayerb2" class="hoofdmenuddb" onMouseOver="toonMenuLayer(2);" onMouseOut="toonMenuLayer(0);">
+<TABLE><TR><TD><a href="/contact" style="font-family:'Futura Md BT';  color:rgb(218,10,23); border-bottom:4px solid rgb(218,10,23);">CONTACT</a></TD></TR></TABLE>
+</DIV>
+<a href="/contact" onMouseOver="toonMenuLayer(2);" onMouseOut="toonMenuLayer(0);" style="">CONTACT</a>
+</LI>
+
+<LI style="position:relative;" onMouseOver="toonMenuLayer(3);" onMouseOut="toonMenuLayer(0);">
+<DIV id="menulayera3" class="hoofdmenudda" onMouseOver="toonMenuLayer(3);" onMouseOut="toonMenuLayer(0);" style="background-color:#ffffff; border:1px solid #ffffff;">
+<DIV style="font-size:14px; font-weight:normal;" class="edittussen" id="submenucontent5"><p><a href="/accommodaties"><span style="color:#ff0000">►</span>&nbsp;Intro</a><a href="/accommodaties/tarievenwijzer"><span style="color:#ff0000">►</span> Algemene informatie</a></p>
+
+<p><a href="/almerebuiten"><span style="color:#ff0000">►&nbsp;</span>Almere Buiten</a></p>
+
+<p><a href="/60"><span style="color:#ff0000">►</span> Almere Haven</a></p>
+
+<p><a href="/almerepoort"><span style="color:#ff0000">►</span> Almere Poort</a></p>
+
+<p><a href="/59" target="_blank"><span style="color:#ff0000">►&nbsp;</span>Almere Stad</a></p>
+
+<p><a href="/buurtkamers"><span style="color:#ff0000">►</span> Buurtkamers</a></p>
+
+<p><a href="/initiatievenbureau"><span style="color:#ff0000">►</span> Initiatievenbureau</a></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+</DIV>
+</DIV>
+<DIV id="menulayerb3" class="hoofdmenuddb" onMouseOver="toonMenuLayer(3);" onMouseOut="toonMenuLayer(0);">
+<TABLE><TR><TD><a href="/accommodaties" style="font-family:'Futura Md BT';  color:rgb(218,10,23); border-bottom:4px solid rgb(218,10,23);">LOCATIES</a></TD></TR></TABLE>
+</DIV>
+<a href="/accommodaties" onMouseOver="toonMenuLayer(3);" onMouseOut="toonMenuLayer(0);" style="">LOCATIES</a>
+</LI>
+
+<LI style="position:relative;" onMouseOver="toonMenuLayer(4);" onMouseOut="toonMenuLayer(0);">
+<DIV id="menulayera4" class="hoofdmenudda" onMouseOver="toonMenuLayer(4);" onMouseOut="toonMenuLayer(0);" style="background-color:#ffffff; border:1px solid #ffffff;">
+<DIV style="font-size:14px; font-weight:normal;" class="edittussen" id="submenucontent4"><p><a href="/vrijwilligers"><span style="color:#ff0000">►</span>&nbsp;Intro</a></p>
+
+<p><a href="/vrijwilligers/aanmelden"><span style="color:#ff0000">► </span>Vrijwilligerswerk bij De Schoor</a></p>
+
+<p><a href="/vrijwilligers/vacatures"><span style="color:#ff0000">► </span>Vrijwilligersvacatures</a></p>
+
+<p><a href="/45"><span style="color:#ff0000">► </span>Vrijwilligersgids</a></p>
+
+<p><a href="/vrijwilligersbeleid"><span style="color:#ff0000">► </span>Vrijwilligersbeleid</a></p>
+
+<p><a href="/47"><span style="color:#ff0000">► </span>Opleidingen &amp; cursussen</a></p>
+
+<p><a href="/202"><span style="color:#ff0000">►&nbsp;</span>Vrijwilligers met een uitkering</a></p>
+
+<p><a href="/415"><span style="color:#ff0000">►</span> OCO Almere</a></p>
+
+<p><a href="/mdt"><span style="color:#ff0000">►</span> Maatschappelijke diensttijd</a></p>
+
+<p>&nbsp;</p>
+</DIV>
+</DIV>
+<DIV id="menulayerb4" class="hoofdmenuddb" onMouseOver="toonMenuLayer(4);" onMouseOut="toonMenuLayer(0);">
+<TABLE><TR><TD><a href="/vrijwilligers" style="font-family:'Futura Md BT';  color:rgb(218,10,23); border-bottom:4px solid rgb(218,10,23);">VRIJWILLIGERS</a></TD></TR></TABLE>
+</DIV>
+<a href="/vrijwilligers" onMouseOver="toonMenuLayer(4);" onMouseOut="toonMenuLayer(0);" style="">VRIJWILLIGERS</a>
+</LI>
+
+<LI style="position:relative;" onMouseOver="toonMenuLayer(5);" onMouseOut="toonMenuLayer(0);">
+<DIV id="menulayera5" class="hoofdmenudda" onMouseOver="toonMenuLayer(5);" onMouseOut="toonMenuLayer(0);" style="background-color:#ffffff; border:1px solid #ffffff;">
+<DIV style="font-size:14px; font-weight:normal;" class="edittussen" id="submenucontent3"><p><a href="/stage"><span style="color:#ff0000">►</span>&nbsp;Intro</a></p>
+
+<p><a href="/81"><span style="color:#ff0000">►</span> Werken bij De Schoor</a></p>
+
+<p>&nbsp;</p>
+
+<p><a href="/stage"><span style="color:#ff0000">►</span> Stage lopen bij De Schoor</a></p>
+
+<p><a href="/78"><span style="color:#ff0000">►</span> Stage: Veelgestelde vragen</a></p>
+
+<p><a href="/stagevacatures"><span style="color:#ff0000">►</span> Stagevacatures De Schoor</a></p>
+
+<p><a href="/stagevacatures/wijkteams"><span style="color:#ff0000">►</span> Stagevacatures Wijkteams</a></p>
+
+<p>&nbsp;</p>
+</DIV>
+</DIV>
+<DIV id="menulayerb5" class="hoofdmenuddb" onMouseOver="toonMenuLayer(5);" onMouseOut="toonMenuLayer(0);">
+<TABLE><TR><TD><a href="/stage" style="font-family:'Futura Md BT';  color:rgb(218,10,23); border-bottom:4px solid rgb(218,10,23);">WERK & STAGE</a></TD></TR></TABLE>
+</DIV>
+<a href="/stage" onMouseOver="toonMenuLayer(5);" onMouseOut="toonMenuLayer(0);" style="">WERK & STAGE</a>
+</LI>
+
+<LI style="position:relative;" onMouseOver="toonMenuLayer(6);" onMouseOut="toonMenuLayer(0);">
+<DIV id="menulayera6" class="hoofdmenudda" onMouseOver="toonMenuLayer(6);" onMouseOut="toonMenuLayer(0);" style="background-color:#ffffff; border:1px solid #ffffff;">
+<DIV style="font-size:14px; font-weight:normal;" class="edittussen" id="submenucontent179"><p><a href="/buurtkracht"><span style="color:#ff0000">►</span> Intro</a></p>
+
+<p><a href="/repaircafe"><span style="color:#ff0000">►</span> Repair Caf&eacute;</a><a href="/rommelroutes"><span style="color:#ff0000">►</span> Rommelroutes</a><a href="/1570"><span style="color:#e74c3c">►</span> Buurtpreventie</a></p>
+
+<p><a href="/ruilenweggeven"><span style="color:#e74c3c">►</span> Ruil- en weggeefinitiatieven</a></p>
+
+<p><a href="/1575"><span style="color:#e74c3c">►</span> Buurtkrachtacties</a><a href="/1472"><span style="color:#e74c3c">►</span> Buurtkrachtblogs</a></p>
+
+<p><a href="/buurtkrachtverhalen"><span style="color:#ff0000">►</span> Buurtkrachtverhalen</a></p>
+
+<p><span style="color:#ff0000">►&nbsp;</span><a href="/2029" style="font-weight: inherit; background-color: rgb(255, 255, 255); display: inline !important;">Digitale nieuwsbrief</a></p>
+
+<p>&nbsp;</p>
+
+<p><a href="/opbouwwerk"><span style="color:#ff0000">►</span> Opbouwwerk in de wijkteams</a></p>
+</DIV>
+</DIV>
+<DIV id="menulayerb6" class="hoofdmenuddb" onMouseOver="toonMenuLayer(6);" onMouseOut="toonMenuLayer(0);">
+<TABLE><TR><TD><a href="/buurtkracht" style="font-family:'Futura Md BT';  color:rgb(218,10,23); border-bottom:4px solid rgb(218,10,23);">BUURTKRACHT</a></TD></TR></TABLE>
+</DIV>
+<a href="/buurtkracht" onMouseOver="toonMenuLayer(6);" onMouseOut="toonMenuLayer(0);" style="">BUURTKRACHT</a>
+</LI>
+
+<LI style="position:relative;" onMouseOver="toonMenuLayer(7);" onMouseOut="toonMenuLayer(0);">
+<DIV id="menulayera7" class="hoofdmenudda" onMouseOver="toonMenuLayer(7);" onMouseOut="toonMenuLayer(0);" style="background-color:#ffffff; border:1px solid #ffffff;">
+<DIV style="font-size:14px; font-weight:normal;" class="edittussen" id="submenucontent6"><p><a href="/6"><span style="color:#ff0000">►</span> Intro</a></p>
+
+<p><a href="/verantwoording"><span style="color:#ff0000">►&nbsp;</span>Verantwoording 2024</a></p>
+
+<p><a href="/koersplan"><span style="color:#ff0000">►</span> Strategische koers</a></p>
+
+<p><a href="/podcast"><span style="color:#ff0000">►</span> Podcastserie <em>In Almere</em></a></p>
+
+<p><a href="/raadsperiode20222026"><span style="color:#ff0000">►</span> Raadsperiode 2022 - 2026</a></p>
+
+<p>&nbsp;</p>
+
+<p><a href="/nieuwsbrief/netwerkpartners"><span style="color:#ff0000">►</span> Nieuwsbrief netwerkpartners</a></p>
+
+<p>&nbsp;</p>
+
+<p><strong>Jeugd</strong></p>
+
+<p><a href="/coachesvve"><span style="color:#ff0000">►</span> Coaches VE</a></p>
+
+<p><a href="/143"><span style="color:#ff0000">►</span> Toeleiding voorscholen</a><a href="/246"><span style="color:#ff0000">►</span> Sterk in Kinderwerk</a></p>
+
+<p><a href="/handreiking"><span style="color:#ff0000">►</span> Dynamisch Jongerenwerk</a></p>
+
+<p>&nbsp;</p>
+
+<p><strong>Wijk &amp; Welzijn</strong></p>
+
+<p><a href="/opbouwwerkalmere"><span style="color:#ff0000">►</span> Opbouwwerk</a><a href="/welzijnoprecept"><span style="color:#ff0000">►</span> Welzijn op Recept</a></p>
+
+<p><a href="/269"><span style="color:#ff0000">►</span> Outreachend Werk (Maatschappelijk Werk)</a></p>
+
+<p>&nbsp;</p>
+</DIV>
+</DIV>
+<DIV id="menulayerb7" class="hoofdmenuddb" onMouseOver="toonMenuLayer(7);" onMouseOut="toonMenuLayer(0);">
+<TABLE><TR><TD><a href="/6" style="font-family:'Futura Md BT';  color:rgb(218,10,23); border-bottom:4px solid rgb(218,10,23);">VOOR NETWERKPARTNERS</a></TD></TR></TABLE>
+</DIV>
+<a href="/6" onMouseOver="toonMenuLayer(7);" onMouseOut="toonMenuLayer(0);" style="">VOOR NETWERKPARTNERS</a>
+</LI>
+
+</UL>
+</DIV>
+</DIV>
+<script>
+function kleurmenu (kleur, aanuit) {
+//	alert(kleur+' / '+aanuit);
+	document.getElementById(kleur+'vlak').style.display=aanuit;
+//	document.getElementById('div'+kleur+'0').style.display=aanuit;
+//	document.getElementById('div'+kleur+'1').style.display=aanuit;
+//	document.getElementById('div'+kleur+'2').style.display=aanuit;
+}
+</script>
+<!-- editable = 0 -->
+<DIV class="row" style="height:60px; padding:0; margin:0;">
+<DIV class="col-sm-6" style="background-color:rgb(94,198,237); text-align:left; height:60px; padding:0;">
+	<DIV class="blauwblok" style="position:relative; cursor:pointer; width:510px; height:60px;" onClick="kleurmenu('blauw', 'block');">
+		
+		<DIV style="position:absolute; font-family:'Futura Md BT'; font-weight:bold; color:#fff; height:57px; margin-top:3px;"><IMG 
+			src="images/blauwe-pijl.png" style="vertical-align:middle; margin-left:40px;"> IK HEB EEN HULPVRAAG</DIV>
+
+		<DIV id="blauwvlak" style="display:none; cursor:auto;">
+
+			<DIV style="position:fixed; top:0px; left:0px; z-index:10; width:100%; height:100%; background-color:#000; opacity:0;" onMouseOver="kleurmenu('blauw', 'none');"></DIV>
+			
+			<DIV style="position:absolute; z-index:20; width:510px; height:60px;"></DIV>
+			 
+			<DIV style="position:absolute; top:60px; z-index:20; background-color:rgba(94,198,237,1);">
+			<TABLE style="width:510px; border-width:1px; border-top:5px solid #fff;">
+			<TR><TD style="width:50%; padding:30px 30px 30px 45px; color:#fff; font-weight:bold;">
+			<DIV id="kleurblok1" class="edittussen">
+			<p><span style="color:#ff0000">OVER:</span></p>
+
+<p><a href="/166"><span style="color:#ff0000">►</span>&nbsp;duurzaamheid</a></p>
+
+<p><a href="/207"><span style="color:#ff0000">►&nbsp;</span>eenzaamheid</a></p>
+
+<p><a href="/2298"><span style="color:#ff0000">►&nbsp;</span>geld/schulden</a></p>
+
+<p><a href="/buurtkracht"><span style="color:#ff0000">►&nbsp;</span>mijn buurt</a></p>
+
+<p><a href="/wijkteams"><span style="color:#ff0000">►</span>&nbsp;ondersteuning<br />
+&nbsp;&nbsp; vanuit de wijkteams</a></p>
+
+<p><a href="/180"><span style="color:#ff0000">►&nbsp;</span>ouder worden</a></p>
+
+<p><a href="/adviespuntrelatieenscheiding"><span style="color:#ff0000">►</span> relatie/scheiding</a></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+			</DIV>
+			</TD><TD style="width:50%; border-left:5px solid #fff; padding:30px 30px 30px 45px; color:#fff; opacity:1; font-weight:bold;">
+			<DIV id="kleurblok2" class="edittussen">
+			<p>&nbsp;</p>
+
+<p><a href="/sociaalraadslieden"><span style="color:#ff0000">►&nbsp;</span>sociaal/juridische</a></p>
+
+<p><a href="/sociaalraadslieden">&nbsp; &nbsp;zaken</a></p>
+
+<p><a href="/184"><span style="color:#ff0000">►&nbsp;</span><span style="color:#ffffff">taalondersteuning</span></a></p>
+
+<p><a href="/bredeondersteuning"><span style="color:#ff0000">►</span>&nbsp;toeslagenaffaire</a></p>
+
+<p><a href="/658"><span style="color:#ff0000">►&nbsp;</span>vervoer</a></p>
+
+<p><a href="/658"><span style="color:#ff0000">►</span></a>&nbsp;<a href="/welzijnoprecept">Welzijn op Recept</a></p>
+
+<p><a href="/181"><span style="color:#ff0000">►&nbsp;</span>werk/opleiding</a></p>
+
+<p><a href="/2276"><span style="color:#ff0000">►</span>&nbsp;wonen</a></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+			</DIV>
+			</TD></TR>
+			</TABLE>
+			</DIV>
+		</DIV>
+	</DIV>
+</DIV>
+<DIV class="col-sm-6" style="background-color:rgb(164,195,5); text-align:left; height:60px; padding:0;">
+	<DIV class="groenblok" style="position:relative; float:left; cursor:pointer; width:510px; height:60px;" onClick="kleurmenu('groen', 'block');">
+		
+		<DIV style="position:absolute; font-family:'Futura Md BT'; font-weight:bold; color:#fff; height:57px; margin-top:3px;"><IMG 
+			src="images/groene-pijl.png" style="vertical-align:middle; margin-left:40px;"> IK ZOEK EEN ACTIVITEIT</DIV>
+
+		<DIV id="groenvlak" style="display:none; cursor:auto;">
+
+			<DIV style="position:fixed; top:0px; left:0px; z-index:10; width:100%; height:100%; background-color:#000; opacity:0;" onMouseOver="kleurmenu('groen', 'none');"></DIV>
+			
+			<DIV style="position:absolute; z-index:20; width:510px; height:60px;"></DIV>
+			 
+			<DIV style="position:absolute; top:60px; z-index:20; background-color:rgba(164,195,5,1);">
+			<TABLE style="width:510px; border-width:1px; border-top:5px solid #fff;">
+			<TR><TD style="width:50%; padding:30px 30px 30px 45px; color:#fff; font-weight:bold;">
+			<DIV id="kleurblok3" class="edittussen">
+			<p><span style="color:#ff0000">VOOR:</span></p>
+
+<p><a href="/spelendlereninalmere"><span style="color:#ff0000">►</span> peuters &amp; kleuters</a></p>
+
+<p><a href="/kinderen"><span style="color:#ff0000">►</span>&nbsp;kinderen</a></p>
+
+<p><a href="/jongerenwerk"><span style="color:#ff0000">►&nbsp;</span>jongeren</a><br />
+<a href="/109"><span style="color:#ff0000">►</span>&nbsp;volwassenen</a></p>
+
+<p><span style="color:#ff0000">►</span>&nbsp;<a href="/senioren">senioren</a></p>
+
+<p>&nbsp;</p>
+			</DIV>
+			<!--/TD><TD style="width:5px; background-color:#fff;"><IMG src="images/leeg.gif" style="width:5px; height:1px;"></TD>
+			<TD style="width:50%; padding:30px 30px 30px 45px; color:#fff; opacity:1; font-weight:bold;"-->
+			</TD><TD style="width:50%; border-left:5px solid #fff; padding:30px 30px 30px 45px; color:#fff; opacity:1; font-weight:bold;">
+			<DIV id="kleurblok4" class="edittussen">
+			<p><span style="color:#ff0000">►</span> <a href="/buurtcentra">In onze buurtcentra</a></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+			</DIV>
+			</TD></TR>
+			</TABLE>
+			</DIV>
+		</DIV>
+	</DIV>
+</DIV>
+</DIV>
+
+<IMG src="../bovenbalk/bovenbalk156.jpg" style="width:100%; border-top:5px solid #fff;"><!--a href="/"><IMG src="../bovenbalk/bovenbalk156.jpg" style="width:100%; border-top:5px solid #fff;"></a-->
+
+
+<!--IMG src="bovenbalk/" style="width:100%; border-top:5px solid #fff;"-->
+<style>
+#voorprinten {
+	text-align:left;
+	margin-top:50px;
+	padding:0 50px 50px 50px;
+	font-family:'Futura Bk BT';
+}
+@media (min-width: 768px) {
+	#voorprinten {
+		padding-left:135px;
+		background-image:url('images/bollen-lijn.png');
+		background-repeat:repeat-y;
+		background-position:30px 0;
+	}
+}
+</style>
+<script>
+function getRecaptchaToken(formulier) {
+	grecaptcha.ready(function() {
+		grecaptcha.execute('6LfiDxglAAAAAB4Pf60_FiCEHXHFasUyiAnJoqci', {action: formulier}).then(function(token) {
+			gRecaptchaResponse.value = token;
+//alert("Hallo");
+			document.getElementById(formulier).submit();
+		});
+	});
+}
+</script>
+</DIV>
+<DIV class="container" style="z-index:1; position:relative; padding:0;">
+	<DIV id="voorprinten" onClick="clearVlakken();">
+
+<DIV id="kruimelpad" class="tolkie-ignore"><B>Je bent hier</B> &gt; Voor Netwerkpartners &gt; Opbouwwerk<BR><BR></DIV>
+<script id="tolkie-script" type="module" src="https://app.tolkie.nl" crossorigin="anonymous" data-tolkie-token="6061ea7641ab68f24152fe12c711849959056c4b" data-tolkie-state="separateButtons" defer=""></script>
+<BR>
+<DIV id="content1" class="editmaxform" style=""><p><strong>Wat is opbouwwerk:</strong></p>
+
+<p>Het opbouwwerk richt zich op het opbouwen en versterken van samenlevingen door het cre&euml;ren van actieve duurzame gemeenschappen (community building).&nbsp;&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><em><strong>&lsquo;We moeten radicaler kiezen voor het versterken van gemeenschappen. Niet omdat ze problemen hebben, maar omdat ze het samenleven sterker maken.&rsquo; </strong></em><strong>Joop Hofman</strong><span style="font-size:18px"><strong>&nbsp;</strong></span></p>
+
+<p>&nbsp;</p>
+
+<p>Samen met verschillende partijen werken we aan het versterken van gemeenschappen van binnenuit.&nbsp;We vinden het belangrijk om bewoners centraal te stellen en onze onafhankelijke positie in het krachtenveld van de samenleving te waarborgen.&nbsp;Opbouwwerkers schakelen tussen de rol van coach, ondersteuner, aanjager, vraagbaak, regisseur en procesbegeleider. De opbouwwerker bepaalt of hij in die rol naast, achter of voor de bewoners staat.&nbsp;</p>
+
+<p>&nbsp;&nbsp;</p>
+
+<p>Het doel is om mensen zelf invloed te laten uitoefenen op hun leefomgeving en samen te werken aan veranderingen die zij belangrijk vinden. We leggen de focus op het opbouwen van relaties, het stimuleren van eigen initiatief en het waarborgen van inspraak van bewoners in hun leefomgeving. Hierbij versterken we de democratie en benutten we de potentie van buurtbewoners, onder andere door de verbinding te leggen tussen bewoners en de overheid (overheidsparticipatie).&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><strong><em>&lsquo;Wie graag wil dat mensen in hun buurt meer naar elkaar omkijken, meer voor elkaar zorgen, heeft opbouwwerkers nodig.&rsquo; </em>Jeroen Gradener&nbsp;</strong></p>
+
+<p>&nbsp;</p>
+
+<p><em>Onze belangrijke uitgangspunten zijn:</em><strong>&nbsp;</strong></p>
+
+<ul>
+	<li>
+	<p>Beginnen met wat er speelt in de buurt (startpunt is de praktijk en niet het probleem)&nbsp;</p>
+	</li>
+	<li>
+	<p>Aanmoedigen van ontmoetingen, ontspanning en ontwikkeling&nbsp;</p>
+	</li>
+	<li>
+	<p>Cre&euml;ren van nieuwe kansen en mogelijkheden, zoals bewonersinitiatieven&nbsp;</p>
+	</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p><em>Onze belangrijkste taken zijn:</em><strong>&nbsp;</strong></p>
+
+<ul>
+	<li>
+	<p>Beschermen en versterken van kwetsbare bewoners&nbsp;en groepen&nbsp;</p>
+	</li>
+	<li>
+	<p>Aanmoedigen van betrokkenheid van bewoners&nbsp;(burgerparticipatie)&nbsp;</p>
+	</li>
+</ul>
+
+<ul>
+	<li>
+	<p>Verbeteren van de relaties tussen bewoners en organisaties&nbsp;&nbsp;</p>
+	</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p>Meer weten over samenlevingsopbouw en de rol van het opbouwwerk:</p>
+
+<ul>
+	<li><a href="https://www.bpsw.nl/app/uploads/Visiedocument-samenlevingsopbouw.pdf" target="_blank">Visiedocument samenlevingsopbouw</a>&nbsp;</li>
+	<li><a href="https://www.movisie.nl/sites/movisie.nl/files/publication-attachment/Competentieprofiel%20Opbouwwerker%20%5BMOV-222726-0.3%5D.pdf" target="_blank">Competentieprofiel opbouwwerk</a>&nbsp;</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p><strong>Werkwijze Almere:</strong></p>
+
+<p>In Almere zijn er twee werksoorten vanuit het team opbouwwerk:&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>
+	<p><em>Reguliere opbouwwerk&nbsp;</em></p>
+	</li>
+</ul>
+
+<p>Het reguliere opbouwwerk bestaat uit het gebiedsgericht werken in de verschillende stadsdelen van Almere van uit Buurtkracht, met daarnaast ons eigen Buurtkracht kenniscentrum dat stedelijk werkt en projecten co&ouml;rdineert zoals Repair Caf&eacute; en Rommelroute. [<a href="https://www.youtube.com/watch?v=JpqaDTfstYk" target="_blank">Filmpje</a>]</p>
+
+<p>En uit de opbouwwerkers die zich inzetten voor speciale projecten zoals buurtpreventieteams, welzijn op recept, integrale straat aanpak (ISA) en kwartiermaker Almere Hout.&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>
+	<p><em>Opbouwwerker in het Wijkteam</em>&nbsp;</p>
+	</li>
+</ul>
+
+<p>Ieder wijkteam in Almere heeft een opbouwwerker. De opbouwwerker is zo present in de wijk en legt contacten met bewoners en netwerkpartners. De opbouwwerker analyseert de wijk samen met de betrokkenen, signaleert en agendeert. Samen met het wijkteam wordt er collectief aanbod ontwikkeld voor de wijk.</p>
+
+<p>[<a href="https://www.youtube.com/watch?v=iI-vQlHbl5k" target="_blank">Filmpje 1</a>] [<a href="https://vimeo.com/598805439/4fce503a7e" target="_blank">Filmpje 2</a>]</p>
+
+<p>&nbsp;</p>
+
+<p>Voorbeelden van het opbouwwerk in de praktijk&nbsp;</p>
+
+<ul>
+	<li>
+	<p>Integrale straat aanpak (ISA)&nbsp;</p>
+	</li>
+	<li>
+	<p><a href="/welzijnoprecept" target="_blank">Welzijn op Recept</a>&nbsp;</p>
+	</li>
+	<li>
+	<p><a href="/1570">Buurtpreventieteams</a>&nbsp;</p>
+	</li>
+	<li>
+	<p><a href="/rommelroutes">Rommelroute</a></p>
+	</li>
+	<li>
+	<p><a href="https://www.deschoor.nl/site7/index.php?pid=188" target="_blank">Repair caf&eacute;</a>&nbsp;</p>
+	</li>
+	<li>
+	<p>Odeonpark &nbsp;</p>
+	</li>
+	<li>
+	<p>Almere Hout (kwartiermaker)&nbsp;</p>
+	</li>
+	<li>
+	<p>ABBA&nbsp;</p>
+	</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p><strong>Contact met het opbouwwerk:</strong></p>
+
+<p>Wij gaan graag met je in gesprek over hoe wij samen kunnen werken aan actieve duurzame gemeenschappen. Wij vertellen je graag wat we voor je kunnen betekenen en waar we de samenwerking zoeken. We laten je ook dan ook zien wat wij tegen komen in de praktijk (wijkwandeling) en drinken samen een functioneel kopje koffie bij een vindplek in de wijk.&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>Hans Versteegh (teamleider)&nbsp;-&nbsp;<script class="tolkie-ignore">var a='<a hr'; var b='ef="mai'; var cx='lto:hversteegh'; var cy='@'; var cz='deschoor.nl?subject=Informatie%20opbouwwerk'; var dx='">hversteegh'; var dy='@'; var dz='deschoor.nl'; var e='</a>'; document.write(''+a+b+cx+cy+cz+dx+dy+dz+e+''); </script>&nbsp;&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>Wie zijn de opbouwwerkers in de wijk:</p>
+
+<p><a href="/buurtkracht">Buurtkracht</a></p>
+
+<p><a href="/opbouwwerk" target="_blank">Wijkteam</a></p>
+
+<p>Welzijn op Recept</p>
+</DIV>
+<DIV style="clear:both;"></DIV>
+<style>
+.balkmenu-container P {
+	text-align:left; 
+	vertical-align:middle; 
+	font-size:18px;
+	line-height:21px; 
+	font-weight:normal;
+	padding:17px 0 17px 10px;
+	margin-bottom:10px;
+}
+.balkmenu-container P A {
+	text-decoration:none;
+	color:#000;
+}
+.video-container {
+	position:relative;
+	padding-bottom:56.25%;
+	padding-top:30px;
+	height:0;
+	overflow:hidden;
+}
+.video-container iframe, .video-container object, .video-container embed {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+.onderschrift-container {
+	font-size:11px !important;
+}
+.slogan-container {
+/*	background-color:rgb(255, 107, 1);*/
+	display:inline-block; 
+	vertical-align:middle; 
+	text-align:center; 
+	padding:10% 25%;
+	width:100%;
+	min-height:232px;
+}
+.slogan-container P {
+	color:#fff; 
+	font-size:21px; 
+	font-weight:bold;
+}
+.visitekaartje-container {
+	border:1px solid #ccc; 
+	width:100%;
+	color:#000; 
+	font-size:17px; 
+	font-weight:normal;
+	vertical-align:middle; 
+	text-align:center; 
+	min-height:232px;
+}
+.visitekaartje-container TD {
+	vertical-align:middle; 
+	text-align:center; 
+}
+.kalender-container {
+	border:1px solid #ccc; 
+	padding:10px; 
+	margin-bottom:10px;
+	min-height:232px;
+}
+.kalender-datumblok {
+	background-color:#cccccc;
+	display:inline-block; 
+	vertical-align:middle; 
+	text-align:center; 
+	color:#000; 
+	padding:10px;
+}
+.kalender-datumblok P {
+	line-height:21px; 
+	font-size:21px; 
+	font-weight:bold;
+	margin:1px;
+	padding:1px;
+}
+.kalender-functie P {
+	font-size:21px; 
+	font-weight:bold; 
+	margin:30px 0;
+}
+.kalender-doorklik P {
+	background-color:#cccccc;
+	width:100%; 
+	height:43px; 
+	vertical-align:middle; 
+	color:#000; 
+	margin-bottom:10px;
+	display:inline-block; 
+	line-height:43px; 
+	text-align:center; 
+	font-size:21px; 
+	font-weight:normal;
+}
+.kalender-doorklik A {
+	text-decoration:none;
+}
+.meerinfo-container {
+	border:1px solid #ccc; 
+	vertical-align:middle; 
+	text-align:center;
+	width:100%; 
+	padding:30px 0;
+	min-height:232px;
+}
+.meerinfo-container TABLE {
+	text-align:left; 
+	display:inline-block; 
+	border-collapse:separate; 
+	border-spacing:5px;
+}
+.contact-container {
+	border:1px solid #ccc; 
+	padding:10px; 
+	margin-bottom:10px; 
+	min-height:232px;
+}
+.contact-container P {
+	font-size:21px;
+}
+.tekstwidgettitel {
+	font-size:21px;
+	font-weight:bold;
+}
+.tekstwidgettitel A {
+	font-size:21px;
+	font-weight:bold;
+	color:#000;
+	text-decoration:none;
+}
+.tekstwidgettitel A:hover {
+	color:#f00;
+	text-decoration:none;
+}
+</style>
+<script>
+/*
+alternatief: var blueIcon = L.Icon.extend({
+korter: https://programmierfrage.com/items/mysql-and-custom-icon-in-leafletjs
+*/
+var blueIcon = new L.Icon({
+	iconUrl: '../leaflet-color-markers/blauw2kl.png',
+	shadowUrl: '../leaflet-color-markers/marker-shadow.png',
+	iconSize: [25, 41],
+	iconAnchor: [12, 41],
+	popupAnchor: [1, -34],
+	shadowSize: [41, 41]
+});
+
+var redIcon = new L.Icon({
+	iconUrl: '../leaflet-color-markers/rood2kl.png',
+	shadowUrl: '../leaflet-color-markers/marker-shadow.png',
+	iconSize: [25, 41],
+	iconAnchor: [12, 41],
+	popupAnchor: [1, -34],
+	shadowSize: [41, 41]
+});
+
+var greenIcon = new L.Icon({
+	iconUrl: '../leaflet-color-markers/groen2kl.png',
+	shadowUrl: '../leaflet-color-markers/marker-shadow.png',
+	iconSize: [25, 41],
+	iconAnchor: [12, 41],
+	popupAnchor: [1, -34],
+	shadowSize: [41, 41]
+});
+
+var yellowIcon = new L.Icon({
+	iconUrl: '../leaflet-color-markers/geel2kl.png',
+	shadowUrl: '../leaflet-color-markers/marker-shadow.png',
+	iconSize: [25, 41],
+	iconAnchor: [12, 41],
+	popupAnchor: [1, -34],
+	shadowSize: [41, 41]
+});
+
+var greyIcon = new L.Icon({
+	iconUrl: '../leaflet-color-markers/grijs2kl.png',
+	shadowUrl: '../leaflet-color-markers/marker-shadow.png',
+	iconSize: [25, 41],
+	iconAnchor: [12, 41],
+	popupAnchor: [1, -34],
+	shadowSize: [41, 41]
+});
+
+var blackIcon = new L.Icon({
+	iconUrl: '../leaflet-color-markers/zwart2kl.png',
+	shadowUrl: '../leaflet-color-markers/marker-shadow.png',
+	iconSize: [25, 41],
+	iconAnchor: [12, 41],
+	popupAnchor: [1, -34],
+	shadowSize: [41, 41]
+});
+let icons = new Array();
+icons["blueIcon"]=blueIcon;
+icons["redIcon"]=redIcon;
+icons["greenIcon"]=greenIcon;
+icons["yellowIcon"]=yellowIcon;
+icons["greyIcon"]=greyIcon;
+icons["blackIcon"]=blackIcon;
+
+</script>
+<style type = "text/css">
+<!--
+	@media print {
+		p.bodyText {font-family:georgia, times, serif;}
+	}
+-->
+</style>
+<BR clear=all><BR>	
+<DIV class="tolkie-ignore">
+<TABLE class=footer><TR style="vertical-align:middle;"><TD>
+</TD><TD>
+<!--A HREF="javascript:print();"><IMG SRC="images/p.gif" NAME='p' BORDER=0 HSPACE=4></A-->
+</TD><TD style="padding-top:7px;">
+
+<!-- AddThis Button BEGIN -->
+<div class="addthis_inline_share_toolbox"></div> 
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4e8b642c7128a32a"></script> 
+<!-- AddThis Button END -->
+
+</TD><TD style="vertical-align:middle;">
+
+	<a href="javascript:history.back();">Terug</a>
+
+</TD></TR></TABLE>
+</DIV>	</DIV>
+</DIV>
+<DIV class="tolkie-ignore">
+	<DIV style="position:relative; padding:0; width:100%; background-color:rgb(169,169,169);">
+		<DIV class="container" style="position:relative; padding:0;">
+			<DIV class="row" style="min-height:37px; background-color:rgb(169,169,169); padding:0; margin:0;" onClick="clearVlakken();">
+				<DIV class="col-sm-6" style="text-align:left; line-height:37px; padding:0; color:#fff;">
+<!--a href="tel:+31365278500" style="font-weight:bold; color:#fff; text-decoration:none;"><img src="images/telefoon.jpg" style="border:0; margin:4px 4px 4px 40px;"> 036 - 52 78 500</a-->
+Copyright De Schoor 2026				</DIV>
+				<DIV class="col-sm-6" style="text-align:right; padding:0;">
+<a href="https://www.deschoor.nl/privacy" style="color:#fff;">privacyreglement</a>
+				</DIV>
+			</DIV>
+
+			<DIV class="row" style="padding:0; margin:0;">
+				<DIV class="col-sm-3" style="">
+				</DIV>
+				<DIV class="col-sm-3" style="">
+				</DIV>
+				<DIV class="col-sm-3" style="">
+				</DIV>
+				<DIV class="col-sm-3" style="">
+				</DIV>
+			</DIV>
+		</DIV>
+	</DIV>
+</DIV>  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-98827771-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- p = 2141 -->
+<!-- o = 2141 -->
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=13068425;
+var sc_invisible=0;
+var sc_security="64a1d6f1";
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="Web Analytics"
+href="http://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="//c.statcounter.com/13068425/0/64a1d6f1/0" alt="Web
+Analytics"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+</BODY>
+</HTML>

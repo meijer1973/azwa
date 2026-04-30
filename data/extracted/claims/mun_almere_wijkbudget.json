@@ -1,0 +1,955 @@
+{
+  "document_id": "mun_almere_wijkbudget",
+  "claim_extraction_run_id": "phase4_all_docs_claims_v3",
+  "generated_on": "2026-04-30",
+  "source_extraction_run_id": "phase3_all_docs_v3",
+  "claim_count": 10,
+  "claims": [
+    {
+      "claim_id": "clm__mun_almere_wijkbudget_d6_001",
+      "topic": "d6.digital_and_operational_infrastructure",
+      "subtopic": "data_and_transfer_infrastructure",
+      "claim_type": "implementation_condition",
+      "normative_status": {
+        "status": "lower_authority_signal",
+        "label": "Lagere-autoriteitssignaal",
+        "source_authority": "commentary",
+        "has_normative_language": false,
+        "public_wording_guardrail": "Altijd expliciet toeschrijven aan de bron; niet als harde norm presenteren zonder sterkere bron.",
+        "needs_attribution": true
+      },
+      "time_status": {
+        "status": "undated_context",
+        "label": "Geen zelfstandig tijdmoment",
+        "date_signal": "none",
+        "source_temporal_anchor": "publication_context",
+        "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
+        "needs_review": true
+      },
+      "money_status": {
+        "status": "budget_window",
+        "label": "Budgetvenster of financieel tijdvak",
+        "financial_signal": true,
+        "source_finance_anchor": "explicit_finance_signal",
+        "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+        "needs_verification": true
+      },
+      "governance_status": {
+        "status": "not_governance",
+        "label": "Geen zelfstandige governanceclaim",
+        "actor_signals": [],
+        "source_governance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+        "needs_verification": true,
+        "vague_region_only": false
+      },
+      "locality_status": {
+        "status": "explicit_almere",
+        "label": "Expliciet Almeers",
+        "locality_scope": "Almere",
+        "regional_split_signals": [],
+        "explicit_location_signals": {
+          "almere": true,
+          "flevoland": false
+        },
+        "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
+        "needs_verification": false
+      },
+      "execution_status": {
+        "status": "capacity_need",
+        "label": "Uitvoering vraagt capaciteit of bemensing",
+        "execution_need_signals": [
+          "capacity"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
+        "public_wording_guardrail": "Formuleer als capaciteitsvraag; vul geen fte, team of eigenaar in zonder bron.",
+        "needs_verification": true
+      },
+      "statement": "Zodat zij bijvoorbeeld mee kunnen doen aan activiteiten Je kunt het wijkbudget bijvoorbeeld niet gebruiken voor: - Kosten voor personeel - Reiskosten - Parkeerkosten - Cadeaus en bedankjes voor vrijwilligers - Eten en drinken",
+      "source_document_id": "mun_almere_wijkbudget",
+      "source_location": {
+        "source_statement_ids": [
+          "mun_almere_wijkbudget_d6_001"
+        ],
+        "pages": [
+          null
+        ],
+        "sections": [
+          "Wijkbudget / Doel Wijkbudget"
+        ],
+        "evidence_quotes": [
+          "Zodat zij bijvoorbeeld mee kunnen doen aan activiteiten Je kunt het wijkbudget bijvoorbeeld niet gebruiken voor: - Kosten voor personeel - Reiskosten - Parkeerkosten - Cadeaus en bedankjes voor vrijwilligers - Eten en drinken"
+        ]
+      },
+      "publisher": "Gemeente Almere",
+      "instrument_type": "commentary",
+      "jurisdiction_level": "municipal",
+      "document_status": "current",
+      "authority_weight": 0.25,
+      "publication_date": null,
+      "effective_from": null,
+      "effective_to": null,
+      "validity_status": "contextual_active",
+      "applies_to": [
+        "Almere"
+      ],
+      "confidence": 0.68,
+      "human_review_status": "needs_human_review",
+      "source_statement_type": "contextual_relevance",
+      "claim_extraction_run_id": "phase4_all_docs_claims_v3",
+      "relations": []
+    },
+    {
+      "claim_id": "clm__mun_almere_wijkbudget_d6_002",
+      "topic": "d6.other",
+      "subtopic": "uncategorized",
+      "claim_type": "implementation_requirement",
+      "normative_status": {
+        "status": "lower_authority_signal",
+        "label": "Lagere-autoriteitssignaal",
+        "source_authority": "commentary",
+        "has_normative_language": false,
+        "public_wording_guardrail": "Altijd expliciet toeschrijven aan de bron; niet als harde norm presenteren zonder sterkere bron.",
+        "needs_attribution": true
+      },
+      "time_status": {
+        "status": "undated_context",
+        "label": "Geen zelfstandig tijdmoment",
+        "date_signal": "none",
+        "source_temporal_anchor": "publication_context",
+        "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
+        "needs_review": true
+      },
+      "money_status": {
+        "status": "budget_window",
+        "label": "Budgetvenster of financieel tijdvak",
+        "financial_signal": true,
+        "source_finance_anchor": "explicit_finance_signal",
+        "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+        "needs_verification": true
+      },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [
+          "gemeente"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": false
+      },
+      "locality_status": {
+        "status": "explicit_almere",
+        "label": "Expliciet Almeers",
+        "locality_scope": "Almere",
+        "regional_split_signals": [
+          "gemeentelijk"
+        ],
+        "explicit_location_signals": {
+          "almere": true,
+          "flevoland": false
+        },
+        "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
+        "needs_verification": false
+      },
+      "execution_status": {
+        "status": "operational_requirement",
+        "label": "Operationele vereiste of inrichting",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
+        "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
+        "needs_verification": true
+      },
+      "statement": "Het wijkbudget is een geldbedrag van de gemeente voor ideeën van bewoners voor andere bewoners.",
+      "source_document_id": "mun_almere_wijkbudget",
+      "source_location": {
+        "source_statement_ids": [
+          "mun_almere_wijkbudget_d6_002"
+        ],
+        "pages": [
+          null
+        ],
+        "sections": [
+          "Wijkbudget"
+        ],
+        "evidence_quotes": [
+          "Het wijkbudget is een geldbedrag van de gemeente voor ideeën van bewoners voor andere bewoners."
+        ]
+      },
+      "publisher": "Gemeente Almere",
+      "instrument_type": "commentary",
+      "jurisdiction_level": "municipal",
+      "document_status": "current",
+      "authority_weight": 0.25,
+      "publication_date": null,
+      "effective_from": null,
+      "effective_to": null,
+      "validity_status": "contextual_active",
+      "applies_to": [
+        "Almere"
+      ],
+      "confidence": 0.5,
+      "human_review_status": "needs_human_review",
+      "source_statement_type": "contextual_relevance",
+      "claim_extraction_run_id": "phase4_all_docs_claims_v3",
+      "relations": []
+    },
+    {
+      "claim_id": "clm__mun_almere_wijkbudget_d6_003",
+      "topic": "d6.other",
+      "subtopic": "uncategorized",
+      "claim_type": "implementation_requirement",
+      "normative_status": {
+        "status": "lower_authority_signal",
+        "label": "Lagere-autoriteitssignaal",
+        "source_authority": "commentary",
+        "has_normative_language": false,
+        "public_wording_guardrail": "Altijd expliciet toeschrijven aan de bron; niet als harde norm presenteren zonder sterkere bron.",
+        "needs_attribution": true
+      },
+      "time_status": {
+        "status": "undated_context",
+        "label": "Geen zelfstandig tijdmoment",
+        "date_signal": "none",
+        "source_temporal_anchor": "publication_context",
+        "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
+        "needs_review": true
+      },
+      "money_status": {
+        "status": "budget_window",
+        "label": "Budgetvenster of financieel tijdvak",
+        "financial_signal": true,
+        "source_finance_anchor": "explicit_finance_signal",
+        "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+        "needs_verification": true
+      },
+      "governance_status": {
+        "status": "not_governance",
+        "label": "Geen zelfstandige governanceclaim",
+        "actor_signals": [],
+        "source_governance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+        "needs_verification": true,
+        "vague_region_only": false
+      },
+      "locality_status": {
+        "status": "explicit_almere",
+        "label": "Expliciet Almeers",
+        "locality_scope": "Almere",
+        "regional_split_signals": [],
+        "explicit_location_signals": {
+          "almere": true,
+          "flevoland": false
+        },
+        "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
+        "needs_verification": false
+      },
+      "execution_status": {
+        "status": "operational_requirement",
+        "label": "Operationele vereiste of inrichting",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
+        "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
+        "needs_verification": true
+      },
+      "statement": "Het doel van het wijkbudget is ervoor zorgen dat de omgeving waarin mensen leven verbetert.",
+      "source_document_id": "mun_almere_wijkbudget",
+      "source_location": {
+        "source_statement_ids": [
+          "mun_almere_wijkbudget_d6_003"
+        ],
+        "pages": [
+          null
+        ],
+        "sections": [
+          "Wijkbudget / Doel Wijkbudget"
+        ],
+        "evidence_quotes": [
+          "Het doel van het wijkbudget is ervoor zorgen dat de omgeving waarin mensen leven verbetert."
+        ]
+      },
+      "publisher": "Gemeente Almere",
+      "instrument_type": "commentary",
+      "jurisdiction_level": "municipal",
+      "document_status": "current",
+      "authority_weight": 0.25,
+      "publication_date": null,
+      "effective_from": null,
+      "effective_to": null,
+      "validity_status": "contextual_active",
+      "applies_to": [
+        "Almere"
+      ],
+      "confidence": 0.5,
+      "human_review_status": "needs_human_review",
+      "source_statement_type": "contextual_relevance",
+      "claim_extraction_run_id": "phase4_all_docs_claims_v3",
+      "relations": []
+    },
+    {
+      "claim_id": "clm__mun_almere_wijkbudget_governance_and_finance_001",
+      "topic": "governance_and_finance.other",
+      "subtopic": "uncategorized",
+      "claim_type": "governance_arrangement",
+      "normative_status": {
+        "status": "guidance",
+        "label": "Toelichting of praktische guidance",
+        "source_authority": "commentary",
+        "has_normative_language": false,
+        "public_wording_guardrail": "Formuleer als toelichting, format, advies of handreiking.",
+        "needs_attribution": true
+      },
+      "time_status": {
+        "status": "budget_calendar_moment",
+        "label": "Begrotings- of financieringsmoment",
+        "date_signal": "none",
+        "source_temporal_anchor": "publication_context",
+        "public_wording_guardrail": "Koppel aan de financiele bronroute; maak geen lokale budgetkeuze zonder lokale bron.",
+        "needs_review": false
+      },
+      "money_status": {
+        "status": "finance_context",
+        "label": "Financiele context",
+        "financial_signal": true,
+        "source_finance_anchor": "explicit_finance_signal",
+        "public_wording_guardrail": "Gebruik als context; controleer sterkere bronnen voordat hier een financieringsregel van wordt gemaakt.",
+        "needs_verification": true
+      },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": false
+      },
+      "locality_status": {
+        "status": "explicit_almere",
+        "label": "Expliciet Almeers",
+        "locality_scope": "Almere",
+        "regional_split_signals": [],
+        "explicit_location_signals": {
+          "almere": true,
+          "flevoland": false
+        },
+        "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
+        "needs_verification": false
+      },
+      "execution_status": {
+        "status": "implementation_activity",
+        "label": "Uitvoeringsactiviteit zichtbaar",
+        "execution_need_signals": [
+          "implementation_activity"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
+        "public_wording_guardrail": "Beschrijf alleen de activiteit die de bron noemt; voeg geen eigenaar, bereik of vervolgplanning toe.",
+        "needs_verification": false
+      },
+      "statement": "We zien graag dat het geld voor grote activiteiten of projecten niet alleen uit het wijkbudget komt, maar dat er minimaal 1 andere partij meebetaalt (cofinanciering).",
+      "source_document_id": "mun_almere_wijkbudget",
+      "source_location": {
+        "source_statement_ids": [
+          "mun_almere_wijkbudget_governance_and_finance_001"
+        ],
+        "pages": [
+          null
+        ],
+        "sections": [
+          "Wijkbudget / Andere subsidies en crowdfunding"
+        ],
+        "evidence_quotes": [
+          "We zien graag dat het geld voor grote activiteiten of projecten niet alleen uit het wijkbudget komt, maar dat er minimaal 1 andere partij meebetaalt (cofinanciering)."
+        ]
+      },
+      "publisher": "Gemeente Almere",
+      "instrument_type": "commentary",
+      "jurisdiction_level": "municipal",
+      "document_status": "current",
+      "authority_weight": 0.25,
+      "publication_date": null,
+      "effective_from": null,
+      "effective_to": null,
+      "validity_status": "contextual_active",
+      "applies_to": [
+        "Almere"
+      ],
+      "confidence": 0.38,
+      "human_review_status": "needs_human_review",
+      "source_statement_type": "direct_extraction",
+      "claim_extraction_run_id": "phase4_all_docs_claims_v3",
+      "relations": []
+    },
+    {
+      "claim_id": "clm__mun_almere_wijkbudget_governance_and_finance_002",
+      "topic": "governance_and_finance.other",
+      "subtopic": "uncategorized",
+      "claim_type": "governance_arrangement",
+      "normative_status": {
+        "status": "guidance",
+        "label": "Toelichting of praktische guidance",
+        "source_authority": "commentary",
+        "has_normative_language": false,
+        "public_wording_guardrail": "Formuleer als toelichting, format, advies of handreiking.",
+        "needs_attribution": true
+      },
+      "time_status": {
+        "status": "undated_context",
+        "label": "Geen zelfstandig tijdmoment",
+        "date_signal": "none",
+        "source_temporal_anchor": "publication_context",
+        "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
+        "needs_review": false
+      },
+      "money_status": {
+        "status": "budget_window",
+        "label": "Budgetvenster of financieel tijdvak",
+        "financial_signal": true,
+        "source_finance_anchor": "explicit_finance_signal",
+        "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+        "needs_verification": false
+      },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [
+          "gemeente"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": false
+      },
+      "locality_status": {
+        "status": "explicit_almere",
+        "label": "Expliciet Almeers",
+        "locality_scope": "Almere",
+        "regional_split_signals": [
+          "gemeentelijk"
+        ],
+        "explicit_location_signals": {
+          "almere": true,
+          "flevoland": false
+        },
+        "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
+        "needs_verification": false
+      },
+      "execution_status": {
+        "status": "not_execution",
+        "label": "Geen zelfstandige uitvoeringsclaim",
+        "execution_need_signals": [],
+        "source_execution_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als actie- of implementatieclaim.",
+        "needs_verification": false
+      },
+      "statement": "Het wijkbudget is een geldbedrag van de gemeente voor ideeën van bewoners voor andere bewoners.",
+      "source_document_id": "mun_almere_wijkbudget",
+      "source_location": {
+        "source_statement_ids": [
+          "mun_almere_wijkbudget_governance_and_finance_002"
+        ],
+        "pages": [
+          null
+        ],
+        "sections": [
+          "Wijkbudget"
+        ],
+        "evidence_quotes": [
+          "Het wijkbudget is een geldbedrag van de gemeente voor ideeën van bewoners voor andere bewoners."
+        ]
+      },
+      "publisher": "Gemeente Almere",
+      "instrument_type": "commentary",
+      "jurisdiction_level": "municipal",
+      "document_status": "current",
+      "authority_weight": 0.25,
+      "publication_date": null,
+      "effective_from": null,
+      "effective_to": null,
+      "validity_status": "contextual_active",
+      "applies_to": [
+        "Almere"
+      ],
+      "confidence": 0.38,
+      "human_review_status": "needs_human_review",
+      "source_statement_type": "direct_extraction",
+      "claim_extraction_run_id": "phase4_all_docs_claims_v3",
+      "relations": []
+    },
+    {
+      "claim_id": "clm__mun_almere_wijkbudget_governance_and_finance_003",
+      "topic": "governance_and_finance.other",
+      "subtopic": "uncategorized",
+      "claim_type": "governance_arrangement",
+      "normative_status": {
+        "status": "guidance",
+        "label": "Toelichting of praktische guidance",
+        "source_authority": "commentary",
+        "has_normative_language": false,
+        "public_wording_guardrail": "Formuleer als toelichting, format, advies of handreiking.",
+        "needs_attribution": true
+      },
+      "time_status": {
+        "status": "undated_context",
+        "label": "Geen zelfstandig tijdmoment",
+        "date_signal": "none",
+        "source_temporal_anchor": "publication_context",
+        "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
+        "needs_review": false
+      },
+      "money_status": {
+        "status": "budget_window",
+        "label": "Budgetvenster of financieel tijdvak",
+        "financial_signal": true,
+        "source_finance_anchor": "explicit_finance_signal",
+        "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+        "needs_verification": false
+      },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": false
+      },
+      "locality_status": {
+        "status": "explicit_almere",
+        "label": "Expliciet Almeers",
+        "locality_scope": "Almere",
+        "regional_split_signals": [],
+        "explicit_location_signals": {
+          "almere": true,
+          "flevoland": false
+        },
+        "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
+        "needs_verification": false
+      },
+      "execution_status": {
+        "status": "not_execution",
+        "label": "Geen zelfstandige uitvoeringsclaim",
+        "execution_need_signals": [],
+        "source_execution_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als actie- of implementatieclaim.",
+        "needs_verification": false
+      },
+      "statement": "Het doel van het wijkbudget is ervoor zorgen dat de omgeving waarin mensen leven verbetert.",
+      "source_document_id": "mun_almere_wijkbudget",
+      "source_location": {
+        "source_statement_ids": [
+          "mun_almere_wijkbudget_governance_and_finance_003"
+        ],
+        "pages": [
+          null
+        ],
+        "sections": [
+          "Wijkbudget / Doel Wijkbudget"
+        ],
+        "evidence_quotes": [
+          "Het doel van het wijkbudget is ervoor zorgen dat de omgeving waarin mensen leven verbetert."
+        ]
+      },
+      "publisher": "Gemeente Almere",
+      "instrument_type": "commentary",
+      "jurisdiction_level": "municipal",
+      "document_status": "current",
+      "authority_weight": 0.25,
+      "publication_date": null,
+      "effective_from": null,
+      "effective_to": null,
+      "validity_status": "contextual_active",
+      "applies_to": [
+        "Almere"
+      ],
+      "confidence": 0.38,
+      "human_review_status": "needs_human_review",
+      "source_statement_type": "direct_extraction",
+      "claim_extraction_run_id": "phase4_all_docs_claims_v3",
+      "relations": []
+    },
+    {
+      "claim_id": "clm__mun_almere_wijkbudget_monitoring_and_evaluation_001",
+      "topic": "monitoring.other",
+      "subtopic": "uncategorized",
+      "claim_type": "monitoring_commitment",
+      "normative_status": {
+        "status": "guidance",
+        "label": "Toelichting of praktische guidance",
+        "source_authority": "commentary",
+        "has_normative_language": false,
+        "public_wording_guardrail": "Formuleer als toelichting, format, advies of handreiking.",
+        "needs_attribution": true
+      },
+      "time_status": {
+        "status": "review_or_update_moment",
+        "label": "Evaluatie-, herijkings- of actualisatiemoment",
+        "date_signal": "none",
+        "source_temporal_anchor": "explicit_text_signal",
+        "public_wording_guardrail": "Formuleer als review- of updatecyclus; niet automatisch als lokaal besluitmoment.",
+        "needs_review": false
+      },
+      "money_status": {
+        "status": "not_financial",
+        "label": "Geen zelfstandige financiele claim",
+        "financial_signal": false,
+        "source_finance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+        "needs_verification": false
+      },
+      "governance_status": {
+        "status": "not_governance",
+        "label": "Geen zelfstandige governanceclaim",
+        "actor_signals": [],
+        "source_governance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+        "needs_verification": false,
+        "vague_region_only": false
+      },
+      "locality_status": {
+        "status": "explicit_almere",
+        "label": "Expliciet Almeers",
+        "locality_scope": "Almere",
+        "regional_split_signals": [],
+        "explicit_location_signals": {
+          "almere": true,
+          "flevoland": false
+        },
+        "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
+        "needs_verification": false
+      },
+      "execution_status": {
+        "status": "review_task",
+        "label": "Uitvoering vraagt review, monitoring of validatie",
+        "execution_need_signals": [
+          "review"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
+        "public_wording_guardrail": "Formuleer als review-, monitorings- of validatietaak; niet als besluit of uitvoeringseigenaarschap.",
+        "needs_verification": true
+      },
+      "statement": "Je kunt geld krijgen voor activiteiten waarbij je elkaar beter leren kennen of iets voor een ander doen.",
+      "source_document_id": "mun_almere_wijkbudget",
+      "source_location": {
+        "source_statement_ids": [
+          "mun_almere_wijkbudget_monitoring_and_evaluation_001"
+        ],
+        "pages": [
+          null
+        ],
+        "sections": [
+          "Wijkbudget"
+        ],
+        "evidence_quotes": [
+          "Je kunt geld krijgen voor activiteiten waarbij je elkaar beter leren kennen of iets voor een ander doen."
+        ]
+      },
+      "publisher": "Gemeente Almere",
+      "instrument_type": "commentary",
+      "jurisdiction_level": "municipal",
+      "document_status": "current",
+      "authority_weight": 0.25,
+      "publication_date": null,
+      "effective_from": null,
+      "effective_to": null,
+      "validity_status": "contextual_active",
+      "applies_to": [
+        "Almere"
+      ],
+      "confidence": 0.38,
+      "human_review_status": "needs_human_review",
+      "source_statement_type": "direct_extraction",
+      "claim_extraction_run_id": "phase4_all_docs_claims_v3",
+      "relations": []
+    },
+    {
+      "claim_id": "clm__mun_almere_wijkbudget_municipal_translation_001",
+      "topic": "municipal.implementation_translation",
+      "subtopic": "regional_and_municipal_execution",
+      "claim_type": "implementation_requirement",
+      "normative_status": {
+        "status": "guidance",
+        "label": "Toelichting of praktische guidance",
+        "source_authority": "commentary",
+        "has_normative_language": false,
+        "public_wording_guardrail": "Formuleer als toelichting, format, advies of handreiking.",
+        "needs_attribution": true
+      },
+      "time_status": {
+        "status": "undated_context",
+        "label": "Geen zelfstandig tijdmoment",
+        "date_signal": "none",
+        "source_temporal_anchor": "publication_context",
+        "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
+        "needs_review": false
+      },
+      "money_status": {
+        "status": "budget_window",
+        "label": "Budgetvenster of financieel tijdvak",
+        "financial_signal": true,
+        "source_finance_anchor": "explicit_finance_signal",
+        "public_wording_guardrail": "Gebruik als budgetvenster; maak geen claim over lokale besteding zonder lokale bron.",
+        "needs_verification": false
+      },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [
+          "gemeente"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": false
+      },
+      "locality_status": {
+        "status": "explicit_almere",
+        "label": "Expliciet Almeers",
+        "locality_scope": "Almere",
+        "regional_split_signals": [
+          "gemeentelijk"
+        ],
+        "explicit_location_signals": {
+          "almere": true,
+          "flevoland": false
+        },
+        "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
+        "needs_verification": false
+      },
+      "execution_status": {
+        "status": "operational_requirement",
+        "label": "Operationele vereiste of inrichting",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
+        "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
+        "needs_verification": false
+      },
+      "statement": "Het wijkbudget is een geldbedrag van de gemeente voor ideeën van bewoners voor andere bewoners.",
+      "source_document_id": "mun_almere_wijkbudget",
+      "source_location": {
+        "source_statement_ids": [
+          "mun_almere_wijkbudget_municipal_translation_001"
+        ],
+        "pages": [
+          null
+        ],
+        "sections": [
+          "Wijkbudget"
+        ],
+        "evidence_quotes": [
+          "Het wijkbudget is een geldbedrag van de gemeente voor ideeën van bewoners voor andere bewoners."
+        ]
+      },
+      "publisher": "Gemeente Almere",
+      "instrument_type": "commentary",
+      "jurisdiction_level": "municipal",
+      "document_status": "current",
+      "authority_weight": 0.25,
+      "publication_date": null,
+      "effective_from": null,
+      "effective_to": null,
+      "validity_status": "contextual_active",
+      "applies_to": [
+        "Almere"
+      ],
+      "confidence": 0.56,
+      "human_review_status": "needs_human_review",
+      "source_statement_type": "direct_extraction",
+      "claim_extraction_run_id": "phase4_all_docs_claims_v3",
+      "relations": []
+    },
+    {
+      "claim_id": "clm__mun_almere_wijkbudget_municipal_translation_002",
+      "topic": "municipal.implementation_translation",
+      "subtopic": "regional_and_municipal_execution",
+      "claim_type": "implementation_requirement",
+      "normative_status": {
+        "status": "lower_authority_signal",
+        "label": "Lagere-autoriteitssignaal",
+        "source_authority": "commentary",
+        "has_normative_language": true,
+        "public_wording_guardrail": "Altijd expliciet toeschrijven aan de bron; niet als harde norm presenteren zonder sterkere bron.",
+        "needs_attribution": true
+      },
+      "time_status": {
+        "status": "undated_context",
+        "label": "Geen zelfstandig tijdmoment",
+        "date_signal": "none",
+        "source_temporal_anchor": "publication_context",
+        "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
+        "needs_review": false
+      },
+      "money_status": {
+        "status": "application_condition",
+        "label": "Aanvraagvoorwaarde of randvoorwaarde",
+        "financial_signal": true,
+        "source_finance_anchor": "explicit_finance_signal",
+        "public_wording_guardrail": "Formuleer als aanvraag- of procesvoorwaarde; controleer of de bron formeel of praktisch is.",
+        "needs_verification": false
+      },
+      "governance_status": {
+        "status": "application_role",
+        "label": "Aanvraag- of indieningsrol",
+        "actor_signals": [
+          "gemeente"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als aanvraag- of penvoerdersrol; niet automatisch als inhoudelijke eigenaar.",
+        "needs_verification": false,
+        "vague_region_only": false
+      },
+      "locality_status": {
+        "status": "explicit_almere",
+        "label": "Expliciet Almeers",
+        "locality_scope": "Almere",
+        "regional_split_signals": [
+          "gemeentelijk"
+        ],
+        "explicit_location_signals": {
+          "almere": true,
+          "flevoland": false
+        },
+        "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
+        "needs_verification": false
+      },
+      "execution_status": {
+        "status": "operational_requirement",
+        "label": "Operationele vereiste of inrichting",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
+        "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
+        "needs_verification": false
+      },
+      "statement": "Inwoners moeten voor een aanvraag inloggen met DigiD - Verenigingen, stichtingen, organisaties of zakelijke partijen loggen in met eHerkenning (niveau EH2+) Als je niet op de juiste manier inlogt kan de gemeente niet uitbetalen.",
+      "source_document_id": "mun_almere_wijkbudget",
+      "source_location": {
+        "source_statement_ids": [
+          "mun_almere_wijkbudget_municipal_translation_002"
+        ],
+        "pages": [
+          null
+        ],
+        "sections": [
+          "Wijkbudget / Aanvraag wijkbudget"
+        ],
+        "evidence_quotes": [
+          "- Inwoners moeten voor een aanvraag inloggen met DigiD - Verenigingen, stichtingen, organisaties of zakelijke partijen loggen in met eHerkenning (niveau EH2+) Als je niet op de juiste manier inlogt kan de gemeente niet uitbetalen."
+        ]
+      },
+      "publisher": "Gemeente Almere",
+      "instrument_type": "commentary",
+      "jurisdiction_level": "municipal",
+      "document_status": "current",
+      "authority_weight": 0.25,
+      "publication_date": null,
+      "effective_from": null,
+      "effective_to": null,
+      "validity_status": "contextual_active",
+      "applies_to": [
+        "Almere"
+      ],
+      "confidence": 0.56,
+      "human_review_status": "needs_human_review",
+      "source_statement_type": "direct_extraction",
+      "claim_extraction_run_id": "phase4_all_docs_claims_v3",
+      "relations": []
+    },
+    {
+      "claim_id": "clm__mun_almere_wijkbudget_municipal_translation_003",
+      "topic": "municipal.implementation_translation",
+      "subtopic": "regional_and_municipal_execution",
+      "claim_type": "implementation_requirement",
+      "normative_status": {
+        "status": "guidance",
+        "label": "Toelichting of praktische guidance",
+        "source_authority": "commentary",
+        "has_normative_language": false,
+        "public_wording_guardrail": "Formuleer als toelichting, format, advies of handreiking.",
+        "needs_attribution": true
+      },
+      "time_status": {
+        "status": "undated_context",
+        "label": "Geen zelfstandig tijdmoment",
+        "date_signal": "none",
+        "source_temporal_anchor": "publication_context",
+        "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
+        "needs_review": false
+      },
+      "money_status": {
+        "status": "application_condition",
+        "label": "Aanvraagvoorwaarde of randvoorwaarde",
+        "financial_signal": true,
+        "source_finance_anchor": "explicit_finance_signal",
+        "public_wording_guardrail": "Formuleer als aanvraag- of procesvoorwaarde; controleer of de bron formeel of praktisch is.",
+        "needs_verification": false
+      },
+      "governance_status": {
+        "status": "application_role",
+        "label": "Aanvraag- of indieningsrol",
+        "actor_signals": [
+          "gemeente"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als aanvraag- of penvoerdersrol; niet automatisch als inhoudelijke eigenaar.",
+        "needs_verification": false,
+        "vague_region_only": false
+      },
+      "locality_status": {
+        "status": "explicit_almere",
+        "label": "Expliciet Almeers",
+        "locality_scope": "Almere",
+        "regional_split_signals": [
+          "gemeentelijk"
+        ],
+        "explicit_location_signals": {
+          "almere": true,
+          "flevoland": false
+        },
+        "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
+        "needs_verification": false
+      },
+      "execution_status": {
+        "status": "operational_requirement",
+        "label": "Operationele vereiste of inrichting",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
+        "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
+        "needs_verification": false
+      },
+      "statement": "Als je bijvoorbeeld als inwoner inlogt met DigiD, terwijl je aanvraagt voor een stichting, kan de gemeente geen geld op de rekening storten.",
+      "source_document_id": "mun_almere_wijkbudget",
+      "source_location": {
+        "source_statement_ids": [
+          "mun_almere_wijkbudget_municipal_translation_003"
+        ],
+        "pages": [
+          null
+        ],
+        "sections": [
+          "Wijkbudget / Aanvraag wijkbudget"
+        ],
+        "evidence_quotes": [
+          "Als je bijvoorbeeld als inwoner inlogt met DigiD, terwijl je aanvraagt voor een stichting, kan de gemeente geen geld op de rekening storten."
+        ]
+      },
+      "publisher": "Gemeente Almere",
+      "instrument_type": "commentary",
+      "jurisdiction_level": "municipal",
+      "document_status": "current",
+      "authority_weight": 0.25,
+      "publication_date": null,
+      "effective_from": null,
+      "effective_to": null,
+      "validity_status": "contextual_active",
+      "applies_to": [
+        "Almere"
+      ],
+      "confidence": 0.56,
+      "human_review_status": "needs_human_review",
+      "source_statement_type": "direct_extraction",
+      "claim_extraction_run_id": "phase4_all_docs_claims_v3",
+      "relations": []
+    }
+  ]
+}

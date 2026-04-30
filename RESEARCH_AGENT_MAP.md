@@ -226,6 +226,7 @@ Machine-readable:
     "docs/dr/README.md",
     "docs/source-intake/phase31.5-healthy-school-deep-research-intake.md",
     "docs/source-intake/phase31.5-digital-operational-infrastructure-deep-research-intake.md",
+    "docs/source-intake/phase31.5-informal-support-deep-research-intake.md",
     "docs/human-review-guidance.md",
     "docs/internal/monthly-source-audit-2026-04-30.md",
     "docs/internal/review-dashboard.html"

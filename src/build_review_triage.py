@@ -181,11 +181,6 @@ def build_review_triage(as_of: date) -> dict[str, Any]:
         component["component_label"]
         for component in d6_components
         if "public-source gap" in component.get("open_issue", "")
-        or component["component_id"] in {
-            "gezonde_school_mentale_gezonde_school",
-            "digital_operational_infrastructure",
-            "citizen_initiatives_informal_support",
-        }
     ]
 
     return {

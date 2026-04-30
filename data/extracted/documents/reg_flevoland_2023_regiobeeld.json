@@ -39,7 +39,19 @@
         }
       ]
     },
-    "d6_main_message": null,
+    "d6_main_message": {
+      "statement_id": "reg_flevoland_2023_regiobeeld_summary_d6_main_message_001",
+      "statement_type": "source_grounded_summary",
+      "statement": "Dit vraagt veel inzet vanuit thuiszorg en mantelzorgers, terwijl er al veel personeelskrapte is en mantelzorgpotentieel afneemt.",
+      "evidence": [
+        {
+          "evidence_quote": "Dit vraagt veel inzet vanuit thuiszorg en mantelzorgers, terwijl er al veel personeelskrapte is en mantelzorgpotentieel afneemt.",
+          "page": 43,
+          "section": "Page 43",
+          "table_id": null
+        }
+      ]
+    },
     "combined_d5_d6_logic": {
       "statement_id": "reg_flevoland_2023_regiobeeld_summary_combined_d5_d6_logic_001",
       "statement_type": "source_grounded_summary",
@@ -115,8 +127,48 @@
     },
     "d6": {
       "explicit_reference_present": false,
-      "relevance_note": "No high-confidence d6 evidence was auto-selected in this extraction pass.",
-      "items": []
+      "relevance_note": "Auto-extracted d6 evidence from structural chunks and tables for this document.",
+      "items": [
+        {
+          "statement_id": "reg_flevoland_2023_regiobeeld_d6_001",
+          "statement_type": "contextual_relevance",
+          "statement": "Dit vraagt veel inzet vanuit thuiszorg en mantelzorgers, terwijl er al veel personeelskrapte is en mantelzorgpotentieel afneemt.",
+          "evidence": [
+            {
+              "evidence_quote": "Dit vraagt veel inzet vanuit thuiszorg en mantelzorgers, terwijl er al veel personeelskrapte is en mantelzorgpotentieel afneemt.",
+              "page": 43,
+              "section": "Page 43",
+              "table_id": null
+            }
+          ]
+        },
+        {
+          "statement_id": "reg_flevoland_2023_regiobeeld_d6_002",
+          "statement_type": "contextual_relevance",
+          "statement": "Percentage zwaar belaste mantelzorgers Percentage mantelzorgers per gemeente Mantelzorgers per gemeente Zwaar belaste mantelzorgers per gemeente 20% 15% 10% 5% 0% 0% 5% 10% 15% 20% 25% 30% 35% Bron: Corona Gezondheidsmonitor Volwassenen en Ouderen 2022, GGD’en, CBS en RIVM.",
+          "evidence": [
+            {
+              "evidence_quote": "Percentage zwaar belaste mantelzorgers Percentage mantelzorgers per gemeente Mantelzorgers per gemeente Zwaar belaste mantelzorgers per gemeente 20% 15% 10% 5% 0% 0% 5% 10% 15% 20% 25% 30% 35% Bron: Corona Gezondheidsmonitor Volwassenen en Ouderen 2022, GGD’en, CBS en RIVM.",
+              "page": 103,
+              "section": "Page 103",
+              "table_id": null
+            }
+          ]
+        },
+        {
+          "statement_id": "reg_flevoland_2023_regiobeeld_d6_003",
+          "statement_type": "contextual_relevance",
+          "statement": "Inbreng eerste werksessie Arbeidsmarkt Mentale gezondheid Ouderenzorg Overig Algemene kenmerken Flevoland Preventie Juiste zorg op de juiste plek Gezondheidsverschillen / Onderliggende problematiek 23 keer benoemd 24 keer benoemd 12 keer benoemd 17 keer benoemd Bevolkingsgroei Digitale zorg (4x) Armoede Beweegcijfers In- uitstroom ziekenhuiszorg Transitie die doorgemaakt moet worden 19 keer benoemd Huisartsentekort Wachtlijsten / Aanbod van wat er gebeurt als iemand op een wachtlijst staat Woonopgave ouderen ...",
+          "evidence": [
+            {
+              "evidence_quote": "Inbreng eerste werksessie Arbeidsmarkt Mentale gezondheid Ouderenzorg Overig Algemene kenmerken Flevoland Preventie Juiste zorg op de juiste plek Gezondheidsverschillen / Onderliggende problematiek 23 keer benoemd 24 keer benoemd 12 keer benoemd 17 keer benoemd Bevolkingsgroei Digitale zorg (4x) Armoede Beweegcijfers In- uitstroom ziekenhuiszorg Transitie die doorgemaakt moet worden 19 keer benoemd Huisartsentekort Wachtlijsten / Aanbod van wat er gebeurt als iemand op een wachtlijst staat Woonopgave ouderen ...",
+              "page": 128,
+              "section": "Page 128",
+              "table_id": null
+            }
+          ]
+        }
+      ]
     },
     "governance_and_finance": {
       "explicit_reference_present": true,

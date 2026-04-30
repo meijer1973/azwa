@@ -6,103 +6,7 @@
   "claim_count": 10,
   "claims": [
     {
-      "claim_id": "clm__nat_iza_2022_integraal_zorgakkoord_d6_002",
-      "topic": "d6.other",
-      "subtopic": "uncategorized",
-      "claim_type": "implementation_requirement",
-      "normative_status": {
-        "status": "agreement",
-        "label": "Afspraak of akkoordtekst",
-        "source_authority": "agreement",
-        "has_normative_language": false,
-        "public_wording_guardrail": "Formuleer als afspraak tussen akkoordpartijen; niet automatisch als wettelijke plicht voor Almere.",
-        "needs_attribution": true
-      },
-      "time_status": {
-        "status": "publication_or_context_date",
-        "label": "Publicatie- of contextdatum",
-        "date_signal": "year",
-        "source_temporal_anchor": "explicit_text_signal",
-        "public_wording_guardrail": "Gebruik als bron- of contextdatum; niet als beleidsdeadline.",
-        "needs_review": true
-      },
-      "money_status": {
-        "status": "accountability_rule",
-        "label": "Verantwoordings- of rapportageregel",
-        "financial_signal": true,
-        "source_finance_anchor": "explicit_finance_signal",
-        "public_wording_guardrail": "Koppel aan de bronroute en verantwoordingsplicht; maak er geen bestedingsruimte van.",
-        "needs_verification": true
-      },
-      "governance_status": {
-        "status": "approval_role",
-        "label": "Goedkeurings- of vaststellingsrol",
-        "actor_signals": [],
-        "source_governance_anchor": "explicit_governance_signal",
-        "public_wording_guardrail": "Gebruik als goedkeurings- of vaststellingsrol; niet automatisch als uitvoeringsverantwoordelijkheid.",
-        "needs_verification": true,
-        "vague_region_only": false
-      },
-      "locality_status": {
-        "status": "national_with_local_relevance",
-        "label": "Landelijk met lokale relevantie",
-        "locality_scope": "national to local",
-        "regional_split_signals": [],
-        "explicit_location_signals": {
-          "almere": false,
-          "flevoland": false
-        },
-        "public_wording_guardrail": "Formuleer als landelijke lijn met relevantie voor Almere; niet als lokale vaststelling.",
-        "needs_verification": true
-      },
-      "execution_status": {
-        "status": "review_task",
-        "label": "Uitvoering vraagt review, monitoring of validatie",
-        "execution_need_signals": [
-          "review"
-        ],
-        "source_execution_anchor": "explicit_execution_signal",
-        "public_wording_guardrail": "Formuleer als review-, monitorings- of validatietaak; niet als besluit of uitvoeringseigenaarschap.",
-        "needs_verification": true
-      },
-      "statement": "De komende jaren wordt actief ingezet op gegevensuitwisseling’ wordt vanuit de medisch speci­ alistische zorg ingezet op telemonitoring van patiënten Integraal Zorgakkoord 2022 | 49",
-      "source_document_id": "nat_iza_2022_integraal_zorgakkoord",
-      "source_location": {
-        "source_statement_ids": [
-          "nat_iza_2022_integraal_zorgakkoord_d6_002"
-        ],
-        "pages": [
-          49
-        ],
-        "sections": [
-          "Page 49"
-        ],
-        "evidence_quotes": [
-          "De komende jaren wordt actief ingezet op gegevensuitwisseling’ wordt vanuit de medisch speci­ alistische zorg ingezet op telemonitoring van patiënten Integraal Zorgakkoord 2022 | 49"
-        ]
-      },
-      "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
-      "instrument_type": "agreement",
-      "jurisdiction_level": "national",
-      "document_status": "reference",
-      "authority_weight": 0.82,
-      "publication_date": "2022-09-16",
-      "effective_from": "2022-09-16",
-      "effective_to": null,
-      "validity_status": "contextual_active",
-      "applies_to": [
-        "Netherlands",
-        "all_regions",
-        "all_municipalities"
-      ],
-      "confidence": 0.5,
-      "human_review_status": "needs_human_review",
-      "source_statement_type": "contextual_relevance",
-      "claim_extraction_run_id": "phase4_all_docs_claims_v3",
-      "relations": []
-    },
-    {
-      "claim_id": "clm__nat_iza_2022_integraal_zorgakkoord_d6_003",
+      "claim_id": "clm__nat_iza_2022_integraal_zorgakkoord_d6_001",
       "topic": "d6.basisinfrastructuur",
       "subtopic": "wijk_en_regio_basis",
       "claim_type": "implementation_requirement",
@@ -163,7 +67,7 @@
       "source_document_id": "nat_iza_2022_integraal_zorgakkoord",
       "source_location": {
         "source_statement_ids": [
-          "nat_iza_2022_integraal_zorgakkoord_d6_003"
+          "nat_iza_2022_integraal_zorgakkoord_d6_001"
         ],
         "pages": [
           70
@@ -190,6 +94,104 @@
         "all_municipalities"
       ],
       "confidence": 0.7,
+      "human_review_status": "needs_human_review",
+      "source_statement_type": "contextual_relevance",
+      "claim_extraction_run_id": "phase4_all_docs_claims_v3",
+      "relations": []
+    },
+    {
+      "claim_id": "clm__nat_iza_2022_integraal_zorgakkoord_d6_003",
+      "topic": "d6.other",
+      "subtopic": "uncategorized",
+      "claim_type": "implementation_requirement",
+      "normative_status": {
+        "status": "agreement",
+        "label": "Afspraak of akkoordtekst",
+        "source_authority": "agreement",
+        "has_normative_language": false,
+        "public_wording_guardrail": "Formuleer als afspraak tussen akkoordpartijen; niet automatisch als wettelijke plicht voor Almere.",
+        "needs_attribution": true
+      },
+      "time_status": {
+        "status": "expected_moment",
+        "label": "Verwacht of indicatief moment",
+        "date_signal": "month_or_cycle",
+        "source_temporal_anchor": "explicit_text_signal",
+        "public_wording_guardrail": "Formuleer als verwacht, indicatief of bronafhankelijk moment; niet als harde deadline.",
+        "needs_review": true
+      },
+      "money_status": {
+        "status": "not_financial",
+        "label": "Geen zelfstandige financiele claim",
+        "financial_signal": false,
+        "source_finance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+        "needs_verification": true
+      },
+      "governance_status": {
+        "status": "accountability_role",
+        "label": "Verantwoordings- of eigenaarschapsrol",
+        "actor_signals": [
+          "gemeente"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Maak duidelijk of het gaat om eigenaarschap, aanspreekbaarheid of verantwoording.",
+        "needs_verification": true,
+        "vague_region_only": false
+      },
+      "locality_status": {
+        "status": "national_with_local_relevance",
+        "label": "Landelijk met lokale relevantie",
+        "locality_scope": "national to local",
+        "regional_split_signals": [
+          "gemeentelijk"
+        ],
+        "explicit_location_signals": {
+          "almere": false,
+          "flevoland": false
+        },
+        "public_wording_guardrail": "Formuleer als landelijke lijn met relevantie voor Almere; niet als lokale vaststelling.",
+        "needs_verification": true
+      },
+      "execution_status": {
+        "status": "operational_requirement",
+        "label": "Operationele vereiste of inrichting",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
+        "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
+        "needs_verification": true
+      },
+      "statement": "Gemeenten zijn – gezien hun brede verantwoordelijkheid in het sociale en preventieve domein – goed in staat om passende en integrale ondersteuning en zorg te bieden aan (kwetsbare) mensen en de sociale basis, waar­ onder mantelzorgers.",
+      "source_document_id": "nat_iza_2022_integraal_zorgakkoord",
+      "source_location": {
+        "source_statement_ids": [
+          "nat_iza_2022_integraal_zorgakkoord_d6_003"
+        ],
+        "pages": [
+          5
+        ],
+        "sections": [
+          "Page 5"
+        ],
+        "evidence_quotes": [
+          "Gemeenten zijn – gezien hun brede verantwoordelijkheid in het sociale en preventieve domein – goed in staat om passende en integrale ondersteuning en zorg te bieden aan (kwetsbare) mensen en de sociale basis, waar­ onder mantelzorgers."
+        ]
+      },
+      "publisher": "Ministerie van Volksgezondheid, Welzijn en Sport",
+      "instrument_type": "agreement",
+      "jurisdiction_level": "national",
+      "document_status": "reference",
+      "authority_weight": 0.82,
+      "publication_date": "2022-09-16",
+      "effective_from": "2022-09-16",
+      "effective_to": null,
+      "validity_status": "contextual_active",
+      "applies_to": [
+        "Netherlands",
+        "all_regions",
+        "all_municipalities"
+      ],
+      "confidence": 0.5,
       "human_review_status": "needs_human_review",
       "source_statement_type": "contextual_relevance",
       "claim_extraction_run_id": "phase4_all_docs_claims_v3",

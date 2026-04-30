@@ -3,23 +3,21 @@
 ## Summary
 Current sprint: Sprint 31.4 - Review triage and deep-research offload.
 Generated on: 2026-04-30.
-Review queue items triaged: 387.
+Review queue items triaged: 565.
 Deep-research assignments prepared: 6.
 D6 rows still requiring human validation: 12.
-D6 rows with named public-search gaps: 3.
+D6 rows with named public-search gaps: 0.
 
 Send only public-source gaps, authority/source hierarchy checks, explicit local adoption searches and source-replacement searches to deep research agents. Keep ownership, mandate, funding, D6 classification and settled-status decisions with human stakeholders or policy owners.
-
-Deep-research reports are source-discovery inputs only. Repository staff must ingest selected public sources through the manifest/pipeline and verify the resulting findings in top data layers before treating an assignment as processed.
 
 ## Triage Buckets
 
 | Bucket | Item count | What it means | Top reason codes |
 | --- | ---: | --- | --- |
-| `human_only` | 58 | Requires policy judgement, stakeholder validation, finance/controller confirmation, or local mandate clarification. | `execution_review_task` (31), `execution_capacity_need` (13), `execution_decision_question` (12), `governance_gap` (1), `local_funding_gap` (1) |
-| `deep_research_candidate` | 199 | May be reducible by a careful public-source search for stronger sources, clearer dates, actor scope, or explicit local adoption. | `lower_authority_norm_signal` (37), `municipality_relevance_inferred` (30), `authority_unclear` (30), `expected_time_not_deadline` (22), `national_claim_local_relevance` (22) |
-| `mixed_public_search_then_human` | 120 | Public search may clarify the source basis, but final role, action, sequencing or responsibility language may still need human validation. | `actor_context_needs_role_split` (46), `execution_context_needs_action_split` (28), `execution_dependency` (23), `execution_sequencing_need` (23) |
-| `pipeline_or_extraction_cleanup` | 10 | Mostly repository/pipeline cleanup rather than policy review. | `missing_d5_content` (4), `extraction_noise_detected` (3), `missing_d6_content` (2), `table_content_not_promoted` (1) |
+| `human_only` | 76 | Requires policy judgement, stakeholder validation, finance/controller confirmation, or local mandate clarification. | `execution_review_task` (43), `execution_capacity_need` (17), `execution_decision_question` (13), `table_extraction_missing` (1), `governance_gap` (1) |
+| `deep_research_candidate` | 309 | May be reducible by a careful public-source search for stronger sources, clearer dates, actor scope, or explicit local adoption. | `lower_authority_norm_signal` (65), `municipality_relevance_inferred` (58), `authority_unclear` (54), `expected_time_not_deadline` (32), `national_claim_local_relevance` (24) |
+| `mixed_public_search_then_human` | 163 | Public search may clarify the source basis, but final role, action, sequencing or responsibility language may still need human validation. | `actor_context_needs_role_split` (61), `execution_context_needs_action_split` (43), `execution_sequencing_need` (30), `execution_dependency` (29) |
+| `pipeline_or_extraction_cleanup` | 17 | Mostly repository/pipeline cleanup rather than policy review. | `missing_d6_content` (8), `missing_d5_content` (6), `extraction_noise_detected` (3) |
 
 ## Human-Only D6 Rows
 
@@ -42,9 +40,6 @@ These rows still need policy-owner, stakeholder, finance/controller or internal-
 
 Deep research may look for additional public sources for these rows, but it may not settle classification, owner, mandate or funding.
 
-- Burgerinitiatieven en informele steun
-- Digitale en operationele infrastructuur
-- Gezonde School / mentale gezonde school
 
 ## Deep-Research Assignments
 

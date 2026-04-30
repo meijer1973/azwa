@@ -3,7 +3,7 @@
   "claim_extraction_run_id": "phase4_all_docs_claims_v3",
   "generated_on": "2026-04-30",
   "source_extraction_run_id": "phase3_all_docs_v3",
-  "claim_count": 13,
+  "claim_count": 16,
   "claims": [
     {
       "claim_id": "clm__reg_flevoland_2023_regiobeeld_d5_001",
@@ -291,6 +291,294 @@
         "Almere"
       ],
       "confidence": 0.68,
+      "human_review_status": "needs_human_review",
+      "source_statement_type": "contextual_relevance",
+      "claim_extraction_run_id": "phase4_all_docs_claims_v3",
+      "relations": []
+    },
+    {
+      "claim_id": "clm__reg_flevoland_2023_regiobeeld_d6_001",
+      "topic": "d6.digital_and_operational_infrastructure",
+      "subtopic": "data_and_transfer_infrastructure",
+      "claim_type": "implementation_condition",
+      "normative_status": {
+        "status": "lower_authority_signal",
+        "label": "Lagere-autoriteitssignaal",
+        "source_authority": "commentary",
+        "has_normative_language": false,
+        "public_wording_guardrail": "Altijd expliciet toeschrijven aan de bron; niet als harde norm presenteren zonder sterkere bron.",
+        "needs_attribution": true
+      },
+      "time_status": {
+        "status": "undated_context",
+        "label": "Geen zelfstandig tijdmoment",
+        "date_signal": "none",
+        "source_temporal_anchor": "publication_context",
+        "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
+        "needs_review": true
+      },
+      "money_status": {
+        "status": "not_financial",
+        "label": "Geen zelfstandige financiele claim",
+        "financial_signal": false,
+        "source_finance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+        "needs_verification": true
+      },
+      "governance_status": {
+        "status": "execution_role",
+        "label": "Uitvoeringsrol",
+        "actor_signals": [],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als uitvoeringsrol; noem geen opdrachtgever of eigenaar tenzij de bron dat zegt.",
+        "needs_verification": true,
+        "vague_region_only": false
+      },
+      "locality_status": {
+        "status": "explicit_flevoland",
+        "label": "Expliciet Flevolands",
+        "locality_scope": "Flevoland",
+        "regional_split_signals": [],
+        "explicit_location_signals": {
+          "almere": false,
+          "flevoland": true
+        },
+        "public_wording_guardrail": "Formuleer als Flevolandse of GGD/Flevolandse bronlijn; niet automatisch als Almeerse keuze.",
+        "needs_verification": false
+      },
+      "execution_status": {
+        "status": "capacity_need",
+        "label": "Uitvoering vraagt capaciteit of bemensing",
+        "execution_need_signals": [
+          "capacity"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
+        "public_wording_guardrail": "Formuleer als capaciteitsvraag; vul geen fte, team of eigenaar in zonder bron.",
+        "needs_verification": true
+      },
+      "statement": "Dit vraagt veel inzet vanuit thuiszorg en mantelzorgers, terwijl er al veel personeelskrapte is en mantelzorgpotentieel afneemt.",
+      "source_document_id": "reg_flevoland_2023_regiobeeld",
+      "source_location": {
+        "source_statement_ids": [
+          "reg_flevoland_2023_regiobeeld_d6_001"
+        ],
+        "pages": [
+          43
+        ],
+        "sections": [
+          "Page 43"
+        ],
+        "evidence_quotes": [
+          "Dit vraagt veel inzet vanuit thuiszorg en mantelzorgers, terwijl er al veel personeelskrapte is en mantelzorgpotentieel afneemt."
+        ]
+      },
+      "publisher": "Flever",
+      "instrument_type": "commentary",
+      "jurisdiction_level": "regional",
+      "document_status": "reference",
+      "authority_weight": 0.25,
+      "publication_date": "2023-07-12",
+      "effective_from": "2023-07-12",
+      "effective_to": null,
+      "validity_status": "contextual_active",
+      "applies_to": [
+        "Flevoland",
+        "Almere"
+      ],
+      "confidence": 0.68,
+      "human_review_status": "needs_human_review",
+      "source_statement_type": "contextual_relevance",
+      "claim_extraction_run_id": "phase4_all_docs_claims_v3",
+      "relations": []
+    },
+    {
+      "claim_id": "clm__reg_flevoland_2023_regiobeeld_d6_002",
+      "topic": "d6.regional_coordination",
+      "subtopic": "ggd_and_regional_coordination",
+      "claim_type": "implementation_requirement",
+      "normative_status": {
+        "status": "lower_authority_signal",
+        "label": "Lagere-autoriteitssignaal",
+        "source_authority": "commentary",
+        "has_normative_language": false,
+        "public_wording_guardrail": "Altijd expliciet toeschrijven aan de bron; niet als harde norm presenteren zonder sterkere bron.",
+        "needs_attribution": true
+      },
+      "time_status": {
+        "status": "publication_or_context_date",
+        "label": "Publicatie- of contextdatum",
+        "date_signal": "year",
+        "source_temporal_anchor": "explicit_text_signal",
+        "public_wording_guardrail": "Gebruik als bron- of contextdatum; niet als beleidsdeadline.",
+        "needs_review": true
+      },
+      "money_status": {
+        "status": "not_financial",
+        "label": "Geen zelfstandige financiele claim",
+        "financial_signal": false,
+        "source_finance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+        "needs_verification": true
+      },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [
+          "gemeente"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": false
+      },
+      "locality_status": {
+        "status": "explicit_flevoland",
+        "label": "Expliciet Flevolands",
+        "locality_scope": "Flevoland",
+        "regional_split_signals": [
+          "gemeentelijk"
+        ],
+        "explicit_location_signals": {
+          "almere": false,
+          "flevoland": true
+        },
+        "public_wording_guardrail": "Formuleer als Flevolandse of GGD/Flevolandse bronlijn; niet automatisch als Almeerse keuze.",
+        "needs_verification": false
+      },
+      "execution_status": {
+        "status": "operational_requirement",
+        "label": "Operationele vereiste of inrichting",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
+        "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
+        "needs_verification": true
+      },
+      "statement": "Percentage zwaar belaste mantelzorgers Percentage mantelzorgers per gemeente Mantelzorgers per gemeente Zwaar belaste mantelzorgers per gemeente 20% 15% 10% 5% 0% 0% 5% 10% 15% 20% 25% 30% 35% Bron: Corona Gezondheidsmonitor Volwassenen en Ouderen 2022, GGD’en, CBS en RIVM.",
+      "source_document_id": "reg_flevoland_2023_regiobeeld",
+      "source_location": {
+        "source_statement_ids": [
+          "reg_flevoland_2023_regiobeeld_d6_002"
+        ],
+        "pages": [
+          103
+        ],
+        "sections": [
+          "Page 103"
+        ],
+        "evidence_quotes": [
+          "Percentage zwaar belaste mantelzorgers Percentage mantelzorgers per gemeente Mantelzorgers per gemeente Zwaar belaste mantelzorgers per gemeente 20% 15% 10% 5% 0% 0% 5% 10% 15% 20% 25% 30% 35% Bron: Corona Gezondheidsmonitor Volwassenen en Ouderen 2022, GGD’en, CBS en RIVM."
+        ]
+      },
+      "publisher": "Flever",
+      "instrument_type": "commentary",
+      "jurisdiction_level": "regional",
+      "document_status": "reference",
+      "authority_weight": 0.25,
+      "publication_date": "2023-07-12",
+      "effective_from": "2023-07-12",
+      "effective_to": null,
+      "validity_status": "contextual_active",
+      "applies_to": [
+        "Flevoland",
+        "Almere"
+      ],
+      "confidence": 0.68,
+      "human_review_status": "needs_human_review",
+      "source_statement_type": "contextual_relevance",
+      "claim_extraction_run_id": "phase4_all_docs_claims_v3",
+      "relations": []
+    },
+    {
+      "claim_id": "clm__reg_flevoland_2023_regiobeeld_d6_003",
+      "topic": "d6.other",
+      "subtopic": "uncategorized",
+      "claim_type": "implementation_requirement",
+      "normative_status": {
+        "status": "lower_authority_signal",
+        "label": "Lagere-autoriteitssignaal",
+        "source_authority": "commentary",
+        "has_normative_language": true,
+        "public_wording_guardrail": "Altijd expliciet toeschrijven aan de bron; niet als harde norm presenteren zonder sterkere bron.",
+        "needs_attribution": true
+      },
+      "time_status": {
+        "status": "undated_context",
+        "label": "Geen zelfstandig tijdmoment",
+        "date_signal": "none",
+        "source_temporal_anchor": "publication_context",
+        "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
+        "needs_review": true
+      },
+      "money_status": {
+        "status": "not_financial",
+        "label": "Geen zelfstandige financiele claim",
+        "financial_signal": false,
+        "source_finance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+        "needs_verification": true
+      },
+      "governance_status": {
+        "status": "not_governance",
+        "label": "Geen zelfstandige governanceclaim",
+        "actor_signals": [],
+        "source_governance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+        "needs_verification": true,
+        "vague_region_only": false
+      },
+      "locality_status": {
+        "status": "explicit_flevoland",
+        "label": "Expliciet Flevolands",
+        "locality_scope": "Flevoland",
+        "regional_split_signals": [],
+        "explicit_location_signals": {
+          "almere": false,
+          "flevoland": true
+        },
+        "public_wording_guardrail": "Formuleer als Flevolandse of GGD/Flevolandse bronlijn; niet automatisch als Almeerse keuze.",
+        "needs_verification": false
+      },
+      "execution_status": {
+        "status": "capacity_need",
+        "label": "Uitvoering vraagt capaciteit of bemensing",
+        "execution_need_signals": [
+          "sequencing",
+          "capacity"
+        ],
+        "source_execution_anchor": "explicit_execution_signal",
+        "public_wording_guardrail": "Formuleer als capaciteitsvraag; vul geen fte, team of eigenaar in zonder bron.",
+        "needs_verification": true
+      },
+      "statement": "Inbreng eerste werksessie Arbeidsmarkt Mentale gezondheid Ouderenzorg Overig Algemene kenmerken Flevoland Preventie Juiste zorg op de juiste plek Gezondheidsverschillen / Onderliggende problematiek 23 keer benoemd 24 keer benoemd 12 keer benoemd 17 keer benoemd Bevolkingsgroei Digitale zorg (4x) Armoede Beweegcijfers In- uitstroom ziekenhuiszorg Transitie die doorgemaakt moet worden 19 keer benoemd Huisartsentekort Wachtlijsten / Aanbod van wat er gebeurt als iemand op een wachtlijst staat Woonopgave ouderen ...",
+      "source_document_id": "reg_flevoland_2023_regiobeeld",
+      "source_location": {
+        "source_statement_ids": [
+          "reg_flevoland_2023_regiobeeld_d6_003"
+        ],
+        "pages": [
+          128
+        ],
+        "sections": [
+          "Page 128"
+        ],
+        "evidence_quotes": [
+          "Inbreng eerste werksessie Arbeidsmarkt Mentale gezondheid Ouderenzorg Overig Algemene kenmerken Flevoland Preventie Juiste zorg op de juiste plek Gezondheidsverschillen / Onderliggende problematiek 23 keer benoemd 24 keer benoemd 12 keer benoemd 17 keer benoemd Bevolkingsgroei Digitale zorg (4x) Armoede Beweegcijfers In- uitstroom ziekenhuiszorg Transitie die doorgemaakt moet worden 19 keer benoemd Huisartsentekort Wachtlijsten / Aanbod van wat er gebeurt als iemand op een wachtlijst staat Woonopgave ouderen ..."
+        ]
+      },
+      "publisher": "Flever",
+      "instrument_type": "commentary",
+      "jurisdiction_level": "regional",
+      "document_status": "reference",
+      "authority_weight": 0.25,
+      "publication_date": "2023-07-12",
+      "effective_from": "2023-07-12",
+      "effective_to": null,
+      "validity_status": "contextual_active",
+      "applies_to": [
+        "Flevoland",
+        "Almere"
+      ],
+      "confidence": 0.5,
       "human_review_status": "needs_human_review",
       "source_statement_type": "contextual_relevance",
       "claim_extraction_run_id": "phase4_all_docs_claims_v3",

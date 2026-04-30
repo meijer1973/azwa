@@ -3,7 +3,7 @@
   "claim_extraction_run_id": "phase4_all_docs_claims_v3",
   "generated_on": "2026-04-30",
   "source_extraction_run_id": "phase3_all_docs_v3",
-  "claim_count": 9,
+  "claim_count": 10,
   "claims": [
     {
       "claim_id": "clm__mun_almere_samenwerkingsprojecten_d6_001",
@@ -186,6 +186,102 @@
         "Almere"
       ],
       "confidence": 0.68,
+      "human_review_status": "needs_human_review",
+      "source_statement_type": "contextual_relevance",
+      "claim_extraction_run_id": "phase4_all_docs_claims_v3",
+      "relations": []
+    },
+    {
+      "claim_id": "clm__mun_almere_samenwerkingsprojecten_d6_003",
+      "topic": "d6.other",
+      "subtopic": "uncategorized",
+      "claim_type": "implementation_requirement",
+      "normative_status": {
+        "status": "lower_authority_signal",
+        "label": "Lagere-autoriteitssignaal",
+        "source_authority": "commentary",
+        "has_normative_language": false,
+        "public_wording_guardrail": "Altijd expliciet toeschrijven aan de bron; niet als harde norm presenteren zonder sterkere bron.",
+        "needs_attribution": true
+      },
+      "time_status": {
+        "status": "undated_context",
+        "label": "Geen zelfstandig tijdmoment",
+        "date_signal": "none",
+        "source_temporal_anchor": "publication_context",
+        "public_wording_guardrail": "Niet op de tijdlijn plaatsen zonder aanvullende tijdbron.",
+        "needs_review": true
+      },
+      "money_status": {
+        "status": "not_financial",
+        "label": "Geen zelfstandige financiele claim",
+        "financial_signal": false,
+        "source_finance_anchor": "none",
+        "public_wording_guardrail": "Niet gebruiken als financieringsregel.",
+        "needs_verification": true
+      },
+      "governance_status": {
+        "status": "actor_context",
+        "label": "Actor- of governancecontext",
+        "actor_signals": [
+          "gemeente"
+        ],
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Gebruik als context; specificeer rol alleen wanneer de bron die rol benoemt.",
+        "needs_verification": true,
+        "vague_region_only": false
+      },
+      "locality_status": {
+        "status": "explicit_almere",
+        "label": "Expliciet Almeers",
+        "locality_scope": "Almere",
+        "regional_split_signals": [
+          "gemeentelijk"
+        ],
+        "explicit_location_signals": {
+          "almere": true,
+          "flevoland": false
+        },
+        "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
+        "needs_verification": false
+      },
+      "execution_status": {
+        "status": "operational_requirement",
+        "label": "Operationele vereiste of inrichting",
+        "execution_need_signals": [],
+        "source_execution_anchor": "topic_context",
+        "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
+        "needs_verification": true
+      },
+      "statement": "Binnen het netwerk Goud in Almere werken gemeente, senioren, bewonersinitiatieven, organisaties, woningcorporaties en bedrijven samen aan een Almere waar je goed oud kunt worden.",
+      "source_document_id": "mun_almere_samenwerkingsprojecten",
+      "source_location": {
+        "source_statement_ids": [
+          "mun_almere_samenwerkingsprojecten_d6_003"
+        ],
+        "pages": [
+          null
+        ],
+        "sections": [
+          "Samenwerkingsprojecten / Goud in Almere"
+        ],
+        "evidence_quotes": [
+          "Binnen het netwerk Goud in Almere werken gemeente, senioren, bewonersinitiatieven, organisaties, woningcorporaties en bedrijven samen aan een Almere waar je goed oud kunt worden."
+        ]
+      },
+      "publisher": "Gemeente Almere",
+      "instrument_type": "commentary",
+      "jurisdiction_level": "municipal",
+      "document_status": "current",
+      "authority_weight": 0.25,
+      "publication_date": null,
+      "effective_from": null,
+      "effective_to": null,
+      "validity_status": "contextual_active",
+      "applies_to": [
+        "Almere"
+      ],
+      "confidence": 0.5,
       "human_review_status": "needs_human_review",
       "source_statement_type": "contextual_relevance",
       "claim_extraction_run_id": "phase4_all_docs_claims_v3",

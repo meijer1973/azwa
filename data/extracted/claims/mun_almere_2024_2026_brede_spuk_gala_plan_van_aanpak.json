@@ -3,7 +3,7 @@
   "claim_extraction_run_id": "phase4_all_docs_claims_v3",
   "generated_on": "2026-04-30",
   "source_extraction_run_id": "phase3_all_docs_v3",
-  "claim_count": 18,
+  "claim_count": 17,
   "claims": [
     {
       "claim_id": "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d5_001",
@@ -411,11 +411,11 @@
         "needs_verification": true
       },
       "governance_status": {
-        "status": "not_governance",
-        "label": "Geen zelfstandige governanceclaim",
+        "status": "accountability_role",
+        "label": "Verantwoordings- of eigenaarschapsrol",
         "actor_signals": [],
-        "source_governance_anchor": "none",
-        "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
+        "source_governance_anchor": "explicit_governance_signal",
+        "public_wording_guardrail": "Maak duidelijk of het gaat om eigenaarschap, aanspreekbaarheid of verantwoording.",
         "needs_verification": true,
         "vague_region_only": false
       },
@@ -432,30 +432,29 @@
         "needs_verification": false
       },
       "execution_status": {
-        "status": "sequencing_need",
-        "label": "Uitvoering vraagt fasering of volgorde",
+        "status": "capacity_need",
+        "label": "Uitvoering vraagt capaciteit of bemensing",
         "execution_need_signals": [
-          "operational_requirement",
-          "sequencing"
+          "capacity"
         ],
         "source_execution_anchor": "explicit_execution_signal",
-        "public_wording_guardrail": "Formuleer als fasering of volgordevraag; maak er geen harde planning van zonder bron.",
+        "public_wording_guardrail": "Formuleer als capaciteitsvraag; vul geen fte, team of eigenaar in zonder bron.",
         "needs_verification": true
       },
-      "statement": "Daarnaast ontwikkelen het preventief jeugdbeleid, het jongerenwerk en de wijkteams zich verder.",
+      "statement": "Een groot aandachtspunt hierbij is om professionals in sport en cultuur, sociaal werkers, vrijwilligers en mantelzorgers voldoende te erkennen, waarderen en toe te rusten en hen niet te overvragen in hun capaciteit, mogelijkheden en verantwoordelijkheden.",
       "source_document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
       "source_location": {
         "source_statement_ids": [
           "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d6_002"
         ],
         "pages": [
-          10
+          9
         ],
         "sections": [
-          "Page 10"
+          "Page 9"
         ],
         "evidence_quotes": [
-          "Daarnaast ontwikkelen het preventief jeugdbeleid, het jongerenwerk en de wijkteams zich verder."
+          "Een groot aandachtspunt hierbij is om professionals in sport en cultuur, sociaal werkers, vrijwilligers en mantelzorgers voldoende te erkennen, waarderen en toe te rusten en hen niet te overvragen in hun capaciteit, mogelijkheden en verantwoordelijkheden."
         ]
       },
       "publisher": "Gemeente Almere",
@@ -471,98 +470,6 @@
         "Almere"
       ],
       "confidence": 0.5,
-      "human_review_status": "needs_human_review",
-      "source_statement_type": "contextual_relevance",
-      "claim_extraction_run_id": "phase4_all_docs_claims_v3",
-      "relations": []
-    },
-    {
-      "claim_id": "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d6_003",
-      "topic": "d6.basisinfrastructuur",
-      "subtopic": "wijk_en_regio_basis",
-      "claim_type": "implementation_requirement",
-      "normative_status": {
-        "status": "lower_authority_signal",
-        "label": "Lagere-autoriteitssignaal",
-        "source_authority": "municipal_policy",
-        "has_normative_language": false,
-        "public_wording_guardrail": "Altijd expliciet toeschrijven aan de bron; niet als harde norm presenteren zonder sterkere bron.",
-        "needs_attribution": true
-      },
-      "time_status": {
-        "status": "budget_calendar_moment",
-        "label": "Begrotings- of financieringsmoment",
-        "date_signal": "none",
-        "source_temporal_anchor": "publication_context",
-        "public_wording_guardrail": "Koppel aan de financiele bronroute; maak geen lokale budgetkeuze zonder lokale bron.",
-        "needs_review": true
-      },
-      "money_status": {
-        "status": "funding_route",
-        "label": "Financieringsroute",
-        "financial_signal": true,
-        "source_finance_anchor": "explicit_finance_signal",
-        "public_wording_guardrail": "Beschrijf de route en betrokken partijen; niet automatisch als lokaal beschikbaar budget formuleren.",
-        "needs_verification": true
-      },
-      "governance_status": {
-        "status": "not_governance",
-        "label": "Geen zelfstandige governanceclaim",
-        "actor_signals": [],
-        "source_governance_anchor": "none",
-        "public_wording_guardrail": "Niet gebruiken als rol- of besluitclaim.",
-        "needs_verification": true,
-        "vague_region_only": false
-      },
-      "locality_status": {
-        "status": "explicit_almere",
-        "label": "Expliciet Almeers",
-        "locality_scope": "Almere",
-        "regional_split_signals": [],
-        "explicit_location_signals": {
-          "almere": true,
-          "flevoland": false
-        },
-        "public_wording_guardrail": "Mag als Almeerse bronlijn worden gebruikt, maar alleen voor wat de bron zelf zegt.",
-        "needs_verification": false
-      },
-      "execution_status": {
-        "status": "operational_requirement",
-        "label": "Operationele vereiste of inrichting",
-        "execution_need_signals": [],
-        "source_execution_anchor": "topic_context",
-        "public_wording_guardrail": "Formuleer als wat moet worden ingericht of voorbereid; niet als lokaal al uitgevoerde actie.",
-        "needs_verification": true
-      },
-      "statement": "De Brede SPUK maakt gerichte interventies op dit vlak mogelijk in de lokale sociale infrastructuur en de leefomgeving.",
-      "source_document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
-      "source_location": {
-        "source_statement_ids": [
-          "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d6_003"
-        ],
-        "pages": [
-          13
-        ],
-        "sections": [
-          "Page 13"
-        ],
-        "evidence_quotes": [
-          "De Brede SPUK maakt gerichte interventies op dit vlak mogelijk in de lokale sociale infrastructuur en de leefomgeving."
-        ]
-      },
-      "publisher": "Gemeente Almere",
-      "instrument_type": "municipal_policy",
-      "jurisdiction_level": "municipal",
-      "document_status": "current",
-      "authority_weight": 0.48,
-      "publication_date": "2023-09-20",
-      "effective_from": "2023-09-20",
-      "effective_to": null,
-      "validity_status": "contextual_active",
-      "applies_to": [
-        "Almere"
-      ],
-      "confidence": 0.7,
       "human_review_status": "needs_human_review",
       "source_statement_type": "contextual_relevance",
       "claim_extraction_run_id": "phase4_all_docs_claims_v3",

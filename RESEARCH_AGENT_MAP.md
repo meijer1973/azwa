@@ -26,9 +26,9 @@ For source-intake and public update history, follow `docs/updateprotocol.md`. A 
 
 For monthly source monitoring, use `config/monthly_source_audit.json`, `data/extracted/monthly_source_audit.json`, and `docs/internal/monthly-source-audit-2026-04-30.md`. Watchlist rows, expected publications and pending intake candidates are not public evidence until source intake, manifest registration and pipeline processing have happened.
 
-For human review routing, use `data/extracted/human_review_round.json` and `docs/review/phase31.3-human-review-round.md`. Reviewer decisions must be recorded as human review decisions or validation records; they do not become source claims unless backed by a canonical source or explicit validation evidence.
+For human review routing, use `data/extracted/human_review_round.json` and `docs/review/archive/phase31/phase31.3-human-review-round.md`. Reviewer decisions must be recorded as human review decisions or validation records; they do not become source claims unless backed by a canonical source or explicit validation evidence.
 
-For deep-research delegation, use `data/extracted/review_triage_deep_research_offload.json`, `docs/review/phase31.4-review-triage-deep-research-offload.md`, and `docs/review/phase31.4-deep-research-agent-prompts.md`. Deep research agents may reduce public-source gaps and source-authority uncertainty, but they must not settle D6 classification, ownership, mandate, funding, safe wording, or register status.
+For deep-research delegation, use `data/extracted/review_triage_deep_research_offload.json`, `docs/review/archive/phase31/phase31.4-review-triage-deep-research-offload.md`, and `docs/review/archive/phase31/phase31.4-deep-research-agent-prompts.md`. Deep research agents may reduce public-source gaps and source-authority uncertainty, but they must not settle D6 classification, ownership, mandate, funding, safe wording, or register status.
 
 For human-readable review navigation, start with `docs/review/README.md`. Archived review notes under `docs/review/archive/` are provenance only, not current entry points.
 
@@ -216,18 +216,18 @@ Machine-readable:
     "docs/regional-roles-and-splits-almere-flevoland.md",
     "docs/data-quality-checklist.md",
     "docs/phase25-sprint25.4-d6-almere-responsibility-pack-plan.md",
-    "docs/review/almere_d6_public_source_boundary.md",
     "docs/review/almere_d6_deep_research_learnings.md",
     "docs/review/almere_d6_open_questions.md",
-    "docs/review/almere_d6_validation_pack.md",
-    "docs/review/almere_d6_stakeholder_validation_log.md",
-    "docs/review/almere_d6_stakeholder_information_request.md",
-    "docs/review/almere_d6_decision_needed.md",
-    "docs/review/almere_d6_funding_gap_table.md",
-    "docs/review/almere_d6_safe_wording.md",
-    "docs/review/phase31.3-human-review-round.md",
-    "docs/review/phase31.4-review-triage-deep-research-offload.md",
-    "docs/review/phase31.4-deep-research-agent-prompts.md",
+    "docs/review/archive/d6-support/almere_d6_public_source_boundary.md",
+    "docs/review/archive/d6-support/almere_d6_validation_pack.md",
+    "docs/review/archive/d6-support/almere_d6_stakeholder_validation_log.md",
+    "docs/review/archive/d6-support/almere_d6_stakeholder_information_request.md",
+    "docs/review/archive/d6-support/almere_d6_decision_needed.md",
+    "docs/review/archive/d6-support/almere_d6_funding_gap_table.md",
+    "docs/review/archive/d6-support/almere_d6_safe_wording.md",
+    "docs/review/archive/phase31/phase31.3-human-review-round.md",
+    "docs/review/archive/phase31/phase31.4-review-triage-deep-research-offload.md",
+    "docs/review/archive/phase31/phase31.4-deep-research-agent-prompts.md",
     "docs/review/README.md",
     "docs/dr/README.md",
     "docs/source-intake/phase31.5-healthy-school-deep-research-intake.md",
@@ -424,15 +424,8 @@ Theme view models:
   "d6_validation": [
     "data/extracted/municipal/almere_d6_responsibility_register.json",
     "data/extracted/municipal/almere_local_decisions.json",
-    "docs/review/almere_d6_public_source_boundary.md",
     "docs/review/almere_d6_deep_research_learnings.md",
-    "docs/review/almere_d6_open_questions.md",
-    "docs/review/almere_d6_validation_pack.md",
-    "docs/review/almere_d6_stakeholder_validation_log.md",
-    "docs/review/almere_d6_stakeholder_information_request.md",
-    "docs/review/almere_d6_decision_needed.md",
-    "docs/review/almere_d6_funding_gap_table.md",
-    "docs/review/almere_d6_safe_wording.md"
+    "docs/review/almere_d6_open_questions.md"
   ]
 }
 ```

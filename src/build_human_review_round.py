@@ -14,7 +14,7 @@ REVIEW_QUEUE_PATH = REPO_ROOT / "data" / "extracted" / "review_queue.json"
 CLAIMS_MASTER_PATH = REPO_ROOT / "data" / "extracted" / "claims" / "claims_master.jsonl"
 MONTHLY_AUDIT_PATH = REPO_ROOT / "data" / "extracted" / "monthly_source_audit.json"
 OUTPUT_JSON_PATH = REPO_ROOT / "data" / "extracted" / "human_review_round.json"
-OUTPUT_MD_PATH = REPO_ROOT / "docs" / "review" / "phase31.3-human-review-round.md"
+OUTPUT_MD_PATH = REPO_ROOT / "docs" / "review" / "archive" / "phase31" / "phase31.3-human-review-round.md"
 
 
 REASON_PERSPECTIVE_FALLBACKS = {

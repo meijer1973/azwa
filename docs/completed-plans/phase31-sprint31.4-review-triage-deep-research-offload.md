@@ -6,8 +6,8 @@ Sprint 31.4 is completed. The current next sprint is not yet selected. Sprint 25
 ## What Changed
 - Added `src/build_review_triage.py` to route review work into human-only, deep-research, mixed and pipeline-cleanup buckets.
 - Added `data/extracted/review_triage_deep_research_offload.json` as the machine-readable triage layer.
-- Added `docs/review/phase31.4-review-triage-deep-research-offload.md` as the human-readable triage note.
-- Added `docs/review/phase31.4-deep-research-agent-prompts.md` with ready-to-send deep research prompts.
+- Added `docs/review/archive/phase31/phase31.4-review-triage-deep-research-offload.md` as the human-readable triage note.
+- Added `docs/review/archive/phase31/phase31.4-deep-research-agent-prompts.md` with ready-to-send deep research prompts.
 - Added the new review-triage docs to the internal dashboard.
 - Added `tests/test_review_triage.py`.
 

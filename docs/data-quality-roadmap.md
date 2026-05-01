@@ -20,8 +20,8 @@ Gebruik deze roadmap als levend werkdocument. Werk na elke sprint de statusregel
 | 25.4 D6 governance en samenwerking | completed | Heropend en afgerond als D6 Almere responsibility pack: `docs/phase25-sprint25.4-d6-almere-responsibility-pack-plan.md`; registerlaag staat in `data/extracted/municipal/almere_d6_responsibility_register.json` en schema in `data/schemas/almere_d6_responsibility_register.schema.json` |
 | 24.6 D6 commit, verify and stabilize | completed | Remediation is gecommit/gepusht; verificatie via `python src/run_pipeline.py --all`, gerichte tests en schema-validatie |
 | 24.7 D6 register evidence audit | completed | Registerrijen gecontroleerd op status, eigenaar, uitvoerder, schaal, financiering, bewijs en open reviewvraag |
-| 24.8 D6 local validation preparation | completed | Interne validatiepack: `docs/review/almere_d6_validation_pack.md` |
-| 25.5 D6 stakeholder validation handoff | completed | Repository-side handoff compleet; wacht op policy-maker stakeholdervalidatie. Start via `docs/review/README.md`. Current artifacts include `docs/review/almere_d6_deep_research_learnings.md` for learned public-source information, `docs/review/almere_d6_open_questions.md` for remaining questions, plus the validation pack, source-boundary note, decision-needed list, funding table, stakeholder request/log and safe wording library. |
+| 24.8 D6 local validation preparation | completed | Interne validatiepack gearchiveerd in `docs/review/archive/d6-support/almere_d6_validation_pack.md`; actuele menselijke ingang staat in `docs/review/almere_d6_open_questions.md` |
+| 25.5 D6 stakeholder validation handoff | completed | Repository-side handoff compleet; wacht op policy-maker stakeholdervalidatie. Start via `docs/review/README.md`. Current artifacts are `docs/review/almere_d6_deep_research_learnings.md` for learned public-source information and `docs/review/almere_d6_open_questions.md` for remaining questions; detailed support files are archived in `docs/review/archive/d6-support/`. |
 | 25.6 Post-validation register hardening | parked | Geparkeerd tot stakeholder-validatierecords, lokale/interne documenten, finance/controller bevestiging of expliciet beleidsbesluit beschikbaar zijn; blokkeert Fase 26 niet |
 | 26.1 Rough-claim audit hercalibratie | completed | `src/build_data_quality_audit.py`, `tests/test_data_quality_audit.py`, `data/extracted/data_quality_audit.json`, `docs/completed-plans/phase26-sprint26.1-rough-claim-audit-recalibration.md` |
 | 26.2 Deterministische tekstfixes | completed | `src/build_structural_extractions.py`, `src/build_document_extractions.py`, `data/extracted/voting_records.json`, `data/logs/phase26_text_cleanup.json`, `docs/completed-plans/phase26-sprint26.2-deterministic-text-fixes.md` |
@@ -46,8 +46,8 @@ Gebruik deze roadmap als levend werkdocument. Werk na elke sprint de statusregel
 | 30.3 Beleidsdocumenten en rapporten | completed | `docs/rapporten/report-status.json`, `src/audit_report_grounding.py`, `docs/internal/report-grounding-audit-2026-04-29.md`, `tests/test_report_grounding.py`, `docs/completed-plans/phase30-sprint30.3-beleidsdocumenten-rapporten.md` |
 | 31.1 Updateprotocol | completed | `docs/updateprotocol.md`, `src/validate_update_protocol.py`, `docs/internal/update-protocol-check-2026-04-29.md`, `tests/test_update_protocol.py`, `docs/completed-plans/phase31-sprint31.1-updateprotocol.md` |
 | 31.2 Maandelijkse bronaudit | completed | `config/monthly_source_audit.json`, `src/build_monthly_source_audit.py`, `data/extracted/monthly_source_audit.json`, `docs/internal/monthly-source-audit-2026-04-30.md`, `docs/completed-plans/phase31-sprint31.2-maandelijkse-bronaudit.md` |
-| 31.3 Reviewronde met menselijke beoordelaars | completed | `src/build_human_review_round.py`, `data/extracted/human_review_round.json`, `docs/review/phase31.3-human-review-round.md`, `docs/completed-plans/phase31-sprint31.3-reviewronde-menselijke-beoordelaars.md` |
-| 31.4 Reviewtriage en deep-research offload | completed | `src/build_review_triage.py`, `data/extracted/review_triage_deep_research_offload.json`, `docs/review/phase31.4-review-triage-deep-research-offload.md`, `docs/review/phase31.4-deep-research-agent-prompts.md`, `docs/completed-plans/phase31-sprint31.4-review-triage-deep-research-offload.md` |
+| 31.3 Reviewronde met menselijke beoordelaars | completed | `src/build_human_review_round.py`, `data/extracted/human_review_round.json`, `docs/review/archive/phase31/phase31.3-human-review-round.md`, `docs/completed-plans/phase31-sprint31.3-reviewronde-menselijke-beoordelaars.md` |
+| 31.4 Reviewtriage en deep-research offload | completed | `src/build_review_triage.py`, `data/extracted/review_triage_deep_research_offload.json`, `docs/review/archive/phase31/phase31.4-review-triage-deep-research-offload.md`, `docs/review/archive/phase31/phase31.4-deep-research-agent-prompts.md`, `docs/completed-plans/phase31-sprint31.4-review-triage-deep-research-offload.md` |
 | 31.5 Deep-research bronintake en top-layer verificatie | open | Intakes verwerkt voor `docs/dr/Healthy school.md`, `docs/dr/Digital and operational infrastructure.md`, `docs/dr/Informal support.md`, `docs/dr/Zorgzaam Flevoland, and Flever interface.md`, `docs/dr/Samen Sterker in de Wijk in Almere.md` en `docs/dr/Almere D6 Settlement Evidence Audit.md`. Geselecteerde bronnen gaan door manifest/pipeline en worden getoetst in D6-register/reviewlagen; intake-notities staan in `docs/source-intake/`. |
 
 ## Huidige sprintplan
@@ -105,9 +105,9 @@ Status op 29 april 2026: Sprint 31.1 is afgerond. `docs/updateprotocol.md` legt 
 
 Status op 30 april 2026: Sprint 31.2 is afgerond. `config/monthly_source_audit.json` legt de maandelijkse watchlist vast voor verwachte circulaires, AZWA-handreikingen, nieuwe SPUK-/monitorbronnen en open intakekandidaten. `src/build_monthly_source_audit.py` schrijft `data/extracted/monthly_source_audit.json` en `docs/internal/monthly-source-audit-2026-04-30.md`. De audit houdt zes watchlistitems op `not_due_yet`, signaleert een VNG-vervangingsbron als pending replacement, bewaart drie verwachte tijdlijnmomenten als pending source ingestion en behandelt redirectgedrag als link-review in plaats van direct als bronfeit. Watchlist- en pending-items blijven geen publieke evidence totdat ze formeel zijn opgeslagen, aan de raw manifestlaag zijn toegevoegd en door de pipeline zijn verwerkt.
 
-Status op 30 april 2026: Sprint 31.3 is afgerond. `src/build_human_review_round.py` bundelt de review queue, perspectiefconfiguratie en maandelijkse bronaudit tot `data/extracted/human_review_round.json` en `docs/review/phase31.3-human-review-round.md`. Het reviewpack geeft per perspectief de hoofdvragen, topreden-codes en voorbeelditems, en herhaalt dat reviewerbesluiten apart moeten worden vastgelegd en niet automatisch bronclaims worden. De D6-guardrail blijft staan: geen D6-registerrij wordt `settled` zolang Sprint 25.6 geparkeerd is.
+Status op 30 april 2026: Sprint 31.3 is afgerond. `src/build_human_review_round.py` bundelt de review queue, perspectiefconfiguratie en maandelijkse bronaudit tot `data/extracted/human_review_round.json` en `docs/review/archive/phase31/phase31.3-human-review-round.md`. Het reviewpack geeft per perspectief de hoofdvragen, topreden-codes en voorbeelditems, en herhaalt dat reviewerbesluiten apart moeten worden vastgelegd en niet automatisch bronclaims worden. De D6-guardrail blijft staan: geen D6-registerrij wordt `settled` zolang Sprint 25.6 geparkeerd is.
 
-Status op 30 april 2026: Sprint 31.4 is afgerond. `src/build_review_triage.py` routeerde de toenmalige reviewitems naar vier buckets: deep-research kandidaten, gemengde public-search-then-human items, human-only items en pipeline/extractie-cleanup items. `docs/review/phase31.4-deep-research-agent-prompts.md` bevat zes kant-en-klare opdrachten voor deep research agents rond Gezonde School, digitale/operationele infrastructuur, burgerinitiatieven/informele steun, PGA/Zorgzaam/Flever, Samen Sterker in de Wijk en sterkere autoriteits-/adoptiebronnen. Deep research mag publieke bronnen en source gaps verminderen, maar geen D6-classificatie, eigenaarschap, mandaat, financiering of `settled` status vaststellen.
+Status op 30 april 2026: Sprint 31.4 is afgerond. `src/build_review_triage.py` routeerde de toenmalige reviewitems naar vier buckets: deep-research kandidaten, gemengde public-search-then-human items, human-only items en pipeline/extractie-cleanup items. `docs/review/archive/phase31/phase31.4-deep-research-agent-prompts.md` bevat zes kant-en-klare opdrachten voor deep research agents rond Gezonde School, digitale/operationele infrastructuur, burgerinitiatieven/informele steun, PGA/Zorgzaam/Flever, Samen Sterker in de Wijk en sterkere autoriteits-/adoptiebronnen. Deep research mag publieke bronnen en source gaps verminderen, maar geen D6-classificatie, eigenaarschap, mandaat, financiering of `settled` status vaststellen.
 
 Status op 1 mei 2026: Sprint 31.5 heeft vijf deep-research rapporten als bronsignaal verwerkt, niet als bewijsbron: `docs/dr/Healthy school.md`, `docs/dr/Digital and operational infrastructure.md`, `docs/dr/Informal support.md`, `docs/dr/Zorgzaam Flevoland, and Flever interface.md` en `docs/dr/Samen Sterker in de Wijk in Almere.md`. De geselecteerde publieke bronnen zijn opgeslagen, toegevoegd aan de manifestlaag, door de pipeline gehaald en daarna getoetst in het D6-register en reviewmateriaal. Gezonde School, digitale/operationele infrastructuur, inloopvoorzieningen, burgerinitiatieven/informele steun, de PGA/Zorgzaam/Flever-interface en Samen Sterker in de Wijk hebben nu sterkere publieke prefill, maar blijven `inferred` en `needs_human_review`; formele D6-classificatie, eigenaarschap, mandaat, SLT-relatie en financiering blijven stakeholder- of beleidsvalidatie.
 
@@ -252,15 +252,15 @@ Status: open.
 - Sprint 25.4 is heropend met `docs/phase25-sprint25.4-d6-almere-responsibility-pack-plan.md` omdat de bronbasis rond lokale D6-verantwoordelijkheid voor Almere nog versterking vraagt.
 - Eerste D6 Almere responsibility register toegevoegd in `data/extracted/municipal/almere_d6_responsibility_register.json` met twaalf startcomponenten, publieke bronstatus en lokale validatie-/besluitvelden.
 - Registerintegratie aangescherpt met schema, research-agent routing en QC-checks voor bewijs per rij, toegestane besluitstatus, lokale autoriteitsbron bij `settled`, en uitsluiting van `data/site` als registerbewijs.
-- Interne D6-validatiepack toegevoegd in `docs/review/almere_d6_validation_pack.md`; dit is validatiemateriaal en geen finale publicatie of bestuurlijke werkagendatekst.
+- Interne D6-validatiepack toegevoegd en later gearchiveerd in `docs/review/archive/d6-support/almere_d6_validation_pack.md`; dit is validatiemateriaal en geen finale publicatie of bestuurlijke werkagendatekst.
 
 Sprint 25.5: D6 stakeholder validation handoff
 Status: repository-side complete; awaiting policy-maker stakeholder validation.
 
 Repository-team verantwoordelijkheid:
 
-- Completeer de publieke-brongrens in `docs/review/almere_d6_public_source_boundary.md`.
-- Onderhoud de validatiepack, informatie-uitvraag, decision-needed lijst, funding-gap tabel en safe-wording bibliotheek.
+- Completeer de publieke-brongrens; de oude detailnotitie staat in `docs/review/archive/d6-support/almere_d6_public_source_boundary.md`.
+- Onderhoud de actuele menselijke ingang via `docs/review/almere_d6_deep_research_learnings.md` en `docs/review/almere_d6_open_questions.md`; gebruik de gearchiveerde validatiepack, informatie-uitvraag, decision-needed lijst, funding-gap tabel en safe-wording bibliotheek alleen als onderbouwing.
 - Documenteer welke D6-classificatie-, eigenaarschap-, mandaat-, financierings- en woordingsvragen niet meer uit publieke bronnen kunnen worden beantwoord.
 - Houd de registerstatus conservatief: geen `settled` zonder traceerbare validatie of autoritatieve lokale bron.
 
@@ -484,7 +484,7 @@ Status: completed.
 
 - `src/build_human_review_round.py` maakt een reviewpack uit de review queue, perspectiefconfiguratie en maandelijkse bronaudit.
 - `data/extracted/human_review_round.json` bevat de machineleesbare reviewronde.
-- `docs/review/phase31.3-human-review-round.md` bevat de menselijke reviewlijst per perspectief.
+- `docs/review/archive/phase31/phase31.3-human-review-round.md` bevat de menselijke reviewlijst per perspectief.
 - Reviewerbesluiten blijven apart van bronclaims; D6-hardening blijft geblokkeerd zolang Sprint 25.6 geparkeerd is.
 
 Sprint 31.4: Reviewtriage en deep-research offload
@@ -492,8 +492,8 @@ Status: completed.
 
 - `src/build_review_triage.py` maakt een triagelaag uit de review queue, human-review round en D6 responsibility register.
 - `data/extracted/review_triage_deep_research_offload.json` bevat de machineleesbare bucketverdeling.
-- `docs/review/phase31.4-review-triage-deep-research-offload.md` bevat de menselijke triagenotitie.
-- `docs/review/phase31.4-deep-research-agent-prompts.md` bevat opdrachten die aan deep research agents kunnen worden gedelegeerd.
+- `docs/review/archive/phase31/phase31.4-review-triage-deep-research-offload.md` bevat de menselijke triagenotitie.
+- `docs/review/archive/phase31/phase31.4-deep-research-agent-prompts.md` bevat opdrachten die aan deep research agents kunnen worden gedelegeerd.
 - Deep research mag publieke bronhiaten verkleinen, maar niet de human-only D6-validatievragen beslissen.
 
 ## Kwaliteitscriteria

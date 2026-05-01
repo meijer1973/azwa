@@ -3,7 +3,15 @@
 ## Summary
 Current sprint: Sprint 31.5 - Deep-research bronintake en top-layer verificatie.
 
-This note collects what the repository learned from the Sprint 31.5 deep-research intake. It separates source-backed public learning from remaining validation questions. Deep-research reports are not evidence; only selected public sources that were ingested through the pipeline count as source material.
+This is the "what we know now" note. It collects what the repository learned from the Sprint 31.5 deep-research intake. It does not list the remaining questions; those are in `almere_d6_open_questions.md`.
+
+Deep-research reports are not evidence. Only selected public sources that were ingested through the pipeline count as source material.
+
+## Bottom Line
+
+Public evidence is now strong enough to prepare a focused D6 validation conversation. It is not strong enough to write final bestuurlijke D6 text.
+
+The biggest practical learning is that most D6 rows now have concrete public-source context. The remaining problem is no longer "can we find anything public?" but "who validates classification, ownership, mandate and funding?"
 
 Current top-layer position:
 
@@ -45,7 +53,7 @@ Six deep-research intakes were processed:
 | Burgerinitiatieven en informele steun | Public sources show wijkbudget, resident-led neighbourhood meeting support, De Schoor, VMCA, Humanitas, mantelzorg and prevention-network context. | The repository now has a public-source-backed partner and mechanism map for validation. | This row is no longer a missing-inventory problem at public level; it is a D6 classification and funding question. |
 | Financiering en budgetafbakening | National funding architecture, work-agenda process and some local subsidy/funding traces are visible. | The repository can warn about double-counting risk across AZWA-D6, D5, SPUK/GALA, PGA, regular municipal budget and Zvw/insurer funding. | Public sources support the need for a funding matrix, but do not fill that matrix. |
 
-## Main Repository Learning
+## Main Repository Learning For Humans
 
 The public-source corpus is now strong enough to prepare a validation conversation. It is not strong enough to produce final bestuurlijke D6 wording.
 
@@ -54,6 +62,13 @@ The practical shift is:
 - Before deep research: several rows had weak or generic public support.
 - After deep research: most rows have concrete public-source prefill.
 - Still unchanged: no row is `settled`; formal D6 classification, owner, mandate and funding require validation.
+
+## What Not To Do With This Note
+
+- Do not treat "source-backed validation candidate" as "formal D6 infrastructure".
+- Do not assign an owner from public actor visibility alone.
+- Do not turn funding traces into confirmed component budgets.
+- Do not use deep-research reports as citations; use the ingested public sources instead.
 
 ## Source-Intake Notes
 
@@ -65,4 +80,3 @@ The detailed source-selection notes are in:
 - `docs/source-intake/phase31.5-pga-zorgzaam-flever-deep-research-intake.md`.
 - `docs/source-intake/phase31.5-samen-sterker-deep-research-intake.md`.
 - `docs/source-intake/phase31.5-d6-settlement-evidence-audit-intake.md`.
-

@@ -6,7 +6,7 @@ Sprint 31.3 is completed. The current next sprint is not yet selected in this no
 ## What Changed
 - Added `src/build_human_review_round.py` to turn the review queue, perspective config and monthly source audit into a human-review package.
 - Added `data/extracted/human_review_round.json` as the machine-readable review-round layer.
-- Added `docs/review/phase31.3-human-review-round.md` as the human-readable reviewer pack.
+- Added `docs/review/archive/phase31/phase31.3-human-review-round.md` as the human-readable reviewer pack; the top-level review folder now keeps only the current D6 human-facing summaries.
 - Added the reviewer pack to the internal review dashboard.
 - Added `tests/test_human_review_round.py`.
 

@@ -3,9 +3,29 @@
 ## Summary
 Current sprint: Sprint 31.5 - Deep-research bronintake en top-layer verificatie.
 
-This note collects what is still missing after deep-research source intake. It is intentionally question-focused. Use it to prepare stakeholder validation, finance/controller review and internal document requests.
+This is the "what we still need to ask" note. It collects what is still missing after deep-research source intake. Use it to prepare stakeholder validation, finance/controller review and internal document requests.
 
-No item below should be answered by repository inference. If a question is answered later, record the evidence in `docs/review/almere_d6_stakeholder_validation_log.md` and update the D6 responsibility register only when the evidence directly supports the change.
+No item below should be answered by repository inference. If a question is answered later, record the evidence in a validation record. The archived template is `docs/review/archive/d6-support/almere_d6_stakeholder_validation_log.md`. Update the D6 responsibility register only when the evidence directly supports the change.
+
+## Bottom Line
+
+The remaining work is not broad public-source search. It is validation:
+
+- Which components are formally D6?
+- Who owns, coordinates and executes them?
+- Which mandate or decision proves that?
+- Which funding line applies?
+- Which wording is safe enough for the work agenda?
+
+## First Questions To Ask
+
+Start with these because they unlock the most rows:
+
+1. Ask Gemeente Almere which D6 components are formal infrastructure, adjacent infrastructure, candidate infrastructure or context.
+2. Ask finance/controller roles for a component-level funding matrix and double-counting check.
+3. Ask GGD/JGZ which tasks are regular public-health/JGZ work and which are D6-specific.
+4. Ask programme governance how PGA, Zorgzaam/Flever, AZWA-D5, AZWA-D6 and GALA/SPUK should be separated.
+5. Ask digital/data leads who owns RTP/RSO/data/monitoring/privacy responsibilities per subcomponent.
 
 ## What Still Cannot Be Settled From Public Search
 
@@ -61,4 +81,3 @@ Broad public D6 searching should stay parked. The only targeted public-source le
 ## Handoff Rule
 
 If an answer comes from a stakeholder, internal document or finance/controller confirmation, record it as validation evidence. Do not silently convert it into a source claim. If an answer comes from a new public source, ingest the source first, rerun the pipeline, and then check whether the finding appears in the top data layers.
-

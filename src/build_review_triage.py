@@ -13,8 +13,8 @@ REVIEW_QUEUE_PATH = REPO_ROOT / "data" / "extracted" / "review_queue.json"
 HUMAN_REVIEW_ROUND_PATH = REPO_ROOT / "data" / "extracted" / "human_review_round.json"
 ALMERE_D6_REGISTER_PATH = REPO_ROOT / "data" / "extracted" / "municipal" / "almere_d6_responsibility_register.json"
 OUTPUT_JSON_PATH = REPO_ROOT / "data" / "extracted" / "review_triage_deep_research_offload.json"
-OUTPUT_MD_PATH = REPO_ROOT / "docs" / "review" / "phase31.4-review-triage-deep-research-offload.md"
-PROMPT_OUTPUT_PATH = REPO_ROOT / "docs" / "review" / "phase31.4-deep-research-agent-prompts.md"
+OUTPUT_MD_PATH = REPO_ROOT / "docs" / "review" / "archive" / "phase31" / "phase31.4-review-triage-deep-research-offload.md"
+PROMPT_OUTPUT_PATH = REPO_ROOT / "docs" / "review" / "archive" / "phase31" / "phase31.4-deep-research-agent-prompts.md"
 
 
 BUCKET_RULES = {

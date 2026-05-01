@@ -1,6 +1,6 @@
 {
   "triage_id": "phase31_4_review_triage_deep_research_offload",
-  "generated_on": "2026-04-30",
+  "generated_on": "2026-05-01",
   "current_sprint": "Sprint 31.4 - Review triage and deep-research offload",
   "inputs": [
     "data/extracted/review_queue.json",
@@ -9,13 +9,13 @@
     "docs/review/*.md"
   ],
   "summary": {
-    "review_queue_items": 585,
-    "human_review_round_items": 585,
+    "review_queue_items": 613,
+    "human_review_round_items": 613,
     "bucket_counts": {
-      "pipeline_or_extraction_cleanup": 25,
+      "pipeline_or_extraction_cleanup": 32,
       "human_only": 79,
-      "mixed_public_search_then_human": 166,
-      "deep_research_candidate": 315
+      "mixed_public_search_then_human": 173,
+      "deep_research_candidate": 329
     },
     "deep_research_assignment_count": 6,
     "d6_rows_requiring_human_validation": 12,
@@ -42,7 +42,7 @@
       },
       "sample_items": [
         {
-          "review_item_id": "rvw_019",
+          "review_item_id": "rvw_022",
           "reason_code": "table_extraction_missing",
           "document_id": "reg_ggd_flevoland_kadernota_2027",
           "summary": "reg_ggd_flevoland_kadernota_2027 is marked as table-bearing in the inventory, but no table candidates were extracted.",
@@ -50,7 +50,7 @@
           "sample_claim_ids": []
         },
         {
-          "review_item_id": "rvw_025",
+          "review_item_id": "rvw_032",
           "reason_code": "execution_capacity_need",
           "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
           "summary": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 2 execution capacity claim(s).",
@@ -61,7 +61,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_027",
+          "review_item_id": "rvw_034",
           "reason_code": "execution_review_task",
           "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
           "summary": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 4 execution review or monitoring claim(s).",
@@ -74,7 +74,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_035",
+          "review_item_id": "rvw_042",
           "reason_code": "execution_decision_question",
           "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid",
           "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid contains 2 execution decision-question claim(s).",
@@ -85,7 +85,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_036",
+          "review_item_id": "rvw_043",
           "reason_code": "execution_review_task",
           "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid",
           "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid contains 1 execution review or monitoring claim(s).",
@@ -95,7 +95,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_042",
+          "review_item_id": "rvw_049",
           "reason_code": "execution_decision_question",
           "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
           "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst contains 2 execution decision-question claim(s).",
@@ -106,7 +106,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_051",
+          "review_item_id": "rvw_058",
           "reason_code": "execution_review_task",
           "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd",
           "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd contains 3 execution review or monitoring claim(s).",
@@ -118,7 +118,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_059",
+          "review_item_id": "rvw_066",
           "reason_code": "execution_capacity_need",
           "document_id": "mun_almere_2024_2034_maatschappelijke_agenda",
           "summary": "mun_almere_2024_2034_maatschappelijke_agenda contains 1 execution capacity claim(s).",
@@ -144,23 +144,23 @@
         "unresolved_conflict",
         "vague_region_actor"
       ],
-      "item_count": 315,
+      "item_count": 329,
       "top_reason_codes": {
-        "lower_authority_norm_signal": 66,
-        "municipality_relevance_inferred": 58,
-        "authority_unclear": 56,
-        "expected_time_not_deadline": 33,
+        "lower_authority_norm_signal": 68,
+        "authority_unclear": 61,
+        "municipality_relevance_inferred": 59,
+        "expected_time_not_deadline": 34,
         "national_claim_local_relevance": 24,
-        "vague_region_actor": 22,
+        "vague_region_actor": 23,
+        "regional_split_context": 19,
         "finance_context_needs_verification": 18,
-        "regional_split_context": 15,
         "local_planning_context_not_policy_deadline": 11,
         "unresolved_conflict": 11,
         "local_adoption_gap": 1
       },
       "sample_items": [
         {
-          "review_item_id": "rvw_029",
+          "review_item_id": "rvw_036",
           "reason_code": "expected_time_not_deadline",
           "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
           "summary": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 3 expected or indicative time claim(s).",
@@ -172,7 +172,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_030",
+          "review_item_id": "rvw_037",
           "reason_code": "lower_authority_norm_signal",
           "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
           "summary": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 9 lower-authority norm signal claim(s).",
@@ -186,7 +186,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_031",
+          "review_item_id": "rvw_038",
           "reason_code": "municipality_relevance_inferred",
           "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
           "summary": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 5 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
@@ -200,7 +200,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_032",
+          "review_item_id": "rvw_039",
           "reason_code": "vague_region_actor",
           "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
           "summary": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 1 claim(s) where 'regio' is the only detected actor signal.",
@@ -210,7 +210,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_034",
+          "review_item_id": "rvw_041",
           "reason_code": "authority_unclear",
           "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid",
           "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid contributes lower-authority claims that still require human review.",
@@ -224,7 +224,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_037",
+          "review_item_id": "rvw_044",
           "reason_code": "expected_time_not_deadline",
           "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid",
           "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid contains 2 expected or indicative time claim(s).",
@@ -235,7 +235,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_038",
+          "review_item_id": "rvw_045",
           "reason_code": "local_planning_context_not_policy_deadline",
           "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid",
           "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid contains 2 local planning context claim(s).",
@@ -246,7 +246,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_039",
+          "review_item_id": "rvw_046",
           "reason_code": "lower_authority_norm_signal",
           "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid",
           "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid contains 1 lower-authority norm signal claim(s).",
@@ -265,16 +265,16 @@
         "execution_dependency",
         "execution_sequencing_need"
       ],
-      "item_count": 166,
+      "item_count": 173,
       "top_reason_codes": {
-        "actor_context_needs_role_split": 63,
-        "execution_context_needs_action_split": 43,
-        "execution_sequencing_need": 31,
-        "execution_dependency": 29
+        "actor_context_needs_role_split": 65,
+        "execution_context_needs_action_split": 44,
+        "execution_sequencing_need": 34,
+        "execution_dependency": 30
       },
       "sample_items": [
         {
-          "review_item_id": "rvw_024",
+          "review_item_id": "rvw_031",
           "reason_code": "actor_context_needs_role_split",
           "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
           "summary": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 3 actor-context claim(s) without a more specific governance role.",
@@ -286,7 +286,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_026",
+          "review_item_id": "rvw_033",
           "reason_code": "execution_dependency",
           "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
           "summary": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 1 execution dependency claim(s).",
@@ -296,7 +296,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_028",
+          "review_item_id": "rvw_035",
           "reason_code": "execution_sequencing_need",
           "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
           "summary": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 2 execution sequencing claim(s).",
@@ -307,7 +307,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_033",
+          "review_item_id": "rvw_040",
           "reason_code": "actor_context_needs_role_split",
           "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid",
           "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid contains 3 actor-context claim(s) without a more specific governance role.",
@@ -319,7 +319,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_040",
+          "review_item_id": "rvw_047",
           "reason_code": "actor_context_needs_role_split",
           "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
           "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst contains 1 actor-context claim(s) without a more specific governance role.",
@@ -329,7 +329,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_041",
+          "review_item_id": "rvw_048",
           "reason_code": "execution_context_needs_action_split",
           "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
           "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst contains 2 execution-context claim(s) without a more specific execution status.",
@@ -340,7 +340,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_043",
+          "review_item_id": "rvw_050",
           "reason_code": "execution_dependency",
           "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
           "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst contains 1 execution dependency claim(s).",
@@ -350,7 +350,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_044",
+          "review_item_id": "rvw_051",
           "reason_code": "execution_sequencing_need",
           "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
           "summary": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst contains 2 execution sequencing claim(s).",
@@ -370,10 +370,10 @@
         "missing_d6_content",
         "table_content_not_promoted"
       ],
-      "item_count": 25,
+      "item_count": 32,
       "top_reason_codes": {
-        "missing_d6_content": 12,
-        "missing_d5_content": 10,
+        "missing_d6_content": 18,
+        "missing_d5_content": 11,
         "extraction_noise_detected": 3
       },
       "sample_items": [
@@ -419,6 +419,14 @@
         },
         {
           "review_item_id": "rvw_006",
+          "reason_code": "missing_d6_content",
+          "document_id": "mun_almere_evaluatie_schakelteams_2021",
+          "summary": "mun_almere_evaluatie_schakelteams_2021 is expected to contain D6 material, but the extraction produced no D6 items.",
+          "recommended_action": "Review the source and improve the D6 extraction rules for this document.",
+          "sample_claim_ids": []
+        },
+        {
+          "review_item_id": "rvw_007",
           "reason_code": "missing_d5_content",
           "document_id": "mun_almere_pga_current_home",
           "summary": "mun_almere_pga_current_home is expected to contain D5 material, but the extraction produced no D5 items.",
@@ -426,19 +434,11 @@
           "sample_claim_ids": []
         },
         {
-          "review_item_id": "rvw_007",
-          "reason_code": "missing_d6_content",
-          "document_id": "mun_almere_welzijnskader_2020",
-          "summary": "mun_almere_welzijnskader_2020 is expected to contain D6 material, but the extraction produced no D6 items.",
-          "recommended_action": "Review the source and improve the D6 extraction rules for this document.",
-          "sample_claim_ids": []
-        },
-        {
           "review_item_id": "rvw_008",
-          "reason_code": "missing_d6_content",
-          "document_id": "mun_vmca_meerjarenvisie_2022_2025",
-          "summary": "mun_vmca_meerjarenvisie_2022_2025 is expected to contain D6 material, but the extraction produced no D6 items.",
-          "recommended_action": "Review the source and improve the D6 extraction rules for this document.",
+          "reason_code": "missing_d5_content",
+          "document_id": "mun_almere_pga_samen_sterker_wijk",
+          "summary": "mun_almere_pga_samen_sterker_wijk is expected to contain D5 material, but the extraction produced no D5 items.",
+          "recommended_action": "Review the source and improve the D5 extraction rules for this document.",
           "sample_claim_ids": []
         }
       ]

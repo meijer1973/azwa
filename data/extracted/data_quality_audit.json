@@ -1,20 +1,20 @@
 {
   "audit_run_id": "phase24_data_quality_audit_v1",
-  "generated_on": "2026-04-30",
+  "generated_on": "2026-05-01",
   "storage": {
     "canonical_output": "data/extracted/data_quality_audit.json",
     "sprint_note": "docs/completed-plans/phase24-sprint24.2-audit.md"
   },
   "summary": {
-    "claim_count": 760,
+    "claim_count": 782,
     "topic_count": 44,
-    "claims_with_perspectives": 738,
+    "claims_with_perspectives": 760,
     "claims_without_perspectives": 22,
     "broad_rest_topic_count": 5,
     "high_volume_topic_count": 9,
-    "rough_claim_count": 147,
+    "rough_claim_count": 150,
     "site_files_with_rough_claims": 10,
-    "open_review_items": 562
+    "open_review_items": 583
   },
   "perspective_coverage": {
     "claims": {
@@ -22,7 +22,7 @@
         {
           "perspective_id": "norm",
           "title": "Norm",
-          "claim_count": 253,
+          "claim_count": 257,
           "topic_count": 17,
           "sample_topics": [
             "d5.basisfunctionaliteiten_onderbouwd",
@@ -38,7 +38,7 @@
         {
           "perspective_id": "time",
           "title": "Time",
-          "claim_count": 223,
+          "claim_count": 227,
           "topic_count": 16,
           "sample_topics": [
             "monitoring.d5_operational_monitoring",
@@ -79,7 +79,7 @@
         {
           "perspective_id": "locality",
           "title": "Locality",
-          "claim_count": 541,
+          "claim_count": 561,
           "topic_count": 35,
           "sample_topics": [
             "d5.basisfunctionaliteiten_onderbouwd",
@@ -95,7 +95,7 @@
         {
           "perspective_id": "execution",
           "title": "Execution",
-          "claim_count": 537,
+          "claim_count": 556,
           "topic_count": 27,
           "sample_topics": [
             "d5.basisfunctionaliteiten_onderbouwd",
@@ -109,7 +109,7 @@
           ]
         }
       ],
-      "claims_with_perspectives": 738,
+      "claims_with_perspectives": 760,
       "claims_without_perspectives": 22,
       "unmapped_topics": [],
       "topic_mapping_gaps": [
@@ -192,19 +192,19 @@
         }
       },
       "source_detail": {
-        "file_count": 95,
-        "labeled_file_count": 95,
+        "file_count": 104,
+        "labeled_file_count": 104,
         "unlabeled_file_count": 0,
         "perspective_counts": {
-          "norm": 95,
-          "time": 70,
-          "governance": 81,
-          "locality": 94,
-          "execution": 85,
+          "norm": 104,
+          "time": 73,
+          "governance": 86,
+          "locality": 103,
+          "execution": 91,
           "money": 24
         },
         "classification_counts": {
-          "source_fact": 95
+          "source_fact": 104
         }
       }
     }
@@ -214,17 +214,17 @@
     "status_counts": {
       "agreement": 76,
       "binding": 1,
-      "contextual": 78,
-      "expectation": 34,
-      "guidance": 319,
-      "lower_authority_signal": 252
+      "contextual": 79,
+      "expectation": 35,
+      "guidance": 335,
+      "lower_authority_signal": 256
     },
     "norm_perspective_status_counts": {
       "agreement": 27,
       "contextual": 1,
       "expectation": 17,
       "guidance": 8,
-      "lower_authority_signal": 200
+      "lower_authority_signal": 204
     },
     "attribution_needed_sample": [
       {
@@ -458,33 +458,33 @@
   "time_status_audit": {
     "description": "Sprint 27.2 time split for formal deadlines, expected moments, review/update cycles, budget-calendar moments, implementation horizons, local planning context, source-dated moments, publication/context dates, and undated context.",
     "status_counts": {
-      "budget_calendar_moment": 145,
-      "expected_moment": 69,
+      "budget_calendar_moment": 149,
+      "expected_moment": 71,
       "formal_deadline": 9,
       "implementation_horizon": 28,
       "local_planning_context": 18,
       "publication_or_context_date": 41,
-      "review_or_update_moment": 136,
+      "review_or_update_moment": 137,
       "source_dated_moment": 15,
-      "undated_context": 299
+      "undated_context": 314
     },
     "time_perspective_status_counts": {
-      "budget_calendar_moment": 26,
-      "expected_moment": 21,
+      "budget_calendar_moment": 28,
+      "expected_moment": 22,
       "formal_deadline": 6,
       "implementation_horizon": 19,
       "local_planning_context": 8,
-      "review_or_update_moment": 124,
+      "review_or_update_moment": 125,
       "source_dated_moment": 15,
       "undated_context": 4
     },
     "date_signal_counts": {
       "exact_date": 49,
       "month_or_cycle": 62,
-      "none": 471,
-      "period": 36,
+      "none": 488,
+      "period": 38,
       "quarter": 7,
-      "year": 135
+      "year": 138
     },
     "review_needed_sample": [
       {
@@ -720,12 +720,12 @@
     "status_counts": {
       "accountability_rule": 55,
       "allocation_mechanism": 33,
-      "application_condition": 26,
-      "budget_window": 164,
+      "application_condition": 27,
+      "budget_window": 168,
       "finance_context": 22,
-      "funding_route": 54,
+      "funding_route": 55,
       "local_funding_gap": 1,
-      "not_financial": 405
+      "not_financial": 421
     },
     "money_perspective_status_counts": {
       "accountability_rule": 4,
@@ -943,14 +943,14 @@
     "description": "Sprint 27.4 governance split for decision, coordination, application, execution, accountability, approval, review, governance gaps, actor context, and non-governance material.",
     "status_counts": {
       "accountability_role": 12,
-      "actor_context": 188,
-      "application_role": 22,
+      "actor_context": 191,
+      "application_role": 23,
       "approval_role": 53,
-      "coordination_role": 68,
+      "coordination_role": 71,
       "decision_role": 39,
-      "execution_role": 60,
+      "execution_role": 64,
       "governance_gap": 1,
-      "not_governance": 275,
+      "not_governance": 286,
       "review_role": 42
     },
     "governance_perspective_status_counts": {
@@ -959,14 +959,14 @@
     },
     "actor_signal_counts": {
       "college": 16,
-      "gemeente": 187,
+      "gemeente": 192,
       "gemeenteraad": 33,
       "mandaatgemeente": 5,
       "ministerie": 26,
-      "regio": 88,
-      "uitvoeringspartner": 21,
+      "regio": 89,
+      "uitvoeringspartner": 23,
       "vng": 20,
-      "zorgverzekeraar": 27
+      "zorgverzekeraar": 29
     },
     "zero_count_actor_signals": [],
     "verification_needed_sample": [
@@ -1249,26 +1249,26 @@
   "locality_status_audit": {
     "description": "Sprint 27.5 locality split for explicit Almere, explicit Flevoland, regional split context, national general, national with local relevance, inferred local relevance, local adoption gaps, municipal context, and no locality signal.",
     "status_counts": {
-      "explicit_almere": 373,
-      "explicit_flevoland": 71,
+      "explicit_almere": 384,
+      "explicit_flevoland": 75,
       "local_adoption_gap": 1,
       "national_general": 193,
       "national_with_local_relevance": 72,
-      "regional_split_context": 50
+      "regional_split_context": 57
     },
     "locality_perspective_status_counts": {
-      "explicit_almere": 372,
-      "explicit_flevoland": 71,
+      "explicit_almere": 382,
+      "explicit_flevoland": 75,
       "local_adoption_gap": 1,
       "national_general": 15,
       "national_with_local_relevance": 48,
-      "regional_split_context": 34
+      "regional_split_context": 40
     },
     "regional_split_counts": {
-      "GGD-regio": 42,
+      "GGD-regio": 45,
       "IZA/AZWA-regio": 37,
       "ROAZ/subregio": 8,
-      "gemeentelijk": 227,
+      "gemeentelijk": 234,
       "provincie": 2
     },
     "verification_needed_sample": [
@@ -1661,32 +1661,32 @@
     "status_counts": {
       "capacity_need": 26,
       "decision_question": 19,
-      "dependency": 43,
-      "execution_context": 94,
-      "implementation_activity": 57,
-      "not_execution": 108,
-      "operational_requirement": 257,
+      "dependency": 44,
+      "execution_context": 95,
+      "implementation_activity": 61,
+      "not_execution": 110,
+      "operational_requirement": 267,
       "review_task": 88,
-      "sequencing_need": 68
+      "sequencing_need": 72
     },
     "execution_perspective_status_counts": {
       "capacity_need": 21,
       "decision_question": 5,
-      "dependency": 26,
-      "execution_context": 80,
-      "implementation_activity": 31,
-      "operational_requirement": 251,
+      "dependency": 27,
+      "execution_context": 81,
+      "implementation_activity": 35,
+      "operational_requirement": 261,
       "review_task": 79,
-      "sequencing_need": 44
+      "sequencing_need": 47
     },
     "execution_need_signal_counts": {
       "capacity": 26,
       "decision_question": 19,
-      "dependency": 45,
-      "implementation_activity": 114,
-      "operational_requirement": 46,
+      "dependency": 46,
+      "implementation_activity": 120,
+      "operational_requirement": 50,
       "review": 121,
-      "sequencing": 87
+      "sequencing": 91
     },
     "verification_needed_sample": [
       {
@@ -1968,7 +1968,7 @@
     "broad_rest_topics": [
       {
         "topic": "monitoring.other",
-        "current_claim_count": 85,
+        "current_claim_count": 86,
         "historical_claim_count": 6,
         "needs_human_review": true,
         "confidence": 0.37,
@@ -1995,11 +1995,11 @@
           "clm__nat_azwa_2026_voortgang_kamerbrief_monitoring_and_evaluation_002",
           "clm__nat_azwa_2026_cw31_kamerbrief_monitoring_and_evaluation_002"
         ],
-        "interpretation_summary": "Current view combines 85 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
+        "interpretation_summary": "Current view combines 86 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
       },
       {
         "topic": "timeline.other",
-        "current_claim_count": 66,
+        "current_claim_count": 69,
         "historical_claim_count": 4,
         "needs_human_review": true,
         "confidence": 0.36,
@@ -2025,7 +2025,39 @@
           "clm__nat_azwa_2026_voortgang_kamerbrief_timeline_and_status_001",
           "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_timeline_and_status_003"
         ],
-        "interpretation_summary": "Current view combines 66 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
+        "interpretation_summary": "Current view combines 69 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
+      },
+      {
+        "topic": "d6.other",
+        "current_claim_count": 61,
+        "historical_claim_count": 0,
+        "needs_human_review": true,
+        "confidence": 0.39,
+        "perspective_ids": [
+          "execution",
+          "locality",
+          "norm"
+        ],
+        "sample_documents": [
+          "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
+          "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
+          "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst",
+          "nat_azwa_2026_voortgang_kamerbrief",
+          "nat_azwa_opdracht_werkagenda_d5_2026",
+          "nat_gala_2023_gezond_en_actief_leven",
+          "nat_iza_2022_integraal_zorgakkoord"
+        ],
+        "sample_claim_ids": [
+          "clm__nat_gala_2023_gezond_en_actief_leven_d6_003",
+          "clm__nat_gala_2023_gezond_en_actief_leven_d6_001",
+          "clm__nat_iza_2022_integraal_zorgakkoord_d6_003",
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_d6_001",
+          "clm__nat_azwa_2026_voortgang_kamerbrief_d6_001",
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_d6_003",
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_d6_002",
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_d6_001"
+        ],
+        "interpretation_summary": "Current view combines 61 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
       },
       {
         "topic": "governance_and_finance.other",
@@ -2054,38 +2086,6 @@
           "clm__reg_ggd_flevoland_begroting_2026_governance_and_finance_002"
         ],
         "interpretation_summary": "Current view combines 61 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
-      },
-      {
-        "topic": "d6.other",
-        "current_claim_count": 59,
-        "historical_claim_count": 0,
-        "needs_human_review": true,
-        "confidence": 0.39,
-        "perspective_ids": [
-          "execution",
-          "locality",
-          "norm"
-        ],
-        "sample_documents": [
-          "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
-          "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
-          "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst",
-          "nat_azwa_2026_voortgang_kamerbrief",
-          "nat_azwa_opdracht_werkagenda_d5_2026",
-          "nat_gala_2023_gezond_en_actief_leven",
-          "nat_iza_2022_integraal_zorgakkoord"
-        ],
-        "sample_claim_ids": [
-          "clm__nat_gala_2023_gezond_en_actief_leven_d6_003",
-          "clm__nat_gala_2023_gezond_en_actief_leven_d6_001",
-          "clm__nat_iza_2022_integraal_zorgakkoord_d6_003",
-          "clm__nat_azwa_opdracht_werkagenda_d5_2026_d6_001",
-          "clm__nat_azwa_2026_voortgang_kamerbrief_d6_001",
-          "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_d6_003",
-          "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_d6_002",
-          "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_d6_001"
-        ],
-        "interpretation_summary": "Current view combines 59 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
       },
       {
         "topic": "d5.other",
@@ -2124,7 +2124,7 @@
     "high_volume_topics": [
       {
         "topic": "municipal.implementation_translation",
-        "current_claim_count": 169,
+        "current_claim_count": 183,
         "historical_claim_count": 8,
         "needs_human_review": true,
         "confidence": 0.53,
@@ -2138,11 +2138,11 @@
           "clm__nat_azwa_opdracht_werkagenda_d5_2026_municipal_translation_002",
           "clm__nat_azwa_2026_cw31_kader_d5_d6_municipal_translation_002"
         ],
-        "interpretation_summary": "Current view combines 169 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
+        "interpretation_summary": "Current view combines 183 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
       },
       {
         "topic": "monitoring.other",
-        "current_claim_count": 85,
+        "current_claim_count": 86,
         "historical_claim_count": 6,
         "needs_human_review": true,
         "confidence": 0.37,
@@ -2156,11 +2156,11 @@
           "clm__nat_azwa_2026_voortgang_kamerbrief_monitoring_and_evaluation_002",
           "clm__nat_azwa_2026_cw31_kamerbrief_monitoring_and_evaluation_002"
         ],
-        "interpretation_summary": "Current view combines 85 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
+        "interpretation_summary": "Current view combines 86 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
       },
       {
         "topic": "timeline.other",
-        "current_claim_count": 66,
+        "current_claim_count": 69,
         "historical_claim_count": 4,
         "needs_human_review": true,
         "confidence": 0.36,
@@ -2174,7 +2174,25 @@
           "clm__nat_azwa_2026_voortgang_kamerbrief_timeline_and_status_001",
           "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_timeline_and_status_003"
         ],
-        "interpretation_summary": "Current view combines 66 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
+        "interpretation_summary": "Current view combines 69 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
+      },
+      {
+        "topic": "d6.other",
+        "current_claim_count": 61,
+        "historical_claim_count": 0,
+        "needs_human_review": true,
+        "confidence": 0.39,
+        "sample_claim_ids": [
+          "clm__nat_gala_2023_gezond_en_actief_leven_d6_003",
+          "clm__nat_gala_2023_gezond_en_actief_leven_d6_001",
+          "clm__nat_iza_2022_integraal_zorgakkoord_d6_003",
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_d6_001",
+          "clm__nat_azwa_2026_voortgang_kamerbrief_d6_001",
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_d6_003",
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_d6_002",
+          "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_d6_001"
+        ],
+        "interpretation_summary": "Current view combines 61 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
       },
       {
         "topic": "governance_and_finance.other",
@@ -2193,24 +2211,6 @@
           "clm__reg_ggd_flevoland_begroting_2026_governance_and_finance_002"
         ],
         "interpretation_summary": "Current view combines 61 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
-      },
-      {
-        "topic": "d6.other",
-        "current_claim_count": 59,
-        "historical_claim_count": 0,
-        "needs_human_review": true,
-        "confidence": 0.39,
-        "sample_claim_ids": [
-          "clm__nat_gala_2023_gezond_en_actief_leven_d6_003",
-          "clm__nat_gala_2023_gezond_en_actief_leven_d6_001",
-          "clm__nat_iza_2022_integraal_zorgakkoord_d6_003",
-          "clm__nat_azwa_opdracht_werkagenda_d5_2026_d6_001",
-          "clm__nat_azwa_2026_voortgang_kamerbrief_d6_001",
-          "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_d6_003",
-          "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_d6_002",
-          "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_d6_001"
-        ],
-        "interpretation_summary": "Current view combines 59 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
       },
       {
         "topic": "d5.basisfunctionaliteiten_onderbouwd",
@@ -2268,7 +2268,7 @@
       },
       {
         "topic": "d6.regional_coordination",
-        "current_claim_count": 21,
+        "current_claim_count": 23,
         "historical_claim_count": 0,
         "needs_human_review": true,
         "confidence": 0.58,
@@ -2276,13 +2276,13 @@
           "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d6_003",
           "clm__reg_ggd_flevoland_begroting_2026_d6_003",
           "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_d6_001",
+          "clm__mun_almere_pga_samen_sterker_wijk_d6_002",
           "clm__reg_flevoland_2023_regiobeeld_d6_002",
+          "clm__reg_zonmw_samen_sterker_uitvoeringsplan_d6_001",
           "clm__reg_ggd_flevoland_valpreventie_almere_d6_002",
-          "clm__reg_ggd_flevoland_valpreventie_almere_d6_001",
-          "clm__reg_ggd_flevoland_ketenaanpak_gezond_gewicht_almere_d6_002",
-          "clm__reg_ggd_flevoland_ketenaanpak_gezond_gewicht_almere_d6_001"
+          "clm__reg_ggd_flevoland_valpreventie_almere_d6_001"
         ],
-        "interpretation_summary": "Current view combines 21 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
+        "interpretation_summary": "Current view combines 23 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
       }
     ]
   },
@@ -2297,11 +2297,11 @@
     },
     "issue_counts": {
       "english_summary": 65,
-      "unverified_extraction_length": 63,
+      "unverified_extraction_length": 65,
       "bullet_or_heading_fragment": 10,
-      "fragment_too_short": 9
+      "fragment_too_short": 10
     },
-    "claim_count": 147,
+    "claim_count": 150,
     "claims": [
       {
         "claim_id": "clm__mun_almere_pga_current_home_d6_001",
@@ -3486,6 +3486,20 @@
         "statement_excerpt": "3. Maatschappelijke en organisatorische ontwikkelingen Het Gezond en Actief Leven Akkoord4 en het Integraal Zorgakkoord5 zijn in 2023 landelijk vastgesteld om uitvoering te geven aan deze transformatie. GGD Flevoland heeft hierin vanuit de Wet Publieke Gezondheid6 (Wpg) en haar takenpakket een belangrijke rol. Zo is GGD Flevoland nauw betrokken bij de lokale GALA plannen van de gemeenten, het R..."
       },
       {
+        "claim_id": "clm__reg_samen_sterker_in_de_wijk_home_municipal_translation_002",
+        "topic": "municipal.implementation_translation",
+        "document_id": "reg_samen_sterker_in_de_wijk_home",
+        "jurisdiction_level": "regional",
+        "perspective_ids": [
+          "execution",
+          "locality"
+        ],
+        "issue_codes": [
+          "fragment_too_short"
+        ],
+        "statement_excerpt": "Samen Sterker in de Wijk ondersteunt hierbij."
+      },
+      {
         "claim_id": "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_governance_and_finance_003",
         "topic": "governance_and_finance.other",
         "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
@@ -3740,6 +3754,35 @@
           "unverified_extraction_length"
         ],
         "statement_excerpt": "Dit project is bedoeld voor iedereen in Almere die bijdraagt aan gezondheid en welzijn: professionals, inwoners vrijwilligers, studenten, beleidsmakers en bestuurders Start Livegang: Januari 2024 Projectleider Rosa Kimman Doelgroep Almere-inwoners met een tijdelijke zorgvraag buiten het ziekenhuis Partners Woonzorg Flevoland, Zorggroep Almere, Flevoziekenhuis, ReHA, (toekomst: ambulance)"
+      },
+      {
+        "claim_id": "clm__mun_almere_pga_samen_sterker_wijk_d6_002",
+        "topic": "d6.regional_coordination",
+        "document_id": "mun_almere_pga_samen_sterker_wijk",
+        "jurisdiction_level": "municipal",
+        "perspective_ids": [
+          "execution",
+          "locality",
+          "norm"
+        ],
+        "issue_codes": [
+          "unverified_extraction_length"
+        ],
+        "statement_excerpt": "Data Start in 2019 tot Eind 2027 Projectleider Laura van Hummel Doelgroep Inwoners van Almere (18+) met mentale kwetsbaarheid Partners Bruis, EigenWijze Company, GGZ Centraal, Kwintes, GGD Flevoland, Leger des Heils, Amethist Verslavingszorg, Triade Vitree, Wijkteams Almere"
+      },
+      {
+        "claim_id": "clm__mun_almere_pga_samen_sterker_wijk_timeline_and_status_001",
+        "topic": "timeline.other",
+        "document_id": "mun_almere_pga_samen_sterker_wijk",
+        "jurisdiction_level": "municipal",
+        "perspective_ids": [
+          "locality",
+          "time"
+        ],
+        "issue_codes": [
+          "unverified_extraction_length"
+        ],
+        "statement_excerpt": "Data Start in 2019 tot Eind 2027 Projectleider Laura van Hummel Doelgroep Inwoners van Almere (18+) met mentale kwetsbaarheid Partners Bruis, EigenWijze Company, GGZ Centraal, Kwintes, GGD Flevoland, Leger des Heils, Amethist Verslavingszorg, Triade Vitree, Wijkteams Almere"
       },
       {
         "claim_id": "clm__mun_almere_pga_seo_businesscase_2024_governance_and_finance_002",
@@ -4376,15 +4419,36 @@
       "action_detail": 11,
       "decision_detail": 15,
       "site_almere_view": 19,
-      "site_home_view": 14,
-      "site_updates_view": 54
+      "site_home_view": 15,
+      "site_updates_view": 57
     },
     "files": [
       {
         "path": "data/site/site_updates_view.json",
         "page_group": "site_updates_view",
-        "rough_claim_count": 54,
+        "rough_claim_count": 57,
         "sample_claims": [
+          {
+            "claim_id": "clm__mun_almere_pga_samen_sterker_wijk_d6_002",
+            "issue_codes": [
+              "unverified_extraction_length"
+            ],
+            "statement_excerpt": "Data Start in 2019 tot Eind 2027 Projectleider Laura van Hummel Doelgroep Inwoners van Almere (18+) met mentale kwetsbaarheid Partners Bruis, EigenWijze Company, GGZ Centraal, Kwintes, GGD Flevoland, Leger des Heils, Amethist Verslavingszorg, Triade Vitree, Wijkteams Almere"
+          },
+          {
+            "claim_id": "clm__mun_almere_pga_samen_sterker_wijk_timeline_and_status_001",
+            "issue_codes": [
+              "unverified_extraction_length"
+            ],
+            "statement_excerpt": "Data Start in 2019 tot Eind 2027 Projectleider Laura van Hummel Doelgroep Inwoners van Almere (18+) met mentale kwetsbaarheid Partners Bruis, EigenWijze Company, GGZ Centraal, Kwintes, GGD Flevoland, Leger des Heils, Amethist Verslavingszorg, Triade Vitree, Wijkteams Almere"
+          },
+          {
+            "claim_id": "clm__reg_samen_sterker_in_de_wijk_home_municipal_translation_002",
+            "issue_codes": [
+              "fragment_too_short"
+            ],
+            "statement_excerpt": "Samen Sterker in de Wijk ondersteunt hierbij."
+          },
           {
             "claim_id": "clm__reg_flever_zorgzaam_flevoland_project_monitoring_and_evaluation_001",
             "issue_codes": [
@@ -4415,27 +4479,6 @@
           },
           {
             "claim_id": "clm__mun_deschoor_buurtkamers_d5_003",
-            "issue_codes": [
-              "unverified_extraction_length"
-            ],
-            "statement_excerpt": "OVER: ► duurzaamheid ► eenzaamheid ► geld/schulden ► mijn buurt ► ondersteuning vanuit de wijkteams ► ouder worden ► relatie/scheiding | ► sociaal/juridische zaken ► taalondersteuning ► toeslagenaffaire ► vervoer ► Welzijn op Recept ► werk/opleiding ► wonen"
-          },
-          {
-            "claim_id": "clm__mun_deschoor_buurtkamers_municipal_translation_003",
-            "issue_codes": [
-              "unverified_extraction_length"
-            ],
-            "statement_excerpt": "OVER: ► duurzaamheid ► eenzaamheid ► geld/schulden ► mijn buurt ► ondersteuning vanuit de wijkteams ► ouder worden ► relatie/scheiding | ► sociaal/juridische zaken ► taalondersteuning ► toeslagenaffaire ► vervoer ► Welzijn op Recept ► werk/opleiding ► wonen"
-          },
-          {
-            "claim_id": "clm__mun_deschoor_initiatievenbureau_d5_003",
-            "issue_codes": [
-              "unverified_extraction_length"
-            ],
-            "statement_excerpt": "OVER: ► duurzaamheid ► eenzaamheid ► geld/schulden ► mijn buurt ► ondersteuning vanuit de wijkteams ► ouder worden ► relatie/scheiding | ► sociaal/juridische zaken ► taalondersteuning ► toeslagenaffaire ► vervoer ► Welzijn op Recept ► werk/opleiding ► wonen"
-          },
-          {
-            "claim_id": "clm__mun_deschoor_initiatievenbureau_municipal_translation_003",
             "issue_codes": [
               "unverified_extraction_length"
             ],
@@ -4509,21 +4552,28 @@
       {
         "path": "data/site/site_home_view.json",
         "page_group": "site_home_view",
-        "rough_claim_count": 14,
+        "rough_claim_count": 15,
         "sample_claims": [
           {
-            "claim_id": "clm__reg_flever_zorgzaam_flevoland_project_monitoring_and_evaluation_001",
+            "claim_id": "clm__mun_almere_pga_samen_sterker_wijk_d6_002",
             "issue_codes": [
               "unverified_extraction_length"
             ],
-            "statement_excerpt": "Inwonersparticipatie - Versterken - Ervaringsdeskundigheid - Eenzaamheid in Flevoland - Inspiratie - Instroom en behoud - Formele en informele zorg - Versterken veranderkracht - Leren en Opleiden - Datagedreven werken - Word lid van Flever - Experimenteren gebiedsontwikkeling - Netwerk Arbeidsmarkt en Onderwijs - Netwerk Versterken van Inwoners - Netwerk Onderzoek - Kennisbank - Agenda - Actuee..."
+            "statement_excerpt": "Data Start in 2019 tot Eind 2027 Projectleider Laura van Hummel Doelgroep Inwoners van Almere (18+) met mentale kwetsbaarheid Partners Bruis, EigenWijze Company, GGZ Centraal, Kwintes, GGD Flevoland, Leger des Heils, Amethist Verslavingszorg, Triade Vitree, Wijkteams Almere"
           },
           {
-            "claim_id": "clm__reg_flever_inwoners_onderdeel_pga_monitoring_and_evaluation_001",
+            "claim_id": "clm__mun_almere_pga_samen_sterker_wijk_timeline_and_status_001",
             "issue_codes": [
               "unverified_extraction_length"
             ],
-            "statement_excerpt": "Inwonersparticipatie - Versterken - Ervaringsdeskundigheid - Eenzaamheid in Flevoland - Inspiratie - Instroom en behoud - Formele en informele zorg - Versterken veranderkracht - Leren en Opleiden - Datagedreven werken - Word lid van Flever - Experimenteren gebiedsontwikkeling - Netwerk Arbeidsmarkt en Onderwijs - Netwerk Versterken van Inwoners - Netwerk Onderzoek - Kennisbank - Agenda - Actuee..."
+            "statement_excerpt": "Data Start in 2019 tot Eind 2027 Projectleider Laura van Hummel Doelgroep Inwoners van Almere (18+) met mentale kwetsbaarheid Partners Bruis, EigenWijze Company, GGZ Centraal, Kwintes, GGD Flevoland, Leger des Heils, Amethist Verslavingszorg, Triade Vitree, Wijkteams Almere"
+          },
+          {
+            "claim_id": "clm__reg_samen_sterker_in_de_wijk_home_municipal_translation_002",
+            "issue_codes": [
+              "fragment_too_short"
+            ],
+            "statement_excerpt": "Samen Sterker in de Wijk ondersteunt hierbij."
           },
           {
             "claim_id": "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_timeline_and_status_001",
@@ -4559,13 +4609,6 @@
               "english_summary"
             ],
             "statement_excerpt": "A mid-term review is scheduled for early 2027 and can trigger sharper afspraken, different middeleninzet, or budget-neutral shifts between sectors before decisions for 2028."
-          },
-          {
-            "claim_id": "clm__reg_flevoland_2023_regioplan_iza_municipal_translation_002",
-            "issue_codes": [
-              "english_summary"
-            ],
-            "statement_excerpt": "A key follow-up issue for municipal implementation is clarifying roles and responsibilities between municipality, social domain, insurers, and providers."
           }
         ]
       },
@@ -4810,8 +4853,8 @@
       "related_topics": [
         "monitoring.other",
         "timeline.other",
-        "governance_and_finance.other",
         "d6.other",
+        "governance_and_finance.other",
         "d5.other"
       ],
       "related_review_reasons": [

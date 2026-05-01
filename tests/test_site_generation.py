@@ -41,7 +41,7 @@ REFERENCE_PAGE_PATH = DIST_DIR / "reference" / "index.html"
 REFERENCE_TOPICS_PAGE_PATH = DIST_DIR / "reference" / "topics" / "index.html"
 SOURCES_PAGE_PATH = DIST_DIR / "sources" / "index.html"
 UPDATES_PAGE_PATH = DIST_DIR / "updates" / "index.html"
-LATEST_UPDATE_ID = "upd_pga_zorgzaam_flever_interface_intake_2026_04_30"
+LATEST_UPDATE_ID = "upd_samen_sterker_wijk_intake_2026_05_01"
 LATEST_UPDATE_CLAIMS_PAGE_PATH = DIST_DIR / "updates" / "claims" / LATEST_UPDATE_ID / "index.html"
 VNG_FINANCING_UPDATE_ID = "upd_vng_financiering_2026_04_23"
 VNG_FINANCING_UPDATE_CLAIMS_PAGE_PATH = DIST_DIR / "updates" / "claims" / VNG_FINANCING_UPDATE_ID / "index.html"
@@ -502,17 +502,17 @@ class SiteGenerationTests(unittest.TestCase):
         html = UPDATES_PAGE_PATH.read_text(encoding="utf-8")
 
         self.assertEqual(updates_view["latest_update"]["update_id"], LATEST_UPDATE_ID)
-        self.assertIn("PGA, Zorgzaam Flevoland en Flever beter gescheiden", html)
+        self.assertIn("Samen Sterker in de Wijk sterker onderbouwd", html)
         self.assertIn("Kort samengevat", html)
-        self.assertIn("Vier publieke bronnen rond GGD Flevoland", html)
-        self.assertIn('../sources/flever-zorgzaam-flevoland/index.html', html)
-        self.assertIn("95", html)
+        self.assertIn("Negen publieke bronnen rond Zorglandschap Wmo", html)
+        self.assertIn('../sources/monitor-zorglandschap-wmo-2025/index.html', html)
+        self.assertIn("104", html)
         self.assertIn("Bekijk volledige controlelijst", html)
         self.assertIn("Wat is er veranderd", html)
         self.assertIn("Meer duiding", html)
-        self.assertIn("PGA wordt scherper als lokaal transformatieprogramma gelezen", html)
-        self.assertIn("Zorgzaam Flevoland wordt scherper als regionale beweging", html)
-        self.assertIn("Flever wordt als ondersteunende participatie- en verbindingsactor zichtbaar", html)
+        self.assertIn("Zorglandschap Wmo geeft regionale programma- en monitorcontext", html)
+        self.assertIn("ZonMw en PGA geven project- en transformatiecontext", html)
+        self.assertIn("Gemeentelijke bronnen geven extra Almere-context", html)
         self.assertIn("Tijdlijn", html)
         self.assertIn(f'claims/{LATEST_UPDATE_ID}/index.html', html)
         self.assertIn(f'id="{VNG_FINANCING_UPDATE_ID}"', html)
@@ -580,10 +580,10 @@ class SiteGenerationTests(unittest.TestCase):
 
     def test_update_claims_detail_explicitly_attributes_lower_authority_fragments(self) -> None:
         html = LATEST_UPDATE_CLAIMS_PAGE_PATH.read_text(encoding="utf-8")
-        self.assertIn("Bronhouder: Flever", html)
+        self.assertIn("Bronhouder: Regio Almere / Gemeente Almere", html)
         self.assertIn("Soort bron: toelichtende bron", html)
         self.assertIn("Veilige formulering: Altijd expliciet toeschrijven", html)
-        self.assertIn("Volgens Flever:", html)
+        self.assertIn("Volgens Regio Almere / Gemeente Almere:", html)
 
     def test_timeline_register_is_chronological_within_each_year(self) -> None:
         register = load_json(TIMELINE_REGISTER_PATH)

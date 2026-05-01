@@ -10,6 +10,7 @@ HEALTHY_SCHOOL_REPORT_PATH = REPO_ROOT / "docs" / "dr" / "Healthy school.md"
 DIGITAL_INFRA_REPORT_PATH = REPO_ROOT / "docs" / "dr" / "Digital and operational infrastructure.md"
 INFORMAL_SUPPORT_REPORT_PATH = REPO_ROOT / "docs" / "dr" / "Informal support.md"
 PGA_ZORGZAAM_FLEVER_REPORT_PATH = REPO_ROOT / "docs" / "dr" / "Zorgzaam Flevoland, and Flever interface.md"
+SAMEN_STERKER_REPORT_PATH = REPO_ROOT / "docs" / "dr" / "Samen Sterker in de Wijk in Almere.md"
 MANIFEST_PATH = REPO_ROOT / "data" / "raw" / "manifest.json"
 INVENTORY_PATH = REPO_ROOT / "data" / "extracted" / "document_inventory.json"
 REGISTER_PATH = REPO_ROOT / "data" / "extracted" / "municipal" / "almere_d6_responsibility_register.json"
@@ -63,6 +64,18 @@ PGA_ZORGZAAM_FLEVER_SOURCE_IDS = {
     "reg_flever_inwoners_onderdeel_pga",
 }
 
+SAMEN_STERKER_SOURCE_IDS = {
+    "reg_almere_zorglandschap_wmo",
+    "reg_zorglandschap_wmo_uitvoeringsprogramma_2022",
+    "reg_zorglandschap_wmo_monitor_2025",
+    "reg_zonmw_samen_sterker_uitvoeringsplan",
+    "reg_zonmw_samen_sterker_startsubsidie",
+    "mun_almere_pga_samen_sterker_wijk",
+    "mun_almere_subsidieregister_2023",
+    "mun_almere_evaluatie_schakelteams_2021",
+    "reg_samen_sterker_in_de_wijk_home",
+}
+
 
 def load_json(path: Path) -> dict | list:
     return json.loads(path.read_text(encoding="utf-8"))
@@ -74,6 +87,7 @@ class DeepResearchIntakeTests(unittest.TestCase):
         self.assertTrue(DIGITAL_INFRA_REPORT_PATH.exists())
         self.assertTrue(INFORMAL_SUPPORT_REPORT_PATH.exists())
         self.assertTrue(PGA_ZORGZAAM_FLEVER_REPORT_PATH.exists())
+        self.assertTrue(SAMEN_STERKER_REPORT_PATH.exists())
         manifest = load_json(MANIFEST_PATH)
         self.assertFalse(any(entry["file_path"] == "docs/dr/Healthy school.md" for entry in manifest))
         self.assertFalse(
@@ -82,6 +96,9 @@ class DeepResearchIntakeTests(unittest.TestCase):
         self.assertFalse(any(entry["file_path"] == "docs/dr/Informal support.md" for entry in manifest))
         self.assertFalse(
             any(entry["file_path"] == "docs/dr/Zorgzaam Flevoland, and Flever interface.md" for entry in manifest)
+        )
+        self.assertFalse(
+            any(entry["file_path"] == "docs/dr/Samen Sterker in de Wijk in Almere.md" for entry in manifest)
         )
 
     def test_healthy_school_sources_are_ingested(self) -> None:
@@ -119,6 +136,15 @@ class DeepResearchIntakeTests(unittest.TestCase):
         inventory = load_json(INVENTORY_PATH)
         inventory_ids = {entry["document_id"] for entry in inventory["documents"]}
         self.assertTrue(PGA_ZORGZAAM_FLEVER_SOURCE_IDS.issubset(inventory_ids))
+
+    def test_samen_sterker_sources_are_ingested(self) -> None:
+        manifest = load_json(MANIFEST_PATH)
+        manifest_ids = {entry["document_id"] for entry in manifest}
+        self.assertTrue(SAMEN_STERKER_SOURCE_IDS.issubset(manifest_ids))
+
+        inventory = load_json(INVENTORY_PATH)
+        inventory_ids = {entry["document_id"] for entry in inventory["documents"]}
+        self.assertTrue(SAMEN_STERKER_SOURCE_IDS.issubset(inventory_ids))
 
     def test_healthy_school_findings_reach_d6_register(self) -> None:
         register = load_json(REGISTER_PATH)
@@ -196,6 +222,20 @@ class DeepResearchIntakeTests(unittest.TestCase):
         evidence_sources = set(row["evidence_source"])
         self.assertTrue(PGA_ZORGZAAM_FLEVER_SOURCE_IDS.issubset(evidence_sources))
         self.assertIn("PGA as local transformation programme", row["existing_almere_provision"])
+        self.assertEqual(row["decision_status"], "inferred")
+        self.assertNotEqual(row["decision_status"], "settled")
+        self.assertTrue(row["needs_human_review"])
+
+    def test_samen_sterker_findings_reach_d6_register(self) -> None:
+        register = load_json(REGISTER_PATH)
+        row = next(
+            component
+            for component in register["components"]
+            if component["component_id"] == "samen_sterker_wijk_mental_health"
+        )
+        evidence_sources = set(row["evidence_source"])
+        self.assertTrue(SAMEN_STERKER_SOURCE_IDS.issubset(evidence_sources))
+        self.assertIn("Zorglandschap Wmo", row["existing_almere_provision"])
         self.assertEqual(row["decision_status"], "inferred")
         self.assertNotEqual(row["decision_status"], "settled")
         self.assertTrue(row["needs_human_review"])

@@ -12,16 +12,16 @@ class ReviewTriageTests(unittest.TestCase):
         summary = triage["summary"]
 
         self.assertEqual(triage["current_sprint"], "Sprint 31.4 - Review triage and deep-research offload")
-        self.assertEqual(summary["review_queue_items"], 585)
-        self.assertEqual(summary["human_review_round_items"], 585)
+        self.assertEqual(summary["review_queue_items"], 613)
+        self.assertEqual(summary["human_review_round_items"], 613)
         self.assertEqual(summary["deep_research_assignment_count"], 6)
         self.assertEqual(
             summary["bucket_counts"],
             {
-                "pipeline_or_extraction_cleanup": 25,
-                "mixed_public_search_then_human": 166,
+                "pipeline_or_extraction_cleanup": 32,
+                "mixed_public_search_then_human": 173,
                 "human_only": 79,
-                "deep_research_candidate": 315,
+                "deep_research_candidate": 329,
             },
         )
 

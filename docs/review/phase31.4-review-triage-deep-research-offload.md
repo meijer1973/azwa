@@ -2,8 +2,8 @@
 
 ## Summary
 Current sprint: Sprint 31.4 - Review triage and deep-research offload.
-Generated on: 2026-04-30.
-Review queue items triaged: 585.
+Generated on: 2026-05-01.
+Review queue items triaged: 613.
 Deep-research assignments prepared: 6.
 D6 rows still requiring human validation: 12.
 D6 rows with named public-search gaps: 0.
@@ -15,9 +15,9 @@ Send only public-source gaps, authority/source hierarchy checks, explicit local 
 | Bucket | Item count | What it means | Top reason codes |
 | --- | ---: | --- | --- |
 | `human_only` | 79 | Requires policy judgement, stakeholder validation, finance/controller confirmation, or local mandate clarification. | `execution_review_task` (44), `execution_capacity_need` (19), `execution_decision_question` (13), `table_extraction_missing` (1), `governance_gap` (1) |
-| `deep_research_candidate` | 315 | May be reducible by a careful public-source search for stronger sources, clearer dates, actor scope, or explicit local adoption. | `lower_authority_norm_signal` (66), `municipality_relevance_inferred` (58), `authority_unclear` (56), `expected_time_not_deadline` (33), `national_claim_local_relevance` (24) |
-| `mixed_public_search_then_human` | 166 | Public search may clarify the source basis, but final role, action, sequencing or responsibility language may still need human validation. | `actor_context_needs_role_split` (63), `execution_context_needs_action_split` (43), `execution_sequencing_need` (31), `execution_dependency` (29) |
-| `pipeline_or_extraction_cleanup` | 25 | Mostly repository/pipeline cleanup rather than policy review. | `missing_d6_content` (12), `missing_d5_content` (10), `extraction_noise_detected` (3) |
+| `deep_research_candidate` | 329 | May be reducible by a careful public-source search for stronger sources, clearer dates, actor scope, or explicit local adoption. | `lower_authority_norm_signal` (68), `authority_unclear` (61), `municipality_relevance_inferred` (59), `expected_time_not_deadline` (34), `national_claim_local_relevance` (24) |
+| `mixed_public_search_then_human` | 173 | Public search may clarify the source basis, but final role, action, sequencing or responsibility language may still need human validation. | `actor_context_needs_role_split` (65), `execution_context_needs_action_split` (44), `execution_sequencing_need` (34), `execution_dependency` (30) |
+| `pipeline_or_extraction_cleanup` | 32 | Mostly repository/pipeline cleanup rather than policy review. | `missing_d6_content` (18), `missing_d5_content` (11), `extraction_noise_detected` (3) |
 
 ## Human-Only D6 Rows
 

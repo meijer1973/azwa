@@ -2,11 +2,11 @@
 
 ## Summary
 Current sprint: Sprint 31.3 - Reviewronde met menselijke beoordelaars.
-Generated on: 2026-04-30.
-Review items: 585.
-Warnings: 23.
-Review-level items: 562.
-Unassigned items: 23.
+Generated on: 2026-05-01.
+Review items: 613.
+Warnings: 30.
+Review-level items: 583.
+Unassigned items: 30.
 
 This pack is for human reviewers. It does not settle policy, D6 ownership, funding, timing, or execution questions by itself.
 
@@ -30,32 +30,32 @@ This pack is for human reviewers. It does not settle policy, D6 ownership, fundi
 
 ### Norm
 
-Review items: 333.
+Review items: 344.
 
 Reviewer questions:
 - Welke bronhouder of bronsoort moet expliciet worden genoemd voordat deze normtaal veilig is?
 - Is dit bindend, een afspraak, een verwachting, guidance of alleen context?
 
 Top reason codes:
-- `lower_authority_norm_signal`: 66
-- `authority_unclear`: 56
-- `municipality_relevance_inferred`: 55
+- `lower_authority_norm_signal`: 68
+- `authority_unclear`: 61
+- `municipality_relevance_inferred`: 56
 - `execution_context_needs_action_split`: 32
-- `actor_context_needs_role_split`: 28
-- `expected_time_not_deadline`: 18
+- `actor_context_needs_role_split`: 29
+- `expected_time_not_deadline`: 19
+- `execution_sequencing_need`: 16
 - `vague_region_actor`: 16
-- `execution_sequencing_need`: 15
 
 Sample items:
-- `rvw_025` / `execution_capacity_need`: mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 2 execution capacity claim(s). Action: Use these as capacity questions; do not infer staffing, fte, or ownership.
-- `rvw_028` / `execution_sequencing_need`: mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 2 execution sequencing claim(s). Action: Treat these as sequencing or phasing signals; do not turn them into a hard local implementation plan without source evidence.
-- `rvw_029` / `expected_time_not_deadline`: mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 3 expected or indicative time claim(s). Action: Keep these as expected moments unless a stronger source establishes a formal deadline.
-- `rvw_030` / `lower_authority_norm_signal`: mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 9 lower-authority norm signal claim(s). Action: Attribute these passages explicitly and do not present them as binding without a stronger source.
-- `rvw_031` / `municipality_relevance_inferred`: mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 5 contextual claim(s) where municipal relevance is inferred rather than explicitly stated. Action: Review these claims before treating them as firm municipal obligations or implementation facts.
+- `rvw_032` / `execution_capacity_need`: mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 2 execution capacity claim(s). Action: Use these as capacity questions; do not infer staffing, fte, or ownership.
+- `rvw_035` / `execution_sequencing_need`: mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 2 execution sequencing claim(s). Action: Treat these as sequencing or phasing signals; do not turn them into a hard local implementation plan without source evidence.
+- `rvw_036` / `expected_time_not_deadline`: mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 3 expected or indicative time claim(s). Action: Keep these as expected moments unless a stronger source establishes a formal deadline.
+- `rvw_037` / `lower_authority_norm_signal`: mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 9 lower-authority norm signal claim(s). Action: Attribute these passages explicitly and do not present them as binding without a stronger source.
+- `rvw_038` / `municipality_relevance_inferred`: mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 5 contextual claim(s) where municipal relevance is inferred rather than explicitly stated. Action: Review these claims before treating them as firm municipal obligations or implementation facts.
 
 ### Time
 
-Review items: 237.
+Review items: 244.
 
 Reviewer questions:
 - Is dit een formele deadline, een verwacht moment, een publicatiedatum of lokale planningscontext?
@@ -63,20 +63,20 @@ Reviewer questions:
 
 Top reason codes:
 - `execution_review_task`: 41
-- `expected_time_not_deadline`: 33
-- `authority_unclear`: 32
-- `execution_context_needs_action_split`: 25
-- `execution_sequencing_need`: 17
+- `expected_time_not_deadline`: 34
+- `authority_unclear`: 34
+- `execution_context_needs_action_split`: 26
+- `execution_sequencing_need`: 18
+- `actor_context_needs_role_split`: 15
 - `execution_dependency`: 14
-- `actor_context_needs_role_split`: 14
 - `local_planning_context_not_policy_deadline`: 11
 
 Sample items:
-- `rvw_027` / `execution_review_task`: mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 4 execution review or monitoring claim(s). Action: Keep these as review, monitoring, or validation tasks; do not present them as settled implementation choices.
-- `rvw_029` / `expected_time_not_deadline`: mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 3 expected or indicative time claim(s). Action: Keep these as expected moments unless a stronger source establishes a formal deadline.
-- `rvw_034` / `authority_unclear`: mun_almere_2024_2026_visie_gezondheidsbeleid contributes lower-authority claims that still require human review. Action: Keep these claims as contextual support only until a stronger primary source confirms or replaces them.
-- `rvw_035` / `execution_decision_question`: mun_almere_2024_2026_visie_gezondheidsbeleid contains 2 execution decision-question claim(s). Action: Keep these as possible decision questions; do not present them as decided actions.
-- `rvw_036` / `execution_review_task`: mun_almere_2024_2026_visie_gezondheidsbeleid contains 1 execution review or monitoring claim(s). Action: Keep these as review, monitoring, or validation tasks; do not present them as settled implementation choices.
+- `rvw_034` / `execution_review_task`: mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 4 execution review or monitoring claim(s). Action: Keep these as review, monitoring, or validation tasks; do not present them as settled implementation choices.
+- `rvw_036` / `expected_time_not_deadline`: mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 3 expected or indicative time claim(s). Action: Keep these as expected moments unless a stronger source establishes a formal deadline.
+- `rvw_041` / `authority_unclear`: mun_almere_2024_2026_visie_gezondheidsbeleid contributes lower-authority claims that still require human review. Action: Keep these claims as contextual support only until a stronger primary source confirms or replaces them.
+- `rvw_042` / `execution_decision_question`: mun_almere_2024_2026_visie_gezondheidsbeleid contains 2 execution decision-question claim(s). Action: Keep these as possible decision questions; do not present them as decided actions.
+- `rvw_043` / `execution_review_task`: mun_almere_2024_2026_visie_gezondheidsbeleid contains 1 execution review or monitoring claim(s). Action: Keep these as review, monitoring, or validation tasks; do not present them as settled implementation choices.
 
 ### Money
 
@@ -97,23 +97,23 @@ Top reason codes:
 - `execution_decision_question`: 2
 
 Sample items:
-- `rvw_044` / `execution_sequencing_need`: mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst contains 2 execution sequencing claim(s). Action: Treat these as sequencing or phasing signals; do not turn them into a hard local implementation plan without source evidence.
-- `rvw_046` / `lower_authority_norm_signal`: mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst contains 5 lower-authority norm signal claim(s). Action: Attribute these passages explicitly and do not present them as binding without a stronger source.
-- `rvw_048` / `vague_region_actor`: mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst contains 1 claim(s) where 'regio' is the only detected actor signal. Action: Clarify whether the source means IZA/AZWA-regio, GGD-regio, zorgkantoorregio, ROAZ/subregio, province, mandaatgemeente, or practical execution structure before using this as a role claim.
-- `rvw_054` / `lower_authority_norm_signal`: mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd contains 5 lower-authority norm signal claim(s). Action: Attribute these passages explicitly and do not present them as binding without a stronger source.
-- `rvw_064` / `execution_dependency`: mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst contains 3 execution dependency claim(s). Action: Name the dependency and keep it open unless a source shows it has been resolved.
+- `rvw_051` / `execution_sequencing_need`: mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst contains 2 execution sequencing claim(s). Action: Treat these as sequencing or phasing signals; do not turn them into a hard local implementation plan without source evidence.
+- `rvw_053` / `lower_authority_norm_signal`: mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst contains 5 lower-authority norm signal claim(s). Action: Attribute these passages explicitly and do not present them as binding without a stronger source.
+- `rvw_055` / `vague_region_actor`: mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst contains 1 claim(s) where 'regio' is the only detected actor signal. Action: Clarify whether the source means IZA/AZWA-regio, GGD-regio, zorgkantoorregio, ROAZ/subregio, province, mandaatgemeente, or practical execution structure before using this as a role claim.
+- `rvw_061` / `lower_authority_norm_signal`: mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd contains 5 lower-authority norm signal claim(s). Action: Attribute these passages explicitly and do not present them as binding without a stronger source.
+- `rvw_071` / `execution_dependency`: mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst contains 3 execution dependency claim(s). Action: Name the dependency and keep it open unless a source shows it has been resolved.
 
 ### Governance
 
-Review items: 98.
+Review items: 101.
 
 Reviewer questions:
 - Noemt de bron besluitvorming, coordinatie, uitvoering, eigenaarschap, goedkeuring of alleen een actor?
 - Welke actorrol moet expliciet door een mens worden bevestigd voordat de tekst sterker mag worden?
 
 Top reason codes:
-- `actor_context_needs_role_split`: 63
-- `vague_region_actor`: 22
+- `actor_context_needs_role_split`: 65
+- `vague_region_actor`: 23
 - `lower_authority_norm_signal`: 4
 - `authority_unclear`: 2
 - `regional_split_context`: 2
@@ -122,61 +122,61 @@ Top reason codes:
 - `execution_context_needs_action_split`: 1
 
 Sample items:
-- `rvw_024` / `actor_context_needs_role_split`: mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 3 actor-context claim(s) without a more specific governance role. Action: Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.
-- `rvw_032` / `vague_region_actor`: mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 1 claim(s) where 'regio' is the only detected actor signal. Action: Clarify whether the source means IZA/AZWA-regio, GGD-regio, zorgkantoorregio, ROAZ/subregio, province, mandaatgemeente, or practical execution structure before using this as a role claim.
-- `rvw_033` / `actor_context_needs_role_split`: mun_almere_2024_2026_visie_gezondheidsbeleid contains 3 actor-context claim(s) without a more specific governance role. Action: Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.
-- `rvw_040` / `actor_context_needs_role_split`: mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst contains 1 actor-context claim(s) without a more specific governance role. Action: Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.
-- `rvw_048` / `vague_region_actor`: mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst contains 1 claim(s) where 'regio' is the only detected actor signal. Action: Clarify whether the source means IZA/AZWA-regio, GGD-regio, zorgkantoorregio, ROAZ/subregio, province, mandaatgemeente, or practical execution structure before using this as a role claim.
+- `rvw_031` / `actor_context_needs_role_split`: mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 3 actor-context claim(s) without a more specific governance role. Action: Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.
+- `rvw_039` / `vague_region_actor`: mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 1 claim(s) where 'regio' is the only detected actor signal. Action: Clarify whether the source means IZA/AZWA-regio, GGD-regio, zorgkantoorregio, ROAZ/subregio, province, mandaatgemeente, or practical execution structure before using this as a role claim.
+- `rvw_040` / `actor_context_needs_role_split`: mun_almere_2024_2026_visie_gezondheidsbeleid contains 3 actor-context claim(s) without a more specific governance role. Action: Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.
+- `rvw_047` / `actor_context_needs_role_split`: mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst contains 1 actor-context claim(s) without a more specific governance role. Action: Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.
+- `rvw_055` / `vague_region_actor`: mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst contains 1 claim(s) where 'regio' is the only detected actor signal. Action: Clarify whether the source means IZA/AZWA-regio, GGD-regio, zorgkantoorregio, ROAZ/subregio, province, mandaatgemeente, or practical execution structure before using this as a role claim.
 
 ### Locality
 
-Review items: 439.
+Review items: 458.
 
 Reviewer questions:
 - Is de claim expliciet Almere, expliciet Flevoland, algemeen landelijk of alleen lokaal relevant door interpretatie?
 - Welke lokale bron of stakeholdervalidatie is nodig voordat dit als Almeerse keuze kan worden geschreven?
 
 Top reason codes:
-- `municipality_relevance_inferred`: 58
-- `lower_authority_norm_signal`: 56
-- `actor_context_needs_role_split`: 53
-- `authority_unclear`: 45
+- `municipality_relevance_inferred`: 59
+- `lower_authority_norm_signal`: 57
+- `actor_context_needs_role_split`: 55
+- `authority_unclear`: 50
 - `execution_review_task`: 32
 - `execution_context_needs_action_split`: 28
-- `national_claim_local_relevance`: 24
-- `expected_time_not_deadline`: 23
+- `execution_sequencing_need`: 24
+- `expected_time_not_deadline`: 24
 
 Sample items:
-- `rvw_024` / `actor_context_needs_role_split`: mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 3 actor-context claim(s) without a more specific governance role. Action: Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.
-- `rvw_025` / `execution_capacity_need`: mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 2 execution capacity claim(s). Action: Use these as capacity questions; do not infer staffing, fte, or ownership.
-- `rvw_026` / `execution_dependency`: mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 1 execution dependency claim(s). Action: Name the dependency and keep it open unless a source shows it has been resolved.
-- `rvw_027` / `execution_review_task`: mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 4 execution review or monitoring claim(s). Action: Keep these as review, monitoring, or validation tasks; do not present them as settled implementation choices.
-- `rvw_028` / `execution_sequencing_need`: mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 2 execution sequencing claim(s). Action: Treat these as sequencing or phasing signals; do not turn them into a hard local implementation plan without source evidence.
+- `rvw_031` / `actor_context_needs_role_split`: mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 3 actor-context claim(s) without a more specific governance role. Action: Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.
+- `rvw_032` / `execution_capacity_need`: mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 2 execution capacity claim(s). Action: Use these as capacity questions; do not infer staffing, fte, or ownership.
+- `rvw_033` / `execution_dependency`: mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 1 execution dependency claim(s). Action: Name the dependency and keep it open unless a source shows it has been resolved.
+- `rvw_034` / `execution_review_task`: mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 4 execution review or monitoring claim(s). Action: Keep these as review, monitoring, or validation tasks; do not present them as settled implementation choices.
+- `rvw_035` / `execution_sequencing_need`: mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 2 execution sequencing claim(s). Action: Treat these as sequencing or phasing signals; do not turn them into a hard local implementation plan without source evidence.
 
 ### Execution
 
-Review items: 517.
+Review items: 537.
 
 Reviewer questions:
 - Is dit een feitelijke uitvoeringsactiviteit, een mogelijke opvolgactie, een afhankelijkheid of een reviewtaak?
 - Welke actie, volgorde, capaciteit of eigenaar mag niet worden ingevuld zonder lokale bevestiging?
 
 Top reason codes:
-- `lower_authority_norm_signal`: 62
-- `municipality_relevance_inferred`: 58
-- `actor_context_needs_role_split`: 56
-- `authority_unclear`: 52
+- `lower_authority_norm_signal`: 64
+- `municipality_relevance_inferred`: 59
+- `actor_context_needs_role_split`: 58
+- `authority_unclear`: 56
 - `execution_review_task`: 44
-- `execution_context_needs_action_split`: 43
-- `execution_sequencing_need`: 31
-- `execution_dependency`: 29
+- `execution_context_needs_action_split`: 44
+- `execution_sequencing_need`: 34
+- `execution_dependency`: 30
 
 Sample items:
-- `rvw_024` / `actor_context_needs_role_split`: mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 3 actor-context claim(s) without a more specific governance role. Action: Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.
-- `rvw_025` / `execution_capacity_need`: mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 2 execution capacity claim(s). Action: Use these as capacity questions; do not infer staffing, fte, or ownership.
-- `rvw_026` / `execution_dependency`: mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 1 execution dependency claim(s). Action: Name the dependency and keep it open unless a source shows it has been resolved.
-- `rvw_027` / `execution_review_task`: mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 4 execution review or monitoring claim(s). Action: Keep these as review, monitoring, or validation tasks; do not present them as settled implementation choices.
-- `rvw_028` / `execution_sequencing_need`: mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 2 execution sequencing claim(s). Action: Treat these as sequencing or phasing signals; do not turn them into a hard local implementation plan without source evidence.
+- `rvw_031` / `actor_context_needs_role_split`: mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 3 actor-context claim(s) without a more specific governance role. Action: Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.
+- `rvw_032` / `execution_capacity_need`: mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 2 execution capacity claim(s). Action: Use these as capacity questions; do not infer staffing, fte, or ownership.
+- `rvw_033` / `execution_dependency`: mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 1 execution dependency claim(s). Action: Name the dependency and keep it open unless a source shows it has been resolved.
+- `rvw_034` / `execution_review_task`: mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 4 execution review or monitoring claim(s). Action: Keep these as review, monitoring, or validation tasks; do not present them as settled implementation choices.
+- `rvw_035` / `execution_sequencing_need`: mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak contains 2 execution sequencing claim(s). Action: Treat these as sequencing or phasing signals; do not turn them into a hard local implementation plan without source evidence.
 
 ## Decision Recording Rule
 Reviewer decisions must be recorded as human review decisions or validation records. They do not become source claims unless backed by a canonical source or explicit validation evidence.

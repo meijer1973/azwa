@@ -24,14 +24,14 @@ class UpdateProtocolTests(unittest.TestCase):
 
     def test_site_updates_follow_protocol(self) -> None:
         result = update_protocol.validate_updates()
-        self.assertEqual(result["update_count"], 7)
+        self.assertEqual(result["update_count"], 8)
         self.assertEqual(result["issue_count"], 0)
 
     def test_validator_writes_internal_check_note(self) -> None:
         subprocess.run([sys.executable, "src/validate_update_protocol.py"], cwd=REPO_ROOT, check=True)
         text = CHECK_NOTE_PATH.read_text(encoding="utf-8")
         self.assertIn("Current sprint: Sprint 31.1", text)
-        self.assertIn("Updates checked: 7", text)
+        self.assertIn("Updates checked: 8", text)
         self.assertIn("Blocking update-protocol issues found: 0", text)
 
 

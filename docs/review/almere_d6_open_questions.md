@@ -5,7 +5,7 @@ Current sprint: Sprint 31.5 - Deep-research bronintake en top-layer verificatie.
 
 This is the "what we still need to ask" note. It collects what is still missing after deep-research source intake. Use it to prepare stakeholder validation, finance/controller review and internal document requests.
 
-For handoff conversations, use `docs/review/almere_d6_validation_ticket_matrix.md`. That file converts the questions below into constrained validation tickets with answer choices, evidence gates and default register effects.
+For handoff conversations, use `docs/review/almere_d6_validation_ticket_matrix.md`. That file converts the questions below into plain-language answer choices, stakeholder packets and simple decision rules.
 
 No item below should be answered by repository inference. If a question is answered later, record the evidence in a validation record. The archived template is `docs/review/archive/d6-support/almere_d6_stakeholder_validation_log.md`. Update the D6 responsibility register only when the evidence directly supports the change.
 

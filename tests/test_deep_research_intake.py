@@ -18,12 +18,19 @@ SETTLEMENT_AUDIT_REPORT_PATH = REPO_ROOT / "docs" / "dr" / "Almere D6 Settlement
 STAND_VAN_ZAKEN_REPORT_PATH = (
     REPO_ROOT / "docs" / "dr" / "Stable public source check for “Stand van zaken Gezondheidsbeleid (IZA en GALA)”.md"
 )
+CONSTRAINED_ANSWER_DESIGN_REPORT_PATH = (
+    REPO_ROOT / "docs" / "dr" / "Constrained answer design for the Almere D6 open-question set.md"
+)
 MANIFEST_PATH = REPO_ROOT / "data" / "raw" / "manifest.json"
 SOURCE_INTAKE_CANDIDATES_PATH = REPO_ROOT / "data" / "raw" / "source_intake_candidates.json"
 INVENTORY_PATH = REPO_ROOT / "data" / "extracted" / "document_inventory.json"
 REGISTER_PATH = REPO_ROOT / "data" / "extracted" / "municipal" / "almere_d6_responsibility_register.json"
 TRIAGE_PATH = REPO_ROOT / "data" / "extracted" / "review_triage_deep_research_offload.json"
 OPEN_QUESTIONS_PATH = REPO_ROOT / "docs" / "review" / "almere_d6_open_questions.md"
+VALIDATION_MATRIX_PATH = REPO_ROOT / "docs" / "review" / "almere_d6_validation_ticket_matrix.md"
+CONSTRAINED_ANSWER_DESIGN_INTAKE_PATH = (
+    REPO_ROOT / "docs" / "source-intake" / "phase31.5-constrained-answer-design-intake.md"
+)
 
 HEALTHY_SCHOOL_SOURCE_IDS = {
     "mun_almere_gezonde_scholen",
@@ -109,6 +116,7 @@ class DeepResearchIntakeTests(unittest.TestCase):
         self.assertTrue(AUTHORITY_ADOPTION_REPORT_PATH.exists())
         self.assertTrue(SETTLEMENT_AUDIT_REPORT_PATH.exists())
         self.assertTrue(STAND_VAN_ZAKEN_REPORT_PATH.exists())
+        self.assertTrue(CONSTRAINED_ANSWER_DESIGN_REPORT_PATH.exists())
         manifest = load_json(MANIFEST_PATH)
         self.assertFalse(any(entry["file_path"] == "docs/dr/Healthy school.md" for entry in manifest))
         self.assertFalse(
@@ -134,6 +142,12 @@ class DeepResearchIntakeTests(unittest.TestCase):
             any(
                 entry["file_path"]
                 == "docs/dr/Stable public source check for “Stand van zaken Gezondheidsbeleid (IZA en GALA)”.md"
+                for entry in manifest
+            )
+        )
+        self.assertFalse(
+            any(
+                entry["file_path"] == "docs/dr/Constrained answer design for the Almere D6 open-question set.md"
                 for entry in manifest
             )
         )
@@ -322,6 +336,30 @@ class DeepResearchIntakeTests(unittest.TestCase):
         open_questions = OPEN_QUESTIONS_PATH.read_text(encoding="utf-8")
         self.assertIn("Stable Documentwijzer landing URL found", open_questions)
         self.assertIn("underlying raadsbrief text/PDF is still needed", open_questions)
+
+    def test_constrained_answer_design_is_plain_language_handoff(self) -> None:
+        self.assertTrue(CONSTRAINED_ANSWER_DESIGN_INTAKE_PATH.exists())
+        matrix = VALIDATION_MATRIX_PATH.read_text(encoding="utf-8")
+
+        self.assertIn("Which description best fits this component?", matrix)
+        self.assertIn("Stakeholder Packets", matrix)
+        self.assertIn("Simple Decision Rules", matrix)
+        self.assertIn("The current working view is that this component may be relevant to D6", matrix)
+
+        lower_matrix = matrix.lower()
+        for internal_term in [
+            "repository",
+            "register",
+            "prefill",
+            "source intake",
+            "top-layer",
+            "case b",
+            "case c",
+            "d6 row",
+            "`settled`",
+            "`inferred`",
+        ]:
+            self.assertNotIn(internal_term, lower_matrix)
 
 
 if __name__ == "__main__":

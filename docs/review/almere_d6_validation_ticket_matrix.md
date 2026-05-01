@@ -1,147 +1,676 @@
-# Almere D6 validation ticket matrix
+﻿# Almere D6 plain-language validation design
 
 ## Summary
-Current sprint: Sprint 31.5 - Deep-research bronintake en top-layer verificatie.
+Current sprint: Sprint 31.5.
 
-This is the constrained handoff version of the D6 open questions. It turns the remaining questions into validation tickets with answer choices, evidence gates and register effects.
+This file is the plain-language handoff for validating the Almere D6 responsibility questions. It is meant for policy, finance, GGD/JGZ, Wijkteams, PGA/Zorgzaam/Flever, ICT/privacy and partner conversations.
 
-Use this file when asking policy owners, finance/controller roles, GGD/JGZ, Wijkteams, PGA/Zorgzaam/Flever, digital/data leads or regional governance contacts for validation. Do not hand them broad research questions. Ask them to confirm, correct, choose an option and provide evidence.
+The public-source review has already narrowed the questions. The remaining work is not broad research. It is confirmation by the right people.
 
-No D6 responsibility-register row may move to `settled` from this matrix alone. Settlement requires traceable evidence that directly answers classification, ownership, execution/coordination, scale, funding and mandate.
+For each D6 component, confirm:
 
-## How To Use
+1. Does this component belong inside D6?
+2. Who is responsible for it?
+3. Who coordinates or carries it out?
+4. What funding line applies?
+5. Is the funding structural, project-based, mixed or undecided?
+6. Is there a formal decision, document, budget line or other evidence?
+7. Which wording is safe to use in the final D6 overview?
 
-1. Start from the current repository prefill.
-2. Ask the ticket question with the listed choice set.
-3. Record the answer, evidence type and evidence path.
-4. Apply the default register effect unless the evidence gate is fully met.
-5. Escalate conflicts, missing owners, missing funding, unclear mandate or wording risk.
+Ask people to choose from the answer options, correct the current working view, and attach or name the evidence.
 
-## Standard Choice Sets
+## Standard Answer Options
 
-### D6 Classification
+### 1. D6 Relation
 
-A. Formal D6 infrastructure already decided  
-B. Adjacent or supporting infrastructure  
-C. Candidate D6 infrastructure / candidate upgrade  
-D. Implementation context or example, not a D6 component  
-E. Outside D6 scope  
-F. Unknown / no decision yet  
-G. Other, with explanation
+Which description best fits this component?
 
-### Current Status
+A. Formal D6 infrastructure
+B. Adjacent or supporting infrastructure
+C. Candidate D6 infrastructure or candidate for upgrade
+D. Implementation example or project context, but not formal D6 infrastructure
+E. Outside D6 scope
+F. Mixed; split into separate parts
+G. Unknown / not yet decided
+H. Other, please specify
 
-A. Existing structural provision  
-B. Existing project or pilot  
-C. Planned / under development  
-D. Historical / discontinued / no longer active  
-E. Exists, but scale unclear  
-F. Unknown  
-G. Other, with explanation
+### 2. Role
 
-### Scale
+What role does this actor have?
 
-A. Almere-local  
-B. GGD Flevoland scale  
-C. IZA/AZWA Flevoland regional scale  
-D. PGA / Zorgzaam Flevoland / Flever programme scale  
-E. Zorgkantoor / insurer / Zvw scale  
-F. Provider or partner-organization scale  
-G. School, wijk or location-specific scale  
-H. Mixed scale; split needed  
-I. Other, with explanation
+A. Accountable owner
+B. Coordinator
+C. Executor
+D. Partner or contributor
+E. Funder only
+F. Data/privacy accountable party
+G. Programme platform
+H. No formal role
+I. Mixed; split required
+J. Unknown
+K. Other, please specify
 
-### Role
+### 3. Funding
 
-A. Accountable owner  
-B. Coordinator  
-C. Executor  
-D. Partner / contributor  
-E. Funder only  
-F. Data/privacy accountable party  
-G. No formal role  
-H. Unknown  
-I. Other, with explanation
+Which funding line applies?
 
-### Funding
+A. Regular municipal budget
+B. AZWA-D6
+C. D5 work-agenda resources
+D. SPUK/GALA
+E. PGA / IZA transformation funding
+F. GGD contribution / plustaak
+G. Zvw / insurer funding
+H. Provider funding
+I. Project subsidy
+J. Mixed funding; split required
+K. No funding decision yet
+L. Unknown
+M. Other, please specify
 
-A. Regular municipal budget  
-B. AZWA-D6  
-C. D5 work-agenda resources  
-D. SPUK/GALA  
-E. PGA / IZA transformation funding  
-F. GGD contribution / inwonerbijdrage / plustaak  
-G. Zvw / insurer funding  
-H. Provider funding  
-I. Project subsidy, such as ZonMw or temporary programme funding  
-J. Mixed funding; split required  
-K. No funding decision yet  
-L. Other, with explanation
+### 4. Continuity
 
-### Evidence Type
+What is the funding or continuation status?
 
-A. Formal public/local source already in corpus  
-B. New public source to ingest first  
-C. Internal/local document  
-D. Formal decision record  
-E. Finance/controller confirmation  
-F. Stakeholder validation-log entry  
-G. No evidence yet
+A. Structural
+B. Temporary project or pilot
+C. Mixed
+D. Continuation decision still pending
+E. Unknown
+F. Other, please specify
 
-## Default Register Effects
+### 5. Scale
 
-| Situation | Default register effect |
-| --- | --- |
-| Public evidence only, no stakeholder confirmation | Keep `inferred`. |
-| Stakeholder confirms but no evidence path | Keep `inferred`; add incomplete validation note. |
-| Stakeholders disagree | Keep or move to `review_needed`. |
-| Owner or funding unknown | Keep `unknown` or `review_needed`; do not settle. |
-| Formal decision exists but does not settle D6 classification/funding | Record the decision, but do not settle the D6 row. |
-| Classification, owner, executor/coordinator, scale, funding and evidence are all validated | Candidate for `settled`. |
+At what scale does this component operate?
 
-## Validation Tickets
+A. Almere-local
+B. Specific wijk, school, location or target group
+C. GGD Flevoland scale
+D. Flevoland regional / IZA / AZWA scale
+E. PGA / Zorgzaam / Flever programme scale
+F. Provider or partner-organization scale
+G. Mixed scale; split required
+H. Unknown
+I. Other, please specify
 
-| Ticket | Current repository prefill | Question type | Choice set | Evidence gate | Default register effect | Escalation trigger |
+### 6. Evidence
+
+What evidence supports this answer?
+
+A. Formal local decision
+B. Council attachment or adopted policy
+C. Local implementation document
+D. Formal regional governance document
+E. Budget line or finance/controller confirmation
+F. Stakeholder confirmation record
+G. Internal mandate or project document
+H. Data/privacy governance document
+I. Public source only
+J. No evidence yet
+K. Other, please specify
+
+## Component Questions
+
+## 1. Inloopvoorzieningen sociaal en gezond
+
+### Current working view
+
+Several Almere facilities and social-base mechanisms appear relevant to D6, such as buurtontmoeting, wijkbudget, wijkteam access routes, De Schoor activities, volunteer support and informal support. It is not yet confirmed which named facilities formally count as D6.
+
+### Question for validation
+
+For each named facility or mechanism, which classification is correct in current Almere practice?
+
+### Answer format
+
+| Facility or mechanism | D6 relation | Responsible owner | Coordinator | Executor or partner | Funding line | Structural/project/unknown | Evidence |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  |  |  |  |  |  |  |
+
+### Evidence needed
+
+Local inventory, owner confirmation and funding split.
+
+### Safe wording until confirmed
+
+Several Almere inloop and social-base facilities appear relevant to D6 validation.
+
+### Wording to avoid
+
+Almere has already designated specific inloopvoorzieningen as D6 infrastructure.
+
+## 2. Wijkteams Almere
+
+### Current working view
+
+Wijkteams Almere are clearly relevant as a local access and support structure. What is not yet confirmed is whether they are formal D6 infrastructure, adjacent infrastructure or a candidate for upgrade.
+
+### Question for validation
+
+Which description best fits Wijkteams Almere in relation to D6?
+
+### Answer options
+
+A. Formal D6 infrastructure
+B. Adjacent or supporting infrastructure
+C. Candidate D6 infrastructure or upgrade path
+D. Implementation context only
+E. Outside D6 scope
+F. Unknown / not yet decided
+G. Other, please specify
+
+### Additional question
+
+What is the relation between Wijkteams Almere and Stevige Lokale Teams?
+
+A. Same infrastructure line
+B. Collaborating but separate
+C. Referral or access partner
+D. Not formally linked
+E. Still being decided
+F. Unknown
+G. Other, please specify
+
+### Evidence needed
+
+Local implementation document, mandate description or formal confirmation by the municipality and/or Wijkteams Almere.
+
+### Safe wording until confirmed
+
+Wijkteams Almere are a relevant local access and support structure to validate for D6.
+
+### Wording to avoid
+
+Wijkteams Almere are formal D6 infrastructure.
+
+## 3. Stevige Lokale Teams
+
+### Current working view
+
+The SLT decision route is relevant to D6, JGZ and wijkteams. It is not yet clear what the decision formally settles for D6.
+
+### Question for validation
+
+What does the SLT decision route formally settle for D6?
+
+### Answer options
+
+A. It confirms SLT as formal D6 infrastructure
+B. It confirms SLT development, but not formal D6 classification
+C. It confirms project or implementation capacity only
+D. It affects several components and must be split between SLT, JGZ, wijkteams and project capacity
+E. It has no direct D6 effect
+F. Unknown / not yet decided
+G. Other, please specify
+
+### Additional question
+
+Which parts are included?
+
+A. SLT only
+B. JGZ-related roles
+C. Wijkteam-related roles
+D. Broader social or pedagogical basis
+E. Project or implementation capacity
+F. Mixed; split required
+G. Unknown
+H. Other, please specify
+
+### Evidence needed
+
+Decision package, council attachment, implementation document and budget-line mapping.
+
+### Safe wording until confirmed
+
+The SLT decision route is relevant to D6 validation and may affect JGZ, wijkteams and local support arrangements.
+
+### Wording to avoid
+
+The SLT decision settles D6 ownership, funding or classification.
+
+## 4. JGZ Almere
+
+### Current working view
+
+JGZ Almere is clearly relevant for children, families, schools and SLT-related work. What is not yet confirmed is which JGZ roles are regular JGZ, which are SLT-related and which, if any, are D6-specific.
+
+### Question for validation
+
+For each JGZ role cluster, which description is correct?
+
+### Answer options
+
+A. Regular statutory JGZ
+B. SLT-related role
+C. D6-specific role
+D. Supports D6 but is not formal D6 infrastructure
+E. Outside D6 scope
+F. Mixed; split required
+G. Unknown
+H. Other, please specify
+
+### Additional role question
+
+For each relevant role, is JGZ:
+
+A. Accountable owner
+B. Coordinator
+C. Executor
+D. Partner
+E. Advisor
+F. Unknown
+G. Other, please specify
+
+### Evidence needed
+
+JGZ/GGD/municipal role-split memo, implementation document or formal confirmation.
+
+### Safe wording until confirmed
+
+JGZ Almere is a relevant actor to validate for D6, especially around children, families, schools and SLT-related roles.
+
+### Wording to avoid
+
+JGZ Almere owns the D6 JGZ component.
+
+## 5. GGD Flevoland-coordinatie
+
+### Current working view
+
+GGD Flevoland is relevant for public health, prevention, monitoring and advice. The open question is which tasks are regular GGD tasks, which are GALA/SPUK-related, which are regional and which are specifically D6-related for Almere.
+
+### Question for validation
+
+For each GGD task cluster, which classification is correct?
+
+### Answer options
+
+A. D6-specific task for Almere
+B. Regular GGD public-health task
+C. GALA/SPUK prevention task
+D. Regional IZA/AZWA support task
+E. Monitoring/advisory task
+F. Mixed; split required
+G. Unknown
+H. Other, please specify
+
+### Additional scale question
+
+At what scale does the task operate?
+
+A. Almere-local
+B. GGD Flevoland scale
+C. Flevoland regional / IZA / AZWA scale
+D. Mixed
+E. Unknown
+F. Other, please specify
+
+### Evidence needed
+
+Task-split confirmation from GGD and municipality, plus any relevant governance or funding document.
+
+### Safe wording until confirmed
+
+GGD Flevoland has relevant public-health, prevention, monitoring and advisory roles that need D6-specific task validation.
+
+### Wording to avoid
+
+GGD Flevoland is confirmed as D6 owner for Almere.
+
+## 6. Gezonde School / mentale gezonde school
+
+### Current working view
+
+Gezonde School and school wellbeing appear relevant to prevention, youth, JGZ, GGD and education partners. It is not yet confirmed whether this is formal D6 infrastructure, adjacent prevention infrastructure or implementation context.
+
+### Question for validation
+
+Which description best fits Gezonde School / school wellbeing in Almere?
+
+### Answer options
+
+A. Formal D6 infrastructure
+B. Adjacent or supporting prevention infrastructure
+C. Candidate D6 infrastructure
+D. Implementation context or example
+E. Outside D6 scope
+F. Unknown / not yet decided
+G. Other, please specify
+
+### Additional ownership question
+
+Who owns or coordinates this work in Almere?
+
+A. Gemeente Almere
+B. GGD Flevoland
+C. JGZ Almere
+D. Schools / education partnership
+E. Shared responsibility
+F. Unknown
+G. Other, please specify
+
+### Evidence needed
+
+Local school/prevention arrangement, governance confirmation and funding confirmation.
+
+### Safe wording until confirmed
+
+Gezonde School / school wellbeing is a relevant prevention and education-related candidate for D6 validation.
+
+### Wording to avoid
+
+Almere has a confirmed D6 Gezonde School arrangement.
+
+## 7. Kennis & Advies / monitoring / dashboards
+
+### Current working view
+
+There are monitoring, dashboard, epidemiology and advice capabilities that may support D6. It is not yet confirmed which products actually steer D6, who owns reporting and who maintains the learning cycle.
+
+### Question for validation
+
+Which named monitors, dashboards or reports are used for D6 steering?
+
+### Answer options per monitor/dashboard/report
+
+A. Directly steers D6
+B. Supports D6 context only
+C. Regional public-health monitor only
+D. Not used for D6
+E. Unknown
+F. Other, please specify
+
+### Additional accountability questions
+
+Who owns report production?
+
+A. Gemeente Almere
+B. GGD Flevoland
+C. Regional programme governance
+D. Shared
+E. Unknown
+F. Other, please specify
+
+Who is responsible for follow-up and learning cycle?
+
+A. Gemeente Almere
+B. GGD Flevoland
+C. Regional programme governance
+D. Shared
+E. Unknown
+F. Other, please specify
+
+Who is data/privacy accountable?
+
+A. Gemeente Almere
+B. GGD Flevoland
+C. Provider organization
+D. Shared
+E. Unknown
+F. Other, please specify
+
+### Evidence needed
+
+Monitoring arrangement, reporting-owner confirmation and, where relevant, ICT/privacy confirmation.
+
+### Safe wording until confirmed
+
+Monitoring and dashboard functions are relevant to D6 validation, but steering ownership still needs confirmation.
+
+### Wording to avoid
+
+GGD Kennis & Advies owns D6 monitoring.
+
+## 8. Samen Sterker in de Wijk
+
+### Current working view
+
+Samen Sterker in de Wijk appears to be an active neighbourhood mental-health initiative and a strong D6-related validation candidate. It is not yet confirmed whether it is formal D6 infrastructure, adjacent implementation, a project example or a candidate for upgrade.
+
+### Question for validation
+
+Which description best fits Samen Sterker in de Wijk?
+
+### Answer options
+
+A. Formal D6 infrastructure
+B. Adjacent or supporting infrastructure
+C. Candidate D6 infrastructure or upgrade path
+D. Implementation project or example
+E. Outside D6 scope
+F. Mixed; split required
+G. Unknown
+H. Other, please specify
+
+### Additional questions
+
+What is the current scale?
+
+A. Citywide Almere
+B. Specific wijk or pilot area
+C. Regional project
+D. Partner-specific implementation
+E. Mixed
+F. Unknown
+G. Other, please specify
+
+What is the continuation status?
+
+A. Structural
+B. Temporary project
+C. Mixed
+D. Continuation undecided
+E. Unknown
+F. Other, please specify
+
+### Evidence needed
+
+Project/governance confirmation, current-status note, funding confirmation and evaluation or steering evidence.
+
+### Safe wording until confirmed
+
+Samen Sterker in de Wijk is an active neighbourhood mental-health initiative and a strong candidate for D6-related validation.
+
+### Wording to avoid
+
+Samen Sterker is formal D6 infrastructure with confirmed D6 ownership and structural D6 funding.
+
+## 9. PGA / Zorgzaam Flevoland / Flever interface
+
+### Current working view
+
+PGA, Zorgzaam Flevoland, Flever, GGD and AZWA governance appear to have different roles. They should not be treated as one combined actor.
+
+### Question for validation
+
+For each actor, what role does it have in relation to Almere D6?
+
+### Answer format
+
+| Actor | Primary role | D6 relation | Scale | Funding role | Evidence |
+| --- | --- | --- | --- | --- | --- |
+| PGA |  |  |  |  |  |
+| Zorgzaam Flevoland |  |  |  |  |  |
+| Flever |  |  |  |  |  |
+| GGD Flevoland |  |  |  |  |  |
+| AZWA work-agenda governance |  |  |  |  |  |
+| Gemeente Almere |  |  |  |  |  |
+
+### Role options
+
+A. Accountable owner
+B. Coordinator
+C. Executor
+D. Programme platform
+E. Partner or contributor
+F. Funder only
+G. Advisor
+H. No formal role
+I. Unknown
+J. Other, please specify
+
+### D6 relation options
+
+A. Direct D6 role
+B. Adjacent supporting programme
+C. Regional governance only
+D. Local implementation only
+E. No D6 role
+F. Unknown
+G. Other, please specify
+
+### Evidence needed
+
+Programme-governance confirmation and funding-role split.
+
+### Safe wording until confirmed
+
+Current evidence suggests an interface between local programme work, regional collaboration, participation support and monitoring/advice.
+
+### Wording to avoid
+
+PGA, Zorgzaam Flevoland or Flever owns D6 for Almere.
+
+## 10. Digitale en operationele infrastructuur
+
+### Current working view
+
+Digital and operational infrastructure is not one object. It includes possible subcomponents such as RTP, RSO/data infrastructure, thuismonitoring, GGD dashboards and ACP/PZP pilots. These need to be validated separately.
+
+### Question for validation
+
+For each digital or operational subcomponent, is it in D6 scope, and who owns operations, data/privacy accountability and funding?
+
+### Answer format
+
+| Subcomponent | D6 relation | Operational owner | Data/privacy accountable party | Scale | Funding line | Continuity | Evidence |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| RTP |  |  |  |  |  |  |  |
+| RSO/data infrastructure |  |  |  |  |  |  |  |
+| Thuismonitoring / Monitoring@home |  |  |  |  |  |  |  |
+| GGD dashboards/monitoring |  |  |  |  |  |  |  |
+| ACP/PZP data-sharing pilots |  |  |  |  |  |  |  |
+| Other |  |  |  |  |  |  |  |
+
+### Evidence needed
+
+Subcomponent inventory, ICT/privacy accountability document, operational ownership confirmation and funding matrix.
+
+### Safe wording until confirmed
+
+Several digital and operational components may support D6-related execution, but they require subcomponent-level validation.
+
+### Wording to avoid
+
+RTP, RSO or Monitoring@home are confirmed formal D6 infrastructure for Almere.
+
+## 11. Burgerinitiatieven en informele steun
+
+### Current working view
+
+Several informal-support actors and mechanisms are visible, such as wijkbudget, resident-led support, VMCA, De Schoor, Humanitas, mantelzorg support and prevention networks. The open question is which are inside D6 and which are general social-base context.
+
+### Question for validation
+
+Which informal-support actors or mechanisms are inside current D6 scope?
+
+### Answer format
+
+| Actor or mechanism | D6 relation | Role | Scale | Funding line | Evidence |
+| --- | --- | --- | --- | --- | --- |
+| Wijkbudget |  |  |  |  |  |
+| Resident-led neighbourhood support |  |  |  |  |  |
+| VMCA volunteer support |  |  |  |  |  |
+| De Schoor social-base support |  |  |  |  |  |
+| Humanitas informal support |  |  |  |  |  |
+| Mantelzorg support |  |  |  |  |  |
+| Prevention-network actor |  |  |  |  |  |
+| Other |  |  |  |  |  |
+
+### Evidence needed
+
+Local inventory, classification confirmation and funding validation.
+
+### Safe wording until confirmed
+
+Several informal-support actors and mechanisms are relevant to D6 validation.
+
+### Wording to avoid
+
+Named informal-support actors are D6 owners.
+
+## 12. Financiering en budgetafbakening
+
+### Current working view
+
+Public sources show several possible funding routes, but they do not provide a component-level funding split. This is a finance/controller question.
+
+### Question for validation
+
+For each D6 component, which funding line applies, is the funding structural or project-based, and has finance/controller confirmed the split?
+
+### Answer format
+
+| Component | Primary funding line | Secondary funding line | Structural/project/undecided | Double-counting risk | Controller confirmed? | Evidence |
 | --- | --- | --- | --- | --- | --- | --- |
-| Inloopvoorzieningen sociaal en gezond | Public sources show social-base, buurtontmoeting, wijkbudget, wijkteam social-contact access, De Schoor, resident initiatives, mantelzorg and volunteer-support routes as relevant candidates. | `classification_choice`, `role_split`, `funding_split` | For each named facility/mechanism: D6 classification, current status, role, scale, funding, evidence type. | Local inventory or validation record naming facilities, owner/coordinator and funding line. | Keep `inferred` until named facilities and funding are validated. | No named inventory, no coordinator, unclear double funding. |
-| Wijkteams Almere | Public sources support Wijkteams as existing local support/access infrastructure. | `classification_choice`, `mandate_interpretation`, `role_split` | D6 classification; relation to SLT: separate baseline, transition path, execution partner, coordination partner, unknown, other. | Gemeente Almere/Wijkteams validation or implementation document on mandate, coverage, partner model and SLT relation. | Keep `inferred`. | Wijkteam mandate or SLT relation unclear. |
-| Stevige Lokale Teams | Public council material shows a 19 February 2026 SLT decision route and connection with JGZ/wijkteams. | `mandate_interpretation`, `classification_choice`, `funding_split` | What does the decision settle: SLT development only, D6 classification, mandate, owner, funding, partial, other. Rows touched: SLT, Wijkteams, JGZ, funding, monitoring, other. | Decision interpretation tied to council attachments, validation record and budget lines. | Keep `inferred`; do not settle if decision only supports SLT development. | Decision is cited as D6 proof without explicit D6 classification or funding interpretation. |
-| JGZ Almere | Public GGD/JGZ sources show broad 0-18 youth-health relevance to families, schools and local support. | `assurance`, `role_split`, `classification_choice` | For each JGZ role: regular JGZ, SLT-related, D6-specific, adjacent prevention, unknown, other. | JGZ/GGD/Gemeente task split or validation record. | Keep `inferred`. | JGZ regular work is collapsed into D6-specific work. |
-| GGD Flevoland-coordinatie | Public GGD sources support regional public-health, prevention, knowledge, advice, JGZ and monitoring relevance. | `role_split`, `classification_choice`, `funding_split` | Task split: regular GGD/public health, GALA/SPUK, regional monitoring/advice, D6-specific Almere, other. Scale choice required. | GGD/Flevoland/Gemeente validation of task, scale and funding route. | Keep `inferred`. | GGD regional tasks are overclaimed as Almere D6 tasks. |
-| Gezonde School / mentale gezonde school | Public Almere/GGD/JGZ/school sources now support school wellbeing and prevention context. | `classification_choice`, `role_split`, `funding_split`, `wording_approval` | D6 classification, current status, owner/coordinator, scale, funding, evidence type. | Local school/prevention arrangement or validation record naming owner, coordinator and funding. | Keep `inferred`. | School-prevention context is presented as formal D6 without validation. |
-| Kennis & Advies / monitoring / dashboards | GGD Kennis & Advies sources show monitors, dashboards, epidemiology, data analysis and advice functions. | `assurance`, `role_split`, `data_governance` | Which monitors steer D6: GGD Kennis & Advies, GGD dashboards, municipal dashboard, PGA/regional dashboard, D5 work-agenda monitoring, none, unknown, other. | Monitoring arrangement naming reporting owner, maintainer, frequency and funding. | Keep `inferred`. | Monitoring capability is confused with accepted D6 steering arrangement. |
-| Samen Sterker in de Wijk | Public sources show active mental-health neighbourhood implementation context through Almere, Zorglandschap Wmo, ZonMw, PGA and project material. | `assurance`, `classification_choice`, `role_split`, `funding_split` | Current status, scale, D6 classification, owner/coordinator, funding, evidence type. | Current project/governance validation, evaluation steering evidence and funding status. | Keep `inferred`. | Project status, citywide scale or structural funding unclear. |
-| PGA / Zorgzaam Flevoland-interface | Public sources clarify a role split: PGA local transformation programme, Zorgzaam regional IZA/regioplan movement, Flever participation/support, GGD monitoring/advice. | `role_split`, `classification_choice`, `funding_split` | Per actor: local programme, regional governance layer, participation-support actor, monitoring/advisory actor, funder, D6 owner, unknown, other. | Programme governance validation and funding-role split. | Keep `inferred`. | PGA, Zorgzaam, Flever, GGD and AZWA/D5/D6 roles are merged into one actor or budget line. |
-| Digitale en operationele infrastructuur | Public sources support RTP, RSO/data infrastructure, thuismonitoring, GGD monitoring and ACP/PZP data-sharing pilots as separate public components. | `data_governance`, `role_split`, `classification_choice`, `funding_split` | Split before validation: RTP; RSO/data infrastructure; thuismonitoring; GGD dashboards/monitoring; ACP/PZP pilots; other digital support. Per subcomponent: D6 classification, owner, data/privacy accountable party, operations, funding, continuity. | Component split plus ICT/privacy/accountability and funding validation. | Keep `inferred`; create sub-rows only when governance needs separate tracking. | One broad digital row hides different owners, data controllers, privacy risks or funding routes. |
-| Burgerinitiatieven en informele steun | Public sources show wijkbudget, resident-led support, De Schoor, VMCA, Humanitas, mantelzorg and prevention-network context. | `classification_choice`, `role_split`, `funding_split` | Per mechanism/actor: inside D6, adjacent social base, candidate, context, outside, unknown, other. | Local inventory, classification and funding validation. | Keep `inferred`. | Known actors are treated as inside D6 because they are publicly visible. |
-| Financiering en budgetafbakening | Public sources support funding-route awareness and double-counting risk, but not a component-level funding matrix. | `funding_split`, `mandate_interpretation`, `wording_approval` | Use as master matrix, not a normal component: AZWA-D6, D5, SPUK/GALA, PGA/IZA, regular municipal budget, GGD contribution/plustaak, Zvw/insurer, provider funding, project subsidy, structural/project/undecided, double-counting risk. | Finance/controller matrix or budget decision per component. | Keep `unknown` until component-level funding is validated. | Any final wording calls a component structural, funded or assigned without finance validation. |
+| Inloopvoorzieningen |  |  |  |  |  |  |
+| Wijkteams |  |  |  |  |  |  |
+| SLT |  |  |  |  |  |  |
+| JGZ |  |  |  |  |  |  |
+| GGD coordination |  |  |  |  |  |  |
+| Gezonde School |  |  |  |  |  |  |
+| Monitoring/dashboards |  |  |  |  |  |  |
+| Samen Sterker |  |  |  |  |  |  |
+| PGA/Zorgzaam/Flever interface |  |  |  |  |  |  |
+| Digital/operational infrastructure |  |  |  |  |  |  |
+| Informal support |  |  |  |  |  |  |
 
-## Work Packages For Handoff
+### Evidence needed
 
-| Work package | Rows covered | Output |
+Component-level funding matrix, controller confirmation and double-counting check.
+
+### Safe wording until confirmed
+
+Funding separation must be mapped per component to prevent double counting.
+
+### Wording to avoid
+
+D6 funding is already locally allocated.
+
+## Stakeholder Packets
+
+Do not send every question to every group. Split the work into focused packets.
+
+| Stakeholder packet | Should answer | Components |
 | --- | --- | --- |
-| Gemeente Almere classification session | Inloop, Wijkteams, SLT, Gezonde School, informal support | Classification choices, owner candidates, decision route and safe wording issues. |
-| GGD/JGZ/monitoring session | JGZ, GGD coordination, Gezonde School, Kennis & Advies | Task split, scale split and dashboard/reporting ownership. |
-| Mental-health / Samen Sterker session | Samen Sterker, PGA interface, SLT relation if relevant | Current status, scale, D6 relation, owner/coordinator and evaluation status. |
-| Digital/data/privacy session | Digital and operational infrastructure, monitoring overlap | Subcomponent owner, data controller, privacy/security accountability, operations and funding. |
-| Finance/controller review | All rows | Component-level funding matrix and double-counting control. |
+| Gemeente Almere policy / social domain | D6 classification, local ownership, mandate, safe wording | Inloopvoorzieningen, Wijkteams, SLT, Gezonde School, Burgerinitiatieven, Samen Sterker |
+| Finance/controller | Funding line, structural/project status, double-counting risk | All components |
+| Wijkteams / SLT leads | Mandate, coverage, execution model, relation between Wijkteams and SLT | Wijkteams, SLT |
+| JGZ / GGD Flevoland | JGZ role split, GGD task split, school-health role, monitoring role | JGZ, GGD, Gezonde School, Kennis & Advies |
+| PGA / Zorgzaam / Flever / regional governance | Actor-role separation, local vs regional scale, programme role | PGA/Zorgzaam/Flever interface, related digital or governance components |
+| Mental-health wijk partners | Current status, scale, coordination, continuation | Samen Sterker in de Wijk |
+| ICT / data / privacy leads | Operational owner, data controller, privacy/security accountability | Digital/operational infrastructure, monitoring/dashboards |
+| Social-base partners | Named facilities, informal-support mechanisms, role and funding | Inloopvoorzieningen, Burgerinitiatieven, informele steun |
 
-## Source-Intake Ticket
+## Simple Decision Rules
 
-| Source candidate | Current status | Next action | Register effect |
-| --- | --- | --- | --- |
-| `Stand van zaken Gezondheidsbeleid (IZA en GALA)` | Stable Documentwijzer landing URL found; underlying raadsbrief text/PDF not retrieved. Candidate is recorded in `data/raw/source_intake_candidates.json` as `pending_full_text`. | Find stable download/API document URL, ingest through manifest if claim-ready, rerun pipeline and verify top-layer appearance. | No D6 register change until claim-ready source text or validation evidence exists. |
+| Answer type | Effect on the D6 responsibility overview |
+| --- | --- |
+| Formal D6 + owner + coordinator/executor + scale + funding + evidence | May be marked as confirmed. |
+| Formal D6 but missing funding or ownership | Keep as not fully confirmed. |
+| Adjacent/supporting infrastructure | Keep linked, but do not describe as formal D6. |
+| Candidate D6 infrastructure | Keep as candidate; decision still needed. |
+| Implementation example only | Use as context, not as formal D6 component. |
+| Outside D6 scope | Remove from D6 candidate wording. |
+| Mixed/split required | Split into subcomponents before deciding. |
+| Unknown | No change. |
+| Conflicting answers | Mark as requiring review; do not force a conclusion. |
+| Funding unclear | Escalate to finance/controller. |
+| Data/privacy unclear | Escalate to ICT/privacy owner. |
+| Safe wording unclear | Escalate to policy owner. |
 
-## Settlement Rule
+## Core Question Pattern
 
-A row can become `settled` only when all of these are traceably answered:
+Use this pattern throughout:
 
-- D6 classification;
-- accountable owner;
-- executor and/or coordinator;
-- scale;
-- funding source and funding status;
-- mandate or decision route where relevant;
-- evidence path.
-
-If any of those remain missing, keep `inferred`, `unknown` or `review_needed`.
+> The current working view is that this component may be relevant to D6, but this is not yet confirmed. Which option best describes current Almere practice, and what evidence supports that answer?

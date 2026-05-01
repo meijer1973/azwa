@@ -13,7 +13,7 @@ Only these files should normally be used from the top level of this folder.
 | --- | --- |
 | `almere_d6_deep_research_learnings.md` | Clear summary of what Sprint 31.5 deep-research intake added to the public-source picture. |
 | `almere_d6_open_questions.md` | Clear list of what remains unknown and what must be asked of stakeholders, finance/controller roles or internal document owners. |
-| `almere_d6_validation_ticket_matrix.md` | Constrained validation tickets with answer choices, evidence gates and default register effects. Use this for handoff conversations instead of broad research questions. |
+| `almere_d6_validation_ticket_matrix.md` | Plain-language validation design with answer choices, stakeholder packets and simple decision rules. Use this for handoff conversations instead of broad research questions. |
 | `README.md` | This folder guide. |
 
 No D6 responsibility-register row may move to `settled` from these notes alone. Settlement requires traceable stakeholder validation, a local decision, or another authoritative source that directly answers classification, ownership, mandate, scale and funding.
@@ -22,7 +22,7 @@ No D6 responsibility-register row may move to `settled` from these notes alone. 
 
 1. Read `almere_d6_deep_research_learnings.md` to see what is now publicly source-backed.
 2. Read `almere_d6_open_questions.md` to see what still needs stakeholder, finance/controller, governance or internal-document validation.
-3. Use `almere_d6_validation_ticket_matrix.md` when preparing validation requests; it turns open questions into constrained choices.
+3. Use `almere_d6_validation_ticket_matrix.md` when preparing validation requests; it turns open questions into plain-language choices.
 4. Use archive files only when you need provenance, detailed tables, or generated sprint snapshots.
 
 Deep research reports are not sources. Put reports in `docs/dr/`, extract their suggested public sources, ingest selected public sources through the pipeline, and then test whether the findings appear in the top data layers.

@@ -32,7 +32,7 @@ For deep-research delegation, use `data/extracted/review_triage_deep_research_of
 
 For human-readable review navigation, start with `docs/review/README.md`. Archived review notes under `docs/review/archive/` are provenance only, not current entry points.
 
-For D6 validation handoff, use `docs/review/almere_d6_deep_research_learnings.md` to see what public-source intake added, `docs/review/almere_d6_open_questions.md` to see what still must be asked, and `docs/review/almere_d6_validation_ticket_matrix.md` to turn those questions into constrained validation tickets. Do not merge those categories when drafting conclusions.
+For D6 validation handoff, use `docs/review/almere_d6_deep_research_learnings.md` to see what public-source intake added, `docs/review/almere_d6_open_questions.md` to see what still must be asked, and `docs/review/almere_d6_validation_ticket_matrix.md` to turn those questions into plain-language stakeholder choices. Do not merge those categories when drafting conclusions.
 
 For deep-research intake, use `docs/dr/README.md`. Reports placed in `docs/dr/` are not corpus evidence. Treat them as source-discovery signals: ingest selected public sources through the raw manifest and pipeline, then verify that the findings appear in top data layers before marking the report processed.
 
@@ -238,6 +238,7 @@ Machine-readable:
     "docs/source-intake/phase31.5-samen-sterker-deep-research-intake.md",
     "docs/source-intake/phase31.5-d6-settlement-evidence-audit-intake.md",
     "docs/source-intake/phase31.5-stand-van-zaken-gezondheidsbeleid-intake.md",
+    "docs/source-intake/phase31.5-constrained-answer-design-intake.md",
     "docs/human-review-guidance.md",
     "docs/internal/monthly-source-audit-2026-04-30.md",
     "docs/internal/review-dashboard.html"

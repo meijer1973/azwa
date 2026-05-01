@@ -32,6 +32,7 @@ REVIEW_DOC_PATHS = [
     DOCS_DIR / "review" / "README.md",
     DOCS_DIR / "review" / "almere_d6_deep_research_learnings.md",
     DOCS_DIR / "review" / "almere_d6_open_questions.md",
+    DOCS_DIR / "review" / "almere_d6_validation_ticket_matrix.md",
 ]
 
 ISSUE_TYPES = {

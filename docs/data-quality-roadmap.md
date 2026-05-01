@@ -115,6 +115,8 @@ Status op 1 mei 2026: het settlement-auditrapport `docs/dr/Almere D6 Settlement 
 
 Status op 1 mei 2026: het follow-uprapport `docs/dr/Stable public source check for “Stand van zaken Gezondheidsbeleid (IZA en GALA)”.md` is verwerkt als bronintake-signaal. De stabiele Documentwijzer-landingspagina is gevonden en vastgelegd als `mun_almere_stand_van_zaken_gezondheidsbeleid_iza_gala_2025` in `data/raw/source_intake_candidates.json` met status `pending_full_text`. De lokale download leverde alleen de Raadzaam-appshell op, dus deze bron is nog niet toegevoegd aan `data/raw/manifest.json` en levert nog geen claim- of D6-registerbewijs op. De resterende publieke taak is gericht: haal de onderliggende raadsbrieftekst/PDF op, of laat de kandidaat staan.
 
+Status op 1 mei 2026: de D6-open-vragen zijn aangescherpt naar validatietickets in `docs/review/almere_d6_validation_ticket_matrix.md`. De repository geeft daarmee geen brede onderzoeksvragen meer mee, maar keuzevelden, evidence gates, standaard registereffecten en escalatietriggers per D6-rij. De brede rijen digitale/operationele infrastructuur en financiering worden in de matrix respectievelijk als subcomponenten en master funding matrix behandeld, zonder het D6-register inhoudelijk te harden.
+
 Afgeronde aanpak voor Sprint 25.4a:
 
 - Gebruik publieke bronnen eerst om D6-rollen te ordenen; als bronnen geen taak, eigenaar of besluit geven, markeer dit als lokale validatie of besluitvraag.

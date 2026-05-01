@@ -167,6 +167,17 @@
       "reason": "Korte procesnotitie met de relatie tot het regioplan en de sleuteldata rond 26 mei, september en 15 november 2026.",
       "priority": "high",
       "ingestion_status": "ingested"
+    },
+    {
+      "proposed_document_id": "mun_almere_stand_van_zaken_gezondheidsbeleid_iza_gala_2025",
+      "title": "Stand van zaken Gezondheidsbeleid (IZA en GALA)",
+      "source_url": "https://documentwijzer.raadvanalmere.nl/app/instrument/item%2F1015051",
+      "publisher": "Raad van Almere / Gemeente Almere",
+      "source_type_guess": "raadsbrief / Documentwijzer item",
+      "reason": "Stable public landing URL found for a previously unresolved Almere IZA/GALA health-policy status source; potentially relevant to GGD/JGZ, PGA and funding context after full-text retrieval.",
+      "priority": "high",
+      "ingestion_status": "pending_full_text",
+      "ingestion_note": "Landing URL resolves, but local download on 2026-05-01 produced only the Raadzaam SPA shell and no underlying raadsbrief text/PDF. Do not add to raw manifest or use for claims until the attachment/full text is retrieved."
     }
   ],
   "candidate_timeline_items": [

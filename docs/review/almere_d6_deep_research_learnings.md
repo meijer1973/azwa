@@ -36,6 +36,8 @@ Six deep-research intakes were processed:
 | Samen Sterker in de Wijk | Strengthened public evidence for Samen Sterker as an active mental-health neighbourhood initiative with municipal, regional, ZonMw, PGA and project-site context. |
 | D6 settlement evidence audit | Confirmed the public-source boundary: public evidence is now strong enough for validation preparation, but not for settlement of D6 classification, ownership, mandate or funding. |
 
+A seventh, narrower intake was also processed for `Stand van zaken Gezondheidsbeleid (IZA en GALA)`. It found a stable Documentwijzer landing URL, but not the underlying raadsbrief full text or downloadable attachment. The result is therefore a pending source candidate, not new D6 evidence.
+
 ## Learned Per D6 Component
 
 | D6 component | What we learned from public sources | Source-backed interpretation now possible | What this changed |
@@ -63,6 +65,8 @@ The practical shift is:
 - After deep research: most rows have concrete public-source prefill.
 - Still unchanged: no row is `settled`; formal D6 classification, owner, mandate and funding require validation.
 
+The `Stand van zaken Gezondheidsbeleid (IZA en GALA)` search narrows one residual public-source lead: the stable landing URL exists, but full-text retrieval is still needed before any source claim can be made from it.
+
 ## What Not To Do With This Note
 
 - Do not treat "source-backed validation candidate" as "formal D6 infrastructure".
@@ -80,3 +84,4 @@ The detailed source-selection notes are in:
 - `docs/source-intake/phase31.5-pga-zorgzaam-flever-deep-research-intake.md`.
 - `docs/source-intake/phase31.5-samen-sterker-deep-research-intake.md`.
 - `docs/source-intake/phase31.5-d6-settlement-evidence-audit-intake.md`.
+- `docs/source-intake/phase31.5-stand-van-zaken-gezondheidsbeleid-intake.md`.

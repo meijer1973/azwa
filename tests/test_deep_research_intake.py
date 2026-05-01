@@ -15,10 +15,15 @@ AUTHORITY_ADOPTION_REPORT_PATH = (
     REPO_ROOT / "docs" / "dr" / "Stronger official sources for Almere authority and adoption items.md"
 )
 SETTLEMENT_AUDIT_REPORT_PATH = REPO_ROOT / "docs" / "dr" / "Almere D6 Settlement Evidence Audit.md"
+STAND_VAN_ZAKEN_REPORT_PATH = (
+    REPO_ROOT / "docs" / "dr" / "Stable public source check for “Stand van zaken Gezondheidsbeleid (IZA en GALA)”.md"
+)
 MANIFEST_PATH = REPO_ROOT / "data" / "raw" / "manifest.json"
+SOURCE_INTAKE_CANDIDATES_PATH = REPO_ROOT / "data" / "raw" / "source_intake_candidates.json"
 INVENTORY_PATH = REPO_ROOT / "data" / "extracted" / "document_inventory.json"
 REGISTER_PATH = REPO_ROOT / "data" / "extracted" / "municipal" / "almere_d6_responsibility_register.json"
 TRIAGE_PATH = REPO_ROOT / "data" / "extracted" / "review_triage_deep_research_offload.json"
+OPEN_QUESTIONS_PATH = REPO_ROOT / "docs" / "review" / "almere_d6_open_questions.md"
 
 HEALTHY_SCHOOL_SOURCE_IDS = {
     "mun_almere_gezonde_scholen",
@@ -103,6 +108,7 @@ class DeepResearchIntakeTests(unittest.TestCase):
         self.assertTrue(SAMEN_STERKER_REPORT_PATH.exists())
         self.assertTrue(AUTHORITY_ADOPTION_REPORT_PATH.exists())
         self.assertTrue(SETTLEMENT_AUDIT_REPORT_PATH.exists())
+        self.assertTrue(STAND_VAN_ZAKEN_REPORT_PATH.exists())
         manifest = load_json(MANIFEST_PATH)
         self.assertFalse(any(entry["file_path"] == "docs/dr/Healthy school.md" for entry in manifest))
         self.assertFalse(
@@ -123,6 +129,13 @@ class DeepResearchIntakeTests(unittest.TestCase):
         )
         self.assertFalse(
             any(entry["file_path"] == "docs/dr/Almere D6 Settlement Evidence Audit.md" for entry in manifest)
+        )
+        self.assertFalse(
+            any(
+                entry["file_path"]
+                == "docs/dr/Stable public source check for “Stand van zaken Gezondheidsbeleid (IZA en GALA)”.md"
+                for entry in manifest
+            )
         )
 
     def test_healthy_school_sources_are_ingested(self) -> None:
@@ -290,6 +303,25 @@ class DeepResearchIntakeTests(unittest.TestCase):
         self.assertTrue(SETTLEMENT_AUDIT_SOURCE_IDS.intersection(funding_row["evidence_source"]))
         self.assertNotEqual(funding_row["decision_status"], "settled")
         self.assertTrue(funding_row["needs_human_review"])
+
+    def test_stand_van_zaken_candidate_waits_for_full_text(self) -> None:
+        candidates = load_json(SOURCE_INTAKE_CANDIDATES_PATH)
+        candidate = next(
+            item
+            for item in candidates["candidate_sources"]
+            if item["proposed_document_id"] == "mun_almere_stand_van_zaken_gezondheidsbeleid_iza_gala_2025"
+        )
+        self.assertEqual(candidate["ingestion_status"], "pending_full_text")
+        self.assertIn("documentwijzer", candidate["source_url"])
+        self.assertIn("full text", candidate["ingestion_note"])
+
+        manifest = load_json(MANIFEST_PATH)
+        manifest_ids = {entry["document_id"] for entry in manifest}
+        self.assertNotIn("mun_almere_stand_van_zaken_gezondheidsbeleid_iza_gala_2025", manifest_ids)
+
+        open_questions = OPEN_QUESTIONS_PATH.read_text(encoding="utf-8")
+        self.assertIn("Stable Documentwijzer landing URL found", open_questions)
+        self.assertIn("underlying raadsbrief text/PDF is still needed", open_questions)
 
 
 if __name__ == "__main__":

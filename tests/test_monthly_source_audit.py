@@ -12,11 +12,18 @@ class MonthlySourceAuditTests(unittest.TestCase):
         summary = audit["summary"]
 
         self.assertEqual(summary["watchlist_count"], 6)
-        self.assertEqual(summary["candidate_source_count"], 16)
+        self.assertEqual(summary["candidate_source_count"], 17)
         self.assertEqual(summary["pending_timeline_item_count"], 3)
         self.assertEqual(summary["pending_replacement_count"], 1)
         self.assertEqual(summary["watch_status_counts"], {"not_due_yet": 6})
         self.assertFalse(audit["live_link_check"])
+        candidate_statuses = {
+            item["proposed_document_id"]: item["ingestion_status"] for item in audit["candidate_sources"]
+        }
+        self.assertEqual(
+            candidate_statuses["mun_almere_stand_van_zaken_gezondheidsbeleid_iza_gala_2025"],
+            "pending_full_text",
+        )
 
     def test_pending_replacement_and_timeline_items_remain_separate_from_evidence(self) -> None:
         audit = monthly_audit.build_audit(date(2026, 4, 30), live=False)

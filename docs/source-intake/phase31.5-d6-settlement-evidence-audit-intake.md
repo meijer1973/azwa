@@ -22,7 +22,7 @@ The audit also relies on the companion report `docs/dr/Stronger official sources
 
 | Candidate | Reason |
 | --- | --- |
-| Council article for `Stand van zaken Gezondheidsbeleid (IZA en GALA)` | The report identified this as useful, but a stable public URL/download was not found during this intake. Keep as a named source candidate for later targeted search. |
+| Council article for `Stand van zaken Gezondheidsbeleid (IZA en GALA)` | A later targeted check found the stable Documentwijzer landing URL, but not the underlying full text/PDF. It is recorded as `pending_full_text` in `data/raw/source_intake_candidates.json`; see `docs/source-intake/phase31.5-stand-van-zaken-gezondheidsbeleid-intake.md`. |
 | Council summary pages for Visie Gezondheidsbeleid and Maatschappelijke Agenda | The repository already has stronger underlying Documentwijzer/council-decision material for these dossiers. |
 | Broad additional public search for D6 settlement | Deferred by design. The audit confirms there are no named public-search gaps for the D6 register rows. |
 

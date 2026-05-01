@@ -1,17 +1,18 @@
 {
   "audit_id": "monthly_source_audit_2026_04",
   "generated_on": "2026-04-30",
-  "live_link_check": true,
+  "live_link_check": false,
   "summary": {
-    "candidate_source_count": 16,
+    "candidate_source_count": 17,
     "watchlist_count": 6,
     "pending_timeline_item_count": 3,
     "pending_replacement_count": 1,
-    "live_link_issue_count": 1,
-    "live_link_review_count": 1,
+    "live_link_issue_count": 0,
+    "live_link_review_count": 0,
     "candidate_status_counts": {
       "ingested": 15,
-      "pending_replacement": 1
+      "pending_replacement": 1,
+      "pending_full_text": 1
     },
     "watch_status_counts": {
       "not_due_yet": 6
@@ -30,10 +31,10 @@
       "intake_rule": "Pas toevoegen als eigen bron nadat de 2026-circulairepagina of PDF publiek beschikbaar is.",
       "audit_status": "not_due_yet",
       "link_check": {
-        "checked": true,
-        "ok": true,
-        "status_code": 200,
-        "final_url": "https://www.rijksoverheid.nl/onderwerpen/financien-gemeenten-en-provincies/gemeentefonds/circulaires-gemeentefonds"
+        "checked": false,
+        "ok": null,
+        "status_code": null,
+        "note": "live link check not requested"
       }
     },
     {
@@ -48,10 +49,10 @@
       "intake_rule": "Pas toevoegen als eigen bron nadat de 2026-circulairepagina of PDF publiek beschikbaar is.",
       "audit_status": "not_due_yet",
       "link_check": {
-        "checked": true,
-        "ok": true,
-        "status_code": 200,
-        "final_url": "https://www.rijksoverheid.nl/onderwerpen/financien-gemeenten-en-provincies/gemeentefonds/circulaires-gemeentefonds"
+        "checked": false,
+        "ok": null,
+        "status_code": null,
+        "note": "live link check not requested"
       }
     },
     {
@@ -66,10 +67,10 @@
       "intake_rule": "Pas toevoegen als eigen bron nadat de 2026-circulairepagina of PDF publiek beschikbaar is.",
       "audit_status": "not_due_yet",
       "link_check": {
-        "checked": true,
-        "ok": true,
-        "status_code": 200,
-        "final_url": "https://www.rijksoverheid.nl/onderwerpen/financien-gemeenten-en-provincies/gemeentefonds/circulaires-gemeentefonds"
+        "checked": false,
+        "ok": null,
+        "status_code": null,
+        "note": "live link check not requested"
       }
     },
     {
@@ -84,10 +85,10 @@
       "intake_rule": "Handreikingen pas als bron gebruiken nadat de publicatie of download beschikbaar is; tot die tijd blijft het tijdlijnitem een verwacht vrijgavemoment.",
       "audit_status": "not_due_yet",
       "link_check": {
-        "checked": true,
-        "ok": true,
-        "status_code": 200,
-        "final_url": "https://www.zorgakkoorden.nl/programmas/aanvullend-zorg-en-welzijnsakkoord/handvatten-voor-het-opstellen-van-de-regionale-werkagenda/"
+        "checked": false,
+        "ok": null,
+        "status_code": null,
+        "note": "live link check not requested"
       }
     },
     {
@@ -102,10 +103,10 @@
       "intake_rule": "Pas opnemen als regeling of uitvoeringspagina wanneer een formele publicatie of aanvraagpagina beschikbaar is.",
       "audit_status": "not_due_yet",
       "link_check": {
-        "checked": true,
-        "ok": true,
-        "status_code": 200,
-        "final_url": "https://www.zorgakkoorden.nl/programmas/aanvullend-zorg-en-welzijnsakkoord/handvatten-voor-het-opstellen-van-de-regionale-werkagenda/"
+        "checked": false,
+        "ok": null,
+        "status_code": null,
+        "note": "live link check not requested"
       }
     },
     {
@@ -120,10 +121,10 @@
       "intake_rule": "Pas opnemen wanneer een concrete monitorrapportage of Kamerbrief met monitorbijlage beschikbaar is.",
       "audit_status": "not_due_yet",
       "link_check": {
-        "checked": true,
-        "ok": true,
-        "status_code": 200,
-        "final_url": "https://www.rijksoverheid.nl/onderwerpen/kwaliteit-van-de-zorg/integraal-zorgakkoord"
+        "checked": false,
+        "ok": null,
+        "status_code": null,
+        "note": "live link check not requested"
       }
     }
   ],
@@ -136,10 +137,10 @@
       "ingestion_status": "ingested",
       "source_url": "https://www.zorgakkoorden.nl/programmas/aanvullend-zorg-en-welzijnsakkoord",
       "link_check": {
-        "checked": true,
-        "ok": true,
-        "status_code": 200,
-        "final_url": "https://www.zorgakkoorden.nl/programmas/aanvullend-zorg-en-welzijnsakkoord/"
+        "checked": false,
+        "ok": null,
+        "status_code": null,
+        "note": "live link check not requested"
       },
       "note": null
     },
@@ -151,10 +152,10 @@
       "ingestion_status": "ingested",
       "source_url": "https://www.dus-i.nl/subsidies/specifieke-uitkeringen-spuk/specifieke-uitkering-transformatiemiddelen-iza",
       "link_check": {
-        "checked": true,
-        "ok": true,
-        "status_code": 200,
-        "final_url": "https://www.dus-i.nl/subsidies/specifieke-uitkeringen-spuk/specifieke-uitkering-transformatiemiddelen-iza"
+        "checked": false,
+        "ok": null,
+        "status_code": null,
+        "note": "live link check not requested"
       },
       "note": null
     },
@@ -166,12 +167,10 @@
       "ingestion_status": "ingested",
       "source_url": "https://wetten.overheid.nl/BWBR0049737/",
       "link_check": {
-        "checked": true,
+        "checked": false,
         "ok": null,
-        "review_needed": true,
-        "status_code": 302,
-        "error": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\n",
-        "note": "Redirect handling needs manual review; this is not treated as a dead link by itself."
+        "status_code": null,
+        "note": "live link check not requested"
       },
       "note": null
     },
@@ -183,10 +182,10 @@
       "ingestion_status": "ingested",
       "source_url": "https://www.rijksoverheid.nl/onderwerpen/financien-gemeenten-en-provincies/gemeentefonds",
       "link_check": {
-        "checked": true,
-        "ok": true,
-        "status_code": 200,
-        "final_url": "https://www.rijksoverheid.nl/onderwerpen/financien-gemeenten-en-provincies/gemeentefonds"
+        "checked": false,
+        "ok": null,
+        "status_code": null,
+        "note": "live link check not requested"
       },
       "note": null
     },
@@ -198,10 +197,10 @@
       "ingestion_status": "pending_replacement",
       "source_url": "https://vng.nl/onderwerpen/integraal-zorgakkoord-iza",
       "link_check": {
-        "checked": true,
-        "ok": false,
-        "status_code": 404,
-        "error": "HTTP Error 404: Not Found"
+        "checked": false,
+        "ok": null,
+        "status_code": null,
+        "note": "live link check not requested"
       },
       "note": "De oorspronkelijke URL gaf op 2026-04-22 een 404 terug; vervangende VNG-bron nog selecteren."
     },
@@ -213,10 +212,10 @@
       "ingestion_status": "ingested",
       "source_url": "https://vng.nl/rubrieken/onderwerpen/gezond-en-actief-leven",
       "link_check": {
-        "checked": true,
-        "ok": true,
-        "status_code": 200,
-        "final_url": "https://vng.nl/rubrieken/onderwerpen/gezond-en-actief-leven"
+        "checked": false,
+        "ok": null,
+        "status_code": null,
+        "note": "live link check not requested"
       },
       "note": null
     },
@@ -228,10 +227,10 @@
       "ingestion_status": "ingested",
       "source_url": "https://vng.nl/sites/default/files/2025-07/20250711-ledenbrief-onderhandelaarsakkoord-azwa.pdf",
       "link_check": {
-        "checked": true,
-        "ok": true,
-        "status_code": 200,
-        "final_url": "https://vng.nl/sites/default/files/2025-07/20250711-ledenbrief-onderhandelaarsakkoord-azwa.pdf"
+        "checked": false,
+        "ok": null,
+        "status_code": null,
+        "note": "live link check not requested"
       },
       "note": null
     },
@@ -243,10 +242,10 @@
       "ingestion_status": "ingested",
       "source_url": "https://sociaalwerknederland.nl/actueel/financiering-iza-en-azwa-hoe-zit-het-precies",
       "link_check": {
-        "checked": true,
-        "ok": true,
-        "status_code": 200,
-        "final_url": "https://sociaalwerknederland.nl/actueel/financiering-iza-en-azwa-hoe-zit-het-precies"
+        "checked": false,
+        "ok": null,
+        "status_code": null,
+        "note": "live link check not requested"
       },
       "note": null
     },
@@ -258,10 +257,10 @@
       "ingestion_status": "ingested",
       "source_url": "https://www.almere.nl/bestuur-en-organisatie/financien/begroting",
       "link_check": {
-        "checked": true,
-        "ok": true,
-        "status_code": 200,
-        "final_url": "https://www.almere.nl/bestuur-en-organisatie/financien/begroting"
+        "checked": false,
+        "ok": null,
+        "status_code": null,
+        "note": "live link check not requested"
       },
       "note": null
     },
@@ -273,10 +272,10 @@
       "ingestion_status": "ingested",
       "source_url": "https://raadvanalmere.nl/page/vergaderschema",
       "link_check": {
-        "checked": true,
-        "ok": true,
-        "status_code": 200,
-        "final_url": "https://raadvanalmere.nl/page/vergaderschema"
+        "checked": false,
+        "ok": null,
+        "status_code": null,
+        "note": "live link check not requested"
       },
       "note": null
     },
@@ -288,10 +287,10 @@
       "ingestion_status": "ingested",
       "source_url": "https://vng.nl/brieven/azwa-financiering-voor-gemeenten-zorgakkoord",
       "link_check": {
-        "checked": true,
-        "ok": true,
-        "status_code": 200,
-        "final_url": "https://vng.nl/brieven/azwa-financiering-voor-gemeenten-zorgakkoord"
+        "checked": false,
+        "ok": null,
+        "status_code": null,
+        "note": "live link check not requested"
       },
       "note": null
     },
@@ -303,10 +302,10 @@
       "ingestion_status": "ingested",
       "source_url": "https://vng.nl/sites/default/files/2026-04/20260422-ledenbrief-azwa-financiering-voor-gemeenten-zorgakkoord.pdf",
       "link_check": {
-        "checked": true,
-        "ok": true,
-        "status_code": 200,
-        "final_url": "https://vng.nl/sites/default/files/2026-04/20260422-ledenbrief-azwa-financiering-voor-gemeenten-zorgakkoord.pdf"
+        "checked": false,
+        "ok": null,
+        "status_code": null,
+        "note": "live link check not requested"
       },
       "note": null
     },
@@ -318,10 +317,10 @@
       "ingestion_status": "ingested",
       "source_url": "https://vng.nl/sites/default/files/2026-04/brief-vws-aan-vng-over-azwa-afspraken-d5-en-d6-en-financieringsinstrument.pdf",
       "link_check": {
-        "checked": true,
-        "ok": true,
-        "status_code": 200,
-        "final_url": "https://vng.nl/sites/default/files/2026-04/brief-vws-aan-vng-over-azwa-afspraken-d5-en-d6-en-financieringsinstrument.pdf"
+        "checked": false,
+        "ok": null,
+        "status_code": null,
+        "note": "live link check not requested"
       },
       "note": null
     },
@@ -333,10 +332,10 @@
       "ingestion_status": "ingested",
       "source_url": "https://vng.nl/sites/default/files/2026-04/opdracht-voor-de-werkagenda-azwa.pdf",
       "link_check": {
-        "checked": true,
-        "ok": true,
-        "status_code": 200,
-        "final_url": "https://vng.nl/sites/default/files/2026-04/opdracht-voor-de-werkagenda-azwa.pdf"
+        "checked": false,
+        "ok": null,
+        "status_code": null,
+        "note": "live link check not requested"
       },
       "note": null
     },
@@ -348,10 +347,10 @@
       "ingestion_status": "ingested",
       "source_url": "https://vng.nl/sites/default/files/2026-04/format-voor-de-werkagenda-azwa.docx",
       "link_check": {
-        "checked": true,
-        "ok": true,
-        "status_code": 200,
-        "final_url": "https://vng.nl/sites/default/files/2026-04/format-voor-de-werkagenda-azwa.docx"
+        "checked": false,
+        "ok": null,
+        "status_code": null,
+        "note": "live link check not requested"
       },
       "note": null
     },
@@ -363,12 +362,27 @@
       "ingestion_status": "ingested",
       "source_url": "https://vng.nl/sites/default/files/2026-04/20260422-begeleidende-toelichting-op-opdracht-werkagenda-financiele-middelen-proces.pdf",
       "link_check": {
-        "checked": true,
-        "ok": true,
-        "status_code": 200,
-        "final_url": "https://vng.nl/sites/default/files/2026-04/20260422-begeleidende-toelichting-op-opdracht-werkagenda-financiele-middelen-proces.pdf"
+        "checked": false,
+        "ok": null,
+        "status_code": null,
+        "note": "live link check not requested"
       },
       "note": null
+    },
+    {
+      "proposed_document_id": "mun_almere_stand_van_zaken_gezondheidsbeleid_iza_gala_2025",
+      "title": "Stand van zaken Gezondheidsbeleid (IZA en GALA)",
+      "publisher": "Raad van Almere / Gemeente Almere",
+      "priority": "high",
+      "ingestion_status": "pending_full_text",
+      "source_url": "https://documentwijzer.raadvanalmere.nl/app/instrument/item%2F1015051",
+      "link_check": {
+        "checked": false,
+        "ok": null,
+        "status_code": null,
+        "note": "live link check not requested"
+      },
+      "note": "Landing URL resolves, but local download on 2026-05-01 produced only the Raadzaam SPA shell and no underlying raadsbrief text/PDF. Do not add to raw manifest or use for claims until the attachment/full text is retrieved."
     }
   ],
   "pending_timeline_items": [
@@ -403,49 +417,15 @@
       "ingestion_status": "pending_replacement",
       "source_url": "https://vng.nl/onderwerpen/integraal-zorgakkoord-iza",
       "link_check": {
-        "checked": true,
-        "ok": false,
-        "status_code": 404,
-        "error": "HTTP Error 404: Not Found"
-      },
-      "note": "De oorspronkelijke URL gaf op 2026-04-22 een 404 terug; vervangende VNG-bron nog selecteren."
-    }
-  ],
-  "live_link_issues": [
-    {
-      "proposed_document_id": "nat_vng_iza_azwa_wegwijzer_2026",
-      "title": "VNG Wegwijzer IZA / AZWA",
-      "publisher": "VNG",
-      "priority": "high",
-      "ingestion_status": "pending_replacement",
-      "source_url": "https://vng.nl/onderwerpen/integraal-zorgakkoord-iza",
-      "link_check": {
-        "checked": true,
-        "ok": false,
-        "status_code": 404,
-        "error": "HTTP Error 404: Not Found"
-      },
-      "note": "De oorspronkelijke URL gaf op 2026-04-22 een 404 terug; vervangende VNG-bron nog selecteren."
-    }
-  ],
-  "live_link_review_items": [
-    {
-      "proposed_document_id": "nat_wetten_spuk_transformatiemiddelen_regeling",
-      "title": "Regeling specifieke uitkering transformatiemiddelen IZA & AZWA 2024-2028",
-      "publisher": "Wetten.nl",
-      "priority": "critical",
-      "ingestion_status": "ingested",
-      "source_url": "https://wetten.overheid.nl/BWBR0049737/",
-      "link_check": {
-        "checked": true,
+        "checked": false,
         "ok": null,
-        "review_needed": true,
-        "status_code": 302,
-        "error": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\n",
-        "note": "Redirect handling needs manual review; this is not treated as a dead link by itself."
+        "status_code": null,
+        "note": "live link check not requested"
       },
-      "note": null
+      "note": "De oorspronkelijke URL gaf op 2026-04-22 een 404 terug; vervangende VNG-bron nog selecteren."
     }
   ],
+  "live_link_issues": [],
+  "live_link_review_items": [],
   "source_boundary": "Pending sources and watchlist items are not public evidence until they are saved, added to the raw manifest, processed by the pipeline and represented in generated layers."
 }

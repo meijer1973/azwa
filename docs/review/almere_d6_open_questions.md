@@ -72,11 +72,11 @@ These themes remain outside the public-source boundary:
 
 ## Remaining Public Search
 
-Broad public D6 searching should stay parked. The only targeted public-source lead still worth checking is:
+Broad public D6 searching should stay parked. The only targeted public-source lead still worth checking is now narrowed to full-text retrieval:
 
 | Source candidate | Why it may matter | Current status |
 | --- | --- | --- |
-| `Stand van zaken Gezondheidsbeleid (IZA en GALA)` | May add local council/process evidence for health, GALA and IZA positioning relevant to D6 validation. | Named candidate only; stable public URL/download was not found during the last intake. |
+| `Stand van zaken Gezondheidsbeleid (IZA en GALA)` | May add local council/process evidence for health, GALA and IZA positioning relevant to D6 validation. Most plausible rows are GGD/JGZ, PGA/Zorgzaam interface and funding context. | Stable Documentwijzer landing URL found: `https://documentwijzer.raadvanalmere.nl/app/instrument/item%2F1015051`. Local download returned only the Raadzaam app shell, so the underlying raadsbrief text/PDF is still needed before this can become corpus evidence. |
 
 ## Handoff Rule
 

@@ -229,6 +229,7 @@ Machine-readable:
     "docs/source-intake/phase31.5-informal-support-deep-research-intake.md",
     "docs/source-intake/phase31.5-pga-zorgzaam-flever-deep-research-intake.md",
     "docs/source-intake/phase31.5-samen-sterker-deep-research-intake.md",
+    "docs/source-intake/phase31.5-d6-settlement-evidence-audit-intake.md",
     "docs/human-review-guidance.md",
     "docs/internal/monthly-source-audit-2026-04-30.md",
     "docs/internal/review-dashboard.html"

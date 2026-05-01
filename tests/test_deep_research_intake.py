@@ -11,9 +11,14 @@ DIGITAL_INFRA_REPORT_PATH = REPO_ROOT / "docs" / "dr" / "Digital and operational
 INFORMAL_SUPPORT_REPORT_PATH = REPO_ROOT / "docs" / "dr" / "Informal support.md"
 PGA_ZORGZAAM_FLEVER_REPORT_PATH = REPO_ROOT / "docs" / "dr" / "Zorgzaam Flevoland, and Flever interface.md"
 SAMEN_STERKER_REPORT_PATH = REPO_ROOT / "docs" / "dr" / "Samen Sterker in de Wijk in Almere.md"
+AUTHORITY_ADOPTION_REPORT_PATH = (
+    REPO_ROOT / "docs" / "dr" / "Stronger official sources for Almere authority and adoption items.md"
+)
+SETTLEMENT_AUDIT_REPORT_PATH = REPO_ROOT / "docs" / "dr" / "Almere D6 Settlement Evidence Audit.md"
 MANIFEST_PATH = REPO_ROOT / "data" / "raw" / "manifest.json"
 INVENTORY_PATH = REPO_ROOT / "data" / "extracted" / "document_inventory.json"
 REGISTER_PATH = REPO_ROOT / "data" / "extracted" / "municipal" / "almere_d6_responsibility_register.json"
+TRIAGE_PATH = REPO_ROOT / "data" / "extracted" / "review_triage_deep_research_offload.json"
 
 HEALTHY_SCHOOL_SOURCE_IDS = {
     "mun_almere_gezonde_scholen",
@@ -76,6 +81,14 @@ SAMEN_STERKER_SOURCE_IDS = {
     "reg_samen_sterker_in_de_wijk_home",
 }
 
+SETTLEMENT_AUDIT_SOURCE_IDS = {
+    "mun_almere_subsidieregister_2024",
+    "mun_almere_subsidieregister_2025",
+    "mun_almere_mentale_gezondheid",
+    "reg_ggd_flevoland_voortgang_gala_regio_2023",
+    "nat_zorgakkoorden_werkagenda_handvatten_2026",
+}
+
 
 def load_json(path: Path) -> dict | list:
     return json.loads(path.read_text(encoding="utf-8"))
@@ -88,6 +101,8 @@ class DeepResearchIntakeTests(unittest.TestCase):
         self.assertTrue(INFORMAL_SUPPORT_REPORT_PATH.exists())
         self.assertTrue(PGA_ZORGZAAM_FLEVER_REPORT_PATH.exists())
         self.assertTrue(SAMEN_STERKER_REPORT_PATH.exists())
+        self.assertTrue(AUTHORITY_ADOPTION_REPORT_PATH.exists())
+        self.assertTrue(SETTLEMENT_AUDIT_REPORT_PATH.exists())
         manifest = load_json(MANIFEST_PATH)
         self.assertFalse(any(entry["file_path"] == "docs/dr/Healthy school.md" for entry in manifest))
         self.assertFalse(
@@ -99,6 +114,15 @@ class DeepResearchIntakeTests(unittest.TestCase):
         )
         self.assertFalse(
             any(entry["file_path"] == "docs/dr/Samen Sterker in de Wijk in Almere.md" for entry in manifest)
+        )
+        self.assertFalse(
+            any(
+                entry["file_path"] == "docs/dr/Stronger official sources for Almere authority and adoption items.md"
+                for entry in manifest
+            )
+        )
+        self.assertFalse(
+            any(entry["file_path"] == "docs/dr/Almere D6 Settlement Evidence Audit.md" for entry in manifest)
         )
 
     def test_healthy_school_sources_are_ingested(self) -> None:
@@ -145,6 +169,15 @@ class DeepResearchIntakeTests(unittest.TestCase):
         inventory = load_json(INVENTORY_PATH)
         inventory_ids = {entry["document_id"] for entry in inventory["documents"]}
         self.assertTrue(SAMEN_STERKER_SOURCE_IDS.issubset(inventory_ids))
+
+    def test_settlement_audit_sources_are_ingested(self) -> None:
+        manifest = load_json(MANIFEST_PATH)
+        manifest_ids = {entry["document_id"] for entry in manifest}
+        self.assertTrue(SETTLEMENT_AUDIT_SOURCE_IDS.issubset(manifest_ids))
+
+        inventory = load_json(INVENTORY_PATH)
+        inventory_ids = {entry["document_id"] for entry in inventory["documents"]}
+        self.assertTrue(SETTLEMENT_AUDIT_SOURCE_IDS.issubset(inventory_ids))
 
     def test_healthy_school_findings_reach_d6_register(self) -> None:
         register = load_json(REGISTER_PATH)
@@ -239,6 +272,24 @@ class DeepResearchIntakeTests(unittest.TestCase):
         self.assertEqual(row["decision_status"], "inferred")
         self.assertNotEqual(row["decision_status"], "settled")
         self.assertTrue(row["needs_human_review"])
+
+    def test_settlement_audit_keeps_d6_rows_unsettled(self) -> None:
+        register = load_json(REGISTER_PATH)
+        triage = load_json(TRIAGE_PATH)
+
+        self.assertEqual(register["summary"]["settled_count"], 0)
+        self.assertEqual(register["summary"]["component_count"], 12)
+        self.assertEqual(triage["summary"]["d6_rows_requiring_human_validation"], 12)
+        self.assertEqual(triage["summary"]["d6_rows_with_named_public_search_gap"], 0)
+
+        funding_row = next(
+            component
+            for component in register["components"]
+            if component["component_id"] == "funding_budget_alignment"
+        )
+        self.assertTrue(SETTLEMENT_AUDIT_SOURCE_IDS.intersection(funding_row["evidence_source"]))
+        self.assertNotEqual(funding_row["decision_status"], "settled")
+        self.assertTrue(funding_row["needs_human_review"])
 
 
 if __name__ == "__main__":

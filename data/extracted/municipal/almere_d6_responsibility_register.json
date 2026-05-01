@@ -12,7 +12,7 @@
   ],
   "summary": {
     "component_count": 12,
-    "candidate_source_count": 59,
+    "candidate_source_count": 64,
     "settled_count": 0,
     "inferred_count": 11,
     "proposed_count": 0,
@@ -613,6 +613,56 @@
       "verification_status": "downloaded_2026_05_01",
       "why_it_matters": "Current project-owned public page for programme framing and public-facing description.",
       "intake_action": "Use as lower-authority current project evidence; prefer municipal/regional/ZonMw sources for stronger claims."
+    },
+    {
+      "source_id": "mun_almere_subsidieregister_2024",
+      "title": "Subsidieregister 2024",
+      "publisher": "Gemeente Almere",
+      "source_url": "https://www.almere.nl/subsidies/subsidieregister/subsidieregister-2024",
+      "repository_status": "ingested_formal_corpus",
+      "verification_status": "downloaded_2026_05_01",
+      "why_it_matters": "Municipal subsidy register for GGD, JGZ, Wijkteams and social-base funding traces.",
+      "intake_action": "Use as funding-context evidence only; do not infer D6 budget allocation."
+    },
+    {
+      "source_id": "mun_almere_subsidieregister_2025",
+      "title": "Subsidieregister 2025",
+      "publisher": "Gemeente Almere",
+      "source_url": "https://www.almere.nl/subsidies/subsidieregister/subsidieregister-2025",
+      "repository_status": "ingested_formal_corpus",
+      "verification_status": "downloaded_2026_05_01",
+      "why_it_matters": "Municipal subsidy register for current GGD/JGZ/SLT-related and partner funding traces.",
+      "intake_action": "Use as funding-context evidence only; require finance/controller validation for component splits."
+    },
+    {
+      "source_id": "mun_almere_mentale_gezondheid",
+      "title": "Mentale gezondheid",
+      "publisher": "Gemeente Almere",
+      "source_url": "https://www.almere.nl/zorg-en-welzijn/gezond-in-almere/mentale-gezondheid",
+      "repository_status": "ingested_formal_corpus",
+      "verification_status": "downloaded_2026_05_01",
+      "why_it_matters": "Municipal implementation context for youth mental health and prevention.",
+      "intake_action": "Use as local prevention context; do not infer D6 classification, owner or funding."
+    },
+    {
+      "source_id": "reg_ggd_flevoland_voortgang_gala_regio_2023",
+      "title": "Voortgang GALA in de regio",
+      "publisher": "GGD Flevoland",
+      "source_url": "https://www.ggdflevoland.nl/app/uploads/sites/6/2023/07/4.-Oplegnotitie-voortgang-GALA-in-de-regio.pdf",
+      "repository_status": "ingested_formal_corpus",
+      "verification_status": "pdf_downloaded_2026_05_01",
+      "why_it_matters": "GGD/BOSD governance context for regional GALA/IZA progress and GGD advisory role.",
+      "intake_action": "Use as regional governance context; do not treat it as Almere D6 row mandate."
+    },
+    {
+      "source_id": "nat_zorgakkoorden_werkagenda_handvatten_2026",
+      "title": "Handvatten voor het opstellen van de regionale werkagenda",
+      "publisher": "Zorgakkoorden / Ministerie van VWS",
+      "source_url": "https://www.zorgakkoorden.nl/programmas/aanvullend-zorg-en-welzijnsakkoord/handvatten-voor-het-opstellen-van-de-regionale-werkagenda/",
+      "repository_status": "ingested_formal_corpus",
+      "verification_status": "downloaded_2026_05_01",
+      "why_it_matters": "Canonical national process source for regional workagenda governance and deadlines.",
+      "intake_action": "Use for workagenda process hierarchy; do not use as proof of Almere adoption."
     }
   ],
   "components": [
@@ -888,7 +938,9 @@
         "reg_ggd_flevoland_begroting_2026",
         "reg_ggd_flevoland_gezonde_school",
         "reg_ggd_flevoland_ketenaanpak_gezond_gewicht_almere",
-        "mun_almere_lea_2024_2028"
+        "mun_almere_lea_2024_2028",
+        "mun_almere_subsidieregister_2024",
+        "mun_almere_subsidieregister_2025"
       ],
       "confidence": "medium",
       "open_issue": "Operational role is public, but exact D6 ownership and budget status need local validation.",
@@ -905,7 +957,9 @@
         "reg_ggd_flevoland_begroting_2026",
         "reg_ggd_flevoland_gezonde_school",
         "reg_ggd_flevoland_ketenaanpak_gezond_gewicht_almere",
-        "mun_almere_lea_2024_2028"
+        "mun_almere_lea_2024_2028",
+        "mun_almere_subsidieregister_2024",
+        "mun_almere_subsidieregister_2025"
       ],
       "evidence": [
         {
@@ -942,6 +996,20 @@
           "source_url": "https://sociaaldomein.almere.nl/onderwijs/lea-2024-2028",
           "repository_status": "ingested_formal_corpus",
           "verification_status": "downloaded_2026_04_30"
+        },
+        {
+          "source_id": "mun_almere_subsidieregister_2024",
+          "title": "Subsidieregister 2024",
+          "source_url": "https://www.almere.nl/subsidies/subsidieregister/subsidieregister-2024",
+          "repository_status": "ingested_formal_corpus",
+          "verification_status": "downloaded_2026_05_01"
+        },
+        {
+          "source_id": "mun_almere_subsidieregister_2025",
+          "title": "Subsidieregister 2025",
+          "source_url": "https://www.almere.nl/subsidies/subsidieregister/subsidieregister-2025",
+          "repository_status": "ingested_formal_corpus",
+          "verification_status": "downloaded_2026_05_01"
         }
       ],
       "human_review_needed": true,
@@ -970,7 +1038,11 @@
       ],
       "decision_status": "inferred",
       "evidence_sources": [
-        "reg_ggd_flevoland_begroting_2026"
+        "reg_ggd_flevoland_begroting_2026",
+        "reg_ggd_flevoland_kadernota_2025",
+        "reg_ggd_flevoland_voortgang_gala_regio_2023",
+        "mun_almere_subsidieregister_2024",
+        "mun_almere_subsidieregister_2025"
       ],
       "confidence": "medium",
       "open_issue": "Separate GGD-region tasks from IZA/AZWA-region and Almere-local execution.",
@@ -985,7 +1057,11 @@
       ],
       "prefill_status": "source_backed_prefill",
       "evidence_source": [
-        "reg_ggd_flevoland_begroting_2026"
+        "reg_ggd_flevoland_begroting_2026",
+        "reg_ggd_flevoland_kadernota_2025",
+        "reg_ggd_flevoland_voortgang_gala_regio_2023",
+        "mun_almere_subsidieregister_2024",
+        "mun_almere_subsidieregister_2025"
       ],
       "evidence": [
         {
@@ -994,6 +1070,34 @@
           "source_url": "https://www.ggdflevoland.nl/app/uploads/sites/6/2025/10/Begroting-2026-GGD-Flevoland.pdf",
           "repository_status": "ingested_formal_corpus",
           "verification_status": "pdf_downloaded_2026_04_27"
+        },
+        {
+          "source_id": "reg_ggd_flevoland_kadernota_2025",
+          "title": "Kadernota GGD Flevoland 2025",
+          "source_url": "https://www.ggdflevoland.nl/app/uploads/sites/6/2024/04/3.2-Kadernota-kern-GGD-2025-v-29mrt2024-gg10042024_.pdf",
+          "repository_status": "ingested_formal_corpus",
+          "verification_status": "pdf_downloaded_2026_04_30"
+        },
+        {
+          "source_id": "reg_ggd_flevoland_voortgang_gala_regio_2023",
+          "title": "Voortgang GALA in de regio",
+          "source_url": "https://www.ggdflevoland.nl/app/uploads/sites/6/2023/07/4.-Oplegnotitie-voortgang-GALA-in-de-regio.pdf",
+          "repository_status": "ingested_formal_corpus",
+          "verification_status": "pdf_downloaded_2026_05_01"
+        },
+        {
+          "source_id": "mun_almere_subsidieregister_2024",
+          "title": "Subsidieregister 2024",
+          "source_url": "https://www.almere.nl/subsidies/subsidieregister/subsidieregister-2024",
+          "repository_status": "ingested_formal_corpus",
+          "verification_status": "downloaded_2026_05_01"
+        },
+        {
+          "source_id": "mun_almere_subsidieregister_2025",
+          "title": "Subsidieregister 2025",
+          "source_url": "https://www.almere.nl/subsidies/subsidieregister/subsidieregister-2025",
+          "repository_status": "ingested_formal_corpus",
+          "verification_status": "downloaded_2026_05_01"
         }
       ],
       "human_review_needed": true,
@@ -1030,7 +1134,8 @@
         "reg_ggd_flevoland_ketenaanpak_gezond_gewicht_almere",
         "mun_almere_lea_2024_2028",
         "reg_ggd_flevoland_jgz_almere_profile",
-        "reg_ggd_flevoland_begroting_2026"
+        "reg_ggd_flevoland_begroting_2026",
+        "mun_almere_mentale_gezondheid"
       ],
       "confidence": "medium",
       "open_issue": "Public evidence is stronger, but formal D6 classification, accountable owner, mandate, scale and component-level funding remain local validation questions.",
@@ -1051,7 +1156,8 @@
         "reg_ggd_flevoland_ketenaanpak_gezond_gewicht_almere",
         "mun_almere_lea_2024_2028",
         "reg_ggd_flevoland_jgz_almere_profile",
-        "reg_ggd_flevoland_begroting_2026"
+        "reg_ggd_flevoland_begroting_2026",
+        "mun_almere_mentale_gezondheid"
       ],
       "evidence": [
         {
@@ -1102,6 +1208,13 @@
           "source_url": "https://www.ggdflevoland.nl/app/uploads/sites/6/2025/10/Begroting-2026-GGD-Flevoland.pdf",
           "repository_status": "ingested_formal_corpus",
           "verification_status": "pdf_downloaded_2026_04_27"
+        },
+        {
+          "source_id": "mun_almere_mentale_gezondheid",
+          "title": "Mentale gezondheid",
+          "source_url": "https://www.almere.nl/zorg-en-welzijn/gezond-in-almere/mentale-gezondheid",
+          "repository_status": "ingested_formal_corpus",
+          "verification_status": "downloaded_2026_05_01"
         }
       ],
       "human_review_needed": true,
@@ -1129,7 +1242,9 @@
       "decision_status": "inferred",
       "evidence_sources": [
         "reg_ggd_flevoland_kennis_en_advies",
-        "reg_ggd_flevoland_begroting_2026"
+        "reg_ggd_flevoland_begroting_2026",
+        "reg_ggd_flevoland_kadernota_2025",
+        "reg_ggd_flevoland_voortgang_gala_regio_2023"
       ],
       "confidence": "medium",
       "open_issue": "Public monitoring function is clear; D6-specific steering arrangement is not yet settled.",
@@ -1143,7 +1258,9 @@
       "prefill_status": "source_backed_prefill",
       "evidence_source": [
         "reg_ggd_flevoland_kennis_en_advies",
-        "reg_ggd_flevoland_begroting_2026"
+        "reg_ggd_flevoland_begroting_2026",
+        "reg_ggd_flevoland_kadernota_2025",
+        "reg_ggd_flevoland_voortgang_gala_regio_2023"
       ],
       "evidence": [
         {
@@ -1159,6 +1276,20 @@
           "source_url": "https://www.ggdflevoland.nl/app/uploads/sites/6/2025/10/Begroting-2026-GGD-Flevoland.pdf",
           "repository_status": "ingested_formal_corpus",
           "verification_status": "pdf_downloaded_2026_04_27"
+        },
+        {
+          "source_id": "reg_ggd_flevoland_kadernota_2025",
+          "title": "Kadernota GGD Flevoland 2025",
+          "source_url": "https://www.ggdflevoland.nl/app/uploads/sites/6/2024/04/3.2-Kadernota-kern-GGD-2025-v-29mrt2024-gg10042024_.pdf",
+          "repository_status": "ingested_formal_corpus",
+          "verification_status": "pdf_downloaded_2026_04_30"
+        },
+        {
+          "source_id": "reg_ggd_flevoland_voortgang_gala_regio_2023",
+          "title": "Voortgang GALA in de regio",
+          "source_url": "https://www.ggdflevoland.nl/app/uploads/sites/6/2023/07/4.-Oplegnotitie-voortgang-GALA-in-de-regio.pdf",
+          "repository_status": "ingested_formal_corpus",
+          "verification_status": "pdf_downloaded_2026_05_01"
         }
       ],
       "human_review_needed": true,
@@ -1370,6 +1501,7 @@
         "reg_zonmw_doorontwikkeling_zorgzaam_flevoland",
         "reg_ggd_flevoland_kadernota_2025",
         "reg_ggd_flevoland_begroting_2026",
+        "reg_ggd_flevoland_voortgang_gala_regio_2023",
         "reg_flever_zorgzaam_flevoland_project",
         "reg_flever_meerjarenplan_2025_2028",
         "reg_flever_inwoners_onderdeel_pga"
@@ -1397,6 +1529,7 @@
         "reg_zonmw_doorontwikkeling_zorgzaam_flevoland",
         "reg_ggd_flevoland_kadernota_2025",
         "reg_ggd_flevoland_begroting_2026",
+        "reg_ggd_flevoland_voortgang_gala_regio_2023",
         "reg_flever_zorgzaam_flevoland_project",
         "reg_flever_meerjarenplan_2025_2028",
         "reg_flever_inwoners_onderdeel_pga"
@@ -1441,6 +1574,13 @@
           "source_url": "https://www.ggdflevoland.nl/app/uploads/sites/6/2025/10/Begroting-2026-GGD-Flevoland.pdf",
           "repository_status": "ingested_formal_corpus",
           "verification_status": "pdf_downloaded_2026_04_27"
+        },
+        {
+          "source_id": "reg_ggd_flevoland_voortgang_gala_regio_2023",
+          "title": "Voortgang GALA in de regio",
+          "source_url": "https://www.ggdflevoland.nl/app/uploads/sites/6/2023/07/4.-Oplegnotitie-voortgang-GALA-in-de-regio.pdf",
+          "repository_status": "ingested_formal_corpus",
+          "verification_status": "pdf_downloaded_2026_05_01"
         },
         {
           "source_id": "reg_flever_zorgzaam_flevoland_project",
@@ -1813,7 +1953,7 @@
     {
       "component_id": "funding_budget_alignment",
       "component_label": "Financiering en budgetafbakening",
-      "existing_almere_provision": "National funding architecture is present in the existing corpus; Almere-specific D6 allocation is not settled.",
+      "existing_almere_provision": "National funding architecture and workagenda process sources are present, and municipal subsidy registers now give stronger local funding-context traces. Almere-specific D6 allocation is not settled.",
       "required_upgrade": "Map AZWA-D6, D5 workagenda, SPUK IZA, Brede SPUK/GALA, PGA transformation funding, municipal regular budget and Zvw lines per component.",
       "owner": "municipality and regional workagenda governance need component-specific validation",
       "executors": [],
@@ -1829,7 +1969,13 @@
       ],
       "decision_status": "unknown",
       "evidence_sources": [
-        "data/extracted/workagenda_d5_operational_requirements.json"
+        "data/extracted/workagenda_d5_operational_requirements.json",
+        "nat_zorgakkoorden_werkagenda_handvatten_2026",
+        "mun_almere_subsidieregister_2023",
+        "mun_almere_subsidieregister_2024",
+        "mun_almere_subsidieregister_2025",
+        "reg_ggd_flevoland_begroting_2026",
+        "nat_zorgakkoorden_pga_20_miljoen_2024"
       ],
       "confidence": "medium",
       "open_issue": "This is the main anti-dubbeltelling control point for D6.",
@@ -1840,12 +1986,60 @@
       ],
       "prefill_status": "decision_needed",
       "evidence_source": [
-        "data/extracted/workagenda_d5_operational_requirements.json"
+        "data/extracted/workagenda_d5_operational_requirements.json",
+        "nat_zorgakkoorden_werkagenda_handvatten_2026",
+        "mun_almere_subsidieregister_2023",
+        "mun_almere_subsidieregister_2024",
+        "mun_almere_subsidieregister_2025",
+        "reg_ggd_flevoland_begroting_2026",
+        "nat_zorgakkoorden_pga_20_miljoen_2024"
       ],
       "evidence": [
         {
           "source_id": "data/extracted/workagenda_d5_operational_requirements.json",
           "repository_status": "existing_repository_layer_or_prior_source"
+        },
+        {
+          "source_id": "nat_zorgakkoorden_werkagenda_handvatten_2026",
+          "title": "Handvatten voor het opstellen van de regionale werkagenda",
+          "source_url": "https://www.zorgakkoorden.nl/programmas/aanvullend-zorg-en-welzijnsakkoord/handvatten-voor-het-opstellen-van-de-regionale-werkagenda/",
+          "repository_status": "ingested_formal_corpus",
+          "verification_status": "downloaded_2026_05_01"
+        },
+        {
+          "source_id": "mun_almere_subsidieregister_2023",
+          "title": "Subsidieregister 2023",
+          "source_url": "https://www.almere.nl/subsidies/subsidieregister/subsidieregister-2023",
+          "repository_status": "ingested_formal_corpus",
+          "verification_status": "downloaded_2026_05_01"
+        },
+        {
+          "source_id": "mun_almere_subsidieregister_2024",
+          "title": "Subsidieregister 2024",
+          "source_url": "https://www.almere.nl/subsidies/subsidieregister/subsidieregister-2024",
+          "repository_status": "ingested_formal_corpus",
+          "verification_status": "downloaded_2026_05_01"
+        },
+        {
+          "source_id": "mun_almere_subsidieregister_2025",
+          "title": "Subsidieregister 2025",
+          "source_url": "https://www.almere.nl/subsidies/subsidieregister/subsidieregister-2025",
+          "repository_status": "ingested_formal_corpus",
+          "verification_status": "downloaded_2026_05_01"
+        },
+        {
+          "source_id": "reg_ggd_flevoland_begroting_2026",
+          "title": "Begroting 2026 GGD Flevoland",
+          "source_url": "https://www.ggdflevoland.nl/app/uploads/sites/6/2025/10/Begroting-2026-GGD-Flevoland.pdf",
+          "repository_status": "ingested_formal_corpus",
+          "verification_status": "pdf_downloaded_2026_04_27"
+        },
+        {
+          "source_id": "nat_zorgakkoorden_pga_20_miljoen_2024",
+          "title": "20 miljoen voor transformatieplan Positief Gezond Almere",
+          "source_url": "https://www.zorgakkoorden.nl/actueel/nieuws/Transformatieplan_Positief_Mooi_Almere/",
+          "repository_status": "ingested_formal_corpus",
+          "verification_status": "downloaded_2026_04_30"
         }
       ],
       "human_review_needed": true,

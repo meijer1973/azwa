@@ -3,34 +3,34 @@
   "generated_on": "2026-05-01",
   "summary": {
     "blocking": 0,
-    "warning": 30,
-    "review": 583,
-    "item_count": 613,
+    "warning": 31,
+    "review": 598,
+    "item_count": 629,
     "issue_counts_by_reason": {
-      "actor_context_needs_role_split": 65,
-      "authority_unclear": 61,
+      "actor_context_needs_role_split": 66,
+      "authority_unclear": 65,
       "execution_capacity_need": 19,
-      "execution_context_needs_action_split": 44,
+      "execution_context_needs_action_split": 46,
       "execution_decision_question": 13,
       "execution_dependency": 30,
-      "execution_review_task": 44,
-      "execution_sequencing_need": 34,
+      "execution_review_task": 45,
+      "execution_sequencing_need": 35,
       "expected_time_not_deadline": 34,
       "extraction_noise_detected": 3,
-      "finance_context_needs_verification": 18,
+      "finance_context_needs_verification": 19,
       "governance_gap": 1,
       "local_adoption_gap": 1,
       "local_funding_gap": 1,
       "local_planning_context_not_policy_deadline": 11,
-      "lower_authority_norm_signal": 68,
+      "lower_authority_norm_signal": 70,
       "missing_d5_content": 11,
-      "missing_d6_content": 18,
-      "municipality_relevance_inferred": 59,
+      "missing_d6_content": 19,
+      "municipality_relevance_inferred": 60,
       "national_claim_local_relevance": 24,
-      "regional_split_context": 19,
+      "regional_split_context": 20,
       "table_extraction_missing": 1,
       "unresolved_conflict": 11,
-      "vague_region_actor": 23
+      "vague_region_actor": 24
     }
   },
   "items": [
@@ -391,6 +391,22 @@
       "severity": "warning",
       "check_id": "document_payload_integrity",
       "reason_code": "missing_d6_content",
+      "summary": "reg_ggd_flevoland_voortgang_gala_regio_2023 is expected to contain D6 material, but the extraction produced no D6 items.",
+      "recommended_action": "Review the source and improve the D6 extraction rules for this document.",
+      "document_id": "reg_ggd_flevoland_voortgang_gala_regio_2023",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/documents/reg_ggd_flevoland_voortgang_gala_regio_2023.json"
+      ],
+      "related_ids": {},
+      "evidence": {},
+      "review_item_id": "rvw_023"
+    },
+    {
+      "status": "open",
+      "severity": "warning",
+      "check_id": "document_payload_integrity",
+      "reason_code": "missing_d6_content",
       "summary": "reg_npz_almere_evaluatie_viewer_pzp_acp_2025 is expected to contain D6 material, but the extraction produced no D6 items.",
       "recommended_action": "Review the source and improve the D6 extraction rules for this document.",
       "document_id": "reg_npz_almere_evaluatie_viewer_pzp_acp_2025",
@@ -400,7 +416,7 @@
       ],
       "related_ids": {},
       "evidence": {},
-      "review_item_id": "rvw_023"
+      "review_item_id": "rvw_024"
     },
     {
       "status": "open",
@@ -416,7 +432,7 @@
       ],
       "related_ids": {},
       "evidence": {},
-      "review_item_id": "rvw_024"
+      "review_item_id": "rvw_025"
     },
     {
       "status": "open",
@@ -432,7 +448,7 @@
       ],
       "related_ids": {},
       "evidence": {},
-      "review_item_id": "rvw_025"
+      "review_item_id": "rvw_026"
     },
     {
       "status": "open",
@@ -448,7 +464,7 @@
       ],
       "related_ids": {},
       "evidence": {},
-      "review_item_id": "rvw_026"
+      "review_item_id": "rvw_027"
     },
     {
       "status": "open",
@@ -464,7 +480,7 @@
       ],
       "related_ids": {},
       "evidence": {},
-      "review_item_id": "rvw_027"
+      "review_item_id": "rvw_028"
     },
     {
       "status": "open",
@@ -480,7 +496,7 @@
       ],
       "related_ids": {},
       "evidence": {},
-      "review_item_id": "rvw_028"
+      "review_item_id": "rvw_029"
     },
     {
       "status": "open",
@@ -496,7 +512,7 @@
       ],
       "related_ids": {},
       "evidence": {},
-      "review_item_id": "rvw_029"
+      "review_item_id": "rvw_030"
     },
     {
       "status": "open",
@@ -512,7 +528,7 @@
       ],
       "related_ids": {},
       "evidence": {},
-      "review_item_id": "rvw_030"
+      "review_item_id": "rvw_031"
     },
     {
       "status": "open",
@@ -534,7 +550,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_031"
+      "review_item_id": "rvw_032"
     },
     {
       "status": "open",
@@ -555,7 +571,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_032"
+      "review_item_id": "rvw_033"
     },
     {
       "status": "open",
@@ -575,7 +591,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_033"
+      "review_item_id": "rvw_034"
     },
     {
       "status": "open",
@@ -598,7 +614,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_034"
+      "review_item_id": "rvw_035"
     },
     {
       "status": "open",
@@ -619,7 +635,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_035"
+      "review_item_id": "rvw_036"
     },
     {
       "status": "open",
@@ -641,7 +657,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_036"
+      "review_item_id": "rvw_037"
     },
     {
       "status": "open",
@@ -665,7 +681,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_037"
+      "review_item_id": "rvw_038"
     },
     {
       "status": "open",
@@ -690,7 +706,7 @@
         "topic_count": 3
       },
       "evidence": {},
-      "review_item_id": "rvw_038"
+      "review_item_id": "rvw_039"
     },
     {
       "status": "open",
@@ -710,7 +726,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_039"
+      "review_item_id": "rvw_040"
     },
     {
       "status": "open",
@@ -732,7 +748,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_040"
+      "review_item_id": "rvw_041"
     },
     {
       "status": "open",
@@ -757,7 +773,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_041"
+      "review_item_id": "rvw_042"
     },
     {
       "status": "open",
@@ -778,7 +794,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_042"
+      "review_item_id": "rvw_043"
     },
     {
       "status": "open",
@@ -798,7 +814,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_043"
+      "review_item_id": "rvw_044"
     },
     {
       "status": "open",
@@ -819,7 +835,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_044"
+      "review_item_id": "rvw_045"
     },
     {
       "status": "open",
@@ -840,7 +856,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_045"
+      "review_item_id": "rvw_046"
     },
     {
       "status": "open",
@@ -860,7 +876,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_046"
+      "review_item_id": "rvw_047"
     },
     {
       "status": "open",
@@ -880,7 +896,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_047"
+      "review_item_id": "rvw_048"
     },
     {
       "status": "open",
@@ -901,7 +917,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_048"
+      "review_item_id": "rvw_049"
     },
     {
       "status": "open",
@@ -922,7 +938,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_049"
+      "review_item_id": "rvw_050"
     },
     {
       "status": "open",
@@ -942,7 +958,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_050"
+      "review_item_id": "rvw_051"
     },
     {
       "status": "open",
@@ -963,7 +979,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_051"
+      "review_item_id": "rvw_052"
     },
     {
       "status": "open",
@@ -987,7 +1003,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_052"
+      "review_item_id": "rvw_053"
     },
     {
       "status": "open",
@@ -1011,7 +1027,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_053"
+      "review_item_id": "rvw_054"
     },
     {
       "status": "open",
@@ -1034,7 +1050,7 @@
         "topic_count": 2
       },
       "evidence": {},
-      "review_item_id": "rvw_054"
+      "review_item_id": "rvw_055"
     },
     {
       "status": "open",
@@ -1054,7 +1070,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_055"
+      "review_item_id": "rvw_056"
     },
     {
       "status": "open",
@@ -1074,7 +1090,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_056"
+      "review_item_id": "rvw_057"
     },
     {
       "status": "open",
@@ -1094,7 +1110,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_057"
+      "review_item_id": "rvw_058"
     },
     {
       "status": "open",
@@ -1116,7 +1132,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_058"
+      "review_item_id": "rvw_059"
     },
     {
       "status": "open",
@@ -1137,7 +1153,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_059"
+      "review_item_id": "rvw_060"
     },
     {
       "status": "open",
@@ -1161,7 +1177,7 @@
           "De Visie Gezondheidsbeleid Almere 2024-2026 vast te stellen: 1. waarin de volgende doelstellingen zijn vastgelegd: a. Brede Preventie: Het stimuleren van een gezonde leefstijl en leefomgeving vanuit het gedachtengoed Positieve Gezondheid; b. We verweven gezondheid in alle beleidsterreinen: Health in all policies; c. De toegankelijkheid van de zorg in de toekomst garanderen door alle Almeerders de juiste hulp op de juiste plek te bieden; 2. met daarin de volgende ambities: a. in te zetten op het bevorderen van de samenwerking tussen het medische en het sociale domein; b. bij te dragen aan de zorgtransitie; c. mensen in staat te stellen de vaardigheden te verwerven om beter voor zichzelf ..."
         ]
       },
-      "review_item_id": "rvw_060"
+      "review_item_id": "rvw_061"
     },
     {
       "status": "open",
@@ -1185,7 +1201,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_061"
+      "review_item_id": "rvw_062"
     },
     {
       "status": "open",
@@ -1208,7 +1224,7 @@
         "topic_count": 2
       },
       "evidence": {},
-      "review_item_id": "rvw_062"
+      "review_item_id": "rvw_063"
     },
     {
       "status": "open",
@@ -1229,7 +1245,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_063"
+      "review_item_id": "rvw_064"
     },
     {
       "status": "open",
@@ -1253,7 +1269,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_064"
+      "review_item_id": "rvw_065"
     },
     {
       "status": "open",
@@ -1278,7 +1294,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_065"
+      "review_item_id": "rvw_066"
     },
     {
       "status": "open",
@@ -1298,7 +1314,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_066"
+      "review_item_id": "rvw_067"
     },
     {
       "status": "open",
@@ -1319,7 +1335,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_067"
+      "review_item_id": "rvw_068"
     },
     {
       "status": "open",
@@ -1339,7 +1355,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_068"
+      "review_item_id": "rvw_069"
     },
     {
       "status": "open",
@@ -1362,7 +1378,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_069"
+      "review_item_id": "rvw_070"
     },
     {
       "status": "open",
@@ -1383,7 +1399,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_070"
+      "review_item_id": "rvw_071"
     },
     {
       "status": "open",
@@ -1405,7 +1421,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_071"
+      "review_item_id": "rvw_072"
     },
     {
       "status": "open",
@@ -1426,7 +1442,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_072"
+      "review_item_id": "rvw_073"
     },
     {
       "status": "open",
@@ -1446,7 +1462,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_073"
+      "review_item_id": "rvw_074"
     },
     {
       "status": "open",
@@ -1469,7 +1485,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_074"
+      "review_item_id": "rvw_075"
     },
     {
       "status": "open",
@@ -1493,7 +1509,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_075"
+      "review_item_id": "rvw_076"
     },
     {
       "status": "open",
@@ -1516,7 +1532,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_076"
+      "review_item_id": "rvw_077"
     },
     {
       "status": "open",
@@ -1536,7 +1552,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_077"
+      "review_item_id": "rvw_078"
     },
     {
       "status": "open",
@@ -1561,7 +1577,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_078"
+      "review_item_id": "rvw_079"
     },
     {
       "status": "open",
@@ -1581,7 +1597,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_079"
+      "review_item_id": "rvw_080"
     },
     {
       "status": "open",
@@ -1603,7 +1619,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_080"
+      "review_item_id": "rvw_081"
     },
     {
       "status": "open",
@@ -1623,7 +1639,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_081"
+      "review_item_id": "rvw_082"
     },
     {
       "status": "open",
@@ -1643,7 +1659,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_082"
+      "review_item_id": "rvw_083"
     },
     {
       "status": "open",
@@ -1663,7 +1679,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_083"
+      "review_item_id": "rvw_084"
     },
     {
       "status": "open",
@@ -1684,7 +1700,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_084"
+      "review_item_id": "rvw_085"
     },
     {
       "status": "open",
@@ -1706,7 +1722,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_085"
+      "review_item_id": "rvw_086"
     },
     {
       "status": "open",
@@ -1727,7 +1743,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_086"
+      "review_item_id": "rvw_087"
     },
     {
       "status": "open",
@@ -1747,7 +1763,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_087"
+      "review_item_id": "rvw_088"
     },
     {
       "status": "open",
@@ -1767,7 +1783,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_088"
+      "review_item_id": "rvw_089"
     },
     {
       "status": "open",
@@ -1787,7 +1803,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_089"
+      "review_item_id": "rvw_090"
     },
     {
       "status": "open",
@@ -1807,7 +1823,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_090"
+      "review_item_id": "rvw_091"
     },
     {
       "status": "open",
@@ -1828,7 +1844,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_091"
+      "review_item_id": "rvw_092"
     },
     {
       "status": "open",
@@ -1848,7 +1864,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_092"
+      "review_item_id": "rvw_093"
     },
     {
       "status": "open",
@@ -1869,7 +1885,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_093"
+      "review_item_id": "rvw_094"
     },
     {
       "status": "open",
@@ -1890,7 +1906,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_094"
+      "review_item_id": "rvw_095"
     },
     {
       "status": "open",
@@ -1910,7 +1926,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_095"
+      "review_item_id": "rvw_096"
     },
     {
       "status": "open",
@@ -1932,7 +1948,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_096"
+      "review_item_id": "rvw_097"
     },
     {
       "status": "open",
@@ -1952,7 +1968,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_097"
+      "review_item_id": "rvw_098"
     },
     {
       "status": "open",
@@ -1972,7 +1988,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_098"
+      "review_item_id": "rvw_099"
     },
     {
       "status": "open",
@@ -1996,7 +2012,7 @@
           "Voorgesteld raadsbesluit 1. De ontwikkeling van de Stevige Lokale Teams in de komende periode te starten op basis van de volgende uitgangspunten: a. één stedelijk kader met maatwerk in de wijk; b. één team per wijk, voor alle leeftijden; c. mandaat en doorlopende regie; d. de organisatievorm en capaciteit volgt de inhoud; e. professionals die zowel verbinden als doen, mét inzet van experts en de sociale basis; f. helder opdrachtgeverschap en een taak op resultaat en financiën; g. aansluiten op bestaande netwerken en werkwijzen. 2. Het college opdracht te geven om: a. naast JGZ Almere ook de wijkteams mee te nemen in de scope van de Stevige Lokale Teams; b. in 2026 te starten met de ..."
         ]
       },
-      "review_item_id": "rvw_099"
+      "review_item_id": "rvw_100"
     },
     {
       "status": "open",
@@ -2016,7 +2032,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_100"
+      "review_item_id": "rvw_101"
     },
     {
       "status": "open",
@@ -2039,7 +2055,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_101"
+      "review_item_id": "rvw_102"
     },
     {
       "status": "open",
@@ -2061,7 +2077,7 @@
         "topic_count": 2
       },
       "evidence": {},
-      "review_item_id": "rvw_102"
+      "review_item_id": "rvw_103"
     },
     {
       "status": "open",
@@ -2083,7 +2099,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_103"
+      "review_item_id": "rvw_104"
     },
     {
       "status": "open",
@@ -2108,7 +2124,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_104"
+      "review_item_id": "rvw_105"
     },
     {
       "status": "open",
@@ -2128,7 +2144,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_105"
+      "review_item_id": "rvw_106"
     },
     {
       "status": "open",
@@ -2149,7 +2165,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_106"
+      "review_item_id": "rvw_107"
     },
     {
       "status": "open",
@@ -2171,7 +2187,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_107"
+      "review_item_id": "rvw_108"
     },
     {
       "status": "open",
@@ -2194,7 +2210,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_108"
+      "review_item_id": "rvw_109"
     },
     {
       "status": "open",
@@ -2215,7 +2231,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_109"
+      "review_item_id": "rvw_110"
     },
     {
       "status": "open",
@@ -2235,7 +2251,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_110"
+      "review_item_id": "rvw_111"
     },
     {
       "status": "open",
@@ -2257,7 +2273,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_111"
+      "review_item_id": "rvw_112"
     },
     {
       "status": "open",
@@ -2277,7 +2293,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_112"
+      "review_item_id": "rvw_113"
     },
     {
       "status": "open",
@@ -2297,7 +2313,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_113"
+      "review_item_id": "rvw_114"
     },
     {
       "status": "open",
@@ -2321,7 +2337,7 @@
           "Voorgesteld raadsbesluit 1. De ontwikkeling van de Stevige Lokale Teams in de komende periode te starten op basis van de volgende uitgangspunten: a. één stedelijk kader met maatwerk in de wijk; b. één team per wijk, voor alle leeftijden; c. mandaat en doorlopende regie; d. de organisatievorm en capaciteit volgt de inhoud; e. professionals die zowel verbinden als doen, mét inzet van experts en de sociale basis; f. helder opdrachtgeverschap en een taak op resultaat en financiën; g. aansluiten op bestaande netwerken en werkwijzen. 2. Het college opdracht te geven om: a. naast JGZ Almere ook de wijkteams mee te nemen in de scope van de Stevige Lokale Teams; b. in 2026 te starten met de ..."
         ]
       },
-      "review_item_id": "rvw_114"
+      "review_item_id": "rvw_115"
     },
     {
       "status": "open",
@@ -2341,7 +2357,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_115"
+      "review_item_id": "rvw_116"
     },
     {
       "status": "open",
@@ -2364,7 +2380,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_116"
+      "review_item_id": "rvw_117"
     },
     {
       "status": "open",
@@ -2386,7 +2402,7 @@
         "topic_count": 2
       },
       "evidence": {},
-      "review_item_id": "rvw_117"
+      "review_item_id": "rvw_118"
     },
     {
       "status": "open",
@@ -2411,7 +2427,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_118"
+      "review_item_id": "rvw_119"
     },
     {
       "status": "open",
@@ -2431,7 +2447,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_119"
+      "review_item_id": "rvw_120"
     },
     {
       "status": "open",
@@ -2452,7 +2468,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_120"
+      "review_item_id": "rvw_121"
     },
     {
       "status": "open",
@@ -2476,7 +2492,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_121"
+      "review_item_id": "rvw_122"
     },
     {
       "status": "open",
@@ -2501,7 +2517,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_122"
+      "review_item_id": "rvw_123"
     },
     {
       "status": "open",
@@ -2521,7 +2537,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_123"
+      "review_item_id": "rvw_124"
     },
     {
       "status": "open",
@@ -2541,7 +2557,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_124"
+      "review_item_id": "rvw_125"
     },
     {
       "status": "open",
@@ -2562,7 +2578,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_125"
+      "review_item_id": "rvw_126"
     },
     {
       "status": "open",
@@ -2582,7 +2598,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_126"
+      "review_item_id": "rvw_127"
     },
     {
       "status": "open",
@@ -2605,7 +2621,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_127"
+      "review_item_id": "rvw_128"
     },
     {
       "status": "open",
@@ -2625,7 +2641,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_128"
+      "review_item_id": "rvw_129"
     },
     {
       "status": "open",
@@ -2645,7 +2661,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_129"
+      "review_item_id": "rvw_130"
     },
     {
       "status": "open",
@@ -2670,7 +2686,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_130"
+      "review_item_id": "rvw_131"
     },
     {
       "status": "open",
@@ -2691,7 +2707,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_131"
+      "review_item_id": "rvw_132"
     },
     {
       "status": "open",
@@ -2711,7 +2727,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_132"
+      "review_item_id": "rvw_133"
     },
     {
       "status": "open",
@@ -2733,7 +2749,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_133"
+      "review_item_id": "rvw_134"
     },
     {
       "status": "open",
@@ -2756,7 +2772,7 @@
         "topic_count": 2
       },
       "evidence": {},
-      "review_item_id": "rvw_134"
+      "review_item_id": "rvw_135"
     },
     {
       "status": "open",
@@ -2780,7 +2796,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_135"
+      "review_item_id": "rvw_136"
     },
     {
       "status": "open",
@@ -2805,7 +2821,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_136"
+      "review_item_id": "rvw_137"
     },
     {
       "status": "open",
@@ -2829,7 +2845,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_137"
+      "review_item_id": "rvw_138"
     },
     {
       "status": "open",
@@ -2850,7 +2866,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_138"
+      "review_item_id": "rvw_139"
     },
     {
       "status": "open",
@@ -2872,7 +2888,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_139"
+      "review_item_id": "rvw_140"
     },
     {
       "status": "open",
@@ -2895,7 +2911,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_140"
+      "review_item_id": "rvw_141"
     },
     {
       "status": "open",
@@ -2916,7 +2932,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_141"
+      "review_item_id": "rvw_142"
     },
     {
       "status": "open",
@@ -2941,7 +2957,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_142"
+      "review_item_id": "rvw_143"
     },
     {
       "status": "open",
@@ -2962,7 +2978,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_143"
+      "review_item_id": "rvw_144"
     },
     {
       "status": "open",
@@ -2982,7 +2998,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_144"
+      "review_item_id": "rvw_145"
     },
     {
       "status": "open",
@@ -3004,7 +3020,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_145"
+      "review_item_id": "rvw_146"
     },
     {
       "status": "open",
@@ -3027,7 +3043,110 @@
         "topic_count": 2
       },
       "evidence": {},
-      "review_item_id": "rvw_146"
+      "review_item_id": "rvw_147"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "authority_unclear",
+      "summary": "mun_almere_mentale_gezondheid contributes lower-authority claims that still require human review.",
+      "recommended_action": "Keep these claims as contextual support only until a stronger primary source confirms or replaces them.",
+      "document_id": "mun_almere_mentale_gezondheid",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_mentale_gezondheid.json"
+      ],
+      "related_ids": {
+        "review_claim_count": 2,
+        "sample_claim_ids": [
+          "clm__mun_almere_mentale_gezondheid_d6_001",
+          "clm__mun_almere_mentale_gezondheid_monitoring_and_evaluation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_148"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_context_needs_action_split",
+      "summary": "mun_almere_mentale_gezondheid contains 1 execution-context claim(s) without a more specific execution status.",
+      "recommended_action": "Review these before turning context into an action, dependency, owner, sequence, or capacity need.",
+      "document_id": "mun_almere_mentale_gezondheid",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_mentale_gezondheid.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_mentale_gezondheid_d6_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_149"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_review_task",
+      "summary": "mun_almere_mentale_gezondheid contains 1 execution review or monitoring claim(s).",
+      "recommended_action": "Keep these as review, monitoring, or validation tasks; do not present them as settled implementation choices.",
+      "document_id": "mun_almere_mentale_gezondheid",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_mentale_gezondheid.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_mentale_gezondheid_monitoring_and_evaluation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_150"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "lower_authority_norm_signal",
+      "summary": "mun_almere_mentale_gezondheid contains 1 lower-authority norm signal claim(s).",
+      "recommended_action": "Attribute these passages explicitly and do not present them as binding without a stronger source.",
+      "document_id": "mun_almere_mentale_gezondheid",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_mentale_gezondheid.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_mentale_gezondheid_d6_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_151"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "municipality_relevance_inferred",
+      "summary": "mun_almere_mentale_gezondheid contains 1 contextual claim(s) where municipal relevance is inferred rather than explicitly stated.",
+      "recommended_action": "Review these claims before treating them as firm municipal obligations or implementation facts.",
+      "document_id": "mun_almere_mentale_gezondheid",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_mentale_gezondheid.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__mun_almere_mentale_gezondheid_d6_001"
+        ],
+        "topic_count": 1
+      },
+      "evidence": {},
+      "review_item_id": "rvw_152"
     },
     {
       "status": "open",
@@ -3048,7 +3167,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_147"
+      "review_item_id": "rvw_153"
     },
     {
       "status": "open",
@@ -3068,7 +3187,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_148"
+      "review_item_id": "rvw_154"
     },
     {
       "status": "open",
@@ -3088,7 +3207,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_149"
+      "review_item_id": "rvw_155"
     },
     {
       "status": "open",
@@ -3108,7 +3227,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_150"
+      "review_item_id": "rvw_156"
     },
     {
       "status": "open",
@@ -3132,7 +3251,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_151"
+      "review_item_id": "rvw_157"
     },
     {
       "status": "open",
@@ -3154,7 +3273,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_152"
+      "review_item_id": "rvw_158"
     },
     {
       "status": "open",
@@ -3177,7 +3296,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_153"
+      "review_item_id": "rvw_159"
     },
     {
       "status": "open",
@@ -3202,7 +3321,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_154"
+      "review_item_id": "rvw_160"
     },
     {
       "status": "open",
@@ -3222,7 +3341,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_155"
+      "review_item_id": "rvw_161"
     },
     {
       "status": "open",
@@ -3244,7 +3363,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_156"
+      "review_item_id": "rvw_162"
     },
     {
       "status": "open",
@@ -3267,7 +3386,7 @@
         "topic_count": 2
       },
       "evidence": {},
-      "review_item_id": "rvw_157"
+      "review_item_id": "rvw_163"
     },
     {
       "status": "open",
@@ -3289,7 +3408,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_158"
+      "review_item_id": "rvw_164"
     },
     {
       "status": "open",
@@ -3309,7 +3428,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_159"
+      "review_item_id": "rvw_165"
     },
     {
       "status": "open",
@@ -3329,7 +3448,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_160"
+      "review_item_id": "rvw_166"
     },
     {
       "status": "open",
@@ -3351,7 +3470,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_161"
+      "review_item_id": "rvw_167"
     },
     {
       "status": "open",
@@ -3374,7 +3493,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_162"
+      "review_item_id": "rvw_168"
     },
     {
       "status": "open",
@@ -3397,7 +3516,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_163"
+      "review_item_id": "rvw_169"
     },
     {
       "status": "open",
@@ -3418,7 +3537,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_164"
+      "review_item_id": "rvw_170"
     },
     {
       "status": "open",
@@ -3439,7 +3558,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_165"
+      "review_item_id": "rvw_171"
     },
     {
       "status": "open",
@@ -3459,7 +3578,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_166"
+      "review_item_id": "rvw_172"
     },
     {
       "status": "open",
@@ -3483,7 +3602,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_167"
+      "review_item_id": "rvw_173"
     },
     {
       "status": "open",
@@ -3508,7 +3627,7 @@
         "topic_count": 4
       },
       "evidence": {},
-      "review_item_id": "rvw_168"
+      "review_item_id": "rvw_174"
     },
     {
       "status": "open",
@@ -3530,7 +3649,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_169"
+      "review_item_id": "rvw_175"
     },
     {
       "status": "open",
@@ -3552,7 +3671,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_170"
+      "review_item_id": "rvw_176"
     },
     {
       "status": "open",
@@ -3574,7 +3693,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_171"
+      "review_item_id": "rvw_177"
     },
     {
       "status": "open",
@@ -3599,7 +3718,7 @@
         "topic_count": 2
       },
       "evidence": {},
-      "review_item_id": "rvw_172"
+      "review_item_id": "rvw_178"
     },
     {
       "status": "open",
@@ -3620,7 +3739,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_173"
+      "review_item_id": "rvw_179"
     },
     {
       "status": "open",
@@ -3641,7 +3760,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_174"
+      "review_item_id": "rvw_180"
     },
     {
       "status": "open",
@@ -3661,7 +3780,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_175"
+      "review_item_id": "rvw_181"
     },
     {
       "status": "open",
@@ -3682,7 +3801,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_176"
+      "review_item_id": "rvw_182"
     },
     {
       "status": "open",
@@ -3703,7 +3822,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_177"
+      "review_item_id": "rvw_183"
     },
     {
       "status": "open",
@@ -3725,7 +3844,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_178"
+      "review_item_id": "rvw_184"
     },
     {
       "status": "open",
@@ -3748,7 +3867,7 @@
         "topic_count": 2
       },
       "evidence": {},
-      "review_item_id": "rvw_179"
+      "review_item_id": "rvw_185"
     },
     {
       "status": "open",
@@ -3769,7 +3888,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_180"
+      "review_item_id": "rvw_186"
     },
     {
       "status": "open",
@@ -3794,7 +3913,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_181"
+      "review_item_id": "rvw_187"
     },
     {
       "status": "open",
@@ -3817,7 +3936,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_182"
+      "review_item_id": "rvw_188"
     },
     {
       "status": "open",
@@ -3840,7 +3959,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_183"
+      "review_item_id": "rvw_189"
     },
     {
       "status": "open",
@@ -3862,7 +3981,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_184"
+      "review_item_id": "rvw_190"
     },
     {
       "status": "open",
@@ -3882,7 +4001,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_185"
+      "review_item_id": "rvw_191"
     },
     {
       "status": "open",
@@ -3906,7 +4025,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_186"
+      "review_item_id": "rvw_192"
     },
     {
       "status": "open",
@@ -3930,7 +4049,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_187"
+      "review_item_id": "rvw_193"
     },
     {
       "status": "open",
@@ -3955,7 +4074,7 @@
         "topic_count": 4
       },
       "evidence": {},
-      "review_item_id": "rvw_188"
+      "review_item_id": "rvw_194"
     },
     {
       "status": "open",
@@ -3975,7 +4094,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_189"
+      "review_item_id": "rvw_195"
     },
     {
       "status": "open",
@@ -3995,7 +4114,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_190"
+      "review_item_id": "rvw_196"
     },
     {
       "status": "open",
@@ -4015,7 +4134,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_191"
+      "review_item_id": "rvw_197"
     },
     {
       "status": "open",
@@ -4039,7 +4158,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_192"
+      "review_item_id": "rvw_198"
     },
     {
       "status": "open",
@@ -4061,7 +4180,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_193"
+      "review_item_id": "rvw_199"
     },
     {
       "status": "open",
@@ -4081,7 +4200,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_194"
+      "review_item_id": "rvw_200"
     },
     {
       "status": "open",
@@ -4105,7 +4224,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_195"
+      "review_item_id": "rvw_201"
     },
     {
       "status": "open",
@@ -4130,7 +4249,7 @@
         "topic_count": 4
       },
       "evidence": {},
-      "review_item_id": "rvw_196"
+      "review_item_id": "rvw_202"
     },
     {
       "status": "open",
@@ -4150,7 +4269,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_197"
+      "review_item_id": "rvw_203"
     },
     {
       "status": "open",
@@ -4173,7 +4292,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_198"
+      "review_item_id": "rvw_204"
     },
     {
       "status": "open",
@@ -4194,7 +4313,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_199"
+      "review_item_id": "rvw_205"
     },
     {
       "status": "open",
@@ -4215,7 +4334,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_200"
+      "review_item_id": "rvw_206"
     },
     {
       "status": "open",
@@ -4238,7 +4357,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_201"
+      "review_item_id": "rvw_207"
     },
     {
       "status": "open",
@@ -4263,7 +4382,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_202"
+      "review_item_id": "rvw_208"
     },
     {
       "status": "open",
@@ -4283,7 +4402,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_203"
+      "review_item_id": "rvw_209"
     },
     {
       "status": "open",
@@ -4304,7 +4423,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_204"
+      "review_item_id": "rvw_210"
     },
     {
       "status": "open",
@@ -4324,7 +4443,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_205"
+      "review_item_id": "rvw_211"
     },
     {
       "status": "open",
@@ -4347,7 +4466,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_206"
+      "review_item_id": "rvw_212"
     },
     {
       "status": "open",
@@ -4370,7 +4489,7 @@
         "topic_count": 3
       },
       "evidence": {},
-      "review_item_id": "rvw_207"
+      "review_item_id": "rvw_213"
     },
     {
       "status": "open",
@@ -4394,7 +4513,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_208"
+      "review_item_id": "rvw_214"
     },
     {
       "status": "open",
@@ -4415,7 +4534,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_209"
+      "review_item_id": "rvw_215"
     },
     {
       "status": "open",
@@ -4437,7 +4556,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_210"
+      "review_item_id": "rvw_216"
     },
     {
       "status": "open",
@@ -4460,7 +4579,7 @@
         "topic_count": 2
       },
       "evidence": {},
-      "review_item_id": "rvw_211"
+      "review_item_id": "rvw_217"
     },
     {
       "status": "open",
@@ -4482,7 +4601,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_212"
+      "review_item_id": "rvw_218"
     },
     {
       "status": "open",
@@ -4507,7 +4626,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_213"
+      "review_item_id": "rvw_219"
     },
     {
       "status": "open",
@@ -4528,7 +4647,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_214"
+      "review_item_id": "rvw_220"
     },
     {
       "status": "open",
@@ -4548,7 +4667,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_215"
+      "review_item_id": "rvw_221"
     },
     {
       "status": "open",
@@ -4569,7 +4688,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_216"
+      "review_item_id": "rvw_222"
     },
     {
       "status": "open",
@@ -4594,7 +4713,7 @@
         "topic_count": 3
       },
       "evidence": {},
-      "review_item_id": "rvw_217"
+      "review_item_id": "rvw_223"
     },
     {
       "status": "open",
@@ -4615,7 +4734,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_218"
+      "review_item_id": "rvw_224"
     },
     {
       "status": "open",
@@ -4638,7 +4757,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_219"
+      "review_item_id": "rvw_225"
     },
     {
       "status": "open",
@@ -4661,7 +4780,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_220"
+      "review_item_id": "rvw_226"
     },
     {
       "status": "open",
@@ -4684,7 +4803,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_221"
+      "review_item_id": "rvw_227"
     },
     {
       "status": "open",
@@ -4709,7 +4828,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_222"
+      "review_item_id": "rvw_228"
     },
     {
       "status": "open",
@@ -4731,7 +4850,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_223"
+      "review_item_id": "rvw_229"
     },
     {
       "status": "open",
@@ -4751,7 +4870,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_224"
+      "review_item_id": "rvw_230"
     },
     {
       "status": "open",
@@ -4772,7 +4891,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_225"
+      "review_item_id": "rvw_231"
     },
     {
       "status": "open",
@@ -4792,7 +4911,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_226"
+      "review_item_id": "rvw_232"
     },
     {
       "status": "open",
@@ -4814,7 +4933,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_227"
+      "review_item_id": "rvw_233"
     },
     {
       "status": "open",
@@ -4835,7 +4954,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_228"
+      "review_item_id": "rvw_234"
     },
     {
       "status": "open",
@@ -4859,7 +4978,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_229"
+      "review_item_id": "rvw_235"
     },
     {
       "status": "open",
@@ -4884,7 +5003,7 @@
         "topic_count": 4
       },
       "evidence": {},
-      "review_item_id": "rvw_230"
+      "review_item_id": "rvw_236"
     },
     {
       "status": "open",
@@ -4904,7 +5023,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_231"
+      "review_item_id": "rvw_237"
     },
     {
       "status": "open",
@@ -4929,7 +5048,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_232"
+      "review_item_id": "rvw_238"
     },
     {
       "status": "open",
@@ -4950,7 +5069,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_233"
+      "review_item_id": "rvw_239"
     },
     {
       "status": "open",
@@ -4970,7 +5089,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_234"
+      "review_item_id": "rvw_240"
     },
     {
       "status": "open",
@@ -4994,7 +5113,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_235"
+      "review_item_id": "rvw_241"
     },
     {
       "status": "open",
@@ -5017,7 +5136,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_236"
+      "review_item_id": "rvw_242"
     },
     {
       "status": "open",
@@ -5039,7 +5158,50 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_237"
+      "review_item_id": "rvw_243"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "authority_unclear",
+      "summary": "mun_almere_subsidieregister_2024 contributes lower-authority claims that still require human review.",
+      "recommended_action": "Keep these claims as contextual support only until a stronger primary source confirms or replaces them.",
+      "document_id": "mun_almere_subsidieregister_2024",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_subsidieregister_2024.json"
+      ],
+      "related_ids": {
+        "review_claim_count": 2,
+        "sample_claim_ids": [
+          "clm__mun_almere_subsidieregister_2024_timeline_and_status_001",
+          "clm__mun_almere_subsidieregister_2024_timeline_and_status_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_244"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "authority_unclear",
+      "summary": "mun_almere_subsidieregister_2025 contributes lower-authority claims that still require human review.",
+      "recommended_action": "Keep these claims as contextual support only until a stronger primary source confirms or replaces them.",
+      "document_id": "mun_almere_subsidieregister_2025",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/mun_almere_subsidieregister_2025.json"
+      ],
+      "related_ids": {
+        "review_claim_count": 1,
+        "sample_claim_ids": [
+          "clm__mun_almere_subsidieregister_2025_timeline_and_status_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_245"
     },
     {
       "status": "open",
@@ -5063,7 +5225,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_238"
+      "review_item_id": "rvw_246"
     },
     {
       "status": "open",
@@ -5088,7 +5250,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_239"
+      "review_item_id": "rvw_247"
     },
     {
       "status": "open",
@@ -5108,7 +5270,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_240"
+      "review_item_id": "rvw_248"
     },
     {
       "status": "open",
@@ -5128,7 +5290,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_241"
+      "review_item_id": "rvw_249"
     },
     {
       "status": "open",
@@ -5148,7 +5310,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_242"
+      "review_item_id": "rvw_250"
     },
     {
       "status": "open",
@@ -5171,7 +5333,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_243"
+      "review_item_id": "rvw_251"
     },
     {
       "status": "open",
@@ -5194,7 +5356,7 @@
         "topic_count": 2
       },
       "evidence": {},
-      "review_item_id": "rvw_244"
+      "review_item_id": "rvw_252"
     },
     {
       "status": "open",
@@ -5216,7 +5378,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_245"
+      "review_item_id": "rvw_253"
     },
     {
       "status": "open",
@@ -5236,7 +5398,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_246"
+      "review_item_id": "rvw_254"
     },
     {
       "status": "open",
@@ -5257,7 +5419,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_247"
+      "review_item_id": "rvw_255"
     },
     {
       "status": "open",
@@ -5278,7 +5440,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_248"
+      "review_item_id": "rvw_256"
     },
     {
       "status": "open",
@@ -5298,7 +5460,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_249"
+      "review_item_id": "rvw_257"
     },
     {
       "status": "open",
@@ -5319,7 +5481,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_250"
+      "review_item_id": "rvw_258"
     },
     {
       "status": "open",
@@ -5344,7 +5506,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_251"
+      "review_item_id": "rvw_259"
     },
     {
       "status": "open",
@@ -5365,7 +5527,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_252"
+      "review_item_id": "rvw_260"
     },
     {
       "status": "open",
@@ -5386,7 +5548,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_253"
+      "review_item_id": "rvw_261"
     },
     {
       "status": "open",
@@ -5410,7 +5572,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_254"
+      "review_item_id": "rvw_262"
     },
     {
       "status": "open",
@@ -5434,7 +5596,7 @@
         "topic_count": 2
       },
       "evidence": {},
-      "review_item_id": "rvw_255"
+      "review_item_id": "rvw_263"
     },
     {
       "status": "open",
@@ -5459,7 +5621,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_256"
+      "review_item_id": "rvw_264"
     },
     {
       "status": "open",
@@ -5480,7 +5642,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_257"
+      "review_item_id": "rvw_265"
     },
     {
       "status": "open",
@@ -5501,7 +5663,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_258"
+      "review_item_id": "rvw_266"
     },
     {
       "status": "open",
@@ -5524,7 +5686,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_259"
+      "review_item_id": "rvw_267"
     },
     {
       "status": "open",
@@ -5548,7 +5710,7 @@
         "topic_count": 2
       },
       "evidence": {},
-      "review_item_id": "rvw_260"
+      "review_item_id": "rvw_268"
     },
     {
       "status": "open",
@@ -5573,7 +5735,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_261"
+      "review_item_id": "rvw_269"
     },
     {
       "status": "open",
@@ -5594,7 +5756,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_262"
+      "review_item_id": "rvw_270"
     },
     {
       "status": "open",
@@ -5617,7 +5779,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_263"
+      "review_item_id": "rvw_271"
     },
     {
       "status": "open",
@@ -5641,7 +5803,7 @@
         "topic_count": 2
       },
       "evidence": {},
-      "review_item_id": "rvw_264"
+      "review_item_id": "rvw_272"
     },
     {
       "status": "open",
@@ -5666,7 +5828,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_265"
+      "review_item_id": "rvw_273"
     },
     {
       "status": "open",
@@ -5686,7 +5848,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_266"
+      "review_item_id": "rvw_274"
     },
     {
       "status": "open",
@@ -5707,7 +5869,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_267"
+      "review_item_id": "rvw_275"
     },
     {
       "status": "open",
@@ -5727,7 +5889,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_268"
+      "review_item_id": "rvw_276"
     },
     {
       "status": "open",
@@ -5750,7 +5912,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_269"
+      "review_item_id": "rvw_277"
     },
     {
       "status": "open",
@@ -5774,7 +5936,7 @@
         "topic_count": 2
       },
       "evidence": {},
-      "review_item_id": "rvw_270"
+      "review_item_id": "rvw_278"
     },
     {
       "status": "open",
@@ -5797,7 +5959,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_271"
+      "review_item_id": "rvw_279"
     },
     {
       "status": "open",
@@ -5818,7 +5980,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_272"
+      "review_item_id": "rvw_280"
     },
     {
       "status": "open",
@@ -5839,7 +6001,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_273"
+      "review_item_id": "rvw_281"
     },
     {
       "status": "open",
@@ -5861,7 +6023,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_274"
+      "review_item_id": "rvw_282"
     },
     {
       "status": "open",
@@ -5882,7 +6044,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_275"
+      "review_item_id": "rvw_283"
     },
     {
       "status": "open",
@@ -5902,7 +6064,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_276"
+      "review_item_id": "rvw_284"
     },
     {
       "status": "open",
@@ -5922,7 +6084,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_277"
+      "review_item_id": "rvw_285"
     },
     {
       "status": "open",
@@ -5943,7 +6105,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_278"
+      "review_item_id": "rvw_286"
     },
     {
       "status": "open",
@@ -5965,7 +6127,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_279"
+      "review_item_id": "rvw_287"
     },
     {
       "status": "open",
@@ -5985,7 +6147,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_280"
+      "review_item_id": "rvw_288"
     },
     {
       "status": "open",
@@ -6008,7 +6170,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_281"
+      "review_item_id": "rvw_289"
     },
     {
       "status": "open",
@@ -6028,7 +6190,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_282"
+      "review_item_id": "rvw_290"
     },
     {
       "status": "open",
@@ -6050,7 +6212,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_283"
+      "review_item_id": "rvw_291"
     },
     {
       "status": "open",
@@ -6070,7 +6232,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_284"
+      "review_item_id": "rvw_292"
     },
     {
       "status": "open",
@@ -6092,7 +6254,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_285"
+      "review_item_id": "rvw_293"
     },
     {
       "status": "open",
@@ -6112,7 +6274,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_286"
+      "review_item_id": "rvw_294"
     },
     {
       "status": "open",
@@ -6133,7 +6295,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_287"
+      "review_item_id": "rvw_295"
     },
     {
       "status": "open",
@@ -6153,7 +6315,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_288"
+      "review_item_id": "rvw_296"
     },
     {
       "status": "open",
@@ -6173,7 +6335,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_289"
+      "review_item_id": "rvw_297"
     },
     {
       "status": "open",
@@ -6196,7 +6358,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_290"
+      "review_item_id": "rvw_298"
     },
     {
       "status": "open",
@@ -6216,7 +6378,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_291"
+      "review_item_id": "rvw_299"
     },
     {
       "status": "open",
@@ -6237,7 +6399,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_292"
+      "review_item_id": "rvw_300"
     },
     {
       "status": "open",
@@ -6258,7 +6420,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_293"
+      "review_item_id": "rvw_301"
     },
     {
       "status": "open",
@@ -6280,7 +6442,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_294"
+      "review_item_id": "rvw_302"
     },
     {
       "status": "open",
@@ -6301,7 +6463,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_295"
+      "review_item_id": "rvw_303"
     },
     {
       "status": "open",
@@ -6322,7 +6484,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_296"
+      "review_item_id": "rvw_304"
     },
     {
       "status": "open",
@@ -6342,7 +6504,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_297"
+      "review_item_id": "rvw_305"
     },
     {
       "status": "open",
@@ -6362,7 +6524,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_298"
+      "review_item_id": "rvw_306"
     },
     {
       "status": "open",
@@ -6382,7 +6544,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_299"
+      "review_item_id": "rvw_307"
     },
     {
       "status": "open",
@@ -6403,7 +6565,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_300"
+      "review_item_id": "rvw_308"
     },
     {
       "status": "open",
@@ -6423,7 +6585,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_301"
+      "review_item_id": "rvw_309"
     },
     {
       "status": "open",
@@ -6444,7 +6606,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_302"
+      "review_item_id": "rvw_310"
     },
     {
       "status": "open",
@@ -6464,7 +6626,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_303"
+      "review_item_id": "rvw_311"
     },
     {
       "status": "open",
@@ -6484,7 +6646,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_304"
+      "review_item_id": "rvw_312"
     },
     {
       "status": "open",
@@ -6505,7 +6667,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_305"
+      "review_item_id": "rvw_313"
     },
     {
       "status": "open",
@@ -6527,7 +6689,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_306"
+      "review_item_id": "rvw_314"
     },
     {
       "status": "open",
@@ -6550,7 +6712,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_307"
+      "review_item_id": "rvw_315"
     },
     {
       "status": "open",
@@ -6575,7 +6737,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_308"
+      "review_item_id": "rvw_316"
     },
     {
       "status": "open",
@@ -6595,7 +6757,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_309"
+      "review_item_id": "rvw_317"
     },
     {
       "status": "open",
@@ -6616,7 +6778,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_310"
+      "review_item_id": "rvw_318"
     },
     {
       "status": "open",
@@ -6639,7 +6801,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_311"
+      "review_item_id": "rvw_319"
     },
     {
       "status": "open",
@@ -6661,7 +6823,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_312"
+      "review_item_id": "rvw_320"
     },
     {
       "status": "open",
@@ -6685,7 +6847,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_313"
+      "review_item_id": "rvw_321"
     },
     {
       "status": "open",
@@ -6705,7 +6867,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_314"
+      "review_item_id": "rvw_322"
     },
     {
       "status": "open",
@@ -6725,7 +6887,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_315"
+      "review_item_id": "rvw_323"
     },
     {
       "status": "open",
@@ -6748,7 +6910,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_316"
+      "review_item_id": "rvw_324"
     },
     {
       "status": "open",
@@ -6772,7 +6934,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_317"
+      "review_item_id": "rvw_325"
     },
     {
       "status": "open",
@@ -6793,7 +6955,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_318"
+      "review_item_id": "rvw_326"
     },
     {
       "status": "open",
@@ -6813,7 +6975,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_319"
+      "review_item_id": "rvw_327"
     },
     {
       "status": "open",
@@ -6835,7 +6997,7 @@
         "topic_count": 2
       },
       "evidence": {},
-      "review_item_id": "rvw_320"
+      "review_item_id": "rvw_328"
     },
     {
       "status": "open",
@@ -6856,7 +7018,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_321"
+      "review_item_id": "rvw_329"
     },
     {
       "status": "open",
@@ -6880,7 +7042,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_322"
+      "review_item_id": "rvw_330"
     },
     {
       "status": "open",
@@ -6902,7 +7064,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_323"
+      "review_item_id": "rvw_331"
     },
     {
       "status": "open",
@@ -6926,7 +7088,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_324"
+      "review_item_id": "rvw_332"
     },
     {
       "status": "open",
@@ -6951,7 +7113,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_325"
+      "review_item_id": "rvw_333"
     },
     {
       "status": "open",
@@ -6972,7 +7134,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_326"
+      "review_item_id": "rvw_334"
     },
     {
       "status": "open",
@@ -6993,7 +7155,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_327"
+      "review_item_id": "rvw_335"
     },
     {
       "status": "open",
@@ -7017,7 +7179,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_328"
+      "review_item_id": "rvw_336"
     },
     {
       "status": "open",
@@ -7038,7 +7200,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_329"
+      "review_item_id": "rvw_337"
     },
     {
       "status": "open",
@@ -7059,7 +7221,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_330"
+      "review_item_id": "rvw_338"
     },
     {
       "status": "open",
@@ -7083,7 +7245,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_331"
+      "review_item_id": "rvw_339"
     },
     {
       "status": "open",
@@ -7105,7 +7267,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_332"
+      "review_item_id": "rvw_340"
     },
     {
       "status": "open",
@@ -7128,7 +7290,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_333"
+      "review_item_id": "rvw_341"
     },
     {
       "status": "open",
@@ -7153,7 +7315,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_334"
+      "review_item_id": "rvw_342"
     },
     {
       "status": "open",
@@ -7173,7 +7335,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_335"
+      "review_item_id": "rvw_343"
     },
     {
       "status": "open",
@@ -7193,7 +7355,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_336"
+      "review_item_id": "rvw_344"
     },
     {
       "status": "open",
@@ -7215,7 +7377,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_337"
+      "review_item_id": "rvw_345"
     },
     {
       "status": "open",
@@ -7235,7 +7397,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_338"
+      "review_item_id": "rvw_346"
     },
     {
       "status": "open",
@@ -7260,7 +7422,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_339"
+      "review_item_id": "rvw_347"
     },
     {
       "status": "open",
@@ -7280,7 +7442,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_340"
+      "review_item_id": "rvw_348"
     },
     {
       "status": "open",
@@ -7300,7 +7462,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_341"
+      "review_item_id": "rvw_349"
     },
     {
       "status": "open",
@@ -7320,7 +7482,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_342"
+      "review_item_id": "rvw_350"
     },
     {
       "status": "open",
@@ -7343,7 +7505,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_343"
+      "review_item_id": "rvw_351"
     },
     {
       "status": "open",
@@ -7365,7 +7527,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_344"
+      "review_item_id": "rvw_352"
     },
     {
       "status": "open",
@@ -7385,7 +7547,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_345"
+      "review_item_id": "rvw_353"
     },
     {
       "status": "open",
@@ -7407,7 +7569,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_346"
+      "review_item_id": "rvw_354"
     },
     {
       "status": "open",
@@ -7429,7 +7591,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_347"
+      "review_item_id": "rvw_355"
     },
     {
       "status": "open",
@@ -7450,7 +7612,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_348"
+      "review_item_id": "rvw_356"
     },
     {
       "status": "open",
@@ -7470,7 +7632,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_349"
+      "review_item_id": "rvw_357"
     },
     {
       "status": "open",
@@ -7495,7 +7657,7 @@
         "topic_count": 3
       },
       "evidence": {},
-      "review_item_id": "rvw_350"
+      "review_item_id": "rvw_358"
     },
     {
       "status": "open",
@@ -7519,7 +7681,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_351"
+      "review_item_id": "rvw_359"
     },
     {
       "status": "open",
@@ -7540,7 +7702,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_352"
+      "review_item_id": "rvw_360"
     },
     {
       "status": "open",
@@ -7560,7 +7722,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_353"
+      "review_item_id": "rvw_361"
     },
     {
       "status": "open",
@@ -7581,7 +7743,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_354"
+      "review_item_id": "rvw_362"
     },
     {
       "status": "open",
@@ -7601,7 +7763,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_355"
+      "review_item_id": "rvw_363"
     },
     {
       "status": "open",
@@ -7621,7 +7783,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_356"
+      "review_item_id": "rvw_364"
     },
     {
       "status": "open",
@@ -7641,7 +7803,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_357"
+      "review_item_id": "rvw_365"
     },
     {
       "status": "open",
@@ -7662,7 +7824,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_358"
+      "review_item_id": "rvw_366"
     },
     {
       "status": "open",
@@ -7684,7 +7846,7 @@
         "topic_count": 2
       },
       "evidence": {},
-      "review_item_id": "rvw_359"
+      "review_item_id": "rvw_367"
     },
     {
       "status": "open",
@@ -7706,7 +7868,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_360"
+      "review_item_id": "rvw_368"
     },
     {
       "status": "open",
@@ -7726,7 +7888,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_361"
+      "review_item_id": "rvw_369"
     },
     {
       "status": "open",
@@ -7749,7 +7911,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_362"
+      "review_item_id": "rvw_370"
     },
     {
       "status": "open",
@@ -7774,7 +7936,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_363"
+      "review_item_id": "rvw_371"
     },
     {
       "status": "open",
@@ -7794,7 +7956,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_364"
+      "review_item_id": "rvw_372"
     },
     {
       "status": "open",
@@ -7814,7 +7976,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_365"
+      "review_item_id": "rvw_373"
     },
     {
       "status": "open",
@@ -7838,7 +8000,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_366"
+      "review_item_id": "rvw_374"
     },
     {
       "status": "open",
@@ -7858,7 +8020,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_367"
+      "review_item_id": "rvw_375"
     },
     {
       "status": "open",
@@ -7880,7 +8042,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_368"
+      "review_item_id": "rvw_376"
     },
     {
       "status": "open",
@@ -7902,7 +8064,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_369"
+      "review_item_id": "rvw_377"
     },
     {
       "status": "open",
@@ -7927,7 +8089,7 @@
         "topic_count": 6
       },
       "evidence": {},
-      "review_item_id": "rvw_370"
+      "review_item_id": "rvw_378"
     },
     {
       "status": "open",
@@ -7951,7 +8113,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_371"
+      "review_item_id": "rvw_379"
     },
     {
       "status": "open",
@@ -7973,7 +8135,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_372"
+      "review_item_id": "rvw_380"
     },
     {
       "status": "open",
@@ -7995,7 +8157,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_373"
+      "review_item_id": "rvw_381"
     },
     {
       "status": "open",
@@ -8020,7 +8182,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_374"
+      "review_item_id": "rvw_382"
     },
     {
       "status": "open",
@@ -8041,7 +8203,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_375"
+      "review_item_id": "rvw_383"
     },
     {
       "status": "open",
@@ -8061,7 +8223,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_376"
+      "review_item_id": "rvw_384"
     },
     {
       "status": "open",
@@ -8081,7 +8243,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_377"
+      "review_item_id": "rvw_385"
     },
     {
       "status": "open",
@@ -8104,7 +8266,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_378"
+      "review_item_id": "rvw_386"
     },
     {
       "status": "open",
@@ -8124,7 +8286,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_379"
+      "review_item_id": "rvw_387"
     },
     {
       "status": "open",
@@ -8144,7 +8306,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_380"
+      "review_item_id": "rvw_388"
     },
     {
       "status": "open",
@@ -8164,7 +8326,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_381"
+      "review_item_id": "rvw_389"
     },
     {
       "status": "open",
@@ -8188,7 +8350,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_382"
+      "review_item_id": "rvw_390"
     },
     {
       "status": "open",
@@ -8209,7 +8371,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_383"
+      "review_item_id": "rvw_391"
     },
     {
       "status": "open",
@@ -8231,7 +8393,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_384"
+      "review_item_id": "rvw_392"
     },
     {
       "status": "open",
@@ -8251,7 +8413,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_385"
+      "review_item_id": "rvw_393"
     },
     {
       "status": "open",
@@ -8272,7 +8434,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_386"
+      "review_item_id": "rvw_394"
     },
     {
       "status": "open",
@@ -8292,7 +8454,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_387"
+      "review_item_id": "rvw_395"
     },
     {
       "status": "open",
@@ -8317,7 +8479,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_388"
+      "review_item_id": "rvw_396"
     },
     {
       "status": "open",
@@ -8338,7 +8500,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_389"
+      "review_item_id": "rvw_397"
     },
     {
       "status": "open",
@@ -8362,7 +8524,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_390"
+      "review_item_id": "rvw_398"
     },
     {
       "status": "open",
@@ -8387,7 +8549,7 @@
         "topic_count": 2
       },
       "evidence": {},
-      "review_item_id": "rvw_391"
+      "review_item_id": "rvw_399"
     },
     {
       "status": "open",
@@ -8411,7 +8573,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_392"
+      "review_item_id": "rvw_400"
     },
     {
       "status": "open",
@@ -8432,7 +8594,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_393"
+      "review_item_id": "rvw_401"
     },
     {
       "status": "open",
@@ -8453,7 +8615,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_394"
+      "review_item_id": "rvw_402"
     },
     {
       "status": "open",
@@ -8477,7 +8639,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_395"
+      "review_item_id": "rvw_403"
     },
     {
       "status": "open",
@@ -8497,7 +8659,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_396"
+      "review_item_id": "rvw_404"
     },
     {
       "status": "open",
@@ -8518,7 +8680,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_397"
+      "review_item_id": "rvw_405"
     },
     {
       "status": "open",
@@ -8539,7 +8701,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_398"
+      "review_item_id": "rvw_406"
     },
     {
       "status": "open",
@@ -8562,7 +8724,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_399"
+      "review_item_id": "rvw_407"
     },
     {
       "status": "open",
@@ -8584,7 +8746,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_400"
+      "review_item_id": "rvw_408"
     },
     {
       "status": "open",
@@ -8604,7 +8766,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_401"
+      "review_item_id": "rvw_409"
     },
     {
       "status": "open",
@@ -8627,7 +8789,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_402"
+      "review_item_id": "rvw_410"
     },
     {
       "status": "open",
@@ -8647,7 +8809,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_403"
+      "review_item_id": "rvw_411"
     },
     {
       "status": "open",
@@ -8668,7 +8830,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_404"
+      "review_item_id": "rvw_412"
     },
     {
       "status": "open",
@@ -8688,7 +8850,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_405"
+      "review_item_id": "rvw_413"
     },
     {
       "status": "open",
@@ -8712,7 +8874,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_406"
+      "review_item_id": "rvw_414"
     },
     {
       "status": "open",
@@ -8737,7 +8899,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_407"
+      "review_item_id": "rvw_415"
     },
     {
       "status": "open",
@@ -8759,7 +8921,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_408"
+      "review_item_id": "rvw_416"
     },
     {
       "status": "open",
@@ -8779,7 +8941,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_409"
+      "review_item_id": "rvw_417"
     },
     {
       "status": "open",
@@ -8803,7 +8965,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_410"
+      "review_item_id": "rvw_418"
     },
     {
       "status": "open",
@@ -8826,7 +8988,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_411"
+      "review_item_id": "rvw_419"
     },
     {
       "status": "open",
@@ -8850,7 +9012,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_412"
+      "review_item_id": "rvw_420"
     },
     {
       "status": "open",
@@ -8870,7 +9032,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_413"
+      "review_item_id": "rvw_421"
     },
     {
       "status": "open",
@@ -8891,7 +9053,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_414"
+      "review_item_id": "rvw_422"
     },
     {
       "status": "open",
@@ -8912,7 +9074,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_415"
+      "review_item_id": "rvw_423"
     },
     {
       "status": "open",
@@ -8935,7 +9097,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_416"
+      "review_item_id": "rvw_424"
     },
     {
       "status": "open",
@@ -8960,7 +9122,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_417"
+      "review_item_id": "rvw_425"
     },
     {
       "status": "open",
@@ -8980,7 +9142,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_418"
+      "review_item_id": "rvw_426"
     },
     {
       "status": "open",
@@ -9000,7 +9162,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_419"
+      "review_item_id": "rvw_427"
     },
     {
       "status": "open",
@@ -9020,7 +9182,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_420"
+      "review_item_id": "rvw_428"
     },
     {
       "status": "open",
@@ -9043,7 +9205,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_421"
+      "review_item_id": "rvw_429"
     },
     {
       "status": "open",
@@ -9063,7 +9225,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_422"
+      "review_item_id": "rvw_430"
     },
     {
       "status": "open",
@@ -9085,7 +9247,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_423"
+      "review_item_id": "rvw_431"
     },
     {
       "status": "open",
@@ -9109,7 +9271,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_424"
+      "review_item_id": "rvw_432"
     },
     {
       "status": "open",
@@ -9129,7 +9291,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_425"
+      "review_item_id": "rvw_433"
     },
     {
       "status": "open",
@@ -9152,7 +9314,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_426"
+      "review_item_id": "rvw_434"
     },
     {
       "status": "open",
@@ -9177,7 +9339,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_427"
+      "review_item_id": "rvw_435"
     },
     {
       "status": "open",
@@ -9197,7 +9359,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_428"
+      "review_item_id": "rvw_436"
     },
     {
       "status": "open",
@@ -9217,7 +9379,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_429"
+      "review_item_id": "rvw_437"
     },
     {
       "status": "open",
@@ -9237,7 +9399,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_430"
+      "review_item_id": "rvw_438"
     },
     {
       "status": "open",
@@ -9257,7 +9419,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_431"
+      "review_item_id": "rvw_439"
     },
     {
       "status": "open",
@@ -9278,7 +9440,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_432"
+      "review_item_id": "rvw_440"
     },
     {
       "status": "open",
@@ -9298,7 +9460,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_433"
+      "review_item_id": "rvw_441"
     },
     {
       "status": "open",
@@ -9318,7 +9480,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_434"
+      "review_item_id": "rvw_442"
     },
     {
       "status": "open",
@@ -9342,7 +9504,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_435"
+      "review_item_id": "rvw_443"
     },
     {
       "status": "open",
@@ -9363,7 +9525,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_436"
+      "review_item_id": "rvw_444"
     },
     {
       "status": "open",
@@ -9383,7 +9545,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_437"
+      "review_item_id": "rvw_445"
     },
     {
       "status": "open",
@@ -9406,7 +9568,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_438"
+      "review_item_id": "rvw_446"
     },
     {
       "status": "open",
@@ -9426,7 +9588,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_439"
+      "review_item_id": "rvw_447"
     },
     {
       "status": "open",
@@ -9446,7 +9608,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_440"
+      "review_item_id": "rvw_448"
     },
     {
       "status": "open",
@@ -9467,7 +9629,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_441"
+      "review_item_id": "rvw_449"
     },
     {
       "status": "open",
@@ -9487,7 +9649,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_442"
+      "review_item_id": "rvw_450"
     },
     {
       "status": "open",
@@ -9507,7 +9669,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_443"
+      "review_item_id": "rvw_451"
     },
     {
       "status": "open",
@@ -9529,7 +9691,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_444"
+      "review_item_id": "rvw_452"
     },
     {
       "status": "open",
@@ -9550,7 +9712,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_445"
+      "review_item_id": "rvw_453"
     },
     {
       "status": "open",
@@ -9573,7 +9735,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_446"
+      "review_item_id": "rvw_454"
     },
     {
       "status": "open",
@@ -9593,7 +9755,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_447"
+      "review_item_id": "rvw_455"
     },
     {
       "status": "open",
@@ -9613,7 +9775,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_448"
+      "review_item_id": "rvw_456"
     },
     {
       "status": "open",
@@ -9633,7 +9795,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_449"
+      "review_item_id": "rvw_457"
     },
     {
       "status": "open",
@@ -9653,7 +9815,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_450"
+      "review_item_id": "rvw_458"
     },
     {
       "status": "open",
@@ -9673,7 +9835,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_451"
+      "review_item_id": "rvw_459"
     },
     {
       "status": "open",
@@ -9694,7 +9856,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_452"
+      "review_item_id": "rvw_460"
     },
     {
       "status": "open",
@@ -9714,7 +9876,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_453"
+      "review_item_id": "rvw_461"
     },
     {
       "status": "open",
@@ -9734,7 +9896,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_454"
+      "review_item_id": "rvw_462"
     },
     {
       "status": "open",
@@ -9754,7 +9916,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_455"
+      "review_item_id": "rvw_463"
     },
     {
       "status": "open",
@@ -9774,7 +9936,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_456"
+      "review_item_id": "rvw_464"
     },
     {
       "status": "open",
@@ -9794,7 +9956,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_457"
+      "review_item_id": "rvw_465"
     },
     {
       "status": "open",
@@ -9815,7 +9977,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_458"
+      "review_item_id": "rvw_466"
     },
     {
       "status": "open",
@@ -9835,7 +9997,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_459"
+      "review_item_id": "rvw_467"
     },
     {
       "status": "open",
@@ -9860,7 +10022,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_460"
+      "review_item_id": "rvw_468"
     },
     {
       "status": "open",
@@ -9881,7 +10043,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_461"
+      "review_item_id": "rvw_469"
     },
     {
       "status": "open",
@@ -9904,7 +10066,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_462"
+      "review_item_id": "rvw_470"
     },
     {
       "status": "open",
@@ -9924,7 +10086,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_463"
+      "review_item_id": "rvw_471"
     },
     {
       "status": "open",
@@ -9948,7 +10110,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_464"
+      "review_item_id": "rvw_472"
     },
     {
       "status": "open",
@@ -9970,7 +10132,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_465"
+      "review_item_id": "rvw_473"
     },
     {
       "status": "open",
@@ -9994,7 +10156,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_466"
+      "review_item_id": "rvw_474"
     },
     {
       "status": "open",
@@ -10019,7 +10181,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_467"
+      "review_item_id": "rvw_475"
     },
     {
       "status": "open",
@@ -10043,7 +10205,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_468"
+      "review_item_id": "rvw_476"
     },
     {
       "status": "open",
@@ -10063,7 +10225,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_469"
+      "review_item_id": "rvw_477"
     },
     {
       "status": "open",
@@ -10083,7 +10245,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_470"
+      "review_item_id": "rvw_478"
     },
     {
       "status": "open",
@@ -10103,7 +10265,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_471"
+      "review_item_id": "rvw_479"
     },
     {
       "status": "open",
@@ -10124,7 +10286,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_472"
+      "review_item_id": "rvw_480"
     },
     {
       "status": "open",
@@ -10145,7 +10307,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_473"
+      "review_item_id": "rvw_481"
     },
     {
       "status": "open",
@@ -10169,7 +10331,192 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_474"
+      "review_item_id": "rvw_482"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "actor_context_needs_role_split",
+      "summary": "nat_zorgakkoorden_werkagenda_handvatten_2026 contains 7 actor-context claim(s) without a more specific governance role.",
+      "recommended_action": "Review these before treating an actor mention as decision-making, coordination, execution, approval, application, accountability or monitoring responsibility.",
+      "document_id": "nat_zorgakkoorden_werkagenda_handvatten_2026",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_zorgakkoorden_werkagenda_handvatten_2026.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_zorgakkoorden_werkagenda_handvatten_2026_d5_002",
+          "clm__nat_zorgakkoorden_werkagenda_handvatten_2026_d5_003",
+          "clm__nat_zorgakkoorden_werkagenda_handvatten_2026_d6_002",
+          "clm__nat_zorgakkoorden_werkagenda_handvatten_2026_governance_and_finance_003",
+          "clm__nat_zorgakkoorden_werkagenda_handvatten_2026_timeline_and_status_003"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_483"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "authority_unclear",
+      "summary": "nat_zorgakkoorden_werkagenda_handvatten_2026 contributes lower-authority claims that still require human review.",
+      "recommended_action": "Keep these claims as contextual support only until a stronger primary source confirms or replaces them.",
+      "document_id": "nat_zorgakkoorden_werkagenda_handvatten_2026",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_zorgakkoorden_werkagenda_handvatten_2026.json"
+      ],
+      "related_ids": {
+        "review_claim_count": 16,
+        "sample_claim_ids": [
+          "clm__nat_zorgakkoorden_werkagenda_handvatten_2026_d5_001",
+          "clm__nat_zorgakkoorden_werkagenda_handvatten_2026_d5_002",
+          "clm__nat_zorgakkoorden_werkagenda_handvatten_2026_d5_003",
+          "clm__nat_zorgakkoorden_werkagenda_handvatten_2026_d6_001",
+          "clm__nat_zorgakkoorden_werkagenda_handvatten_2026_d6_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_484"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_context_needs_action_split",
+      "summary": "nat_zorgakkoorden_werkagenda_handvatten_2026 contains 1 execution-context claim(s) without a more specific execution status.",
+      "recommended_action": "Review these before turning context into an action, dependency, owner, sequence, or capacity need.",
+      "document_id": "nat_zorgakkoorden_werkagenda_handvatten_2026",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_zorgakkoorden_werkagenda_handvatten_2026.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_zorgakkoorden_werkagenda_handvatten_2026_monitoring_and_evaluation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_485"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "execution_sequencing_need",
+      "summary": "nat_zorgakkoorden_werkagenda_handvatten_2026 contains 5 execution sequencing claim(s).",
+      "recommended_action": "Treat these as sequencing or phasing signals; do not turn them into a hard local implementation plan without source evidence.",
+      "document_id": "nat_zorgakkoorden_werkagenda_handvatten_2026",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_zorgakkoorden_werkagenda_handvatten_2026.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_zorgakkoorden_werkagenda_handvatten_2026_d5_001",
+          "clm__nat_zorgakkoorden_werkagenda_handvatten_2026_d6_001",
+          "clm__nat_zorgakkoorden_werkagenda_handvatten_2026_governance_and_finance_001",
+          "clm__nat_zorgakkoorden_werkagenda_handvatten_2026_timeline_and_status_001",
+          "clm__nat_zorgakkoorden_werkagenda_handvatten_2026_monitoring_and_evaluation_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_486"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "finance_context_needs_verification",
+      "summary": "nat_zorgakkoorden_werkagenda_handvatten_2026 contains 1 finance-context claim(s) without a more specific money status.",
+      "recommended_action": "Review these before treating them as a funding route, condition, budget window, spending rule, or accountability rule.",
+      "document_id": "nat_zorgakkoorden_werkagenda_handvatten_2026",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_zorgakkoorden_werkagenda_handvatten_2026.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_zorgakkoorden_werkagenda_handvatten_2026_governance_and_finance_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_487"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "lower_authority_norm_signal",
+      "summary": "nat_zorgakkoorden_werkagenda_handvatten_2026 contains 8 lower-authority norm signal claim(s).",
+      "recommended_action": "Attribute these passages explicitly and do not present them as binding without a stronger source.",
+      "document_id": "nat_zorgakkoorden_werkagenda_handvatten_2026",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_zorgakkoorden_werkagenda_handvatten_2026.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_zorgakkoorden_werkagenda_handvatten_2026_d5_001",
+          "clm__nat_zorgakkoorden_werkagenda_handvatten_2026_d5_002",
+          "clm__nat_zorgakkoorden_werkagenda_handvatten_2026_d5_003",
+          "clm__nat_zorgakkoorden_werkagenda_handvatten_2026_d6_001",
+          "clm__nat_zorgakkoorden_werkagenda_handvatten_2026_d6_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_488"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "regional_split_context",
+      "summary": "nat_zorgakkoorden_werkagenda_handvatten_2026 contains 6 regional split context claim(s).",
+      "recommended_action": "Name the relevant regional scale before drawing conclusions for Almere.",
+      "document_id": "nat_zorgakkoorden_werkagenda_handvatten_2026",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_zorgakkoorden_werkagenda_handvatten_2026.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_zorgakkoorden_werkagenda_handvatten_2026_d5_003",
+          "clm__nat_zorgakkoorden_werkagenda_handvatten_2026_timeline_and_status_002",
+          "clm__nat_zorgakkoorden_werkagenda_handvatten_2026_timeline_and_status_003",
+          "clm__nat_zorgakkoorden_werkagenda_handvatten_2026_municipal_translation_001",
+          "clm__nat_zorgakkoorden_werkagenda_handvatten_2026_municipal_translation_002"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_489"
+    },
+    {
+      "status": "open",
+      "severity": "review",
+      "check_id": "claim_payload_integrity",
+      "reason_code": "vague_region_actor",
+      "summary": "nat_zorgakkoorden_werkagenda_handvatten_2026 contains 7 claim(s) where 'regio' is the only detected actor signal.",
+      "recommended_action": "Clarify whether the source means IZA/AZWA-regio, GGD-regio, zorgkantoorregio, ROAZ/subregio, province, mandaatgemeente, or practical execution structure before using this as a role claim.",
+      "document_id": "nat_zorgakkoorden_werkagenda_handvatten_2026",
+      "topic": null,
+      "source_paths": [
+        "data/extracted/claims/nat_zorgakkoorden_werkagenda_handvatten_2026.json"
+      ],
+      "related_ids": {
+        "sample_claim_ids": [
+          "clm__nat_zorgakkoorden_werkagenda_handvatten_2026_d5_001",
+          "clm__nat_zorgakkoorden_werkagenda_handvatten_2026_d5_003",
+          "clm__nat_zorgakkoorden_werkagenda_handvatten_2026_d6_001",
+          "clm__nat_zorgakkoorden_werkagenda_handvatten_2026_governance_and_finance_001",
+          "clm__nat_zorgakkoorden_werkagenda_handvatten_2026_timeline_and_status_001"
+        ]
+      },
+      "evidence": {},
+      "review_item_id": "rvw_490"
     },
     {
       "status": "open",
@@ -10189,7 +10536,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_475"
+      "review_item_id": "rvw_491"
     },
     {
       "status": "open",
@@ -10212,7 +10559,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_476"
+      "review_item_id": "rvw_492"
     },
     {
       "status": "open",
@@ -10232,7 +10579,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_477"
+      "review_item_id": "rvw_493"
     },
     {
       "status": "open",
@@ -10252,7 +10599,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_478"
+      "review_item_id": "rvw_494"
     },
     {
       "status": "open",
@@ -10272,7 +10619,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_479"
+      "review_item_id": "rvw_495"
     },
     {
       "status": "open",
@@ -10296,7 +10643,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_480"
+      "review_item_id": "rvw_496"
     },
     {
       "status": "open",
@@ -10316,7 +10663,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_481"
+      "review_item_id": "rvw_497"
     },
     {
       "status": "open",
@@ -10336,7 +10683,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_482"
+      "review_item_id": "rvw_498"
     },
     {
       "status": "open",
@@ -10356,7 +10703,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_483"
+      "review_item_id": "rvw_499"
     },
     {
       "status": "open",
@@ -10381,7 +10728,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_484"
+      "review_item_id": "rvw_500"
     },
     {
       "status": "open",
@@ -10401,7 +10748,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_485"
+      "review_item_id": "rvw_501"
     },
     {
       "status": "open",
@@ -10421,7 +10768,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_486"
+      "review_item_id": "rvw_502"
     },
     {
       "status": "open",
@@ -10441,7 +10788,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_487"
+      "review_item_id": "rvw_503"
     },
     {
       "status": "open",
@@ -10461,7 +10808,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_488"
+      "review_item_id": "rvw_504"
     },
     {
       "status": "open",
@@ -10481,7 +10828,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_489"
+      "review_item_id": "rvw_505"
     },
     {
       "status": "open",
@@ -10501,7 +10848,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_490"
+      "review_item_id": "rvw_506"
     },
     {
       "status": "open",
@@ -10525,7 +10872,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_491"
+      "review_item_id": "rvw_507"
     },
     {
       "status": "open",
@@ -10550,7 +10897,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_492"
+      "review_item_id": "rvw_508"
     },
     {
       "status": "open",
@@ -10572,7 +10919,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_493"
+      "review_item_id": "rvw_509"
     },
     {
       "status": "open",
@@ -10595,7 +10942,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_494"
+      "review_item_id": "rvw_510"
     },
     {
       "status": "open",
@@ -10616,7 +10963,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_495"
+      "review_item_id": "rvw_511"
     },
     {
       "status": "open",
@@ -10637,7 +10984,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_496"
+      "review_item_id": "rvw_512"
     },
     {
       "status": "open",
@@ -10657,7 +11004,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_497"
+      "review_item_id": "rvw_513"
     },
     {
       "status": "open",
@@ -10681,7 +11028,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_498"
+      "review_item_id": "rvw_514"
     },
     {
       "status": "open",
@@ -10706,7 +11053,7 @@
         "topic_count": 4
       },
       "evidence": {},
-      "review_item_id": "rvw_499"
+      "review_item_id": "rvw_515"
     },
     {
       "status": "open",
@@ -10727,7 +11074,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_500"
+      "review_item_id": "rvw_516"
     },
     {
       "status": "open",
@@ -10750,7 +11097,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_501"
+      "review_item_id": "rvw_517"
     },
     {
       "status": "open",
@@ -10771,7 +11118,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_502"
+      "review_item_id": "rvw_518"
     },
     {
       "status": "open",
@@ -10791,7 +11138,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_503"
+      "review_item_id": "rvw_519"
     },
     {
       "status": "open",
@@ -10815,7 +11162,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_504"
+      "review_item_id": "rvw_520"
     },
     {
       "status": "open",
@@ -10838,7 +11185,7 @@
         "topic_count": 3
       },
       "evidence": {},
-      "review_item_id": "rvw_505"
+      "review_item_id": "rvw_521"
     },
     {
       "status": "open",
@@ -10859,7 +11206,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_506"
+      "review_item_id": "rvw_522"
     },
     {
       "status": "open",
@@ -10884,7 +11231,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_507"
+      "review_item_id": "rvw_523"
     },
     {
       "status": "open",
@@ -10905,7 +11252,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_508"
+      "review_item_id": "rvw_524"
     },
     {
       "status": "open",
@@ -10925,7 +11272,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_509"
+      "review_item_id": "rvw_525"
     },
     {
       "status": "open",
@@ -10945,7 +11292,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_510"
+      "review_item_id": "rvw_526"
     },
     {
       "status": "open",
@@ -10966,7 +11313,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_511"
+      "review_item_id": "rvw_527"
     },
     {
       "status": "open",
@@ -10988,7 +11335,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_512"
+      "review_item_id": "rvw_528"
     },
     {
       "status": "open",
@@ -11009,7 +11356,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_513"
+      "review_item_id": "rvw_529"
     },
     {
       "status": "open",
@@ -11032,7 +11379,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_514"
+      "review_item_id": "rvw_530"
     },
     {
       "status": "open",
@@ -11057,7 +11404,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_515"
+      "review_item_id": "rvw_531"
     },
     {
       "status": "open",
@@ -11081,7 +11428,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_516"
+      "review_item_id": "rvw_532"
     },
     {
       "status": "open",
@@ -11103,7 +11450,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_517"
+      "review_item_id": "rvw_533"
     },
     {
       "status": "open",
@@ -11126,7 +11473,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_518"
+      "review_item_id": "rvw_534"
     },
     {
       "status": "open",
@@ -11150,7 +11497,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_519"
+      "review_item_id": "rvw_535"
     },
     {
       "status": "open",
@@ -11175,7 +11522,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_520"
+      "review_item_id": "rvw_536"
     },
     {
       "status": "open",
@@ -11198,7 +11545,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_521"
+      "review_item_id": "rvw_537"
     },
     {
       "status": "open",
@@ -11219,7 +11566,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_522"
+      "review_item_id": "rvw_538"
     },
     {
       "status": "open",
@@ -11240,7 +11587,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_523"
+      "review_item_id": "rvw_539"
     },
     {
       "status": "open",
@@ -11262,7 +11609,7 @@
         "topic_count": 2
       },
       "evidence": {},
-      "review_item_id": "rvw_524"
+      "review_item_id": "rvw_540"
     },
     {
       "status": "open",
@@ -11287,7 +11634,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_525"
+      "review_item_id": "rvw_541"
     },
     {
       "status": "open",
@@ -11310,7 +11657,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_526"
+      "review_item_id": "rvw_542"
     },
     {
       "status": "open",
@@ -11331,7 +11678,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_527"
+      "review_item_id": "rvw_543"
     },
     {
       "status": "open",
@@ -11352,7 +11699,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_528"
+      "review_item_id": "rvw_544"
     },
     {
       "status": "open",
@@ -11374,7 +11721,7 @@
         "topic_count": 2
       },
       "evidence": {},
-      "review_item_id": "rvw_529"
+      "review_item_id": "rvw_545"
     },
     {
       "status": "open",
@@ -11398,7 +11745,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_530"
+      "review_item_id": "rvw_546"
     },
     {
       "status": "open",
@@ -11418,7 +11765,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_531"
+      "review_item_id": "rvw_547"
     },
     {
       "status": "open",
@@ -11438,7 +11785,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_532"
+      "review_item_id": "rvw_548"
     },
     {
       "status": "open",
@@ -11459,7 +11806,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_533"
+      "review_item_id": "rvw_549"
     },
     {
       "status": "open",
@@ -11479,7 +11826,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_534"
+      "review_item_id": "rvw_550"
     },
     {
       "status": "open",
@@ -11499,7 +11846,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_535"
+      "review_item_id": "rvw_551"
     },
     {
       "status": "open",
@@ -11519,7 +11866,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_536"
+      "review_item_id": "rvw_552"
     },
     {
       "status": "open",
@@ -11543,7 +11890,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_537"
+      "review_item_id": "rvw_553"
     },
     {
       "status": "open",
@@ -11568,7 +11915,7 @@
         "topic_count": 4
       },
       "evidence": {},
-      "review_item_id": "rvw_538"
+      "review_item_id": "rvw_554"
     },
     {
       "status": "open",
@@ -11588,7 +11935,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_539"
+      "review_item_id": "rvw_555"
     },
     {
       "status": "open",
@@ -11610,7 +11957,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_540"
+      "review_item_id": "rvw_556"
     },
     {
       "status": "open",
@@ -11635,7 +11982,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_541"
+      "review_item_id": "rvw_557"
     },
     {
       "status": "open",
@@ -11655,7 +12002,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_542"
+      "review_item_id": "rvw_558"
     },
     {
       "status": "open",
@@ -11675,7 +12022,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_543"
+      "review_item_id": "rvw_559"
     },
     {
       "status": "open",
@@ -11695,7 +12042,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_544"
+      "review_item_id": "rvw_560"
     },
     {
       "status": "open",
@@ -11717,7 +12064,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_545"
+      "review_item_id": "rvw_561"
     },
     {
       "status": "open",
@@ -11740,7 +12087,7 @@
         "topic_count": 2
       },
       "evidence": {},
-      "review_item_id": "rvw_546"
+      "review_item_id": "rvw_562"
     },
     {
       "status": "open",
@@ -11763,7 +12110,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_547"
+      "review_item_id": "rvw_563"
     },
     {
       "status": "open",
@@ -11788,7 +12135,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_548"
+      "review_item_id": "rvw_564"
     },
     {
       "status": "open",
@@ -11808,7 +12155,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_549"
+      "review_item_id": "rvw_565"
     },
     {
       "status": "open",
@@ -11830,7 +12177,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_550"
+      "review_item_id": "rvw_566"
     },
     {
       "status": "open",
@@ -11853,7 +12200,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_551"
+      "review_item_id": "rvw_567"
     },
     {
       "status": "open",
@@ -11877,7 +12224,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_552"
+      "review_item_id": "rvw_568"
     },
     {
       "status": "open",
@@ -11902,7 +12249,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_553"
+      "review_item_id": "rvw_569"
     },
     {
       "status": "open",
@@ -11924,7 +12271,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_554"
+      "review_item_id": "rvw_570"
     },
     {
       "status": "open",
@@ -11946,7 +12293,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_555"
+      "review_item_id": "rvw_571"
     },
     {
       "status": "open",
@@ -11969,7 +12316,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_556"
+      "review_item_id": "rvw_572"
     },
     {
       "status": "open",
@@ -11993,7 +12340,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_557"
+      "review_item_id": "rvw_573"
     },
     {
       "status": "open",
@@ -12018,7 +12365,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_558"
+      "review_item_id": "rvw_574"
     },
     {
       "status": "open",
@@ -12040,7 +12387,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_559"
+      "review_item_id": "rvw_575"
     },
     {
       "status": "open",
@@ -12062,7 +12409,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_560"
+      "review_item_id": "rvw_576"
     },
     {
       "status": "open",
@@ -12085,7 +12432,7 @@
         "topic_count": 2
       },
       "evidence": {},
-      "review_item_id": "rvw_561"
+      "review_item_id": "rvw_577"
     },
     {
       "status": "open",
@@ -12108,7 +12455,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_562"
+      "review_item_id": "rvw_578"
     },
     {
       "status": "open",
@@ -12133,7 +12480,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_563"
+      "review_item_id": "rvw_579"
     },
     {
       "status": "open",
@@ -12154,7 +12501,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_564"
+      "review_item_id": "rvw_580"
     },
     {
       "status": "open",
@@ -12174,7 +12521,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_565"
+      "review_item_id": "rvw_581"
     },
     {
       "status": "open",
@@ -12198,7 +12545,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_566"
+      "review_item_id": "rvw_582"
     },
     {
       "status": "open",
@@ -12223,7 +12570,7 @@
         "topic_count": 2
       },
       "evidence": {},
-      "review_item_id": "rvw_567"
+      "review_item_id": "rvw_583"
     },
     {
       "status": "open",
@@ -12243,7 +12590,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_568"
+      "review_item_id": "rvw_584"
     },
     {
       "status": "open",
@@ -12268,7 +12615,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_569"
+      "review_item_id": "rvw_585"
     },
     {
       "status": "open",
@@ -12288,7 +12635,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_570"
+      "review_item_id": "rvw_586"
     },
     {
       "status": "open",
@@ -12308,7 +12655,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_571"
+      "review_item_id": "rvw_587"
     },
     {
       "status": "open",
@@ -12331,7 +12678,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_572"
+      "review_item_id": "rvw_588"
     },
     {
       "status": "open",
@@ -12351,7 +12698,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_573"
+      "review_item_id": "rvw_589"
     },
     {
       "status": "open",
@@ -12371,7 +12718,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_574"
+      "review_item_id": "rvw_590"
     },
     {
       "status": "open",
@@ -12391,7 +12738,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_575"
+      "review_item_id": "rvw_591"
     },
     {
       "status": "open",
@@ -12412,7 +12759,7 @@
         "topic_count": 1
       },
       "evidence": {},
-      "review_item_id": "rvw_576"
+      "review_item_id": "rvw_592"
     },
     {
       "status": "open",
@@ -12436,7 +12783,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_577"
+      "review_item_id": "rvw_593"
     },
     {
       "status": "open",
@@ -12456,7 +12803,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_578"
+      "review_item_id": "rvw_594"
     },
     {
       "status": "open",
@@ -12477,7 +12824,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_579"
+      "review_item_id": "rvw_595"
     },
     {
       "status": "open",
@@ -12497,7 +12844,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_580"
+      "review_item_id": "rvw_596"
     },
     {
       "status": "open",
@@ -12517,7 +12864,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_581"
+      "review_item_id": "rvw_597"
     },
     {
       "status": "open",
@@ -12537,7 +12884,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_582"
+      "review_item_id": "rvw_598"
     },
     {
       "status": "open",
@@ -12560,7 +12907,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_583"
+      "review_item_id": "rvw_599"
     },
     {
       "status": "open",
@@ -12581,7 +12928,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_584"
+      "review_item_id": "rvw_600"
     },
     {
       "status": "open",
@@ -12604,7 +12951,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_585"
+      "review_item_id": "rvw_601"
     },
     {
       "status": "open",
@@ -12629,7 +12976,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_586"
+      "review_item_id": "rvw_602"
     },
     {
       "status": "open",
@@ -12649,7 +12996,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_587"
+      "review_item_id": "rvw_603"
     },
     {
       "status": "open",
@@ -12669,7 +13016,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_588"
+      "review_item_id": "rvw_604"
     },
     {
       "status": "open",
@@ -12692,7 +13039,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_589"
+      "review_item_id": "rvw_605"
     },
     {
       "status": "open",
@@ -12713,7 +13060,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_590"
+      "review_item_id": "rvw_606"
     },
     {
       "status": "open",
@@ -12734,7 +13081,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_591"
+      "review_item_id": "rvw_607"
     },
     {
       "status": "open",
@@ -12754,7 +13101,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_592"
+      "review_item_id": "rvw_608"
     },
     {
       "status": "open",
@@ -12778,7 +13125,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_593"
+      "review_item_id": "rvw_609"
     },
     {
       "status": "open",
@@ -12799,7 +13146,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_594"
+      "review_item_id": "rvw_610"
     },
     {
       "status": "open",
@@ -12822,7 +13169,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_595"
+      "review_item_id": "rvw_611"
     },
     {
       "status": "open",
@@ -12842,7 +13189,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_596"
+      "review_item_id": "rvw_612"
     },
     {
       "status": "open",
@@ -12862,7 +13209,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_597"
+      "review_item_id": "rvw_613"
     },
     {
       "status": "open",
@@ -12884,7 +13231,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_598"
+      "review_item_id": "rvw_614"
     },
     {
       "status": "open",
@@ -12908,7 +13255,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_599"
+      "review_item_id": "rvw_615"
     },
     {
       "status": "open",
@@ -12928,7 +13275,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_600"
+      "review_item_id": "rvw_616"
     },
     {
       "status": "open",
@@ -12948,7 +13295,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_601"
+      "review_item_id": "rvw_617"
     },
     {
       "status": "open",
@@ -12968,7 +13315,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_602"
+      "review_item_id": "rvw_618"
     },
     {
       "status": "open",
@@ -12999,7 +13346,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_603"
+      "review_item_id": "rvw_619"
     },
     {
       "status": "open",
@@ -13026,7 +13373,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_604"
+      "review_item_id": "rvw_620"
     },
     {
       "status": "open",
@@ -13053,7 +13400,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_605"
+      "review_item_id": "rvw_621"
     },
     {
       "status": "open",
@@ -13077,14 +13424,14 @@
           "clm__nat_azwa_2025_aanbiedingsbrief_d5_001",
           "clm__reg_ggd_flevoland_begroting_2026_d5_002",
           "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d5_002",
+          "clm__nat_zorgakkoorden_werkagenda_handvatten_2026_d5_002",
           "clm__nat_vng_ledenbrief_azwa_financiering_2026_d5_002",
           "clm__nat_vng_ledenbrief_azwa_financiering_2026_d5_001",
-          "clm__nat_vng_brief_azwa_financiering_webpagina_2026_d5_001",
-          "clm__nat_azwa_toelichting_producten_proces_2026_d5_002"
+          "clm__nat_vng_brief_azwa_financiering_webpagina_2026_d5_001"
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_606"
+      "review_item_id": "rvw_622"
     },
     {
       "status": "open",
@@ -13115,7 +13462,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_607"
+      "review_item_id": "rvw_623"
     },
     {
       "status": "open",
@@ -13146,7 +13493,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_608"
+      "review_item_id": "rvw_624"
     },
     {
       "status": "open",
@@ -13177,7 +13524,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_609"
+      "review_item_id": "rvw_625"
     },
     {
       "status": "open",
@@ -13202,7 +13549,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_610"
+      "review_item_id": "rvw_626"
     },
     {
       "status": "open",
@@ -13228,7 +13575,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_611"
+      "review_item_id": "rvw_627"
     },
     {
       "status": "open",
@@ -13249,12 +13596,13 @@
           "clm__nat_azwa_2025_definitief_monitoring_and_evaluation_002",
           "clm__nat_azwa_2026_voortgang_kamerbrief_monitoring_and_evaluation_001",
           "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_monitoring_and_evaluation_003",
+          "clm__nat_zorgakkoorden_werkagenda_handvatten_2026_monitoring_and_evaluation_001",
           "clm__nat_zorgakkoorden_pga_20_miljoen_2024_monitoring_and_evaluation_001",
           "clm__nat_zorgakkoorden_azwa_programmapagina_2025_monitoring_and_evaluation_001"
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_612"
+      "review_item_id": "rvw_628"
     },
     {
       "status": "open",
@@ -13277,7 +13625,7 @@
         ]
       },
       "evidence": {},
-      "review_item_id": "rvw_613"
+      "review_item_id": "rvw_629"
     }
   ]
 }

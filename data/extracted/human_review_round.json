@@ -9,55 +9,55 @@
     "docs/human-review-guidance.md"
   ],
   "summary": {
-    "review_item_count": 613,
-    "unassigned_item_count": 30,
+    "review_item_count": 629,
+    "unassigned_item_count": 31,
     "blocking_count": 0,
-    "warning_count": 30,
-    "review_count": 583,
+    "warning_count": 31,
+    "review_count": 598,
     "reason_counts_by_code": {
-      "actor_context_needs_role_split": 65,
-      "authority_unclear": 61,
+      "actor_context_needs_role_split": 66,
+      "authority_unclear": 65,
       "execution_capacity_need": 19,
-      "execution_context_needs_action_split": 44,
+      "execution_context_needs_action_split": 46,
       "execution_decision_question": 13,
       "execution_dependency": 30,
-      "execution_review_task": 44,
-      "execution_sequencing_need": 34,
+      "execution_review_task": 45,
+      "execution_sequencing_need": 35,
       "expected_time_not_deadline": 34,
       "extraction_noise_detected": 3,
-      "finance_context_needs_verification": 18,
+      "finance_context_needs_verification": 19,
       "governance_gap": 1,
       "local_adoption_gap": 1,
       "local_funding_gap": 1,
       "local_planning_context_not_policy_deadline": 11,
-      "lower_authority_norm_signal": 68,
+      "lower_authority_norm_signal": 70,
       "missing_d5_content": 11,
-      "missing_d6_content": 18,
-      "municipality_relevance_inferred": 59,
+      "missing_d6_content": 19,
+      "municipality_relevance_inferred": 60,
       "national_claim_local_relevance": 24,
-      "regional_split_context": 19,
+      "regional_split_context": 20,
       "table_extraction_missing": 1,
       "unresolved_conflict": 11,
-      "vague_region_actor": 23
+      "vague_region_actor": 24
     }
   },
   "perspectives": [
     {
       "perspective_id": "norm",
       "title": "Norm",
-      "review_item_count": 344,
+      "review_item_count": 356,
       "severity_counts": {
-        "review": 344
+        "review": 356
       },
       "top_reason_codes": {
-        "lower_authority_norm_signal": 68,
-        "authority_unclear": 61,
-        "municipality_relevance_inferred": 56,
-        "execution_context_needs_action_split": 32,
-        "actor_context_needs_role_split": 29,
+        "lower_authority_norm_signal": 70,
+        "authority_unclear": 65,
+        "municipality_relevance_inferred": 57,
+        "execution_context_needs_action_split": 33,
+        "actor_context_needs_role_split": 30,
         "expected_time_not_deadline": 19,
-        "execution_sequencing_need": 16,
-        "vague_region_actor": 16
+        "execution_sequencing_need": 17,
+        "vague_region_actor": 17
       },
       "top_documents": {
         "nat_azwa_toelichting_producten_proces_2026": 8,
@@ -73,7 +73,7 @@
       ],
       "sample_items": [
         {
-          "review_item_id": "rvw_032",
+          "review_item_id": "rvw_033",
           "severity": "review",
           "reason_code": "execution_capacity_need",
           "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
@@ -94,7 +94,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_035",
+          "review_item_id": "rvw_036",
           "severity": "review",
           "reason_code": "execution_sequencing_need",
           "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
@@ -115,7 +115,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_036",
+          "review_item_id": "rvw_037",
           "severity": "review",
           "reason_code": "expected_time_not_deadline",
           "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
@@ -138,7 +138,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_037",
+          "review_item_id": "rvw_038",
           "severity": "review",
           "reason_code": "lower_authority_norm_signal",
           "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
@@ -162,7 +162,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_038",
+          "review_item_id": "rvw_039",
           "severity": "review",
           "reason_code": "municipality_relevance_inferred",
           "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
@@ -186,7 +186,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_039",
+          "review_item_id": "rvw_040",
           "severity": "review",
           "reason_code": "vague_region_actor",
           "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
@@ -207,7 +207,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_041",
+          "review_item_id": "rvw_042",
           "severity": "review",
           "reason_code": "authority_unclear",
           "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid",
@@ -232,7 +232,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_046",
+          "review_item_id": "rvw_047",
           "severity": "review",
           "reason_code": "lower_authority_norm_signal",
           "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid",
@@ -255,17 +255,17 @@
     {
       "perspective_id": "time",
       "title": "Time",
-      "review_item_count": 244,
+      "review_item_count": 253,
       "severity_counts": {
-        "review": 244
+        "review": 253
       },
       "top_reason_codes": {
-        "execution_review_task": 41,
+        "execution_review_task": 42,
+        "authority_unclear": 37,
         "expected_time_not_deadline": 34,
-        "authority_unclear": 34,
-        "execution_context_needs_action_split": 26,
-        "execution_sequencing_need": 18,
-        "actor_context_needs_role_split": 15,
+        "execution_context_needs_action_split": 27,
+        "execution_sequencing_need": 19,
+        "actor_context_needs_role_split": 16,
         "execution_dependency": 14,
         "local_planning_context_not_policy_deadline": 11
       },
@@ -283,7 +283,7 @@
       ],
       "sample_items": [
         {
-          "review_item_id": "rvw_034",
+          "review_item_id": "rvw_035",
           "severity": "review",
           "reason_code": "execution_review_task",
           "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
@@ -306,7 +306,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_036",
+          "review_item_id": "rvw_037",
           "severity": "review",
           "reason_code": "expected_time_not_deadline",
           "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
@@ -329,7 +329,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_041",
+          "review_item_id": "rvw_042",
           "severity": "review",
           "reason_code": "authority_unclear",
           "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid",
@@ -354,7 +354,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_042",
+          "review_item_id": "rvw_043",
           "severity": "review",
           "reason_code": "execution_decision_question",
           "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid",
@@ -375,7 +375,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_043",
+          "review_item_id": "rvw_044",
           "severity": "review",
           "reason_code": "execution_review_task",
           "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid",
@@ -395,7 +395,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_044",
+          "review_item_id": "rvw_045",
           "severity": "review",
           "reason_code": "expected_time_not_deadline",
           "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid",
@@ -416,7 +416,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_045",
+          "review_item_id": "rvw_046",
           "severity": "review",
           "reason_code": "local_planning_context_not_policy_deadline",
           "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid",
@@ -436,7 +436,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_048",
+          "review_item_id": "rvw_049",
           "severity": "review",
           "reason_code": "execution_context_needs_action_split",
           "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
@@ -462,12 +462,12 @@
     {
       "perspective_id": "money",
       "title": "Money",
-      "review_item_count": 56,
+      "review_item_count": 57,
       "severity_counts": {
-        "review": 56
+        "review": 57
       },
       "top_reason_codes": {
-        "finance_context_needs_verification": 18,
+        "finance_context_needs_verification": 19,
         "actor_context_needs_role_split": 9,
         "lower_authority_norm_signal": 8,
         "execution_sequencing_need": 4,
@@ -490,7 +490,7 @@
       ],
       "sample_items": [
         {
-          "review_item_id": "rvw_051",
+          "review_item_id": "rvw_052",
           "severity": "review",
           "reason_code": "execution_sequencing_need",
           "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
@@ -512,7 +512,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_053",
+          "review_item_id": "rvw_054",
           "severity": "review",
           "reason_code": "lower_authority_norm_signal",
           "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
@@ -537,7 +537,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_055",
+          "review_item_id": "rvw_056",
           "severity": "review",
           "reason_code": "vague_region_actor",
           "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
@@ -558,7 +558,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_061",
+          "review_item_id": "rvw_062",
           "severity": "review",
           "reason_code": "lower_authority_norm_signal",
           "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd",
@@ -583,7 +583,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_071",
+          "review_item_id": "rvw_072",
           "severity": "review",
           "reason_code": "execution_dependency",
           "document_id": "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst",
@@ -606,7 +606,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_075",
+          "review_item_id": "rvw_076",
           "severity": "review",
           "reason_code": "lower_authority_norm_signal",
           "document_id": "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst",
@@ -632,7 +632,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_082",
+          "review_item_id": "rvw_083",
           "severity": "review",
           "reason_code": "finance_context_needs_verification",
           "document_id": "mun_almere_2024_2034_maatschappelijke_agenda_opzet_evaluatie",
@@ -651,7 +651,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_100",
+          "review_item_id": "rvw_101",
           "severity": "review",
           "reason_code": "finance_context_needs_verification",
           "document_id": "mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel",
@@ -674,13 +674,13 @@
     {
       "perspective_id": "governance",
       "title": "Governance",
-      "review_item_count": 101,
+      "review_item_count": 103,
       "severity_counts": {
-        "review": 101
+        "review": 103
       },
       "top_reason_codes": {
-        "actor_context_needs_role_split": 65,
-        "vague_region_actor": 23,
+        "actor_context_needs_role_split": 66,
+        "vague_region_actor": 24,
         "lower_authority_norm_signal": 4,
         "authority_unclear": 2,
         "regional_split_context": 2,
@@ -702,7 +702,7 @@
       ],
       "sample_items": [
         {
-          "review_item_id": "rvw_031",
+          "review_item_id": "rvw_032",
           "severity": "review",
           "reason_code": "actor_context_needs_role_split",
           "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
@@ -724,7 +724,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_039",
+          "review_item_id": "rvw_040",
           "severity": "review",
           "reason_code": "vague_region_actor",
           "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
@@ -745,7 +745,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_040",
+          "review_item_id": "rvw_041",
           "severity": "review",
           "reason_code": "actor_context_needs_role_split",
           "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid",
@@ -767,7 +767,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_047",
+          "review_item_id": "rvw_048",
           "severity": "review",
           "reason_code": "actor_context_needs_role_split",
           "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
@@ -787,7 +787,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_055",
+          "review_item_id": "rvw_056",
           "severity": "review",
           "reason_code": "vague_region_actor",
           "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
@@ -808,7 +808,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_056",
+          "review_item_id": "rvw_057",
           "severity": "review",
           "reason_code": "actor_context_needs_role_split",
           "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd",
@@ -828,7 +828,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_063",
+          "review_item_id": "rvw_064",
           "severity": "review",
           "reason_code": "vague_region_actor",
           "document_id": "mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd",
@@ -850,7 +850,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_064",
+          "review_item_id": "rvw_065",
           "severity": "review",
           "reason_code": "actor_context_needs_role_split",
           "document_id": "mun_almere_2024_2034_maatschappelijke_agenda",
@@ -879,17 +879,17 @@
     {
       "perspective_id": "locality",
       "title": "Locality",
-      "review_item_count": 458,
+      "review_item_count": 466,
       "severity_counts": {
-        "review": 458
+        "review": 466
       },
       "top_reason_codes": {
-        "municipality_relevance_inferred": 59,
-        "lower_authority_norm_signal": 57,
+        "municipality_relevance_inferred": 60,
+        "lower_authority_norm_signal": 58,
         "actor_context_needs_role_split": 55,
-        "authority_unclear": 50,
-        "execution_review_task": 32,
-        "execution_context_needs_action_split": 28,
+        "authority_unclear": 53,
+        "execution_review_task": 33,
+        "execution_context_needs_action_split": 29,
         "execution_sequencing_need": 24,
         "expected_time_not_deadline": 24
       },
@@ -907,7 +907,7 @@
       ],
       "sample_items": [
         {
-          "review_item_id": "rvw_031",
+          "review_item_id": "rvw_032",
           "severity": "review",
           "reason_code": "actor_context_needs_role_split",
           "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
@@ -929,7 +929,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_032",
+          "review_item_id": "rvw_033",
           "severity": "review",
           "reason_code": "execution_capacity_need",
           "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
@@ -950,7 +950,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_033",
+          "review_item_id": "rvw_034",
           "severity": "review",
           "reason_code": "execution_dependency",
           "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
@@ -969,7 +969,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_034",
+          "review_item_id": "rvw_035",
           "severity": "review",
           "reason_code": "execution_review_task",
           "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
@@ -992,7 +992,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_035",
+          "review_item_id": "rvw_036",
           "severity": "review",
           "reason_code": "execution_sequencing_need",
           "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
@@ -1013,7 +1013,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_036",
+          "review_item_id": "rvw_037",
           "severity": "review",
           "reason_code": "expected_time_not_deadline",
           "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
@@ -1036,7 +1036,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_037",
+          "review_item_id": "rvw_038",
           "severity": "review",
           "reason_code": "lower_authority_norm_signal",
           "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
@@ -1060,7 +1060,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_038",
+          "review_item_id": "rvw_039",
           "severity": "review",
           "reason_code": "municipality_relevance_inferred",
           "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
@@ -1088,18 +1088,18 @@
     {
       "perspective_id": "execution",
       "title": "Execution",
-      "review_item_count": 537,
+      "review_item_count": 549,
       "severity_counts": {
-        "review": 537
+        "review": 549
       },
       "top_reason_codes": {
-        "lower_authority_norm_signal": 64,
-        "municipality_relevance_inferred": 59,
-        "actor_context_needs_role_split": 58,
-        "authority_unclear": 56,
-        "execution_review_task": 44,
-        "execution_context_needs_action_split": 44,
-        "execution_sequencing_need": 34,
+        "lower_authority_norm_signal": 66,
+        "municipality_relevance_inferred": 60,
+        "actor_context_needs_role_split": 59,
+        "authority_unclear": 58,
+        "execution_context_needs_action_split": 46,
+        "execution_review_task": 45,
+        "execution_sequencing_need": 35,
         "execution_dependency": 30
       },
       "top_documents": {
@@ -1116,7 +1116,7 @@
       ],
       "sample_items": [
         {
-          "review_item_id": "rvw_031",
+          "review_item_id": "rvw_032",
           "severity": "review",
           "reason_code": "actor_context_needs_role_split",
           "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
@@ -1138,7 +1138,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_032",
+          "review_item_id": "rvw_033",
           "severity": "review",
           "reason_code": "execution_capacity_need",
           "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
@@ -1159,7 +1159,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_033",
+          "review_item_id": "rvw_034",
           "severity": "review",
           "reason_code": "execution_dependency",
           "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
@@ -1178,7 +1178,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_034",
+          "review_item_id": "rvw_035",
           "severity": "review",
           "reason_code": "execution_review_task",
           "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
@@ -1201,7 +1201,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_035",
+          "review_item_id": "rvw_036",
           "severity": "review",
           "reason_code": "execution_sequencing_need",
           "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
@@ -1222,7 +1222,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_036",
+          "review_item_id": "rvw_037",
           "severity": "review",
           "reason_code": "expected_time_not_deadline",
           "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
@@ -1245,7 +1245,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_037",
+          "review_item_id": "rvw_038",
           "severity": "review",
           "reason_code": "lower_authority_norm_signal",
           "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
@@ -1269,7 +1269,7 @@
           ]
         },
         {
-          "review_item_id": "rvw_038",
+          "review_item_id": "rvw_039",
           "severity": "review",
           "reason_code": "municipality_relevance_inferred",
           "document_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",

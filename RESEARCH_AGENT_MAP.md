@@ -32,6 +32,8 @@ For deep-research delegation, use `data/extracted/review_triage_deep_research_of
 
 For human-readable review navigation, start with `docs/review/README.md`. Archived review notes under `docs/review/archive/` are provenance only, not current entry points.
 
+For D6 validation handoff, use `docs/review/almere_d6_deep_research_learnings.md` to see what public-source intake added, and `docs/review/almere_d6_open_questions.md` to see what still must be asked. Do not merge those two categories when drafting conclusions.
+
 For deep-research intake, use `docs/dr/README.md`. Reports placed in `docs/dr/` are not corpus evidence. Treat them as source-discovery signals: ingest selected public sources through the raw manifest and pipeline, then verify that the findings appear in top data layers before marking the report processed.
 
 ## Access Layer
@@ -215,6 +217,8 @@ Machine-readable:
     "docs/data-quality-checklist.md",
     "docs/phase25-sprint25.4-d6-almere-responsibility-pack-plan.md",
     "docs/review/almere_d6_public_source_boundary.md",
+    "docs/review/almere_d6_deep_research_learnings.md",
+    "docs/review/almere_d6_open_questions.md",
     "docs/review/almere_d6_validation_pack.md",
     "docs/review/almere_d6_stakeholder_validation_log.md",
     "docs/review/almere_d6_stakeholder_information_request.md",
@@ -421,6 +425,8 @@ Theme view models:
     "data/extracted/municipal/almere_d6_responsibility_register.json",
     "data/extracted/municipal/almere_local_decisions.json",
     "docs/review/almere_d6_public_source_boundary.md",
+    "docs/review/almere_d6_deep_research_learnings.md",
+    "docs/review/almere_d6_open_questions.md",
     "docs/review/almere_d6_validation_pack.md",
     "docs/review/almere_d6_stakeholder_validation_log.md",
     "docs/review/almere_d6_stakeholder_information_request.md",

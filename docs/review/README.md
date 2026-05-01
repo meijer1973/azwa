@@ -11,6 +11,8 @@ These files are current. They are for policy validation and may be used without 
 
 | File | Use |
 | --- | --- |
+| `almere_d6_deep_research_learnings.md` | Clear summary of what Sprint 31.5 deep-research intake added to the public-source picture. |
+| `almere_d6_open_questions.md` | Clear list of what remains unknown and what must be asked of stakeholders, finance/controller roles or internal document owners. |
 | `almere_d6_validation_pack.md` | Main D6 validation pack. Start here for the complete current picture. |
 | `almere_d6_public_source_boundary.md` | Explains what public sources prove, suggest, and cannot settle for each D6 row. |
 | `almere_d6_safe_wording.md` | Safe and unsafe wording for later work-agenda drafting. |

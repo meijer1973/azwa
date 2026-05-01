@@ -30,6 +30,8 @@ For human review routing, use `data/extracted/human_review_round.json` and `docs
 
 For deep-research delegation, use `data/extracted/review_triage_deep_research_offload.json`, `docs/review/phase31.4-review-triage-deep-research-offload.md`, and `docs/review/phase31.4-deep-research-agent-prompts.md`. Deep research agents may reduce public-source gaps and source-authority uncertainty, but they must not settle D6 classification, ownership, mandate, funding, safe wording, or register status.
 
+For human-readable review navigation, start with `docs/review/README.md`. Archived review notes under `docs/review/archive/` are provenance only, not current entry points.
+
 For deep-research intake, use `docs/dr/README.md`. Reports placed in `docs/dr/` are not corpus evidence. Treat them as source-discovery signals: ingest selected public sources through the raw manifest and pipeline, then verify that the findings appear in top data layers before marking the report processed.
 
 ## Access Layer
@@ -213,7 +215,6 @@ Machine-readable:
     "docs/data-quality-checklist.md",
     "docs/phase25-sprint25.4-d6-almere-responsibility-pack-plan.md",
     "docs/review/almere_d6_public_source_boundary.md",
-    "docs/review/almere_d6_validation_handoff_summary.md",
     "docs/review/almere_d6_validation_pack.md",
     "docs/review/almere_d6_stakeholder_validation_log.md",
     "docs/review/almere_d6_stakeholder_information_request.md",
@@ -223,6 +224,7 @@ Machine-readable:
     "docs/review/phase31.3-human-review-round.md",
     "docs/review/phase31.4-review-triage-deep-research-offload.md",
     "docs/review/phase31.4-deep-research-agent-prompts.md",
+    "docs/review/README.md",
     "docs/dr/README.md",
     "docs/source-intake/phase31.5-healthy-school-deep-research-intake.md",
     "docs/source-intake/phase31.5-digital-operational-infrastructure-deep-research-intake.md",
@@ -419,7 +421,6 @@ Theme view models:
     "data/extracted/municipal/almere_d6_responsibility_register.json",
     "data/extracted/municipal/almere_local_decisions.json",
     "docs/review/almere_d6_public_source_boundary.md",
-    "docs/review/almere_d6_validation_handoff_summary.md",
     "docs/review/almere_d6_validation_pack.md",
     "docs/review/almere_d6_stakeholder_validation_log.md",
     "docs/review/almere_d6_stakeholder_information_request.md",

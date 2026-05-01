@@ -29,11 +29,11 @@ ALMERE_D6_RESPONSIBILITY_PATH = EXTRACTED_DIR / "municipal" / "almere_d6_respons
 OUTPUT_PATH = DOCS_DIR / "internal" / "review-dashboard.html"
 
 REVIEW_DOC_PATHS = [
+    DOCS_DIR / "review" / "README.md",
     DOCS_DIR / "review" / "phase31.4-review-triage-deep-research-offload.md",
     DOCS_DIR / "review" / "phase31.4-deep-research-agent-prompts.md",
     DOCS_DIR / "review" / "phase31.3-human-review-round.md",
     DOCS_DIR / "review" / "almere_d6_public_source_boundary.md",
-    DOCS_DIR / "review" / "almere_d6_validation_handoff_summary.md",
     DOCS_DIR / "review" / "almere_d6_validation_pack.md",
     DOCS_DIR / "review" / "almere_d6_stakeholder_validation_log.md",
     DOCS_DIR / "review" / "almere_d6_stakeholder_information_request.md",

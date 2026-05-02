@@ -1,0 +1,2566 @@
+{
+  "ticket_set_id": "workagenda_d5_validation_tickets_v1",
+  "generated_on": "2026-05-02",
+  "sprint": "32.2 D5-validatie voorbereiden",
+  "status": "initial_validation_ticket_set",
+  "purpose": "Constrained validation tickets for D5 workagenda components. Stakeholders should confirm, correct, choose an option and provide evidence instead of doing open-ended research.",
+  "source_layers": [
+    "data/workagenda/d5_status_matrix.json",
+    "data/workagenda/d5_stuurmodel.json",
+    "data/extracted/workagenda_d5_operational_requirements.json",
+    "data/extracted/workagenda_nulmeting_capacity.json"
+  ],
+  "guardrails": [
+    "Tickets are validation prompts, not source claims.",
+    "Do not fill stakeholder answers by repository inference.",
+    "No D5 component becomes drafting-ready without evidence for local status, governance, finance, decision/phasing and D6 dependency handling.",
+    "Finance and insurer/Zvw answers require finance/controller, contract, budget or insurer evidence."
+  ],
+  "standard_choice_sets": {
+    "local_status": [
+      "Bestaat al en is structureel",
+      "Bestaat als project/pilot",
+      "Bestaat deels",
+      "In voorbereiding",
+      "Niet aanwezig",
+      "Onbekend",
+      "Anders, toelichten"
+    ],
+    "coverage": [
+      "Regionaal dekkend",
+      "Almere-dekkend",
+      "Deels dekkend",
+      "Wijk- of locatiegebonden",
+      "Alleen pilotgebied",
+      "Onbekend",
+      "Anders, toelichten"
+    ],
+    "role": [
+      "Opdrachtgever/eigenaar",
+      "Coordinator",
+      "Uitvoerder",
+      "Partner",
+      "Financier",
+      "Adviseur/monitoring",
+      "Geen formele rol",
+      "Onbekend",
+      "Anders, toelichten"
+    ],
+    "finance": [
+      "Gemeentelijke middelen",
+      "AZWA-D5",
+      "Doorbraakmiddelen sociaal domein",
+      "SPUK/GALA",
+      "Zvw/zorgverzekeraar",
+      "Reguliere organisatiebekostiging",
+      "Projectsubsidie",
+      "Gemengd, uitsplitsing nodig",
+      "Geen financiering besloten",
+      "Onbekend",
+      "Anders, toelichten"
+    ],
+    "continuity": [
+      "Structureel geborgd",
+      "Tijdelijk/projectmatig",
+      "Deels structureel, deels tijdelijk",
+      "Continuiteitsbesluit nodig",
+      "Onbekend",
+      "Anders, toelichten"
+    ],
+    "d6_dependency": [
+      "Niet nodig",
+      "Mogelijke afhankelijkheid",
+      "Bevestigde afhankelijkheid",
+      "Kritieke blokkade",
+      "Nog te valideren",
+      "Onbekend",
+      "Anders, toelichten"
+    ],
+    "scope_choice": [
+      "Opnemen in werkagenda",
+      "Niet opnemen",
+      "Alleen volgen als ontwikkelagenda-optie",
+      "Wachten op landelijke handreiking",
+      "Besluit nodig",
+      "Onbekend",
+      "Anders, toelichten"
+    ],
+    "evidence": [
+      "Formeel besluit",
+      "Begrotingsregel of controllerbevestiging",
+      "Uitvoeringsplan",
+      "Samenwerkingsafspraak",
+      "Contract/inkoopafspraak",
+      "Stakeholderbevestiging",
+      "Publieke bron",
+      "Geen bewijs beschikbaar",
+      "Anders, toelichten"
+    ]
+  },
+  "summary": {
+    "ticket_count": 47,
+    "component_count": 11,
+    "ticket_type_counts": {
+      "d6_dependency": 9,
+      "decision_phasing": 9,
+      "finance_controller": 9,
+      "governance_roles": 9,
+      "local_status_capacity": 9,
+      "scope_choice": 2
+    },
+    "stakeholder_packet_counts": {
+      "Finance/controller / zorgverzekeraar waar relevant": 9,
+      "GGD-JGZ / Gemeente Almere / regionale governance": 2,
+      "GGZ/MGN / zorgverzekeraar / sociaal domein": 2,
+      "Gemeente Almere / D6 policy owner / relevant D6 partners": 9,
+      "Gemeente Almere / JGZ-GGD / geboortezorg-VSV": 2,
+      "Gemeente Almere / JGZ-GGD / onderwijs / zorgverzekeraar": 2,
+      "Gemeente Almere / VSV-geboortezorg / Flevoziekenhuis / zorgverzekeraar": 2,
+      "Gemeente Almere preventie / GGD / beweegaanbieders": 2,
+      "Gemeente Almere preventie / zorgverzekeraar / leefstijlpartners": 2,
+      "Gemeente Almere sociaal domein / eerstelijn / welzijn": 2,
+      "Gemeente Almere sociaal domein / welzijn en sociale basis": 2,
+      "IZA/AZWA governance / Gemeente Almere": 1,
+      "IZA/AZWA governance / Gemeente Almere / betrokken besluitnemer": 9,
+      "IZA/AZWA governance / Gemeente Almere / zorgverzekeraar": 1
+    }
+  },
+  "tickets_by_component": {
+    "integrale_gezinspoli": [
+      "integrale_gezinspoli__local_status_capacity",
+      "integrale_gezinspoli__governance_roles",
+      "integrale_gezinspoli__finance_controller",
+      "integrale_gezinspoli__d6_dependency",
+      "integrale_gezinspoli__decision_phasing"
+    ],
+    "kansrijke_start": [
+      "kansrijke_start__local_status_capacity",
+      "kansrijke_start__governance_roles",
+      "kansrijke_start__finance_controller",
+      "kansrijke_start__d6_dependency",
+      "kansrijke_start__decision_phasing"
+    ],
+    "ketenaanpak_overgewicht_obesitas_kinderen": [
+      "ketenaanpak_overgewicht_obesitas_kinderen__local_status_capacity",
+      "ketenaanpak_overgewicht_obesitas_kinderen__governance_roles",
+      "ketenaanpak_overgewicht_obesitas_kinderen__finance_controller",
+      "ketenaanpak_overgewicht_obesitas_kinderen__d6_dependency",
+      "ketenaanpak_overgewicht_obesitas_kinderen__decision_phasing"
+    ],
+    "ketenaanpak_overgewicht_obesitas_volwassenen": [
+      "ketenaanpak_overgewicht_obesitas_volwassenen__local_status_capacity",
+      "ketenaanpak_overgewicht_obesitas_volwassenen__governance_roles",
+      "ketenaanpak_overgewicht_obesitas_volwassenen__finance_controller",
+      "ketenaanpak_overgewicht_obesitas_volwassenen__d6_dependency",
+      "ketenaanpak_overgewicht_obesitas_volwassenen__decision_phasing"
+    ],
+    "laagdrempelige_steunpunten": [
+      "laagdrempelige_steunpunten__local_status_capacity",
+      "laagdrempelige_steunpunten__governance_roles",
+      "laagdrempelige_steunpunten__finance_controller",
+      "laagdrempelige_steunpunten__d6_dependency",
+      "laagdrempelige_steunpunten__decision_phasing"
+    ],
+    "mentale_gezondheidsnetwerken": [
+      "mentale_gezondheidsnetwerken__local_status_capacity",
+      "mentale_gezondheidsnetwerken__governance_roles",
+      "mentale_gezondheidsnetwerken__finance_controller",
+      "mentale_gezondheidsnetwerken__d6_dependency",
+      "mentale_gezondheidsnetwerken__decision_phasing"
+    ],
+    "nu_niet_zwanger": [
+      "nu_niet_zwanger__local_status_capacity",
+      "nu_niet_zwanger__governance_roles",
+      "nu_niet_zwanger__finance_controller",
+      "nu_niet_zwanger__d6_dependency",
+      "nu_niet_zwanger__decision_phasing"
+    ],
+    "ontwikkelagenda_1_nieuw_beproeven": [
+      "ontwikkelagenda_1_nieuw_beproeven__scope_choice"
+    ],
+    "ontwikkelagenda_2_overige_initiatieven": [
+      "ontwikkelagenda_2_overige_initiatieven__scope_choice"
+    ],
+    "sociaal_verwijzen": [
+      "sociaal_verwijzen__local_status_capacity",
+      "sociaal_verwijzen__governance_roles",
+      "sociaal_verwijzen__finance_controller",
+      "sociaal_verwijzen__d6_dependency",
+      "sociaal_verwijzen__decision_phasing"
+    ],
+    "valpreventie": [
+      "valpreventie__local_status_capacity",
+      "valpreventie__governance_roles",
+      "valpreventie__finance_controller",
+      "valpreventie__d6_dependency",
+      "valpreventie__decision_phasing"
+    ]
+  },
+  "tickets": [
+    {
+      "ticket_id": "laagdrempelige_steunpunten__local_status_capacity",
+      "target_id": "laagdrempelige_steunpunten",
+      "component": "Laagdrempelige steunpunten",
+      "ticket_type": "local_status_capacity",
+      "stakeholder_packet": "Gemeente Almere sociaal domein / welzijn en sociale basis",
+      "current_working_view": "GGD-indicatoren voor eenzaamheid, angst/depressierisico en broze gezondheid geven publieke urgentiesignalen.",
+      "question": "Wat is de actuele lokale invulling, dekking en capaciteit voor Laagdrempelige steunpunten?",
+      "choice_sets": [
+        "local_status",
+        "coverage",
+        "continuity"
+      ],
+      "answer_options": {
+        "local_status": [
+          "Bestaat al en is structureel",
+          "Bestaat als project/pilot",
+          "Bestaat deels",
+          "In voorbereiding",
+          "Niet aanwezig",
+          "Onbekend",
+          "Anders, toelichten"
+        ],
+        "coverage": [
+          "Regionaal dekkend",
+          "Almere-dekkend",
+          "Deels dekkend",
+          "Wijk- of locatiegebonden",
+          "Alleen pilotgebied",
+          "Onbekend",
+          "Anders, toelichten"
+        ],
+        "continuity": [
+          "Structureel geborgd",
+          "Tijdelijk/projectmatig",
+          "Deels structureel, deels tijdelijk",
+          "Continuiteitsbesluit nodig",
+          "Onbekend",
+          "Anders, toelichten"
+        ]
+      },
+      "evidence_options": [
+        "Formeel besluit",
+        "Begrotingsregel of controllerbevestiging",
+        "Uitvoeringsplan",
+        "Samenwerkingsafspraak",
+        "Contract/inkoopafspraak",
+        "Stakeholderbevestiging",
+        "Publieke bron",
+        "Geen bewijs beschikbaar",
+        "Anders, toelichten"
+      ],
+      "evidence_gate": "Uitvoeringsplan, samenwerkingsafspraak, publieke bron plus stakeholderbevestiging, of validatie door verantwoordelijke organisatie.",
+      "default_if_no_evidence": "Keep current and capacity fields as validation-needed; do not draft as confirmed.",
+      "status_matrix_effect": "May move huidige_situatie/aantallen_capaciteit from validation-needed to confirmed concept if evidence is complete.",
+      "escalation_trigger": "Capacity unknown, coverage conflict, or no accountable respondent.",
+      "source_status": {
+        "public_foundation": "deels",
+        "risk": "geel",
+        "public_indicator_count": 4,
+        "indicative_calculation_count": 0
+      }
+    },
+    {
+      "ticket_id": "laagdrempelige_steunpunten__governance_roles",
+      "target_id": "laagdrempelige_steunpunten",
+      "component": "Laagdrempelige steunpunten",
+      "ticket_type": "governance_roles",
+      "stakeholder_packet": "Gemeente Almere sociaal domein / welzijn en sociale basis",
+      "current_working_view": "GGD-indicatoren voor eenzaamheid, angst/depressierisico en broze gezondheid geven publieke urgentiesignalen.",
+      "question": "Wie is eigenaar, coordinator, uitvoerder en partner voor Laagdrempelige steunpunten?",
+      "choice_sets": [
+        "role"
+      ],
+      "answer_options": {
+        "role": [
+          "Opdrachtgever/eigenaar",
+          "Coordinator",
+          "Uitvoerder",
+          "Partner",
+          "Financier",
+          "Adviseur/monitoring",
+          "Geen formele rol",
+          "Onbekend",
+          "Anders, toelichten"
+        ]
+      },
+      "evidence_options": [
+        "Formeel besluit",
+        "Begrotingsregel of controllerbevestiging",
+        "Uitvoeringsplan",
+        "Samenwerkingsafspraak",
+        "Contract/inkoopafspraak",
+        "Stakeholderbevestiging",
+        "Publieke bron",
+        "Geen bewijs beschikbaar",
+        "Anders, toelichten"
+      ],
+      "evidence_gate": "Mandaat, samenwerkingsafspraak, uitvoeringsplan of expliciete stakeholderbevestiging.",
+      "default_if_no_evidence": "Keep governance as owner unknown/local validation needed.",
+      "status_matrix_effect": "May update governance fields only for roles supported by evidence.",
+      "escalation_trigger": "No owner, conflicting owners, unclear mandate or unclear relation between local and regional scale.",
+      "source_status": {
+        "public_foundation": "deels",
+        "risk": "geel",
+        "public_indicator_count": 4,
+        "indicative_calculation_count": 0
+      }
+    },
+    {
+      "ticket_id": "laagdrempelige_steunpunten__finance_controller",
+      "target_id": "laagdrempelige_steunpunten",
+      "component": "Laagdrempelige steunpunten",
+      "ticket_type": "finance_controller",
+      "stakeholder_packet": "Finance/controller / zorgverzekeraar waar relevant",
+      "current_working_view": "GGD-indicatoren voor eenzaamheid, angst/depressierisico en broze gezondheid geven publieke urgentiesignalen.",
+      "question": "Welke financiering geldt voor Laagdrempelige steunpunten, en is die structureel, tijdelijk of gemengd?",
+      "choice_sets": [
+        "finance",
+        "continuity"
+      ],
+      "answer_options": {
+        "finance": [
+          "Gemeentelijke middelen",
+          "AZWA-D5",
+          "Doorbraakmiddelen sociaal domein",
+          "SPUK/GALA",
+          "Zvw/zorgverzekeraar",
+          "Reguliere organisatiebekostiging",
+          "Projectsubsidie",
+          "Gemengd, uitsplitsing nodig",
+          "Geen financiering besloten",
+          "Onbekend",
+          "Anders, toelichten"
+        ],
+        "continuity": [
+          "Structureel geborgd",
+          "Tijdelijk/projectmatig",
+          "Deels structureel, deels tijdelijk",
+          "Continuiteitsbesluit nodig",
+          "Onbekend",
+          "Anders, toelichten"
+        ]
+      },
+      "evidence_options": [
+        "Formeel besluit",
+        "Begrotingsregel of controllerbevestiging",
+        "Uitvoeringsplan",
+        "Samenwerkingsafspraak",
+        "Contract/inkoopafspraak",
+        "Stakeholderbevestiging",
+        "Publieke bron",
+        "Geen bewijs beschikbaar",
+        "Anders, toelichten"
+      ],
+      "evidence_gate": "Begrotingsregel, controllerbevestiging, verzekeraar/Zvw-bevestiging, contract/inkoopafspraak of formeel financieringsbesluit.",
+      "default_if_no_evidence": "Keep finance as controllercheck needed; do not write as funded.",
+      "status_matrix_effect": "May move finance status from controllercheck needed to concept/confirmed only when funding line and continuity are evidenced.",
+      "escalation_trigger": "No funding line, double-counting risk, insurer role unclear or structural/project status unknown.",
+      "source_status": {
+        "public_foundation": "deels",
+        "risk": "geel",
+        "public_indicator_count": 4,
+        "indicative_calculation_count": 0
+      }
+    },
+    {
+      "ticket_id": "laagdrempelige_steunpunten__d6_dependency",
+      "target_id": "laagdrempelige_steunpunten",
+      "component": "Laagdrempelige steunpunten",
+      "ticket_type": "d6_dependency",
+      "stakeholder_packet": "Gemeente Almere / D6 policy owner / relevant D6 partners",
+      "current_working_view": "GGD-indicatoren voor eenzaamheid, angst/depressierisico en broze gezondheid geven publieke urgentiesignalen.",
+      "question": "Welke D6-infrastructuur is randvoorwaardelijk voor Laagdrempelige steunpunten?",
+      "choice_sets": [
+        "d6_dependency"
+      ],
+      "answer_options": {
+        "d6_dependency": [
+          "Niet nodig",
+          "Mogelijke afhankelijkheid",
+          "Bevestigde afhankelijkheid",
+          "Kritieke blokkade",
+          "Nog te valideren",
+          "Onbekend",
+          "Anders, toelichten"
+        ]
+      },
+      "evidence_options": [
+        "Formeel besluit",
+        "Begrotingsregel of controllerbevestiging",
+        "Uitvoeringsplan",
+        "Samenwerkingsafspraak",
+        "Contract/inkoopafspraak",
+        "Stakeholderbevestiging",
+        "Publieke bron",
+        "Geen bewijs beschikbaar",
+        "Anders, toelichten"
+      ],
+      "evidence_gate": "Validatierecord of expliciete afhankelijkheid in werkagenda-, uitvoerings-, governance- of D6-verantwoordelijkheidsbron.",
+      "default_if_no_evidence": "Keep D6 dependency as possible/needs validation.",
+      "status_matrix_effect": "May mark dependency as confirmed, blocked, not needed or split by subdependency.",
+      "escalation_trigger": "D6 dependency is critical, unresolved, or conflicts with D6 responsibility overview.",
+      "source_status": {
+        "public_foundation": "deels",
+        "risk": "geel",
+        "public_indicator_count": 4,
+        "indicative_calculation_count": 0
+      }
+    },
+    {
+      "ticket_id": "laagdrempelige_steunpunten__decision_phasing",
+      "target_id": "laagdrempelige_steunpunten",
+      "component": "Laagdrempelige steunpunten",
+      "ticket_type": "decision_phasing",
+      "stakeholder_packet": "IZA/AZWA governance / Gemeente Almere / betrokken besluitnemer",
+      "current_working_view": "GGD-indicatoren voor eenzaamheid, angst/depressierisico en broze gezondheid geven publieke urgentiesignalen.",
+      "question": "Welk besluit of welke fasering is nodig om Laagdrempelige steunpunten richting 2027-2030 op te nemen?",
+      "choice_sets": [
+        "continuity"
+      ],
+      "answer_options": {
+        "continuity": [
+          "Structureel geborgd",
+          "Tijdelijk/projectmatig",
+          "Deels structureel, deels tijdelijk",
+          "Continuiteitsbesluit nodig",
+          "Onbekend",
+          "Anders, toelichten"
+        ]
+      },
+      "evidence_options": [
+        "Formeel besluit",
+        "Begrotingsregel of controllerbevestiging",
+        "Uitvoeringsplan",
+        "Samenwerkingsafspraak",
+        "Contract/inkoopafspraak",
+        "Stakeholderbevestiging",
+        "Publieke bron",
+        "Geen bewijs beschikbaar",
+        "Anders, toelichten"
+      ],
+      "evidence_gate": "Besluitrecord, governancebesluit, planningsbevestiging of goedgekeurde faseringsnotitie.",
+      "default_if_no_evidence": "Keep decision/phasing as decision needed.",
+      "status_matrix_effect": "May convert open decision into resolved decision, explicit risk or later milestone.",
+      "escalation_trigger": "No decision owner, no deadline before September 2026, or bestuurlijke wording risk.",
+      "source_status": {
+        "public_foundation": "deels",
+        "risk": "geel",
+        "public_indicator_count": 4,
+        "indicative_calculation_count": 0
+      }
+    },
+    {
+      "ticket_id": "sociaal_verwijzen__local_status_capacity",
+      "target_id": "sociaal_verwijzen",
+      "component": "Sociaal verwijzen",
+      "ticket_type": "local_status_capacity",
+      "stakeholder_packet": "Gemeente Almere sociaal domein / eerstelijn / welzijn",
+      "current_working_view": "Landelijke werkagenda-bron geeft richtinggevende capaciteit: 60 verwijzingen per 10.000 inwoners en 0,2-0,5 fte brugfunctie per 10.000 inwoners. CBS 2025 denominator maakt een eerste indicatieve Almere-rekensom mogelijk.",
+      "question": "Wat is de actuele lokale invulling, dekking en capaciteit voor Sociaal verwijzen?",
+      "choice_sets": [
+        "local_status",
+        "coverage",
+        "continuity"
+      ],
+      "answer_options": {
+        "local_status": [
+          "Bestaat al en is structureel",
+          "Bestaat als project/pilot",
+          "Bestaat deels",
+          "In voorbereiding",
+          "Niet aanwezig",
+          "Onbekend",
+          "Anders, toelichten"
+        ],
+        "coverage": [
+          "Regionaal dekkend",
+          "Almere-dekkend",
+          "Deels dekkend",
+          "Wijk- of locatiegebonden",
+          "Alleen pilotgebied",
+          "Onbekend",
+          "Anders, toelichten"
+        ],
+        "continuity": [
+          "Structureel geborgd",
+          "Tijdelijk/projectmatig",
+          "Deels structureel, deels tijdelijk",
+          "Continuiteitsbesluit nodig",
+          "Onbekend",
+          "Anders, toelichten"
+        ]
+      },
+      "evidence_options": [
+        "Formeel besluit",
+        "Begrotingsregel of controllerbevestiging",
+        "Uitvoeringsplan",
+        "Samenwerkingsafspraak",
+        "Contract/inkoopafspraak",
+        "Stakeholderbevestiging",
+        "Publieke bron",
+        "Geen bewijs beschikbaar",
+        "Anders, toelichten"
+      ],
+      "evidence_gate": "Uitvoeringsplan, samenwerkingsafspraak, publieke bron plus stakeholderbevestiging, of validatie door verantwoordelijke organisatie.",
+      "default_if_no_evidence": "Keep current and capacity fields as validation-needed; do not draft as confirmed.",
+      "status_matrix_effect": "May move huidige_situatie/aantallen_capaciteit from validation-needed to confirmed concept if evidence is complete.",
+      "escalation_trigger": "Capacity unknown, coverage conflict, or no accountable respondent.",
+      "source_status": {
+        "public_foundation": "sterk",
+        "risk": "geel",
+        "public_indicator_count": 2,
+        "indicative_calculation_count": 2
+      }
+    },
+    {
+      "ticket_id": "sociaal_verwijzen__governance_roles",
+      "target_id": "sociaal_verwijzen",
+      "component": "Sociaal verwijzen",
+      "ticket_type": "governance_roles",
+      "stakeholder_packet": "Gemeente Almere sociaal domein / eerstelijn / welzijn",
+      "current_working_view": "Landelijke werkagenda-bron geeft richtinggevende capaciteit: 60 verwijzingen per 10.000 inwoners en 0,2-0,5 fte brugfunctie per 10.000 inwoners. CBS 2025 denominator maakt een eerste indicatieve Almere-rekensom mogelijk.",
+      "question": "Wie is eigenaar, coordinator, uitvoerder en partner voor Sociaal verwijzen?",
+      "choice_sets": [
+        "role"
+      ],
+      "answer_options": {
+        "role": [
+          "Opdrachtgever/eigenaar",
+          "Coordinator",
+          "Uitvoerder",
+          "Partner",
+          "Financier",
+          "Adviseur/monitoring",
+          "Geen formele rol",
+          "Onbekend",
+          "Anders, toelichten"
+        ]
+      },
+      "evidence_options": [
+        "Formeel besluit",
+        "Begrotingsregel of controllerbevestiging",
+        "Uitvoeringsplan",
+        "Samenwerkingsafspraak",
+        "Contract/inkoopafspraak",
+        "Stakeholderbevestiging",
+        "Publieke bron",
+        "Geen bewijs beschikbaar",
+        "Anders, toelichten"
+      ],
+      "evidence_gate": "Mandaat, samenwerkingsafspraak, uitvoeringsplan of expliciete stakeholderbevestiging.",
+      "default_if_no_evidence": "Keep governance as owner unknown/local validation needed.",
+      "status_matrix_effect": "May update governance fields only for roles supported by evidence.",
+      "escalation_trigger": "No owner, conflicting owners, unclear mandate or unclear relation between local and regional scale.",
+      "source_status": {
+        "public_foundation": "sterk",
+        "risk": "geel",
+        "public_indicator_count": 2,
+        "indicative_calculation_count": 2
+      }
+    },
+    {
+      "ticket_id": "sociaal_verwijzen__finance_controller",
+      "target_id": "sociaal_verwijzen",
+      "component": "Sociaal verwijzen",
+      "ticket_type": "finance_controller",
+      "stakeholder_packet": "Finance/controller / zorgverzekeraar waar relevant",
+      "current_working_view": "Landelijke werkagenda-bron geeft richtinggevende capaciteit: 60 verwijzingen per 10.000 inwoners en 0,2-0,5 fte brugfunctie per 10.000 inwoners. CBS 2025 denominator maakt een eerste indicatieve Almere-rekensom mogelijk.",
+      "question": "Welke financiering geldt voor Sociaal verwijzen, en is die structureel, tijdelijk of gemengd?",
+      "choice_sets": [
+        "finance",
+        "continuity"
+      ],
+      "answer_options": {
+        "finance": [
+          "Gemeentelijke middelen",
+          "AZWA-D5",
+          "Doorbraakmiddelen sociaal domein",
+          "SPUK/GALA",
+          "Zvw/zorgverzekeraar",
+          "Reguliere organisatiebekostiging",
+          "Projectsubsidie",
+          "Gemengd, uitsplitsing nodig",
+          "Geen financiering besloten",
+          "Onbekend",
+          "Anders, toelichten"
+        ],
+        "continuity": [
+          "Structureel geborgd",
+          "Tijdelijk/projectmatig",
+          "Deels structureel, deels tijdelijk",
+          "Continuiteitsbesluit nodig",
+          "Onbekend",
+          "Anders, toelichten"
+        ]
+      },
+      "evidence_options": [
+        "Formeel besluit",
+        "Begrotingsregel of controllerbevestiging",
+        "Uitvoeringsplan",
+        "Samenwerkingsafspraak",
+        "Contract/inkoopafspraak",
+        "Stakeholderbevestiging",
+        "Publieke bron",
+        "Geen bewijs beschikbaar",
+        "Anders, toelichten"
+      ],
+      "evidence_gate": "Begrotingsregel, controllerbevestiging, verzekeraar/Zvw-bevestiging, contract/inkoopafspraak of formeel financieringsbesluit.",
+      "default_if_no_evidence": "Keep finance as controllercheck needed; do not write as funded.",
+      "status_matrix_effect": "May move finance status from controllercheck needed to concept/confirmed only when funding line and continuity are evidenced.",
+      "escalation_trigger": "No funding line, double-counting risk, insurer role unclear or structural/project status unknown.",
+      "source_status": {
+        "public_foundation": "sterk",
+        "risk": "geel",
+        "public_indicator_count": 2,
+        "indicative_calculation_count": 2
+      }
+    },
+    {
+      "ticket_id": "sociaal_verwijzen__d6_dependency",
+      "target_id": "sociaal_verwijzen",
+      "component": "Sociaal verwijzen",
+      "ticket_type": "d6_dependency",
+      "stakeholder_packet": "Gemeente Almere / D6 policy owner / relevant D6 partners",
+      "current_working_view": "Landelijke werkagenda-bron geeft richtinggevende capaciteit: 60 verwijzingen per 10.000 inwoners en 0,2-0,5 fte brugfunctie per 10.000 inwoners. CBS 2025 denominator maakt een eerste indicatieve Almere-rekensom mogelijk.",
+      "question": "Welke D6-infrastructuur is randvoorwaardelijk voor Sociaal verwijzen?",
+      "choice_sets": [
+        "d6_dependency"
+      ],
+      "answer_options": {
+        "d6_dependency": [
+          "Niet nodig",
+          "Mogelijke afhankelijkheid",
+          "Bevestigde afhankelijkheid",
+          "Kritieke blokkade",
+          "Nog te valideren",
+          "Onbekend",
+          "Anders, toelichten"
+        ]
+      },
+      "evidence_options": [
+        "Formeel besluit",
+        "Begrotingsregel of controllerbevestiging",
+        "Uitvoeringsplan",
+        "Samenwerkingsafspraak",
+        "Contract/inkoopafspraak",
+        "Stakeholderbevestiging",
+        "Publieke bron",
+        "Geen bewijs beschikbaar",
+        "Anders, toelichten"
+      ],
+      "evidence_gate": "Validatierecord of expliciete afhankelijkheid in werkagenda-, uitvoerings-, governance- of D6-verantwoordelijkheidsbron.",
+      "default_if_no_evidence": "Keep D6 dependency as possible/needs validation.",
+      "status_matrix_effect": "May mark dependency as confirmed, blocked, not needed or split by subdependency.",
+      "escalation_trigger": "D6 dependency is critical, unresolved, or conflicts with D6 responsibility overview.",
+      "source_status": {
+        "public_foundation": "sterk",
+        "risk": "geel",
+        "public_indicator_count": 2,
+        "indicative_calculation_count": 2
+      }
+    },
+    {
+      "ticket_id": "sociaal_verwijzen__decision_phasing",
+      "target_id": "sociaal_verwijzen",
+      "component": "Sociaal verwijzen",
+      "ticket_type": "decision_phasing",
+      "stakeholder_packet": "IZA/AZWA governance / Gemeente Almere / betrokken besluitnemer",
+      "current_working_view": "Landelijke werkagenda-bron geeft richtinggevende capaciteit: 60 verwijzingen per 10.000 inwoners en 0,2-0,5 fte brugfunctie per 10.000 inwoners. CBS 2025 denominator maakt een eerste indicatieve Almere-rekensom mogelijk.",
+      "question": "Welk besluit of welke fasering is nodig om Sociaal verwijzen richting 2027-2030 op te nemen?",
+      "choice_sets": [
+        "continuity"
+      ],
+      "answer_options": {
+        "continuity": [
+          "Structureel geborgd",
+          "Tijdelijk/projectmatig",
+          "Deels structureel, deels tijdelijk",
+          "Continuiteitsbesluit nodig",
+          "Onbekend",
+          "Anders, toelichten"
+        ]
+      },
+      "evidence_options": [
+        "Formeel besluit",
+        "Begrotingsregel of controllerbevestiging",
+        "Uitvoeringsplan",
+        "Samenwerkingsafspraak",
+        "Contract/inkoopafspraak",
+        "Stakeholderbevestiging",
+        "Publieke bron",
+        "Geen bewijs beschikbaar",
+        "Anders, toelichten"
+      ],
+      "evidence_gate": "Besluitrecord, governancebesluit, planningsbevestiging of goedgekeurde faseringsnotitie.",
+      "default_if_no_evidence": "Keep decision/phasing as decision needed.",
+      "status_matrix_effect": "May convert open decision into resolved decision, explicit risk or later milestone.",
+      "escalation_trigger": "No decision owner, no deadline before September 2026, or bestuurlijke wording risk.",
+      "source_status": {
+        "public_foundation": "sterk",
+        "risk": "geel",
+        "public_indicator_count": 2,
+        "indicative_calculation_count": 2
+      }
+    },
+    {
+      "ticket_id": "valpreventie__local_status_capacity",
+      "target_id": "valpreventie",
+      "component": "Valpreventie",
+      "ticket_type": "local_status_capacity",
+      "stakeholder_packet": "Gemeente Almere preventie / GGD / beweegaanbieders",
+      "current_working_view": "GGD Valpreventie Almere beschrijft publieke inloop/risico-inschatting en cursusmatching. GGD-tabellenboek ouderen geeft publieke valindicatoren voor Almere. Landelijke werkagenda-richting noemt valrisico-inschatting bij 14% van de 65-plussers.",
+      "question": "Wat is de actuele lokale invulling, dekking en capaciteit voor Valpreventie?",
+      "choice_sets": [
+        "local_status",
+        "coverage",
+        "continuity"
+      ],
+      "answer_options": {
+        "local_status": [
+          "Bestaat al en is structureel",
+          "Bestaat als project/pilot",
+          "Bestaat deels",
+          "In voorbereiding",
+          "Niet aanwezig",
+          "Onbekend",
+          "Anders, toelichten"
+        ],
+        "coverage": [
+          "Regionaal dekkend",
+          "Almere-dekkend",
+          "Deels dekkend",
+          "Wijk- of locatiegebonden",
+          "Alleen pilotgebied",
+          "Onbekend",
+          "Anders, toelichten"
+        ],
+        "continuity": [
+          "Structureel geborgd",
+          "Tijdelijk/projectmatig",
+          "Deels structureel, deels tijdelijk",
+          "Continuiteitsbesluit nodig",
+          "Onbekend",
+          "Anders, toelichten"
+        ]
+      },
+      "evidence_options": [
+        "Formeel besluit",
+        "Begrotingsregel of controllerbevestiging",
+        "Uitvoeringsplan",
+        "Samenwerkingsafspraak",
+        "Contract/inkoopafspraak",
+        "Stakeholderbevestiging",
+        "Publieke bron",
+        "Geen bewijs beschikbaar",
+        "Anders, toelichten"
+      ],
+      "evidence_gate": "Uitvoeringsplan, samenwerkingsafspraak, publieke bron plus stakeholderbevestiging, of validatie door verantwoordelijke organisatie.",
+      "default_if_no_evidence": "Keep current and capacity fields as validation-needed; do not draft as confirmed.",
+      "status_matrix_effect": "May move huidige_situatie/aantallen_capaciteit from validation-needed to confirmed concept if evidence is complete.",
+      "escalation_trigger": "Capacity unknown, coverage conflict, or no accountable respondent.",
+      "source_status": {
+        "public_foundation": "sterk",
+        "risk": "geel",
+        "public_indicator_count": 4,
+        "indicative_calculation_count": 1
+      }
+    },
+    {
+      "ticket_id": "valpreventie__governance_roles",
+      "target_id": "valpreventie",
+      "component": "Valpreventie",
+      "ticket_type": "governance_roles",
+      "stakeholder_packet": "Gemeente Almere preventie / GGD / beweegaanbieders",
+      "current_working_view": "GGD Valpreventie Almere beschrijft publieke inloop/risico-inschatting en cursusmatching. GGD-tabellenboek ouderen geeft publieke valindicatoren voor Almere. Landelijke werkagenda-richting noemt valrisico-inschatting bij 14% van de 65-plussers.",
+      "question": "Wie is eigenaar, coordinator, uitvoerder en partner voor Valpreventie?",
+      "choice_sets": [
+        "role"
+      ],
+      "answer_options": {
+        "role": [
+          "Opdrachtgever/eigenaar",
+          "Coordinator",
+          "Uitvoerder",
+          "Partner",
+          "Financier",
+          "Adviseur/monitoring",
+          "Geen formele rol",
+          "Onbekend",
+          "Anders, toelichten"
+        ]
+      },
+      "evidence_options": [
+        "Formeel besluit",
+        "Begrotingsregel of controllerbevestiging",
+        "Uitvoeringsplan",
+        "Samenwerkingsafspraak",
+        "Contract/inkoopafspraak",
+        "Stakeholderbevestiging",
+        "Publieke bron",
+        "Geen bewijs beschikbaar",
+        "Anders, toelichten"
+      ],
+      "evidence_gate": "Mandaat, samenwerkingsafspraak, uitvoeringsplan of expliciete stakeholderbevestiging.",
+      "default_if_no_evidence": "Keep governance as owner unknown/local validation needed.",
+      "status_matrix_effect": "May update governance fields only for roles supported by evidence.",
+      "escalation_trigger": "No owner, conflicting owners, unclear mandate or unclear relation between local and regional scale.",
+      "source_status": {
+        "public_foundation": "sterk",
+        "risk": "geel",
+        "public_indicator_count": 4,
+        "indicative_calculation_count": 1
+      }
+    },
+    {
+      "ticket_id": "valpreventie__finance_controller",
+      "target_id": "valpreventie",
+      "component": "Valpreventie",
+      "ticket_type": "finance_controller",
+      "stakeholder_packet": "Finance/controller / zorgverzekeraar waar relevant",
+      "current_working_view": "GGD Valpreventie Almere beschrijft publieke inloop/risico-inschatting en cursusmatching. GGD-tabellenboek ouderen geeft publieke valindicatoren voor Almere. Landelijke werkagenda-richting noemt valrisico-inschatting bij 14% van de 65-plussers.",
+      "question": "Welke financiering geldt voor Valpreventie, en is die structureel, tijdelijk of gemengd?",
+      "choice_sets": [
+        "finance",
+        "continuity"
+      ],
+      "answer_options": {
+        "finance": [
+          "Gemeentelijke middelen",
+          "AZWA-D5",
+          "Doorbraakmiddelen sociaal domein",
+          "SPUK/GALA",
+          "Zvw/zorgverzekeraar",
+          "Reguliere organisatiebekostiging",
+          "Projectsubsidie",
+          "Gemengd, uitsplitsing nodig",
+          "Geen financiering besloten",
+          "Onbekend",
+          "Anders, toelichten"
+        ],
+        "continuity": [
+          "Structureel geborgd",
+          "Tijdelijk/projectmatig",
+          "Deels structureel, deels tijdelijk",
+          "Continuiteitsbesluit nodig",
+          "Onbekend",
+          "Anders, toelichten"
+        ]
+      },
+      "evidence_options": [
+        "Formeel besluit",
+        "Begrotingsregel of controllerbevestiging",
+        "Uitvoeringsplan",
+        "Samenwerkingsafspraak",
+        "Contract/inkoopafspraak",
+        "Stakeholderbevestiging",
+        "Publieke bron",
+        "Geen bewijs beschikbaar",
+        "Anders, toelichten"
+      ],
+      "evidence_gate": "Begrotingsregel, controllerbevestiging, verzekeraar/Zvw-bevestiging, contract/inkoopafspraak of formeel financieringsbesluit.",
+      "default_if_no_evidence": "Keep finance as controllercheck needed; do not write as funded.",
+      "status_matrix_effect": "May move finance status from controllercheck needed to concept/confirmed only when funding line and continuity are evidenced.",
+      "escalation_trigger": "No funding line, double-counting risk, insurer role unclear or structural/project status unknown.",
+      "source_status": {
+        "public_foundation": "sterk",
+        "risk": "geel",
+        "public_indicator_count": 4,
+        "indicative_calculation_count": 1
+      }
+    },
+    {
+      "ticket_id": "valpreventie__d6_dependency",
+      "target_id": "valpreventie",
+      "component": "Valpreventie",
+      "ticket_type": "d6_dependency",
+      "stakeholder_packet": "Gemeente Almere / D6 policy owner / relevant D6 partners",
+      "current_working_view": "GGD Valpreventie Almere beschrijft publieke inloop/risico-inschatting en cursusmatching. GGD-tabellenboek ouderen geeft publieke valindicatoren voor Almere. Landelijke werkagenda-richting noemt valrisico-inschatting bij 14% van de 65-plussers.",
+      "question": "Welke D6-infrastructuur is randvoorwaardelijk voor Valpreventie?",
+      "choice_sets": [
+        "d6_dependency"
+      ],
+      "answer_options": {
+        "d6_dependency": [
+          "Niet nodig",
+          "Mogelijke afhankelijkheid",
+          "Bevestigde afhankelijkheid",
+          "Kritieke blokkade",
+          "Nog te valideren",
+          "Onbekend",
+          "Anders, toelichten"
+        ]
+      },
+      "evidence_options": [
+        "Formeel besluit",
+        "Begrotingsregel of controllerbevestiging",
+        "Uitvoeringsplan",
+        "Samenwerkingsafspraak",
+        "Contract/inkoopafspraak",
+        "Stakeholderbevestiging",
+        "Publieke bron",
+        "Geen bewijs beschikbaar",
+        "Anders, toelichten"
+      ],
+      "evidence_gate": "Validatierecord of expliciete afhankelijkheid in werkagenda-, uitvoerings-, governance- of D6-verantwoordelijkheidsbron.",
+      "default_if_no_evidence": "Keep D6 dependency as possible/needs validation.",
+      "status_matrix_effect": "May mark dependency as confirmed, blocked, not needed or split by subdependency.",
+      "escalation_trigger": "D6 dependency is critical, unresolved, or conflicts with D6 responsibility overview.",
+      "source_status": {
+        "public_foundation": "sterk",
+        "risk": "geel",
+        "public_indicator_count": 4,
+        "indicative_calculation_count": 1
+      }
+    },
+    {
+      "ticket_id": "valpreventie__decision_phasing",
+      "target_id": "valpreventie",
+      "component": "Valpreventie",
+      "ticket_type": "decision_phasing",
+      "stakeholder_packet": "IZA/AZWA governance / Gemeente Almere / betrokken besluitnemer",
+      "current_working_view": "GGD Valpreventie Almere beschrijft publieke inloop/risico-inschatting en cursusmatching. GGD-tabellenboek ouderen geeft publieke valindicatoren voor Almere. Landelijke werkagenda-richting noemt valrisico-inschatting bij 14% van de 65-plussers.",
+      "question": "Welk besluit of welke fasering is nodig om Valpreventie richting 2027-2030 op te nemen?",
+      "choice_sets": [
+        "continuity"
+      ],
+      "answer_options": {
+        "continuity": [
+          "Structureel geborgd",
+          "Tijdelijk/projectmatig",
+          "Deels structureel, deels tijdelijk",
+          "Continuiteitsbesluit nodig",
+          "Onbekend",
+          "Anders, toelichten"
+        ]
+      },
+      "evidence_options": [
+        "Formeel besluit",
+        "Begrotingsregel of controllerbevestiging",
+        "Uitvoeringsplan",
+        "Samenwerkingsafspraak",
+        "Contract/inkoopafspraak",
+        "Stakeholderbevestiging",
+        "Publieke bron",
+        "Geen bewijs beschikbaar",
+        "Anders, toelichten"
+      ],
+      "evidence_gate": "Besluitrecord, governancebesluit, planningsbevestiging of goedgekeurde faseringsnotitie.",
+      "default_if_no_evidence": "Keep decision/phasing as decision needed.",
+      "status_matrix_effect": "May convert open decision into resolved decision, explicit risk or later milestone.",
+      "escalation_trigger": "No decision owner, no deadline before September 2026, or bestuurlijke wording risk.",
+      "source_status": {
+        "public_foundation": "sterk",
+        "risk": "geel",
+        "public_indicator_count": 4,
+        "indicative_calculation_count": 1
+      }
+    },
+    {
+      "ticket_id": "ketenaanpak_overgewicht_obesitas_volwassenen__local_status_capacity",
+      "target_id": "ketenaanpak_overgewicht_obesitas_volwassenen",
+      "component": "Ketenaanpak overgewicht en obesitas volwassenen",
+      "ticket_type": "local_status_capacity",
+      "stakeholder_packet": "Gemeente Almere preventie / zorgverzekeraar / leefstijlpartners",
+      "current_working_view": "GGD-tabellenboek volwassenen geeft publieke Almere-indicatoren voor overgewicht, obesitas en bewegen.",
+      "question": "Wat is de actuele lokale invulling, dekking en capaciteit voor Ketenaanpak overgewicht en obesitas volwassenen?",
+      "choice_sets": [
+        "local_status",
+        "coverage",
+        "continuity"
+      ],
+      "answer_options": {
+        "local_status": [
+          "Bestaat al en is structureel",
+          "Bestaat als project/pilot",
+          "Bestaat deels",
+          "In voorbereiding",
+          "Niet aanwezig",
+          "Onbekend",
+          "Anders, toelichten"
+        ],
+        "coverage": [
+          "Regionaal dekkend",
+          "Almere-dekkend",
+          "Deels dekkend",
+          "Wijk- of locatiegebonden",
+          "Alleen pilotgebied",
+          "Onbekend",
+          "Anders, toelichten"
+        ],
+        "continuity": [
+          "Structureel geborgd",
+          "Tijdelijk/projectmatig",
+          "Deels structureel, deels tijdelijk",
+          "Continuiteitsbesluit nodig",
+          "Onbekend",
+          "Anders, toelichten"
+        ]
+      },
+      "evidence_options": [
+        "Formeel besluit",
+        "Begrotingsregel of controllerbevestiging",
+        "Uitvoeringsplan",
+        "Samenwerkingsafspraak",
+        "Contract/inkoopafspraak",
+        "Stakeholderbevestiging",
+        "Publieke bron",
+        "Geen bewijs beschikbaar",
+        "Anders, toelichten"
+      ],
+      "evidence_gate": "Uitvoeringsplan, samenwerkingsafspraak, publieke bron plus stakeholderbevestiging, of validatie door verantwoordelijke organisatie.",
+      "default_if_no_evidence": "Keep current and capacity fields as validation-needed; do not draft as confirmed.",
+      "status_matrix_effect": "May move huidige_situatie/aantallen_capaciteit from validation-needed to confirmed concept if evidence is complete.",
+      "escalation_trigger": "Capacity unknown, coverage conflict, or no accountable respondent.",
+      "source_status": {
+        "public_foundation": "deels",
+        "risk": "geel",
+        "public_indicator_count": 3,
+        "indicative_calculation_count": 0
+      }
+    },
+    {
+      "ticket_id": "ketenaanpak_overgewicht_obesitas_volwassenen__governance_roles",
+      "target_id": "ketenaanpak_overgewicht_obesitas_volwassenen",
+      "component": "Ketenaanpak overgewicht en obesitas volwassenen",
+      "ticket_type": "governance_roles",
+      "stakeholder_packet": "Gemeente Almere preventie / zorgverzekeraar / leefstijlpartners",
+      "current_working_view": "GGD-tabellenboek volwassenen geeft publieke Almere-indicatoren voor overgewicht, obesitas en bewegen.",
+      "question": "Wie is eigenaar, coordinator, uitvoerder en partner voor Ketenaanpak overgewicht en obesitas volwassenen?",
+      "choice_sets": [
+        "role"
+      ],
+      "answer_options": {
+        "role": [
+          "Opdrachtgever/eigenaar",
+          "Coordinator",
+          "Uitvoerder",
+          "Partner",
+          "Financier",
+          "Adviseur/monitoring",
+          "Geen formele rol",
+          "Onbekend",
+          "Anders, toelichten"
+        ]
+      },
+      "evidence_options": [
+        "Formeel besluit",
+        "Begrotingsregel of controllerbevestiging",
+        "Uitvoeringsplan",
+        "Samenwerkingsafspraak",
+        "Contract/inkoopafspraak",
+        "Stakeholderbevestiging",
+        "Publieke bron",
+        "Geen bewijs beschikbaar",
+        "Anders, toelichten"
+      ],
+      "evidence_gate": "Mandaat, samenwerkingsafspraak, uitvoeringsplan of expliciete stakeholderbevestiging.",
+      "default_if_no_evidence": "Keep governance as owner unknown/local validation needed.",
+      "status_matrix_effect": "May update governance fields only for roles supported by evidence.",
+      "escalation_trigger": "No owner, conflicting owners, unclear mandate or unclear relation between local and regional scale.",
+      "source_status": {
+        "public_foundation": "deels",
+        "risk": "geel",
+        "public_indicator_count": 3,
+        "indicative_calculation_count": 0
+      }
+    },
+    {
+      "ticket_id": "ketenaanpak_overgewicht_obesitas_volwassenen__finance_controller",
+      "target_id": "ketenaanpak_overgewicht_obesitas_volwassenen",
+      "component": "Ketenaanpak overgewicht en obesitas volwassenen",
+      "ticket_type": "finance_controller",
+      "stakeholder_packet": "Finance/controller / zorgverzekeraar waar relevant",
+      "current_working_view": "GGD-tabellenboek volwassenen geeft publieke Almere-indicatoren voor overgewicht, obesitas en bewegen.",
+      "question": "Welke financiering geldt voor Ketenaanpak overgewicht en obesitas volwassenen, en is die structureel, tijdelijk of gemengd?",
+      "choice_sets": [
+        "finance",
+        "continuity"
+      ],
+      "answer_options": {
+        "finance": [
+          "Gemeentelijke middelen",
+          "AZWA-D5",
+          "Doorbraakmiddelen sociaal domein",
+          "SPUK/GALA",
+          "Zvw/zorgverzekeraar",
+          "Reguliere organisatiebekostiging",
+          "Projectsubsidie",
+          "Gemengd, uitsplitsing nodig",
+          "Geen financiering besloten",
+          "Onbekend",
+          "Anders, toelichten"
+        ],
+        "continuity": [
+          "Structureel geborgd",
+          "Tijdelijk/projectmatig",
+          "Deels structureel, deels tijdelijk",
+          "Continuiteitsbesluit nodig",
+          "Onbekend",
+          "Anders, toelichten"
+        ]
+      },
+      "evidence_options": [
+        "Formeel besluit",
+        "Begrotingsregel of controllerbevestiging",
+        "Uitvoeringsplan",
+        "Samenwerkingsafspraak",
+        "Contract/inkoopafspraak",
+        "Stakeholderbevestiging",
+        "Publieke bron",
+        "Geen bewijs beschikbaar",
+        "Anders, toelichten"
+      ],
+      "evidence_gate": "Begrotingsregel, controllerbevestiging, verzekeraar/Zvw-bevestiging, contract/inkoopafspraak of formeel financieringsbesluit.",
+      "default_if_no_evidence": "Keep finance as controllercheck needed; do not write as funded.",
+      "status_matrix_effect": "May move finance status from controllercheck needed to concept/confirmed only when funding line and continuity are evidenced.",
+      "escalation_trigger": "No funding line, double-counting risk, insurer role unclear or structural/project status unknown.",
+      "source_status": {
+        "public_foundation": "deels",
+        "risk": "geel",
+        "public_indicator_count": 3,
+        "indicative_calculation_count": 0
+      }
+    },
+    {
+      "ticket_id": "ketenaanpak_overgewicht_obesitas_volwassenen__d6_dependency",
+      "target_id": "ketenaanpak_overgewicht_obesitas_volwassenen",
+      "component": "Ketenaanpak overgewicht en obesitas volwassenen",
+      "ticket_type": "d6_dependency",
+      "stakeholder_packet": "Gemeente Almere / D6 policy owner / relevant D6 partners",
+      "current_working_view": "GGD-tabellenboek volwassenen geeft publieke Almere-indicatoren voor overgewicht, obesitas en bewegen.",
+      "question": "Welke D6-infrastructuur is randvoorwaardelijk voor Ketenaanpak overgewicht en obesitas volwassenen?",
+      "choice_sets": [
+        "d6_dependency"
+      ],
+      "answer_options": {
+        "d6_dependency": [
+          "Niet nodig",
+          "Mogelijke afhankelijkheid",
+          "Bevestigde afhankelijkheid",
+          "Kritieke blokkade",
+          "Nog te valideren",
+          "Onbekend",
+          "Anders, toelichten"
+        ]
+      },
+      "evidence_options": [
+        "Formeel besluit",
+        "Begrotingsregel of controllerbevestiging",
+        "Uitvoeringsplan",
+        "Samenwerkingsafspraak",
+        "Contract/inkoopafspraak",
+        "Stakeholderbevestiging",
+        "Publieke bron",
+        "Geen bewijs beschikbaar",
+        "Anders, toelichten"
+      ],
+      "evidence_gate": "Validatierecord of expliciete afhankelijkheid in werkagenda-, uitvoerings-, governance- of D6-verantwoordelijkheidsbron.",
+      "default_if_no_evidence": "Keep D6 dependency as possible/needs validation.",
+      "status_matrix_effect": "May mark dependency as confirmed, blocked, not needed or split by subdependency.",
+      "escalation_trigger": "D6 dependency is critical, unresolved, or conflicts with D6 responsibility overview.",
+      "source_status": {
+        "public_foundation": "deels",
+        "risk": "geel",
+        "public_indicator_count": 3,
+        "indicative_calculation_count": 0
+      }
+    },
+    {
+      "ticket_id": "ketenaanpak_overgewicht_obesitas_volwassenen__decision_phasing",
+      "target_id": "ketenaanpak_overgewicht_obesitas_volwassenen",
+      "component": "Ketenaanpak overgewicht en obesitas volwassenen",
+      "ticket_type": "decision_phasing",
+      "stakeholder_packet": "IZA/AZWA governance / Gemeente Almere / betrokken besluitnemer",
+      "current_working_view": "GGD-tabellenboek volwassenen geeft publieke Almere-indicatoren voor overgewicht, obesitas en bewegen.",
+      "question": "Welk besluit of welke fasering is nodig om Ketenaanpak overgewicht en obesitas volwassenen richting 2027-2030 op te nemen?",
+      "choice_sets": [
+        "continuity"
+      ],
+      "answer_options": {
+        "continuity": [
+          "Structureel geborgd",
+          "Tijdelijk/projectmatig",
+          "Deels structureel, deels tijdelijk",
+          "Continuiteitsbesluit nodig",
+          "Onbekend",
+          "Anders, toelichten"
+        ]
+      },
+      "evidence_options": [
+        "Formeel besluit",
+        "Begrotingsregel of controllerbevestiging",
+        "Uitvoeringsplan",
+        "Samenwerkingsafspraak",
+        "Contract/inkoopafspraak",
+        "Stakeholderbevestiging",
+        "Publieke bron",
+        "Geen bewijs beschikbaar",
+        "Anders, toelichten"
+      ],
+      "evidence_gate": "Besluitrecord, governancebesluit, planningsbevestiging of goedgekeurde faseringsnotitie.",
+      "default_if_no_evidence": "Keep decision/phasing as decision needed.",
+      "status_matrix_effect": "May convert open decision into resolved decision, explicit risk or later milestone.",
+      "escalation_trigger": "No decision owner, no deadline before September 2026, or bestuurlijke wording risk.",
+      "source_status": {
+        "public_foundation": "deels",
+        "risk": "geel",
+        "public_indicator_count": 3,
+        "indicative_calculation_count": 0
+      }
+    },
+    {
+      "ticket_id": "kansrijke_start__local_status_capacity",
+      "target_id": "kansrijke_start",
+      "component": "Kansrijke Start",
+      "ticket_type": "local_status_capacity",
+      "stakeholder_packet": "Gemeente Almere / JGZ-GGD / geboortezorg-VSV",
+      "current_working_view": "CBS 2025 geeft publieke leeftijdsdenominatoren; lokale coalitie-, capaciteit- en interventiekeuzes zijn nog invulvelden.",
+      "question": "Wat is de actuele lokale invulling, dekking en capaciteit voor Kansrijke Start?",
+      "choice_sets": [
+        "local_status",
+        "coverage",
+        "continuity"
+      ],
+      "answer_options": {
+        "local_status": [
+          "Bestaat al en is structureel",
+          "Bestaat als project/pilot",
+          "Bestaat deels",
+          "In voorbereiding",
+          "Niet aanwezig",
+          "Onbekend",
+          "Anders, toelichten"
+        ],
+        "coverage": [
+          "Regionaal dekkend",
+          "Almere-dekkend",
+          "Deels dekkend",
+          "Wijk- of locatiegebonden",
+          "Alleen pilotgebied",
+          "Onbekend",
+          "Anders, toelichten"
+        ],
+        "continuity": [
+          "Structureel geborgd",
+          "Tijdelijk/projectmatig",
+          "Deels structureel, deels tijdelijk",
+          "Continuiteitsbesluit nodig",
+          "Onbekend",
+          "Anders, toelichten"
+        ]
+      },
+      "evidence_options": [
+        "Formeel besluit",
+        "Begrotingsregel of controllerbevestiging",
+        "Uitvoeringsplan",
+        "Samenwerkingsafspraak",
+        "Contract/inkoopafspraak",
+        "Stakeholderbevestiging",
+        "Publieke bron",
+        "Geen bewijs beschikbaar",
+        "Anders, toelichten"
+      ],
+      "evidence_gate": "Uitvoeringsplan, samenwerkingsafspraak, publieke bron plus stakeholderbevestiging, of validatie door verantwoordelijke organisatie.",
+      "default_if_no_evidence": "Keep current and capacity fields as validation-needed; do not draft as confirmed.",
+      "status_matrix_effect": "May move huidige_situatie/aantallen_capaciteit from validation-needed to confirmed concept if evidence is complete.",
+      "escalation_trigger": "Capacity unknown, coverage conflict, or no accountable respondent.",
+      "source_status": {
+        "public_foundation": "zwak",
+        "risk": "rood",
+        "public_indicator_count": 0,
+        "indicative_calculation_count": 0
+      }
+    },
+    {
+      "ticket_id": "kansrijke_start__governance_roles",
+      "target_id": "kansrijke_start",
+      "component": "Kansrijke Start",
+      "ticket_type": "governance_roles",
+      "stakeholder_packet": "Gemeente Almere / JGZ-GGD / geboortezorg-VSV",
+      "current_working_view": "CBS 2025 geeft publieke leeftijdsdenominatoren; lokale coalitie-, capaciteit- en interventiekeuzes zijn nog invulvelden.",
+      "question": "Wie is eigenaar, coordinator, uitvoerder en partner voor Kansrijke Start?",
+      "choice_sets": [
+        "role"
+      ],
+      "answer_options": {
+        "role": [
+          "Opdrachtgever/eigenaar",
+          "Coordinator",
+          "Uitvoerder",
+          "Partner",
+          "Financier",
+          "Adviseur/monitoring",
+          "Geen formele rol",
+          "Onbekend",
+          "Anders, toelichten"
+        ]
+      },
+      "evidence_options": [
+        "Formeel besluit",
+        "Begrotingsregel of controllerbevestiging",
+        "Uitvoeringsplan",
+        "Samenwerkingsafspraak",
+        "Contract/inkoopafspraak",
+        "Stakeholderbevestiging",
+        "Publieke bron",
+        "Geen bewijs beschikbaar",
+        "Anders, toelichten"
+      ],
+      "evidence_gate": "Mandaat, samenwerkingsafspraak, uitvoeringsplan of expliciete stakeholderbevestiging.",
+      "default_if_no_evidence": "Keep governance as owner unknown/local validation needed.",
+      "status_matrix_effect": "May update governance fields only for roles supported by evidence.",
+      "escalation_trigger": "No owner, conflicting owners, unclear mandate or unclear relation between local and regional scale.",
+      "source_status": {
+        "public_foundation": "zwak",
+        "risk": "rood",
+        "public_indicator_count": 0,
+        "indicative_calculation_count": 0
+      }
+    },
+    {
+      "ticket_id": "kansrijke_start__finance_controller",
+      "target_id": "kansrijke_start",
+      "component": "Kansrijke Start",
+      "ticket_type": "finance_controller",
+      "stakeholder_packet": "Finance/controller / zorgverzekeraar waar relevant",
+      "current_working_view": "CBS 2025 geeft publieke leeftijdsdenominatoren; lokale coalitie-, capaciteit- en interventiekeuzes zijn nog invulvelden.",
+      "question": "Welke financiering geldt voor Kansrijke Start, en is die structureel, tijdelijk of gemengd?",
+      "choice_sets": [
+        "finance",
+        "continuity"
+      ],
+      "answer_options": {
+        "finance": [
+          "Gemeentelijke middelen",
+          "AZWA-D5",
+          "Doorbraakmiddelen sociaal domein",
+          "SPUK/GALA",
+          "Zvw/zorgverzekeraar",
+          "Reguliere organisatiebekostiging",
+          "Projectsubsidie",
+          "Gemengd, uitsplitsing nodig",
+          "Geen financiering besloten",
+          "Onbekend",
+          "Anders, toelichten"
+        ],
+        "continuity": [
+          "Structureel geborgd",
+          "Tijdelijk/projectmatig",
+          "Deels structureel, deels tijdelijk",
+          "Continuiteitsbesluit nodig",
+          "Onbekend",
+          "Anders, toelichten"
+        ]
+      },
+      "evidence_options": [
+        "Formeel besluit",
+        "Begrotingsregel of controllerbevestiging",
+        "Uitvoeringsplan",
+        "Samenwerkingsafspraak",
+        "Contract/inkoopafspraak",
+        "Stakeholderbevestiging",
+        "Publieke bron",
+        "Geen bewijs beschikbaar",
+        "Anders, toelichten"
+      ],
+      "evidence_gate": "Begrotingsregel, controllerbevestiging, verzekeraar/Zvw-bevestiging, contract/inkoopafspraak of formeel financieringsbesluit.",
+      "default_if_no_evidence": "Keep finance as controllercheck needed; do not write as funded.",
+      "status_matrix_effect": "May move finance status from controllercheck needed to concept/confirmed only when funding line and continuity are evidenced.",
+      "escalation_trigger": "No funding line, double-counting risk, insurer role unclear or structural/project status unknown.",
+      "source_status": {
+        "public_foundation": "zwak",
+        "risk": "rood",
+        "public_indicator_count": 0,
+        "indicative_calculation_count": 0
+      }
+    },
+    {
+      "ticket_id": "kansrijke_start__d6_dependency",
+      "target_id": "kansrijke_start",
+      "component": "Kansrijke Start",
+      "ticket_type": "d6_dependency",
+      "stakeholder_packet": "Gemeente Almere / D6 policy owner / relevant D6 partners",
+      "current_working_view": "CBS 2025 geeft publieke leeftijdsdenominatoren; lokale coalitie-, capaciteit- en interventiekeuzes zijn nog invulvelden.",
+      "question": "Welke D6-infrastructuur is randvoorwaardelijk voor Kansrijke Start?",
+      "choice_sets": [
+        "d6_dependency"
+      ],
+      "answer_options": {
+        "d6_dependency": [
+          "Niet nodig",
+          "Mogelijke afhankelijkheid",
+          "Bevestigde afhankelijkheid",
+          "Kritieke blokkade",
+          "Nog te valideren",
+          "Onbekend",
+          "Anders, toelichten"
+        ]
+      },
+      "evidence_options": [
+        "Formeel besluit",
+        "Begrotingsregel of controllerbevestiging",
+        "Uitvoeringsplan",
+        "Samenwerkingsafspraak",
+        "Contract/inkoopafspraak",
+        "Stakeholderbevestiging",
+        "Publieke bron",
+        "Geen bewijs beschikbaar",
+        "Anders, toelichten"
+      ],
+      "evidence_gate": "Validatierecord of expliciete afhankelijkheid in werkagenda-, uitvoerings-, governance- of D6-verantwoordelijkheidsbron.",
+      "default_if_no_evidence": "Keep D6 dependency as possible/needs validation.",
+      "status_matrix_effect": "May mark dependency as confirmed, blocked, not needed or split by subdependency.",
+      "escalation_trigger": "D6 dependency is critical, unresolved, or conflicts with D6 responsibility overview.",
+      "source_status": {
+        "public_foundation": "zwak",
+        "risk": "rood",
+        "public_indicator_count": 0,
+        "indicative_calculation_count": 0
+      }
+    },
+    {
+      "ticket_id": "kansrijke_start__decision_phasing",
+      "target_id": "kansrijke_start",
+      "component": "Kansrijke Start",
+      "ticket_type": "decision_phasing",
+      "stakeholder_packet": "IZA/AZWA governance / Gemeente Almere / betrokken besluitnemer",
+      "current_working_view": "CBS 2025 geeft publieke leeftijdsdenominatoren; lokale coalitie-, capaciteit- en interventiekeuzes zijn nog invulvelden.",
+      "question": "Welk besluit of welke fasering is nodig om Kansrijke Start richting 2027-2030 op te nemen?",
+      "choice_sets": [
+        "continuity"
+      ],
+      "answer_options": {
+        "continuity": [
+          "Structureel geborgd",
+          "Tijdelijk/projectmatig",
+          "Deels structureel, deels tijdelijk",
+          "Continuiteitsbesluit nodig",
+          "Onbekend",
+          "Anders, toelichten"
+        ]
+      },
+      "evidence_options": [
+        "Formeel besluit",
+        "Begrotingsregel of controllerbevestiging",
+        "Uitvoeringsplan",
+        "Samenwerkingsafspraak",
+        "Contract/inkoopafspraak",
+        "Stakeholderbevestiging",
+        "Publieke bron",
+        "Geen bewijs beschikbaar",
+        "Anders, toelichten"
+      ],
+      "evidence_gate": "Besluitrecord, governancebesluit, planningsbevestiging of goedgekeurde faseringsnotitie.",
+      "default_if_no_evidence": "Keep decision/phasing as decision needed.",
+      "status_matrix_effect": "May convert open decision into resolved decision, explicit risk or later milestone.",
+      "escalation_trigger": "No decision owner, no deadline before September 2026, or bestuurlijke wording risk.",
+      "source_status": {
+        "public_foundation": "zwak",
+        "risk": "rood",
+        "public_indicator_count": 0,
+        "indicative_calculation_count": 0
+      }
+    },
+    {
+      "ticket_id": "integrale_gezinspoli__local_status_capacity",
+      "target_id": "integrale_gezinspoli",
+      "component": "Integrale gezinspoli",
+      "ticket_type": "local_status_capacity",
+      "stakeholder_packet": "Gemeente Almere / VSV-geboortezorg / Flevoziekenhuis / zorgverzekeraar",
+      "current_working_view": "Publieke corpuslaag bevat nog geen Almeerse capaciteit of besluit voor een integrale gezinspoli.",
+      "question": "Wat is de actuele lokale invulling, dekking en capaciteit voor Integrale gezinspoli?",
+      "choice_sets": [
+        "local_status",
+        "coverage",
+        "continuity"
+      ],
+      "answer_options": {
+        "local_status": [
+          "Bestaat al en is structureel",
+          "Bestaat als project/pilot",
+          "Bestaat deels",
+          "In voorbereiding",
+          "Niet aanwezig",
+          "Onbekend",
+          "Anders, toelichten"
+        ],
+        "coverage": [
+          "Regionaal dekkend",
+          "Almere-dekkend",
+          "Deels dekkend",
+          "Wijk- of locatiegebonden",
+          "Alleen pilotgebied",
+          "Onbekend",
+          "Anders, toelichten"
+        ],
+        "continuity": [
+          "Structureel geborgd",
+          "Tijdelijk/projectmatig",
+          "Deels structureel, deels tijdelijk",
+          "Continuiteitsbesluit nodig",
+          "Onbekend",
+          "Anders, toelichten"
+        ]
+      },
+      "evidence_options": [
+        "Formeel besluit",
+        "Begrotingsregel of controllerbevestiging",
+        "Uitvoeringsplan",
+        "Samenwerkingsafspraak",
+        "Contract/inkoopafspraak",
+        "Stakeholderbevestiging",
+        "Publieke bron",
+        "Geen bewijs beschikbaar",
+        "Anders, toelichten"
+      ],
+      "evidence_gate": "Uitvoeringsplan, samenwerkingsafspraak, publieke bron plus stakeholderbevestiging, of validatie door verantwoordelijke organisatie.",
+      "default_if_no_evidence": "Keep current and capacity fields as validation-needed; do not draft as confirmed.",
+      "status_matrix_effect": "May move huidige_situatie/aantallen_capaciteit from validation-needed to confirmed concept if evidence is complete.",
+      "escalation_trigger": "Capacity unknown, coverage conflict, or no accountable respondent.",
+      "source_status": {
+        "public_foundation": "zwak",
+        "risk": "rood",
+        "public_indicator_count": 0,
+        "indicative_calculation_count": 0
+      }
+    },
+    {
+      "ticket_id": "integrale_gezinspoli__governance_roles",
+      "target_id": "integrale_gezinspoli",
+      "component": "Integrale gezinspoli",
+      "ticket_type": "governance_roles",
+      "stakeholder_packet": "Gemeente Almere / VSV-geboortezorg / Flevoziekenhuis / zorgverzekeraar",
+      "current_working_view": "Publieke corpuslaag bevat nog geen Almeerse capaciteit of besluit voor een integrale gezinspoli.",
+      "question": "Wie is eigenaar, coordinator, uitvoerder en partner voor Integrale gezinspoli?",
+      "choice_sets": [
+        "role"
+      ],
+      "answer_options": {
+        "role": [
+          "Opdrachtgever/eigenaar",
+          "Coordinator",
+          "Uitvoerder",
+          "Partner",
+          "Financier",
+          "Adviseur/monitoring",
+          "Geen formele rol",
+          "Onbekend",
+          "Anders, toelichten"
+        ]
+      },
+      "evidence_options": [
+        "Formeel besluit",
+        "Begrotingsregel of controllerbevestiging",
+        "Uitvoeringsplan",
+        "Samenwerkingsafspraak",
+        "Contract/inkoopafspraak",
+        "Stakeholderbevestiging",
+        "Publieke bron",
+        "Geen bewijs beschikbaar",
+        "Anders, toelichten"
+      ],
+      "evidence_gate": "Mandaat, samenwerkingsafspraak, uitvoeringsplan of expliciete stakeholderbevestiging.",
+      "default_if_no_evidence": "Keep governance as owner unknown/local validation needed.",
+      "status_matrix_effect": "May update governance fields only for roles supported by evidence.",
+      "escalation_trigger": "No owner, conflicting owners, unclear mandate or unclear relation between local and regional scale.",
+      "source_status": {
+        "public_foundation": "zwak",
+        "risk": "rood",
+        "public_indicator_count": 0,
+        "indicative_calculation_count": 0
+      }
+    },
+    {
+      "ticket_id": "integrale_gezinspoli__finance_controller",
+      "target_id": "integrale_gezinspoli",
+      "component": "Integrale gezinspoli",
+      "ticket_type": "finance_controller",
+      "stakeholder_packet": "Finance/controller / zorgverzekeraar waar relevant",
+      "current_working_view": "Publieke corpuslaag bevat nog geen Almeerse capaciteit of besluit voor een integrale gezinspoli.",
+      "question": "Welke financiering geldt voor Integrale gezinspoli, en is die structureel, tijdelijk of gemengd?",
+      "choice_sets": [
+        "finance",
+        "continuity"
+      ],
+      "answer_options": {
+        "finance": [
+          "Gemeentelijke middelen",
+          "AZWA-D5",
+          "Doorbraakmiddelen sociaal domein",
+          "SPUK/GALA",
+          "Zvw/zorgverzekeraar",
+          "Reguliere organisatiebekostiging",
+          "Projectsubsidie",
+          "Gemengd, uitsplitsing nodig",
+          "Geen financiering besloten",
+          "Onbekend",
+          "Anders, toelichten"
+        ],
+        "continuity": [
+          "Structureel geborgd",
+          "Tijdelijk/projectmatig",
+          "Deels structureel, deels tijdelijk",
+          "Continuiteitsbesluit nodig",
+          "Onbekend",
+          "Anders, toelichten"
+        ]
+      },
+      "evidence_options": [
+        "Formeel besluit",
+        "Begrotingsregel of controllerbevestiging",
+        "Uitvoeringsplan",
+        "Samenwerkingsafspraak",
+        "Contract/inkoopafspraak",
+        "Stakeholderbevestiging",
+        "Publieke bron",
+        "Geen bewijs beschikbaar",
+        "Anders, toelichten"
+      ],
+      "evidence_gate": "Begrotingsregel, controllerbevestiging, verzekeraar/Zvw-bevestiging, contract/inkoopafspraak of formeel financieringsbesluit.",
+      "default_if_no_evidence": "Keep finance as controllercheck needed; do not write as funded.",
+      "status_matrix_effect": "May move finance status from controllercheck needed to concept/confirmed only when funding line and continuity are evidenced.",
+      "escalation_trigger": "No funding line, double-counting risk, insurer role unclear or structural/project status unknown.",
+      "source_status": {
+        "public_foundation": "zwak",
+        "risk": "rood",
+        "public_indicator_count": 0,
+        "indicative_calculation_count": 0
+      }
+    },
+    {
+      "ticket_id": "integrale_gezinspoli__d6_dependency",
+      "target_id": "integrale_gezinspoli",
+      "component": "Integrale gezinspoli",
+      "ticket_type": "d6_dependency",
+      "stakeholder_packet": "Gemeente Almere / D6 policy owner / relevant D6 partners",
+      "current_working_view": "Publieke corpuslaag bevat nog geen Almeerse capaciteit of besluit voor een integrale gezinspoli.",
+      "question": "Welke D6-infrastructuur is randvoorwaardelijk voor Integrale gezinspoli?",
+      "choice_sets": [
+        "d6_dependency"
+      ],
+      "answer_options": {
+        "d6_dependency": [
+          "Niet nodig",
+          "Mogelijke afhankelijkheid",
+          "Bevestigde afhankelijkheid",
+          "Kritieke blokkade",
+          "Nog te valideren",
+          "Onbekend",
+          "Anders, toelichten"
+        ]
+      },
+      "evidence_options": [
+        "Formeel besluit",
+        "Begrotingsregel of controllerbevestiging",
+        "Uitvoeringsplan",
+        "Samenwerkingsafspraak",
+        "Contract/inkoopafspraak",
+        "Stakeholderbevestiging",
+        "Publieke bron",
+        "Geen bewijs beschikbaar",
+        "Anders, toelichten"
+      ],
+      "evidence_gate": "Validatierecord of expliciete afhankelijkheid in werkagenda-, uitvoerings-, governance- of D6-verantwoordelijkheidsbron.",
+      "default_if_no_evidence": "Keep D6 dependency as possible/needs validation.",
+      "status_matrix_effect": "May mark dependency as confirmed, blocked, not needed or split by subdependency.",
+      "escalation_trigger": "D6 dependency is critical, unresolved, or conflicts with D6 responsibility overview.",
+      "source_status": {
+        "public_foundation": "zwak",
+        "risk": "rood",
+        "public_indicator_count": 0,
+        "indicative_calculation_count": 0
+      }
+    },
+    {
+      "ticket_id": "integrale_gezinspoli__decision_phasing",
+      "target_id": "integrale_gezinspoli",
+      "component": "Integrale gezinspoli",
+      "ticket_type": "decision_phasing",
+      "stakeholder_packet": "IZA/AZWA governance / Gemeente Almere / betrokken besluitnemer",
+      "current_working_view": "Publieke corpuslaag bevat nog geen Almeerse capaciteit of besluit voor een integrale gezinspoli.",
+      "question": "Welk besluit of welke fasering is nodig om Integrale gezinspoli richting 2027-2030 op te nemen?",
+      "choice_sets": [
+        "continuity"
+      ],
+      "answer_options": {
+        "continuity": [
+          "Structureel geborgd",
+          "Tijdelijk/projectmatig",
+          "Deels structureel, deels tijdelijk",
+          "Continuiteitsbesluit nodig",
+          "Onbekend",
+          "Anders, toelichten"
+        ]
+      },
+      "evidence_options": [
+        "Formeel besluit",
+        "Begrotingsregel of controllerbevestiging",
+        "Uitvoeringsplan",
+        "Samenwerkingsafspraak",
+        "Contract/inkoopafspraak",
+        "Stakeholderbevestiging",
+        "Publieke bron",
+        "Geen bewijs beschikbaar",
+        "Anders, toelichten"
+      ],
+      "evidence_gate": "Besluitrecord, governancebesluit, planningsbevestiging of goedgekeurde faseringsnotitie.",
+      "default_if_no_evidence": "Keep decision/phasing as decision needed.",
+      "status_matrix_effect": "May convert open decision into resolved decision, explicit risk or later milestone.",
+      "escalation_trigger": "No decision owner, no deadline before September 2026, or bestuurlijke wording risk.",
+      "source_status": {
+        "public_foundation": "zwak",
+        "risk": "rood",
+        "public_indicator_count": 0,
+        "indicative_calculation_count": 0
+      }
+    },
+    {
+      "ticket_id": "nu_niet_zwanger__local_status_capacity",
+      "target_id": "nu_niet_zwanger",
+      "component": "Nu Niet Zwanger",
+      "ticket_type": "local_status_capacity",
+      "stakeholder_packet": "GGD-JGZ / Gemeente Almere / regionale governance",
+      "current_working_view": "Werkagenda noemt structurele coordinatie en expertise; publieke Almere-capaciteit is nog niet in de corpuslaag gevonden.",
+      "question": "Wat is de actuele lokale invulling, dekking en capaciteit voor Nu Niet Zwanger?",
+      "choice_sets": [
+        "local_status",
+        "coverage",
+        "continuity"
+      ],
+      "answer_options": {
+        "local_status": [
+          "Bestaat al en is structureel",
+          "Bestaat als project/pilot",
+          "Bestaat deels",
+          "In voorbereiding",
+          "Niet aanwezig",
+          "Onbekend",
+          "Anders, toelichten"
+        ],
+        "coverage": [
+          "Regionaal dekkend",
+          "Almere-dekkend",
+          "Deels dekkend",
+          "Wijk- of locatiegebonden",
+          "Alleen pilotgebied",
+          "Onbekend",
+          "Anders, toelichten"
+        ],
+        "continuity": [
+          "Structureel geborgd",
+          "Tijdelijk/projectmatig",
+          "Deels structureel, deels tijdelijk",
+          "Continuiteitsbesluit nodig",
+          "Onbekend",
+          "Anders, toelichten"
+        ]
+      },
+      "evidence_options": [
+        "Formeel besluit",
+        "Begrotingsregel of controllerbevestiging",
+        "Uitvoeringsplan",
+        "Samenwerkingsafspraak",
+        "Contract/inkoopafspraak",
+        "Stakeholderbevestiging",
+        "Publieke bron",
+        "Geen bewijs beschikbaar",
+        "Anders, toelichten"
+      ],
+      "evidence_gate": "Uitvoeringsplan, samenwerkingsafspraak, publieke bron plus stakeholderbevestiging, of validatie door verantwoordelijke organisatie.",
+      "default_if_no_evidence": "Keep current and capacity fields as validation-needed; do not draft as confirmed.",
+      "status_matrix_effect": "May move huidige_situatie/aantallen_capaciteit from validation-needed to confirmed concept if evidence is complete.",
+      "escalation_trigger": "Capacity unknown, coverage conflict, or no accountable respondent.",
+      "source_status": {
+        "public_foundation": "zwak",
+        "risk": "rood",
+        "public_indicator_count": 0,
+        "indicative_calculation_count": 0
+      }
+    },
+    {
+      "ticket_id": "nu_niet_zwanger__governance_roles",
+      "target_id": "nu_niet_zwanger",
+      "component": "Nu Niet Zwanger",
+      "ticket_type": "governance_roles",
+      "stakeholder_packet": "GGD-JGZ / Gemeente Almere / regionale governance",
+      "current_working_view": "Werkagenda noemt structurele coordinatie en expertise; publieke Almere-capaciteit is nog niet in de corpuslaag gevonden.",
+      "question": "Wie is eigenaar, coordinator, uitvoerder en partner voor Nu Niet Zwanger?",
+      "choice_sets": [
+        "role"
+      ],
+      "answer_options": {
+        "role": [
+          "Opdrachtgever/eigenaar",
+          "Coordinator",
+          "Uitvoerder",
+          "Partner",
+          "Financier",
+          "Adviseur/monitoring",
+          "Geen formele rol",
+          "Onbekend",
+          "Anders, toelichten"
+        ]
+      },
+      "evidence_options": [
+        "Formeel besluit",
+        "Begrotingsregel of controllerbevestiging",
+        "Uitvoeringsplan",
+        "Samenwerkingsafspraak",
+        "Contract/inkoopafspraak",
+        "Stakeholderbevestiging",
+        "Publieke bron",
+        "Geen bewijs beschikbaar",
+        "Anders, toelichten"
+      ],
+      "evidence_gate": "Mandaat, samenwerkingsafspraak, uitvoeringsplan of expliciete stakeholderbevestiging.",
+      "default_if_no_evidence": "Keep governance as owner unknown/local validation needed.",
+      "status_matrix_effect": "May update governance fields only for roles supported by evidence.",
+      "escalation_trigger": "No owner, conflicting owners, unclear mandate or unclear relation between local and regional scale.",
+      "source_status": {
+        "public_foundation": "zwak",
+        "risk": "rood",
+        "public_indicator_count": 0,
+        "indicative_calculation_count": 0
+      }
+    },
+    {
+      "ticket_id": "nu_niet_zwanger__finance_controller",
+      "target_id": "nu_niet_zwanger",
+      "component": "Nu Niet Zwanger",
+      "ticket_type": "finance_controller",
+      "stakeholder_packet": "Finance/controller / zorgverzekeraar waar relevant",
+      "current_working_view": "Werkagenda noemt structurele coordinatie en expertise; publieke Almere-capaciteit is nog niet in de corpuslaag gevonden.",
+      "question": "Welke financiering geldt voor Nu Niet Zwanger, en is die structureel, tijdelijk of gemengd?",
+      "choice_sets": [
+        "finance",
+        "continuity"
+      ],
+      "answer_options": {
+        "finance": [
+          "Gemeentelijke middelen",
+          "AZWA-D5",
+          "Doorbraakmiddelen sociaal domein",
+          "SPUK/GALA",
+          "Zvw/zorgverzekeraar",
+          "Reguliere organisatiebekostiging",
+          "Projectsubsidie",
+          "Gemengd, uitsplitsing nodig",
+          "Geen financiering besloten",
+          "Onbekend",
+          "Anders, toelichten"
+        ],
+        "continuity": [
+          "Structureel geborgd",
+          "Tijdelijk/projectmatig",
+          "Deels structureel, deels tijdelijk",
+          "Continuiteitsbesluit nodig",
+          "Onbekend",
+          "Anders, toelichten"
+        ]
+      },
+      "evidence_options": [
+        "Formeel besluit",
+        "Begrotingsregel of controllerbevestiging",
+        "Uitvoeringsplan",
+        "Samenwerkingsafspraak",
+        "Contract/inkoopafspraak",
+        "Stakeholderbevestiging",
+        "Publieke bron",
+        "Geen bewijs beschikbaar",
+        "Anders, toelichten"
+      ],
+      "evidence_gate": "Begrotingsregel, controllerbevestiging, verzekeraar/Zvw-bevestiging, contract/inkoopafspraak of formeel financieringsbesluit.",
+      "default_if_no_evidence": "Keep finance as controllercheck needed; do not write as funded.",
+      "status_matrix_effect": "May move finance status from controllercheck needed to concept/confirmed only when funding line and continuity are evidenced.",
+      "escalation_trigger": "No funding line, double-counting risk, insurer role unclear or structural/project status unknown.",
+      "source_status": {
+        "public_foundation": "zwak",
+        "risk": "rood",
+        "public_indicator_count": 0,
+        "indicative_calculation_count": 0
+      }
+    },
+    {
+      "ticket_id": "nu_niet_zwanger__d6_dependency",
+      "target_id": "nu_niet_zwanger",
+      "component": "Nu Niet Zwanger",
+      "ticket_type": "d6_dependency",
+      "stakeholder_packet": "Gemeente Almere / D6 policy owner / relevant D6 partners",
+      "current_working_view": "Werkagenda noemt structurele coordinatie en expertise; publieke Almere-capaciteit is nog niet in de corpuslaag gevonden.",
+      "question": "Welke D6-infrastructuur is randvoorwaardelijk voor Nu Niet Zwanger?",
+      "choice_sets": [
+        "d6_dependency"
+      ],
+      "answer_options": {
+        "d6_dependency": [
+          "Niet nodig",
+          "Mogelijke afhankelijkheid",
+          "Bevestigde afhankelijkheid",
+          "Kritieke blokkade",
+          "Nog te valideren",
+          "Onbekend",
+          "Anders, toelichten"
+        ]
+      },
+      "evidence_options": [
+        "Formeel besluit",
+        "Begrotingsregel of controllerbevestiging",
+        "Uitvoeringsplan",
+        "Samenwerkingsafspraak",
+        "Contract/inkoopafspraak",
+        "Stakeholderbevestiging",
+        "Publieke bron",
+        "Geen bewijs beschikbaar",
+        "Anders, toelichten"
+      ],
+      "evidence_gate": "Validatierecord of expliciete afhankelijkheid in werkagenda-, uitvoerings-, governance- of D6-verantwoordelijkheidsbron.",
+      "default_if_no_evidence": "Keep D6 dependency as possible/needs validation.",
+      "status_matrix_effect": "May mark dependency as confirmed, blocked, not needed or split by subdependency.",
+      "escalation_trigger": "D6 dependency is critical, unresolved, or conflicts with D6 responsibility overview.",
+      "source_status": {
+        "public_foundation": "zwak",
+        "risk": "rood",
+        "public_indicator_count": 0,
+        "indicative_calculation_count": 0
+      }
+    },
+    {
+      "ticket_id": "nu_niet_zwanger__decision_phasing",
+      "target_id": "nu_niet_zwanger",
+      "component": "Nu Niet Zwanger",
+      "ticket_type": "decision_phasing",
+      "stakeholder_packet": "IZA/AZWA governance / Gemeente Almere / betrokken besluitnemer",
+      "current_working_view": "Werkagenda noemt structurele coordinatie en expertise; publieke Almere-capaciteit is nog niet in de corpuslaag gevonden.",
+      "question": "Welk besluit of welke fasering is nodig om Nu Niet Zwanger richting 2027-2030 op te nemen?",
+      "choice_sets": [
+        "continuity"
+      ],
+      "answer_options": {
+        "continuity": [
+          "Structureel geborgd",
+          "Tijdelijk/projectmatig",
+          "Deels structureel, deels tijdelijk",
+          "Continuiteitsbesluit nodig",
+          "Onbekend",
+          "Anders, toelichten"
+        ]
+      },
+      "evidence_options": [
+        "Formeel besluit",
+        "Begrotingsregel of controllerbevestiging",
+        "Uitvoeringsplan",
+        "Samenwerkingsafspraak",
+        "Contract/inkoopafspraak",
+        "Stakeholderbevestiging",
+        "Publieke bron",
+        "Geen bewijs beschikbaar",
+        "Anders, toelichten"
+      ],
+      "evidence_gate": "Besluitrecord, governancebesluit, planningsbevestiging of goedgekeurde faseringsnotitie.",
+      "default_if_no_evidence": "Keep decision/phasing as decision needed.",
+      "status_matrix_effect": "May convert open decision into resolved decision, explicit risk or later milestone.",
+      "escalation_trigger": "No decision owner, no deadline before September 2026, or bestuurlijke wording risk.",
+      "source_status": {
+        "public_foundation": "zwak",
+        "risk": "rood",
+        "public_indicator_count": 0,
+        "indicative_calculation_count": 0
+      }
+    },
+    {
+      "ticket_id": "mentale_gezondheidsnetwerken__local_status_capacity",
+      "target_id": "mentale_gezondheidsnetwerken",
+      "component": "Mentale gezondheidsnetwerken",
+      "ticket_type": "local_status_capacity",
+      "stakeholder_packet": "GGZ/MGN / zorgverzekeraar / sociaal domein",
+      "current_working_view": "GGD-indicatoren geven publieke urgentiesignalen; MGN-rol/geografie is carry-over naar geschoonde validatie.",
+      "question": "Wat is de actuele lokale invulling, dekking en capaciteit voor Mentale gezondheidsnetwerken?",
+      "choice_sets": [
+        "local_status",
+        "coverage",
+        "continuity"
+      ],
+      "answer_options": {
+        "local_status": [
+          "Bestaat al en is structureel",
+          "Bestaat als project/pilot",
+          "Bestaat deels",
+          "In voorbereiding",
+          "Niet aanwezig",
+          "Onbekend",
+          "Anders, toelichten"
+        ],
+        "coverage": [
+          "Regionaal dekkend",
+          "Almere-dekkend",
+          "Deels dekkend",
+          "Wijk- of locatiegebonden",
+          "Alleen pilotgebied",
+          "Onbekend",
+          "Anders, toelichten"
+        ],
+        "continuity": [
+          "Structureel geborgd",
+          "Tijdelijk/projectmatig",
+          "Deels structureel, deels tijdelijk",
+          "Continuiteitsbesluit nodig",
+          "Onbekend",
+          "Anders, toelichten"
+        ]
+      },
+      "evidence_options": [
+        "Formeel besluit",
+        "Begrotingsregel of controllerbevestiging",
+        "Uitvoeringsplan",
+        "Samenwerkingsafspraak",
+        "Contract/inkoopafspraak",
+        "Stakeholderbevestiging",
+        "Publieke bron",
+        "Geen bewijs beschikbaar",
+        "Anders, toelichten"
+      ],
+      "evidence_gate": "Uitvoeringsplan, samenwerkingsafspraak, publieke bron plus stakeholderbevestiging, of validatie door verantwoordelijke organisatie.",
+      "default_if_no_evidence": "Keep current and capacity fields as validation-needed; do not draft as confirmed.",
+      "status_matrix_effect": "May move huidige_situatie/aantallen_capaciteit from validation-needed to confirmed concept if evidence is complete.",
+      "escalation_trigger": "Capacity unknown, coverage conflict, or no accountable respondent.",
+      "source_status": {
+        "public_foundation": "deels",
+        "risk": "geel",
+        "public_indicator_count": 4,
+        "indicative_calculation_count": 0
+      }
+    },
+    {
+      "ticket_id": "mentale_gezondheidsnetwerken__governance_roles",
+      "target_id": "mentale_gezondheidsnetwerken",
+      "component": "Mentale gezondheidsnetwerken",
+      "ticket_type": "governance_roles",
+      "stakeholder_packet": "GGZ/MGN / zorgverzekeraar / sociaal domein",
+      "current_working_view": "GGD-indicatoren geven publieke urgentiesignalen; MGN-rol/geografie is carry-over naar geschoonde validatie.",
+      "question": "Wie is eigenaar, coordinator, uitvoerder en partner voor Mentale gezondheidsnetwerken?",
+      "choice_sets": [
+        "role"
+      ],
+      "answer_options": {
+        "role": [
+          "Opdrachtgever/eigenaar",
+          "Coordinator",
+          "Uitvoerder",
+          "Partner",
+          "Financier",
+          "Adviseur/monitoring",
+          "Geen formele rol",
+          "Onbekend",
+          "Anders, toelichten"
+        ]
+      },
+      "evidence_options": [
+        "Formeel besluit",
+        "Begrotingsregel of controllerbevestiging",
+        "Uitvoeringsplan",
+        "Samenwerkingsafspraak",
+        "Contract/inkoopafspraak",
+        "Stakeholderbevestiging",
+        "Publieke bron",
+        "Geen bewijs beschikbaar",
+        "Anders, toelichten"
+      ],
+      "evidence_gate": "Mandaat, samenwerkingsafspraak, uitvoeringsplan of expliciete stakeholderbevestiging.",
+      "default_if_no_evidence": "Keep governance as owner unknown/local validation needed.",
+      "status_matrix_effect": "May update governance fields only for roles supported by evidence.",
+      "escalation_trigger": "No owner, conflicting owners, unclear mandate or unclear relation between local and regional scale.",
+      "source_status": {
+        "public_foundation": "deels",
+        "risk": "geel",
+        "public_indicator_count": 4,
+        "indicative_calculation_count": 0
+      }
+    },
+    {
+      "ticket_id": "mentale_gezondheidsnetwerken__finance_controller",
+      "target_id": "mentale_gezondheidsnetwerken",
+      "component": "Mentale gezondheidsnetwerken",
+      "ticket_type": "finance_controller",
+      "stakeholder_packet": "Finance/controller / zorgverzekeraar waar relevant",
+      "current_working_view": "GGD-indicatoren geven publieke urgentiesignalen; MGN-rol/geografie is carry-over naar geschoonde validatie.",
+      "question": "Welke financiering geldt voor Mentale gezondheidsnetwerken, en is die structureel, tijdelijk of gemengd?",
+      "choice_sets": [
+        "finance",
+        "continuity"
+      ],
+      "answer_options": {
+        "finance": [
+          "Gemeentelijke middelen",
+          "AZWA-D5",
+          "Doorbraakmiddelen sociaal domein",
+          "SPUK/GALA",
+          "Zvw/zorgverzekeraar",
+          "Reguliere organisatiebekostiging",
+          "Projectsubsidie",
+          "Gemengd, uitsplitsing nodig",
+          "Geen financiering besloten",
+          "Onbekend",
+          "Anders, toelichten"
+        ],
+        "continuity": [
+          "Structureel geborgd",
+          "Tijdelijk/projectmatig",
+          "Deels structureel, deels tijdelijk",
+          "Continuiteitsbesluit nodig",
+          "Onbekend",
+          "Anders, toelichten"
+        ]
+      },
+      "evidence_options": [
+        "Formeel besluit",
+        "Begrotingsregel of controllerbevestiging",
+        "Uitvoeringsplan",
+        "Samenwerkingsafspraak",
+        "Contract/inkoopafspraak",
+        "Stakeholderbevestiging",
+        "Publieke bron",
+        "Geen bewijs beschikbaar",
+        "Anders, toelichten"
+      ],
+      "evidence_gate": "Begrotingsregel, controllerbevestiging, verzekeraar/Zvw-bevestiging, contract/inkoopafspraak of formeel financieringsbesluit.",
+      "default_if_no_evidence": "Keep finance as controllercheck needed; do not write as funded.",
+      "status_matrix_effect": "May move finance status from controllercheck needed to concept/confirmed only when funding line and continuity are evidenced.",
+      "escalation_trigger": "No funding line, double-counting risk, insurer role unclear or structural/project status unknown.",
+      "source_status": {
+        "public_foundation": "deels",
+        "risk": "geel",
+        "public_indicator_count": 4,
+        "indicative_calculation_count": 0
+      }
+    },
+    {
+      "ticket_id": "mentale_gezondheidsnetwerken__d6_dependency",
+      "target_id": "mentale_gezondheidsnetwerken",
+      "component": "Mentale gezondheidsnetwerken",
+      "ticket_type": "d6_dependency",
+      "stakeholder_packet": "Gemeente Almere / D6 policy owner / relevant D6 partners",
+      "current_working_view": "GGD-indicatoren geven publieke urgentiesignalen; MGN-rol/geografie is carry-over naar geschoonde validatie.",
+      "question": "Welke D6-infrastructuur is randvoorwaardelijk voor Mentale gezondheidsnetwerken?",
+      "choice_sets": [
+        "d6_dependency"
+      ],
+      "answer_options": {
+        "d6_dependency": [
+          "Niet nodig",
+          "Mogelijke afhankelijkheid",
+          "Bevestigde afhankelijkheid",
+          "Kritieke blokkade",
+          "Nog te valideren",
+          "Onbekend",
+          "Anders, toelichten"
+        ]
+      },
+      "evidence_options": [
+        "Formeel besluit",
+        "Begrotingsregel of controllerbevestiging",
+        "Uitvoeringsplan",
+        "Samenwerkingsafspraak",
+        "Contract/inkoopafspraak",
+        "Stakeholderbevestiging",
+        "Publieke bron",
+        "Geen bewijs beschikbaar",
+        "Anders, toelichten"
+      ],
+      "evidence_gate": "Validatierecord of expliciete afhankelijkheid in werkagenda-, uitvoerings-, governance- of D6-verantwoordelijkheidsbron.",
+      "default_if_no_evidence": "Keep D6 dependency as possible/needs validation.",
+      "status_matrix_effect": "May mark dependency as confirmed, blocked, not needed or split by subdependency.",
+      "escalation_trigger": "D6 dependency is critical, unresolved, or conflicts with D6 responsibility overview.",
+      "source_status": {
+        "public_foundation": "deels",
+        "risk": "geel",
+        "public_indicator_count": 4,
+        "indicative_calculation_count": 0
+      }
+    },
+    {
+      "ticket_id": "mentale_gezondheidsnetwerken__decision_phasing",
+      "target_id": "mentale_gezondheidsnetwerken",
+      "component": "Mentale gezondheidsnetwerken",
+      "ticket_type": "decision_phasing",
+      "stakeholder_packet": "IZA/AZWA governance / Gemeente Almere / betrokken besluitnemer",
+      "current_working_view": "GGD-indicatoren geven publieke urgentiesignalen; MGN-rol/geografie is carry-over naar geschoonde validatie.",
+      "question": "Welk besluit of welke fasering is nodig om Mentale gezondheidsnetwerken richting 2027-2030 op te nemen?",
+      "choice_sets": [
+        "continuity"
+      ],
+      "answer_options": {
+        "continuity": [
+          "Structureel geborgd",
+          "Tijdelijk/projectmatig",
+          "Deels structureel, deels tijdelijk",
+          "Continuiteitsbesluit nodig",
+          "Onbekend",
+          "Anders, toelichten"
+        ]
+      },
+      "evidence_options": [
+        "Formeel besluit",
+        "Begrotingsregel of controllerbevestiging",
+        "Uitvoeringsplan",
+        "Samenwerkingsafspraak",
+        "Contract/inkoopafspraak",
+        "Stakeholderbevestiging",
+        "Publieke bron",
+        "Geen bewijs beschikbaar",
+        "Anders, toelichten"
+      ],
+      "evidence_gate": "Besluitrecord, governancebesluit, planningsbevestiging of goedgekeurde faseringsnotitie.",
+      "default_if_no_evidence": "Keep decision/phasing as decision needed.",
+      "status_matrix_effect": "May convert open decision into resolved decision, explicit risk or later milestone.",
+      "escalation_trigger": "No decision owner, no deadline before September 2026, or bestuurlijke wording risk.",
+      "source_status": {
+        "public_foundation": "deels",
+        "risk": "geel",
+        "public_indicator_count": 4,
+        "indicative_calculation_count": 0
+      }
+    },
+    {
+      "ticket_id": "ketenaanpak_overgewicht_obesitas_kinderen__local_status_capacity",
+      "target_id": "ketenaanpak_overgewicht_obesitas_kinderen",
+      "component": "Ketenaanpak overgewicht en obesitas kinderen",
+      "ticket_type": "local_status_capacity",
+      "stakeholder_packet": "Gemeente Almere / JGZ-GGD / onderwijs / zorgverzekeraar",
+      "current_working_view": "CBS 2025 geeft publieke jeugdleeftijdsdenominatoren; specifieke jeugdgezondheids- en CZV/kinder-GLI-capaciteit is nog invulveld.",
+      "question": "Wat is de actuele lokale invulling, dekking en capaciteit voor Ketenaanpak overgewicht en obesitas kinderen?",
+      "choice_sets": [
+        "local_status",
+        "coverage",
+        "continuity"
+      ],
+      "answer_options": {
+        "local_status": [
+          "Bestaat al en is structureel",
+          "Bestaat als project/pilot",
+          "Bestaat deels",
+          "In voorbereiding",
+          "Niet aanwezig",
+          "Onbekend",
+          "Anders, toelichten"
+        ],
+        "coverage": [
+          "Regionaal dekkend",
+          "Almere-dekkend",
+          "Deels dekkend",
+          "Wijk- of locatiegebonden",
+          "Alleen pilotgebied",
+          "Onbekend",
+          "Anders, toelichten"
+        ],
+        "continuity": [
+          "Structureel geborgd",
+          "Tijdelijk/projectmatig",
+          "Deels structureel, deels tijdelijk",
+          "Continuiteitsbesluit nodig",
+          "Onbekend",
+          "Anders, toelichten"
+        ]
+      },
+      "evidence_options": [
+        "Formeel besluit",
+        "Begrotingsregel of controllerbevestiging",
+        "Uitvoeringsplan",
+        "Samenwerkingsafspraak",
+        "Contract/inkoopafspraak",
+        "Stakeholderbevestiging",
+        "Publieke bron",
+        "Geen bewijs beschikbaar",
+        "Anders, toelichten"
+      ],
+      "evidence_gate": "Uitvoeringsplan, samenwerkingsafspraak, publieke bron plus stakeholderbevestiging, of validatie door verantwoordelijke organisatie.",
+      "default_if_no_evidence": "Keep current and capacity fields as validation-needed; do not draft as confirmed.",
+      "status_matrix_effect": "May move huidige_situatie/aantallen_capaciteit from validation-needed to confirmed concept if evidence is complete.",
+      "escalation_trigger": "Capacity unknown, coverage conflict, or no accountable respondent.",
+      "source_status": {
+        "public_foundation": "zwak",
+        "risk": "rood",
+        "public_indicator_count": 0,
+        "indicative_calculation_count": 0
+      }
+    },
+    {
+      "ticket_id": "ketenaanpak_overgewicht_obesitas_kinderen__governance_roles",
+      "target_id": "ketenaanpak_overgewicht_obesitas_kinderen",
+      "component": "Ketenaanpak overgewicht en obesitas kinderen",
+      "ticket_type": "governance_roles",
+      "stakeholder_packet": "Gemeente Almere / JGZ-GGD / onderwijs / zorgverzekeraar",
+      "current_working_view": "CBS 2025 geeft publieke jeugdleeftijdsdenominatoren; specifieke jeugdgezondheids- en CZV/kinder-GLI-capaciteit is nog invulveld.",
+      "question": "Wie is eigenaar, coordinator, uitvoerder en partner voor Ketenaanpak overgewicht en obesitas kinderen?",
+      "choice_sets": [
+        "role"
+      ],
+      "answer_options": {
+        "role": [
+          "Opdrachtgever/eigenaar",
+          "Coordinator",
+          "Uitvoerder",
+          "Partner",
+          "Financier",
+          "Adviseur/monitoring",
+          "Geen formele rol",
+          "Onbekend",
+          "Anders, toelichten"
+        ]
+      },
+      "evidence_options": [
+        "Formeel besluit",
+        "Begrotingsregel of controllerbevestiging",
+        "Uitvoeringsplan",
+        "Samenwerkingsafspraak",
+        "Contract/inkoopafspraak",
+        "Stakeholderbevestiging",
+        "Publieke bron",
+        "Geen bewijs beschikbaar",
+        "Anders, toelichten"
+      ],
+      "evidence_gate": "Mandaat, samenwerkingsafspraak, uitvoeringsplan of expliciete stakeholderbevestiging.",
+      "default_if_no_evidence": "Keep governance as owner unknown/local validation needed.",
+      "status_matrix_effect": "May update governance fields only for roles supported by evidence.",
+      "escalation_trigger": "No owner, conflicting owners, unclear mandate or unclear relation between local and regional scale.",
+      "source_status": {
+        "public_foundation": "zwak",
+        "risk": "rood",
+        "public_indicator_count": 0,
+        "indicative_calculation_count": 0
+      }
+    },
+    {
+      "ticket_id": "ketenaanpak_overgewicht_obesitas_kinderen__finance_controller",
+      "target_id": "ketenaanpak_overgewicht_obesitas_kinderen",
+      "component": "Ketenaanpak overgewicht en obesitas kinderen",
+      "ticket_type": "finance_controller",
+      "stakeholder_packet": "Finance/controller / zorgverzekeraar waar relevant",
+      "current_working_view": "CBS 2025 geeft publieke jeugdleeftijdsdenominatoren; specifieke jeugdgezondheids- en CZV/kinder-GLI-capaciteit is nog invulveld.",
+      "question": "Welke financiering geldt voor Ketenaanpak overgewicht en obesitas kinderen, en is die structureel, tijdelijk of gemengd?",
+      "choice_sets": [
+        "finance",
+        "continuity"
+      ],
+      "answer_options": {
+        "finance": [
+          "Gemeentelijke middelen",
+          "AZWA-D5",
+          "Doorbraakmiddelen sociaal domein",
+          "SPUK/GALA",
+          "Zvw/zorgverzekeraar",
+          "Reguliere organisatiebekostiging",
+          "Projectsubsidie",
+          "Gemengd, uitsplitsing nodig",
+          "Geen financiering besloten",
+          "Onbekend",
+          "Anders, toelichten"
+        ],
+        "continuity": [
+          "Structureel geborgd",
+          "Tijdelijk/projectmatig",
+          "Deels structureel, deels tijdelijk",
+          "Continuiteitsbesluit nodig",
+          "Onbekend",
+          "Anders, toelichten"
+        ]
+      },
+      "evidence_options": [
+        "Formeel besluit",
+        "Begrotingsregel of controllerbevestiging",
+        "Uitvoeringsplan",
+        "Samenwerkingsafspraak",
+        "Contract/inkoopafspraak",
+        "Stakeholderbevestiging",
+        "Publieke bron",
+        "Geen bewijs beschikbaar",
+        "Anders, toelichten"
+      ],
+      "evidence_gate": "Begrotingsregel, controllerbevestiging, verzekeraar/Zvw-bevestiging, contract/inkoopafspraak of formeel financieringsbesluit.",
+      "default_if_no_evidence": "Keep finance as controllercheck needed; do not write as funded.",
+      "status_matrix_effect": "May move finance status from controllercheck needed to concept/confirmed only when funding line and continuity are evidenced.",
+      "escalation_trigger": "No funding line, double-counting risk, insurer role unclear or structural/project status unknown.",
+      "source_status": {
+        "public_foundation": "zwak",
+        "risk": "rood",
+        "public_indicator_count": 0,
+        "indicative_calculation_count": 0
+      }
+    },
+    {
+      "ticket_id": "ketenaanpak_overgewicht_obesitas_kinderen__d6_dependency",
+      "target_id": "ketenaanpak_overgewicht_obesitas_kinderen",
+      "component": "Ketenaanpak overgewicht en obesitas kinderen",
+      "ticket_type": "d6_dependency",
+      "stakeholder_packet": "Gemeente Almere / D6 policy owner / relevant D6 partners",
+      "current_working_view": "CBS 2025 geeft publieke jeugdleeftijdsdenominatoren; specifieke jeugdgezondheids- en CZV/kinder-GLI-capaciteit is nog invulveld.",
+      "question": "Welke D6-infrastructuur is randvoorwaardelijk voor Ketenaanpak overgewicht en obesitas kinderen?",
+      "choice_sets": [
+        "d6_dependency"
+      ],
+      "answer_options": {
+        "d6_dependency": [
+          "Niet nodig",
+          "Mogelijke afhankelijkheid",
+          "Bevestigde afhankelijkheid",
+          "Kritieke blokkade",
+          "Nog te valideren",
+          "Onbekend",
+          "Anders, toelichten"
+        ]
+      },
+      "evidence_options": [
+        "Formeel besluit",
+        "Begrotingsregel of controllerbevestiging",
+        "Uitvoeringsplan",
+        "Samenwerkingsafspraak",
+        "Contract/inkoopafspraak",
+        "Stakeholderbevestiging",
+        "Publieke bron",
+        "Geen bewijs beschikbaar",
+        "Anders, toelichten"
+      ],
+      "evidence_gate": "Validatierecord of expliciete afhankelijkheid in werkagenda-, uitvoerings-, governance- of D6-verantwoordelijkheidsbron.",
+      "default_if_no_evidence": "Keep D6 dependency as possible/needs validation.",
+      "status_matrix_effect": "May mark dependency as confirmed, blocked, not needed or split by subdependency.",
+      "escalation_trigger": "D6 dependency is critical, unresolved, or conflicts with D6 responsibility overview.",
+      "source_status": {
+        "public_foundation": "zwak",
+        "risk": "rood",
+        "public_indicator_count": 0,
+        "indicative_calculation_count": 0
+      }
+    },
+    {
+      "ticket_id": "ketenaanpak_overgewicht_obesitas_kinderen__decision_phasing",
+      "target_id": "ketenaanpak_overgewicht_obesitas_kinderen",
+      "component": "Ketenaanpak overgewicht en obesitas kinderen",
+      "ticket_type": "decision_phasing",
+      "stakeholder_packet": "IZA/AZWA governance / Gemeente Almere / betrokken besluitnemer",
+      "current_working_view": "CBS 2025 geeft publieke jeugdleeftijdsdenominatoren; specifieke jeugdgezondheids- en CZV/kinder-GLI-capaciteit is nog invulveld.",
+      "question": "Welk besluit of welke fasering is nodig om Ketenaanpak overgewicht en obesitas kinderen richting 2027-2030 op te nemen?",
+      "choice_sets": [
+        "continuity"
+      ],
+      "answer_options": {
+        "continuity": [
+          "Structureel geborgd",
+          "Tijdelijk/projectmatig",
+          "Deels structureel, deels tijdelijk",
+          "Continuiteitsbesluit nodig",
+          "Onbekend",
+          "Anders, toelichten"
+        ]
+      },
+      "evidence_options": [
+        "Formeel besluit",
+        "Begrotingsregel of controllerbevestiging",
+        "Uitvoeringsplan",
+        "Samenwerkingsafspraak",
+        "Contract/inkoopafspraak",
+        "Stakeholderbevestiging",
+        "Publieke bron",
+        "Geen bewijs beschikbaar",
+        "Anders, toelichten"
+      ],
+      "evidence_gate": "Besluitrecord, governancebesluit, planningsbevestiging of goedgekeurde faseringsnotitie.",
+      "default_if_no_evidence": "Keep decision/phasing as decision needed.",
+      "status_matrix_effect": "May convert open decision into resolved decision, explicit risk or later milestone.",
+      "escalation_trigger": "No decision owner, no deadline before September 2026, or bestuurlijke wording risk.",
+      "source_status": {
+        "public_foundation": "zwak",
+        "risk": "rood",
+        "public_indicator_count": 0,
+        "indicative_calculation_count": 0
+      }
+    },
+    {
+      "ticket_id": "ontwikkelagenda_1_nieuw_beproeven__scope_choice",
+      "target_id": "ontwikkelagenda_1_nieuw_beproeven",
+      "component": "Ontwikkelagenda 1 nieuw: dementie, nicotinevrij, rookvrije start, multiproblematiek NPLV",
+      "ticket_type": "scope_choice",
+      "stakeholder_packet": "IZA/AZWA governance / Gemeente Almere / zorgverzekeraar",
+      "current_working_view": "Alleen vullen wanneer publieke bron of lokale validatie aangeeft dat Almere/Flevoland dit wil beproeven.",
+      "question": "Moet Ontwikkelagenda 1 nieuw: dementie, nicotinevrij, rookvrije start, multiproblematiek NPLV in de Almere/Flevoland werkagenda worden opgenomen?",
+      "choice_sets": [
+        "scope_choice"
+      ],
+      "answer_options": {
+        "scope_choice": [
+          "Opnemen in werkagenda",
+          "Niet opnemen",
+          "Alleen volgen als ontwikkelagenda-optie",
+          "Wachten op landelijke handreiking",
+          "Besluit nodig",
+          "Onbekend",
+          "Anders, toelichten"
+        ]
+      },
+      "evidence_options": [
+        "Formeel besluit",
+        "Begrotingsregel of controllerbevestiging",
+        "Uitvoeringsplan",
+        "Samenwerkingsafspraak",
+        "Contract/inkoopafspraak",
+        "Stakeholderbevestiging",
+        "Publieke bron",
+        "Geen bewijs beschikbaar",
+        "Anders, toelichten"
+      ],
+      "evidence_gate": "Explicit scope decision, governance confirmation or later national guidance.",
+      "default_if_no_evidence": "Keep item optional/not applicable and do not include in required workagenda text.",
+      "status_matrix_effect": "May activate a normal validation-ticket set if the region chooses to include it.",
+      "escalation_trigger": "No scope owner, conflicting regional preference, or national guidance changes requirement.",
+      "source_status": {
+        "public_foundation": "zwak",
+        "risk": "grijs",
+        "public_indicator_count": 0,
+        "indicative_calculation_count": 0
+      }
+    },
+    {
+      "ticket_id": "ontwikkelagenda_2_overige_initiatieven__scope_choice",
+      "target_id": "ontwikkelagenda_2_overige_initiatieven",
+      "component": "Ontwikkelagenda 2 en overige initiatieven",
+      "ticket_type": "scope_choice",
+      "stakeholder_packet": "IZA/AZWA governance / Gemeente Almere",
+      "current_working_view": "Alleen opnemen als publieke bron of lokale validatie aangeeft dat dit praktisch nodig is.",
+      "question": "Moet Ontwikkelagenda 2 en overige initiatieven in de Almere/Flevoland werkagenda worden opgenomen?",
+      "choice_sets": [
+        "scope_choice"
+      ],
+      "answer_options": {
+        "scope_choice": [
+          "Opnemen in werkagenda",
+          "Niet opnemen",
+          "Alleen volgen als ontwikkelagenda-optie",
+          "Wachten op landelijke handreiking",
+          "Besluit nodig",
+          "Onbekend",
+          "Anders, toelichten"
+        ]
+      },
+      "evidence_options": [
+        "Formeel besluit",
+        "Begrotingsregel of controllerbevestiging",
+        "Uitvoeringsplan",
+        "Samenwerkingsafspraak",
+        "Contract/inkoopafspraak",
+        "Stakeholderbevestiging",
+        "Publieke bron",
+        "Geen bewijs beschikbaar",
+        "Anders, toelichten"
+      ],
+      "evidence_gate": "Explicit scope decision, governance confirmation or later national guidance.",
+      "default_if_no_evidence": "Keep item optional/not applicable and do not include in required workagenda text.",
+      "status_matrix_effect": "May activate a normal validation-ticket set if the region chooses to include it.",
+      "escalation_trigger": "No scope owner, conflicting regional preference, or national guidance changes requirement.",
+      "source_status": {
+        "public_foundation": "zwak",
+        "risk": "grijs",
+        "public_indicator_count": 0,
+        "indicative_calculation_count": 0
+      }
+    }
+  ]
+}

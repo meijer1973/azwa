@@ -1,0 +1,210 @@
+{
+  "model_id": "workagenda_d5_stuurmodel_v0_1",
+  "generated_on": "2026-05-02",
+  "sprint": "32.0 Scope en stuurmodel vastzetten",
+  "status": "active_control_contract",
+  "purpose": "Delivery-control contract for building the D5 workagenda steering layer before creating the D5 statusmatrix, validation tickets, finance matrix, decision register, D5-D6 dependency map or dashboard view.",
+  "source_layers": [
+    "data/extracted/workagenda_d5_operational_requirements.json",
+    "data/extracted/workagenda_nulmeting_capacity.json",
+    "data/extracted/municipal/almere_d6_responsibility_register.json",
+    "data/extracted/monthly_source_audit.json",
+    "data/site/timeline_register.json"
+  ],
+  "guardrails": [
+    "This model is a control contract, not a local decision.",
+    "Do not treat source-backed working views as locally validated answers.",
+    "Do not mark finance as confirmed without finance/controller or insurer evidence.",
+    "Do not start workagenda drafting until status, validation, finance, decision and D5-D6 dependency layers exist.",
+    "D6 dependencies must stay visible as dependencies, not hidden inside D5 programme text."
+  ],
+  "delivery_status_values": [
+    {
+      "code": "A",
+      "status": "beantwoord_uit_bron",
+      "label": "Beantwoord uit bron",
+      "meaning": "Public/corpus source directly answers the field."
+    },
+    {
+      "code": "B",
+      "status": "bron_suggereert_validatie_nodig",
+      "label": "Bron suggereert antwoord, validatie nodig",
+      "meaning": "Source-backed working view exists, but local validation is required."
+    },
+    {
+      "code": "C",
+      "status": "lokale_validatie_nodig",
+      "label": "Lokale validatie nodig",
+      "meaning": "Local practice, owner, coverage, capacity or evidence must be confirmed."
+    },
+    {
+      "code": "D",
+      "status": "bestuurlijk_besluit_nodig",
+      "label": "Bestuurlijk besluit nodig",
+      "meaning": "A decision is needed before the field can be used as workagenda position."
+    },
+    {
+      "code": "E",
+      "status": "finance_controller_nodig",
+      "label": "Finance/controller nodig",
+      "meaning": "Funding, structural continuation or double-counting must be checked."
+    },
+    {
+      "code": "F",
+      "status": "zorgverzekeraar_zvw_bevestiging_nodig",
+      "label": "Zorgverzekeraar/Zvw-bevestiging nodig",
+      "meaning": "Zvw-side purchase, contract or insurer role must be confirmed."
+    },
+    {
+      "code": "G",
+      "status": "ict_privacy_data_bevestiging_nodig",
+      "label": "ICT/privacy/data-bevestiging nodig",
+      "meaning": "Data, privacy, dashboard, reporting or operational accountability must be confirmed."
+    },
+    {
+      "code": "H",
+      "status": "wachten_op_landelijke_handreiking",
+      "label": "Wachten op landelijke handreiking",
+      "meaning": "National guidance or template is still expected."
+    },
+    {
+      "code": "I",
+      "status": "optioneel_niet_van_toepassing",
+      "label": "Optioneel / niet van toepassing",
+      "meaning": "Item is optional, excluded or not applicable for the current scope."
+    },
+    {
+      "code": "J",
+      "status": "onbekend",
+      "label": "Onbekend",
+      "meaning": "Not enough information to classify yet."
+    }
+  ],
+  "d5_scope": [
+    {
+      "target_id": "laagdrempelige_steunpunten",
+      "title": "Laagdrempelige steunpunten",
+      "category": "basisfunctionaliteit",
+      "required_in_workagenda": true
+    },
+    {
+      "target_id": "sociaal_verwijzen",
+      "title": "Sociaal verwijzen",
+      "category": "basisfunctionaliteit",
+      "required_in_workagenda": true
+    },
+    {
+      "target_id": "valpreventie",
+      "title": "Valpreventie",
+      "category": "basisfunctionaliteit",
+      "required_in_workagenda": true
+    },
+    {
+      "target_id": "ketenaanpak_overgewicht_obesitas_volwassenen",
+      "title": "Ketenaanpak overgewicht en obesitas volwassenen",
+      "category": "basisfunctionaliteit",
+      "required_in_workagenda": true
+    },
+    {
+      "target_id": "kansrijke_start",
+      "title": "Kansrijke Start",
+      "category": "basisfunctionaliteit",
+      "required_in_workagenda": true
+    },
+    {
+      "target_id": "integrale_gezinspoli",
+      "title": "Integrale gezinspoli",
+      "category": "basisfunctionaliteit",
+      "required_in_workagenda": true
+    },
+    {
+      "target_id": "nu_niet_zwanger",
+      "title": "Nu Niet Zwanger",
+      "category": "basisfunctionaliteit",
+      "required_in_workagenda": true
+    },
+    {
+      "target_id": "mentale_gezondheidsnetwerken",
+      "title": "Mentale gezondheidsnetwerken",
+      "category": "ontwikkelagenda_1_lopend",
+      "required_in_workagenda": true
+    },
+    {
+      "target_id": "ketenaanpak_overgewicht_obesitas_kinderen",
+      "title": "Ketenaanpak overgewicht en obesitas kinderen",
+      "category": "ontwikkelagenda_1_lopend",
+      "required_in_workagenda": true
+    },
+    {
+      "target_id": "ontwikkelagenda_1_nieuw_beproeven",
+      "title": "Ontwikkelagenda 1 nieuw: dementie, nicotinevrij, rookvrije start, multiproblematiek NPLV",
+      "category": "ontwikkelagenda_1_nieuw_conditioneel",
+      "required_in_workagenda": false
+    },
+    {
+      "target_id": "ontwikkelagenda_2_overige_initiatieven",
+      "title": "Ontwikkelagenda 2 en overige initiatieven",
+      "category": "optioneel_geen_landelijke_financiering",
+      "required_in_workagenda": false
+    }
+  ],
+  "workagenda_fields": [
+    "huidige_situatie",
+    "gewenste_situatie",
+    "ingroeipad_2030",
+    "aantallen_capaciteit",
+    "financiering",
+    "verantwoordelijkheid_governance",
+    "monitoring_lerende_cyclus",
+    "mijlpalen",
+    "d6_afhankelijkheden",
+    "open_besluiten_risicos"
+  ],
+  "milestones": [
+    {
+      "date_label": "eind mei 2026",
+      "meaning": "Handreikingen basisfunctionaliteiten and process clarity for beproevende regio's expected.",
+      "delivery_status": "wachten_op_landelijke_handreiking"
+    },
+    {
+      "date_label": "medio juli 2026",
+      "meaning": "RESV-related plans toward insurer/process track.",
+      "delivery_status": "finance_controller_nodig"
+    },
+    {
+      "date_label": "half september 2026",
+      "meaning": "Practical workagenda readiness for IZA governance and college route.",
+      "delivery_status": "bestuurlijk_besluit_nodig"
+    },
+    {
+      "date_label": "15 november 2026",
+      "meaning": "Formal deadline for regional workagenda adoption and VWS transmission.",
+      "delivery_status": "bestuurlijk_besluit_nodig"
+    },
+    {
+      "date_label": "december 2026",
+      "meaning": "Further clarity expected for later development-agenda items.",
+      "delivery_status": "wachten_op_landelijke_handreiking"
+    },
+    {
+      "date_label": "1 januari 2027",
+      "meaning": "Start of implementation.",
+      "delivery_status": "bestuurlijk_besluit_nodig"
+    },
+    {
+      "date_label": "2030",
+      "meaning": "Regional coverage/end-state horizon.",
+      "delivery_status": "bron_suggereert_validatie_nodig"
+    }
+  ],
+  "planned_files": [
+    "data/workagenda/d5_status_matrix.json",
+    "data/workagenda/d5_validation_tickets.json",
+    "data/workagenda/d5_validation_log.json",
+    "data/workagenda/d5_finance_matrix.json",
+    "data/workagenda/d5_decision_register.json",
+    "data/workagenda/d5_d6_dependency_map.json",
+    "data/workagenda/d5_source_update_log.json",
+    "data/workagenda/d5_dashboard_view.json"
+  ]
+}

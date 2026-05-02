@@ -1,9 +1,9 @@
 # Werkagenda-delivery roadmap
 
 ## Summary
-Current sprint: Sprint 31.5 - Deep-research bronintake en top-layer verificatie.
+Current sprint: Sprint 32.0 - Werkagenda-delivery scope en stuurmodel.
 
-This roadmap is the transition plan from a research repository to a workagenda-delivery system. It has been checked against the current repository state on 2026-05-02. It is a planning layer only: no D5 delivery sprint has started from this document yet.
+This roadmap is the transition plan from a research repository to a workagenda-delivery system. It has been checked against the current repository state on 2026-05-02. Sprint 32.0 has now started with the delivery-control contract in `docs/workagenda-d5-stuurmodel.md` and `data/workagenda/d5_stuurmodel.json`.
 
 The proposed direction is sound. The repository already contains many of the source, claim, review and D6 validation building blocks. The missing layer is a delivery-control layer that can show, per D5 component and per workagenda field, whether the answer is source-backed, needs local validation, needs finance/controller confirmation, needs a decision, depends on D6, waits for national guidance, or is ready for workagenda drafting.
 
@@ -11,7 +11,7 @@ The proposed direction is sound. The repository already contains many of the sou
 
 | Sprint | Status | Goal | Main output |
 | --- | --- | --- | --- |
-| 32.0 Scope en stuurmodel vastzetten | planned | Fix the D5 scope, delivery statuses, milestones and owner/workstream model. | Werkagenda D5 stuurmodel v0.1. |
+| 32.0 Scope en stuurmodel vastzetten | open | Fix the D5 scope, delivery statuses, milestones and owner/workstream model. | `docs/workagenda-d5-stuurmodel.md`; `data/workagenda/d5_stuurmodel.json`. |
 | 32.1 D5-statusmatrix bouwen | planned | Build one central matrix showing whether the workagenda is on track. | Werkagenda D5 statusmatrix v1. |
 | 32.2 D5-validatie voorbereiden | planned | Create constrained D5 validation questions and workbook/format structure. | D5 validatieformats. |
 | 32.3 Eerste menselijke validatieronde | blocked | Process stakeholder confirmations after validation packets are distributed. | Validatielog D5 ronde 1. |

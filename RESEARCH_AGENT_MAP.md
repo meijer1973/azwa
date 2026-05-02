@@ -38,6 +38,8 @@ For deep-research intake, use `docs/dr/README.md`. Reports placed in `docs/dr/` 
 
 For the planned workagenda-delivery transition, use `docs/workagenda-delivery-roadmap.md`. It maps the current repository status to the missing D5 delivery-control layer. Do not treat its planned file names or sprint outputs as existing artifacts until Sprint 32.0 or later creates them.
 
+For active Sprint 32.0 workagenda-delivery scope, use `docs/workagenda-d5-stuurmodel.md` and `data/workagenda/d5_stuurmodel.json`. These files define the D5 scope, delivery status values, workagenda fields, milestones and planned delivery artifacts. They are a control contract, not a local decision or workagenda draft.
+
 ## Access Layer
 
 Base URL:
@@ -242,6 +244,8 @@ Machine-readable:
     "docs/source-intake/phase31.5-stand-van-zaken-gezondheidsbeleid-intake.md",
     "docs/source-intake/phase31.5-constrained-answer-design-intake.md",
     "docs/workagenda-delivery-roadmap.md",
+    "docs/workagenda-d5-stuurmodel.md",
+    "data/workagenda/d5_stuurmodel.json",
     "docs/human-review-guidance.md",
     "docs/internal/monthly-source-audit-2026-04-30.md",
     "docs/internal/review-dashboard.html"
@@ -436,6 +440,8 @@ Theme view models:
   ],
   "workagenda_delivery_planning": [
     "docs/workagenda-delivery-roadmap.md",
+    "docs/workagenda-d5-stuurmodel.md",
+    "data/workagenda/d5_stuurmodel.json",
     "data/extracted/workagenda_d5_operational_requirements.json",
     "data/extracted/workagenda_nulmeting_capacity.json",
     "data/extracted/municipal/almere_d6_responsibility_register.json",

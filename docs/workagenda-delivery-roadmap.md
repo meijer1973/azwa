@@ -7,6 +7,24 @@ This roadmap is the transition plan from a research repository to a workagenda-d
 
 The proposed direction is sound. The repository already contains many of the source, claim, review and D6 validation building blocks. The missing layer is a delivery-control layer that can show, per D5 component and per workagenda field, whether the answer is source-backed, needs local validation, needs finance/controller confirmation, needs a decision, depends on D6, waits for national guidance, or is ready for workagenda drafting.
 
+## Sprint Ledger
+
+| Sprint | Status | Goal | Main output |
+| --- | --- | --- | --- |
+| 32.0 Scope en stuurmodel vastzetten | planned | Fix the D5 scope, delivery statuses, milestones and owner/workstream model. | Werkagenda D5 stuurmodel v0.1. |
+| 32.1 D5-statusmatrix bouwen | planned | Build one central matrix showing whether the workagenda is on track. | Werkagenda D5 statusmatrix v1. |
+| 32.2 D5-validatie voorbereiden | planned | Create constrained D5 validation questions and workbook/format structure. | D5 validatieformats. |
+| 32.3 Eerste menselijke validatieronde | blocked | Process stakeholder confirmations after validation packets are distributed. | Validatielog D5 ronde 1. |
+| 32.4 Handreikingen en tijdsafhankelijke bronnen verwerken | planned | Watch and process D5 handreikingen, RPI/regioscan and other expected sources. | Bronupdate D5 handreikingen en wijzigingenlog. |
+| 32.5 Gap compression en besluit-tickets | planned | Convert remaining gaps into validation, decision, finance or D6 dependency tickets. | Besluitlijst werkagenda D5 v1. |
+| 32.6 Finance/controller en zorgverzekeraar integreren | planned | Build component-level finance and insurer confirmation status. | Finance/controller matrix D5 v1. |
+| 32.7 D6-afhankelijkheden integreren | planned | Connect each D5 component to required D6 infrastructure. | D5-D6 afhankelijkhedenkaart v1. |
+| 32.8 Prioritering, fasering en 2030-ingroeipad | planned | Convert inventory into choices, phasing and consequences. | Prioritering en fasering D5 v1. |
+| 32.9 Concept-werkagenda v0.8 | blocked | Draft a bestuurlijk concept with explicit unresolved points. | Werkagenda D5 Almere/Flevoland concept v0.8. |
+| 32.10 Governance-ready versie | blocked | Prepare version for IZA governance and college route. | Werkagenda D5 governance-ready v1.0. |
+| 32.11 Vaststelling en VWS-verzending | blocked | Track decision route, changes and evidence. | Definitieve werkagenda + bewijs- en wijzigingslog. |
+| 32.12 Uitvoeringsstart 2027 en lerende cyclus | blocked | Convert workagenda into execution steering and monitoring. | Uitvoeringsdashboard D5 2027. |
+
 ## Repository Fit Check
 
 | Roadmap requirement | Current repository status | Fit |
@@ -88,24 +106,6 @@ These milestones should be stored in the delivery-control layer as planning targ
 | `data/workagenda/d5_source_update_log.json` | Handreikingen, regioscan, rode-dradenanalyse and time-sensitive source changes. | Planned. |
 | `data/workagenda/d5_dashboard_view.json` | Red/yellow/green workagenda steering view. | Planned. |
 | `docs/workagenda/` | Human-readable delivery notes, validation formats and handoff material. | Planned; avoid mixing with unreviewed source packages. |
-
-## Sprint Ledger
-
-| Sprint | Status | Goal | Main output |
-| --- | --- | --- | --- |
-| 32.0 Scope en stuurmodel vastzetten | planned | Fix the D5 scope, delivery statuses, milestones and owner/workstream model. | Werkagenda D5 stuurmodel v0.1. |
-| 32.1 D5-statusmatrix bouwen | planned | Build one central matrix showing whether the workagenda is on track. | Werkagenda D5 statusmatrix v1. |
-| 32.2 D5-validatie voorbereiden | planned | Create constrained D5 validation questions and workbook/format structure. | D5 validatieformats. |
-| 32.3 Eerste menselijke validatieronde | blocked | Process stakeholder confirmations after validation packets are distributed. | Validatielog D5 ronde 1. |
-| 32.4 Handreikingen en tijdsafhankelijke bronnen verwerken | planned | Watch and process D5 handreikingen, RPI/regioscan and other expected sources. | Bronupdate D5 handreikingen en wijzigingenlog. |
-| 32.5 Gap compression en besluit-tickets | planned | Convert remaining gaps into validation, decision, finance or D6 dependency tickets. | Besluitlijst werkagenda D5 v1. |
-| 32.6 Finance/controller en zorgverzekeraar integreren | planned | Build component-level finance and insurer confirmation status. | Finance/controller matrix D5 v1. |
-| 32.7 D6-afhankelijkheden integreren | planned | Connect each D5 component to required D6 infrastructure. | D5-D6 afhankelijkhedenkaart v1. |
-| 32.8 Prioritering, fasering en 2030-ingroeipad | planned | Convert inventory into choices, phasing and consequences. | Prioritering en fasering D5 v1. |
-| 32.9 Concept-werkagenda v0.8 | blocked | Draft a bestuurlijk concept with explicit unresolved points. | Werkagenda D5 Almere/Flevoland concept v0.8. |
-| 32.10 Governance-ready versie | blocked | Prepare version for IZA governance and college route. | Werkagenda D5 governance-ready v1.0. |
-| 32.11 Vaststelling en VWS-verzending | blocked | Track decision route, changes and evidence. | Definitieve werkagenda + bewijs- en wijzigingslog. |
-| 32.12 Uitvoeringsstart 2027 en lerende cyclus | blocked | Convert workagenda into execution steering and monitoring. | Uitvoeringsdashboard D5 2027. |
 
 ## Workstreams
 

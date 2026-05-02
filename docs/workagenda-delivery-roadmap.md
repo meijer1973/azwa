@@ -1,9 +1,9 @@
 # Werkagenda-delivery roadmap
 
 ## Summary
-Current sprint: Sprint 32.0 - Werkagenda-delivery scope en stuurmodel.
+Current sprint: Sprint 32.1 - D5-statusmatrix bouwen.
 
-This roadmap is the transition plan from a research repository to a workagenda-delivery system. It has been checked against the current repository state on 2026-05-02. Sprint 32.0 has now started with the delivery-control contract in `docs/workagenda-d5-stuurmodel.md` and `data/workagenda/d5_stuurmodel.json`.
+This roadmap is the transition plan from a research repository to a workagenda-delivery system. It has been checked against the current repository state on 2026-05-02. Sprint 32.0 is complete with the delivery-control contract in `docs/workagenda-d5-stuurmodel.md` and `data/workagenda/d5_stuurmodel.json`. Sprint 32.1 has started with the first D5 delivery-status matrix in `docs/workagenda-d5-statusmatrix.md` and `data/workagenda/d5_status_matrix.json`.
 
 The proposed direction is sound. The repository already contains many of the source, claim, review and D6 validation building blocks. The missing layer is a delivery-control layer that can show, per D5 component and per workagenda field, whether the answer is source-backed, needs local validation, needs finance/controller confirmation, needs a decision, depends on D6, waits for national guidance, or is ready for workagenda drafting.
 
@@ -11,8 +11,8 @@ The proposed direction is sound. The repository already contains many of the sou
 
 | Sprint | Status | Goal | Main output |
 | --- | --- | --- | --- |
-| 32.0 Scope en stuurmodel vastzetten | open | Fix the D5 scope, delivery statuses, milestones and owner/workstream model. | `docs/workagenda-d5-stuurmodel.md`; `data/workagenda/d5_stuurmodel.json`. |
-| 32.1 D5-statusmatrix bouwen | planned | Build one central matrix showing whether the workagenda is on track. | Werkagenda D5 statusmatrix v1. |
+| 32.0 Scope en stuurmodel vastzetten | completed | Fix the D5 scope, delivery statuses, milestones and owner/workstream model. | `docs/workagenda-d5-stuurmodel.md`; `data/workagenda/d5_stuurmodel.json`; `docs/completed-plans/phase32-sprint32.0-workagenda-stuurmodel.md`. |
+| 32.1 D5-statusmatrix bouwen | open | Build one central matrix showing whether the workagenda is on track. | `docs/workagenda-d5-statusmatrix.md`; `data/workagenda/d5_status_matrix.json`. |
 | 32.2 D5-validatie voorbereiden | planned | Create constrained D5 validation questions and workbook/format structure. | D5 validatieformats. |
 | 32.3 Eerste menselijke validatieronde | blocked | Process stakeholder confirmations after validation packets are distributed. | Validatielog D5 ronde 1. |
 | 32.4 Handreikingen en tijdsafhankelijke bronnen verwerken | planned | Watch and process D5 handreikingen, RPI/regioscan and other expected sources. | Bronupdate D5 handreikingen en wijzigingenlog. |
@@ -97,7 +97,7 @@ These milestones should be stored in the delivery-control layer as planning targ
 
 | File | Function | Initial status |
 | --- | --- | --- |
-| `data/workagenda/d5_status_matrix.json` | Central status per D5 component and workagenda field. | Planned. |
+| `data/workagenda/d5_status_matrix.json` | Central status per D5 component and workagenda field. | Initial v1 created in Sprint 32.1. |
 | `data/workagenda/d5_validation_tickets.json` | Human validation questions with constrained answer options. | Planned. |
 | `data/workagenda/d5_validation_log.json` | Who confirmed what, when, with what evidence. | Planned. |
 | `data/workagenda/d5_finance_matrix.json` | Funding, double-counting, structural/project status and controller status. | Planned. |
@@ -129,13 +129,11 @@ These milestones should be stored in the delivery-control layer as planning targ
 
 ## Recommended Next Step
 
-The next executable sprint is Sprint 32.0, not Sprint 32.1. Although the proposed roadmap suggests starting Sprint 1 and 2 in parallel, the current repository should first create the delivery-control contract:
+Sprint 32.0 is complete and Sprint 32.1 has started. The next repository-side step is to use the D5 statusmatrix as the input for Sprint 32.2:
 
-- canonical D5 scope list;
-- accepted delivery statuses;
-- milestone model;
-- file/schema choices;
-- relationship to existing D5 and D6 data layers;
-- dashboard design boundary.
+- convert red/yellow D5 rows into constrained validation tickets;
+- add answer choices, evidence fields and default register effects;
+- keep finance/controller, Zvw/insurer, ICT/privacy and D6 dependency questions explicit;
+- avoid workagenda drafting until validation, finance, decision and D5-D6 dependency layers exist.
 
-After Sprint 32.0, Sprints 32.1 and 32.2 can run in parallel.
+Sprint 32.1 can continue refining the matrix if source layers change, but broad research is not the main route. Sprint 32.2 should make the matrix answerable by people through confirm/correct/choose/provide-evidence fields.

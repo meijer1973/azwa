@@ -36,9 +36,9 @@ For D6 validation handoff, use `docs/review/almere_d6_deep_research_learnings.md
 
 For deep-research intake, use `docs/dr/README.md`. Reports placed in `docs/dr/` are not corpus evidence. Treat them as source-discovery signals: ingest selected public sources through the raw manifest and pipeline, then verify that the findings appear in top data layers before marking the report processed.
 
-For the planned workagenda-delivery transition, use `docs/workagenda-delivery-roadmap.md`. It maps the current repository status to the missing D5 delivery-control layer. Do not treat its planned file names or sprint outputs as existing artifacts until Sprint 32.0 or later creates them.
+For the workagenda-delivery transition, use `docs/workagenda-delivery-roadmap.md`. It maps the current repository status to the D5 delivery-control layer and shows which Phase 32 artifacts exist, are planned, or remain blocked.
 
-For active Sprint 32.0 workagenda-delivery scope, use `docs/workagenda-d5-stuurmodel.md` and `data/workagenda/d5_stuurmodel.json`. These files define the D5 scope, delivery status values, workagenda fields, milestones and planned delivery artifacts. They are a control contract, not a local decision or workagenda draft.
+For Sprint 32.0/32.1 workagenda-delivery scope, use `docs/workagenda-d5-stuurmodel.md`, `data/workagenda/d5_stuurmodel.json`, `docs/workagenda-d5-statusmatrix.md`, and `data/workagenda/d5_status_matrix.json`. These files define the D5 scope, delivery status values, workagenda fields, milestones and the first D5 delivery-status matrix. They are control layers, not local decisions or workagenda drafts.
 
 ## Access Layer
 
@@ -96,6 +96,7 @@ Machine-readable:
     "data/raw",
     "data/intermediate",
     "data/extracted",
+    "data/workagenda",
     "data/site"
   ],
   "preferred_layer": "data/extracted",
@@ -129,6 +130,7 @@ Machine-readable:
     "data/raw",
     "data/intermediate",
     "data/extracted",
+    "data/workagenda",
     "data/site",
     "data/curated",
     "data/schemas",
@@ -245,7 +247,9 @@ Machine-readable:
     "docs/source-intake/phase31.5-constrained-answer-design-intake.md",
     "docs/workagenda-delivery-roadmap.md",
     "docs/workagenda-d5-stuurmodel.md",
+    "docs/workagenda-d5-statusmatrix.md",
     "data/workagenda/d5_stuurmodel.json",
+    "data/workagenda/d5_status_matrix.json",
     "docs/human-review-guidance.md",
     "docs/internal/monthly-source-audit-2026-04-30.md",
     "docs/internal/review-dashboard.html"
@@ -441,7 +445,9 @@ Theme view models:
   "workagenda_delivery_planning": [
     "docs/workagenda-delivery-roadmap.md",
     "docs/workagenda-d5-stuurmodel.md",
+    "docs/workagenda-d5-statusmatrix.md",
     "data/workagenda/d5_stuurmodel.json",
+    "data/workagenda/d5_status_matrix.json",
     "data/extracted/workagenda_d5_operational_requirements.json",
     "data/extracted/workagenda_nulmeting_capacity.json",
     "data/extracted/municipal/almere_d6_responsibility_register.json",

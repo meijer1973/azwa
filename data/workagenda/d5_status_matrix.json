@@ -1,0 +1,1787 @@
+{
+  "matrix_id": "workagenda_d5_status_matrix_v1",
+  "generated_on": "2026-05-02",
+  "sprint": "32.1 D5-statusmatrix bouwen",
+  "status": "initial_delivery_matrix",
+  "purpose": "Central delivery-status matrix showing, per D5 component and workagenda field, what public sources can prefill and what still needs validation, finance/controller confirmation, decisions or D6 dependency mapping.",
+  "source_layers": [
+    "data/workagenda/d5_stuurmodel.json",
+    "data/extracted/workagenda_d5_operational_requirements.json",
+    "data/extracted/workagenda_nulmeting_capacity.json",
+    "data/extracted/municipal/almere_d6_responsibility_register.json"
+  ],
+  "guardrails": [
+    "This matrix is a steering aid, not a workagenda draft or local decision.",
+    "No row is ready for workagenda drafting until validation, finance/controller status, governance and D6 dependencies are resolved or explicitly escalated.",
+    "Public-source working views must remain separate from local validation and finance/controller confirmation."
+  ],
+  "summary": {
+    "target_count": 11,
+    "required_target_count": 9,
+    "ready_for_workagenda_drafting_count": 0,
+    "risk_counts": {
+      "geel": 5,
+      "grijs": 2,
+      "rood": 4
+    },
+    "field_status_code_counts": {
+      "B": 28,
+      "C": 26,
+      "D": 18,
+      "E": 9,
+      "G": 9,
+      "I": 20
+    }
+  },
+  "status_model": [
+    {
+      "code": "A",
+      "status": "beantwoord_uit_bron",
+      "label": "Beantwoord uit bron",
+      "meaning": "Public/corpus source directly answers the field."
+    },
+    {
+      "code": "B",
+      "status": "bron_suggereert_validatie_nodig",
+      "label": "Bron suggereert antwoord, validatie nodig",
+      "meaning": "Source-backed working view exists, but local validation is required."
+    },
+    {
+      "code": "C",
+      "status": "lokale_validatie_nodig",
+      "label": "Lokale validatie nodig",
+      "meaning": "Local practice, owner, coverage, capacity or evidence must be confirmed."
+    },
+    {
+      "code": "D",
+      "status": "bestuurlijk_besluit_nodig",
+      "label": "Bestuurlijk besluit nodig",
+      "meaning": "A decision is needed before the field can be used as workagenda position."
+    },
+    {
+      "code": "E",
+      "status": "finance_controller_nodig",
+      "label": "Finance/controller nodig",
+      "meaning": "Funding, structural continuation or double-counting must be checked."
+    },
+    {
+      "code": "F",
+      "status": "zorgverzekeraar_zvw_bevestiging_nodig",
+      "label": "Zorgverzekeraar/Zvw-bevestiging nodig",
+      "meaning": "Zvw-side purchase, contract or insurer role must be confirmed."
+    },
+    {
+      "code": "G",
+      "status": "ict_privacy_data_bevestiging_nodig",
+      "label": "ICT/privacy/data-bevestiging nodig",
+      "meaning": "Data, privacy, dashboard, reporting or operational accountability must be confirmed."
+    },
+    {
+      "code": "H",
+      "status": "wachten_op_landelijke_handreiking",
+      "label": "Wachten op landelijke handreiking",
+      "meaning": "National guidance or template is still expected."
+    },
+    {
+      "code": "I",
+      "status": "optioneel_niet_van_toepassing",
+      "label": "Optioneel / niet van toepassing",
+      "meaning": "Item is optional, excluded or not applicable for the current scope."
+    },
+    {
+      "code": "J",
+      "status": "onbekend",
+      "label": "Onbekend",
+      "meaning": "Not enough information to classify yet."
+    }
+  ],
+  "rows": [
+    {
+      "target_id": "laagdrempelige_steunpunten",
+      "title": "Laagdrempelige steunpunten",
+      "category": "basisfunctionaliteit",
+      "required_in_workagenda": true,
+      "status_in_azwa": "basisfunctionaliteit",
+      "public_foundation": "deels",
+      "local_validation_status": "niet_gestart",
+      "decision_status": "besluit_nodig",
+      "finance_status": "controllercheck_nodig",
+      "capacity_status": "indicatief",
+      "governance_status": "eigenaar_onbekend",
+      "monitoring_status": "concept",
+      "d6_dependency_status": "mogelijk",
+      "risk": "geel",
+      "ready_for_workagenda_drafting": false,
+      "field_statuses": {
+        "huidige_situatie": {
+          "status_code": "B",
+          "reason": "Public sources support a working view, but local status and coverage still need validation.",
+          "evidence": [
+            "GGD-indicatoren voor eenzaamheid, angst/depressierisico en broze gezondheid geven publieke urgentiesignalen."
+          ],
+          "blockers": [
+            "bestaande steunpunten die mogen meetellen",
+            "openingstijden en toegankelijkheid",
+            "wijk- of stadsdeeldekking",
+            "uitvoerder/eigenaar",
+            "formatie of coordinatiecapaciteit",
+            "budget en financieringsbron"
+          ]
+        },
+        "gewenste_situatie": {
+          "status_code": "B",
+          "reason": "National workagenda sources describe the target direction, but Almere/Flevoland must validate the local design.",
+          "evidence": [],
+          "blockers": []
+        },
+        "ingroeipad_2030": {
+          "status_code": "D",
+          "reason": "Prioritisation and phasing toward 2030 need a local or regional decision.",
+          "evidence": [],
+          "blockers": [
+            "prioritering_2027_2030"
+          ]
+        },
+        "aantallen_capaciteit": {
+          "status_code": "B",
+          "reason": "Indicators or indicative calculations exist, but capacity needs validation.",
+          "evidence": [
+            "GGD-indicatoren voor eenzaamheid, angst/depressierisico en broze gezondheid geven publieke urgentiesignalen."
+          ],
+          "blockers": [
+            "bestaande steunpunten die mogen meetellen",
+            "openingstijden en toegankelijkheid",
+            "wijk- of stadsdeeldekking",
+            "uitvoerder/eigenaar",
+            "formatie of coordinatiecapaciteit",
+            "budget en financieringsbron"
+          ]
+        },
+        "financiering": {
+          "status_code": "E",
+          "reason": "Funding line, structural/project status and double-counting must be checked by finance/controller.",
+          "evidence": [],
+          "blockers": [
+            "budget"
+          ]
+        },
+        "verantwoordelijkheid_governance": {
+          "status_code": "C",
+          "reason": "Owner, coordinator, executor and mandate must be locally validated.",
+          "evidence": [],
+          "blockers": [
+            "lokale_eigenaar",
+            "formele_besluitstatus"
+          ]
+        },
+        "monitoring_lerende_cyclus": {
+          "status_code": "G",
+          "reason": "Monitoring arrangement, data/reporting owner and learning-cycle accountability need confirmation.",
+          "evidence": [],
+          "blockers": [
+            "monitoringafspraak"
+          ]
+        },
+        "mijlpalen": {
+          "status_code": "B",
+          "reason": "National milestone structure exists, but local sequencing and action dates need validation.",
+          "evidence": [],
+          "blockers": []
+        },
+        "d6_afhankelijkheden": {
+          "status_code": "C",
+          "reason": "D6 prerequisites must be mapped explicitly before drafting.",
+          "evidence": [
+            "inloopvoorzieningen_sociaal_en_gezond",
+            "burgerinitiatieven_informele_steun",
+            "wijkteams_almere"
+          ],
+          "blockers": []
+        },
+        "open_besluiten_risicos": {
+          "status_code": "D",
+          "reason": "Open decisions remain and must become validation, finance or decision tickets.",
+          "evidence": [],
+          "blockers": [
+            "prioritering_2027_2030",
+            "lokale_eigenaar",
+            "budget",
+            "monitoringafspraak",
+            "formele_besluitstatus"
+          ]
+        }
+      },
+      "field_code_counts": {
+        "B": 4,
+        "C": 2,
+        "D": 2,
+        "E": 1,
+        "G": 1
+      },
+      "public_evidence": [
+        "GGD-indicatoren voor eenzaamheid, angst/depressierisico en broze gezondheid geven publieke urgentiesignalen."
+      ],
+      "public_indicator_count": 4,
+      "indicative_calculation_count": 0,
+      "local_fill_fields": [
+        "bestaande steunpunten die mogen meetellen",
+        "openingstijden en toegankelijkheid",
+        "wijk- of stadsdeeldekking",
+        "uitvoerder/eigenaar",
+        "formatie of coordinatiecapaciteit",
+        "budget en financieringsbron"
+      ],
+      "decision_needed": [
+        "prioritering_2027_2030",
+        "lokale_eigenaar",
+        "budget",
+        "monitoringafspraak",
+        "formele_besluitstatus"
+      ],
+      "d6_dependency_hints": [
+        "inloopvoorzieningen_sociaal_en_gezond",
+        "burgerinitiatieven_informele_steun",
+        "wijkteams_almere"
+      ],
+      "next_action": "Prepare constrained validation ticket: Welke bestaande Almeerse steunpunten tellen mee voor de werkagenda?",
+      "action_owner": "Gemeente Almere sociaal domein; sociale-basis partners; finance/controller",
+      "deadline": "2026-05-31",
+      "evidence": {
+        "operational_requirement_source_ids": [
+          "nat_azwa_opdracht_werkagenda_d5_2026",
+          "nat_azwa_format_werkagenda_d5_2026",
+          "nat_azwa_toelichting_producten_proces_2026",
+          "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+        ],
+        "nulmeting_source_layer": "data/extracted/workagenda_nulmeting_capacity.json",
+        "stuurmodel_source_layer": "data/workagenda/d5_stuurmodel.json"
+      }
+    },
+    {
+      "target_id": "sociaal_verwijzen",
+      "title": "Sociaal verwijzen",
+      "category": "basisfunctionaliteit",
+      "required_in_workagenda": true,
+      "status_in_azwa": "basisfunctionaliteit",
+      "public_foundation": "sterk",
+      "local_validation_status": "niet_gestart",
+      "decision_status": "besluit_nodig",
+      "finance_status": "controllercheck_nodig",
+      "capacity_status": "indicatief",
+      "governance_status": "eigenaar_onbekend",
+      "monitoring_status": "concept",
+      "d6_dependency_status": "mogelijk",
+      "risk": "geel",
+      "ready_for_workagenda_drafting": false,
+      "field_statuses": {
+        "huidige_situatie": {
+          "status_code": "B",
+          "reason": "Public sources support a working view, but local status and coverage still need validation.",
+          "evidence": [
+            "Landelijke werkagenda-bron geeft richtinggevende capaciteit: 60 verwijzingen per 10.000 inwoners en 0,2-0,5 fte brugfunctie per 10.000 inwoners.",
+            "CBS 2025 denominator maakt een eerste indicatieve Almere-rekensom mogelijk."
+          ],
+          "blockers": [
+            "huidige verwijsroute",
+            "aantal verwijzingen huidig",
+            "brugfunctionaris-fte huidig",
+            "aanbieders en afspraken met eerste lijn",
+            "monitoringregistratie"
+          ]
+        },
+        "gewenste_situatie": {
+          "status_code": "B",
+          "reason": "National workagenda sources describe the target direction, but Almere/Flevoland must validate the local design.",
+          "evidence": [],
+          "blockers": []
+        },
+        "ingroeipad_2030": {
+          "status_code": "D",
+          "reason": "Prioritisation and phasing toward 2030 need a local or regional decision.",
+          "evidence": [],
+          "blockers": [
+            "prioritering_2027_2030"
+          ]
+        },
+        "aantallen_capaciteit": {
+          "status_code": "B",
+          "reason": "Indicators or indicative calculations exist, but capacity needs validation.",
+          "evidence": [
+            "Landelijke werkagenda-bron geeft richtinggevende capaciteit: 60 verwijzingen per 10.000 inwoners en 0,2-0,5 fte brugfunctie per 10.000 inwoners.",
+            "CBS 2025 denominator maakt een eerste indicatieve Almere-rekensom mogelijk."
+          ],
+          "blockers": [
+            "huidige verwijsroute",
+            "aantal verwijzingen huidig",
+            "brugfunctionaris-fte huidig",
+            "aanbieders en afspraken met eerste lijn",
+            "monitoringregistratie"
+          ]
+        },
+        "financiering": {
+          "status_code": "E",
+          "reason": "Funding line, structural/project status and double-counting must be checked by finance/controller.",
+          "evidence": [],
+          "blockers": [
+            "budget"
+          ]
+        },
+        "verantwoordelijkheid_governance": {
+          "status_code": "C",
+          "reason": "Owner, coordinator, executor and mandate must be locally validated.",
+          "evidence": [],
+          "blockers": [
+            "lokale_eigenaar",
+            "formele_besluitstatus"
+          ]
+        },
+        "monitoring_lerende_cyclus": {
+          "status_code": "G",
+          "reason": "Monitoring arrangement, data/reporting owner and learning-cycle accountability need confirmation.",
+          "evidence": [],
+          "blockers": [
+            "monitoringafspraak"
+          ]
+        },
+        "mijlpalen": {
+          "status_code": "B",
+          "reason": "National milestone structure exists, but local sequencing and action dates need validation.",
+          "evidence": [],
+          "blockers": []
+        },
+        "d6_afhankelijkheden": {
+          "status_code": "C",
+          "reason": "D6 prerequisites must be mapped explicitly before drafting.",
+          "evidence": [
+            "wijkteams_almere",
+            "inloopvoorzieningen_sociaal_en_gezond",
+            "digitale_operationele_infrastructuur"
+          ],
+          "blockers": []
+        },
+        "open_besluiten_risicos": {
+          "status_code": "D",
+          "reason": "Open decisions remain and must become validation, finance or decision tickets.",
+          "evidence": [],
+          "blockers": [
+            "prioritering_2027_2030",
+            "lokale_eigenaar",
+            "budget",
+            "monitoringafspraak",
+            "formele_besluitstatus"
+          ]
+        }
+      },
+      "field_code_counts": {
+        "B": 4,
+        "C": 2,
+        "D": 2,
+        "E": 1,
+        "G": 1
+      },
+      "public_evidence": [
+        "Landelijke werkagenda-bron geeft richtinggevende capaciteit: 60 verwijzingen per 10.000 inwoners en 0,2-0,5 fte brugfunctie per 10.000 inwoners.",
+        "CBS 2025 denominator maakt een eerste indicatieve Almere-rekensom mogelijk."
+      ],
+      "public_indicator_count": 2,
+      "indicative_calculation_count": 2,
+      "local_fill_fields": [
+        "huidige verwijsroute",
+        "aantal verwijzingen huidig",
+        "brugfunctionaris-fte huidig",
+        "aanbieders en afspraken met eerste lijn",
+        "monitoringregistratie"
+      ],
+      "decision_needed": [
+        "prioritering_2027_2030",
+        "lokale_eigenaar",
+        "budget",
+        "monitoringafspraak",
+        "formele_besluitstatus"
+      ],
+      "d6_dependency_hints": [
+        "wijkteams_almere",
+        "inloopvoorzieningen_sociaal_en_gezond",
+        "digitale_operationele_infrastructuur"
+      ],
+      "next_action": "Prepare constrained validation ticket: Welke actuele Almeerse verwijzingsroute en brugfunctie bestaan al?",
+      "action_owner": "Gemeente Almere sociaal domein; eerstelijn/welzijn; zorgverzekeraar; finance/controller",
+      "deadline": "2026-05-31",
+      "evidence": {
+        "operational_requirement_source_ids": [
+          "nat_azwa_opdracht_werkagenda_d5_2026",
+          "nat_azwa_format_werkagenda_d5_2026",
+          "nat_azwa_toelichting_producten_proces_2026",
+          "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+        ],
+        "nulmeting_source_layer": "data/extracted/workagenda_nulmeting_capacity.json",
+        "stuurmodel_source_layer": "data/workagenda/d5_stuurmodel.json"
+      }
+    },
+    {
+      "target_id": "valpreventie",
+      "title": "Valpreventie",
+      "category": "basisfunctionaliteit",
+      "required_in_workagenda": true,
+      "status_in_azwa": "basisfunctionaliteit",
+      "public_foundation": "sterk",
+      "local_validation_status": "niet_gestart",
+      "decision_status": "besluit_nodig",
+      "finance_status": "controllercheck_nodig",
+      "capacity_status": "indicatief",
+      "governance_status": "eigenaar_onbekend",
+      "monitoring_status": "concept",
+      "d6_dependency_status": "mogelijk",
+      "risk": "geel",
+      "ready_for_workagenda_drafting": false,
+      "field_statuses": {
+        "huidige_situatie": {
+          "status_code": "B",
+          "reason": "Public sources support a working view, but local status and coverage still need validation.",
+          "evidence": [
+            "GGD Valpreventie Almere beschrijft publieke inloop/risico-inschatting en cursusmatching.",
+            "GGD-tabellenboek ouderen geeft publieke valindicatoren voor Almere.",
+            "Landelijke werkagenda-richting noemt valrisico-inschatting bij 14% van de 65-plussers."
+          ],
+          "blockers": [
+            "cursuscapaciteit",
+            "aanbieders per wijk/stadsdeel",
+            "wachttijden",
+            "doorverwijsroute vanuit inloop",
+            "structureel beweegaanbod",
+            "budget en eigenaarschap"
+          ]
+        },
+        "gewenste_situatie": {
+          "status_code": "B",
+          "reason": "National workagenda sources describe the target direction, but Almere/Flevoland must validate the local design.",
+          "evidence": [],
+          "blockers": []
+        },
+        "ingroeipad_2030": {
+          "status_code": "D",
+          "reason": "Prioritisation and phasing toward 2030 need a local or regional decision.",
+          "evidence": [],
+          "blockers": [
+            "prioritering_2027_2030"
+          ]
+        },
+        "aantallen_capaciteit": {
+          "status_code": "B",
+          "reason": "Indicators or indicative calculations exist, but capacity needs validation.",
+          "evidence": [
+            "GGD Valpreventie Almere beschrijft publieke inloop/risico-inschatting en cursusmatching.",
+            "GGD-tabellenboek ouderen geeft publieke valindicatoren voor Almere.",
+            "Landelijke werkagenda-richting noemt valrisico-inschatting bij 14% van de 65-plussers."
+          ],
+          "blockers": [
+            "cursuscapaciteit",
+            "aanbieders per wijk/stadsdeel",
+            "wachttijden",
+            "doorverwijsroute vanuit inloop",
+            "structureel beweegaanbod",
+            "budget en eigenaarschap"
+          ]
+        },
+        "financiering": {
+          "status_code": "E",
+          "reason": "Funding line, structural/project status and double-counting must be checked by finance/controller.",
+          "evidence": [],
+          "blockers": [
+            "budget"
+          ]
+        },
+        "verantwoordelijkheid_governance": {
+          "status_code": "C",
+          "reason": "Owner, coordinator, executor and mandate must be locally validated.",
+          "evidence": [],
+          "blockers": [
+            "lokale_eigenaar",
+            "formele_besluitstatus"
+          ]
+        },
+        "monitoring_lerende_cyclus": {
+          "status_code": "G",
+          "reason": "Monitoring arrangement, data/reporting owner and learning-cycle accountability need confirmation.",
+          "evidence": [],
+          "blockers": [
+            "monitoringafspraak"
+          ]
+        },
+        "mijlpalen": {
+          "status_code": "B",
+          "reason": "National milestone structure exists, but local sequencing and action dates need validation.",
+          "evidence": [],
+          "blockers": []
+        },
+        "d6_afhankelijkheden": {
+          "status_code": "C",
+          "reason": "D6 prerequisites must be mapped explicitly before drafting.",
+          "evidence": [
+            "ggd_flevoland_coordinatie",
+            "kennis_advies_monitoring_dashboards",
+            "burgerinitiatieven_informele_steun"
+          ],
+          "blockers": []
+        },
+        "open_besluiten_risicos": {
+          "status_code": "D",
+          "reason": "Open decisions remain and must become validation, finance or decision tickets.",
+          "evidence": [],
+          "blockers": [
+            "prioritering_2027_2030",
+            "lokale_eigenaar",
+            "budget",
+            "monitoringafspraak",
+            "formele_besluitstatus"
+          ]
+        }
+      },
+      "field_code_counts": {
+        "B": 4,
+        "C": 2,
+        "D": 2,
+        "E": 1,
+        "G": 1
+      },
+      "public_evidence": [
+        "GGD Valpreventie Almere beschrijft publieke inloop/risico-inschatting en cursusmatching.",
+        "GGD-tabellenboek ouderen geeft publieke valindicatoren voor Almere.",
+        "Landelijke werkagenda-richting noemt valrisico-inschatting bij 14% van de 65-plussers."
+      ],
+      "public_indicator_count": 4,
+      "indicative_calculation_count": 1,
+      "local_fill_fields": [
+        "cursuscapaciteit",
+        "aanbieders per wijk/stadsdeel",
+        "wachttijden",
+        "doorverwijsroute vanuit inloop",
+        "structureel beweegaanbod",
+        "budget en eigenaarschap"
+      ],
+      "decision_needed": [
+        "prioritering_2027_2030",
+        "lokale_eigenaar",
+        "budget",
+        "monitoringafspraak",
+        "formele_besluitstatus"
+      ],
+      "d6_dependency_hints": [
+        "ggd_flevoland_coordinatie",
+        "kennis_advies_monitoring_dashboards",
+        "burgerinitiatieven_informele_steun"
+      ],
+      "next_action": "Prepare constrained validation ticket: Wat is het actuele aantal 65-plussers per peildatum?",
+      "action_owner": "Gemeente Almere preventie; GGD/JGZ; beweegaanbieders; finance/controller",
+      "deadline": "2026-05-31",
+      "evidence": {
+        "operational_requirement_source_ids": [
+          "nat_azwa_opdracht_werkagenda_d5_2026",
+          "nat_azwa_format_werkagenda_d5_2026",
+          "nat_azwa_toelichting_producten_proces_2026",
+          "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+        ],
+        "nulmeting_source_layer": "data/extracted/workagenda_nulmeting_capacity.json",
+        "stuurmodel_source_layer": "data/workagenda/d5_stuurmodel.json"
+      }
+    },
+    {
+      "target_id": "ketenaanpak_overgewicht_obesitas_volwassenen",
+      "title": "Ketenaanpak overgewicht en obesitas volwassenen",
+      "category": "basisfunctionaliteit",
+      "required_in_workagenda": true,
+      "status_in_azwa": "basisfunctionaliteit",
+      "public_foundation": "deels",
+      "local_validation_status": "niet_gestart",
+      "decision_status": "besluit_nodig",
+      "finance_status": "controllercheck_nodig",
+      "capacity_status": "indicatief",
+      "governance_status": "eigenaar_onbekend",
+      "monitoring_status": "concept",
+      "d6_dependency_status": "mogelijk",
+      "risk": "geel",
+      "ready_for_workagenda_drafting": false,
+      "field_statuses": {
+        "huidige_situatie": {
+          "status_code": "B",
+          "reason": "Public sources support a working view, but local status and coverage still need validation.",
+          "evidence": [
+            "GGD-tabellenboek volwassenen geeft publieke Almere-indicatoren voor overgewicht, obesitas en bewegen."
+          ],
+          "blockers": [
+            "GLI-capaciteit",
+            "leefstijl- en beweegaanbod",
+            "centrale zorgcoordinatie",
+            "wijkspreiding",
+            "wachttijden",
+            "financieringsmix Zvw/gemeente/GALA/PGA"
+          ]
+        },
+        "gewenste_situatie": {
+          "status_code": "B",
+          "reason": "National workagenda sources describe the target direction, but Almere/Flevoland must validate the local design.",
+          "evidence": [],
+          "blockers": []
+        },
+        "ingroeipad_2030": {
+          "status_code": "D",
+          "reason": "Prioritisation and phasing toward 2030 need a local or regional decision.",
+          "evidence": [],
+          "blockers": [
+            "prioritering_2027_2030"
+          ]
+        },
+        "aantallen_capaciteit": {
+          "status_code": "B",
+          "reason": "Indicators or indicative calculations exist, but capacity needs validation.",
+          "evidence": [
+            "GGD-tabellenboek volwassenen geeft publieke Almere-indicatoren voor overgewicht, obesitas en bewegen."
+          ],
+          "blockers": [
+            "GLI-capaciteit",
+            "leefstijl- en beweegaanbod",
+            "centrale zorgcoordinatie",
+            "wijkspreiding",
+            "wachttijden",
+            "financieringsmix Zvw/gemeente/GALA/PGA"
+          ]
+        },
+        "financiering": {
+          "status_code": "E",
+          "reason": "Funding line, structural/project status and double-counting must be checked by finance/controller.",
+          "evidence": [],
+          "blockers": [
+            "budget"
+          ]
+        },
+        "verantwoordelijkheid_governance": {
+          "status_code": "C",
+          "reason": "Owner, coordinator, executor and mandate must be locally validated.",
+          "evidence": [],
+          "blockers": [
+            "lokale_eigenaar",
+            "formele_besluitstatus"
+          ]
+        },
+        "monitoring_lerende_cyclus": {
+          "status_code": "G",
+          "reason": "Monitoring arrangement, data/reporting owner and learning-cycle accountability need confirmation.",
+          "evidence": [],
+          "blockers": [
+            "monitoringafspraak"
+          ]
+        },
+        "mijlpalen": {
+          "status_code": "B",
+          "reason": "National milestone structure exists, but local sequencing and action dates need validation.",
+          "evidence": [],
+          "blockers": []
+        },
+        "d6_afhankelijkheden": {
+          "status_code": "C",
+          "reason": "D6 prerequisites must be mapped explicitly before drafting.",
+          "evidence": [
+            "sociaal_verwijzen_d6_interface",
+            "inloopvoorzieningen_sociaal_en_gezond",
+            "burgerinitiatieven_informele_steun"
+          ],
+          "blockers": []
+        },
+        "open_besluiten_risicos": {
+          "status_code": "D",
+          "reason": "Open decisions remain and must become validation, finance or decision tickets.",
+          "evidence": [],
+          "blockers": [
+            "prioritering_2027_2030",
+            "lokale_eigenaar",
+            "budget",
+            "monitoringafspraak",
+            "formele_besluitstatus"
+          ]
+        }
+      },
+      "field_code_counts": {
+        "B": 4,
+        "C": 2,
+        "D": 2,
+        "E": 1,
+        "G": 1
+      },
+      "public_evidence": [
+        "GGD-tabellenboek volwassenen geeft publieke Almere-indicatoren voor overgewicht, obesitas en bewegen."
+      ],
+      "public_indicator_count": 3,
+      "indicative_calculation_count": 0,
+      "local_fill_fields": [
+        "GLI-capaciteit",
+        "leefstijl- en beweegaanbod",
+        "centrale zorgcoordinatie",
+        "wijkspreiding",
+        "wachttijden",
+        "financieringsmix Zvw/gemeente/GALA/PGA"
+      ],
+      "decision_needed": [
+        "prioritering_2027_2030",
+        "lokale_eigenaar",
+        "budget",
+        "monitoringafspraak",
+        "formele_besluitstatus"
+      ],
+      "d6_dependency_hints": [
+        "sociaal_verwijzen_d6_interface",
+        "inloopvoorzieningen_sociaal_en_gezond",
+        "burgerinitiatieven_informele_steun"
+      ],
+      "next_action": "Prepare constrained validation ticket: Welke GLI-capaciteit en leefstijl-/beweegcapaciteit zijn in Almere beschikbaar?",
+      "action_owner": "Gemeente Almere preventie; zorgverzekeraar; leefstijl/beweegaanbieders",
+      "deadline": "2026-05-31",
+      "evidence": {
+        "operational_requirement_source_ids": [
+          "nat_azwa_opdracht_werkagenda_d5_2026",
+          "nat_azwa_format_werkagenda_d5_2026",
+          "nat_azwa_toelichting_producten_proces_2026",
+          "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+        ],
+        "nulmeting_source_layer": "data/extracted/workagenda_nulmeting_capacity.json",
+        "stuurmodel_source_layer": "data/workagenda/d5_stuurmodel.json"
+      }
+    },
+    {
+      "target_id": "kansrijke_start",
+      "title": "Kansrijke Start",
+      "category": "basisfunctionaliteit",
+      "required_in_workagenda": true,
+      "status_in_azwa": "basisfunctionaliteit",
+      "public_foundation": "zwak",
+      "local_validation_status": "niet_gestart",
+      "decision_status": "besluit_nodig",
+      "finance_status": "controllercheck_nodig",
+      "capacity_status": "onbekend",
+      "governance_status": "eigenaar_onbekend",
+      "monitoring_status": "onbekend",
+      "d6_dependency_status": "mogelijk",
+      "risk": "rood",
+      "ready_for_workagenda_drafting": false,
+      "field_statuses": {
+        "huidige_situatie": {
+          "status_code": "C",
+          "reason": "Public sources do not yet fill the local current-state field strongly enough.",
+          "evidence": [
+            "CBS 2025 geeft publieke leeftijdsdenominatoren; lokale coalitie-, capaciteit- en interventiekeuzes zijn nog invulvelden."
+          ],
+          "blockers": [
+            "coalitie Kansrijke Start",
+            "doelgroepdefinitie",
+            "huidig interventieaanbod",
+            "bereik en locaties",
+            "eigenaar en uitvoerders",
+            "besluitstatus"
+          ]
+        },
+        "gewenste_situatie": {
+          "status_code": "B",
+          "reason": "National workagenda sources describe the target direction, but Almere/Flevoland must validate the local design.",
+          "evidence": [],
+          "blockers": []
+        },
+        "ingroeipad_2030": {
+          "status_code": "D",
+          "reason": "Prioritisation and phasing toward 2030 need a local or regional decision.",
+          "evidence": [],
+          "blockers": [
+            "prioritering_2027_2030"
+          ]
+        },
+        "aantallen_capaciteit": {
+          "status_code": "C",
+          "reason": "No sufficient public Almere capacity basis is present yet.",
+          "evidence": [
+            "CBS 2025 geeft publieke leeftijdsdenominatoren; lokale coalitie-, capaciteit- en interventiekeuzes zijn nog invulvelden."
+          ],
+          "blockers": [
+            "coalitie Kansrijke Start",
+            "doelgroepdefinitie",
+            "huidig interventieaanbod",
+            "bereik en locaties",
+            "eigenaar en uitvoerders",
+            "besluitstatus"
+          ]
+        },
+        "financiering": {
+          "status_code": "E",
+          "reason": "Funding line, structural/project status and double-counting must be checked by finance/controller.",
+          "evidence": [],
+          "blockers": [
+            "budget"
+          ]
+        },
+        "verantwoordelijkheid_governance": {
+          "status_code": "C",
+          "reason": "Owner, coordinator, executor and mandate must be locally validated.",
+          "evidence": [],
+          "blockers": [
+            "lokale_eigenaar",
+            "formele_besluitstatus"
+          ]
+        },
+        "monitoring_lerende_cyclus": {
+          "status_code": "G",
+          "reason": "Monitoring arrangement, data/reporting owner and learning-cycle accountability need confirmation.",
+          "evidence": [],
+          "blockers": [
+            "monitoringafspraak"
+          ]
+        },
+        "mijlpalen": {
+          "status_code": "B",
+          "reason": "National milestone structure exists, but local sequencing and action dates need validation.",
+          "evidence": [],
+          "blockers": []
+        },
+        "d6_afhankelijkheden": {
+          "status_code": "C",
+          "reason": "D6 prerequisites must be mapped explicitly before drafting.",
+          "evidence": [
+            "jgz_almere",
+            "ggd_flevoland_coordinatie",
+            "stevige_lokale_teams",
+            "burgerinitiatieven_informele_steun"
+          ],
+          "blockers": []
+        },
+        "open_besluiten_risicos": {
+          "status_code": "D",
+          "reason": "Open decisions remain and must become validation, finance or decision tickets.",
+          "evidence": [],
+          "blockers": [
+            "prioritering_2027_2030",
+            "lokale_eigenaar",
+            "budget",
+            "monitoringafspraak",
+            "formele_besluitstatus"
+          ]
+        }
+      },
+      "field_code_counts": {
+        "B": 2,
+        "C": 4,
+        "D": 2,
+        "E": 1,
+        "G": 1
+      },
+      "public_evidence": [
+        "CBS 2025 geeft publieke leeftijdsdenominatoren; lokale coalitie-, capaciteit- en interventiekeuzes zijn nog invulvelden."
+      ],
+      "public_indicator_count": 0,
+      "indicative_calculation_count": 0,
+      "local_fill_fields": [
+        "coalitie Kansrijke Start",
+        "doelgroepdefinitie",
+        "huidig interventieaanbod",
+        "bereik en locaties",
+        "eigenaar en uitvoerders",
+        "besluitstatus"
+      ],
+      "decision_needed": [
+        "prioritering_2027_2030",
+        "lokale_eigenaar",
+        "budget",
+        "monitoringafspraak",
+        "formele_besluitstatus"
+      ],
+      "d6_dependency_hints": [
+        "jgz_almere",
+        "ggd_flevoland_coordinatie",
+        "stevige_lokale_teams",
+        "burgerinitiatieven_informele_steun"
+      ],
+      "next_action": "Prepare constrained validation ticket: Welke actuele coalitie Kansrijke Start bestaat in Almere/Flevoland?",
+      "action_owner": "Gemeente Almere; JGZ/GGD; geboortezorg/VSV; finance/controller",
+      "deadline": "2026-05-31",
+      "evidence": {
+        "operational_requirement_source_ids": [
+          "nat_azwa_opdracht_werkagenda_d5_2026",
+          "nat_azwa_format_werkagenda_d5_2026",
+          "nat_azwa_toelichting_producten_proces_2026",
+          "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+        ],
+        "nulmeting_source_layer": "data/extracted/workagenda_nulmeting_capacity.json",
+        "stuurmodel_source_layer": "data/workagenda/d5_stuurmodel.json"
+      }
+    },
+    {
+      "target_id": "integrale_gezinspoli",
+      "title": "Integrale gezinspoli",
+      "category": "basisfunctionaliteit",
+      "required_in_workagenda": true,
+      "status_in_azwa": "basisfunctionaliteit",
+      "public_foundation": "zwak",
+      "local_validation_status": "niet_gestart",
+      "decision_status": "besluit_nodig",
+      "finance_status": "controllercheck_nodig",
+      "capacity_status": "onbekend",
+      "governance_status": "eigenaar_onbekend",
+      "monitoring_status": "onbekend",
+      "d6_dependency_status": "mogelijk",
+      "risk": "rood",
+      "ready_for_workagenda_drafting": false,
+      "field_statuses": {
+        "huidige_situatie": {
+          "status_code": "C",
+          "reason": "Public sources do not yet fill the local current-state field strongly enough.",
+          "evidence": [
+            "Publieke corpuslaag bevat nog geen Almeerse capaciteit of besluit voor een integrale gezinspoli."
+          ],
+          "blockers": [
+            "bestaat er een gezinspoli of vergelijkbare route",
+            "kernteam en vaste gezichten",
+            "MDO-afspraken",
+            "taakverschuiving",
+            "capaciteit",
+            "besluitstatus"
+          ]
+        },
+        "gewenste_situatie": {
+          "status_code": "B",
+          "reason": "National workagenda sources describe the target direction, but Almere/Flevoland must validate the local design.",
+          "evidence": [],
+          "blockers": []
+        },
+        "ingroeipad_2030": {
+          "status_code": "D",
+          "reason": "Prioritisation and phasing toward 2030 need a local or regional decision.",
+          "evidence": [],
+          "blockers": [
+            "prioritering_2027_2030"
+          ]
+        },
+        "aantallen_capaciteit": {
+          "status_code": "C",
+          "reason": "No sufficient public Almere capacity basis is present yet.",
+          "evidence": [
+            "Publieke corpuslaag bevat nog geen Almeerse capaciteit of besluit voor een integrale gezinspoli."
+          ],
+          "blockers": [
+            "bestaat er een gezinspoli of vergelijkbare route",
+            "kernteam en vaste gezichten",
+            "MDO-afspraken",
+            "taakverschuiving",
+            "capaciteit",
+            "besluitstatus"
+          ]
+        },
+        "financiering": {
+          "status_code": "E",
+          "reason": "Funding line, structural/project status and double-counting must be checked by finance/controller.",
+          "evidence": [],
+          "blockers": [
+            "budget"
+          ]
+        },
+        "verantwoordelijkheid_governance": {
+          "status_code": "C",
+          "reason": "Owner, coordinator, executor and mandate must be locally validated.",
+          "evidence": [],
+          "blockers": [
+            "lokale_eigenaar",
+            "formele_besluitstatus"
+          ]
+        },
+        "monitoring_lerende_cyclus": {
+          "status_code": "G",
+          "reason": "Monitoring arrangement, data/reporting owner and learning-cycle accountability need confirmation.",
+          "evidence": [],
+          "blockers": [
+            "monitoringafspraak"
+          ]
+        },
+        "mijlpalen": {
+          "status_code": "B",
+          "reason": "National milestone structure exists, but local sequencing and action dates need validation.",
+          "evidence": [],
+          "blockers": []
+        },
+        "d6_afhankelijkheden": {
+          "status_code": "C",
+          "reason": "D6 prerequisites must be mapped explicitly before drafting.",
+          "evidence": [
+            "jgz_almere",
+            "stevige_lokale_teams",
+            "digitale_operationele_infrastructuur"
+          ],
+          "blockers": []
+        },
+        "open_besluiten_risicos": {
+          "status_code": "D",
+          "reason": "Open decisions remain and must become validation, finance or decision tickets.",
+          "evidence": [],
+          "blockers": [
+            "prioritering_2027_2030",
+            "lokale_eigenaar",
+            "budget",
+            "monitoringafspraak",
+            "formele_besluitstatus"
+          ]
+        }
+      },
+      "field_code_counts": {
+        "B": 2,
+        "C": 4,
+        "D": 2,
+        "E": 1,
+        "G": 1
+      },
+      "public_evidence": [
+        "Publieke corpuslaag bevat nog geen Almeerse capaciteit of besluit voor een integrale gezinspoli."
+      ],
+      "public_indicator_count": 0,
+      "indicative_calculation_count": 0,
+      "local_fill_fields": [
+        "bestaat er een gezinspoli of vergelijkbare route",
+        "kernteam en vaste gezichten",
+        "MDO-afspraken",
+        "taakverschuiving",
+        "capaciteit",
+        "besluitstatus"
+      ],
+      "decision_needed": [
+        "prioritering_2027_2030",
+        "lokale_eigenaar",
+        "budget",
+        "monitoringafspraak",
+        "formele_besluitstatus"
+      ],
+      "d6_dependency_hints": [
+        "jgz_almere",
+        "stevige_lokale_teams",
+        "digitale_operationele_infrastructuur"
+      ],
+      "next_action": "Prepare constrained validation ticket: Is er in Almere of Flevoland al een integrale gezinspoli of voorbereiding?",
+      "action_owner": "Gemeente Almere; VSV/geboortezorg; Flevoziekenhuis; zorgverzekeraar",
+      "deadline": "2026-05-31",
+      "evidence": {
+        "operational_requirement_source_ids": [
+          "nat_azwa_opdracht_werkagenda_d5_2026",
+          "nat_azwa_format_werkagenda_d5_2026",
+          "nat_azwa_toelichting_producten_proces_2026",
+          "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+        ],
+        "nulmeting_source_layer": "data/extracted/workagenda_nulmeting_capacity.json",
+        "stuurmodel_source_layer": "data/workagenda/d5_stuurmodel.json"
+      }
+    },
+    {
+      "target_id": "nu_niet_zwanger",
+      "title": "Nu Niet Zwanger",
+      "category": "basisfunctionaliteit",
+      "required_in_workagenda": true,
+      "status_in_azwa": "basisfunctionaliteit",
+      "public_foundation": "zwak",
+      "local_validation_status": "niet_gestart",
+      "decision_status": "besluit_nodig",
+      "finance_status": "controllercheck_nodig",
+      "capacity_status": "onbekend",
+      "governance_status": "eigenaar_onbekend",
+      "monitoring_status": "onbekend",
+      "d6_dependency_status": "mogelijk",
+      "risk": "rood",
+      "ready_for_workagenda_drafting": false,
+      "field_statuses": {
+        "huidige_situatie": {
+          "status_code": "C",
+          "reason": "Public sources do not yet fill the local current-state field strongly enough.",
+          "evidence": [
+            "Werkagenda noemt structurele coordinatie en expertise; publieke Almere-capaciteit is nog niet in de corpuslaag gevonden."
+          ],
+          "blockers": [
+            "regionale of lokale organisatievorm",
+            "coordinator/expertise",
+            "aangesloten professionals",
+            "anticonceptiebudget",
+            "bereik",
+            "GGD-regio versus IZA/AZWA-regio keuze"
+          ]
+        },
+        "gewenste_situatie": {
+          "status_code": "B",
+          "reason": "National workagenda sources describe the target direction, but Almere/Flevoland must validate the local design.",
+          "evidence": [],
+          "blockers": []
+        },
+        "ingroeipad_2030": {
+          "status_code": "D",
+          "reason": "Prioritisation and phasing toward 2030 need a local or regional decision.",
+          "evidence": [],
+          "blockers": [
+            "prioritering_2027_2030"
+          ]
+        },
+        "aantallen_capaciteit": {
+          "status_code": "C",
+          "reason": "No sufficient public Almere capacity basis is present yet.",
+          "evidence": [
+            "Werkagenda noemt structurele coordinatie en expertise; publieke Almere-capaciteit is nog niet in de corpuslaag gevonden."
+          ],
+          "blockers": [
+            "regionale of lokale organisatievorm",
+            "coordinator/expertise",
+            "aangesloten professionals",
+            "anticonceptiebudget",
+            "bereik",
+            "GGD-regio versus IZA/AZWA-regio keuze"
+          ]
+        },
+        "financiering": {
+          "status_code": "E",
+          "reason": "Funding line, structural/project status and double-counting must be checked by finance/controller.",
+          "evidence": [],
+          "blockers": [
+            "budget"
+          ]
+        },
+        "verantwoordelijkheid_governance": {
+          "status_code": "C",
+          "reason": "Owner, coordinator, executor and mandate must be locally validated.",
+          "evidence": [],
+          "blockers": [
+            "lokale_eigenaar",
+            "formele_besluitstatus"
+          ]
+        },
+        "monitoring_lerende_cyclus": {
+          "status_code": "G",
+          "reason": "Monitoring arrangement, data/reporting owner and learning-cycle accountability need confirmation.",
+          "evidence": [],
+          "blockers": [
+            "monitoringafspraak"
+          ]
+        },
+        "mijlpalen": {
+          "status_code": "B",
+          "reason": "National milestone structure exists, but local sequencing and action dates need validation.",
+          "evidence": [],
+          "blockers": []
+        },
+        "d6_afhankelijkheden": {
+          "status_code": "C",
+          "reason": "D6 prerequisites must be mapped explicitly before drafting.",
+          "evidence": [
+            "ggd_flevoland_coordinatie",
+            "digitale_operationele_infrastructuur"
+          ],
+          "blockers": []
+        },
+        "open_besluiten_risicos": {
+          "status_code": "D",
+          "reason": "Open decisions remain and must become validation, finance or decision tickets.",
+          "evidence": [],
+          "blockers": [
+            "prioritering_2027_2030",
+            "lokale_eigenaar",
+            "budget",
+            "monitoringafspraak",
+            "formele_besluitstatus"
+          ]
+        }
+      },
+      "field_code_counts": {
+        "B": 2,
+        "C": 4,
+        "D": 2,
+        "E": 1,
+        "G": 1
+      },
+      "public_evidence": [
+        "Werkagenda noemt structurele coordinatie en expertise; publieke Almere-capaciteit is nog niet in de corpuslaag gevonden."
+      ],
+      "public_indicator_count": 0,
+      "indicative_calculation_count": 0,
+      "local_fill_fields": [
+        "regionale of lokale organisatievorm",
+        "coordinator/expertise",
+        "aangesloten professionals",
+        "anticonceptiebudget",
+        "bereik",
+        "GGD-regio versus IZA/AZWA-regio keuze"
+      ],
+      "decision_needed": [
+        "prioritering_2027_2030",
+        "lokale_eigenaar",
+        "budget",
+        "monitoringafspraak",
+        "formele_besluitstatus"
+      ],
+      "d6_dependency_hints": [
+        "ggd_flevoland_coordinatie",
+        "digitale_operationele_infrastructuur"
+      ],
+      "next_action": "Prepare constrained validation ticket: Wordt NNZ bestuurlijk op GGD-regio, IZA/AZWA-regio of gemeentelijke schaal georganiseerd?",
+      "action_owner": "GGD/JGZ; Gemeente Almere; regionale governance; finance/controller",
+      "deadline": "2026-05-31",
+      "evidence": {
+        "operational_requirement_source_ids": [
+          "nat_azwa_opdracht_werkagenda_d5_2026",
+          "nat_azwa_format_werkagenda_d5_2026",
+          "nat_azwa_toelichting_producten_proces_2026",
+          "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+        ],
+        "nulmeting_source_layer": "data/extracted/workagenda_nulmeting_capacity.json",
+        "stuurmodel_source_layer": "data/workagenda/d5_stuurmodel.json"
+      }
+    },
+    {
+      "target_id": "mentale_gezondheidsnetwerken",
+      "title": "Mentale gezondheidsnetwerken",
+      "category": "ontwikkelagenda_1_lopend",
+      "required_in_workagenda": true,
+      "status_in_azwa": "ontwikkelagenda_1_lopend",
+      "public_foundation": "deels",
+      "local_validation_status": "niet_gestart",
+      "decision_status": "besluit_nodig",
+      "finance_status": "controllercheck_nodig",
+      "capacity_status": "indicatief",
+      "governance_status": "eigenaar_onbekend",
+      "monitoring_status": "concept",
+      "d6_dependency_status": "mogelijk",
+      "risk": "geel",
+      "ready_for_workagenda_drafting": false,
+      "field_statuses": {
+        "huidige_situatie": {
+          "status_code": "B",
+          "reason": "Public sources support a working view, but local status and coverage still need validation.",
+          "evidence": [
+            "GGD-indicatoren geven publieke urgentiesignalen; MGN-rol/geografie is carry-over naar geschoonde validatie."
+          ],
+          "blockers": [
+            "geschoonde MGN-rol/geografie",
+            "huidige netwerkafspraken",
+            "aanmeldroute",
+            "capaciteit per partner",
+            "mandaat en besluitstatus"
+          ]
+        },
+        "gewenste_situatie": {
+          "status_code": "B",
+          "reason": "National workagenda sources describe the target direction, but Almere/Flevoland must validate the local design.",
+          "evidence": [],
+          "blockers": []
+        },
+        "ingroeipad_2030": {
+          "status_code": "D",
+          "reason": "Prioritisation and phasing toward 2030 need a local or regional decision.",
+          "evidence": [],
+          "blockers": [
+            "prioritering_2027_2030"
+          ]
+        },
+        "aantallen_capaciteit": {
+          "status_code": "B",
+          "reason": "Indicators or indicative calculations exist, but capacity needs validation.",
+          "evidence": [
+            "GGD-indicatoren geven publieke urgentiesignalen; MGN-rol/geografie is carry-over naar geschoonde validatie."
+          ],
+          "blockers": [
+            "geschoonde MGN-rol/geografie",
+            "huidige netwerkafspraken",
+            "aanmeldroute",
+            "capaciteit per partner",
+            "mandaat en besluitstatus"
+          ]
+        },
+        "financiering": {
+          "status_code": "E",
+          "reason": "Funding line, structural/project status and double-counting must be checked by finance/controller.",
+          "evidence": [],
+          "blockers": [
+            "budget"
+          ]
+        },
+        "verantwoordelijkheid_governance": {
+          "status_code": "C",
+          "reason": "Owner, coordinator, executor and mandate must be locally validated.",
+          "evidence": [],
+          "blockers": [
+            "lokale_eigenaar",
+            "formele_besluitstatus"
+          ]
+        },
+        "monitoring_lerende_cyclus": {
+          "status_code": "G",
+          "reason": "Monitoring arrangement, data/reporting owner and learning-cycle accountability need confirmation.",
+          "evidence": [],
+          "blockers": [
+            "monitoringafspraak"
+          ]
+        },
+        "mijlpalen": {
+          "status_code": "B",
+          "reason": "National milestone structure exists, but local sequencing and action dates need validation.",
+          "evidence": [],
+          "blockers": []
+        },
+        "d6_afhankelijkheden": {
+          "status_code": "C",
+          "reason": "D6 prerequisites must be mapped explicitly before drafting.",
+          "evidence": [
+            "samen_sterker_in_de_wijk",
+            "pga_zorgzaam_flevoland_interface",
+            "kennis_advies_monitoring_dashboards"
+          ],
+          "blockers": []
+        },
+        "open_besluiten_risicos": {
+          "status_code": "D",
+          "reason": "Open decisions remain and must become validation, finance or decision tickets.",
+          "evidence": [],
+          "blockers": [
+            "prioritering_2027_2030",
+            "lokale_eigenaar",
+            "budget",
+            "monitoringafspraak",
+            "formele_besluitstatus"
+          ]
+        }
+      },
+      "field_code_counts": {
+        "B": 4,
+        "C": 2,
+        "D": 2,
+        "E": 1,
+        "G": 1
+      },
+      "public_evidence": [
+        "GGD-indicatoren geven publieke urgentiesignalen; MGN-rol/geografie is carry-over naar geschoonde validatie."
+      ],
+      "public_indicator_count": 4,
+      "indicative_calculation_count": 0,
+      "local_fill_fields": [
+        "geschoonde MGN-rol/geografie",
+        "huidige netwerkafspraken",
+        "aanmeldroute",
+        "capaciteit per partner",
+        "mandaat en besluitstatus"
+      ],
+      "decision_needed": [
+        "prioritering_2027_2030",
+        "lokale_eigenaar",
+        "budget",
+        "monitoringafspraak",
+        "formele_besluitstatus"
+      ],
+      "d6_dependency_hints": [
+        "samen_sterker_in_de_wijk",
+        "pga_zorgzaam_flevoland_interface",
+        "kennis_advies_monitoring_dashboards"
+      ],
+      "next_action": "Prepare constrained validation ticket: Welk MGN-transformatieplan is voor Flevoland/Almere leidend?",
+      "action_owner": "GGZ/MGN governance; Gemeente Almere; zorgverzekeraar; sociaal domein",
+      "deadline": "2026-05-31",
+      "evidence": {
+        "operational_requirement_source_ids": [
+          "nat_azwa_opdracht_werkagenda_d5_2026",
+          "nat_azwa_format_werkagenda_d5_2026",
+          "nat_azwa_toelichting_producten_proces_2026",
+          "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+        ],
+        "nulmeting_source_layer": "data/extracted/workagenda_nulmeting_capacity.json",
+        "stuurmodel_source_layer": "data/workagenda/d5_stuurmodel.json"
+      }
+    },
+    {
+      "target_id": "ketenaanpak_overgewicht_obesitas_kinderen",
+      "title": "Ketenaanpak overgewicht en obesitas kinderen",
+      "category": "ontwikkelagenda_1_lopend",
+      "required_in_workagenda": true,
+      "status_in_azwa": "ontwikkelagenda_1_lopend",
+      "public_foundation": "zwak",
+      "local_validation_status": "niet_gestart",
+      "decision_status": "besluit_nodig",
+      "finance_status": "controllercheck_nodig",
+      "capacity_status": "onbekend",
+      "governance_status": "eigenaar_onbekend",
+      "monitoring_status": "onbekend",
+      "d6_dependency_status": "mogelijk",
+      "risk": "rood",
+      "ready_for_workagenda_drafting": false,
+      "field_statuses": {
+        "huidige_situatie": {
+          "status_code": "C",
+          "reason": "Public sources do not yet fill the local current-state field strongly enough.",
+          "evidence": [
+            "CBS 2025 geeft publieke jeugdleeftijdsdenominatoren; specifieke jeugdgezondheids- en CZV/kinder-GLI-capaciteit is nog invulveld."
+          ],
+          "blockers": [
+            "CZV-capaciteit",
+            "kinder-GLI-aanbod",
+            "jeugdgezondheidsindicatoren",
+            "school/wijkspreiding",
+            "regionale coordinatie",
+            "financiering"
+          ]
+        },
+        "gewenste_situatie": {
+          "status_code": "B",
+          "reason": "National workagenda sources describe the target direction, but Almere/Flevoland must validate the local design.",
+          "evidence": [],
+          "blockers": []
+        },
+        "ingroeipad_2030": {
+          "status_code": "D",
+          "reason": "Prioritisation and phasing toward 2030 need a local or regional decision.",
+          "evidence": [],
+          "blockers": [
+            "prioritering_2027_2030"
+          ]
+        },
+        "aantallen_capaciteit": {
+          "status_code": "C",
+          "reason": "No sufficient public Almere capacity basis is present yet.",
+          "evidence": [
+            "CBS 2025 geeft publieke jeugdleeftijdsdenominatoren; specifieke jeugdgezondheids- en CZV/kinder-GLI-capaciteit is nog invulveld."
+          ],
+          "blockers": [
+            "CZV-capaciteit",
+            "kinder-GLI-aanbod",
+            "jeugdgezondheidsindicatoren",
+            "school/wijkspreiding",
+            "regionale coordinatie",
+            "financiering"
+          ]
+        },
+        "financiering": {
+          "status_code": "E",
+          "reason": "Funding line, structural/project status and double-counting must be checked by finance/controller.",
+          "evidence": [],
+          "blockers": [
+            "budget"
+          ]
+        },
+        "verantwoordelijkheid_governance": {
+          "status_code": "C",
+          "reason": "Owner, coordinator, executor and mandate must be locally validated.",
+          "evidence": [],
+          "blockers": [
+            "lokale_eigenaar",
+            "formele_besluitstatus"
+          ]
+        },
+        "monitoring_lerende_cyclus": {
+          "status_code": "G",
+          "reason": "Monitoring arrangement, data/reporting owner and learning-cycle accountability need confirmation.",
+          "evidence": [],
+          "blockers": [
+            "monitoringafspraak"
+          ]
+        },
+        "mijlpalen": {
+          "status_code": "B",
+          "reason": "National milestone structure exists, but local sequencing and action dates need validation.",
+          "evidence": [],
+          "blockers": []
+        },
+        "d6_afhankelijkheden": {
+          "status_code": "C",
+          "reason": "D6 prerequisites must be mapped explicitly before drafting.",
+          "evidence": [
+            "jgz_almere",
+            "gezonde_school_mentale_gezonde_school",
+            "ggd_flevoland_coordinatie"
+          ],
+          "blockers": []
+        },
+        "open_besluiten_risicos": {
+          "status_code": "D",
+          "reason": "Open decisions remain and must become validation, finance or decision tickets.",
+          "evidence": [],
+          "blockers": [
+            "prioritering_2027_2030",
+            "lokale_eigenaar",
+            "budget",
+            "monitoringafspraak",
+            "formele_besluitstatus"
+          ]
+        }
+      },
+      "field_code_counts": {
+        "B": 2,
+        "C": 4,
+        "D": 2,
+        "E": 1,
+        "G": 1
+      },
+      "public_evidence": [
+        "CBS 2025 geeft publieke jeugdleeftijdsdenominatoren; specifieke jeugdgezondheids- en CZV/kinder-GLI-capaciteit is nog invulveld."
+      ],
+      "public_indicator_count": 0,
+      "indicative_calculation_count": 0,
+      "local_fill_fields": [
+        "CZV-capaciteit",
+        "kinder-GLI-aanbod",
+        "jeugdgezondheidsindicatoren",
+        "school/wijkspreiding",
+        "regionale coordinatie",
+        "financiering"
+      ],
+      "decision_needed": [
+        "prioritering_2027_2030",
+        "lokale_eigenaar",
+        "budget",
+        "monitoringafspraak",
+        "formele_besluitstatus"
+      ],
+      "d6_dependency_hints": [
+        "jgz_almere",
+        "gezonde_school_mentale_gezonde_school",
+        "ggd_flevoland_coordinatie"
+      ],
+      "next_action": "Prepare constrained validation ticket: Wat is het actuele aantal jeugdigen per peildatum?",
+      "action_owner": "Gemeente Almere; JGZ/GGD; onderwijs/scholen; zorgverzekeraar",
+      "deadline": "2026-05-31",
+      "evidence": {
+        "operational_requirement_source_ids": [
+          "nat_azwa_opdracht_werkagenda_d5_2026",
+          "nat_azwa_format_werkagenda_d5_2026",
+          "nat_azwa_toelichting_producten_proces_2026",
+          "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+        ],
+        "nulmeting_source_layer": "data/extracted/workagenda_nulmeting_capacity.json",
+        "stuurmodel_source_layer": "data/workagenda/d5_stuurmodel.json"
+      }
+    },
+    {
+      "target_id": "ontwikkelagenda_1_nieuw_beproeven",
+      "title": "Ontwikkelagenda 1 nieuw: dementie, nicotinevrij, rookvrije start, multiproblematiek NPLV",
+      "category": "ontwikkelagenda_1_nieuw_conditioneel",
+      "required_in_workagenda": false,
+      "status_in_azwa": "ontwikkelagenda_1_nieuw_conditioneel",
+      "public_foundation": "zwak",
+      "local_validation_status": "scopekeuze_nodig",
+      "decision_status": "scopekeuze_nodig",
+      "finance_status": "niet_van_toepassing_tot_scopekeuze",
+      "capacity_status": "onbekend",
+      "governance_status": "niet_van_toepassing_tot_scopekeuze",
+      "monitoring_status": "onbekend",
+      "d6_dependency_status": "onbekend",
+      "risk": "grijs",
+      "ready_for_workagenda_drafting": false,
+      "field_statuses": {
+        "huidige_situatie": {
+          "status_code": "I",
+          "reason": "Scope choice is optional or conditional before workagenda fields should be filled.",
+          "evidence": [
+            "Alleen vullen wanneer publieke bron of lokale validatie aangeeft dat Almere/Flevoland dit wil beproeven."
+          ],
+          "blockers": []
+        },
+        "gewenste_situatie": {
+          "status_code": "I",
+          "reason": "Scope choice is optional or conditional before workagenda fields should be filled.",
+          "evidence": [],
+          "blockers": []
+        },
+        "ingroeipad_2030": {
+          "status_code": "I",
+          "reason": "Scope choice is optional or conditional before workagenda fields should be filled.",
+          "evidence": [],
+          "blockers": []
+        },
+        "aantallen_capaciteit": {
+          "status_code": "I",
+          "reason": "Scope choice is optional or conditional before workagenda fields should be filled.",
+          "evidence": [],
+          "blockers": []
+        },
+        "financiering": {
+          "status_code": "I",
+          "reason": "Scope choice is optional or conditional before workagenda fields should be filled.",
+          "evidence": [],
+          "blockers": []
+        },
+        "verantwoordelijkheid_governance": {
+          "status_code": "I",
+          "reason": "Scope choice is optional or conditional before workagenda fields should be filled.",
+          "evidence": [],
+          "blockers": []
+        },
+        "monitoring_lerende_cyclus": {
+          "status_code": "I",
+          "reason": "Scope choice is optional or conditional before workagenda fields should be filled.",
+          "evidence": [],
+          "blockers": []
+        },
+        "mijlpalen": {
+          "status_code": "I",
+          "reason": "Scope choice is optional or conditional before workagenda fields should be filled.",
+          "evidence": [],
+          "blockers": []
+        },
+        "d6_afhankelijkheden": {
+          "status_code": "I",
+          "reason": "Scope choice is optional or conditional before workagenda fields should be filled.",
+          "evidence": [],
+          "blockers": []
+        },
+        "open_besluiten_risicos": {
+          "status_code": "I",
+          "reason": "Scope choice is optional or conditional before workagenda fields should be filled.",
+          "evidence": [],
+          "blockers": []
+        }
+      },
+      "field_code_counts": {
+        "I": 10
+      },
+      "public_evidence": [
+        "Alleen vullen wanneer publieke bron of lokale validatie aangeeft dat Almere/Flevoland dit wil beproeven."
+      ],
+      "public_indicator_count": 0,
+      "indicative_calculation_count": 0,
+      "local_fill_fields": [
+        "gekozen aanpak",
+        "onderbouwing",
+        "beschikbare capaciteit",
+        "financiering zonder verdringing",
+        "besluitstatus"
+      ],
+      "decision_needed": [
+        "prioritering_2027_2030",
+        "lokale_eigenaar",
+        "budget",
+        "monitoringafspraak",
+        "formele_besluitstatus"
+      ],
+      "d6_dependency_hints": [],
+      "next_action": "Decide whether this optional/conditional item belongs in the Almere/Flevoland workagenda scope.",
+      "action_owner": "IZA/AZWA governance; Gemeente Almere; zorgverzekeraar",
+      "deadline": "2026-06-15",
+      "evidence": {
+        "operational_requirement_source_ids": [
+          "nat_azwa_opdracht_werkagenda_d5_2026",
+          "nat_azwa_format_werkagenda_d5_2026",
+          "nat_azwa_toelichting_producten_proces_2026",
+          "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+        ],
+        "nulmeting_source_layer": "data/extracted/workagenda_nulmeting_capacity.json",
+        "stuurmodel_source_layer": "data/workagenda/d5_stuurmodel.json"
+      }
+    },
+    {
+      "target_id": "ontwikkelagenda_2_overige_initiatieven",
+      "title": "Ontwikkelagenda 2 en overige initiatieven",
+      "category": "optioneel_geen_landelijke_financiering",
+      "required_in_workagenda": false,
+      "status_in_azwa": "optioneel_geen_landelijke_financiering",
+      "public_foundation": "zwak",
+      "local_validation_status": "scopekeuze_nodig",
+      "decision_status": "scopekeuze_nodig",
+      "finance_status": "niet_van_toepassing_tot_scopekeuze",
+      "capacity_status": "onbekend",
+      "governance_status": "niet_van_toepassing_tot_scopekeuze",
+      "monitoring_status": "onbekend",
+      "d6_dependency_status": "onbekend",
+      "risk": "grijs",
+      "ready_for_workagenda_drafting": false,
+      "field_statuses": {
+        "huidige_situatie": {
+          "status_code": "I",
+          "reason": "Scope choice is optional or conditional before workagenda fields should be filled.",
+          "evidence": [
+            "Alleen opnemen als publieke bron of lokale validatie aangeeft dat dit praktisch nodig is."
+          ],
+          "blockers": []
+        },
+        "gewenste_situatie": {
+          "status_code": "I",
+          "reason": "Scope choice is optional or conditional before workagenda fields should be filled.",
+          "evidence": [],
+          "blockers": []
+        },
+        "ingroeipad_2030": {
+          "status_code": "I",
+          "reason": "Scope choice is optional or conditional before workagenda fields should be filled.",
+          "evidence": [],
+          "blockers": []
+        },
+        "aantallen_capaciteit": {
+          "status_code": "I",
+          "reason": "Scope choice is optional or conditional before workagenda fields should be filled.",
+          "evidence": [],
+          "blockers": []
+        },
+        "financiering": {
+          "status_code": "I",
+          "reason": "Scope choice is optional or conditional before workagenda fields should be filled.",
+          "evidence": [],
+          "blockers": []
+        },
+        "verantwoordelijkheid_governance": {
+          "status_code": "I",
+          "reason": "Scope choice is optional or conditional before workagenda fields should be filled.",
+          "evidence": [],
+          "blockers": []
+        },
+        "monitoring_lerende_cyclus": {
+          "status_code": "I",
+          "reason": "Scope choice is optional or conditional before workagenda fields should be filled.",
+          "evidence": [],
+          "blockers": []
+        },
+        "mijlpalen": {
+          "status_code": "I",
+          "reason": "Scope choice is optional or conditional before workagenda fields should be filled.",
+          "evidence": [],
+          "blockers": []
+        },
+        "d6_afhankelijkheden": {
+          "status_code": "I",
+          "reason": "Scope choice is optional or conditional before workagenda fields should be filled.",
+          "evidence": [],
+          "blockers": []
+        },
+        "open_besluiten_risicos": {
+          "status_code": "I",
+          "reason": "Scope choice is optional or conditional before workagenda fields should be filled.",
+          "evidence": [],
+          "blockers": []
+        }
+      },
+      "field_code_counts": {
+        "I": 10
+      },
+      "public_evidence": [
+        "Alleen opnemen als publieke bron of lokale validatie aangeeft dat dit praktisch nodig is."
+      ],
+      "public_indicator_count": 0,
+      "indicative_calculation_count": 0,
+      "local_fill_fields": [
+        "initiatief",
+        "relatie met D5",
+        "lokale eigenaar",
+        "capaciteit",
+        "financiering",
+        "besluitstatus"
+      ],
+      "decision_needed": [
+        "prioritering_2027_2030",
+        "lokale_eigenaar",
+        "budget",
+        "monitoringafspraak",
+        "formele_besluitstatus"
+      ],
+      "d6_dependency_hints": [],
+      "next_action": "Decide whether this optional/conditional item belongs in the Almere/Flevoland workagenda scope.",
+      "action_owner": "IZA/AZWA governance; Gemeente Almere",
+      "deadline": "2026-06-15",
+      "evidence": {
+        "operational_requirement_source_ids": [
+          "nat_azwa_opdracht_werkagenda_d5_2026",
+          "nat_azwa_format_werkagenda_d5_2026",
+          "nat_azwa_toelichting_producten_proces_2026",
+          "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+        ],
+        "nulmeting_source_layer": "data/extracted/workagenda_nulmeting_capacity.json",
+        "stuurmodel_source_layer": "data/workagenda/d5_stuurmodel.json"
+      }
+    }
+  ]
+}

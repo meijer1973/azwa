@@ -36,6 +36,8 @@ For D6 validation handoff, use `docs/review/almere_d6_deep_research_learnings.md
 
 For deep-research intake, use `docs/dr/README.md`. Reports placed in `docs/dr/` are not corpus evidence. Treat them as source-discovery signals: ingest selected public sources through the raw manifest and pipeline, then verify that the findings appear in top data layers before marking the report processed.
 
+For the planned workagenda-delivery transition, use `docs/workagenda-delivery-roadmap.md`. It maps the current repository status to the missing D5 delivery-control layer. Do not treat its planned file names or sprint outputs as existing artifacts until Sprint 32.0 or later creates them.
+
 ## Access Layer
 
 Base URL:
@@ -239,6 +241,7 @@ Machine-readable:
     "docs/source-intake/phase31.5-d6-settlement-evidence-audit-intake.md",
     "docs/source-intake/phase31.5-stand-van-zaken-gezondheidsbeleid-intake.md",
     "docs/source-intake/phase31.5-constrained-answer-design-intake.md",
+    "docs/workagenda-delivery-roadmap.md",
     "docs/human-review-guidance.md",
     "docs/internal/monthly-source-audit-2026-04-30.md",
     "docs/internal/review-dashboard.html"
@@ -430,6 +433,14 @@ Theme view models:
     "docs/review/almere_d6_deep_research_learnings.md",
     "docs/review/almere_d6_open_questions.md",
     "docs/review/almere_d6_validation_ticket_matrix.md"
+  ],
+  "workagenda_delivery_planning": [
+    "docs/workagenda-delivery-roadmap.md",
+    "data/extracted/workagenda_d5_operational_requirements.json",
+    "data/extracted/workagenda_nulmeting_capacity.json",
+    "data/extracted/municipal/almere_d6_responsibility_register.json",
+    "data/extracted/monthly_source_audit.json",
+    "data/site/timeline_register.json"
   ]
 }
 ```

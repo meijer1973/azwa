@@ -1,9 +1,9 @@
 # Werkagenda-delivery roadmap
 
 ## Summary
-Current sprint: Sprint 32.2 - D5-validatie voorbereiden.
+Current sprint: Sprint 32.4 - Handreikingen en tijdsafhankelijke bronnen verwerken. Sprint 32.3 is blocked pending stakeholder validation responses.
 
-This roadmap is the transition plan from a research repository to a workagenda-delivery system. It has been checked against the current repository state on 2026-05-02. Sprint 32.0 is complete with the delivery-control contract in `docs/workagenda-d5-stuurmodel.md` and `data/workagenda/d5_stuurmodel.json`. Sprint 32.1 is complete with the first D5 delivery-status matrix in `docs/workagenda-d5-statusmatrix.md` and `data/workagenda/d5_status_matrix.json`. Sprint 32.2 has started with constrained D5 validation tickets in `docs/workagenda-d5-validation-tickets.md` and `data/workagenda/d5_validation_tickets.json`.
+This roadmap is the transition plan from a research repository to a workagenda-delivery system. It has been checked against the current repository state on 2026-05-02. Sprint 32.0 is complete with the delivery-control contract in `docs/workagenda-d5-stuurmodel.md` and `data/workagenda/d5_stuurmodel.json`. Sprint 32.1 is complete with the first D5 delivery-status matrix in `docs/workagenda-d5-statusmatrix.md` and `data/workagenda/d5_status_matrix.json`. Sprint 32.2 is repository-side complete with constrained D5 validation tickets and packet formats in `docs/workagenda-d5-validation-tickets.md`, `data/workagenda/d5_validation_tickets.json`, `docs/workagenda-d5-validation-format.md`, `data/workagenda/d5_validation_packets.json`, and `data/workagenda/validation_packets/*.csv`.
 
 The proposed direction is sound. The repository already contains many of the source, claim, review and D6 validation building blocks. The missing layer is a delivery-control layer that can show, per D5 component and per workagenda field, whether the answer is source-backed, needs local validation, needs finance/controller confirmation, needs a decision, depends on D6, waits for national guidance, or is ready for workagenda drafting.
 
@@ -13,9 +13,9 @@ The proposed direction is sound. The repository already contains many of the sou
 | --- | --- | --- | --- |
 | 32.0 Scope en stuurmodel vastzetten | completed | Fix the D5 scope, delivery statuses, milestones and owner/workstream model. | `docs/workagenda-d5-stuurmodel.md`; `data/workagenda/d5_stuurmodel.json`; `docs/completed-plans/phase32-sprint32.0-workagenda-stuurmodel.md`. |
 | 32.1 D5-statusmatrix bouwen | completed | Build one central matrix showing whether the workagenda is on track. | `docs/workagenda-d5-statusmatrix.md`; `data/workagenda/d5_status_matrix.json`; `docs/completed-plans/phase32-sprint32.1-d5-statusmatrix.md`. |
-| 32.2 D5-validatie voorbereiden | open | Create constrained D5 validation questions and workbook/format structure. | `docs/workagenda-d5-validation-tickets.md`; `data/workagenda/d5_validation_tickets.json`. |
+| 32.2 D5-validatie voorbereiden | completed | Create constrained D5 validation questions and workbook/format structure. | `docs/workagenda-d5-validation-tickets.md`; `data/workagenda/d5_validation_tickets.json`; `docs/workagenda-d5-validation-format.md`; `data/workagenda/d5_validation_packets.json`; `data/workagenda/validation_packets/*.csv`; `docs/completed-plans/phase32-sprint32.2-d5-validatieformats.md`. |
 | 32.3 Eerste menselijke validatieronde | blocked | Process stakeholder confirmations after validation packets are distributed. | Validatielog D5 ronde 1. |
-| 32.4 Handreikingen en tijdsafhankelijke bronnen verwerken | planned | Watch and process D5 handreikingen, RPI/regioscan and other expected sources. | Bronupdate D5 handreikingen en wijzigingenlog. |
+| 32.4 Handreikingen en tijdsafhankelijke bronnen verwerken | open | Watch and process D5 handreikingen, RPI/regioscan and other expected sources while 32.3 waits on stakeholder responses. | Bronupdate D5 handreikingen en wijzigingenlog. |
 | 32.5 Gap compression en besluit-tickets | planned | Convert remaining gaps into validation, decision, finance or D6 dependency tickets. | Besluitlijst werkagenda D5 v1. |
 | 32.6 Finance/controller en zorgverzekeraar integreren | planned | Build component-level finance and insurer confirmation status. | Finance/controller matrix D5 v1. |
 | 32.7 D6-afhankelijkheden integreren | planned | Connect each D5 component to required D6 infrastructure. | D5-D6 afhankelijkhedenkaart v1. |
@@ -99,11 +99,11 @@ These milestones should be stored in the delivery-control layer as planning targ
 | --- | --- | --- |
 | `data/workagenda/d5_status_matrix.json` | Central status per D5 component and workagenda field. | Initial v1 created in Sprint 32.1. |
 | `data/workagenda/d5_validation_tickets.json` | Human validation questions with constrained answer options. | Initial v1 created in Sprint 32.2. |
-| `data/workagenda/d5_validation_log.json` | Who confirmed what, when, with what evidence. | Planned. |
+| `data/workagenda/d5_validation_log.json` | Who confirmed what, when, with what evidence. | Blocked until completed stakeholder answers exist. |
 | `data/workagenda/d5_finance_matrix.json` | Funding, double-counting, structural/project status and controller status. | Planned. |
 | `data/workagenda/d5_decision_register.json` | Governance and bestuurlijke decision tickets. | Planned. |
 | `data/workagenda/d5_d6_dependency_map.json` | D6 preconditions per D5 component. | Planned. |
-| `data/workagenda/d5_source_update_log.json` | Handreikingen, regioscan, rode-dradenanalyse and time-sensitive source changes. | Planned. |
+| `data/workagenda/d5_source_update_log.json` | Handreikingen, regioscan, rode-dradenanalyse and time-sensitive source changes. | Planned for Sprint 32.4. |
 | `data/workagenda/d5_dashboard_view.json` | Red/yellow/green workagenda steering view. | Planned. |
 | `docs/workagenda/` | Human-readable delivery notes, validation formats and handoff material. | Planned; avoid mixing with unreviewed source packages. |
 
@@ -129,11 +129,11 @@ These milestones should be stored in the delivery-control layer as planning targ
 
 ## Recommended Next Step
 
-Sprint 32.0 and Sprint 32.1 are complete. Sprint 32.2 has started and now has an initial validation-ticket set. The next repository-side step is to turn the ticket set into a practical validation format/workbook structure:
+Sprint 32.0, Sprint 32.1 and repository-side Sprint 32.2 are complete. Sprint 32.3 is blocked until completed stakeholder answers or explicit policy decisions exist. The next repository-side step is Sprint 32.4:
 
-- group tickets into stakeholder packets;
-- decide whether to materialize the tickets as Excel, CSV, form input or dashboard cards;
-- keep answer choices, evidence fields and default no-evidence effects intact;
-- keep finance/controller, Zvw/insurer, ICT/privacy and D6 dependency questions explicit.
+- create a D5 source-update log;
+- track expected handreikingen, RPI/regioscan, rode-dradenanalyse and development-agenda updates;
+- keep each watch item separate from evidence until source intake, manifest registration and pipeline processing happen;
+- update the statusmatrix and validation packets only when new source evidence changes the workagenda control fields.
 
-Do not move to Sprint 32.3 until the validation format is usable by stakeholders without reading the full repository.
+Do not start final drafting or Sprint 32.3 processing until validation responses exist.

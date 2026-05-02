@@ -1,0 +1,168 @@
+{
+  "packet_set_id": "workagenda_d5_validation_packets_v1",
+  "generated_on": "2026-05-02",
+  "sprint": "32.2 D5-validatie voorbereiden",
+  "status": "stakeholder_packet_format",
+  "purpose": "Stakeholder packet layer derived from constrained D5 validation tickets. These packet CSVs can be opened as spreadsheet forms or converted to Excel/form tooling.",
+  "source_layers": [
+    "data/workagenda/d5_validation_tickets.json"
+  ],
+  "guardrails": [
+    "Packets are validation forms, not completed validation records.",
+    "Blank answer fields mean unresolved; do not fill them by inference.",
+    "Evidence path or document reference is required before using answers to change statusmatrix fields."
+  ],
+  "csv_columns": [
+    "ticket_id",
+    "component",
+    "ticket_type",
+    "current_working_view",
+    "question",
+    "choice_sets",
+    "answer",
+    "correction_or_note",
+    "evidence_type",
+    "evidence_path_or_document",
+    "evidence_gate",
+    "default_if_no_evidence",
+    "status_matrix_effect",
+    "escalation_trigger"
+  ],
+  "summary": {
+    "packet_count": 6,
+    "ticket_count": 47,
+    "component_count": 11
+  },
+  "packets": [
+    {
+      "packet_id": "d6_dependency",
+      "title": "D6-afhankelijkheden",
+      "purpose": "D6 preconditions needed for D5 execution.",
+      "ticket_count": 9,
+      "ticket_ids": [
+        "laagdrempelige_steunpunten__d6_dependency",
+        "sociaal_verwijzen__d6_dependency",
+        "valpreventie__d6_dependency",
+        "ketenaanpak_overgewicht_obesitas_volwassenen__d6_dependency",
+        "kansrijke_start__d6_dependency",
+        "integrale_gezinspoli__d6_dependency",
+        "nu_niet_zwanger__d6_dependency",
+        "mentale_gezondheidsnetwerken__d6_dependency",
+        "ketenaanpak_overgewicht_obesitas_kinderen__d6_dependency"
+      ],
+      "component_count": 9,
+      "ticket_type_counts": {
+        "d6_dependency": 9
+      },
+      "csv_path": "data/workagenda/validation_packets/d6_afhankelijkheden.csv"
+    },
+    {
+      "packet_id": "decision_phasing",
+      "title": "Besluitvorming en fasering",
+      "purpose": "Decision owner, phasing toward 2027-2030 and governance escalation.",
+      "ticket_count": 9,
+      "ticket_ids": [
+        "laagdrempelige_steunpunten__decision_phasing",
+        "sociaal_verwijzen__decision_phasing",
+        "valpreventie__decision_phasing",
+        "ketenaanpak_overgewicht_obesitas_volwassenen__decision_phasing",
+        "kansrijke_start__decision_phasing",
+        "integrale_gezinspoli__decision_phasing",
+        "nu_niet_zwanger__decision_phasing",
+        "mentale_gezondheidsnetwerken__decision_phasing",
+        "ketenaanpak_overgewicht_obesitas_kinderen__decision_phasing"
+      ],
+      "component_count": 9,
+      "ticket_type_counts": {
+        "decision_phasing": 9
+      },
+      "csv_path": "data/workagenda/validation_packets/besluitvorming_en_fasering.csv"
+    },
+    {
+      "packet_id": "finance_controller",
+      "title": "Finance/controller en zorgverzekeraar",
+      "purpose": "Funding line, structural/project status, double-counting risk and insurer/Zvw confirmation.",
+      "ticket_count": 9,
+      "ticket_ids": [
+        "laagdrempelige_steunpunten__finance_controller",
+        "sociaal_verwijzen__finance_controller",
+        "valpreventie__finance_controller",
+        "ketenaanpak_overgewicht_obesitas_volwassenen__finance_controller",
+        "kansrijke_start__finance_controller",
+        "integrale_gezinspoli__finance_controller",
+        "nu_niet_zwanger__finance_controller",
+        "mentale_gezondheidsnetwerken__finance_controller",
+        "ketenaanpak_overgewicht_obesitas_kinderen__finance_controller"
+      ],
+      "component_count": 9,
+      "ticket_type_counts": {
+        "finance_controller": 9
+      },
+      "csv_path": "data/workagenda/validation_packets/finance_controller_en_zorgverzekeraar.csv"
+    },
+    {
+      "packet_id": "gemeente_sociaal_domein",
+      "title": "Gemeente Almere beleid en sociaal domein",
+      "purpose": "Local status, capacity, ownership, local coverage and social-domain implementation.",
+      "ticket_count": 5,
+      "ticket_ids": [
+        "laagdrempelige_steunpunten__local_status_capacity",
+        "laagdrempelige_steunpunten__governance_roles",
+        "sociaal_verwijzen__local_status_capacity",
+        "sociaal_verwijzen__governance_roles",
+        "ontwikkelagenda_2_overige_initiatieven__scope_choice"
+      ],
+      "component_count": 3,
+      "ticket_type_counts": {
+        "governance_roles": 2,
+        "local_status_capacity": 2,
+        "scope_choice": 1
+      },
+      "csv_path": "data/workagenda/validation_packets/gemeente_almere_beleid_en_sociaal_domein.csv"
+    },
+    {
+      "packet_id": "jgz_ggd",
+      "title": "JGZ / GGD Flevoland",
+      "purpose": "JGZ, GGD, prevention, monitoring and public-health role validation.",
+      "ticket_count": 6,
+      "ticket_ids": [
+        "valpreventie__local_status_capacity",
+        "valpreventie__governance_roles",
+        "kansrijke_start__local_status_capacity",
+        "kansrijke_start__governance_roles",
+        "nu_niet_zwanger__local_status_capacity",
+        "nu_niet_zwanger__governance_roles"
+      ],
+      "component_count": 3,
+      "ticket_type_counts": {
+        "governance_roles": 3,
+        "local_status_capacity": 3
+      },
+      "csv_path": "data/workagenda/validation_packets/jgz_ggd_flevoland.csv"
+    },
+    {
+      "packet_id": "zorgverzekeraar",
+      "title": "Zorgverzekeraar / Zvw",
+      "purpose": "Zvw, contracting, insurer role and care-professional funding questions.",
+      "ticket_count": 9,
+      "ticket_ids": [
+        "ketenaanpak_overgewicht_obesitas_volwassenen__local_status_capacity",
+        "ketenaanpak_overgewicht_obesitas_volwassenen__governance_roles",
+        "integrale_gezinspoli__local_status_capacity",
+        "integrale_gezinspoli__governance_roles",
+        "mentale_gezondheidsnetwerken__local_status_capacity",
+        "mentale_gezondheidsnetwerken__governance_roles",
+        "ketenaanpak_overgewicht_obesitas_kinderen__local_status_capacity",
+        "ketenaanpak_overgewicht_obesitas_kinderen__governance_roles",
+        "ontwikkelagenda_1_nieuw_beproeven__scope_choice"
+      ],
+      "component_count": 5,
+      "ticket_type_counts": {
+        "governance_roles": 4,
+        "local_status_capacity": 4,
+        "scope_choice": 1
+      },
+      "csv_path": "data/workagenda/validation_packets/zorgverzekeraar_zvw.csv"
+    }
+  ]
+}

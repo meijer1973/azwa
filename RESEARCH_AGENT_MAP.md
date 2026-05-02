@@ -38,7 +38,7 @@ For deep-research intake, use `docs/dr/README.md`. Reports placed in `docs/dr/` 
 
 For the workagenda-delivery transition, use `docs/workagenda-delivery-roadmap.md`. It maps the current repository status to the D5 delivery-control layer and shows which Phase 32 artifacts exist, are planned, or remain blocked.
 
-For Sprint 32.0-32.2 workagenda-delivery scope, use `docs/workagenda-d5-stuurmodel.md`, `data/workagenda/d5_stuurmodel.json`, `docs/workagenda-d5-statusmatrix.md`, `data/workagenda/d5_status_matrix.json`, `docs/workagenda-d5-validation-tickets.md`, and `data/workagenda/d5_validation_tickets.json`. These files define the D5 scope, delivery status values, workagenda fields, milestones, the first D5 delivery-status matrix and constrained validation tickets. They are control layers, not local decisions or workagenda drafts.
+For Sprint 32.0-32.2 workagenda-delivery scope, use `docs/workagenda-d5-stuurmodel.md`, `data/workagenda/d5_stuurmodel.json`, `docs/workagenda-d5-statusmatrix.md`, `data/workagenda/d5_status_matrix.json`, `docs/workagenda-d5-validation-tickets.md`, `data/workagenda/d5_validation_tickets.json`, `docs/workagenda-d5-validation-format.md`, and `data/workagenda/d5_validation_packets.json`. These files define the D5 scope, delivery status values, workagenda fields, milestones, the first D5 delivery-status matrix, constrained validation tickets and stakeholder packet formats. They are control layers, not local decisions or workagenda drafts. Blank validation packet fields are unresolved; do not fill them by inference.
 
 ## Access Layer
 
@@ -249,9 +249,11 @@ Machine-readable:
     "docs/workagenda-d5-stuurmodel.md",
     "docs/workagenda-d5-statusmatrix.md",
     "docs/workagenda-d5-validation-tickets.md",
+    "docs/workagenda-d5-validation-format.md",
     "data/workagenda/d5_stuurmodel.json",
     "data/workagenda/d5_status_matrix.json",
     "data/workagenda/d5_validation_tickets.json",
+    "data/workagenda/d5_validation_packets.json",
     "docs/human-review-guidance.md",
     "docs/internal/monthly-source-audit-2026-04-30.md",
     "docs/internal/review-dashboard.html"
@@ -449,9 +451,11 @@ Theme view models:
     "docs/workagenda-d5-stuurmodel.md",
     "docs/workagenda-d5-statusmatrix.md",
     "docs/workagenda-d5-validation-tickets.md",
+    "docs/workagenda-d5-validation-format.md",
     "data/workagenda/d5_stuurmodel.json",
     "data/workagenda/d5_status_matrix.json",
     "data/workagenda/d5_validation_tickets.json",
+    "data/workagenda/d5_validation_packets.json",
     "data/extracted/workagenda_d5_operational_requirements.json",
     "data/extracted/workagenda_nulmeting_capacity.json",
     "data/extracted/municipal/almere_d6_responsibility_register.json",

@@ -27449,94 +27449,104 @@
     "href": "../../docs/data-quality-roadmap.md",
     "rows": [
       {
-        "sprint": "32.0 Scope en stuurmodel vastzetten",
-        "status": "completed",
-        "note": "`docs/workagenda-d5-stuurmodel.md`; `data/workagenda/d5_stuurmodel.json`; `docs/completed-plans/phase32-sprint32.0-workagenda-stuurmodel.md`"
-      },
-      {
-        "sprint": "32.1 D5-statusmatrix bouwen",
-        "status": "completed",
-        "note": "`docs/workagenda-d5-statusmatrix.md`; `data/workagenda/d5_status_matrix.json`; `docs/completed-plans/phase32-sprint32.1-d5-statusmatrix.md`"
-      },
-      {
-        "sprint": "32.2 D5-validatie voorbereiden",
-        "status": "completed",
-        "note": "`docs/workagenda-d5-validation-tickets.md`; `data/workagenda/d5_validation_tickets.json`; `docs/workagenda-d5-validation-format.md`; `data/workagenda/d5_validation_packets.json`; `data/workagenda/validation_packets/*.csv`; `docs/completed-plans/phase32-sprint32.2-d5-validatieformats.md`"
-      },
-      {
-        "sprint": "32.3 Eerste menselijke validatieronde",
-        "status": "blocked",
-        "note": "Blocked until completed stakeholder answers, validation records, explicit policy decisions or relevant evidence documents exist."
-      },
-      {
-        "sprint": "32.4 Handreikingen en tijdsafhankelijke bronnen verwerken",
+        "sprint": "33.P1 Add IDs, routing and traceability",
         "status": "open",
-        "note": "Planned: `data/workagenda/d5_source_update_log.json` and a human-readable source-update note."
+        "note": "Controleer/voeg per relevante rij `vraag_id`, `component_id`, `stakeholderpakket`, `antwoordtype`, `validatiestatus`, bewijsvereiste, repo-update-effect en deadline toe. Output: Workbook QA note and/or updated validation ticket import map. Dependency: Requires frozen P0 baseline."
       },
       {
-        "sprint": "32.5 Gap compression en besluit-tickets",
+        "sprint": "33.P2 Prefill audit and current working views",
         "status": "planned",
-        "note": "Planned: `data/workagenda/d5_decision_register.json` and decision-ticket summary."
+        "note": "Controleer dat elke human-facing tab een korte `Huidige werkvisie`, beoordeling werkvisie, correctieveld en bewijsveld heeft, zonder interne termen. Output: Prefill audit note; workbook change list. Dependency: Requires P1 traceability."
       },
       {
-        "sprint": "32.6 Finance/controller en zorgverzekeraar integreren",
+        "sprint": "33.P3 Targeted pre-contact agents",
         "status": "planned",
-        "note": "Planned: `data/workagenda/d5_finance_matrix.json`."
+        "note": "Alleen gerichte agents: evidence-prefill audit, D5 source-update watchlist, D5-D6 dependency mapping, policymaker readability, finance-risk precheck. Geen brede D5/D6 search. Output: Targeted agent prompts and intake notes. Dependency: Use only named gaps/watchlist items."
       },
       {
-        "sprint": "32.7 D6-afhankelijkheden integreren",
+        "sprint": "33.P4 Build stakeholder packets",
         "status": "planned",
-        "note": "Planned: `data/workagenda/d5_d6_dependency_map.json`."
+        "note": "Maak gefilterde D5/D6 pakketten per groep zodat niemand het volledige workbook krijgt behalve het kernteam. Output: Stakeholder packet index and send set. Dependency: Requires P1-P3."
       },
       {
-        "sprint": "32.8 Prioritering, fasering en 2030-ingroeipad",
+        "sprint": "33.P5 Internal dry run",
         "status": "planned",
-        "note": "Planned: prioritisation and phasing view."
+        "note": "Laat 2-4 interne reviewers een D5-tab, D6-tab, finance-row, evidence-field en `niet mijn domein` case testen. Output: Dry-run findings and workbook fixes. Dependency: Requires P4 packets."
       },
       {
-        "sprint": "32.9 Concept-werkagenda v0.8",
-        "status": "blocked",
-        "note": "Blocked until statusmatrix, validation tickets, finance matrix, decision register and D5-D6 dependency map exist."
+        "sprint": "33.P6 Repository/workflow integration",
+        "status": "planned",
+        "note": "Leg vast hoe Excel-antwoorden terugkomen in validation logs, finance matrix, decision register, D5-D6 dependency map, source update log and statusmatrix. Output: Import/processing workflow note; planned JSON objects where needed. Dependency: Requires P1/P4 structure."
       },
       {
-        "sprint": "32.10 Governance-ready versie",
-        "status": "blocked",
-        "note": "Blocked until concept is validated and finance/governance risks are explicit."
+        "sprint": "33.P7 Send-readiness gate",
+        "status": "planned",
+        "note": "Go/no-go voor contact: IDs, routing, evidence gates, current working views, dropdowns, dry run and source watchlist must be complete. Output: Send-readiness gate note. Dependency: Must pass before contacting policymakers."
       },
       {
-        "sprint": "32.11 Vaststelling en VWS-verzending",
+        "sprint": "V1 Controlled outbound",
         "status": "blocked",
-        "note": "Blocked until governance route begins."
+        "note": "Verstuur beperkte stakeholderpakketten pas na P7. Output: Sent-packet log. Dependency: Blocked until send-readiness gate passes."
       },
       {
-        "sprint": "32.12 Uitvoeringsstart 2027 en lerende cyclus",
+        "sprint": "V2 Response triage",
         "status": "blocked",
-        "note": "Blocked until adopted workagenda exists."
+        "note": "Verwerk antwoorden naar statuswijzigingen, weak confirmations, conflicts, decision tickets, finance tickets or rerouting. Output: Validation log and ticket updates. Dependency: Blocked until responses return."
+      },
+      {
+        "sprint": "V3 Decision and finance compression",
+        "status": "blocked",
+        "note": "Zet resterende onzekerheid om naar compacte besluit-, finance-, governance-, ICT/privacy- en D6-risk lijsten. Output: Decision/finance compression outputs. Dependency: Blocked until response triage."
+      },
+      {
+        "sprint": "V4 Work-agenda readiness dashboard",
+        "status": "blocked",
+        "note": "Toon per D5 item of het klaar is voor werkagenda-draft, met risico en volgende actie. Output: `data/workagenda/d5_dashboard_view.json`. Dependency: Blocked until validation/finance/dependency layers mature."
+      },
+      {
+        "sprint": "25.6 D6 post-validation register hardening",
+        "status": "parked",
+        "note": "Hard register rows only after D6 validation evidence exists. Output: Updated D6 responsibility register and QC. Dependency: Wacht op stakeholdervalidatie, lokale/interne documenten, finance/controller bevestiging of beleidsbesluit."
       }
     ],
     "current": {
-      "sprint": "32.4 Handreikingen en tijdsafhankelijke bronnen verwerken",
+      "sprint": "33.P1 Add IDs, routing and traceability",
       "status": "open",
-      "note": "Planned: `data/workagenda/d5_source_update_log.json` and a human-readable source-update note."
+      "note": "Controleer/voeg per relevante rij `vraag_id`, `component_id`, `stakeholderpakket`, `antwoordtype`, `validatiestatus`, bewijsvereiste, repo-update-effect en deadline toe. Output: Workbook QA note and/or updated validation ticket import map. Dependency: Requires frozen P0 baseline."
     },
     "history": [
       {
-        "sprint": "32.2 D5-validatie voorbereiden",
+        "sprint": "33.P0 Freeze validation instruments",
         "status": "completed",
-        "note": "`docs/workagenda-d5-validation-tickets.md`; `data/workagenda/d5_validation_tickets.json`; `docs/workagenda-d5-validation-format.md`; `data/workagenda/d5_validation_packets.json`; `data/workagenda/validation_packets/*.csv`; `docs/completed-plans/phase32-sprint32.2-d5-validatieformats.md`"
+        "note": "`docs/review/validation-instrument-register.md`, `docs/review/D5_validatieformat_werkagenda_Almere_v0.1.xlsx`, `docs/review/Almere_D6_validatieformats.xlsx`. De workbooks zijn pre-contact validation baselines, geen bronnen of validatieresultaten."
       },
       {
-        "sprint": "32.1 D5-statusmatrix bouwen",
+        "sprint": "25.2 Lokale bronversterking Almere",
         "status": "completed",
-        "note": "`docs/workagenda-d5-statusmatrix.md`; `data/workagenda/d5_status_matrix.json`; `docs/completed-plans/phase32-sprint32.1-d5-statusmatrix.md`"
+        "note": "`data/extracted/local_source_strengthening_almere.json`, `docs/internal/source-intake/phase25.2-public-source-assessment.md`, `docs/completed-plans/phase25-sprint25.2-lokale-bronversterking.md`"
       },
       {
-        "sprint": "32.0 Scope en stuurmodel vastzetten",
+        "sprint": "25.1 Werkagenda- en financieringslaag",
         "status": "completed",
-        "note": "`docs/workagenda-d5-stuurmodel.md`; `data/workagenda/d5_stuurmodel.json`; `docs/completed-plans/phase32-sprint32.0-workagenda-stuurmodel.md`"
+        "note": "`data/extracted/workagenda_d5_operational_requirements.json`, `src/build_workagenda_d5_operational_requirements.py`, `docs/completed-plans/phase25-sprint25.1-werkagenda-financieringslaag.md`"
+      },
+      {
+        "sprint": "24.1 Taxonomie en checklist",
+        "status": "completed",
+        "note": "`config/data_quality_perspectives.json`, `docs/data-quality-checklist.md`"
+      },
+      {
+        "sprint": "24.2 Audit van bestaande site-data",
+        "status": "completed",
+        "note": "`docs/completed-plans/phase24-sprint24.2-audit.md`, `data/extracted/data_quality_audit.json`"
+      },
+      {
+        "sprint": "24.3 Review-dashboard intern",
+        "status": "completed",
+        "note": "`docs/internal/review-dashboard.html`, `src/build_internal_review_dashboard.py`, `docs/completed-plans/phase24-sprint24.3-review-dashboard.md`"
       }
     ],
-    "completed_count": 3,
+    "completed_count": 41,
     "open_count": 1
   },
   "next_cleanup_targets": [
@@ -58790,7 +58800,7 @@
       "path": "docs/review/README.md",
       "href": "../../docs/review/README.md",
       "title": "Review Folder Guide",
-      "summary": "Current sprint: Sprint 31.5 - Deep-research bronintake en top-layer verificatie. This folder now has one simple human-facing entry point: read the current D6 notes below. Older detailed packs, generated review snapshots, and source-boundary working papers are archived for traceability.",
+      "summary": "Current sprint: Sprint 33.P0 - Pre-contact validation-readiness: freeze validation instruments. This folder now has two active review uses: - D6 human-facing validation handoff notes.",
       "headings": [
         "Summary",
         "Current Files",
@@ -58798,9 +58808,9 @@
         "Archive",
         "Maintenance Rule"
       ],
-      "table_line_count": 11,
-      "checklist_item_count": 4,
-      "content": "# Review Folder Guide\n\n## Summary\nCurrent sprint: Sprint 31.5 - Deep-research bronintake en top-layer verificatie.\n\nThis folder now has one simple human-facing entry point: read the current D6 notes below. Older detailed packs, generated review snapshots, and source-boundary working papers are archived for traceability.\n\n## Current Files\n\nOnly these files should normally be used from the top level of this folder.\n\n| File | Use |\n| --- | --- |\n| `almere_d6_deep_research_learnings.md` | Clear summary of what Sprint 31.5 deep-research intake added to the public-source picture. |\n| `almere_d6_open_questions.md` | Clear list of what remains unknown and what must be asked of stakeholders, finance/controller roles or internal document owners. |\n| `almere_d6_validation_ticket_matrix.md` | Plain-language validation design with answer choices, stakeholder packets and simple decision rules. Use this for handoff conversations instead of broad research questions. |\n| `README.md` | This folder guide. |\n\nNo D6 responsibility-register row may move to `settled` from these notes alone. Settlement requires traceable stakeholder validation, a local decision, or another authoritative source that directly answers classification, ownership, mandate, scale and funding.\n\n## Current Human Reading Order\n\n1. Read `almere_d6_deep_research_learnings.md` to see what is now publicly source-backed.\n2. Read `almere_d6_open_questions.md` to see what still needs stakeholder, finance/controller, governance or internal-document validation.\n3. Use `almere_d6_validation_ticket_matrix.md` when preparing validation requests; it turns open questions into plain-language choices.\n4. Use archive files only when you need provenance, detailed tables, or generated sprint snapshots.\n\nDeep research reports are not sources. Put reports in `docs/dr/`, extract their suggested public sources, ingest selected public sources through the pipeline, and then test whether the findings appear in the top data layers.\n\n## Archive\n\nArchived review documents live under `archive/`. They are kept for provenance and should not be treated as the active review entry point.\n\n| File | Why archived |\n| --- | --- |\n| `archive/d6-handoff/almere_d6_validation_handoff_summary.md` | Superseded by the current validation pack, public-source boundary note, safe wording library, decision-needed list and funding gap table. |\n| `archive/d6-support/` | Detailed D6 handoff support files: validation pack, source-boundary note, safe wording, decision-needed list, funding table, stakeholder request and validation log. |\n| `archive/phase31/` | Generated Sprint 31.3 and 31.4 review snapshots and deep-research prompts. |\n\n## Maintenance Rule\n\nWhen a new review document becomes the current entry point, update this README, `AGENTS.md`, `RESEARCH_AGENT_MAP.md`, and the internal review dashboard inputs. Archive superseded material instead of deleting it.\n"
+      "table_line_count": 14,
+      "checklist_item_count": 7,
+      "content": "# Review Folder Guide\n\n## Summary\nCurrent sprint: Sprint 33.P0 - Pre-contact validation-readiness: freeze validation instruments.\n\nThis folder now has two active review uses:\n\n- D6 human-facing validation handoff notes.\n- D5/D6 pre-contact validation instrument control.\n\nOlder detailed packs, generated review snapshots, and source-boundary working papers are archived for traceability.\n\n## Current Files\n\nOnly these files should normally be used from the top level of this folder.\n\n| File | Use |\n| --- | --- |\n| `validation-instrument-register.md` | Current register for the D5 and D6 Excel validation workbooks. Use before editing, sending, or importing answers from the workbooks. |\n| `D5_validatieformat_werkagenda_Almere_v0.1.xlsx` | D5 pre-validation workbook baseline. This is a validation instrument, not a source or validation result. |\n| `Almere_D6_validatieformats.xlsx` | D6 pre-validation workbook baseline. This is a validation instrument, not a source or validation result. |\n| `almere_d6_deep_research_learnings.md` | Clear summary of what Sprint 31.5 deep-research intake added to the public-source picture. |\n| `almere_d6_open_questions.md` | Clear list of what remains unknown and what must be asked of stakeholders, finance/controller roles or internal document owners. |\n| `almere_d6_validation_ticket_matrix.md` | Plain-language validation design with answer choices, stakeholder packets and simple decision rules. Use this for handoff conversations instead of broad research questions. |\n| `README.md` | This folder guide. |\n\nThe Excel workbooks should not be sent to policymakers until the send-readiness gate in `docs/data-quality-roadmap.md` has passed.\n\nNo D6 responsibility-register row may move to `settled` from these notes alone. Settlement requires traceable stakeholder validation, a local decision, or another authoritative source that directly answers classification, ownership, mandate, scale and funding.\n\n## Current Human Reading Order\n\n0. Read `validation-instrument-register.md` if you are working with the D5 or D6 Excel validation workbooks.\n1. Read `almere_d6_deep_research_learnings.md` to see what is now publicly source-backed.\n2. Read `almere_d6_open_questions.md` to see what still needs stakeholder, finance/controller, governance or internal-document validation.\n3. Use `almere_d6_validation_ticket_matrix.md` when preparing validation requests; it turns open questions into plain-language choices.\n4. Use archive files only when you need provenance, detailed tables, or generated sprint snapshots.\n\nDeep research reports are not sources. Put reports in `docs/dr/`, extract their suggested public sources, ingest selected public sources through the pipeline, and then test whether the findings appear in the top data layers.\n\n## Archive\n\nArchived review documents live under `archive/`. They are kept for provenance and should not be treated as the active review entry point.\n\n| File | Why archived |\n| --- | --- |\n| `archive/d6-handoff/almere_d6_validation_handoff_summary.md` | Superseded by the current validation pack, public-source boundary note, safe wording library, decision-needed list and funding gap table. |\n| `archive/d6-support/` | Detailed D6 handoff support files: validation pack, source-boundary note, safe wording, decision-needed list, funding table, stakeholder request and validation log. |\n| `archive/phase31/` | Generated Sprint 31.3 and 31.4 review snapshots and deep-research prompts. |\n\n## Maintenance Rule\n\nWhen a new review document becomes the current entry point, update this README, `AGENTS.md`, `RESEARCH_AGENT_MAP.md`, and the internal review dashboard inputs. Archive superseded material instead of deleting it.\n"
     },
     {
       "path": "docs/review/almere_d6_deep_research_learnings.md",

@@ -40,6 +40,8 @@ For roadmap navigation, use `docs/data-quality-roadmap.md` as the single canonic
 
 For Sprint 32.0-32.2 workagenda-delivery scope, use `docs/workagenda-d5-stuurmodel.md`, `data/workagenda/d5_stuurmodel.json`, `docs/workagenda-d5-statusmatrix.md`, `data/workagenda/d5_status_matrix.json`, `docs/workagenda-d5-validation-tickets.md`, `data/workagenda/d5_validation_tickets.json`, `docs/workagenda-d5-validation-format.md`, and `data/workagenda/d5_validation_packets.json`. These files define the D5 scope, delivery status values, workagenda fields, milestones, the first D5 delivery-status matrix, constrained validation tickets and stakeholder packet formats. They are control layers, not local decisions or workagenda drafts. Blank validation packet fields are unresolved; do not fill them by inference.
 
+For pre-contact validation-readiness, use `docs/review/validation-instrument-register.md` before editing, sending, or importing answers from the D5 and D6 Excel validation workbooks. The workbooks are validation instruments, not corpus sources, final policy truth, or stakeholder validation results.
+
 ## Access Layer
 
 Base URL:
@@ -226,6 +228,9 @@ Machine-readable:
     "docs/review/almere_d6_deep_research_learnings.md",
     "docs/review/almere_d6_open_questions.md",
     "docs/review/almere_d6_validation_ticket_matrix.md",
+    "docs/review/validation-instrument-register.md",
+    "docs/review/D5_validatieformat_werkagenda_Almere_v0.1.xlsx",
+    "docs/review/Almere_D6_validatieformats.xlsx",
     "docs/review/archive/d6-support/almere_d6_public_source_boundary.md",
     "docs/review/archive/d6-support/almere_d6_validation_pack.md",
     "docs/review/archive/d6-support/almere_d6_stakeholder_validation_log.md",
@@ -448,7 +453,9 @@ Theme view models:
     "data/extracted/municipal/almere_local_decisions.json",
     "docs/review/almere_d6_deep_research_learnings.md",
     "docs/review/almere_d6_open_questions.md",
-    "docs/review/almere_d6_validation_ticket_matrix.md"
+    "docs/review/almere_d6_validation_ticket_matrix.md",
+    "docs/review/validation-instrument-register.md",
+    "docs/review/Almere_D6_validatieformats.xlsx"
   ],
   "workagenda_delivery_planning": [
     "docs/data-quality-roadmap.md",
@@ -459,6 +466,9 @@ Theme view models:
     "docs/workagenda-d5-statusmatrix.md",
     "docs/workagenda-d5-validation-tickets.md",
     "docs/workagenda-d5-validation-format.md",
+    "docs/review/validation-instrument-register.md",
+    "docs/review/D5_validatieformat_werkagenda_Almere_v0.1.xlsx",
+    "docs/review/Almere_D6_validatieformats.xlsx",
     "data/workagenda/d5_stuurmodel.json",
     "data/workagenda/d5_status_matrix.json",
     "data/workagenda/d5_validation_tickets.json",

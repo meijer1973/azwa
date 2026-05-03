@@ -1,9 +1,9 @@
 ﻿# AZWA Canonical Roadmap
 
 ## Summary
-Current sprint: Sprint 32.4 - Handreikingen en tijdsafhankelijke bronnen verwerken. Sprint 32.3 is blocked pending stakeholder validation responses.
+Current sprint: Sprint 33.P1 - Pre-contact validation-readiness: add IDs, routing and traceability.
 
-Roadmap version: `v2026.05.03-2`.
+Roadmap version: `v2026.05.03-3`.
 
 This is the single active roadmap for the repository. It combines the older data-quality roadmap and the workagenda-delivery roadmap into one canonical planning surface. Historical snapshots and retired roadmap files live under `docs/roadmap/archive/`; version changes are recorded in `docs/roadmap/roadmap-version-log.md`.
 
@@ -30,22 +30,80 @@ Statusbetekenis:
 
 | Task | Status | What needs to be done | Next artifact / output | Blocker or dependency |
 | --- | --- | --- | --- | --- |
-| 32.4 Handreikingen en tijdsafhankelijke bronnen verwerken | open | Maak een D5 source-update log voor handreikingen, RPI/regioscan, rode-dradenanalyse en ontwikkelagenda-updates. Houd watchlist-items gescheiden van bewijs totdat bronintake en pipelineverwerking klaar zijn. | `data/workagenda/d5_source_update_log.json`; human-readable source-update note. | Geen brede research; alleen named expected publications/source gaps. |
-| 32.3 Eerste menselijke validatieronde | blocked | Verwerk ingevulde D5 validatiepakketten pas wanneer stakeholderantwoorden of expliciete beleidsbesluiten beschikbaar zijn. | `data/workagenda/d5_validation_log.json`. | Wacht op ingevulde stakeholderantwoorden, validatierecords of bewijsdocumenten. |
+| 33.P1 Add IDs, routing and traceability | open | Controleer/voeg per relevante rij `vraag_id`, `component_id`, `stakeholderpakket`, `antwoordtype`, `validatiestatus`, bewijsvereiste, repo-update-effect en deadline toe. | Workbook QA note and/or updated validation ticket import map. | Requires frozen P0 baseline. |
+| 33.P2 Prefill audit and current working views | planned | Controleer dat elke human-facing tab een korte `Huidige werkvisie`, beoordeling werkvisie, correctieveld en bewijsveld heeft, zonder interne termen. | Prefill audit note; workbook change list. | Requires P1 traceability. |
+| 33.P3 Targeted pre-contact agents | planned | Alleen gerichte agents: evidence-prefill audit, D5 source-update watchlist, D5-D6 dependency mapping, policymaker readability, finance-risk precheck. Geen brede D5/D6 search. | Targeted agent prompts and intake notes. | Use only named gaps/watchlist items. |
+| 33.P4 Build stakeholder packets | planned | Maak gefilterde D5/D6 pakketten per groep zodat niemand het volledige workbook krijgt behalve het kernteam. | Stakeholder packet index and send set. | Requires P1-P3. |
+| 33.P5 Internal dry run | planned | Laat 2-4 interne reviewers een D5-tab, D6-tab, finance-row, evidence-field en `niet mijn domein` case testen. | Dry-run findings and workbook fixes. | Requires P4 packets. |
+| 33.P6 Repository/workflow integration | planned | Leg vast hoe Excel-antwoorden terugkomen in validation logs, finance matrix, decision register, D5-D6 dependency map, source update log and statusmatrix. | Import/processing workflow note; planned JSON objects where needed. | Requires P1/P4 structure. |
+| 33.P7 Send-readiness gate | planned | Go/no-go voor contact: IDs, routing, evidence gates, current working views, dropdowns, dry run and source watchlist must be complete. | Send-readiness gate note. | Must pass before contacting policymakers. |
+| V1 Controlled outbound | blocked | Verstuur beperkte stakeholderpakketten pas na P7. | Sent-packet log. | Blocked until send-readiness gate passes. |
+| V2 Response triage | blocked | Verwerk antwoorden naar statuswijzigingen, weak confirmations, conflicts, decision tickets, finance tickets or rerouting. | Validation log and ticket updates. | Blocked until responses return. |
+| V3 Decision and finance compression | blocked | Zet resterende onzekerheid om naar compacte besluit-, finance-, governance-, ICT/privacy- en D6-risk lijsten. | Decision/finance compression outputs. | Blocked until response triage. |
+| V4 Work-agenda readiness dashboard | blocked | Toon per D5 item of het klaar is voor werkagenda-draft, met risico en volgende actie. | `data/workagenda/d5_dashboard_view.json`. | Blocked until validation/finance/dependency layers mature. |
 | 25.6 D6 post-validation register hardening | parked | Hard register rows only after D6 validation evidence exists. | Updated D6 responsibility register and QC. | Wacht op stakeholdervalidatie, lokale/interne documenten, finance/controller bevestiging of beleidsbesluit. |
-| 32.5 Gap compression en besluit-tickets | planned | Zet resterende D5-gaten om naar validatie-, besluit-, finance- of D6-afhankelijkheidstickets. | `data/workagenda/d5_decision_register.json`; decision-ticket summary. | Na source-update log en/of validatie-input. |
-| 32.6 Finance/controller en zorgverzekeraar integreren | planned | Bouw componentniveau finance/controller matrix met dubbeltelling, structureel/projectstatus en Zvw/verzekeraarsbevestiging. | `data/workagenda/d5_finance_matrix.json`. | Finance/controller en verzekeraar input nodig. |
-| 32.7 D6-afhankelijkheden integreren | planned | Koppel elk D5-onderdeel aan benodigde D6-infrastructuur en maak blokkades zichtbaar. | `data/workagenda/d5_d6_dependency_map.json`. | D6 validatie blijft deels policy-maker dependency. |
-| 32.8 Prioritering, fasering en 2030-ingroeipad | planned | Vertaal status, validatie, finance en afhankelijkheden naar keuzeopties en fasering. | Prioritering/fasering view. | Na status-, finance-, besluit- en dependency-lagen. |
-| 32.9 Concept-werkagenda v0.8 | blocked | Schrijf bestuurlijk concept met open punten zichtbaar. | Concept workagenda v0.8. | Blocked until statusmatrix, validation tickets, finance matrix, decision register and D5-D6 dependency map exist. |
-| 32.10 Governance-ready versie | blocked | Maak versie voor IZA-governance en college-route. | Governance-ready workagenda v1.0. | Blocked until concept is validated and finance/governance risks are explicit. |
-| 32.11 Vaststelling en VWS-verzending | blocked | Begeleid besluitroute, wijzigingen en bewijslog. | Definitieve werkagenda + bewijs-/wijzigingslog. | Blocked until governance route begins. |
-| 32.12 Uitvoeringsstart 2027 en lerende cyclus | blocked | Zet vastgestelde werkagenda om naar uitvoering, monitoring en bijsturing. | Uitvoeringsdashboard D5 2027. | Blocked until adopted workagenda exists. |
 
 Completed sprint history: `docs/roadmap/completed-sprint-ledger.md`.
 
 ## Huidige sprintplan
-Sprint 32.4 is open als repository-side vervolgstap. Sprint 32.3 is geblokkeerd tot ingevulde stakeholderantwoorden, validatierecords, expliciete beleidsbesluiten of relevante bewijsdocumenten beschikbaar zijn. De lopende repository-taak is nu handreikingen en tijdsafhankelijke bronnen bewaken zonder brede research te starten. Sprint 25.6 blijft geparkeerd omdat post-validatie hardening pas verantwoord is na stakeholdervalidatierecords, lokale/interne documenten, finance/controller bevestiging of een expliciet beleidsbesluit.
+Sprint 33.P1 is open. Sprint 33.P0 heeft de D5- en D6-validatie-Excelbestanden als pre-validation baselines geregistreerd en onder versiecontrole gebracht. De lopende taak is nu traceability: controleren of elke relevante vraag een stabiele ID, stakeholderrouting, antwoordtype, bewijsvereiste, repo-update-effect en deadline heeft. Sprint 32.3 blijft geblokkeerd tot echte stakeholderantwoorden bestaan. Sprint 25.6 blijft geparkeerd omdat post-validatie hardening pas verantwoord is na stakeholdervalidatierecords, lokale/interne documenten, finance/controller bevestiging of een expliciet beleidsbesluit.
+
+## Current Context Check - 2026-05-03
+
+The reviewed recommendation is directionally correct but partly stale against the current repository:
+
+- D5 statusmatrix, validation tickets and CSV stakeholder packets already exist in `data/workagenda/` from Sprints 32.1-32.2.
+- The two Excel files now present in `docs/review/` are the practical pre-contact instruments, but they were not yet controlled as tracked baseline assets.
+- D6 markdown validation material already exists in `docs/review/almere_d6_validation_ticket_matrix.md`, but the D6 Excel still needs the same traceability/import discipline as D5.
+- No stakeholder validation has happened yet. The next phase is therefore not V1 outbound, but pre-contact QA.
+- Sprint 32.4 source-watch work remains relevant, but it is now folded into 33.P3/P6 as a targeted D5 source-update watchlist rather than a standalone broad research step.
+
+## Phase 33 - Pre-contact Validation-readiness
+
+Goal: reduce human workload before validation starts. Policymakers should receive short validation packets where they can confirm or correct the current working view, choose from dropdown options, identify responsible parties, add or name evidence, mark whether another party must confirm, and flag decision, finance or ICT/privacy issues.
+
+### Phase 33 Assets
+
+| Asset | Current repository status | Use |
+| --- | --- | --- |
+| `docs/review/D5_validatieformat_werkagenda_Almere_v0.1.xlsx` | Baseline Excel workbook, 20 sheets. | D5 pre-contact validation instrument. |
+| `docs/review/Almere_D6_validatieformats.xlsx` | Baseline Excel workbook, 15 sheets. | D6 pre-contact validation instrument. |
+| `docs/review/validation-instrument-register.md` | Created in 33.P0. | Version, purpose, sheet inventory, shared vocabulary and import rules. |
+| `data/workagenda/d5_validation_tickets.json` | Created in 32.2. | D5 machine-readable validation ticket basis. |
+| `data/workagenda/d5_validation_packets.json` and `data/workagenda/validation_packets/*.csv` | Created in 32.2. | D5 repository-generated packet basis, to be reconciled with Excel. |
+| `docs/review/almere_d6_validation_ticket_matrix.md` | Existing D6 plain-language matrix. | D6 question design and stakeholder language basis. |
+
+### Phase 33 Sprint Sequence
+
+| Sprint | Name | Main output | Contact policymakers yet? |
+| --- | --- | --- | --- |
+| 33.P0 | Freeze instruments | D5/D6 Excel baselines and validation instrument register. Completed. | No |
+| 33.P1 | Add IDs and routing | Stable IDs, stakeholder packages and repo-update effects per validation row. | No |
+| 33.P2 | Prefill audit | Current working view per human-facing tab; no blank broad questions. | No |
+| 33.P3 | Targeted agents | Evidence, readability, dependency, source-watch and finance-risk prechecks only. | No |
+| 33.P4 | Stakeholder packets | Filtered packets per group, with instructions and escalation route. | No |
+| 33.P5 | Internal dry run | Tested and revised workbook/packet set. | No |
+| 33.P6 | Repository/workflow integration | Validation logs, ticket structures, status matrix import path. | No |
+| 33.P7 | Send-readiness gate | Go/no-go decision for contact. | No |
+| V1 | Controlled outbound | Packets sent and logged. | Yes |
+| V2 | Response triage | Processed validation answers. | Yes |
+| V3 | Decision and finance compression | Decision, finance, governance and ICT/privacy tickets. | Yes |
+| V4 | Work-agenda readiness dashboard | Green/yellow/red workagenda delivery view. | Yes |
+
+### Targeted Deep Research Policy
+
+Use targeted agents only. Do not run another broad D5 or D6 research wave.
+
+| Agent type | Worth doing now? | Reason |
+| --- | ---: | --- |
+| Evidence-prefill audit | Yes | Reduces weak or unsupported working views before humans see them. |
+| Policymaker readability audit | Yes | Prevents overloaded forms. |
+| D5-D6 dependency mapping | Yes | Essential for credible workagenda execution. |
+| Finance-risk precheck | Yes | Finance is on the critical path. |
+| End-May handreiking watchlist | Yes, scheduled | The D5 assignment expects handreikingen around the end of May. |
+| Broad D5 public search | No | D5 structure is already sufficiently known for pre-contact QA. |
+| Broad D6 public search | No | D6 mostly requires validation, not more public search. |
+| Local ownership/funding research by agent | No | Requires human validation or decision. |
 
 ## Phase 32 - Werkagenda-delivery System
 
@@ -59,7 +117,7 @@ Phase 32 turns the repository from a research and review tool into a D5 workagen
 | 32.1 D5-statusmatrix bouwen | completed | `docs/workagenda-d5-statusmatrix.md`; `data/workagenda/d5_status_matrix.json`; `docs/completed-plans/phase32-sprint32.1-d5-statusmatrix.md` |
 | 32.2 D5-validatie voorbereiden | completed | `docs/workagenda-d5-validation-tickets.md`; `data/workagenda/d5_validation_tickets.json`; `docs/workagenda-d5-validation-format.md`; `data/workagenda/d5_validation_packets.json`; `data/workagenda/validation_packets/*.csv`; `docs/completed-plans/phase32-sprint32.2-d5-validatieformats.md` |
 | 32.3 Eerste menselijke validatieronde | blocked | Blocked until completed stakeholder answers, validation records, explicit policy decisions or relevant evidence documents exist. |
-| 32.4 Handreikingen en tijdsafhankelijke bronnen verwerken | open | Planned: `data/workagenda/d5_source_update_log.json` and a human-readable source-update note. |
+| 32.4 Handreikingen en tijdsafhankelijke bronnen verwerken | folded into 33.P3/P6 | Source-watch work remains needed, but now runs as targeted pre-contact watchlist/workflow integration instead of a standalone current sprint. |
 | 32.5 Gap compression en besluit-tickets | planned | Planned: `data/workagenda/d5_decision_register.json` and decision-ticket summary. |
 | 32.6 Finance/controller en zorgverzekeraar integreren | planned | Planned: `data/workagenda/d5_finance_matrix.json`. |
 | 32.7 D6-afhankelijkheden integreren | planned | Planned: `data/workagenda/d5_d6_dependency_map.json`. |
@@ -96,7 +154,7 @@ Every D5 component and workagenda field uses one of these statuses:
 | `data/workagenda/d5_validation_packets.json` | Stakeholder packet index. | Created in 32.2. |
 | `data/workagenda/validation_packets/*.csv` | Blank validation forms per stakeholder packet. | Created in 32.2; not validation results. |
 | `data/workagenda/d5_validation_log.json` | Who confirmed what, when, with what evidence. | Blocked until validation answers exist. |
-| `data/workagenda/d5_source_update_log.json` | Handreikingen, regioscan, rode-dradenanalyse and time-sensitive source changes. | Planned for 32.4. |
+| `data/workagenda/d5_source_update_log.json` | Handreikingen, regioscan, rode-dradenanalyse and time-sensitive source changes. | Planned inside 33.P3/P6. |
 | `data/workagenda/d5_finance_matrix.json` | Funding, double-counting, structural/project status and controller status. | Planned. |
 | `data/workagenda/d5_decision_register.json` | Governance and bestuurlijke decision tickets. | Planned. |
 | `data/workagenda/d5_d6_dependency_map.json` | D6 preconditions per D5 component. | Planned. |

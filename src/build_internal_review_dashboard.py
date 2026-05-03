@@ -20,6 +20,7 @@ CLAIMS_MASTER_PATH = EXTRACTED_DIR / "claims" / "claims_master.jsonl"
 PERSPECTIVES_PATH = CONFIG_DIR / "data_quality_perspectives.json"
 REGIONAL_ROLES_PATH = DATA_DIR / "curated" / "regional_roles_and_splits_almere_flevoland.json"
 ROADMAP_PATH = DOCS_DIR / "data-quality-roadmap.md"
+COMPLETED_SPRINT_LEDGER_PATH = DOCS_DIR / "roadmap" / "completed-sprint-ledger.md"
 SITE_UPDATES_PATH = DATA_DIR / "site" / "site_updates_view.json"
 WORKAGENDA_D5_PATH = EXTRACTED_DIR / "workagenda_d5_operational_requirements.json"
 LOCAL_SOURCE_STRENGTHENING_PATH = EXTRACTED_DIR / "local_source_strengthening_almere.json"
@@ -562,7 +563,7 @@ def parse_sprint_ledger() -> dict[str, Any]:
     in_table = False
 
     for line in text.splitlines():
-        if line.startswith("| Sprint | Status |"):
+        if line.startswith("| Task | Status |"):
             in_table = True
             continue
         if not in_table:
@@ -573,25 +574,51 @@ def parse_sprint_ledger() -> dict[str, Any]:
             break
 
         cells = [cell.strip() for cell in line.strip().strip("|").split("|")]
-        if len(cells) != 3:
+        if len(cells) != 5:
             continue
-        sprint, status, note = cells
+        sprint, status, what, output, dependency = cells
+        note_parts = [what]
+        if output:
+            note_parts.append(f"Output: {output}")
+        if dependency:
+            note_parts.append(f"Dependency: {dependency}")
+        note = " ".join(note_parts)
         rows.append({"sprint": sprint, "status": status, "note": note})
 
     current = next((row for row in rows if "Huidige volgende sprint" in row["note"]), None)
     if current is None:
         current = next((row for row in rows if row["status"] == "open"), None)
 
-    completed_count = sum(1 for row in rows if row["status"] == "completed")
+    history: list[dict[str, str]] = []
+    if COMPLETED_SPRINT_LEDGER_PATH.exists():
+        completed_text = COMPLETED_SPRINT_LEDGER_PATH.read_text(encoding="utf-8")
+        in_completed_table = False
+        for line in completed_text.splitlines():
+            if line.startswith("| Sprint | Status |"):
+                in_completed_table = True
+                continue
+            if not in_completed_table:
+                continue
+            if line.startswith("| ---"):
+                continue
+            if not line.startswith("|"):
+                break
+            cells = [cell.strip() for cell in line.strip().strip("|").split("|")]
+            if len(cells) != 3:
+                continue
+            sprint, status, note = cells
+            history.append({"sprint": sprint, "status": status, "note": note})
+
+    completed_count = sum(1 for row in history if row["status"] == "completed")
     open_count = sum(1 for row in rows if row["status"] == "open")
-    history = list(reversed([row for row in rows if row["status"] == "completed"]))[:6]
+    recent_history = history[:6]
 
     return {
         "path": repo_path(ROADMAP_PATH),
         "href": output_relative_link(repo_path(ROADMAP_PATH)),
         "rows": rows,
         "current": current,
-        "history": history,
+        "history": recent_history,
         "completed_count": completed_count,
         "open_count": open_count,
     }

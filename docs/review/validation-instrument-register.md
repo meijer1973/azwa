@@ -1,11 +1,11 @@
 # Validation Instrument Register
 
 ## Summary
-Current roadmap sprint: Sprint 33.P4 - Build stakeholder packets.
+Current roadmap sprint: Sprint 33.P5 - Internal dry run.
 
 Recorded on: 2026-05-03.
 
-Created during Sprint 33.P0 and updated through Sprint 33.P3. This register treats the current D5 and D6 Excel workbooks as pre-validation baseline instruments. They are not final policy truth, not corpus sources, and not stakeholder validation results.
+Created during Sprint 33.P0 and updated through Sprint 33.P4. This register treats the current D5 and D6 Excel workbooks as pre-validation baseline instruments. They are not final policy truth, not corpus sources, and not stakeholder validation results.
 
 Use this register before editing, sending, or importing answers from the workbooks.
 
@@ -13,8 +13,8 @@ Use this register before editing, sending, or importing answers from the workboo
 
 | Instrument | Path | Version | Status | Sheets | Purpose | Source basis | Next QA action |
 | --- | --- | --- | --- | ---: | --- | --- | --- |
-| D5 validatieformat werkagenda Almere | `docs/review/D5_validatieformat_werkagenda_Almere_v0.1.xlsx` | `v0.1` | pre-validation baseline | 20 | Prepare D5 workagenda validation before contacting policymakers. | `data/workagenda/d5_status_matrix.json`, `data/workagenda/d5_validation_tickets.json`, `data/workagenda/d5_validation_packets.json`, source corpus and generated evidence layers. | Use traceability/prefill audits and pre-contact agent prompts to build filtered stakeholder packets. |
-| Almere D6 validatieformats | `docs/review/Almere_D6_validatieformats.xlsx` | current imported baseline | pre-validation baseline | 15 | Prepare D6 infrastructure, ownership, mandate, funding and safe-wording validation. | `docs/review/almere_d6_deep_research_learnings.md`, `docs/review/almere_d6_open_questions.md`, `docs/review/almere_d6_validation_ticket_matrix.md`, `data/extracted/municipal/almere_d6_responsibility_register.json`. | Use traceability/prefill audits and pre-contact agent prompts to build filtered stakeholder packets. |
+| D5 validatieformat werkagenda Almere | `docs/review/D5_validatieformat_werkagenda_Almere_v0.1.xlsx` | `v0.1` | pre-validation baseline | 20 | Prepare D5 workagenda validation before contacting policymakers. | `data/workagenda/d5_status_matrix.json`, `data/workagenda/d5_validation_tickets.json`, `data/workagenda/d5_validation_packets.json`, source corpus and generated evidence layers. | Test prepared packet drafts in Sprint 33.P5 internal dry run. |
+| Almere D6 validatieformats | `docs/review/Almere_D6_validatieformats.xlsx` | current imported baseline | pre-validation baseline | 15 | Prepare D6 infrastructure, ownership, mandate, funding and safe-wording validation. | `docs/review/almere_d6_deep_research_learnings.md`, `docs/review/almere_d6_open_questions.md`, `docs/review/almere_d6_validation_ticket_matrix.md`, `data/extracted/municipal/almere_d6_responsibility_register.json`. | Test prepared packet drafts in Sprint 33.P5 internal dry run. |
 
 ## Traceability Layer
 
@@ -45,6 +45,17 @@ Sprint 33.P3 created:
 - `src/build_precontact_agent_plan.py`
 
 The agent plan prepares five narrow prompts: evidence-prefill audit, D5 source-update watchlist, D5-D6 dependency mapping, policymaker readability and finance-risk precheck. They are marked `prepared_not_sent`. They must not be used to contact stakeholders or settle local validation, ownership, mandate, funding, D6 classification or final workagenda wording.
+
+## Pre-contact Stakeholder Packet Layer
+
+Sprint 33.P4 created:
+
+- `data/workagenda/precontact_stakeholder_packets.json`
+- `docs/review/precontact-stakeholder-packets.md`
+- `data/workagenda/precontact_packets/*.csv`
+- `src/build_precontact_stakeholder_packets.py`
+
+The packet layer creates filtered D5/D6 validation packet drafts with `vraag_id`, component IDs, answer type, evidence fields, repo-update effects and `not_my_domain_reroute` columns. Packets are marked `prepared_not_sent`; they are not validation records and must not be sent before the P7 send-readiness gate. The broad Gemeente Almere sociaal-domein route is split into three packets: D5 local input, D6 validation and sturing/afhankelijkheden.
 
 ## Freeze Rule
 

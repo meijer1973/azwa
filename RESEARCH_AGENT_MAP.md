@@ -40,7 +40,7 @@ For roadmap navigation, use `docs/data-quality-roadmap.md` as the single canonic
 
 For Sprint 32.0-32.2 workagenda-delivery scope, use `docs/workagenda-d5-stuurmodel.md`, `data/workagenda/d5_stuurmodel.json`, `docs/workagenda-d5-statusmatrix.md`, `data/workagenda/d5_status_matrix.json`, `docs/workagenda-d5-validation-tickets.md`, `data/workagenda/d5_validation_tickets.json`, `docs/workagenda-d5-validation-format.md`, and `data/workagenda/d5_validation_packets.json`. These files define the D5 scope, delivery status values, workagenda fields, milestones, the first D5 delivery-status matrix, constrained validation tickets and stakeholder packet formats. They are control layers, not local decisions or workagenda drafts. Blank validation packet fields are unresolved; do not fill them by inference.
 
-For pre-contact validation-readiness, use `docs/review/validation-instrument-register.md`, `docs/review/validation-workbook-traceability-audit.md`, `docs/review/validation-workbook-prefill-audit.md`, `docs/review/precontact-agent-prompts.md`, `data/workagenda/validation_workbook_traceability_map.json`, `data/workagenda/validation_workbook_prefill_audit.json`, and `data/workagenda/precontact_agent_plan.json` before editing, sending, importing answers from, or delegating pre-contact agents from the D5 and D6 Excel validation workbooks. The workbooks are validation instruments, not corpus sources, final policy truth, or stakeholder validation results.
+For pre-contact validation-readiness, use `docs/review/validation-instrument-register.md`, `docs/review/validation-workbook-traceability-audit.md`, `docs/review/validation-workbook-prefill-audit.md`, `docs/review/precontact-agent-prompts.md`, `docs/review/precontact-stakeholder-packets.md`, `data/workagenda/validation_workbook_traceability_map.json`, `data/workagenda/validation_workbook_prefill_audit.json`, `data/workagenda/precontact_agent_plan.json`, and `data/workagenda/precontact_stakeholder_packets.json` before editing, sending, importing answers from, or delegating pre-contact agents from the D5 and D6 Excel validation workbooks. The workbooks and packet drafts are validation instruments, not corpus sources, final policy truth, or stakeholder validation results.
 
 ## Access Layer
 
@@ -232,6 +232,7 @@ Machine-readable:
     "docs/review/validation-workbook-traceability-audit.md",
     "docs/review/validation-workbook-prefill-audit.md",
     "docs/review/precontact-agent-prompts.md",
+    "docs/review/precontact-stakeholder-packets.md",
     "docs/review/D5_validatieformat_werkagenda_Almere_v0.1.xlsx",
     "docs/review/Almere_D6_validatieformats.xlsx",
     "docs/review/archive/d6-support/almere_d6_public_source_boundary.md",
@@ -269,9 +270,12 @@ Machine-readable:
     "data/workagenda/validation_workbook_traceability_map.json",
     "data/workagenda/validation_workbook_prefill_audit.json",
     "data/workagenda/precontact_agent_plan.json",
+    "data/workagenda/precontact_stakeholder_packets.json",
+    "data/workagenda/precontact_packets",
     "src/build_validation_workbook_traceability.py",
     "src/build_validation_workbook_prefill_audit.py",
     "src/build_precontact_agent_plan.py",
+    "src/build_precontact_stakeholder_packets.py",
     "docs/human-review-guidance.md",
     "docs/internal/monthly-source-audit-2026-04-30.md",
     "docs/internal/review-dashboard.html"
@@ -467,6 +471,7 @@ Theme view models:
     "docs/review/validation-workbook-traceability-audit.md",
     "docs/review/validation-workbook-prefill-audit.md",
     "docs/review/precontact-agent-prompts.md",
+    "docs/review/precontact-stakeholder-packets.md",
     "docs/review/Almere_D6_validatieformats.xlsx"
   ],
   "workagenda_delivery_planning": [
@@ -482,6 +487,7 @@ Theme view models:
     "docs/review/validation-workbook-traceability-audit.md",
     "docs/review/validation-workbook-prefill-audit.md",
     "docs/review/precontact-agent-prompts.md",
+    "docs/review/precontact-stakeholder-packets.md",
     "docs/review/D5_validatieformat_werkagenda_Almere_v0.1.xlsx",
     "docs/review/Almere_D6_validatieformats.xlsx",
     "data/workagenda/d5_stuurmodel.json",
@@ -491,9 +497,12 @@ Theme view models:
     "data/workagenda/validation_workbook_traceability_map.json",
     "data/workagenda/validation_workbook_prefill_audit.json",
     "data/workagenda/precontact_agent_plan.json",
+    "data/workagenda/precontact_stakeholder_packets.json",
+    "data/workagenda/precontact_packets",
     "src/build_validation_workbook_traceability.py",
     "src/build_validation_workbook_prefill_audit.py",
     "src/build_precontact_agent_plan.py",
+    "src/build_precontact_stakeholder_packets.py",
     "data/extracted/workagenda_d5_operational_requirements.json",
     "data/extracted/workagenda_nulmeting_capacity.json",
     "data/extracted/municipal/almere_d6_responsibility_register.json",

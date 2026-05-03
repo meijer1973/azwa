@@ -1,9 +1,9 @@
 ﻿# AZWA Canonical Roadmap
 
 ## Summary
-Current sprint: Sprint 33.P4 - Pre-contact validation-readiness: build stakeholder packets.
+Current sprint: Sprint 33.P5 - Pre-contact validation-readiness: internal dry run.
 
-Roadmap version: `v2026.05.03-6`.
+Roadmap version: `v2026.05.03-7`.
 
 This is the single active roadmap for the repository. It combines the older data-quality roadmap and the workagenda-delivery roadmap into one canonical planning surface. Historical snapshots and retired roadmap files live under `docs/roadmap/archive/`; version changes are recorded in `docs/roadmap/roadmap-version-log.md`.
 
@@ -30,8 +30,7 @@ Statusbetekenis:
 
 | Task | Status | What needs to be done | Next artifact / output | Blocker or dependency |
 | --- | --- | --- | --- | --- |
-| 33.P4 Build stakeholder packets | open | Maak gefilterde D5/D6 pakketten per groep zodat niemand het volledige workbook krijgt behalve het kernteam. | Stakeholder packet index and send set. | Requires P1-P3. |
-| 33.P5 Internal dry run | planned | Laat 2-4 interne reviewers een D5-tab, D6-tab, finance-row, evidence-field en `niet mijn domein` case testen. | Dry-run findings and workbook fixes. | Requires P4 packets. |
+| 33.P5 Internal dry run | open | Laat 2-4 interne reviewers een D5-tab, D6-tab, finance-row, evidence-field en `niet mijn domein` case testen. | Dry-run findings and workbook fixes. | Requires P4 packets. |
 | 33.P6 Repository/workflow integration | planned | Leg vast hoe Excel-antwoorden terugkomen in validation logs, finance matrix, decision register, D5-D6 dependency map, source update log and statusmatrix. | Import/processing workflow note; planned JSON objects where needed. | Requires P1/P4 structure. |
 | 33.P7 Send-readiness gate | planned | Go/no-go voor contact: IDs, routing, evidence gates, current working views, dropdowns, dry run and source watchlist must be complete. | Send-readiness gate note. | Must pass before contacting policymakers. |
 | V1 Controlled outbound | blocked | Verstuur beperkte stakeholderpakketten pas na P7. | Sent-packet log. | Blocked until send-readiness gate passes. |
@@ -43,7 +42,7 @@ Statusbetekenis:
 Completed sprint history: `docs/roadmap/completed-sprint-ledger.md`.
 
 ## Huidige sprintplan
-Sprint 33.P4 is open. Sprint 33.P3 heeft de gerichte pre-contact agent prompts voorbereid via `data/workagenda/precontact_agent_plan.json` en `docs/review/precontact-agent-prompts.md`. De prompts staan op `prepared_not_sent` en mogen alleen evidence-prefill, source-watch, D5-D6 dependency mapping, policymaker readability and finance-risk precheck ondersteunen; ze mogen geen stakeholdercontact, formele D5/D6-besluiten, eigenaarschap, mandaat, financiering of final wording invullen. De lopende taak is nu stakeholderpakketten bouwen: gefilterde D5/D6 packet sets per groep, met traceability IDs, evidence fields en duidelijke instructie. Sprint 32.3 blijft geblokkeerd tot echte stakeholderantwoorden bestaan. Sprint 25.6 blijft geparkeerd omdat post-validatie hardening pas verantwoord is na stakeholdervalidatierecords, lokale/interne documenten, finance/controller bevestiging of een expliciet beleidsbesluit.
+Sprint 33.P5 is open. Sprint 33.P4 heeft 18 gefilterde D5/D6 stakeholder packet drafts gebouwd via `data/workagenda/precontact_stakeholder_packets.json`, `docs/review/precontact-stakeholder-packets.md` en `data/workagenda/precontact_packets/*.csv`. De packet set bevat 245 unieke `vraag_id` waarden en 604 packet rows door multi-routing; na splitsing van Gemeente Almere sociaal domein in D5, D6 en sturing is de grootste packet draft 80 rijen. Alle packets blijven `prepared_not_sent`. De lopende taak is nu een interne dry run: test een D5-tab, een D6-tab, een finance-row, een evidence-field en een `niet mijn domein` case voordat er stakeholdercontact is. Sprint 32.3 blijft geblokkeerd tot echte stakeholderantwoorden bestaan. Sprint 25.6 blijft geparkeerd omdat post-validatie hardening pas verantwoord is na stakeholdervalidatierecords, lokale/interne documenten, finance/controller bevestiging of een expliciet beleidsbesluit.
 
 ## Current Context Check - 2026-05-03
 
@@ -72,6 +71,9 @@ Goal: reduce human workload before validation starts. Policymakers should receiv
 | `docs/review/validation-workbook-prefill-audit.md` | Created in 33.P2. | Human-readable workbook prefill audit and cleanup list. |
 | `data/workagenda/precontact_agent_plan.json` | Created in 33.P3. | Prepared targeted agent plan; prompts are not sent. |
 | `docs/review/precontact-agent-prompts.md` | Created in 33.P3. | Copy-ready prompts for five narrow pre-contact agents. |
+| `data/workagenda/precontact_stakeholder_packets.json` | Created in 33.P4. | Prepared D5/D6 packet index; packets are not sent. |
+| `docs/review/precontact-stakeholder-packets.md` | Created in 33.P4. | Human-readable packet overview, instructions and cleanup-before-send notes. |
+| `data/workagenda/precontact_packets/*.csv` | Created in 33.P4. | Draft CSV packet send set with `vraag_id`, evidence fields and reroute columns. |
 | `data/workagenda/d5_validation_tickets.json` | Created in 32.2. | D5 machine-readable validation ticket basis. |
 | `data/workagenda/d5_validation_packets.json` and `data/workagenda/validation_packets/*.csv` | Created in 32.2. | D5 repository-generated packet basis, to be reconciled with Excel. |
 | `docs/review/almere_d6_validation_ticket_matrix.md` | Existing D6 plain-language matrix. | D6 question design and stakeholder language basis. |
@@ -84,7 +86,7 @@ Goal: reduce human workload before validation starts. Policymakers should receiv
 | 33.P1 | Add IDs and routing | Stable IDs, stakeholder packages and repo-update effects per validation row. Completed. | No |
 | 33.P2 | Prefill audit | Current working view per human-facing tab; no blank broad questions. Completed. | No |
 | 33.P3 | Targeted agents | Evidence, readability, dependency, source-watch and finance-risk prechecks only. Completed; prompts prepared, not sent. | No |
-| 33.P4 | Stakeholder packets | Filtered packets per group, with instructions and escalation route. | No |
+| 33.P4 | Stakeholder packets | Filtered packets per group, with instructions and escalation route. Completed; packet drafts prepared, not sent. | No |
 | 33.P5 | Internal dry run | Tested and revised workbook/packet set. | No |
 | 33.P6 | Repository/workflow integration | Validation logs, ticket structures, status matrix import path. | No |
 | 33.P7 | Send-readiness gate | Go/no-go decision for contact. | No |

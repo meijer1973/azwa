@@ -292,6 +292,15 @@ def normalize(value: str) -> str:
     return re.sub(r"\s+", " ", cleaned)
 
 
+def repair_mojibake(value: str) -> str:
+    if "Ã" not in value and "â" not in value:
+        return value
+    try:
+        return value.encode("latin-1").decode("utf-8")
+    except UnicodeError:
+        return value
+
+
 def column_index(cell_ref: str) -> int:
     match = re.match(r"([A-Z]+)", cell_ref)
     if not match:
@@ -317,10 +326,10 @@ def cell_value(cell: ET.Element, shared_strings: list[str]) -> str:
     cell_type = cell.attrib.get("t")
     value = cell.find("main:v", NS)
     if cell_type == "s" and value is not None:
-        return shared_strings[int(value.text or "0")]
+        return repair_mojibake(shared_strings[int(value.text or "0")])
     if cell_type == "inlineStr":
-        return "".join(text.text or "" for text in cell.findall(".//main:t", NS))
-    return value.text if value is not None else ""
+        return repair_mojibake("".join(text.text or "" for text in cell.findall(".//main:t", NS)))
+    return repair_mojibake(value.text if value is not None else "")
 
 
 def normalize_target(target: str) -> str:

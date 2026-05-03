@@ -1,4 +1,22 @@
-# Datakwaliteitsroadmap AZWA-site
+# AZWA Canonical Roadmap
+
+## Summary
+Current sprint: Sprint 32.4 - Handreikingen en tijdsafhankelijke bronnen verwerken. Sprint 32.3 is blocked pending stakeholder validation responses.
+
+Roadmap version: `v2026.05.03`.
+
+This is the single active roadmap for the repository. It combines the older data-quality roadmap and the workagenda-delivery roadmap into one canonical planning surface. Historical snapshots and retired roadmap files live under `docs/roadmap/archive/`; version changes are recorded in `docs/roadmap/roadmap-version-log.md`.
+
+## Roadmap Versioning
+
+Use this versioning rule for roadmap changes:
+
+- The active roadmap is always `docs/data-quality-roadmap.md`.
+- Increment the roadmap version when sprint status, phase scope, gate rules, canonical file routing, or delivery sequence changes.
+- Record every roadmap version in `docs/roadmap/roadmap-version-log.md`.
+- Archive replaced standalone roadmap files or major prior snapshots under `docs/roadmap/archive/`.
+- Keep `docs/workagenda-delivery-roadmap.md` as a redirect only; do not maintain it as a second active roadmap.
+- After roadmap changes, regenerate `docs/internal/review-dashboard.html`, run tests, commit and push before reporting back.
 
 ## Sprint Ledger
 Gebruik deze roadmap als levend werkdocument. Werk na elke sprint de statusregel bij:
@@ -57,6 +75,71 @@ Gebruik deze roadmap als levend werkdocument. Werk na elke sprint de statusregel
 
 ## Huidige sprintplan
 Sprint 32.4 is open als repository-side vervolgstap. Sprint 32.3 is geblokkeerd tot ingevulde stakeholderantwoorden, validatierecords, expliciete beleidsbesluiten of relevante bewijsdocumenten beschikbaar zijn. De lopende repository-taak is nu handreikingen en tijdsafhankelijke bronnen bewaken zonder brede research te starten. Sprint 25.6 blijft geparkeerd omdat post-validatie hardening pas verantwoord is na stakeholdervalidatierecords, lokale/interne documenten, finance/controller bevestiging of een expliciet beleidsbesluit.
+
+## Phase 32 - Werkagenda-delivery System
+
+Phase 32 turns the repository from a research and review tool into a D5 workagenda-delivery control system. The goal is not final drafting yet. The goal is to show, per D5 component and workagenda field, whether the answer is source-backed, needs local validation, needs finance/controller or Zvw confirmation, needs a decision, depends on D6, waits for national guidance, or is ready for drafting.
+
+### Phase 32 Status
+
+| Sprint | Status | Output |
+| --- | --- | --- |
+| 32.0 Scope en stuurmodel vastzetten | completed | `docs/workagenda-d5-stuurmodel.md`; `data/workagenda/d5_stuurmodel.json`; `docs/completed-plans/phase32-sprint32.0-workagenda-stuurmodel.md` |
+| 32.1 D5-statusmatrix bouwen | completed | `docs/workagenda-d5-statusmatrix.md`; `data/workagenda/d5_status_matrix.json`; `docs/completed-plans/phase32-sprint32.1-d5-statusmatrix.md` |
+| 32.2 D5-validatie voorbereiden | completed | `docs/workagenda-d5-validation-tickets.md`; `data/workagenda/d5_validation_tickets.json`; `docs/workagenda-d5-validation-format.md`; `data/workagenda/d5_validation_packets.json`; `data/workagenda/validation_packets/*.csv`; `docs/completed-plans/phase32-sprint32.2-d5-validatieformats.md` |
+| 32.3 Eerste menselijke validatieronde | blocked | Blocked until completed stakeholder answers, validation records, explicit policy decisions or relevant evidence documents exist. |
+| 32.4 Handreikingen en tijdsafhankelijke bronnen verwerken | open | Planned: `data/workagenda/d5_source_update_log.json` and a human-readable source-update note. |
+| 32.5 Gap compression en besluit-tickets | planned | Planned: `data/workagenda/d5_decision_register.json` and decision-ticket summary. |
+| 32.6 Finance/controller en zorgverzekeraar integreren | planned | Planned: `data/workagenda/d5_finance_matrix.json`. |
+| 32.7 D6-afhankelijkheden integreren | planned | Planned: `data/workagenda/d5_d6_dependency_map.json`. |
+| 32.8 Prioritering, fasering en 2030-ingroeipad | planned | Planned: prioritisation and phasing view. |
+| 32.9 Concept-werkagenda v0.8 | blocked | Blocked until statusmatrix, validation tickets, finance matrix, decision register and D5-D6 dependency map exist. |
+| 32.10 Governance-ready versie | blocked | Blocked until concept is validated and finance/governance risks are explicit. |
+| 32.11 Vaststelling en VWS-verzending | blocked | Blocked until governance route begins. |
+| 32.12 Uitvoeringsstart 2027 en lerende cyclus | blocked | Blocked until adopted workagenda exists. |
+
+### Phase 32 Delivery Status Model
+
+Every D5 component and workagenda field uses one of these statuses:
+
+| Code | Status | Meaning |
+| --- | --- | --- |
+| A | Beantwoord uit bron | Public/corpus source directly answers the field. |
+| B | Bron suggereert antwoord, validatie nodig | Source-backed working view exists, but local validation is required. |
+| C | Lokale validatie nodig | Local practice, owner, coverage, capacity or evidence must be confirmed. |
+| D | Bestuurlijk besluit nodig | A decision is needed before the field can be used as workagenda position. |
+| E | Finance/controller nodig | Funding, structural continuation or double-counting must be checked. |
+| F | Zorgverzekeraar/Zvw-bevestiging nodig | Zvw-side purchase, contract or insurer role must be confirmed. |
+| G | ICT/privacy/data-bevestiging nodig | Data, privacy, dashboard, reporting or operational accountability must be confirmed. |
+| H | Wachten op landelijke handreiking | National guidance or template is still expected. |
+| I | Optioneel / niet van toepassing | Item is optional, excluded or not applicable for the current scope. |
+| J | Onbekend | Not enough information to classify yet. |
+
+### Phase 32 Core Files
+
+| File | Function | Status |
+| --- | --- | --- |
+| `data/workagenda/d5_stuurmodel.json` | Scope, status values, fields and milestones. | Created in 32.0. |
+| `data/workagenda/d5_status_matrix.json` | Central status per D5 component and workagenda field. | Created in 32.1. |
+| `data/workagenda/d5_validation_tickets.json` | Constrained validation questions. | Created in 32.2. |
+| `data/workagenda/d5_validation_packets.json` | Stakeholder packet index. | Created in 32.2. |
+| `data/workagenda/validation_packets/*.csv` | Blank validation forms per stakeholder packet. | Created in 32.2; not validation results. |
+| `data/workagenda/d5_validation_log.json` | Who confirmed what, when, with what evidence. | Blocked until validation answers exist. |
+| `data/workagenda/d5_source_update_log.json` | Handreikingen, regioscan, rode-dradenanalyse and time-sensitive source changes. | Planned for 32.4. |
+| `data/workagenda/d5_finance_matrix.json` | Funding, double-counting, structural/project status and controller status. | Planned. |
+| `data/workagenda/d5_decision_register.json` | Governance and bestuurlijke decision tickets. | Planned. |
+| `data/workagenda/d5_d6_dependency_map.json` | D6 preconditions per D5 component. | Planned. |
+| `data/workagenda/d5_dashboard_view.json` | Red/yellow/green workagenda steering view. | Planned. |
+
+### Phase 32 Gate Rules
+
+- Do not start final D5 workagenda drafting from the roadmap, statusmatrix or validation packets alone.
+- Do not mark a D5 field ready if it only has a source-backed working view and still needs local validation.
+- Do not use finance wording as confirmed unless finance/controller or insurer evidence exists.
+- Do not hide D6 prerequisites inside D5 programme text; record them as dependencies.
+- Do not send broad research agents unless a named source, expected publication or explicit source gap exists.
+- Do not process Sprint 32.3 until completed validation responses or explicit policy decisions exist.
+- Do not move to Sprint 32.9 drafting until the statusmatrix, validation tickets, finance matrix, decision register and D5-D6 dependency map exist.
 
 Status op 26 april 2026: Sprint 25.2 is afgerond als publieke bronversterkingssprint. `data/extracted/local_source_strengthening_almere.json` maakt zichtbaar welke lokale bronnen in de formele laag zitten, welke publieke bronnen als assessmentmateriaal zijn beoordeeld, en welke vragen naar later in de workflow gaan omdat de publieke bronbasis is uitgeput of omdat een geschoonde validatiestap nodig is. De geselecteerde Documentwijzer-bijlagen voor Visie Gezondheidsbeleid en Maatschappelijke Agenda zijn eerst naar page-markdown omgezet en daarna opgenomen in `data/raw/manifest.json`. Ook de GGD-tabellenboeken voor volwassenen en ouderen, de GGD-valpreventiepagina Almere en de ZonMw-bron zijn opgenomen in `data/raw/manifest.json`, door inventory/extractie/claims/site-viewmodels verwerkt en blijven reviewmateriaal voordat ze bestuurlijk of public-facing worden gebruikt. Niet-publieke informatie, ontbrekende lokale bevestiging en formele besluitvragen blokkeren deze fase niet; ze worden als gaten of carry-over taken zichtbaar gemaakt voor lokale medewerkers en latere besluitvorming.
 
@@ -124,7 +207,7 @@ Status op 1 mei 2026: de D6-open-vragen zijn aangescherpt naar validatievragen i
 
 Status op 1 mei 2026: het rapport `docs/dr/Constrained answer design for the Almere D6 open-question set.md` is verwerkt als ontwerpinput, niet als bronbewijs. Er zijn geen nieuwe manifestbronnen geselecteerd. De managementopmerking is verwerkt door de actieve validatiematrix om te schrijven naar stakeholdertaal en interne termen zoals repository/register/prefill/top-layer buiten de handoffvragen te houden.
 
-Status op 2 mei 2026: de voorgestelde roadmap om de repository om te bouwen naar een werkagenda-delivery system is getoetst aan de huidige staat en vastgelegd in `docs/workagenda-delivery-roadmap.md`. De richting klopt: D5-vereisten, nulmeting/capaciteit, D6-validatie, tijdlijn/watchlist en reviewguardrails bestaan al. De ontbrekende laag is een delivery-control laag met D5-statusmatrix, D5-validatietickets, validatielog, finance/controller matrix, besluitregister, D5-D6-afhankelijkhedenkaart, bronupdate-log en dashboardview.
+Status op 2 mei 2026: de voorgestelde roadmap om de repository om te bouwen naar een werkagenda-delivery system is getoetst aan de huidige staat. De richting klopt: D5-vereisten, nulmeting/capaciteit, D6-validatie, tijdlijn/watchlist en reviewguardrails bestaan al. De ontbrekende laag is een delivery-control laag met D5-statusmatrix, D5-validatietickets, validatielog, finance/controller matrix, besluitregister, D5-D6-afhankelijkhedenkaart, bronupdate-log en dashboardview. De eerst losse workagenda-roadmap is op 3 mei 2026 samengevoegd in deze canonieke roadmap.
 
 Status op 2 mei 2026: Sprint 32.0 is gestart. Het eerste stuurmodel staat in `docs/workagenda-d5-stuurmodel.md` en de machineleesbare contractlaag in `data/workagenda/d5_stuurmodel.json`. Deze laag legt de D5-scope, statuscodes A-J, werkagendavelden, mijlpalen en geplande kernbestanden vast. Het is nog geen D5-statusmatrix en nog geen validatie-Excel; die volgen pas na dit contract.
 

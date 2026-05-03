@@ -39,7 +39,7 @@ No D6 responsibility row was moved to `settled`. Formal D6 classification, owner
 - `Stand van zaken Gezondheidsbeleid (IZA en GALA)` remains `pending_full_text` in `data/raw/source_intake_candidates.json`.
 - Sprint 25.6 remains parked until stakeholder validation records, local/internal documents, finance/controller confirmation or explicit policy decisions exist.
 - D6 validation questions now have a plain-language handoff matrix, but answers still require confirmation by the relevant stakeholders.
-- Workagenda-delivery work continues in Phase 32 through `docs/workagenda-delivery-roadmap.md`.
+- Workagenda-delivery work continues in Phase 32 through the canonical roadmap `docs/data-quality-roadmap.md`. `docs/workagenda-delivery-roadmap.md` is now only a redirect.
 
 ## Verification
 

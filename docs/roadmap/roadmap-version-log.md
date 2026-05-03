@@ -1,7 +1,7 @@
 # Roadmap Version Log
 
 ## Summary
-Current roadmap version: `v2026.05.03-5`.
+Current roadmap version: `v2026.05.03-6`.
 
 The active roadmap is `docs/data-quality-roadmap.md`. This log records material roadmap changes so the project does not split into multiple competing roadmap documents.
 
@@ -17,6 +17,7 @@ The active roadmap is `docs/data-quality-roadmap.md`. This log records material 
 
 | Version | Date | Change | Active roadmap | Archive / notes |
 | --- | --- | --- | --- | --- |
+| `v2026.05.03-6` | 2026-05-03 | Closed Sprint 33.P3 and moved the active task to Sprint 33.P4 stakeholder packet building. | `docs/data-quality-roadmap.md` | Added `data/workagenda/precontact_agent_plan.json`, `docs/review/precontact-agent-prompts.md`, and `src/build_precontact_agent_plan.py`; prompts are prepared, not sent. |
 | `v2026.05.03-5` | 2026-05-03 | Closed Sprint 33.P2 and moved the active task to Sprint 33.P3 targeted pre-contact agents. | `docs/data-quality-roadmap.md` | Added `data/workagenda/validation_workbook_prefill_audit.json`, `docs/review/validation-workbook-prefill-audit.md`, and `src/build_validation_workbook_prefill_audit.py`. |
 | `v2026.05.03-4` | 2026-05-03 | Closed Sprint 33.P1 at repository-map level and moved the active task to Sprint 33.P2 prefill audit/current working views. | `docs/data-quality-roadmap.md` | Added `data/workagenda/validation_workbook_traceability_map.json`, `docs/review/validation-workbook-traceability-audit.md`, and `src/build_validation_workbook_traceability.py`. |
 | `v2026.05.03-3` | 2026-05-03 | Reframed the active roadmap around pre-contact validation-readiness, with Sprint 33.P0-P7 before policymaker contact and V1-V4 after send-readiness. | `docs/data-quality-roadmap.md` | Added `docs/review/validation-instrument-register.md` and brought the D5/D6 Excel workbooks under tracked baseline control. |

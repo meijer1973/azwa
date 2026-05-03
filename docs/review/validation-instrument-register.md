@@ -1,11 +1,11 @@
 # Validation Instrument Register
 
 ## Summary
-Current roadmap sprint: Sprint 33.P2 - Prefill audit and current working views.
+Current roadmap sprint: Sprint 33.P4 - Build stakeholder packets.
 
 Recorded on: 2026-05-03.
 
-Created during Sprint 33.P0 and updated during Sprint 33.P1. This register treats the current D5 and D6 Excel workbooks as pre-validation baseline instruments. They are not final policy truth, not corpus sources, and not stakeholder validation results.
+Created during Sprint 33.P0 and updated through Sprint 33.P3. This register treats the current D5 and D6 Excel workbooks as pre-validation baseline instruments. They are not final policy truth, not corpus sources, and not stakeholder validation results.
 
 Use this register before editing, sending, or importing answers from the workbooks.
 
@@ -13,8 +13,8 @@ Use this register before editing, sending, or importing answers from the workboo
 
 | Instrument | Path | Version | Status | Sheets | Purpose | Source basis | Next QA action |
 | --- | --- | --- | --- | ---: | --- | --- | --- |
-| D5 validatieformat werkagenda Almere | `docs/review/D5_validatieformat_werkagenda_Almere_v0.1.xlsx` | `v0.1` | pre-validation baseline | 20 | Prepare D5 workagenda validation before contacting policymakers. | `data/workagenda/d5_status_matrix.json`, `data/workagenda/d5_validation_tickets.json`, `data/workagenda/d5_validation_packets.json`, source corpus and generated evidence layers. | IDs/routing now mapped in `data/workagenda/validation_workbook_traceability_map.json`; next check current working views and human-facing wording. |
-| Almere D6 validatieformats | `docs/review/Almere_D6_validatieformats.xlsx` | current imported baseline | pre-validation baseline | 15 | Prepare D6 infrastructure, ownership, mandate, funding and safe-wording validation. | `docs/review/almere_d6_deep_research_learnings.md`, `docs/review/almere_d6_open_questions.md`, `docs/review/almere_d6_validation_ticket_matrix.md`, `data/extracted/municipal/almere_d6_responsibility_register.json`. | IDs/routing now mapped in `data/workagenda/validation_workbook_traceability_map.json`; next check current working views and human-facing wording. |
+| D5 validatieformat werkagenda Almere | `docs/review/D5_validatieformat_werkagenda_Almere_v0.1.xlsx` | `v0.1` | pre-validation baseline | 20 | Prepare D5 workagenda validation before contacting policymakers. | `data/workagenda/d5_status_matrix.json`, `data/workagenda/d5_validation_tickets.json`, `data/workagenda/d5_validation_packets.json`, source corpus and generated evidence layers. | Use traceability/prefill audits and pre-contact agent prompts to build filtered stakeholder packets. |
+| Almere D6 validatieformats | `docs/review/Almere_D6_validatieformats.xlsx` | current imported baseline | pre-validation baseline | 15 | Prepare D6 infrastructure, ownership, mandate, funding and safe-wording validation. | `docs/review/almere_d6_deep_research_learnings.md`, `docs/review/almere_d6_open_questions.md`, `docs/review/almere_d6_validation_ticket_matrix.md`, `data/extracted/municipal/almere_d6_responsibility_register.json`. | Use traceability/prefill audits and pre-contact agent prompts to build filtered stakeholder packets. |
 
 ## Traceability Layer
 
@@ -35,6 +35,16 @@ Sprint 33.P2 created:
 - `src/build_validation_workbook_prefill_audit.py`
 
 The prefill audit checks current working views, assessment/correction fields, evidence fields, broad questions and internal jargon. It does not validate policy content. Its main finding is that the workbooks are usable as pre-contact drafts, but the outgoing packets still need targeted cleanup before stakeholder contact.
+
+## Pre-contact Agent Plan
+
+Sprint 33.P3 created:
+
+- `data/workagenda/precontact_agent_plan.json`
+- `docs/review/precontact-agent-prompts.md`
+- `src/build_precontact_agent_plan.py`
+
+The agent plan prepares five narrow prompts: evidence-prefill audit, D5 source-update watchlist, D5-D6 dependency mapping, policymaker readability and finance-risk precheck. They are marked `prepared_not_sent`. They must not be used to contact stakeholders or settle local validation, ownership, mandate, funding, D6 classification or final workagenda wording.
 
 ## Freeze Rule
 

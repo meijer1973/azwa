@@ -1,9 +1,9 @@
 ﻿# AZWA Canonical Roadmap
 
 ## Summary
-Current sprint: Sprint 33.P2 - Pre-contact validation-readiness: prefill audit and current working views.
+Current sprint: Sprint 33.P3 - Pre-contact validation-readiness: targeted pre-contact agents.
 
-Roadmap version: `v2026.05.03-4`.
+Roadmap version: `v2026.05.03-5`.
 
 This is the single active roadmap for the repository. It combines the older data-quality roadmap and the workagenda-delivery roadmap into one canonical planning surface. Historical snapshots and retired roadmap files live under `docs/roadmap/archive/`; version changes are recorded in `docs/roadmap/roadmap-version-log.md`.
 
@@ -30,8 +30,7 @@ Statusbetekenis:
 
 | Task | Status | What needs to be done | Next artifact / output | Blocker or dependency |
 | --- | --- | --- | --- | --- |
-| 33.P2 Prefill audit and current working views | open | Controleer dat elke human-facing tab een korte `Huidige werkvisie`, beoordeling werkvisie, correctieveld en bewijsveld heeft, zonder interne termen. | Prefill audit note; workbook change list. | Requires P1 traceability. |
-| 33.P3 Targeted pre-contact agents | planned | Alleen gerichte agents: evidence-prefill audit, D5 source-update watchlist, D5-D6 dependency mapping, policymaker readability, finance-risk precheck. Geen brede D5/D6 search. | Targeted agent prompts and intake notes. | Use only named gaps/watchlist items. |
+| 33.P3 Targeted pre-contact agents | open | Alleen gerichte agents: evidence-prefill audit, D5 source-update watchlist, D5-D6 dependency mapping, policymaker readability, finance-risk precheck. Geen brede D5/D6 search. | Targeted agent prompts and intake notes. | Use only named gaps/watchlist items. |
 | 33.P4 Build stakeholder packets | planned | Maak gefilterde D5/D6 pakketten per groep zodat niemand het volledige workbook krijgt behalve het kernteam. | Stakeholder packet index and send set. | Requires P1-P3. |
 | 33.P5 Internal dry run | planned | Laat 2-4 interne reviewers een D5-tab, D6-tab, finance-row, evidence-field en `niet mijn domein` case testen. | Dry-run findings and workbook fixes. | Requires P4 packets. |
 | 33.P6 Repository/workflow integration | planned | Leg vast hoe Excel-antwoorden terugkomen in validation logs, finance matrix, decision register, D5-D6 dependency map, source update log and statusmatrix. | Import/processing workflow note; planned JSON objects where needed. | Requires P1/P4 structure. |
@@ -45,7 +44,7 @@ Statusbetekenis:
 Completed sprint history: `docs/roadmap/completed-sprint-ledger.md`.
 
 ## Huidige sprintplan
-Sprint 33.P2 is open. Sprint 33.P1 heeft repository-side traceability toegevoegd via `data/workagenda/validation_workbook_traceability_map.json`: 245 validatierijen hebben nu gegenereerde unieke IDs, componentrouting, stakeholderpakketten, antwoordtypen, bewijsvereisten, repo-update-effecten en pre-contact deadlines. De Excelbestanden zijn daarmee nog niet send-ready als ruwe stakeholderbestanden; zichtbare of beschermde rij-identiteit moet in de uiteindelijke pakketten blijven. De lopende taak is nu de prefill-audit: controleren of elke human-facing tab een korte begrijpelijke werkvisie, beoordelingsveld, correctieveld en bewijsinstructie heeft zonder interne termen. Sprint 32.3 blijft geblokkeerd tot echte stakeholderantwoorden bestaan. Sprint 25.6 blijft geparkeerd omdat post-validatie hardening pas verantwoord is na stakeholdervalidatierecords, lokale/interne documenten, finance/controller bevestiging of een expliciet beleidsbesluit.
+Sprint 33.P3 is open. Sprint 33.P2 heeft de prefill-audit afgerond via `data/workagenda/validation_workbook_prefill_audit.json` en `docs/review/validation-workbook-prefill-audit.md`. De audit bevestigt dat de workbooks bruikbaar zijn als pre-contact drafts, maar nog gerichte cleanup nodig hebben voor packet export: vier D5 matrix-tabs missen een korte werkvisie, één D5 overzichtstab mist een correctieveld, twee D6 tabs hebben taalcleanup nodig en twee D6 tabs hebben te brede vragen. De lopende taak is nu gerichte pre-contact agents voorbereiden: evidence-prefill, D5 source-watch, D5-D6 dependency mapping, policymaker readability and finance-risk precheck. Sprint 32.3 blijft geblokkeerd tot echte stakeholderantwoorden bestaan. Sprint 25.6 blijft geparkeerd omdat post-validatie hardening pas verantwoord is na stakeholdervalidatierecords, lokale/interne documenten, finance/controller bevestiging of een expliciet beleidsbesluit.
 
 ## Current Context Check - 2026-05-03
 
@@ -70,6 +69,8 @@ Goal: reduce human workload before validation starts. Policymakers should receiv
 | `docs/review/validation-instrument-register.md` | Created in 33.P0. | Version, purpose, sheet inventory, shared vocabulary and import rules. |
 | `data/workagenda/validation_workbook_traceability_map.json` | Created in 33.P1. | Stable generated IDs, routing and processing metadata for 245 D5/D6 workbook validation rows. |
 | `docs/review/validation-workbook-traceability-audit.md` | Created in 33.P1. | Human-readable audit of workbook traceability and remaining send-readiness limits. |
+| `data/workagenda/validation_workbook_prefill_audit.json` | Created in 33.P2. | Machine-readable audit of current working views, answer/correction fields, evidence fields, broad questions and language flags. |
+| `docs/review/validation-workbook-prefill-audit.md` | Created in 33.P2. | Human-readable workbook prefill audit and cleanup list. |
 | `data/workagenda/d5_validation_tickets.json` | Created in 32.2. | D5 machine-readable validation ticket basis. |
 | `data/workagenda/d5_validation_packets.json` and `data/workagenda/validation_packets/*.csv` | Created in 32.2. | D5 repository-generated packet basis, to be reconciled with Excel. |
 | `docs/review/almere_d6_validation_ticket_matrix.md` | Existing D6 plain-language matrix. | D6 question design and stakeholder language basis. |
@@ -80,7 +81,7 @@ Goal: reduce human workload before validation starts. Policymakers should receiv
 | --- | --- | --- | --- |
 | 33.P0 | Freeze instruments | D5/D6 Excel baselines and validation instrument register. Completed. | No |
 | 33.P1 | Add IDs and routing | Stable IDs, stakeholder packages and repo-update effects per validation row. Completed. | No |
-| 33.P2 | Prefill audit | Current working view per human-facing tab; no blank broad questions. | No |
+| 33.P2 | Prefill audit | Current working view per human-facing tab; no blank broad questions. Completed. | No |
 | 33.P3 | Targeted agents | Evidence, readability, dependency, source-watch and finance-risk prechecks only. | No |
 | 33.P4 | Stakeholder packets | Filtered packets per group, with instructions and escalation route. | No |
 | 33.P5 | Internal dry run | Tested and revised workbook/packet set. | No |

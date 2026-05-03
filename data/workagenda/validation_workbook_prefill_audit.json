@@ -1,0 +1,726 @@
+{
+  "generated_on": "2026-05-03",
+  "current_sprint": "Sprint 33.P2 - Pre-contact validation-readiness: prefill audit and current working views",
+  "purpose": "Audit human-facing current working views, evidence instructions, correction fields and jargon in D5/D6 validation workbooks before stakeholder contact.",
+  "guardrail": "This audit is a QA layer. It does not validate policy content or turn workbook text into source evidence.",
+  "summary": {
+    "sheet_count": 27,
+    "mapped_validation_row_count": 245,
+    "sheets_missing_current_working_view": [
+      {
+        "workbook_id": "d5_validation_workbook",
+        "sheet": "Financiering",
+        "component_id": "d5_financiering",
+        "mapped_validation_row_count": 11,
+        "has_current_working_view": false,
+        "has_assessment_field": true,
+        "has_correction_field": true,
+        "has_evidence_field": true,
+        "internal_jargon_flags": [],
+        "plain_language_flags": [],
+        "blank_question_count": 0,
+        "broad_question_count": 0,
+        "broad_question_flags": [],
+        "current_view_sample": "",
+        "recommendations": [
+          "Add a concise current working view before stakeholder contact."
+        ]
+      },
+      {
+        "workbook_id": "d5_validation_workbook",
+        "sheet": "Governance rollen",
+        "component_id": "d5_governance_rollen",
+        "mapped_validation_row_count": 45,
+        "has_current_working_view": false,
+        "has_assessment_field": true,
+        "has_correction_field": true,
+        "has_evidence_field": true,
+        "internal_jargon_flags": [],
+        "plain_language_flags": [],
+        "blank_question_count": 0,
+        "broad_question_count": 0,
+        "broad_question_flags": [],
+        "current_view_sample": "",
+        "recommendations": [
+          "Add a concise current working view before stakeholder contact."
+        ]
+      },
+      {
+        "workbook_id": "d5_validation_workbook",
+        "sheet": "Monitoring cyclus",
+        "component_id": "d5_monitoring_cyclus",
+        "mapped_validation_row_count": 10,
+        "has_current_working_view": false,
+        "has_assessment_field": true,
+        "has_correction_field": true,
+        "has_evidence_field": true,
+        "internal_jargon_flags": [],
+        "plain_language_flags": [],
+        "blank_question_count": 0,
+        "broad_question_count": 0,
+        "broad_question_flags": [],
+        "current_view_sample": "",
+        "recommendations": [
+          "Add a concise current working view before stakeholder contact."
+        ]
+      },
+      {
+        "workbook_id": "d5_validation_workbook",
+        "sheet": "D6 afhankelijkheden",
+        "component_id": "d5_d6_afhankelijkheden",
+        "mapped_validation_row_count": 9,
+        "has_current_working_view": false,
+        "has_assessment_field": true,
+        "has_correction_field": true,
+        "has_evidence_field": true,
+        "internal_jargon_flags": [],
+        "plain_language_flags": [],
+        "blank_question_count": 0,
+        "broad_question_count": 0,
+        "broad_question_flags": [],
+        "current_view_sample": "",
+        "recommendations": [
+          "Add a concise current working view before stakeholder contact."
+        ]
+      }
+    ],
+    "sheets_missing_assessment_field": [],
+    "sheets_missing_correction_field": [
+      {
+        "workbook_id": "d5_validation_workbook",
+        "sheet": "Overzicht D5",
+        "component_id": "d5_overview",
+        "mapped_validation_row_count": 12,
+        "has_current_working_view": true,
+        "has_assessment_field": true,
+        "has_correction_field": false,
+        "has_evidence_field": true,
+        "internal_jargon_flags": [],
+        "plain_language_flags": [],
+        "blank_question_count": 0,
+        "broad_question_count": 0,
+        "broad_question_flags": [],
+        "current_view_sample": "Groen / 0",
+        "recommendations": [
+          "Add or clarify a short correction/toelichting field."
+        ]
+      }
+    ],
+    "sheets_missing_evidence_field": [],
+    "sheets_with_language_flags": [
+      {
+        "workbook_id": "d6_validation_workbook",
+        "sheet": "Inloopvoorzieningen",
+        "component_id": "inloopvoorzieningen_sociaal_en_gezond",
+        "mapped_validation_row_count": 5,
+        "has_current_working_view": true,
+        "has_assessment_field": true,
+        "has_correction_field": true,
+        "has_evidence_field": true,
+        "internal_jargon_flags": [],
+        "plain_language_flags": [
+          "social_base"
+        ],
+        "blank_question_count": 0,
+        "broad_question_count": 0,
+        "broad_question_flags": [],
+        "current_view_sample": "Huidige werkhypothese: Meerdere Almere inloop- en social-base voorzieningen lijken relevant voor D6-validatie, maar per voorziening is nog niet bevestigd of deze formeel binnen D6 valt.\nVeilige voorlopige formulering: Meerdere Almere inloop- en social-basis voorzieningen kunnen relevant zijn voor D6-validatie.\nNiet gebruiken vóór bevestiging: Almere heeft specifieke inloopvoorzieningen al als formele D6-infrastructuur aangewezen.",
+        "recommendations": [
+          "Replace English/technical terms with plain Dutch policy language."
+        ]
+      },
+      {
+        "workbook_id": "d6_validation_workbook",
+        "sheet": "PGA-Zorgzaam-Flever",
+        "component_id": "pga_zorgzaam_flever_interface",
+        "mapped_validation_row_count": 7,
+        "has_current_working_view": true,
+        "has_assessment_field": true,
+        "has_correction_field": true,
+        "has_evidence_field": true,
+        "internal_jargon_flags": [],
+        "plain_language_flags": [
+          "evidence"
+        ],
+        "blank_question_count": 0,
+        "broad_question_count": 0,
+        "broad_question_flags": [],
+        "current_view_sample": "Huidige werkhypothese: PGA, Zorgzaam Flevoland, Flever, GGD en AZWA-governance lijken verschillende rollen te hebben. Ze moeten niet als één gecombineerde D6-actor worden behandeld.\nVeilige voorlopige formulering: Huidige evidence wijst op een interface tussen lokaal programmawerk, regionale samenwerking, participatieondersteuning en monitoring/advies.\nNiet gebruiken vóór bevestiging: PGA, Zorgzaam Flevoland of Flever is eigenaar van D6 voor Almere.",
+        "recommendations": [
+          "Replace English/technical terms with plain Dutch policy language."
+        ]
+      }
+    ],
+    "sheets_with_broad_questions": [
+      {
+        "workbook_id": "d6_validation_workbook",
+        "sheet": "Gezonde School",
+        "component_id": "gezonde_school_mentale_gezonde_school",
+        "mapped_validation_row_count": 8,
+        "has_current_working_view": true,
+        "has_assessment_field": true,
+        "has_correction_field": true,
+        "has_evidence_field": true,
+        "internal_jargon_flags": [],
+        "plain_language_flags": [],
+        "blank_question_count": 0,
+        "broad_question_count": 1,
+        "broad_question_flags": [
+          {
+            "vraag_id": "D6-GS-002",
+            "question_text": "Verantwoordelijke eigenaar: Wie is verantwoordelijk eigenaar?",
+            "reason": [
+              "generic_owner"
+            ]
+          }
+        ],
+        "current_view_sample": "Huidige werkhypothese: Gezonde School en schoolwelzijn lijken relevant voor preventie, jeugd, JGZ, GGD en onderwijs. De formele D6-relatie is nog te bevestigen.\nVeilige voorlopige formulering: Gezonde School / schoolwelzijn is een relevante preventie- en onderwijsgerelateerde kandidaat voor D6-validatie.\nNiet gebruiken vóór bevestiging: Almere heeft een bevestigde D6-Gezonde-School-regeling.",
+        "recommendations": [
+          "Narrow broad monitoring/owner questions before packet export."
+        ]
+      },
+      {
+        "workbook_id": "d6_validation_workbook",
+        "sheet": "Samen Sterker",
+        "component_id": "samen_sterker_in_de_wijk",
+        "mapped_validation_row_count": 8,
+        "has_current_working_view": true,
+        "has_assessment_field": true,
+        "has_correction_field": true,
+        "has_evidence_field": true,
+        "internal_jargon_flags": [],
+        "plain_language_flags": [],
+        "blank_question_count": 0,
+        "broad_question_count": 1,
+        "broad_question_flags": [
+          {
+            "vraag_id": "D6-SSW-004",
+            "question_text": "Verantwoordelijke eigenaar: Wie is verantwoordelijk eigenaar?",
+            "reason": [
+              "generic_owner"
+            ]
+          }
+        ],
+        "current_view_sample": "Huidige werkhypothese: Samen Sterker in de Wijk lijkt een actieve wijkgerichte GGZ-/welzijnsaanpak en sterke D6-gerelateerde validatiekandidaat. Formele D6-relatie, schaal en continuïteit zijn nog te bevestigen.\nVeilige voorlopige formulering: Samen Sterker in de Wijk is een actieve wijkgerichte aanpak en een sterke kandidaat voor D6-gerelateerde validatie.\nNiet gebruiken vóór bevestiging: Samen Sterker is formele D6-infrastructuur met bevestigde D6-eigenaar en structurele D6-financiering.",
+        "recommendations": [
+          "Narrow broad monitoring/owner questions before packet export."
+        ]
+      }
+    ]
+  },
+  "workbooks": [
+    {
+      "workbook_id": "d5_validation_workbook",
+      "path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.1.xlsx",
+      "validation_domain": "D5",
+      "sheet_count": 15,
+      "mapped_validation_row_count": 154,
+      "sheets_missing_current_working_view": [
+        "Financiering",
+        "Governance rollen",
+        "Monitoring cyclus",
+        "D6 afhankelijkheden"
+      ],
+      "sheets_missing_assessment_field": [],
+      "sheets_missing_correction_field": [
+        "Overzicht D5"
+      ],
+      "sheets_missing_evidence_field": [],
+      "sheets_with_language_flags": [],
+      "sheets_with_broad_questions": [],
+      "sheets": [
+        {
+          "sheet": "Overzicht D5",
+          "component_id": "d5_overview",
+          "mapped_validation_row_count": 12,
+          "has_current_working_view": true,
+          "has_assessment_field": true,
+          "has_correction_field": false,
+          "has_evidence_field": true,
+          "internal_jargon_flags": [],
+          "plain_language_flags": [],
+          "blank_question_count": 0,
+          "broad_question_count": 0,
+          "broad_question_flags": [],
+          "current_view_sample": "Groen / 0",
+          "recommendations": [
+            "Add or clarify a short correction/toelichting field."
+          ]
+        },
+        {
+          "sheet": "Laagdremp. steunpunten",
+          "component_id": "laagdrempelige_steunpunten",
+          "mapped_validation_row_count": 7,
+          "has_current_working_view": true,
+          "has_assessment_field": true,
+          "has_correction_field": true,
+          "has_evidence_field": true,
+          "internal_jargon_flags": [],
+          "plain_language_flags": [],
+          "blank_question_count": 0,
+          "broad_question_count": 0,
+          "broad_question_flags": [],
+          "current_view_sample": "Huidige werkhypothese / Werkagenda vraagt minimaal één LSP per gemeente. Bevestigen welke voorziening(en) in Almere hiervoor tellen.",
+          "recommendations": []
+        },
+        {
+          "sheet": "Sociaal verwijzen",
+          "component_id": "sociaal_verwijzen",
+          "mapped_validation_row_count": 7,
+          "has_current_working_view": true,
+          "has_assessment_field": true,
+          "has_correction_field": true,
+          "has_evidence_field": true,
+          "internal_jargon_flags": [],
+          "plain_language_flags": [],
+          "blank_question_count": 0,
+          "broad_question_count": 0,
+          "broad_question_flags": [],
+          "current_view_sample": "Huidige werkhypothese / Richtingwaarde: gemiddeld 60 verwijzingen per 10.000 inwoners; lokale toepassing valideren.",
+          "recommendations": []
+        },
+        {
+          "sheet": "Mentale gezondheid",
+          "component_id": "mentale_gezondheidsnetwerken",
+          "mapped_validation_row_count": 7,
+          "has_current_working_view": true,
+          "has_assessment_field": true,
+          "has_correction_field": true,
+          "has_evidence_field": true,
+          "internal_jargon_flags": [],
+          "plain_language_flags": [],
+          "blank_question_count": 0,
+          "broad_question_count": 0,
+          "broad_question_flags": [],
+          "current_view_sample": "Huidige werkhypothese / Werkagenda moet afspraken uit het MGN-transformatieplan tot uitvoering brengen.",
+          "recommendations": []
+        },
+        {
+          "sheet": "Valpreventie",
+          "component_id": "valpreventie",
+          "mapped_validation_row_count": 7,
+          "has_current_working_view": true,
+          "has_assessment_field": true,
+          "has_correction_field": true,
+          "has_evidence_field": true,
+          "internal_jargon_flags": [],
+          "plain_language_flags": [],
+          "blank_question_count": 0,
+          "broad_question_count": 0,
+          "broad_question_flags": [],
+          "current_view_sample": "Huidige werkhypothese / Afspraken nodig voor opsporen van thuiswonende ouderen met verhoogd valrisico.",
+          "recommendations": []
+        },
+        {
+          "sheet": "Overgewicht volwassenen",
+          "component_id": "overgewicht_volwassenen",
+          "mapped_validation_row_count": 7,
+          "has_current_working_view": true,
+          "has_assessment_field": true,
+          "has_correction_field": true,
+          "has_evidence_field": true,
+          "internal_jargon_flags": [],
+          "plain_language_flags": [],
+          "blank_question_count": 0,
+          "broad_question_count": 0,
+          "broad_question_flags": [],
+          "current_view_sample": "Huidige werkhypothese / Doelgroep bestaat uit volwassenen vanaf licht verhoogd gewichtsgerelateerd gezondheidsrisico.",
+          "recommendations": []
+        },
+        {
+          "sheet": "Kansrijke Start",
+          "component_id": "kansrijke_start",
+          "mapped_validation_row_count": 7,
+          "has_current_working_view": true,
+          "has_assessment_field": true,
+          "has_correction_field": true,
+          "has_evidence_field": true,
+          "internal_jargon_flags": [],
+          "plain_language_flags": [],
+          "blank_question_count": 0,
+          "broad_question_count": 0,
+          "broad_question_flags": [],
+          "current_view_sample": "Huidige werkhypothese / Elke gemeente en regio heeft een coalitie Kansrijke Start met medisch, sociaal, publiek en informeel domein.",
+          "recommendations": []
+        },
+        {
+          "sheet": "Integrale gezinspoli",
+          "component_id": "integrale_gezinspoli",
+          "mapped_validation_row_count": 8,
+          "has_current_working_view": true,
+          "has_assessment_field": true,
+          "has_correction_field": true,
+          "has_evidence_field": true,
+          "internal_jargon_flags": [],
+          "plain_language_flags": [],
+          "blank_question_count": 0,
+          "broad_question_count": 0,
+          "broad_question_flags": [],
+          "current_view_sample": "Huidige werkhypothese / Nieuwe aanpak die in meeste regio's nog opgebouwd moet worden; eerst vaststellen of Almere/Flevoland een route of plan heeft.",
+          "recommendations": []
+        },
+        {
+          "sheet": "Nu Niet Zwanger",
+          "component_id": "nu_niet_zwanger",
+          "mapped_validation_row_count": 6,
+          "has_current_working_view": true,
+          "has_assessment_field": true,
+          "has_correction_field": true,
+          "has_evidence_field": true,
+          "internal_jargon_flags": [],
+          "plain_language_flags": [],
+          "blank_question_count": 0,
+          "broad_question_count": 0,
+          "broad_question_flags": [],
+          "current_view_sample": "Huidige werkhypothese / Benodigd: minimaal 2 fte per regio, verdeeld over 3 personen.",
+          "recommendations": []
+        },
+        {
+          "sheet": "Overgewicht kinderen",
+          "component_id": "overgewicht_kinderen",
+          "mapped_validation_row_count": 6,
+          "has_current_working_view": true,
+          "has_assessment_field": true,
+          "has_correction_field": true,
+          "has_evidence_field": true,
+          "internal_jargon_flags": [],
+          "plain_language_flags": [],
+          "blank_question_count": 0,
+          "broad_question_count": 0,
+          "broad_question_flags": [],
+          "current_view_sample": "Huidige werkhypothese / Eerste inschatting: 0,2 fte per 1.000 jeugdigen.",
+          "recommendations": []
+        },
+        {
+          "sheet": "Optionele ontwikkelagenda",
+          "component_id": "optionele_ontwikkelagenda",
+          "mapped_validation_row_count": 5,
+          "has_current_working_view": true,
+          "has_assessment_field": true,
+          "has_correction_field": true,
+          "has_evidence_field": true,
+          "internal_jargon_flags": [],
+          "plain_language_flags": [],
+          "blank_question_count": 0,
+          "broad_question_count": 0,
+          "broad_question_flags": [],
+          "current_view_sample": "Huidige werkhypothese / Alleen opnemen als regio wil beproeven; vereist toezegging en onderbouwing vanuit regionale opgaven/populatie.",
+          "recommendations": []
+        },
+        {
+          "sheet": "Financiering",
+          "component_id": "d5_financiering",
+          "mapped_validation_row_count": 11,
+          "has_current_working_view": false,
+          "has_assessment_field": true,
+          "has_correction_field": true,
+          "has_evidence_field": true,
+          "internal_jargon_flags": [],
+          "plain_language_flags": [],
+          "blank_question_count": 0,
+          "broad_question_count": 0,
+          "broad_question_flags": [],
+          "current_view_sample": "",
+          "recommendations": [
+            "Add a concise current working view before stakeholder contact."
+          ]
+        },
+        {
+          "sheet": "Governance rollen",
+          "component_id": "d5_governance_rollen",
+          "mapped_validation_row_count": 45,
+          "has_current_working_view": false,
+          "has_assessment_field": true,
+          "has_correction_field": true,
+          "has_evidence_field": true,
+          "internal_jargon_flags": [],
+          "plain_language_flags": [],
+          "blank_question_count": 0,
+          "broad_question_count": 0,
+          "broad_question_flags": [],
+          "current_view_sample": "",
+          "recommendations": [
+            "Add a concise current working view before stakeholder contact."
+          ]
+        },
+        {
+          "sheet": "Monitoring cyclus",
+          "component_id": "d5_monitoring_cyclus",
+          "mapped_validation_row_count": 10,
+          "has_current_working_view": false,
+          "has_assessment_field": true,
+          "has_correction_field": true,
+          "has_evidence_field": true,
+          "internal_jargon_flags": [],
+          "plain_language_flags": [],
+          "blank_question_count": 0,
+          "broad_question_count": 0,
+          "broad_question_flags": [],
+          "current_view_sample": "",
+          "recommendations": [
+            "Add a concise current working view before stakeholder contact."
+          ]
+        },
+        {
+          "sheet": "D6 afhankelijkheden",
+          "component_id": "d5_d6_afhankelijkheden",
+          "mapped_validation_row_count": 9,
+          "has_current_working_view": false,
+          "has_assessment_field": true,
+          "has_correction_field": true,
+          "has_evidence_field": true,
+          "internal_jargon_flags": [],
+          "plain_language_flags": [],
+          "blank_question_count": 0,
+          "broad_question_count": 0,
+          "broad_question_flags": [],
+          "current_view_sample": "",
+          "recommendations": [
+            "Add a concise current working view before stakeholder contact."
+          ]
+        }
+      ]
+    },
+    {
+      "workbook_id": "d6_validation_workbook",
+      "path": "docs/review/Almere_D6_validatieformats.xlsx",
+      "validation_domain": "D6",
+      "sheet_count": 12,
+      "mapped_validation_row_count": 91,
+      "sheets_missing_current_working_view": [],
+      "sheets_missing_assessment_field": [],
+      "sheets_missing_correction_field": [],
+      "sheets_missing_evidence_field": [],
+      "sheets_with_language_flags": [
+        "Inloopvoorzieningen",
+        "PGA-Zorgzaam-Flever"
+      ],
+      "sheets_with_broad_questions": [
+        "Gezonde School",
+        "Samen Sterker"
+      ],
+      "sheets": [
+        {
+          "sheet": "Inloopvoorzieningen",
+          "component_id": "inloopvoorzieningen_sociaal_en_gezond",
+          "mapped_validation_row_count": 5,
+          "has_current_working_view": true,
+          "has_assessment_field": true,
+          "has_correction_field": true,
+          "has_evidence_field": true,
+          "internal_jargon_flags": [],
+          "plain_language_flags": [
+            "social_base"
+          ],
+          "blank_question_count": 0,
+          "broad_question_count": 0,
+          "broad_question_flags": [],
+          "current_view_sample": "Huidige werkhypothese: Meerdere Almere inloop- en social-base voorzieningen lijken relevant voor D6-validatie, maar per voorziening is nog niet bevestigd of deze formeel binnen D6 valt.\nVeilige voorlopige formulering: Meerdere Almere inloop- en social-basis voorzieningen kunnen relevant zijn voor D6-validatie.\nNiet gebruiken vóór bevestiging: Almere heeft specifieke inloopvoorzieningen al als formele D6-infrastructuur aangewezen.",
+          "recommendations": [
+            "Replace English/technical terms with plain Dutch policy language."
+          ]
+        },
+        {
+          "sheet": "Wijkteams",
+          "component_id": "wijkteams_almere",
+          "mapped_validation_row_count": 9,
+          "has_current_working_view": true,
+          "has_assessment_field": true,
+          "has_correction_field": true,
+          "has_evidence_field": true,
+          "internal_jargon_flags": [],
+          "plain_language_flags": [],
+          "blank_question_count": 0,
+          "broad_question_count": 0,
+          "broad_question_flags": [],
+          "current_view_sample": "Huidige werkhypothese: Wijkteams Almere zijn duidelijk relevant als lokale toegangs- en ondersteuningsstructuur. De formele D6-relatie en relatie met SLT zijn nog te bevestigen.\nVeilige voorlopige formulering: Wijkteams Almere zijn een relevante lokale toegangs- en ondersteuningsstructuur om voor D6 te valideren.\nNiet gebruiken vóór bevestiging: Wijkteams Almere zijn formele D6-infrastructuur.",
+          "recommendations": []
+        },
+        {
+          "sheet": "SLT",
+          "component_id": "stevige_lokale_teams",
+          "mapped_validation_row_count": 9,
+          "has_current_working_view": true,
+          "has_assessment_field": true,
+          "has_correction_field": true,
+          "has_evidence_field": true,
+          "internal_jargon_flags": [],
+          "plain_language_flags": [],
+          "blank_question_count": 0,
+          "broad_question_count": 0,
+          "broad_question_flags": [],
+          "current_view_sample": "Huidige werkhypothese: De SLT-besluitroute is relevant voor D6, JGZ en wijkteams. Nog te bevestigen is wat de route formeel voor D6 regelt.\nVeilige voorlopige formulering: De SLT-besluitroute is relevant voor D6-validatie en kan JGZ, wijkteams en lokale ondersteuning raken.\nNiet gebruiken vóór bevestiging: Het SLT-besluit regelt D6-eigenaarschap, D6-financiering of formele D6-classificatie volledig.",
+          "recommendations": []
+        },
+        {
+          "sheet": "JGZ Almere",
+          "component_id": "jgz_almere",
+          "mapped_validation_row_count": 6,
+          "has_current_working_view": true,
+          "has_assessment_field": true,
+          "has_correction_field": true,
+          "has_evidence_field": true,
+          "internal_jargon_flags": [],
+          "plain_language_flags": [],
+          "blank_question_count": 0,
+          "broad_question_count": 0,
+          "broad_question_flags": [],
+          "current_view_sample": "Huidige werkhypothese: JGZ Almere is relevant voor kinderen, gezinnen, scholen en SLT-gerelateerde inzet. De rolverdeling per functiecluster is nog te bevestigen.\nVeilige voorlopige formulering: JGZ Almere is een relevante actor om voor D6 en SLT-gerelateerde rollen te valideren.\nNiet gebruiken vóór bevestiging: JGZ Almere is eigenaar van de D6-JGZ-component.",
+          "recommendations": []
+        },
+        {
+          "sheet": "GGD Flevoland",
+          "component_id": "ggd_flevoland_coordinatie",
+          "mapped_validation_row_count": 7,
+          "has_current_working_view": true,
+          "has_assessment_field": true,
+          "has_correction_field": true,
+          "has_evidence_field": true,
+          "internal_jargon_flags": [],
+          "plain_language_flags": [],
+          "blank_question_count": 0,
+          "broad_question_count": 0,
+          "broad_question_flags": [],
+          "current_view_sample": "Huidige werkhypothese: GGD Flevoland is relevant voor publieke gezondheid, preventie, monitoring en advies. De D6-specifieke taken voor Almere moeten per taakcluster worden bevestigd.\nVeilige voorlopige formulering: GGD Flevoland heeft relevante publieke-gezondheids-, preventie-, monitoring- en adviesrollen die D6-specifiek gevalideerd moeten worden.\nNiet gebruiken vóór bevestiging: GGD Flevoland is bevestigd als D6-eigenaar voor Almere.",
+          "recommendations": []
+        },
+        {
+          "sheet": "Gezonde School",
+          "component_id": "gezonde_school_mentale_gezonde_school",
+          "mapped_validation_row_count": 8,
+          "has_current_working_view": true,
+          "has_assessment_field": true,
+          "has_correction_field": true,
+          "has_evidence_field": true,
+          "internal_jargon_flags": [],
+          "plain_language_flags": [],
+          "blank_question_count": 0,
+          "broad_question_count": 1,
+          "broad_question_flags": [
+            {
+              "vraag_id": "D6-GS-002",
+              "question_text": "Verantwoordelijke eigenaar: Wie is verantwoordelijk eigenaar?",
+              "reason": [
+                "generic_owner"
+              ]
+            }
+          ],
+          "current_view_sample": "Huidige werkhypothese: Gezonde School en schoolwelzijn lijken relevant voor preventie, jeugd, JGZ, GGD en onderwijs. De formele D6-relatie is nog te bevestigen.\nVeilige voorlopige formulering: Gezonde School / schoolwelzijn is een relevante preventie- en onderwijsgerelateerde kandidaat voor D6-validatie.\nNiet gebruiken vóór bevestiging: Almere heeft een bevestigde D6-Gezonde-School-regeling.",
+          "recommendations": [
+            "Narrow broad monitoring/owner questions before packet export."
+          ]
+        },
+        {
+          "sheet": "Monitoring",
+          "component_id": "kennis_advies_monitoring_dashboards",
+          "mapped_validation_row_count": 6,
+          "has_current_working_view": true,
+          "has_assessment_field": true,
+          "has_correction_field": true,
+          "has_evidence_field": true,
+          "internal_jargon_flags": [],
+          "plain_language_flags": [],
+          "blank_question_count": 0,
+          "broad_question_count": 0,
+          "broad_question_flags": [],
+          "current_view_sample": "Huidige werkhypothese: Monitoring-, dashboard-, epidemiologie- en adviesfuncties kunnen D6 ondersteunen. Nog te bevestigen is welke producten D6 direct sturen en wie rapportage en opvolging beheert.\nVeilige voorlopige formulering: Monitoring- en dashboardfuncties zijn relevant voor D6-validatie, maar sturingsverantwoordelijkheid moet nog worden bevestigd.\nNiet gebruiken vóór bevestiging: GGD Kennis & Advies is eigenaar van D6-monitoring.",
+          "recommendations": []
+        },
+        {
+          "sheet": "Samen Sterker",
+          "component_id": "samen_sterker_in_de_wijk",
+          "mapped_validation_row_count": 8,
+          "has_current_working_view": true,
+          "has_assessment_field": true,
+          "has_correction_field": true,
+          "has_evidence_field": true,
+          "internal_jargon_flags": [],
+          "plain_language_flags": [],
+          "blank_question_count": 0,
+          "broad_question_count": 1,
+          "broad_question_flags": [
+            {
+              "vraag_id": "D6-SSW-004",
+              "question_text": "Verantwoordelijke eigenaar: Wie is verantwoordelijk eigenaar?",
+              "reason": [
+                "generic_owner"
+              ]
+            }
+          ],
+          "current_view_sample": "Huidige werkhypothese: Samen Sterker in de Wijk lijkt een actieve wijkgerichte GGZ-/welzijnsaanpak en sterke D6-gerelateerde validatiekandidaat. Formele D6-relatie, schaal en continuïteit zijn nog te bevestigen.\nVeilige voorlopige formulering: Samen Sterker in de Wijk is een actieve wijkgerichte aanpak en een sterke kandidaat voor D6-gerelateerde validatie.\nNiet gebruiken vóór bevestiging: Samen Sterker is formele D6-infrastructuur met bevestigde D6-eigenaar en structurele D6-financiering.",
+          "recommendations": [
+            "Narrow broad monitoring/owner questions before packet export."
+          ]
+        },
+        {
+          "sheet": "PGA-Zorgzaam-Flever",
+          "component_id": "pga_zorgzaam_flever_interface",
+          "mapped_validation_row_count": 7,
+          "has_current_working_view": true,
+          "has_assessment_field": true,
+          "has_correction_field": true,
+          "has_evidence_field": true,
+          "internal_jargon_flags": [],
+          "plain_language_flags": [
+            "evidence"
+          ],
+          "blank_question_count": 0,
+          "broad_question_count": 0,
+          "broad_question_flags": [],
+          "current_view_sample": "Huidige werkhypothese: PGA, Zorgzaam Flevoland, Flever, GGD en AZWA-governance lijken verschillende rollen te hebben. Ze moeten niet als één gecombineerde D6-actor worden behandeld.\nVeilige voorlopige formulering: Huidige evidence wijst op een interface tussen lokaal programmawerk, regionale samenwerking, participatieondersteuning en monitoring/advies.\nNiet gebruiken vóór bevestiging: PGA, Zorgzaam Flevoland of Flever is eigenaar van D6 voor Almere.",
+          "recommendations": [
+            "Replace English/technical terms with plain Dutch policy language."
+          ]
+        },
+        {
+          "sheet": "Digitaal-operationeel",
+          "component_id": "digitale_en_operationele_infrastructuur",
+          "mapped_validation_row_count": 6,
+          "has_current_working_view": true,
+          "has_assessment_field": true,
+          "has_correction_field": true,
+          "has_evidence_field": true,
+          "internal_jargon_flags": [],
+          "plain_language_flags": [],
+          "blank_question_count": 0,
+          "broad_question_count": 0,
+          "broad_question_flags": [],
+          "current_view_sample": "Huidige werkhypothese: Digitale en operationele infrastructuur is geen enkelvoudig object. RTP, RSO/data, thuismonitoring, dashboards en ACP/PZP-pilots moeten afzonderlijk worden gevalideerd.\nVeilige voorlopige formulering: Meerdere digitale en operationele componenten kunnen D6-gerelateerde uitvoering ondersteunen, maar vereisen validatie per subcomponent.\nNiet gebruiken vóór bevestiging: RTP, RSO of Monitoring@home zijn bevestigde formele D6-infrastructuur voor Almere.",
+          "recommendations": []
+        },
+        {
+          "sheet": "Informele steun",
+          "component_id": "burgerinitiatieven_informele_steun",
+          "mapped_validation_row_count": 8,
+          "has_current_working_view": true,
+          "has_assessment_field": true,
+          "has_correction_field": true,
+          "has_evidence_field": true,
+          "internal_jargon_flags": [],
+          "plain_language_flags": [],
+          "blank_question_count": 0,
+          "broad_question_count": 0,
+          "broad_question_flags": [],
+          "current_view_sample": "Huidige werkhypothese: Meerdere informele-steunactoren en mechanismen zijn zichtbaar, maar nog niet bevestigd is wat binnen D6 valt en wat algemene sociale basis blijft.\nVeilige voorlopige formulering: Meerdere informele-steunactoren en mechanismen zijn relevant voor D6-validatie.\nNiet gebruiken vóór bevestiging: Genoemde informele-steunactoren zijn D6-eigenaren.",
+          "recommendations": []
+        },
+        {
+          "sheet": "Financiering",
+          "component_id": "d6_financiering_budgetafbakening",
+          "mapped_validation_row_count": 12,
+          "has_current_working_view": true,
+          "has_assessment_field": true,
+          "has_correction_field": true,
+          "has_evidence_field": true,
+          "internal_jargon_flags": [],
+          "plain_language_flags": [],
+          "blank_question_count": 0,
+          "broad_question_count": 0,
+          "broad_question_flags": [],
+          "current_view_sample": "Huidige werkhypothese: Openbare bronnen tonen mogelijke financieringsroutes, maar geen componentniveau-splitsing. Dit is een controller-/financematrixthema.\nVeilige voorlopige formulering: Financiering moet per component worden gescheiden om dubbeltelling te voorkomen.\nNiet gebruiken vóór bevestiging: D6-financiering is al lokaal per component toegewezen.",
+          "recommendations": []
+        }
+      ]
+    }
+  ]
+}

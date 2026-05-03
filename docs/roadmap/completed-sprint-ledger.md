@@ -1,7 +1,7 @@
 ﻿# Completed Sprint Ledger
 
 ## Summary
-Current roadmap version: `v2026.05.03-3`.
+Current roadmap version: `v2026.05.03-4`.
 
 This file stores completed sprint history that used to live at the top of `docs/data-quality-roadmap.md`. The active roadmap now keeps only open, blocked, parked and planned work at the top.
 
@@ -11,6 +11,7 @@ Use this file for provenance. Do not use it as the active task list.
 
 | Sprint | Status | Vindplaats / opmerking |
 | --- | --- | --- |
+| 33.P1 Add IDs, routing and traceability | completed | `data/workagenda/validation_workbook_traceability_map.json`, `docs/review/validation-workbook-traceability-audit.md`, `src/build_validation_workbook_traceability.py`, `tests/test_validation_workbook_traceability.py`. Repository-side traceability exists for 245 D5/D6 workbook validation rows; outgoing Excel packets still need visible/protected row identity before send-readiness. |
 | 33.P0 Freeze validation instruments | completed | `docs/review/validation-instrument-register.md`, `docs/review/D5_validatieformat_werkagenda_Almere_v0.1.xlsx`, `docs/review/Almere_D6_validatieformats.xlsx`. De workbooks zijn pre-contact validation baselines, geen bronnen of validatieresultaten. |
 | 25.2 Lokale bronversterking Almere | completed | `data/extracted/local_source_strengthening_almere.json`, `docs/internal/source-intake/phase25.2-public-source-assessment.md`, `docs/completed-plans/phase25-sprint25.2-lokale-bronversterking.md` |
 | 25.1 Werkagenda- en financieringslaag | completed | `data/extracted/workagenda_d5_operational_requirements.json`, `src/build_workagenda_d5_operational_requirements.py`, `docs/completed-plans/phase25-sprint25.1-werkagenda-financieringslaag.md` |

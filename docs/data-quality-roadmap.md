@@ -1,9 +1,9 @@
 ﻿# AZWA Canonical Roadmap
 
 ## Summary
-Current sprint: Sprint 33.P1 - Pre-contact validation-readiness: add IDs, routing and traceability.
+Current sprint: Sprint 33.P2 - Pre-contact validation-readiness: prefill audit and current working views.
 
-Roadmap version: `v2026.05.03-3`.
+Roadmap version: `v2026.05.03-4`.
 
 This is the single active roadmap for the repository. It combines the older data-quality roadmap and the workagenda-delivery roadmap into one canonical planning surface. Historical snapshots and retired roadmap files live under `docs/roadmap/archive/`; version changes are recorded in `docs/roadmap/roadmap-version-log.md`.
 
@@ -30,8 +30,7 @@ Statusbetekenis:
 
 | Task | Status | What needs to be done | Next artifact / output | Blocker or dependency |
 | --- | --- | --- | --- | --- |
-| 33.P1 Add IDs, routing and traceability | open | Controleer/voeg per relevante rij `vraag_id`, `component_id`, `stakeholderpakket`, `antwoordtype`, `validatiestatus`, bewijsvereiste, repo-update-effect en deadline toe. | Workbook QA note and/or updated validation ticket import map. | Requires frozen P0 baseline. |
-| 33.P2 Prefill audit and current working views | planned | Controleer dat elke human-facing tab een korte `Huidige werkvisie`, beoordeling werkvisie, correctieveld en bewijsveld heeft, zonder interne termen. | Prefill audit note; workbook change list. | Requires P1 traceability. |
+| 33.P2 Prefill audit and current working views | open | Controleer dat elke human-facing tab een korte `Huidige werkvisie`, beoordeling werkvisie, correctieveld en bewijsveld heeft, zonder interne termen. | Prefill audit note; workbook change list. | Requires P1 traceability. |
 | 33.P3 Targeted pre-contact agents | planned | Alleen gerichte agents: evidence-prefill audit, D5 source-update watchlist, D5-D6 dependency mapping, policymaker readability, finance-risk precheck. Geen brede D5/D6 search. | Targeted agent prompts and intake notes. | Use only named gaps/watchlist items. |
 | 33.P4 Build stakeholder packets | planned | Maak gefilterde D5/D6 pakketten per groep zodat niemand het volledige workbook krijgt behalve het kernteam. | Stakeholder packet index and send set. | Requires P1-P3. |
 | 33.P5 Internal dry run | planned | Laat 2-4 interne reviewers een D5-tab, D6-tab, finance-row, evidence-field en `niet mijn domein` case testen. | Dry-run findings and workbook fixes. | Requires P4 packets. |
@@ -46,7 +45,7 @@ Statusbetekenis:
 Completed sprint history: `docs/roadmap/completed-sprint-ledger.md`.
 
 ## Huidige sprintplan
-Sprint 33.P1 is open. Sprint 33.P0 heeft de D5- en D6-validatie-Excelbestanden als pre-validation baselines geregistreerd en onder versiecontrole gebracht. De lopende taak is nu traceability: controleren of elke relevante vraag een stabiele ID, stakeholderrouting, antwoordtype, bewijsvereiste, repo-update-effect en deadline heeft. Sprint 32.3 blijft geblokkeerd tot echte stakeholderantwoorden bestaan. Sprint 25.6 blijft geparkeerd omdat post-validatie hardening pas verantwoord is na stakeholdervalidatierecords, lokale/interne documenten, finance/controller bevestiging of een expliciet beleidsbesluit.
+Sprint 33.P2 is open. Sprint 33.P1 heeft repository-side traceability toegevoegd via `data/workagenda/validation_workbook_traceability_map.json`: 245 validatierijen hebben nu gegenereerde unieke IDs, componentrouting, stakeholderpakketten, antwoordtypen, bewijsvereisten, repo-update-effecten en pre-contact deadlines. De Excelbestanden zijn daarmee nog niet send-ready als ruwe stakeholderbestanden; zichtbare of beschermde rij-identiteit moet in de uiteindelijke pakketten blijven. De lopende taak is nu de prefill-audit: controleren of elke human-facing tab een korte begrijpelijke werkvisie, beoordelingsveld, correctieveld en bewijsinstructie heeft zonder interne termen. Sprint 32.3 blijft geblokkeerd tot echte stakeholderantwoorden bestaan. Sprint 25.6 blijft geparkeerd omdat post-validatie hardening pas verantwoord is na stakeholdervalidatierecords, lokale/interne documenten, finance/controller bevestiging of een expliciet beleidsbesluit.
 
 ## Current Context Check - 2026-05-03
 
@@ -69,6 +68,8 @@ Goal: reduce human workload before validation starts. Policymakers should receiv
 | `docs/review/D5_validatieformat_werkagenda_Almere_v0.1.xlsx` | Baseline Excel workbook, 20 sheets. | D5 pre-contact validation instrument. |
 | `docs/review/Almere_D6_validatieformats.xlsx` | Baseline Excel workbook, 15 sheets. | D6 pre-contact validation instrument. |
 | `docs/review/validation-instrument-register.md` | Created in 33.P0. | Version, purpose, sheet inventory, shared vocabulary and import rules. |
+| `data/workagenda/validation_workbook_traceability_map.json` | Created in 33.P1. | Stable generated IDs, routing and processing metadata for 245 D5/D6 workbook validation rows. |
+| `docs/review/validation-workbook-traceability-audit.md` | Created in 33.P1. | Human-readable audit of workbook traceability and remaining send-readiness limits. |
 | `data/workagenda/d5_validation_tickets.json` | Created in 32.2. | D5 machine-readable validation ticket basis. |
 | `data/workagenda/d5_validation_packets.json` and `data/workagenda/validation_packets/*.csv` | Created in 32.2. | D5 repository-generated packet basis, to be reconciled with Excel. |
 | `docs/review/almere_d6_validation_ticket_matrix.md` | Existing D6 plain-language matrix. | D6 question design and stakeholder language basis. |
@@ -78,7 +79,7 @@ Goal: reduce human workload before validation starts. Policymakers should receiv
 | Sprint | Name | Main output | Contact policymakers yet? |
 | --- | --- | --- | --- |
 | 33.P0 | Freeze instruments | D5/D6 Excel baselines and validation instrument register. Completed. | No |
-| 33.P1 | Add IDs and routing | Stable IDs, stakeholder packages and repo-update effects per validation row. | No |
+| 33.P1 | Add IDs and routing | Stable IDs, stakeholder packages and repo-update effects per validation row. Completed. | No |
 | 33.P2 | Prefill audit | Current working view per human-facing tab; no blank broad questions. | No |
 | 33.P3 | Targeted agents | Evidence, readability, dependency, source-watch and finance-risk prechecks only. | No |
 | 33.P4 | Stakeholder packets | Filtered packets per group, with instructions and escalation route. | No |

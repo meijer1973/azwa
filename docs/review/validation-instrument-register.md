@@ -1,11 +1,11 @@
 # Validation Instrument Register
 
 ## Summary
-Current sprint: Sprint 33.P0 - Freeze validation instruments.
+Current roadmap sprint: Sprint 33.P2 - Prefill audit and current working views.
 
 Recorded on: 2026-05-03.
 
-This register treats the current D5 and D6 Excel workbooks as pre-validation baseline instruments. They are not final policy truth, not corpus sources, and not stakeholder validation results.
+Created during Sprint 33.P0 and updated during Sprint 33.P1. This register treats the current D5 and D6 Excel workbooks as pre-validation baseline instruments. They are not final policy truth, not corpus sources, and not stakeholder validation results.
 
 Use this register before editing, sending, or importing answers from the workbooks.
 
@@ -13,8 +13,18 @@ Use this register before editing, sending, or importing answers from the workboo
 
 | Instrument | Path | Version | Status | Sheets | Purpose | Source basis | Next QA action |
 | --- | --- | --- | --- | ---: | --- | --- | --- |
-| D5 validatieformat werkagenda Almere | `docs/review/D5_validatieformat_werkagenda_Almere_v0.1.xlsx` | `v0.1` | pre-validation baseline | 20 | Prepare D5 workagenda validation before contacting policymakers. | `data/workagenda/d5_status_matrix.json`, `data/workagenda/d5_validation_tickets.json`, `data/workagenda/d5_validation_packets.json`, source corpus and generated evidence layers. | Check IDs, routing, current working views, evidence gates, stakeholder packet fit and import path. |
-| Almere D6 validatieformats | `docs/review/Almere_D6_validatieformats.xlsx` | current imported baseline | pre-validation baseline | 15 | Prepare D6 infrastructure, ownership, mandate, funding and safe-wording validation. | `docs/review/almere_d6_deep_research_learnings.md`, `docs/review/almere_d6_open_questions.md`, `docs/review/almere_d6_validation_ticket_matrix.md`, `data/extracted/municipal/almere_d6_responsibility_register.json`. | Check IDs, routing, plain-language answer choices, evidence gates and validation-log path. |
+| D5 validatieformat werkagenda Almere | `docs/review/D5_validatieformat_werkagenda_Almere_v0.1.xlsx` | `v0.1` | pre-validation baseline | 20 | Prepare D5 workagenda validation before contacting policymakers. | `data/workagenda/d5_status_matrix.json`, `data/workagenda/d5_validation_tickets.json`, `data/workagenda/d5_validation_packets.json`, source corpus and generated evidence layers. | IDs/routing now mapped in `data/workagenda/validation_workbook_traceability_map.json`; next check current working views and human-facing wording. |
+| Almere D6 validatieformats | `docs/review/Almere_D6_validatieformats.xlsx` | current imported baseline | pre-validation baseline | 15 | Prepare D6 infrastructure, ownership, mandate, funding and safe-wording validation. | `docs/review/almere_d6_deep_research_learnings.md`, `docs/review/almere_d6_open_questions.md`, `docs/review/almere_d6_validation_ticket_matrix.md`, `data/extracted/municipal/almere_d6_responsibility_register.json`. | IDs/routing now mapped in `data/workagenda/validation_workbook_traceability_map.json`; next check current working views and human-facing wording. |
+
+## Traceability Layer
+
+Sprint 33.P1 created:
+
+- `data/workagenda/validation_workbook_traceability_map.json`
+- `docs/review/validation-workbook-traceability-audit.md`
+- `src/build_validation_workbook_traceability.py`
+
+The traceability map assigns generated stable IDs, component IDs, stakeholder packages, answer types, evidence requirements, repo-update effects and pre-contact deadlines to 245 validation rows across the D5 and D6 workbooks. The workbooks themselves should still not be sent as raw files until outgoing packets include visible/protected row identity or another controlled answer-processing route.
 
 ## Freeze Rule
 

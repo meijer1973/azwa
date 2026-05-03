@@ -1,9 +1,9 @@
 ﻿# AZWA Canonical Roadmap
 
 ## Summary
-Current sprint: Sprint 33.P5 - Pre-contact validation-readiness: internal dry run.
+Current sprint: Sprint 33.P6 - Pre-contact validation-readiness: repository/workflow integration.
 
-Roadmap version: `v2026.05.03-7`.
+Roadmap version: `v2026.05.03-8`.
 
 This is the single active roadmap for the repository. It combines the older data-quality roadmap and the workagenda-delivery roadmap into one canonical planning surface. Historical snapshots and retired roadmap files live under `docs/roadmap/archive/`; version changes are recorded in `docs/roadmap/roadmap-version-log.md`.
 
@@ -30,8 +30,8 @@ Statusbetekenis:
 
 | Task | Status | What needs to be done | Next artifact / output | Blocker or dependency |
 | --- | --- | --- | --- | --- |
-| 33.P5 Internal dry run | open | Laat 2-4 interne reviewers een D5-tab, D6-tab, finance-row, evidence-field en `niet mijn domein` case testen. | Dry-run findings and workbook fixes. | Requires P4 packets. |
-| 33.P6 Repository/workflow integration | planned | Leg vast hoe Excel-antwoorden terugkomen in validation logs, finance matrix, decision register, D5-D6 dependency map, source update log and statusmatrix. | Import/processing workflow note; planned JSON objects where needed. | Requires P1/P4 structure. |
+| 33.P5 Internal dry run | blocked | Laat 2-4 interne reviewers de voorbereide P5-cases testen: D5-tab, D6-tab, finance-row, evidence-field en `niet mijn domein` case. | Completed dry-run response record and packet fixes. | Repository dry-run pack exists; human reviewers still needed before P7. |
+| 33.P6 Repository/workflow integration | open | Leg vast hoe Excel-antwoorden terugkomen in validation logs, finance matrix, decision register, D5-D6 dependency map, source update log and statusmatrix. | Import/processing workflow note; planned JSON objects where needed. | Can proceed while P5 human dry run is pending. |
 | 33.P7 Send-readiness gate | planned | Go/no-go voor contact: IDs, routing, evidence gates, current working views, dropdowns, dry run and source watchlist must be complete. | Send-readiness gate note. | Must pass before contacting policymakers. |
 | V1 Controlled outbound | blocked | Verstuur beperkte stakeholderpakketten pas na P7. | Sent-packet log. | Blocked until send-readiness gate passes. |
 | V2 Response triage | blocked | Verwerk antwoorden naar statuswijzigingen, weak confirmations, conflicts, decision tickets, finance tickets or rerouting. | Validation log and ticket updates. | Blocked until responses return. |
@@ -42,7 +42,7 @@ Statusbetekenis:
 Completed sprint history: `docs/roadmap/completed-sprint-ledger.md`.
 
 ## Huidige sprintplan
-Sprint 33.P5 is open. Sprint 33.P4 heeft 18 gefilterde D5/D6 stakeholder packet drafts gebouwd via `data/workagenda/precontact_stakeholder_packets.json`, `docs/review/precontact-stakeholder-packets.md` en `data/workagenda/precontact_packets/*.csv`. De packet set bevat 245 unieke `vraag_id` waarden en 604 packet rows door multi-routing; na splitsing van Gemeente Almere sociaal domein in D5, D6 en sturing is de grootste packet draft 80 rijen. Alle packets blijven `prepared_not_sent`. De lopende taak is nu een interne dry run: test een D5-tab, een D6-tab, een finance-row, een evidence-field en een `niet mijn domein` case voordat er stakeholdercontact is. Sprint 32.3 blijft geblokkeerd tot echte stakeholderantwoorden bestaan. Sprint 25.6 blijft geparkeerd omdat post-validatie hardening pas verantwoord is na stakeholdervalidatierecords, lokale/interne documenten, finance/controller bevestiging of een expliciet beleidsbesluit.
+Sprint 33.P6 is open. Sprint 33.P5 heeft de repository-side dry-run pack voorbereid via `data/workagenda/precontact_internal_dry_run.json` en `docs/review/precontact-internal-dry-run.md`: vijf exacte testcases voor een D5-tab, D6-tab, finance-row, evidence-field en `niet mijn domein` reroute. De human dry run is nog niet uitgevoerd en blijft een P7-blokkade, maar P6 kan repository-side doorgaan. De lopende taak is nu workflowintegratie: vastleggen hoe teruggestuurde Excel/CSV-antwoorden naar validation logs, finance matrix, decision register, D5-D6 dependency map, source-update log en statusmatrix gaan. Sprint 32.3 blijft geblokkeerd tot echte stakeholderantwoorden bestaan. Sprint 25.6 blijft geparkeerd omdat post-validatie hardening pas verantwoord is na stakeholdervalidatierecords, lokale/interne documenten, finance/controller bevestiging of een expliciet beleidsbesluit.
 
 ## Current Context Check - 2026-05-03
 
@@ -74,6 +74,8 @@ Goal: reduce human workload before validation starts. Policymakers should receiv
 | `data/workagenda/precontact_stakeholder_packets.json` | Created in 33.P4. | Prepared D5/D6 packet index; packets are not sent. |
 | `docs/review/precontact-stakeholder-packets.md` | Created in 33.P4. | Human-readable packet overview, instructions and cleanup-before-send notes. |
 | `data/workagenda/precontact_packets/*.csv` | Created in 33.P4. | Draft CSV packet send set with `vraag_id`, evidence fields and reroute columns. |
+| `data/workagenda/precontact_internal_dry_run.json` | Created in 33.P5. | Repository-side dry-run cases; human reviewers still pending. |
+| `docs/review/precontact-internal-dry-run.md` | Created in 33.P5. | Human-readable dry-run protocol and pass/fail criteria. |
 | `data/workagenda/d5_validation_tickets.json` | Created in 32.2. | D5 machine-readable validation ticket basis. |
 | `data/workagenda/d5_validation_packets.json` and `data/workagenda/validation_packets/*.csv` | Created in 32.2. | D5 repository-generated packet basis, to be reconciled with Excel. |
 | `docs/review/almere_d6_validation_ticket_matrix.md` | Existing D6 plain-language matrix. | D6 question design and stakeholder language basis. |
@@ -87,7 +89,7 @@ Goal: reduce human workload before validation starts. Policymakers should receiv
 | 33.P2 | Prefill audit | Current working view per human-facing tab; no blank broad questions. Completed. | No |
 | 33.P3 | Targeted agents | Evidence, readability, dependency, source-watch and finance-risk prechecks only. Completed; prompts prepared, not sent. | No |
 | 33.P4 | Stakeholder packets | Filtered packets per group, with instructions and escalation route. Completed; packet drafts prepared, not sent. | No |
-| 33.P5 | Internal dry run | Tested and revised workbook/packet set. | No |
+| 33.P5 | Internal dry run | Repository-side case pack prepared; human reviewer execution pending and blocks P7. | No |
 | 33.P6 | Repository/workflow integration | Validation logs, ticket structures, status matrix import path. | No |
 | 33.P7 | Send-readiness gate | Go/no-go decision for contact. | No |
 | V1 | Controlled outbound | Packets sent and logged. | Yes |

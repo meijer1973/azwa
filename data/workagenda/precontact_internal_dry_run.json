@@ -1,0 +1,282 @@
+{
+  "generated_on": "2026-05-03",
+  "current_sprint": "Sprint 33.P5 - Pre-contact validation-readiness: internal dry run",
+  "repository_check_status": "completed",
+  "human_dry_run_status": "pending_internal_reviewers",
+  "gate_effect": "Blocks P7 send-readiness until human reviewers complete the cases; does not block P6 workflow integration.",
+  "source_inputs": [
+    "data/workagenda/precontact_stakeholder_packets.json"
+  ],
+  "reviewer_roles": [
+    {
+      "role": "policy_reviewer",
+      "tests": "Plain-language policy meaning, safe wording and decision-risk clarity."
+    },
+    {
+      "role": "finance_reviewer",
+      "tests": "Funding-line, structural/project and double-counting questions."
+    },
+    {
+      "role": "data_repository_reviewer",
+      "tests": "Vraag_id preservation, answer-processing route and not-my-domain rerouting."
+    },
+    {
+      "role": "subject_reviewer",
+      "tests": "Whether a domain expert can answer from the filtered packet alone."
+    }
+  ],
+  "automated_checks": [
+    {
+      "check_id": "P5-AUTO-001",
+      "check": "Packet index loads and contains prepared packets.",
+      "status": "pass"
+    },
+    {
+      "check_id": "P5-AUTO-002",
+      "check": "All packet drafts remain prepared_not_sent.",
+      "status": "pass"
+    },
+    {
+      "check_id": "P5-AUTO-003",
+      "check": "Required dry-run cases are resolvable to exact packet rows.",
+      "status": "pass"
+    },
+    {
+      "check_id": "P5-AUTO-004",
+      "check": "Dry-run CSVs expose answer, evidence and not-my-domain fields.",
+      "status": "pass"
+    },
+    {
+      "check_id": "P5-AUTO-005",
+      "check": "Packet sizes remain reviewable.",
+      "status": "pass"
+    }
+  ],
+  "cases": [
+    {
+      "case_id": "P5-CASE-001",
+      "case_type": "d5_tab_answerability",
+      "packet_id": "welzijn_sociale_basis",
+      "vraag_id": "D5-SV-001",
+      "reviewer_role": "policy_or_subject_reviewer",
+      "instruction": "Test whether a busy social-base reviewer can answer a D5 sociaal-verwijzen row without opening the full workbook.",
+      "expected_processing_route": "validation_log_or_decision_ticket",
+      "packet_label": "Welzijn en sociale basis",
+      "packet_csv_path": "data/workagenda/precontact_packets/welzijn_sociale_basis.csv",
+      "csv_fields_present": [
+        "answer",
+        "correction_or_note",
+        "evidence_reference",
+        "evidence_type",
+        "not_my_domain_reroute",
+        "vraag_id"
+      ],
+      "missing_required_csv_fields": [],
+      "domain": "D5",
+      "workbook_id": "d5_validation_workbook",
+      "sheet": "Sociaal verwijzen",
+      "sheet_row": 5,
+      "component_id": "sociaal_verwijzen",
+      "question_text": "Capaciteit brede gesprek huisarts/eerstelijn",
+      "antwoordtype": "dropdown_plus_evidence",
+      "repo_update_effect": "validation_log_or_finance_ticket",
+      "bewijstype_verplicht": true,
+      "pass_criteria": [
+        "Reviewer can understand what is being asked without opening the full workbook.",
+        "Reviewer can choose an answer, mark unknown, or mark not-my-domain.",
+        "Reviewer can name evidence type and evidence reference when claiming confirmation.",
+        "Returned row preserves vraag_id and packet_id.",
+        "Repository team can route the answer to the expected processing route."
+      ],
+      "failure_triggers": [
+        "Question requires a broad explanation instead of a choice or short correction.",
+        "Reviewer cannot tell whether evidence is required.",
+        "Reviewer needs another packet to understand the row.",
+        "Not-my-domain answer has no clear reroute target.",
+        "Answer would silently become a source claim instead of a validation record."
+      ]
+    },
+    {
+      "case_id": "P5-CASE-002",
+      "case_type": "d6_tab_answerability",
+      "packet_id": "wijkteams_slt_leads",
+      "vraag_id": "D6-WIJK-001",
+      "reviewer_role": "subject_reviewer",
+      "instruction": "Test whether a Wijkteams/SLT reviewer can classify the D6 relation from the packet row and evidence fields.",
+      "expected_processing_route": "d6_validation_log_or_register_update",
+      "packet_label": "Wijkteams / SLT-leads",
+      "packet_csv_path": "data/workagenda/precontact_packets/wijkteams_slt_leads.csv",
+      "csv_fields_present": [
+        "answer",
+        "correction_or_note",
+        "evidence_reference",
+        "evidence_type",
+        "not_my_domain_reroute",
+        "vraag_id"
+      ],
+      "missing_required_csv_fields": [],
+      "domain": "D6",
+      "workbook_id": "d6_validation_workbook",
+      "sheet": "Wijkteams",
+      "sheet_row": 7,
+      "component_id": "wijkteams_almere",
+      "question_text": "D6-relatie: Welke beschrijving past bij Wijkteams Almere?",
+      "antwoordtype": "classification_choice",
+      "repo_update_effect": "d6_validation_log_or_register_update",
+      "bewijstype_verplicht": true,
+      "pass_criteria": [
+        "Reviewer can understand what is being asked without opening the full workbook.",
+        "Reviewer can choose an answer, mark unknown, or mark not-my-domain.",
+        "Reviewer can name evidence type and evidence reference when claiming confirmation.",
+        "Returned row preserves vraag_id and packet_id.",
+        "Repository team can route the answer to the expected processing route."
+      ],
+      "failure_triggers": [
+        "Question requires a broad explanation instead of a choice or short correction.",
+        "Reviewer cannot tell whether evidence is required.",
+        "Reviewer needs another packet to understand the row.",
+        "Not-my-domain answer has no clear reroute target.",
+        "Answer would silently become a source claim instead of a validation record."
+      ]
+    },
+    {
+      "case_id": "P5-CASE-003",
+      "case_type": "finance_row",
+      "packet_id": "finance_controller",
+      "vraag_id": "D5-FIN-001",
+      "reviewer_role": "finance_reviewer",
+      "instruction": "Test whether finance can record funding line, structural/project status, double-counting risk and evidence reference.",
+      "expected_processing_route": "finance_matrix_update",
+      "packet_label": "Finance/controller",
+      "packet_csv_path": "data/workagenda/precontact_packets/finance_controller.csv",
+      "csv_fields_present": [
+        "answer",
+        "correction_or_note",
+        "evidence_reference",
+        "evidence_type",
+        "not_my_domain_reroute",
+        "vraag_id"
+      ],
+      "missing_required_csv_fields": [],
+      "domain": "D5",
+      "workbook_id": "d5_validation_workbook",
+      "sheet": "Financiering",
+      "sheet_row": 5,
+      "component_id": "d5_financiering",
+      "question_text": "Laagdrempelige steunpunten",
+      "antwoordtype": "finance_matrix",
+      "repo_update_effect": "finance_matrix_update",
+      "bewijstype_verplicht": true,
+      "pass_criteria": [
+        "Reviewer can understand what is being asked without opening the full workbook.",
+        "Reviewer can choose an answer, mark unknown, or mark not-my-domain.",
+        "Reviewer can name evidence type and evidence reference when claiming confirmation.",
+        "Returned row preserves vraag_id and packet_id.",
+        "Repository team can route the answer to the expected processing route."
+      ],
+      "failure_triggers": [
+        "Question requires a broad explanation instead of a choice or short correction.",
+        "Reviewer cannot tell whether evidence is required.",
+        "Reviewer needs another packet to understand the row.",
+        "Not-my-domain answer has no clear reroute target.",
+        "Answer would silently become a source claim instead of a validation record."
+      ]
+    },
+    {
+      "case_id": "P5-CASE-004",
+      "case_type": "evidence_field",
+      "packet_id": "gemeente_almere_sociaal_domein_d6",
+      "vraag_id": "D6-SLT-001",
+      "reviewer_role": "policy_reviewer",
+      "instruction": "Test whether a formal-decision interpretation can be answered only with an explicit evidence type and reference.",
+      "expected_processing_route": "d6_validation_log_or_decision_ticket",
+      "packet_label": "Gemeente Almere sociaal domein - D6 validatie",
+      "packet_csv_path": "data/workagenda/precontact_packets/gemeente_almere_sociaal_domein_d6.csv",
+      "csv_fields_present": [
+        "answer",
+        "correction_or_note",
+        "evidence_reference",
+        "evidence_type",
+        "not_my_domain_reroute",
+        "vraag_id"
+      ],
+      "missing_required_csv_fields": [],
+      "domain": "D6",
+      "workbook_id": "d6_validation_workbook",
+      "sheet": "SLT",
+      "sheet_row": 7,
+      "component_id": "stevige_lokale_teams",
+      "question_text": "Formele betekenis: Wat regelt de SLT-besluitroute formeel voor D6?",
+      "antwoordtype": "mandate_interpretation",
+      "repo_update_effect": "d6_validation_log_or_decision_ticket",
+      "bewijstype_verplicht": true,
+      "pass_criteria": [
+        "Reviewer can understand what is being asked without opening the full workbook.",
+        "Reviewer can choose an answer, mark unknown, or mark not-my-domain.",
+        "Reviewer can name evidence type and evidence reference when claiming confirmation.",
+        "Returned row preserves vraag_id and packet_id.",
+        "Repository team can route the answer to the expected processing route."
+      ],
+      "failure_triggers": [
+        "Question requires a broad explanation instead of a choice or short correction.",
+        "Reviewer cannot tell whether evidence is required.",
+        "Reviewer needs another packet to understand the row.",
+        "Not-my-domain answer has no clear reroute target.",
+        "Answer would silently become a source claim instead of a validation record."
+      ]
+    },
+    {
+      "case_id": "P5-CASE-005",
+      "case_type": "not_my_domain_reroute",
+      "packet_id": "zorgverzekeraar_zvw",
+      "vraag_id": "D5-SV-001",
+      "reviewer_role": "data_repository_reviewer",
+      "instruction": "Test whether a reviewer can mark a row as not-my-domain and route it to the better owner without losing vraag_id traceability.",
+      "expected_processing_route": "reroute_or_validation_log_note",
+      "expected_reroute_candidates": [
+        "welzijn_sociale_basis",
+        "gemeente_almere_sociaal_domein_d5"
+      ],
+      "packet_label": "Zorgverzekeraar/Zvw",
+      "packet_csv_path": "data/workagenda/precontact_packets/zorgverzekeraar_zvw.csv",
+      "csv_fields_present": [
+        "answer",
+        "correction_or_note",
+        "evidence_reference",
+        "evidence_type",
+        "not_my_domain_reroute",
+        "vraag_id"
+      ],
+      "missing_required_csv_fields": [],
+      "domain": "D5",
+      "workbook_id": "d5_validation_workbook",
+      "sheet": "Sociaal verwijzen",
+      "sheet_row": 5,
+      "component_id": "sociaal_verwijzen",
+      "question_text": "Capaciteit brede gesprek huisarts/eerstelijn",
+      "antwoordtype": "dropdown_plus_evidence",
+      "repo_update_effect": "validation_log_or_finance_ticket",
+      "bewijstype_verplicht": true,
+      "pass_criteria": [
+        "Reviewer can understand what is being asked without opening the full workbook.",
+        "Reviewer can choose an answer, mark unknown, or mark not-my-domain.",
+        "Reviewer can name evidence type and evidence reference when claiming confirmation.",
+        "Returned row preserves vraag_id and packet_id.",
+        "Repository team can route the answer to the expected processing route."
+      ],
+      "failure_triggers": [
+        "Question requires a broad explanation instead of a choice or short correction.",
+        "Reviewer cannot tell whether evidence is required.",
+        "Reviewer needs another packet to understand the row.",
+        "Not-my-domain answer has no clear reroute target.",
+        "Answer would silently become a source claim instead of a validation record."
+      ]
+    }
+  ],
+  "human_completion_required": [
+    "Select 2-4 internal reviewers before stakeholder contact.",
+    "Have them complete the five dry-run cases in the CSV packet drafts.",
+    "Record time-to-answer, confusing wording, missing dropdown options, evidence ambiguity and reroute clarity.",
+    "Apply workbook or packet fixes before the P7 send-readiness gate."
+  ]
+}

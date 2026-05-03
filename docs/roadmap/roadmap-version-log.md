@@ -1,7 +1,7 @@
 # Roadmap Version Log
 
 ## Summary
-Current roadmap version: `v2026.05.03-7`.
+Current roadmap version: `v2026.05.03-8`.
 
 The active roadmap is `docs/data-quality-roadmap.md`. This log records material roadmap changes so the project does not split into multiple competing roadmap documents.
 
@@ -17,6 +17,7 @@ The active roadmap is `docs/data-quality-roadmap.md`. This log records material 
 
 | Version | Date | Change | Active roadmap | Archive / notes |
 | --- | --- | --- | --- | --- |
+| `v2026.05.03-8` | 2026-05-03 | Prepared Sprint 33.P5 internal dry-run cases and moved repository-side active work to Sprint 33.P6 workflow integration. | `docs/data-quality-roadmap.md` | Added `data/workagenda/precontact_internal_dry_run.json`, `docs/review/precontact-internal-dry-run.md`, and `src/build_precontact_internal_dry_run.py`; P5 human reviewer execution remains a P7 blocker, not a P6 blocker. |
 | `v2026.05.03-7` | 2026-05-03 | Closed Sprint 33.P4 and moved the active task to Sprint 33.P5 internal dry run. | `docs/data-quality-roadmap.md` | Added `data/workagenda/precontact_stakeholder_packets.json`, `docs/review/precontact-stakeholder-packets.md`, `data/workagenda/precontact_packets/*.csv`, and `src/build_precontact_stakeholder_packets.py`; packet drafts are prepared, not sent. |
 | `v2026.05.03-6` | 2026-05-03 | Closed Sprint 33.P3 and moved the active task to Sprint 33.P4 stakeholder packet building. | `docs/data-quality-roadmap.md` | Added `data/workagenda/precontact_agent_plan.json`, `docs/review/precontact-agent-prompts.md`, and `src/build_precontact_agent_plan.py`; prompts are prepared, not sent. |
 | `v2026.05.03-5` | 2026-05-03 | Closed Sprint 33.P2 and moved the active task to Sprint 33.P3 targeted pre-contact agents. | `docs/data-quality-roadmap.md` | Added `data/workagenda/validation_workbook_prefill_audit.json`, `docs/review/validation-workbook-prefill-audit.md`, and `src/build_validation_workbook_prefill_audit.py`. |

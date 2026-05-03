@@ -1,7 +1,7 @@
 # Roadmap Version Log
 
 ## Summary
-Current roadmap version: `v2026.05.03`.
+Current roadmap version: `v2026.05.03-2`.
 
 The active roadmap is `docs/data-quality-roadmap.md`. This log records material roadmap changes so the project does not split into multiple competing roadmap documents.
 
@@ -17,4 +17,5 @@ The active roadmap is `docs/data-quality-roadmap.md`. This log records material 
 
 | Version | Date | Change | Active roadmap | Archive / notes |
 | --- | --- | --- | --- | --- |
+| `v2026.05.03-2` | 2026-05-03 | Changed the top roadmap ledger into an active task ledger and moved completed sprint history out of the top roadmap flow. | `docs/data-quality-roadmap.md` | Completed sprint history now lives in `docs/roadmap/completed-sprint-ledger.md`. |
 | `v2026.05.03` | 2026-05-03 | Merged the workagenda-delivery roadmap into the canonical roadmap and introduced roadmap versioning. | `docs/data-quality-roadmap.md` | Archived prior standalone workagenda roadmap as `docs/roadmap/archive/workagenda-delivery-roadmap-v2026.05.02.md`; `docs/workagenda-delivery-roadmap.md` is now a redirect. |

@@ -34,6 +34,7 @@
 - `RESEARCH_AGENT_PROMPT.md`: root-level working prompt for external research agents; use it when handing a concrete Almere research question to another agent and preserve its quality-issue logging requirement.
 - `docs/data-quality-roadmap.md`: single canonical roadmap for data quality, review, D6 validation handoff, and Phase 32 workagenda-delivery work. Keep its Sprint Ledger and roadmap version current when sprint status, phase scope, gate rules, canonical file routing, or delivery sequence changes.
 - `docs/roadmap/roadmap-version-log.md`: roadmap version history and versioning rules. Update it whenever the canonical roadmap version changes.
+- `docs/roadmap/completed-sprint-ledger.md`: completed sprint history moved out of the top canonical roadmap. Use it for provenance only; active work remains in the Active Task Ledger at the top of `docs/data-quality-roadmap.md`.
 - `docs/roadmap/archive/`: archived roadmap snapshots and retired standalone roadmap files. Use archived files for provenance only, not as active planning.
 - `data/extracted/workagenda_nulmeting_capacity.json`: Sprint 25.3 public-source prefill layer for D5 workagenda targets; use it to distinguish public baseline evidence, indicative calculations, local staff validation fields, and later decision questions.
 - `data/extracted/d6_governance_collaboration.json`: Sprint 25.4 public-source role map for D6 governance and collaboration; use it to separate public role evidence, scale guardrails, local validation fields, and later decision questions.

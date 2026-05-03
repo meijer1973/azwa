@@ -27449,259 +27449,94 @@
     "href": "../../docs/data-quality-roadmap.md",
     "rows": [
       {
-        "sprint": "25.2 Lokale bronversterking Almere",
+        "sprint": "32.0 Scope en stuurmodel vastzetten",
         "status": "completed",
-        "note": "`data/extracted/local_source_strengthening_almere.json`, `docs/internal/source-intake/phase25.2-public-source-assessment.md`, `docs/completed-plans/phase25-sprint25.2-lokale-bronversterking.md`"
-      },
-      {
-        "sprint": "25.1 Werkagenda- en financieringslaag",
-        "status": "completed",
-        "note": "`data/extracted/workagenda_d5_operational_requirements.json`, `src/build_workagenda_d5_operational_requirements.py`, `docs/completed-plans/phase25-sprint25.1-werkagenda-financieringslaag.md`"
-      },
-      {
-        "sprint": "24.1 Taxonomie en checklist",
-        "status": "completed",
-        "note": "`config/data_quality_perspectives.json`, `docs/data-quality-checklist.md`"
-      },
-      {
-        "sprint": "24.2 Audit van bestaande site-data",
-        "status": "completed",
-        "note": "`docs/completed-plans/phase24-sprint24.2-audit.md`, `data/extracted/data_quality_audit.json`"
-      },
-      {
-        "sprint": "24.3 Review-dashboard intern",
-        "status": "completed",
-        "note": "`docs/internal/review-dashboard.html`, `src/build_internal_review_dashboard.py`, `docs/completed-plans/phase24-sprint24.3-review-dashboard.md`"
-      },
-      {
-        "sprint": "25.3 Nulmeting en capaciteit werkagenda",
-        "status": "completed",
-        "note": "`data/extracted/workagenda_nulmeting_capacity.json`, `src/build_workagenda_nulmeting_capacity.py`, `docs/completed-plans/phase25-sprint25.3-nulmeting-capaciteit.md`"
-      },
-      {
-        "sprint": "25.4 D6 governance en samenwerking",
-        "status": "completed",
-        "note": "Heropend en afgerond als D6 Almere responsibility pack: `docs/phase25-sprint25.4-d6-almere-responsibility-pack-plan.md`; registerlaag staat in `data/extracted/municipal/almere_d6_responsibility_register.json` en schema in `data/schemas/almere_d6_responsibility_register.schema.json`"
-      },
-      {
-        "sprint": "24.6 D6 commit, verify and stabilize",
-        "status": "completed",
-        "note": "Remediation is gecommit/gepusht; verificatie via `python src/run_pipeline.py --all`, gerichte tests en schema-validatie"
-      },
-      {
-        "sprint": "24.7 D6 register evidence audit",
-        "status": "completed",
-        "note": "Registerrijen gecontroleerd op status, eigenaar, uitvoerder, schaal, financiering, bewijs en open reviewvraag"
-      },
-      {
-        "sprint": "24.8 D6 local validation preparation",
-        "status": "completed",
-        "note": "Interne validatiepack gearchiveerd in `docs/review/archive/d6-support/almere_d6_validation_pack.md`; actuele menselijke ingang staat in `docs/review/almere_d6_open_questions.md`"
-      },
-      {
-        "sprint": "25.5 D6 stakeholder validation handoff",
-        "status": "completed",
-        "note": "Repository-side handoff compleet; wacht op policy-maker stakeholdervalidatie. Start via `docs/review/README.md`. Current artifacts are `docs/review/almere_d6_deep_research_learnings.md` for learned public-source information and `docs/review/almere_d6_open_questions.md` for remaining questions; detailed support files are archived in `docs/review/archive/d6-support/`."
-      },
-      {
-        "sprint": "25.6 Post-validation register hardening",
-        "status": "parked",
-        "note": "Geparkeerd tot stakeholder-validatierecords, lokale/interne documenten, finance/controller bevestiging of expliciet beleidsbesluit beschikbaar zijn; blokkeert Fase 26 niet"
-      },
-      {
-        "sprint": "26.1 Rough-claim audit hercalibratie",
-        "status": "completed",
-        "note": "`src/build_data_quality_audit.py`, `tests/test_data_quality_audit.py`, `data/extracted/data_quality_audit.json`, `docs/completed-plans/phase26-sprint26.1-rough-claim-audit-recalibration.md`"
-      },
-      {
-        "sprint": "26.2 Deterministische tekstfixes",
-        "status": "completed",
-        "note": "`src/build_structural_extractions.py`, `src/build_document_extractions.py`, `data/extracted/voting_records.json`, `data/logs/phase26_text_cleanup.json`, `docs/completed-plans/phase26-sprint26.2-deterministic-text-fixes.md`"
-      },
-      {
-        "sprint": "26.3 Sentence-boundary en dedup",
-        "status": "completed",
-        "note": "`src/build_claims_top5.py`, `src/verify_claim_id_references.py`, `data/extracted/claims/sentence_validator_rejects.json`, `data/extracted/claims/dedup_log.json`, `docs/completed-plans/phase26-sprint26.3-sentence-boundary-dedup.md`"
-      },
-      {
-        "sprint": "27.1 Norm",
-        "status": "completed",
-        "note": "`src/build_claims_top5.py`, `data/schemas/claim.schema.json`, `data/extracted/data_quality_audit.json`, `docs/completed-plans/phase27-sprint27.1-norm.md`"
-      },
-      {
-        "sprint": "27.2 Tijd",
-        "status": "completed",
-        "note": "`src/build_claims_top5.py`, `data/schemas/claim.schema.json`, `data/extracted/data_quality_audit.json`, `data/site/timeline_register.json`, `docs/completed-plans/phase27-sprint27.2-tijd.md`"
-      },
-      {
-        "sprint": "27.3 Geld",
-        "status": "completed",
-        "note": "`src/build_claims_top5.py`, `data/schemas/claim.schema.json`, `data/extracted/data_quality_audit.json`, `docs/completed-plans/phase27-sprint27.3-geld.md`"
-      },
-      {
-        "sprint": "27.4 Governance",
-        "status": "completed",
-        "note": "`src/build_claims_top5.py`, `data/schemas/claim.schema.json`, `data/extracted/data_quality_audit.json`, `docs/completed-plans/phase27-sprint27.4-governance.md`"
-      },
-      {
-        "sprint": "27.5 Locality",
-        "status": "completed",
-        "note": "`src/build_claims_top5.py`, `data/schemas/claim.schema.json`, `data/extracted/data_quality_audit.json`, `docs/completed-plans/phase27-sprint27.5-locality.md`"
-      },
-      {
-        "sprint": "27.6 Execution",
-        "status": "completed",
-        "note": "`src/build_claims_top5.py`, `data/schemas/claim.schema.json`, `data/extracted/data_quality_audit.json`, `docs/completed-plans/phase27-sprint27.6-execution.md`"
-      },
-      {
-        "sprint": "27.7 Perspectiefmodel stabilisatie",
-        "status": "completed",
-        "note": "`src/build_claims_top5.py`, `src/build_structural_extractions.py`, `src/build_data_quality_audit.py`, `config/data_quality_perspectives.json`, `docs/completed-plans/phase27-sprint27.7-perspectiefmodel-stabilisatie.md`"
-      },
-      {
-        "sprint": "28.1 Menselijke samenvattingen per update",
-        "status": "completed",
-        "note": "`config/site_updates.json`, `config/site_taxonomy.json`, `src/render_site.py`, `tests/test_site_generation.py`, `docs/completed-plans/phase28-sprint28.1-menselijke-update-samenvattingen.md`"
-      },
-      {
-        "sprint": "28.2 Bronverwijzing en autoriteitstaal",
-        "status": "completed",
-        "note": "`src/render_site.py`, `src/build_site_view_models.py`, `tests/test_site_generation.py`, `docs/completed-plans/phase28-sprint28.2-bronverwijzing-autoriteitstaal.md`"
-      },
-      {
-        "sprint": "28.3 Detailpagina's voor drill-down",
-        "status": "completed",
-        "note": "`src/render_site.py`, `src/build_site_view_models.py`, `tests/test_site_generation.py`, `docs/completed-plans/phase28-sprint28.3-drilldown-detailpaginas.md`"
-      },
-      {
-        "sprint": "28.4 Pre-29 follow-up cleanup",
-        "status": "completed",
-        "note": "`RESEARCH_AGENT_MAP.md`, `src/render_site.py`, `tests/test_site_generation.py`, `docs/completed-plans/phase28-sprint28.4-pre29-followup-cleanup.md`"
-      },
-      {
-        "sprint": "29.0 Perspectiefschema zero-count cleanup",
-        "status": "completed",
-        "note": "`src/build_claims_top5.py`, `config/data_quality_perspectives.json`, `data/schemas/claim.schema.json`, `src/build_quality_control.py`, `data/extracted/data_quality_audit.json`, `docs/completed-plans/phase29-sprint29.0-perspectiefschema-zero-count-cleanup.md`"
-      },
-      {
-        "sprint": "29.1 Tijdlijnregister verdiepen",
-        "status": "completed",
-        "note": "`src/build_site_view_models.py`, `src/render_site.py`, `config/timeline_curation.json`, `data/site/timeline_register.json`, `docs/completed-plans/phase29-sprint29.1-tijdlijnregister-verdiepen.md`"
-      },
-      {
-        "sprint": "29.2 Begrotings- en verantwoordingscyclus",
-        "status": "completed",
-        "note": "`config/timeline_curation.json`, `src/build_site_view_models.py`, `src/render_site.py`, `data/site/site_timeline_view.json`, `docs/completed-plans/phase29-sprint29.2-begrotings-verantwoordingscyclus.md`"
-      },
-      {
-        "sprint": "29.3 Handreikingen en uitvoeringsmomenten",
-        "status": "completed",
-        "note": "`config/timeline_curation.json`, `src/build_site_view_models.py`, `src/render_site.py`, `data/site/site_timeline_view.json`, `docs/completed-plans/phase29-sprint29.3-handreikingen-uitvoeringsmomenten.md`"
-      },
-      {
-        "sprint": "30.1 Lokale lacunes",
-        "status": "completed",
-        "note": "`src/build_site_view_models.py`, `src/render_site.py`, `data/site/site_almere_view.json`, `dist/almere/index.html`, `docs/completed-plans/phase30-sprint30.1-lokale-lacunes.md`"
-      },
-      {
-        "sprint": "30.2 Besluitvragen en mogelijke opvolgacties",
-        "status": "completed",
-        "note": "`src/build_site_view_models.py`, `src/render_site.py`, `data/site/decision_view_models/*.json`, `data/site/action_view_models/*.json`, `docs/completed-plans/phase30-sprint30.2-besluitvragen-opvolgacties.md`"
-      },
-      {
-        "sprint": "30.3 Beleidsdocumenten en rapporten",
-        "status": "completed",
-        "note": "`docs/rapporten/report-status.json`, `src/audit_report_grounding.py`, `docs/internal/report-grounding-audit-2026-04-29.md`, `tests/test_report_grounding.py`, `docs/completed-plans/phase30-sprint30.3-beleidsdocumenten-rapporten.md`"
-      },
-      {
-        "sprint": "31.1 Updateprotocol",
-        "status": "completed",
-        "note": "`docs/updateprotocol.md`, `src/validate_update_protocol.py`, `docs/internal/update-protocol-check-2026-04-29.md`, `tests/test_update_protocol.py`, `docs/completed-plans/phase31-sprint31.1-updateprotocol.md`"
-      },
-      {
-        "sprint": "31.2 Maandelijkse bronaudit",
-        "status": "completed",
-        "note": "`config/monthly_source_audit.json`, `src/build_monthly_source_audit.py`, `data/extracted/monthly_source_audit.json`, `docs/internal/monthly-source-audit-2026-04-30.md`, `docs/completed-plans/phase31-sprint31.2-maandelijkse-bronaudit.md`"
-      },
-      {
-        "sprint": "31.3 Reviewronde met menselijke beoordelaars",
-        "status": "completed",
-        "note": "`src/build_human_review_round.py`, `data/extracted/human_review_round.json`, `docs/review/archive/phase31/phase31.3-human-review-round.md`, `docs/completed-plans/phase31-sprint31.3-reviewronde-menselijke-beoordelaars.md`"
-      },
-      {
-        "sprint": "31.4 Reviewtriage en deep-research offload",
-        "status": "completed",
-        "note": "`src/build_review_triage.py`, `data/extracted/review_triage_deep_research_offload.json`, `docs/review/archive/phase31/phase31.4-review-triage-deep-research-offload.md`, `docs/review/archive/phase31/phase31.4-deep-research-agent-prompts.md`, `docs/completed-plans/phase31-sprint31.4-review-triage-deep-research-offload.md`"
-      },
-      {
-        "sprint": "31.5 Deep-research bronintake en top-layer verificatie",
-        "status": "completed",
-        "note": "Afgerond in `docs/completed-plans/phase31-sprint31.5-deep-research-bronintake.md`. Deep-researchrapporten zijn verwerkt als bronsignaal of ontwerpinput, geselecteerde bronnen zijn via manifest/pipeline getoetst, niet-claim-ready bronvondsten blijven intakekandidaat, en de D6-validatiehandoff is aangescherpt zonder D6-rijen te harden."
-      },
-      {
-        "sprint": "32.0 Werkagenda-delivery scope en stuurmodel",
-        "status": "completed",
-        "note": "`docs/workagenda-d5-stuurmodel.md`, `data/workagenda/d5_stuurmodel.json`, `tests/test_workagenda_d5_stuurmodel.py`, `docs/completed-plans/phase32-sprint32.0-workagenda-stuurmodel.md`"
+        "note": "`docs/workagenda-d5-stuurmodel.md`; `data/workagenda/d5_stuurmodel.json`; `docs/completed-plans/phase32-sprint32.0-workagenda-stuurmodel.md`"
       },
       {
         "sprint": "32.1 D5-statusmatrix bouwen",
         "status": "completed",
-        "note": "`docs/workagenda-d5-statusmatrix.md`, `data/workagenda/d5_status_matrix.json`, `src/build_workagenda_d5_status_matrix.py`, `tests/test_workagenda_d5_status_matrix.py`, `docs/completed-plans/phase32-sprint32.1-d5-statusmatrix.md`"
+        "note": "`docs/workagenda-d5-statusmatrix.md`; `data/workagenda/d5_status_matrix.json`; `docs/completed-plans/phase32-sprint32.1-d5-statusmatrix.md`"
       },
       {
         "sprint": "32.2 D5-validatie voorbereiden",
         "status": "completed",
-        "note": "`docs/workagenda-d5-validation-tickets.md`, `data/workagenda/d5_validation_tickets.json`, `docs/workagenda-d5-validation-format.md`, `data/workagenda/d5_validation_packets.json`, `data/workagenda/validation_packets/*.csv`, `docs/completed-plans/phase32-sprint32.2-d5-validatieformats.md`"
+        "note": "`docs/workagenda-d5-validation-tickets.md`; `data/workagenda/d5_validation_tickets.json`; `docs/workagenda-d5-validation-format.md`; `data/workagenda/d5_validation_packets.json`; `data/workagenda/validation_packets/*.csv`; `docs/completed-plans/phase32-sprint32.2-d5-validatieformats.md`"
       },
       {
         "sprint": "32.3 Eerste menselijke validatieronde",
         "status": "blocked",
-        "note": "Geblokkeerd tot ingevulde stakeholderantwoorden, validatierecords, expliciete beleidsbesluiten of relevante bewijsdocumenten beschikbaar zijn."
+        "note": "Blocked until completed stakeholder answers, validation records, explicit policy decisions or relevant evidence documents exist."
       },
       {
         "sprint": "32.4 Handreikingen en tijdsafhankelijke bronnen verwerken",
         "status": "open",
-        "note": "Volgende repository-side sprint: bronupdate-log voor D5 handreikingen, RPI/regioscan, rode-dradenanalyse en ontwikkelagenda-updates."
+        "note": "Planned: `data/workagenda/d5_source_update_log.json` and a human-readable source-update note."
+      },
+      {
+        "sprint": "32.5 Gap compression en besluit-tickets",
+        "status": "planned",
+        "note": "Planned: `data/workagenda/d5_decision_register.json` and decision-ticket summary."
+      },
+      {
+        "sprint": "32.6 Finance/controller en zorgverzekeraar integreren",
+        "status": "planned",
+        "note": "Planned: `data/workagenda/d5_finance_matrix.json`."
+      },
+      {
+        "sprint": "32.7 D6-afhankelijkheden integreren",
+        "status": "planned",
+        "note": "Planned: `data/workagenda/d5_d6_dependency_map.json`."
+      },
+      {
+        "sprint": "32.8 Prioritering, fasering en 2030-ingroeipad",
+        "status": "planned",
+        "note": "Planned: prioritisation and phasing view."
+      },
+      {
+        "sprint": "32.9 Concept-werkagenda v0.8",
+        "status": "blocked",
+        "note": "Blocked until statusmatrix, validation tickets, finance matrix, decision register and D5-D6 dependency map exist."
+      },
+      {
+        "sprint": "32.10 Governance-ready versie",
+        "status": "blocked",
+        "note": "Blocked until concept is validated and finance/governance risks are explicit."
+      },
+      {
+        "sprint": "32.11 Vaststelling en VWS-verzending",
+        "status": "blocked",
+        "note": "Blocked until governance route begins."
+      },
+      {
+        "sprint": "32.12 Uitvoeringsstart 2027 en lerende cyclus",
+        "status": "blocked",
+        "note": "Blocked until adopted workagenda exists."
       }
     ],
     "current": {
       "sprint": "32.4 Handreikingen en tijdsafhankelijke bronnen verwerken",
       "status": "open",
-      "note": "Volgende repository-side sprint: bronupdate-log voor D5 handreikingen, RPI/regioscan, rode-dradenanalyse en ontwikkelagenda-updates."
+      "note": "Planned: `data/workagenda/d5_source_update_log.json` and a human-readable source-update note."
     },
     "history": [
       {
         "sprint": "32.2 D5-validatie voorbereiden",
         "status": "completed",
-        "note": "`docs/workagenda-d5-validation-tickets.md`, `data/workagenda/d5_validation_tickets.json`, `docs/workagenda-d5-validation-format.md`, `data/workagenda/d5_validation_packets.json`, `data/workagenda/validation_packets/*.csv`, `docs/completed-plans/phase32-sprint32.2-d5-validatieformats.md`"
+        "note": "`docs/workagenda-d5-validation-tickets.md`; `data/workagenda/d5_validation_tickets.json`; `docs/workagenda-d5-validation-format.md`; `data/workagenda/d5_validation_packets.json`; `data/workagenda/validation_packets/*.csv`; `docs/completed-plans/phase32-sprint32.2-d5-validatieformats.md`"
       },
       {
         "sprint": "32.1 D5-statusmatrix bouwen",
         "status": "completed",
-        "note": "`docs/workagenda-d5-statusmatrix.md`, `data/workagenda/d5_status_matrix.json`, `src/build_workagenda_d5_status_matrix.py`, `tests/test_workagenda_d5_status_matrix.py`, `docs/completed-plans/phase32-sprint32.1-d5-statusmatrix.md`"
+        "note": "`docs/workagenda-d5-statusmatrix.md`; `data/workagenda/d5_status_matrix.json`; `docs/completed-plans/phase32-sprint32.1-d5-statusmatrix.md`"
       },
       {
-        "sprint": "32.0 Werkagenda-delivery scope en stuurmodel",
+        "sprint": "32.0 Scope en stuurmodel vastzetten",
         "status": "completed",
-        "note": "`docs/workagenda-d5-stuurmodel.md`, `data/workagenda/d5_stuurmodel.json`, `tests/test_workagenda_d5_stuurmodel.py`, `docs/completed-plans/phase32-sprint32.0-workagenda-stuurmodel.md`"
-      },
-      {
-        "sprint": "31.5 Deep-research bronintake en top-layer verificatie",
-        "status": "completed",
-        "note": "Afgerond in `docs/completed-plans/phase31-sprint31.5-deep-research-bronintake.md`. Deep-researchrapporten zijn verwerkt als bronsignaal of ontwerpinput, geselecteerde bronnen zijn via manifest/pipeline getoetst, niet-claim-ready bronvondsten blijven intakekandidaat, en de D6-validatiehandoff is aangescherpt zonder D6-rijen te harden."
-      },
-      {
-        "sprint": "31.4 Reviewtriage en deep-research offload",
-        "status": "completed",
-        "note": "`src/build_review_triage.py`, `data/extracted/review_triage_deep_research_offload.json`, `docs/review/archive/phase31/phase31.4-review-triage-deep-research-offload.md`, `docs/review/archive/phase31/phase31.4-deep-research-agent-prompts.md`, `docs/completed-plans/phase31-sprint31.4-review-triage-deep-research-offload.md`"
-      },
-      {
-        "sprint": "31.3 Reviewronde met menselijke beoordelaars",
-        "status": "completed",
-        "note": "`src/build_human_review_round.py`, `data/extracted/human_review_round.json`, `docs/review/archive/phase31/phase31.3-human-review-round.md`, `docs/completed-plans/phase31-sprint31.3-reviewronde-menselijke-beoordelaars.md`"
+        "note": "`docs/workagenda-d5-stuurmodel.md`; `data/workagenda/d5_stuurmodel.json`; `docs/completed-plans/phase32-sprint32.0-workagenda-stuurmodel.md`"
       }
     ],
-    "completed_count": 40,
+    "completed_count": 3,
     "open_count": 1
   },
   "next_cleanup_targets": [

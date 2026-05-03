@@ -1,9 +1,9 @@
-# AZWA Canonical Roadmap
+﻿# AZWA Canonical Roadmap
 
 ## Summary
 Current sprint: Sprint 32.4 - Handreikingen en tijdsafhankelijke bronnen verwerken. Sprint 32.3 is blocked pending stakeholder validation responses.
 
-Roadmap version: `v2026.05.03`.
+Roadmap version: `v2026.05.03-2`.
 
 This is the single active roadmap for the repository. It combines the older data-quality roadmap and the workagenda-delivery roadmap into one canonical planning surface. Historical snapshots and retired roadmap files live under `docs/roadmap/archive/`; version changes are recorded in `docs/roadmap/roadmap-version-log.md`.
 
@@ -18,60 +18,31 @@ Use this versioning rule for roadmap changes:
 - Keep `docs/workagenda-delivery-roadmap.md` as a redirect only; do not maintain it as a second active roadmap.
 - After roadmap changes, regenerate `docs/internal/review-dashboard.html`, run tests, commit and push before reporting back.
 
-## Sprint Ledger
-Gebruik deze roadmap als levend werkdocument. Werk na elke sprint de statusregel bij:
+## Active Task Ledger
+Gebruik deze roadmap als levend werkdocument voor wat nu nog gedaan moet worden. Voltooide sprints staan niet meer bovenaan; ze zijn verplaatst naar `docs/roadmap/completed-sprint-ledger.md`.
 
-- `completed`: uitgevoerd en vastgelegd in een notitie, data-output, codewijziging of controle.
-- `open`: nog niet uitgevoerd of nog niet volledig afgerond.
-- Afgeronde fase- en sprintplannen staan in `docs/completed-plans/`; actieve plannen blijven in de hoofdmap `docs/`.
-- Het interne dashboard `docs/internal/review-dashboard.html` moet de meest actuele sprintstand tonen. Werk bij sprintstatus, huidige planning, cleanup targets, reviewdata, brondekking of publieke updategeschiedenis altijd eerst deze roadmap bij en draai daarna `python src/build_internal_review_dashboard.py` voordat wijzigingen worden vastgelegd.
-- Elk plan of elke sprintnotitie begint met een korte actuele samenvatting. Bij meer-sprintplannen heeft een Sprint Ledger bovenaan de voorkeur; bij kleinere plannen volstaat een korte samenvatting bovenaan.
+Statusbetekenis:
 
-| Sprint | Status | Vindplaats / opmerking |
-| --- | --- | --- |
-| 25.2 Lokale bronversterking Almere | completed | `data/extracted/local_source_strengthening_almere.json`, `docs/internal/source-intake/phase25.2-public-source-assessment.md`, `docs/completed-plans/phase25-sprint25.2-lokale-bronversterking.md` |
-| 25.1 Werkagenda- en financieringslaag | completed | `data/extracted/workagenda_d5_operational_requirements.json`, `src/build_workagenda_d5_operational_requirements.py`, `docs/completed-plans/phase25-sprint25.1-werkagenda-financieringslaag.md` |
-| 24.1 Taxonomie en checklist | completed | `config/data_quality_perspectives.json`, `docs/data-quality-checklist.md` |
-| 24.2 Audit van bestaande site-data | completed | `docs/completed-plans/phase24-sprint24.2-audit.md`, `data/extracted/data_quality_audit.json` |
-| 24.3 Review-dashboard intern | completed | `docs/internal/review-dashboard.html`, `src/build_internal_review_dashboard.py`, `docs/completed-plans/phase24-sprint24.3-review-dashboard.md` |
-| 25.3 Nulmeting en capaciteit werkagenda | completed | `data/extracted/workagenda_nulmeting_capacity.json`, `src/build_workagenda_nulmeting_capacity.py`, `docs/completed-plans/phase25-sprint25.3-nulmeting-capaciteit.md` |
-| 25.4 D6 governance en samenwerking | completed | Heropend en afgerond als D6 Almere responsibility pack: `docs/phase25-sprint25.4-d6-almere-responsibility-pack-plan.md`; registerlaag staat in `data/extracted/municipal/almere_d6_responsibility_register.json` en schema in `data/schemas/almere_d6_responsibility_register.schema.json` |
-| 24.6 D6 commit, verify and stabilize | completed | Remediation is gecommit/gepusht; verificatie via `python src/run_pipeline.py --all`, gerichte tests en schema-validatie |
-| 24.7 D6 register evidence audit | completed | Registerrijen gecontroleerd op status, eigenaar, uitvoerder, schaal, financiering, bewijs en open reviewvraag |
-| 24.8 D6 local validation preparation | completed | Interne validatiepack gearchiveerd in `docs/review/archive/d6-support/almere_d6_validation_pack.md`; actuele menselijke ingang staat in `docs/review/almere_d6_open_questions.md` |
-| 25.5 D6 stakeholder validation handoff | completed | Repository-side handoff compleet; wacht op policy-maker stakeholdervalidatie. Start via `docs/review/README.md`. Current artifacts are `docs/review/almere_d6_deep_research_learnings.md` for learned public-source information and `docs/review/almere_d6_open_questions.md` for remaining questions; detailed support files are archived in `docs/review/archive/d6-support/`. |
-| 25.6 Post-validation register hardening | parked | Geparkeerd tot stakeholder-validatierecords, lokale/interne documenten, finance/controller bevestiging of expliciet beleidsbesluit beschikbaar zijn; blokkeert Fase 26 niet |
-| 26.1 Rough-claim audit hercalibratie | completed | `src/build_data_quality_audit.py`, `tests/test_data_quality_audit.py`, `data/extracted/data_quality_audit.json`, `docs/completed-plans/phase26-sprint26.1-rough-claim-audit-recalibration.md` |
-| 26.2 Deterministische tekstfixes | completed | `src/build_structural_extractions.py`, `src/build_document_extractions.py`, `data/extracted/voting_records.json`, `data/logs/phase26_text_cleanup.json`, `docs/completed-plans/phase26-sprint26.2-deterministic-text-fixes.md` |
-| 26.3 Sentence-boundary en dedup | completed | `src/build_claims_top5.py`, `src/verify_claim_id_references.py`, `data/extracted/claims/sentence_validator_rejects.json`, `data/extracted/claims/dedup_log.json`, `docs/completed-plans/phase26-sprint26.3-sentence-boundary-dedup.md` |
-| 27.1 Norm | completed | `src/build_claims_top5.py`, `data/schemas/claim.schema.json`, `data/extracted/data_quality_audit.json`, `docs/completed-plans/phase27-sprint27.1-norm.md` |
-| 27.2 Tijd | completed | `src/build_claims_top5.py`, `data/schemas/claim.schema.json`, `data/extracted/data_quality_audit.json`, `data/site/timeline_register.json`, `docs/completed-plans/phase27-sprint27.2-tijd.md` |
-| 27.3 Geld | completed | `src/build_claims_top5.py`, `data/schemas/claim.schema.json`, `data/extracted/data_quality_audit.json`, `docs/completed-plans/phase27-sprint27.3-geld.md` |
-| 27.4 Governance | completed | `src/build_claims_top5.py`, `data/schemas/claim.schema.json`, `data/extracted/data_quality_audit.json`, `docs/completed-plans/phase27-sprint27.4-governance.md` |
-| 27.5 Locality | completed | `src/build_claims_top5.py`, `data/schemas/claim.schema.json`, `data/extracted/data_quality_audit.json`, `docs/completed-plans/phase27-sprint27.5-locality.md` |
-| 27.6 Execution | completed | `src/build_claims_top5.py`, `data/schemas/claim.schema.json`, `data/extracted/data_quality_audit.json`, `docs/completed-plans/phase27-sprint27.6-execution.md` |
-| 27.7 Perspectiefmodel stabilisatie | completed | `src/build_claims_top5.py`, `src/build_structural_extractions.py`, `src/build_data_quality_audit.py`, `config/data_quality_perspectives.json`, `docs/completed-plans/phase27-sprint27.7-perspectiefmodel-stabilisatie.md` |
-| 28.1 Menselijke samenvattingen per update | completed | `config/site_updates.json`, `config/site_taxonomy.json`, `src/render_site.py`, `tests/test_site_generation.py`, `docs/completed-plans/phase28-sprint28.1-menselijke-update-samenvattingen.md` |
-| 28.2 Bronverwijzing en autoriteitstaal | completed | `src/render_site.py`, `src/build_site_view_models.py`, `tests/test_site_generation.py`, `docs/completed-plans/phase28-sprint28.2-bronverwijzing-autoriteitstaal.md` |
-| 28.3 Detailpagina's voor drill-down | completed | `src/render_site.py`, `src/build_site_view_models.py`, `tests/test_site_generation.py`, `docs/completed-plans/phase28-sprint28.3-drilldown-detailpaginas.md` |
-| 28.4 Pre-29 follow-up cleanup | completed | `RESEARCH_AGENT_MAP.md`, `src/render_site.py`, `tests/test_site_generation.py`, `docs/completed-plans/phase28-sprint28.4-pre29-followup-cleanup.md` |
-| 29.0 Perspectiefschema zero-count cleanup | completed | `src/build_claims_top5.py`, `config/data_quality_perspectives.json`, `data/schemas/claim.schema.json`, `src/build_quality_control.py`, `data/extracted/data_quality_audit.json`, `docs/completed-plans/phase29-sprint29.0-perspectiefschema-zero-count-cleanup.md` |
-| 29.1 Tijdlijnregister verdiepen | completed | `src/build_site_view_models.py`, `src/render_site.py`, `config/timeline_curation.json`, `data/site/timeline_register.json`, `docs/completed-plans/phase29-sprint29.1-tijdlijnregister-verdiepen.md` |
-| 29.2 Begrotings- en verantwoordingscyclus | completed | `config/timeline_curation.json`, `src/build_site_view_models.py`, `src/render_site.py`, `data/site/site_timeline_view.json`, `docs/completed-plans/phase29-sprint29.2-begrotings-verantwoordingscyclus.md` |
-| 29.3 Handreikingen en uitvoeringsmomenten | completed | `config/timeline_curation.json`, `src/build_site_view_models.py`, `src/render_site.py`, `data/site/site_timeline_view.json`, `docs/completed-plans/phase29-sprint29.3-handreikingen-uitvoeringsmomenten.md` |
-| 30.1 Lokale lacunes | completed | `src/build_site_view_models.py`, `src/render_site.py`, `data/site/site_almere_view.json`, `dist/almere/index.html`, `docs/completed-plans/phase30-sprint30.1-lokale-lacunes.md` |
-| 30.2 Besluitvragen en mogelijke opvolgacties | completed | `src/build_site_view_models.py`, `src/render_site.py`, `data/site/decision_view_models/*.json`, `data/site/action_view_models/*.json`, `docs/completed-plans/phase30-sprint30.2-besluitvragen-opvolgacties.md` |
-| 30.3 Beleidsdocumenten en rapporten | completed | `docs/rapporten/report-status.json`, `src/audit_report_grounding.py`, `docs/internal/report-grounding-audit-2026-04-29.md`, `tests/test_report_grounding.py`, `docs/completed-plans/phase30-sprint30.3-beleidsdocumenten-rapporten.md` |
-| 31.1 Updateprotocol | completed | `docs/updateprotocol.md`, `src/validate_update_protocol.py`, `docs/internal/update-protocol-check-2026-04-29.md`, `tests/test_update_protocol.py`, `docs/completed-plans/phase31-sprint31.1-updateprotocol.md` |
-| 31.2 Maandelijkse bronaudit | completed | `config/monthly_source_audit.json`, `src/build_monthly_source_audit.py`, `data/extracted/monthly_source_audit.json`, `docs/internal/monthly-source-audit-2026-04-30.md`, `docs/completed-plans/phase31-sprint31.2-maandelijkse-bronaudit.md` |
-| 31.3 Reviewronde met menselijke beoordelaars | completed | `src/build_human_review_round.py`, `data/extracted/human_review_round.json`, `docs/review/archive/phase31/phase31.3-human-review-round.md`, `docs/completed-plans/phase31-sprint31.3-reviewronde-menselijke-beoordelaars.md` |
-| 31.4 Reviewtriage en deep-research offload | completed | `src/build_review_triage.py`, `data/extracted/review_triage_deep_research_offload.json`, `docs/review/archive/phase31/phase31.4-review-triage-deep-research-offload.md`, `docs/review/archive/phase31/phase31.4-deep-research-agent-prompts.md`, `docs/completed-plans/phase31-sprint31.4-review-triage-deep-research-offload.md` |
-| 31.5 Deep-research bronintake en top-layer verificatie | completed | Afgerond in `docs/completed-plans/phase31-sprint31.5-deep-research-bronintake.md`. Deep-researchrapporten zijn verwerkt als bronsignaal of ontwerpinput, geselecteerde bronnen zijn via manifest/pipeline getoetst, niet-claim-ready bronvondsten blijven intakekandidaat, en de D6-validatiehandoff is aangescherpt zonder D6-rijen te harden. |
-| 32.0 Werkagenda-delivery scope en stuurmodel | completed | `docs/workagenda-d5-stuurmodel.md`, `data/workagenda/d5_stuurmodel.json`, `tests/test_workagenda_d5_stuurmodel.py`, `docs/completed-plans/phase32-sprint32.0-workagenda-stuurmodel.md` |
-| 32.1 D5-statusmatrix bouwen | completed | `docs/workagenda-d5-statusmatrix.md`, `data/workagenda/d5_status_matrix.json`, `src/build_workagenda_d5_status_matrix.py`, `tests/test_workagenda_d5_status_matrix.py`, `docs/completed-plans/phase32-sprint32.1-d5-statusmatrix.md` |
-| 32.2 D5-validatie voorbereiden | completed | `docs/workagenda-d5-validation-tickets.md`, `data/workagenda/d5_validation_tickets.json`, `docs/workagenda-d5-validation-format.md`, `data/workagenda/d5_validation_packets.json`, `data/workagenda/validation_packets/*.csv`, `docs/completed-plans/phase32-sprint32.2-d5-validatieformats.md` |
-| 32.3 Eerste menselijke validatieronde | blocked | Geblokkeerd tot ingevulde stakeholderantwoorden, validatierecords, expliciete beleidsbesluiten of relevante bewijsdocumenten beschikbaar zijn. |
-| 32.4 Handreikingen en tijdsafhankelijke bronnen verwerken | open | Volgende repository-side sprint: bronupdate-log voor D5 handreikingen, RPI/regioscan, rode-dradenanalyse en ontwikkelagenda-updates. |
+- `open`: repository-side werk kan nu worden uitgevoerd.
+- `blocked`: wacht op externe validatie, besluitvorming, documenten of eerdere deliverylagen.
+- `parked`: bewust geparkeerd en geen blocker voor de huidige route.
+- `planned`: nog niet gestart; volgorde afhankelijk van de open/blocked taken erboven.
+
+| Task | Status | What needs to be done | Next artifact / output | Blocker or dependency |
+| --- | --- | --- | --- | --- |
+| 32.4 Handreikingen en tijdsafhankelijke bronnen verwerken | open | Maak een D5 source-update log voor handreikingen, RPI/regioscan, rode-dradenanalyse en ontwikkelagenda-updates. Houd watchlist-items gescheiden van bewijs totdat bronintake en pipelineverwerking klaar zijn. | `data/workagenda/d5_source_update_log.json`; human-readable source-update note. | Geen brede research; alleen named expected publications/source gaps. |
+| 32.3 Eerste menselijke validatieronde | blocked | Verwerk ingevulde D5 validatiepakketten pas wanneer stakeholderantwoorden of expliciete beleidsbesluiten beschikbaar zijn. | `data/workagenda/d5_validation_log.json`. | Wacht op ingevulde stakeholderantwoorden, validatierecords of bewijsdocumenten. |
+| 25.6 D6 post-validation register hardening | parked | Hard register rows only after D6 validation evidence exists. | Updated D6 responsibility register and QC. | Wacht op stakeholdervalidatie, lokale/interne documenten, finance/controller bevestiging of beleidsbesluit. |
+| 32.5 Gap compression en besluit-tickets | planned | Zet resterende D5-gaten om naar validatie-, besluit-, finance- of D6-afhankelijkheidstickets. | `data/workagenda/d5_decision_register.json`; decision-ticket summary. | Na source-update log en/of validatie-input. |
+| 32.6 Finance/controller en zorgverzekeraar integreren | planned | Bouw componentniveau finance/controller matrix met dubbeltelling, structureel/projectstatus en Zvw/verzekeraarsbevestiging. | `data/workagenda/d5_finance_matrix.json`. | Finance/controller en verzekeraar input nodig. |
+| 32.7 D6-afhankelijkheden integreren | planned | Koppel elk D5-onderdeel aan benodigde D6-infrastructuur en maak blokkades zichtbaar. | `data/workagenda/d5_d6_dependency_map.json`. | D6 validatie blijft deels policy-maker dependency. |
+| 32.8 Prioritering, fasering en 2030-ingroeipad | planned | Vertaal status, validatie, finance en afhankelijkheden naar keuzeopties en fasering. | Prioritering/fasering view. | Na status-, finance-, besluit- en dependency-lagen. |
+| 32.9 Concept-werkagenda v0.8 | blocked | Schrijf bestuurlijk concept met open punten zichtbaar. | Concept workagenda v0.8. | Blocked until statusmatrix, validation tickets, finance matrix, decision register and D5-D6 dependency map exist. |
+| 32.10 Governance-ready versie | blocked | Maak versie voor IZA-governance en college-route. | Governance-ready workagenda v1.0. | Blocked until concept is validated and finance/governance risks are explicit. |
+| 32.11 Vaststelling en VWS-verzending | blocked | Begeleid besluitroute, wijzigingen en bewijslog. | Definitieve werkagenda + bewijs-/wijzigingslog. | Blocked until governance route begins. |
+| 32.12 Uitvoeringsstart 2027 en lerende cyclus | blocked | Zet vastgestelde werkagenda om naar uitvoering, monitoring en bijsturing. | Uitvoeringsdashboard D5 2027. | Blocked until adopted workagenda exists. |
+
+Completed sprint history: `docs/roadmap/completed-sprint-ledger.md`.
 
 ## Huidige sprintplan
 Sprint 32.4 is open als repository-side vervolgstap. Sprint 32.3 is geblokkeerd tot ingevulde stakeholderantwoorden, validatierecords, expliciete beleidsbesluiten of relevante bewijsdocumenten beschikbaar zijn. De lopende repository-taak is nu handreikingen en tijdsafhankelijke bronnen bewaken zonder brede research te starten. Sprint 25.6 blijft geparkeerd omdat post-validatie hardening pas verantwoord is na stakeholdervalidatierecords, lokale/interne documenten, finance/controller bevestiging of een expliciet beleidsbesluit.
@@ -201,7 +172,7 @@ Status op 1 mei 2026: Sprint 31.5 heeft vijf deep-research rapporten als bronsig
 
 Status op 1 mei 2026: het settlement-auditrapport `docs/dr/Almere D6 Settlement Evidence Audit.md` is verwerkt als bronhiaten- en grenssignaal. Vijf sterkere publieke bronnen zijn geselecteerd en toegevoegd: subsidieregisters 2024/2025, Almere Mentale gezondheid, GGD Flevoland Voortgang GALA in de regio en Zorgakkoorden handvatten regionale werkagenda. De top-layer check blijft conservatief: geen D6-rij is `settled`, alle twaalf D6-rijen blijven menselijke validatie vragen en de triagelaag houdt `d6_rows_with_named_public_search_gap` op `0`. Brede publieke D6-zoekacties zijn daarmee geparkeerd; overblijvende vragen zijn governance-, finance/controller-, mandaat-, ICT/privacy- of stakeholdervalidatie.
 
-Status op 1 mei 2026: het follow-uprapport `docs/dr/Stable public source check for “Stand van zaken Gezondheidsbeleid (IZA en GALA)”.md` is verwerkt als bronintake-signaal. De stabiele Documentwijzer-landingspagina is gevonden en vastgelegd als `mun_almere_stand_van_zaken_gezondheidsbeleid_iza_gala_2025` in `data/raw/source_intake_candidates.json` met status `pending_full_text`. De lokale download leverde alleen de Raadzaam-appshell op, dus deze bron is nog niet toegevoegd aan `data/raw/manifest.json` en levert nog geen claim- of D6-registerbewijs op. De resterende publieke taak is gericht: haal de onderliggende raadsbrieftekst/PDF op, of laat de kandidaat staan.
+Status op 1 mei 2026: het follow-uprapport `docs/dr/Stable public source check for â€œStand van zaken Gezondheidsbeleid (IZA en GALA)â€.md` is verwerkt als bronintake-signaal. De stabiele Documentwijzer-landingspagina is gevonden en vastgelegd als `mun_almere_stand_van_zaken_gezondheidsbeleid_iza_gala_2025` in `data/raw/source_intake_candidates.json` met status `pending_full_text`. De lokale download leverde alleen de Raadzaam-appshell op, dus deze bron is nog niet toegevoegd aan `data/raw/manifest.json` en levert nog geen claim- of D6-registerbewijs op. De resterende publieke taak is gericht: haal de onderliggende raadsbrieftekst/PDF op, of laat de kandidaat staan.
 
 Status op 1 mei 2026: de D6-open-vragen zijn aangescherpt naar validatievragen in `docs/review/almere_d6_validation_ticket_matrix.md`. De repository geeft daarmee geen brede onderzoeksvragen meer mee, maar plain-language keuzevelden, stakeholderpakketten, eenvoudige beslisregels en escalatietriggers per D6-component. De brede rijen digitale/operationele infrastructuur en financiering worden in de matrix respectievelijk als subcomponenten en master funding matrix behandeld, zonder het D6-register inhoudelijk te harden.
 

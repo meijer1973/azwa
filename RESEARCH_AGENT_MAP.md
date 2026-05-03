@@ -36,7 +36,7 @@ For D6 validation handoff, use `docs/review/almere_d6_deep_research_learnings.md
 
 For deep-research intake, use `docs/dr/README.md`. Reports placed in `docs/dr/` are not corpus evidence. Treat them as source-discovery signals: ingest selected public sources through the raw manifest and pipeline, then verify that the findings appear in top data layers before marking the report processed.
 
-For roadmap navigation, use `docs/data-quality-roadmap.md` as the single canonical roadmap. It includes the data-quality history, D6 validation handoff status, and Phase 32 workagenda-delivery plan. `docs/workagenda-delivery-roadmap.md` is only a redirect; do not maintain it as a second active roadmap. Use `docs/roadmap/roadmap-version-log.md` for roadmap version history.
+For roadmap navigation, use `docs/data-quality-roadmap.md` as the single canonical roadmap. Its top Active Task Ledger shows work still to do. Completed sprint history lives in `docs/roadmap/completed-sprint-ledger.md`. `docs/workagenda-delivery-roadmap.md` is only a redirect; do not maintain it as a second active roadmap. Use `docs/roadmap/roadmap-version-log.md` for roadmap version history.
 
 For Sprint 32.0-32.2 workagenda-delivery scope, use `docs/workagenda-d5-stuurmodel.md`, `data/workagenda/d5_stuurmodel.json`, `docs/workagenda-d5-statusmatrix.md`, `data/workagenda/d5_status_matrix.json`, `docs/workagenda-d5-validation-tickets.md`, `data/workagenda/d5_validation_tickets.json`, `docs/workagenda-d5-validation-format.md`, and `data/workagenda/d5_validation_packets.json`. These files define the D5 scope, delivery status values, workagenda fields, milestones, the first D5 delivery-status matrix, constrained validation tickets and stakeholder packet formats. They are control layers, not local decisions or workagenda drafts. Blank validation packet fields are unresolved; do not fill them by inference.
 
@@ -248,6 +248,7 @@ Machine-readable:
     "docs/source-intake/phase31.5-constrained-answer-design-intake.md",
     "docs/data-quality-roadmap.md",
     "docs/roadmap/roadmap-version-log.md",
+    "docs/roadmap/completed-sprint-ledger.md",
     "docs/workagenda-delivery-roadmap.md",
     "docs/workagenda-d5-stuurmodel.md",
     "docs/workagenda-d5-statusmatrix.md",
@@ -452,6 +453,7 @@ Theme view models:
   "workagenda_delivery_planning": [
     "docs/data-quality-roadmap.md",
     "docs/roadmap/roadmap-version-log.md",
+    "docs/roadmap/completed-sprint-ledger.md",
     "docs/workagenda-delivery-roadmap.md",
     "docs/workagenda-d5-stuurmodel.md",
     "docs/workagenda-d5-statusmatrix.md",

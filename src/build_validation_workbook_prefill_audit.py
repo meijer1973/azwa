@@ -73,8 +73,11 @@ ASSESSMENT_HEADERS = {
     "taakclassificatie",
     "gebruik voor d6",
     "primaire rol",
+    "rol almere",
     "controller bevestigd?",
     "lokale validatiestatus",
+    "monitoringstatus",
+    "afhankelijkheidsstatus",
 }
 
 CORRECTION_HEADERS = {

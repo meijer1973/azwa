@@ -40,8 +40,8 @@ class WorkbookConfig:
 WORKBOOKS = [
     WorkbookConfig(
         workbook_id="d5_validation_workbook",
-        path=ROOT / "docs" / "review" / "D5_validatieformat_werkagenda_Almere_v0.2.xlsx",
-        version="v0.2",
+        path=ROOT / "docs" / "review" / "D5_validatieformat_werkagenda_Almere_v0.3.xlsx",
+        version="v0.3",
         validation_domain="D5",
         sheets={
             "Overzicht D5": SheetConfig(
@@ -329,7 +329,7 @@ def cell_value(cell: ET.Element, shared_strings: list[str]) -> str:
         return repair_mojibake(shared_strings[int(value.text or "0")])
     if cell_type == "inlineStr":
         return repair_mojibake("".join(text.text or "" for text in cell.findall(".//main:t", NS)))
-    return repair_mojibake(value.text if value is not None else "")
+    return repair_mojibake((value.text or "") if value is not None else "")
 
 
 def normalize_target(target: str) -> str:

@@ -7,7 +7,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-WORKBOOK = ROOT / "docs" / "review" / "D5_validatieformat_werkagenda_Almere_v0.2.xlsx"
+WORKBOOK = ROOT / "docs" / "review" / "D5_validatieformat_werkagenda_Almere_v0.3.xlsx"
 
 NS = {
     "main": "http://schemas.openxmlformats.org/spreadsheetml/2006/main",
@@ -143,8 +143,9 @@ def test_d5_validation_workbook_has_owner_and_routing_dropdowns() -> None:
         ]
         for sheet_name in component_sheets:
             validations = _validations(archive, targets[sheet_name])
-            assert validations["F5:F50"] == owner_formula
-            assert validations["P5:P50"] == owner_formula
+            assert validations["E5:E50"] == owner_formula
+            assert validations["M5:M50"] == owner_formula
+            assert validations["F5:F50"] == "Keuzelijsten!$C$2:$C$13"
 
         expected_validations = {
             "Overzicht D5": {"N11:N100": owner_formula},
@@ -156,11 +157,11 @@ def test_d5_validation_workbook_has_owner_and_routing_dropdowns() -> None:
             },
             "D6 afhankelijkheden": {
                 "F5:F80": stakeholder_formula,
-                "L5:L80": owner_formula,
+                "K5:K80": owner_formula,
             },
             "Validatielog": {
                 "C5:C100": stakeholder_formula,
-                "N5:N100": owner_formula,
+                "M5:M100": owner_formula,
             },
             "Bronnen wijzigingen": {"G5:G80": owner_formula},
         }
@@ -168,3 +169,61 @@ def test_d5_validation_workbook_has_owner_and_routing_dropdowns() -> None:
             validations = _validations(archive, targets[sheet_name])
             for range_ref, formula in expected.items():
                 assert validations[range_ref] == formula
+
+
+def test_d5_validation_workbook_v03_human_tabs_remove_broad_columns() -> None:
+    with zipfile.ZipFile(WORKBOOK) as archive:
+        targets = _sheet_targets(archive)
+        shared_strings = _shared_strings(archive)
+        forbidden_headers = {
+            "Dekking / schaal",
+            "Capaciteit / aantallen",
+            "Validatiestatus",
+        }
+        human_tabs = [
+            "Stakeholderpakketten",
+            "Laagdremp. steunpunten",
+            "Sociaal verwijzen",
+            "Mentale gezondheid",
+            "Valpreventie",
+            "Overgewicht volwassenen",
+            "Kansrijke Start",
+            "Integrale gezinspoli",
+            "Nu Niet Zwanger",
+            "Overgewicht kinderen",
+            "Optionele ontwikkelagenda",
+            "Governance rollen",
+            "Monitoring cyclus",
+            "D6 afhankelijkheden",
+            "Validatielog",
+        ]
+
+        for sheet_name in human_tabs:
+            root = ET.fromstring(archive.read(targets[sheet_name]))
+            headers = [
+                _cell_value(cell, shared_strings)
+                for cell in root.findall(".//main:sheetData/main:row[@r='4']/main:c", NS)
+            ]
+            assert "Rol" not in headers
+            assert not forbidden_headers.intersection(headers)
+
+        role_tabs = [
+            "Laagdremp. steunpunten",
+            "Sociaal verwijzen",
+            "Mentale gezondheid",
+            "Valpreventie",
+            "Overgewicht volwassenen",
+            "Kansrijke Start",
+            "Integrale gezinspoli",
+            "Nu Niet Zwanger",
+            "Overgewicht kinderen",
+            "Optionele ontwikkelagenda",
+            "Governance rollen",
+        ]
+        for sheet_name in role_tabs:
+            root = ET.fromstring(archive.read(targets[sheet_name]))
+            headers = [
+                _cell_value(cell, shared_strings)
+                for cell in root.findall(".//main:sheetData/main:row[@r='4']/main:c", NS)
+            ]
+            assert "Rol Almere" in headers

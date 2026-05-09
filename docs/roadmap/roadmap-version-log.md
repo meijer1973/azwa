@@ -1,7 +1,7 @@
 # Roadmap Version Log
 
 ## Summary
-Current roadmap version: `v2026.05.09-2`.
+Current roadmap version: `v2026.05.09-3`.
 
 The active roadmap is `docs/data-quality-roadmap.md`. This log records material roadmap changes so the project does not split into multiple competing roadmap documents.
 
@@ -17,6 +17,7 @@ The active roadmap is `docs/data-quality-roadmap.md`. This log records material 
 
 | Version | Date | Change | Active roadmap | Archive / notes |
 | --- | --- | --- | --- | --- |
+| `v2026.05.09-3` | 2026-05-09 | Switched active D5 validation workbook routing from `v0.2` to versioned `v0.3`. | `docs/data-quality-roadmap.md` | Current D5 workbook is `docs/review/D5_validatieformat_werkagenda_Almere_v0.3.xlsx`; `v0.2` remains preserved as prior version. |
 | `v2026.05.09-2` | 2026-05-09 | Switched active D5 validation workbook routing from `v0.1` to versioned `v0.2` and preserved `v0.1` as the baseline. | `docs/data-quality-roadmap.md` | Current D5 workbook is `docs/review/D5_validatieformat_werkagenda_Almere_v0.2.xlsx`; workbook edits must create a new version instead of overwriting prior versions. |
 | `v2026.05.09` | 2026-05-09 | Closed Sprint 33.P6 repository/workflow integration and marked Sprint 33.P7 blocked pending P5 human dry run. | `docs/data-quality-roadmap.md` | Added `data/workagenda/precontact_response_workflow.json`, `docs/review/precontact-response-workflow.md`, and `src/build_precontact_response_workflow.py`; no answers imported and no stakeholder contact authorized. |
 | `v2026.05.03-8` | 2026-05-03 | Prepared Sprint 33.P5 internal dry-run cases and moved repository-side active work to Sprint 33.P6 workflow integration. | `docs/data-quality-roadmap.md` | Added `data/workagenda/precontact_internal_dry_run.json`, `docs/review/precontact-internal-dry-run.md`, and `src/build_precontact_internal_dry_run.py`; P5 human reviewer execution remains a P7 blocker, not a P6 blocker. |

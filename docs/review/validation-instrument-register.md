@@ -1,11 +1,11 @@
 # Validation Instrument Register
 
 ## Summary
-Current roadmap sprint: Sprint 33.P6 - Repository/workflow integration.
+Current roadmap sprint: Sprint 33.P7 - Send-readiness gate blocked.
 
-Recorded on: 2026-05-03.
+Recorded on: 2026-05-09.
 
-Created during Sprint 33.P0 and updated through Sprint 33.P5. This register treats the current D5 and D6 Excel workbooks as pre-validation baseline instruments. They are not final policy truth, not corpus sources, and not stakeholder validation results.
+Created during Sprint 33.P0 and updated through Sprint 33.P6. This register treats the current D5 and D6 Excel workbooks as pre-validation baseline instruments. They are not final policy truth, not corpus sources, and not stakeholder validation results.
 
 Use this register before editing, sending, or importing answers from the workbooks.
 
@@ -13,8 +13,8 @@ Use this register before editing, sending, or importing answers from the workboo
 
 | Instrument | Path | Version | Status | Sheets | Purpose | Source basis | Next QA action |
 | --- | --- | --- | --- | ---: | --- | --- | --- |
-| D5 validatieformat werkagenda Almere | `docs/review/D5_validatieformat_werkagenda_Almere_v0.1.xlsx` | `v0.1` | pre-validation baseline | 20 | Prepare D5 workagenda validation before contacting policymakers. | `data/workagenda/d5_status_matrix.json`, `data/workagenda/d5_validation_tickets.json`, `data/workagenda/d5_validation_packets.json`, source corpus and generated evidence layers. | Use P6 workflow integration to define answer-processing routes; complete P5 human dry run before P7. |
-| Almere D6 validatieformats | `docs/review/Almere_D6_validatieformats.xlsx` | current imported baseline | pre-validation baseline | 15 | Prepare D6 infrastructure, ownership, mandate, funding and safe-wording validation. | `docs/review/almere_d6_deep_research_learnings.md`, `docs/review/almere_d6_open_questions.md`, `docs/review/almere_d6_validation_ticket_matrix.md`, `data/extracted/municipal/almere_d6_responsibility_register.json`. | Use P6 workflow integration to define answer-processing routes; complete P5 human dry run before P7. |
+| D5 validatieformat werkagenda Almere | `docs/review/D5_validatieformat_werkagenda_Almere_v0.1.xlsx` | `v0.1` | pre-validation baseline | 20 | Prepare D5 workagenda validation before contacting policymakers. | `data/workagenda/d5_status_matrix.json`, `data/workagenda/d5_validation_tickets.json`, `data/workagenda/d5_validation_packets.json`, source corpus and generated evidence layers. | Complete P5 human dry run and packet fixes before P7 send-readiness. |
+| Almere D6 validatieformats | `docs/review/Almere_D6_validatieformats.xlsx` | current imported baseline | pre-validation baseline | 15 | Prepare D6 infrastructure, ownership, mandate, funding and safe-wording validation. | `docs/review/almere_d6_deep_research_learnings.md`, `docs/review/almere_d6_open_questions.md`, `docs/review/almere_d6_validation_ticket_matrix.md`, `data/extracted/municipal/almere_d6_responsibility_register.json`. | Complete P5 human dry run and packet fixes before P7 send-readiness. |
 
 ## Traceability Layer
 
@@ -66,6 +66,16 @@ Sprint 33.P5 created:
 - `src/build_precontact_internal_dry_run.py`
 
 The dry-run layer defines five exact cases for internal reviewers: a D5 tab, a D6 tab, a finance row, an evidence-field case and a `not_my_domain_reroute` case. The repository-side case pack is complete, but the human dry run is still pending. This blocks P7 send-readiness and policymaker contact; it does not block Sprint 33.P6 workflow integration.
+
+## Response Workflow Layer
+
+Sprint 33.P6 created:
+
+- `data/workagenda/precontact_response_workflow.json`
+- `docs/review/precontact-response-workflow.md`
+- `src/build_precontact_response_workflow.py`
+
+The response workflow maps every current `repo_update_effect` route to validation logs, finance matrices, decision registers, the D5-D6 dependency map, source-update log, statusmatrix or D6 responsibility register. It also defines answer outcomes, evidence gates and no-overclaim rules. It imports no answers and does not authorize stakeholder contact.
 
 ## Freeze Rule
 

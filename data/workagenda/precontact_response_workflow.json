@@ -1,0 +1,582 @@
+{
+  "generated_on": "2026-05-09",
+  "current_sprint": "Sprint 33.P6 - Pre-contact validation-readiness: repository/workflow integration",
+  "status": "repository_workflow_defined_no_answers_imported",
+  "human_validation_status": "no_stakeholder_answers_yet",
+  "p5_human_dry_run_status": "pending_internal_reviewers",
+  "gate_effect": "P6 is repository-side complete when this workflow is generated and tested; P7 remains blocked until the P5 human dry run is completed.",
+  "source_inputs": [
+    "data/workagenda/precontact_stakeholder_packets.json",
+    "data/workagenda/precontact_internal_dry_run.json"
+  ],
+  "return_contract": {
+    "required_fields": [
+      "vraag_id",
+      "stakeholderpakket",
+      "answer",
+      "evidence_type",
+      "evidence_reference",
+      "correction_or_note",
+      "not_my_domain_reroute"
+    ],
+    "identity_rule": "Every returned answer must preserve vraag_id and stakeholderpakket; do not merge answers by question text.",
+    "evidence_rule": "Confirmed answers require evidence_type and evidence_reference before they can update status, finance, decision or register layers.",
+    "source_rule": "New public sources named in responses go to source intake first and are not substantive evidence until processed through the pipeline."
+  },
+  "answer_outcome_rules": [
+    {
+      "outcome": "confirmed_with_evidence",
+      "processing": "Record in validation log and update the relevant matrix/register only if the evidence directly supports the field.",
+      "may_update_status": true
+    },
+    {
+      "outcome": "confirmed_without_evidence",
+      "processing": "Record as weak confirmation; do not mark ready or settled.",
+      "may_update_status": false
+    },
+    {
+      "outcome": "partly_correct",
+      "processing": "Update the working view and keep review_needed until the correction and evidence are clear.",
+      "may_update_status": false
+    },
+    {
+      "outcome": "incorrect",
+      "processing": "Correct the working view, keep review_needed and create a decision ticket if a policy choice is needed.",
+      "may_update_status": false
+    },
+    {
+      "outcome": "not_my_domain",
+      "processing": "Do not treat as substantive validation; reroute using not_my_domain_reroute and keep the original vraag_id.",
+      "may_update_status": false
+    },
+    {
+      "outcome": "unknown",
+      "processing": "Keep unresolved and preserve the open question.",
+      "may_update_status": false
+    },
+    {
+      "outcome": "conflict",
+      "processing": "Escalate to review_needed or decision register; do not force a conclusion.",
+      "may_update_status": false
+    },
+    {
+      "outcome": "decision_needed",
+      "processing": "Create or update a decision ticket with owner, options, deadline and evidence after decision.",
+      "may_update_status": false
+    },
+    {
+      "outcome": "finance_needed",
+      "processing": "Route to finance matrix or finance/controller ticket; no funding wording becomes confirmed.",
+      "may_update_status": false
+    },
+    {
+      "outcome": "ict_privacy_needed",
+      "processing": "Route to ICT/privacy register; no data-accountability wording becomes confirmed.",
+      "may_update_status": false
+    },
+    {
+      "outcome": "public_source_found",
+      "processing": "Add the public source to source intake first; ingest, run pipeline and verify top layers before using as source evidence.",
+      "may_update_status": false
+    }
+  ],
+  "target_artifacts": [
+    {
+      "target_id": "d5_d6_dependency_map",
+      "path": "data/workagenda/d5_d6_dependency_map.json",
+      "status": "planned_no_answers_yet",
+      "purpose": "D6 preconditions and blockers per D5 component.",
+      "route_count": 1,
+      "routes": [
+        "d5_d6_dependency_map_update"
+      ],
+      "possible_unique_vraag_id_count": 9
+    },
+    {
+      "target_id": "d5_decision_register",
+      "path": "data/workagenda/d5_decision_register.json",
+      "status": "planned_no_answers_yet",
+      "purpose": "D5 policy, governance, phasing and workagenda decision tickets.",
+      "route_count": 5,
+      "routes": [
+        "decision_register_or_validation_log",
+        "decision_ticket_or_status_matrix_update",
+        "finance_matrix_update",
+        "validation_log_or_decision_ticket",
+        "validation_log_or_finance_ticket"
+      ],
+      "possible_unique_vraag_id_count": 123
+    },
+    {
+      "target_id": "d5_finance_matrix",
+      "path": "data/workagenda/d5_finance_matrix.json",
+      "status": "planned_no_answers_yet",
+      "purpose": "D5 funding line, structural/project status, double-counting risk and controller/Zvw confirmation.",
+      "route_count": 2,
+      "routes": [
+        "finance_matrix_update",
+        "validation_log_or_finance_ticket"
+      ],
+      "possible_unique_vraag_id_count": 44
+    },
+    {
+      "target_id": "d5_status_matrix",
+      "path": "data/workagenda/d5_status_matrix.json",
+      "status": "existing_update_target",
+      "purpose": "D5 delivery status per component and workagenda field.",
+      "route_count": 8,
+      "routes": [
+        "d5_d6_dependency_map_update",
+        "decision_register_or_validation_log",
+        "decision_ticket_or_status_matrix_update",
+        "finance_matrix_update",
+        "status_matrix_update",
+        "validation_log_or_decision_ticket",
+        "validation_log_or_finance_ticket",
+        "validation_log_or_ict_privacy_ticket"
+      ],
+      "possible_unique_vraag_id_count": 154
+    },
+    {
+      "target_id": "d5_validation_log",
+      "path": "data/workagenda/d5_validation_log.json",
+      "status": "planned_no_answers_yet",
+      "purpose": "D5 stakeholder confirmations, corrections, weak confirmations, unknowns and conflicts.",
+      "route_count": 8,
+      "routes": [
+        "d5_d6_dependency_map_update",
+        "decision_register_or_validation_log",
+        "decision_ticket_or_status_matrix_update",
+        "finance_matrix_update",
+        "status_matrix_update",
+        "validation_log_or_decision_ticket",
+        "validation_log_or_finance_ticket",
+        "validation_log_or_ict_privacy_ticket"
+      ],
+      "possible_unique_vraag_id_count": 154
+    },
+    {
+      "target_id": "d6_decision_register",
+      "path": "data/workagenda/d6_decision_register.json",
+      "status": "planned_no_answers_yet",
+      "purpose": "D6 classification, mandate, owner, funding and safe-wording decision tickets.",
+      "route_count": 5,
+      "routes": [
+        "d5_d6_dependency_map_update",
+        "d6_finance_matrix_or_decision_ticket",
+        "d6_validation_log_or_decision_ticket",
+        "d6_validation_log_or_ict_privacy_ticket",
+        "d6_validation_log_or_register_update"
+      ],
+      "possible_unique_vraag_id_count": 100
+    },
+    {
+      "target_id": "d6_finance_matrix",
+      "path": "data/workagenda/d6_finance_matrix.json",
+      "status": "planned_no_answers_yet",
+      "purpose": "D6 funding line, structural/project status, double-counting risk and controller confirmation.",
+      "route_count": 1,
+      "routes": [
+        "d6_finance_matrix_or_decision_ticket"
+      ],
+      "possible_unique_vraag_id_count": 12
+    },
+    {
+      "target_id": "d6_responsibility_register",
+      "path": "data/extracted/municipal/almere_d6_responsibility_register.json",
+      "status": "existing_update_target_after_validation_only",
+      "purpose": "D6 responsibility register; no row may become settled without direct evidence.",
+      "route_count": 4,
+      "routes": [
+        "d6_finance_matrix_or_decision_ticket",
+        "d6_validation_log_or_decision_ticket",
+        "d6_validation_log_or_ict_privacy_ticket",
+        "d6_validation_log_or_register_update"
+      ],
+      "possible_unique_vraag_id_count": 91
+    },
+    {
+      "target_id": "d6_validation_log",
+      "path": "data/workagenda/d6_validation_log.json",
+      "status": "planned_no_answers_yet",
+      "purpose": "D6 stakeholder confirmations, corrections, weak confirmations, unknowns and conflicts.",
+      "route_count": 5,
+      "routes": [
+        "d5_d6_dependency_map_update",
+        "d6_finance_matrix_or_decision_ticket",
+        "d6_validation_log_or_decision_ticket",
+        "d6_validation_log_or_ict_privacy_ticket",
+        "d6_validation_log_or_register_update"
+      ],
+      "possible_unique_vraag_id_count": 100
+    },
+    {
+      "target_id": "ict_privacy_register",
+      "path": "data/workagenda/ict_privacy_decision_register.json",
+      "status": "planned_no_answers_yet",
+      "purpose": "ICT/privacy/data-accountability issues that cannot be resolved from the validation packet answer alone.",
+      "route_count": 2,
+      "routes": [
+        "d6_validation_log_or_ict_privacy_ticket",
+        "validation_log_or_ict_privacy_ticket"
+      ],
+      "possible_unique_vraag_id_count": 22
+    },
+    {
+      "target_id": "source_update_log",
+      "path": "data/workagenda/d5_source_update_log.json",
+      "status": "planned_no_answers_yet",
+      "purpose": "New public sources named by stakeholders, handreiking updates and source-intake follow-up.",
+      "route_count": 11,
+      "routes": [
+        "d6_finance_matrix_or_decision_ticket",
+        "d6_validation_log_or_decision_ticket",
+        "d6_validation_log_or_ict_privacy_ticket",
+        "d6_validation_log_or_register_update",
+        "decision_register_or_validation_log",
+        "decision_ticket_or_status_matrix_update",
+        "finance_matrix_update",
+        "status_matrix_update",
+        "validation_log_or_decision_ticket",
+        "validation_log_or_finance_ticket",
+        "validation_log_or_ict_privacy_ticket"
+      ],
+      "possible_unique_vraag_id_count": 236
+    }
+  ],
+  "route_definitions": [
+    {
+      "repo_update_effect": "d5_d6_dependency_map_update",
+      "primary_targets": [
+        "d5_d6_dependency_map"
+      ],
+      "conditional_targets": [
+        "d5_validation_log",
+        "d6_validation_log",
+        "d6_decision_register"
+      ],
+      "status_update_target": "d5_status_matrix"
+    },
+    {
+      "repo_update_effect": "d6_finance_matrix_or_decision_ticket",
+      "primary_targets": [
+        "d6_finance_matrix"
+      ],
+      "conditional_targets": [
+        "d6_validation_log",
+        "d6_decision_register",
+        "source_update_log"
+      ],
+      "status_update_target": "d6_responsibility_register"
+    },
+    {
+      "repo_update_effect": "d6_validation_log_or_decision_ticket",
+      "primary_targets": [
+        "d6_validation_log"
+      ],
+      "conditional_targets": [
+        "d6_decision_register",
+        "source_update_log"
+      ],
+      "status_update_target": "d6_responsibility_register"
+    },
+    {
+      "repo_update_effect": "d6_validation_log_or_ict_privacy_ticket",
+      "primary_targets": [
+        "d6_validation_log"
+      ],
+      "conditional_targets": [
+        "ict_privacy_register",
+        "d6_decision_register",
+        "source_update_log"
+      ],
+      "status_update_target": "d6_responsibility_register"
+    },
+    {
+      "repo_update_effect": "d6_validation_log_or_register_update",
+      "primary_targets": [
+        "d6_validation_log"
+      ],
+      "conditional_targets": [
+        "d6_responsibility_register",
+        "d6_decision_register",
+        "source_update_log"
+      ],
+      "status_update_target": "d6_responsibility_register"
+    },
+    {
+      "repo_update_effect": "decision_register_or_validation_log",
+      "primary_targets": [
+        "d5_decision_register",
+        "d5_validation_log"
+      ],
+      "conditional_targets": [
+        "source_update_log"
+      ],
+      "status_update_target": "d5_status_matrix"
+    },
+    {
+      "repo_update_effect": "decision_ticket_or_status_matrix_update",
+      "primary_targets": [
+        "d5_decision_register",
+        "d5_status_matrix"
+      ],
+      "conditional_targets": [
+        "d5_validation_log",
+        "source_update_log"
+      ],
+      "status_update_target": "d5_status_matrix"
+    },
+    {
+      "repo_update_effect": "finance_matrix_update",
+      "primary_targets": [
+        "d5_finance_matrix"
+      ],
+      "conditional_targets": [
+        "d5_validation_log",
+        "d5_decision_register",
+        "source_update_log"
+      ],
+      "status_update_target": "d5_status_matrix"
+    },
+    {
+      "repo_update_effect": "status_matrix_update",
+      "primary_targets": [
+        "d5_status_matrix",
+        "d5_validation_log"
+      ],
+      "conditional_targets": [
+        "source_update_log"
+      ],
+      "status_update_target": "d5_status_matrix"
+    },
+    {
+      "repo_update_effect": "validation_log_or_decision_ticket",
+      "primary_targets": [
+        "d5_validation_log"
+      ],
+      "conditional_targets": [
+        "d5_decision_register",
+        "source_update_log"
+      ],
+      "status_update_target": "d5_status_matrix"
+    },
+    {
+      "repo_update_effect": "validation_log_or_finance_ticket",
+      "primary_targets": [
+        "d5_validation_log"
+      ],
+      "conditional_targets": [
+        "d5_finance_matrix",
+        "d5_decision_register",
+        "source_update_log"
+      ],
+      "status_update_target": "d5_status_matrix"
+    },
+    {
+      "repo_update_effect": "validation_log_or_ict_privacy_ticket",
+      "primary_targets": [
+        "d5_validation_log"
+      ],
+      "conditional_targets": [
+        "ict_privacy_register",
+        "source_update_log"
+      ],
+      "status_update_target": "d5_status_matrix"
+    }
+  ],
+  "route_coverage": [
+    {
+      "repo_update_effect": "d5_d6_dependency_map_update",
+      "packet_row_count": 18,
+      "unique_vraag_id_count": 9,
+      "primary_targets": [
+        "d5_d6_dependency_map"
+      ],
+      "conditional_targets": [
+        "d5_validation_log",
+        "d6_validation_log",
+        "d6_decision_register"
+      ],
+      "status_update_target": "d5_status_matrix"
+    },
+    {
+      "repo_update_effect": "d6_finance_matrix_or_decision_ticket",
+      "packet_row_count": 36,
+      "unique_vraag_id_count": 12,
+      "primary_targets": [
+        "d6_finance_matrix"
+      ],
+      "conditional_targets": [
+        "d6_validation_log",
+        "d6_decision_register",
+        "source_update_log"
+      ],
+      "status_update_target": "d6_responsibility_register"
+    },
+    {
+      "repo_update_effect": "d6_validation_log_or_decision_ticket",
+      "packet_row_count": 104,
+      "unique_vraag_id_count": 37,
+      "primary_targets": [
+        "d6_validation_log"
+      ],
+      "conditional_targets": [
+        "d6_decision_register",
+        "source_update_log"
+      ],
+      "status_update_target": "d6_responsibility_register"
+    },
+    {
+      "repo_update_effect": "d6_validation_log_or_ict_privacy_ticket",
+      "packet_row_count": 36,
+      "unique_vraag_id_count": 12,
+      "primary_targets": [
+        "d6_validation_log"
+      ],
+      "conditional_targets": [
+        "ict_privacy_register",
+        "d6_decision_register",
+        "source_update_log"
+      ],
+      "status_update_target": "d6_responsibility_register"
+    },
+    {
+      "repo_update_effect": "d6_validation_log_or_register_update",
+      "packet_row_count": 67,
+      "unique_vraag_id_count": 30,
+      "primary_targets": [
+        "d6_validation_log"
+      ],
+      "conditional_targets": [
+        "d6_responsibility_register",
+        "d6_decision_register",
+        "source_update_log"
+      ],
+      "status_update_target": "d6_responsibility_register"
+    },
+    {
+      "repo_update_effect": "decision_register_or_validation_log",
+      "packet_row_count": 90,
+      "unique_vraag_id_count": 45,
+      "primary_targets": [
+        "d5_decision_register",
+        "d5_validation_log"
+      ],
+      "conditional_targets": [
+        "source_update_log"
+      ],
+      "status_update_target": "d5_status_matrix"
+    },
+    {
+      "repo_update_effect": "decision_ticket_or_status_matrix_update",
+      "packet_row_count": 10,
+      "unique_vraag_id_count": 5,
+      "primary_targets": [
+        "d5_decision_register",
+        "d5_status_matrix"
+      ],
+      "conditional_targets": [
+        "d5_validation_log",
+        "source_update_log"
+      ],
+      "status_update_target": "d5_status_matrix"
+    },
+    {
+      "repo_update_effect": "finance_matrix_update",
+      "packet_row_count": 22,
+      "unique_vraag_id_count": 11,
+      "primary_targets": [
+        "d5_finance_matrix"
+      ],
+      "conditional_targets": [
+        "d5_validation_log",
+        "d5_decision_register",
+        "source_update_log"
+      ],
+      "status_update_target": "d5_status_matrix"
+    },
+    {
+      "repo_update_effect": "status_matrix_update",
+      "packet_row_count": 12,
+      "unique_vraag_id_count": 12,
+      "primary_targets": [
+        "d5_status_matrix",
+        "d5_validation_log"
+      ],
+      "conditional_targets": [
+        "source_update_log"
+      ],
+      "status_update_target": "d5_status_matrix"
+    },
+    {
+      "repo_update_effect": "validation_log_or_decision_ticket",
+      "packet_row_count": 80,
+      "unique_vraag_id_count": 29,
+      "primary_targets": [
+        "d5_validation_log"
+      ],
+      "conditional_targets": [
+        "d5_decision_register",
+        "source_update_log"
+      ],
+      "status_update_target": "d5_status_matrix"
+    },
+    {
+      "repo_update_effect": "validation_log_or_finance_ticket",
+      "packet_row_count": 99,
+      "unique_vraag_id_count": 33,
+      "primary_targets": [
+        "d5_validation_log"
+      ],
+      "conditional_targets": [
+        "d5_finance_matrix",
+        "d5_decision_register",
+        "source_update_log"
+      ],
+      "status_update_target": "d5_status_matrix"
+    },
+    {
+      "repo_update_effect": "validation_log_or_ict_privacy_ticket",
+      "packet_row_count": 30,
+      "unique_vraag_id_count": 10,
+      "primary_targets": [
+        "d5_validation_log"
+      ],
+      "conditional_targets": [
+        "ict_privacy_register",
+        "source_update_log"
+      ],
+      "status_update_target": "d5_status_matrix"
+    }
+  ],
+  "quality_gates": [
+    {
+      "gate": "no_silent_source_claims",
+      "rule": "Stakeholder answers, finance confirmations and decisions are validation evidence, not corpus source claims."
+    },
+    {
+      "gate": "no_settled_without_evidence",
+      "rule": "No D6 register row can move to settled unless classification, owner, executor/coordinator, scale, funding and evidence are directly supported."
+    },
+    {
+      "gate": "weak_confirmation_stays_open",
+      "rule": "Confirmation without evidence is logged but cannot make a field ready for drafting."
+    },
+    {
+      "gate": "conflicts_escalate",
+      "rule": "Conflicting responses create review_needed or decision tickets; the repository team does not choose between them by inference."
+    },
+    {
+      "gate": "not_my_domain_reroutes",
+      "rule": "Not-my-domain answers keep the original vraag_id and are rerouted rather than counted as negative validation."
+    }
+  ],
+  "unknown_routes": [],
+  "ready_for_p7": false,
+  "p7_blockers": [
+    "P5 human internal dry run is pending.",
+    "No stakeholder packets may be sent before P7 send-readiness gate.",
+    "No returned stakeholder answers exist yet."
+  ]
+}

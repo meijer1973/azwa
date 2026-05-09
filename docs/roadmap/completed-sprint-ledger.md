@@ -1,7 +1,7 @@
 ﻿# Completed Sprint Ledger
 
 ## Summary
-Current roadmap version: `v2026.05.03-8`.
+Current roadmap version: `v2026.05.09`.
 
 This file stores completed sprint history that used to live at the top of `docs/data-quality-roadmap.md`. The active roadmap now keeps only open, blocked, parked and planned work at the top.
 
@@ -11,6 +11,7 @@ Use this file for provenance. Do not use it as the active task list.
 
 | Sprint | Status | Vindplaats / opmerking |
 | --- | --- | --- |
+| 33.P6 Repository/workflow integration | completed | `data/workagenda/precontact_response_workflow.json`, `docs/review/precontact-response-workflow.md`, `src/build_precontact_response_workflow.py`, `tests/test_precontact_response_workflow.py`. Alle 12 `repo_update_effect` routes zijn gekoppeld aan validation logs, finance matrices, decision registers, D5-D6 dependency map, source-update log, statusmatrix of D6 responsibility register. Er zijn geen antwoorden geimporteerd en P7 blijft geblokkeerd tot de P5 human dry run klaar is. |
 | 33.P4 Build stakeholder packets | completed | `data/workagenda/precontact_stakeholder_packets.json`, `docs/review/precontact-stakeholder-packets.md`, `data/workagenda/precontact_packets/*.csv`, `src/build_precontact_stakeholder_packets.py`, `tests/test_precontact_stakeholder_packets.py`. Achttien gefilterde packet drafts zijn voorbereid met 245 unieke `vraag_id` waarden; alle packets staan op `prepared_not_sent`, de grootste packet draft is 80 rijen, en er is geen stakeholdercontact gestart. |
 | 33.P3 Targeted pre-contact agents | completed | `data/workagenda/precontact_agent_plan.json`, `docs/review/precontact-agent-prompts.md`, `src/build_precontact_agent_plan.py`, `tests/test_precontact_agent_plan.py`. Vijf prompts zijn voorbereid en staan op `prepared_not_sent`: evidence-prefill, D5 source-watch, D5-D6 dependency mapping, policymaker readability en finance-risk precheck. Geen stakeholdercontact en geen broad research. |
 | 33.P2 Prefill audit and current working views | completed | `data/workagenda/validation_workbook_prefill_audit.json`, `docs/review/validation-workbook-prefill-audit.md`, `src/build_validation_workbook_prefill_audit.py`, `tests/test_validation_workbook_prefill_audit.py`. De workbooks zijn bruikbaar als pre-contact drafts, maar packet export moet nog vier D5 werkvisies, één D5 correctieveld, twee D6 taalcleanup-punten en twee brede D6-vragen oplossen of bewust routeren. |

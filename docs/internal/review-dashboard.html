@@ -227,7 +227,7 @@
     <h1>Internal Review Dashboard</h1>
     <p class="subtle">Local-only workbench for current sprint status, cleanup targets, and open data-quality issues.</p>
     <div class="meta-row">
-      <span class="pill accent">Generated: 2026-05-03</span>
+      <span class="pill accent">Generated: 2026-05-09</span>
       <span class="pill">Local file, not dist/</span>
       <span class="pill warn">Internal technical categories</span>
     </div>
@@ -427,7 +427,7 @@
   </main>
 
   <script id="dashboard-data" type="application/json">{
-  "generated_on": "2026-05-03",
+  "generated_on": "2026-05-09",
   "title": "Internal Review Dashboard",
   "subtitle": "Local-only workbench for current sprint status, cleanup targets, and open data-quality issues.",
   "language_note": "Internal developer/agent UI uses English technical framing. Dutch domain labels are kept where they come from the roadmap, corpus, or review taxonomy.",
@@ -27454,14 +27454,9 @@
         "note": "Laat 2-4 interne reviewers de voorbereide P5-cases testen: D5-tab, D6-tab, finance-row, evidence-field en `niet mijn domein` case. Output: Completed dry-run response record and packet fixes. Dependency: Repository dry-run pack exists; human reviewers still needed before P7."
       },
       {
-        "sprint": "33.P6 Repository/workflow integration",
-        "status": "open",
-        "note": "Leg vast hoe Excel-antwoorden terugkomen in validation logs, finance matrix, decision register, D5-D6 dependency map, source update log and statusmatrix. Output: Import/processing workflow note; planned JSON objects where needed. Dependency: Can proceed while P5 human dry run is pending."
-      },
-      {
         "sprint": "33.P7 Send-readiness gate",
-        "status": "planned",
-        "note": "Go/no-go voor contact: IDs, routing, evidence gates, current working views, dropdowns, dry run and source watchlist must be complete. Output: Send-readiness gate note. Dependency: Must pass before contacting policymakers."
+        "status": "blocked",
+        "note": "Go/no-go voor contact: IDs, routing, evidence gates, current working views, dropdowns, dry run and source watchlist must be complete. Output: Send-readiness gate note. Dependency: Blocked until P5 human dry run is completed and packet fixes are processed."
       },
       {
         "sprint": "V1 Controlled outbound",
@@ -27489,12 +27484,13 @@
         "note": "Hard register rows only after D6 validation evidence exists. Output: Updated D6 responsibility register and QC. Dependency: Wacht op stakeholdervalidatie, lokale/interne documenten, finance/controller bevestiging of beleidsbesluit."
       }
     ],
-    "current": {
-      "sprint": "33.P6 Repository/workflow integration",
-      "status": "open",
-      "note": "Leg vast hoe Excel-antwoorden terugkomen in validation logs, finance matrix, decision register, D5-D6 dependency map, source update log and statusmatrix. Output: Import/processing workflow note; planned JSON objects where needed. Dependency: Can proceed while P5 human dry run is pending."
-    },
+    "current": null,
     "history": [
+      {
+        "sprint": "33.P6 Repository/workflow integration",
+        "status": "completed",
+        "note": "`data/workagenda/precontact_response_workflow.json`, `docs/review/precontact-response-workflow.md`, `src/build_precontact_response_workflow.py`, `tests/test_precontact_response_workflow.py`. Alle 12 `repo_update_effect` routes zijn gekoppeld aan validation logs, finance matrices, decision registers, D5-D6 dependency map, source-update log, statusmatrix of D6 responsibility register. Er zijn geen antwoorden geimporteerd en P7 blijft geblokkeerd tot de P5 human dry run klaar is."
+      },
       {
         "sprint": "33.P4 Build stakeholder packets",
         "status": "completed",
@@ -27519,15 +27515,10 @@
         "sprint": "33.P0 Freeze validation instruments",
         "status": "completed",
         "note": "`docs/review/validation-instrument-register.md`, `docs/review/D5_validatieformat_werkagenda_Almere_v0.1.xlsx`, `docs/review/Almere_D6_validatieformats.xlsx`. De workbooks zijn pre-contact validation baselines, geen bronnen of validatieresultaten."
-      },
-      {
-        "sprint": "25.2 Lokale bronversterking Almere",
-        "status": "completed",
-        "note": "`data/extracted/local_source_strengthening_almere.json`, `docs/internal/source-intake/phase25.2-public-source-assessment.md`, `docs/completed-plans/phase25-sprint25.2-lokale-bronversterking.md`"
       }
     ],
-    "completed_count": 45,
-    "open_count": 1
+    "completed_count": 46,
+    "open_count": 0
   },
   "next_cleanup_targets": [
     {
@@ -58780,7 +58771,7 @@
       "path": "docs/review/README.md",
       "href": "../../docs/review/README.md",
       "title": "Review Folder Guide",
-      "summary": "Current sprint: Sprint 33.P6 - Pre-contact validation-readiness: repository/workflow integration. This folder now has two active review uses: - D6 human-facing validation handoff notes.",
+      "summary": "Current sprint: Sprint 33.P7 - Pre-contact send-readiness gate (blocked). This folder now has two active review uses: - D6 human-facing validation handoff notes.",
       "headings": [
         "Summary",
         "Current Files",
@@ -58788,9 +58779,9 @@
         "Archive",
         "Maintenance Rule"
       ],
-      "table_line_count": 19,
+      "table_line_count": 20,
       "checklist_item_count": 7,
-      "content": "# Review Folder Guide\n\n## Summary\nCurrent sprint: Sprint 33.P6 - Pre-contact validation-readiness: repository/workflow integration.\n\nThis folder now has two active review uses:\n\n- D6 human-facing validation handoff notes.\n- D5/D6 pre-contact validation instrument control.\n\nOlder detailed packs, generated review snapshots, and source-boundary working papers are archived for traceability.\n\n## Current Files\n\nOnly these files should normally be used from the top level of this folder.\n\n| File | Use |\n| --- | --- |\n| `validation-instrument-register.md` | Current register for the D5 and D6 Excel validation workbooks. Use before editing, sending, or importing answers from the workbooks. |\n| `validation-workbook-traceability-audit.md` | Sprint 33.P1 audit of D5/D6 workbook row traceability, generated IDs, routing, evidence gates and remaining send-readiness limits. |\n| `validation-workbook-prefill-audit.md` | Sprint 33.P2 audit of current working views, assessment/correction fields, evidence fields, broad questions and stakeholder-facing language. |\n| `precontact-agent-prompts.md` | Sprint 33.P3 copy-ready targeted agent prompts for pre-contact QA. Prepared only; not stakeholder contact and not broad research. |\n| `precontact-stakeholder-packets.md` | Sprint 33.P4 index of filtered D5/D6 stakeholder packet drafts and CSV send-set files. Prepared only; not sent and not validation results. |\n| `precontact-internal-dry-run.md` | Sprint 33.P5 internal dry-run cases, pass/fail criteria and reviewer roles. Human reviewer execution is still pending. |\n| `D5_validatieformat_werkagenda_Almere_v0.1.xlsx` | D5 pre-validation workbook baseline. This is a validation instrument, not a source or validation result. |\n| `Almere_D6_validatieformats.xlsx` | D6 pre-validation workbook baseline. This is a validation instrument, not a source or validation result. |\n| `almere_d6_deep_research_learnings.md` | Clear summary of what Sprint 31.5 deep-research intake added to the public-source picture. |\n| `almere_d6_open_questions.md` | Clear list of what remains unknown and what must be asked of stakeholders, finance/controller roles or internal document owners. |\n| `almere_d6_validation_ticket_matrix.md` | Plain-language validation design with answer choices, stakeholder packets and simple decision rules. Use this for handoff conversations instead of broad research questions. |\n| `README.md` | This folder guide. |\n\nThe Excel workbooks should not be sent to policymakers until the send-readiness gate in `docs/data-quality-roadmap.md` has passed.\n\nNo D6 responsibility-register row may move to `settled` from these notes alone. Settlement requires traceable stakeholder validation, a local decision, or another authoritative source that directly answers classification, ownership, mandate, scale and funding.\n\n## Current Human Reading Order\n\n0. Read `validation-instrument-register.md`, `validation-workbook-traceability-audit.md`, `validation-workbook-prefill-audit.md`, `precontact-agent-prompts.md`, `precontact-stakeholder-packets.md`, and `precontact-internal-dry-run.md` if you are working with the D5 or D6 Excel validation workbooks, pre-contact agent routing, stakeholder packet drafts, or send-readiness dry-run checks.\n1. Read `almere_d6_deep_research_learnings.md` to see what is now publicly source-backed.\n2. Read `almere_d6_open_questions.md` to see what still needs stakeholder, finance/controller, governance or internal-document validation.\n3. Use `almere_d6_validation_ticket_matrix.md` when preparing validation requests; it turns open questions into plain-language choices.\n4. Use archive files only when you need provenance, detailed tables, or generated sprint snapshots.\n\nDeep research reports are not sources. Put reports in `docs/dr/`, extract their suggested public sources, ingest selected public sources through the pipeline, and then test whether the findings appear in the top data layers.\n\n## Archive\n\nArchived review documents live under `archive/`. They are kept for provenance and should not be treated as the active review entry point.\n\n| File | Why archived |\n| --- | --- |\n| `archive/d6-handoff/almere_d6_validation_handoff_summary.md` | Superseded by the current validation pack, public-source boundary note, safe wording library, decision-needed list and funding gap table. |\n| `archive/d6-support/` | Detailed D6 handoff support files: validation pack, source-boundary note, safe wording, decision-needed list, funding table, stakeholder request and validation log. |\n| `archive/phase31/` | Generated Sprint 31.3 and 31.4 review snapshots and deep-research prompts. |\n\n## Maintenance Rule\n\nWhen a new review document becomes the current entry point, update this README, `AGENTS.md`, `RESEARCH_AGENT_MAP.md`, and the internal review dashboard inputs. Archive superseded material instead of deleting it.\n"
+      "content": "# Review Folder Guide\n\n## Summary\nCurrent sprint: Sprint 33.P7 - Pre-contact send-readiness gate (blocked).\n\nThis folder now has two active review uses:\n\n- D6 human-facing validation handoff notes.\n- D5/D6 pre-contact validation instrument control.\n\nOlder detailed packs, generated review snapshots, and source-boundary working papers are archived for traceability.\n\n## Current Files\n\nOnly these files should normally be used from the top level of this folder.\n\n| File | Use |\n| --- | --- |\n| `validation-instrument-register.md` | Current register for the D5 and D6 Excel validation workbooks. Use before editing, sending, or importing answers from the workbooks. |\n| `validation-workbook-traceability-audit.md` | Sprint 33.P1 audit of D5/D6 workbook row traceability, generated IDs, routing, evidence gates and remaining send-readiness limits. |\n| `validation-workbook-prefill-audit.md` | Sprint 33.P2 audit of current working views, assessment/correction fields, evidence fields, broad questions and stakeholder-facing language. |\n| `precontact-agent-prompts.md` | Sprint 33.P3 copy-ready targeted agent prompts for pre-contact QA. Prepared only; not stakeholder contact and not broad research. |\n| `precontact-stakeholder-packets.md` | Sprint 33.P4 index of filtered D5/D6 stakeholder packet drafts and CSV send-set files. Prepared only; not sent and not validation results. |\n| `precontact-internal-dry-run.md` | Sprint 33.P5 internal dry-run cases, pass/fail criteria and reviewer roles. Human reviewer execution is still pending. |\n| `precontact-response-workflow.md` | Sprint 33.P6 response-processing workflow for returned packet answers. No answers have been imported yet. |\n| `D5_validatieformat_werkagenda_Almere_v0.1.xlsx` | D5 pre-validation workbook baseline. This is a validation instrument, not a source or validation result. |\n| `Almere_D6_validatieformats.xlsx` | D6 pre-validation workbook baseline. This is a validation instrument, not a source or validation result. |\n| `almere_d6_deep_research_learnings.md` | Clear summary of what Sprint 31.5 deep-research intake added to the public-source picture. |\n| `almere_d6_open_questions.md` | Clear list of what remains unknown and what must be asked of stakeholders, finance/controller roles or internal document owners. |\n| `almere_d6_validation_ticket_matrix.md` | Plain-language validation design with answer choices, stakeholder packets and simple decision rules. Use this for handoff conversations instead of broad research questions. |\n| `README.md` | This folder guide. |\n\nThe Excel workbooks should not be sent to policymakers until the send-readiness gate in `docs/data-quality-roadmap.md` has passed.\n\nNo D6 responsibility-register row may move to `settled` from these notes alone. Settlement requires traceable stakeholder validation, a local decision, or another authoritative source that directly answers classification, ownership, mandate, scale and funding.\n\n## Current Human Reading Order\n\n0. Read `validation-instrument-register.md`, `validation-workbook-traceability-audit.md`, `validation-workbook-prefill-audit.md`, `precontact-agent-prompts.md`, `precontact-stakeholder-packets.md`, `precontact-internal-dry-run.md`, and `precontact-response-workflow.md` if you are working with the D5 or D6 Excel validation workbooks, pre-contact agent routing, stakeholder packet drafts, send-readiness dry-run checks, or returned-answer processing.\n1. Read `almere_d6_deep_research_learnings.md` to see what is now publicly source-backed.\n2. Read `almere_d6_open_questions.md` to see what still needs stakeholder, finance/controller, governance or internal-document validation.\n3. Use `almere_d6_validation_ticket_matrix.md` when preparing validation requests; it turns open questions into plain-language choices.\n4. Use archive files only when you need provenance, detailed tables, or generated sprint snapshots.\n\nDeep research reports are not sources. Put reports in `docs/dr/`, extract their suggested public sources, ingest selected public sources through the pipeline, and then test whether the findings appear in the top data layers.\n\n## Archive\n\nArchived review documents live under `archive/`. They are kept for provenance and should not be treated as the active review entry point.\n\n| File | Why archived |\n| --- | --- |\n| `archive/d6-handoff/almere_d6_validation_handoff_summary.md` | Superseded by the current validation pack, public-source boundary note, safe wording library, decision-needed list and funding gap table. |\n| `archive/d6-support/` | Detailed D6 handoff support files: validation pack, source-boundary note, safe wording, decision-needed list, funding table, stakeholder request and validation log. |\n| `archive/phase31/` | Generated Sprint 31.3 and 31.4 review snapshots and deep-research prompts. |\n\n## Maintenance Rule\n\nWhen a new review document becomes the current entry point, update this README, `AGENTS.md`, `RESEARCH_AGENT_MAP.md`, and the internal review dashboard inputs. Archive superseded material instead of deleting it.\n"
     },
     {
       "path": "docs/review/almere_d6_deep_research_learnings.md",

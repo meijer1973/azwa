@@ -40,8 +40,8 @@ class WorkbookConfig:
 WORKBOOKS = [
     WorkbookConfig(
         workbook_id="d5_validation_workbook",
-        path=ROOT / "docs" / "review" / "D5_validatieformat_werkagenda_Almere_v0.4.xlsx",
-        version="v0.4",
+        path=ROOT / "docs" / "review" / "D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+        version="v0.5",
         validation_domain="D5",
         sheets={
             "Overzicht D5": SheetConfig(
@@ -417,7 +417,9 @@ def field_coverage(headers: dict[int, str], sheet_summary: str) -> dict[str, boo
         "bewijstype_verplicht": any("bewijstype verplicht" in value for value in normalized_headers),
         "repo_update_effect": any(value in {"repo update effect", "repo_update_effect"} for value in normalized_headers),
         "deadline": any("deadline" in value for value in normalized_headers),
-        "evidence_reference": any("bewijs" in value for value in normalized_headers),
+        "evidence_reference": any(
+            "bewijs" in value or value in {"bron", "brontype"} for value in normalized_headers
+        ),
         "current_working_view": any("huidige werkhypothese" in value for value in normalized_headers)
         or summary_present,
     }

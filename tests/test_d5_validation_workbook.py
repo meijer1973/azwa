@@ -7,7 +7,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-WORKBOOK = ROOT / "docs" / "review" / "D5_validatieformat_werkagenda_Almere_v0.4.xlsx"
+WORKBOOK = ROOT / "docs" / "review" / "D5_validatieformat_werkagenda_Almere_v0.5.xlsx"
 
 NS = {
     "main": "http://schemas.openxmlformats.org/spreadsheetml/2006/main",
@@ -171,7 +171,7 @@ def test_d5_validation_workbook_has_owner_and_routing_dropdowns() -> None:
                 assert validations[range_ref] == formula
 
 
-def test_d5_validation_workbook_v04_human_tabs_remove_broad_columns() -> None:
+def test_d5_validation_workbook_v05_human_tabs_use_plain_human_columns() -> None:
     with zipfile.ZipFile(WORKBOOK) as archive:
         targets = _sheet_targets(archive)
         shared_strings = _shared_strings(archive)
@@ -179,6 +179,9 @@ def test_d5_validation_workbook_v04_human_tabs_remove_broad_columns() -> None:
             "Dekking / schaal",
             "Capaciteit / aantallen",
             "Validatiestatus",
+            "Bewijssoort",
+            "Bewijs / verwijzing",
+            "Bewijs/verwijzing",
         }
         human_tabs = [
             "Stakeholderpakketten",
@@ -228,6 +231,31 @@ def test_d5_validation_workbook_v04_human_tabs_remove_broad_columns() -> None:
             ]
             assert "Rol Almere" in headers
 
+        source_tabs = [
+            "Laagdremp. steunpunten",
+            "Sociaal verwijzen",
+            "Mentale gezondheid",
+            "Valpreventie",
+            "Overgewicht volwassenen",
+            "Kansrijke Start",
+            "Integrale gezinspoli",
+            "Nu Niet Zwanger",
+            "Overgewicht kinderen",
+            "Optionele ontwikkelagenda",
+            "Financiering",
+            "Governance rollen",
+            "D6 afhankelijkheden",
+            "Validatielog",
+        ]
+        for sheet_name in source_tabs:
+            root = ET.fromstring(archive.read(targets[sheet_name]))
+            headers = [
+                _cell_value(cell, shared_strings)
+                for cell in root.findall(".//main:sheetData/main:row[@r='4']/main:c", NS)
+            ]
+            assert "Brontype" in headers
+            assert "bron" in headers
+
 
 def test_d5_validation_workbook_table_definitions_match_ranges() -> None:
     forbidden_headers = {
@@ -235,6 +263,9 @@ def test_d5_validation_workbook_table_definitions_match_ranges() -> None:
         "Capaciteit / aantallen",
         "Validatiestatus",
         "Rol",
+        "Bewijssoort",
+        "Bewijs / verwijzing",
+        "Bewijs/verwijzing",
     }
     with zipfile.ZipFile(WORKBOOK) as archive:
         table_paths = [

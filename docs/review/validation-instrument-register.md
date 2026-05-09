@@ -13,7 +13,7 @@ Use this register before editing, sending, or importing answers from the workboo
 
 | Instrument | Path | Version | Status | Sheets | Purpose | Source basis | Next QA action |
 | --- | --- | --- | --- | ---: | --- | --- | --- |
-| D5 validatieformat werkagenda Almere | `docs/review/D5_validatieformat_werkagenda_Almere_v0.4.xlsx` | `v0.4` | current pre-validation working version | 20 | Prepare D5 workagenda validation before contacting policymakers. | `data/workagenda/d5_status_matrix.json`, `data/workagenda/d5_validation_tickets.json`, `data/workagenda/d5_validation_packets.json`, source corpus and generated evidence layers. | Complete P5 human dry run and packet fixes before P7 send-readiness. |
+| D5 validatieformat werkagenda Almere | `docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx` | `v0.5` | current pre-validation working version | 20 | Prepare D5 workagenda validation before contacting policymakers. | `data/workagenda/d5_status_matrix.json`, `data/workagenda/d5_validation_tickets.json`, `data/workagenda/d5_validation_packets.json`, source corpus and generated evidence layers. | Complete P5 human dry run and packet fixes before P7 send-readiness. |
 | Almere D6 validatieformats | `docs/review/Almere_D6_validatieformats.xlsx` | current imported baseline | pre-validation baseline | 15 | Prepare D6 infrastructure, ownership, mandate, funding and safe-wording validation. | `docs/review/almere_d6_deep_research_learnings.md`, `docs/review/almere_d6_open_questions.md`, `docs/review/almere_d6_validation_ticket_matrix.md`, `data/extracted/municipal/almere_d6_responsibility_register.json`. | Complete P5 human dry run and packet fixes before P7 send-readiness. |
 
 ## Workbook Version History
@@ -25,7 +25,8 @@ Do not overwrite versioned Excel workbooks. Keep the old file and create the nex
 | D5 validatieformat werkagenda Almere | `v0.1` | `docs/review/D5_validatieformat_werkagenda_Almere_v0.1.xlsx` | preserved baseline | Sprint 33.P0 baseline workbook before owner/party dropdown hardening. |
 | D5 validatieformat werkagenda Almere | `v0.2` | `docs/review/D5_validatieformat_werkagenda_Almere_v0.2.xlsx` | preserved prior version | Adds controlled dropdowns for owner/party, stakeholder group, overlegcyclus and bijsturingsafspraak fields for P5 dry-run hardening. |
 | D5 validatieformat werkagenda Almere | `v0.3` | `docs/review/D5_validatieformat_werkagenda_Almere_v0.3.xlsx` | superseded | Renamed human-facing `Rol` columns to `Rol Almere` and removed broad input columns, but Excel table metadata could trigger a repair prompt. Do not use for dry run. |
-| D5 validatieformat werkagenda Almere | `v0.4` | `docs/review/D5_validatieformat_werkagenda_Almere_v0.4.xlsx` | current working version | Rebuilds the v0.3 changes from `v0.2` while updating Excel table refs and table-column metadata so the workbook opens without repair. |
+| D5 validatieformat werkagenda Almere | `v0.4` | `docs/review/D5_validatieformat_werkagenda_Almere_v0.4.xlsx` | preserved prior version | Rebuilds the v0.3 changes from `v0.2` while updating Excel table refs and table-column metadata so the workbook opens without repair. |
+| D5 validatieformat werkagenda Almere | `v0.5` | `docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx` | current working version | Renames `Bewijssoort` to `Brontype` and `Bewijs / verwijzing` / `Bewijs/verwijzing` to `bron`, with table metadata kept in sync. |
 
 ## Traceability Layer
 

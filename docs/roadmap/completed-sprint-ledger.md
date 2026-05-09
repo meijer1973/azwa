@@ -1,7 +1,7 @@
 ﻿# Completed Sprint Ledger
 
 ## Summary
-Current roadmap version: `v2026.05.09-7`.
+Current roadmap version: `v2026.05.09-8`.
 
 This file stores completed sprint history that used to live at the top of `docs/data-quality-roadmap.md`. The active roadmap now keeps only open, blocked, parked and planned work at the top.
 

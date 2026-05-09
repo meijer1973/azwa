@@ -7,7 +7,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-WORKBOOK = ROOT / "docs" / "review" / "D5_validatieformat_werkagenda_Almere_v0.7.xlsx"
+WORKBOOK = ROOT / "docs" / "review" / "D5_validatieformat_werkagenda_Almere_v0.8.xlsx"
 
 NS = {
     "main": "http://schemas.openxmlformats.org/spreadsheetml/2006/main",
@@ -49,6 +49,14 @@ def _sheet_targets(archive: zipfile.ZipFile) -> dict[str, str]:
         ]
         targets[sheet.attrib["name"]] = rid_to_target[rid]
     return targets
+
+
+def _sheet_states(archive: zipfile.ZipFile) -> dict[str, str]:
+    workbook = ET.fromstring(archive.read("xl/workbook.xml"))
+    return {
+        sheet.attrib["name"]: sheet.attrib.get("state", "visible")
+        for sheet in workbook.findall("main:sheets/main:sheet", NS)
+    }
 
 
 def _shared_strings(archive: zipfile.ZipFile) -> list[str]:
@@ -180,7 +188,7 @@ def test_d5_validation_workbook_has_owner_and_routing_dropdowns() -> None:
                 assert validations[range_ref] == formula
 
 
-def test_d5_validation_workbook_v07_human_tabs_use_plain_human_columns() -> None:
+def test_d5_validation_workbook_v08_human_tabs_use_plain_human_columns() -> None:
     with zipfile.ZipFile(WORKBOOK) as archive:
         targets = _sheet_targets(archive)
         shared_strings = _shared_strings(archive)
@@ -262,6 +270,22 @@ def test_d5_validation_workbook_v07_human_tabs_use_plain_human_columns() -> None
             ]
             assert "Brontype" in headers
             assert "bron" in headers
+
+
+def test_d5_validation_workbook_v08_hides_right_side_control_tabs() -> None:
+    expected_hidden = {
+        "Monitoring cyclus",
+        "D6 afhankelijkheden",
+        "Validatielog",
+        "Bronnen wijzigingen",
+        "Keuzelijsten",
+    }
+    with zipfile.ZipFile(WORKBOOK) as archive:
+        states = _sheet_states(archive)
+        assert expected_hidden.issubset(states)
+        assert {sheet for sheet, state in states.items() if state == "veryHidden"} == expected_hidden
+        assert states["Start hier"] == "visible"
+        assert states["Overzicht D5"] == "visible"
 
 
 def test_d5_validation_workbook_uses_plain_pilot_wording() -> None:

@@ -38,7 +38,7 @@ Gate effect: Blocks P7 send-readiness until human reviewers complete the cases; 
 
 1. Open the workbook named in the case detail.
 2. Go to the listed sheet and row.
-3. Answer only that row using the workbook's dropdowns, short note fields and evidence fields.
+3. Answer only that row using the workbook's dropdowns, short note fields and evidence fields. For D5 owner, party or action-holder fields, choose from the dropdown where possible and use `Anders, toelichten` only when the list is missing the right option.
 4. If the row is outside the reviewer's domain, choose or write `niet mijn domein` and name the better owner if known.
 5. Record whether the row was easy to understand, what evidence would be attached, and whether any dropdown option was missing.
 6. Do not use the CSV as the human form. The repository team uses the CSV path only to check traceability and export shape.
@@ -79,7 +79,7 @@ What the reviewer does:
 
 - Open `docs/review/D5_validatieformat_werkagenda_Almere_v0.1.xlsx`.
 - Go to sheet `Sociaal verwijzen`, row `5`.
-- Use the workbook dropdowns and evidence fields to answer just this row.
+- Use the workbook dropdowns and evidence fields to answer just this row. Check whether owner/party/action-holder dropdowns are sufficient.
 - Note whether wording, answer options or evidence instructions need improvement before stakeholder contact.
 
 Pass criteria:
@@ -163,7 +163,7 @@ What the reviewer does:
 
 - Open `docs/review/D5_validatieformat_werkagenda_Almere_v0.1.xlsx`.
 - Go to sheet `Financiering`, row `5`.
-- Use the workbook dropdowns and evidence fields to answer just this row.
+- Use the workbook dropdowns and evidence fields to answer just this row. Check whether owner/party/action-holder dropdowns are sufficient.
 - Note whether wording, answer options or evidence instructions need improvement before stakeholder contact.
 
 Pass criteria:
@@ -247,7 +247,7 @@ What the reviewer does:
 
 - Open `docs/review/D5_validatieformat_werkagenda_Almere_v0.1.xlsx`.
 - Go to sheet `Sociaal verwijzen`, row `5`.
-- Use the workbook dropdowns and evidence fields to answer just this row.
+- Use the workbook dropdowns and evidence fields to answer just this row. Check whether owner/party/action-holder dropdowns are sufficient.
 - Note whether wording, answer options or evidence instructions need improvement before stakeholder contact.
 
 Pass criteria:
@@ -276,6 +276,7 @@ Expected reroute candidates:
 
 - Select 2-4 internal reviewers before stakeholder contact.
 - Have them complete the five dry-run cases in the human-facing Excel workbooks, using workbook path, sheet and row from this note.
+- For D5 cases, test the owner/party/action-holder dropdowns and report whether an expected owner option is missing.
 - Use CSV packet paths only as repository traceability/export references, not as the normal human entry surface.
 - Record time-to-answer, confusing wording, missing dropdown options, evidence ambiguity and reroute clarity.
 - Apply workbook or packet fixes before the P7 send-readiness gate.

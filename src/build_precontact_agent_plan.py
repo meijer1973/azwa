@@ -34,7 +34,7 @@ def shared_inputs() -> list[str]:
         "docs/review/validation-workbook-prefill-audit.md",
         TRACEABILITY_PATH,
         PREFILL_AUDIT_PATH,
-        "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
+        "docs/review/D5_validatieformat_werkagenda_Almere_v0.7.xlsx",
         "docs/review/Almere_D6_validatieformats.xlsx",
     ]
 
@@ -101,7 +101,7 @@ def agent_plans() -> list[dict[str, Any]]:
                 "D5 handreikingen expected end May.",
                 "Handreiking Regionale Preventie Infrastructuur.",
                 "Regioscan and rode-dradenanalyse.",
-                "Ontwikkelagenda process for beproevende regio's.",
+                "Ontwikkelagenda process for pilot regions or regions that want to try new approaches in practice.",
                 "Finance updates for AZWA/D5, doorbraakmiddelen, Zvw and social-domain funding.",
             ],
             "may_resolve": [

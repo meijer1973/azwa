@@ -219,7 +219,7 @@ TARGET_PUBLIC_BASELINE = {
     },
     "ontwikkelagenda_1_nieuw_beproeven": {
         "public_evidence": [
-            "Alleen vullen wanneer publieke bron of lokale validatie aangeeft dat Almere/Flevoland dit wil beproeven.",
+            "Alleen vullen wanneer publieke bron of lokale validatie aangeeft dat Almere/Flevoland deze aanpak in de praktijk wil uitproberen.",
         ],
         "indicator_ids": [],
         "local_fill_fields": [

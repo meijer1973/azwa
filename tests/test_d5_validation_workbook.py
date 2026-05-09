@@ -7,7 +7,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-WORKBOOK = ROOT / "docs" / "review" / "D5_validatieformat_werkagenda_Almere_v0.6.xlsx"
+WORKBOOK = ROOT / "docs" / "review" / "D5_validatieformat_werkagenda_Almere_v0.7.xlsx"
 
 NS = {
     "main": "http://schemas.openxmlformats.org/spreadsheetml/2006/main",
@@ -59,6 +59,16 @@ def _shared_strings(archive: zipfile.ZipFile) -> list[str]:
         "".join(text.text or "" for text in item.findall(".//main:t", NS))
         for item in root.findall("main:si", NS)
     ]
+
+
+def _workbook_text(archive: zipfile.ZipFile) -> str:
+    values: list[str] = []
+    for path in archive.namelist():
+        if not path.startswith("xl/") or not path.endswith(".xml"):
+            continue
+        root = ET.fromstring(archive.read(path))
+        values.extend(text for text in root.itertext() if text)
+    return "\n".join(values).lower()
 
 
 def _cell_value(cell: ET.Element, shared_strings: list[str]) -> str:
@@ -170,7 +180,7 @@ def test_d5_validation_workbook_has_owner_and_routing_dropdowns() -> None:
                 assert validations[range_ref] == formula
 
 
-def test_d5_validation_workbook_v06_human_tabs_use_plain_human_columns() -> None:
+def test_d5_validation_workbook_v07_human_tabs_use_plain_human_columns() -> None:
     with zipfile.ZipFile(WORKBOOK) as archive:
         targets = _sheet_targets(archive)
         shared_strings = _shared_strings(archive)
@@ -252,6 +262,14 @@ def test_d5_validation_workbook_v06_human_tabs_use_plain_human_columns() -> None
             ]
             assert "Brontype" in headers
             assert "bron" in headers
+
+
+def test_d5_validation_workbook_uses_plain_pilot_wording() -> None:
+    with zipfile.ZipFile(WORKBOOK) as archive:
+        workbook_text = _workbook_text(archive)
+        assert "beproev" not in workbook_text
+        assert "pilot" in workbook_text
+        assert "in de praktijk uitproberen" in workbook_text
 
 
 def test_d5_validation_workbook_table_definitions_match_ranges() -> None:

@@ -47,7 +47,7 @@ The next phase turns the repository from a research tool into a workagenda-deliv
 | Nu Niet Zwanger | Basisfunctionaliteit | Yes |
 | Mentale gezondheidsnetwerken | Ontwikkelagenda 1 lopend | Yes |
 | Ketenaanpak overgewicht en obesitas kinderen | Ontwikkelagenda 1 lopend | Yes |
-| Ontwikkelagenda 1 nieuw: dementie, nicotinevrij, rookvrije start, multiproblematiek NPLV | Conditioneel | No, unless the region chooses to be a beproevende regio. |
+| Ontwikkelagenda 1 nieuw: dementie, nicotinevrij, rookvrije start, multiproblematiek NPLV | Conditioneel | No, unless the region chooses to act as a pilot region for one or more of these approaches. |
 | Ontwikkelagenda 2 en overige initiatieven | Optional | No, unless the region explicitly chooses to include them. |
 
 ## Workagenda Fields
@@ -71,7 +71,7 @@ Each D5 component should eventually be scored on these fields:
 
 | Moment | Delivery meaning |
 | --- | --- |
-| Eind mei 2026 | Handreikingen basisfunctionaliteiten and process clarity for beproevende regio's expected. |
+| Eind mei 2026 | Handreikingen basisfunctionaliteiten and process clarity for pilot regions / regions trying new approaches in practice expected. |
 | Medio juli 2026 | RESV-related plans toward insurer/process track. |
 | Half september 2026 | Practical workagenda readiness for IZA governance and college route. |
 | 15 november 2026 | Formal deadline for regional workagenda adoption and VWS transmission. |

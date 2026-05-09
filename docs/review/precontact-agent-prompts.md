@@ -46,7 +46,7 @@ Start from these repository inputs:
 - `docs/review/validation-workbook-prefill-audit.md`
 - `data/workagenda/validation_workbook_traceability_map.json`
 - `data/workagenda/validation_workbook_prefill_audit.json`
-- `docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx`
+- `docs/review/D5_validatieformat_werkagenda_Almere_v0.7.xlsx`
 - `docs/review/Almere_D6_validatieformats.xlsx`
 - `data/workagenda/d5_status_matrix.json`
 - `data/workagenda/d5_validation_tickets.json`
@@ -117,7 +117,7 @@ Start from these repository inputs:
 - `docs/review/validation-workbook-prefill-audit.md`
 - `data/workagenda/validation_workbook_traceability_map.json`
 - `data/workagenda/validation_workbook_prefill_audit.json`
-- `docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx`
+- `docs/review/D5_validatieformat_werkagenda_Almere_v0.7.xlsx`
 - `docs/review/Almere_D6_validatieformats.xlsx`
 - `config/monthly_source_audit.json`
 - `data/extracted/monthly_source_audit.json`
@@ -128,7 +128,7 @@ Focus only on:
 - D5 handreikingen expected end May.
 - Handreiking Regionale Preventie Infrastructuur.
 - Regioscan and rode-dradenanalyse.
-- Ontwikkelagenda process for beproevende regio's.
+- Ontwikkelagenda process for pilot regions or regions that want to try new approaches in practice.
 - Finance updates for AZWA/D5, doorbraakmiddelen, Zvw and social-domain funding.
 
 You may resolve:
@@ -184,7 +184,7 @@ Start from these repository inputs:
 - `docs/review/validation-workbook-prefill-audit.md`
 - `data/workagenda/validation_workbook_traceability_map.json`
 - `data/workagenda/validation_workbook_prefill_audit.json`
-- `docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx`
+- `docs/review/D5_validatieformat_werkagenda_Almere_v0.7.xlsx`
 - `docs/review/Almere_D6_validatieformats.xlsx`
 - `data/workagenda/d5_status_matrix.json`
 - `data/workagenda/d5_validation_tickets.json`
@@ -250,7 +250,7 @@ Start from these repository inputs:
 - `docs/review/validation-workbook-prefill-audit.md`
 - `data/workagenda/validation_workbook_traceability_map.json`
 - `data/workagenda/validation_workbook_prefill_audit.json`
-- `docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx`
+- `docs/review/D5_validatieformat_werkagenda_Almere_v0.7.xlsx`
 - `docs/review/Almere_D6_validatieformats.xlsx`
 
 Focus only on:
@@ -313,7 +313,7 @@ Start from these repository inputs:
 - `docs/review/validation-workbook-prefill-audit.md`
 - `data/workagenda/validation_workbook_traceability_map.json`
 - `data/workagenda/validation_workbook_prefill_audit.json`
-- `docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx`
+- `docs/review/D5_validatieformat_werkagenda_Almere_v0.7.xlsx`
 - `docs/review/Almere_D6_validatieformats.xlsx`
 - `data/workagenda/d5_status_matrix.json`
 - `docs/review/almere_d6_validation_ticket_matrix.md`

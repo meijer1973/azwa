@@ -3,9 +3,11 @@
 ## Summary
 Current sprint: Sprint 33.P5 - Pre-contact validation-readiness: internal dry run.
 
-Generated on: 2026-05-03.
+Generated on: 2026-05-09.
 
 This file defines the internal dry-run cases for the prepared D5/D6 stakeholder packets. It is not a stakeholder validation record and it does not authorize contact with policymakers.
+
+Human reviewers should work in the Excel validation workbooks, not in raw CSV files. The CSV packet paths below are repository traceability references: they help the repository team verify that returned answers can be mapped back to `vraag_id`, packet routing and processing targets.
 
 Repository check status: `completed`.
 
@@ -32,6 +34,17 @@ Gate effect: Blocks P7 send-readiness until human reviewers complete the cases; 
 | `data_repository_reviewer` | Vraag_id preservation, answer-processing route and not-my-domain rerouting. |
 | `subject_reviewer` | Whether a domain expert can answer from the filtered packet alone. |
 
+## What The Human Reviewer Should Do
+
+1. Open the workbook named in the case detail.
+2. Go to the listed sheet and row.
+3. Answer only that row using the workbook's dropdowns, short note fields and evidence fields.
+4. If the row is outside the reviewer's domain, choose or write `niet mijn domein` and name the better owner if known.
+5. Record whether the row was easy to understand, what evidence would be attached, and whether any dropdown option was missing.
+6. Do not use the CSV as the human form. The repository team uses the CSV path only to check traceability and export shape.
+
+The dry run tests usability and processability. It is not asking reviewers to validate all D5/D6 content and it does not create stakeholder evidence.
+
 ## Dry-run Cases
 
 | Case | Packet | Vraag ID | Test | Expected route |
@@ -48,7 +61,9 @@ Gate effect: Blocks P7 send-readiness until human reviewers complete the cases; 
 
 Packet: `welzijn_sociale_basis` (Welzijn en sociale basis)
 
-CSV: `data/workagenda/precontact_packets/welzijn_sociale_basis.csv`
+Human workbook: `docs/review/D5_validatieformat_werkagenda_Almere_v0.1.xlsx`
+
+Repository CSV reference: `data/workagenda/precontact_packets/welzijn_sociale_basis.csv`
 
 Vraag ID: `D5-SV-001`
 
@@ -60,19 +75,27 @@ Reviewer role: `policy_or_subject_reviewer`
 
 Expected processing route: `validation_log_or_decision_ticket`
 
+What the reviewer does:
+
+- Open `docs/review/D5_validatieformat_werkagenda_Almere_v0.1.xlsx`.
+- Go to sheet `Sociaal verwijzen`, row `5`.
+- Use the workbook dropdowns and evidence fields to answer just this row.
+- Note whether wording, answer options or evidence instructions need improvement before stakeholder contact.
+
 Pass criteria:
 
-- Reviewer can understand what is being asked without opening the full workbook.
+- Reviewer can find the indicated workbook sheet and row without repository help.
+- Reviewer can understand what is being asked in the Excel workbook.
 - Reviewer can choose an answer, mark unknown, or mark not-my-domain.
 - Reviewer can name evidence type and evidence reference when claiming confirmation.
-- Returned row preserves vraag_id and packet_id.
+- Repository reviewer can map the Excel answer back to vraag_id and packet_id using the dry-run case reference.
 - Repository team can route the answer to the expected processing route.
 
 Failure triggers:
 
 - Question requires a broad explanation instead of a choice or short correction.
 - Reviewer cannot tell whether evidence is required.
-- Reviewer needs another packet to understand the row.
+- Reviewer needs raw CSV or repository JSON to answer the human-facing question.
 - Not-my-domain answer has no clear reroute target.
 - Answer would silently become a source claim instead of a validation record.
 
@@ -80,7 +103,9 @@ Failure triggers:
 
 Packet: `wijkteams_slt_leads` (Wijkteams / SLT-leads)
 
-CSV: `data/workagenda/precontact_packets/wijkteams_slt_leads.csv`
+Human workbook: `docs/review/Almere_D6_validatieformats.xlsx`
+
+Repository CSV reference: `data/workagenda/precontact_packets/wijkteams_slt_leads.csv`
 
 Vraag ID: `D6-WIJK-001`
 
@@ -92,19 +117,27 @@ Reviewer role: `subject_reviewer`
 
 Expected processing route: `d6_validation_log_or_register_update`
 
+What the reviewer does:
+
+- Open `docs/review/Almere_D6_validatieformats.xlsx`.
+- Go to sheet `Wijkteams`, row `7`.
+- Use the workbook dropdowns and evidence fields to answer just this row.
+- Note whether wording, answer options or evidence instructions need improvement before stakeholder contact.
+
 Pass criteria:
 
-- Reviewer can understand what is being asked without opening the full workbook.
+- Reviewer can find the indicated workbook sheet and row without repository help.
+- Reviewer can understand what is being asked in the Excel workbook.
 - Reviewer can choose an answer, mark unknown, or mark not-my-domain.
 - Reviewer can name evidence type and evidence reference when claiming confirmation.
-- Returned row preserves vraag_id and packet_id.
+- Repository reviewer can map the Excel answer back to vraag_id and packet_id using the dry-run case reference.
 - Repository team can route the answer to the expected processing route.
 
 Failure triggers:
 
 - Question requires a broad explanation instead of a choice or short correction.
 - Reviewer cannot tell whether evidence is required.
-- Reviewer needs another packet to understand the row.
+- Reviewer needs raw CSV or repository JSON to answer the human-facing question.
 - Not-my-domain answer has no clear reroute target.
 - Answer would silently become a source claim instead of a validation record.
 
@@ -112,7 +145,9 @@ Failure triggers:
 
 Packet: `finance_controller` (Finance/controller)
 
-CSV: `data/workagenda/precontact_packets/finance_controller.csv`
+Human workbook: `docs/review/D5_validatieformat_werkagenda_Almere_v0.1.xlsx`
+
+Repository CSV reference: `data/workagenda/precontact_packets/finance_controller.csv`
 
 Vraag ID: `D5-FIN-001`
 
@@ -124,19 +159,27 @@ Reviewer role: `finance_reviewer`
 
 Expected processing route: `finance_matrix_update`
 
+What the reviewer does:
+
+- Open `docs/review/D5_validatieformat_werkagenda_Almere_v0.1.xlsx`.
+- Go to sheet `Financiering`, row `5`.
+- Use the workbook dropdowns and evidence fields to answer just this row.
+- Note whether wording, answer options or evidence instructions need improvement before stakeholder contact.
+
 Pass criteria:
 
-- Reviewer can understand what is being asked without opening the full workbook.
+- Reviewer can find the indicated workbook sheet and row without repository help.
+- Reviewer can understand what is being asked in the Excel workbook.
 - Reviewer can choose an answer, mark unknown, or mark not-my-domain.
 - Reviewer can name evidence type and evidence reference when claiming confirmation.
-- Returned row preserves vraag_id and packet_id.
+- Repository reviewer can map the Excel answer back to vraag_id and packet_id using the dry-run case reference.
 - Repository team can route the answer to the expected processing route.
 
 Failure triggers:
 
 - Question requires a broad explanation instead of a choice or short correction.
 - Reviewer cannot tell whether evidence is required.
-- Reviewer needs another packet to understand the row.
+- Reviewer needs raw CSV or repository JSON to answer the human-facing question.
 - Not-my-domain answer has no clear reroute target.
 - Answer would silently become a source claim instead of a validation record.
 
@@ -144,7 +187,9 @@ Failure triggers:
 
 Packet: `gemeente_almere_sociaal_domein_d6` (Gemeente Almere sociaal domein - D6 validatie)
 
-CSV: `data/workagenda/precontact_packets/gemeente_almere_sociaal_domein_d6.csv`
+Human workbook: `docs/review/Almere_D6_validatieformats.xlsx`
+
+Repository CSV reference: `data/workagenda/precontact_packets/gemeente_almere_sociaal_domein_d6.csv`
 
 Vraag ID: `D6-SLT-001`
 
@@ -156,19 +201,27 @@ Reviewer role: `policy_reviewer`
 
 Expected processing route: `d6_validation_log_or_decision_ticket`
 
+What the reviewer does:
+
+- Open `docs/review/Almere_D6_validatieformats.xlsx`.
+- Go to sheet `SLT`, row `7`.
+- Use the workbook dropdowns and evidence fields to answer just this row.
+- Note whether wording, answer options or evidence instructions need improvement before stakeholder contact.
+
 Pass criteria:
 
-- Reviewer can understand what is being asked without opening the full workbook.
+- Reviewer can find the indicated workbook sheet and row without repository help.
+- Reviewer can understand what is being asked in the Excel workbook.
 - Reviewer can choose an answer, mark unknown, or mark not-my-domain.
 - Reviewer can name evidence type and evidence reference when claiming confirmation.
-- Returned row preserves vraag_id and packet_id.
+- Repository reviewer can map the Excel answer back to vraag_id and packet_id using the dry-run case reference.
 - Repository team can route the answer to the expected processing route.
 
 Failure triggers:
 
 - Question requires a broad explanation instead of a choice or short correction.
 - Reviewer cannot tell whether evidence is required.
-- Reviewer needs another packet to understand the row.
+- Reviewer needs raw CSV or repository JSON to answer the human-facing question.
 - Not-my-domain answer has no clear reroute target.
 - Answer would silently become a source claim instead of a validation record.
 
@@ -176,7 +229,9 @@ Failure triggers:
 
 Packet: `zorgverzekeraar_zvw` (Zorgverzekeraar/Zvw)
 
-CSV: `data/workagenda/precontact_packets/zorgverzekeraar_zvw.csv`
+Human workbook: `docs/review/D5_validatieformat_werkagenda_Almere_v0.1.xlsx`
+
+Repository CSV reference: `data/workagenda/precontact_packets/zorgverzekeraar_zvw.csv`
 
 Vraag ID: `D5-SV-001`
 
@@ -188,19 +243,27 @@ Reviewer role: `data_repository_reviewer`
 
 Expected processing route: `reroute_or_validation_log_note`
 
+What the reviewer does:
+
+- Open `docs/review/D5_validatieformat_werkagenda_Almere_v0.1.xlsx`.
+- Go to sheet `Sociaal verwijzen`, row `5`.
+- Use the workbook dropdowns and evidence fields to answer just this row.
+- Note whether wording, answer options or evidence instructions need improvement before stakeholder contact.
+
 Pass criteria:
 
-- Reviewer can understand what is being asked without opening the full workbook.
+- Reviewer can find the indicated workbook sheet and row without repository help.
+- Reviewer can understand what is being asked in the Excel workbook.
 - Reviewer can choose an answer, mark unknown, or mark not-my-domain.
 - Reviewer can name evidence type and evidence reference when claiming confirmation.
-- Returned row preserves vraag_id and packet_id.
+- Repository reviewer can map the Excel answer back to vraag_id and packet_id using the dry-run case reference.
 - Repository team can route the answer to the expected processing route.
 
 Failure triggers:
 
 - Question requires a broad explanation instead of a choice or short correction.
 - Reviewer cannot tell whether evidence is required.
-- Reviewer needs another packet to understand the row.
+- Reviewer needs raw CSV or repository JSON to answer the human-facing question.
 - Not-my-domain answer has no clear reroute target.
 - Answer would silently become a source claim instead of a validation record.
 
@@ -212,7 +275,8 @@ Expected reroute candidates:
 ## Human Completion Required
 
 - Select 2-4 internal reviewers before stakeholder contact.
-- Have them complete the five dry-run cases in the CSV packet drafts.
+- Have them complete the five dry-run cases in the human-facing Excel workbooks, using workbook path, sheet and row from this note.
+- Use CSV packet paths only as repository traceability/export references, not as the normal human entry surface.
 - Record time-to-answer, confusing wording, missing dropdown options, evidence ambiguity and reroute clarity.
 - Apply workbook or packet fixes before the P7 send-readiness gate.
 

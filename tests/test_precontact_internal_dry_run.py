@@ -29,6 +29,9 @@ def test_precontact_internal_dry_run_cases_keep_traceability_and_csv_fields():
     for case in dry_run["cases"]:
         assert case["packet_id"]
         assert case["vraag_id"]
+        assert case["workbook_path"].endswith(".xlsx")
+        assert case["human_entry_surface"] == "excel_workbook"
+        assert case["repository_traceability_surface"] == "csv_packet_reference"
         assert case["sheet"]
         assert case["question_text"]
         assert case["repo_update_effect"]

@@ -1,5 +1,5 @@
 {
-  "generated_on": "2026-05-03",
+  "generated_on": "2026-05-09",
   "current_sprint": "Sprint 33.P5 - Pre-contact validation-readiness: internal dry run",
   "repository_check_status": "completed",
   "human_dry_run_status": "pending_internal_reviewers",
@@ -63,6 +63,9 @@
       "expected_processing_route": "validation_log_or_decision_ticket",
       "packet_label": "Welzijn en sociale basis",
       "packet_csv_path": "data/workagenda/precontact_packets/welzijn_sociale_basis.csv",
+      "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.1.xlsx",
+      "human_entry_surface": "excel_workbook",
+      "repository_traceability_surface": "csv_packet_reference",
       "csv_fields_present": [
         "answer",
         "correction_or_note",
@@ -82,16 +85,17 @@
       "repo_update_effect": "validation_log_or_finance_ticket",
       "bewijstype_verplicht": true,
       "pass_criteria": [
-        "Reviewer can understand what is being asked without opening the full workbook.",
+        "Reviewer can find the indicated workbook sheet and row without repository help.",
+        "Reviewer can understand what is being asked in the Excel workbook.",
         "Reviewer can choose an answer, mark unknown, or mark not-my-domain.",
         "Reviewer can name evidence type and evidence reference when claiming confirmation.",
-        "Returned row preserves vraag_id and packet_id.",
+        "Repository reviewer can map the Excel answer back to vraag_id and packet_id using the dry-run case reference.",
         "Repository team can route the answer to the expected processing route."
       ],
       "failure_triggers": [
         "Question requires a broad explanation instead of a choice or short correction.",
         "Reviewer cannot tell whether evidence is required.",
-        "Reviewer needs another packet to understand the row.",
+        "Reviewer needs raw CSV or repository JSON to answer the human-facing question.",
         "Not-my-domain answer has no clear reroute target.",
         "Answer would silently become a source claim instead of a validation record."
       ]
@@ -106,6 +110,9 @@
       "expected_processing_route": "d6_validation_log_or_register_update",
       "packet_label": "Wijkteams / SLT-leads",
       "packet_csv_path": "data/workagenda/precontact_packets/wijkteams_slt_leads.csv",
+      "workbook_path": "docs/review/Almere_D6_validatieformats.xlsx",
+      "human_entry_surface": "excel_workbook",
+      "repository_traceability_surface": "csv_packet_reference",
       "csv_fields_present": [
         "answer",
         "correction_or_note",
@@ -125,16 +132,17 @@
       "repo_update_effect": "d6_validation_log_or_register_update",
       "bewijstype_verplicht": true,
       "pass_criteria": [
-        "Reviewer can understand what is being asked without opening the full workbook.",
+        "Reviewer can find the indicated workbook sheet and row without repository help.",
+        "Reviewer can understand what is being asked in the Excel workbook.",
         "Reviewer can choose an answer, mark unknown, or mark not-my-domain.",
         "Reviewer can name evidence type and evidence reference when claiming confirmation.",
-        "Returned row preserves vraag_id and packet_id.",
+        "Repository reviewer can map the Excel answer back to vraag_id and packet_id using the dry-run case reference.",
         "Repository team can route the answer to the expected processing route."
       ],
       "failure_triggers": [
         "Question requires a broad explanation instead of a choice or short correction.",
         "Reviewer cannot tell whether evidence is required.",
-        "Reviewer needs another packet to understand the row.",
+        "Reviewer needs raw CSV or repository JSON to answer the human-facing question.",
         "Not-my-domain answer has no clear reroute target.",
         "Answer would silently become a source claim instead of a validation record."
       ]
@@ -149,6 +157,9 @@
       "expected_processing_route": "finance_matrix_update",
       "packet_label": "Finance/controller",
       "packet_csv_path": "data/workagenda/precontact_packets/finance_controller.csv",
+      "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.1.xlsx",
+      "human_entry_surface": "excel_workbook",
+      "repository_traceability_surface": "csv_packet_reference",
       "csv_fields_present": [
         "answer",
         "correction_or_note",
@@ -168,16 +179,17 @@
       "repo_update_effect": "finance_matrix_update",
       "bewijstype_verplicht": true,
       "pass_criteria": [
-        "Reviewer can understand what is being asked without opening the full workbook.",
+        "Reviewer can find the indicated workbook sheet and row without repository help.",
+        "Reviewer can understand what is being asked in the Excel workbook.",
         "Reviewer can choose an answer, mark unknown, or mark not-my-domain.",
         "Reviewer can name evidence type and evidence reference when claiming confirmation.",
-        "Returned row preserves vraag_id and packet_id.",
+        "Repository reviewer can map the Excel answer back to vraag_id and packet_id using the dry-run case reference.",
         "Repository team can route the answer to the expected processing route."
       ],
       "failure_triggers": [
         "Question requires a broad explanation instead of a choice or short correction.",
         "Reviewer cannot tell whether evidence is required.",
-        "Reviewer needs another packet to understand the row.",
+        "Reviewer needs raw CSV or repository JSON to answer the human-facing question.",
         "Not-my-domain answer has no clear reroute target.",
         "Answer would silently become a source claim instead of a validation record."
       ]
@@ -192,6 +204,9 @@
       "expected_processing_route": "d6_validation_log_or_decision_ticket",
       "packet_label": "Gemeente Almere sociaal domein - D6 validatie",
       "packet_csv_path": "data/workagenda/precontact_packets/gemeente_almere_sociaal_domein_d6.csv",
+      "workbook_path": "docs/review/Almere_D6_validatieformats.xlsx",
+      "human_entry_surface": "excel_workbook",
+      "repository_traceability_surface": "csv_packet_reference",
       "csv_fields_present": [
         "answer",
         "correction_or_note",
@@ -211,16 +226,17 @@
       "repo_update_effect": "d6_validation_log_or_decision_ticket",
       "bewijstype_verplicht": true,
       "pass_criteria": [
-        "Reviewer can understand what is being asked without opening the full workbook.",
+        "Reviewer can find the indicated workbook sheet and row without repository help.",
+        "Reviewer can understand what is being asked in the Excel workbook.",
         "Reviewer can choose an answer, mark unknown, or mark not-my-domain.",
         "Reviewer can name evidence type and evidence reference when claiming confirmation.",
-        "Returned row preserves vraag_id and packet_id.",
+        "Repository reviewer can map the Excel answer back to vraag_id and packet_id using the dry-run case reference.",
         "Repository team can route the answer to the expected processing route."
       ],
       "failure_triggers": [
         "Question requires a broad explanation instead of a choice or short correction.",
         "Reviewer cannot tell whether evidence is required.",
-        "Reviewer needs another packet to understand the row.",
+        "Reviewer needs raw CSV or repository JSON to answer the human-facing question.",
         "Not-my-domain answer has no clear reroute target.",
         "Answer would silently become a source claim instead of a validation record."
       ]
@@ -239,6 +255,9 @@
       ],
       "packet_label": "Zorgverzekeraar/Zvw",
       "packet_csv_path": "data/workagenda/precontact_packets/zorgverzekeraar_zvw.csv",
+      "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.1.xlsx",
+      "human_entry_surface": "excel_workbook",
+      "repository_traceability_surface": "csv_packet_reference",
       "csv_fields_present": [
         "answer",
         "correction_or_note",
@@ -258,16 +277,17 @@
       "repo_update_effect": "validation_log_or_finance_ticket",
       "bewijstype_verplicht": true,
       "pass_criteria": [
-        "Reviewer can understand what is being asked without opening the full workbook.",
+        "Reviewer can find the indicated workbook sheet and row without repository help.",
+        "Reviewer can understand what is being asked in the Excel workbook.",
         "Reviewer can choose an answer, mark unknown, or mark not-my-domain.",
         "Reviewer can name evidence type and evidence reference when claiming confirmation.",
-        "Returned row preserves vraag_id and packet_id.",
+        "Repository reviewer can map the Excel answer back to vraag_id and packet_id using the dry-run case reference.",
         "Repository team can route the answer to the expected processing route."
       ],
       "failure_triggers": [
         "Question requires a broad explanation instead of a choice or short correction.",
         "Reviewer cannot tell whether evidence is required.",
-        "Reviewer needs another packet to understand the row.",
+        "Reviewer needs raw CSV or repository JSON to answer the human-facing question.",
         "Not-my-domain answer has no clear reroute target.",
         "Answer would silently become a source claim instead of a validation record."
       ]
@@ -275,7 +295,8 @@
   ],
   "human_completion_required": [
     "Select 2-4 internal reviewers before stakeholder contact.",
-    "Have them complete the five dry-run cases in the CSV packet drafts.",
+    "Have them complete the five dry-run cases in the human-facing Excel workbooks, using workbook path, sheet and row from this note.",
+    "Use CSV packet paths only as repository traceability/export references, not as the normal human entry surface.",
     "Record time-to-answer, confusing wording, missing dropdown options, evidence ambiguity and reroute clarity.",
     "Apply workbook or packet fixes before the P7 send-readiness gate."
   ]

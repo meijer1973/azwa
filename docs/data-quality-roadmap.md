@@ -3,7 +3,7 @@
 ## Summary
 Current sprint: Sprint 33.P7 - Pre-contact send-readiness gate (blocked).
 
-Roadmap version: `v2026.05.09-8`.
+Roadmap version: `v2026.05.09-9`.
 
 This is the single active roadmap for the repository. It combines the older data-quality roadmap and the workagenda-delivery roadmap into one canonical planning surface. Historical snapshots and retired roadmap files live under `docs/roadmap/archive/`; version changes are recorded in `docs/roadmap/roadmap-version-log.md`.
 
@@ -61,7 +61,7 @@ Goal: reduce human workload before validation starts. Policymakers should receiv
 
 | Asset | Current repository status | Use |
 | --- | --- | --- |
-| `docs/review/D5_validatieformat_werkagenda_Almere_v0.8.xlsx` | Current Excel workbook, 18 sheets; 13 visible human-facing sheets and 5 hidden control/workflow sheets. Prior versions preserved. | D5 pre-contact validation instrument for P5 dry run; keeps the right-side control tabs out of the human-facing tab bar while preserving them for repository processing. |
+| `docs/review/D5_validatieformat_werkagenda_Almere_v0.9.xlsx` | Current Excel workbook, 18 sheets; 11 visible input/instruction sheets and 7 hidden navigation/control/workflow sheets. Prior versions preserved. | D5 pre-contact validation instrument for P5 dry run; keeps navigation and control tabs out of the human-facing tab bar while preserving them for repository processing. |
 | `docs/review/Almere_D6_validatieformats.xlsx` | Baseline Excel workbook, 15 sheets. | D6 pre-contact validation instrument. |
 | `docs/review/validation-instrument-register.md` | Created in 33.P0. | Version, purpose, sheet inventory, shared vocabulary and import rules. |
 | `data/workagenda/validation_workbook_traceability_map.json` | Created in 33.P1. | Stable generated IDs, routing and processing metadata for 189 D5/D6 workbook validation rows. |

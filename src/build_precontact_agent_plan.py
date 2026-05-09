@@ -34,7 +34,7 @@ def shared_inputs() -> list[str]:
         "docs/review/validation-workbook-prefill-audit.md",
         TRACEABILITY_PATH,
         PREFILL_AUDIT_PATH,
-        "docs/review/D5_validatieformat_werkagenda_Almere_v0.8.xlsx",
+        "docs/review/D5_validatieformat_werkagenda_Almere_v0.9.xlsx",
         "docs/review/Almere_D6_validatieformats.xlsx",
     ]
 

@@ -23,7 +23,8 @@ Only these files should normally be used from the top level of this folder.
 | `precontact-stakeholder-packets.md` | Sprint 33.P4 index of filtered D5/D6 stakeholder packet drafts and CSV send-set files. Prepared only; not sent and not validation results. |
 | `precontact-internal-dry-run.md` | Sprint 33.P5 internal dry-run cases, pass/fail criteria and reviewer roles. Human reviewer execution is still pending. |
 | `precontact-response-workflow.md` | Sprint 33.P6 response-processing workflow for returned packet answers. No answers have been imported yet. |
-| `D5_validatieformat_werkagenda_Almere_v0.8.xlsx` | Current D5 pre-validation workbook for the internal dry run. This is a validation instrument, not a source or validation result. The right-side control/workflow tabs are hidden. |
+| `D5_validatieformat_werkagenda_Almere_v0.9.xlsx` | Current D5 pre-validation workbook for the internal dry run. This is a validation instrument, not a source or validation result. Navigation and control/workflow tabs are hidden. |
+| `D5_validatieformat_werkagenda_Almere_v0.8.xlsx` | Preserved D5 workbook version before also hiding `Stakeholderpakketten` and `Overzicht D5`. Keep for provenance; do not overwrite. |
 | `D5_validatieformat_werkagenda_Almere_v0.7.xlsx` | Preserved D5 workbook version before hiding the right-side control/workflow tabs. Keep for provenance; do not overwrite. |
 | `D5_validatieformat_werkagenda_Almere_v0.6.xlsx` | Preserved D5 workbook version before optional development-agenda wording was simplified. Keep for provenance; do not overwrite. |
 | `D5_validatieformat_werkagenda_Almere_v0.5.xlsx` | Preserved D5 workbook version before removal of the dedicated `Financiering` and `Governance rollen` tabs. Keep for provenance; do not overwrite. |

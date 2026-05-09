@@ -7,7 +7,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-WORKBOOK = ROOT / "docs" / "review" / "D5_validatieformat_werkagenda_Almere_v0.8.xlsx"
+WORKBOOK = ROOT / "docs" / "review" / "D5_validatieformat_werkagenda_Almere_v0.9.xlsx"
 
 NS = {
     "main": "http://schemas.openxmlformats.org/spreadsheetml/2006/main",
@@ -188,7 +188,7 @@ def test_d5_validation_workbook_has_owner_and_routing_dropdowns() -> None:
                 assert validations[range_ref] == formula
 
 
-def test_d5_validation_workbook_v08_human_tabs_use_plain_human_columns() -> None:
+def test_d5_validation_workbook_v09_human_tabs_use_plain_human_columns() -> None:
     with zipfile.ZipFile(WORKBOOK) as archive:
         targets = _sheet_targets(archive)
         shared_strings = _shared_strings(archive)
@@ -272,8 +272,10 @@ def test_d5_validation_workbook_v08_human_tabs_use_plain_human_columns() -> None
             assert "bron" in headers
 
 
-def test_d5_validation_workbook_v08_hides_right_side_control_tabs() -> None:
+def test_d5_validation_workbook_v09_hides_navigation_and_control_tabs() -> None:
     expected_hidden = {
+        "Stakeholderpakketten",
+        "Overzicht D5",
         "Monitoring cyclus",
         "D6 afhankelijkheden",
         "Validatielog",
@@ -285,7 +287,7 @@ def test_d5_validation_workbook_v08_hides_right_side_control_tabs() -> None:
         assert expected_hidden.issubset(states)
         assert {sheet for sheet, state in states.items() if state == "veryHidden"} == expected_hidden
         assert states["Start hier"] == "visible"
-        assert states["Overzicht D5"] == "visible"
+        assert states["Laagdremp. steunpunten"] == "visible"
 
 
 def test_d5_validation_workbook_uses_plain_pilot_wording() -> None:

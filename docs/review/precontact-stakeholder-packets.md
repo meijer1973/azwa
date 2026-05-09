@@ -3,7 +3,7 @@
 ## Summary
 Current sprint: Sprint 33.P4 - Pre-contact validation-readiness: build stakeholder packets.
 
-Generated on: 2026-05-03.
+Generated on: 2026-05-09.
 
 This file indexes filtered D5/D6 validation packet drafts. They are prepared, not sent. They are not stakeholder validation records.
 

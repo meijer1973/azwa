@@ -40,8 +40,8 @@ class WorkbookConfig:
 WORKBOOKS = [
     WorkbookConfig(
         workbook_id="d5_validation_workbook",
-        path=ROOT / "docs" / "review" / "D5_validatieformat_werkagenda_Almere_v0.1.xlsx",
-        version="v0.1",
+        path=ROOT / "docs" / "review" / "D5_validatieformat_werkagenda_Almere_v0.2.xlsx",
+        version="v0.2",
         validation_domain="D5",
         sheets={
             "Overzicht D5": SheetConfig(

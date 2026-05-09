@@ -23,7 +23,8 @@ Only these files should normally be used from the top level of this folder.
 | `precontact-stakeholder-packets.md` | Sprint 33.P4 index of filtered D5/D6 stakeholder packet drafts and CSV send-set files. Prepared only; not sent and not validation results. |
 | `precontact-internal-dry-run.md` | Sprint 33.P5 internal dry-run cases, pass/fail criteria and reviewer roles. Human reviewer execution is still pending. |
 | `precontact-response-workflow.md` | Sprint 33.P6 response-processing workflow for returned packet answers. No answers have been imported yet. |
-| `D5_validatieformat_werkagenda_Almere_v0.1.xlsx` | D5 pre-validation workbook baseline. This is a validation instrument, not a source or validation result. |
+| `D5_validatieformat_werkagenda_Almere_v0.2.xlsx` | Current D5 pre-validation workbook for the internal dry run. This is a validation instrument, not a source or validation result. |
+| `D5_validatieformat_werkagenda_Almere_v0.1.xlsx` | Preserved D5 workbook baseline from Sprint 33.P0. Keep for provenance; do not overwrite. |
 | `Almere_D6_validatieformats.xlsx` | D6 pre-validation workbook baseline. This is a validation instrument, not a source or validation result. |
 | `almere_d6_deep_research_learnings.md` | Clear summary of what Sprint 31.5 deep-research intake added to the public-source picture. |
 | `almere_d6_open_questions.md` | Clear list of what remains unknown and what must be asked of stakeholders, finance/controller roles or internal document owners. |

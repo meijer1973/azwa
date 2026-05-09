@@ -3,7 +3,7 @@
 ## Summary
 Current sprint: Sprint 33.P3 - Pre-contact validation-readiness: targeted pre-contact agents.
 
-Generated on: 2026-05-03.
+Generated on: 2026-05-09.
 
 This file contains narrow, copy-ready agent prompts for pre-contact QA. These prompts are prepared, not sent. They are meant to reduce validation workload before stakeholder packets are built.
 
@@ -46,7 +46,7 @@ Start from these repository inputs:
 - `docs/review/validation-workbook-prefill-audit.md`
 - `data/workagenda/validation_workbook_traceability_map.json`
 - `data/workagenda/validation_workbook_prefill_audit.json`
-- `docs/review/D5_validatieformat_werkagenda_Almere_v0.1.xlsx`
+- `docs/review/D5_validatieformat_werkagenda_Almere_v0.2.xlsx`
 - `docs/review/Almere_D6_validatieformats.xlsx`
 - `data/workagenda/d5_status_matrix.json`
 - `data/workagenda/d5_validation_tickets.json`
@@ -117,7 +117,7 @@ Start from these repository inputs:
 - `docs/review/validation-workbook-prefill-audit.md`
 - `data/workagenda/validation_workbook_traceability_map.json`
 - `data/workagenda/validation_workbook_prefill_audit.json`
-- `docs/review/D5_validatieformat_werkagenda_Almere_v0.1.xlsx`
+- `docs/review/D5_validatieformat_werkagenda_Almere_v0.2.xlsx`
 - `docs/review/Almere_D6_validatieformats.xlsx`
 - `config/monthly_source_audit.json`
 - `data/extracted/monthly_source_audit.json`
@@ -184,7 +184,7 @@ Start from these repository inputs:
 - `docs/review/validation-workbook-prefill-audit.md`
 - `data/workagenda/validation_workbook_traceability_map.json`
 - `data/workagenda/validation_workbook_prefill_audit.json`
-- `docs/review/D5_validatieformat_werkagenda_Almere_v0.1.xlsx`
+- `docs/review/D5_validatieformat_werkagenda_Almere_v0.2.xlsx`
 - `docs/review/Almere_D6_validatieformats.xlsx`
 - `data/workagenda/d5_status_matrix.json`
 - `data/workagenda/d5_validation_tickets.json`
@@ -250,7 +250,7 @@ Start from these repository inputs:
 - `docs/review/validation-workbook-prefill-audit.md`
 - `data/workagenda/validation_workbook_traceability_map.json`
 - `data/workagenda/validation_workbook_prefill_audit.json`
-- `docs/review/D5_validatieformat_werkagenda_Almere_v0.1.xlsx`
+- `docs/review/D5_validatieformat_werkagenda_Almere_v0.2.xlsx`
 - `docs/review/Almere_D6_validatieformats.xlsx`
 
 Focus only on:
@@ -313,7 +313,7 @@ Start from these repository inputs:
 - `docs/review/validation-workbook-prefill-audit.md`
 - `data/workagenda/validation_workbook_traceability_map.json`
 - `data/workagenda/validation_workbook_prefill_audit.json`
-- `docs/review/D5_validatieformat_werkagenda_Almere_v0.1.xlsx`
+- `docs/review/D5_validatieformat_werkagenda_Almere_v0.2.xlsx`
 - `docs/review/Almere_D6_validatieformats.xlsx`
 - `data/workagenda/d5_status_matrix.json`
 - `docs/review/almere_d6_validation_ticket_matrix.md`

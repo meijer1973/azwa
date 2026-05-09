@@ -3,7 +3,7 @@
 ## Summary
 Sprint covered: Sprint 33.P2 - Pre-contact validation-readiness: prefill audit and current working views.
 
-Generated on: 2026-05-03.
+Generated on: 2026-05-09.
 
 This audit checks whether the D5 and D6 validation workbooks are understandable before stakeholder contact. It checks current working views, answer/correction fields, evidence fields, broad questions and internal jargon. It does not validate the policy content.
 
@@ -28,7 +28,7 @@ The workbooks are usable as pre-contact drafts, but they still need packet clean
 
 ### D5 Workbook
 
-Path: `docs/review/D5_validatieformat_werkagenda_Almere_v0.1.xlsx`
+Path: `docs/review/D5_validatieformat_werkagenda_Almere_v0.2.xlsx`
 
 | Sheet | Status | Main cleanup need |
 | --- | --- | --- |

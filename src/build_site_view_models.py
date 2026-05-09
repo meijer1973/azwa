@@ -2520,10 +2520,10 @@ def build_site_updates_view(documents: dict[str, dict], timeline_register: dict,
         metrics = []
         for item in spec.get("metrics", []):
             label = item["label"].lower()
-            if "bronnen" in label:
-                metric_page_url = section_urls["bronnen"]
-            elif label == "claims":
+            if label == "claims" or "bronfragment" in label:
                 metric_page_url = section_urls["claims"]
+            elif "bronnen" in label:
+                metric_page_url = section_urls["bronnen"]
             else:
                 metric_page_url = section_urls["tijdlijn"]
             metrics.append(

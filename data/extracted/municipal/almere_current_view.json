@@ -2,8 +2,8 @@
   "municipality_id": "GM0034",
   "municipality_name": "Almere",
   "view_run_id": "phase7_phase8_views_v2",
-  "generated_on": "2026-05-01",
-  "as_of_date": "2026-05-01",
+  "generated_on": "2026-05-09",
+  "as_of_date": "2026-05-09",
   "source_interpretation_run_id": "phase6_current_interpretation_v2",
   "applicable_d5_items": [
     {
@@ -37,7 +37,7 @@
     {
       "item_id": "almere_d5_underbouwd",
       "topic": "d5.basisfunctionaliteiten_onderbouwd",
-      "summary": "Current view combines 35 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
+      "summary": "Current view combines 43 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
       "claim_ids": [
         "clm__nat_gala_2023_gezond_en_actief_leven_d5_003",
         "clm__nat_gala_2023_gezond_en_actief_leven_d5_001",
@@ -53,10 +53,18 @@
         "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d5_002",
         "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d5_003",
         "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d5_001",
+        "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_d5_003",
+        "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_d5_001",
+        "clm__reg_ggd_flevoland_valpreventie_lelystad_2025_d5_003",
+        "clm__reg_ggd_flevoland_valpreventie_lelystad_2025_d5_001",
+        "clm__reg_ros_friesland_zorgpad_vroegsignalering_zwangeren_2024_d5_001",
         "clm__nat_zorgakkoorden_werkagenda_handvatten_2026_d5_001",
         "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_d5_002",
         "clm__nat_vng_ledenbrief_onderhandelaarsakkoord_azwa_2025_d5_002",
         "clm__nat_zorgakkoorden_pga_20_miljoen_2024_d5_001",
+        "clm__reg_amstellandzorg_welzijn_op_recept_procesflow_2024_d5_003",
+        "clm__reg_amstellandzorg_welzijn_op_recept_procesflow_2024_d5_002",
+        "clm__reg_amstellandzorg_welzijn_op_recept_procesflow_2024_d5_001",
         "clm__reg_flevoland_2023_regiobeeld_d5_003",
         "clm__reg_flevoland_2023_regiobeeld_d5_002",
         "clm__reg_flevoland_2023_regiobeeld_d5_001",
@@ -140,6 +148,27 @@
           "document_status": "current"
         },
         {
+          "document_id": "reg_ggd_flevoland_valpreventie_almere_ketendocument_2026",
+          "title": "Ketendocument Valpreventie Almere",
+          "jurisdiction_level": "regional",
+          "document_type": "regional_project_plan",
+          "document_status": "current"
+        },
+        {
+          "document_id": "reg_ggd_flevoland_valpreventie_lelystad_2025",
+          "title": "Ketendocument Valpreventie Lelystad",
+          "jurisdiction_level": "regional",
+          "document_type": "regional_project_plan",
+          "document_status": "reference"
+        },
+        {
+          "document_id": "reg_ros_friesland_zorgpad_vroegsignalering_zwangeren_2024",
+          "title": "Zorgpad Vroegsignalering Zwangeren Fryslan inclusief PHB-JGZ",
+          "jurisdiction_level": "regional",
+          "document_type": "regional_project_plan",
+          "document_status": "reference"
+        },
+        {
           "document_id": "nat_zorgakkoorden_werkagenda_handvatten_2026",
           "title": "Handvatten voor het opstellen van de regionale werkagenda",
           "jurisdiction_level": "national",
@@ -166,6 +195,13 @@
           "jurisdiction_level": "national",
           "document_type": "national_news_page",
           "document_status": "current"
+        },
+        {
+          "document_id": "reg_amstellandzorg_welzijn_op_recept_procesflow_2024",
+          "title": "Procesflow Welzijn op Recept",
+          "jurisdiction_level": "regional",
+          "document_type": "process_note",
+          "document_status": "reference"
         },
         {
           "document_id": "reg_flevoland_2023_regiobeeld",
@@ -231,9 +267,10 @@
     {
       "item_id": "almere_d5_workagenda",
       "topic": "d5.regional_workagenda",
-      "summary": "Current view combines 3 compatible claims led by nat_azwa_2025_definitief. Lower-authority claims clarify or implement the baseline rather than replacing it.",
+      "summary": "Current view combines 4 compatible claims led by nat_azwa_2025_definitief. Lower-authority claims clarify or implement the baseline rather than replacing it.",
       "claim_ids": [
         "clm__nat_azwa_2025_definitief_d5_003",
+        "clm__nat_leidraad_consultatiefunctie_ggz_sociaal_domein_2024_d5_001",
         "clm__nat_zorgakkoorden_werkagenda_handvatten_2026_d5_003",
         "clm__nat_azwa_toelichting_producten_proces_2026_d5_003"
       ],
@@ -244,6 +281,13 @@
           "jurisdiction_level": "national",
           "document_type": "agreement",
           "document_status": "current"
+        },
+        {
+          "document_id": "nat_leidraad_consultatiefunctie_ggz_sociaal_domein_2024",
+          "title": "Leidraad consultatiefunctie ggz voor het sociaal domein",
+          "jurisdiction_level": "national",
+          "document_type": "implementation_framework",
+          "document_status": "reference"
         },
         {
           "document_id": "nat_zorgakkoorden_werkagenda_handvatten_2026",
@@ -515,7 +559,7 @@
     {
       "item_id": "almere_d6_local_teams",
       "topic": "d6.local_teams",
-      "summary": "Current view combines 13 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
+      "summary": "Current view combines 14 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
       "claim_ids": [
         "clm__nat_azwa_2025_definitief_d6_002",
         "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d6_001",
@@ -525,6 +569,7 @@
         "clm__mun_almere_2026_stevige_lokale_teams_raadsvoorstel_d6_003",
         "clm__mun_almere_2026_stevige_lokale_teams_besluitenlijst_d6_001",
         "clm__mun_almere_2026_stevige_lokale_teams_begrotingswijziging_d6_001",
+        "clm__reg_samen_nijmegen_protocol_kwetsbare_zwangere_2024_d6_001",
         "clm__mun_almere_sociaal_domein_informatiepagina_d6_001",
         "clm__mun_almere_2026_stevige_lokale_teams_raad_d6_003",
         "clm__mun_almere_2026_stevige_lokale_teams_raad_d6_002",
@@ -579,6 +624,13 @@
           "title": "Stevige Lokale Teams en inzet Investeringsfonds jeugd en gezin - begrotingswijziging",
           "jurisdiction_level": "municipal",
           "document_type": "municipal_budget_change",
+          "document_status": "reference"
+        },
+        {
+          "document_id": "reg_samen_nijmegen_protocol_kwetsbare_zwangere_2024",
+          "title": "VSV protocol kwetsbare zwangere 6.0",
+          "jurisdiction_level": "regional",
+          "document_type": "regional_project_plan",
           "document_status": "reference"
         },
         {
@@ -792,7 +844,7 @@
     {
       "item_id": "almere_d6_translation",
       "topic": "municipal.implementation_translation",
-      "summary": "Current view combines 186 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
+      "summary": "Current view combines 197 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
       "claim_ids": [
         "clm__nat_wetten_spuk_transformatiemiddelen_regeling_municipal_translation_003",
         "clm__nat_wetten_spuk_transformatiemiddelen_regeling_municipal_translation_002",
@@ -829,6 +881,14 @@
         "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_municipal_translation_003",
         "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_municipal_translation_002",
         "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_municipal_translation_001",
+        "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_municipal_translation_003",
+        "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_municipal_translation_002",
+        "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_municipal_translation_001",
+        "clm__reg_ggd_flevoland_valpreventie_lelystad_2025_municipal_translation_003",
+        "clm__reg_ggd_flevoland_valpreventie_lelystad_2025_municipal_translation_002",
+        "clm__reg_ggd_flevoland_valpreventie_lelystad_2025_municipal_translation_001",
+        "clm__reg_ros_friesland_zorgpad_vroegsignalering_zwangeren_2024_municipal_translation_003",
+        "clm__reg_ros_friesland_zorgpad_vroegsignalering_zwangeren_2024_municipal_translation_001",
         "clm__mun_almere_pga_samen_sterker_wijk_municipal_translation_003",
         "clm__mun_almere_pga_samen_sterker_wijk_municipal_translation_002",
         "clm__mun_almere_pga_samen_sterker_wijk_municipal_translation_001",
@@ -893,6 +953,9 @@
         "clm__mun_almere_2024_2034_maatschappelijke_agenda_municipal_translation_001",
         "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_municipal_translation_003",
         "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_municipal_translation_001",
+        "clm__reg_amstellandzorg_welzijn_op_recept_procesflow_2024_municipal_translation_003",
+        "clm__reg_amstellandzorg_welzijn_op_recept_procesflow_2024_municipal_translation_002",
+        "clm__reg_amstellandzorg_welzijn_op_recept_procesflow_2024_municipal_translation_001",
         "clm__mun_almere_sociale_veerkracht_almeerders_municipal_translation_003",
         "clm__mun_almere_sociale_veerkracht_almeerders_municipal_translation_002",
         "clm__mun_almere_sociale_veerkracht_almeerders_municipal_translation_001",
@@ -1088,6 +1151,27 @@
           "document_status": "current"
         },
         {
+          "document_id": "reg_ggd_flevoland_valpreventie_almere_ketendocument_2026",
+          "title": "Ketendocument Valpreventie Almere",
+          "jurisdiction_level": "regional",
+          "document_type": "regional_project_plan",
+          "document_status": "current"
+        },
+        {
+          "document_id": "reg_ggd_flevoland_valpreventie_lelystad_2025",
+          "title": "Ketendocument Valpreventie Lelystad",
+          "jurisdiction_level": "regional",
+          "document_type": "regional_project_plan",
+          "document_status": "reference"
+        },
+        {
+          "document_id": "reg_ros_friesland_zorgpad_vroegsignalering_zwangeren_2024",
+          "title": "Zorgpad Vroegsignalering Zwangeren Fryslan inclusief PHB-JGZ",
+          "jurisdiction_level": "regional",
+          "document_type": "regional_project_plan",
+          "document_status": "reference"
+        },
+        {
           "document_id": "mun_almere_pga_samen_sterker_wijk",
           "title": "Samen Sterker in de Wijk: mentale veerkracht in Almere",
           "jurisdiction_level": "municipal",
@@ -1254,6 +1338,13 @@
           "jurisdiction_level": "municipal",
           "document_type": "municipal_policy_summary",
           "document_status": "supporting"
+        },
+        {
+          "document_id": "reg_amstellandzorg_welzijn_op_recept_procesflow_2024",
+          "title": "Procesflow Welzijn op Recept",
+          "jurisdiction_level": "regional",
+          "document_type": "process_note",
+          "document_status": "reference"
         },
         {
           "document_id": "mun_almere_sociale_veerkracht_almeerders",
@@ -1530,10 +1621,18 @@
         "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d5_002",
         "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d5_003",
         "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d5_001",
+        "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_d5_003",
+        "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_d5_001",
+        "clm__reg_ggd_flevoland_valpreventie_lelystad_2025_d5_003",
+        "clm__reg_ggd_flevoland_valpreventie_lelystad_2025_d5_001",
+        "clm__reg_ros_friesland_zorgpad_vroegsignalering_zwangeren_2024_d5_001",
         "clm__nat_zorgakkoorden_werkagenda_handvatten_2026_d5_001",
         "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_d5_002",
         "clm__nat_vng_ledenbrief_onderhandelaarsakkoord_azwa_2025_d5_002",
         "clm__nat_zorgakkoorden_pga_20_miljoen_2024_d5_001",
+        "clm__reg_amstellandzorg_welzijn_op_recept_procesflow_2024_d5_003",
+        "clm__reg_amstellandzorg_welzijn_op_recept_procesflow_2024_d5_002",
+        "clm__reg_amstellandzorg_welzijn_op_recept_procesflow_2024_d5_001",
         "clm__reg_flevoland_2023_regiobeeld_d5_003",
         "clm__reg_flevoland_2023_regiobeeld_d5_002",
         "clm__reg_flevoland_2023_regiobeeld_d5_001",
@@ -1552,6 +1651,7 @@
         "clm__mun_deschoor_buurtkamers_d5_003",
         "clm__mun_deschoor_buurtkamers_d5_001",
         "clm__nat_azwa_2025_definitief_d5_003",
+        "clm__nat_leidraad_consultatiefunctie_ggz_sociaal_domein_2024_d5_001",
         "clm__nat_zorgakkoorden_werkagenda_handvatten_2026_d5_003",
         "clm__nat_azwa_toelichting_producten_proces_2026_d5_003",
         "clm__mun_almere_pga_transformatieplan_municipal_translation_001",
@@ -1760,6 +1860,15 @@
       ]
     },
     {
+      "document_id": "reg_amstellandzorg_welzijn_op_recept_procesflow_2024",
+      "title": "Procesflow Welzijn op Recept",
+      "document_type": "process_note",
+      "relevant_topics": [
+        "d5.basisfunctionaliteiten_onderbouwd",
+        "municipal.implementation_translation"
+      ]
+    },
+    {
       "document_id": "reg_flever_inwoners_onderdeel_pga",
       "title": "Inwoners onderdeel van Positief Gezond Almere (PGA)",
       "document_type": "provider_news_page",
@@ -1881,10 +1990,39 @@
       ]
     },
     {
+      "document_id": "reg_ggd_flevoland_valpreventie_almere_ketendocument_2026",
+      "title": "Ketendocument Valpreventie Almere",
+      "document_type": "regional_project_plan",
+      "relevant_topics": [
+        "d5.basisfunctionaliteiten_onderbouwd",
+        "finance.local_alignment_goal",
+        "municipal.implementation_translation"
+      ]
+    },
+    {
+      "document_id": "reg_ggd_flevoland_valpreventie_lelystad_2025",
+      "title": "Ketendocument Valpreventie Lelystad",
+      "document_type": "regional_project_plan",
+      "relevant_topics": [
+        "d5.basisfunctionaliteiten_onderbouwd",
+        "finance.local_alignment_goal",
+        "municipal.implementation_translation"
+      ]
+    },
+    {
       "document_id": "reg_npz_almere_pilot_viewer_acp",
       "title": "Pilot viewer-ACP",
       "document_type": "regional_project_page",
       "relevant_topics": [
+        "municipal.implementation_translation"
+      ]
+    },
+    {
+      "document_id": "reg_ros_friesland_zorgpad_vroegsignalering_zwangeren_2024",
+      "title": "Zorgpad Vroegsignalering Zwangeren Fryslan inclusief PHB-JGZ",
+      "document_type": "regional_project_plan",
+      "relevant_topics": [
+        "d5.basisfunctionaliteiten_onderbouwd",
         "municipal.implementation_translation"
       ]
     },
@@ -1894,6 +2032,14 @@
       "document_type": "regional_service_page",
       "relevant_topics": [
         "municipal.implementation_translation"
+      ]
+    },
+    {
+      "document_id": "reg_samen_nijmegen_protocol_kwetsbare_zwangere_2024",
+      "title": "VSV protocol kwetsbare zwangere 6.0",
+      "document_type": "regional_project_plan",
+      "relevant_topics": [
+        "d6.local_teams"
       ]
     },
     {
@@ -2297,7 +2443,7 @@
   "uncertain_items": [
     {
       "topic": "d5.basisfunctionaliteiten_onderbouwd",
-      "summary": "Current view combines 35 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
+      "summary": "Current view combines 43 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
       "claim_ids": [
         "clm__nat_gala_2023_gezond_en_actief_leven_d5_003",
         "clm__nat_gala_2023_gezond_en_actief_leven_d5_001",
@@ -2313,10 +2459,18 @@
         "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d5_002",
         "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d5_003",
         "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d5_001",
+        "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_d5_003",
+        "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_d5_001",
+        "clm__reg_ggd_flevoland_valpreventie_lelystad_2025_d5_003",
+        "clm__reg_ggd_flevoland_valpreventie_lelystad_2025_d5_001",
+        "clm__reg_ros_friesland_zorgpad_vroegsignalering_zwangeren_2024_d5_001",
         "clm__nat_zorgakkoorden_werkagenda_handvatten_2026_d5_001",
         "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_d5_002",
         "clm__nat_vng_ledenbrief_onderhandelaarsakkoord_azwa_2025_d5_002",
         "clm__nat_zorgakkoorden_pga_20_miljoen_2024_d5_001",
+        "clm__reg_amstellandzorg_welzijn_op_recept_procesflow_2024_d5_003",
+        "clm__reg_amstellandzorg_welzijn_op_recept_procesflow_2024_d5_002",
+        "clm__reg_amstellandzorg_welzijn_op_recept_procesflow_2024_d5_001",
         "clm__reg_flevoland_2023_regiobeeld_d5_003",
         "clm__reg_flevoland_2023_regiobeeld_d5_002",
         "clm__reg_flevoland_2023_regiobeeld_d5_001",
@@ -2400,6 +2554,27 @@
           "document_status": "current"
         },
         {
+          "document_id": "reg_ggd_flevoland_valpreventie_almere_ketendocument_2026",
+          "title": "Ketendocument Valpreventie Almere",
+          "jurisdiction_level": "regional",
+          "document_type": "regional_project_plan",
+          "document_status": "current"
+        },
+        {
+          "document_id": "reg_ggd_flevoland_valpreventie_lelystad_2025",
+          "title": "Ketendocument Valpreventie Lelystad",
+          "jurisdiction_level": "regional",
+          "document_type": "regional_project_plan",
+          "document_status": "reference"
+        },
+        {
+          "document_id": "reg_ros_friesland_zorgpad_vroegsignalering_zwangeren_2024",
+          "title": "Zorgpad Vroegsignalering Zwangeren Fryslan inclusief PHB-JGZ",
+          "jurisdiction_level": "regional",
+          "document_type": "regional_project_plan",
+          "document_status": "reference"
+        },
+        {
           "document_id": "nat_zorgakkoorden_werkagenda_handvatten_2026",
           "title": "Handvatten voor het opstellen van de regionale werkagenda",
           "jurisdiction_level": "national",
@@ -2426,6 +2601,13 @@
           "jurisdiction_level": "national",
           "document_type": "national_news_page",
           "document_status": "current"
+        },
+        {
+          "document_id": "reg_amstellandzorg_welzijn_op_recept_procesflow_2024",
+          "title": "Procesflow Welzijn op Recept",
+          "jurisdiction_level": "regional",
+          "document_type": "process_note",
+          "document_status": "reference"
         },
         {
           "document_id": "reg_flevoland_2023_regiobeeld",
@@ -2621,7 +2803,7 @@
     },
     {
       "topic": "d5.other",
-      "summary": "Current view combines 19 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
+      "summary": "Current view combines 21 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
       "claim_ids": [
         "clm__nat_azwa_2026_voortgang_kamerbrief_d5_003",
         "clm__nat_azwa_2026_voortgang_kamerbrief_d5_001",
@@ -2629,6 +2811,8 @@
         "clm__nat_azwa_2025_aanbiedingsbrief_d5_001",
         "clm__reg_ggd_flevoland_begroting_2026_d5_002",
         "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d5_002",
+        "clm__reg_samen_nijmegen_protocol_kwetsbare_zwangere_2024_d5_002",
+        "clm__reg_ros_friesland_zorgpad_vroegsignalering_zwangeren_2024_d5_002",
         "clm__nat_zorgakkoorden_werkagenda_handvatten_2026_d5_002",
         "clm__nat_vng_ledenbrief_azwa_financiering_2026_d5_002",
         "clm__nat_vng_ledenbrief_azwa_financiering_2026_d5_001",
@@ -2678,6 +2862,20 @@
           "jurisdiction_level": "municipal",
           "document_type": "municipal_program_plan",
           "document_status": "current"
+        },
+        {
+          "document_id": "reg_samen_nijmegen_protocol_kwetsbare_zwangere_2024",
+          "title": "VSV protocol kwetsbare zwangere 6.0",
+          "jurisdiction_level": "regional",
+          "document_type": "regional_project_plan",
+          "document_status": "reference"
+        },
+        {
+          "document_id": "reg_ros_friesland_zorgpad_vroegsignalering_zwangeren_2024",
+          "title": "Zorgpad Vroegsignalering Zwangeren Fryslan inclusief PHB-JGZ",
+          "jurisdiction_level": "regional",
+          "document_type": "regional_project_plan",
+          "document_status": "reference"
         },
         {
           "document_id": "nat_zorgakkoorden_werkagenda_handvatten_2026",
@@ -2747,9 +2945,10 @@
     },
     {
       "topic": "d5.regional_workagenda",
-      "summary": "Current view combines 3 compatible claims led by nat_azwa_2025_definitief. Lower-authority claims clarify or implement the baseline rather than replacing it.",
+      "summary": "Current view combines 4 compatible claims led by nat_azwa_2025_definitief. Lower-authority claims clarify or implement the baseline rather than replacing it.",
       "claim_ids": [
         "clm__nat_azwa_2025_definitief_d5_003",
+        "clm__nat_leidraad_consultatiefunctie_ggz_sociaal_domein_2024_d5_001",
         "clm__nat_zorgakkoorden_werkagenda_handvatten_2026_d5_003",
         "clm__nat_azwa_toelichting_producten_proces_2026_d5_003"
       ],
@@ -2760,6 +2959,13 @@
           "jurisdiction_level": "national",
           "document_type": "agreement",
           "document_status": "current"
+        },
+        {
+          "document_id": "nat_leidraad_consultatiefunctie_ggz_sociaal_domein_2024",
+          "title": "Leidraad consultatiefunctie ggz voor het sociaal domein",
+          "jurisdiction_level": "national",
+          "document_type": "implementation_framework",
+          "document_status": "reference"
         },
         {
           "document_id": "nat_zorgakkoorden_werkagenda_handvatten_2026",
@@ -3060,7 +3266,7 @@
     },
     {
       "topic": "d6.local_teams",
-      "summary": "Current view combines 13 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
+      "summary": "Current view combines 14 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
       "claim_ids": [
         "clm__nat_azwa_2025_definitief_d6_002",
         "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d6_001",
@@ -3070,6 +3276,7 @@
         "clm__mun_almere_2026_stevige_lokale_teams_raadsvoorstel_d6_003",
         "clm__mun_almere_2026_stevige_lokale_teams_besluitenlijst_d6_001",
         "clm__mun_almere_2026_stevige_lokale_teams_begrotingswijziging_d6_001",
+        "clm__reg_samen_nijmegen_protocol_kwetsbare_zwangere_2024_d6_001",
         "clm__mun_almere_sociaal_domein_informatiepagina_d6_001",
         "clm__mun_almere_2026_stevige_lokale_teams_raad_d6_003",
         "clm__mun_almere_2026_stevige_lokale_teams_raad_d6_002",
@@ -3127,6 +3334,13 @@
           "document_status": "reference"
         },
         {
+          "document_id": "reg_samen_nijmegen_protocol_kwetsbare_zwangere_2024",
+          "title": "VSV protocol kwetsbare zwangere 6.0",
+          "jurisdiction_level": "regional",
+          "document_type": "regional_project_plan",
+          "document_status": "reference"
+        },
+        {
           "document_id": "mun_almere_sociaal_domein_informatiepagina",
           "title": "Informatiepagina Sociaal Domein",
           "jurisdiction_level": "municipal",
@@ -3152,7 +3366,7 @@
     },
     {
       "topic": "d6.other",
-      "summary": "Current view combines 62 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
+      "summary": "Current view combines 66 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
       "claim_ids": [
         "clm__nat_gala_2023_gezond_en_actief_leven_d6_003",
         "clm__nat_gala_2023_gezond_en_actief_leven_d6_001",
@@ -3167,6 +3381,8 @@
         "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d6_001",
         "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_d6_003",
         "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_d6_002",
+        "clm__reg_samen_nijmegen_protocol_kwetsbare_zwangere_2024_d6_003",
+        "clm__reg_samen_nijmegen_protocol_kwetsbare_zwangere_2024_d6_002",
         "clm__mun_almere_pga_samen_sterker_wijk_d6_003",
         "clm__mun_almere_pga_samen_sterker_wijk_d6_001",
         "clm__mun_almere_pga_regionaal_transferpunt_d6_003",
@@ -3175,6 +3391,8 @@
         "clm__reg_ggd_flevoland_2024_ouderen_gemeenten_d6_002",
         "clm__mun_almere_pga_seo_businesscase_2024_d6_003",
         "clm__mun_almere_pga_seo_businesscase_2024_d6_001",
+        "clm__reg_amstellandzorg_welzijn_op_recept_procesflow_2024_d6_002",
+        "clm__reg_amstellandzorg_welzijn_op_recept_procesflow_2024_d6_001",
         "clm__mun_almere_sociale_veerkracht_almeerders_d6_001",
         "clm__reg_flevoland_2023_regiobeeld_d6_003",
         "clm__reg_npz_almere_pilot_viewer_acp_d6_001",
@@ -3275,6 +3493,13 @@
           "document_status": "current"
         },
         {
+          "document_id": "reg_samen_nijmegen_protocol_kwetsbare_zwangere_2024",
+          "title": "VSV protocol kwetsbare zwangere 6.0",
+          "jurisdiction_level": "regional",
+          "document_type": "regional_project_plan",
+          "document_status": "reference"
+        },
+        {
           "document_id": "mun_almere_pga_samen_sterker_wijk",
           "title": "Samen Sterker in de Wijk: mentale veerkracht in Almere",
           "jurisdiction_level": "municipal",
@@ -3314,6 +3539,13 @@
           "title": "Naar een positief gezond Almere; Beleidstheorie en businesscase transformatieplan",
           "jurisdiction_level": "municipal",
           "document_type": "research_report",
+          "document_status": "reference"
+        },
+        {
+          "document_id": "reg_amstellandzorg_welzijn_op_recept_procesflow_2024",
+          "title": "Procesflow Welzijn op Recept",
+          "jurisdiction_level": "regional",
+          "document_type": "process_note",
           "document_status": "reference"
         },
         {
@@ -3496,11 +3728,16 @@
     },
     {
       "topic": "d6.regional_coordination",
-      "summary": "Current view combines 23 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
+      "summary": "Current view combines 28 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
       "claim_ids": [
         "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d6_003",
         "clm__reg_ggd_flevoland_begroting_2026_d6_003",
         "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_d6_001",
+        "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_d6_003",
+        "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_d6_001",
+        "clm__reg_ggd_flevoland_valpreventie_lelystad_2025_d6_003",
+        "clm__reg_ggd_flevoland_valpreventie_lelystad_2025_d6_001",
+        "clm__reg_ros_friesland_zorgpad_vroegsignalering_zwangeren_2024_d6_001",
         "clm__mun_almere_pga_samen_sterker_wijk_d6_002",
         "clm__reg_flevoland_2023_regiobeeld_d6_002",
         "clm__reg_zonmw_samen_sterker_uitvoeringsplan_d6_001",
@@ -3543,6 +3780,27 @@
           "jurisdiction_level": "municipal",
           "document_type": "municipal_council_proposal",
           "document_status": "current"
+        },
+        {
+          "document_id": "reg_ggd_flevoland_valpreventie_almere_ketendocument_2026",
+          "title": "Ketendocument Valpreventie Almere",
+          "jurisdiction_level": "regional",
+          "document_type": "regional_project_plan",
+          "document_status": "current"
+        },
+        {
+          "document_id": "reg_ggd_flevoland_valpreventie_lelystad_2025",
+          "title": "Ketendocument Valpreventie Lelystad",
+          "jurisdiction_level": "regional",
+          "document_type": "regional_project_plan",
+          "document_status": "reference"
+        },
+        {
+          "document_id": "reg_ros_friesland_zorgpad_vroegsignalering_zwangeren_2024",
+          "title": "Zorgpad Vroegsignalering Zwangeren Fryslan inclusief PHB-JGZ",
+          "jurisdiction_level": "regional",
+          "document_type": "regional_project_plan",
+          "document_status": "reference"
         },
         {
           "document_id": "mun_almere_pga_samen_sterker_wijk",
@@ -3783,9 +4041,11 @@
     },
     {
       "topic": "finance.local_alignment_goal",
-      "summary": "Current view combines 4 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
+      "summary": "Current view combines 6 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
       "claim_ids": [
         "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_governance_and_finance_002",
+        "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_governance_and_finance_003",
+        "clm__reg_ggd_flevoland_valpreventie_lelystad_2025_governance_and_finance_003",
         "clm__mun_almere_pga_transformatieplan_governance_and_finance_002",
         "clm__nat_vng_ledenbrief_onderhandelaarsakkoord_azwa_2025_governance_and_finance_003",
         "clm__mun_almere_pga_seo_businesscase_2024_governance_and_finance_003"
@@ -3797,6 +4057,20 @@
           "jurisdiction_level": "municipal",
           "document_type": "municipal_policy",
           "document_status": "current"
+        },
+        {
+          "document_id": "reg_ggd_flevoland_valpreventie_almere_ketendocument_2026",
+          "title": "Ketendocument Valpreventie Almere",
+          "jurisdiction_level": "regional",
+          "document_type": "regional_project_plan",
+          "document_status": "current"
+        },
+        {
+          "document_id": "reg_ggd_flevoland_valpreventie_lelystad_2025",
+          "title": "Ketendocument Valpreventie Lelystad",
+          "jurisdiction_level": "regional",
+          "document_type": "regional_project_plan",
+          "document_status": "reference"
         },
         {
           "document_id": "mun_almere_pga_transformatieplan",
@@ -3915,7 +4189,7 @@
     },
     {
       "topic": "governance_and_finance.other",
-      "summary": "Current view combines 63 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
+      "summary": "Current view combines 71 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
       "claim_ids": [
         "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_governance_and_finance_003",
         "clm__nat_azwa_opdracht_werkagenda_d5_2026_governance_and_finance_003",
@@ -3939,6 +4213,12 @@
         "clm__mun_almere_nadere_regels_buurtontmoeting_governance_and_finance_002",
         "clm__mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd_governance_and_finance_002",
         "clm__mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd_governance_and_finance_001",
+        "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_governance_and_finance_002",
+        "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_governance_and_finance_001",
+        "clm__reg_ggd_flevoland_valpreventie_lelystad_2025_governance_and_finance_002",
+        "clm__reg_ggd_flevoland_valpreventie_lelystad_2025_governance_and_finance_001",
+        "clm__reg_samen_nijmegen_protocol_kwetsbare_zwangere_2024_governance_and_finance_002",
+        "clm__reg_samen_nijmegen_protocol_kwetsbare_zwangere_2024_governance_and_finance_001",
         "clm__nat_zorgakkoorden_werkagenda_handvatten_2026_governance_and_finance_003",
         "clm__nat_zorgakkoorden_werkagenda_handvatten_2026_governance_and_finance_001",
         "clm__nat_vng_ledenbrief_azwa_financiering_2026_governance_and_finance_003",
@@ -3957,6 +4237,8 @@
         "clm__mun_almere_2024_2034_maatschappelijke_agenda_governance_and_finance_001",
         "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_governance_and_finance_002",
         "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_governance_and_finance_001",
+        "clm__reg_amstellandzorg_welzijn_op_recept_procesflow_2024_governance_and_finance_002",
+        "clm__reg_amstellandzorg_welzijn_op_recept_procesflow_2024_governance_and_finance_001",
         "clm__mun_almere_sociale_veerkracht_almeerders_governance_and_finance_003",
         "clm__mun_almere_sociale_veerkracht_almeerders_governance_and_finance_002",
         "clm__reg_flevoland_2023_regiobeeld_governance_and_finance_003",
@@ -4060,6 +4342,27 @@
           "document_status": "current"
         },
         {
+          "document_id": "reg_ggd_flevoland_valpreventie_almere_ketendocument_2026",
+          "title": "Ketendocument Valpreventie Almere",
+          "jurisdiction_level": "regional",
+          "document_type": "regional_project_plan",
+          "document_status": "current"
+        },
+        {
+          "document_id": "reg_ggd_flevoland_valpreventie_lelystad_2025",
+          "title": "Ketendocument Valpreventie Lelystad",
+          "jurisdiction_level": "regional",
+          "document_type": "regional_project_plan",
+          "document_status": "reference"
+        },
+        {
+          "document_id": "reg_samen_nijmegen_protocol_kwetsbare_zwangere_2024",
+          "title": "VSV protocol kwetsbare zwangere 6.0",
+          "jurisdiction_level": "regional",
+          "document_type": "regional_project_plan",
+          "document_status": "reference"
+        },
+        {
           "document_id": "nat_zorgakkoorden_werkagenda_handvatten_2026",
           "title": "Handvatten voor het opstellen van de regionale werkagenda",
           "jurisdiction_level": "national",
@@ -4128,6 +4431,13 @@
           "jurisdiction_level": "municipal",
           "document_type": "municipal_policy_summary",
           "document_status": "supporting"
+        },
+        {
+          "document_id": "reg_amstellandzorg_welzijn_op_recept_procesflow_2024",
+          "title": "Procesflow Welzijn op Recept",
+          "jurisdiction_level": "regional",
+          "document_type": "process_note",
+          "document_status": "reference"
         },
         {
           "document_id": "mun_almere_sociale_veerkracht_almeerders",
@@ -4393,7 +4703,7 @@
     },
     {
       "topic": "monitoring.other",
-      "summary": "Current view combines 87 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
+      "summary": "Current view combines 98 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
       "claim_ids": [
         "clm__nat_wetten_spuk_transformatiemiddelen_regeling_monitoring_and_evaluation_003",
         "clm__nat_wetten_spuk_transformatiemiddelen_regeling_monitoring_and_evaluation_001",
@@ -4423,6 +4733,16 @@
         "clm__mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd_monitoring_and_evaluation_001",
         "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_monitoring_and_evaluation_002",
         "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_monitoring_and_evaluation_001",
+        "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_monitoring_and_evaluation_003",
+        "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_monitoring_and_evaluation_002",
+        "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_monitoring_and_evaluation_001",
+        "clm__reg_ggd_flevoland_valpreventie_lelystad_2025_monitoring_and_evaluation_003",
+        "clm__reg_ggd_flevoland_valpreventie_lelystad_2025_monitoring_and_evaluation_002",
+        "clm__reg_ggd_flevoland_valpreventie_lelystad_2025_monitoring_and_evaluation_001",
+        "clm__reg_samen_nijmegen_protocol_kwetsbare_zwangere_2024_monitoring_and_evaluation_001",
+        "clm__reg_ros_friesland_zorgpad_vroegsignalering_zwangeren_2024_monitoring_and_evaluation_003",
+        "clm__reg_ros_friesland_zorgpad_vroegsignalering_zwangeren_2024_monitoring_and_evaluation_002",
+        "clm__reg_ros_friesland_zorgpad_vroegsignalering_zwangeren_2024_monitoring_and_evaluation_001",
         "clm__mun_almere_pga_current_home_monitoring_and_evaluation_001",
         "clm__nat_vng_ledenbrief_azwa_financiering_2026_monitoring_and_evaluation_003",
         "clm__nat_vng_ledenbrief_azwa_financiering_2026_monitoring_and_evaluation_001",
@@ -4442,6 +4762,7 @@
         "clm__reg_ggd_flevoland_2024_ouderen_gemeenten_monitoring_and_evaluation_001",
         "clm__mun_almere_pga_seo_businesscase_2024_monitoring_and_evaluation_001",
         "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_monitoring_and_evaluation_001",
+        "clm__reg_amstellandzorg_welzijn_op_recept_procesflow_2024_monitoring_and_evaluation_002",
         "clm__mun_almere_sociale_veerkracht_almeerders_monitoring_and_evaluation_003",
         "clm__mun_almere_sociale_veerkracht_almeerders_monitoring_and_evaluation_002",
         "clm__mun_almere_sociale_veerkracht_almeerders_monitoring_and_evaluation_001",
@@ -4576,6 +4897,34 @@
           "document_status": "current"
         },
         {
+          "document_id": "reg_ggd_flevoland_valpreventie_almere_ketendocument_2026",
+          "title": "Ketendocument Valpreventie Almere",
+          "jurisdiction_level": "regional",
+          "document_type": "regional_project_plan",
+          "document_status": "current"
+        },
+        {
+          "document_id": "reg_ggd_flevoland_valpreventie_lelystad_2025",
+          "title": "Ketendocument Valpreventie Lelystad",
+          "jurisdiction_level": "regional",
+          "document_type": "regional_project_plan",
+          "document_status": "reference"
+        },
+        {
+          "document_id": "reg_samen_nijmegen_protocol_kwetsbare_zwangere_2024",
+          "title": "VSV protocol kwetsbare zwangere 6.0",
+          "jurisdiction_level": "regional",
+          "document_type": "regional_project_plan",
+          "document_status": "reference"
+        },
+        {
+          "document_id": "reg_ros_friesland_zorgpad_vroegsignalering_zwangeren_2024",
+          "title": "Zorgpad Vroegsignalering Zwangeren Fryslan inclusief PHB-JGZ",
+          "jurisdiction_level": "regional",
+          "document_type": "regional_project_plan",
+          "document_status": "reference"
+        },
+        {
           "document_id": "mun_almere_pga_current_home",
           "title": "Positief Gezond Almere",
           "jurisdiction_level": "municipal",
@@ -4651,6 +5000,13 @@
           "jurisdiction_level": "municipal",
           "document_type": "municipal_policy_summary",
           "document_status": "supporting"
+        },
+        {
+          "document_id": "reg_amstellandzorg_welzijn_op_recept_procesflow_2024",
+          "title": "Procesflow Welzijn op Recept",
+          "jurisdiction_level": "regional",
+          "document_type": "process_note",
+          "document_status": "reference"
         },
         {
           "document_id": "mun_almere_sociale_veerkracht_almeerders",
@@ -4818,9 +5174,10 @@
     },
     {
       "topic": "monitoring.regional_monitoring_plan",
-      "summary": "Current view combines 2 compatible claims for monitoring.regional_monitoring_plan, led by reg_flevoland_2023_regioplan_iza: The Regioplan calls for a 2024 monitoringsplan to show whether the transformatie is visible and whether the region is on course.",
+      "summary": "Current view combines 3 compatible claims for monitoring.regional_monitoring_plan, led by reg_flevoland_2023_regioplan_iza: The Regioplan calls for a 2024 monitoringsplan to show whether the transformatie is visible and whether the region is on course.",
       "claim_ids": [
         "clm__reg_flevoland_2023_regioplan_iza_monitoring_and_evaluation_001",
+        "clm__reg_amstellandzorg_welzijn_op_recept_procesflow_2024_monitoring_and_evaluation_001",
         "clm__reg_ggd_flevoland_kennis_en_advies_monitoring_and_evaluation_001"
       ],
       "source_documents": [
@@ -4829,6 +5186,13 @@
           "title": "Zorgzaam Flevoland 2023 Regioplan IZA Flevoland",
           "jurisdiction_level": "regional",
           "document_type": "regional_plan",
+          "document_status": "reference"
+        },
+        {
+          "document_id": "reg_amstellandzorg_welzijn_op_recept_procesflow_2024",
+          "title": "Procesflow Welzijn op Recept",
+          "jurisdiction_level": "regional",
+          "document_type": "process_note",
           "document_status": "reference"
         },
         {
@@ -4870,7 +5234,7 @@
     },
     {
       "topic": "municipal.implementation_translation",
-      "summary": "Current view combines 186 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
+      "summary": "Current view combines 197 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
       "claim_ids": [
         "clm__nat_wetten_spuk_transformatiemiddelen_regeling_municipal_translation_003",
         "clm__nat_wetten_spuk_transformatiemiddelen_regeling_municipal_translation_002",
@@ -4907,6 +5271,14 @@
         "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_municipal_translation_003",
         "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_municipal_translation_002",
         "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_municipal_translation_001",
+        "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_municipal_translation_003",
+        "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_municipal_translation_002",
+        "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_municipal_translation_001",
+        "clm__reg_ggd_flevoland_valpreventie_lelystad_2025_municipal_translation_003",
+        "clm__reg_ggd_flevoland_valpreventie_lelystad_2025_municipal_translation_002",
+        "clm__reg_ggd_flevoland_valpreventie_lelystad_2025_municipal_translation_001",
+        "clm__reg_ros_friesland_zorgpad_vroegsignalering_zwangeren_2024_municipal_translation_003",
+        "clm__reg_ros_friesland_zorgpad_vroegsignalering_zwangeren_2024_municipal_translation_001",
         "clm__mun_almere_pga_samen_sterker_wijk_municipal_translation_003",
         "clm__mun_almere_pga_samen_sterker_wijk_municipal_translation_002",
         "clm__mun_almere_pga_samen_sterker_wijk_municipal_translation_001",
@@ -4971,6 +5343,9 @@
         "clm__mun_almere_2024_2034_maatschappelijke_agenda_municipal_translation_001",
         "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_municipal_translation_003",
         "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_municipal_translation_001",
+        "clm__reg_amstellandzorg_welzijn_op_recept_procesflow_2024_municipal_translation_003",
+        "clm__reg_amstellandzorg_welzijn_op_recept_procesflow_2024_municipal_translation_002",
+        "clm__reg_amstellandzorg_welzijn_op_recept_procesflow_2024_municipal_translation_001",
         "clm__mun_almere_sociale_veerkracht_almeerders_municipal_translation_003",
         "clm__mun_almere_sociale_veerkracht_almeerders_municipal_translation_002",
         "clm__mun_almere_sociale_veerkracht_almeerders_municipal_translation_001",
@@ -5166,6 +5541,27 @@
           "document_status": "current"
         },
         {
+          "document_id": "reg_ggd_flevoland_valpreventie_almere_ketendocument_2026",
+          "title": "Ketendocument Valpreventie Almere",
+          "jurisdiction_level": "regional",
+          "document_type": "regional_project_plan",
+          "document_status": "current"
+        },
+        {
+          "document_id": "reg_ggd_flevoland_valpreventie_lelystad_2025",
+          "title": "Ketendocument Valpreventie Lelystad",
+          "jurisdiction_level": "regional",
+          "document_type": "regional_project_plan",
+          "document_status": "reference"
+        },
+        {
+          "document_id": "reg_ros_friesland_zorgpad_vroegsignalering_zwangeren_2024",
+          "title": "Zorgpad Vroegsignalering Zwangeren Fryslan inclusief PHB-JGZ",
+          "jurisdiction_level": "regional",
+          "document_type": "regional_project_plan",
+          "document_status": "reference"
+        },
+        {
           "document_id": "mun_almere_pga_samen_sterker_wijk",
           "title": "Samen Sterker in de Wijk: mentale veerkracht in Almere",
           "jurisdiction_level": "municipal",
@@ -5332,6 +5728,13 @@
           "jurisdiction_level": "municipal",
           "document_type": "municipal_policy_summary",
           "document_status": "supporting"
+        },
+        {
+          "document_id": "reg_amstellandzorg_welzijn_op_recept_procesflow_2024",
+          "title": "Procesflow Welzijn op Recept",
+          "jurisdiction_level": "regional",
+          "document_type": "process_note",
+          "document_status": "reference"
         },
         {
           "document_id": "mun_almere_sociale_veerkracht_almeerders",
@@ -5811,7 +6214,7 @@
     },
     {
       "topic": "timeline.other",
-      "summary": "Current view combines 75 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
+      "summary": "Current view combines 81 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere.",
       "claim_ids": [
         "clm__nat_wetten_spuk_transformatiemiddelen_regeling_timeline_and_status_003",
         "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_timeline_and_status_001",
@@ -5831,6 +6234,12 @@
         "clm__mun_almere_nadere_regels_buurtontmoeting_timeline_and_status_001",
         "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_timeline_and_status_003",
         "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_timeline_and_status_001",
+        "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_timeline_and_status_002",
+        "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_timeline_and_status_001",
+        "clm__reg_ggd_flevoland_valpreventie_lelystad_2025_timeline_and_status_001",
+        "clm__reg_samen_nijmegen_protocol_kwetsbare_zwangere_2024_timeline_and_status_001",
+        "clm__reg_ros_friesland_zorgpad_vroegsignalering_zwangeren_2024_timeline_and_status_003",
+        "clm__reg_ros_friesland_zorgpad_vroegsignalering_zwangeren_2024_timeline_and_status_001",
         "clm__mun_almere_pga_samen_sterker_wijk_timeline_and_status_001",
         "clm__nat_vng_azwa_faq_middelen_timeline_and_status_003",
         "clm__nat_vng_azwa_faq_middelen_timeline_and_status_002",
@@ -5952,6 +6361,34 @@
           "jurisdiction_level": "municipal",
           "document_type": "municipal_council_proposal",
           "document_status": "current"
+        },
+        {
+          "document_id": "reg_ggd_flevoland_valpreventie_almere_ketendocument_2026",
+          "title": "Ketendocument Valpreventie Almere",
+          "jurisdiction_level": "regional",
+          "document_type": "regional_project_plan",
+          "document_status": "current"
+        },
+        {
+          "document_id": "reg_ggd_flevoland_valpreventie_lelystad_2025",
+          "title": "Ketendocument Valpreventie Lelystad",
+          "jurisdiction_level": "regional",
+          "document_type": "regional_project_plan",
+          "document_status": "reference"
+        },
+        {
+          "document_id": "reg_samen_nijmegen_protocol_kwetsbare_zwangere_2024",
+          "title": "VSV protocol kwetsbare zwangere 6.0",
+          "jurisdiction_level": "regional",
+          "document_type": "regional_project_plan",
+          "document_status": "reference"
+        },
+        {
+          "document_id": "reg_ros_friesland_zorgpad_vroegsignalering_zwangeren_2024",
+          "title": "Zorgpad Vroegsignalering Zwangeren Fryslan inclusief PHB-JGZ",
+          "jurisdiction_level": "regional",
+          "document_type": "regional_project_plan",
+          "document_status": "reference"
         },
         {
           "document_id": "mun_almere_pga_samen_sterker_wijk",
@@ -6242,6 +6679,20 @@
   ],
   "obsolete_items": [
     {
+      "topic": "d5.basisfunctionaliteiten_onderbouwd",
+      "historical_claim_ids": [
+        "clm__nat_pharos_brugfuncties_huisartsenzorg_sociaal_domein_2025_d5_003",
+        "clm__nat_pharos_brugfuncties_huisartsenzorg_sociaal_domein_2025_d5_002",
+        "clm__nat_pharos_brugfuncties_huisartsenzorg_sociaal_domein_2025_d5_001"
+      ],
+      "superseded_claim_ids": [
+        "clm__nat_pharos_brugfuncties_huisartsenzorg_sociaal_domein_2025_d5_001",
+        "clm__nat_pharos_brugfuncties_huisartsenzorg_sociaal_domein_2025_d5_002",
+        "clm__nat_pharos_brugfuncties_huisartsenzorg_sociaal_domein_2025_d5_003"
+      ],
+      "note": "Current wording exists; older or draft wording remains preserved only for traceability."
+    },
+    {
       "topic": "d5.implementation_enablers",
       "historical_claim_ids": [
         "clm__nat_azwa_2025_onderhandelaarsakkoord_d5_003"
@@ -6280,8 +6731,20 @@
       "note": "Current wording exists; older or draft wording remains preserved only for traceability."
     },
     {
+      "topic": "d6.digital_and_operational_infrastructure",
+      "historical_claim_ids": [
+        "clm__nat_pharos_brugfuncties_huisartsenzorg_sociaal_domein_2025_d6_001",
+        "clm__nat_leidraad_consultatiefunctie_ggz_sociaal_domein_2024_d6_003",
+        "clm__nat_leidraad_consultatiefunctie_ggz_sociaal_domein_2024_d6_002"
+      ],
+      "superseded_claim_ids": [],
+      "note": "Current wording exists; older or draft wording remains preserved only for traceability."
+    },
+    {
       "topic": "d6.local_teams",
       "historical_claim_ids": [
+        "clm__nat_pharos_brugfuncties_huisartsenzorg_sociaal_domein_2025_d6_003",
+        "clm__nat_pharos_brugfuncties_huisartsenzorg_sociaal_domein_2025_d6_002",
         "clm__nat_vng_richtinggevend_kader_toegang_lokale_teams_d6_003",
         "clm__nat_vng_richtinggevend_kader_toegang_lokale_teams_d6_002",
         "clm__nat_vng_richtinggevend_kader_toegang_lokale_teams_d6_001",
@@ -6289,11 +6752,25 @@
         "clm__nat_tsd_basisfuncties_lokale_teams_d6_001"
       ],
       "superseded_claim_ids": [
+        "clm__nat_pharos_brugfuncties_huisartsenzorg_sociaal_domein_2025_d6_002",
+        "clm__nat_pharos_brugfuncties_huisartsenzorg_sociaal_domein_2025_d6_003",
         "clm__nat_tsd_basisfuncties_lokale_teams_d6_001",
         "clm__nat_tsd_basisfuncties_lokale_teams_d6_003",
         "clm__nat_vng_richtinggevend_kader_toegang_lokale_teams_d6_001",
         "clm__nat_vng_richtinggevend_kader_toegang_lokale_teams_d6_002",
         "clm__nat_vng_richtinggevend_kader_toegang_lokale_teams_d6_003"
+      ],
+      "note": "Current wording exists; older or draft wording remains preserved only for traceability."
+    },
+    {
+      "topic": "d6.regional_coordination",
+      "historical_claim_ids": [
+        "clm__nat_kind_naar_gezonder_gewicht_monitoring_matrix_2023_d6_003",
+        "clm__nat_kind_naar_gezonder_gewicht_monitoring_matrix_2023_d6_001"
+      ],
+      "superseded_claim_ids": [
+        "clm__nat_kind_naar_gezonder_gewicht_monitoring_matrix_2023_d6_001",
+        "clm__nat_kind_naar_gezonder_gewicht_monitoring_matrix_2023_d6_003"
       ],
       "note": "Current wording exists; older or draft wording remains preserved only for traceability."
     },
@@ -6364,14 +6841,28 @@
         "clm__nat_gala_2023_gezond_en_actief_leven_monitoring_and_evaluation_002",
         "clm__nat_iza_2022_integraal_zorgakkoord_monitoring_and_evaluation_003",
         "clm__nat_iza_2022_integraal_zorgakkoord_monitoring_and_evaluation_002",
+        "clm__nat_pharos_brugfuncties_huisartsenzorg_sociaal_domein_2025_monitoring_and_evaluation_003",
+        "clm__nat_pharos_brugfuncties_huisartsenzorg_sociaal_domein_2025_monitoring_and_evaluation_001",
         "clm__nat_vng_richtinggevend_kader_toegang_lokale_teams_monitoring_and_evaluation_002",
-        "clm__nat_vng_richtinggevend_kader_toegang_lokale_teams_monitoring_and_evaluation_001"
+        "clm__nat_vng_richtinggevend_kader_toegang_lokale_teams_monitoring_and_evaluation_001",
+        "clm__nat_leidraad_consultatiefunctie_ggz_sociaal_domein_2024_monitoring_and_evaluation_003",
+        "clm__nat_leidraad_consultatiefunctie_ggz_sociaal_domein_2024_monitoring_and_evaluation_002",
+        "clm__nat_leidraad_consultatiefunctie_ggz_sociaal_domein_2024_monitoring_and_evaluation_001",
+        "clm__nat_kind_naar_gezonder_gewicht_monitoring_matrix_2023_monitoring_and_evaluation_003",
+        "clm__nat_kind_naar_gezonder_gewicht_monitoring_matrix_2023_monitoring_and_evaluation_002"
       ],
       "superseded_claim_ids": [
         "clm__nat_gala_2023_gezond_en_actief_leven_monitoring_and_evaluation_002",
         "clm__nat_gala_2023_gezond_en_actief_leven_monitoring_and_evaluation_003",
         "clm__nat_iza_2022_integraal_zorgakkoord_monitoring_and_evaluation_002",
         "clm__nat_iza_2022_integraal_zorgakkoord_monitoring_and_evaluation_003",
+        "clm__nat_kind_naar_gezonder_gewicht_monitoring_matrix_2023_monitoring_and_evaluation_002",
+        "clm__nat_kind_naar_gezonder_gewicht_monitoring_matrix_2023_monitoring_and_evaluation_003",
+        "clm__nat_leidraad_consultatiefunctie_ggz_sociaal_domein_2024_monitoring_and_evaluation_001",
+        "clm__nat_leidraad_consultatiefunctie_ggz_sociaal_domein_2024_monitoring_and_evaluation_002",
+        "clm__nat_leidraad_consultatiefunctie_ggz_sociaal_domein_2024_monitoring_and_evaluation_003",
+        "clm__nat_pharos_brugfuncties_huisartsenzorg_sociaal_domein_2025_monitoring_and_evaluation_001",
+        "clm__nat_pharos_brugfuncties_huisartsenzorg_sociaal_domein_2025_monitoring_and_evaluation_003",
         "clm__nat_vng_richtinggevend_kader_toegang_lokale_teams_monitoring_and_evaluation_001",
         "clm__nat_vng_richtinggevend_kader_toegang_lokale_teams_monitoring_and_evaluation_002"
       ],
@@ -6395,6 +6886,12 @@
         "clm__nat_gala_2023_gezond_en_actief_leven_municipal_translation_001",
         "clm__nat_iza_2022_integraal_zorgakkoord_municipal_translation_003",
         "clm__nat_iza_2022_integraal_zorgakkoord_municipal_translation_002",
+        "clm__nat_pharos_brugfuncties_huisartsenzorg_sociaal_domein_2025_municipal_translation_003",
+        "clm__nat_pharos_brugfuncties_huisartsenzorg_sociaal_domein_2025_municipal_translation_002",
+        "clm__nat_pharos_brugfuncties_huisartsenzorg_sociaal_domein_2025_municipal_translation_001",
+        "clm__nat_leidraad_consultatiefunctie_ggz_sociaal_domein_2024_municipal_translation_003",
+        "clm__nat_leidraad_consultatiefunctie_ggz_sociaal_domein_2024_municipal_translation_002",
+        "clm__nat_leidraad_consultatiefunctie_ggz_sociaal_domein_2024_municipal_translation_001",
         "clm__nat_tsd_basisfuncties_lokale_teams_municipal_translation_001",
         "clm__nat_azwa_2025_aanbiedingsbrief_municipal_translation_002",
         "clm__nat_azwa_2025_aanbiedingsbrief_municipal_translation_001"
@@ -6407,6 +6904,12 @@
         "clm__nat_gala_2023_gezond_en_actief_leven_municipal_translation_003",
         "clm__nat_iza_2022_integraal_zorgakkoord_municipal_translation_002",
         "clm__nat_iza_2022_integraal_zorgakkoord_municipal_translation_003",
+        "clm__nat_leidraad_consultatiefunctie_ggz_sociaal_domein_2024_municipal_translation_001",
+        "clm__nat_leidraad_consultatiefunctie_ggz_sociaal_domein_2024_municipal_translation_002",
+        "clm__nat_leidraad_consultatiefunctie_ggz_sociaal_domein_2024_municipal_translation_003",
+        "clm__nat_pharos_brugfuncties_huisartsenzorg_sociaal_domein_2025_municipal_translation_001",
+        "clm__nat_pharos_brugfuncties_huisartsenzorg_sociaal_domein_2025_municipal_translation_002",
+        "clm__nat_pharos_brugfuncties_huisartsenzorg_sociaal_domein_2025_municipal_translation_003",
         "clm__nat_tsd_basisfuncties_lokale_teams_municipal_translation_001"
       ],
       "note": "Current wording exists; older or draft wording remains preserved only for traceability."
@@ -6471,24 +6974,20 @@
       "topic": "timeline.rollout_2030",
       "historical_claim_ids": [
         "clm__nat_azwa_2025_onderhandelaarsakkoord_timeline_and_status_002",
+        "clm__nat_pharos_brugfuncties_huisartsenzorg_sociaal_domein_2025_timeline_and_status_002",
+        "clm__nat_pharos_brugfuncties_huisartsenzorg_sociaal_domein_2025_timeline_and_status_001",
         "clm__nat_vng_richtinggevend_kader_toegang_lokale_teams_timeline_and_status_001"
       ],
       "superseded_claim_ids": [
         "clm__nat_azwa_2025_onderhandelaarsakkoord_timeline_and_status_002",
+        "clm__nat_pharos_brugfuncties_huisartsenzorg_sociaal_domein_2025_timeline_and_status_001",
+        "clm__nat_pharos_brugfuncties_huisartsenzorg_sociaal_domein_2025_timeline_and_status_002",
         "clm__nat_vng_richtinggevend_kader_toegang_lokale_teams_timeline_and_status_001"
       ],
       "note": "Current wording exists; older or draft wording remains preserved only for traceability."
     }
   ],
   "unresolved_conflicts": [
-    {
-      "conflict_id": "conflict__d5__basisfunctionaliteiten_onderbouwd",
-      "topic": "d5.basisfunctionaliteiten_onderbouwd",
-      "conflict_type": "localization_overlap",
-      "resolution_status": "parallel_claims",
-      "recommended_resolution_rule": "municipal_documents_cannot_override_national_obligations",
-      "notes": "Current interpretation keeps the higher-authority national baseline and also preserves lower-authority regional or municipal localization claims for Almere."
-    },
     {
       "conflict_id": "conflict__d5__cross_domain_collaboration",
       "topic": "d5.cross_domain_collaboration",
@@ -6516,22 +7015,14 @@
     {
       "conflict_id": "conflict__d6__digital_and_operational_infrastructure",
       "topic": "d6.digital_and_operational_infrastructure",
-      "conflict_type": "localization_overlap",
-      "resolution_status": "parallel_claims",
-      "recommended_resolution_rule": "municipal_documents_cannot_override_national_obligations",
+      "conflict_type": "precedence_overlap",
+      "resolution_status": "needs_human_review",
+      "recommended_resolution_rule": "equal_authority_and_date_stays_unresolved",
       "notes": "Current interpretation keeps the higher-authority national baseline and also preserves lower-authority regional or municipal localization claims for Almere."
     },
     {
       "conflict_id": "conflict__d6__other",
       "topic": "d6.other",
-      "conflict_type": "localization_overlap",
-      "resolution_status": "parallel_claims",
-      "recommended_resolution_rule": "municipal_documents_cannot_override_national_obligations",
-      "notes": "Current interpretation keeps the higher-authority national baseline and also preserves lower-authority regional or municipal localization claims for Almere."
-    },
-    {
-      "conflict_id": "conflict__d6__regional_coordination",
-      "topic": "d6.regional_coordination",
       "conflict_type": "localization_overlap",
       "resolution_status": "parallel_claims",
       "recommended_resolution_rule": "municipal_documents_cannot_override_national_obligations",
@@ -6595,10 +7086,18 @@
         "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d5_002",
         "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d5_003",
         "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d5_001",
+        "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_d5_003",
+        "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_d5_001",
+        "clm__reg_ggd_flevoland_valpreventie_lelystad_2025_d5_003",
+        "clm__reg_ggd_flevoland_valpreventie_lelystad_2025_d5_001",
+        "clm__reg_ros_friesland_zorgpad_vroegsignalering_zwangeren_2024_d5_001",
         "clm__nat_zorgakkoorden_werkagenda_handvatten_2026_d5_001",
         "clm__nat_sociaalwerknl_financiering_iza_azwa_2025_d5_002",
         "clm__nat_vng_ledenbrief_onderhandelaarsakkoord_azwa_2025_d5_002",
         "clm__nat_zorgakkoorden_pga_20_miljoen_2024_d5_001",
+        "clm__reg_amstellandzorg_welzijn_op_recept_procesflow_2024_d5_003",
+        "clm__reg_amstellandzorg_welzijn_op_recept_procesflow_2024_d5_002",
+        "clm__reg_amstellandzorg_welzijn_op_recept_procesflow_2024_d5_001",
         "clm__reg_flevoland_2023_regiobeeld_d5_003",
         "clm__reg_flevoland_2023_regiobeeld_d5_002",
         "clm__reg_flevoland_2023_regiobeeld_d5_001",
@@ -6617,6 +7116,7 @@
         "clm__mun_deschoor_buurtkamers_d5_003",
         "clm__mun_deschoor_buurtkamers_d5_001",
         "clm__nat_azwa_2025_definitief_d5_003",
+        "clm__nat_leidraad_consultatiefunctie_ggz_sociaal_domein_2024_d5_001",
         "clm__nat_zorgakkoorden_werkagenda_handvatten_2026_d5_003",
         "clm__nat_azwa_toelichting_producten_proces_2026_d5_003",
         "clm__mun_almere_pga_transformatieplan_municipal_translation_001",
@@ -6643,6 +7143,7 @@
         "clm__mun_almere_2026_stevige_lokale_teams_raadsvoorstel_d6_003",
         "clm__mun_almere_2026_stevige_lokale_teams_besluitenlijst_d6_001",
         "clm__mun_almere_2026_stevige_lokale_teams_begrotingswijziging_d6_001",
+        "clm__reg_samen_nijmegen_protocol_kwetsbare_zwangere_2024_d6_001",
         "clm__mun_almere_sociaal_domein_informatiepagina_d6_001",
         "clm__mun_almere_2026_stevige_lokale_teams_raad_d6_003",
         "clm__mun_almere_2026_stevige_lokale_teams_raad_d6_002",
@@ -6665,6 +7166,8 @@
       "supporting_claim_ids": [
         "clm__nat_azwa_2025_definitief_governance_and_finance_002",
         "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_governance_and_finance_002",
+        "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_governance_and_finance_003",
+        "clm__reg_ggd_flevoland_valpreventie_lelystad_2025_governance_and_finance_003",
         "clm__mun_almere_pga_transformatieplan_governance_and_finance_002",
         "clm__nat_vng_ledenbrief_onderhandelaarsakkoord_azwa_2025_governance_and_finance_003",
         "clm__mun_almere_pga_seo_businesscase_2024_governance_and_finance_003",

@@ -41,7 +41,7 @@ REFERENCE_PAGE_PATH = DIST_DIR / "reference" / "index.html"
 REFERENCE_TOPICS_PAGE_PATH = DIST_DIR / "reference" / "topics" / "index.html"
 SOURCES_PAGE_PATH = DIST_DIR / "sources" / "index.html"
 UPDATES_PAGE_PATH = DIST_DIR / "updates" / "index.html"
-LATEST_UPDATE_ID = "upd_d6_settlement_audit_intake_2026_05_01"
+LATEST_UPDATE_ID = "upd_operationele_d5_bronnen_2026_05_09"
 LATEST_UPDATE_CLAIMS_PAGE_PATH = DIST_DIR / "updates" / "claims" / LATEST_UPDATE_ID / "index.html"
 VNG_FINANCING_UPDATE_ID = "upd_vng_financiering_2026_04_23"
 VNG_FINANCING_UPDATE_CLAIMS_PAGE_PATH = DIST_DIR / "updates" / "claims" / VNG_FINANCING_UPDATE_ID / "index.html"
@@ -502,17 +502,17 @@ class SiteGenerationTests(unittest.TestCase):
         html = UPDATES_PAGE_PATH.read_text(encoding="utf-8")
 
         self.assertEqual(updates_view["latest_update"]["update_id"], LATEST_UPDATE_ID)
-        self.assertIn("D6-settlementgrens scherper gemaakt", html)
+        self.assertIn("Operationele D5-bronnen toegevoegd", html)
         self.assertIn("Kort samengevat", html)
-        self.assertIn("Vijf publieke bronnen rond Almere-subsidies", html)
-        self.assertIn('../sources/zorgakkoorden-werkagenda-handvatten/index.html', html)
-        self.assertIn("109", html)
+        self.assertIn("Acht publieke bronnen zijn toegevoegd", html)
+        self.assertIn("../sources/ketendocument-valpreventie-almere/index.html", html)
+        self.assertIn("117", html)
         self.assertIn("Bekijk volledige controlelijst", html)
         self.assertIn("Wat is er veranderd", html)
         self.assertIn("Meer duiding", html)
-        self.assertIn("Subsidielijnen zijn beter zichtbaar", html)
-        self.assertIn("Mentale gezondheid heeft nu een extra gemeentelijke contextbron", html)
-        self.assertIn("GGD/GALA-governance is sterker te plaatsen", html)
+        self.assertIn("Valpreventie heeft nu een Almeers ketendocument", html)
+        self.assertIn("Sociaal verwijzen en brugfuncties zijn concreter te bevragen", html)
+        self.assertIn("Kansrijke Start en kwetsbare zwangeren krijgen operationele vergelijkingsvoorbeelden", html)
         self.assertIn("Tijdlijn", html)
         self.assertIn(f'claims/{LATEST_UPDATE_ID}/index.html', html)
         self.assertIn(f'id="{VNG_FINANCING_UPDATE_ID}"', html)
@@ -580,10 +580,10 @@ class SiteGenerationTests(unittest.TestCase):
 
     def test_update_claims_detail_explicitly_attributes_lower_authority_fragments(self) -> None:
         html = LATEST_UPDATE_CLAIMS_PAGE_PATH.read_text(encoding="utf-8")
-        self.assertIn("Bronhouder: Gemeente Almere", html)
-        self.assertIn("Soort bron: toelichtende bron", html)
+        self.assertIn("Bronhouder: GGD Flevoland en partners", html)
+        self.assertIn("Soort bron: implementatie- of programmaplan", html)
         self.assertIn("Veilige formulering: Altijd expliciet toeschrijven", html)
-        self.assertIn("Volgens Gemeente Almere:", html)
+        self.assertIn("Volgens GGD Flevoland en partners:", html)
 
     def test_timeline_register_is_chronological_within_each_year(self) -> None:
         register = load_json(TIMELINE_REGISTER_PATH)

@@ -21,6 +21,7 @@ STAND_VAN_ZAKEN_REPORT_PATH = (
 CONSTRAINED_ANSWER_DESIGN_REPORT_PATH = (
     REPO_ROOT / "docs" / "dr" / "Constrained answer design for the Almere D6 open-question set.md"
 )
+OPERATIONAL_REPORT_PATH = REPO_ROOT / "docs" / "dr" / "azwa operational.md"
 MANIFEST_PATH = REPO_ROOT / "data" / "raw" / "manifest.json"
 SOURCE_INTAKE_CANDIDATES_PATH = REPO_ROOT / "data" / "raw" / "source_intake_candidates.json"
 INVENTORY_PATH = REPO_ROOT / "data" / "extracted" / "document_inventory.json"
@@ -101,6 +102,17 @@ SETTLEMENT_AUDIT_SOURCE_IDS = {
     "nat_zorgakkoorden_werkagenda_handvatten_2026",
 }
 
+OPERATIONAL_SOURCE_IDS = {
+    "reg_ggd_flevoland_valpreventie_almere_ketendocument_2026",
+    "reg_ggd_flevoland_valpreventie_lelystad_2025",
+    "reg_amstellandzorg_welzijn_op_recept_procesflow_2024",
+    "reg_ros_friesland_zorgpad_vroegsignalering_zwangeren_2024",
+    "reg_samen_nijmegen_protocol_kwetsbare_zwangere_2024",
+    "nat_kind_naar_gezonder_gewicht_monitoring_matrix_2023",
+    "nat_leidraad_consultatiefunctie_ggz_sociaal_domein_2024",
+    "nat_pharos_brugfuncties_huisartsenzorg_sociaal_domein_2025",
+}
+
 
 def load_json(path: Path) -> dict | list:
     return json.loads(path.read_text(encoding="utf-8"))
@@ -117,6 +129,7 @@ class DeepResearchIntakeTests(unittest.TestCase):
         self.assertTrue(SETTLEMENT_AUDIT_REPORT_PATH.exists())
         self.assertTrue(STAND_VAN_ZAKEN_REPORT_PATH.exists())
         self.assertTrue(CONSTRAINED_ANSWER_DESIGN_REPORT_PATH.exists())
+        self.assertTrue(OPERATIONAL_REPORT_PATH.exists())
         manifest = load_json(MANIFEST_PATH)
         self.assertFalse(any(entry["file_path"] == "docs/dr/Healthy school.md" for entry in manifest))
         self.assertFalse(
@@ -151,6 +164,7 @@ class DeepResearchIntakeTests(unittest.TestCase):
                 for entry in manifest
             )
         )
+        self.assertFalse(any(entry["file_path"] == "docs/dr/azwa operational.md" for entry in manifest))
 
     def test_healthy_school_sources_are_ingested(self) -> None:
         manifest = load_json(MANIFEST_PATH)
@@ -205,6 +219,39 @@ class DeepResearchIntakeTests(unittest.TestCase):
         inventory = load_json(INVENTORY_PATH)
         inventory_ids = {entry["document_id"] for entry in inventory["documents"]}
         self.assertTrue(SETTLEMENT_AUDIT_SOURCE_IDS.issubset(inventory_ids))
+
+    def test_operational_sources_are_ingested(self) -> None:
+        manifest = load_json(MANIFEST_PATH)
+        manifest_ids = {entry["document_id"] for entry in manifest}
+        self.assertTrue(OPERATIONAL_SOURCE_IDS.issubset(manifest_ids))
+
+        inventory = load_json(INVENTORY_PATH)
+        inventory_ids = {entry["document_id"] for entry in inventory["documents"]}
+        self.assertTrue(OPERATIONAL_SOURCE_IDS.issubset(inventory_ids))
+
+    def test_operational_findings_reach_top_layers(self) -> None:
+        claims_path = REPO_ROOT / "data" / "extracted" / "claims" / "claims_master.jsonl"
+        source_ids_with_claims = set()
+        operational_claim_count = 0
+        for line in claims_path.read_text(encoding="utf-8").splitlines():
+            claim = json.loads(line)
+            if claim.get("source_document_id") in OPERATIONAL_SOURCE_IDS:
+                source_ids_with_claims.add(claim["source_document_id"])
+                operational_claim_count += 1
+
+        self.assertEqual(source_ids_with_claims, OPERATIONAL_SOURCE_IDS)
+        self.assertGreaterEqual(operational_claim_count, 90)
+
+        sources_view = load_json(REPO_ROOT / "data" / "site" / "site_sources_view.json")
+        source_view_ids = {source["metadata"]["document_id"] for source in sources_view["sources"]}
+        self.assertTrue(OPERATIONAL_SOURCE_IDS.issubset(source_view_ids))
+
+        operational_layer = (REPO_ROOT / "data" / "extracted" / "workagenda_d5_operational_requirements.json").read_text(
+            encoding="utf-8"
+        )
+        self.assertIn("valpreventie", operational_layer.lower())
+        self.assertIn("welzijn op recept", operational_layer.lower())
+        self.assertIn("brugfunctie", operational_layer.lower())
 
     def test_healthy_school_findings_reach_d6_register(self) -> None:
         register = load_json(REGISTER_PATH)

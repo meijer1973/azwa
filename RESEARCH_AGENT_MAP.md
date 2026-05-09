@@ -257,6 +257,7 @@ Machine-readable:
     "docs/source-intake/phase31.5-d6-settlement-evidence-audit-intake.md",
     "docs/source-intake/phase31.5-stand-van-zaken-gezondheidsbeleid-intake.md",
     "docs/source-intake/phase31.5-constrained-answer-design-intake.md",
+    "docs/source-intake/phase33-operational-deep-research-intake.md",
     "docs/data-quality-roadmap.md",
     "docs/roadmap/roadmap-version-log.md",
     "docs/roadmap/completed-sprint-ledger.md",

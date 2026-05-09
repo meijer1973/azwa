@@ -21,7 +21,7 @@ The Excel workbooks themselves are **not yet send-ready as raw stakeholder packe
 
 | Workbook | Path | Mapped validation rows | Result |
 | --- | --- | ---: | --- |
-| D5 validatieformat werkagenda Almere | `docs/review/D5_validatieformat_werkagenda_Almere_v0.9.xlsx` | 98 | Traceability map created; workbook still lacks visible per-row metadata fields. Seven navigation/control/workflow sheets are hidden in the current workbook version. |
+| D5 validatieformat werkagenda Almere | `docs/review/D5_validatieformat_werkagenda_Almere_v0.10.xlsx` | 98 | Traceability map created; workbook still lacks visible per-row metadata fields. Eight instruction/navigation/control/workflow sheets are hidden in the current workbook version. |
 | Almere D6 validatieformats | `docs/review/Almere_D6_validatieformats.xlsx` | 91 | Traceability map created; workbook still lacks visible per-row metadata fields. |
 | Total |  | 189 | All generated IDs are unique. |
 

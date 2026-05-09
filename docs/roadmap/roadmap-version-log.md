@@ -1,7 +1,7 @@
 # Roadmap Version Log
 
 ## Summary
-Current roadmap version: `v2026.05.09-9`.
+Current roadmap version: `v2026.05.09-10`.
 
 The active roadmap is `docs/data-quality-roadmap.md`. This log records material roadmap changes so the project does not split into multiple competing roadmap documents.
 
@@ -17,6 +17,7 @@ The active roadmap is `docs/data-quality-roadmap.md`. This log records material 
 
 | Version | Date | Change | Active roadmap | Archive / notes |
 | --- | --- | --- | --- | --- |
+| `v2026.05.09-10` | 2026-05-09 | Switched active D5 validation workbook routing from `v0.9` to versioned `v0.10`. | `docs/data-quality-roadmap.md` | Current D5 workbook is `docs/review/D5_validatieformat_werkagenda_Almere_v0.10.xlsx`; `Start hier` is also hidden, leaving only the component input sheets visible. |
 | `v2026.05.09-9` | 2026-05-09 | Switched active D5 validation workbook routing from `v0.8` to versioned `v0.9`. | `docs/data-quality-roadmap.md` | Current D5 workbook is `docs/review/D5_validatieformat_werkagenda_Almere_v0.9.xlsx`; `Stakeholderpakketten` and `Overzicht D5` are also hidden, leaving only the instruction and component input sheets visible. |
 | `v2026.05.09-8` | 2026-05-09 | Switched active D5 validation workbook routing from `v0.7` to versioned `v0.8`. | `docs/data-quality-roadmap.md` | Current D5 workbook is `docs/review/D5_validatieformat_werkagenda_Almere_v0.8.xlsx`; the five right-side control/workflow sheets are hidden so the human-facing tab bar stays simpler. |
 | `v2026.05.09-7` | 2026-05-09 | Switched active D5 validation workbook routing from `v0.6` to versioned `v0.7`. | `docs/data-quality-roadmap.md` | Current D5 workbook is `docs/review/D5_validatieformat_werkagenda_Almere_v0.7.xlsx`; optional new development-agenda wording now uses plain-language `pilot`, `pilotregio` and `in de praktijk uitproberen`. |

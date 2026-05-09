@@ -147,12 +147,12 @@ ROUTE_DEFINITIONS: dict[str, dict[str, Any]] = {
 ANSWER_OUTCOME_RULES = [
     {
         "outcome": "confirmed_with_evidence",
-        "processing": "Record in validation log and update the relevant matrix/register only if the evidence directly supports the field.",
+        "processing": "First classify the evidence. If a high-quality public source is named, ingest and verify it through top layers before treating it as source-backed. If the evidence is a stakeholder/internal confirmation, record it as validation evidence and update only the directly supported field.",
         "may_update_status": True,
     },
     {
         "outcome": "confirmed_without_evidence",
-        "processing": "Record as weak confirmation; do not mark ready or settled.",
+        "processing": "Record as low-authority human confirmation; do not mark ready, confirmed or settled.",
         "may_update_status": False,
     },
     {
@@ -199,6 +199,39 @@ ANSWER_OUTCOME_RULES = [
         "outcome": "public_source_found",
         "processing": "Add the public source to source intake first; ingest, run pipeline and verify top layers before using as source evidence.",
         "may_update_status": False,
+    },
+]
+
+AUTHORITY_LEVELS = [
+    {
+        "level": "source_ingested_and_top_layer_verified",
+        "authority": "high",
+        "meaning": "A credible public source has been added to the source corpus, processed by the pipeline and verified in the relevant top data layer.",
+        "allowed_effect": "May support source-backed updates when the source directly answers the field.",
+    },
+    {
+        "level": "formal_decision_or_controller_confirmation",
+        "authority": "high_for_validation",
+        "meaning": "A formal local/regional decision, budget line, controller confirmation or internal mandate document is named or attached.",
+        "allowed_effect": "May support validation, finance or decision-register updates; it is not a public corpus source unless separately ingested as a public source.",
+    },
+    {
+        "level": "stakeholder_confirmation_with_evidence_reference",
+        "authority": "medium_for_validation",
+        "meaning": "A stakeholder answer names a role, document, decision or evidence path but the evidence has not yet been independently processed.",
+        "allowed_effect": "Record in validation log; update only cautiously and keep evidence follow-up open where needed.",
+    },
+    {
+        "level": "human_input_without_source_backup",
+        "authority": "low",
+        "meaning": "A human answer provides a conclusion but no credible source, document, decision, budget line or evidence path.",
+        "allowed_effect": "Record as low-authority confirmation only; do not mark ready, confirmed, source-backed or settled.",
+    },
+    {
+        "level": "new_public_source_named_not_ingested",
+        "authority": "candidate",
+        "meaning": "A reviewer names a potentially useful public source that is not yet in the corpus.",
+        "allowed_effect": "Add to source-update/source-intake queue first; no substantive status change until ingestion and top-layer verification.",
     },
 ]
 
@@ -288,10 +321,14 @@ def build_workflow() -> dict[str, Any]:
         ],
         "return_contract": {
             "required_fields": REQUIRED_RETURN_FIELDS,
+            "human_input_channel_rule": "Human reviewers enter answers in the Excel validation workbooks. CSV packet files are machine/export/import artifacts and should not be the normal human entry surface.",
+            "csv_machine_rule": "CSV files may be generated or machine-edited by repository tooling only; preserve vraag_id, stakeholderpakket and evidence fields exactly.",
             "identity_rule": "Every returned answer must preserve vraag_id and stakeholderpakket; do not merge answers by question text.",
             "evidence_rule": "Confirmed answers require evidence_type and evidence_reference before they can update status, finance, decision or register layers.",
-            "source_rule": "New public sources named in responses go to source intake first and are not substantive evidence until processed through the pipeline.",
+            "source_rule": "New public sources named in responses go to source intake first and are not substantive evidence until processed through the pipeline and verified in top data layers.",
+            "unsupported_human_input_rule": "Human input without credible evidence is recorded as low-authority validation input and cannot make a field source-backed, ready, confirmed or settled.",
         },
+        "authority_levels": AUTHORITY_LEVELS,
         "answer_outcome_rules": ANSWER_OUTCOME_RULES,
         "target_artifacts": target_usage(coverage),
         "route_definitions": [
@@ -303,6 +340,18 @@ def build_workflow() -> dict[str, Any]:
         ],
         "route_coverage": coverage,
         "quality_gates": [
+            {
+                "gate": "excel_for_human_input",
+                "rule": "Human reviewers use Excel workbooks; CSV packet files are machine-processing artifacts.",
+            },
+            {
+                "gate": "unsupported_human_input_low_authority",
+                "rule": "Human input without source/document/decision/budget evidence is low-authority validation input and cannot settle a field.",
+            },
+            {
+                "gate": "source_ingestion_before_source_backing",
+                "rule": "Named public sources must be ingested and verified in top data layers before becoming source-backed evidence.",
+            },
             {
                 "gate": "no_silent_source_claims",
                 "rule": "Stakeholder answers, finance confirmations and decisions are validation evidence, not corpus source claims.",
@@ -358,15 +407,32 @@ def render_markdown(workflow: dict[str, Any]) -> str:
         "| Rule | Meaning |",
         "| --- | --- |",
         f"| Required fields | `{', '.join(workflow['return_contract']['required_fields'])}` |",
+        f"| Human input channel rule | {workflow['return_contract']['human_input_channel_rule']} |",
+        f"| CSV machine rule | {workflow['return_contract']['csv_machine_rule']} |",
         f"| Identity rule | {workflow['return_contract']['identity_rule']} |",
         f"| Evidence rule | {workflow['return_contract']['evidence_rule']} |",
         f"| Source rule | {workflow['return_contract']['source_rule']} |",
+        f"| Unsupported human input rule | {workflow['return_contract']['unsupported_human_input_rule']} |",
+        "",
+        "## Authority Levels",
+        "",
+        "| Level | Authority | Meaning | Allowed effect |",
+        "| --- | --- | --- | --- |",
+    ]
+    for level in workflow["authority_levels"]:
+        lines.append(
+            f"| `{level['level']}` | `{level['authority']}` | {level['meaning']} | {level['allowed_effect']} |"
+        )
+
+    lines.extend(
+        [
         "",
         "## Answer Outcomes",
         "",
         "| Outcome | May update status? | Processing rule |",
         "| --- | --- | --- |",
-    ]
+        ]
+    )
     for rule in workflow["answer_outcome_rules"]:
         may_update = "yes" if rule["may_update_status"] else "no"
         lines.append(f"| `{rule['outcome']}` | {may_update} | {rule['processing']} |")

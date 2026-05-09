@@ -77,6 +77,8 @@ Sprint 33.P6 created:
 
 The response workflow maps every current `repo_update_effect` route to validation logs, finance matrices, decision registers, the D5-D6 dependency map, source-update log, statusmatrix or D6 responsibility register. It also defines answer outcomes, evidence gates and no-overclaim rules. It imports no answers and does not authorize stakeholder contact.
 
+Human input belongs in the Excel validation workbooks. CSV packet files are machine/export/import artifacts and should only be generated or machine-edited by repository tooling. If a human answer names a credible public source, add the source to source intake and verify it through top data layers before treating it as source-backed. If a human answer gives a conclusion without a source, document, decision, budget line or evidence path, record it as low-authority validation input only.
+
 ## Freeze Rule
 
 Do not make uncontrolled edits to these workbooks while pre-contact QA is running. Changes should either:

@@ -20,16 +20,29 @@ This file defines how returned D5/D6 packet answers must be processed. It does n
 | Rule | Meaning |
 | --- | --- |
 | Required fields | `vraag_id, stakeholderpakket, answer, evidence_type, evidence_reference, correction_or_note, not_my_domain_reroute` |
+| Human input channel rule | Human reviewers enter answers in the Excel validation workbooks. CSV packet files are machine/export/import artifacts and should not be the normal human entry surface. |
+| CSV machine rule | CSV files may be generated or machine-edited by repository tooling only; preserve vraag_id, stakeholderpakket and evidence fields exactly. |
 | Identity rule | Every returned answer must preserve vraag_id and stakeholderpakket; do not merge answers by question text. |
 | Evidence rule | Confirmed answers require evidence_type and evidence_reference before they can update status, finance, decision or register layers. |
-| Source rule | New public sources named in responses go to source intake first and are not substantive evidence until processed through the pipeline. |
+| Source rule | New public sources named in responses go to source intake first and are not substantive evidence until processed through the pipeline and verified in top data layers. |
+| Unsupported human input rule | Human input without credible evidence is recorded as low-authority validation input and cannot make a field source-backed, ready, confirmed or settled. |
+
+## Authority Levels
+
+| Level | Authority | Meaning | Allowed effect |
+| --- | --- | --- | --- |
+| `source_ingested_and_top_layer_verified` | `high` | A credible public source has been added to the source corpus, processed by the pipeline and verified in the relevant top data layer. | May support source-backed updates when the source directly answers the field. |
+| `formal_decision_or_controller_confirmation` | `high_for_validation` | A formal local/regional decision, budget line, controller confirmation or internal mandate document is named or attached. | May support validation, finance or decision-register updates; it is not a public corpus source unless separately ingested as a public source. |
+| `stakeholder_confirmation_with_evidence_reference` | `medium_for_validation` | A stakeholder answer names a role, document, decision or evidence path but the evidence has not yet been independently processed. | Record in validation log; update only cautiously and keep evidence follow-up open where needed. |
+| `human_input_without_source_backup` | `low` | A human answer provides a conclusion but no credible source, document, decision, budget line or evidence path. | Record as low-authority confirmation only; do not mark ready, confirmed, source-backed or settled. |
+| `new_public_source_named_not_ingested` | `candidate` | A reviewer names a potentially useful public source that is not yet in the corpus. | Add to source-update/source-intake queue first; no substantive status change until ingestion and top-layer verification. |
 
 ## Answer Outcomes
 
 | Outcome | May update status? | Processing rule |
 | --- | --- | --- |
-| `confirmed_with_evidence` | yes | Record in validation log and update the relevant matrix/register only if the evidence directly supports the field. |
-| `confirmed_without_evidence` | no | Record as weak confirmation; do not mark ready or settled. |
+| `confirmed_with_evidence` | yes | First classify the evidence. If a high-quality public source is named, ingest and verify it through top layers before treating it as source-backed. If the evidence is a stakeholder/internal confirmation, record it as validation evidence and update only the directly supported field. |
+| `confirmed_without_evidence` | no | Record as low-authority human confirmation; do not mark ready, confirmed or settled. |
 | `partly_correct` | no | Update the working view and keep review_needed until the correction and evidence are clear. |
 | `incorrect` | no | Correct the working view, keep review_needed and create a decision ticket if a policy choice is needed. |
 | `not_my_domain` | no | Do not treat as substantive validation; reroute using not_my_domain_reroute and keep the original vraag_id. |
@@ -75,6 +88,9 @@ This file defines how returned D5/D6 packet answers must be processed. It does n
 
 ## Quality Gates
 
+- `excel_for_human_input`: Human reviewers use Excel workbooks; CSV packet files are machine-processing artifacts.
+- `unsupported_human_input_low_authority`: Human input without source/document/decision/budget evidence is low-authority validation input and cannot settle a field.
+- `source_ingestion_before_source_backing`: Named public sources must be ingested and verified in top data layers before becoming source-backed evidence.
 - `no_silent_source_claims`: Stakeholder answers, finance confirmations and decisions are validation evidence, not corpus source claims.
 - `no_settled_without_evidence`: No D6 register row can move to settled unless classification, owner, executor/coordinator, scale, funding and evidence are directly supported.
 - `weak_confirmation_stays_open`: Confirmation without evidence is logged but cannot make a field ready for drafting.

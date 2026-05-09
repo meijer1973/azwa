@@ -7,7 +7,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-WORKBOOK = ROOT / "docs" / "review" / "D5_validatieformat_werkagenda_Almere_v0.3.xlsx"
+WORKBOOK = ROOT / "docs" / "review" / "D5_validatieformat_werkagenda_Almere_v0.4.xlsx"
 
 NS = {
     "main": "http://schemas.openxmlformats.org/spreadsheetml/2006/main",
@@ -171,7 +171,7 @@ def test_d5_validation_workbook_has_owner_and_routing_dropdowns() -> None:
                 assert validations[range_ref] == formula
 
 
-def test_d5_validation_workbook_v03_human_tabs_remove_broad_columns() -> None:
+def test_d5_validation_workbook_v04_human_tabs_remove_broad_columns() -> None:
     with zipfile.ZipFile(WORKBOOK) as archive:
         targets = _sheet_targets(archive)
         shared_strings = _shared_strings(archive)
@@ -227,3 +227,30 @@ def test_d5_validation_workbook_v03_human_tabs_remove_broad_columns() -> None:
                 for cell in root.findall(".//main:sheetData/main:row[@r='4']/main:c", NS)
             ]
             assert "Rol Almere" in headers
+
+
+def test_d5_validation_workbook_table_definitions_match_ranges() -> None:
+    forbidden_headers = {
+        "Dekking / schaal",
+        "Capaciteit / aantallen",
+        "Validatiestatus",
+        "Rol",
+    }
+    with zipfile.ZipFile(WORKBOOK) as archive:
+        table_paths = [
+            path
+            for path in archive.namelist()
+            if path.startswith("xl/tables/table") and path.endswith(".xml")
+        ]
+        assert table_paths
+        for path in table_paths:
+            root = ET.fromstring(archive.read(path))
+            ref = root.attrib["ref"]
+            start, end = ref.split(":")
+            _start_row, start_col = _cell_ref(start)
+            _end_row, end_col = _cell_ref(end)
+            expected_width = end_col - start_col + 1
+            columns = root.findall("main:tableColumns/main:tableColumn", NS)
+            assert len(columns) == expected_width, path
+            table_column_names = {column.attrib["name"] for column in columns}
+            assert not forbidden_headers.intersection(table_column_names), path

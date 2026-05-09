@@ -51,7 +51,7 @@ The dry run tests usability and processability. It is not asking reviewers to va
 | --- | --- | --- | --- | --- |
 | `P5-CASE-001` | `welzijn_sociale_basis` | `D5-SV-001` | Test whether a busy social-base reviewer can answer a D5 sociaal-verwijzen row without opening the full workbook. | `validation_log_or_decision_ticket` |
 | `P5-CASE-002` | `wijkteams_slt_leads` | `D6-WIJK-001` | Test whether a Wijkteams/SLT reviewer can classify the D6 relation from the packet row and evidence fields. | `d6_validation_log_or_register_update` |
-| `P5-CASE-003` | `finance_controller` | `D5-FIN-001` | Test whether finance can record funding line, structural/project status, double-counting risk and evidence reference. | `finance_matrix_update` |
+| `P5-CASE-003` | `finance_controller` | `D5-NNZ-004` | Test whether finance can evaluate a component-level budget question now that the separate D5 finance tab has been removed. | `validation_log_or_finance_ticket` |
 | `P5-CASE-004` | `gemeente_almere_sociaal_domein_d6` | `D6-SLT-001` | Test whether a formal-decision interpretation can be answered only with an explicit evidence type and reference. | `d6_validation_log_or_decision_ticket` |
 | `P5-CASE-005` | `zorgverzekeraar_zvw` | `D5-SV-001` | Test whether a reviewer can mark a row as not-my-domain and route it to the better owner without losing vraag_id traceability. | `reroute_or_validation_log_note` |
 
@@ -61,7 +61,7 @@ The dry run tests usability and processability. It is not asking reviewers to va
 
 Packet: `welzijn_sociale_basis` (Welzijn en sociale basis)
 
-Human workbook: `docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx`
+Human workbook: `docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx`
 
 Repository CSV reference: `data/workagenda/precontact_packets/welzijn_sociale_basis.csv`
 
@@ -77,7 +77,7 @@ Expected processing route: `validation_log_or_decision_ticket`
 
 What the reviewer does:
 
-- Open `docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx`.
+- Open `docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx`.
 - Go to sheet `Sociaal verwijzen`, row `5`.
 - Use the workbook dropdowns and evidence fields to answer just this row. Check whether owner/party/action-holder dropdowns are sufficient.
 - Note whether wording, answer options or evidence instructions need improvement before stakeholder contact.
@@ -145,24 +145,24 @@ Failure triggers:
 
 Packet: `finance_controller` (Finance/controller)
 
-Human workbook: `docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx`
+Human workbook: `docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx`
 
 Repository CSV reference: `data/workagenda/precontact_packets/finance_controller.csv`
 
-Vraag ID: `D5-FIN-001`
+Vraag ID: `D5-NNZ-004`
 
-Sheet: `Financiering` row `5`
+Sheet: `Nu Niet Zwanger` row `8`
 
-Question: Laagdrempelige steunpunten
+Question: Toegankelijke anticonceptiezorg en budget
 
 Reviewer role: `finance_reviewer`
 
-Expected processing route: `finance_matrix_update`
+Expected processing route: `validation_log_or_finance_ticket`
 
 What the reviewer does:
 
-- Open `docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx`.
-- Go to sheet `Financiering`, row `5`.
+- Open `docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx`.
+- Go to sheet `Nu Niet Zwanger`, row `8`.
 - Use the workbook dropdowns and evidence fields to answer just this row. Check whether owner/party/action-holder dropdowns are sufficient.
 - Note whether wording, answer options or evidence instructions need improvement before stakeholder contact.
 
@@ -229,7 +229,7 @@ Failure triggers:
 
 Packet: `zorgverzekeraar_zvw` (Zorgverzekeraar/Zvw)
 
-Human workbook: `docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx`
+Human workbook: `docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx`
 
 Repository CSV reference: `data/workagenda/precontact_packets/zorgverzekeraar_zvw.csv`
 
@@ -245,7 +245,7 @@ Expected processing route: `reroute_or_validation_log_note`
 
 What the reviewer does:
 
-- Open `docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx`.
+- Open `docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx`.
 - Go to sheet `Sociaal verwijzen`, row `5`.
 - Use the workbook dropdowns and evidence fields to answer just this row. Check whether owner/party/action-holder dropdowns are sufficient.
 - Note whether wording, answer options or evidence instructions need improvement before stakeholder contact.

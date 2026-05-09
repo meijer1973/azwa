@@ -34,7 +34,7 @@ def shared_inputs() -> list[str]:
         "docs/review/validation-workbook-prefill-audit.md",
         TRACEABILITY_PATH,
         PREFILL_AUDIT_PATH,
-        "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+        "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
         "docs/review/Almere_D6_validatieformats.xlsx",
     ]
 
@@ -56,7 +56,7 @@ def agent_plans() -> list[dict[str, Any]]:
                 "docs/review/almere_d6_validation_ticket_matrix.md",
             ],
             "focus": [
-                "D5 tabs with missing current working view: Financiering, Governance rollen, Monitoring cyclus, D6 afhankelijkheden.",
+                "D5 tabs with missing current working view: Monitoring cyclus and D6 afhankelijkheden.",
                 "Any row whose current working view is weak, overly broad, or not clearly source-backed.",
                 "D6 tabs where safe wording depends on public evidence versus validation.",
             ],
@@ -207,7 +207,7 @@ def agent_plans() -> list[dict[str, Any]]:
                 "docs/review/validation-workbook-prefill-audit.md",
             ],
             "focus": [
-                "D5 finance workbook tab.",
+                "D5 component rows with finance/controller or funding questions.",
                 "D6 financing and budget-demarcation tab.",
                 "Rows with mixed funding, unknown funding, project continuity or double-counting risk.",
                 "Separation of AZWA-D5, AZWA-D6, SPUK/GALA, PGA/IZA, regular municipal funding, GGD contribution/plustaak and Zvw/insurer funding.",

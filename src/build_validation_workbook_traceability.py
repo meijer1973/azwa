@@ -40,8 +40,8 @@ class WorkbookConfig:
 WORKBOOKS = [
     WorkbookConfig(
         workbook_id="d5_validation_workbook",
-        path=ROOT / "docs" / "review" / "D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-        version="v0.5",
+        path=ROOT / "docs" / "review" / "D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
+        version="v0.6",
         validation_domain="D5",
         sheets={
             "Overzicht D5": SheetConfig(
@@ -130,22 +130,6 @@ WORKBOOKS = [
                 ["kernteam_werkagenda", "gemeente_almere_sociaal_domein"],
                 "dropdown_plus_evidence",
                 "decision_ticket_or_status_matrix_update",
-                "pre_contact_send_readiness",
-            ),
-            "Financiering": SheetConfig(
-                "d5_financiering",
-                "D5-FIN",
-                ["finance_controller", "zorgverzekeraar_zvw"],
-                "finance_matrix",
-                "finance_matrix_update",
-                "pre_contact_send_readiness",
-            ),
-            "Governance rollen": SheetConfig(
-                "d5_governance_rollen",
-                "D5-GOV",
-                ["gemeente_almere_sociaal_domein", "regionale_governance"],
-                "role_matrix",
-                "decision_register_or_validation_log",
                 "pre_contact_send_readiness",
             ),
             "Monitoring cyclus": SheetConfig(

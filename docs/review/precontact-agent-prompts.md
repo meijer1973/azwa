@@ -46,7 +46,7 @@ Start from these repository inputs:
 - `docs/review/validation-workbook-prefill-audit.md`
 - `data/workagenda/validation_workbook_traceability_map.json`
 - `data/workagenda/validation_workbook_prefill_audit.json`
-- `docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx`
+- `docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx`
 - `docs/review/Almere_D6_validatieformats.xlsx`
 - `data/workagenda/d5_status_matrix.json`
 - `data/workagenda/d5_validation_tickets.json`
@@ -55,7 +55,7 @@ Start from these repository inputs:
 - `docs/review/almere_d6_validation_ticket_matrix.md`
 
 Focus only on:
-- D5 tabs with missing current working view: Financiering, Governance rollen, Monitoring cyclus, D6 afhankelijkheden.
+- D5 tabs with missing current working view: Monitoring cyclus and D6 afhankelijkheden.
 - Any row whose current working view is weak, overly broad, or not clearly source-backed.
 - D6 tabs where safe wording depends on public evidence versus validation.
 
@@ -117,7 +117,7 @@ Start from these repository inputs:
 - `docs/review/validation-workbook-prefill-audit.md`
 - `data/workagenda/validation_workbook_traceability_map.json`
 - `data/workagenda/validation_workbook_prefill_audit.json`
-- `docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx`
+- `docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx`
 - `docs/review/Almere_D6_validatieformats.xlsx`
 - `config/monthly_source_audit.json`
 - `data/extracted/monthly_source_audit.json`
@@ -184,7 +184,7 @@ Start from these repository inputs:
 - `docs/review/validation-workbook-prefill-audit.md`
 - `data/workagenda/validation_workbook_traceability_map.json`
 - `data/workagenda/validation_workbook_prefill_audit.json`
-- `docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx`
+- `docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx`
 - `docs/review/Almere_D6_validatieformats.xlsx`
 - `data/workagenda/d5_status_matrix.json`
 - `data/workagenda/d5_validation_tickets.json`
@@ -250,7 +250,7 @@ Start from these repository inputs:
 - `docs/review/validation-workbook-prefill-audit.md`
 - `data/workagenda/validation_workbook_traceability_map.json`
 - `data/workagenda/validation_workbook_prefill_audit.json`
-- `docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx`
+- `docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx`
 - `docs/review/Almere_D6_validatieformats.xlsx`
 
 Focus only on:
@@ -313,14 +313,14 @@ Start from these repository inputs:
 - `docs/review/validation-workbook-prefill-audit.md`
 - `data/workagenda/validation_workbook_traceability_map.json`
 - `data/workagenda/validation_workbook_prefill_audit.json`
-- `docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx`
+- `docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx`
 - `docs/review/Almere_D6_validatieformats.xlsx`
 - `data/workagenda/d5_status_matrix.json`
 - `docs/review/almere_d6_validation_ticket_matrix.md`
 - `docs/review/validation-workbook-prefill-audit.md`
 
 Focus only on:
-- D5 finance workbook tab.
+- D5 component rows with finance/controller or funding questions.
 - D6 financing and budget-demarcation tab.
 - Rows with mixed funding, unknown funding, project continuity or double-counting risk.
 - Separation of AZWA-D5, AZWA-D6, SPUK/GALA, PGA/IZA, regular municipal funding, GGD contribution/plustaak and Zvw/insurer funding.

@@ -44,10 +44,10 @@ CASE_DEFINITIONS = [
         "case_id": "P5-CASE-003",
         "case_type": "finance_row",
         "packet_id": "finance_controller",
-        "vraag_id": "D5-FIN-001",
+        "vraag_id": "D5-NNZ-004",
         "reviewer_role": "finance_reviewer",
-        "instruction": "Test whether finance can record funding line, structural/project status, double-counting risk and evidence reference.",
-        "expected_processing_route": "finance_matrix_update",
+        "instruction": "Test whether finance can evaluate a component-level budget question now that the separate D5 finance tab has been removed.",
+        "expected_processing_route": "validation_log_or_finance_ticket",
     },
     {
         "case_id": "P5-CASE-004",

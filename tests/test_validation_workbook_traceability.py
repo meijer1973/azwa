@@ -7,7 +7,7 @@ def test_validation_workbook_traceability_ids_are_unique():
 
     assert uniqueness["total_ids"] == uniqueness["unique_ids"]
     assert uniqueness["duplicates"] == []
-    assert uniqueness["total_ids"] >= 200
+    assert uniqueness["total_ids"] >= 180
 
 
 def test_validation_workbook_traceability_covers_d5_and_d6():
@@ -17,6 +17,9 @@ def test_validation_workbook_traceability_covers_d5_and_d6():
     assert set(workbooks) == {"d5_validation_workbook", "d6_validation_workbook"}
     assert sum(sheet["mapped_validation_row_count"] for sheet in workbooks["d5_validation_workbook"]["sheets"]) > 0
     assert sum(sheet["mapped_validation_row_count"] for sheet in workbooks["d6_validation_workbook"]["sheets"]) > 0
+    d5_sheet_names = {sheet["sheet"] for sheet in workbooks["d5_validation_workbook"]["sheets"]}
+    assert "Financiering" not in d5_sheet_names
+    assert "Governance rollen" not in d5_sheet_names
 
 
 def test_validation_workbook_rows_have_processing_metadata():

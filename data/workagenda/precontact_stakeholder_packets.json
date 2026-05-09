@@ -16,8 +16,8 @@
     "data/workagenda/precontact_agent_plan.json"
   ],
   "packet_count": 18,
-  "total_packet_rows": 604,
-  "unique_vraag_ids": 245,
+  "total_packet_rows": 492,
+  "unique_vraag_ids": 189,
   "packets": [
     {
       "packet_id": "d6_validation_owner",
@@ -45,7 +45,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "D6 afhankelijkheden",
           "sheet_row": 5,
           "vraag_id": "D5-D6DEP-001",
@@ -64,7 +64,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "D6 afhankelijkheden",
           "sheet_row": 6,
           "vraag_id": "D5-D6DEP-002",
@@ -83,7 +83,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "D6 afhankelijkheden",
           "sheet_row": 7,
           "vraag_id": "D5-D6DEP-003",
@@ -102,7 +102,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "D6 afhankelijkheden",
           "sheet_row": 8,
           "vraag_id": "D5-D6DEP-004",
@@ -121,7 +121,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "D6 afhankelijkheden",
           "sheet_row": 9,
           "vraag_id": "D5-D6DEP-005",
@@ -140,7 +140,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "D6 afhankelijkheden",
           "sheet_row": 10,
           "vraag_id": "D5-D6DEP-006",
@@ -159,7 +159,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "D6 afhankelijkheden",
           "sheet_row": 11,
           "vraag_id": "D5-D6DEP-007",
@@ -178,7 +178,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "D6 afhankelijkheden",
           "sheet_row": 12,
           "vraag_id": "D5-D6DEP-008",
@@ -197,7 +197,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "D6 afhankelijkheden",
           "sheet_row": 13,
           "vraag_id": "D5-D6DEP-009",
@@ -225,17 +225,12 @@
       "escalation_route": "Finance lead / projectlead werkagenda",
       "expected_response_timing": "to_be_set_after_p7_send_readiness_gate",
       "csv_path": "data/workagenda/precontact_packets/finance_controller.csv",
-      "row_count": 64,
-      "d5_row_count": 24,
+      "row_count": 53,
+      "d5_row_count": 13,
       "d6_row_count": 40,
-      "sheet_count": 8,
-      "evidence_required_count": 64,
+      "sheet_count": 7,
+      "evidence_required_count": 53,
       "cleanup_before_send": [
-        {
-          "workbook_id": "d5_validation_workbook",
-          "sheet": "Financiering",
-          "recommendation": "Add a concise current working view before stakeholder contact."
-        },
         {
           "workbook_id": "d6_validation_workbook",
           "sheet": "Inloopvoorzieningen",
@@ -251,216 +246,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Financiering",
-          "sheet_row": 5,
-          "vraag_id": "D5-FIN-001",
-          "component_id": "d5_financiering",
-          "question_text": "Laagdrempelige steunpunten",
-          "stakeholderpakket": [
-            "finance_controller",
-            "zorgverzekeraar_zvw"
-          ],
-          "antwoordtype": "finance_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "finance_matrix_update",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Financiering",
-          "sheet_row": 6,
-          "vraag_id": "D5-FIN-002",
-          "component_id": "d5_financiering",
-          "question_text": "Sociaal verwijzen",
-          "stakeholderpakket": [
-            "finance_controller",
-            "zorgverzekeraar_zvw"
-          ],
-          "antwoordtype": "finance_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "finance_matrix_update",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Financiering",
-          "sheet_row": 7,
-          "vraag_id": "D5-FIN-003",
-          "component_id": "d5_financiering",
-          "question_text": "Valpreventie",
-          "stakeholderpakket": [
-            "finance_controller",
-            "zorgverzekeraar_zvw"
-          ],
-          "antwoordtype": "finance_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "finance_matrix_update",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Financiering",
-          "sheet_row": 8,
-          "vraag_id": "D5-FIN-004",
-          "component_id": "d5_financiering",
-          "question_text": "Overgewicht volwassenen",
-          "stakeholderpakket": [
-            "finance_controller",
-            "zorgverzekeraar_zvw"
-          ],
-          "antwoordtype": "finance_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "finance_matrix_update",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Financiering",
-          "sheet_row": 9,
-          "vraag_id": "D5-FIN-005",
-          "component_id": "d5_financiering",
-          "question_text": "Kansrijke Start",
-          "stakeholderpakket": [
-            "finance_controller",
-            "zorgverzekeraar_zvw"
-          ],
-          "antwoordtype": "finance_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "finance_matrix_update",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Financiering",
-          "sheet_row": 10,
-          "vraag_id": "D5-FIN-006",
-          "component_id": "d5_financiering",
-          "question_text": "Integrale gezinspoli",
-          "stakeholderpakket": [
-            "finance_controller",
-            "zorgverzekeraar_zvw"
-          ],
-          "antwoordtype": "finance_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "finance_matrix_update",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Financiering",
-          "sheet_row": 11,
-          "vraag_id": "D5-FIN-007",
-          "component_id": "d5_financiering",
-          "question_text": "Nu Niet Zwanger",
-          "stakeholderpakket": [
-            "finance_controller",
-            "zorgverzekeraar_zvw"
-          ],
-          "antwoordtype": "finance_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "finance_matrix_update",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Financiering",
-          "sheet_row": 12,
-          "vraag_id": "D5-FIN-008",
-          "component_id": "d5_financiering",
-          "question_text": "Mentale gezondheidsnetwerken",
-          "stakeholderpakket": [
-            "finance_controller",
-            "zorgverzekeraar_zvw"
-          ],
-          "antwoordtype": "finance_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "finance_matrix_update",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Financiering",
-          "sheet_row": 13,
-          "vraag_id": "D5-FIN-009",
-          "component_id": "d5_financiering",
-          "question_text": "Overgewicht kinderen",
-          "stakeholderpakket": [
-            "finance_controller",
-            "zorgverzekeraar_zvw"
-          ],
-          "antwoordtype": "finance_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "finance_matrix_update",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Financiering",
-          "sheet_row": 14,
-          "vraag_id": "D5-FIN-010",
-          "component_id": "d5_financiering",
-          "question_text": "Ontwikkelagenda 1 nieuw",
-          "stakeholderpakket": [
-            "finance_controller",
-            "zorgverzekeraar_zvw"
-          ],
-          "antwoordtype": "finance_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "finance_matrix_update",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Financiering",
-          "sheet_row": 15,
-          "vraag_id": "D5-FIN-011",
-          "component_id": "d5_financiering",
-          "question_text": "Ontwikkelagenda 2 / overige initiatieven",
-          "stakeholderpakket": [
-            "finance_controller",
-            "zorgverzekeraar_zvw"
-          ],
-          "antwoordtype": "finance_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "finance_matrix_update",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Nu Niet Zwanger",
           "sheet_row": 5,
           "vraag_id": "D5-NNZ-001",
@@ -480,7 +266,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Nu Niet Zwanger",
           "sheet_row": 6,
           "vraag_id": "D5-NNZ-002",
@@ -500,7 +286,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Nu Niet Zwanger",
           "sheet_row": 7,
           "vraag_id": "D5-NNZ-003",
@@ -520,7 +306,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Nu Niet Zwanger",
           "sheet_row": 8,
           "vraag_id": "D5-NNZ-004",
@@ -540,7 +326,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Nu Niet Zwanger",
           "sheet_row": 9,
           "vraag_id": "D5-NNZ-005",
@@ -560,7 +346,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Nu Niet Zwanger",
           "sheet_row": 10,
           "vraag_id": "D5-NNZ-006",
@@ -580,7 +366,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Overgewicht volwassenen",
           "sheet_row": 5,
           "vraag_id": "D5-OVW-001",
@@ -600,7 +386,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Overgewicht volwassenen",
           "sheet_row": 6,
           "vraag_id": "D5-OVW-002",
@@ -620,7 +406,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Overgewicht volwassenen",
           "sheet_row": 7,
           "vraag_id": "D5-OVW-003",
@@ -640,7 +426,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Overgewicht volwassenen",
           "sheet_row": 8,
           "vraag_id": "D5-OVW-004",
@@ -660,7 +446,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Overgewicht volwassenen",
           "sheet_row": 9,
           "vraag_id": "D5-OVW-005",
@@ -680,7 +466,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Overgewicht volwassenen",
           "sheet_row": 10,
           "vraag_id": "D5-OVW-006",
@@ -700,7 +486,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Overgewicht volwassenen",
           "sheet_row": 11,
           "vraag_id": "D5-OVW-007",
@@ -1539,7 +1325,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Kansrijke Start",
           "sheet_row": 5,
           "vraag_id": "D5-KS-001",
@@ -1559,7 +1345,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Kansrijke Start",
           "sheet_row": 6,
           "vraag_id": "D5-KS-002",
@@ -1579,7 +1365,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Kansrijke Start",
           "sheet_row": 7,
           "vraag_id": "D5-KS-003",
@@ -1599,7 +1385,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Kansrijke Start",
           "sheet_row": 8,
           "vraag_id": "D5-KS-004",
@@ -1619,7 +1405,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Kansrijke Start",
           "sheet_row": 9,
           "vraag_id": "D5-KS-005",
@@ -1639,7 +1425,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Kansrijke Start",
           "sheet_row": 10,
           "vraag_id": "D5-KS-006",
@@ -1659,7 +1445,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Kansrijke Start",
           "sheet_row": 11,
           "vraag_id": "D5-KS-007",
@@ -1679,7 +1465,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Laagdremp. steunpunten",
           "sheet_row": 5,
           "vraag_id": "D5-LSP-001",
@@ -1698,7 +1484,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Laagdremp. steunpunten",
           "sheet_row": 6,
           "vraag_id": "D5-LSP-002",
@@ -1717,7 +1503,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Laagdremp. steunpunten",
           "sheet_row": 7,
           "vraag_id": "D5-LSP-003",
@@ -1736,7 +1522,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Laagdremp. steunpunten",
           "sheet_row": 8,
           "vraag_id": "D5-LSP-004",
@@ -1755,7 +1541,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Laagdremp. steunpunten",
           "sheet_row": 9,
           "vraag_id": "D5-LSP-005",
@@ -1774,7 +1560,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Laagdremp. steunpunten",
           "sheet_row": 10,
           "vraag_id": "D5-LSP-006",
@@ -1793,7 +1579,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Laagdremp. steunpunten",
           "sheet_row": 11,
           "vraag_id": "D5-LSP-007",
@@ -1812,7 +1598,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Mentale gezondheid",
           "sheet_row": 5,
           "vraag_id": "D5-MGN-001",
@@ -1832,7 +1618,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Mentale gezondheid",
           "sheet_row": 6,
           "vraag_id": "D5-MGN-002",
@@ -1852,7 +1638,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Mentale gezondheid",
           "sheet_row": 7,
           "vraag_id": "D5-MGN-003",
@@ -1872,7 +1658,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Mentale gezondheid",
           "sheet_row": 8,
           "vraag_id": "D5-MGN-004",
@@ -1892,7 +1678,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Mentale gezondheid",
           "sheet_row": 9,
           "vraag_id": "D5-MGN-005",
@@ -1912,7 +1698,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Mentale gezondheid",
           "sheet_row": 10,
           "vraag_id": "D5-MGN-006",
@@ -1932,7 +1718,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Mentale gezondheid",
           "sheet_row": 11,
           "vraag_id": "D5-MGN-007",
@@ -1952,7 +1738,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Nu Niet Zwanger",
           "sheet_row": 5,
           "vraag_id": "D5-NNZ-001",
@@ -1972,7 +1758,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Nu Niet Zwanger",
           "sheet_row": 6,
           "vraag_id": "D5-NNZ-002",
@@ -1992,7 +1778,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Nu Niet Zwanger",
           "sheet_row": 7,
           "vraag_id": "D5-NNZ-003",
@@ -2012,7 +1798,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Nu Niet Zwanger",
           "sheet_row": 8,
           "vraag_id": "D5-NNZ-004",
@@ -2032,7 +1818,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Nu Niet Zwanger",
           "sheet_row": 9,
           "vraag_id": "D5-NNZ-005",
@@ -2052,7 +1838,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Nu Niet Zwanger",
           "sheet_row": 10,
           "vraag_id": "D5-NNZ-006",
@@ -2072,7 +1858,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Overgewicht kinderen",
           "sheet_row": 5,
           "vraag_id": "D5-OK-001",
@@ -2092,7 +1878,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Overgewicht kinderen",
           "sheet_row": 6,
           "vraag_id": "D5-OK-002",
@@ -2112,7 +1898,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Overgewicht kinderen",
           "sheet_row": 7,
           "vraag_id": "D5-OK-003",
@@ -2132,7 +1918,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Overgewicht kinderen",
           "sheet_row": 8,
           "vraag_id": "D5-OK-004",
@@ -2152,7 +1938,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Overgewicht kinderen",
           "sheet_row": 9,
           "vraag_id": "D5-OK-005",
@@ -2172,7 +1958,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Overgewicht kinderen",
           "sheet_row": 10,
           "vraag_id": "D5-OK-006",
@@ -2192,7 +1978,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Overgewicht volwassenen",
           "sheet_row": 5,
           "vraag_id": "D5-OVW-001",
@@ -2212,7 +1998,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Overgewicht volwassenen",
           "sheet_row": 6,
           "vraag_id": "D5-OVW-002",
@@ -2232,7 +2018,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Overgewicht volwassenen",
           "sheet_row": 7,
           "vraag_id": "D5-OVW-003",
@@ -2252,7 +2038,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Overgewicht volwassenen",
           "sheet_row": 8,
           "vraag_id": "D5-OVW-004",
@@ -2272,7 +2058,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Overgewicht volwassenen",
           "sheet_row": 9,
           "vraag_id": "D5-OVW-005",
@@ -2292,7 +2078,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Overgewicht volwassenen",
           "sheet_row": 10,
           "vraag_id": "D5-OVW-006",
@@ -2312,7 +2098,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Overgewicht volwassenen",
           "sheet_row": 11,
           "vraag_id": "D5-OVW-007",
@@ -2332,7 +2118,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Sociaal verwijzen",
           "sheet_row": 5,
           "vraag_id": "D5-SV-001",
@@ -2352,7 +2138,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Sociaal verwijzen",
           "sheet_row": 6,
           "vraag_id": "D5-SV-002",
@@ -2372,7 +2158,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Sociaal verwijzen",
           "sheet_row": 7,
           "vraag_id": "D5-SV-003",
@@ -2392,7 +2178,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Sociaal verwijzen",
           "sheet_row": 8,
           "vraag_id": "D5-SV-004",
@@ -2412,7 +2198,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Sociaal verwijzen",
           "sheet_row": 9,
           "vraag_id": "D5-SV-005",
@@ -2432,7 +2218,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Sociaal verwijzen",
           "sheet_row": 10,
           "vraag_id": "D5-SV-006",
@@ -2452,7 +2238,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Sociaal verwijzen",
           "sheet_row": 11,
           "vraag_id": "D5-SV-007",
@@ -2472,7 +2258,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Valpreventie",
           "sheet_row": 5,
           "vraag_id": "D5-VAL-001",
@@ -2492,7 +2278,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Valpreventie",
           "sheet_row": 6,
           "vraag_id": "D5-VAL-002",
@@ -2512,7 +2298,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Valpreventie",
           "sheet_row": 7,
           "vraag_id": "D5-VAL-003",
@@ -2532,7 +2318,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Valpreventie",
           "sheet_row": 8,
           "vraag_id": "D5-VAL-004",
@@ -2552,7 +2338,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Valpreventie",
           "sheet_row": 9,
           "vraag_id": "D5-VAL-005",
@@ -2572,7 +2358,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Valpreventie",
           "sheet_row": 10,
           "vraag_id": "D5-VAL-006",
@@ -2592,7 +2378,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Valpreventie",
           "sheet_row": 11,
           "vraag_id": "D5-VAL-007",
@@ -4211,20 +3997,15 @@
       "escalation_route": "Projectlead werkagenda / beleidsowner",
       "expected_response_timing": "to_be_set_after_p7_send_readiness_gate",
       "csv_path": "data/workagenda/precontact_packets/gemeente_almere_sociaal_domein_sturing.csv",
-      "row_count": 59,
-      "d5_row_count": 59,
+      "row_count": 14,
+      "d5_row_count": 14,
       "d6_row_count": 0,
-      "sheet_count": 3,
-      "evidence_required_count": 59,
+      "sheet_count": 2,
+      "evidence_required_count": 14,
       "cleanup_before_send": [
         {
           "workbook_id": "d5_validation_workbook",
           "sheet": "D6 afhankelijkheden",
-          "recommendation": "Add a concise current working view before stakeholder contact."
-        },
-        {
-          "workbook_id": "d5_validation_workbook",
-          "sheet": "Governance rollen",
           "recommendation": "Add a concise current working view before stakeholder contact."
         }
       ],
@@ -4232,7 +4013,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "D6 afhankelijkheden",
           "sheet_row": 5,
           "vraag_id": "D5-D6DEP-001",
@@ -4251,7 +4032,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "D6 afhankelijkheden",
           "sheet_row": 6,
           "vraag_id": "D5-D6DEP-002",
@@ -4270,7 +4051,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "D6 afhankelijkheden",
           "sheet_row": 7,
           "vraag_id": "D5-D6DEP-003",
@@ -4289,7 +4070,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "D6 afhankelijkheden",
           "sheet_row": 8,
           "vraag_id": "D5-D6DEP-004",
@@ -4308,7 +4089,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "D6 afhankelijkheden",
           "sheet_row": 9,
           "vraag_id": "D5-D6DEP-005",
@@ -4327,7 +4108,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "D6 afhankelijkheden",
           "sheet_row": 10,
           "vraag_id": "D5-D6DEP-006",
@@ -4346,7 +4127,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "D6 afhankelijkheden",
           "sheet_row": 11,
           "vraag_id": "D5-D6DEP-007",
@@ -4365,7 +4146,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "D6 afhankelijkheden",
           "sheet_row": 12,
           "vraag_id": "D5-D6DEP-008",
@@ -4384,7 +4165,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "D6 afhankelijkheden",
           "sheet_row": 13,
           "vraag_id": "D5-D6DEP-009",
@@ -4403,862 +4184,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 5,
-          "vraag_id": "D5-GOV-001",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Laagdrempelige steunpunten",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 6,
-          "vraag_id": "D5-GOV-002",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Laagdrempelige steunpunten",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 7,
-          "vraag_id": "D5-GOV-003",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Laagdrempelige steunpunten",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 8,
-          "vraag_id": "D5-GOV-004",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Laagdrempelige steunpunten",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 9,
-          "vraag_id": "D5-GOV-005",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Laagdrempelige steunpunten",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 10,
-          "vraag_id": "D5-GOV-006",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Sociaal verwijzen",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 11,
-          "vraag_id": "D5-GOV-007",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Sociaal verwijzen",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 12,
-          "vraag_id": "D5-GOV-008",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Sociaal verwijzen",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 13,
-          "vraag_id": "D5-GOV-009",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Sociaal verwijzen",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 14,
-          "vraag_id": "D5-GOV-010",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Sociaal verwijzen",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 15,
-          "vraag_id": "D5-GOV-011",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Valpreventie",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 16,
-          "vraag_id": "D5-GOV-012",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Valpreventie",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 17,
-          "vraag_id": "D5-GOV-013",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Valpreventie",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 18,
-          "vraag_id": "D5-GOV-014",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Valpreventie",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 19,
-          "vraag_id": "D5-GOV-015",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Valpreventie",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 20,
-          "vraag_id": "D5-GOV-016",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Overgewicht volwassenen",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 21,
-          "vraag_id": "D5-GOV-017",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Overgewicht volwassenen",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 22,
-          "vraag_id": "D5-GOV-018",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Overgewicht volwassenen",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 23,
-          "vraag_id": "D5-GOV-019",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Overgewicht volwassenen",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 24,
-          "vraag_id": "D5-GOV-020",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Overgewicht volwassenen",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 25,
-          "vraag_id": "D5-GOV-021",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Kansrijke Start",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 26,
-          "vraag_id": "D5-GOV-022",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Kansrijke Start",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 27,
-          "vraag_id": "D5-GOV-023",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Kansrijke Start",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 28,
-          "vraag_id": "D5-GOV-024",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Kansrijke Start",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 29,
-          "vraag_id": "D5-GOV-025",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Kansrijke Start",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 30,
-          "vraag_id": "D5-GOV-026",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Integrale gezinspoli",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 31,
-          "vraag_id": "D5-GOV-027",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Integrale gezinspoli",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 32,
-          "vraag_id": "D5-GOV-028",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Integrale gezinspoli",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 33,
-          "vraag_id": "D5-GOV-029",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Integrale gezinspoli",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 34,
-          "vraag_id": "D5-GOV-030",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Integrale gezinspoli",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 35,
-          "vraag_id": "D5-GOV-031",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Nu Niet Zwanger",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 36,
-          "vraag_id": "D5-GOV-032",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Nu Niet Zwanger",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 37,
-          "vraag_id": "D5-GOV-033",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Nu Niet Zwanger",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 38,
-          "vraag_id": "D5-GOV-034",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Nu Niet Zwanger",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 39,
-          "vraag_id": "D5-GOV-035",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Nu Niet Zwanger",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 40,
-          "vraag_id": "D5-GOV-036",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Mentale gezondheidsnetwerken",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 41,
-          "vraag_id": "D5-GOV-037",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Mentale gezondheidsnetwerken",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 42,
-          "vraag_id": "D5-GOV-038",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Mentale gezondheidsnetwerken",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 43,
-          "vraag_id": "D5-GOV-039",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Mentale gezondheidsnetwerken",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 44,
-          "vraag_id": "D5-GOV-040",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Mentale gezondheidsnetwerken",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 45,
-          "vraag_id": "D5-GOV-041",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Overgewicht kinderen",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 46,
-          "vraag_id": "D5-GOV-042",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Overgewicht kinderen",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 47,
-          "vraag_id": "D5-GOV-043",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Overgewicht kinderen",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 48,
-          "vraag_id": "D5-GOV-044",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Overgewicht kinderen",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 49,
-          "vraag_id": "D5-GOV-045",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Overgewicht kinderen",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Optionele ontwikkelagenda",
           "sheet_row": 5,
           "vraag_id": "D5-OPT-001",
@@ -5277,7 +4203,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Optionele ontwikkelagenda",
           "sheet_row": 6,
           "vraag_id": "D5-OPT-002",
@@ -5296,7 +4222,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Optionele ontwikkelagenda",
           "sheet_row": 7,
           "vraag_id": "D5-OPT-003",
@@ -5315,7 +4241,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Optionele ontwikkelagenda",
           "sheet_row": 8,
           "vraag_id": "D5-OPT-004",
@@ -5334,7 +4260,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Optionele ontwikkelagenda",
           "sheet_row": 9,
           "vraag_id": "D5-OPT-005",
@@ -5383,7 +4309,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Integrale gezinspoli",
           "sheet_row": 5,
           "vraag_id": "D5-IGP-001",
@@ -5403,7 +4329,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Integrale gezinspoli",
           "sheet_row": 6,
           "vraag_id": "D5-IGP-002",
@@ -5423,7 +4349,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Integrale gezinspoli",
           "sheet_row": 7,
           "vraag_id": "D5-IGP-003",
@@ -5443,7 +4369,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Integrale gezinspoli",
           "sheet_row": 8,
           "vraag_id": "D5-IGP-004",
@@ -5463,7 +4389,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Integrale gezinspoli",
           "sheet_row": 9,
           "vraag_id": "D5-IGP-005",
@@ -5483,7 +4409,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Integrale gezinspoli",
           "sheet_row": 10,
           "vraag_id": "D5-IGP-006",
@@ -5503,7 +4429,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Integrale gezinspoli",
           "sheet_row": 11,
           "vraag_id": "D5-IGP-007",
@@ -5523,7 +4449,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Integrale gezinspoli",
           "sheet_row": 12,
           "vraag_id": "D5-IGP-008",
@@ -5543,7 +4469,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Kansrijke Start",
           "sheet_row": 5,
           "vraag_id": "D5-KS-001",
@@ -5563,7 +4489,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Kansrijke Start",
           "sheet_row": 6,
           "vraag_id": "D5-KS-002",
@@ -5583,7 +4509,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Kansrijke Start",
           "sheet_row": 7,
           "vraag_id": "D5-KS-003",
@@ -5603,7 +4529,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Kansrijke Start",
           "sheet_row": 8,
           "vraag_id": "D5-KS-004",
@@ -5623,7 +4549,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Kansrijke Start",
           "sheet_row": 9,
           "vraag_id": "D5-KS-005",
@@ -5643,7 +4569,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Kansrijke Start",
           "sheet_row": 10,
           "vraag_id": "D5-KS-006",
@@ -5663,7 +4589,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Kansrijke Start",
           "sheet_row": 11,
           "vraag_id": "D5-KS-007",
@@ -5683,7 +4609,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Monitoring cyclus",
           "sheet_row": 5,
           "vraag_id": "D5-MON-001",
@@ -5703,7 +4629,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Monitoring cyclus",
           "sheet_row": 6,
           "vraag_id": "D5-MON-002",
@@ -5723,7 +4649,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Monitoring cyclus",
           "sheet_row": 7,
           "vraag_id": "D5-MON-003",
@@ -5743,7 +4669,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Monitoring cyclus",
           "sheet_row": 8,
           "vraag_id": "D5-MON-004",
@@ -5763,7 +4689,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Monitoring cyclus",
           "sheet_row": 9,
           "vraag_id": "D5-MON-005",
@@ -5783,7 +4709,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Monitoring cyclus",
           "sheet_row": 10,
           "vraag_id": "D5-MON-006",
@@ -5803,7 +4729,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Monitoring cyclus",
           "sheet_row": 11,
           "vraag_id": "D5-MON-007",
@@ -5823,7 +4749,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Monitoring cyclus",
           "sheet_row": 12,
           "vraag_id": "D5-MON-008",
@@ -5843,7 +4769,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Monitoring cyclus",
           "sheet_row": 13,
           "vraag_id": "D5-MON-009",
@@ -5863,7 +4789,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Monitoring cyclus",
           "sheet_row": 14,
           "vraag_id": "D5-MON-010",
@@ -5883,7 +4809,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Nu Niet Zwanger",
           "sheet_row": 5,
           "vraag_id": "D5-NNZ-001",
@@ -5903,7 +4829,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Nu Niet Zwanger",
           "sheet_row": 6,
           "vraag_id": "D5-NNZ-002",
@@ -5923,7 +4849,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Nu Niet Zwanger",
           "sheet_row": 7,
           "vraag_id": "D5-NNZ-003",
@@ -5943,7 +4869,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Nu Niet Zwanger",
           "sheet_row": 8,
           "vraag_id": "D5-NNZ-004",
@@ -5963,7 +4889,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Nu Niet Zwanger",
           "sheet_row": 9,
           "vraag_id": "D5-NNZ-005",
@@ -5983,7 +4909,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Nu Niet Zwanger",
           "sheet_row": 10,
           "vraag_id": "D5-NNZ-006",
@@ -6003,7 +4929,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Overgewicht kinderen",
           "sheet_row": 5,
           "vraag_id": "D5-OK-001",
@@ -6023,7 +4949,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Overgewicht kinderen",
           "sheet_row": 6,
           "vraag_id": "D5-OK-002",
@@ -6043,7 +4969,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Overgewicht kinderen",
           "sheet_row": 7,
           "vraag_id": "D5-OK-003",
@@ -6063,7 +4989,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Overgewicht kinderen",
           "sheet_row": 8,
           "vraag_id": "D5-OK-004",
@@ -6083,7 +5009,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Overgewicht kinderen",
           "sheet_row": 9,
           "vraag_id": "D5-OK-005",
@@ -6103,7 +5029,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Overgewicht kinderen",
           "sheet_row": 10,
           "vraag_id": "D5-OK-006",
@@ -6123,7 +5049,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Valpreventie",
           "sheet_row": 5,
           "vraag_id": "D5-VAL-001",
@@ -6143,7 +5069,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Valpreventie",
           "sheet_row": 6,
           "vraag_id": "D5-VAL-002",
@@ -6163,7 +5089,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Valpreventie",
           "sheet_row": 7,
           "vraag_id": "D5-VAL-003",
@@ -6183,7 +5109,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Valpreventie",
           "sheet_row": 8,
           "vraag_id": "D5-VAL-004",
@@ -6203,7 +5129,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Valpreventie",
           "sheet_row": 9,
           "vraag_id": "D5-VAL-005",
@@ -6223,7 +5149,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Valpreventie",
           "sheet_row": 10,
           "vraag_id": "D5-VAL-006",
@@ -6243,7 +5169,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Valpreventie",
           "sheet_row": 11,
           "vraag_id": "D5-VAL-007",
@@ -6816,7 +5742,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Mentale gezondheid",
           "sheet_row": 5,
           "vraag_id": "D5-MGN-001",
@@ -6836,7 +5762,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Mentale gezondheid",
           "sheet_row": 6,
           "vraag_id": "D5-MGN-002",
@@ -6856,7 +5782,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Mentale gezondheid",
           "sheet_row": 7,
           "vraag_id": "D5-MGN-003",
@@ -6876,7 +5802,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Mentale gezondheid",
           "sheet_row": 8,
           "vraag_id": "D5-MGN-004",
@@ -6896,7 +5822,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Mentale gezondheid",
           "sheet_row": 9,
           "vraag_id": "D5-MGN-005",
@@ -6916,7 +5842,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Mentale gezondheid",
           "sheet_row": 10,
           "vraag_id": "D5-MGN-006",
@@ -6936,7 +5862,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Mentale gezondheid",
           "sheet_row": 11,
           "vraag_id": "D5-MGN-007",
@@ -6981,7 +5907,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Monitoring cyclus",
           "sheet_row": 5,
           "vraag_id": "D5-MON-001",
@@ -7001,7 +5927,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Monitoring cyclus",
           "sheet_row": 6,
           "vraag_id": "D5-MON-002",
@@ -7021,7 +5947,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Monitoring cyclus",
           "sheet_row": 7,
           "vraag_id": "D5-MON-003",
@@ -7041,7 +5967,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Monitoring cyclus",
           "sheet_row": 8,
           "vraag_id": "D5-MON-004",
@@ -7061,7 +5987,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Monitoring cyclus",
           "sheet_row": 9,
           "vraag_id": "D5-MON-005",
@@ -7081,7 +6007,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Monitoring cyclus",
           "sheet_row": 10,
           "vraag_id": "D5-MON-006",
@@ -7101,7 +6027,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Monitoring cyclus",
           "sheet_row": 11,
           "vraag_id": "D5-MON-007",
@@ -7121,7 +6047,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Monitoring cyclus",
           "sheet_row": 12,
           "vraag_id": "D5-MON-008",
@@ -7141,7 +6067,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Monitoring cyclus",
           "sheet_row": 13,
           "vraag_id": "D5-MON-009",
@@ -7161,7 +6087,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Monitoring cyclus",
           "sheet_row": 14,
           "vraag_id": "D5-MON-010",
@@ -7446,7 +6372,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Optionele ontwikkelagenda",
           "sheet_row": 5,
           "vraag_id": "D5-OPT-001",
@@ -7465,7 +6391,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Optionele ontwikkelagenda",
           "sheet_row": 6,
           "vraag_id": "D5-OPT-002",
@@ -7484,7 +6410,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Optionele ontwikkelagenda",
           "sheet_row": 7,
           "vraag_id": "D5-OPT-003",
@@ -7503,7 +6429,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Optionele ontwikkelagenda",
           "sheet_row": 8,
           "vraag_id": "D5-OPT-004",
@@ -7522,7 +6448,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Optionele ontwikkelagenda",
           "sheet_row": 9,
           "vraag_id": "D5-OPT-005",
@@ -7541,7 +6467,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Overzicht D5",
           "sheet_row": 11,
           "vraag_id": "D5-OVZ-001",
@@ -7559,7 +6485,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Overzicht D5",
           "sheet_row": 12,
           "vraag_id": "D5-OVZ-002",
@@ -7577,7 +6503,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Overzicht D5",
           "sheet_row": 13,
           "vraag_id": "D5-OVZ-003",
@@ -7595,7 +6521,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Overzicht D5",
           "sheet_row": 14,
           "vraag_id": "D5-OVZ-004",
@@ -7613,7 +6539,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Overzicht D5",
           "sheet_row": 15,
           "vraag_id": "D5-OVZ-005",
@@ -7631,7 +6557,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Overzicht D5",
           "sheet_row": 16,
           "vraag_id": "D5-OVZ-006",
@@ -7649,7 +6575,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Overzicht D5",
           "sheet_row": 17,
           "vraag_id": "D5-OVZ-007",
@@ -7667,7 +6593,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Overzicht D5",
           "sheet_row": 18,
           "vraag_id": "D5-OVZ-008",
@@ -7685,7 +6611,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Overzicht D5",
           "sheet_row": 19,
           "vraag_id": "D5-OVZ-009",
@@ -7703,7 +6629,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Overzicht D5",
           "sheet_row": 20,
           "vraag_id": "D5-OVZ-010",
@@ -7721,7 +6647,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Overzicht D5",
           "sheet_row": 21,
           "vraag_id": "D5-OVZ-011",
@@ -7739,7 +6665,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Overzicht D5",
           "sheet_row": 22,
           "vraag_id": "D5-OVZ-012",
@@ -8229,17 +7155,12 @@
       "escalation_route": "Mandaatgemeente / projectlead werkagenda",
       "expected_response_timing": "to_be_set_after_p7_send_readiness_gate",
       "csv_path": "data/workagenda/precontact_packets/regionale_governance.csv",
-      "row_count": 80,
-      "d5_row_count": 55,
+      "row_count": 35,
+      "d5_row_count": 10,
       "d6_row_count": 25,
-      "sheet_count": 5,
-      "evidence_required_count": 80,
+      "sheet_count": 4,
+      "evidence_required_count": 35,
       "cleanup_before_send": [
-        {
-          "workbook_id": "d5_validation_workbook",
-          "sheet": "Governance rollen",
-          "recommendation": "Add a concise current working view before stakeholder contact."
-        },
         {
           "workbook_id": "d5_validation_workbook",
           "sheet": "Monitoring cyclus",
@@ -8250,862 +7171,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 5,
-          "vraag_id": "D5-GOV-001",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Laagdrempelige steunpunten",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 6,
-          "vraag_id": "D5-GOV-002",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Laagdrempelige steunpunten",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 7,
-          "vraag_id": "D5-GOV-003",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Laagdrempelige steunpunten",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 8,
-          "vraag_id": "D5-GOV-004",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Laagdrempelige steunpunten",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 9,
-          "vraag_id": "D5-GOV-005",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Laagdrempelige steunpunten",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 10,
-          "vraag_id": "D5-GOV-006",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Sociaal verwijzen",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 11,
-          "vraag_id": "D5-GOV-007",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Sociaal verwijzen",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 12,
-          "vraag_id": "D5-GOV-008",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Sociaal verwijzen",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 13,
-          "vraag_id": "D5-GOV-009",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Sociaal verwijzen",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 14,
-          "vraag_id": "D5-GOV-010",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Sociaal verwijzen",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 15,
-          "vraag_id": "D5-GOV-011",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Valpreventie",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 16,
-          "vraag_id": "D5-GOV-012",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Valpreventie",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 17,
-          "vraag_id": "D5-GOV-013",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Valpreventie",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 18,
-          "vraag_id": "D5-GOV-014",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Valpreventie",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 19,
-          "vraag_id": "D5-GOV-015",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Valpreventie",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 20,
-          "vraag_id": "D5-GOV-016",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Overgewicht volwassenen",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 21,
-          "vraag_id": "D5-GOV-017",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Overgewicht volwassenen",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 22,
-          "vraag_id": "D5-GOV-018",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Overgewicht volwassenen",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 23,
-          "vraag_id": "D5-GOV-019",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Overgewicht volwassenen",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 24,
-          "vraag_id": "D5-GOV-020",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Overgewicht volwassenen",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 25,
-          "vraag_id": "D5-GOV-021",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Kansrijke Start",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 26,
-          "vraag_id": "D5-GOV-022",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Kansrijke Start",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 27,
-          "vraag_id": "D5-GOV-023",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Kansrijke Start",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 28,
-          "vraag_id": "D5-GOV-024",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Kansrijke Start",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 29,
-          "vraag_id": "D5-GOV-025",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Kansrijke Start",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 30,
-          "vraag_id": "D5-GOV-026",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Integrale gezinspoli",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 31,
-          "vraag_id": "D5-GOV-027",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Integrale gezinspoli",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 32,
-          "vraag_id": "D5-GOV-028",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Integrale gezinspoli",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 33,
-          "vraag_id": "D5-GOV-029",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Integrale gezinspoli",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 34,
-          "vraag_id": "D5-GOV-030",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Integrale gezinspoli",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 35,
-          "vraag_id": "D5-GOV-031",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Nu Niet Zwanger",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 36,
-          "vraag_id": "D5-GOV-032",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Nu Niet Zwanger",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 37,
-          "vraag_id": "D5-GOV-033",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Nu Niet Zwanger",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 38,
-          "vraag_id": "D5-GOV-034",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Nu Niet Zwanger",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 39,
-          "vraag_id": "D5-GOV-035",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Nu Niet Zwanger",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 40,
-          "vraag_id": "D5-GOV-036",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Mentale gezondheidsnetwerken",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 41,
-          "vraag_id": "D5-GOV-037",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Mentale gezondheidsnetwerken",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 42,
-          "vraag_id": "D5-GOV-038",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Mentale gezondheidsnetwerken",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 43,
-          "vraag_id": "D5-GOV-039",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Mentale gezondheidsnetwerken",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 44,
-          "vraag_id": "D5-GOV-040",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Mentale gezondheidsnetwerken",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 45,
-          "vraag_id": "D5-GOV-041",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Overgewicht kinderen",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 46,
-          "vraag_id": "D5-GOV-042",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Overgewicht kinderen",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 47,
-          "vraag_id": "D5-GOV-043",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Overgewicht kinderen",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 48,
-          "vraag_id": "D5-GOV-044",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Overgewicht kinderen",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Governance rollen",
-          "sheet_row": 49,
-          "vraag_id": "D5-GOV-045",
-          "component_id": "d5_governance_rollen",
-          "question_text": "Overgewicht kinderen",
-          "stakeholderpakket": [
-            "gemeente_almere_sociaal_domein",
-            "regionale_governance"
-          ],
-          "antwoordtype": "role_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "decision_register_or_validation_log",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Monitoring cyclus",
           "sheet_row": 5,
           "vraag_id": "D5-MON-001",
@@ -9125,7 +7191,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Monitoring cyclus",
           "sheet_row": 6,
           "vraag_id": "D5-MON-002",
@@ -9145,7 +7211,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Monitoring cyclus",
           "sheet_row": 7,
           "vraag_id": "D5-MON-003",
@@ -9165,7 +7231,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Monitoring cyclus",
           "sheet_row": 8,
           "vraag_id": "D5-MON-004",
@@ -9185,7 +7251,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Monitoring cyclus",
           "sheet_row": 9,
           "vraag_id": "D5-MON-005",
@@ -9205,7 +7271,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Monitoring cyclus",
           "sheet_row": 10,
           "vraag_id": "D5-MON-006",
@@ -9225,7 +7291,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Monitoring cyclus",
           "sheet_row": 11,
           "vraag_id": "D5-MON-007",
@@ -9245,7 +7311,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Monitoring cyclus",
           "sheet_row": 12,
           "vraag_id": "D5-MON-008",
@@ -9265,7 +7331,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Monitoring cyclus",
           "sheet_row": 13,
           "vraag_id": "D5-MON-009",
@@ -9285,7 +7351,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Monitoring cyclus",
           "sheet_row": 14,
           "vraag_id": "D5-MON-010",
@@ -10101,7 +8167,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Integrale gezinspoli",
           "sheet_row": 5,
           "vraag_id": "D5-IGP-001",
@@ -10121,7 +8187,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Integrale gezinspoli",
           "sheet_row": 6,
           "vraag_id": "D5-IGP-002",
@@ -10141,7 +8207,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Integrale gezinspoli",
           "sheet_row": 7,
           "vraag_id": "D5-IGP-003",
@@ -10161,7 +8227,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Integrale gezinspoli",
           "sheet_row": 8,
           "vraag_id": "D5-IGP-004",
@@ -10181,7 +8247,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Integrale gezinspoli",
           "sheet_row": 9,
           "vraag_id": "D5-IGP-005",
@@ -10201,7 +8267,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Integrale gezinspoli",
           "sheet_row": 10,
           "vraag_id": "D5-IGP-006",
@@ -10221,7 +8287,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Integrale gezinspoli",
           "sheet_row": 11,
           "vraag_id": "D5-IGP-007",
@@ -10241,7 +8307,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Integrale gezinspoli",
           "sheet_row": 12,
           "vraag_id": "D5-IGP-008",
@@ -10261,7 +8327,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Kansrijke Start",
           "sheet_row": 5,
           "vraag_id": "D5-KS-001",
@@ -10281,7 +8347,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Kansrijke Start",
           "sheet_row": 6,
           "vraag_id": "D5-KS-002",
@@ -10301,7 +8367,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Kansrijke Start",
           "sheet_row": 7,
           "vraag_id": "D5-KS-003",
@@ -10321,7 +8387,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Kansrijke Start",
           "sheet_row": 8,
           "vraag_id": "D5-KS-004",
@@ -10341,7 +8407,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Kansrijke Start",
           "sheet_row": 9,
           "vraag_id": "D5-KS-005",
@@ -10361,7 +8427,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Kansrijke Start",
           "sheet_row": 10,
           "vraag_id": "D5-KS-006",
@@ -10381,7 +8447,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Kansrijke Start",
           "sheet_row": 11,
           "vraag_id": "D5-KS-007",
@@ -10420,7 +8486,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Laagdremp. steunpunten",
           "sheet_row": 5,
           "vraag_id": "D5-LSP-001",
@@ -10439,7 +8505,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Laagdremp. steunpunten",
           "sheet_row": 6,
           "vraag_id": "D5-LSP-002",
@@ -10458,7 +8524,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Laagdremp. steunpunten",
           "sheet_row": 7,
           "vraag_id": "D5-LSP-003",
@@ -10477,7 +8543,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Laagdremp. steunpunten",
           "sheet_row": 8,
           "vraag_id": "D5-LSP-004",
@@ -10496,7 +8562,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Laagdremp. steunpunten",
           "sheet_row": 9,
           "vraag_id": "D5-LSP-005",
@@ -10515,7 +8581,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Laagdremp. steunpunten",
           "sheet_row": 10,
           "vraag_id": "D5-LSP-006",
@@ -10534,7 +8600,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Laagdremp. steunpunten",
           "sheet_row": 11,
           "vraag_id": "D5-LSP-007",
@@ -10553,7 +8619,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Sociaal verwijzen",
           "sheet_row": 5,
           "vraag_id": "D5-SV-001",
@@ -10573,7 +8639,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Sociaal verwijzen",
           "sheet_row": 6,
           "vraag_id": "D5-SV-002",
@@ -10593,7 +8659,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Sociaal verwijzen",
           "sheet_row": 7,
           "vraag_id": "D5-SV-003",
@@ -10613,7 +8679,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Sociaal verwijzen",
           "sheet_row": 8,
           "vraag_id": "D5-SV-004",
@@ -10633,7 +8699,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Sociaal verwijzen",
           "sheet_row": 9,
           "vraag_id": "D5-SV-005",
@@ -10653,7 +8719,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Sociaal verwijzen",
           "sheet_row": 10,
           "vraag_id": "D5-SV-006",
@@ -10673,7 +8739,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Sociaal verwijzen",
           "sheet_row": 11,
           "vraag_id": "D5-SV-007",
@@ -11257,232 +9323,17 @@
       "escalation_route": "Regionale governance / projectlead werkagenda",
       "expected_response_timing": "to_be_set_after_p7_send_readiness_gate",
       "csv_path": "data/workagenda/precontact_packets/zorgverzekeraar_zvw.csv",
-      "row_count": 53,
-      "d5_row_count": 53,
+      "row_count": 42,
+      "d5_row_count": 42,
       "d6_row_count": 0,
-      "sheet_count": 7,
-      "evidence_required_count": 53,
-      "cleanup_before_send": [
-        {
-          "workbook_id": "d5_validation_workbook",
-          "sheet": "Financiering",
-          "recommendation": "Add a concise current working view before stakeholder contact."
-        }
-      ],
+      "sheet_count": 6,
+      "evidence_required_count": 42,
+      "cleanup_before_send": [],
       "rows": [
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Financiering",
-          "sheet_row": 5,
-          "vraag_id": "D5-FIN-001",
-          "component_id": "d5_financiering",
-          "question_text": "Laagdrempelige steunpunten",
-          "stakeholderpakket": [
-            "finance_controller",
-            "zorgverzekeraar_zvw"
-          ],
-          "antwoordtype": "finance_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "finance_matrix_update",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Financiering",
-          "sheet_row": 6,
-          "vraag_id": "D5-FIN-002",
-          "component_id": "d5_financiering",
-          "question_text": "Sociaal verwijzen",
-          "stakeholderpakket": [
-            "finance_controller",
-            "zorgverzekeraar_zvw"
-          ],
-          "antwoordtype": "finance_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "finance_matrix_update",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Financiering",
-          "sheet_row": 7,
-          "vraag_id": "D5-FIN-003",
-          "component_id": "d5_financiering",
-          "question_text": "Valpreventie",
-          "stakeholderpakket": [
-            "finance_controller",
-            "zorgverzekeraar_zvw"
-          ],
-          "antwoordtype": "finance_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "finance_matrix_update",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Financiering",
-          "sheet_row": 8,
-          "vraag_id": "D5-FIN-004",
-          "component_id": "d5_financiering",
-          "question_text": "Overgewicht volwassenen",
-          "stakeholderpakket": [
-            "finance_controller",
-            "zorgverzekeraar_zvw"
-          ],
-          "antwoordtype": "finance_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "finance_matrix_update",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Financiering",
-          "sheet_row": 9,
-          "vraag_id": "D5-FIN-005",
-          "component_id": "d5_financiering",
-          "question_text": "Kansrijke Start",
-          "stakeholderpakket": [
-            "finance_controller",
-            "zorgverzekeraar_zvw"
-          ],
-          "antwoordtype": "finance_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "finance_matrix_update",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Financiering",
-          "sheet_row": 10,
-          "vraag_id": "D5-FIN-006",
-          "component_id": "d5_financiering",
-          "question_text": "Integrale gezinspoli",
-          "stakeholderpakket": [
-            "finance_controller",
-            "zorgverzekeraar_zvw"
-          ],
-          "antwoordtype": "finance_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "finance_matrix_update",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Financiering",
-          "sheet_row": 11,
-          "vraag_id": "D5-FIN-007",
-          "component_id": "d5_financiering",
-          "question_text": "Nu Niet Zwanger",
-          "stakeholderpakket": [
-            "finance_controller",
-            "zorgverzekeraar_zvw"
-          ],
-          "antwoordtype": "finance_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "finance_matrix_update",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Financiering",
-          "sheet_row": 12,
-          "vraag_id": "D5-FIN-008",
-          "component_id": "d5_financiering",
-          "question_text": "Mentale gezondheidsnetwerken",
-          "stakeholderpakket": [
-            "finance_controller",
-            "zorgverzekeraar_zvw"
-          ],
-          "antwoordtype": "finance_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "finance_matrix_update",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Financiering",
-          "sheet_row": 13,
-          "vraag_id": "D5-FIN-009",
-          "component_id": "d5_financiering",
-          "question_text": "Overgewicht kinderen",
-          "stakeholderpakket": [
-            "finance_controller",
-            "zorgverzekeraar_zvw"
-          ],
-          "antwoordtype": "finance_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "finance_matrix_update",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Financiering",
-          "sheet_row": 14,
-          "vraag_id": "D5-FIN-010",
-          "component_id": "d5_financiering",
-          "question_text": "Ontwikkelagenda 1 nieuw",
-          "stakeholderpakket": [
-            "finance_controller",
-            "zorgverzekeraar_zvw"
-          ],
-          "antwoordtype": "finance_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "finance_matrix_update",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
-          "sheet": "Financiering",
-          "sheet_row": 15,
-          "vraag_id": "D5-FIN-011",
-          "component_id": "d5_financiering",
-          "question_text": "Ontwikkelagenda 2 / overige initiatieven",
-          "stakeholderpakket": [
-            "finance_controller",
-            "zorgverzekeraar_zvw"
-          ],
-          "antwoordtype": "finance_matrix",
-          "validatiestatus_default": "nog_niet_gevraagd",
-          "bewijstype_verplicht": true,
-          "repo_update_effect": "finance_matrix_update",
-          "deadline": "pre_contact_send_readiness"
-        },
-        {
-          "domain": "D5",
-          "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Integrale gezinspoli",
           "sheet_row": 5,
           "vraag_id": "D5-IGP-001",
@@ -11502,7 +9353,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Integrale gezinspoli",
           "sheet_row": 6,
           "vraag_id": "D5-IGP-002",
@@ -11522,7 +9373,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Integrale gezinspoli",
           "sheet_row": 7,
           "vraag_id": "D5-IGP-003",
@@ -11542,7 +9393,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Integrale gezinspoli",
           "sheet_row": 8,
           "vraag_id": "D5-IGP-004",
@@ -11562,7 +9413,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Integrale gezinspoli",
           "sheet_row": 9,
           "vraag_id": "D5-IGP-005",
@@ -11582,7 +9433,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Integrale gezinspoli",
           "sheet_row": 10,
           "vraag_id": "D5-IGP-006",
@@ -11602,7 +9453,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Integrale gezinspoli",
           "sheet_row": 11,
           "vraag_id": "D5-IGP-007",
@@ -11622,7 +9473,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Integrale gezinspoli",
           "sheet_row": 12,
           "vraag_id": "D5-IGP-008",
@@ -11642,7 +9493,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Mentale gezondheid",
           "sheet_row": 5,
           "vraag_id": "D5-MGN-001",
@@ -11662,7 +9513,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Mentale gezondheid",
           "sheet_row": 6,
           "vraag_id": "D5-MGN-002",
@@ -11682,7 +9533,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Mentale gezondheid",
           "sheet_row": 7,
           "vraag_id": "D5-MGN-003",
@@ -11702,7 +9553,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Mentale gezondheid",
           "sheet_row": 8,
           "vraag_id": "D5-MGN-004",
@@ -11722,7 +9573,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Mentale gezondheid",
           "sheet_row": 9,
           "vraag_id": "D5-MGN-005",
@@ -11742,7 +9593,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Mentale gezondheid",
           "sheet_row": 10,
           "vraag_id": "D5-MGN-006",
@@ -11762,7 +9613,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Mentale gezondheid",
           "sheet_row": 11,
           "vraag_id": "D5-MGN-007",
@@ -11782,7 +9633,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Overgewicht kinderen",
           "sheet_row": 5,
           "vraag_id": "D5-OK-001",
@@ -11802,7 +9653,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Overgewicht kinderen",
           "sheet_row": 6,
           "vraag_id": "D5-OK-002",
@@ -11822,7 +9673,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Overgewicht kinderen",
           "sheet_row": 7,
           "vraag_id": "D5-OK-003",
@@ -11842,7 +9693,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Overgewicht kinderen",
           "sheet_row": 8,
           "vraag_id": "D5-OK-004",
@@ -11862,7 +9713,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Overgewicht kinderen",
           "sheet_row": 9,
           "vraag_id": "D5-OK-005",
@@ -11882,7 +9733,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Overgewicht kinderen",
           "sheet_row": 10,
           "vraag_id": "D5-OK-006",
@@ -11902,7 +9753,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Overgewicht volwassenen",
           "sheet_row": 5,
           "vraag_id": "D5-OVW-001",
@@ -11922,7 +9773,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Overgewicht volwassenen",
           "sheet_row": 6,
           "vraag_id": "D5-OVW-002",
@@ -11942,7 +9793,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Overgewicht volwassenen",
           "sheet_row": 7,
           "vraag_id": "D5-OVW-003",
@@ -11962,7 +9813,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Overgewicht volwassenen",
           "sheet_row": 8,
           "vraag_id": "D5-OVW-004",
@@ -11982,7 +9833,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Overgewicht volwassenen",
           "sheet_row": 9,
           "vraag_id": "D5-OVW-005",
@@ -12002,7 +9853,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Overgewicht volwassenen",
           "sheet_row": 10,
           "vraag_id": "D5-OVW-006",
@@ -12022,7 +9873,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Overgewicht volwassenen",
           "sheet_row": 11,
           "vraag_id": "D5-OVW-007",
@@ -12042,7 +9893,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Sociaal verwijzen",
           "sheet_row": 5,
           "vraag_id": "D5-SV-001",
@@ -12062,7 +9913,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Sociaal verwijzen",
           "sheet_row": 6,
           "vraag_id": "D5-SV-002",
@@ -12082,7 +9933,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Sociaal verwijzen",
           "sheet_row": 7,
           "vraag_id": "D5-SV-003",
@@ -12102,7 +9953,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Sociaal verwijzen",
           "sheet_row": 8,
           "vraag_id": "D5-SV-004",
@@ -12122,7 +9973,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Sociaal verwijzen",
           "sheet_row": 9,
           "vraag_id": "D5-SV-005",
@@ -12142,7 +9993,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Sociaal verwijzen",
           "sheet_row": 10,
           "vraag_id": "D5-SV-006",
@@ -12162,7 +10013,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Sociaal verwijzen",
           "sheet_row": 11,
           "vraag_id": "D5-SV-007",
@@ -12182,7 +10033,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Valpreventie",
           "sheet_row": 5,
           "vraag_id": "D5-VAL-001",
@@ -12202,7 +10053,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Valpreventie",
           "sheet_row": 6,
           "vraag_id": "D5-VAL-002",
@@ -12222,7 +10073,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Valpreventie",
           "sheet_row": 7,
           "vraag_id": "D5-VAL-003",
@@ -12242,7 +10093,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Valpreventie",
           "sheet_row": 8,
           "vraag_id": "D5-VAL-004",
@@ -12262,7 +10113,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Valpreventie",
           "sheet_row": 9,
           "vraag_id": "D5-VAL-005",
@@ -12282,7 +10133,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Valpreventie",
           "sheet_row": 10,
           "vraag_id": "D5-VAL-006",
@@ -12302,7 +10153,7 @@
         {
           "domain": "D5",
           "workbook_id": "d5_validation_workbook",
-          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+          "workbook_path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
           "sheet": "Valpreventie",
           "sheet_row": 11,
           "vraag_id": "D5-VAL-007",

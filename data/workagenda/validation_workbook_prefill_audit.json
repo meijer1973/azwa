@@ -4,47 +4,9 @@
   "purpose": "Audit human-facing current working views, evidence instructions, correction fields and jargon in D5/D6 validation workbooks before stakeholder contact.",
   "guardrail": "This audit is a QA layer. It does not validate policy content or turn workbook text into source evidence.",
   "summary": {
-    "sheet_count": 27,
-    "mapped_validation_row_count": 245,
+    "sheet_count": 25,
+    "mapped_validation_row_count": 189,
     "sheets_missing_current_working_view": [
-      {
-        "workbook_id": "d5_validation_workbook",
-        "sheet": "Financiering",
-        "component_id": "d5_financiering",
-        "mapped_validation_row_count": 11,
-        "has_current_working_view": false,
-        "has_assessment_field": true,
-        "has_correction_field": true,
-        "has_evidence_field": true,
-        "internal_jargon_flags": [],
-        "plain_language_flags": [],
-        "blank_question_count": 0,
-        "broad_question_count": 0,
-        "broad_question_flags": [],
-        "current_view_sample": "",
-        "recommendations": [
-          "Add a concise current working view before stakeholder contact."
-        ]
-      },
-      {
-        "workbook_id": "d5_validation_workbook",
-        "sheet": "Governance rollen",
-        "component_id": "d5_governance_rollen",
-        "mapped_validation_row_count": 45,
-        "has_current_working_view": false,
-        "has_assessment_field": true,
-        "has_correction_field": true,
-        "has_evidence_field": true,
-        "internal_jargon_flags": [],
-        "plain_language_flags": [],
-        "blank_question_count": 0,
-        "broad_question_count": 0,
-        "broad_question_flags": [],
-        "current_view_sample": "",
-        "recommendations": [
-          "Add a concise current working view before stakeholder contact."
-        ]
-      },
       {
         "workbook_id": "d5_validation_workbook",
         "sheet": "Monitoring cyclus",
@@ -211,13 +173,11 @@
   "workbooks": [
     {
       "workbook_id": "d5_validation_workbook",
-      "path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx",
+      "path": "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
       "validation_domain": "D5",
-      "sheet_count": 15,
-      "mapped_validation_row_count": 154,
+      "sheet_count": 13,
+      "mapped_validation_row_count": 98,
       "sheets_missing_current_working_view": [
-        "Financiering",
-        "Governance rollen",
         "Monitoring cyclus",
         "D6 afhankelijkheden"
       ],
@@ -406,42 +366,6 @@
           "broad_question_flags": [],
           "current_view_sample": "Huidige werkhypothese / Alleen opnemen als regio wil beproeven; vereist toezegging en onderbouwing vanuit regionale opgaven/populatie.",
           "recommendations": []
-        },
-        {
-          "sheet": "Financiering",
-          "component_id": "d5_financiering",
-          "mapped_validation_row_count": 11,
-          "has_current_working_view": false,
-          "has_assessment_field": true,
-          "has_correction_field": true,
-          "has_evidence_field": true,
-          "internal_jargon_flags": [],
-          "plain_language_flags": [],
-          "blank_question_count": 0,
-          "broad_question_count": 0,
-          "broad_question_flags": [],
-          "current_view_sample": "",
-          "recommendations": [
-            "Add a concise current working view before stakeholder contact."
-          ]
-        },
-        {
-          "sheet": "Governance rollen",
-          "component_id": "d5_governance_rollen",
-          "mapped_validation_row_count": 45,
-          "has_current_working_view": false,
-          "has_assessment_field": true,
-          "has_correction_field": true,
-          "has_evidence_field": true,
-          "internal_jargon_flags": [],
-          "plain_language_flags": [],
-          "blank_question_count": 0,
-          "broad_question_count": 0,
-          "broad_question_flags": [],
-          "current_view_sample": "",
-          "recommendations": [
-            "Add a concise current working view before stakeholder contact."
-          ]
         },
         {
           "sheet": "Monitoring cyclus",

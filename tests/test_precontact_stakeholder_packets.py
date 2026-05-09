@@ -9,7 +9,7 @@ def test_precontact_packets_are_prepared_not_sent_and_filtered():
 
     assert packet_index["dispatch_status"] == "prepared_not_sent"
     assert packet_index["packet_count"] >= 15
-    assert packet_index["unique_vraag_ids"] == 245
+    assert packet_index["unique_vraag_ids"] == 189
 
     packet_ids = {packet["packet_id"] for packet in packet_index["packets"]}
     assert "gemeente_almere_sociaal_domein" not in packet_ids

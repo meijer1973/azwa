@@ -20,23 +20,23 @@ This file indexes filtered D5/D6 validation packet drafts. They are prepared, no
 | Packet | Rows | D5 | D6 | CSV | Cleanup before send |
 | --- | ---: | ---: | ---: | --- | --- |
 | D6 validatie-owner (`d6_validation_owner`) | 9 | 9 | 0 | `data/workagenda/precontact_packets/d6_validation_owner.csv` | 1 item(s) |
-| Finance/controller (`finance_controller`) | 64 | 24 | 40 | `data/workagenda/precontact_packets/finance_controller.csv` | 3 item(s) |
+| Finance/controller (`finance_controller`) | 53 | 13 | 40 | `data/workagenda/precontact_packets/finance_controller.csv` | 2 item(s) |
 | Gemeente Almere sociaal domein - D5 lokale invulling (`gemeente_almere_sociaal_domein_d5`) | 54 | 54 | 0 | `data/workagenda/precontact_packets/gemeente_almere_sociaal_domein_d5.csv` | none |
 | Gemeente Almere sociaal domein - D6 validatie (`gemeente_almere_sociaal_domein_d6`) | 79 | 0 | 79 | `data/workagenda/precontact_packets/gemeente_almere_sociaal_domein_d6.csv` | 4 item(s) |
-| Gemeente Almere sociaal domein - sturing en afhankelijkheden (`gemeente_almere_sociaal_domein_sturing`) | 59 | 59 | 0 | `data/workagenda/precontact_packets/gemeente_almere_sociaal_domein_sturing.csv` | 2 item(s) |
+| Gemeente Almere sociaal domein - sturing en afhankelijkheden (`gemeente_almere_sociaal_domein_sturing`) | 14 | 14 | 0 | `data/workagenda/precontact_packets/gemeente_almere_sociaal_domein_sturing.csv` | 1 item(s) |
 | GGD/JGZ (`ggd_jgz`) | 71 | 44 | 27 | `data/workagenda/precontact_packets/ggd_jgz.csv` | 2 item(s) |
 | GGZ/MGN partners (`ggz_mgn_partners`) | 7 | 7 | 0 | `data/workagenda/precontact_packets/ggz_mgn_partners.csv` | none |
 | ICT / data / privacy (`ict_data_privacy`) | 22 | 10 | 12 | `data/workagenda/precontact_packets/ict_data_privacy.csv` | 1 item(s) |
 | Kernteam werkagenda (`kernteam_werkagenda`) | 17 | 17 | 0 | `data/workagenda/precontact_packets/kernteam_werkagenda.csv` | 1 item(s) |
 | Onderwijs partners (`onderwijs_partners`) | 8 | 0 | 8 | `data/workagenda/precontact_packets/onderwijs_partners.csv` | 1 item(s) |
 | PGA / Zorgzaam / Flever / regionale governance (`pga_zorgzaam_flever_regionale_governance`) | 13 | 0 | 13 | `data/workagenda/precontact_packets/pga_zorgzaam_flever_regionale_governance.csv` | 1 item(s) |
-| Regionale governance (`regionale_governance`) | 80 | 55 | 25 | `data/workagenda/precontact_packets/regionale_governance.csv` | 2 item(s) |
+| Regionale governance (`regionale_governance`) | 35 | 10 | 25 | `data/workagenda/precontact_packets/regionale_governance.csv` | 1 item(s) |
 | Sociale-basis partners (`sociale_basis_partners`) | 13 | 0 | 13 | `data/workagenda/precontact_packets/sociale_basis_partners.csv` | 1 item(s) |
 | VSV / geboortezorg / JGZ (`vsv_geboortezorg_jgz`) | 15 | 15 | 0 | `data/workagenda/precontact_packets/vsv_geboortezorg_jgz.csv` | none |
 | Welzijn en sociale basis (`welzijn_sociale_basis`) | 14 | 14 | 0 | `data/workagenda/precontact_packets/welzijn_sociale_basis.csv` | none |
 | Wijkgerichte GGZ-/welzijnspartners (`wijkgerichte_ggz_welzijnspartners`) | 8 | 0 | 8 | `data/workagenda/precontact_packets/wijkgerichte_ggz_welzijnspartners.csv` | 1 item(s) |
 | Wijkteams / SLT-leads (`wijkteams_slt_leads`) | 18 | 0 | 18 | `data/workagenda/precontact_packets/wijkteams_slt_leads.csv` | none |
-| Zorgverzekeraar/Zvw (`zorgverzekeraar_zvw`) | 53 | 53 | 0 | `data/workagenda/precontact_packets/zorgverzekeraar_zvw.csv` | 1 item(s) |
+| Zorgverzekeraar/Zvw (`zorgverzekeraar_zvw`) | 42 | 42 | 0 | `data/workagenda/precontact_packets/zorgverzekeraar_zvw.csv` | none |
 
 ## Packet Details
 
@@ -92,11 +92,10 @@ Contact owner: Finance/controller contact
 
 Escalation route: Finance lead / projectlead werkagenda
 
-Rows: 64 (24 D5, 40 D6)
+Rows: 53 (13 D5, 40 D6)
 
 Cleanup before send:
 
-- `d5_validation_workbook` / `Financiering`: Add a concise current working view before stakeholder contact.
 - `d6_validation_workbook` / `Inloopvoorzieningen`: Replace English/technical terms with plain Dutch policy language.
 - `d6_validation_workbook` / `Samen Sterker`: Narrow broad monitoring/owner questions before packet export.
 
@@ -104,15 +103,15 @@ Sample questions:
 
 | Vraag ID | Domain | Sheet | Question |
 | --- | --- | --- | --- |
-| `D5-FIN-001` | D5 | Financiering | Laagdrempelige steunpunten |
-| `D5-FIN-002` | D5 | Financiering | Sociaal verwijzen |
-| `D5-FIN-003` | D5 | Financiering | Valpreventie |
-| `D5-FIN-004` | D5 | Financiering | Overgewicht volwassenen |
-| `D5-FIN-005` | D5 | Financiering | Kansrijke Start |
-| `D5-FIN-006` | D5 | Financiering | Integrale gezinspoli |
-| `D5-FIN-007` | D5 | Financiering | Nu Niet Zwanger |
-| `D5-FIN-008` | D5 | Financiering | Mentale gezondheidsnetwerken |
-| ... | ... | ... | 56 more row(s) in CSV |
+| `D5-NNZ-001` | D5 | Nu Niet Zwanger | Structurele regionale coördinatie NNZ |
+| `D5-NNZ-002` | D5 | Nu Niet Zwanger | Kinderwensverkenning in reguliere werkwijze |
+| `D5-NNZ-003` | D5 | Nu Niet Zwanger | Samenwerking ziekenhuizen, verloskundigen, huisartsen |
+| `D5-NNZ-004` | D5 | Nu Niet Zwanger | Toegankelijke anticonceptiezorg en budget |
+| `D5-NNZ-005` | D5 | Nu Niet Zwanger | Schaal GGD-regio versus IZA-regio |
+| `D5-NNZ-006` | D5 | Nu Niet Zwanger | Privacy en casuïstiekbespreking |
+| `D5-OVW-001` | D5 | Overgewicht volwassenen | Doelgroep vanaf licht verhoogd GGR |
+| `D5-OVW-002` | D5 | Overgewicht volwassenen | Centrale zorgcoördinator |
+| ... | ... | ... | 45 more row(s) in CSV |
 
 ### Gemeente Almere sociaal domein - D5 lokale invulling
 
@@ -203,12 +202,11 @@ Contact owner: Gemeente Almere beleidscontact
 
 Escalation route: Projectlead werkagenda / beleidsowner
 
-Rows: 59 (59 D5, 0 D6)
+Rows: 14 (14 D5, 0 D6)
 
 Cleanup before send:
 
 - `d5_validation_workbook` / `D6 afhankelijkheden`: Add a concise current working view before stakeholder contact.
-- `d5_validation_workbook` / `Governance rollen`: Add a concise current working view before stakeholder contact.
 
 Sample questions:
 
@@ -222,7 +220,7 @@ Sample questions:
 | `D5-D6DEP-006` | D5 | D6 afhankelijkheden | Kansrijke Start |
 | `D5-D6DEP-007` | D5 | D6 afhankelijkheden | Integrale gezinspoli |
 | `D5-D6DEP-008` | D5 | D6 afhankelijkheden | Nu Niet Zwanger |
-| ... | ... | ... | 51 more row(s) in CSV |
+| ... | ... | ... | 6 more row(s) in CSV |
 
 ### GGD/JGZ
 
@@ -452,26 +450,25 @@ Contact owner: Regionale governance contact
 
 Escalation route: Mandaatgemeente / projectlead werkagenda
 
-Rows: 80 (55 D5, 25 D6)
+Rows: 35 (10 D5, 25 D6)
 
 Cleanup before send:
 
-- `d5_validation_workbook` / `Governance rollen`: Add a concise current working view before stakeholder contact.
 - `d5_validation_workbook` / `Monitoring cyclus`: Add a concise current working view before stakeholder contact.
 
 Sample questions:
 
 | Vraag ID | Domain | Sheet | Question |
 | --- | --- | --- | --- |
-| `D5-GOV-001` | D5 | Governance rollen | Laagdrempelige steunpunten |
-| `D5-GOV-002` | D5 | Governance rollen | Laagdrempelige steunpunten |
-| `D5-GOV-003` | D5 | Governance rollen | Laagdrempelige steunpunten |
-| `D5-GOV-004` | D5 | Governance rollen | Laagdrempelige steunpunten |
-| `D5-GOV-005` | D5 | Governance rollen | Laagdrempelige steunpunten |
-| `D5-GOV-006` | D5 | Governance rollen | Sociaal verwijzen |
-| `D5-GOV-007` | D5 | Governance rollen | Sociaal verwijzen |
-| `D5-GOV-008` | D5 | Governance rollen | Sociaal verwijzen |
-| ... | ... | ... | 72 more row(s) in CSV |
+| `D5-MON-001` | D5 | Monitoring cyclus | Overkoepelende doelen |
+| `D5-MON-002` | D5 | Monitoring cyclus | Laagdrempelige steunpunten |
+| `D5-MON-003` | D5 | Monitoring cyclus | Sociaal verwijzen |
+| `D5-MON-004` | D5 | Monitoring cyclus | Valpreventie |
+| `D5-MON-005` | D5 | Monitoring cyclus | Overgewicht volwassenen |
+| `D5-MON-006` | D5 | Monitoring cyclus | Kansrijke Start |
+| `D5-MON-007` | D5 | Monitoring cyclus | Integrale gezinspoli |
+| `D5-MON-008` | D5 | Monitoring cyclus | Nu Niet Zwanger |
+| ... | ... | ... | 27 more row(s) in CSV |
 
 ### Sociale-basis partners
 
@@ -662,25 +659,23 @@ Contact owner: Zorgverzekeraar/Zvw contact
 
 Escalation route: Regionale governance / projectlead werkagenda
 
-Rows: 53 (53 D5, 0 D6)
+Rows: 42 (42 D5, 0 D6)
 
-Cleanup before send:
-
-- `d5_validation_workbook` / `Financiering`: Add a concise current working view before stakeholder contact.
+Cleanup before send: none flagged by the prefill audit.
 
 Sample questions:
 
 | Vraag ID | Domain | Sheet | Question |
 | --- | --- | --- | --- |
-| `D5-FIN-001` | D5 | Financiering | Laagdrempelige steunpunten |
-| `D5-FIN-002` | D5 | Financiering | Sociaal verwijzen |
-| `D5-FIN-003` | D5 | Financiering | Valpreventie |
-| `D5-FIN-004` | D5 | Financiering | Overgewicht volwassenen |
-| `D5-FIN-005` | D5 | Financiering | Kansrijke Start |
-| `D5-FIN-006` | D5 | Financiering | Integrale gezinspoli |
-| `D5-FIN-007` | D5 | Financiering | Nu Niet Zwanger |
-| `D5-FIN-008` | D5 | Financiering | Mentale gezondheidsnetwerken |
-| ... | ... | ... | 45 more row(s) in CSV |
+| `D5-IGP-001` | D5 | Integrale gezinspoli | Bestaan/status integrale gezinspoli |
+| `D5-IGP-002` | D5 | Integrale gezinspoli | Kernteam medisch, publieke gezondheid en sociaal domein |
+| `D5-IGP-003` | D5 | Integrale gezinspoli | Eén aanspreekpunt voor het gezin |
+| `D5-IGP-004` | D5 | Integrale gezinspoli | Expertise op één plek / huiselijke context |
+| `D5-IGP-005` | D5 | Integrale gezinspoli | Multidisciplinair overleg |
+| `D5-IGP-006` | D5 | Integrale gezinspoli | Informele steunorganisaties inzetten |
+| `D5-IGP-007` | D5 | Integrale gezinspoli | Taakverschuiving en werkproces dreigende ziekenhuisinstroom |
+| `D5-IGP-008` | D5 | Integrale gezinspoli | Privacy/casuïstiek en gegevensdeling |
+| ... | ... | ... | 34 more row(s) in CSV |
 
 ## Required Before Sending
 

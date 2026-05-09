@@ -62,9 +62,7 @@ This file defines how returned D5/D6 packet answers must be processed. It does n
 | `d6_validation_log_or_decision_ticket` | 37 | 104 | `d6_validation_log` | `d6_decision_register, source_update_log` | `d6_responsibility_register` |
 | `d6_validation_log_or_ict_privacy_ticket` | 12 | 36 | `d6_validation_log` | `ict_privacy_register, d6_decision_register, source_update_log` | `d6_responsibility_register` |
 | `d6_validation_log_or_register_update` | 30 | 67 | `d6_validation_log` | `d6_responsibility_register, d6_decision_register, source_update_log` | `d6_responsibility_register` |
-| `decision_register_or_validation_log` | 45 | 90 | `d5_decision_register, d5_validation_log` | `source_update_log` | `d5_status_matrix` |
 | `decision_ticket_or_status_matrix_update` | 5 | 10 | `d5_decision_register, d5_status_matrix` | `d5_validation_log, source_update_log` | `d5_status_matrix` |
-| `finance_matrix_update` | 11 | 22 | `d5_finance_matrix` | `d5_validation_log, d5_decision_register, source_update_log` | `d5_status_matrix` |
 | `status_matrix_update` | 12 | 12 | `d5_status_matrix, d5_validation_log` | `source_update_log` | `d5_status_matrix` |
 | `validation_log_or_decision_ticket` | 29 | 80 | `d5_validation_log` | `d5_decision_register, source_update_log` | `d5_status_matrix` |
 | `validation_log_or_finance_ticket` | 33 | 99 | `d5_validation_log` | `d5_finance_matrix, d5_decision_register, source_update_log` | `d5_status_matrix` |

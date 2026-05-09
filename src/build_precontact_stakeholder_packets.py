@@ -157,7 +157,7 @@ def routed_packet_id(packet_id: str, row: dict[str, Any]) -> str:
         return packet_id
     if row["domain"] == "D6":
         return "gemeente_almere_sociaal_domein_d6"
-    if row["sheet"] in {"Governance rollen", "D6 afhankelijkheden", "Optionele ontwikkelagenda", "Overzicht D5"}:
+    if row["sheet"] in {"D6 afhankelijkheden", "Optionele ontwikkelagenda", "Overzicht D5"}:
         return "gemeente_almere_sociaal_domein_sturing"
     return "gemeente_almere_sociaal_domein_d5"
 

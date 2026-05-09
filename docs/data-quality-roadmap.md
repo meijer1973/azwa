@@ -3,7 +3,7 @@
 ## Summary
 Current sprint: Sprint 33.P7 - Pre-contact send-readiness gate (blocked).
 
-Roadmap version: `v2026.05.09-5`.
+Roadmap version: `v2026.05.09-6`.
 
 This is the single active roadmap for the repository. It combines the older data-quality roadmap and the workagenda-delivery roadmap into one canonical planning surface. Historical snapshots and retired roadmap files live under `docs/roadmap/archive/`; version changes are recorded in `docs/roadmap/roadmap-version-log.md`.
 
@@ -61,10 +61,10 @@ Goal: reduce human workload before validation starts. Policymakers should receiv
 
 | Asset | Current repository status | Use |
 | --- | --- | --- |
-| `docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx` | Current Excel workbook, 20 sheets; prior versions preserved. | D5 pre-contact validation instrument for P5 dry run; uses `Rol Almere`, `Brontype` and `bron` as the human-facing validation columns. |
+| `docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx` | Current Excel workbook, 18 sheets; prior versions preserved. | D5 pre-contact validation instrument for P5 dry run; dedicated `Financiering` and `Governance rollen` tabs removed, with finance/governance validation routed through the relevant component rows. |
 | `docs/review/Almere_D6_validatieformats.xlsx` | Baseline Excel workbook, 15 sheets. | D6 pre-contact validation instrument. |
 | `docs/review/validation-instrument-register.md` | Created in 33.P0. | Version, purpose, sheet inventory, shared vocabulary and import rules. |
-| `data/workagenda/validation_workbook_traceability_map.json` | Created in 33.P1. | Stable generated IDs, routing and processing metadata for 245 D5/D6 workbook validation rows. |
+| `data/workagenda/validation_workbook_traceability_map.json` | Created in 33.P1. | Stable generated IDs, routing and processing metadata for 189 D5/D6 workbook validation rows. |
 | `docs/review/validation-workbook-traceability-audit.md` | Created in 33.P1. | Human-readable audit of workbook traceability and remaining send-readiness limits. |
 | `data/workagenda/validation_workbook_prefill_audit.json` | Created in 33.P2. | Machine-readable audit of current working views, answer/correction fields, evidence fields, broad questions and language flags. |
 | `docs/review/validation-workbook-prefill-audit.md` | Created in 33.P2. | Human-readable workbook prefill audit and cleanup list. |

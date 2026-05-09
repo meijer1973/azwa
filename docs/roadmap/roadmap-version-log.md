@@ -1,7 +1,7 @@
 # Roadmap Version Log
 
 ## Summary
-Current roadmap version: `v2026.05.09-5`.
+Current roadmap version: `v2026.05.09-6`.
 
 The active roadmap is `docs/data-quality-roadmap.md`. This log records material roadmap changes so the project does not split into multiple competing roadmap documents.
 
@@ -17,6 +17,7 @@ The active roadmap is `docs/data-quality-roadmap.md`. This log records material 
 
 | Version | Date | Change | Active roadmap | Archive / notes |
 | --- | --- | --- | --- | --- |
+| `v2026.05.09-6` | 2026-05-09 | Switched active D5 validation workbook routing from `v0.5` to versioned `v0.6`. | `docs/data-quality-roadmap.md` | Current D5 workbook is `docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx`; dedicated D5 `Financiering` and `Governance rollen` tabs are removed, while finance/governance questions remain in component rows where relevant. |
 | `v2026.05.09-5` | 2026-05-09 | Switched active D5 validation workbook routing from `v0.4` to versioned `v0.5`. | `docs/data-quality-roadmap.md` | Current D5 workbook is `docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx`; `Bewijssoort` is renamed to `Brontype` and `Bewijs / verwijzing` / `Bewijs/verwijzing` to `bron`. |
 | `v2026.05.09-4` | 2026-05-09 | Switched active D5 validation workbook routing from `v0.3` to repaired version `v0.4`. | `docs/data-quality-roadmap.md` | Current D5 workbook is `docs/review/D5_validatieformat_werkagenda_Almere_v0.4.xlsx`; `v0.3` is superseded because its Excel table metadata caused repair prompts. |
 | `v2026.05.09-3` | 2026-05-09 | Switched active D5 validation workbook routing from `v0.2` to versioned `v0.3`. | `docs/data-quality-roadmap.md` | Current D5 workbook is `docs/review/D5_validatieformat_werkagenda_Almere_v0.3.xlsx`; `v0.2` remains preserved as prior version. |

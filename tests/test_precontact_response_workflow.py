@@ -17,7 +17,7 @@ def test_precontact_response_workflow_covers_all_packet_routes():
     routes = {route["repo_update_effect"] for route in workflow["route_coverage"]}
     defined_routes = {route["repo_update_effect"] for route in workflow["route_definitions"]}
     assert routes == defined_routes
-    assert len(routes) == 12
+    assert len(routes) == 10
 
 
 def test_precontact_response_workflow_preserves_return_contract():

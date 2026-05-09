@@ -40,7 +40,7 @@ For roadmap navigation, use `docs/data-quality-roadmap.md` as the single canonic
 
 For Sprint 32.0-32.2 workagenda-delivery scope, use `docs/workagenda-d5-stuurmodel.md`, `data/workagenda/d5_stuurmodel.json`, `docs/workagenda-d5-statusmatrix.md`, `data/workagenda/d5_status_matrix.json`, `docs/workagenda-d5-validation-tickets.md`, `data/workagenda/d5_validation_tickets.json`, `docs/workagenda-d5-validation-format.md`, and `data/workagenda/d5_validation_packets.json`. These files define the D5 scope, delivery status values, workagenda fields, milestones, the first D5 delivery-status matrix, constrained validation tickets and stakeholder packet formats. They are control layers, not local decisions or workagenda drafts. Blank validation packet fields are unresolved; do not fill them by inference.
 
-For pre-contact validation-readiness, use `docs/review/validation-instrument-register.md`, `docs/review/validation-workbook-traceability-audit.md`, `docs/review/validation-workbook-prefill-audit.md`, `docs/review/precontact-agent-prompts.md`, `docs/review/precontact-stakeholder-packets.md`, `docs/review/precontact-internal-dry-run.md`, `docs/review/precontact-response-workflow.md`, `data/workagenda/validation_workbook_traceability_map.json`, `data/workagenda/validation_workbook_prefill_audit.json`, `data/workagenda/precontact_agent_plan.json`, `data/workagenda/precontact_stakeholder_packets.json`, `data/workagenda/precontact_internal_dry_run.json`, and `data/workagenda/precontact_response_workflow.json` before editing, sending, importing answers from, delegating pre-contact agents, testing send-readiness, or processing returned answers from the D5 and D6 Excel validation workbooks. The current D5 workbook is `docs/review/D5_validatieformat_werkagenda_Almere_v0.2.xlsx`; `v0.1` is preserved as the baseline. Do not overwrite versioned Excel workbooks: create the next version and regenerate traceability/prefill/packet/dry-run artifacts. The workbooks, packet drafts, dry-run cases and response workflow are validation instruments, not corpus sources, final policy truth, or stakeholder validation results. Human input belongs in the Excel workbooks; CSV packet files are machine/export/import artifacts. Human input that names a credible public source must go through source intake and top-layer verification before it becomes source-backed evidence; human input without source or evidence backup remains low-authority validation input.
+For pre-contact validation-readiness, use `docs/review/validation-instrument-register.md`, `docs/review/validation-workbook-traceability-audit.md`, `docs/review/validation-workbook-prefill-audit.md`, `docs/review/precontact-agent-prompts.md`, `docs/review/precontact-stakeholder-packets.md`, `docs/review/precontact-internal-dry-run.md`, `docs/review/precontact-response-workflow.md`, `data/workagenda/validation_workbook_traceability_map.json`, `data/workagenda/validation_workbook_prefill_audit.json`, `data/workagenda/precontact_agent_plan.json`, `data/workagenda/precontact_stakeholder_packets.json`, `data/workagenda/precontact_internal_dry_run.json`, and `data/workagenda/precontact_response_workflow.json` before editing, sending, importing answers from, delegating pre-contact agents, testing send-readiness, or processing returned answers from the D5 and D6 Excel validation workbooks. The current D5 workbook is `docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx`; prior versions are preserved for provenance. Do not overwrite versioned Excel workbooks: create the next version and regenerate traceability/prefill/packet/dry-run artifacts. The workbooks, packet drafts, dry-run cases and response workflow are validation instruments, not corpus sources, final policy truth, or stakeholder validation results. Human input belongs in the Excel workbooks; CSV packet files are machine/export/import artifacts. Human input that names a credible public source must go through source intake and top-layer verification before it becomes source-backed evidence; human input without source or evidence backup remains low-authority validation input.
 
 ## Access Layer
 
@@ -235,7 +235,7 @@ Machine-readable:
     "docs/review/precontact-stakeholder-packets.md",
     "docs/review/precontact-internal-dry-run.md",
     "docs/review/precontact-response-workflow.md",
-    "docs/review/D5_validatieformat_werkagenda_Almere_v0.2.xlsx",
+    "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
     "docs/review/Almere_D6_validatieformats.xlsx",
     "docs/review/archive/d6-support/almere_d6_public_source_boundary.md",
     "docs/review/archive/d6-support/almere_d6_validation_pack.md",
@@ -499,7 +499,7 @@ Theme view models:
     "docs/review/precontact-stakeholder-packets.md",
     "docs/review/precontact-internal-dry-run.md",
     "docs/review/precontact-response-workflow.md",
-    "docs/review/D5_validatieformat_werkagenda_Almere_v0.2.xlsx",
+    "docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx",
     "docs/review/Almere_D6_validatieformats.xlsx",
     "data/workagenda/d5_stuurmodel.json",
     "data/workagenda/d5_status_matrix.json",

@@ -15,9 +15,9 @@ The workbooks are usable as pre-contact drafts, but they still need packet clean
 
 | Check | Count |
 | --- | ---: |
-| Human-facing sheets audited | 27 |
-| Validation rows covered by traceability map | 245 |
-| Sheets missing a current working view | 4 |
+| Human-facing sheets audited | 25 |
+| Validation rows covered by traceability map | 189 |
+| Sheets missing a current working view | 2 |
 | Sheets missing an assessment/selection field | 0 |
 | Sheets missing a correction/toelichting field | 1 |
 | Sheets missing an evidence field | 0 |
@@ -28,7 +28,7 @@ The workbooks are usable as pre-contact drafts, but they still need packet clean
 
 ### D5 Workbook
 
-Path: `docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx`
+Path: `docs/review/D5_validatieformat_werkagenda_Almere_v0.6.xlsx`
 
 | Sheet | Status | Main cleanup need |
 | --- | --- | --- |
@@ -43,8 +43,6 @@ Path: `docs/review/D5_validatieformat_werkagenda_Almere_v0.5.xlsx`
 | Nu Niet Zwanger | ok | No immediate prefill cleanup flagged. |
 | Overgewicht kinderen | ok | No immediate prefill cleanup flagged. |
 | Optionele ontwikkelagenda | ok | No immediate prefill cleanup flagged. |
-| Financiering | needs cleanup | Add a concise current working view before stakeholder contact. |
-| Governance rollen | needs cleanup | Add a concise current working view before stakeholder contact. |
 | Monitoring cyclus | needs cleanup | Add a concise current working view before stakeholder contact. |
 | D6 afhankelijkheden | needs cleanup | Add a concise current working view before stakeholder contact. |
 

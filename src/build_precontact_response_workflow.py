@@ -92,16 +92,6 @@ ROUTE_DEFINITIONS: dict[str, dict[str, Any]] = {
         "conditional_targets": ["d5_finance_matrix", "d5_decision_register", "source_update_log"],
         "status_update_target": "d5_status_matrix",
     },
-    "decision_register_or_validation_log": {
-        "primary_targets": ["d5_decision_register", "d5_validation_log"],
-        "conditional_targets": ["source_update_log"],
-        "status_update_target": "d5_status_matrix",
-    },
-    "finance_matrix_update": {
-        "primary_targets": ["d5_finance_matrix"],
-        "conditional_targets": ["d5_validation_log", "d5_decision_register", "source_update_log"],
-        "status_update_target": "d5_status_matrix",
-    },
     "status_matrix_update": {
         "primary_targets": ["d5_status_matrix", "d5_validation_log"],
         "conditional_targets": ["source_update_log"],

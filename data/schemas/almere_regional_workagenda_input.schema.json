@@ -1,0 +1,142 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/meijer1973/azwa/blob/main/data/schemas/almere_regional_workagenda_input.schema.json",
+  "title": "Almere Regional Workagenda Input Layer",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "schema_id",
+    "generated_on",
+    "status",
+    "purpose",
+    "source_layers",
+    "process_context",
+    "summary",
+    "objects"
+  ],
+  "properties": {
+    "schema_id": {
+      "type": "string",
+      "const": "ALMERE-REGIONAL-WORKAGENDA-INPUT-V1"
+    },
+    "generated_on": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "purpose": {
+      "type": "string"
+    },
+    "source_layers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "process_context": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": [
+        "sender",
+        "recipient",
+        "regional_process_owner",
+        "formal_workagenda_deadline",
+        "almere_internal_submission_target"
+      ]
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "objects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "required": [
+          "input_id",
+          "component_id",
+          "title",
+          "component_type",
+          "almere_submission",
+          "almere_policy_input",
+          "current_state",
+          "target_state_for_regional_workagenda",
+          "gap_summary",
+          "validation_needed_before_or_after_submission",
+          "risk_assessment",
+          "handoff_to_region",
+          "evidence_package",
+          "traceability"
+        ],
+        "properties": {
+          "input_id": {
+            "type": "string"
+          },
+          "component_id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "component_type": {
+            "type": "string"
+          },
+          "almere_submission": {
+            "type": "object",
+            "additionalProperties": true,
+            "required": [
+              "submission_status",
+              "concept_handoff_ready",
+              "confirmed_position_ready",
+              "recommended_submission_type",
+              "reason_not_confirmed"
+            ]
+          },
+          "almere_policy_input": {
+            "type": "object"
+          },
+          "current_state": {
+            "type": "object"
+          },
+          "target_state_for_regional_workagenda": {
+            "type": "object"
+          },
+          "gap_summary": {
+            "type": "object",
+            "additionalProperties": true,
+            "required": [
+              "overall_gap_type",
+              "can_send_as_concept",
+              "can_send_as_confirmed_position",
+              "main_gaps"
+            ]
+          },
+          "validation_needed_before_or_after_submission": {
+            "type": "object"
+          },
+          "risk_assessment": {
+            "type": "object"
+          },
+          "handoff_to_region": {
+            "type": "object"
+          },
+          "evidence_package": {
+            "type": "object"
+          },
+          "traceability": {
+            "type": "object",
+            "additionalProperties": true,
+            "required": [
+              "derived_from_repository_layers",
+              "is_source_claim",
+              "is_almere_input_model",
+              "safe_public_use"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

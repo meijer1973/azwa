@@ -65,6 +65,8 @@
           "almere_policy_input",
           "current_state",
           "target_state_for_regional_workagenda",
+          "workagenda_delivery_requirements",
+          "available_information_for_workagenda",
           "gap_summary",
           "validation_needed_before_or_after_submission",
           "risk_assessment",
@@ -116,6 +118,29 @@
           },
           "target_state_for_regional_workagenda": {
             "type": "object"
+          },
+          "workagenda_delivery_requirements": {
+            "type": "object",
+            "additionalProperties": true,
+            "required": [
+              "status",
+              "required_sections",
+              "minimum_municipal_input_by_2026_09_15"
+            ]
+          },
+          "available_information_for_workagenda": {
+            "type": "object",
+            "additionalProperties": true,
+            "required": [
+              "summary",
+              "source_backed_current_information",
+              "public_indicators",
+              "implementation_progress_signals",
+              "party_and_role_signals",
+              "finance_and_resource_signals",
+              "monitoring_and_learning_signals",
+              "authority_boundary"
+            ]
           },
           "gap_summary": {
             "type": "object",

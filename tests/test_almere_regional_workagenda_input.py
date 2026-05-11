@@ -50,6 +50,8 @@ class AlmereRegionalWorkagendaInputTests(unittest.TestCase):
         self.assertEqual(output_ids, matrix_ids)
         self.assertEqual(self.layer["summary"]["object_count"], len(matrix_ids))
         self.assertEqual(self.layer["summary"]["confirmed_position_ready_count"], 0)
+        self.assertGreaterEqual(self.layer["summary"]["enriched_information_object_count"], len(matrix_ids))
+        self.assertGreater(self.layer["summary"]["implementation_progress_signal_count"], 0)
         self.assertEqual(self.layer["summary"]["primary_municipality_delivery_target"], "2026-09-15")
         self.assertIn("main delivery target", self.layer["summary"]["date_priority_note"])
 
@@ -71,7 +73,20 @@ class AlmereRegionalWorkagendaInputTests(unittest.TestCase):
         )
         self.assertTrue(valpreventie["almere_submission"]["concept_handoff_ready"])
         self.assertFalse(valpreventie["almere_submission"]["confirmed_position_ready"])
+        self.assertIn("workagenda_delivery_requirements", valpreventie)
+        self.assertIn("available_information_for_workagenda", valpreventie)
+        self.assertEqual(
+            len(valpreventie["workagenda_delivery_requirements"]["required_sections"]),
+            8,
+        )
+        implementation_signals = valpreventie["available_information_for_workagenda"][
+            "implementation_progress_signals"
+        ]
+        self.assertTrue(any("cursus" in signal["statement"] for signal in implementation_signals))
+        party_signals = valpreventie["available_information_for_workagenda"]["party_and_role_signals"]
+        self.assertTrue(any("Paramedisch Platform Almere" in signal["party_or_role"] for signal in party_signals))
         self.assertTrue(valpreventie["evidence_package"]["public_evidence"])
+        self.assertTrue(valpreventie["evidence_package"]["public_indicators"])
         self.assertEqual(
             valpreventie["validation_needed_before_or_after_submission"]["validation_ticket_ids"],
             [
@@ -90,6 +105,20 @@ class AlmereRegionalWorkagendaInputTests(unittest.TestCase):
         self.assertIn("monitoring", gap_fields)
         self.assertIn("d6_dependency", gap_fields)
         self.assertIn("bestaande uitvoeringsroute", valpreventie["handoff_to_region"]["recommended_wording"])
+
+    def test_adult_overweight_has_current_information_and_party_signals(self) -> None:
+        objects = {item["component_id"]: item for item in self.layer["objects"]}
+        adult_overweight = objects["ketenaanpak_overgewicht_obesitas_volwassenen"]
+
+        available = adult_overweight["available_information_for_workagenda"]
+        self.assertGreaterEqual(len(available["public_indicators"]), 3)
+        self.assertTrue(
+            any("Flevoland Gezond en Wel" in signal["statement"] for signal in available["implementation_progress_signals"])
+        )
+        self.assertTrue(
+            any("GLI" in signal["statement"] for signal in available["implementation_progress_signals"])
+        )
+        self.assertTrue(available["finance_and_resource_signals"])
 
     def test_priority_questions_are_limited_and_traceable(self) -> None:
         for item in self.layer["objects"]:

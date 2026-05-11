@@ -10,6 +10,7 @@
     "data/workagenda/d5_stuurmodel.json",
     "data/extracted/workagenda_d5_operational_requirements.json",
     "data/extracted/workagenda_nulmeting_capacity.json",
+    "data/extracted/local_source_strengthening_almere.json",
     "data/extracted/municipal/almere_d6_responsibility_register.json",
     "data/site/source_view_models/zorgakkoorden-werkagenda-handvatten.json",
     "data/site/source_view_models/format-werkagenda-azwa.json",
@@ -88,6 +89,9 @@
       "grijs": 2,
       "rood": 4
     },
+    "enriched_information_object_count": 11,
+    "implementation_progress_signal_count": 7,
+    "party_and_role_signal_count": 61,
     "primary_municipality_delivery_target": "2026-09-15",
     "municipality_delivery_to_region_target": "2026-09-15",
     "almere_internal_submission_target": "2026-09-15",
@@ -242,6 +246,301 @@
           "confirmed governance mandate where it has not yet been validated",
           "final college-adopted workagenda wording"
         ]
+      },
+      "workagenda_delivery_requirements": {
+        "status": "requirements_available",
+        "required_sections": [
+          {
+            "section_id": "urgency_and_problem",
+            "label": "urgentie en opgave",
+            "what_to_prepare": "why this component matters for Almere and the regional workagenda"
+          },
+          {
+            "section_id": "current_local_situation",
+            "label": "huidige lokale situatie",
+            "what_to_prepare": "what is already arranged, what is visible from sources and what still needs local confirmation"
+          },
+          {
+            "section_id": "target_ambition",
+            "label": "ambitie richting 2030",
+            "what_to_prepare": "the intended direction, coverage and scale for the regional workagenda period"
+          },
+          {
+            "section_id": "target_design",
+            "label": "ontwerp van de aanpak",
+            "what_to_prepare": "roles, route, partners, D6 dependencies and working agreements"
+          },
+          {
+            "section_id": "project_objectives_and_gap",
+            "label": "doelen en verschil met huidige situatie",
+            "what_to_prepare": "the limited set of gaps and decision points needed for first regional drafting"
+          },
+          {
+            "section_id": "financial_plan",
+            "label": "financieel plan",
+            "what_to_prepare": "funding route, continuity status and controller validation needs"
+          },
+          {
+            "section_id": "monitoring_and_learning",
+            "label": "monitoring en lerende cyclus",
+            "what_to_prepare": "candidate indicators, data owner and how learning will be organised"
+          },
+          {
+            "section_id": "milestone_planning",
+            "label": "mijlpalenplanning",
+            "what_to_prepare": "municipal delivery by 15 September 2026 and later regional consolidation toward adoption"
+          }
+        ],
+        "component_requirement_summary": {
+          "population_or_target_group": "Inwoners die baat hebben bij laagdrempelige steun rond zelfregie en herstel, met bijzondere aandacht voor EPA en sociaal-emotionele kwetsbaarheid.",
+          "coverage_or_capacity_direction": "Minimaal een laagdrempelig steunpunt per gemeente en een regionaal passend netwerk van typen steunpunten.",
+          "scale_hint": "Gemeentelijke nabijheid met regionale afstemming; de concrete schaal moet per regio en gemeente worden vastgesteld.",
+          "related_component_ids": [
+            "mentale_gezondheidsnetwerken",
+            "sociaal_verwijzen"
+          ],
+          "almere_concept_status": "gedeeltelijk"
+        },
+        "source_document_ids": [
+          "nat_azwa_opdracht_werkagenda_d5_2026",
+          "nat_azwa_format_werkagenda_d5_2026",
+          "nat_azwa_toelichting_producten_proces_2026",
+          "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+        ],
+        "source_claim_ids": [
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_d5_001",
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_d6_002",
+          "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d5_001"
+        ],
+        "minimum_municipal_input_by_2026_09_15": [
+          "current local status: structureel, projectmatig, deels ingericht or still unclear",
+          "known route, partners and current implementation signals",
+          "validated or explicitly unvalidated owner and coordinator",
+          "validated or explicitly unvalidated finance route",
+          "main monitoring signal and owner if known",
+          "decision or phasing question for the regional coordinator"
+        ],
+        "review_questions_from_requirement_layer": [
+          "Welke bestaande Almeerse steunpunten tellen mee voor de werkagenda?",
+          "Is er dekking per stadsdeel of wijk en hoe wordt EPA-toegankelijkheid geborgd?",
+          "Wie financiert coordinatie, openingstijden en uitvoering?"
+        ]
+      },
+      "available_information_for_workagenda": {
+        "summary": "There is current information for first regional orientation, but local implementation, ownership, finance and monitoring still need confirmation.",
+        "source_backed_current_information": [
+          "GGD-indicatoren voor eenzaamheid, angst/depressierisico en broze gezondheid geven publieke urgentiesignalen."
+        ],
+        "public_indicators": [
+          {
+            "indicator_id": "adult_strong_loneliness_pct",
+            "label": "Sterk eenzaam 18-64",
+            "value": 21,
+            "unit": "%",
+            "page": 14,
+            "age_group": "adult",
+            "source_document_id": "reg_ggd_flevoland_2024_volwassenen_gemeenten",
+            "source_title": "GGD Flevoland Tabellenboek volwassenen 2024 - gemeenten",
+            "source_status": "public_table_book_ingested_needs_human_review"
+          },
+          {
+            "indicator_id": "older_strong_loneliness_pct",
+            "label": "Sterk eenzaam 65+",
+            "value": 15,
+            "unit": "%",
+            "page": 14,
+            "age_group": "older",
+            "source_document_id": "reg_ggd_flevoland_2024_ouderen_gemeenten",
+            "source_title": "GGD Flevoland Tabellenboek ouderen 2024 - gemeenten",
+            "source_status": "public_table_book_ingested_needs_human_review"
+          },
+          {
+            "indicator_id": "adult_high_anxiety_depression_risk_pct",
+            "label": "Hoog risico angststoornis/depressie 18-64",
+            "value": 14,
+            "unit": "%",
+            "page": 14,
+            "age_group": "adult",
+            "source_document_id": "reg_ggd_flevoland_2024_volwassenen_gemeenten",
+            "source_title": "GGD Flevoland Tabellenboek volwassenen 2024 - gemeenten",
+            "source_status": "public_table_book_ingested_needs_human_review"
+          },
+          {
+            "indicator_id": "older_high_anxiety_depression_risk_pct",
+            "label": "Hoog risico angststoornis/depressie 65+",
+            "value": 8,
+            "unit": "%",
+            "page": 14,
+            "age_group": "older",
+            "source_document_id": "reg_ggd_flevoland_2024_ouderen_gemeenten",
+            "source_title": "GGD Flevoland Tabellenboek ouderen 2024 - gemeenten",
+            "source_status": "public_table_book_ingested_needs_human_review"
+          }
+        ],
+        "operational_direction": {
+          "population_or_target_group": "Inwoners die baat hebben bij laagdrempelige steun rond zelfregie en herstel, met bijzondere aandacht voor EPA en sociaal-emotionele kwetsbaarheid.",
+          "coverage_or_capacity_direction": "Minimaal een laagdrempelig steunpunt per gemeente en een regionaal passend netwerk van typen steunpunten.",
+          "scale_hint": "Gemeentelijke nabijheid met regionale afstemming; de concrete schaal moet per regio en gemeente worden vastgesteld.",
+          "related_component_ids": [
+            "mentale_gezondheidsnetwerken",
+            "sociaal_verwijzen"
+          ]
+        },
+        "implementation_progress_signals": [],
+        "party_and_role_signals": [
+          {
+            "party_or_role": "gemeente",
+            "indicated_role": "actor hint from the D5 operational requirement layer",
+            "authority": "operational_requirements_layer",
+            "validation_status": "actor_hint_not_local_role_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "party_or_role": "welzijn",
+            "indicated_role": "actor hint from the D5 operational requirement layer",
+            "authority": "operational_requirements_layer",
+            "validation_status": "actor_hint_not_local_role_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "party_or_role": "ggz",
+            "indicated_role": "actor hint from the D5 operational requirement layer",
+            "authority": "operational_requirements_layer",
+            "validation_status": "actor_hint_not_local_role_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "party_or_role": "sociaal_domein",
+            "indicated_role": "actor hint from the D5 operational requirement layer",
+            "authority": "operational_requirements_layer",
+            "validation_status": "actor_hint_not_local_role_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "party_or_role": "ervaringsdeskundigheid",
+            "indicated_role": "actor hint from the D5 operational requirement layer",
+            "authority": "operational_requirements_layer",
+            "validation_status": "actor_hint_not_local_role_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          }
+        ],
+        "finance_and_resource_signals": [
+          {
+            "signal_id": "finance_stream_hint_01",
+            "statement": "gemeentelijke_azwa_spuk",
+            "authority": "operational_requirements_layer",
+            "validation_status": "finance_stream_hint_not_controller_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "signal_id": "finance_stream_hint_02",
+            "statement": "doorbraakmiddelen_sociaal_domein",
+            "authority": "operational_requirements_layer",
+            "validation_status": "finance_stream_hint_not_controller_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          }
+        ],
+        "monitoring_and_learning_signals": [
+          {
+            "signal_id": "public_indicator_adult_strong_loneliness_pct",
+            "statement": "Sterk eenzaam 18-64: 21%",
+            "authority": "public_indicator_source",
+            "validation_status": "baseline_indicator_not_local_monitoring_arrangement",
+            "source_ids": [
+              "reg_ggd_flevoland_2024_volwassenen_gemeenten"
+            ]
+          },
+          {
+            "signal_id": "public_indicator_older_strong_loneliness_pct",
+            "statement": "Sterk eenzaam 65+: 15%",
+            "authority": "public_indicator_source",
+            "validation_status": "baseline_indicator_not_local_monitoring_arrangement",
+            "source_ids": [
+              "reg_ggd_flevoland_2024_ouderen_gemeenten"
+            ]
+          },
+          {
+            "signal_id": "public_indicator_adult_high_anxiety_depression_risk_pct",
+            "statement": "Hoog risico angststoornis/depressie 18-64: 14%",
+            "authority": "public_indicator_source",
+            "validation_status": "baseline_indicator_not_local_monitoring_arrangement",
+            "source_ids": [
+              "reg_ggd_flevoland_2024_volwassenen_gemeenten"
+            ]
+          },
+          {
+            "signal_id": "public_indicator_older_high_anxiety_depression_risk_pct",
+            "statement": "Hoog risico angststoornis/depressie 65+: 8%",
+            "authority": "public_indicator_source",
+            "validation_status": "baseline_indicator_not_local_monitoring_arrangement",
+            "source_ids": [
+              "reg_ggd_flevoland_2024_ouderen_gemeenten"
+            ]
+          }
+        ],
+        "local_information_still_needed": [
+          "bestaande steunpunten die mogen meetellen",
+          "openingstijden en toegankelijkheid",
+          "wijk- of stadsdeeldekking",
+          "uitvoerder/eigenaar",
+          "formatie of coordinatiecapaciteit",
+          "budget en financieringsbron"
+        ],
+        "decisions_still_needed": [
+          "prioritering_2027_2030",
+          "lokale_eigenaar",
+          "budget",
+          "monitoringafspraak",
+          "formele_besluitstatus"
+        ],
+        "source_strengthening_candidates": {
+          "candidate_source_ids": [
+            "mun_almere_2024_2034_maatschappelijke_agenda_underlying_documents",
+            "mun_almere_2025_stand_van_zaken_gezondheidsbeleid_iza_gala",
+            "reg_ggd_flevoland_2024_gezondheidsmonitor_volwassenen_ouderen",
+            "reg_zonmw_doorontwikkeling_zorgzaam_flevoland",
+            "reg_mgn_flevoland_almere_mandaatgemeente",
+            "mun_almere_2024_programmarekening_pga_iza_gala"
+          ],
+          "still_needs_local_decision": true,
+          "note": "Candidate sources can strengthen baseline and role evidence, but local choices remain unset until Almere or the regional table records target-specific decisions."
+        },
+        "authority_boundary": "Use source-backed and low-authority signals for first contact and 15 September input preparation; do not upgrade them to confirmed ownership, capacity, finance, monitoring or final workagenda text without local validation."
       },
       "gap_summary": {
         "overall_gap_type": "workagenda_input_gap",
@@ -637,10 +936,79 @@
             ],
             "authority": "repository_source_layer_reference",
             "confidence": "medium"
+          },
+          {
+            "source_id": "reg_ggd_flevoland_2024_volwassenen_gemeenten",
+            "title": "reg_ggd_flevoland_2024_volwassenen_gemeenten",
+            "use_for": [
+              "D5 operational requirement context"
+            ],
+            "authority": "repository_source_layer_reference",
+            "confidence": "medium"
+          },
+          {
+            "source_id": "reg_ggd_flevoland_2024_ouderen_gemeenten",
+            "title": "reg_ggd_flevoland_2024_ouderen_gemeenten",
+            "use_for": [
+              "D5 operational requirement context"
+            ],
+            "authority": "repository_source_layer_reference",
+            "confidence": "medium"
           }
         ],
         "public_evidence": [
           "GGD-indicatoren voor eenzaamheid, angst/depressierisico en broze gezondheid geven publieke urgentiesignalen."
+        ],
+        "public_indicators": [
+          {
+            "indicator_id": "adult_strong_loneliness_pct",
+            "label": "Sterk eenzaam 18-64",
+            "value": 21,
+            "unit": "%",
+            "page": 14,
+            "age_group": "adult",
+            "source_document_id": "reg_ggd_flevoland_2024_volwassenen_gemeenten",
+            "source_title": "GGD Flevoland Tabellenboek volwassenen 2024 - gemeenten",
+            "source_status": "public_table_book_ingested_needs_human_review"
+          },
+          {
+            "indicator_id": "older_strong_loneliness_pct",
+            "label": "Sterk eenzaam 65+",
+            "value": 15,
+            "unit": "%",
+            "page": 14,
+            "age_group": "older",
+            "source_document_id": "reg_ggd_flevoland_2024_ouderen_gemeenten",
+            "source_title": "GGD Flevoland Tabellenboek ouderen 2024 - gemeenten",
+            "source_status": "public_table_book_ingested_needs_human_review"
+          },
+          {
+            "indicator_id": "adult_high_anxiety_depression_risk_pct",
+            "label": "Hoog risico angststoornis/depressie 18-64",
+            "value": 14,
+            "unit": "%",
+            "page": 14,
+            "age_group": "adult",
+            "source_document_id": "reg_ggd_flevoland_2024_volwassenen_gemeenten",
+            "source_title": "GGD Flevoland Tabellenboek volwassenen 2024 - gemeenten",
+            "source_status": "public_table_book_ingested_needs_human_review"
+          },
+          {
+            "indicator_id": "older_high_anxiety_depression_risk_pct",
+            "label": "Hoog risico angststoornis/depressie 65+",
+            "value": 8,
+            "unit": "%",
+            "page": 14,
+            "age_group": "older",
+            "source_document_id": "reg_ggd_flevoland_2024_ouderen_gemeenten",
+            "source_title": "GGD Flevoland Tabellenboek ouderen 2024 - gemeenten",
+            "source_status": "public_table_book_ingested_needs_human_review"
+          }
+        ],
+        "source_claim_ids": [
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_d5_001",
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_d6_002",
+          "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d5_001"
         ],
         "evidence_limitations": [
           "Generated data layers are not public sources.",
@@ -656,6 +1024,7 @@
           "data/workagenda/d5_stuurmodel.json",
           "data/extracted/workagenda_d5_operational_requirements.json",
           "data/extracted/workagenda_nulmeting_capacity.json",
+          "data/extracted/local_source_strengthening_almere.json",
           "data/extracted/municipal/almere_d6_responsibility_register.json"
         ],
         "is_source_claim": false,
@@ -805,6 +1174,276 @@
           "confirmed governance mandate where it has not yet been validated",
           "final college-adopted workagenda wording"
         ]
+      },
+      "workagenda_delivery_requirements": {
+        "status": "requirements_available",
+        "required_sections": [
+          {
+            "section_id": "urgency_and_problem",
+            "label": "urgentie en opgave",
+            "what_to_prepare": "why this component matters for Almere and the regional workagenda"
+          },
+          {
+            "section_id": "current_local_situation",
+            "label": "huidige lokale situatie",
+            "what_to_prepare": "what is already arranged, what is visible from sources and what still needs local confirmation"
+          },
+          {
+            "section_id": "target_ambition",
+            "label": "ambitie richting 2030",
+            "what_to_prepare": "the intended direction, coverage and scale for the regional workagenda period"
+          },
+          {
+            "section_id": "target_design",
+            "label": "ontwerp van de aanpak",
+            "what_to_prepare": "roles, route, partners, D6 dependencies and working agreements"
+          },
+          {
+            "section_id": "project_objectives_and_gap",
+            "label": "doelen en verschil met huidige situatie",
+            "what_to_prepare": "the limited set of gaps and decision points needed for first regional drafting"
+          },
+          {
+            "section_id": "financial_plan",
+            "label": "financieel plan",
+            "what_to_prepare": "funding route, continuity status and controller validation needs"
+          },
+          {
+            "section_id": "monitoring_and_learning",
+            "label": "monitoring en lerende cyclus",
+            "what_to_prepare": "candidate indicators, data owner and how learning will be organised"
+          },
+          {
+            "section_id": "milestone_planning",
+            "label": "mijlpalenplanning",
+            "what_to_prepare": "municipal delivery by 15 September 2026 and later regional consolidation toward adoption"
+          }
+        ],
+        "component_requirement_summary": {
+          "population_or_target_group": "Volwassen inwoners met milde psychosociale problemen bij wie brede vraagverheldering en toeleiding naar sociaal domein of sociale basis passend kan zijn.",
+          "coverage_or_capacity_direction": "De opdracht noemt gemiddeld 60 verwijzingen per 10.000 inwoners en 0,2-0,5 fte brugfunctie per 10.000 inwoners als richtinggevende capaciteit.",
+          "scale_hint": "Lokaal uitvoerend rond huisartsen/eerstelijn en sociaal domein, met regionale afspraken over dekkend aanbod en wederkerigheid.",
+          "related_component_ids": [
+            "laagdrempelige_steunpunten",
+            "mentale_gezondheidsnetwerken",
+            "ketenaanpak_overgewicht_obesitas_volwassenen"
+          ],
+          "almere_concept_status": "gedeeltelijk"
+        },
+        "source_document_ids": [
+          "nat_azwa_opdracht_werkagenda_d5_2026",
+          "nat_azwa_format_werkagenda_d5_2026",
+          "nat_azwa_toelichting_producten_proces_2026",
+          "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+        ],
+        "source_claim_ids": [
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_d5_001",
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_d6_002"
+        ],
+        "minimum_municipal_input_by_2026_09_15": [
+          "current local status: structureel, projectmatig, deels ingericht or still unclear",
+          "known route, partners and current implementation signals",
+          "validated or explicitly unvalidated owner and coordinator",
+          "validated or explicitly unvalidated finance route",
+          "main monitoring signal and owner if known",
+          "decision or phasing question for the regional coordinator"
+        ],
+        "review_questions_from_requirement_layer": [
+          "Welke actuele Almeerse verwijzingsroute en brugfunctie bestaan al?",
+          "Welke fte, verwijzers, terugkoppeling en financiering zijn bronvast?",
+          "Hoe wordt dubbeltelling met PGA of bestaande Welzijn op Recept-financiering voorkomen?"
+        ]
+      },
+      "available_information_for_workagenda": {
+        "summary": "There is current information for first regional orientation, but local implementation, ownership, finance and monitoring still need confirmation.",
+        "source_backed_current_information": [
+          "Landelijke werkagenda-bron geeft richtinggevende capaciteit: 60 verwijzingen per 10.000 inwoners en 0,2-0,5 fte brugfunctie per 10.000 inwoners.",
+          "CBS 2025 denominator maakt een eerste indicatieve Almere-rekensom mogelijk."
+        ],
+        "public_indicators": [
+          {
+            "indicator_id": "adult_brittle_health_pct",
+            "label": "Broze gezondheid 18-64",
+            "value": 37,
+            "unit": "%",
+            "page": 15,
+            "age_group": "adult",
+            "source_document_id": "reg_ggd_flevoland_2024_volwassenen_gemeenten",
+            "source_title": "GGD Flevoland Tabellenboek volwassenen 2024 - gemeenten",
+            "source_status": "public_table_book_ingested_needs_human_review"
+          },
+          {
+            "indicator_id": "older_brittle_health_pct",
+            "label": "Broze gezondheid 65+",
+            "value": 32,
+            "unit": "%",
+            "page": 15,
+            "age_group": "older",
+            "source_document_id": "reg_ggd_flevoland_2024_ouderen_gemeenten",
+            "source_title": "GGD Flevoland Tabellenboek ouderen 2024 - gemeenten",
+            "source_status": "public_table_book_ingested_needs_human_review"
+          }
+        ],
+        "operational_direction": {
+          "population_or_target_group": "Volwassen inwoners met milde psychosociale problemen bij wie brede vraagverheldering en toeleiding naar sociaal domein of sociale basis passend kan zijn.",
+          "coverage_or_capacity_direction": "De opdracht noemt gemiddeld 60 verwijzingen per 10.000 inwoners en 0,2-0,5 fte brugfunctie per 10.000 inwoners als richtinggevende capaciteit.",
+          "scale_hint": "Lokaal uitvoerend rond huisartsen/eerstelijn en sociaal domein, met regionale afspraken over dekkend aanbod en wederkerigheid.",
+          "related_component_ids": [
+            "laagdrempelige_steunpunten",
+            "mentale_gezondheidsnetwerken",
+            "ketenaanpak_overgewicht_obesitas_volwassenen"
+          ]
+        },
+        "implementation_progress_signals": [],
+        "party_and_role_signals": [
+          {
+            "party_or_role": "huisartsen",
+            "indicated_role": "actor hint from the D5 operational requirement layer",
+            "authority": "operational_requirements_layer",
+            "validation_status": "actor_hint_not_local_role_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "party_or_role": "eerstelijn",
+            "indicated_role": "actor hint from the D5 operational requirement layer",
+            "authority": "operational_requirements_layer",
+            "validation_status": "actor_hint_not_local_role_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "party_or_role": "sociaal_domein",
+            "indicated_role": "actor hint from the D5 operational requirement layer",
+            "authority": "operational_requirements_layer",
+            "validation_status": "actor_hint_not_local_role_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "party_or_role": "welzijn",
+            "indicated_role": "actor hint from the D5 operational requirement layer",
+            "authority": "operational_requirements_layer",
+            "validation_status": "actor_hint_not_local_role_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "party_or_role": "gemeente",
+            "indicated_role": "actor hint from the D5 operational requirement layer",
+            "authority": "operational_requirements_layer",
+            "validation_status": "actor_hint_not_local_role_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          }
+        ],
+        "finance_and_resource_signals": [
+          {
+            "signal_id": "finance_stream_hint_01",
+            "statement": "gemeentelijke_azwa_spuk",
+            "authority": "operational_requirements_layer",
+            "validation_status": "finance_stream_hint_not_controller_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "signal_id": "finance_stream_hint_02",
+            "statement": "zorgverzekeraar_zvw",
+            "authority": "operational_requirements_layer",
+            "validation_status": "finance_stream_hint_not_controller_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "signal_id": "finance_stream_hint_03",
+            "statement": "pga_iza_transformatiemiddelen_apart_houden",
+            "authority": "operational_requirements_layer",
+            "validation_status": "finance_stream_hint_not_controller_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          }
+        ],
+        "monitoring_and_learning_signals": [
+          {
+            "signal_id": "public_indicator_adult_brittle_health_pct",
+            "statement": "Broze gezondheid 18-64: 37%",
+            "authority": "public_indicator_source",
+            "validation_status": "baseline_indicator_not_local_monitoring_arrangement",
+            "source_ids": [
+              "reg_ggd_flevoland_2024_volwassenen_gemeenten"
+            ]
+          },
+          {
+            "signal_id": "public_indicator_older_brittle_health_pct",
+            "statement": "Broze gezondheid 65+: 32%",
+            "authority": "public_indicator_source",
+            "validation_status": "baseline_indicator_not_local_monitoring_arrangement",
+            "source_ids": [
+              "reg_ggd_flevoland_2024_ouderen_gemeenten"
+            ]
+          }
+        ],
+        "local_information_still_needed": [
+          "huidige verwijsroute",
+          "aantal verwijzingen huidig",
+          "brugfunctionaris-fte huidig",
+          "aanbieders en afspraken met eerste lijn",
+          "monitoringregistratie"
+        ],
+        "decisions_still_needed": [
+          "prioritering_2027_2030",
+          "lokale_eigenaar",
+          "budget",
+          "monitoringafspraak",
+          "formele_besluitstatus"
+        ],
+        "source_strengthening_candidates": {
+          "candidate_source_ids": [
+            "mun_almere_2024_2034_maatschappelijke_agenda_underlying_documents",
+            "mun_almere_2025_stand_van_zaken_gezondheidsbeleid_iza_gala",
+            "reg_ggd_flevoland_2024_gezondheidsmonitor_volwassenen_ouderen",
+            "reg_ggd_flevoland_2024_tabellenboek_volwassenen",
+            "reg_zonmw_doorontwikkeling_zorgzaam_flevoland",
+            "reg_mgn_flevoland_almere_mandaatgemeente",
+            "mun_almere_2024_programmarekening_pga_iza_gala",
+            "nat_cbs_2025_bevolkingsgroei_almere"
+          ],
+          "still_needs_local_decision": true,
+          "note": "Candidate sources can strengthen baseline and role evidence, but local choices remain unset until Almere or the regional table records target-specific decisions."
+        },
+        "authority_boundary": "Use source-backed and low-authority signals for first contact and 15 September input preparation; do not upgrade them to confirmed ownership, capacity, finance, monitoring or final workagenda text without local validation."
       },
       "gap_summary": {
         "overall_gap_type": "workagenda_input_gap",
@@ -1206,11 +1845,57 @@
             ],
             "authority": "repository_source_layer_reference",
             "confidence": "medium"
+          },
+          {
+            "source_id": "reg_ggd_flevoland_2024_volwassenen_gemeenten",
+            "title": "reg_ggd_flevoland_2024_volwassenen_gemeenten",
+            "use_for": [
+              "D5 operational requirement context"
+            ],
+            "authority": "repository_source_layer_reference",
+            "confidence": "medium"
+          },
+          {
+            "source_id": "reg_ggd_flevoland_2024_ouderen_gemeenten",
+            "title": "reg_ggd_flevoland_2024_ouderen_gemeenten",
+            "use_for": [
+              "D5 operational requirement context"
+            ],
+            "authority": "repository_source_layer_reference",
+            "confidence": "medium"
           }
         ],
         "public_evidence": [
           "Landelijke werkagenda-bron geeft richtinggevende capaciteit: 60 verwijzingen per 10.000 inwoners en 0,2-0,5 fte brugfunctie per 10.000 inwoners.",
           "CBS 2025 denominator maakt een eerste indicatieve Almere-rekensom mogelijk."
+        ],
+        "public_indicators": [
+          {
+            "indicator_id": "adult_brittle_health_pct",
+            "label": "Broze gezondheid 18-64",
+            "value": 37,
+            "unit": "%",
+            "page": 15,
+            "age_group": "adult",
+            "source_document_id": "reg_ggd_flevoland_2024_volwassenen_gemeenten",
+            "source_title": "GGD Flevoland Tabellenboek volwassenen 2024 - gemeenten",
+            "source_status": "public_table_book_ingested_needs_human_review"
+          },
+          {
+            "indicator_id": "older_brittle_health_pct",
+            "label": "Broze gezondheid 65+",
+            "value": 32,
+            "unit": "%",
+            "page": 15,
+            "age_group": "older",
+            "source_document_id": "reg_ggd_flevoland_2024_ouderen_gemeenten",
+            "source_title": "GGD Flevoland Tabellenboek ouderen 2024 - gemeenten",
+            "source_status": "public_table_book_ingested_needs_human_review"
+          }
+        ],
+        "source_claim_ids": [
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_d5_001",
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_d6_002"
         ],
         "evidence_limitations": [
           "Generated data layers are not public sources.",
@@ -1226,6 +1911,7 @@
           "data/workagenda/d5_stuurmodel.json",
           "data/extracted/workagenda_d5_operational_requirements.json",
           "data/extracted/workagenda_nulmeting_capacity.json",
+          "data/extracted/local_source_strengthening_almere.json",
           "data/extracted/municipal/almere_d6_responsibility_register.json"
         ],
         "is_source_claim": false,
@@ -1387,6 +2073,471 @@
           "confirmed governance mandate where it has not yet been validated",
           "final college-adopted workagenda wording"
         ]
+      },
+      "workagenda_delivery_requirements": {
+        "status": "requirements_available",
+        "required_sections": [
+          {
+            "section_id": "urgency_and_problem",
+            "label": "urgentie en opgave",
+            "what_to_prepare": "why this component matters for Almere and the regional workagenda"
+          },
+          {
+            "section_id": "current_local_situation",
+            "label": "huidige lokale situatie",
+            "what_to_prepare": "what is already arranged, what is visible from sources and what still needs local confirmation"
+          },
+          {
+            "section_id": "target_ambition",
+            "label": "ambitie richting 2030",
+            "what_to_prepare": "the intended direction, coverage and scale for the regional workagenda period"
+          },
+          {
+            "section_id": "target_design",
+            "label": "ontwerp van de aanpak",
+            "what_to_prepare": "roles, route, partners, D6 dependencies and working agreements"
+          },
+          {
+            "section_id": "project_objectives_and_gap",
+            "label": "doelen en verschil met huidige situatie",
+            "what_to_prepare": "the limited set of gaps and decision points needed for first regional drafting"
+          },
+          {
+            "section_id": "financial_plan",
+            "label": "financieel plan",
+            "what_to_prepare": "funding route, continuity status and controller validation needs"
+          },
+          {
+            "section_id": "monitoring_and_learning",
+            "label": "monitoring en lerende cyclus",
+            "what_to_prepare": "candidate indicators, data owner and how learning will be organised"
+          },
+          {
+            "section_id": "milestone_planning",
+            "label": "mijlpalenplanning",
+            "what_to_prepare": "municipal delivery by 15 September 2026 and later regional consolidation toward adoption"
+          }
+        ],
+        "component_requirement_summary": {
+          "population_or_target_group": "Thuiswonende ouderen van 65 jaar en ouder met verhoogd valrisico.",
+          "coverage_or_capacity_direction": "Afspraken over opsporen, valrisico-inschatting bij 14% van de 65-plussers, erkende valpreventieve beweeginterventies en structureel beweegaanbod.",
+          "scale_hint": "Lokale uitvoering via gemeente en aanbieders, met regionale afspraken over opsporing, toeleiding en dekkend aanbod.",
+          "related_component_ids": [
+            "ketenaanpak_overgewicht_obesitas_volwassenen",
+            "sociaal_verwijzen"
+          ],
+          "almere_concept_status": "gedeeltelijk_sterk_inhoudelijk_onderbouwd"
+        },
+        "source_document_ids": [
+          "nat_azwa_opdracht_werkagenda_d5_2026",
+          "nat_azwa_format_werkagenda_d5_2026",
+          "nat_azwa_toelichting_producten_proces_2026",
+          "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+        ],
+        "source_claim_ids": [
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_d5_001",
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_d6_002",
+          "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d5_001",
+          "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d5_002"
+        ],
+        "minimum_municipal_input_by_2026_09_15": [
+          "current local status: structureel, projectmatig, deels ingericht or still unclear",
+          "known route, partners and current implementation signals",
+          "validated or explicitly unvalidated owner and coordinator",
+          "validated or explicitly unvalidated finance route",
+          "main monitoring signal and owner if known",
+          "decision or phasing question for the regional coordinator"
+        ],
+        "review_questions_from_requirement_layer": [
+          "Wat is het actuele aantal 65-plussers per peildatum?",
+          "Welke cursuscapaciteit, aanbieders, wachttijden en wijkspreiding zijn bronvast?",
+          "Welke bestaande GALA- of lokale middelen mogen niet dubbel worden geteld als AZWA-inzet?"
+        ]
+      },
+      "available_information_for_workagenda": {
+        "summary": "There is already usable current information and implementation movement, but it must be kept separate from confirmed local decisions.",
+        "source_backed_current_information": [
+          "GGD Valpreventie Almere beschrijft publieke inloop/risico-inschatting en cursusmatching.",
+          "GGD-tabellenboek ouderen geeft publieke valindicatoren voor Almere.",
+          "Landelijke werkagenda-richting noemt valrisico-inschatting bij 14% van de 65-plussers."
+        ],
+        "public_indicators": [
+          {
+            "indicator_id": "older_fall_concern_pct",
+            "label": "Bezorgd om te vallen 65+",
+            "value": 31,
+            "unit": "%",
+            "page": 10,
+            "age_group": "older",
+            "source_document_id": "reg_ggd_flevoland_2024_ouderen_gemeenten",
+            "source_title": "GGD Flevoland Tabellenboek ouderen 2024 - gemeenten",
+            "source_status": "public_table_book_ingested_needs_human_review"
+          },
+          {
+            "indicator_id": "older_fallen_once_or_more_pct",
+            "label": "Een of meer keer gevallen 65+",
+            "value": 24,
+            "unit": "%",
+            "page": 10,
+            "age_group": "older",
+            "source_document_id": "reg_ggd_flevoland_2024_ouderen_gemeenten",
+            "source_title": "GGD Flevoland Tabellenboek ouderen 2024 - gemeenten",
+            "source_status": "public_table_book_ingested_needs_human_review"
+          },
+          {
+            "indicator_id": "older_fallen_twice_or_more_pct",
+            "label": "Twee keer of vaker gevallen 65+",
+            "value": 10,
+            "unit": "%",
+            "page": 10,
+            "age_group": "older",
+            "source_document_id": "reg_ggd_flevoland_2024_ouderen_gemeenten",
+            "source_title": "GGD Flevoland Tabellenboek ouderen 2024 - gemeenten",
+            "source_status": "public_table_book_ingested_needs_human_review"
+          },
+          {
+            "indicator_id": "older_meets_movement_guideline_pct",
+            "label": "Voldoet aan beweegrichtlijn 65+",
+            "value": 37,
+            "unit": "%",
+            "page": 11,
+            "age_group": "older",
+            "source_document_id": "reg_ggd_flevoland_2024_ouderen_gemeenten",
+            "source_title": "GGD Flevoland Tabellenboek ouderen 2024 - gemeenten",
+            "source_status": "public_table_book_ingested_needs_human_review"
+          }
+        ],
+        "operational_direction": {
+          "population_or_target_group": "Thuiswonende ouderen van 65 jaar en ouder met verhoogd valrisico.",
+          "coverage_or_capacity_direction": "Afspraken over opsporen, valrisico-inschatting bij 14% van de 65-plussers, erkende valpreventieve beweeginterventies en structureel beweegaanbod.",
+          "scale_hint": "Lokale uitvoering via gemeente en aanbieders, met regionale afspraken over opsporing, toeleiding en dekkend aanbod.",
+          "related_component_ids": [
+            "ketenaanpak_overgewicht_obesitas_volwassenen",
+            "sociaal_verwijzen"
+          ]
+        },
+        "implementation_progress_signals": [
+          {
+            "signal_id": "valpreventie_inloop_route",
+            "statement": "GGD Flevoland beschrijft voor Almere een vrij toegankelijk inloopmoment waar professionals met inwoners naar het valrisico kijken.",
+            "authority": "regional_operational_source",
+            "validation_status": "source_backed_public_route_not_capacity_confirmation",
+            "source_ids": [
+              "reg_ggd_flevoland_valpreventie_almere"
+            ],
+            "claim_ids": [
+              "clm__reg_ggd_flevoland_valpreventie_almere_d5_001"
+            ]
+          },
+          {
+            "signal_id": "valpreventie_course_matching",
+            "statement": "De publieke route beschrijft dat met inwoners wordt besproken of zij een cursus valpreventie kunnen volgen en welke cursus past; dit wijst op een bestaande toeleidingsroute, maar bevestigt geen actuele capaciteit of wachttijd.",
+            "authority": "regional_operational_source",
+            "validation_status": "source_backed_route_signal_capacity_unconfirmed",
+            "source_ids": [
+              "reg_ggd_flevoland_valpreventie_almere"
+            ],
+            "claim_ids": [
+              "clm__reg_ggd_flevoland_valpreventie_almere_d5_002"
+            ]
+          },
+          {
+            "signal_id": "valpreventie_free_walk_in_signal",
+            "statement": "De GGD-pagina noemt vrije inloop, geen aanmelding nodig en gratis toegang voor de eerste route naar cursusdeelname.",
+            "authority": "regional_operational_source",
+            "validation_status": "source_backed_public_access_signal_not_finance_confirmation",
+            "source_ids": [
+              "reg_ggd_flevoland_valpreventie_almere"
+            ],
+            "claim_ids": [
+              "clm__reg_ggd_flevoland_valpreventie_almere_d5_003"
+            ]
+          },
+          {
+            "signal_id": "valpreventie_chain_steps",
+            "statement": "Het ketendocument beschrijft ketenstappen zoals signaleren, valrisicotest, passende interventies en aansluiting op structureel sport- en beweegaanbod.",
+            "authority": "regional_implementation_source",
+            "validation_status": "implementation_route_signal_local_status_still_to_validate",
+            "source_ids": [
+              "reg_ggd_flevoland_valpreventie_almere_ketendocument_2026"
+            ],
+            "claim_ids": [
+              "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_d6_003"
+            ]
+          }
+        ],
+        "party_and_role_signals": [
+          {
+            "party_or_role": "gemeente",
+            "indicated_role": "actor hint from the D5 operational requirement layer",
+            "authority": "operational_requirements_layer",
+            "validation_status": "actor_hint_not_local_role_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "party_or_role": "eerstelijn",
+            "indicated_role": "actor hint from the D5 operational requirement layer",
+            "authority": "operational_requirements_layer",
+            "validation_status": "actor_hint_not_local_role_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "party_or_role": "sociaal_domein",
+            "indicated_role": "actor hint from the D5 operational requirement layer",
+            "authority": "operational_requirements_layer",
+            "validation_status": "actor_hint_not_local_role_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "party_or_role": "beweegaanbieders",
+            "indicated_role": "actor hint from the D5 operational requirement layer",
+            "authority": "operational_requirements_layer",
+            "validation_status": "actor_hint_not_local_role_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "party_or_role": "ouderenwerk",
+            "indicated_role": "actor hint from the D5 operational requirement layer",
+            "authority": "operational_requirements_layer",
+            "validation_status": "actor_hint_not_local_role_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "party_or_role": "GGD Flevoland",
+            "indicated_role": "publieke route en informatievoorziening voor valpreventie in Almere",
+            "authority": "regional_operational_source",
+            "validation_status": "visible_in_public_source",
+            "source_ids": [
+              "reg_ggd_flevoland_valpreventie_almere"
+            ]
+          },
+          {
+            "party_or_role": "Gemeente Almere",
+            "indicated_role": "genoemd in afspraken rond gemeentelijk domein voor matig valrisico",
+            "authority": "regional_implementation_source",
+            "validation_status": "role_signal_needs_owner_and_controller_validation",
+            "source_ids": [
+              "reg_ggd_flevoland_valpreventie_almere_ketendocument_2026"
+            ],
+            "claim_ids": [
+              "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_governance_and_finance_002"
+            ]
+          },
+          {
+            "party_or_role": "Paramedisch Platform Almere",
+            "indicated_role": "genoemd bij afspraken voor valpreventieve beweeginterventies bij matig valrisico",
+            "authority": "regional_implementation_source",
+            "validation_status": "party_signal_not_full_contract_confirmation",
+            "source_ids": [
+              "reg_ggd_flevoland_valpreventie_almere_ketendocument_2026"
+            ],
+            "claim_ids": [
+              "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_governance_and_finance_002"
+            ]
+          },
+          {
+            "party_or_role": "EELA",
+            "indicated_role": "ROS die volgens het ketendocument samenwerking tussen zorglijnen, sociaal domein, overheden, verzekeraars en bedrijfsleven in Almere en Amsterdam helpt versterken",
+            "authority": "regional_implementation_source",
+            "validation_status": "party_signal_scope_and_task_need_validation",
+            "source_ids": [
+              "reg_ggd_flevoland_valpreventie_almere_ketendocument_2026"
+            ],
+            "claim_ids": [
+              "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_municipal_translation_002"
+            ]
+          },
+          {
+            "party_or_role": "centrale coördinator valpreventie",
+            "indicated_role": "verzamelt aanmeldingen binnen Almere en houdt wachtlijsten per gebied/woonkern bij",
+            "authority": "regional_implementation_source",
+            "validation_status": "role_signal_identity_mandate_and_current_status_unconfirmed",
+            "source_ids": [
+              "reg_ggd_flevoland_valpreventie_almere_ketendocument_2026"
+            ],
+            "claim_ids": [
+              "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_municipal_translation_003"
+            ]
+          }
+        ],
+        "finance_and_resource_signals": [
+          {
+            "signal_id": "finance_stream_hint_01",
+            "statement": "gemeentelijke_azwa_spuk",
+            "authority": "operational_requirements_layer",
+            "validation_status": "finance_stream_hint_not_controller_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "signal_id": "finance_stream_hint_02",
+            "statement": "gala_spuk_apart_houden",
+            "authority": "operational_requirements_layer",
+            "validation_status": "finance_stream_hint_not_controller_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "signal_id": "finance_stream_hint_03",
+            "statement": "doorbraakmiddelen_sociaal_domein",
+            "authority": "operational_requirements_layer",
+            "validation_status": "finance_stream_hint_not_controller_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "signal_id": "valpreventie_moderate_risk_municipal_arrangements",
+            "statement": "Het ketendocument noemt gemeentelijke regelingen en afspraken tussen Gemeente Almere en het Paramedisch Platform Almere voor valpreventieve beweeginterventies bij matig valrisico.",
+            "authority": "regional_implementation_source",
+            "validation_status": "finance_signal_requires_controller_validation",
+            "source_ids": [
+              "reg_ggd_flevoland_valpreventie_almere_ketendocument_2026"
+            ],
+            "claim_ids": [
+              "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_governance_and_finance_002"
+            ]
+          },
+          {
+            "signal_id": "valpreventie_accessibility_finance_signal",
+            "statement": "Het ketendocument legt een verband tussen de financieringsstructuur en deelname zonder financiële drempels; dit is geen bewijs van structurele borging.",
+            "authority": "regional_implementation_source",
+            "validation_status": "finance_context_not_structural_funding_confirmation",
+            "source_ids": [
+              "reg_ggd_flevoland_valpreventie_almere_ketendocument_2026"
+            ],
+            "claim_ids": [
+              "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_governance_and_finance_003"
+            ]
+          }
+        ],
+        "monitoring_and_learning_signals": [
+          {
+            "signal_id": "public_indicator_older_fall_concern_pct",
+            "statement": "Bezorgd om te vallen 65+: 31%",
+            "authority": "public_indicator_source",
+            "validation_status": "baseline_indicator_not_local_monitoring_arrangement",
+            "source_ids": [
+              "reg_ggd_flevoland_2024_ouderen_gemeenten"
+            ]
+          },
+          {
+            "signal_id": "public_indicator_older_fallen_once_or_more_pct",
+            "statement": "Een of meer keer gevallen 65+: 24%",
+            "authority": "public_indicator_source",
+            "validation_status": "baseline_indicator_not_local_monitoring_arrangement",
+            "source_ids": [
+              "reg_ggd_flevoland_2024_ouderen_gemeenten"
+            ]
+          },
+          {
+            "signal_id": "public_indicator_older_fallen_twice_or_more_pct",
+            "statement": "Twee keer of vaker gevallen 65+: 10%",
+            "authority": "public_indicator_source",
+            "validation_status": "baseline_indicator_not_local_monitoring_arrangement",
+            "source_ids": [
+              "reg_ggd_flevoland_2024_ouderen_gemeenten"
+            ]
+          },
+          {
+            "signal_id": "public_indicator_older_meets_movement_guideline_pct",
+            "statement": "Voldoet aan beweegrichtlijn 65+: 37%",
+            "authority": "public_indicator_source",
+            "validation_status": "baseline_indicator_not_local_monitoring_arrangement",
+            "source_ids": [
+              "reg_ggd_flevoland_2024_ouderen_gemeenten"
+            ]
+          },
+          {
+            "signal_id": "valpreventie_monitoring_registration",
+            "statement": "Het ketendocument bevat onderdelen over monitoring, registratie en kwaliteit.",
+            "authority": "regional_implementation_source",
+            "validation_status": "monitoring_signal_owner_and_use_unconfirmed",
+            "source_ids": [
+              "reg_ggd_flevoland_valpreventie_almere_ketendocument_2026"
+            ],
+            "claim_ids": [
+              "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_monitoring_and_evaluation_001"
+            ]
+          },
+          {
+            "signal_id": "valpreventie_excel_monitoring_template",
+            "statement": "Het ketendocument noemt een Excel-sjabloon voor monitoring en registratie.",
+            "authority": "regional_implementation_source",
+            "validation_status": "instrument_signal_not_validated_reporting_arrangement",
+            "source_ids": [
+              "reg_ggd_flevoland_valpreventie_almere_ketendocument_2026"
+            ],
+            "claim_ids": [
+              "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_monitoring_and_evaluation_003"
+            ]
+          }
+        ],
+        "local_information_still_needed": [
+          "cursuscapaciteit",
+          "aanbieders per wijk/stadsdeel",
+          "wachttijden",
+          "doorverwijsroute vanuit inloop",
+          "structureel beweegaanbod",
+          "budget en eigenaarschap"
+        ],
+        "decisions_still_needed": [
+          "prioritering_2027_2030",
+          "lokale_eigenaar",
+          "budget",
+          "monitoringafspraak",
+          "formele_besluitstatus"
+        ],
+        "source_strengthening_candidates": {
+          "candidate_source_ids": [
+            "mun_almere_2024_2026_visie_gezondheidsbeleid_underlying_documents",
+            "mun_almere_2025_stand_van_zaken_gezondheidsbeleid_iza_gala",
+            "reg_ggd_flevoland_2024_gezondheidsmonitor_volwassenen_ouderen",
+            "reg_ggd_flevoland_valpreventie_almere",
+            "reg_zonmw_doorontwikkeling_zorgzaam_flevoland",
+            "mun_almere_2024_programmarekening_pga_iza_gala",
+            "nat_cbs_2025_bevolkingsgroei_almere"
+          ],
+          "still_needs_local_decision": true,
+          "note": "Candidate sources can strengthen baseline and role evidence, but local choices remain unset until Almere or the regional table records target-specific decisions."
+        },
+        "authority_boundary": "Use source-backed and low-authority signals for first contact and 15 September input preparation; do not upgrade them to confirmed ownership, capacity, finance, monitoring or final workagenda text without local validation."
       },
       "gap_summary": {
         "overall_gap_type": "workagenda_input_gap",
@@ -1825,12 +2976,83 @@
             ],
             "authority": "repository_source_layer_reference",
             "confidence": "medium"
+          },
+          {
+            "source_id": "reg_ggd_flevoland_2024_ouderen_gemeenten",
+            "title": "reg_ggd_flevoland_2024_ouderen_gemeenten",
+            "use_for": [
+              "D5 operational requirement context"
+            ],
+            "authority": "repository_source_layer_reference",
+            "confidence": "medium"
           }
         ],
         "public_evidence": [
           "GGD Valpreventie Almere beschrijft publieke inloop/risico-inschatting en cursusmatching.",
           "GGD-tabellenboek ouderen geeft publieke valindicatoren voor Almere.",
           "Landelijke werkagenda-richting noemt valrisico-inschatting bij 14% van de 65-plussers."
+        ],
+        "public_indicators": [
+          {
+            "indicator_id": "older_fall_concern_pct",
+            "label": "Bezorgd om te vallen 65+",
+            "value": 31,
+            "unit": "%",
+            "page": 10,
+            "age_group": "older",
+            "source_document_id": "reg_ggd_flevoland_2024_ouderen_gemeenten",
+            "source_title": "GGD Flevoland Tabellenboek ouderen 2024 - gemeenten",
+            "source_status": "public_table_book_ingested_needs_human_review"
+          },
+          {
+            "indicator_id": "older_fallen_once_or_more_pct",
+            "label": "Een of meer keer gevallen 65+",
+            "value": 24,
+            "unit": "%",
+            "page": 10,
+            "age_group": "older",
+            "source_document_id": "reg_ggd_flevoland_2024_ouderen_gemeenten",
+            "source_title": "GGD Flevoland Tabellenboek ouderen 2024 - gemeenten",
+            "source_status": "public_table_book_ingested_needs_human_review"
+          },
+          {
+            "indicator_id": "older_fallen_twice_or_more_pct",
+            "label": "Twee keer of vaker gevallen 65+",
+            "value": 10,
+            "unit": "%",
+            "page": 10,
+            "age_group": "older",
+            "source_document_id": "reg_ggd_flevoland_2024_ouderen_gemeenten",
+            "source_title": "GGD Flevoland Tabellenboek ouderen 2024 - gemeenten",
+            "source_status": "public_table_book_ingested_needs_human_review"
+          },
+          {
+            "indicator_id": "older_meets_movement_guideline_pct",
+            "label": "Voldoet aan beweegrichtlijn 65+",
+            "value": 37,
+            "unit": "%",
+            "page": 11,
+            "age_group": "older",
+            "source_document_id": "reg_ggd_flevoland_2024_ouderen_gemeenten",
+            "source_title": "GGD Flevoland Tabellenboek ouderen 2024 - gemeenten",
+            "source_status": "public_table_book_ingested_needs_human_review"
+          }
+        ],
+        "source_claim_ids": [
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_d5_001",
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_d6_002",
+          "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d5_001",
+          "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d5_002",
+          "clm__reg_ggd_flevoland_valpreventie_almere_d5_001",
+          "clm__reg_ggd_flevoland_valpreventie_almere_d5_002",
+          "clm__reg_ggd_flevoland_valpreventie_almere_d5_003",
+          "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_d6_003",
+          "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_governance_and_finance_002",
+          "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_municipal_translation_002",
+          "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_municipal_translation_003",
+          "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_governance_and_finance_003",
+          "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_monitoring_and_evaluation_001",
+          "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_monitoring_and_evaluation_003"
         ],
         "evidence_limitations": [
           "Generated data layers are not public sources.",
@@ -1846,6 +3068,7 @@
           "data/workagenda/d5_stuurmodel.json",
           "data/extracted/workagenda_d5_operational_requirements.json",
           "data/extracted/workagenda_nulmeting_capacity.json",
+          "data/extracted/local_source_strengthening_almere.json",
           "data/extracted/municipal/almere_d6_responsibility_register.json",
           "data/site/source_view_models/ggd-valpreventie-almere.json",
           "data/site/source_view_models/ketendocument-valpreventie-almere.json",
@@ -2005,6 +3228,391 @@
           "confirmed governance mandate where it has not yet been validated",
           "final college-adopted workagenda wording"
         ]
+      },
+      "workagenda_delivery_requirements": {
+        "status": "requirements_available",
+        "required_sections": [
+          {
+            "section_id": "urgency_and_problem",
+            "label": "urgentie en opgave",
+            "what_to_prepare": "why this component matters for Almere and the regional workagenda"
+          },
+          {
+            "section_id": "current_local_situation",
+            "label": "huidige lokale situatie",
+            "what_to_prepare": "what is already arranged, what is visible from sources and what still needs local confirmation"
+          },
+          {
+            "section_id": "target_ambition",
+            "label": "ambitie richting 2030",
+            "what_to_prepare": "the intended direction, coverage and scale for the regional workagenda period"
+          },
+          {
+            "section_id": "target_design",
+            "label": "ontwerp van de aanpak",
+            "what_to_prepare": "roles, route, partners, D6 dependencies and working agreements"
+          },
+          {
+            "section_id": "project_objectives_and_gap",
+            "label": "doelen en verschil met huidige situatie",
+            "what_to_prepare": "the limited set of gaps and decision points needed for first regional drafting"
+          },
+          {
+            "section_id": "financial_plan",
+            "label": "financieel plan",
+            "what_to_prepare": "funding route, continuity status and controller validation needs"
+          },
+          {
+            "section_id": "monitoring_and_learning",
+            "label": "monitoring en lerende cyclus",
+            "what_to_prepare": "candidate indicators, data owner and how learning will be organised"
+          },
+          {
+            "section_id": "milestone_planning",
+            "label": "mijlpalenplanning",
+            "what_to_prepare": "municipal delivery by 15 September 2026 and later regional consolidation toward adoption"
+          }
+        ],
+        "component_requirement_summary": {
+          "population_or_target_group": "Volwassenen vanaf een licht verhoogd gewichtsgerelateerd gezondheidsrisico, met aanvullend aanbod voor groepen die regulier aanbod onvoldoende bereikt.",
+          "coverage_or_capacity_direction": "Aanbod rond centrale zorgcoordinatie, beweegaanbod, gezondheidsvaardigheden/leefstijl, individuele ondersteuning en GLI.",
+          "scale_hint": "Combinatie van lokale uitvoering, regionale coordinatie en zorgverzekeraarscontractering.",
+          "related_component_ids": [
+            "ketenaanpak_overgewicht_obesitas_kinderen",
+            "sociaal_verwijzen",
+            "valpreventie"
+          ],
+          "almere_concept_status": "gedeeltelijk_hoge_prioriteit"
+        },
+        "source_document_ids": [
+          "nat_azwa_opdracht_werkagenda_d5_2026",
+          "nat_azwa_format_werkagenda_d5_2026",
+          "nat_azwa_toelichting_producten_proces_2026",
+          "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+        ],
+        "source_claim_ids": [
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_d5_002",
+          "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d5_001"
+        ],
+        "minimum_municipal_input_by_2026_09_15": [
+          "current local status: structureel, projectmatig, deels ingericht or still unclear",
+          "known route, partners and current implementation signals",
+          "validated or explicitly unvalidated owner and coordinator",
+          "validated or explicitly unvalidated finance route",
+          "main monitoring signal and owner if known",
+          "decision or phasing question for the regional coordinator"
+        ],
+        "review_questions_from_requirement_layer": [
+          "Welke GLI-capaciteit en leefstijl-/beweegcapaciteit zijn in Almere beschikbaar?",
+          "Wie organiseert en financiert de centrale zorgcoordinator?",
+          "Welke wijkgerichte doelgroepkeuze is bestuurlijk vastgesteld?"
+        ]
+      },
+      "available_information_for_workagenda": {
+        "summary": "There is already usable current information and implementation movement, but it must be kept separate from confirmed local decisions.",
+        "source_backed_current_information": [
+          "GGD-tabellenboek volwassenen geeft publieke Almere-indicatoren voor overgewicht, obesitas en bewegen."
+        ],
+        "public_indicators": [
+          {
+            "indicator_id": "adult_overweight_moderate_pct",
+            "label": "Matig overgewicht 18-64",
+            "value": 37,
+            "unit": "%",
+            "page": 11,
+            "age_group": "adult",
+            "source_document_id": "reg_ggd_flevoland_2024_volwassenen_gemeenten",
+            "source_title": "GGD Flevoland Tabellenboek volwassenen 2024 - gemeenten",
+            "source_status": "public_table_book_ingested_needs_human_review"
+          },
+          {
+            "indicator_id": "adult_obesity_pct",
+            "label": "Ernstig overgewicht/obesitas 18-64",
+            "value": 21,
+            "unit": "%",
+            "page": 11,
+            "age_group": "adult",
+            "source_document_id": "reg_ggd_flevoland_2024_volwassenen_gemeenten",
+            "source_title": "GGD Flevoland Tabellenboek volwassenen 2024 - gemeenten",
+            "source_status": "public_table_book_ingested_needs_human_review"
+          },
+          {
+            "indicator_id": "adult_meets_movement_guideline_pct",
+            "label": "Voldoet aan beweegrichtlijn 18-64",
+            "value": 47,
+            "unit": "%",
+            "page": 11,
+            "age_group": "adult",
+            "source_document_id": "reg_ggd_flevoland_2024_volwassenen_gemeenten",
+            "source_title": "GGD Flevoland Tabellenboek volwassenen 2024 - gemeenten",
+            "source_status": "public_table_book_ingested_needs_human_review"
+          }
+        ],
+        "operational_direction": {
+          "population_or_target_group": "Volwassenen vanaf een licht verhoogd gewichtsgerelateerd gezondheidsrisico, met aanvullend aanbod voor groepen die regulier aanbod onvoldoende bereikt.",
+          "coverage_or_capacity_direction": "Aanbod rond centrale zorgcoordinatie, beweegaanbod, gezondheidsvaardigheden/leefstijl, individuele ondersteuning en GLI.",
+          "scale_hint": "Combinatie van lokale uitvoering, regionale coordinatie en zorgverzekeraarscontractering.",
+          "related_component_ids": [
+            "ketenaanpak_overgewicht_obesitas_kinderen",
+            "sociaal_verwijzen",
+            "valpreventie"
+          ]
+        },
+        "implementation_progress_signals": [
+          {
+            "signal_id": "adult_overweight_public_baseline",
+            "statement": "GGD Flevoland geeft voor Almere publieke indicatoren voor matig overgewicht, obesitas en voldoen aan de beweegrichtlijn bij volwassenen.",
+            "authority": "public_table_book_source",
+            "validation_status": "source_backed_population_signal_not_service_capacity",
+            "source_ids": [
+              "reg_ggd_flevoland_2024_volwassenen_gemeenten"
+            ]
+          },
+          {
+            "signal_id": "adult_overweight_operational_direction",
+            "statement": "De landelijke D5-richting vraagt om samenhang tussen centrale zorgcoördinatie, beweegaanbod, gezondheidsvaardigheden/leefstijl, individuele ondersteuning en GLI.",
+            "authority": "national_operational_requirement",
+            "validation_status": "target_design_direction_local_capacity_unconfirmed",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026"
+            ]
+          },
+          {
+            "signal_id": "adult_overweight_fgw_support",
+            "statement": "Het Almere GALA-plan noemt Flevoland Gezond en Wel als preventiecoalitie die regionale ketenaanpakken ondersteunt, waaronder de gecombineerde leefstijlinterventie voor volwassenen.",
+            "authority": "municipal_policy_source",
+            "validation_status": "regional_support_signal_not_local_delivery_confirmation",
+            "source_ids": [
+              "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak"
+            ],
+            "claim_ids": [
+              "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d5_001"
+            ]
+          }
+        ],
+        "party_and_role_signals": [
+          {
+            "party_or_role": "gemeente",
+            "indicated_role": "actor hint from the D5 operational requirement layer",
+            "authority": "operational_requirements_layer",
+            "validation_status": "actor_hint_not_local_role_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "party_or_role": "zorgverzekeraar",
+            "indicated_role": "actor hint from the D5 operational requirement layer",
+            "authority": "operational_requirements_layer",
+            "validation_status": "actor_hint_not_local_role_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "party_or_role": "eerstelijn",
+            "indicated_role": "actor hint from the D5 operational requirement layer",
+            "authority": "operational_requirements_layer",
+            "validation_status": "actor_hint_not_local_role_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "party_or_role": "leefstijlcoaches",
+            "indicated_role": "actor hint from the D5 operational requirement layer",
+            "authority": "operational_requirements_layer",
+            "validation_status": "actor_hint_not_local_role_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "party_or_role": "beweegaanbieders",
+            "indicated_role": "actor hint from the D5 operational requirement layer",
+            "authority": "operational_requirements_layer",
+            "validation_status": "actor_hint_not_local_role_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "party_or_role": "sociaal_domein",
+            "indicated_role": "actor hint from the D5 operational requirement layer",
+            "authority": "operational_requirements_layer",
+            "validation_status": "actor_hint_not_local_role_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "party_or_role": "Flevoland Gezond en Wel",
+            "indicated_role": "preventiecoalitie die regionale ketenaanpakken ondersteunt",
+            "authority": "municipal_policy_source",
+            "validation_status": "support_signal_task_scope_needs_validation",
+            "source_ids": [
+              "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak"
+            ],
+            "claim_ids": [
+              "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d5_001"
+            ]
+          },
+          {
+            "party_or_role": "gemeente, zorgverzekeraar, eerstelijn, leefstijlcoaches, beweegaanbieders en sociaal domein",
+            "indicated_role": "actoren die volgens de D5-richting nodig zijn voor de aanpak",
+            "authority": "operational_requirements_layer",
+            "validation_status": "actor_hint_not_local_role_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026"
+            ]
+          }
+        ],
+        "finance_and_resource_signals": [
+          {
+            "signal_id": "finance_stream_hint_01",
+            "statement": "zorgverzekeraar_zvw",
+            "authority": "operational_requirements_layer",
+            "validation_status": "finance_stream_hint_not_controller_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "signal_id": "finance_stream_hint_02",
+            "statement": "gemeentelijke_azwa_spuk",
+            "authority": "operational_requirements_layer",
+            "validation_status": "finance_stream_hint_not_controller_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "signal_id": "finance_stream_hint_03",
+            "statement": "gala_spuk_apart_houden",
+            "authority": "operational_requirements_layer",
+            "validation_status": "finance_stream_hint_not_controller_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "signal_id": "adult_overweight_finance_mix_hint",
+            "statement": "De beschikbare D5-richting wijst op een financieringsmix met Zvw, gemeentelijke AZWA/SPUK-lijnen en gescheiden behandeling van bestaande GALA-middelen.",
+            "authority": "operational_requirements_layer",
+            "validation_status": "finance_stream_hint_controller_validation_required",
+            "source_ids": [
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "signal_id": "adult_overweight_budget_table_signal",
+            "statement": "De Almere gezondheidsbeleidsinformatie bevat een begrotingsregel voor aanpak overgewicht en obesitas; scope, jaarschijf en inzet voor de werkagenda moeten voor gebruik worden bevestigd.",
+            "authority": "municipal_policy_source",
+            "validation_status": "low_authority_budget_signal_needs_controller_validation",
+            "source_ids": [
+              "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst"
+            ],
+            "claim_ids": [
+              "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d5_002"
+            ]
+          }
+        ],
+        "monitoring_and_learning_signals": [
+          {
+            "signal_id": "public_indicator_adult_overweight_moderate_pct",
+            "statement": "Matig overgewicht 18-64: 37%",
+            "authority": "public_indicator_source",
+            "validation_status": "baseline_indicator_not_local_monitoring_arrangement",
+            "source_ids": [
+              "reg_ggd_flevoland_2024_volwassenen_gemeenten"
+            ]
+          },
+          {
+            "signal_id": "public_indicator_adult_obesity_pct",
+            "statement": "Ernstig overgewicht/obesitas 18-64: 21%",
+            "authority": "public_indicator_source",
+            "validation_status": "baseline_indicator_not_local_monitoring_arrangement",
+            "source_ids": [
+              "reg_ggd_flevoland_2024_volwassenen_gemeenten"
+            ]
+          },
+          {
+            "signal_id": "public_indicator_adult_meets_movement_guideline_pct",
+            "statement": "Voldoet aan beweegrichtlijn 18-64: 47%",
+            "authority": "public_indicator_source",
+            "validation_status": "baseline_indicator_not_local_monitoring_arrangement",
+            "source_ids": [
+              "reg_ggd_flevoland_2024_volwassenen_gemeenten"
+            ]
+          },
+          {
+            "signal_id": "adult_overweight_ggd_indicators",
+            "statement": "De GGD-indicatoren kunnen dienen als huidige informatie voor de opgave, maar niet als monitoringafspraak voor de ketenaanpak.",
+            "authority": "public_table_book_source",
+            "validation_status": "baseline_signal_not_monitoring_owner_confirmation",
+            "source_ids": [
+              "reg_ggd_flevoland_2024_volwassenen_gemeenten"
+            ]
+          }
+        ],
+        "local_information_still_needed": [
+          "GLI-capaciteit",
+          "leefstijl- en beweegaanbod",
+          "centrale zorgcoordinatie",
+          "wijkspreiding",
+          "wachttijden",
+          "financieringsmix Zvw/gemeente/GALA/PGA"
+        ],
+        "decisions_still_needed": [
+          "prioritering_2027_2030",
+          "lokale_eigenaar",
+          "budget",
+          "monitoringafspraak",
+          "formele_besluitstatus"
+        ],
+        "source_strengthening_candidates": {
+          "candidate_source_ids": [
+            "mun_almere_2024_2034_maatschappelijke_agenda_underlying_documents",
+            "mun_almere_2024_2026_visie_gezondheidsbeleid_underlying_documents",
+            "mun_almere_2025_stand_van_zaken_gezondheidsbeleid_iza_gala",
+            "reg_ggd_flevoland_2024_gezondheidsmonitor_volwassenen_ouderen",
+            "reg_ggd_flevoland_2024_tabellenboek_volwassenen",
+            "reg_zonmw_doorontwikkeling_zorgzaam_flevoland",
+            "mun_almere_2024_programmarekening_pga_iza_gala"
+          ],
+          "still_needs_local_decision": true,
+          "note": "Candidate sources can strengthen baseline and role evidence, but local choices remain unset until Almere or the regional table records target-specific decisions."
+        },
+        "authority_boundary": "Use source-backed and low-authority signals for first contact and 15 September input preparation; do not upgrade them to confirmed ownership, capacity, finance, monitoring or final workagenda text without local validation."
       },
       "gap_summary": {
         "overall_gap_type": "workagenda_input_gap",
@@ -2366,6 +3974,25 @@
             "confidence": "high"
           },
           {
+            "source_id": "reg_ggd_flevoland_2024_volwassenen_gemeenten",
+            "title": "GGD Flevoland Tabellenboek volwassenen 2024 - gemeenten",
+            "use_for": [
+              "current information",
+              "overweight and movement indicators"
+            ],
+            "authority": "public_table_book_source",
+            "confidence": "medium"
+          },
+          {
+            "source_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
+            "title": "Almere Brede SPUK / GALA plan van aanpak 2024-2026",
+            "use_for": [
+              "regional prevention-chain support signal"
+            ],
+            "authority": "municipal_policy_source",
+            "confidence": "medium"
+          },
+          {
             "source_id": "nat_azwa_opdracht_werkagenda_d5_2026",
             "title": "nat_azwa_opdracht_werkagenda_d5_2026",
             "use_for": [
@@ -2405,6 +4032,47 @@
         "public_evidence": [
           "GGD-tabellenboek volwassenen geeft publieke Almere-indicatoren voor overgewicht, obesitas en bewegen."
         ],
+        "public_indicators": [
+          {
+            "indicator_id": "adult_overweight_moderate_pct",
+            "label": "Matig overgewicht 18-64",
+            "value": 37,
+            "unit": "%",
+            "page": 11,
+            "age_group": "adult",
+            "source_document_id": "reg_ggd_flevoland_2024_volwassenen_gemeenten",
+            "source_title": "GGD Flevoland Tabellenboek volwassenen 2024 - gemeenten",
+            "source_status": "public_table_book_ingested_needs_human_review"
+          },
+          {
+            "indicator_id": "adult_obesity_pct",
+            "label": "Ernstig overgewicht/obesitas 18-64",
+            "value": 21,
+            "unit": "%",
+            "page": 11,
+            "age_group": "adult",
+            "source_document_id": "reg_ggd_flevoland_2024_volwassenen_gemeenten",
+            "source_title": "GGD Flevoland Tabellenboek volwassenen 2024 - gemeenten",
+            "source_status": "public_table_book_ingested_needs_human_review"
+          },
+          {
+            "indicator_id": "adult_meets_movement_guideline_pct",
+            "label": "Voldoet aan beweegrichtlijn 18-64",
+            "value": 47,
+            "unit": "%",
+            "page": 11,
+            "age_group": "adult",
+            "source_document_id": "reg_ggd_flevoland_2024_volwassenen_gemeenten",
+            "source_title": "GGD Flevoland Tabellenboek volwassenen 2024 - gemeenten",
+            "source_status": "public_table_book_ingested_needs_human_review"
+          }
+        ],
+        "source_claim_ids": [
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_d5_002",
+          "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d5_001",
+          "clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d5_001",
+          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d5_002"
+        ],
         "evidence_limitations": [
           "Generated data layers are not public sources.",
           "Public-source signals do not equal confirmed local policy, finance, ownership or capacity.",
@@ -2419,6 +4087,7 @@
           "data/workagenda/d5_stuurmodel.json",
           "data/extracted/workagenda_d5_operational_requirements.json",
           "data/extracted/workagenda_nulmeting_capacity.json",
+          "data/extracted/local_source_strengthening_almere.json",
           "data/extracted/municipal/almere_d6_responsibility_register.json"
         ],
         "is_source_claim": false,
@@ -2572,6 +4241,233 @@
           "confirmed governance mandate where it has not yet been validated",
           "final college-adopted workagenda wording"
         ]
+      },
+      "workagenda_delivery_requirements": {
+        "status": "requirements_available",
+        "required_sections": [
+          {
+            "section_id": "urgency_and_problem",
+            "label": "urgentie en opgave",
+            "what_to_prepare": "why this component matters for Almere and the regional workagenda"
+          },
+          {
+            "section_id": "current_local_situation",
+            "label": "huidige lokale situatie",
+            "what_to_prepare": "what is already arranged, what is visible from sources and what still needs local confirmation"
+          },
+          {
+            "section_id": "target_ambition",
+            "label": "ambitie richting 2030",
+            "what_to_prepare": "the intended direction, coverage and scale for the regional workagenda period"
+          },
+          {
+            "section_id": "target_design",
+            "label": "ontwerp van de aanpak",
+            "what_to_prepare": "roles, route, partners, D6 dependencies and working agreements"
+          },
+          {
+            "section_id": "project_objectives_and_gap",
+            "label": "doelen en verschil met huidige situatie",
+            "what_to_prepare": "the limited set of gaps and decision points needed for first regional drafting"
+          },
+          {
+            "section_id": "financial_plan",
+            "label": "financieel plan",
+            "what_to_prepare": "funding route, continuity status and controller validation needs"
+          },
+          {
+            "section_id": "monitoring_and_learning",
+            "label": "monitoring en lerende cyclus",
+            "what_to_prepare": "candidate indicators, data owner and how learning will be organised"
+          },
+          {
+            "section_id": "milestone_planning",
+            "label": "mijlpalenplanning",
+            "what_to_prepare": "municipal delivery by 15 September 2026 and later regional consolidation toward adoption"
+          }
+        ],
+        "component_requirement_summary": {
+          "population_or_target_group": "Toekomstige ouders en ouders in kwetsbare situatie in de eerste 1000 dagen van het kind.",
+          "coverage_or_capacity_direction": "Elke gemeente en regio heeft een coalitie Kansrijke Start en maakt onderbouwde keuzes over hulp, ondersteuning en interventies.",
+          "scale_hint": "Gemeentelijk en regionaal, met medisch, sociaal, publiek en informeel domein.",
+          "related_component_ids": [
+            "integrale_gezinspoli",
+            "nu_niet_zwanger",
+            "ketenaanpak_overgewicht_obesitas_kinderen"
+          ],
+          "almere_concept_status": "gedeeltelijk"
+        },
+        "source_document_ids": [
+          "nat_azwa_opdracht_werkagenda_d5_2026",
+          "nat_azwa_format_werkagenda_d5_2026",
+          "nat_azwa_toelichting_producten_proces_2026",
+          "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+        ],
+        "source_claim_ids": [
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_d5_001",
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_d6_002",
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_governance_and_finance_002",
+          "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d5_001",
+          "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d5_002"
+        ],
+        "minimum_municipal_input_by_2026_09_15": [
+          "current local status: structureel, projectmatig, deels ingericht or still unclear",
+          "known route, partners and current implementation signals",
+          "validated or explicitly unvalidated owner and coordinator",
+          "validated or explicitly unvalidated finance route",
+          "main monitoring signal and owner if known",
+          "decision or phasing question for the regional coordinator"
+        ],
+        "review_questions_from_requirement_layer": [
+          "Welke actuele coalitie Kansrijke Start bestaat in gemeente Almere en, waar relevant, op IZA/AZWA-regio Flevoland-schaal?",
+          "Welke interventies en inkoopafspraken zijn bronvast?",
+          "Hoe worden ouders en ervaringskennis betrokken?"
+        ]
+      },
+      "available_information_for_workagenda": {
+        "summary": "There is current information for first regional orientation, but local implementation, ownership, finance and monitoring still need confirmation.",
+        "source_backed_current_information": [
+          "CBS 2025 geeft publieke leeftijdsdenominatoren; lokale coalitie-, capaciteit- en interventiekeuzes zijn nog invulvelden."
+        ],
+        "public_indicators": [],
+        "operational_direction": {
+          "population_or_target_group": "Toekomstige ouders en ouders in kwetsbare situatie in de eerste 1000 dagen van het kind.",
+          "coverage_or_capacity_direction": "Elke gemeente en regio heeft een coalitie Kansrijke Start en maakt onderbouwde keuzes over hulp, ondersteuning en interventies.",
+          "scale_hint": "Gemeentelijk en regionaal, met medisch, sociaal, publiek en informeel domein.",
+          "related_component_ids": [
+            "integrale_gezinspoli",
+            "nu_niet_zwanger",
+            "ketenaanpak_overgewicht_obesitas_kinderen"
+          ]
+        },
+        "implementation_progress_signals": [],
+        "party_and_role_signals": [
+          {
+            "party_or_role": "gemeente",
+            "indicated_role": "actor hint from the D5 operational requirement layer",
+            "authority": "operational_requirements_layer",
+            "validation_status": "actor_hint_not_local_role_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "party_or_role": "jgz",
+            "indicated_role": "actor hint from the D5 operational requirement layer",
+            "authority": "operational_requirements_layer",
+            "validation_status": "actor_hint_not_local_role_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "party_or_role": "ggd",
+            "indicated_role": "actor hint from the D5 operational requirement layer",
+            "authority": "operational_requirements_layer",
+            "validation_status": "actor_hint_not_local_role_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "party_or_role": "geboortezorg",
+            "indicated_role": "actor hint from the D5 operational requirement layer",
+            "authority": "operational_requirements_layer",
+            "validation_status": "actor_hint_not_local_role_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "party_or_role": "sociaal_domein",
+            "indicated_role": "actor hint from the D5 operational requirement layer",
+            "authority": "operational_requirements_layer",
+            "validation_status": "actor_hint_not_local_role_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "party_or_role": "informele_steun",
+            "indicated_role": "actor hint from the D5 operational requirement layer",
+            "authority": "operational_requirements_layer",
+            "validation_status": "actor_hint_not_local_role_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          }
+        ],
+        "finance_and_resource_signals": [
+          {
+            "signal_id": "finance_stream_hint_01",
+            "statement": "gemeentelijke_azwa_spuk",
+            "authority": "operational_requirements_layer",
+            "validation_status": "finance_stream_hint_not_controller_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "signal_id": "finance_stream_hint_02",
+            "statement": "gala_spuk_apart_houden",
+            "authority": "operational_requirements_layer",
+            "validation_status": "finance_stream_hint_not_controller_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          }
+        ],
+        "monitoring_and_learning_signals": [],
+        "local_information_still_needed": [
+          "coalitie Kansrijke Start",
+          "doelgroepdefinitie",
+          "huidig interventieaanbod",
+          "bereik en locaties",
+          "eigenaar en uitvoerders",
+          "besluitstatus"
+        ],
+        "decisions_still_needed": [
+          "prioritering_2027_2030",
+          "lokale_eigenaar",
+          "budget",
+          "monitoringafspraak",
+          "formele_besluitstatus"
+        ],
+        "source_strengthening_candidates": {
+          "candidate_source_ids": [
+            "mun_almere_2024_2026_visie_gezondheidsbeleid_underlying_documents",
+            "mun_almere_2025_stand_van_zaken_gezondheidsbeleid_iza_gala",
+            "reg_zonmw_doorontwikkeling_zorgzaam_flevoland",
+            "mun_almere_2024_programmarekening_pga_iza_gala"
+          ],
+          "still_needs_local_decision": true,
+          "note": "Candidate sources can strengthen baseline and role evidence, but local choices remain unset until Almere or the regional table records target-specific decisions."
+        },
+        "authority_boundary": "Use source-backed and low-authority signals for first contact and 15 September input preparation; do not upgrade them to confirmed ownership, capacity, finance, monitoring or final workagenda text without local validation."
       },
       "gap_summary": {
         "overall_gap_type": "workagenda_input_gap",
@@ -3024,6 +4920,14 @@
         "public_evidence": [
           "CBS 2025 geeft publieke leeftijdsdenominatoren; lokale coalitie-, capaciteit- en interventiekeuzes zijn nog invulvelden."
         ],
+        "public_indicators": [],
+        "source_claim_ids": [
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_d5_001",
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_d6_002",
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_governance_and_finance_002",
+          "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d5_001",
+          "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d5_002"
+        ],
         "evidence_limitations": [
           "Generated data layers are not public sources.",
           "Public-source signals do not equal confirmed local policy, finance, ownership or capacity.",
@@ -3038,6 +4942,7 @@
           "data/workagenda/d5_stuurmodel.json",
           "data/extracted/workagenda_d5_operational_requirements.json",
           "data/extracted/workagenda_nulmeting_capacity.json",
+          "data/extracted/local_source_strengthening_almere.json",
           "data/extracted/municipal/almere_d6_responsibility_register.json"
         ],
         "is_source_claim": false,
@@ -3191,6 +5096,228 @@
           "confirmed governance mandate where it has not yet been validated",
           "final college-adopted workagenda wording"
         ]
+      },
+      "workagenda_delivery_requirements": {
+        "status": "requirements_available",
+        "required_sections": [
+          {
+            "section_id": "urgency_and_problem",
+            "label": "urgentie en opgave",
+            "what_to_prepare": "why this component matters for Almere and the regional workagenda"
+          },
+          {
+            "section_id": "current_local_situation",
+            "label": "huidige lokale situatie",
+            "what_to_prepare": "what is already arranged, what is visible from sources and what still needs local confirmation"
+          },
+          {
+            "section_id": "target_ambition",
+            "label": "ambitie richting 2030",
+            "what_to_prepare": "the intended direction, coverage and scale for the regional workagenda period"
+          },
+          {
+            "section_id": "target_design",
+            "label": "ontwerp van de aanpak",
+            "what_to_prepare": "roles, route, partners, D6 dependencies and working agreements"
+          },
+          {
+            "section_id": "project_objectives_and_gap",
+            "label": "doelen en verschil met huidige situatie",
+            "what_to_prepare": "the limited set of gaps and decision points needed for first regional drafting"
+          },
+          {
+            "section_id": "financial_plan",
+            "label": "financieel plan",
+            "what_to_prepare": "funding route, continuity status and controller validation needs"
+          },
+          {
+            "section_id": "monitoring_and_learning",
+            "label": "monitoring en lerende cyclus",
+            "what_to_prepare": "candidate indicators, data owner and how learning will be organised"
+          },
+          {
+            "section_id": "milestone_planning",
+            "label": "mijlpalenplanning",
+            "what_to_prepare": "municipal delivery by 15 September 2026 and later regional consolidation toward adoption"
+          }
+        ],
+        "component_requirement_summary": {
+          "population_or_target_group": "Aanstaande gezinnen of gezinnen met jong kind en tweede-lijns zorgbehoefte of hoog risico, in combinatie met kwetsbare sociale omstandigheden.",
+          "coverage_or_capacity_direction": "Kernteam met vaste gezichten, een aanspreekpunt, MDO en afspraken over taakverschuiving en werkproces.",
+          "scale_hint": "Regionaal/lokaal rond ziekenhuis, VSV, JGZ, verloskundigen, huisartsen, kraamzorg en sociaal domein.",
+          "related_component_ids": [
+            "kansrijke_start",
+            "nu_niet_zwanger"
+          ],
+          "almere_concept_status": "onvoldoende_lokaal_ingevuld"
+        },
+        "source_document_ids": [
+          "nat_azwa_opdracht_werkagenda_d5_2026",
+          "nat_azwa_format_werkagenda_d5_2026",
+          "nat_azwa_toelichting_producten_proces_2026",
+          "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+        ],
+        "source_claim_ids": [
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_d5_001",
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_d6_002",
+          "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d5_001"
+        ],
+        "minimum_municipal_input_by_2026_09_15": [
+          "current local status: structureel, projectmatig, deels ingericht or still unclear",
+          "known route, partners and current implementation signals",
+          "validated or explicitly unvalidated owner and coordinator",
+          "validated or explicitly unvalidated finance route",
+          "main monitoring signal and owner if known",
+          "decision or phasing question for the regional coordinator"
+        ],
+        "review_questions_from_requirement_layer": [
+          "Is er in Almere of Flevoland al een integrale gezinspoli of voorbereiding?",
+          "Wie vormt het kernteam en wie is bestuurlijk opdrachtgever?",
+          "Welke financiering en taakverschuiving zijn bronvast?"
+        ]
+      },
+      "available_information_for_workagenda": {
+        "summary": "There is current information for first regional orientation, but local implementation, ownership, finance and monitoring still need confirmation.",
+        "source_backed_current_information": [
+          "Publieke corpuslaag bevat nog geen Almeerse capaciteit of besluit voor een integrale gezinspoli."
+        ],
+        "public_indicators": [],
+        "operational_direction": {
+          "population_or_target_group": "Aanstaande gezinnen of gezinnen met jong kind en tweede-lijns zorgbehoefte of hoog risico, in combinatie met kwetsbare sociale omstandigheden.",
+          "coverage_or_capacity_direction": "Kernteam met vaste gezichten, een aanspreekpunt, MDO en afspraken over taakverschuiving en werkproces.",
+          "scale_hint": "Regionaal/lokaal rond ziekenhuis, VSV, JGZ, verloskundigen, huisartsen, kraamzorg en sociaal domein.",
+          "related_component_ids": [
+            "kansrijke_start",
+            "nu_niet_zwanger"
+          ]
+        },
+        "implementation_progress_signals": [],
+        "party_and_role_signals": [
+          {
+            "party_or_role": "flevoziekenhuis",
+            "indicated_role": "actor hint from the D5 operational requirement layer",
+            "authority": "operational_requirements_layer",
+            "validation_status": "actor_hint_not_local_role_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "party_or_role": "vsv",
+            "indicated_role": "actor hint from the D5 operational requirement layer",
+            "authority": "operational_requirements_layer",
+            "validation_status": "actor_hint_not_local_role_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "party_or_role": "jgz",
+            "indicated_role": "actor hint from the D5 operational requirement layer",
+            "authority": "operational_requirements_layer",
+            "validation_status": "actor_hint_not_local_role_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "party_or_role": "verloskundigen",
+            "indicated_role": "actor hint from the D5 operational requirement layer",
+            "authority": "operational_requirements_layer",
+            "validation_status": "actor_hint_not_local_role_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "party_or_role": "huisartsen",
+            "indicated_role": "actor hint from the D5 operational requirement layer",
+            "authority": "operational_requirements_layer",
+            "validation_status": "actor_hint_not_local_role_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "party_or_role": "sociaal_domein",
+            "indicated_role": "actor hint from the D5 operational requirement layer",
+            "authority": "operational_requirements_layer",
+            "validation_status": "actor_hint_not_local_role_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          }
+        ],
+        "finance_and_resource_signals": [
+          {
+            "signal_id": "finance_stream_hint_01",
+            "statement": "zorgverzekeraar_zvw",
+            "authority": "operational_requirements_layer",
+            "validation_status": "finance_stream_hint_not_controller_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "signal_id": "finance_stream_hint_02",
+            "statement": "gemeentelijke_azwa_spuk",
+            "authority": "operational_requirements_layer",
+            "validation_status": "finance_stream_hint_not_controller_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          }
+        ],
+        "monitoring_and_learning_signals": [],
+        "local_information_still_needed": [
+          "bestaat er een gezinspoli of vergelijkbare route",
+          "kernteam en vaste gezichten",
+          "MDO-afspraken",
+          "taakverschuiving",
+          "capaciteit",
+          "besluitstatus"
+        ],
+        "decisions_still_needed": [
+          "prioritering_2027_2030",
+          "lokale_eigenaar",
+          "budget",
+          "monitoringafspraak",
+          "formele_besluitstatus"
+        ],
+        "source_strengthening_candidates": {
+          "candidate_source_ids": [
+            "mun_almere_2025_stand_van_zaken_gezondheidsbeleid_iza_gala",
+            "reg_zonmw_doorontwikkeling_zorgzaam_flevoland",
+            "mun_almere_2024_programmarekening_pga_iza_gala"
+          ],
+          "still_needs_local_decision": true,
+          "note": "Candidate sources can strengthen baseline and role evidence, but local choices remain unset until Almere or the regional table records target-specific decisions."
+        },
+        "authority_boundary": "Use source-backed and low-authority signals for first contact and 15 September input preparation; do not upgrade them to confirmed ownership, capacity, finance, monitoring or final workagenda text without local validation."
       },
       "gap_summary": {
         "overall_gap_type": "workagenda_input_gap",
@@ -3642,6 +5769,12 @@
         "public_evidence": [
           "Publieke corpuslaag bevat nog geen Almeerse capaciteit of besluit voor een integrale gezinspoli."
         ],
+        "public_indicators": [],
+        "source_claim_ids": [
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_d5_001",
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_d6_002",
+          "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d5_001"
+        ],
         "evidence_limitations": [
           "Generated data layers are not public sources.",
           "Public-source signals do not equal confirmed local policy, finance, ownership or capacity.",
@@ -3656,6 +5789,7 @@
           "data/workagenda/d5_stuurmodel.json",
           "data/extracted/workagenda_d5_operational_requirements.json",
           "data/extracted/workagenda_nulmeting_capacity.json",
+          "data/extracted/local_source_strengthening_almere.json",
           "data/extracted/municipal/almere_d6_responsibility_register.json"
         ],
         "is_source_claim": false,
@@ -3809,6 +5943,216 @@
           "confirmed governance mandate where it has not yet been validated",
           "final college-adopted workagenda wording"
         ]
+      },
+      "workagenda_delivery_requirements": {
+        "status": "requirements_available",
+        "required_sections": [
+          {
+            "section_id": "urgency_and_problem",
+            "label": "urgentie en opgave",
+            "what_to_prepare": "why this component matters for Almere and the regional workagenda"
+          },
+          {
+            "section_id": "current_local_situation",
+            "label": "huidige lokale situatie",
+            "what_to_prepare": "what is already arranged, what is visible from sources and what still needs local confirmation"
+          },
+          {
+            "section_id": "target_ambition",
+            "label": "ambitie richting 2030",
+            "what_to_prepare": "the intended direction, coverage and scale for the regional workagenda period"
+          },
+          {
+            "section_id": "target_design",
+            "label": "ontwerp van de aanpak",
+            "what_to_prepare": "roles, route, partners, D6 dependencies and working agreements"
+          },
+          {
+            "section_id": "project_objectives_and_gap",
+            "label": "doelen en verschil met huidige situatie",
+            "what_to_prepare": "the limited set of gaps and decision points needed for first regional drafting"
+          },
+          {
+            "section_id": "financial_plan",
+            "label": "financieel plan",
+            "what_to_prepare": "funding route, continuity status and controller validation needs"
+          },
+          {
+            "section_id": "monitoring_and_learning",
+            "label": "monitoring en lerende cyclus",
+            "what_to_prepare": "candidate indicators, data owner and how learning will be organised"
+          },
+          {
+            "section_id": "milestone_planning",
+            "label": "mijlpalenplanning",
+            "what_to_prepare": "municipal delivery by 15 September 2026 and later regional consolidation toward adoption"
+          }
+        ],
+        "component_requirement_summary": {
+          "population_or_target_group": "Mensen in vruchtbare leeftijd in kwetsbare omstandigheden waarbij kinderwensverkenning passend is.",
+          "coverage_or_capacity_direction": "Structurele regionale coordinatie en expertise, kinderwensverkenning in reguliere werkwijzen, samenwerkingsafspraken en toegankelijk anticonceptiebudget.",
+          "scale_hint": "GGD-regio is natuurlijke uitvoeringsschaal, maar aansluiting op IZA/AZWA-regio moet bestuurlijk worden bepaald.",
+          "related_component_ids": [
+            "kansrijke_start",
+            "integrale_gezinspoli"
+          ],
+          "almere_concept_status": "gedeeltelijk"
+        },
+        "source_document_ids": [
+          "nat_azwa_opdracht_werkagenda_d5_2026",
+          "nat_azwa_format_werkagenda_d5_2026",
+          "nat_azwa_toelichting_producten_proces_2026",
+          "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+        ],
+        "source_claim_ids": [
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_d5_001",
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_d6_002",
+          "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d5_001"
+        ],
+        "minimum_municipal_input_by_2026_09_15": [
+          "current local status: structureel, projectmatig, deels ingericht or still unclear",
+          "known route, partners and current implementation signals",
+          "validated or explicitly unvalidated owner and coordinator",
+          "validated or explicitly unvalidated finance route",
+          "main monitoring signal and owner if known",
+          "decision or phasing question for the regional coordinator"
+        ],
+        "review_questions_from_requirement_layer": [
+          "Wordt NNZ bestuurlijk op GGD-regio, IZA/AZWA-regio of gemeentelijke schaal georganiseerd?",
+          "Wat zijn huidige fte, budget anticonceptie en privacy/casusafspraken?",
+          "Hoe wordt Zeewolde behandeld waar IZA/AZWA- en GGD-regio niet samenvallen?"
+        ]
+      },
+      "available_information_for_workagenda": {
+        "summary": "There is current information for first regional orientation, but local implementation, ownership, finance and monitoring still need confirmation.",
+        "source_backed_current_information": [
+          "Werkagenda noemt structurele coordinatie en expertise; publieke Almere-capaciteit is nog niet in de corpuslaag gevonden."
+        ],
+        "public_indicators": [],
+        "operational_direction": {
+          "population_or_target_group": "Mensen in vruchtbare leeftijd in kwetsbare omstandigheden waarbij kinderwensverkenning passend is.",
+          "coverage_or_capacity_direction": "Structurele regionale coordinatie en expertise, kinderwensverkenning in reguliere werkwijzen, samenwerkingsafspraken en toegankelijk anticonceptiebudget.",
+          "scale_hint": "GGD-regio is natuurlijke uitvoeringsschaal, maar aansluiting op IZA/AZWA-regio moet bestuurlijk worden bepaald.",
+          "related_component_ids": [
+            "kansrijke_start",
+            "integrale_gezinspoli"
+          ]
+        },
+        "implementation_progress_signals": [],
+        "party_and_role_signals": [
+          {
+            "party_or_role": "ggd",
+            "indicated_role": "actor hint from the D5 operational requirement layer",
+            "authority": "operational_requirements_layer",
+            "validation_status": "actor_hint_not_local_role_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "party_or_role": "gemeenten",
+            "indicated_role": "actor hint from the D5 operational requirement layer",
+            "authority": "operational_requirements_layer",
+            "validation_status": "actor_hint_not_local_role_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "party_or_role": "ziekenhuizen",
+            "indicated_role": "actor hint from the D5 operational requirement layer",
+            "authority": "operational_requirements_layer",
+            "validation_status": "actor_hint_not_local_role_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "party_or_role": "verloskundigen",
+            "indicated_role": "actor hint from the D5 operational requirement layer",
+            "authority": "operational_requirements_layer",
+            "validation_status": "actor_hint_not_local_role_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "party_or_role": "huisartsen",
+            "indicated_role": "actor hint from the D5 operational requirement layer",
+            "authority": "operational_requirements_layer",
+            "validation_status": "actor_hint_not_local_role_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          }
+        ],
+        "finance_and_resource_signals": [
+          {
+            "signal_id": "finance_stream_hint_01",
+            "statement": "gemeentelijke_azwa_spuk",
+            "authority": "operational_requirements_layer",
+            "validation_status": "finance_stream_hint_not_controller_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "signal_id": "finance_stream_hint_02",
+            "statement": "gala_spuk_apart_houden",
+            "authority": "operational_requirements_layer",
+            "validation_status": "finance_stream_hint_not_controller_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          }
+        ],
+        "monitoring_and_learning_signals": [],
+        "local_information_still_needed": [
+          "regionale of lokale organisatievorm",
+          "coordinator/expertise",
+          "aangesloten professionals",
+          "anticonceptiebudget",
+          "bereik",
+          "GGD-regio versus IZA/AZWA-regio keuze"
+        ],
+        "decisions_still_needed": [
+          "prioritering_2027_2030",
+          "lokale_eigenaar",
+          "budget",
+          "monitoringafspraak",
+          "formele_besluitstatus"
+        ],
+        "source_strengthening_candidates": {
+          "candidate_source_ids": [
+            "mun_almere_2025_stand_van_zaken_gezondheidsbeleid_iza_gala",
+            "reg_zonmw_doorontwikkeling_zorgzaam_flevoland",
+            "mun_almere_2024_programmarekening_pga_iza_gala"
+          ],
+          "still_needs_local_decision": true,
+          "note": "Candidate sources can strengthen baseline and role evidence, but local choices remain unset until Almere or the regional table records target-specific decisions."
+        },
+        "authority_boundary": "Use source-backed and low-authority signals for first contact and 15 September input preparation; do not upgrade them to confirmed ownership, capacity, finance, monitoring or final workagenda text without local validation."
       },
       "gap_summary": {
         "overall_gap_type": "workagenda_input_gap",
@@ -4259,6 +6603,12 @@
         "public_evidence": [
           "Werkagenda noemt structurele coordinatie en expertise; publieke Almere-capaciteit is nog niet in de corpuslaag gevonden."
         ],
+        "public_indicators": [],
+        "source_claim_ids": [
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_d5_001",
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_d6_002",
+          "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d5_001"
+        ],
         "evidence_limitations": [
           "Generated data layers are not public sources.",
           "Public-source signals do not equal confirmed local policy, finance, ownership or capacity.",
@@ -4273,6 +6623,7 @@
           "data/workagenda/d5_stuurmodel.json",
           "data/extracted/workagenda_d5_operational_requirements.json",
           "data/extracted/workagenda_nulmeting_capacity.json",
+          "data/extracted/local_source_strengthening_almere.json",
           "data/extracted/municipal/almere_d6_responsibility_register.json"
         ],
         "is_source_claim": false,
@@ -4421,6 +6772,310 @@
           "confirmed governance mandate where it has not yet been validated",
           "final college-adopted workagenda wording"
         ]
+      },
+      "workagenda_delivery_requirements": {
+        "status": "requirements_available",
+        "required_sections": [
+          {
+            "section_id": "urgency_and_problem",
+            "label": "urgentie en opgave",
+            "what_to_prepare": "why this component matters for Almere and the regional workagenda"
+          },
+          {
+            "section_id": "current_local_situation",
+            "label": "huidige lokale situatie",
+            "what_to_prepare": "what is already arranged, what is visible from sources and what still needs local confirmation"
+          },
+          {
+            "section_id": "target_ambition",
+            "label": "ambitie richting 2030",
+            "what_to_prepare": "the intended direction, coverage and scale for the regional workagenda period"
+          },
+          {
+            "section_id": "target_design",
+            "label": "ontwerp van de aanpak",
+            "what_to_prepare": "roles, route, partners, D6 dependencies and working agreements"
+          },
+          {
+            "section_id": "project_objectives_and_gap",
+            "label": "doelen en verschil met huidige situatie",
+            "what_to_prepare": "the limited set of gaps and decision points needed for first regional drafting"
+          },
+          {
+            "section_id": "financial_plan",
+            "label": "financieel plan",
+            "what_to_prepare": "funding route, continuity status and controller validation needs"
+          },
+          {
+            "section_id": "monitoring_and_learning",
+            "label": "monitoring en lerende cyclus",
+            "what_to_prepare": "candidate indicators, data owner and how learning will be organised"
+          },
+          {
+            "section_id": "milestone_planning",
+            "label": "mijlpalenplanning",
+            "what_to_prepare": "municipal delivery by 15 September 2026 and later regional consolidation toward adoption"
+          }
+        ],
+        "component_requirement_summary": {
+          "population_or_target_group": "Personen met psychische klachten en problemen op andere levensdomeinen waarvoor domeinspecifieke ondersteuning alleen waarschijnlijk niet volstaat.",
+          "coverage_or_capacity_direction": "Doorontwikkeling en borging van het regiospecifieke MGN-transformatieplan, inclusief verbinding met sociaal verwijzen en laagdrempelige steunpunten.",
+          "scale_hint": "Regionale ggz/eerstelijn/sociaal-domeinschaal met lokale uitvoering en borging na transformatieplanperiode.",
+          "related_component_ids": [
+            "sociaal_verwijzen",
+            "laagdrempelige_steunpunten"
+          ],
+          "almere_concept_status": "gedeeltelijk"
+        },
+        "source_document_ids": [
+          "nat_azwa_opdracht_werkagenda_d5_2026",
+          "nat_azwa_format_werkagenda_d5_2026",
+          "nat_azwa_toelichting_producten_proces_2026",
+          "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+        ],
+        "source_claim_ids": [
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_d5_002",
+          "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d5_001",
+          "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d5_003"
+        ],
+        "minimum_municipal_input_by_2026_09_15": [
+          "current local status: structureel, projectmatig, deels ingericht or still unclear",
+          "known route, partners and current implementation signals",
+          "validated or explicitly unvalidated owner and coordinator",
+          "validated or explicitly unvalidated finance route",
+          "main monitoring signal and owner if known",
+          "decision or phasing question for the regional coordinator"
+        ],
+        "review_questions_from_requirement_layer": [
+          "Welk MGN-transformatieplan is leidend voor gemeente Almere en, waar relevant, de IZA/AZWA-regio Flevoland?",
+          "Hoe wordt uitvoering na afloop van het transformatieplan geborgd?",
+          "Welke mandaatgemeente- en verzekeraarsrol is bronvast voor deze lijn?"
+        ]
+      },
+      "available_information_for_workagenda": {
+        "summary": "There is current information for first regional orientation, but local implementation, ownership, finance and monitoring still need confirmation.",
+        "source_backed_current_information": [
+          "GGD-indicatoren geven publieke urgentiesignalen; MGN-rol/geografie is carry-over naar geschoonde validatie."
+        ],
+        "public_indicators": [
+          {
+            "indicator_id": "adult_high_anxiety_depression_risk_pct",
+            "label": "Hoog risico angststoornis/depressie 18-64",
+            "value": 14,
+            "unit": "%",
+            "page": 14,
+            "age_group": "adult",
+            "source_document_id": "reg_ggd_flevoland_2024_volwassenen_gemeenten",
+            "source_title": "GGD Flevoland Tabellenboek volwassenen 2024 - gemeenten",
+            "source_status": "public_table_book_ingested_needs_human_review"
+          },
+          {
+            "indicator_id": "older_high_anxiety_depression_risk_pct",
+            "label": "Hoog risico angststoornis/depressie 65+",
+            "value": 8,
+            "unit": "%",
+            "page": 14,
+            "age_group": "older",
+            "source_document_id": "reg_ggd_flevoland_2024_ouderen_gemeenten",
+            "source_title": "GGD Flevoland Tabellenboek ouderen 2024 - gemeenten",
+            "source_status": "public_table_book_ingested_needs_human_review"
+          },
+          {
+            "indicator_id": "adult_strong_loneliness_pct",
+            "label": "Sterk eenzaam 18-64",
+            "value": 21,
+            "unit": "%",
+            "page": 14,
+            "age_group": "adult",
+            "source_document_id": "reg_ggd_flevoland_2024_volwassenen_gemeenten",
+            "source_title": "GGD Flevoland Tabellenboek volwassenen 2024 - gemeenten",
+            "source_status": "public_table_book_ingested_needs_human_review"
+          },
+          {
+            "indicator_id": "older_strong_loneliness_pct",
+            "label": "Sterk eenzaam 65+",
+            "value": 15,
+            "unit": "%",
+            "page": 14,
+            "age_group": "older",
+            "source_document_id": "reg_ggd_flevoland_2024_ouderen_gemeenten",
+            "source_title": "GGD Flevoland Tabellenboek ouderen 2024 - gemeenten",
+            "source_status": "public_table_book_ingested_needs_human_review"
+          }
+        ],
+        "operational_direction": {
+          "population_or_target_group": "Personen met psychische klachten en problemen op andere levensdomeinen waarvoor domeinspecifieke ondersteuning alleen waarschijnlijk niet volstaat.",
+          "coverage_or_capacity_direction": "Doorontwikkeling en borging van het regiospecifieke MGN-transformatieplan, inclusief verbinding met sociaal verwijzen en laagdrempelige steunpunten.",
+          "scale_hint": "Regionale ggz/eerstelijn/sociaal-domeinschaal met lokale uitvoering en borging na transformatieplanperiode.",
+          "related_component_ids": [
+            "sociaal_verwijzen",
+            "laagdrempelige_steunpunten"
+          ]
+        },
+        "implementation_progress_signals": [],
+        "party_and_role_signals": [
+          {
+            "party_or_role": "ggz",
+            "indicated_role": "actor hint from the D5 operational requirement layer",
+            "authority": "operational_requirements_layer",
+            "validation_status": "actor_hint_not_local_role_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "party_or_role": "huisartsen",
+            "indicated_role": "actor hint from the D5 operational requirement layer",
+            "authority": "operational_requirements_layer",
+            "validation_status": "actor_hint_not_local_role_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "party_or_role": "sociaal_domein",
+            "indicated_role": "actor hint from the D5 operational requirement layer",
+            "authority": "operational_requirements_layer",
+            "validation_status": "actor_hint_not_local_role_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "party_or_role": "zorgverzekeraar",
+            "indicated_role": "actor hint from the D5 operational requirement layer",
+            "authority": "operational_requirements_layer",
+            "validation_status": "actor_hint_not_local_role_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "party_or_role": "gemeenten",
+            "indicated_role": "actor hint from the D5 operational requirement layer",
+            "authority": "operational_requirements_layer",
+            "validation_status": "actor_hint_not_local_role_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          }
+        ],
+        "finance_and_resource_signals": [
+          {
+            "signal_id": "finance_stream_hint_01",
+            "statement": "zorgverzekeraar_zvw",
+            "authority": "operational_requirements_layer",
+            "validation_status": "finance_stream_hint_not_controller_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "signal_id": "finance_stream_hint_02",
+            "statement": "gemeentelijke_azwa_spuk",
+            "authority": "operational_requirements_layer",
+            "validation_status": "finance_stream_hint_not_controller_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "signal_id": "finance_stream_hint_03",
+            "statement": "pga_iza_transformatiemiddelen_apart_houden",
+            "authority": "operational_requirements_layer",
+            "validation_status": "finance_stream_hint_not_controller_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          }
+        ],
+        "monitoring_and_learning_signals": [
+          {
+            "signal_id": "public_indicator_adult_high_anxiety_depression_risk_pct",
+            "statement": "Hoog risico angststoornis/depressie 18-64: 14%",
+            "authority": "public_indicator_source",
+            "validation_status": "baseline_indicator_not_local_monitoring_arrangement",
+            "source_ids": [
+              "reg_ggd_flevoland_2024_volwassenen_gemeenten"
+            ]
+          },
+          {
+            "signal_id": "public_indicator_older_high_anxiety_depression_risk_pct",
+            "statement": "Hoog risico angststoornis/depressie 65+: 8%",
+            "authority": "public_indicator_source",
+            "validation_status": "baseline_indicator_not_local_monitoring_arrangement",
+            "source_ids": [
+              "reg_ggd_flevoland_2024_ouderen_gemeenten"
+            ]
+          },
+          {
+            "signal_id": "public_indicator_adult_strong_loneliness_pct",
+            "statement": "Sterk eenzaam 18-64: 21%",
+            "authority": "public_indicator_source",
+            "validation_status": "baseline_indicator_not_local_monitoring_arrangement",
+            "source_ids": [
+              "reg_ggd_flevoland_2024_volwassenen_gemeenten"
+            ]
+          },
+          {
+            "signal_id": "public_indicator_older_strong_loneliness_pct",
+            "statement": "Sterk eenzaam 65+: 15%",
+            "authority": "public_indicator_source",
+            "validation_status": "baseline_indicator_not_local_monitoring_arrangement",
+            "source_ids": [
+              "reg_ggd_flevoland_2024_ouderen_gemeenten"
+            ]
+          }
+        ],
+        "local_information_still_needed": [
+          "geschoonde MGN-rol/geografie",
+          "huidige netwerkafspraken",
+          "aanmeldroute",
+          "capaciteit per partner",
+          "mandaat en besluitstatus"
+        ],
+        "decisions_still_needed": [
+          "prioritering_2027_2030",
+          "lokale_eigenaar",
+          "budget",
+          "monitoringafspraak",
+          "formele_besluitstatus"
+        ],
+        "source_strengthening_candidates": {
+          "candidate_source_ids": [
+            "mun_almere_2025_stand_van_zaken_gezondheidsbeleid_iza_gala",
+            "reg_zonmw_doorontwikkeling_zorgzaam_flevoland",
+            "reg_mgn_flevoland_almere_mandaatgemeente",
+            "mun_almere_2024_programmarekening_pga_iza_gala"
+          ],
+          "still_needs_local_decision": true,
+          "note": "Candidate sources can strengthen baseline and role evidence, but local choices remain unset until Almere or the regional table records target-specific decisions."
+        },
+        "authority_boundary": "Use source-backed and low-authority signals for first contact and 15 September input preparation; do not upgrade them to confirmed ownership, capacity, finance, monitoring or final workagenda text without local validation."
       },
       "gap_summary": {
         "overall_gap_type": "workagenda_input_gap",
@@ -4821,10 +7476,79 @@
             ],
             "authority": "repository_source_layer_reference",
             "confidence": "medium"
+          },
+          {
+            "source_id": "reg_ggd_flevoland_2024_volwassenen_gemeenten",
+            "title": "reg_ggd_flevoland_2024_volwassenen_gemeenten",
+            "use_for": [
+              "D5 operational requirement context"
+            ],
+            "authority": "repository_source_layer_reference",
+            "confidence": "medium"
+          },
+          {
+            "source_id": "reg_ggd_flevoland_2024_ouderen_gemeenten",
+            "title": "reg_ggd_flevoland_2024_ouderen_gemeenten",
+            "use_for": [
+              "D5 operational requirement context"
+            ],
+            "authority": "repository_source_layer_reference",
+            "confidence": "medium"
           }
         ],
         "public_evidence": [
           "GGD-indicatoren geven publieke urgentiesignalen; MGN-rol/geografie is carry-over naar geschoonde validatie."
+        ],
+        "public_indicators": [
+          {
+            "indicator_id": "adult_high_anxiety_depression_risk_pct",
+            "label": "Hoog risico angststoornis/depressie 18-64",
+            "value": 14,
+            "unit": "%",
+            "page": 14,
+            "age_group": "adult",
+            "source_document_id": "reg_ggd_flevoland_2024_volwassenen_gemeenten",
+            "source_title": "GGD Flevoland Tabellenboek volwassenen 2024 - gemeenten",
+            "source_status": "public_table_book_ingested_needs_human_review"
+          },
+          {
+            "indicator_id": "older_high_anxiety_depression_risk_pct",
+            "label": "Hoog risico angststoornis/depressie 65+",
+            "value": 8,
+            "unit": "%",
+            "page": 14,
+            "age_group": "older",
+            "source_document_id": "reg_ggd_flevoland_2024_ouderen_gemeenten",
+            "source_title": "GGD Flevoland Tabellenboek ouderen 2024 - gemeenten",
+            "source_status": "public_table_book_ingested_needs_human_review"
+          },
+          {
+            "indicator_id": "adult_strong_loneliness_pct",
+            "label": "Sterk eenzaam 18-64",
+            "value": 21,
+            "unit": "%",
+            "page": 14,
+            "age_group": "adult",
+            "source_document_id": "reg_ggd_flevoland_2024_volwassenen_gemeenten",
+            "source_title": "GGD Flevoland Tabellenboek volwassenen 2024 - gemeenten",
+            "source_status": "public_table_book_ingested_needs_human_review"
+          },
+          {
+            "indicator_id": "older_strong_loneliness_pct",
+            "label": "Sterk eenzaam 65+",
+            "value": 15,
+            "unit": "%",
+            "page": 14,
+            "age_group": "older",
+            "source_document_id": "reg_ggd_flevoland_2024_ouderen_gemeenten",
+            "source_title": "GGD Flevoland Tabellenboek ouderen 2024 - gemeenten",
+            "source_status": "public_table_book_ingested_needs_human_review"
+          }
+        ],
+        "source_claim_ids": [
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_d5_002",
+          "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d5_001",
+          "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d5_003"
         ],
         "evidence_limitations": [
           "Generated data layers are not public sources.",
@@ -4840,6 +7564,7 @@
           "data/workagenda/d5_stuurmodel.json",
           "data/extracted/workagenda_d5_operational_requirements.json",
           "data/extracted/workagenda_nulmeting_capacity.json",
+          "data/extracted/local_source_strengthening_almere.json",
           "data/extracted/municipal/almere_d6_responsibility_register.json"
         ],
         "is_source_claim": false,
@@ -4993,6 +7718,228 @@
           "confirmed governance mandate where it has not yet been validated",
           "final college-adopted workagenda wording"
         ]
+      },
+      "workagenda_delivery_requirements": {
+        "status": "requirements_available",
+        "required_sections": [
+          {
+            "section_id": "urgency_and_problem",
+            "label": "urgentie en opgave",
+            "what_to_prepare": "why this component matters for Almere and the regional workagenda"
+          },
+          {
+            "section_id": "current_local_situation",
+            "label": "huidige lokale situatie",
+            "what_to_prepare": "what is already arranged, what is visible from sources and what still needs local confirmation"
+          },
+          {
+            "section_id": "target_ambition",
+            "label": "ambitie richting 2030",
+            "what_to_prepare": "the intended direction, coverage and scale for the regional workagenda period"
+          },
+          {
+            "section_id": "target_design",
+            "label": "ontwerp van de aanpak",
+            "what_to_prepare": "roles, route, partners, D6 dependencies and working agreements"
+          },
+          {
+            "section_id": "project_objectives_and_gap",
+            "label": "doelen en verschil met huidige situatie",
+            "what_to_prepare": "the limited set of gaps and decision points needed for first regional drafting"
+          },
+          {
+            "section_id": "financial_plan",
+            "label": "financieel plan",
+            "what_to_prepare": "funding route, continuity status and controller validation needs"
+          },
+          {
+            "section_id": "monitoring_and_learning",
+            "label": "monitoring en lerende cyclus",
+            "what_to_prepare": "candidate indicators, data owner and how learning will be organised"
+          },
+          {
+            "section_id": "milestone_planning",
+            "label": "mijlpalenplanning",
+            "what_to_prepare": "municipal delivery by 15 September 2026 and later regional consolidation toward adoption"
+          }
+        ],
+        "component_requirement_summary": {
+          "population_or_target_group": "Kinderen en jongeren van 0 tot 18 jaar met overgewicht of obesitas.",
+          "coverage_or_capacity_direction": "Eerste inschatting in de opdracht: CZV, kinder-GLI-aanbieder en regionale coordinatie naar jeugdpopulatie.",
+          "scale_hint": "Combinatie van lokale coordinatie door gemeente, zorgverzekeraarsinkoop en regionale coordinatie.",
+          "related_component_ids": [
+            "ketenaanpak_overgewicht_obesitas_volwassenen",
+            "kansrijke_start"
+          ],
+          "almere_concept_status": "gedeeltelijk"
+        },
+        "source_document_ids": [
+          "nat_azwa_opdracht_werkagenda_d5_2026",
+          "nat_azwa_format_werkagenda_d5_2026",
+          "nat_azwa_toelichting_producten_proces_2026",
+          "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+        ],
+        "source_claim_ids": [
+          "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d5_001"
+        ],
+        "minimum_municipal_input_by_2026_09_15": [
+          "current local status: structureel, projectmatig, deels ingericht or still unclear",
+          "known route, partners and current implementation signals",
+          "validated or explicitly unvalidated owner and coordinator",
+          "validated or explicitly unvalidated finance route",
+          "main monitoring signal and owner if known",
+          "decision or phasing question for the regional coordinator"
+        ],
+        "review_questions_from_requirement_layer": [
+          "Wat is het actuele aantal jeugdigen per peildatum?",
+          "Welke CZV- en kinder-GLI-capaciteit bestaat al?",
+          "Hoe worden gemeente- en verzekeraarsinkoop gescheiden en afgestemd?"
+        ]
+      },
+      "available_information_for_workagenda": {
+        "summary": "There is current information for first regional orientation, but local implementation, ownership, finance and monitoring still need confirmation.",
+        "source_backed_current_information": [
+          "CBS 2025 geeft publieke jeugdleeftijdsdenominatoren; specifieke jeugdgezondheids- en CZV/kinder-GLI-capaciteit is nog invulveld."
+        ],
+        "public_indicators": [],
+        "operational_direction": {
+          "population_or_target_group": "Kinderen en jongeren van 0 tot 18 jaar met overgewicht of obesitas.",
+          "coverage_or_capacity_direction": "Eerste inschatting in de opdracht: CZV, kinder-GLI-aanbieder en regionale coordinatie naar jeugdpopulatie.",
+          "scale_hint": "Combinatie van lokale coordinatie door gemeente, zorgverzekeraarsinkoop en regionale coordinatie.",
+          "related_component_ids": [
+            "ketenaanpak_overgewicht_obesitas_volwassenen",
+            "kansrijke_start"
+          ]
+        },
+        "implementation_progress_signals": [],
+        "party_and_role_signals": [
+          {
+            "party_or_role": "gemeente",
+            "indicated_role": "actor hint from the D5 operational requirement layer",
+            "authority": "operational_requirements_layer",
+            "validation_status": "actor_hint_not_local_role_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "party_or_role": "zorgverzekeraar",
+            "indicated_role": "actor hint from the D5 operational requirement layer",
+            "authority": "operational_requirements_layer",
+            "validation_status": "actor_hint_not_local_role_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "party_or_role": "jgz",
+            "indicated_role": "actor hint from the D5 operational requirement layer",
+            "authority": "operational_requirements_layer",
+            "validation_status": "actor_hint_not_local_role_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "party_or_role": "kinder_gli",
+            "indicated_role": "actor hint from the D5 operational requirement layer",
+            "authority": "operational_requirements_layer",
+            "validation_status": "actor_hint_not_local_role_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "party_or_role": "centrale_zorgverlener",
+            "indicated_role": "actor hint from the D5 operational requirement layer",
+            "authority": "operational_requirements_layer",
+            "validation_status": "actor_hint_not_local_role_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          }
+        ],
+        "finance_and_resource_signals": [
+          {
+            "signal_id": "finance_stream_hint_01",
+            "statement": "zorgverzekeraar_zvw",
+            "authority": "operational_requirements_layer",
+            "validation_status": "finance_stream_hint_not_controller_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "signal_id": "finance_stream_hint_02",
+            "statement": "gemeentelijke_azwa_spuk",
+            "authority": "operational_requirements_layer",
+            "validation_status": "finance_stream_hint_not_controller_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "signal_id": "finance_stream_hint_03",
+            "statement": "gala_spuk_apart_houden",
+            "authority": "operational_requirements_layer",
+            "validation_status": "finance_stream_hint_not_controller_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          }
+        ],
+        "monitoring_and_learning_signals": [],
+        "local_information_still_needed": [
+          "CZV-capaciteit",
+          "kinder-GLI-aanbod",
+          "jeugdgezondheidsindicatoren",
+          "school/wijkspreiding",
+          "regionale coordinatie",
+          "financiering"
+        ],
+        "decisions_still_needed": [
+          "prioritering_2027_2030",
+          "lokale_eigenaar",
+          "budget",
+          "monitoringafspraak",
+          "formele_besluitstatus"
+        ],
+        "source_strengthening_candidates": {
+          "candidate_source_ids": [
+            "mun_almere_2024_2026_visie_gezondheidsbeleid_underlying_documents",
+            "mun_almere_2025_stand_van_zaken_gezondheidsbeleid_iza_gala",
+            "reg_zonmw_doorontwikkeling_zorgzaam_flevoland",
+            "mun_almere_2024_programmarekening_pga_iza_gala",
+            "nat_cbs_2025_bevolkingsgroei_almere"
+          ],
+          "still_needs_local_decision": true,
+          "note": "Candidate sources can strengthen baseline and role evidence, but local choices remain unset until Almere or the regional table records target-specific decisions."
+        },
+        "authority_boundary": "Use source-backed and low-authority signals for first contact and 15 September input preparation; do not upgrade them to confirmed ownership, capacity, finance, monitoring or final workagenda text without local validation."
       },
       "gap_summary": {
         "overall_gap_type": "workagenda_input_gap",
@@ -5444,6 +8391,10 @@
         "public_evidence": [
           "CBS 2025 geeft publieke jeugdleeftijdsdenominatoren; specifieke jeugdgezondheids- en CZV/kinder-GLI-capaciteit is nog invulveld."
         ],
+        "public_indicators": [],
+        "source_claim_ids": [
+          "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d5_001"
+        ],
         "evidence_limitations": [
           "Generated data layers are not public sources.",
           "Public-source signals do not equal confirmed local policy, finance, ownership or capacity.",
@@ -5458,6 +8409,7 @@
           "data/workagenda/d5_stuurmodel.json",
           "data/extracted/workagenda_d5_operational_requirements.json",
           "data/extracted/workagenda_nulmeting_capacity.json",
+          "data/extracted/local_source_strengthening_almere.json",
           "data/extracted/municipal/almere_d6_responsibility_register.json"
         ],
         "is_source_claim": false,
@@ -5601,6 +8553,171 @@
           "confirmed governance mandate where it has not yet been validated",
           "final college-adopted workagenda wording"
         ]
+      },
+      "workagenda_delivery_requirements": {
+        "status": "requirements_available",
+        "required_sections": [
+          {
+            "section_id": "urgency_and_problem",
+            "label": "urgentie en opgave",
+            "what_to_prepare": "why this component matters for Almere and the regional workagenda"
+          },
+          {
+            "section_id": "current_local_situation",
+            "label": "huidige lokale situatie",
+            "what_to_prepare": "what is already arranged, what is visible from sources and what still needs local confirmation"
+          },
+          {
+            "section_id": "target_ambition",
+            "label": "ambitie richting 2030",
+            "what_to_prepare": "the intended direction, coverage and scale for the regional workagenda period"
+          },
+          {
+            "section_id": "target_design",
+            "label": "ontwerp van de aanpak",
+            "what_to_prepare": "roles, route, partners, D6 dependencies and working agreements"
+          },
+          {
+            "section_id": "project_objectives_and_gap",
+            "label": "doelen en verschil met huidige situatie",
+            "what_to_prepare": "the limited set of gaps and decision points needed for first regional drafting"
+          },
+          {
+            "section_id": "financial_plan",
+            "label": "financieel plan",
+            "what_to_prepare": "funding route, continuity status and controller validation needs"
+          },
+          {
+            "section_id": "monitoring_and_learning",
+            "label": "monitoring en lerende cyclus",
+            "what_to_prepare": "candidate indicators, data owner and how learning will be organised"
+          },
+          {
+            "section_id": "milestone_planning",
+            "label": "mijlpalenplanning",
+            "what_to_prepare": "municipal delivery by 15 September 2026 and later regional consolidation toward adoption"
+          }
+        ],
+        "component_requirement_summary": {
+          "population_or_target_group": "Afhankelijk van gekozen pilotaanpak en regionale opgaven.",
+          "coverage_or_capacity_direction": "Alleen opnemen wanneer de regio met een of meer aanpakken in de praktijk wil starten; dan is een toezegging en onderbouwing nodig.",
+          "scale_hint": "Nog te kiezen door regio op basis van opgave, populatie en landelijke procesduiding.",
+          "related_component_ids": [],
+          "almere_concept_status": "onvoldoende_bestuurlijke_keuze_nodig"
+        },
+        "source_document_ids": [
+          "nat_azwa_opdracht_werkagenda_d5_2026",
+          "nat_azwa_format_werkagenda_d5_2026",
+          "nat_azwa_toelichting_producten_proces_2026",
+          "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+        ],
+        "source_claim_ids": [
+          "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d5_001"
+        ],
+        "minimum_municipal_input_by_2026_09_15": [
+          "current local status: structureel, projectmatig, deels ingericht or still unclear",
+          "known route, partners and current implementation signals",
+          "validated or explicitly unvalidated owner and coordinator",
+          "validated or explicitly unvalidated finance route",
+          "main monitoring signal and owner if known",
+          "decision or phasing question for the regional coordinator"
+        ],
+        "review_questions_from_requirement_layer": [
+          "Wil gemeente Almere, eventueel met de IZA/AZWA-regio Flevoland, pilotregio zijn voor een of meer nieuwe ontwikkelagenda-aanpakken?",
+          "Welke NPLV-gebieden of populatieopgaven zijn relevant?",
+          "Welke financiering of capaciteit is beschikbaar zonder bestaande D5-middelen te verdringen?"
+        ]
+      },
+      "available_information_for_workagenda": {
+        "summary": "There is current information for first regional orientation, but local implementation, ownership, finance and monitoring still need confirmation.",
+        "source_backed_current_information": [
+          "Alleen vullen wanneer publieke bron of lokale validatie aangeeft dat gemeente Almere en, waar relevant, de IZA/AZWA-regio Flevoland deze aanpak in de praktijk wil uitproberen."
+        ],
+        "public_indicators": [],
+        "operational_direction": {
+          "population_or_target_group": "Afhankelijk van gekozen pilotaanpak en regionale opgaven.",
+          "coverage_or_capacity_direction": "Alleen opnemen wanneer de regio met een of meer aanpakken in de praktijk wil starten; dan is een toezegging en onderbouwing nodig.",
+          "scale_hint": "Nog te kiezen door regio op basis van opgave, populatie en landelijke procesduiding.",
+          "related_component_ids": []
+        },
+        "implementation_progress_signals": [],
+        "party_and_role_signals": [
+          {
+            "party_or_role": "gemeenten",
+            "indicated_role": "actor hint from the D5 operational requirement layer",
+            "authority": "operational_requirements_layer",
+            "validation_status": "actor_hint_not_local_role_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "party_or_role": "zorgverzekeraar",
+            "indicated_role": "actor hint from the D5 operational requirement layer",
+            "authority": "operational_requirements_layer",
+            "validation_status": "actor_hint_not_local_role_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "party_or_role": "uitvoeringspartners",
+            "indicated_role": "actor hint from the D5 operational requirement layer",
+            "authority": "operational_requirements_layer",
+            "validation_status": "actor_hint_not_local_role_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          }
+        ],
+        "finance_and_resource_signals": [
+          {
+            "signal_id": "finance_stream_hint_01",
+            "statement": "geen_harde_landelijke_financiering_vastgesteld_in_deze_laag",
+            "authority": "operational_requirements_layer",
+            "validation_status": "finance_stream_hint_not_controller_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          }
+        ],
+        "monitoring_and_learning_signals": [],
+        "local_information_still_needed": [
+          "gekozen aanpak",
+          "onderbouwing",
+          "beschikbare capaciteit",
+          "financiering zonder verdringing",
+          "besluitstatus"
+        ],
+        "decisions_still_needed": [
+          "prioritering_2027_2030",
+          "lokale_eigenaar",
+          "budget",
+          "monitoringafspraak",
+          "formele_besluitstatus"
+        ],
+        "source_strengthening_candidates": {
+          "candidate_source_ids": [
+            "mun_almere_2025_stand_van_zaken_gezondheidsbeleid_iza_gala",
+            "reg_zonmw_doorontwikkeling_zorgzaam_flevoland",
+            "mun_almere_2024_programmarekening_pga_iza_gala"
+          ],
+          "still_needs_local_decision": true,
+          "note": "Candidate sources can strengthen baseline and role evidence, but local choices remain unset until Almere or the regional table records target-specific decisions."
+        },
+        "authority_boundary": "Use source-backed and low-authority signals for first contact and 15 September input preparation; do not upgrade them to confirmed ownership, capacity, finance, monitoring or final workagenda text without local validation."
       },
       "gap_summary": {
         "overall_gap_type": "workagenda_input_gap",
@@ -5799,6 +8916,10 @@
         "public_evidence": [
           "Alleen vullen wanneer publieke bron of lokale validatie aangeeft dat gemeente Almere en, waar relevant, de IZA/AZWA-regio Flevoland deze aanpak in de praktijk wil uitproberen."
         ],
+        "public_indicators": [],
+        "source_claim_ids": [
+          "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_d5_001"
+        ],
         "evidence_limitations": [
           "Generated data layers are not public sources.",
           "Public-source signals do not equal confirmed local policy, finance, ownership or capacity.",
@@ -5813,6 +8934,7 @@
           "data/workagenda/d5_stuurmodel.json",
           "data/extracted/workagenda_d5_operational_requirements.json",
           "data/extracted/workagenda_nulmeting_capacity.json",
+          "data/extracted/local_source_strengthening_almere.json",
           "data/extracted/municipal/almere_d6_responsibility_register.json"
         ],
         "is_source_claim": false,
@@ -5961,6 +9083,183 @@
           "confirmed governance mandate where it has not yet been validated",
           "final college-adopted workagenda wording"
         ]
+      },
+      "workagenda_delivery_requirements": {
+        "status": "requirements_available",
+        "required_sections": [
+          {
+            "section_id": "urgency_and_problem",
+            "label": "urgentie en opgave",
+            "what_to_prepare": "why this component matters for Almere and the regional workagenda"
+          },
+          {
+            "section_id": "current_local_situation",
+            "label": "huidige lokale situatie",
+            "what_to_prepare": "what is already arranged, what is visible from sources and what still needs local confirmation"
+          },
+          {
+            "section_id": "target_ambition",
+            "label": "ambitie richting 2030",
+            "what_to_prepare": "the intended direction, coverage and scale for the regional workagenda period"
+          },
+          {
+            "section_id": "target_design",
+            "label": "ontwerp van de aanpak",
+            "what_to_prepare": "roles, route, partners, D6 dependencies and working agreements"
+          },
+          {
+            "section_id": "project_objectives_and_gap",
+            "label": "doelen en verschil met huidige situatie",
+            "what_to_prepare": "the limited set of gaps and decision points needed for first regional drafting"
+          },
+          {
+            "section_id": "financial_plan",
+            "label": "financieel plan",
+            "what_to_prepare": "funding route, continuity status and controller validation needs"
+          },
+          {
+            "section_id": "monitoring_and_learning",
+            "label": "monitoring en lerende cyclus",
+            "what_to_prepare": "candidate indicators, data owner and how learning will be organised"
+          },
+          {
+            "section_id": "milestone_planning",
+            "label": "mijlpalenplanning",
+            "what_to_prepare": "municipal delivery by 15 September 2026 and later regional consolidation toward adoption"
+          }
+        ],
+        "component_requirement_summary": {
+          "population_or_target_group": "Afhankelijk van regionale of lokale keuze.",
+          "coverage_or_capacity_direction": "Mag worden opgenomen als dit praktisch is, maar is geen vereiste en kent in deze bronlaag geen landelijke financiering.",
+          "scale_hint": "Alleen opnemen wanneer aansluiting op de regionale zorg-sociaal-domeinagenda expliciet wordt gemaakt.",
+          "related_component_ids": [],
+          "almere_concept_status": "gedeeltelijk"
+        },
+        "source_document_ids": [
+          "nat_azwa_opdracht_werkagenda_d5_2026",
+          "nat_azwa_format_werkagenda_d5_2026",
+          "nat_azwa_toelichting_producten_proces_2026",
+          "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+        ],
+        "source_claim_ids": [],
+        "minimum_municipal_input_by_2026_09_15": [
+          "current local status: structureel, projectmatig, deels ingericht or still unclear",
+          "known route, partners and current implementation signals",
+          "validated or explicitly unvalidated owner and coordinator",
+          "validated or explicitly unvalidated finance route",
+          "main monitoring signal and owner if known",
+          "decision or phasing question for the regional coordinator"
+        ],
+        "review_questions_from_requirement_layer": [
+          "Welke PGA-projecten zijn nuttig maar niet verplicht binnen D5?",
+          "Hoe worden vrijblijvende projecten gescheiden van verplichte basisfunctionaliteiten?",
+          "Welke eigenaar, financiering en meetbaar resultaat horen bij opname in de werkagenda?"
+        ]
+      },
+      "available_information_for_workagenda": {
+        "summary": "There is current information for first regional orientation, but local implementation, ownership, finance and monitoring still need confirmation.",
+        "source_backed_current_information": [
+          "Alleen opnemen als publieke bron of lokale validatie aangeeft dat dit praktisch nodig is."
+        ],
+        "public_indicators": [],
+        "operational_direction": {
+          "population_or_target_group": "Afhankelijk van regionale of lokale keuze.",
+          "coverage_or_capacity_direction": "Mag worden opgenomen als dit praktisch is, maar is geen vereiste en kent in deze bronlaag geen landelijke financiering.",
+          "scale_hint": "Alleen opnemen wanneer aansluiting op de regionale zorg-sociaal-domeinagenda expliciet wordt gemaakt.",
+          "related_component_ids": []
+        },
+        "implementation_progress_signals": [],
+        "party_and_role_signals": [
+          {
+            "party_or_role": "gemeente",
+            "indicated_role": "actor hint from the D5 operational requirement layer",
+            "authority": "operational_requirements_layer",
+            "validation_status": "actor_hint_not_local_role_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "party_or_role": "pga_partners",
+            "indicated_role": "actor hint from the D5 operational requirement layer",
+            "authority": "operational_requirements_layer",
+            "validation_status": "actor_hint_not_local_role_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "party_or_role": "zorgzaam_flevoland",
+            "indicated_role": "actor hint from the D5 operational requirement layer",
+            "authority": "operational_requirements_layer",
+            "validation_status": "actor_hint_not_local_role_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          }
+        ],
+        "finance_and_resource_signals": [
+          {
+            "signal_id": "finance_stream_hint_01",
+            "statement": "gemeentelijke_reguliere_middelen_apart_houden",
+            "authority": "operational_requirements_layer",
+            "validation_status": "finance_stream_hint_not_controller_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          },
+          {
+            "signal_id": "finance_stream_hint_02",
+            "statement": "pga_iza_transformatiemiddelen_apart_houden",
+            "authority": "operational_requirements_layer",
+            "validation_status": "finance_stream_hint_not_controller_confirmation",
+            "source_ids": [
+              "nat_azwa_opdracht_werkagenda_d5_2026",
+              "nat_azwa_format_werkagenda_d5_2026",
+              "nat_azwa_toelichting_producten_proces_2026",
+              "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"
+            ]
+          }
+        ],
+        "monitoring_and_learning_signals": [],
+        "local_information_still_needed": [
+          "initiatief",
+          "relatie met D5",
+          "lokale eigenaar",
+          "capaciteit",
+          "financiering",
+          "besluitstatus"
+        ],
+        "decisions_still_needed": [
+          "prioritering_2027_2030",
+          "lokale_eigenaar",
+          "budget",
+          "monitoringafspraak",
+          "formele_besluitstatus"
+        ],
+        "source_strengthening_candidates": {
+          "candidate_source_ids": [
+            "mun_almere_2024_2034_maatschappelijke_agenda_underlying_documents",
+            "mun_almere_2025_stand_van_zaken_gezondheidsbeleid_iza_gala",
+            "reg_zonmw_doorontwikkeling_zorgzaam_flevoland",
+            "mun_almere_2024_programmarekening_pga_iza_gala"
+          ],
+          "still_needs_local_decision": true,
+          "note": "Candidate sources can strengthen baseline and role evidence, but local choices remain unset until Almere or the regional table records target-specific decisions."
+        },
+        "authority_boundary": "Use source-backed and low-authority signals for first contact and 15 September input preparation; do not upgrade them to confirmed ownership, capacity, finance, monitoring or final workagenda text without local validation."
       },
       "gap_summary": {
         "overall_gap_type": "workagenda_input_gap",
@@ -6154,6 +9453,8 @@
         "public_evidence": [
           "Alleen opnemen als publieke bron of lokale validatie aangeeft dat dit praktisch nodig is."
         ],
+        "public_indicators": [],
+        "source_claim_ids": [],
         "evidence_limitations": [
           "Generated data layers are not public sources.",
           "Public-source signals do not equal confirmed local policy, finance, ownership or capacity.",
@@ -6168,6 +9469,7 @@
           "data/workagenda/d5_stuurmodel.json",
           "data/extracted/workagenda_d5_operational_requirements.json",
           "data/extracted/workagenda_nulmeting_capacity.json",
+          "data/extracted/local_source_strengthening_almere.json",
           "data/extracted/municipal/almere_d6_responsibility_register.json"
         ],
         "is_source_claim": false,

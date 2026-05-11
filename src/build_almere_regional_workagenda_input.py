@@ -12,6 +12,9 @@ ROOT = Path(__file__).resolve().parents[1]
 
 STATUS_MATRIX = ROOT / "data" / "workagenda" / "d5_status_matrix.json"
 VALIDATION_TICKETS = ROOT / "data" / "workagenda" / "d5_validation_tickets.json"
+OPERATIONAL_REQUIREMENTS = ROOT / "data" / "extracted" / "workagenda_d5_operational_requirements.json"
+NULMETING_CAPACITY = ROOT / "data" / "extracted" / "workagenda_nulmeting_capacity.json"
+LOCAL_SOURCE_STRENGTHENING = ROOT / "data" / "extracted" / "local_source_strengthening_almere.json"
 OUTPUT = ROOT / "data" / "workagenda" / "almere_regional_workagenda_input_objects.json"
 
 
@@ -22,6 +25,7 @@ SOURCE_LAYERS = [
     "data/workagenda/d5_stuurmodel.json",
     "data/extracted/workagenda_d5_operational_requirements.json",
     "data/extracted/workagenda_nulmeting_capacity.json",
+    "data/extracted/local_source_strengthening_almere.json",
     "data/extracted/municipal/almere_d6_responsibility_register.json",
     "data/site/source_view_models/zorgakkoorden-werkagenda-handvatten.json",
     "data/site/source_view_models/format-werkagenda-azwa.json",
@@ -166,6 +170,288 @@ DO_NOT_CLAIM_STANDARD = [
 MUNICIPAL_DELIVERY_TARGET_DATE = "2026-09-15"
 REGIONAL_ADOPTION_DEADLINE = "2026-11-15"
 
+WORKAGENDA_REQUIRED_SECTIONS = [
+    {
+        "section_id": "urgency_and_problem",
+        "label": "urgentie en opgave",
+        "what_to_prepare": "why this component matters for Almere and the regional workagenda",
+    },
+    {
+        "section_id": "current_local_situation",
+        "label": "huidige lokale situatie",
+        "what_to_prepare": "what is already arranged, what is visible from sources and what still needs local confirmation",
+    },
+    {
+        "section_id": "target_ambition",
+        "label": "ambitie richting 2030",
+        "what_to_prepare": "the intended direction, coverage and scale for the regional workagenda period",
+    },
+    {
+        "section_id": "target_design",
+        "label": "ontwerp van de aanpak",
+        "what_to_prepare": "roles, route, partners, D6 dependencies and working agreements",
+    },
+    {
+        "section_id": "project_objectives_and_gap",
+        "label": "doelen en verschil met huidige situatie",
+        "what_to_prepare": "the limited set of gaps and decision points needed for first regional drafting",
+    },
+    {
+        "section_id": "financial_plan",
+        "label": "financieel plan",
+        "what_to_prepare": "funding route, continuity status and controller validation needs",
+    },
+    {
+        "section_id": "monitoring_and_learning",
+        "label": "monitoring en lerende cyclus",
+        "what_to_prepare": "candidate indicators, data owner and how learning will be organised",
+    },
+    {
+        "section_id": "milestone_planning",
+        "label": "mijlpalenplanning",
+        "what_to_prepare": "municipal delivery by 15 September 2026 and later regional consolidation toward adoption",
+    },
+]
+
+CURATED_COMPONENT_ENRICHMENT: dict[str, dict[str, list[dict[str, Any]]]] = {
+    "valpreventie": {
+        "implementation_progress_signals": [
+            {
+                "signal_id": "valpreventie_inloop_route",
+                "statement": (
+                    "GGD Flevoland beschrijft voor Almere een vrij toegankelijk inloopmoment "
+                    "waar professionals met inwoners naar het valrisico kijken."
+                ),
+                "authority": "regional_operational_source",
+                "validation_status": "source_backed_public_route_not_capacity_confirmation",
+                "source_ids": ["reg_ggd_flevoland_valpreventie_almere"],
+                "claim_ids": ["clm__reg_ggd_flevoland_valpreventie_almere_d5_001"],
+            },
+            {
+                "signal_id": "valpreventie_course_matching",
+                "statement": (
+                    "De publieke route beschrijft dat met inwoners wordt besproken of zij een cursus "
+                    "valpreventie kunnen volgen en welke cursus past; dit wijst op een bestaande "
+                    "toeleidingsroute, maar bevestigt geen actuele capaciteit of wachttijd."
+                ),
+                "authority": "regional_operational_source",
+                "validation_status": "source_backed_route_signal_capacity_unconfirmed",
+                "source_ids": ["reg_ggd_flevoland_valpreventie_almere"],
+                "claim_ids": ["clm__reg_ggd_flevoland_valpreventie_almere_d5_002"],
+            },
+            {
+                "signal_id": "valpreventie_free_walk_in_signal",
+                "statement": (
+                    "De GGD-pagina noemt vrije inloop, geen aanmelding nodig en gratis toegang voor "
+                    "de eerste route naar cursusdeelname."
+                ),
+                "authority": "regional_operational_source",
+                "validation_status": "source_backed_public_access_signal_not_finance_confirmation",
+                "source_ids": ["reg_ggd_flevoland_valpreventie_almere"],
+                "claim_ids": ["clm__reg_ggd_flevoland_valpreventie_almere_d5_003"],
+            },
+            {
+                "signal_id": "valpreventie_chain_steps",
+                "statement": (
+                    "Het ketendocument beschrijft ketenstappen zoals signaleren, valrisicotest, "
+                    "passende interventies en aansluiting op structureel sport- en beweegaanbod."
+                ),
+                "authority": "regional_implementation_source",
+                "validation_status": "implementation_route_signal_local_status_still_to_validate",
+                "source_ids": ["reg_ggd_flevoland_valpreventie_almere_ketendocument_2026"],
+                "claim_ids": ["clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_d6_003"],
+            },
+        ],
+        "party_and_role_signals": [
+            {
+                "party_or_role": "GGD Flevoland",
+                "indicated_role": "publieke route en informatievoorziening voor valpreventie in Almere",
+                "authority": "regional_operational_source",
+                "validation_status": "visible_in_public_source",
+                "source_ids": ["reg_ggd_flevoland_valpreventie_almere"],
+            },
+            {
+                "party_or_role": "Gemeente Almere",
+                "indicated_role": "genoemd in afspraken rond gemeentelijk domein voor matig valrisico",
+                "authority": "regional_implementation_source",
+                "validation_status": "role_signal_needs_owner_and_controller_validation",
+                "source_ids": ["reg_ggd_flevoland_valpreventie_almere_ketendocument_2026"],
+                "claim_ids": [
+                    "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_governance_and_finance_002"
+                ],
+            },
+            {
+                "party_or_role": "Paramedisch Platform Almere",
+                "indicated_role": "genoemd bij afspraken voor valpreventieve beweeginterventies bij matig valrisico",
+                "authority": "regional_implementation_source",
+                "validation_status": "party_signal_not_full_contract_confirmation",
+                "source_ids": ["reg_ggd_flevoland_valpreventie_almere_ketendocument_2026"],
+                "claim_ids": [
+                    "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_governance_and_finance_002"
+                ],
+            },
+            {
+                "party_or_role": "EELA",
+                "indicated_role": (
+                    "ROS die volgens het ketendocument samenwerking tussen zorglijnen, sociaal domein, "
+                    "overheden, verzekeraars en bedrijfsleven in Almere en Amsterdam helpt versterken"
+                ),
+                "authority": "regional_implementation_source",
+                "validation_status": "party_signal_scope_and_task_need_validation",
+                "source_ids": ["reg_ggd_flevoland_valpreventie_almere_ketendocument_2026"],
+                "claim_ids": ["clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_municipal_translation_002"],
+            },
+            {
+                "party_or_role": "centrale coördinator valpreventie",
+                "indicated_role": "verzamelt aanmeldingen binnen Almere en houdt wachtlijsten per gebied/woonkern bij",
+                "authority": "regional_implementation_source",
+                "validation_status": "role_signal_identity_mandate_and_current_status_unconfirmed",
+                "source_ids": ["reg_ggd_flevoland_valpreventie_almere_ketendocument_2026"],
+                "claim_ids": ["clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_municipal_translation_003"],
+            },
+        ],
+        "finance_and_resource_signals": [
+            {
+                "signal_id": "valpreventie_moderate_risk_municipal_arrangements",
+                "statement": (
+                    "Het ketendocument noemt gemeentelijke regelingen en afspraken tussen Gemeente Almere "
+                    "en het Paramedisch Platform Almere voor valpreventieve beweeginterventies bij matig valrisico."
+                ),
+                "authority": "regional_implementation_source",
+                "validation_status": "finance_signal_requires_controller_validation",
+                "source_ids": ["reg_ggd_flevoland_valpreventie_almere_ketendocument_2026"],
+                "claim_ids": [
+                    "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_governance_and_finance_002"
+                ],
+            },
+            {
+                "signal_id": "valpreventie_accessibility_finance_signal",
+                "statement": (
+                    "Het ketendocument legt een verband tussen de financieringsstructuur en deelname "
+                    "zonder financiële drempels; dit is geen bewijs van structurele borging."
+                ),
+                "authority": "regional_implementation_source",
+                "validation_status": "finance_context_not_structural_funding_confirmation",
+                "source_ids": ["reg_ggd_flevoland_valpreventie_almere_ketendocument_2026"],
+                "claim_ids": [
+                    "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_governance_and_finance_003"
+                ],
+            },
+        ],
+        "monitoring_and_learning_signals": [
+            {
+                "signal_id": "valpreventie_monitoring_registration",
+                "statement": "Het ketendocument bevat onderdelen over monitoring, registratie en kwaliteit.",
+                "authority": "regional_implementation_source",
+                "validation_status": "monitoring_signal_owner_and_use_unconfirmed",
+                "source_ids": ["reg_ggd_flevoland_valpreventie_almere_ketendocument_2026"],
+                "claim_ids": [
+                    "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_monitoring_and_evaluation_001"
+                ],
+            },
+            {
+                "signal_id": "valpreventie_excel_monitoring_template",
+                "statement": "Het ketendocument noemt een Excel-sjabloon voor monitoring en registratie.",
+                "authority": "regional_implementation_source",
+                "validation_status": "instrument_signal_not_validated_reporting_arrangement",
+                "source_ids": ["reg_ggd_flevoland_valpreventie_almere_ketendocument_2026"],
+                "claim_ids": [
+                    "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_monitoring_and_evaluation_003"
+                ],
+            },
+        ],
+    },
+    "ketenaanpak_overgewicht_obesitas_volwassenen": {
+        "implementation_progress_signals": [
+            {
+                "signal_id": "adult_overweight_public_baseline",
+                "statement": (
+                    "GGD Flevoland geeft voor Almere publieke indicatoren voor matig overgewicht, "
+                    "obesitas en voldoen aan de beweegrichtlijn bij volwassenen."
+                ),
+                "authority": "public_table_book_source",
+                "validation_status": "source_backed_population_signal_not_service_capacity",
+                "source_ids": ["reg_ggd_flevoland_2024_volwassenen_gemeenten"],
+            },
+            {
+                "signal_id": "adult_overweight_operational_direction",
+                "statement": (
+                    "De landelijke D5-richting vraagt om samenhang tussen centrale zorgcoördinatie, "
+                    "beweegaanbod, gezondheidsvaardigheden/leefstijl, individuele ondersteuning en GLI."
+                ),
+                "authority": "national_operational_requirement",
+                "validation_status": "target_design_direction_local_capacity_unconfirmed",
+                "source_ids": ["nat_azwa_opdracht_werkagenda_d5_2026", "nat_azwa_format_werkagenda_d5_2026"],
+            },
+            {
+                "signal_id": "adult_overweight_fgw_support",
+                "statement": (
+                    "Het Almere GALA-plan noemt Flevoland Gezond en Wel als preventiecoalitie die "
+                    "regionale ketenaanpakken ondersteunt, waaronder de gecombineerde leefstijlinterventie "
+                    "voor volwassenen."
+                ),
+                "authority": "municipal_policy_source",
+                "validation_status": "regional_support_signal_not_local_delivery_confirmation",
+                "source_ids": ["mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak"],
+                "claim_ids": ["clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d5_001"],
+            },
+        ],
+        "party_and_role_signals": [
+            {
+                "party_or_role": "Flevoland Gezond en Wel",
+                "indicated_role": "preventiecoalitie die regionale ketenaanpakken ondersteunt",
+                "authority": "municipal_policy_source",
+                "validation_status": "support_signal_task_scope_needs_validation",
+                "source_ids": ["mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak"],
+                "claim_ids": ["clm__mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak_d5_001"],
+            },
+            {
+                "party_or_role": "gemeente, zorgverzekeraar, eerstelijn, leefstijlcoaches, beweegaanbieders en sociaal domein",
+                "indicated_role": "actoren die volgens de D5-richting nodig zijn voor de aanpak",
+                "authority": "operational_requirements_layer",
+                "validation_status": "actor_hint_not_local_role_confirmation",
+                "source_ids": ["nat_azwa_opdracht_werkagenda_d5_2026", "nat_azwa_format_werkagenda_d5_2026"],
+            },
+        ],
+        "finance_and_resource_signals": [
+            {
+                "signal_id": "adult_overweight_finance_mix_hint",
+                "statement": (
+                    "De beschikbare D5-richting wijst op een financieringsmix met Zvw, gemeentelijke "
+                    "AZWA/SPUK-lijnen en gescheiden behandeling van bestaande GALA-middelen."
+                ),
+                "authority": "operational_requirements_layer",
+                "validation_status": "finance_stream_hint_controller_validation_required",
+                "source_ids": ["nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026"],
+            },
+            {
+                "signal_id": "adult_overweight_budget_table_signal",
+                "statement": (
+                    "De Almere gezondheidsbeleidsinformatie bevat een begrotingsregel voor aanpak "
+                    "overgewicht en obesitas; scope, jaarschijf en inzet voor de werkagenda moeten "
+                    "voor gebruik worden bevestigd."
+                ),
+                "authority": "municipal_policy_source",
+                "validation_status": "low_authority_budget_signal_needs_controller_validation",
+                "source_ids": ["mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst"],
+                "claim_ids": ["clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_d5_002"],
+            },
+        ],
+        "monitoring_and_learning_signals": [
+            {
+                "signal_id": "adult_overweight_ggd_indicators",
+                "statement": (
+                    "De GGD-indicatoren kunnen dienen als huidige informatie voor de opgave, maar "
+                    "niet als monitoringafspraak voor de ketenaanpak."
+                ),
+                "authority": "public_table_book_source",
+                "validation_status": "baseline_signal_not_monitoring_owner_confirmation",
+                "source_ids": ["reg_ggd_flevoland_2024_volwassenen_gemeenten"],
+            }
+        ],
+    },
+}
+
 
 def load_json(path: Path) -> Any:
     return json.loads(path.read_text(encoding="utf-8"))
@@ -177,6 +463,21 @@ def write_json(path: Path, data: Any) -> None:
         json.dumps(data, ensure_ascii=False, indent=2, sort_keys=False) + "\n",
         encoding="utf-8",
     )
+
+
+def index_by(items: list[dict[str, Any]], key: str) -> dict[str, dict[str, Any]]:
+    return {str(item[key]): item for item in items if key in item}
+
+
+def unique_strings(values: list[str]) -> list[str]:
+    seen: set[str] = set()
+    result: list[str] = []
+    for value in values:
+        if value in seen:
+            continue
+        seen.add(value)
+        result.append(value)
+    return result
 
 
 def build_process_context() -> dict[str, Any]:
@@ -504,11 +805,43 @@ def recommended_wording(row: dict[str, Any], gaps: list[dict[str, Any]]) -> str:
     )
 
 
-def source_refs_for(row: dict[str, Any]) -> list[dict[str, Any]]:
+def source_refs_for(
+    row: dict[str, Any],
+    operational_requirement: dict[str, Any] | None,
+    capacity_item: dict[str, Any] | None,
+) -> list[dict[str, Any]]:
     refs = [NATIONAL_SOURCE_REF]
     if row["target_id"] == "valpreventie":
         refs.extend(VALPREVENTIE_SOURCE_REFS)
-    for source_id in row.get("evidence", {}).get("operational_requirement_source_ids", []):
+    if row["target_id"] == "ketenaanpak_overgewicht_obesitas_volwassenen":
+        refs.extend(
+            [
+                {
+                    "source_id": "reg_ggd_flevoland_2024_volwassenen_gemeenten",
+                    "title": "GGD Flevoland Tabellenboek volwassenen 2024 - gemeenten",
+                    "use_for": ["current information", "overweight and movement indicators"],
+                    "authority": "public_table_book_source",
+                    "confidence": "medium",
+                },
+                {
+                    "source_id": "mun_almere_2024_2026_brede_spuk_gala_plan_van_aanpak",
+                    "title": "Almere Brede SPUK / GALA plan van aanpak 2024-2026",
+                    "use_for": ["regional prevention-chain support signal"],
+                    "authority": "municipal_policy_source",
+                    "confidence": "medium",
+                },
+            ]
+        )
+
+    source_ids = []
+    if operational_requirement:
+        source_ids.extend(operational_requirement.get("source_document_ids", []))
+    if capacity_item:
+        for indicator in capacity_item.get("public_indicators", []):
+            if indicator.get("source_document_id"):
+                source_ids.append(indicator["source_document_id"])
+
+    for source_id in source_ids:
         if source_id == NATIONAL_SOURCE_REF["source_id"] or any(ref["source_id"] == source_id for ref in refs):
             continue
         refs.append(
@@ -530,6 +863,7 @@ def derived_layers_for(row: dict[str, Any]) -> list[str]:
         "data/workagenda/d5_stuurmodel.json",
         "data/extracted/workagenda_d5_operational_requirements.json",
         "data/extracted/workagenda_nulmeting_capacity.json",
+        "data/extracted/local_source_strengthening_almere.json",
         "data/extracted/municipal/almere_d6_responsibility_register.json",
     ]
     if row["target_id"] == "valpreventie":
@@ -606,6 +940,178 @@ def build_target_state(row: dict[str, Any]) -> dict[str, list[str]]:
     }
 
 
+def build_workagenda_delivery_requirements(
+    row: dict[str, Any],
+    operational_requirement: dict[str, Any] | None,
+) -> dict[str, Any]:
+    if not operational_requirement:
+        return {
+            "status": "requirements_not_found_for_component",
+            "required_sections": WORKAGENDA_REQUIRED_SECTIONS,
+            "component_requirement_summary": {},
+            "minimum_municipal_input_by_2026_09_15": [
+                "safe component classification",
+                "current information that can be shared without overclaiming",
+                "main decisions or validations still needed",
+            ],
+        }
+
+    # These are requirements and directional hints from generated source-backed
+    # layers, not evidence that Almere has already made the local choices.
+    return {
+        "status": "requirements_available",
+        "required_sections": WORKAGENDA_REQUIRED_SECTIONS,
+        "component_requirement_summary": {
+            "population_or_target_group": operational_requirement.get("population_or_target_group"),
+            "coverage_or_capacity_direction": operational_requirement.get("coverage_or_capacity_direction"),
+            "scale_hint": operational_requirement.get("scale_hint"),
+            "related_component_ids": operational_requirement.get("related_target_ids", []),
+            "almere_concept_status": operational_requirement.get("almere_concept_status"),
+        },
+        "source_document_ids": operational_requirement.get("source_document_ids", []),
+        "source_claim_ids": operational_requirement.get("source_claim_ids", []),
+        "minimum_municipal_input_by_2026_09_15": [
+            "current local status: structureel, projectmatig, deels ingericht or still unclear",
+            "known route, partners and current implementation signals",
+            "validated or explicitly unvalidated owner and coordinator",
+            "validated or explicitly unvalidated finance route",
+            "main monitoring signal and owner if known",
+            "decision or phasing question for the regional coordinator",
+        ],
+        "review_questions_from_requirement_layer": operational_requirement.get("review_questions", []),
+    }
+
+
+def actor_hints_from_requirement(operational_requirement: dict[str, Any] | None) -> list[dict[str, Any]]:
+    if not operational_requirement:
+        return []
+    return [
+        {
+            "party_or_role": actor,
+            "indicated_role": "actor hint from the D5 operational requirement layer",
+            "authority": "operational_requirements_layer",
+            "validation_status": "actor_hint_not_local_role_confirmation",
+            "source_ids": operational_requirement.get("source_document_ids", []),
+        }
+        for actor in operational_requirement.get("actor_hints", [])
+    ]
+
+
+def finance_hints_from_requirement(operational_requirement: dict[str, Any] | None) -> list[dict[str, Any]]:
+    if not operational_requirement:
+        return []
+    return [
+        {
+            "signal_id": f"finance_stream_hint_{index:02d}",
+            "statement": stream,
+            "authority": "operational_requirements_layer",
+            "validation_status": "finance_stream_hint_not_controller_confirmation",
+            "source_ids": operational_requirement.get("source_document_ids", []),
+        }
+        for index, stream in enumerate(operational_requirement.get("finance_stream_hints", []), start=1)
+    ]
+
+
+def indicators_as_monitoring_signals(capacity_item: dict[str, Any] | None) -> list[dict[str, Any]]:
+    if not capacity_item:
+        return []
+    signals: list[dict[str, Any]] = []
+    for indicator in capacity_item.get("public_indicators", []):
+        label = indicator.get("label")
+        value = indicator.get("value")
+        unit = indicator.get("unit", "")
+        signals.append(
+            {
+                "signal_id": f"public_indicator_{indicator.get('indicator_id', len(signals) + 1)}",
+                "statement": f"{label}: {value}{unit}",
+                "authority": "public_indicator_source",
+                "validation_status": "baseline_indicator_not_local_monitoring_arrangement",
+                "source_ids": [indicator.get("source_document_id")] if indicator.get("source_document_id") else [],
+            }
+        )
+    return signals
+
+
+def build_available_information_for_workagenda(
+    row: dict[str, Any],
+    operational_requirement: dict[str, Any] | None,
+    capacity_item: dict[str, Any] | None,
+    source_need: dict[str, Any] | None,
+) -> dict[str, Any]:
+    component_id = row["target_id"]
+    curated = CURATED_COMPONENT_ENRICHMENT.get(component_id, {})
+    capacity_evidence = capacity_item.get("public_evidence", []) if capacity_item else []
+    public_indicators = capacity_item.get("public_indicators", []) if capacity_item else []
+    current_info = unique_strings([*row.get("public_evidence", []), *capacity_evidence])
+    local_fill_fields = unique_strings(
+        [
+            *row.get("local_fill_fields", []),
+            *(capacity_item.get("local_fill_fields", []) if capacity_item else []),
+        ]
+    )
+
+    implementation_progress = curated.get("implementation_progress_signals", [])
+    party_signals = [
+        *actor_hints_from_requirement(operational_requirement),
+        *curated.get("party_and_role_signals", []),
+    ]
+    finance_signals = [
+        *finance_hints_from_requirement(operational_requirement),
+        *curated.get("finance_and_resource_signals", []),
+    ]
+    monitoring_signals = [
+        *indicators_as_monitoring_signals(capacity_item),
+        *curated.get("monitoring_and_learning_signals", []),
+    ]
+
+    if implementation_progress:
+        summary = (
+            "There is already usable current information and implementation movement, but it must be "
+            "kept separate from confirmed local decisions."
+        )
+    elif current_info or public_indicators:
+        summary = (
+            "There is current information for first regional orientation, but local implementation, "
+            "ownership, finance and monitoring still need confirmation."
+        )
+    else:
+        summary = "Only limited current information is available in the generated source-backed layers."
+
+    return {
+        "summary": summary,
+        "source_backed_current_information": current_info,
+        "public_indicators": public_indicators,
+        "operational_direction": {
+            "population_or_target_group": operational_requirement.get("population_or_target_group")
+            if operational_requirement
+            else None,
+            "coverage_or_capacity_direction": operational_requirement.get("coverage_or_capacity_direction")
+            if operational_requirement
+            else None,
+            "scale_hint": operational_requirement.get("scale_hint") if operational_requirement else None,
+            "related_component_ids": operational_requirement.get("related_target_ids", [])
+            if operational_requirement
+            else [],
+        },
+        "implementation_progress_signals": implementation_progress,
+        "party_and_role_signals": party_signals,
+        "finance_and_resource_signals": finance_signals,
+        "monitoring_and_learning_signals": monitoring_signals,
+        "local_information_still_needed": local_fill_fields,
+        "decisions_still_needed": row.get("decision_needed", []),
+        "source_strengthening_candidates": {
+            "candidate_source_ids": source_need.get("candidate_source_ids", []) if source_need else [],
+            "still_needs_local_decision": source_need.get("still_needs_local_decision") if source_need else None,
+            "note": source_need.get("note") if source_need else None,
+        },
+        "authority_boundary": (
+            "Use source-backed and low-authority signals for first contact and 15 September input preparation; "
+            "do not upgrade them to confirmed ownership, capacity, finance, monitoring or final workagenda text "
+            "without local validation."
+        ),
+    }
+
+
 def build_risk_assessment(row: dict[str, Any], gaps: list[dict[str, Any]]) -> dict[str, Any]:
     risk = row.get("risk", "onbekend")
     if risk == "rood":
@@ -660,6 +1166,9 @@ def build_object(
     row: dict[str, Any],
     tickets_by_component: dict[str, list[str]],
     ticket_lookup: dict[str, dict[str, Any]],
+    operational_requirement: dict[str, Any] | None,
+    capacity_item: dict[str, Any] | None,
+    source_need: dict[str, Any] | None,
 ) -> dict[str, Any]:
     component_id = row["target_id"]
     ready = concept_handoff_ready(row)
@@ -667,6 +1176,13 @@ def build_object(
     ticket_ids = tickets_by_component.get(component_id, [])
     gap_summary = build_gap_summary(row)
     main_gaps = gap_summary["main_gaps"]
+    available_information = build_available_information_for_workagenda(
+        row,
+        operational_requirement,
+        capacity_item,
+        source_need,
+    )
+    current_information = available_information["source_backed_current_information"]
 
     # Most object fields below are conservative transformations of generated
     # steering layers. They are not new source claims or stakeholder validation.
@@ -716,13 +1232,18 @@ def build_object(
         },
         "almere_policy_input": build_policy_input(row),
         "current_state": {
-            "known_from_public_sources": row.get("public_evidence", []),
+            "known_from_public_sources": current_information,
             "known_or_indicated_local_elements": VALPREVENTIE_LOCAL_ELEMENTS
             if component_id == "valpreventie"
             else [],
             "unknown_or_unconfirmed": row.get("local_fill_fields", []),
         },
         "target_state_for_regional_workagenda": build_target_state(row),
+        "workagenda_delivery_requirements": build_workagenda_delivery_requirements(
+            row,
+            operational_requirement,
+        ),
+        "available_information_for_workagenda": available_information,
         "gap_summary": gap_summary,
         "decision_requests_for_region": build_decision_requests(row),
         "validation_needed_before_or_after_submission": {
@@ -750,8 +1271,20 @@ def build_object(
             ],
         },
         "evidence_package": {
-            "source_refs": source_refs_for(row),
+            "source_refs": source_refs_for(row, operational_requirement, capacity_item),
             "public_evidence": row.get("public_evidence", []),
+            "public_indicators": capacity_item.get("public_indicators", []) if capacity_item else [],
+            "source_claim_ids": unique_strings(
+                [
+                    *(operational_requirement.get("source_claim_ids", []) if operational_requirement else []),
+                    *[
+                        claim_id
+                        for group in CURATED_COMPONENT_ENRICHMENT.get(component_id, {}).values()
+                        for signal in group
+                        for claim_id in signal.get("claim_ids", [])
+                    ],
+                ]
+            ),
             "evidence_limitations": [
                 "Generated data layers are not public sources.",
                 "Public-source signals do not equal confirmed local policy, finance, ownership or capacity.",
@@ -787,6 +1320,20 @@ def build_summary(objects: list[dict[str, Any]]) -> dict[str, Any]:
             1 for item in objects if item["almere_submission"]["confirmed_position_ready"]
         ),
         "risk_counts": dict(sorted(risk_counts.items())),
+        "enriched_information_object_count": sum(
+            1
+            for item in objects
+            if item["available_information_for_workagenda"]["source_backed_current_information"]
+            or item["available_information_for_workagenda"]["implementation_progress_signals"]
+            or item["available_information_for_workagenda"]["public_indicators"]
+        ),
+        "implementation_progress_signal_count": sum(
+            len(item["available_information_for_workagenda"]["implementation_progress_signals"])
+            for item in objects
+        ),
+        "party_and_role_signal_count": sum(
+            len(item["available_information_for_workagenda"]["party_and_role_signals"]) for item in objects
+        ),
         "primary_municipality_delivery_target": MUNICIPAL_DELIVERY_TARGET_DATE,
         "municipality_delivery_to_region_target": MUNICIPAL_DELIVERY_TARGET_DATE,
         "almere_internal_submission_target": MUNICIPAL_DELIVERY_TARGET_DATE,
@@ -805,9 +1352,25 @@ def build_summary(objects: list[dict[str, Any]]) -> dict[str, Any]:
 def build_layer() -> dict[str, Any]:
     matrix = load_json(STATUS_MATRIX)
     tickets = load_json(VALIDATION_TICKETS)
+    operational_requirements = load_json(OPERATIONAL_REQUIREMENTS)
+    nulmeting_capacity = load_json(NULMETING_CAPACITY)
+    local_source_strengthening = load_json(LOCAL_SOURCE_STRENGTHENING)
     ticket_lookup = {item["ticket_id"]: item for item in tickets["tickets"]}
     tickets_by_component = tickets["tickets_by_component"]
-    objects = [build_object(row, tickets_by_component, ticket_lookup) for row in matrix["rows"]]
+    operational_by_target = index_by(operational_requirements.get("targets", []), "target_id")
+    capacity_by_target = index_by(nulmeting_capacity.get("targets", []), "target_id")
+    source_need_by_target = index_by(local_source_strengthening.get("target_source_needs", []), "target_id")
+    objects = [
+        build_object(
+            row,
+            tickets_by_component,
+            ticket_lookup,
+            operational_by_target.get(row["target_id"]),
+            capacity_by_target.get(row["target_id"]),
+            source_need_by_target.get(row["target_id"]),
+        )
+        for row in matrix["rows"]
+    ]
     source_layers = SOURCE_LAYERS + VALPREVENTIE_SOURCE_LAYERS
     return {
         "schema_id": "ALMERE-REGIONAL-WORKAGENDA-INPUT-V1",

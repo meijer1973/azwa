@@ -123,6 +123,28 @@ def first_current_view(rows: list[dict[str, object]], headers: dict[int, str], s
     return " / ".join(examples)
 
 
+def clarify_regional_actor_shorthand(text: str) -> str:
+    return (
+        text.replace(
+            "of Almere/Flevoland een",
+            "of er voor gemeente Almere en de relevante Flevoland-schaal een",
+        )
+        .replace(
+            "of Flevoland/Almere een",
+            "of er voor de relevante Flevoland-schaal en gemeente Almere een",
+        )
+        .replace(
+            "Almere/Flevoland",
+            "gemeente Almere en de relevante Flevoland-schaal",
+        )
+        .replace(
+            "Flevoland/Almere",
+            "de relevante Flevoland-schaal en gemeente Almere",
+        )
+        .replace("een route of plan heeft", "een route of plan is")
+    )
+
+
 def normalized_headers(headers: dict[int, str]) -> set[str]:
     return {normalize(header) for header in headers.values()}
 
@@ -209,7 +231,7 @@ def build_audit() -> dict[str, Any]:
                 assessment = has_assessment_field(headers)
                 correction = has_correction_field(headers)
                 question_audit = question_findings(mapped_rows)
-                current_view = first_current_view(rows, headers, summary)
+                current_view = clarify_regional_actor_shorthand(first_current_view(rows, headers, summary))
                 entry = {
                     "sheet": sheet_name,
                     "component_id": sheet_config.component_id,

@@ -77,9 +77,9 @@ DEEP_RESEARCH_ASSIGNMENTS = [
     },
     {
         "assignment_id": "dr_digitale_operationele_infrastructuur",
-        "title": "Digital and operational infrastructure for D6 Almere/Flevoland",
+        "title": "Digital and operational infrastructure for D6 Almere and the relevant Flevoland regional context",
         "d6_rows": ["Digitale en operationele infrastructuur", "Kennis & Advies / monitoring / dashboards"],
-        "question": "Find public sources for RTP Almere, RSO, Monitoring@home, shared information picture, regional data infrastructure or digital cooperation that are relevant to D5/D6 execution in Almere/Flevoland.",
+        "question": "Find public sources for RTP Almere, RSO, Monitoring@home, shared information picture, regional data infrastructure or digital cooperation that are relevant to D5/D6 execution in gemeente Almere and the relevant Flevoland regional context.",
         "likely_sources": ["Gemeente Almere", "Zorgzaam Flevoland", "Flever", "GGD Flevoland", "regional digital/data partnerships", "IZA/AZWA regional pages"],
         "may_resolve": ["named-source gap", "actor/context evidence", "scope evidence"],
         "must_not_resolve": ["D6 ownership", "budget split", "formal governance role"],

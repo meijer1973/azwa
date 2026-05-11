@@ -524,6 +524,130 @@ ANNOTATIONS = {
             "collaboration evidence only; it is not an adopted local policy document or a complete mandate source."
         ),
     },
+    "reg_noordoostpolder_iza_status_memo_2024": {
+        "source_classification": "primary",
+        "curation_bucket": "canonical",
+        "contains_d5": True,
+        "contains_d6": True,
+        "contains_structured_tables": False,
+        "contains_financing_logic": True,
+        "contains_governance_logic": True,
+        "contains_monitoring_evaluation_logic": True,
+        "contains_municipal_implications": True,
+        "inventory_notes": (
+            "Municipal council memo describing Flevoland IZA developments, Verbindende Coalitie steering, "
+            "subregional execution logic and Netwerkbureau setup. Use for actor and role evidence; do not infer "
+            "that Almere owns all regional execution."
+        ),
+    },
+    "reg_provincie_flevoland_verbindende_coalitie_2024": {
+        "source_classification": "primary",
+        "curation_bucket": "canonical",
+        "contains_d5": True,
+        "contains_d6": True,
+        "contains_structured_tables": False,
+        "contains_financing_logic": True,
+        "contains_governance_logic": True,
+        "contains_monitoring_evaluation_logic": False,
+        "contains_municipal_implications": True,
+        "inventory_notes": (
+            "Provincial memo explaining the transition from Zorgtafel to Verbindende Coalitie Zorgzaam Flevoland, "
+            "including the IZA/AZWA-regio split and the province's distinct role. Use as governance-context evidence, "
+            "not as proof that the province is the IZA/AZWA mandaatgemeente."
+        ),
+    },
+    "reg_zonmw_zorgzaam_flevoland_project": {
+        "source_classification": "derivative",
+        "curation_bucket": "context",
+        "contains_d5": True,
+        "contains_d6": True,
+        "contains_structured_tables": False,
+        "contains_financing_logic": True,
+        "contains_governance_logic": True,
+        "contains_monitoring_evaluation_logic": False,
+        "contains_municipal_implications": True,
+        "inventory_notes": (
+            "ZonMw project page naming three subregions, the regional Netwerkbureau and the PGA/subregion Zuid "
+            "example. Use to ensure the Netwerkbureau surfaces in generated layers; keep formal ownership and "
+            "funding continuity as validation questions."
+        ),
+    },
+    "nat_dusi_spuk_iza_2023_2026": {
+        "source_classification": "primary",
+        "curation_bucket": "canonical",
+        "contains_d5": True,
+        "contains_d6": False,
+        "contains_structured_tables": False,
+        "contains_financing_logic": True,
+        "contains_governance_logic": True,
+        "contains_monitoring_evaluation_logic": True,
+        "contains_municipal_implications": True,
+        "inventory_notes": (
+            "Official DUS-I page for SPUK IZA. Use for mandate-structure, municipality coordination, SiSa and "
+            "mandaathouder context; it does not define Verbindende Coalitie or Netwerkbureau responsibilities."
+        ),
+    },
+    "nat_vws_spuk_iza_brede_spuk_mandaatgemeente_2025": {
+        "source_classification": "primary",
+        "curation_bucket": "canonical",
+        "contains_d5": True,
+        "contains_d6": False,
+        "contains_structured_tables": True,
+        "contains_financing_logic": True,
+        "contains_governance_logic": True,
+        "contains_monitoring_evaluation_logic": False,
+        "contains_municipal_implications": True,
+        "inventory_notes": (
+            "Official VWS financing letter and annex. Treat 'Flevoland - Almere' as Regio Flevoland plus "
+            "mandaatgemeente Almere, not as one actor. Use for financing/mandate context, not local execution ownership."
+        ),
+    },
+    "reg_centrumregeling_sociaal_domein_flevoland": {
+        "source_classification": "primary",
+        "curation_bucket": "canonical",
+        "contains_d5": False,
+        "contains_d6": True,
+        "contains_structured_tables": False,
+        "contains_financing_logic": True,
+        "contains_governance_logic": True,
+        "contains_monitoring_evaluation_logic": False,
+        "contains_municipal_implications": True,
+        "inventory_notes": (
+            "Official local regulation for Sociaal Domein Flevoland cooperation and Almere as centrumgemeente for "
+            "specified social-domain tasks. Use as context for municipal mandate mechanics; do not merge it with "
+            "IZA/AZWA-region or province definitions."
+        ),
+    },
+    "reg_proscoop_zorgzaam_flevoland_netwerkbureau_2024": {
+        "source_classification": "derivative",
+        "curation_bucket": "context",
+        "contains_d5": True,
+        "contains_d6": True,
+        "contains_structured_tables": False,
+        "contains_financing_logic": False,
+        "contains_governance_logic": True,
+        "contains_monitoring_evaluation_logic": True,
+        "contains_municipal_implications": True,
+        "inventory_notes": (
+            "Proscoop article naming its coordinator/secretary contribution to the Netwerkbureau and the bureau's "
+            "overview, alignment, learning and connection role. Use as supporting actor-role evidence only."
+        ),
+    },
+    "reg_ggd_flevoland_bestuursrapportage_aug_2024": {
+        "source_classification": "primary",
+        "curation_bucket": "context",
+        "contains_d5": True,
+        "contains_d6": True,
+        "contains_structured_tables": True,
+        "contains_financing_logic": True,
+        "contains_governance_logic": True,
+        "contains_monitoring_evaluation_logic": True,
+        "contains_municipal_implications": True,
+        "inventory_notes": (
+            "GGD board-report bundle with public-health advisory and monitoring context, including a reported "
+            "adviesrol around Netwerkbureau Zorgzaam Flevoland. Use for GGD role context, not final D6 ownership."
+        ),
+    },
     "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst": {
         "source_classification": "primary",
         "curation_bucket": "canonical",
@@ -928,7 +1052,7 @@ ANNOTATIONS = {
         "contains_governance_logic": True,
         "contains_monitoring_evaluation_logic": False,
         "contains_municipal_implications": True,
-        "inventory_notes": "PGA project page for RTP Almere/Flevoland. Use as implementation context for care coordination; do not treat as formal D6 classification.",
+        "inventory_notes": "PGA project page for RTP in Almere and the relevant Flevoland regional context. Use as implementation context for care coordination; do not treat as formal D6 classification.",
     },
     "reg_flevoziekenhuis_rtp_flevoland_2025": {
         "source_classification": "primary",
@@ -1036,7 +1160,7 @@ ANNOTATIONS = {
         "contains_governance_logic": True,
         "contains_monitoring_evaluation_logic": True,
         "contains_municipal_implications": True,
-        "inventory_notes": "National project overview that names the PGA PZP/ACP digital initiative and involved Almere/Flevoland organizations.",
+        "inventory_notes": "National project overview that names the PGA PZP/ACP digital initiative and involved Almere and Flevoland-region organizations.",
     },
     "reg_npz_almere_jaarplan_2025": {
         "source_classification": "primary",

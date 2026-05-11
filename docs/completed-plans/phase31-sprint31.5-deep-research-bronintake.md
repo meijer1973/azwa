@@ -19,6 +19,7 @@ No D6 responsibility row was moved to `settled`. Formal D6 classification, owner
 | `docs/dr/Almere D6 Settlement Evidence Audit.md` | Settlement-boundary check; confirmed that public evidence supports validation preparation but not D6 settlement. |
 | `docs/dr/Stable public source check for “Stand van zaken Gezondheidsbeleid (IZA en GALA)”.md` | Recorded as pending full-text source candidate, not claim-ready evidence. |
 | `docs/dr/Constrained answer design for the Almere D6 open-question set.md` | Design input only; used to rewrite the D6 validation matrix in plain stakeholder language. |
+| `docs/dr/Regional governance.md` | Source intake and top-layer verification for regional governance, Verbindende Coalitie, Netwerkbureau, Almere as mandaatgemeente and strict Flevoland-and-Almere role separation. |
 
 ## Key Outputs
 
@@ -33,6 +34,7 @@ No D6 responsibility row was moved to `settled`. Formal D6 classification, owner
 - `docs/source-intake/phase31.5-d6-settlement-evidence-audit-intake.md`
 - `docs/source-intake/phase31.5-stand-van-zaken-gezondheidsbeleid-intake.md`
 - `docs/source-intake/phase31.5-constrained-answer-design-intake.md`
+- `docs/source-intake/phase31.5-regional-governance-intake.md`
 
 ## Remaining Carry-Forward
 

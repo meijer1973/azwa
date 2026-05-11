@@ -27,7 +27,9 @@ Almere concept input means that a component can be sent to the regional process 
 
 A confirmed Almere position means the relevant local validation, finance/controller, ownership, monitoring, D6-dependency and decision/phasing questions have been resolved or formally escalated. The current generated layer usually marks this as `confirmed_position_ready: false`.
 
-The regional workagenda is the consolidated regional document prepared by the mandaatgemeente, preferente zorgverzekeraar and regional partners. Almere input is only one input stream for that process.
+The regional workagenda is the consolidated regional document prepared by gemeente Almere as mandaatgemeente for the IZA/AZWA-regio Flevoland, the preferente zorgverzekeraar and regional partners. Almere input is only one input stream for that process. This wording does not make the province Flevoland the same entity as the IZA/AZWA-regio, and it does not make Almere sole owner of all regional execution.
+
+The Verbindende Coalitie Zorgzaam Flevoland and Netwerkbureau Zorgzaam Flevoland are now explicit coordination/support actors in the preparation layer. Treat the Verbindende Coalitie as a regional steering/forum candidate and the Netwerkbureau as a support bureau for overview, coherence, monitoring, learning and connection. Their formal mandate, host, reporting line, funding continuity and task allocation remain validation questions.
 
 For Almere and the other municipalities, the key working date is the 15 September 2026 delivery target: by about that date, municipal input should be ready to send to the regional process so the regional coordinator has time to consolidate it. This is a planning assumption for municipal delivery, not a national formal deadline.
 

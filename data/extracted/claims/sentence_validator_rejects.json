@@ -1,5 +1,5 @@
 {
-  "generated_on": "2026-05-09",
+  "generated_on": "2026-05-11",
   "run_id": "phase4_all_docs_claims_v3_sentence_boundary_gate",
   "policy": {
     "rejected": [
@@ -10,10 +10,10 @@
       "Longer claims missing terminal sentence punctuation are retained but logged for later cleanup."
     ]
   },
-  "input_claim_count": 1082,
-  "kept_claim_count": 918,
-  "rejected_claim_count": 164,
-  "review_only_count": 68,
+  "input_claim_count": 1164,
+  "kept_claim_count": 991,
+  "rejected_claim_count": 173,
+  "review_only_count": 72,
   "rejected_claims": [
     {
       "claim_id": "clm__nat_azwa_2026_cw31_kamerbrief_timeline_and_status_001",
@@ -2167,6 +2167,124 @@
       "source_statement_ids": [
         "reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_timeline_and_status_003"
       ]
+    },
+    {
+      "claim_id": "clm__reg_ggd_flevoland_bestuursrapportage_aug_2024_d5_001",
+      "source_document_id": "reg_ggd_flevoland_bestuursrapportage_aug_2024",
+      "topic": "d5.basisfunctionaliteiten_onderbouwd",
+      "subtopic": "sociaal_verwijzen_and_valpreventie",
+      "reasons": [
+        "lowercase_mid_sentence_start"
+      ],
+      "statement": "subtotaal Centrumgemeente 2.844.637 3.173.729 3.217.688 3.362.484 Evaluatie uitstroommonitor Almere gb/mz 6.006 Gezond gewicht/Gezonde school/ Almere gb 98.254 141.808 138.207 144.426 Almeers preventieakkoord Gezond in Almere Almere bestuur 35.858 Regiobeeld Almere gb 18.908 Nu Niet Zwanger Almere gb 18.779 102.999 151.484 158.301 Kansrijke Start Almere jgz 44.000 116.892 Wij zijn zelf het medicijn Almere gb 12.006 Valpreventie Almere gb 15.137 21.780 22.760 Versterken kennisfunctie GGD Almere gb 27.983 27.982 ...",
+      "source_statement_ids": [
+        "reg_ggd_flevoland_bestuursrapportage_aug_2024_d5_001"
+      ]
+    },
+    {
+      "claim_id": "clm__reg_ggd_flevoland_bestuursrapportage_aug_2024_d5_002",
+      "source_document_id": "reg_ggd_flevoland_bestuursrapportage_aug_2024",
+      "topic": "d5.basisfunctionaliteiten_onderbouwd",
+      "subtopic": "sociaal_verwijzen_and_valpreventie",
+      "reasons": [
+        "lowercase_mid_sentence_start"
+      ],
+      "statement": "gezond gewicht en Kansrijke Start, bij inhoudelijke thema’s zoals mentale gezondheid, het verminderen van gezondheidsverschillen, gezonde leefomgeving en positief ouder worden 3.3.",
+      "source_statement_ids": [
+        "reg_ggd_flevoland_bestuursrapportage_aug_2024_d5_002"
+      ]
+    },
+    {
+      "claim_id": "clm__reg_ggd_flevoland_bestuursrapportage_aug_2024_d5_003",
+      "source_document_id": "reg_ggd_flevoland_bestuursrapportage_aug_2024",
+      "topic": "d5.basisfunctionaliteiten_onderbouwd",
+      "subtopic": "sociaal_verwijzen_and_valpreventie",
+      "reasons": [
+        "lowercase_mid_sentence_start",
+        "missing_sentence_terminal"
+      ],
+      "statement": "gezond gewicht en Kansrijke Start, bij inhoudelijke thema’s",
+      "source_statement_ids": [
+        "reg_ggd_flevoland_bestuursrapportage_aug_2024_d5_003"
+      ]
+    },
+    {
+      "claim_id": "clm__reg_ggd_flevoland_bestuursrapportage_aug_2024_timeline_and_status_001",
+      "source_document_id": "reg_ggd_flevoland_bestuursrapportage_aug_2024",
+      "topic": "timeline.other",
+      "subtopic": "uncategorized",
+      "reasons": [
+        "missing_sentence_terminal"
+      ],
+      "statement": "Naar aanleiding van agendapunt Politieke Markt: Raadsvoorstel Ontwerpbegroting 2025 en de meerjarenraming 2026 – 2028 GGD Flevoland (24191)",
+      "source_statement_ids": [
+        "reg_ggd_flevoland_bestuursrapportage_aug_2024_timeline_and_status_001"
+      ]
+    },
+    {
+      "claim_id": "clm__reg_ggd_flevoland_bestuursrapportage_aug_2024_timeline_and_status_002",
+      "source_document_id": "reg_ggd_flevoland_bestuursrapportage_aug_2024",
+      "topic": "timeline.other",
+      "subtopic": "uncategorized",
+      "reasons": [
+        "missing_sentence_terminal"
+      ],
+      "statement": "2025 2026 2027 2028 Almere 474 Dronten 92 Lelystad 164 NOP 88 Urk 37 Zeewolde 46",
+      "source_statement_ids": [
+        "reg_ggd_flevoland_bestuursrapportage_aug_2024_timeline_and_status_002"
+      ]
+    },
+    {
+      "claim_id": "clm__reg_ggd_flevoland_bestuursrapportage_aug_2024_timeline_and_status_003",
+      "source_document_id": "reg_ggd_flevoland_bestuursrapportage_aug_2024",
+      "topic": "timeline.other",
+      "subtopic": "uncategorized",
+      "reasons": [
+        "missing_sentence_terminal"
+      ],
+      "statement": "2025 2026 2027 2028 Almere 6.465 Dronten 1.264 Lelystad 2.399 NOP 1.430 Urk 626 Zeewolde 684",
+      "source_statement_ids": [
+        "reg_ggd_flevoland_bestuursrapportage_aug_2024_timeline_and_status_003"
+      ]
+    },
+    {
+      "claim_id": "clm__reg_ggd_flevoland_bestuursrapportage_aug_2024_monitoring_and_evaluation_001",
+      "source_document_id": "reg_ggd_flevoland_bestuursrapportage_aug_2024",
+      "topic": "monitoring.other",
+      "subtopic": "uncategorized",
+      "reasons": [
+        "lowercase_mid_sentence_start"
+      ],
+      "statement": "hitte, geluid en gevaarlijke ▪ Monitoring, onderzoek en evaluatie: de vraag naar inzicht stoffen waaronder fijnstof en roet) en gezondheidsbevordering in de lokale problematiek, wat een effectieve preventieve (het inrichten van een leefomgeving die bewegen en sociaal aanpak is en wat de effecten van beleid, projecten en activi- contact bevordert en een gezonde leefstijl mogelijk en makkelijk teiten zijn neemt sterk toe.",
+      "source_statement_ids": [
+        "reg_ggd_flevoland_bestuursrapportage_aug_2024_monitoring_and_evaluation_001"
+      ]
+    },
+    {
+      "claim_id": "clm__reg_ggd_flevoland_bestuursrapportage_aug_2024_monitoring_and_evaluation_002",
+      "source_document_id": "reg_ggd_flevoland_bestuursrapportage_aug_2024",
+      "topic": "monitoring.other",
+      "subtopic": "uncategorized",
+      "reasons": [
+        "missing_sentence_terminal"
+      ],
+      "statement": "▪ Monitoring, onderzoek en evaluatie: de vraag naar inzicht stoffen waaronder fijnstof en roet) en gezondheidsbevordering",
+      "source_statement_ids": [
+        "reg_ggd_flevoland_bestuursrapportage_aug_2024_monitoring_and_evaluation_002"
+      ]
+    },
+    {
+      "claim_id": "clm__reg_ggd_flevoland_bestuursrapportage_aug_2024_municipal_translation_001",
+      "source_document_id": "reg_ggd_flevoland_bestuursrapportage_aug_2024",
+      "topic": "municipal.implementation_translation",
+      "subtopic": "regional_local_tailoring",
+      "reasons": [
+        "missing_sentence_terminal"
+      ],
+      "statement": "met allerhande zorg- en welzijnsorganisaties. gemeente Almere worden gesprekken gevoerd over de door-",
+      "source_statement_ids": [
+        "reg_ggd_flevoland_bestuursrapportage_aug_2024_municipal_translation_001"
+      ]
     }
   ],
   "review_only_claims": [
@@ -3052,6 +3170,58 @@
       "statement": "Deelname aan en/of coördineren van netwerkbijeenkomsten In verbinding met alle lokale partijen voor welzijn, schuldhulp, sociaal werk en vrijwilligersorganisaties, sport en cultuur en met informele ondersteuning en bewonersinitiatieven Voorzieningen in sociaal domein Invulling brugfuncties op wijk en individueel niveau 5",
       "source_statement_ids": [
         "nat_pharos_brugfuncties_huisartsenzorg_sociaal_domein_2025_d6_001"
+      ]
+    },
+    {
+      "claim_id": "clm__reg_proscoop_zorgzaam_flevoland_netwerkbureau_2024_d5_002",
+      "source_document_id": "reg_proscoop_zorgzaam_flevoland_netwerkbureau_2024",
+      "topic": "d5.basisfunctionaliteiten_onderbouwd",
+      "subtopic": "sociaal_verwijzen_and_valpreventie",
+      "reasons": [
+        "missing_sentence_terminal"
+      ],
+      "statement": "Versterking Eerstelijn - Digitale Zorg - Geboortezorg - GGZ - Integraal Zorg Akkoord - Oncologie - Ouderenzorg - Paramedie - Positieve Gezondheid - Welzijn op Recept - Achterhoek - Apeldoorn - Centraal Gelderland - Drenthe - Flevoland - Salland - Vechtdal - Zutphen - Zwolle - Kennisbank - Onze mensen - Werken bij - Agenda - Actueel - Contact Home Actueel Drie vloten, één missie: Zorgzaam Flevoland",
+      "source_statement_ids": [
+        "reg_proscoop_zorgzaam_flevoland_netwerkbureau_2024_d5_002"
+      ]
+    },
+    {
+      "claim_id": "clm__reg_proscoop_zorgzaam_flevoland_netwerkbureau_2024_timeline_and_status_001",
+      "source_document_id": "reg_proscoop_zorgzaam_flevoland_netwerkbureau_2024",
+      "topic": "timeline.other",
+      "subtopic": "uncategorized",
+      "reasons": [
+        "missing_sentence_terminal"
+      ],
+      "statement": "van Kleffensstraat 6 6842 CV Arnhem Trefpunt Zutphen Vijverstaete Piet Heinstraat 11 7204 JN Zutphen - Regio’s - Dossiers - Kennisbank - Nieuwsbrieven - Jaarberichten - Werken bij - Actueel - Agenda - Contact - Disclaimer - Privacy- en cookieverklaring - Algemene voorwaarden - Sitemap - Colofon Copyright Proscoop 2026 Ontwerp en realisatie Advice",
+      "source_statement_ids": [
+        "reg_proscoop_zorgzaam_flevoland_netwerkbureau_2024_timeline_and_status_001"
+      ]
+    },
+    {
+      "claim_id": "clm__reg_proscoop_zorgzaam_flevoland_netwerkbureau_2024_timeline_and_status_002",
+      "source_document_id": "reg_proscoop_zorgzaam_flevoland_netwerkbureau_2024",
+      "topic": "timeline.other",
+      "subtopic": "uncategorized",
+      "reasons": [
+        "missing_sentence_terminal"
+      ],
+      "statement": "Copyright Proscoop 2026 Ontwerp en realisatie Advice Functioneel Functioneel Altijd actief Voorkeuren Voorkeuren Statistieken Statistieken Marketing Marketing - Beheer opties - Beheer diensten - Beheer {vendor_count} leveranciers - Lees meer over deze doeleinden - {title} - {title} - {title}",
+      "source_statement_ids": [
+        "reg_proscoop_zorgzaam_flevoland_netwerkbureau_2024_timeline_and_status_002"
+      ]
+    },
+    {
+      "claim_id": "clm__reg_proscoop_zorgzaam_flevoland_netwerkbureau_2024_municipal_translation_002",
+      "source_document_id": "reg_proscoop_zorgzaam_flevoland_netwerkbureau_2024",
+      "topic": "municipal.implementation_translation",
+      "subtopic": "regional_and_municipal_execution",
+      "reasons": [
+        "missing_sentence_terminal"
+      ],
+      "statement": "Versterking Eerstelijn - Digitale Zorg - Geboortezorg - GGZ - Integraal Zorg Akkoord - Oncologie - Ouderenzorg - Paramedie - Positieve Gezondheid - Welzijn op Recept - Achterhoek - Apeldoorn - Centraal Gelderland - Drenthe - Flevoland - Salland - Vechtdal - Zutphen - Zwolle - Kennisbank - Onze mensen - Werken bij - Agenda - Actueel - Contact Home Actueel Drie vloten, één missie: Zorgzaam Flevoland",
+      "source_statement_ids": [
+        "reg_proscoop_zorgzaam_flevoland_netwerkbureau_2024_municipal_translation_002"
       ]
     }
   ]

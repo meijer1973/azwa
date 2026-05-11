@@ -1,6 +1,6 @@
 {
   "run_id": "phase26_text_cleanup_v1",
-  "generated_on": "2026-05-09",
+  "generated_on": "2026-05-11",
   "documents": [
     {
       "document_id": "nat_azwa_2025_definitief",
@@ -52,6 +52,13 @@
     },
     {
       "document_id": "mun_almere_welzijnskader_2020",
+      "mojibake_replacements": {
+        "'\\x07'": 2
+      },
+      "voting_record_count": 0
+    },
+    {
+      "document_id": "reg_ggd_flevoland_bestuursrapportage_aug_2024",
       "mojibake_replacements": {
         "'\\x07'": 2
       },

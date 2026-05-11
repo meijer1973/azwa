@@ -22,10 +22,14 @@ CONSTRAINED_ANSWER_DESIGN_REPORT_PATH = (
     REPO_ROOT / "docs" / "dr" / "Constrained answer design for the Almere D6 open-question set.md"
 )
 OPERATIONAL_REPORT_PATH = REPO_ROOT / "docs" / "dr" / "azwa operational.md"
+REGIONAL_GOVERNANCE_REPORT_PATH = REPO_ROOT / "docs" / "dr" / "Regional governance.md"
 MANIFEST_PATH = REPO_ROOT / "data" / "raw" / "manifest.json"
 SOURCE_INTAKE_CANDIDATES_PATH = REPO_ROOT / "data" / "raw" / "source_intake_candidates.json"
 INVENTORY_PATH = REPO_ROOT / "data" / "extracted" / "document_inventory.json"
 REGISTER_PATH = REPO_ROOT / "data" / "extracted" / "municipal" / "almere_d6_responsibility_register.json"
+REGIONAL_ROLES_PATH = REPO_ROOT / "data" / "curated" / "regional_roles_and_splits_almere_flevoland.json"
+D6_GOVERNANCE_PATH = REPO_ROOT / "data" / "extracted" / "d6_governance_collaboration.json"
+REGIONAL_WORKAGENDA_INPUT_PATH = REPO_ROOT / "data" / "workagenda" / "almere_regional_workagenda_input_objects.json"
 TRIAGE_PATH = REPO_ROOT / "data" / "extracted" / "review_triage_deep_research_offload.json"
 OPEN_QUESTIONS_PATH = REPO_ROOT / "docs" / "review" / "almere_d6_open_questions.md"
 VALIDATION_MATRIX_PATH = REPO_ROOT / "docs" / "review" / "almere_d6_validation_ticket_matrix.md"
@@ -113,6 +117,17 @@ OPERATIONAL_SOURCE_IDS = {
     "nat_pharos_brugfuncties_huisartsenzorg_sociaal_domein_2025",
 }
 
+REGIONAL_GOVERNANCE_SOURCE_IDS = {
+    "reg_noordoostpolder_iza_status_memo_2024",
+    "reg_provincie_flevoland_verbindende_coalitie_2024",
+    "reg_zonmw_zorgzaam_flevoland_project",
+    "nat_dusi_spuk_iza_2023_2026",
+    "nat_vws_spuk_iza_brede_spuk_mandaatgemeente_2025",
+    "reg_centrumregeling_sociaal_domein_flevoland",
+    "reg_proscoop_zorgzaam_flevoland_netwerkbureau_2024",
+    "reg_ggd_flevoland_bestuursrapportage_aug_2024",
+}
+
 
 def load_json(path: Path) -> dict | list:
     return json.loads(path.read_text(encoding="utf-8"))
@@ -130,6 +145,7 @@ class DeepResearchIntakeTests(unittest.TestCase):
         self.assertTrue(STAND_VAN_ZAKEN_REPORT_PATH.exists())
         self.assertTrue(CONSTRAINED_ANSWER_DESIGN_REPORT_PATH.exists())
         self.assertTrue(OPERATIONAL_REPORT_PATH.exists())
+        self.assertTrue(REGIONAL_GOVERNANCE_REPORT_PATH.exists())
         manifest = load_json(MANIFEST_PATH)
         self.assertFalse(any(entry["file_path"] == "docs/dr/Healthy school.md" for entry in manifest))
         self.assertFalse(
@@ -165,6 +181,7 @@ class DeepResearchIntakeTests(unittest.TestCase):
             )
         )
         self.assertFalse(any(entry["file_path"] == "docs/dr/azwa operational.md" for entry in manifest))
+        self.assertFalse(any(entry["file_path"] == "docs/dr/Regional governance.md" for entry in manifest))
 
     def test_healthy_school_sources_are_ingested(self) -> None:
         manifest = load_json(MANIFEST_PATH)
@@ -229,6 +246,15 @@ class DeepResearchIntakeTests(unittest.TestCase):
         inventory_ids = {entry["document_id"] for entry in inventory["documents"]}
         self.assertTrue(OPERATIONAL_SOURCE_IDS.issubset(inventory_ids))
 
+    def test_regional_governance_sources_are_ingested(self) -> None:
+        manifest = load_json(MANIFEST_PATH)
+        manifest_ids = {entry["document_id"] for entry in manifest}
+        self.assertTrue(REGIONAL_GOVERNANCE_SOURCE_IDS.issubset(manifest_ids))
+
+        inventory = load_json(INVENTORY_PATH)
+        inventory_ids = {entry["document_id"] for entry in inventory["documents"]}
+        self.assertTrue(REGIONAL_GOVERNANCE_SOURCE_IDS.issubset(inventory_ids))
+
     def test_operational_findings_reach_top_layers(self) -> None:
         claims_path = REPO_ROOT / "data" / "extracted" / "claims" / "claims_master.jsonl"
         source_ids_with_claims = set()
@@ -252,6 +278,50 @@ class DeepResearchIntakeTests(unittest.TestCase):
         self.assertIn("valpreventie", operational_layer.lower())
         self.assertIn("welzijn op recept", operational_layer.lower())
         self.assertIn("brugfunctie", operational_layer.lower())
+
+    def test_regional_governance_findings_reach_top_layers(self) -> None:
+        claims_path = REPO_ROOT / "data" / "extracted" / "claims" / "claims_master.jsonl"
+        source_ids_with_claims = set()
+        for line in claims_path.read_text(encoding="utf-8").splitlines():
+            claim = json.loads(line)
+            if claim.get("source_document_id") in REGIONAL_GOVERNANCE_SOURCE_IDS:
+                source_ids_with_claims.add(claim["source_document_id"])
+
+        self.assertTrue(REGIONAL_GOVERNANCE_SOURCE_IDS.issubset(source_ids_with_claims))
+
+        sources_view = load_json(REPO_ROOT / "data" / "site" / "site_sources_view.json")
+        source_view_ids = {source["metadata"]["document_id"] for source in sources_view["sources"]}
+        self.assertTrue(REGIONAL_GOVERNANCE_SOURCE_IDS.issubset(source_view_ids))
+
+        d6_layer_text = D6_GOVERNANCE_PATH.read_text(encoding="utf-8")
+        self.assertIn("Verbindende Coalitie Zorgzaam Flevoland", d6_layer_text)
+        self.assertIn("Netwerkbureau Zorgzaam Flevoland", d6_layer_text)
+        self.assertIn("Gemeente Almere", d6_layer_text)
+        self.assertIn("IZA/AZWA-regio Flevoland", d6_layer_text)
+
+        regional_input_text = REGIONAL_WORKAGENDA_INPUT_PATH.read_text(encoding="utf-8")
+        self.assertIn("Verbindende Coalitie Zorgzaam Flevoland", regional_input_text)
+        self.assertIn("Netwerkbureau Zorgzaam Flevoland", regional_input_text)
+        self.assertIn("not the province", regional_input_text)
+
+    def test_regional_roles_keep_flevoland_almere_separate(self) -> None:
+        roles = load_json(REGIONAL_ROLES_PATH)
+        role_ids = {role["role_id"] for role in roles["regional_roles"]}
+        split_ids = {split["split_id"] for split in roles["regional_splits"]}
+
+        self.assertIn("iza_flevoland_formal_mandaatgemeente_almere", role_ids)
+        self.assertIn("verbindende_coalitie_zorgzaam_flevoland", role_ids)
+        self.assertIn("netwerkbureau_zorgzaam_flevoland", role_ids)
+        self.assertIn("province_flevoland_distinct_public_body", role_ids)
+        self.assertIn("spuk_annex_flevoland_almere", split_ids)
+        self.assertIn("Flevoland - Almere", roles["editorial_rule"])
+
+        almere_role = next(
+            role
+            for role in roles["regional_roles"]
+            if role["role_id"] == "iza_flevoland_formal_mandaatgemeente_almere"
+        )
+        self.assertIn("Flevoland en Almere vormen samen een actor.", almere_role["does_not_mean"])
 
     def test_healthy_school_findings_reach_d6_register(self) -> None:
         register = load_json(REGISTER_PATH)

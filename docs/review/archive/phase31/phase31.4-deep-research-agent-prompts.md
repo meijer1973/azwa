@@ -34,7 +34,7 @@ Deliver:
 - Practical implications for Almere.
 - Explicit statement of which questions still require stakeholder validation, internal/local documents, finance/controller confirmation or policy decision.
 
-## dr_digitale_operationele_infrastructuur - Digital and operational infrastructure for D6 Almere/Flevoland
+## dr_digitale_operationele_infrastructuur - Digital and operational infrastructure for D6 Almere and the relevant Flevoland regional context
 
 You are researching the AZWA/IZA/GALA policy corpus for the Almere case.
 
@@ -46,7 +46,7 @@ Use repository derived data layers for orientation, but verify important factual
 
 Research question:
 
-Find public sources for RTP Almere, RSO, Monitoring@home, shared information picture, regional data infrastructure or digital cooperation that are relevant to D5/D6 execution in Almere/Flevoland.
+Find public sources for RTP Almere, RSO, Monitoring@home, shared information picture, regional data infrastructure or digital cooperation that are relevant to D5/D6 execution in gemeente Almere and the relevant Flevoland regional context.
 
 Relevant D6 rows: Digitale en operationele infrastructuur, Kennis & Advies / monitoring / dashboards.
 Likely source types or publishers: Gemeente Almere, Zorgzaam Flevoland, Flever, GGD Flevoland, regional digital/data partnerships, IZA/AZWA regional pages.

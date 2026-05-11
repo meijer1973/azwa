@@ -92,7 +92,7 @@ TARGETS = [
         "related_target_ids": ["sociaal_verwijzen", "laagdrempelige_steunpunten"],
         "almere_concept_status": "gedeeltelijk",
         "review_questions": [
-            "Welk MGN-transformatieplan is voor Flevoland/Almere leidend?",
+            "Welk MGN-transformatieplan is leidend voor gemeente Almere en, waar relevant, de IZA/AZWA-regio Flevoland?",
             "Hoe wordt uitvoering na afloop van het transformatieplan geborgd?",
             "Welke mandaatgemeente- en verzekeraarsrol is bronvast voor deze lijn?",
         ],
@@ -152,7 +152,7 @@ TARGETS = [
         "related_target_ids": ["integrale_gezinspoli", "nu_niet_zwanger", "ketenaanpak_overgewicht_obesitas_kinderen"],
         "almere_concept_status": "gedeeltelijk",
         "review_questions": [
-            "Welke actuele coalitie Kansrijke Start bestaat in Almere/Flevoland?",
+            "Welke actuele coalitie Kansrijke Start bestaat in gemeente Almere en, waar relevant, op IZA/AZWA-regio Flevoland-schaal?",
             "Welke interventies en inkoopafspraken zijn bronvast?",
             "Hoe worden ouders en ervaringskennis betrokken?",
         ],
@@ -232,7 +232,7 @@ TARGETS = [
         "related_target_ids": [],
         "almere_concept_status": "onvoldoende_bestuurlijke_keuze_nodig",
         "review_questions": [
-            "Wil Almere/Flevoland pilotregio zijn voor een of meer nieuwe ontwikkelagenda-aanpakken?",
+            "Wil gemeente Almere, eventueel met de IZA/AZWA-regio Flevoland, pilotregio zijn voor een of meer nieuwe ontwikkelagenda-aanpakken?",
             "Welke NPLV-gebieden of populatieopgaven zijn relevant?",
             "Welke financiering of capaciteit is beschikbaar zonder bestaande D5-middelen te verdringen?",
         ],

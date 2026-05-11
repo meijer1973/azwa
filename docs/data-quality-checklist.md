@@ -108,7 +108,7 @@ Common quality problems:
 
 Editorial rule:
 - Keep ownership, coordination, and approval distinct.
-- For Almere/Flevoland regional roles, first check [regional-roles-and-splits-almere-flevoland.md](C:/Projects/azwa/docs/regional-roles-and-splits-almere-flevoland.md).
+- For Almere and Flevoland regional role splits, first check [regional-roles-and-splits-almere-flevoland.md](C:/Projects/azwa/docs/regional-roles-and-splits-almere-flevoland.md).
 
 ### 5. Locality
 Check:

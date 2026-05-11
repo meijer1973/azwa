@@ -36,6 +36,8 @@ For D6 validation handoff, use `docs/review/almere_d6_deep_research_learnings.md
 
 For deep-research intake, use `docs/dr/README.md`. Reports placed in `docs/dr/` are not corpus evidence. Treat them as source-discovery signals: ingest selected public sources through the raw manifest and pipeline, then verify that the findings appear in top data layers before marking the report processed.
 
+For regional governance around Flevoland and Almere, always load `docs/regional-roles-and-splits-almere-flevoland.md` and `data/curated/regional_roles_and_splits_almere_flevoland.json`. Treat `Flevoland - Almere` in SPUK/mandaatgemeente context as two fields, not one actor: regio Flevoland plus gemeente Almere as mandaatgemeente. Keep the province Flevoland, IZA/AZWA-regio Flevoland, gemeente Almere, Verbindende Coalitie Zorgzaam Flevoland and Netwerkbureau Zorgzaam Flevoland separate unless a source explicitly links a role.
+
 For roadmap navigation, use `docs/data-quality-roadmap.md` as the single canonical roadmap. Its top Active Task Ledger shows work still to do. Completed sprint history lives in `docs/roadmap/completed-sprint-ledger.md`. `docs/workagenda-delivery-roadmap.md` is only a redirect; do not maintain it as a second active roadmap. Use `docs/roadmap/roadmap-version-log.md` for roadmap version history.
 
 For Sprint 32.0-32.2 workagenda-delivery scope, use `docs/workagenda-d5-stuurmodel.md`, `data/workagenda/d5_stuurmodel.json`, `docs/workagenda-d5-statusmatrix.md`, `data/workagenda/d5_status_matrix.json`, `docs/workagenda-d5-validation-tickets.md`, `data/workagenda/d5_validation_tickets.json`, `docs/workagenda-d5-validation-format.md`, and `data/workagenda/d5_validation_packets.json`. These files define the D5 scope, delivery status values, workagenda fields, milestones, the first D5 delivery-status matrix, constrained validation tickets and stakeholder packet formats. They are control layers, not local decisions or workagenda drafts. Blank validation packet fields are unresolved; do not fill them by inference.
@@ -260,6 +262,7 @@ Machine-readable:
     "docs/source-intake/phase31.5-d6-settlement-evidence-audit-intake.md",
     "docs/source-intake/phase31.5-stand-van-zaken-gezondheidsbeleid-intake.md",
     "docs/source-intake/phase31.5-constrained-answer-design-intake.md",
+    "docs/source-intake/phase31.5-regional-governance-intake.md",
     "docs/source-intake/phase33-operational-deep-research-intake.md",
     "docs/data-quality-roadmap.md",
     "docs/roadmap/roadmap-version-log.md",
@@ -558,10 +561,10 @@ Agents MUST:
 - Check each claim's `time_status` before using timing language; `formal_deadline`, `expected_moment`, `review_or_update_moment`, `budget_calendar_moment`, `implementation_horizon`, `local_planning_context`, `source_dated_moment`, `publication_or_context_date`, and `undated_context` require different public wording.
 - Check each claim's `money_status` before using finance language; `funding_route`, `application_condition`, `budget_window`, `allocation_mechanism`, `accountability_rule`, `local_funding_gap`, `finance_context`, and `not_financial` require different public wording.
 - Check each claim's `governance_status` before using role language; `decision_role`, `coordination_role`, `application_role`, `execution_role`, `accountability_role`, `approval_role`, `review_role`, `governance_gap`, `actor_context`, and `not_governance` require different public wording.
-- Check each claim's `locality_status` before using Almere/Flevoland language; `explicit_almere`, `explicit_flevoland`, `regional_split_context`, `national_general`, `national_with_local_relevance`, and `local_adoption_gap` require different public wording.
+- Check each claim's `locality_status` before using wording that links Almere with a Flevoland scale; `explicit_almere`, `explicit_flevoland`, `regional_split_context`, `national_general`, `national_with_local_relevance`, and `local_adoption_gap` require different public wording.
 - Check each claim's `execution_status` before using action language; `operational_requirement`, `implementation_activity`, `decision_question`, `dependency`, `sequencing_need`, `capacity_need`, `review_task`, `execution_context`, and `not_execution` require different public wording.
 - Use Dutch search terms for corpus text and claims.
-- Use `docs/regional-roles-and-splits-almere-flevoland.md` and `data/curated/regional_roles_and_splits_almere_flevoland.json` before drawing regional conclusions about Almere, Flevoland, mandaatgemeente, GGD-regio, zorgkantoorregio, ROAZ, Zeewolde, or practical task ownership.
+- Use `docs/regional-roles-and-splits-almere-flevoland.md` and `data/curated/regional_roles_and_splits_almere_flevoland.json` before drawing regional conclusions about Almere, Flevoland, province versus IZA/AZWA-regio, mandaatgemeente, Verbindende Coalitie, Netwerkbureau, GGD-regio, zorgkantoorregio, ROAZ, Zeewolde, or practical task ownership.
 - Use `docs/internal/review-dashboard.html` for internal quality triage when the task is about open review issues, perspective coverage, rough claim text, or Sprint 24.3 cleanup planning.
 
 Agents MUST NOT:

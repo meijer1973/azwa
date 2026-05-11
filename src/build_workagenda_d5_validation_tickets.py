@@ -124,7 +124,7 @@ def current_working_view(row: dict[str, Any]) -> str:
         return " ".join(evidence)
     if not row.get("required_in_workagenda"):
         return "This item is optional or conditional until the region chooses to include it."
-    return "Public sources identify this as a D5 workagenda target, but local Almere/Flevoland filling still needs validation."
+    return "Public sources identify this as a D5 workagenda target, but filling for gemeente Almere and, where relevant, IZA/AZWA-regio Flevoland still needs validation."
 
 
 def ticket(
@@ -230,7 +230,7 @@ def tickets_for_optional_row(row: dict[str, Any]) -> list[dict[str, Any]]:
         ticket(
             row,
             "scope_choice",
-            f"Moet {row['title']} in de Almere/Flevoland werkagenda worden opgenomen?",
+            f"Moet {row['title']} in de werkagenda voor gemeente Almere en, waar relevant, de IZA/AZWA-regio Flevoland worden opgenomen?",
             ["scope_choice"],
             "Explicit scope decision, governance confirmation or later national guidance.",
             "Keep item optional/not applicable and do not include in required workagenda text.",

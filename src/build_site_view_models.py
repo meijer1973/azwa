@@ -128,7 +128,7 @@ GAP_LABELS = {
             "en hechte wijkverbanden bestuurlijk en organisatorisch invult."
         ),
         "what_public_sources_show": (
-            "De bronbasis bevat landelijke D6-taal over basisinfrastructuur en publieke Almere/Flevoland-bronnen "
+            "De bronbasis bevat landelijke D6-taal over basisinfrastructuur en publieke bronnen over Almere en de relevante Flevolandse context "
             "over wijkteams, Stevige Lokale Teams, JGZ/GGD en samenwerking."
         ),
         "what_public_sources_do_not_prove": (
@@ -438,7 +438,7 @@ TIMELINE_DOCUMENT_SPECS = [
         "summary": "CW 3.1 werkt de ordening van basisfunctionaliteiten en basisinfrastructuur verder uit en maakt de D5/D6-kaders concreter.",
         "linked_domain": "D5 en D6",
         "relation_type": "werkt uit",
-        "consequence_for_almere": "Geeft Almere en Flevoland een concreter referentiekader voor lokale en regionale vertaling.",
+        "consequence_for_almere": "Geeft gemeente Almere en, waar relevant, de IZA/AZWA-regio Flevoland een concreter referentiekader voor lokale en regionale vertaling.",
     },
     {
         "document_id": "nat_azwa_2026_voortgang_kamerbrief",
@@ -874,13 +874,17 @@ def document_type_label(document_type: str) -> str:
         "agreement": "akkoord",
         "framework": "kader",
         "kamerbrief": "kamerbrief",
+        "government_letter": "overheidsbrief",
         "ministerial_letter": "ministeriële brief",
         "assignment": "opdracht",
         "template": "format",
         "process_note": "toelichting",
         "regulation": "regeling",
+        "local_regulation": "lokale regeling",
         "regional_plan": "regionaal plan",
+        "provincial_information_memo": "provinciale mededeling",
         "regional_report": "regionaal rapport",
+        "regional_board_report": "regionale bestuursrapportage",
         "implementation_plan": "uitvoeringsplan",
         "research_report": "onderzoeksrapport",
         "program_page": "programmapagina",
@@ -889,6 +893,7 @@ def document_type_label(document_type: str) -> str:
         "government_info_page": "overheidsinformatiepagina",
         "sector_commentary_page": "sectorale duidingspagina",
         "members_letter": "ledenbrief",
+        "municipal_council_memo": "gemeentelijke raadsmemo",
         "municipal_policy_summary": "gemeentelijke beleidssamenvatting",
         "municipal_info_page": "gemeentelijke informatiepagina",
         "municipal_schedule_page": "gemeentelijk vergaderschema",
@@ -2233,7 +2238,7 @@ def milestone_for_action(action_id: str) -> str:
         "act_d6_lokale_structuur_verduidelijken": "Expliciet lokaal D6-structuur- en regiebeeld.",
         "act_middelen_en_eigenaarschap_vastleggen": "Navolgbare koppeling tussen middelen, eigenaarschap en inzet.",
         "act_monitoring_afstemmen": "Afgestemde lokale monitoringsstructuur.",
-        "act_regionale_digitale_aansluiting": "Concreet aansluitbeeld tussen Almere en Flevolandse digitale infrastructuur.",
+        "act_regionale_digitale_aansluiting": "Concreet aansluitbeeld tussen gemeente Almere en relevante Flevolandse digitale infrastructuur.",
     }
     return mapping[action_id]
 

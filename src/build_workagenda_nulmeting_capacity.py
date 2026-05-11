@@ -219,7 +219,7 @@ TARGET_PUBLIC_BASELINE = {
     },
     "ontwikkelagenda_1_nieuw_beproeven": {
         "public_evidence": [
-            "Alleen vullen wanneer publieke bron of lokale validatie aangeeft dat Almere/Flevoland deze aanpak in de praktijk wil uitproberen.",
+            "Alleen vullen wanneer publieke bron of lokale validatie aangeeft dat gemeente Almere en, waar relevant, de IZA/AZWA-regio Flevoland deze aanpak in de praktijk wil uitproberen.",
         ],
         "indicator_ids": [],
         "local_fill_fields": [

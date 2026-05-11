@@ -1,20 +1,20 @@
 {
   "audit_run_id": "phase24_data_quality_audit_v1",
-  "generated_on": "2026-05-09",
+  "generated_on": "2026-05-11",
   "storage": {
     "canonical_output": "data/extracted/data_quality_audit.json",
     "sprint_note": "docs/completed-plans/phase24-sprint24.2-audit.md"
   },
   "summary": {
-    "claim_count": 897,
+    "claim_count": 967,
     "topic_count": 44,
-    "claims_with_perspectives": 864,
+    "claims_with_perspectives": 934,
     "claims_without_perspectives": 33,
     "broad_rest_topic_count": 5,
     "high_volume_topic_count": 10,
-    "rough_claim_count": 170,
+    "rough_claim_count": 177,
     "site_files_with_rough_claims": 10,
-    "open_review_items": 666
+    "open_review_items": 724
   },
   "perspective_coverage": {
     "claims": {
@@ -22,7 +22,7 @@
         {
           "perspective_id": "norm",
           "title": "Norm",
-          "claim_count": 295,
+          "claim_count": 317,
           "topic_count": 17,
           "sample_topics": [
             "d5.basisfunctionaliteiten_onderbouwd",
@@ -38,7 +38,7 @@
         {
           "perspective_id": "time",
           "title": "Time",
-          "claim_count": 263,
+          "claim_count": 282,
           "topic_count": 16,
           "sample_topics": [
             "monitoring.d5_operational_monitoring",
@@ -54,7 +54,7 @@
         {
           "perspective_id": "money",
           "title": "Money",
-          "claim_count": 50,
+          "claim_count": 60,
           "topic_count": 5,
           "sample_topics": [
             "finance.azwa_macro_framework",
@@ -67,7 +67,7 @@
         {
           "perspective_id": "governance",
           "title": "Governance",
-          "claim_count": 7,
+          "claim_count": 10,
           "topic_count": 4,
           "sample_topics": [
             "governance.local_coalition",
@@ -79,7 +79,7 @@
         {
           "perspective_id": "locality",
           "title": "Locality",
-          "claim_count": 634,
+          "claim_count": 691,
           "topic_count": 35,
           "sample_topics": [
             "d5.basisfunctionaliteiten_onderbouwd",
@@ -95,7 +95,7 @@
         {
           "perspective_id": "execution",
           "title": "Execution",
-          "claim_count": 635,
+          "claim_count": 675,
           "topic_count": 27,
           "sample_topics": [
             "d5.basisfunctionaliteiten_onderbouwd",
@@ -109,7 +109,7 @@
           ]
         }
       ],
-      "claims_with_perspectives": 864,
+      "claims_with_perspectives": 934,
       "claims_without_perspectives": 33,
       "unmapped_topics": [],
       "topic_mapping_gaps": [
@@ -192,19 +192,19 @@
         }
       },
       "source_detail": {
-        "file_count": 117,
-        "labeled_file_count": 117,
+        "file_count": 124,
+        "labeled_file_count": 124,
         "unlabeled_file_count": 0,
         "perspective_counts": {
-          "norm": 117,
-          "time": 85,
-          "governance": 93,
-          "locality": 115,
-          "execution": 103,
-          "money": 27
+          "norm": 124,
+          "time": 91,
+          "governance": 100,
+          "locality": 122,
+          "execution": 110,
+          "money": 31
         },
         "classification_counts": {
-          "source_fact": 117
+          "source_fact": 124
         }
       }
     }
@@ -212,19 +212,20 @@
   "normative_status_audit": {
     "description": "Sprint 27.1 norm-strength split for binding text, agreement text, expectations, guidance, lower-authority signals, and contextual material.",
     "status_counts": {
-      "agreement": 82,
-      "binding": 1,
-      "contextual": 110,
+      "agreement": 87,
+      "binding": 5,
+      "contextual": 117,
       "expectation": 45,
-      "guidance": 366,
-      "lower_authority_signal": 293
+      "guidance": 398,
+      "lower_authority_signal": 315
     },
     "norm_perspective_status_counts": {
-      "agreement": 28,
-      "contextual": 2,
+      "agreement": 31,
+      "binding": 1,
+      "contextual": 3,
       "expectation": 23,
-      "guidance": 9,
-      "lower_authority_signal": 233
+      "guidance": 11,
+      "lower_authority_signal": 248
     },
     "attribution_needed_sample": [
       {
@@ -458,33 +459,33 @@
   "time_status_audit": {
     "description": "Sprint 27.2 time split for formal deadlines, expected moments, review/update cycles, budget-calendar moments, implementation horizons, local planning context, source-dated moments, publication/context dates, and undated context.",
     "status_counts": {
-      "budget_calendar_moment": 171,
-      "expected_moment": 85,
-      "formal_deadline": 14,
-      "implementation_horizon": 32,
+      "budget_calendar_moment": 188,
+      "expected_moment": 88,
+      "formal_deadline": 20,
+      "implementation_horizon": 33,
       "local_planning_context": 18,
-      "publication_or_context_date": 48,
-      "review_or_update_moment": 163,
-      "source_dated_moment": 19,
-      "undated_context": 347
+      "publication_or_context_date": 53,
+      "review_or_update_moment": 172,
+      "source_dated_moment": 23,
+      "undated_context": 372
     },
     "time_perspective_status_counts": {
-      "budget_calendar_moment": 31,
+      "budget_calendar_moment": 34,
       "expected_moment": 22,
-      "formal_deadline": 10,
+      "formal_deadline": 13,
       "implementation_horizon": 21,
       "local_planning_context": 8,
-      "review_or_update_moment": 148,
-      "source_dated_moment": 19,
+      "review_or_update_moment": 157,
+      "source_dated_moment": 23,
       "undated_context": 4
     },
     "date_signal_counts": {
-      "exact_date": 57,
-      "month_or_cycle": 86,
-      "none": 558,
-      "period": 38,
+      "exact_date": 64,
+      "month_or_cycle": 88,
+      "none": 602,
+      "period": 39,
       "quarter": 7,
-      "year": 151
+      "year": 167
     },
     "review_needed_sample": [
       {
@@ -718,22 +719,22 @@
   "money_status_audit": {
     "description": "Sprint 27.3 money split for funding routes, application conditions, budget windows, allocation mechanisms, spending scope, accountability rules, local funding gaps, double-counting risks, finance context, and non-financial material.",
     "status_counts": {
-      "accountability_rule": 71,
-      "allocation_mechanism": 34,
-      "application_condition": 27,
-      "budget_window": 181,
-      "finance_context": 32,
-      "funding_route": 69,
+      "accountability_rule": 81,
+      "allocation_mechanism": 42,
+      "application_condition": 29,
+      "budget_window": 185,
+      "finance_context": 36,
+      "funding_route": 78,
       "local_funding_gap": 1,
-      "not_financial": 482
+      "not_financial": 515
     },
     "money_perspective_status_counts": {
-      "accountability_rule": 4,
-      "allocation_mechanism": 17,
+      "accountability_rule": 5,
+      "allocation_mechanism": 24,
       "application_condition": 1,
       "budget_window": 9,
       "finance_context": 4,
-      "funding_route": 15
+      "funding_route": 17
     },
     "verification_needed_sample": [
       {
@@ -942,31 +943,33 @@
   "governance_status_audit": {
     "description": "Sprint 27.4 governance split for decision, coordination, application, execution, accountability, approval, review, governance gaps, actor context, and non-governance material.",
     "status_counts": {
-      "accountability_role": 15,
-      "actor_context": 218,
-      "application_role": 23,
-      "approval_role": 62,
-      "coordination_role": 90,
-      "decision_role": 41,
-      "execution_role": 73,
+      "accountability_role": 22,
+      "actor_context": 235,
+      "application_role": 24,
+      "approval_role": 73,
+      "coordination_role": 100,
+      "decision_role": 44,
+      "execution_role": 78,
       "governance_gap": 1,
-      "not_governance": 318,
-      "review_role": 56
+      "not_governance": 330,
+      "review_role": 60
     },
     "governance_perspective_status_counts": {
       "accountability_role": 1,
-      "actor_context": 6
+      "actor_context": 7,
+      "approval_role": 1,
+      "coordination_role": 1
     },
     "actor_signal_counts": {
-      "college": 16,
-      "gemeente": 218,
+      "college": 20,
+      "gemeente": 242,
       "gemeenteraad": 33,
-      "mandaatgemeente": 5,
-      "ministerie": 28,
-      "regio": 119,
-      "uitvoeringspartner": 28,
-      "vng": 22,
-      "zorgverzekeraar": 40
+      "mandaatgemeente": 9,
+      "ministerie": 32,
+      "regio": 135,
+      "uitvoeringspartner": 30,
+      "vng": 23,
+      "zorgverzekeraar": 44
     },
     "zero_count_actor_signals": [],
     "verification_needed_sample": [
@@ -1249,26 +1252,26 @@
   "locality_status_audit": {
     "description": "Sprint 27.5 locality split for explicit Almere, explicit Flevoland, regional split context, national general, national with local relevance, inferred local relevance, local adoption gaps, municipal context, and no locality signal.",
     "status_counts": {
-      "explicit_almere": 393,
-      "explicit_flevoland": 100,
+      "explicit_almere": 404,
+      "explicit_flevoland": 119,
       "local_adoption_gap": 1,
-      "national_general": 231,
-      "national_with_local_relevance": 76,
-      "regional_split_context": 96
+      "national_general": 241,
+      "national_with_local_relevance": 78,
+      "regional_split_context": 124
     },
     "locality_perspective_status_counts": {
-      "explicit_almere": 391,
-      "explicit_flevoland": 100,
+      "explicit_almere": 401,
+      "explicit_flevoland": 119,
       "local_adoption_gap": 1,
       "national_general": 15,
-      "national_with_local_relevance": 52,
-      "regional_split_context": 75
+      "national_with_local_relevance": 54,
+      "regional_split_context": 101
     },
     "regional_split_counts": {
-      "GGD-regio": 48,
-      "IZA/AZWA-regio": 48,
-      "ROAZ/subregio": 8,
-      "gemeentelijk": 262,
+      "GGD-regio": 51,
+      "IZA/AZWA-regio": 57,
+      "ROAZ/subregio": 13,
+      "gemeentelijk": 293,
       "provincie": 2
     },
     "verification_needed_sample": [
@@ -1659,34 +1662,34 @@
   "execution_status_audit": {
     "description": "Sprint 27.6 execution split for operational requirements, implementation activity, decision questions, dependencies, sequencing needs, capacity needs, review tasks, execution context, and non-execution material.",
     "status_counts": {
-      "capacity_need": 28,
-      "decision_question": 19,
-      "dependency": 49,
-      "execution_context": 104,
-      "implementation_activity": 70,
-      "not_execution": 132,
-      "operational_requirement": 292,
-      "review_task": 108,
-      "sequencing_need": 95
+      "capacity_need": 31,
+      "decision_question": 23,
+      "dependency": 51,
+      "execution_context": 111,
+      "implementation_activity": 81,
+      "not_execution": 146,
+      "operational_requirement": 306,
+      "review_task": 114,
+      "sequencing_need": 104
     },
     "execution_perspective_status_counts": {
-      "capacity_need": 23,
-      "decision_question": 5,
-      "dependency": 31,
-      "execution_context": 90,
-      "implementation_activity": 39,
-      "operational_requirement": 285,
-      "review_task": 98,
-      "sequencing_need": 64
+      "capacity_need": 24,
+      "decision_question": 7,
+      "dependency": 32,
+      "execution_context": 97,
+      "implementation_activity": 40,
+      "operational_requirement": 299,
+      "review_task": 104,
+      "sequencing_need": 72
     },
     "execution_need_signal_counts": {
-      "capacity": 29,
-      "decision_question": 19,
-      "dependency": 51,
-      "implementation_activity": 135,
-      "operational_requirement": 61,
-      "review": 152,
-      "sequencing": 117
+      "capacity": 32,
+      "decision_question": 23,
+      "dependency": 53,
+      "implementation_activity": 153,
+      "operational_requirement": 63,
+      "review": 161,
+      "sequencing": 126
     },
     "verification_needed_sample": [
       {
@@ -1968,7 +1971,7 @@
     "broad_rest_topics": [
       {
         "topic": "monitoring.other",
-        "current_claim_count": 98,
+        "current_claim_count": 107,
         "historical_claim_count": 13,
         "needs_human_review": true,
         "confidence": 0.38,
@@ -1978,41 +1981,39 @@
           "time"
         ],
         "sample_documents": [
-          "nat_azwa_2026_cw31_kamerbrief",
           "nat_azwa_2026_voortgang_kamerbrief",
           "nat_azwa_opdracht_werkagenda_d5_2026",
           "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026",
           "nat_wetten_spuk_transformatiemiddelen_regeling",
-          "reg_ggd_flevoland_begroting_2026"
+          "reg_centrumregeling_sociaal_domein_flevoland"
         ],
         "sample_claim_ids": [
           "clm__nat_wetten_spuk_transformatiemiddelen_regeling_monitoring_and_evaluation_003",
           "clm__nat_wetten_spuk_transformatiemiddelen_regeling_monitoring_and_evaluation_001",
+          "clm__reg_centrumregeling_sociaal_domein_flevoland_monitoring_and_evaluation_003",
+          "clm__reg_centrumregeling_sociaal_domein_flevoland_monitoring_and_evaluation_002",
+          "clm__reg_centrumregeling_sociaal_domein_flevoland_monitoring_and_evaluation_001",
           "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_monitoring_and_evaluation_001",
           "clm__nat_azwa_opdracht_werkagenda_d5_2026_monitoring_and_evaluation_003",
-          "clm__nat_azwa_opdracht_werkagenda_d5_2026_monitoring_and_evaluation_001",
-          "clm__nat_azwa_2026_voortgang_kamerbrief_monitoring_and_evaluation_003",
-          "clm__nat_azwa_2026_voortgang_kamerbrief_monitoring_and_evaluation_002",
-          "clm__nat_azwa_2026_cw31_kamerbrief_monitoring_and_evaluation_002"
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_monitoring_and_evaluation_001"
         ],
-        "interpretation_summary": "Current view combines 98 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
+        "interpretation_summary": "Current view combines 107 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
       },
       {
         "topic": "timeline.other",
-        "current_claim_count": 81,
+        "current_claim_count": 87,
         "historical_claim_count": 4,
         "needs_human_review": true,
-        "confidence": 0.36,
+        "confidence": 0.37,
         "perspective_ids": [
           "locality",
           "time"
         ],
         "sample_documents": [
-          "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
-          "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst",
           "nat_azwa_2026_voortgang_kamerbrief",
           "nat_azwa_opdracht_werkagenda_d5_2026",
           "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026",
+          "nat_vws_spuk_iza_brede_spuk_mandaatgemeente_2025",
           "nat_wetten_spuk_transformatiemiddelen_regeling"
         ],
         "sample_claim_ids": [
@@ -2020,16 +2021,16 @@
           "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_timeline_and_status_001",
           "clm__nat_azwa_opdracht_werkagenda_d5_2026_timeline_and_status_002",
           "clm__nat_azwa_opdracht_werkagenda_d5_2026_timeline_and_status_001",
-          "clm__nat_azwa_2026_voortgang_kamerbrief_timeline_and_status_003",
-          "clm__nat_azwa_2026_voortgang_kamerbrief_timeline_and_status_002",
-          "clm__nat_azwa_2026_voortgang_kamerbrief_timeline_and_status_001",
-          "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_timeline_and_status_003"
+          "clm__nat_vws_spuk_iza_brede_spuk_mandaatgemeente_2025_timeline_and_status_003",
+          "clm__nat_vws_spuk_iza_brede_spuk_mandaatgemeente_2025_timeline_and_status_002",
+          "clm__nat_vws_spuk_iza_brede_spuk_mandaatgemeente_2025_timeline_and_status_001",
+          "clm__nat_azwa_2026_voortgang_kamerbrief_timeline_and_status_003"
         ],
-        "interpretation_summary": "Current view combines 81 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
+        "interpretation_summary": "Current view combines 87 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
       },
       {
         "topic": "governance_and_finance.other",
-        "current_claim_count": 71,
+        "current_claim_count": 79,
         "historical_claim_count": 12,
         "needs_human_review": true,
         "confidence": 0.38,
@@ -2037,23 +2038,23 @@
           "locality"
         ],
         "sample_documents": [
-          "mun_almere_2026_stevige_lokale_teams_geamendeerd_raadsvoorstel",
           "nat_azwa_2026_voortgang_kamerbrief",
           "nat_azwa_opdracht_werkagenda_d5_2026",
           "nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026",
+          "reg_centrumregeling_sociaal_domein_flevoland",
           "reg_ggd_flevoland_begroting_2026"
         ],
         "sample_claim_ids": [
+          "clm__reg_centrumregeling_sociaal_domein_flevoland_governance_and_finance_003",
+          "clm__reg_centrumregeling_sociaal_domein_flevoland_governance_and_finance_002",
+          "clm__reg_centrumregeling_sociaal_domein_flevoland_governance_and_finance_001",
           "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_governance_and_finance_003",
           "clm__nat_azwa_opdracht_werkagenda_d5_2026_governance_and_finance_003",
           "clm__nat_azwa_opdracht_werkagenda_d5_2026_governance_and_finance_002",
           "clm__nat_azwa_opdracht_werkagenda_d5_2026_governance_and_finance_001",
-          "clm__nat_azwa_2026_voortgang_kamerbrief_governance_and_finance_003",
-          "clm__nat_azwa_2026_voortgang_kamerbrief_governance_and_finance_002",
-          "clm__reg_ggd_flevoland_begroting_2026_governance_and_finance_003",
-          "clm__reg_ggd_flevoland_begroting_2026_governance_and_finance_002"
+          "clm__nat_azwa_2026_voortgang_kamerbrief_governance_and_finance_003"
         ],
-        "interpretation_summary": "Current view combines 71 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
+        "interpretation_summary": "Current view combines 79 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
       },
       {
         "topic": "d6.other",
@@ -2125,75 +2126,75 @@
     "high_volume_topics": [
       {
         "topic": "municipal.implementation_translation",
-        "current_claim_count": 197,
+        "current_claim_count": 217,
         "historical_claim_count": 14,
         "needs_human_review": true,
         "confidence": 0.53,
         "sample_claim_ids": [
           "clm__nat_wetten_spuk_transformatiemiddelen_regeling_municipal_translation_003",
           "clm__nat_wetten_spuk_transformatiemiddelen_regeling_municipal_translation_002",
+          "clm__reg_centrumregeling_sociaal_domein_flevoland_municipal_translation_003",
+          "clm__reg_centrumregeling_sociaal_domein_flevoland_municipal_translation_002",
           "clm__nat_azwa_2025_definitief_municipal_translation_002",
           "clm__nat_azwa_2025_definitief_municipal_translation_001",
           "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_municipal_translation_001",
-          "clm__nat_azwa_opdracht_werkagenda_d5_2026_municipal_translation_003",
-          "clm__nat_azwa_opdracht_werkagenda_d5_2026_municipal_translation_002",
-          "clm__nat_azwa_2026_cw31_kader_d5_d6_municipal_translation_002"
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_municipal_translation_003"
         ],
-        "interpretation_summary": "Current view combines 197 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
+        "interpretation_summary": "Current view combines 217 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
       },
       {
         "topic": "monitoring.other",
-        "current_claim_count": 98,
+        "current_claim_count": 107,
         "historical_claim_count": 13,
         "needs_human_review": true,
         "confidence": 0.38,
         "sample_claim_ids": [
           "clm__nat_wetten_spuk_transformatiemiddelen_regeling_monitoring_and_evaluation_003",
           "clm__nat_wetten_spuk_transformatiemiddelen_regeling_monitoring_and_evaluation_001",
+          "clm__reg_centrumregeling_sociaal_domein_flevoland_monitoring_and_evaluation_003",
+          "clm__reg_centrumregeling_sociaal_domein_flevoland_monitoring_and_evaluation_002",
+          "clm__reg_centrumregeling_sociaal_domein_flevoland_monitoring_and_evaluation_001",
           "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_monitoring_and_evaluation_001",
           "clm__nat_azwa_opdracht_werkagenda_d5_2026_monitoring_and_evaluation_003",
-          "clm__nat_azwa_opdracht_werkagenda_d5_2026_monitoring_and_evaluation_001",
-          "clm__nat_azwa_2026_voortgang_kamerbrief_monitoring_and_evaluation_003",
-          "clm__nat_azwa_2026_voortgang_kamerbrief_monitoring_and_evaluation_002",
-          "clm__nat_azwa_2026_cw31_kamerbrief_monitoring_and_evaluation_002"
+          "clm__nat_azwa_opdracht_werkagenda_d5_2026_monitoring_and_evaluation_001"
         ],
-        "interpretation_summary": "Current view combines 98 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
+        "interpretation_summary": "Current view combines 107 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
       },
       {
         "topic": "timeline.other",
-        "current_claim_count": 81,
+        "current_claim_count": 87,
         "historical_claim_count": 4,
         "needs_human_review": true,
-        "confidence": 0.36,
+        "confidence": 0.37,
         "sample_claim_ids": [
           "clm__nat_wetten_spuk_transformatiemiddelen_regeling_timeline_and_status_003",
           "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_timeline_and_status_001",
           "clm__nat_azwa_opdracht_werkagenda_d5_2026_timeline_and_status_002",
           "clm__nat_azwa_opdracht_werkagenda_d5_2026_timeline_and_status_001",
-          "clm__nat_azwa_2026_voortgang_kamerbrief_timeline_and_status_003",
-          "clm__nat_azwa_2026_voortgang_kamerbrief_timeline_and_status_002",
-          "clm__nat_azwa_2026_voortgang_kamerbrief_timeline_and_status_001",
-          "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_timeline_and_status_003"
+          "clm__nat_vws_spuk_iza_brede_spuk_mandaatgemeente_2025_timeline_and_status_003",
+          "clm__nat_vws_spuk_iza_brede_spuk_mandaatgemeente_2025_timeline_and_status_002",
+          "clm__nat_vws_spuk_iza_brede_spuk_mandaatgemeente_2025_timeline_and_status_001",
+          "clm__nat_azwa_2026_voortgang_kamerbrief_timeline_and_status_003"
         ],
-        "interpretation_summary": "Current view combines 81 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
+        "interpretation_summary": "Current view combines 87 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
       },
       {
         "topic": "governance_and_finance.other",
-        "current_claim_count": 71,
+        "current_claim_count": 79,
         "historical_claim_count": 12,
         "needs_human_review": true,
         "confidence": 0.38,
         "sample_claim_ids": [
+          "clm__reg_centrumregeling_sociaal_domein_flevoland_governance_and_finance_003",
+          "clm__reg_centrumregeling_sociaal_domein_flevoland_governance_and_finance_002",
+          "clm__reg_centrumregeling_sociaal_domein_flevoland_governance_and_finance_001",
           "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_governance_and_finance_003",
           "clm__nat_azwa_opdracht_werkagenda_d5_2026_governance_and_finance_003",
           "clm__nat_azwa_opdracht_werkagenda_d5_2026_governance_and_finance_002",
           "clm__nat_azwa_opdracht_werkagenda_d5_2026_governance_and_finance_001",
-          "clm__nat_azwa_2026_voortgang_kamerbrief_governance_and_finance_003",
-          "clm__nat_azwa_2026_voortgang_kamerbrief_governance_and_finance_002",
-          "clm__reg_ggd_flevoland_begroting_2026_governance_and_finance_003",
-          "clm__reg_ggd_flevoland_begroting_2026_governance_and_finance_002"
+          "clm__nat_azwa_2026_voortgang_kamerbrief_governance_and_finance_003"
         ],
-        "interpretation_summary": "Current view combines 71 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
+        "interpretation_summary": "Current view combines 79 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
       },
       {
         "topic": "d6.other",
@@ -2215,7 +2216,7 @@
       },
       {
         "topic": "d5.basisfunctionaliteiten_onderbouwd",
-        "current_claim_count": 43,
+        "current_claim_count": 46,
         "historical_claim_count": 3,
         "needs_human_review": true,
         "confidence": 0.59,
@@ -2229,32 +2230,14 @@
           "clm__nat_azwa_2026_cw31_kader_d5_d6_d5_001",
           "clm__nat_vng_richtinggevend_kader_toegang_lokale_teams_d5_001"
         ],
-        "interpretation_summary": "Current view combines 43 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
-      },
-      {
-        "topic": "d6.digital_and_operational_infrastructure",
-        "current_claim_count": 30,
-        "historical_claim_count": 3,
-        "needs_human_review": true,
-        "confidence": 0.57,
-        "sample_claim_ids": [
-          "clm__reg_flevoland_2023_regioplan_iza_d6_001",
-          "clm__mun_almere_nadere_regels_buurtontmoeting_d6_002",
-          "clm__mun_almere_nadere_regels_buurtontmoeting_d6_001",
-          "clm__mun_almere_pga_transformatieplan_d6_002",
-          "clm__mun_almere_pga_transformatieplan_d6_001",
-          "clm__mun_almere_pga_rso_data_infrastructuur_d6_003",
-          "clm__mun_almere_pga_rso_data_infrastructuur_d6_002",
-          "clm__mun_almere_pga_rso_data_infrastructuur_d6_001"
-        ],
-        "interpretation_summary": "Current view combines 30 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
+        "interpretation_summary": "Current view combines 46 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
       },
       {
         "topic": "finance.d5_d6.funding_instrument",
-        "current_claim_count": 29,
+        "current_claim_count": 39,
         "historical_claim_count": 4,
         "needs_human_review": true,
-        "confidence": 0.6,
+        "confidence": 0.59,
         "sample_claim_ids": [
           "clm__nat_wetten_spuk_transformatiemiddelen_regeling_governance_and_finance_003",
           "clm__nat_wetten_spuk_transformatiemiddelen_regeling_governance_and_finance_002",
@@ -2262,10 +2245,28 @@
           "clm__nat_azwa_2025_definitief_governance_and_finance_003",
           "clm__nat_vws_brief_azwa_d5_d6_financieringsinstrument_2026_governance_and_finance_001",
           "clm__nat_azwa_2026_cw31_kader_d5_d6_governance_and_finance_001",
-          "clm__reg_flevoland_2023_regioplan_iza_governance_and_finance_002",
-          "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst_governance_and_finance_002"
+          "clm__nat_vws_spuk_iza_brede_spuk_mandaatgemeente_2025_governance_and_finance_003",
+          "clm__nat_vws_spuk_iza_brede_spuk_mandaatgemeente_2025_governance_and_finance_002"
         ],
-        "interpretation_summary": "Current view combines 29 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
+        "interpretation_summary": "Current view combines 39 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
+      },
+      {
+        "topic": "d6.digital_and_operational_infrastructure",
+        "current_claim_count": 36,
+        "historical_claim_count": 3,
+        "needs_human_review": true,
+        "confidence": 0.57,
+        "sample_claim_ids": [
+          "clm__reg_centrumregeling_sociaal_domein_flevoland_d6_003",
+          "clm__reg_centrumregeling_sociaal_domein_flevoland_d6_002",
+          "clm__reg_centrumregeling_sociaal_domein_flevoland_d6_001",
+          "clm__reg_flevoland_2023_regioplan_iza_d6_001",
+          "clm__mun_almere_nadere_regels_buurtontmoeting_d6_002",
+          "clm__mun_almere_nadere_regels_buurtontmoeting_d6_001",
+          "clm__mun_almere_pga_transformatieplan_d6_002",
+          "clm__mun_almere_pga_transformatieplan_d6_001"
+        ],
+        "interpretation_summary": "Current view combines 36 compatible claims. The national claim set is the operative baseline, while regional or municipal claims localize implementation for Almere."
       },
       {
         "topic": "d6.regional_coordination",
@@ -2316,12 +2317,12 @@
     },
     "issue_counts": {
       "english_summary": 65,
-      "unverified_extraction_length": 69,
-      "bullet_or_heading_fragment": 12,
+      "unverified_extraction_length": 73,
+      "bullet_or_heading_fragment": 15,
       "fragment_too_short": 21,
       "encoding_noise": 3
     },
-    "claim_count": 170,
+    "claim_count": 177,
     "claims": [
       {
         "claim_id": "clm__reg_ros_friesland_zorgpad_vroegsignalering_zwangeren_2024_d5_001",
@@ -3506,6 +3507,19 @@
         "statement_excerpt": "[Regeling vervalt per 16-07-2030.] Geraadpleegd op 22-04-2026."
       },
       {
+        "claim_id": "clm__reg_centrumregeling_sociaal_domein_flevoland_governance_and_finance_001",
+        "topic": "governance_and_finance.other",
+        "document_id": "reg_centrumregeling_sociaal_domein_flevoland",
+        "jurisdiction_level": "regional",
+        "perspective_ids": [
+          "locality"
+        ],
+        "issue_codes": [
+          "bullet_or_heading_fragment"
+        ],
+        "statement_excerpt": "1. In een tussen de colleges van de regiogemeenten en Almere te sluiten dienstverleningshandvest, wordt nadere uitwerking gegeven aan deze regeling. In het dienstverleningshandvest wordt in ieder geval geregeld: De uitvoeringskaders behorende bij de genoemde taken; De kwaliteitseisen waaraan de taakuitoefening door Almere moet voldoen; De hoogte van de financiële bijdrage voor de taakuitvoering..."
+      },
+      {
         "claim_id": "clm__reg_ggd_flevoland_2024_ouderen_gemeenten_d6_002",
         "topic": "d6.other",
         "document_id": "reg_ggd_flevoland_2024_ouderen_gemeenten",
@@ -3548,6 +3562,34 @@
           "bullet_or_heading_fragment"
         ],
         "statement_excerpt": "3. Maatschappelijke en organisatorische ontwikkelingen Het Gezond en Actief Leven Akkoord4 en het Integraal Zorgakkoord5 zijn in 2023 landelijk vastgesteld om uitvoering te geven aan deze transformatie. GGD Flevoland heeft hierin vanuit de Wet Publieke Gezondheid6 (Wpg) en haar takenpakket een belangrijke rol. Zo is GGD Flevoland nauw betrokken bij de lokale GALA plannen van de gemeenten, het R..."
+      },
+      {
+        "claim_id": "clm__reg_ggd_flevoland_bestuursrapportage_aug_2024_d6_002",
+        "topic": "d6.digital_and_operational_infrastructure",
+        "document_id": "reg_ggd_flevoland_bestuursrapportage_aug_2024",
+        "jurisdiction_level": "regional",
+        "perspective_ids": [
+          "execution",
+          "locality",
+          "norm"
+        ],
+        "issue_codes": [
+          "bullet_or_heading_fragment"
+        ],
+        "statement_excerpt": "3. Maatschappelijke en organisatorische ontwikkelingen 3.1 Beweging van ziekte en zorg naar De verschillende GGD-afdelingen (zoals Maatschappelijke gezondheid en gedrag Gezondheidszorg, Jeugdgezondheidszorg GGD en Gezondheids­ bevordering & Onderzoek) en JGZ Almere beschikken over een De Flevolandse bevolking wordt steeds ouder en de zorgvraag schat aan gegevens over hun doelgroepen en ontsluit..."
+      },
+      {
+        "claim_id": "clm__reg_ggd_flevoland_bestuursrapportage_aug_2024_governance_and_finance_002",
+        "topic": "governance_and_finance.other",
+        "document_id": "reg_ggd_flevoland_bestuursrapportage_aug_2024",
+        "jurisdiction_level": "regional",
+        "perspective_ids": [
+          "locality"
+        ],
+        "issue_codes": [
+          "bullet_or_heading_fragment"
+        ],
+        "statement_excerpt": "2. Concept-notulen 2.1 Concept-notulen 04 september 2024 T.a.v. agendapunt 3 procesnotitie integraal huisvestingsplan bij de 3e bullet van het besluit, geeft de heer Van de Beld aan dat hij samen met de heer Van Gulick en een externe deel zou uitmaken van de bestuurlijke stuurgroep. Daarnaast zou het gehele bestuur betrokken worden bij het plan. T.a.v. agendapunt 4 plan van uitvoering toekomstg..."
       },
       {
         "claim_id": "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_d5_003",
@@ -4709,6 +4751,63 @@
         "statement_excerpt": "€ 3500,- per groep* Afname valanalyse** € 21,45 (2025) / € 22,53 (2026) per 15 minuten met een maximum van 90 minuten. * inclusief kosten voor handboeken, huur locatie, koffie/thee, etc. exclusief eigen bedrage van maximaal € 20,- per deelnemer ** tijdelijke regeling in afwachting van digitaal platform Let op: Alle genoemde bedragen zijn exclusief 21% btw. De btw dient duidelijk en apart vermel..."
       },
       {
+        "claim_id": "clm__reg_proscoop_zorgzaam_flevoland_netwerkbureau_2024_d5_002",
+        "topic": "d5.basisfunctionaliteiten_onderbouwd",
+        "document_id": "reg_proscoop_zorgzaam_flevoland_netwerkbureau_2024",
+        "jurisdiction_level": "regional",
+        "perspective_ids": [
+          "execution",
+          "locality",
+          "norm"
+        ],
+        "issue_codes": [
+          "unverified_extraction_length"
+        ],
+        "statement_excerpt": "Versterking Eerstelijn - Digitale Zorg - Geboortezorg - GGZ - Integraal Zorg Akkoord - Oncologie - Ouderenzorg - Paramedie - Positieve Gezondheid - Welzijn op Recept - Achterhoek - Apeldoorn - Centraal Gelderland - Drenthe - Flevoland - Salland - Vechtdal - Zutphen - Zwolle - Kennisbank - Onze mensen - Werken bij - Agenda - Actueel - Contact Home Actueel Drie vloten, één missie: Zorgzaam Flevoland"
+      },
+      {
+        "claim_id": "clm__reg_proscoop_zorgzaam_flevoland_netwerkbureau_2024_municipal_translation_002",
+        "topic": "municipal.implementation_translation",
+        "document_id": "reg_proscoop_zorgzaam_flevoland_netwerkbureau_2024",
+        "jurisdiction_level": "regional",
+        "perspective_ids": [
+          "execution",
+          "locality"
+        ],
+        "issue_codes": [
+          "unverified_extraction_length"
+        ],
+        "statement_excerpt": "Versterking Eerstelijn - Digitale Zorg - Geboortezorg - GGZ - Integraal Zorg Akkoord - Oncologie - Ouderenzorg - Paramedie - Positieve Gezondheid - Welzijn op Recept - Achterhoek - Apeldoorn - Centraal Gelderland - Drenthe - Flevoland - Salland - Vechtdal - Zutphen - Zwolle - Kennisbank - Onze mensen - Werken bij - Agenda - Actueel - Contact Home Actueel Drie vloten, één missie: Zorgzaam Flevoland"
+      },
+      {
+        "claim_id": "clm__reg_proscoop_zorgzaam_flevoland_netwerkbureau_2024_timeline_and_status_001",
+        "topic": "timeline.other",
+        "document_id": "reg_proscoop_zorgzaam_flevoland_netwerkbureau_2024",
+        "jurisdiction_level": "regional",
+        "perspective_ids": [
+          "locality",
+          "time"
+        ],
+        "issue_codes": [
+          "unverified_extraction_length"
+        ],
+        "statement_excerpt": "van Kleffensstraat 6 6842 CV Arnhem Trefpunt Zutphen Vijverstaete Piet Heinstraat 11 7204 JN Zutphen - Regio’s - Dossiers - Kennisbank - Nieuwsbrieven - Jaarberichten - Werken bij - Actueel - Agenda - Contact - Disclaimer - Privacy- en cookieverklaring - Algemene voorwaarden - Sitemap - Colofon Copyright Proscoop 2026 Ontwerp en realisatie Advice"
+      },
+      {
+        "claim_id": "clm__reg_proscoop_zorgzaam_flevoland_netwerkbureau_2024_timeline_and_status_002",
+        "topic": "timeline.other",
+        "document_id": "reg_proscoop_zorgzaam_flevoland_netwerkbureau_2024",
+        "jurisdiction_level": "regional",
+        "perspective_ids": [
+          "locality",
+          "time"
+        ],
+        "issue_codes": [
+          "unverified_extraction_length"
+        ],
+        "statement_excerpt": "Copyright Proscoop 2026 Ontwerp en realisatie Advice Functioneel Functioneel Altijd actief Voorkeuren Voorkeuren Statistieken Statistieken Marketing Marketing - Beheer opties - Beheer diensten - Beheer {vendor_count} leveranciers - Lees meer over deze doeleinden - {title} - {title} - {title}"
+      },
+      {
         "claim_id": "clm__reg_samen_nijmegen_protocol_kwetsbare_zwangere_2024_d6_003",
         "topic": "d6.other",
         "document_id": "reg_samen_nijmegen_protocol_kwetsbare_zwangere_2024",
@@ -4730,141 +4829,141 @@
     "page_group_counts": {
       "action_detail": 11,
       "decision_detail": 15,
-      "site_almere_view": 18,
-      "site_home_view": 31,
-      "site_updates_view": 77
+      "site_almere_view": 17,
+      "site_home_view": 19,
+      "site_updates_view": 84
     },
     "files": [
       {
         "path": "data/site/site_updates_view.json",
         "page_group": "site_updates_view",
-        "rough_claim_count": 77,
+        "rough_claim_count": 84,
         "sample_claims": [
+          {
+            "claim_id": "clm__reg_centrumregeling_sociaal_domein_flevoland_governance_and_finance_001",
+            "issue_codes": [
+              "bullet_or_heading_fragment"
+            ],
+            "statement_excerpt": "1. In een tussen de colleges van de regiogemeenten en Almere te sluiten dienstverleningshandvest, wordt nadere uitwerking gegeven aan deze regeling. In het dienstverleningshandvest wordt in ieder geval geregeld: De uitvoeringskaders behorende bij de genoemde taken; De kwaliteitseisen waaraan de taakuitoefening door Almere moet voldoen; De hoogte van de financiële bijdrage voor de taakuitvoering..."
+          },
+          {
+            "claim_id": "clm__reg_proscoop_zorgzaam_flevoland_netwerkbureau_2024_d5_002",
+            "issue_codes": [
+              "unverified_extraction_length"
+            ],
+            "statement_excerpt": "Versterking Eerstelijn - Digitale Zorg - Geboortezorg - GGZ - Integraal Zorg Akkoord - Oncologie - Ouderenzorg - Paramedie - Positieve Gezondheid - Welzijn op Recept - Achterhoek - Apeldoorn - Centraal Gelderland - Drenthe - Flevoland - Salland - Vechtdal - Zutphen - Zwolle - Kennisbank - Onze mensen - Werken bij - Agenda - Actueel - Contact Home Actueel Drie vloten, één missie: Zorgzaam Flevoland"
+          },
+          {
+            "claim_id": "clm__reg_proscoop_zorgzaam_flevoland_netwerkbureau_2024_municipal_translation_002",
+            "issue_codes": [
+              "unverified_extraction_length"
+            ],
+            "statement_excerpt": "Versterking Eerstelijn - Digitale Zorg - Geboortezorg - GGZ - Integraal Zorg Akkoord - Oncologie - Ouderenzorg - Paramedie - Positieve Gezondheid - Welzijn op Recept - Achterhoek - Apeldoorn - Centraal Gelderland - Drenthe - Flevoland - Salland - Vechtdal - Zutphen - Zwolle - Kennisbank - Onze mensen - Werken bij - Agenda - Actueel - Contact Home Actueel Drie vloten, één missie: Zorgzaam Flevoland"
+          },
+          {
+            "claim_id": "clm__reg_proscoop_zorgzaam_flevoland_netwerkbureau_2024_timeline_and_status_001",
+            "issue_codes": [
+              "unverified_extraction_length"
+            ],
+            "statement_excerpt": "van Kleffensstraat 6 6842 CV Arnhem Trefpunt Zutphen Vijverstaete Piet Heinstraat 11 7204 JN Zutphen - Regio’s - Dossiers - Kennisbank - Nieuwsbrieven - Jaarberichten - Werken bij - Actueel - Agenda - Contact - Disclaimer - Privacy- en cookieverklaring - Algemene voorwaarden - Sitemap - Colofon Copyright Proscoop 2026 Ontwerp en realisatie Advice"
+          },
+          {
+            "claim_id": "clm__reg_proscoop_zorgzaam_flevoland_netwerkbureau_2024_timeline_and_status_002",
+            "issue_codes": [
+              "unverified_extraction_length"
+            ],
+            "statement_excerpt": "Copyright Proscoop 2026 Ontwerp en realisatie Advice Functioneel Functioneel Altijd actief Voorkeuren Voorkeuren Statistieken Statistieken Marketing Marketing - Beheer opties - Beheer diensten - Beheer {vendor_count} leveranciers - Lees meer over deze doeleinden - {title} - {title} - {title}"
+          },
+          {
+            "claim_id": "clm__reg_ggd_flevoland_bestuursrapportage_aug_2024_d6_002",
+            "issue_codes": [
+              "bullet_or_heading_fragment"
+            ],
+            "statement_excerpt": "3. Maatschappelijke en organisatorische ontwikkelingen 3.1 Beweging van ziekte en zorg naar De verschillende GGD-afdelingen (zoals Maatschappelijke gezondheid en gedrag Gezondheidszorg, Jeugdgezondheidszorg GGD en Gezondheids­ bevordering & Onderzoek) en JGZ Almere beschikken over een De Flevolandse bevolking wordt steeds ouder en de zorgvraag schat aan gegevens over hun doelgroepen en ontsluit..."
+          },
+          {
+            "claim_id": "clm__reg_ggd_flevoland_bestuursrapportage_aug_2024_governance_and_finance_002",
+            "issue_codes": [
+              "bullet_or_heading_fragment"
+            ],
+            "statement_excerpt": "2. Concept-notulen 2.1 Concept-notulen 04 september 2024 T.a.v. agendapunt 3 procesnotitie integraal huisvestingsplan bij de 3e bullet van het besluit, geeft de heer Van de Beld aan dat hij samen met de heer Van Gulick en een externe deel zou uitmaken van de bestuurlijke stuurgroep. Daarnaast zou het gehele bestuur betrokken worden bij het plan. T.a.v. agendapunt 4 plan van uitvoering toekomstg..."
+          },
           {
             "claim_id": "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_d5_003",
             "issue_codes": [
               "fragment_too_short"
             ],
             "statement_excerpt": "4 Valpreventieve beweeginterventies ......................................................................................"
-          },
-          {
-            "claim_id": "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_d6_003",
-            "issue_codes": [
-              "bullet_or_heading_fragment"
-            ],
-            "statement_excerpt": "2. Overzicht van de ketenaanpak Ketenstappen 1. Signaleren: Iedereen, zowel professional als inwoner, kan een rol spelen in het signaleren van een mogelijk verhoogd valrisico bij thuiswonende 65-plussers. 2. Afname valrisicotest: Professionals nemen, geïntegreerd in hun reguliere werkzaamheden, valrisicotesten af. Daarnaast worden hiervoor gerichte inloopmomenten georganiseerd (zie ggdflevoland..."
-          },
-          {
-            "claim_id": "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_governance_and_finance_001",
-            "issue_codes": [
-              "fragment_too_short"
-            ],
-            "statement_excerpt": "Financiering en declaraties ......................................................................................."
-          },
-          {
-            "claim_id": "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_monitoring_and_evaluation_001",
-            "issue_codes": [
-              "fragment_too_short"
-            ],
-            "statement_excerpt": "Monitoring, registratie en kwaliteit ............................................................................"
-          },
-          {
-            "claim_id": "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_monitoring_and_evaluation_002",
-            "issue_codes": [
-              "fragment_too_short"
-            ],
-            "statement_excerpt": "10 Monitoring en registratie hoog valrisico ..............................................................................."
-          },
-          {
-            "claim_id": "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_monitoring_and_evaluation_003",
-            "issue_codes": [
-              "fragment_too_short"
-            ],
-            "statement_excerpt": "20 Excel sjabloon voor monitoring en registratie ......................................................................"
-          },
-          {
-            "claim_id": "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_timeline_and_status_001",
-            "issue_codes": [
-              "unverified_extraction_length"
-            ],
-            "statement_excerpt": "€ 3500,- per groep* Afname valanalyse** € 21,45 (2025) / € 22,53 (2026) per 15 minuten met een maximum van 90 minuten. * inclusief kosten voor handboeken, huur locatie, koffie/thee, etc. exclusief eigen bedrage van maximaal € 20,- per deelnemer ** tijdelijke regeling in afwachting van digitaal platform Let op: Alle genoemde bedragen zijn exclusief 21% btw. De btw dient duidelijk en apart vermel..."
-          },
-          {
-            "claim_id": "clm__reg_ggd_flevoland_valpreventie_lelystad_2025_d5_003",
-            "issue_codes": [
-              "fragment_too_short"
-            ],
-            "statement_excerpt": "3 Valpreventieve beweeginterventies ......................................................................................"
           }
         ]
       },
       {
         "path": "data/site/site_home_view.json",
         "page_group": "site_home_view",
-        "rough_claim_count": 31,
+        "rough_claim_count": 19,
         "sample_claims": [
           {
-            "claim_id": "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_d5_003",
-            "issue_codes": [
-              "fragment_too_short"
-            ],
-            "statement_excerpt": "4 Valpreventieve beweeginterventies ......................................................................................"
-          },
-          {
-            "claim_id": "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_d6_003",
+            "claim_id": "clm__reg_centrumregeling_sociaal_domein_flevoland_governance_and_finance_001",
             "issue_codes": [
               "bullet_or_heading_fragment"
             ],
-            "statement_excerpt": "2. Overzicht van de ketenaanpak Ketenstappen 1. Signaleren: Iedereen, zowel professional als inwoner, kan een rol spelen in het signaleren van een mogelijk verhoogd valrisico bij thuiswonende 65-plussers. 2. Afname valrisicotest: Professionals nemen, geïntegreerd in hun reguliere werkzaamheden, valrisicotesten af. Daarnaast worden hiervoor gerichte inloopmomenten georganiseerd (zie ggdflevoland..."
+            "statement_excerpt": "1. In een tussen de colleges van de regiogemeenten en Almere te sluiten dienstverleningshandvest, wordt nadere uitwerking gegeven aan deze regeling. In het dienstverleningshandvest wordt in ieder geval geregeld: De uitvoeringskaders behorende bij de genoemde taken; De kwaliteitseisen waaraan de taakuitoefening door Almere moet voldoen; De hoogte van de financiële bijdrage voor de taakuitvoering..."
           },
           {
-            "claim_id": "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_governance_and_finance_001",
-            "issue_codes": [
-              "fragment_too_short"
-            ],
-            "statement_excerpt": "Financiering en declaraties ......................................................................................."
-          },
-          {
-            "claim_id": "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_monitoring_and_evaluation_001",
-            "issue_codes": [
-              "fragment_too_short"
-            ],
-            "statement_excerpt": "Monitoring, registratie en kwaliteit ............................................................................"
-          },
-          {
-            "claim_id": "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_monitoring_and_evaluation_002",
-            "issue_codes": [
-              "fragment_too_short"
-            ],
-            "statement_excerpt": "10 Monitoring en registratie hoog valrisico ..............................................................................."
-          },
-          {
-            "claim_id": "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_monitoring_and_evaluation_003",
-            "issue_codes": [
-              "fragment_too_short"
-            ],
-            "statement_excerpt": "20 Excel sjabloon voor monitoring en registratie ......................................................................"
-          },
-          {
-            "claim_id": "clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_timeline_and_status_001",
+            "claim_id": "clm__reg_proscoop_zorgzaam_flevoland_netwerkbureau_2024_d5_002",
             "issue_codes": [
               "unverified_extraction_length"
             ],
-            "statement_excerpt": "€ 3500,- per groep* Afname valanalyse** € 21,45 (2025) / € 22,53 (2026) per 15 minuten met een maximum van 90 minuten. * inclusief kosten voor handboeken, huur locatie, koffie/thee, etc. exclusief eigen bedrage van maximaal € 20,- per deelnemer ** tijdelijke regeling in afwachting van digitaal platform Let op: Alle genoemde bedragen zijn exclusief 21% btw. De btw dient duidelijk en apart vermel..."
+            "statement_excerpt": "Versterking Eerstelijn - Digitale Zorg - Geboortezorg - GGZ - Integraal Zorg Akkoord - Oncologie - Ouderenzorg - Paramedie - Positieve Gezondheid - Welzijn op Recept - Achterhoek - Apeldoorn - Centraal Gelderland - Drenthe - Flevoland - Salland - Vechtdal - Zutphen - Zwolle - Kennisbank - Onze mensen - Werken bij - Agenda - Actueel - Contact Home Actueel Drie vloten, één missie: Zorgzaam Flevoland"
           },
           {
-            "claim_id": "clm__reg_ggd_flevoland_valpreventie_lelystad_2025_d5_003",
+            "claim_id": "clm__reg_proscoop_zorgzaam_flevoland_netwerkbureau_2024_municipal_translation_002",
             "issue_codes": [
-              "fragment_too_short"
+              "unverified_extraction_length"
             ],
-            "statement_excerpt": "3 Valpreventieve beweeginterventies ......................................................................................"
+            "statement_excerpt": "Versterking Eerstelijn - Digitale Zorg - Geboortezorg - GGZ - Integraal Zorg Akkoord - Oncologie - Ouderenzorg - Paramedie - Positieve Gezondheid - Welzijn op Recept - Achterhoek - Apeldoorn - Centraal Gelderland - Drenthe - Flevoland - Salland - Vechtdal - Zutphen - Zwolle - Kennisbank - Onze mensen - Werken bij - Agenda - Actueel - Contact Home Actueel Drie vloten, één missie: Zorgzaam Flevoland"
+          },
+          {
+            "claim_id": "clm__reg_proscoop_zorgzaam_flevoland_netwerkbureau_2024_timeline_and_status_001",
+            "issue_codes": [
+              "unverified_extraction_length"
+            ],
+            "statement_excerpt": "van Kleffensstraat 6 6842 CV Arnhem Trefpunt Zutphen Vijverstaete Piet Heinstraat 11 7204 JN Zutphen - Regio’s - Dossiers - Kennisbank - Nieuwsbrieven - Jaarberichten - Werken bij - Actueel - Agenda - Contact - Disclaimer - Privacy- en cookieverklaring - Algemene voorwaarden - Sitemap - Colofon Copyright Proscoop 2026 Ontwerp en realisatie Advice"
+          },
+          {
+            "claim_id": "clm__reg_proscoop_zorgzaam_flevoland_netwerkbureau_2024_timeline_and_status_002",
+            "issue_codes": [
+              "unverified_extraction_length"
+            ],
+            "statement_excerpt": "Copyright Proscoop 2026 Ontwerp en realisatie Advice Functioneel Functioneel Altijd actief Voorkeuren Voorkeuren Statistieken Statistieken Marketing Marketing - Beheer opties - Beheer diensten - Beheer {vendor_count} leveranciers - Lees meer over deze doeleinden - {title} - {title} - {title}"
+          },
+          {
+            "claim_id": "clm__reg_ggd_flevoland_bestuursrapportage_aug_2024_d6_002",
+            "issue_codes": [
+              "bullet_or_heading_fragment"
+            ],
+            "statement_excerpt": "3. Maatschappelijke en organisatorische ontwikkelingen 3.1 Beweging van ziekte en zorg naar De verschillende GGD-afdelingen (zoals Maatschappelijke gezondheid en gedrag Gezondheidszorg, Jeugdgezondheidszorg GGD en Gezondheids­ bevordering & Onderzoek) en JGZ Almere beschikken over een De Flevolandse bevolking wordt steeds ouder en de zorgvraag schat aan gegevens over hun doelgroepen en ontsluit..."
+          },
+          {
+            "claim_id": "clm__reg_ggd_flevoland_bestuursrapportage_aug_2024_governance_and_finance_002",
+            "issue_codes": [
+              "bullet_or_heading_fragment"
+            ],
+            "statement_excerpt": "2. Concept-notulen 2.1 Concept-notulen 04 september 2024 T.a.v. agendapunt 3 procesnotitie integraal huisvestingsplan bij de 3e bullet van het besluit, geeft de heer Van de Beld aan dat hij samen met de heer Van Gulick en een externe deel zou uitmaken van de bestuurlijke stuurgroep. Daarnaast zou het gehele bestuur betrokken worden bij het plan. T.a.v. agendapunt 4 plan van uitvoering toekomstg..."
+          },
+          {
+            "claim_id": "clm__mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst_timeline_and_status_001",
+            "issue_codes": [
+              "unverified_extraction_length"
+            ],
+            "statement_excerpt": "Doelstellingen Proces 1. Uiterlijk in het vierde kwartaal van 2024 leveren we een uitvoeringsagenda op die samen met partners en inwoners tot stand is gebracht. 2. Uiterlijk in het vierde kwartaal van 2024 leveren we een sociale investeringsagenda op. Deze geeft een haalbaar en in tijd uitgezet perspectief op het realiseren van een voldoende voorzieningenniveau in alle Almeerse wijken. 3. We ev..."
           }
         ]
       },
       {
         "path": "data/site/site_almere_view.json",
         "page_group": "site_almere_view",
-        "rough_claim_count": 18,
+        "rough_claim_count": 17,
         "sample_claims": [
           {
             "claim_id": "clm__mun_almere_pga_transformatieplan_municipal_translation_001",
@@ -4886,13 +4985,6 @@
               "english_summary"
             ],
             "statement_excerpt": "The sheet describes D5 as a way to implement proven effective basisfunctionaliteiten such as sociaal verwijzen and valpreventie on a regional scale."
-          },
-          {
-            "claim_id": "clm__nat_azwa_2026_cw31_kader_d5_d6_d5_001",
-            "issue_codes": [
-              "english_summary"
-            ],
-            "statement_excerpt": "The D5 objective is to strengthen care-social cooperation so people get equal access to the care and support they need, with sociaal verwijzen named as an example."
           },
           {
             "claim_id": "clm__mun_almere_2024_2026_visie_gezondheidsbeleid_raadsvoorstel_geamendeerd_governance_and_finance_002",
@@ -4921,6 +5013,13 @@
               "english_summary"
             ],
             "statement_excerpt": "Monitoring and learning are explicit parts of the local model, including 'Samen leren' and 'Monitoren'."
+          },
+          {
+            "claim_id": "clm__nat_azwa_2025_onderhandelaarsakkoord_monitoring_and_evaluation_002",
+            "issue_codes": [
+              "english_summary"
+            ],
+            "statement_excerpt": "The overall monitoring chapter builds on the IZA monitor, keeps process-output-outcome levels, and asks for a workafspraak on transitiedoelen before the end of 2025."
           }
         ]
       },

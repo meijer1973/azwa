@@ -764,7 +764,7 @@ def locality_status_for(
     if has_adoption_gap and (explicit_almere or explicit_flevoland or is_locality_topic or inferred_local):
         status = "local_adoption_gap"
         label = "Lokale adoptie- of documentatiegap"
-        scope = "Almere/Flevoland validation"
+        scope = "Gemeente Almere and relevant IZA/AZWA-regio Flevoland validation"
         guardrail = "Formuleer als lokale adoptie- of documentatiegap; niet als lokaal vastgesteld beleid."
     elif explicit_almere:
         status = "explicit_almere"

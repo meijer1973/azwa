@@ -190,10 +190,33 @@ def build_process_context() -> dict[str, Any]:
             "role": "regional consolidation and drafting",
         },
         "regional_process_owner": {
-            "organisation": "mandaatgemeente and preferente zorgverzekeraar",
-            "role": "prepare regional workagenda with regional partners",
+            "organisation": "Gemeente Almere as mandaatgemeente for IZA/AZWA-regio Flevoland, with preferente zorgverzekeraar and regional partners",
+            "role": "municipal financing/coordination node and regional workagenda preparation; not the province and not proof of sole regional ownership",
             "source_id": "nat_zorgakkoorden_werkagenda_handvatten_2026",
         },
+        "regional_coordination_entities": [
+            {
+                "organisation": "Verbindende Coalitie Zorgzaam Flevoland",
+                "role": "regional steering/forum candidate for IZA-opgaven; decision authority and relation to colleges still need validation",
+                "source_ids": [
+                    "reg_noordoostpolder_iza_status_memo_2024",
+                    "reg_provincie_flevoland_verbindende_coalitie_2024",
+                ],
+            },
+            {
+                "organisation": "Netwerkbureau Zorgzaam Flevoland",
+                "role": "regional support bureau for overview, coherence, monitoring, learning and connection; host, reporting line and continuity still need validation",
+                "source_ids": [
+                    "reg_noordoostpolder_iza_status_memo_2024",
+                    "reg_zonmw_zorgzaam_flevoland_project",
+                    "reg_proscoop_zorgzaam_flevoland_netwerkbureau_2024",
+                ],
+            },
+        ],
+        "scale_guardrail": (
+            "Almere always means the municipality. Flevoland can mean province, IZA/AZWA-regio, GGD-regio, "
+            "zorgkantoor/ROAZ context or broader regional wording; write the intended scale explicitly."
+        ),
         "primary_municipality_delivery_target": {
             "date": MUNICIPAL_DELIVERY_TARGET_DATE,
             "description": (

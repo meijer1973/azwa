@@ -167,7 +167,7 @@ def field_statuses_for(
         ),
         "gewenste_situatie": status_cell(
             "B",
-            "National workagenda sources describe the target direction, but Almere/Flevoland must validate the local design.",
+            "National workagenda sources describe the target direction, but gemeente Almere and, where relevant, IZA/AZWA-regio Flevoland must validate the local design.",
         ),
         "ingroeipad_2030": status_cell(
             "D",
@@ -266,7 +266,7 @@ def matrix_row(
 
 def next_action_for(required: bool, target_id: str, operational_target: dict[str, Any], public_foundation: str) -> str:
     if not required:
-        return "Decide whether this optional/conditional item belongs in the Almere/Flevoland workagenda scope."
+        return "Decide whether this optional/conditional item belongs in the gemeente Almere and IZA/AZWA-regio Flevoland workagenda scope."
     questions = operational_target.get("review_questions", [])
     if questions:
         return f"Prepare constrained validation ticket: {questions[0]}"

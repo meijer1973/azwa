@@ -24,13 +24,13 @@ No row is ready for drafting yet. The next sprint should turn these rows into co
 | Sociaal verwijzen | Yes | sterk | geel | finance, owner, decision, D6 dependency | Prepare constrained validation ticket: Welke actuele Almeerse verwijzingsroute en brugfunctie bestaan al? |
 | Valpreventie | Yes | sterk | geel | finance, owner, decision, D6 dependency | Prepare constrained validation ticket: Wat is het actuele aantal 65-plussers per peildatum? |
 | Ketenaanpak overgewicht en obesitas volwassenen | Yes | deels | geel | finance, owner, decision, D6 dependency | Prepare constrained validation ticket: Welke GLI-capaciteit en leefstijl-/beweegcapaciteit zijn in Almere beschikbaar? |
-| Kansrijke Start | Yes | zwak | rood | finance, owner, decision, D6 dependency | Prepare constrained validation ticket: Welke actuele coalitie Kansrijke Start bestaat in Almere/Flevoland? |
+| Kansrijke Start | Yes | zwak | rood | finance, owner, decision, D6 dependency | Prepare constrained validation ticket: Welke actuele coalitie Kansrijke Start bestaat in gemeente Almere en, waar relevant, op IZA/AZWA-regio Flevoland-schaal? |
 | Integrale gezinspoli | Yes | zwak | rood | finance, owner, decision, D6 dependency | Prepare constrained validation ticket: Is er in Almere of Flevoland al een integrale gezinspoli of voorbereiding? |
 | Nu Niet Zwanger | Yes | zwak | rood | finance, owner, decision, D6 dependency | Prepare constrained validation ticket: Wordt NNZ bestuurlijk op GGD-regio, IZA/AZWA-regio of gemeentelijke schaal georganiseerd? |
-| Mentale gezondheidsnetwerken | Yes | deels | geel | finance, owner, decision, D6 dependency | Prepare constrained validation ticket: Welk MGN-transformatieplan is voor Flevoland/Almere leidend? |
+| Mentale gezondheidsnetwerken | Yes | deels | geel | finance, owner, decision, D6 dependency | Prepare constrained validation ticket: Welk MGN-transformatieplan is leidend voor gemeente Almere en, waar relevant, de IZA/AZWA-regio Flevoland? |
 | Ketenaanpak overgewicht en obesitas kinderen | Yes | zwak | rood | finance, owner, decision, D6 dependency | Prepare constrained validation ticket: Wat is het actuele aantal jeugdigen per peildatum? |
-| Ontwikkelagenda 1 nieuw: dementie, nicotinevrij, rookvrije start, multiproblematiek NPLV | Conditional | zwak | grijs | scope choice | Decide whether this optional/conditional item belongs in the Almere/Flevoland workagenda scope. |
-| Ontwikkelagenda 2 en overige initiatieven | Conditional | zwak | grijs | scope choice | Decide whether this optional/conditional item belongs in the Almere/Flevoland workagenda scope. |
+| Ontwikkelagenda 1 nieuw: dementie, nicotinevrij, rookvrije start, multiproblematiek NPLV | Conditional | zwak | grijs | scope choice | Decide whether this optional/conditional item belongs in the gemeente Almere and IZA/AZWA-regio Flevoland workagenda scope. |
+| Ontwikkelagenda 2 en overige initiatieven | Conditional | zwak | grijs | scope choice | Decide whether this optional/conditional item belongs in the gemeente Almere and IZA/AZWA-regio Flevoland workagenda scope. |
 
 ## Field Status Meaning
 

@@ -1,15 +1,33 @@
 {
   "title": "Regional roles and splits around Almere and Flevoland",
-  "as_of_date": "2026-04-24",
-  "purpose": "Make regional scale, formal mandate, coordination, and execution roles explicit so reports and agents do not collapse them into a single 'region' concept.",
-  "editorial_rule": "Do not use 'Flevoland', 'de regio', or 'mandaatgemeente' as generic shorthand when IZA/AZWA-regio, GGD-regio, zorgkantoorregio, ROAZ/subregio, or practical task ownership matters.",
+  "as_of_date": "2026-05-11",
+  "purpose": "Make regional scale, formal mandate, coordination, support-bureau, province, and execution roles explicit so reports and agents do not collapse them into a single 'region' concept.",
+  "editorial_rule": "Do not use 'Flevoland', 'de regio', 'Flevoland - Almere', or 'mandaatgemeente' as generic shorthand when IZA/AZWA-regio, provincie, GGD-regio, zorgkantoorregio, ROAZ/subregio, Netwerkbureau, Verbindende Coalitie, or practical task ownership matters.",
   "role_types": [
     {
       "role_type": "formal_mandaatgemeente",
       "meaning": "Gemeente die namens alle gemeenten in een IZA-regio regionale middelen aanvraagt en verantwoordt, en hierover afspraken kan maken met andere partijen.",
       "source_ids": [
-        "nat_azwa_opdracht_werkagenda_d5_2026"
+        "nat_azwa_opdracht_werkagenda_d5_2026",
+        "nat_dusi_spuk_iza_2023_2026",
+        "nat_vws_spuk_iza_brede_spuk_mandaatgemeente_2025"
       ]
+    },
+    {
+      "role_type": "province_public_body",
+      "meaning": "Provincie als eigen openbaar lichaam en gebiedslaag; niet hetzelfde als IZA/AZWA-regio Flevoland of mandaatgemeente Almere."
+    },
+    {
+      "role_type": "region_label_not_actor",
+      "meaning": "Regio-aanduiding voor een samenwerkingsgebied. Dit is geen uitvoerende organisatie, gemeente, provincie of formele eigenaar."
+    },
+    {
+      "role_type": "regional_steering_forum",
+      "meaning": "Bestuurlijk of netwerkplatform voor regionale sturing, overzicht en verbinding; niet automatisch een rechtspersoon of formeel mandaat."
+    },
+    {
+      "role_type": "regional_support_bureau",
+      "meaning": "Kleine ondersteuningsorganisatie of bureau voor samenhang, overzicht, monitoring, leren, communicatie of procesondersteuning; niet hetzelfde als eigenaar of mandaatgemeente."
     },
     {
       "role_type": "regional_coordination",
@@ -26,10 +44,22 @@
   ],
   "regional_splits": [
     {
+      "split_id": "province_flevoland_public_body",
+      "region_type": "provincie",
+      "label": "Provincie Flevoland",
+      "almere_position": "Almere ligt in de provincie Flevoland, maar de provincie is niet hetzelfde als de IZA/AZWA-regio of de mandaatgemeente.",
+      "source_status": "source_backed_context",
+      "source_ids": [
+        "reg_provincie_flevoland_verbindende_coalitie_2024",
+        "reg_flevoland_2023_regiobeeld"
+      ],
+      "agent_warning": "Use province wording only when the source is about the provincial public body or provincial territory. Do not treat the province as the IZA/AZWA workagenda actor."
+    },
+    {
       "split_id": "iza_azwa_regio_flevoland",
       "region_type": "IZA/AZWA-regio",
       "label": "IZA/AZWA-regio Flevoland",
-      "almere_position": "Deelnemer; extern genoemd als mandaatgemeente voor Flevoland.",
+      "almere_position": "Deelnemer en bronvast genoemd als mandaatgemeente for the Flevoland SPUK/IZA route.",
       "included_municipalities": [
         "Almere",
         "Dronten",
@@ -40,13 +70,29 @@
       "not_in_this_split_or_exception": [
         "Zeewolde sluit voor het regioplan aan bij Noord-Veluwe."
       ],
-      "source_status": "source_backed_with_review_note",
+      "source_status": "source_backed_with_scope_note",
       "source_ids": [
         "reg_flevoland_2023_regiobeeld",
         "reg_flevoland_2023_regioplan_iza",
+        "reg_provincie_flevoland_verbindende_coalitie_2024",
+        "reg_noordoostpolder_iza_status_memo_2024",
+        "nat_vws_spuk_iza_brede_spuk_mandaatgemeente_2025",
         "external_mentale_gezondheidsnetwerken_allenetwerken"
       ],
-      "agent_warning": "Use this split for IZA/AZWA workagenda and mandaatgemeente wording; do not infer that all execution sits with Almere."
+      "agent_warning": "Use this split for IZA/AZWA workagenda and mandaatgemeente wording; do not infer that all execution sits with Almere or that the province is the same actor."
+    },
+    {
+      "split_id": "spuk_annex_flevoland_almere",
+      "region_type": "regio_mandaatgemeente_pair",
+      "label": "Flevoland - Almere in SPUK/mandaatgemeente tables",
+      "almere_position": "Almere is the mandaatgemeente named for the Flevoland route.",
+      "meaning": "Read as two fields: Regio = Flevoland; Mandaatgemeente = Almere.",
+      "source_status": "source_backed_pair_not_actor",
+      "source_ids": [
+        "nat_vws_spuk_iza_brede_spuk_mandaatgemeente_2025",
+        "nat_dusi_spuk_iza_2023_2026"
+      ],
+      "agent_warning": "Never turn 'Flevoland - Almere' into one actor. Write 'regio Flevoland met gemeente Almere als mandaatgemeente' when that is the intended meaning."
     },
     {
       "split_id": "zorgkantoorregio_t_gooi",
@@ -86,7 +132,8 @@
       "source_status": "source_backed",
       "source_ids": [
         "external_ggd_flevoland_gemeenten",
-        "external_ggd_flevoland_begroting_2026"
+        "external_ggd_flevoland_begroting_2026",
+        "reg_ggd_flevoland_bestuursrapportage_aug_2024"
       ],
       "agent_warning": "Use GGD-regio wording for GGD-executed tasks; this scale includes Zeewolde and may differ from the IZA/AZWA-regio."
     },
@@ -95,16 +142,18 @@
       "region_type": "subregio",
       "label": "Subregionale aanpakken vanuit Regioplan IZA Flevoland",
       "subregions": [
-        "Almere",
+        "Almere / subregio Zuid",
         "Lelystad/Dronten",
         "Noordoostpolder/Urk"
       ],
       "source_status": "source_backed",
       "source_ids": [
         "reg_flevoland_2023_regioplan_iza",
+        "reg_noordoostpolder_iza_status_memo_2024",
+        "reg_zonmw_zorgzaam_flevoland_project",
         "external_ggd_flevoland_begroting_2026"
       ],
-      "agent_warning": "A subregional task in Lelystad/Dronten does not make Lelystad the formal mandaatgemeente."
+      "agent_warning": "A subregional task does not identify the formal mandaatgemeente. Validate the actor, scale and mandate per task."
     },
     {
       "split_id": "roaz_acute_care_lens",
@@ -132,18 +181,76 @@
         "Noordoostpolder",
         "Urk"
       ],
-      "source_status": "source_backed_with_review_note",
+      "source_status": "source_backed_with_scope_note",
       "source_ids": [
+        "nat_dusi_spuk_iza_2023_2026",
+        "nat_vws_spuk_iza_brede_spuk_mandaatgemeente_2025",
         "external_mentale_gezondheidsnetwerken_allenetwerken",
         "nat_azwa_opdracht_werkagenda_d5_2026"
       ],
-      "public_wording": "Voor de Flevolandse IZA/AZWA-route wordt Almere in externe netwerkgegevens als mandaatgemeente genoemd. De mandaatgemeente-rol gaat over regionale middelen en afspraken namens gemeenten in de IZA-regio.",
+      "public_wording": "Voor de Flevolandse IZA/AZWA-route wordt Almere als mandaatgemeente genoemd. De mandaatgemeente-rol gaat over regionale middelen en afspraken namens gemeenten in de IZA-regio.",
       "does_not_mean": [
         "Almere voert alle regionale taken zelf uit.",
         "Almere is automatisch trekker van elk subregionaal of thematisch project.",
-        "Lelystad kan geen praktische uitvoerings- of coordinatierol hebben."
+        "Flevoland en Almere vormen samen een actor.",
+        "De provincie Flevoland is hetzelfde als de IZA/AZWA-regio."
       ],
       "review_note": "Een lokaal mandaatbesluit of expliciete regionale bestuursovereenkomst is nog waardevol als aanvullende bron."
+    },
+    {
+      "role_id": "province_flevoland_distinct_public_body",
+      "role_type": "province_public_body",
+      "actor": "Provincie Flevoland",
+      "applies_to_region": "provincie Flevoland",
+      "source_status": "source_backed_context",
+      "source_ids": [
+        "reg_provincie_flevoland_verbindende_coalitie_2024"
+      ],
+      "public_wording": "De provincie Flevoland is een eigen openbaar lichaam en gebiedslaag. In de governancebronnen komt de provincie voor als context- en betrokken actor, niet als mandaatgemeente voor de IZA/AZWA-regio.",
+      "does_not_mean": [
+        "Provincie Flevoland is hetzelfde als IZA/AZWA-regio Flevoland.",
+        "Provincie Flevoland is de mandaatgemeente.",
+        "Provinciale betrokkenheid bepaalt de gemeentelijke taakverdeling."
+      ]
+    },
+    {
+      "role_id": "verbindende_coalitie_zorgzaam_flevoland",
+      "role_type": "regional_steering_forum",
+      "actor": "Verbindende Coalitie Zorgzaam Flevoland",
+      "applies_to_region": "IZA/AZWA-regio Flevoland / Zorgzaam Flevoland",
+      "source_status": "source_backed_coordination_forum_needs_formal_mandate_validation",
+      "source_ids": [
+        "reg_noordoostpolder_iza_status_memo_2024",
+        "reg_provincie_flevoland_verbindende_coalitie_2024",
+        "reg_flevoland_2023_regioplan_iza"
+      ],
+      "public_wording": "De Verbindende Coalitie Zorgzaam Flevoland is een regionaal bestuurlijk netwerk/platform dat sturing, overzicht en verbinding rond de IZA-opgaven ondersteunt.",
+      "does_not_mean": [
+        "De Verbindende Coalitie is automatisch een rechtspersoon.",
+        "De Verbindende Coalitie vervangt de mandaatgemeente Almere.",
+        "Iedere D5- of D6-taak heeft hiermee een vastgestelde eigenaar."
+      ],
+      "review_note": "Valideer per onderwerp besluitbevoegdheid, rapportagelijn, deelnemende partijen en verhouding tot colleges/gemeenteraden."
+    },
+    {
+      "role_id": "netwerkbureau_zorgzaam_flevoland",
+      "role_type": "regional_support_bureau",
+      "actor": "Netwerkbureau Zorgzaam Flevoland",
+      "applies_to_region": "Zorgzaam Flevoland / IZA/AZWA-regio Flevoland",
+      "source_status": "source_backed_support_bureau_needs_host_and_reporting_validation",
+      "source_ids": [
+        "reg_noordoostpolder_iza_status_memo_2024",
+        "reg_zonmw_zorgzaam_flevoland_project",
+        "reg_proscoop_zorgzaam_flevoland_netwerkbureau_2024",
+        "reg_ggd_flevoland_bestuursrapportage_aug_2024"
+      ],
+      "public_wording": "Het Netwerkbureau Zorgzaam Flevoland is een regionale ondersteuningsorganisatie voor samenhang, overzicht, monitoring, leren, afstemming, communicatie en verbinding.",
+      "does_not_mean": [
+        "Het Netwerkbureau is de mandaatgemeente.",
+        "Het Netwerkbureau is de formele eigenaar van alle regionale uitvoering.",
+        "Een coordinatie- of secretarisrol bewijst budgethouderschap of bestuurlijk mandaat."
+      ],
+      "review_note": "Valideer host-organisatie, coordinator/secretaris, rapportagelijn, financiering na projectperiode en welke taken feitelijk bij het bureau liggen."
     },
     {
       "role_id": "zorgzaam_flevoland_regional_movement",
@@ -153,7 +260,9 @@
       "source_status": "source_backed",
       "source_ids": [
         "reg_flevoland_2023_regioplan_iza",
-        "external_flever_zorgzaam_flevoland"
+        "reg_flever_zorgzaam_flevoland_project",
+        "reg_zonmw_zorgzaam_flevoland_project",
+        "reg_provincie_flevoland_verbindende_coalitie_2024"
       ],
       "public_wording": "Zorgzaam Flevoland is de regionale beweging die vanuit het IZA Regioplan is ontstaan; Flever ondersteunt deze beweging.",
       "does_not_mean": [
@@ -169,11 +278,13 @@
       "source_status": "source_backed",
       "source_ids": [
         "nat_azwa_opdracht_werkagenda_d5_2026",
-        "external_ggd_flevoland_begroting_2026"
+        "external_ggd_flevoland_begroting_2026",
+        "reg_ggd_flevoland_bestuursrapportage_aug_2024"
       ],
       "public_wording": "Voor GGD-uitgevoerde onderdelen kan de GGD-regio de natuurlijke schaal zijn; de landelijke werkagenda-bron waarschuwt dat GGD-regio en IZA-regio niet overal overeenkomen.",
       "does_not_mean": [
-        "GGD-schaal is automatisch gelijk aan IZA/AZWA-regio Flevoland."
+        "GGD-schaal is automatisch gelijk aan IZA/AZWA-regio Flevoland.",
+        "Een GGD-advies- of monitoringrol maakt GGD Flevoland niet automatisch eigenaar van D6."
       ]
     },
     {
@@ -216,7 +327,7 @@
       "source_id": "external_ggd_flevoland_begroting_2026",
       "title": "GGD Flevoland Begroting 2026",
       "url": "https://www.ggdflevoland.nl/app/uploads/sites/6/2025/10/Begroting-2026-GGD-Flevoland.pdf",
-      "used_for": "GGD role and subregions Almere, Lelystad/Dronten, Noordoostpolder/Urk."
+      "used_for": "GGD role and subregions Almere, Lelystad/Dronten and Noordoostpolder/Urk."
     }
   ]
 }

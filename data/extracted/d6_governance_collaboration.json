@@ -1,6 +1,6 @@
 {
   "layer_run_id": "phase25_4_d6_governance_collaboration_v1",
-  "generated_on": "2026-05-09",
+  "generated_on": "2026-05-11",
   "status": "active_sprint_support",
   "sprint": "25.4 D6 governance en samenwerking",
   "purpose": "Make D6 role allocation, scale, collaboration, monitoring, and remaining validation questions explicit from the public corpus.",
@@ -12,22 +12,34 @@
   ],
   "summary": {
     "dimension_count": 5,
-    "actor_role_count": 6,
+    "actor_role_count": 8,
     "responsibility_slot_count": 5,
     "responsibility_assignment_count": 25,
     "decision_question_count": 25,
     "dimensions_with_public_claims": 5,
-    "local_validation_field_count": 86,
+    "local_validation_field_count": 96,
     "nulmeting_target_count": 11
   },
   "regional_guardrail": {
-    "editorial_rule": "Do not use 'Flevoland', 'de regio', or 'mandaatgemeente' as generic shorthand when IZA/AZWA-regio, GGD-regio, zorgkantoorregio, ROAZ/subregio, or practical task ownership matters.",
+    "editorial_rule": "Do not use 'Flevoland', 'de regio', 'Flevoland - Almere', or 'mandaatgemeente' as generic shorthand when IZA/AZWA-regio, provincie, GGD-regio, zorgkantoorregio, ROAZ/subregio, Netwerkbureau, Verbindende Coalitie, or practical task ownership matters.",
     "regional_splits": [
+      {
+        "split_id": "province_flevoland_public_body",
+        "region_type": "provincie",
+        "label": "Provincie Flevoland",
+        "almere_position": "Almere ligt in de provincie Flevoland, maar de provincie is niet hetzelfde als de IZA/AZWA-regio of de mandaatgemeente.",
+        "source_status": "source_backed_context",
+        "source_ids": [
+          "reg_provincie_flevoland_verbindende_coalitie_2024",
+          "reg_flevoland_2023_regiobeeld"
+        ],
+        "agent_warning": "Use province wording only when the source is about the provincial public body or provincial territory. Do not treat the province as the IZA/AZWA workagenda actor."
+      },
       {
         "split_id": "iza_azwa_regio_flevoland",
         "region_type": "IZA/AZWA-regio",
         "label": "IZA/AZWA-regio Flevoland",
-        "almere_position": "Deelnemer; extern genoemd als mandaatgemeente voor Flevoland.",
+        "almere_position": "Deelnemer en bronvast genoemd als mandaatgemeente for the Flevoland SPUK/IZA route.",
         "included_municipalities": [
           "Almere",
           "Dronten",
@@ -38,13 +50,29 @@
         "not_in_this_split_or_exception": [
           "Zeewolde sluit voor het regioplan aan bij Noord-Veluwe."
         ],
-        "source_status": "source_backed_with_review_note",
+        "source_status": "source_backed_with_scope_note",
         "source_ids": [
           "reg_flevoland_2023_regiobeeld",
           "reg_flevoland_2023_regioplan_iza",
+          "reg_provincie_flevoland_verbindende_coalitie_2024",
+          "reg_noordoostpolder_iza_status_memo_2024",
+          "nat_vws_spuk_iza_brede_spuk_mandaatgemeente_2025",
           "external_mentale_gezondheidsnetwerken_allenetwerken"
         ],
-        "agent_warning": "Use this split for IZA/AZWA workagenda and mandaatgemeente wording; do not infer that all execution sits with Almere."
+        "agent_warning": "Use this split for IZA/AZWA workagenda and mandaatgemeente wording; do not infer that all execution sits with Almere or that the province is the same actor."
+      },
+      {
+        "split_id": "spuk_annex_flevoland_almere",
+        "region_type": "regio_mandaatgemeente_pair",
+        "label": "Flevoland - Almere in SPUK/mandaatgemeente tables",
+        "almere_position": "Almere is the mandaatgemeente named for the Flevoland route.",
+        "meaning": "Read as two fields: Regio = Flevoland; Mandaatgemeente = Almere.",
+        "source_status": "source_backed_pair_not_actor",
+        "source_ids": [
+          "nat_vws_spuk_iza_brede_spuk_mandaatgemeente_2025",
+          "nat_dusi_spuk_iza_2023_2026"
+        ],
+        "agent_warning": "Never turn 'Flevoland - Almere' into one actor. Write 'regio Flevoland met gemeente Almere als mandaatgemeente' when that is the intended meaning."
       },
       {
         "split_id": "zorgkantoorregio_t_gooi",
@@ -84,7 +112,8 @@
         "source_status": "source_backed",
         "source_ids": [
           "external_ggd_flevoland_gemeenten",
-          "external_ggd_flevoland_begroting_2026"
+          "external_ggd_flevoland_begroting_2026",
+          "reg_ggd_flevoland_bestuursrapportage_aug_2024"
         ],
         "agent_warning": "Use GGD-regio wording for GGD-executed tasks; this scale includes Zeewolde and may differ from the IZA/AZWA-regio."
       },
@@ -93,16 +122,18 @@
         "region_type": "subregio",
         "label": "Subregionale aanpakken vanuit Regioplan IZA Flevoland",
         "subregions": [
-          "Almere",
+          "Almere / subregio Zuid",
           "Lelystad/Dronten",
           "Noordoostpolder/Urk"
         ],
         "source_status": "source_backed",
         "source_ids": [
           "reg_flevoland_2023_regioplan_iza",
+          "reg_noordoostpolder_iza_status_memo_2024",
+          "reg_zonmw_zorgzaam_flevoland_project",
           "external_ggd_flevoland_begroting_2026"
         ],
-        "agent_warning": "A subregional task in Lelystad/Dronten does not make Lelystad the formal mandaatgemeente."
+        "agent_warning": "A subregional task does not identify the formal mandaatgemeente. Validate the actor, scale and mandate per task."
       },
       {
         "split_id": "roaz_acute_care_lens",
@@ -130,18 +161,76 @@
           "Noordoostpolder",
           "Urk"
         ],
-        "source_status": "source_backed_with_review_note",
+        "source_status": "source_backed_with_scope_note",
         "source_ids": [
+          "nat_dusi_spuk_iza_2023_2026",
+          "nat_vws_spuk_iza_brede_spuk_mandaatgemeente_2025",
           "external_mentale_gezondheidsnetwerken_allenetwerken",
           "nat_azwa_opdracht_werkagenda_d5_2026"
         ],
-        "public_wording": "Voor de Flevolandse IZA/AZWA-route wordt Almere in externe netwerkgegevens als mandaatgemeente genoemd. De mandaatgemeente-rol gaat over regionale middelen en afspraken namens gemeenten in de IZA-regio.",
+        "public_wording": "Voor de Flevolandse IZA/AZWA-route wordt Almere als mandaatgemeente genoemd. De mandaatgemeente-rol gaat over regionale middelen en afspraken namens gemeenten in de IZA-regio.",
         "does_not_mean": [
           "Almere voert alle regionale taken zelf uit.",
           "Almere is automatisch trekker van elk subregionaal of thematisch project.",
-          "Lelystad kan geen praktische uitvoerings- of coordinatierol hebben."
+          "Flevoland en Almere vormen samen een actor.",
+          "De provincie Flevoland is hetzelfde als de IZA/AZWA-regio."
         ],
         "review_note": "Een lokaal mandaatbesluit of expliciete regionale bestuursovereenkomst is nog waardevol als aanvullende bron."
+      },
+      {
+        "role_id": "province_flevoland_distinct_public_body",
+        "role_type": "province_public_body",
+        "actor": "Provincie Flevoland",
+        "applies_to_region": "provincie Flevoland",
+        "source_status": "source_backed_context",
+        "source_ids": [
+          "reg_provincie_flevoland_verbindende_coalitie_2024"
+        ],
+        "public_wording": "De provincie Flevoland is een eigen openbaar lichaam en gebiedslaag. In de governancebronnen komt de provincie voor als context- en betrokken actor, niet als mandaatgemeente voor de IZA/AZWA-regio.",
+        "does_not_mean": [
+          "Provincie Flevoland is hetzelfde als IZA/AZWA-regio Flevoland.",
+          "Provincie Flevoland is de mandaatgemeente.",
+          "Provinciale betrokkenheid bepaalt de gemeentelijke taakverdeling."
+        ]
+      },
+      {
+        "role_id": "verbindende_coalitie_zorgzaam_flevoland",
+        "role_type": "regional_steering_forum",
+        "actor": "Verbindende Coalitie Zorgzaam Flevoland",
+        "applies_to_region": "IZA/AZWA-regio Flevoland / Zorgzaam Flevoland",
+        "source_status": "source_backed_coordination_forum_needs_formal_mandate_validation",
+        "source_ids": [
+          "reg_noordoostpolder_iza_status_memo_2024",
+          "reg_provincie_flevoland_verbindende_coalitie_2024",
+          "reg_flevoland_2023_regioplan_iza"
+        ],
+        "public_wording": "De Verbindende Coalitie Zorgzaam Flevoland is een regionaal bestuurlijk netwerk/platform dat sturing, overzicht en verbinding rond de IZA-opgaven ondersteunt.",
+        "does_not_mean": [
+          "De Verbindende Coalitie is automatisch een rechtspersoon.",
+          "De Verbindende Coalitie vervangt de mandaatgemeente Almere.",
+          "Iedere D5- of D6-taak heeft hiermee een vastgestelde eigenaar."
+        ],
+        "review_note": "Valideer per onderwerp besluitbevoegdheid, rapportagelijn, deelnemende partijen en verhouding tot colleges/gemeenteraden."
+      },
+      {
+        "role_id": "netwerkbureau_zorgzaam_flevoland",
+        "role_type": "regional_support_bureau",
+        "actor": "Netwerkbureau Zorgzaam Flevoland",
+        "applies_to_region": "Zorgzaam Flevoland / IZA/AZWA-regio Flevoland",
+        "source_status": "source_backed_support_bureau_needs_host_and_reporting_validation",
+        "source_ids": [
+          "reg_noordoostpolder_iza_status_memo_2024",
+          "reg_zonmw_zorgzaam_flevoland_project",
+          "reg_proscoop_zorgzaam_flevoland_netwerkbureau_2024",
+          "reg_ggd_flevoland_bestuursrapportage_aug_2024"
+        ],
+        "public_wording": "Het Netwerkbureau Zorgzaam Flevoland is een regionale ondersteuningsorganisatie voor samenhang, overzicht, monitoring, leren, afstemming, communicatie en verbinding.",
+        "does_not_mean": [
+          "Het Netwerkbureau is de mandaatgemeente.",
+          "Het Netwerkbureau is de formele eigenaar van alle regionale uitvoering.",
+          "Een coordinatie- of secretarisrol bewijst budgethouderschap of bestuurlijk mandaat."
+        ],
+        "review_note": "Valideer host-organisatie, coordinator/secretaris, rapportagelijn, financiering na projectperiode en welke taken feitelijk bij het bureau liggen."
       },
       {
         "role_id": "zorgzaam_flevoland_regional_movement",
@@ -151,7 +240,9 @@
         "source_status": "source_backed",
         "source_ids": [
           "reg_flevoland_2023_regioplan_iza",
-          "external_flever_zorgzaam_flevoland"
+          "reg_flever_zorgzaam_flevoland_project",
+          "reg_zonmw_zorgzaam_flevoland_project",
+          "reg_provincie_flevoland_verbindende_coalitie_2024"
         ],
         "public_wording": "Zorgzaam Flevoland is de regionale beweging die vanuit het IZA Regioplan is ontstaan; Flever ondersteunt deze beweging.",
         "does_not_mean": [
@@ -167,11 +258,13 @@
         "source_status": "source_backed",
         "source_ids": [
           "nat_azwa_opdracht_werkagenda_d5_2026",
-          "external_ggd_flevoland_begroting_2026"
+          "external_ggd_flevoland_begroting_2026",
+          "reg_ggd_flevoland_bestuursrapportage_aug_2024"
         ],
         "public_wording": "Voor GGD-uitgevoerde onderdelen kan de GGD-regio de natuurlijke schaal zijn; de landelijke werkagenda-bron waarschuwt dat GGD-regio en IZA-regio niet overal overeenkomen.",
         "does_not_mean": [
-          "GGD-schaal is automatisch gelijk aan IZA/AZWA-regio Flevoland."
+          "GGD-schaal is automatisch gelijk aan IZA/AZWA-regio Flevoland.",
+          "Een GGD-advies- of monitoringrol maakt GGD Flevoland niet automatisch eigenaar van D6."
         ]
       },
       {
@@ -238,11 +331,35 @@
     {
       "actor_id": "zorgzaam_flevoland_flever",
       "actor": "Zorgzaam Flevoland / Flever",
-      "public_role": "Regionale beweging en ondersteuning vanuit het IZA-regioplan; ZonMw-bron noemt doorontwikkeling van de samenwerkingsstructuur.",
+      "public_role": "Regionale beweging en ondersteuning vanuit het IZA-regioplan; bronnen onderscheiden dit van mandaatgemeente Almere, Verbindende Coalitie en Netwerkbureau.",
       "source_status": "source_backed_supporting_governance",
       "validation_needed": [
         "besluitvormende rol versus ondersteunende rol",
         "wie is aanspreekbaar per werkstroom"
+      ]
+    },
+    {
+      "actor_id": "verbindende_coalitie_zorgzaam_flevoland",
+      "actor": "Verbindende Coalitie Zorgzaam Flevoland",
+      "public_role": "Regionaal bestuurlijk netwerk/platform dat sturing, overzicht en verbinding rond de Flevolandse IZA-opgaven ondersteunt.",
+      "source_status": "source_backed_coordination_forum_needs_formal_mandate_validation",
+      "validation_needed": [
+        "deelnemende partijen en rol per partij",
+        "besluitbevoegdheid versus afstemming",
+        "verhouding tot colleges/gemeenteraden",
+        "verhouding tot mandaatgemeente Almere en preferente zorgverzekeraar"
+      ]
+    },
+    {
+      "actor_id": "netwerkbureau_zorgzaam_flevoland",
+      "actor": "Netwerkbureau Zorgzaam Flevoland",
+      "public_role": "Regionale ondersteuningsorganisatie voor samenhang, overzicht, monitoring, leren, communicatie, afstemming en verbinding tussen initiatieven.",
+      "source_status": "source_backed_support_bureau_needs_host_and_reporting_validation",
+      "validation_needed": [
+        "host-organisatie",
+        "coordinator/secretaris en rapportagelijn",
+        "financiering en continuiteit na projectperiode",
+        "welke taken bij het bureau liggen en welke bij subregionale verbanden"
       ]
     },
     {
@@ -293,14 +410,14 @@
         "welke onderdelen al bestaan",
         "welke onderdelen nieuw of uit te breiden zijn"
       ],
-      "source_claim_count": 255,
+      "source_claim_count": 271,
       "top_source_document_ids": [
         "reg_flevoland_2023_regiobeeld",
         "mun_almere_lea_2024_2028",
         "nat_palliaweb_digitale_initiatieven_pzp",
         "mun_almere_wijkbudget",
         "nat_pharos_brugfuncties_huisartsenzorg_sociaal_domein_2025",
-        "nat_azwa_2026_voortgang_kamerbrief"
+        "reg_centrumregeling_sociaal_domein_flevoland"
       ],
       "sample_claims": [
         {
@@ -391,14 +508,14 @@
           "public_evidence_status": "public_claims_present_but_role_allocation_needs_validation",
           "topic_counts": {
             "d6.basisinfrastructuur": 16,
-            "d6.digital_and_operational_infrastructure": 33,
+            "d6.digital_and_operational_infrastructure": 39,
             "d6.local_teams": 21,
             "d6.other": 66,
             "d6.regional_coordination": 30,
             "governance.local_coalition": 1,
             "governance.national_coordination": 2,
-            "governance.regional_coordination": 2,
-            "governance_and_finance.other": 83,
+            "governance.regional_coordination": 4,
+            "governance_and_finance.other": 91,
             "timeline.local_governance_calendar": 1
           },
           "source_document_ids": [
@@ -434,14 +551,14 @@
           "public_evidence_status": "public_claims_present_but_role_allocation_needs_validation",
           "topic_counts": {
             "d6.basisinfrastructuur": 16,
-            "d6.digital_and_operational_infrastructure": 33,
+            "d6.digital_and_operational_infrastructure": 39,
             "d6.local_teams": 21,
             "d6.other": 66,
             "d6.regional_coordination": 30,
             "governance.local_coalition": 1,
             "governance.national_coordination": 2,
-            "governance.regional_coordination": 2,
-            "governance_and_finance.other": 83,
+            "governance.regional_coordination": 4,
+            "governance_and_finance.other": 91,
             "timeline.local_governance_calendar": 1
           },
           "source_document_ids": [
@@ -478,14 +595,14 @@
           "public_evidence_status": "public_claims_present_but_role_allocation_needs_validation",
           "topic_counts": {
             "d6.basisinfrastructuur": 16,
-            "d6.digital_and_operational_infrastructure": 33,
+            "d6.digital_and_operational_infrastructure": 39,
             "d6.local_teams": 21,
             "d6.other": 66,
             "d6.regional_coordination": 30,
             "governance.local_coalition": 1,
             "governance.national_coordination": 2,
-            "governance.regional_coordination": 2,
-            "governance_and_finance.other": 83,
+            "governance.regional_coordination": 4,
+            "governance_and_finance.other": 91,
             "timeline.local_governance_calendar": 1
           },
           "source_document_ids": [
@@ -522,14 +639,14 @@
           "public_evidence_status": "public_claims_present_but_role_allocation_needs_validation",
           "topic_counts": {
             "d6.basisinfrastructuur": 16,
-            "d6.digital_and_operational_infrastructure": 33,
+            "d6.digital_and_operational_infrastructure": 39,
             "d6.local_teams": 21,
             "d6.other": 66,
             "d6.regional_coordination": 30,
             "governance.local_coalition": 1,
             "governance.national_coordination": 2,
-            "governance.regional_coordination": 2,
-            "governance_and_finance.other": 83,
+            "governance.regional_coordination": 4,
+            "governance_and_finance.other": 91,
             "timeline.local_governance_calendar": 1
           },
           "source_document_ids": [
@@ -566,14 +683,14 @@
           "public_evidence_status": "public_claims_present_but_role_allocation_needs_validation",
           "topic_counts": {
             "d6.basisinfrastructuur": 16,
-            "d6.digital_and_operational_infrastructure": 33,
+            "d6.digital_and_operational_infrastructure": 39,
             "d6.local_teams": 21,
             "d6.other": 66,
             "d6.regional_coordination": 30,
             "governance.local_coalition": 1,
             "governance.national_coordination": 2,
-            "governance.regional_coordination": 2,
-            "governance_and_finance.other": 83,
+            "governance.regional_coordination": 4,
+            "governance_and_finance.other": 91,
             "timeline.local_governance_calendar": 1
           },
           "source_document_ids": [
@@ -648,14 +765,14 @@
         "aanspreekpunt per wijk",
         "verbinding met huisartsen/eerstelijn"
       ],
-      "source_claim_count": 255,
+      "source_claim_count": 271,
       "top_source_document_ids": [
         "reg_flevoland_2023_regiobeeld",
         "mun_almere_lea_2024_2028",
         "nat_palliaweb_digitale_initiatieven_pzp",
         "mun_almere_wijkbudget",
         "nat_pharos_brugfuncties_huisartsenzorg_sociaal_domein_2025",
-        "nat_azwa_2026_voortgang_kamerbrief"
+        "reg_centrumregeling_sociaal_domein_flevoland"
       ],
       "sample_claims": [
         {
@@ -746,14 +863,14 @@
           "public_evidence_status": "public_claims_present_but_role_allocation_needs_validation",
           "topic_counts": {
             "d6.basisinfrastructuur": 16,
-            "d6.digital_and_operational_infrastructure": 33,
+            "d6.digital_and_operational_infrastructure": 39,
             "d6.local_teams": 21,
             "d6.other": 66,
             "d6.regional_coordination": 30,
             "governance.local_coalition": 1,
             "governance.national_coordination": 2,
-            "governance.regional_coordination": 2,
-            "governance_and_finance.other": 83,
+            "governance.regional_coordination": 4,
+            "governance_and_finance.other": 91,
             "timeline.local_governance_calendar": 1
           },
           "source_document_ids": [
@@ -791,14 +908,14 @@
           "public_evidence_status": "public_claims_present_but_role_allocation_needs_validation",
           "topic_counts": {
             "d6.basisinfrastructuur": 16,
-            "d6.digital_and_operational_infrastructure": 33,
+            "d6.digital_and_operational_infrastructure": 39,
             "d6.local_teams": 21,
             "d6.other": 66,
             "d6.regional_coordination": 30,
             "governance.local_coalition": 1,
             "governance.national_coordination": 2,
-            "governance.regional_coordination": 2,
-            "governance_and_finance.other": 83,
+            "governance.regional_coordination": 4,
+            "governance_and_finance.other": 91,
             "timeline.local_governance_calendar": 1
           },
           "source_document_ids": [
@@ -836,14 +953,14 @@
           "public_evidence_status": "public_claims_present_but_role_allocation_needs_validation",
           "topic_counts": {
             "d6.basisinfrastructuur": 16,
-            "d6.digital_and_operational_infrastructure": 33,
+            "d6.digital_and_operational_infrastructure": 39,
             "d6.local_teams": 21,
             "d6.other": 66,
             "d6.regional_coordination": 30,
             "governance.local_coalition": 1,
             "governance.national_coordination": 2,
-            "governance.regional_coordination": 2,
-            "governance_and_finance.other": 83,
+            "governance.regional_coordination": 4,
+            "governance_and_finance.other": 91,
             "timeline.local_governance_calendar": 1
           },
           "source_document_ids": [
@@ -880,14 +997,14 @@
           "public_evidence_status": "public_claims_present_but_role_allocation_needs_validation",
           "topic_counts": {
             "d6.basisinfrastructuur": 16,
-            "d6.digital_and_operational_infrastructure": 33,
+            "d6.digital_and_operational_infrastructure": 39,
             "d6.local_teams": 21,
             "d6.other": 66,
             "d6.regional_coordination": 30,
             "governance.local_coalition": 1,
             "governance.national_coordination": 2,
-            "governance.regional_coordination": 2,
-            "governance_and_finance.other": 83,
+            "governance.regional_coordination": 4,
+            "governance_and_finance.other": 91,
             "timeline.local_governance_calendar": 1
           },
           "source_document_ids": [
@@ -922,14 +1039,14 @@
           "public_evidence_status": "public_claims_present_but_role_allocation_needs_validation",
           "topic_counts": {
             "d6.basisinfrastructuur": 16,
-            "d6.digital_and_operational_infrastructure": 33,
+            "d6.digital_and_operational_infrastructure": 39,
             "d6.local_teams": 21,
             "d6.other": 66,
             "d6.regional_coordination": 30,
             "governance.local_coalition": 1,
             "governance.national_coordination": 2,
-            "governance.regional_coordination": 2,
-            "governance_and_finance.other": 83,
+            "governance.regional_coordination": 4,
+            "governance_and_finance.other": 91,
             "timeline.local_governance_calendar": 1
           },
           "source_document_ids": [
@@ -1004,7 +1121,7 @@
         "openingstijden en toegankelijkheid",
         "uitvoerder en financier"
       ],
-      "source_claim_count": 301,
+      "source_claim_count": 320,
       "top_source_document_ids": [
         "reg_flevoland_2023_regiobeeld",
         "nat_pharos_brugfuncties_huisartsenzorg_sociaal_domein_2025",
@@ -1101,16 +1218,16 @@
           ],
           "public_evidence_status": "public_claims_present_but_role_allocation_needs_validation",
           "topic_counts": {
-            "d5.basisfunctionaliteiten_onderbouwd": 46,
+            "d5.basisfunctionaliteiten_onderbouwd": 49,
             "d6.basisinfrastructuur": 16,
-            "d6.digital_and_operational_infrastructure": 33,
+            "d6.digital_and_operational_infrastructure": 39,
             "d6.local_teams": 21,
             "d6.other": 66,
             "d6.regional_coordination": 30,
             "governance.local_coalition": 1,
             "governance.national_coordination": 2,
-            "governance.regional_coordination": 2,
-            "governance_and_finance.other": 83,
+            "governance.regional_coordination": 4,
+            "governance_and_finance.other": 91,
             "timeline.local_governance_calendar": 1
           },
           "source_document_ids": [
@@ -1145,16 +1262,16 @@
           ],
           "public_evidence_status": "public_claims_present_but_role_allocation_needs_validation",
           "topic_counts": {
-            "d5.basisfunctionaliteiten_onderbouwd": 46,
+            "d5.basisfunctionaliteiten_onderbouwd": 49,
             "d6.basisinfrastructuur": 16,
-            "d6.digital_and_operational_infrastructure": 33,
+            "d6.digital_and_operational_infrastructure": 39,
             "d6.local_teams": 21,
             "d6.other": 66,
             "d6.regional_coordination": 30,
             "governance.local_coalition": 1,
             "governance.national_coordination": 2,
-            "governance.regional_coordination": 2,
-            "governance_and_finance.other": 83,
+            "governance.regional_coordination": 4,
+            "governance_and_finance.other": 91,
             "timeline.local_governance_calendar": 1
           },
           "source_document_ids": [
@@ -1188,16 +1305,16 @@
           ],
           "public_evidence_status": "public_claims_present_but_role_allocation_needs_validation",
           "topic_counts": {
-            "d5.basisfunctionaliteiten_onderbouwd": 46,
+            "d5.basisfunctionaliteiten_onderbouwd": 49,
             "d6.basisinfrastructuur": 16,
-            "d6.digital_and_operational_infrastructure": 33,
+            "d6.digital_and_operational_infrastructure": 39,
             "d6.local_teams": 21,
             "d6.other": 66,
             "d6.regional_coordination": 30,
             "governance.local_coalition": 1,
             "governance.national_coordination": 2,
-            "governance.regional_coordination": 2,
-            "governance_and_finance.other": 83,
+            "governance.regional_coordination": 4,
+            "governance_and_finance.other": 91,
             "timeline.local_governance_calendar": 1
           },
           "source_document_ids": [
@@ -1230,16 +1347,16 @@
           ],
           "public_evidence_status": "public_claims_present_but_role_allocation_needs_validation",
           "topic_counts": {
-            "d5.basisfunctionaliteiten_onderbouwd": 46,
+            "d5.basisfunctionaliteiten_onderbouwd": 49,
             "d6.basisinfrastructuur": 16,
-            "d6.digital_and_operational_infrastructure": 33,
+            "d6.digital_and_operational_infrastructure": 39,
             "d6.local_teams": 21,
             "d6.other": 66,
             "d6.regional_coordination": 30,
             "governance.local_coalition": 1,
             "governance.national_coordination": 2,
-            "governance.regional_coordination": 2,
-            "governance_and_finance.other": 83,
+            "governance.regional_coordination": 4,
+            "governance_and_finance.other": 91,
             "timeline.local_governance_calendar": 1
           },
           "source_document_ids": [
@@ -1274,16 +1391,16 @@
           ],
           "public_evidence_status": "public_claims_present_but_role_allocation_needs_validation",
           "topic_counts": {
-            "d5.basisfunctionaliteiten_onderbouwd": 46,
+            "d5.basisfunctionaliteiten_onderbouwd": 49,
             "d6.basisinfrastructuur": 16,
-            "d6.digital_and_operational_infrastructure": 33,
+            "d6.digital_and_operational_infrastructure": 39,
             "d6.local_teams": 21,
             "d6.other": 66,
             "d6.regional_coordination": 30,
             "governance.local_coalition": 1,
             "governance.national_coordination": 2,
-            "governance.regional_coordination": 2,
-            "governance_and_finance.other": 83,
+            "governance.regional_coordination": 4,
+            "governance_and_finance.other": 91,
             "timeline.local_governance_calendar": 1
           },
           "source_document_ids": [
@@ -1348,25 +1465,27 @@
     {
       "dimension_id": "regional_coordination",
       "label": "Regionale coordinatie en schaal",
-      "public_question": "Welke bron onderscheidt IZA/AZWA-regio, GGD-regio, mandaatgemeente en uitvoeringsschaal?",
+      "public_question": "Welke bron onderscheidt IZA/AZWA-regio, provincie, mandaatgemeente Almere, Verbindende Coalitie, Netwerkbureau, GGD-regio en uitvoeringsschaal?",
       "topics": [
         "governance.regional_coordination",
         "municipal.role_allocation"
       ],
       "local_validation_fields": [
         "mandaatgemeente-besluit",
-        "regionale tafel of bestuurlijke coalitie",
+        "Verbindende Coalitie-rol en besluitbevoegdheid",
+        "Netwerkbureau-host, taken, rapportagelijn en financiering",
         "GGD-regio versus IZA/AZWA-regio",
+        "provincie versus IZA/AZWA-regio",
         "zorgverzekeraar/zorgkantoorrol"
       ],
-      "source_claim_count": 257,
+      "source_claim_count": 274,
       "top_source_document_ids": [
         "reg_flevoland_2023_regiobeeld",
         "mun_almere_lea_2024_2028",
         "nat_palliaweb_digitale_initiatieven_pzp",
         "mun_almere_wijkbudget",
         "nat_pharos_brugfuncties_huisartsenzorg_sociaal_domein_2025",
-        "nat_azwa_2026_voortgang_kamerbrief"
+        "reg_centrumregeling_sociaal_domein_flevoland"
       ],
       "sample_claims": [
         {
@@ -1459,15 +1578,15 @@
           "public_evidence_status": "public_claims_present_but_role_allocation_needs_validation",
           "topic_counts": {
             "d6.basisinfrastructuur": 16,
-            "d6.digital_and_operational_infrastructure": 33,
+            "d6.digital_and_operational_infrastructure": 39,
             "d6.local_teams": 21,
             "d6.other": 66,
             "d6.regional_coordination": 30,
             "governance.local_coalition": 1,
             "governance.national_coordination": 2,
-            "governance.regional_coordination": 2,
-            "governance_and_finance.other": 83,
-            "municipal.role_allocation": 2,
+            "governance.regional_coordination": 4,
+            "governance_and_finance.other": 91,
+            "municipal.role_allocation": 3,
             "timeline.local_governance_calendar": 1
           },
           "source_document_ids": [
@@ -1494,11 +1613,15 @@
           "label": "Coordinatie",
           "public_question": "Welke publieke bron wijst een coordinerende tafel, organisatie of rol aan?",
           "candidate_actor_ids": [
+            "verbindende_coalitie_zorgzaam_flevoland",
+            "netwerkbureau_zorgzaam_flevoland",
             "zorgzaam_flevoland_flever",
             "gemeente_almere",
             "ggd_flevoland"
           ],
           "candidate_actors": [
+            "Verbindende Coalitie Zorgzaam Flevoland",
+            "Netwerkbureau Zorgzaam Flevoland",
             "Zorgzaam Flevoland / Flever",
             "Gemeente Almere",
             "GGD Flevoland"
@@ -1506,15 +1629,15 @@
           "public_evidence_status": "public_claims_present_but_role_allocation_needs_validation",
           "topic_counts": {
             "d6.basisinfrastructuur": 16,
-            "d6.digital_and_operational_infrastructure": 33,
+            "d6.digital_and_operational_infrastructure": 39,
             "d6.local_teams": 21,
             "d6.other": 66,
             "d6.regional_coordination": 30,
             "governance.local_coalition": 1,
             "governance.national_coordination": 2,
-            "governance.regional_coordination": 2,
-            "governance_and_finance.other": 83,
-            "municipal.role_allocation": 2,
+            "governance.regional_coordination": 4,
+            "governance_and_finance.other": 91,
+            "municipal.role_allocation": 3,
             "timeline.local_governance_calendar": 1
           },
           "source_document_ids": [
@@ -1528,6 +1651,8 @@
             "mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd"
           ],
           "actor_validation_status": {
+            "verbindende_coalitie_zorgzaam_flevoland": "public_role_source_backed_role_scope_still_needs_target_validation",
+            "netwerkbureau_zorgzaam_flevoland": "public_role_source_backed_role_scope_still_needs_target_validation",
             "zorgzaam_flevoland_flever": "public_role_source_backed_role_scope_still_needs_target_validation",
             "gemeente_almere": "public_role_hypothesis_needs_local_validation",
             "ggd_flevoland": "public_role_source_backed_role_scope_still_needs_target_validation"
@@ -1554,15 +1679,15 @@
           "public_evidence_status": "public_claims_present_but_role_allocation_needs_validation",
           "topic_counts": {
             "d6.basisinfrastructuur": 16,
-            "d6.digital_and_operational_infrastructure": 33,
+            "d6.digital_and_operational_infrastructure": 39,
             "d6.local_teams": 21,
             "d6.other": 66,
             "d6.regional_coordination": 30,
             "governance.local_coalition": 1,
             "governance.national_coordination": 2,
-            "governance.regional_coordination": 2,
-            "governance_and_finance.other": 83,
-            "municipal.role_allocation": 2,
+            "governance.regional_coordination": 4,
+            "governance_and_finance.other": 91,
+            "municipal.role_allocation": 3,
             "timeline.local_governance_calendar": 1
           },
           "source_document_ids": [
@@ -1600,15 +1725,15 @@
           "public_evidence_status": "public_claims_present_but_role_allocation_needs_validation",
           "topic_counts": {
             "d6.basisinfrastructuur": 16,
-            "d6.digital_and_operational_infrastructure": 33,
+            "d6.digital_and_operational_infrastructure": 39,
             "d6.local_teams": 21,
             "d6.other": 66,
             "d6.regional_coordination": 30,
             "governance.local_coalition": 1,
             "governance.national_coordination": 2,
-            "governance.regional_coordination": 2,
-            "governance_and_finance.other": 83,
-            "municipal.role_allocation": 2,
+            "governance.regional_coordination": 4,
+            "governance_and_finance.other": 91,
+            "municipal.role_allocation": 3,
             "timeline.local_governance_calendar": 1
           },
           "source_document_ids": [
@@ -1635,27 +1760,29 @@
           "label": "Monitoring en verantwoording",
           "public_question": "Welke publieke bron maakt monitoring, leren of verantwoording concreet?",
           "candidate_actor_ids": [
-            "zorgzaam_flevoland_flever",
+            "netwerkbureau_zorgzaam_flevoland",
             "ggd_flevoland",
+            "zorgzaam_flevoland_flever",
             "gemeente_almere"
           ],
           "candidate_actors": [
-            "Zorgzaam Flevoland / Flever",
+            "Netwerkbureau Zorgzaam Flevoland",
             "GGD Flevoland",
+            "Zorgzaam Flevoland / Flever",
             "Gemeente Almere"
           ],
           "public_evidence_status": "public_claims_present_but_role_allocation_needs_validation",
           "topic_counts": {
             "d6.basisinfrastructuur": 16,
-            "d6.digital_and_operational_infrastructure": 33,
+            "d6.digital_and_operational_infrastructure": 39,
             "d6.local_teams": 21,
             "d6.other": 66,
             "d6.regional_coordination": 30,
             "governance.local_coalition": 1,
             "governance.national_coordination": 2,
-            "governance.regional_coordination": 2,
-            "governance_and_finance.other": 83,
-            "municipal.role_allocation": 2,
+            "governance.regional_coordination": 4,
+            "governance_and_finance.other": 91,
+            "municipal.role_allocation": 3,
             "timeline.local_governance_calendar": 1
           },
           "source_document_ids": [
@@ -1669,8 +1796,9 @@
             "mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd"
           ],
           "actor_validation_status": {
-            "zorgzaam_flevoland_flever": "public_role_source_backed_role_scope_still_needs_target_validation",
+            "netwerkbureau_zorgzaam_flevoland": "public_role_source_backed_role_scope_still_needs_target_validation",
             "ggd_flevoland": "public_role_source_backed_role_scope_still_needs_target_validation",
+            "zorgzaam_flevoland_flever": "public_role_source_backed_role_scope_still_needs_target_validation",
             "gemeente_almere": "public_role_hypothesis_needs_local_validation"
           },
           "local_validation_fields": [
@@ -1691,7 +1819,7 @@
           "question_id": "regional_coordination.coordination",
           "slot_id": "coordination",
           "question": "Wie is voor Regionale coordinatie en schaal bestuurlijk of operationeel verantwoordelijk voor coordinatie?",
-          "public_prefill": "Zorgzaam Flevoland / Flever, Gemeente Almere, GGD Flevoland",
+          "public_prefill": "Verbindende Coalitie Zorgzaam Flevoland, Netwerkbureau Zorgzaam Flevoland, Zorgzaam Flevoland / Flever, Gemeente Almere, GGD Flevoland",
           "decision_status": "local_validation_or_later_decision_needed"
         },
         {
@@ -1712,7 +1840,7 @@
           "question_id": "regional_coordination.monitoring",
           "slot_id": "monitoring",
           "question": "Wie is voor Regionale coordinatie en schaal bestuurlijk of operationeel verantwoordelijk voor monitoring en verantwoording?",
-          "public_prefill": "Zorgzaam Flevoland / Flever, GGD Flevoland, Gemeente Almere",
+          "public_prefill": "Netwerkbureau Zorgzaam Flevoland, GGD Flevoland, Zorgzaam Flevoland / Flever, Gemeente Almere",
           "decision_status": "local_validation_or_later_decision_needed"
         }
       ],
@@ -1730,16 +1858,16 @@
         "monitoringset",
         "wie rapporteert",
         "frequentie",
-        "waar besluiten of bijsturing landen"
+        "waar besluiten of bijsturing landen, inclusief rol Verbindende Coalitie en Netwerkbureau"
       ],
-      "source_claim_count": 366,
+      "source_claim_count": 391,
       "top_source_document_ids": [
         "mun_almere_lea_2024_2028",
+        "reg_centrumregeling_sociaal_domein_flevoland",
         "reg_flevoland_2023_regiobeeld",
         "mun_almere_2024_2034_maatschappelijke_agenda_beleidstekst",
         "mun_almere_sociale_veerkracht_almeerders",
-        "nat_leidraad_consultatiefunctie_ggz_sociaal_domein_2024",
-        "nat_pharos_brugfuncties_huisartsenzorg_sociaal_domein_2025"
+        "nat_leidraad_consultatiefunctie_ggz_sociaal_domein_2024"
       ],
       "sample_claims": [
         {
@@ -1830,15 +1958,15 @@
           "public_evidence_status": "public_claims_present_but_role_allocation_needs_validation",
           "topic_counts": {
             "d6.basisinfrastructuur": 16,
-            "d6.digital_and_operational_infrastructure": 33,
+            "d6.digital_and_operational_infrastructure": 39,
             "d6.local_teams": 21,
             "d6.other": 66,
             "d6.regional_coordination": 30,
             "governance.local_coalition": 1,
             "governance.national_coordination": 2,
-            "governance.regional_coordination": 2,
-            "governance_and_finance.other": 83,
-            "monitoring.other": 111,
+            "governance.regional_coordination": 4,
+            "governance_and_finance.other": 91,
+            "monitoring.other": 120,
             "timeline.local_governance_calendar": 1
           },
           "source_document_ids": [
@@ -1864,25 +1992,27 @@
           "label": "Coordinatie",
           "public_question": "Welke publieke bron wijst een coordinerende tafel, organisatie of rol aan?",
           "candidate_actor_ids": [
+            "netwerkbureau_zorgzaam_flevoland",
             "ggd_flevoland",
             "zorgzaam_flevoland_flever"
           ],
           "candidate_actors": [
+            "Netwerkbureau Zorgzaam Flevoland",
             "GGD Flevoland",
             "Zorgzaam Flevoland / Flever"
           ],
           "public_evidence_status": "public_claims_present_but_role_allocation_needs_validation",
           "topic_counts": {
             "d6.basisinfrastructuur": 16,
-            "d6.digital_and_operational_infrastructure": 33,
+            "d6.digital_and_operational_infrastructure": 39,
             "d6.local_teams": 21,
             "d6.other": 66,
             "d6.regional_coordination": 30,
             "governance.local_coalition": 1,
             "governance.national_coordination": 2,
-            "governance.regional_coordination": 2,
-            "governance_and_finance.other": 83,
-            "monitoring.other": 111,
+            "governance.regional_coordination": 4,
+            "governance_and_finance.other": 91,
+            "monitoring.other": 120,
             "timeline.local_governance_calendar": 1
           },
           "source_document_ids": [
@@ -1896,6 +2026,7 @@
             "mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd"
           ],
           "actor_validation_status": {
+            "netwerkbureau_zorgzaam_flevoland": "public_role_source_backed_role_scope_still_needs_target_validation",
             "ggd_flevoland": "public_role_source_backed_role_scope_still_needs_target_validation",
             "zorgzaam_flevoland_flever": "public_role_source_backed_role_scope_still_needs_target_validation"
           },
@@ -1910,24 +2041,26 @@
           "public_question": "Welke publieke bron maakt duidelijk wie het onderdeel feitelijk uitvoert?",
           "candidate_actor_ids": [
             "ggd_flevoland",
-            "gemeente_almere"
+            "gemeente_almere",
+            "netwerkbureau_zorgzaam_flevoland"
           ],
           "candidate_actors": [
             "GGD Flevoland",
-            "Gemeente Almere"
+            "Gemeente Almere",
+            "Netwerkbureau Zorgzaam Flevoland"
           ],
           "public_evidence_status": "public_claims_present_but_role_allocation_needs_validation",
           "topic_counts": {
             "d6.basisinfrastructuur": 16,
-            "d6.digital_and_operational_infrastructure": 33,
+            "d6.digital_and_operational_infrastructure": 39,
             "d6.local_teams": 21,
             "d6.other": 66,
             "d6.regional_coordination": 30,
             "governance.local_coalition": 1,
             "governance.national_coordination": 2,
-            "governance.regional_coordination": 2,
-            "governance_and_finance.other": 83,
-            "monitoring.other": 111,
+            "governance.regional_coordination": 4,
+            "governance_and_finance.other": 91,
+            "monitoring.other": 120,
             "timeline.local_governance_calendar": 1
           },
           "source_document_ids": [
@@ -1942,7 +2075,8 @@
           ],
           "actor_validation_status": {
             "ggd_flevoland": "public_role_source_backed_role_scope_still_needs_target_validation",
-            "gemeente_almere": "public_role_hypothesis_needs_local_validation"
+            "gemeente_almere": "public_role_hypothesis_needs_local_validation",
+            "netwerkbureau_zorgzaam_flevoland": "public_role_source_backed_role_scope_still_needs_target_validation"
           },
           "local_validation_fields": [
             "uitvoering: bevestig actor, mandaat en bronpassage voor monitoring_and_learning",
@@ -1962,15 +2096,15 @@
           "public_evidence_status": "public_claims_present_but_role_allocation_needs_validation",
           "topic_counts": {
             "d6.basisinfrastructuur": 16,
-            "d6.digital_and_operational_infrastructure": 33,
+            "d6.digital_and_operational_infrastructure": 39,
             "d6.local_teams": 21,
             "d6.other": 66,
             "d6.regional_coordination": 30,
             "governance.local_coalition": 1,
             "governance.national_coordination": 2,
-            "governance.regional_coordination": 2,
-            "governance_and_finance.other": 83,
-            "monitoring.other": 111,
+            "governance.regional_coordination": 4,
+            "governance_and_finance.other": 91,
+            "monitoring.other": 120,
             "timeline.local_governance_calendar": 1
           },
           "source_document_ids": [
@@ -1996,11 +2130,13 @@
           "label": "Monitoring en verantwoording",
           "public_question": "Welke publieke bron maakt monitoring, leren of verantwoording concreet?",
           "candidate_actor_ids": [
+            "netwerkbureau_zorgzaam_flevoland",
             "ggd_flevoland",
             "gemeente_almere",
             "zorgzaam_flevoland_flever"
           ],
           "candidate_actors": [
+            "Netwerkbureau Zorgzaam Flevoland",
             "GGD Flevoland",
             "Gemeente Almere",
             "Zorgzaam Flevoland / Flever"
@@ -2008,15 +2144,15 @@
           "public_evidence_status": "public_claims_present_but_role_allocation_needs_validation",
           "topic_counts": {
             "d6.basisinfrastructuur": 16,
-            "d6.digital_and_operational_infrastructure": 33,
+            "d6.digital_and_operational_infrastructure": 39,
             "d6.local_teams": 21,
             "d6.other": 66,
             "d6.regional_coordination": 30,
             "governance.local_coalition": 1,
             "governance.national_coordination": 2,
-            "governance.regional_coordination": 2,
-            "governance_and_finance.other": 83,
-            "monitoring.other": 111,
+            "governance.regional_coordination": 4,
+            "governance_and_finance.other": 91,
+            "monitoring.other": 120,
             "timeline.local_governance_calendar": 1
           },
           "source_document_ids": [
@@ -2030,6 +2166,7 @@
             "mun_almere_2024_2034_maatschappelijke_agenda_raadsvoorstel_geamendeerd"
           ],
           "actor_validation_status": {
+            "netwerkbureau_zorgzaam_flevoland": "public_role_source_backed_role_scope_still_needs_target_validation",
             "ggd_flevoland": "public_role_source_backed_role_scope_still_needs_target_validation",
             "gemeente_almere": "public_role_hypothesis_needs_local_validation",
             "zorgzaam_flevoland_flever": "public_role_source_backed_role_scope_still_needs_target_validation"
@@ -2052,14 +2189,14 @@
           "question_id": "monitoring_and_learning.coordination",
           "slot_id": "coordination",
           "question": "Wie is voor Monitoring, leren en verantwoording bestuurlijk of operationeel verantwoordelijk voor coordinatie?",
-          "public_prefill": "GGD Flevoland, Zorgzaam Flevoland / Flever",
+          "public_prefill": "Netwerkbureau Zorgzaam Flevoland, GGD Flevoland, Zorgzaam Flevoland / Flever",
           "decision_status": "local_validation_or_later_decision_needed"
         },
         {
           "question_id": "monitoring_and_learning.execution",
           "slot_id": "execution",
           "question": "Wie is voor Monitoring, leren en verantwoording bestuurlijk of operationeel verantwoordelijk voor uitvoering?",
-          "public_prefill": "GGD Flevoland, Gemeente Almere",
+          "public_prefill": "GGD Flevoland, Gemeente Almere, Netwerkbureau Zorgzaam Flevoland",
           "decision_status": "local_validation_or_later_decision_needed"
         },
         {
@@ -2073,7 +2210,7 @@
           "question_id": "monitoring_and_learning.monitoring",
           "slot_id": "monitoring",
           "question": "Wie is voor Monitoring, leren en verantwoording bestuurlijk of operationeel verantwoordelijk voor monitoring en verantwoording?",
-          "public_prefill": "GGD Flevoland, Gemeente Almere, Zorgzaam Flevoland / Flever",
+          "public_prefill": "Netwerkbureau Zorgzaam Flevoland, GGD Flevoland, Gemeente Almere, Zorgzaam Flevoland / Flever",
           "decision_status": "local_validation_or_later_decision_needed"
         }
       ],

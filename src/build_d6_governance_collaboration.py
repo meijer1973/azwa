@@ -55,12 +55,14 @@ D6_DIMENSIONS = [
     {
         "dimension_id": "regional_coordination",
         "label": "Regionale coordinatie en schaal",
-        "public_question": "Welke bron onderscheidt IZA/AZWA-regio, GGD-regio, mandaatgemeente en uitvoeringsschaal?",
+        "public_question": "Welke bron onderscheidt IZA/AZWA-regio, provincie, mandaatgemeente Almere, Verbindende Coalitie, Netwerkbureau, GGD-regio en uitvoeringsschaal?",
         "topics": ["governance.regional_coordination", "municipal.role_allocation"],
         "local_validation_fields": [
             "mandaatgemeente-besluit",
-            "regionale tafel of bestuurlijke coalitie",
+            "Verbindende Coalitie-rol en besluitbevoegdheid",
+            "Netwerkbureau-host, taken, rapportagelijn en financiering",
             "GGD-regio versus IZA/AZWA-regio",
+            "provincie versus IZA/AZWA-regio",
             "zorgverzekeraar/zorgkantoorrol",
         ],
     },
@@ -73,7 +75,7 @@ D6_DIMENSIONS = [
             "monitoringset",
             "wie rapporteert",
             "frequentie",
-            "waar besluiten of bijsturing landen",
+            "waar besluiten of bijsturing landen, inclusief rol Verbindende Coalitie en Netwerkbureau",
         ],
     },
 ]
@@ -132,17 +134,28 @@ DIMENSION_SLOT_PREFILL = {
     },
     "regional_coordination": {
         "decision": ["gemeente_almere", "zorgverzekeraar"],
-        "coordination": ["zorgzaam_flevoland_flever", "gemeente_almere", "ggd_flevoland"],
+        "coordination": [
+            "verbindende_coalitie_zorgzaam_flevoland",
+            "netwerkbureau_zorgzaam_flevoland",
+            "zorgzaam_flevoland_flever",
+            "gemeente_almere",
+            "ggd_flevoland",
+        ],
         "execution": ["gemeente_almere", "ggd_flevoland", "zorgzaam_flevoland_flever"],
         "finance": ["gemeente_almere", "zorgverzekeraar"],
-        "monitoring": ["zorgzaam_flevoland_flever", "ggd_flevoland", "gemeente_almere"],
+        "monitoring": [
+            "netwerkbureau_zorgzaam_flevoland",
+            "ggd_flevoland",
+            "zorgzaam_flevoland_flever",
+            "gemeente_almere",
+        ],
     },
     "monitoring_and_learning": {
         "decision": ["gemeente_almere"],
-        "coordination": ["ggd_flevoland", "zorgzaam_flevoland_flever"],
-        "execution": ["ggd_flevoland", "gemeente_almere"],
+        "coordination": ["netwerkbureau_zorgzaam_flevoland", "ggd_flevoland", "zorgzaam_flevoland_flever"],
+        "execution": ["ggd_flevoland", "gemeente_almere", "netwerkbureau_zorgzaam_flevoland"],
         "finance": ["gemeente_almere"],
-        "monitoring": ["ggd_flevoland", "gemeente_almere", "zorgzaam_flevoland_flever"],
+        "monitoring": ["netwerkbureau_zorgzaam_flevoland", "ggd_flevoland", "gemeente_almere", "zorgzaam_flevoland_flever"],
     },
 }
 
@@ -165,9 +178,33 @@ ACTOR_ROLES = [
     {
         "actor_id": "zorgzaam_flevoland_flever",
         "actor": "Zorgzaam Flevoland / Flever",
-        "public_role": "Regionale beweging en ondersteuning vanuit het IZA-regioplan; ZonMw-bron noemt doorontwikkeling van de samenwerkingsstructuur.",
+        "public_role": "Regionale beweging en ondersteuning vanuit het IZA-regioplan; bronnen onderscheiden dit van mandaatgemeente Almere, Verbindende Coalitie en Netwerkbureau.",
         "source_status": "source_backed_supporting_governance",
         "validation_needed": ["besluitvormende rol versus ondersteunende rol", "wie is aanspreekbaar per werkstroom"],
+    },
+    {
+        "actor_id": "verbindende_coalitie_zorgzaam_flevoland",
+        "actor": "Verbindende Coalitie Zorgzaam Flevoland",
+        "public_role": "Regionaal bestuurlijk netwerk/platform dat sturing, overzicht en verbinding rond de Flevolandse IZA-opgaven ondersteunt.",
+        "source_status": "source_backed_coordination_forum_needs_formal_mandate_validation",
+        "validation_needed": [
+            "deelnemende partijen en rol per partij",
+            "besluitbevoegdheid versus afstemming",
+            "verhouding tot colleges/gemeenteraden",
+            "verhouding tot mandaatgemeente Almere en preferente zorgverzekeraar",
+        ],
+    },
+    {
+        "actor_id": "netwerkbureau_zorgzaam_flevoland",
+        "actor": "Netwerkbureau Zorgzaam Flevoland",
+        "public_role": "Regionale ondersteuningsorganisatie voor samenhang, overzicht, monitoring, leren, communicatie, afstemming en verbinding tussen initiatieven.",
+        "source_status": "source_backed_support_bureau_needs_host_and_reporting_validation",
+        "validation_needed": [
+            "host-organisatie",
+            "coordinator/secretaris en rapportagelijn",
+            "financiering en continuiteit na projectperiode",
+            "welke taken bij het bureau liggen en welke bij subregionale verbanden",
+        ],
     },
     {
         "actor_id": "zorgverzekeraar",

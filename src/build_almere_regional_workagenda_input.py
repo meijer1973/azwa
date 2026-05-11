@@ -571,6 +571,112 @@ CURATED_COMPONENT_ENRICHMENT: dict[str, dict[str, list[dict[str, Any]]]] = {
                 "claim_ids": ["clm__reg_ggd_flevoland_valpreventie_almere_ketendocument_2026_municipal_translation_003"],
             },
         ],
+        "current_execution_actor_signals": [
+            {
+                "actor": "GGD Flevoland",
+                "execution_or_coordination_signal": (
+                    "Projectleider in opdracht van Gemeente Almere; het ketendocument beschrijft "
+                    "coordinatie en implementatie van de ketenaanpak valpreventie binnen de gemeente."
+                ),
+                "role_type": "projectleiding_en_implementatie",
+                "source_authority": "regional_implementation_source",
+                "information_status": "source_backed_current_information",
+                "validation_boundary": (
+                    "Gebruik als rolbeschrijving uit het ketendocument; bevestig voor de werkagenda "
+                    "of opdracht, mandaat en actuele capaciteit nog steeds gelden."
+                ),
+                "source_ids": ["reg_ggd_flevoland_valpreventie_almere_ketendocument_2026"],
+                "source_locations": ["page 20"],
+            },
+            {
+                "actor": "MEE Samen",
+                "execution_or_coordination_signal": (
+                    "Genoemd als centrale coordinator valpreventie. Taken omvatten onder meer "
+                    "informatiebijeenkomsten, fittesten/vitaliteitsdagen, matching op In Balans en "
+                    "Vallen Verleden Tijd, aanmeldingen, wachtlijst, spreiding van groepen, warme "
+                    "overdracht naar beweegaanbod en kwartaalrapportage richting gemeente."
+                ),
+                "role_type": "lokale_coordinatie",
+                "source_authority": "regional_implementation_source",
+                "information_status": "source_backed_current_information",
+                "validation_boundary": (
+                    "Sterk signaal voor huidige coordinatie; bevestig contactpersoon, mandaat, "
+                    "beschikbare uren en actuele uitvoering voor 15 september."
+                ),
+                "source_ids": ["reg_ggd_flevoland_valpreventie_almere_ketendocument_2026"],
+                "source_locations": ["page 20"],
+            },
+            {
+                "actor": "geschoolde fysio-/oefentherapeuten",
+                "execution_or_coordination_signal": (
+                    "Bij 8-10 deelnemers per gebied neemt de centrale coordinator contact op met "
+                    "een fysio-/oefentherapeut die geschoold is in valpreventieve beweeginterventies. "
+                    "De betreffende praktijk informeert deelnemers, voert de beweeginterventie en "
+                    "follow-up volgens protocol uit en registreert aanwezigheid en testuitslagen."
+                ),
+                "role_type": "uitvoering_beweeginterventies",
+                "source_authority": "regional_implementation_source",
+                "information_status": "source_backed_current_information",
+                "validation_boundary": (
+                    "De uitvoerende beroepsgroep is bronvast; de actuele lijst van praktijken, "
+                    "groepen, locaties, capaciteit en wachttijden moet nog lokaal worden bevestigd."
+                ),
+                "source_ids": ["reg_ggd_flevoland_valpreventie_almere_ketendocument_2026"],
+                "source_locations": ["page 9", "page 11", "page 17"],
+            },
+            {
+                "actor": "Paramedisch Platform Almere (PPA)",
+                "execution_or_coordination_signal": (
+                    "Genoemd bij afspraken met Gemeente Almere voor valpreventieve "
+                    "beweeginterventies bij matig valrisico. PPA organiseert volgens het "
+                    "ketendocument elk kwartaal een MDO met uitvoerende professionals en 4-5 keer "
+                    "per jaar een valpreventieoverleg binnen de PPA-werkgroep."
+                ),
+                "role_type": "paramedisch_platform_en_afstemming",
+                "source_authority": "regional_implementation_source",
+                "information_status": "source_backed_current_information",
+                "validation_boundary": (
+                    "Gebruik als platform-/afstemmingssignaal; dit is nog geen volledige lijst van "
+                    "gecontracteerde of beschikbare cursusaanbieders."
+                ),
+                "source_ids": ["reg_ggd_flevoland_valpreventie_almere_ketendocument_2026"],
+                "source_locations": ["page 12", "page 13"],
+            },
+            {
+                "actor": "ReHA en Paramedisch Platform Almere (PPA)",
+                "execution_or_coordination_signal": (
+                    "Voor hoog valrisico beschrijft het ketendocument dat zorgverleners in de eerste "
+                    "lijn de uitvoerders van de valanalyse zijn in een verlengde-armconstructie; ReHA "
+                    "werkt hiervoor samen met PPA."
+                ),
+                "role_type": "valanalyse_hoog_valrisico",
+                "source_authority": "regional_implementation_source",
+                "information_status": "source_backed_current_information",
+                "validation_boundary": (
+                    "Relevant voor de keten en D5/D6-afhankelijkheden, maar niet hetzelfde als "
+                    "cursusuitvoering voor matig valrisico."
+                ),
+                "source_ids": ["reg_ggd_flevoland_valpreventie_almere_ketendocument_2026"],
+                "source_locations": ["page 23"],
+            },
+            {
+                "actor": "Werkgroep valpreventie Almere",
+                "execution_or_coordination_signal": (
+                    "Het ketendocument noemt als betrokken werkgroeppartners: GGD Flevoland, "
+                    "Gemeente Almere gezondheid, Gemeente Almere sport, ELAA, ReHA, Paramedisch "
+                    "Platform Almere, Zorggroep Almere, ProActief, Apotheek Almere en MEE Samen."
+                ),
+                "role_type": "werkgroep_en_afstemming",
+                "source_authority": "regional_implementation_source",
+                "information_status": "source_backed_current_information",
+                "validation_boundary": (
+                    "Deze lijst toont betrokkenheid bij werkgroep/afstemming; zij bewijst niet dat "
+                    "elke genoemde organisatie zelf cursussen uitvoert."
+                ),
+                "source_ids": ["reg_ggd_flevoland_valpreventie_almere_ketendocument_2026"],
+                "source_locations": ["page 12"],
+            },
+        ],
         "finance_and_resource_signals": [
             {
                 "signal_id": "valpreventie_moderate_risk_municipal_arrangements",
@@ -964,10 +1070,13 @@ def build_priority_questions(
     return questions
 
 
-def actors_from_row(row: dict[str, Any]) -> list[dict[str, str]]:
+def actors_from_row(
+    row: dict[str, Any],
+    current_execution_actor_signals: list[dict[str, Any]] | None = None,
+) -> list[dict[str, Any]]:
     raw_owner = row.get("action_owner", "Nog te bepalen")
     names = [part.strip() for part in str(raw_owner).split(";") if part.strip()]
-    return [
+    actors: list[dict[str, Any]] = [
         {
             "name": name,
             "role": "validation_or_handoff_actor",
@@ -975,6 +1084,24 @@ def actors_from_row(row: dict[str, Any]) -> list[dict[str, str]]:
         }
         for name in names
     ]
+    existing_names = {actor["name"] for actor in actors}
+    for signal in current_execution_actor_signals or []:
+        name = signal.get("actor")
+        if not name or name in existing_names:
+            continue
+        actors.append(
+            {
+                "name": name,
+                "role": signal.get("role_type", "current_execution_or_coordination_signal"),
+                "indicated_role": signal.get("execution_or_coordination_signal"),
+                "information_status": signal.get("information_status"),
+                "validation_boundary": signal.get("validation_boundary"),
+                "source": "available_information_for_workagenda.current_execution_actor_signals",
+                "source_ids": signal.get("source_ids", []),
+            }
+        )
+        existing_names.add(name)
+    return actors
 
 
 def build_decision_requests(row: dict[str, Any]) -> list[dict[str, Any]]:
@@ -1331,6 +1458,7 @@ def build_available_information_for_workagenda(
     )
 
     implementation_progress = curated.get("implementation_progress_signals", [])
+    current_execution_actor_signals = curated.get("current_execution_actor_signals", [])
     party_signals = [
         *actor_hints_from_requirement(operational_requirement),
         *curated.get("party_and_role_signals", []),
@@ -1374,6 +1502,7 @@ def build_available_information_for_workagenda(
             else [],
         },
         "implementation_progress_signals": implementation_progress,
+        "current_execution_actor_signals": current_execution_actor_signals,
         "party_and_role_signals": party_signals,
         "finance_and_resource_signals": finance_signals,
         "monitoring_and_learning_signals": monitoring_signals,
@@ -2138,7 +2267,10 @@ def build_object(
             "validation_ticket_ids": ticket_ids,
             "priority_questions": build_priority_questions(component_id, ticket_ids, ticket_lookup),
         },
-        "actors": actors_from_row(row),
+        "actors": actors_from_row(
+            row,
+            available_information.get("current_execution_actor_signals", []),
+        ),
         "finance_input": build_finance_input(row),
         "monitoring_input": build_monitoring_input(row),
         "d6_dependency_input": {
@@ -2215,6 +2347,10 @@ def build_summary(objects: list[dict[str, Any]]) -> dict[str, Any]:
         ),
         "implementation_progress_signal_count": sum(
             len(item["available_information_for_workagenda"]["implementation_progress_signals"])
+            for item in objects
+        ),
+        "current_execution_actor_signal_count": sum(
+            len(item["available_information_for_workagenda"].get("current_execution_actor_signals", []))
             for item in objects
         ),
         "party_and_role_signal_count": sum(

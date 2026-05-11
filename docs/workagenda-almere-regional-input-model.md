@@ -18,12 +18,13 @@ The layer answers four practical questions:
 This layer is a preparation and handoff model. It is not a source document, not a final workagenda, and not proof that unresolved local items have been decided.
 
 ## Current-Information Enrichment
-The generated objects now include two enrichment sections:
+The generated objects now include three enrichment sections:
 
 - `workagenda_delivery_requirements`: the workagenda sections Almere must be able to support for the regional process, translated into English JSON field names and plain Dutch labels without using source-format shorthand as object keys.
 - `available_information_for_workagenda`: source-backed and lower-authority signals that can help a policymaker understand what is already visible, which parties appear to be involved, what implementation movement is already indicated, and what finance or monitoring information still needs validation.
+- `available_information_for_workagenda.current_execution_actor_signals`: a stricter subset for source-backed current execution or coordination signals. Use it to distinguish actors who are described in current implementation routes from actors that merely need to be contacted for validation.
 
-These enrichment fields intentionally separate signal strength. For example, the valpreventie object can now show that Almere has a public GGD route with inloop, risk assessment and course matching, plus ketendocument signals about the chain route, Paramedisch Platform Almere, EELA, a central coordinator, finance/declaration arrangements and monitoring templates. Those are useful first-contact signals, but the same object still keeps capacity, ownership, finance/controller confirmation, monitoring ownership and D6 dependencies unresolved.
+These enrichment fields intentionally separate signal strength. For example, the valpreventie object can now show that Almere has a public GGD route with inloop, risk assessment and course matching, plus ketendocument signals about the chain route, Paramedisch Platform Almere, EELA, MEE Samen as central coordinator, trained physio-/exercise therapists, the werkgroep valpreventie, finance/declaration arrangements and monitoring templates. Those are useful first-contact signals, but the same object still keeps capacity, ownership, finance/controller confirmation, monitoring ownership and D6 dependencies unresolved.
 
 The adult overweight/obesity object can now show current GGD indicators, national direction around central care coordination, exercise offer, lifestyle/health skills, individual support and GLI, and a municipal-source signal that Flevoland Gezond en Wel supports regional chain approaches. It does not turn those signals into confirmed GLI capacity, a confirmed local owner, a settled finance route or a final workagenda text.
 

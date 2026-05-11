@@ -116,6 +116,7 @@
     },
     "enriched_information_object_count": 11,
     "implementation_progress_signal_count": 7,
+    "current_execution_actor_signal_count": 6,
     "party_and_role_signal_count": 61,
     "format_aligned_object_count": 11,
     "format_confirmed_field_count": 0,
@@ -555,6 +556,7 @@
           ]
         },
         "implementation_progress_signals": [],
+        "current_execution_actor_signals": [],
         "party_and_role_signals": [
           {
             "party_or_role": "gemeente",
@@ -2126,6 +2128,7 @@
           ]
         },
         "implementation_progress_signals": [],
+        "current_execution_actor_signals": [],
         "party_and_role_signals": [
           {
             "party_or_role": "huisartsen",
@@ -3756,6 +3759,95 @@
             ]
           }
         ],
+        "current_execution_actor_signals": [
+          {
+            "actor": "GGD Flevoland",
+            "execution_or_coordination_signal": "Projectleider in opdracht van Gemeente Almere; het ketendocument beschrijft coordinatie en implementatie van de ketenaanpak valpreventie binnen de gemeente.",
+            "role_type": "projectleiding_en_implementatie",
+            "source_authority": "regional_implementation_source",
+            "information_status": "source_backed_current_information",
+            "validation_boundary": "Gebruik als rolbeschrijving uit het ketendocument; bevestig voor de werkagenda of opdracht, mandaat en actuele capaciteit nog steeds gelden.",
+            "source_ids": [
+              "reg_ggd_flevoland_valpreventie_almere_ketendocument_2026"
+            ],
+            "source_locations": [
+              "page 20"
+            ]
+          },
+          {
+            "actor": "MEE Samen",
+            "execution_or_coordination_signal": "Genoemd als centrale coordinator valpreventie. Taken omvatten onder meer informatiebijeenkomsten, fittesten/vitaliteitsdagen, matching op In Balans en Vallen Verleden Tijd, aanmeldingen, wachtlijst, spreiding van groepen, warme overdracht naar beweegaanbod en kwartaalrapportage richting gemeente.",
+            "role_type": "lokale_coordinatie",
+            "source_authority": "regional_implementation_source",
+            "information_status": "source_backed_current_information",
+            "validation_boundary": "Sterk signaal voor huidige coordinatie; bevestig contactpersoon, mandaat, beschikbare uren en actuele uitvoering voor 15 september.",
+            "source_ids": [
+              "reg_ggd_flevoland_valpreventie_almere_ketendocument_2026"
+            ],
+            "source_locations": [
+              "page 20"
+            ]
+          },
+          {
+            "actor": "geschoolde fysio-/oefentherapeuten",
+            "execution_or_coordination_signal": "Bij 8-10 deelnemers per gebied neemt de centrale coordinator contact op met een fysio-/oefentherapeut die geschoold is in valpreventieve beweeginterventies. De betreffende praktijk informeert deelnemers, voert de beweeginterventie en follow-up volgens protocol uit en registreert aanwezigheid en testuitslagen.",
+            "role_type": "uitvoering_beweeginterventies",
+            "source_authority": "regional_implementation_source",
+            "information_status": "source_backed_current_information",
+            "validation_boundary": "De uitvoerende beroepsgroep is bronvast; de actuele lijst van praktijken, groepen, locaties, capaciteit en wachttijden moet nog lokaal worden bevestigd.",
+            "source_ids": [
+              "reg_ggd_flevoland_valpreventie_almere_ketendocument_2026"
+            ],
+            "source_locations": [
+              "page 9",
+              "page 11",
+              "page 17"
+            ]
+          },
+          {
+            "actor": "Paramedisch Platform Almere (PPA)",
+            "execution_or_coordination_signal": "Genoemd bij afspraken met Gemeente Almere voor valpreventieve beweeginterventies bij matig valrisico. PPA organiseert volgens het ketendocument elk kwartaal een MDO met uitvoerende professionals en 4-5 keer per jaar een valpreventieoverleg binnen de PPA-werkgroep.",
+            "role_type": "paramedisch_platform_en_afstemming",
+            "source_authority": "regional_implementation_source",
+            "information_status": "source_backed_current_information",
+            "validation_boundary": "Gebruik als platform-/afstemmingssignaal; dit is nog geen volledige lijst van gecontracteerde of beschikbare cursusaanbieders.",
+            "source_ids": [
+              "reg_ggd_flevoland_valpreventie_almere_ketendocument_2026"
+            ],
+            "source_locations": [
+              "page 12",
+              "page 13"
+            ]
+          },
+          {
+            "actor": "ReHA en Paramedisch Platform Almere (PPA)",
+            "execution_or_coordination_signal": "Voor hoog valrisico beschrijft het ketendocument dat zorgverleners in de eerste lijn de uitvoerders van de valanalyse zijn in een verlengde-armconstructie; ReHA werkt hiervoor samen met PPA.",
+            "role_type": "valanalyse_hoog_valrisico",
+            "source_authority": "regional_implementation_source",
+            "information_status": "source_backed_current_information",
+            "validation_boundary": "Relevant voor de keten en D5/D6-afhankelijkheden, maar niet hetzelfde als cursusuitvoering voor matig valrisico.",
+            "source_ids": [
+              "reg_ggd_flevoland_valpreventie_almere_ketendocument_2026"
+            ],
+            "source_locations": [
+              "page 23"
+            ]
+          },
+          {
+            "actor": "Werkgroep valpreventie Almere",
+            "execution_or_coordination_signal": "Het ketendocument noemt als betrokken werkgroeppartners: GGD Flevoland, Gemeente Almere gezondheid, Gemeente Almere sport, ELAA, ReHA, Paramedisch Platform Almere, Zorggroep Almere, ProActief, Apotheek Almere en MEE Samen.",
+            "role_type": "werkgroep_en_afstemming",
+            "source_authority": "regional_implementation_source",
+            "information_status": "source_backed_current_information",
+            "validation_boundary": "Deze lijst toont betrokkenheid bij werkgroep/afstemming; zij bewijst niet dat elke genoemde organisatie zelf cursussen uitvoert.",
+            "source_ids": [
+              "reg_ggd_flevoland_valpreventie_almere_ketendocument_2026"
+            ],
+            "source_locations": [
+              "page 12"
+            ]
+          }
+        ],
         "party_and_role_signals": [
           {
             "party_or_role": "gemeente",
@@ -4987,6 +5079,72 @@
           "name": "finance/controller",
           "role": "validation_or_handoff_actor",
           "source": "data/workagenda/d5_status_matrix.json?action_owner"
+        },
+        {
+          "name": "GGD Flevoland",
+          "role": "projectleiding_en_implementatie",
+          "indicated_role": "Projectleider in opdracht van Gemeente Almere; het ketendocument beschrijft coordinatie en implementatie van de ketenaanpak valpreventie binnen de gemeente.",
+          "information_status": "source_backed_current_information",
+          "validation_boundary": "Gebruik als rolbeschrijving uit het ketendocument; bevestig voor de werkagenda of opdracht, mandaat en actuele capaciteit nog steeds gelden.",
+          "source": "available_information_for_workagenda.current_execution_actor_signals",
+          "source_ids": [
+            "reg_ggd_flevoland_valpreventie_almere_ketendocument_2026"
+          ]
+        },
+        {
+          "name": "MEE Samen",
+          "role": "lokale_coordinatie",
+          "indicated_role": "Genoemd als centrale coordinator valpreventie. Taken omvatten onder meer informatiebijeenkomsten, fittesten/vitaliteitsdagen, matching op In Balans en Vallen Verleden Tijd, aanmeldingen, wachtlijst, spreiding van groepen, warme overdracht naar beweegaanbod en kwartaalrapportage richting gemeente.",
+          "information_status": "source_backed_current_information",
+          "validation_boundary": "Sterk signaal voor huidige coordinatie; bevestig contactpersoon, mandaat, beschikbare uren en actuele uitvoering voor 15 september.",
+          "source": "available_information_for_workagenda.current_execution_actor_signals",
+          "source_ids": [
+            "reg_ggd_flevoland_valpreventie_almere_ketendocument_2026"
+          ]
+        },
+        {
+          "name": "geschoolde fysio-/oefentherapeuten",
+          "role": "uitvoering_beweeginterventies",
+          "indicated_role": "Bij 8-10 deelnemers per gebied neemt de centrale coordinator contact op met een fysio-/oefentherapeut die geschoold is in valpreventieve beweeginterventies. De betreffende praktijk informeert deelnemers, voert de beweeginterventie en follow-up volgens protocol uit en registreert aanwezigheid en testuitslagen.",
+          "information_status": "source_backed_current_information",
+          "validation_boundary": "De uitvoerende beroepsgroep is bronvast; de actuele lijst van praktijken, groepen, locaties, capaciteit en wachttijden moet nog lokaal worden bevestigd.",
+          "source": "available_information_for_workagenda.current_execution_actor_signals",
+          "source_ids": [
+            "reg_ggd_flevoland_valpreventie_almere_ketendocument_2026"
+          ]
+        },
+        {
+          "name": "Paramedisch Platform Almere (PPA)",
+          "role": "paramedisch_platform_en_afstemming",
+          "indicated_role": "Genoemd bij afspraken met Gemeente Almere voor valpreventieve beweeginterventies bij matig valrisico. PPA organiseert volgens het ketendocument elk kwartaal een MDO met uitvoerende professionals en 4-5 keer per jaar een valpreventieoverleg binnen de PPA-werkgroep.",
+          "information_status": "source_backed_current_information",
+          "validation_boundary": "Gebruik als platform-/afstemmingssignaal; dit is nog geen volledige lijst van gecontracteerde of beschikbare cursusaanbieders.",
+          "source": "available_information_for_workagenda.current_execution_actor_signals",
+          "source_ids": [
+            "reg_ggd_flevoland_valpreventie_almere_ketendocument_2026"
+          ]
+        },
+        {
+          "name": "ReHA en Paramedisch Platform Almere (PPA)",
+          "role": "valanalyse_hoog_valrisico",
+          "indicated_role": "Voor hoog valrisico beschrijft het ketendocument dat zorgverleners in de eerste lijn de uitvoerders van de valanalyse zijn in een verlengde-armconstructie; ReHA werkt hiervoor samen met PPA.",
+          "information_status": "source_backed_current_information",
+          "validation_boundary": "Relevant voor de keten en D5/D6-afhankelijkheden, maar niet hetzelfde als cursusuitvoering voor matig valrisico.",
+          "source": "available_information_for_workagenda.current_execution_actor_signals",
+          "source_ids": [
+            "reg_ggd_flevoland_valpreventie_almere_ketendocument_2026"
+          ]
+        },
+        {
+          "name": "Werkgroep valpreventie Almere",
+          "role": "werkgroep_en_afstemming",
+          "indicated_role": "Het ketendocument noemt als betrokken werkgroeppartners: GGD Flevoland, Gemeente Almere gezondheid, Gemeente Almere sport, ELAA, ReHA, Paramedisch Platform Almere, Zorggroep Almere, ProActief, Apotheek Almere en MEE Samen.",
+          "information_status": "source_backed_current_information",
+          "validation_boundary": "Deze lijst toont betrokkenheid bij werkgroep/afstemming; zij bewijst niet dat elke genoemde organisatie zelf cursussen uitvoert.",
+          "source": "available_information_for_workagenda.current_execution_actor_signals",
+          "source_ids": [
+            "reg_ggd_flevoland_valpreventie_almere_ketendocument_2026"
+          ]
         }
       ],
       "finance_input": {
@@ -5556,6 +5714,7 @@
             ]
           }
         ],
+        "current_execution_actor_signals": [],
         "party_and_role_signals": [
           {
             "party_or_role": "gemeente",
@@ -7174,6 +7333,7 @@
           ]
         },
         "implementation_progress_signals": [],
+        "current_execution_actor_signals": [],
         "party_and_role_signals": [
           {
             "party_or_role": "gemeente",
@@ -8685,6 +8845,7 @@
           ]
         },
         "implementation_progress_signals": [],
+        "current_execution_actor_signals": [],
         "party_and_role_signals": [
           {
             "party_or_role": "flevoziekenhuis",
@@ -10190,6 +10351,7 @@
           ]
         },
         "implementation_progress_signals": [],
+        "current_execution_actor_signals": [],
         "party_and_role_signals": [
           {
             "party_or_role": "ggd",
@@ -11722,6 +11884,7 @@
           ]
         },
         "implementation_progress_signals": [],
+        "current_execution_actor_signals": [],
         "party_and_role_signals": [
           {
             "party_or_role": "ggz",
@@ -13279,6 +13442,7 @@
           ]
         },
         "implementation_progress_signals": [],
+        "current_execution_actor_signals": [],
         "party_and_role_signals": [
           {
             "party_or_role": "gemeente",
@@ -14764,6 +14928,7 @@
           "related_component_ids": []
         },
         "implementation_progress_signals": [],
+        "current_execution_actor_signals": [],
         "party_and_role_signals": [
           {
             "party_or_role": "gemeenten",
@@ -15944,6 +16109,7 @@
           "related_component_ids": []
         },
         "implementation_progress_signals": [],
+        "current_execution_actor_signals": [],
         "party_and_role_signals": [
           {
             "party_or_role": "gemeente",

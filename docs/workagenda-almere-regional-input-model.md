@@ -29,7 +29,9 @@ A confirmed Almere position means the relevant local validation, finance/control
 
 The regional workagenda is the consolidated regional document prepared by the mandaatgemeente, preferente zorgverzekeraar and regional partners. Almere input is only one input stream for that process.
 
-The final college-adopted workagenda is the formal regional workagenda after college adoption. The national handvatten source backs the 15 November 2026 adoption deadline. The 15 September 2026 Almere submission target in this layer is a planning assumption for sending structured input to the regional process, not a national formal deadline.
+For Almere and the other municipalities, the key working date is the 15 September 2026 delivery target: by about that date, municipal input should be ready to send to the regional process so the regional coordinator has time to consolidate it. This is a planning assumption for municipal delivery, not a national formal deadline.
+
+The final college-adopted workagenda is the formal regional workagenda after college adoption. The national handvatten source backs the 15 November 2026 adoption deadline. That date is primarily relevant for the regional coordinator and college-adoption process; it should not be treated as the main delivery date for municipalities.
 
 ## Source Layers Used
 The builder uses `data/workagenda/d5_status_matrix.json` as the main source for one generated input object per D5 component. It uses `data/workagenda/d5_validation_tickets.json` to attach validation ticket IDs and select a maximum of five priority questions per component.
@@ -48,7 +50,7 @@ For that reason the layer keeps two readiness flags separate:
 }
 ```
 
-This lets Almere send useful concept input around the internal 15 September 2026 target while still showing what must be validated before the regional workagenda can use the component as a confirmed position.
+This lets Almere send useful concept input around the internal 15 September 2026 target while still showing what must be validated before the regional workagenda can use the component as a confirmed position. The generated layer therefore repeats `2026-09-15` in the process context, summary and each object under `municipality_delivery_to_region`, so municipality-facing notes surface that date before the later 15 November regional adoption deadline.
 
 ## First-Contact And Regional Handoff Use
 Use the layer to prepare short regional handoff notes, first-contact talking points and component summaries. The `handoff_to_region.recommended_wording` field is intentionally concise, and the validation section includes only priority questions instead of copying the full workbook or packet layers.

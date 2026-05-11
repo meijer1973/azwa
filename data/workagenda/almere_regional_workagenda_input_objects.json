@@ -1,6 +1,6 @@
 {
   "schema_id": "ALMERE-REGIONAL-WORKAGENDA-INPUT-V1",
-  "generated_on": "2026-05-10",
+  "generated_on": "2026-05-11",
   "status": "generated_concept_layer",
   "purpose": "Structured Almere input objects for the regional AZWA/D5-D6 workagenda process.",
   "source_layers": [
@@ -36,11 +36,20 @@
       "role": "prepare regional workagenda with regional partners",
       "source_id": "nat_zorgakkoorden_werkagenda_handvatten_2026"
     },
+    "primary_municipality_delivery_target": {
+      "date": "2026-09-15",
+      "description": "Main municipality-facing target date for Almere to deliver structured input to the regional workagenda process.",
+      "why_it_matters": "The regional coordinator needs time after municipal delivery to consolidate local input before the formal regional adoption deadline.",
+      "status": "planning_assumption",
+      "source_backing": "internal_planning_or_user_supplied; not national formal deadline",
+      "must_surface_in_municipality_outputs": true
+    },
     "formal_workagenda_deadline": {
       "date": "2026-11-15",
       "description": "Regional workagenda adopted by colleges",
       "status": "source_backed",
-      "source_id": "nat_zorgakkoorden_werkagenda_handvatten_2026"
+      "source_id": "nat_zorgakkoorden_werkagenda_handvatten_2026",
+      "primary_audience": "regional coordinator and college adoption process"
     },
     "almere_internal_submission_target": {
       "date": "2026-09-15",
@@ -59,8 +68,11 @@
       "grijs": 2,
       "rood": 4
     },
-    "formal_workagenda_deadline": "2026-11-15",
+    "primary_municipality_delivery_target": "2026-09-15",
+    "municipality_delivery_to_region_target": "2026-09-15",
     "almere_internal_submission_target": "2026-09-15",
+    "formal_workagenda_deadline": "2026-11-15",
+    "date_priority_note": "Municipality-facing outputs should surface 2026-09-15 as the main delivery target for Almere input to the region. 2026-11-15 is the later regional adoption deadline.",
     "status_note": "Objects support concept handoff with visible gaps; they do not make any component a confirmed Almere position unless confirmed_position_ready is true."
   },
   "objects": [
@@ -72,6 +84,14 @@
       "d5_or_d6": "D5",
       "component_type": "basisfunctionaliteit",
       "required_in_workagenda": true,
+      "municipality_delivery_to_region": {
+        "target_date": "2026-09-15",
+        "date_role": "primary_municipality_delivery_target",
+        "description": "Main target date for Almere to deliver structured concept input for this component to the regional workagenda process.",
+        "status": "planning_assumption",
+        "why_before_regional_deadline": "Regional coordination needs time to consolidate municipal input before the 2026-11-15 formal adoption deadline.",
+        "must_surface_in_municipality_outputs": true
+      },
       "local_action_deadline": {
         "date": "2026-05-31",
         "status": "status_matrix_local_action_deadline",
@@ -79,6 +99,8 @@
       },
       "almere_submission": {
         "submission_status": "concept_input",
+        "target_delivery_to_region_date": "2026-09-15",
+        "target_delivery_to_region_note": "For Almere and other municipalities, this is the main delivery target for input to the regional process; 15 November is the later regional adoption deadline.",
         "concept_handoff_ready": true,
         "confirmed_position_ready": false,
         "recommended_submission_type": "concept_with_validation_gaps",
@@ -603,7 +625,8 @@
         "evidence_limitations": [
           "Generated data layers are not public sources.",
           "Public-source signals do not equal confirmed local policy, finance, ownership or capacity.",
-          "The 2026-09-15 Almere submission target is a planning assumption, not the national formal deadline."
+          "The 2026-09-15 Almere submission target is the main municipality-facing delivery target for sending input to the region, but remains a planning assumption rather than the national formal deadline.",
+          "The 2026-11-15 date is the regional college-adoption deadline; it should not be presented as the main municipality delivery date."
         ]
       },
       "traceability": {
@@ -628,6 +651,14 @@
       "d5_or_d6": "D5",
       "component_type": "basisfunctionaliteit",
       "required_in_workagenda": true,
+      "municipality_delivery_to_region": {
+        "target_date": "2026-09-15",
+        "date_role": "primary_municipality_delivery_target",
+        "description": "Main target date for Almere to deliver structured concept input for this component to the regional workagenda process.",
+        "status": "planning_assumption",
+        "why_before_regional_deadline": "Regional coordination needs time to consolidate municipal input before the 2026-11-15 formal adoption deadline.",
+        "must_surface_in_municipality_outputs": true
+      },
       "local_action_deadline": {
         "date": "2026-05-31",
         "status": "status_matrix_local_action_deadline",
@@ -635,6 +666,8 @@
       },
       "almere_submission": {
         "submission_status": "concept_input",
+        "target_delivery_to_region_date": "2026-09-15",
+        "target_delivery_to_region_note": "For Almere and other municipalities, this is the main delivery target for input to the regional process; 15 November is the later regional adoption deadline.",
         "concept_handoff_ready": true,
         "confirmed_position_ready": false,
         "recommended_submission_type": "concept_with_validation_gaps",
@@ -1162,7 +1195,8 @@
         "evidence_limitations": [
           "Generated data layers are not public sources.",
           "Public-source signals do not equal confirmed local policy, finance, ownership or capacity.",
-          "The 2026-09-15 Almere submission target is a planning assumption, not the national formal deadline."
+          "The 2026-09-15 Almere submission target is the main municipality-facing delivery target for sending input to the region, but remains a planning assumption rather than the national formal deadline.",
+          "The 2026-11-15 date is the regional college-adoption deadline; it should not be presented as the main municipality delivery date."
         ]
       },
       "traceability": {
@@ -1187,6 +1221,14 @@
       "d5_or_d6": "D5",
       "component_type": "basisfunctionaliteit",
       "required_in_workagenda": true,
+      "municipality_delivery_to_region": {
+        "target_date": "2026-09-15",
+        "date_role": "primary_municipality_delivery_target",
+        "description": "Main target date for Almere to deliver structured concept input for this component to the regional workagenda process.",
+        "status": "planning_assumption",
+        "why_before_regional_deadline": "Regional coordination needs time to consolidate municipal input before the 2026-11-15 formal adoption deadline.",
+        "must_surface_in_municipality_outputs": true
+      },
       "local_action_deadline": {
         "date": "2026-05-31",
         "status": "status_matrix_local_action_deadline",
@@ -1194,6 +1236,8 @@
       },
       "almere_submission": {
         "submission_status": "concept_input",
+        "target_delivery_to_region_date": "2026-09-15",
+        "target_delivery_to_region_note": "For Almere and other municipalities, this is the main delivery target for input to the regional process; 15 November is the later regional adoption deadline.",
         "concept_handoff_ready": true,
         "confirmed_position_ready": false,
         "recommended_submission_type": "concept_with_validation_gaps",
@@ -1771,7 +1815,8 @@
         "evidence_limitations": [
           "Generated data layers are not public sources.",
           "Public-source signals do not equal confirmed local policy, finance, ownership or capacity.",
-          "The 2026-09-15 Almere submission target is a planning assumption, not the national formal deadline."
+          "The 2026-09-15 Almere submission target is the main municipality-facing delivery target for sending input to the region, but remains a planning assumption rather than the national formal deadline.",
+          "The 2026-11-15 date is the regional college-adoption deadline; it should not be presented as the main municipality delivery date."
         ]
       },
       "traceability": {
@@ -1802,6 +1847,14 @@
       "d5_or_d6": "D5",
       "component_type": "basisfunctionaliteit",
       "required_in_workagenda": true,
+      "municipality_delivery_to_region": {
+        "target_date": "2026-09-15",
+        "date_role": "primary_municipality_delivery_target",
+        "description": "Main target date for Almere to deliver structured concept input for this component to the regional workagenda process.",
+        "status": "planning_assumption",
+        "why_before_regional_deadline": "Regional coordination needs time to consolidate municipal input before the 2026-11-15 formal adoption deadline.",
+        "must_surface_in_municipality_outputs": true
+      },
       "local_action_deadline": {
         "date": "2026-05-31",
         "status": "status_matrix_local_action_deadline",
@@ -1809,6 +1862,8 @@
       },
       "almere_submission": {
         "submission_status": "concept_input",
+        "target_delivery_to_region_date": "2026-09-15",
+        "target_delivery_to_region_note": "For Almere and other municipalities, this is the main delivery target for input to the regional process; 15 November is the later regional adoption deadline.",
         "concept_handoff_ready": true,
         "confirmed_position_ready": false,
         "recommended_submission_type": "concept_with_validation_gaps",
@@ -2333,7 +2388,8 @@
         "evidence_limitations": [
           "Generated data layers are not public sources.",
           "Public-source signals do not equal confirmed local policy, finance, ownership or capacity.",
-          "The 2026-09-15 Almere submission target is a planning assumption, not the national formal deadline."
+          "The 2026-09-15 Almere submission target is the main municipality-facing delivery target for sending input to the region, but remains a planning assumption rather than the national formal deadline.",
+          "The 2026-11-15 date is the regional college-adoption deadline; it should not be presented as the main municipality delivery date."
         ]
       },
       "traceability": {
@@ -2358,6 +2414,14 @@
       "d5_or_d6": "D5",
       "component_type": "basisfunctionaliteit",
       "required_in_workagenda": true,
+      "municipality_delivery_to_region": {
+        "target_date": "2026-09-15",
+        "date_role": "primary_municipality_delivery_target",
+        "description": "Main target date for Almere to deliver structured concept input for this component to the regional workagenda process.",
+        "status": "planning_assumption",
+        "why_before_regional_deadline": "Regional coordination needs time to consolidate municipal input before the 2026-11-15 formal adoption deadline.",
+        "must_surface_in_municipality_outputs": true
+      },
       "local_action_deadline": {
         "date": "2026-05-31",
         "status": "status_matrix_local_action_deadline",
@@ -2365,6 +2429,8 @@
       },
       "almere_submission": {
         "submission_status": "concept_input",
+        "target_delivery_to_region_date": "2026-09-15",
+        "target_delivery_to_region_note": "For Almere and other municipalities, this is the main delivery target for input to the regional process; 15 November is the later regional adoption deadline.",
         "concept_handoff_ready": true,
         "confirmed_position_ready": false,
         "recommended_submission_type": "concept_with_validation_gaps",
@@ -2941,7 +3007,8 @@
         "evidence_limitations": [
           "Generated data layers are not public sources.",
           "Public-source signals do not equal confirmed local policy, finance, ownership or capacity.",
-          "The 2026-09-15 Almere submission target is a planning assumption, not the national formal deadline."
+          "The 2026-09-15 Almere submission target is the main municipality-facing delivery target for sending input to the region, but remains a planning assumption rather than the national formal deadline.",
+          "The 2026-11-15 date is the regional college-adoption deadline; it should not be presented as the main municipality delivery date."
         ]
       },
       "traceability": {
@@ -2966,6 +3033,14 @@
       "d5_or_d6": "D5",
       "component_type": "basisfunctionaliteit",
       "required_in_workagenda": true,
+      "municipality_delivery_to_region": {
+        "target_date": "2026-09-15",
+        "date_role": "primary_municipality_delivery_target",
+        "description": "Main target date for Almere to deliver structured concept input for this component to the regional workagenda process.",
+        "status": "planning_assumption",
+        "why_before_regional_deadline": "Regional coordination needs time to consolidate municipal input before the 2026-11-15 formal adoption deadline.",
+        "must_surface_in_municipality_outputs": true
+      },
       "local_action_deadline": {
         "date": "2026-05-31",
         "status": "status_matrix_local_action_deadline",
@@ -2973,6 +3048,8 @@
       },
       "almere_submission": {
         "submission_status": "concept_input",
+        "target_delivery_to_region_date": "2026-09-15",
+        "target_delivery_to_region_note": "For Almere and other municipalities, this is the main delivery target for input to the regional process; 15 November is the later regional adoption deadline.",
         "concept_handoff_ready": true,
         "confirmed_position_ready": false,
         "recommended_submission_type": "concept_with_validation_gaps",
@@ -3548,7 +3625,8 @@
         "evidence_limitations": [
           "Generated data layers are not public sources.",
           "Public-source signals do not equal confirmed local policy, finance, ownership or capacity.",
-          "The 2026-09-15 Almere submission target is a planning assumption, not the national formal deadline."
+          "The 2026-09-15 Almere submission target is the main municipality-facing delivery target for sending input to the region, but remains a planning assumption rather than the national formal deadline.",
+          "The 2026-11-15 date is the regional college-adoption deadline; it should not be presented as the main municipality delivery date."
         ]
       },
       "traceability": {
@@ -3573,6 +3651,14 @@
       "d5_or_d6": "D5",
       "component_type": "basisfunctionaliteit",
       "required_in_workagenda": true,
+      "municipality_delivery_to_region": {
+        "target_date": "2026-09-15",
+        "date_role": "primary_municipality_delivery_target",
+        "description": "Main target date for Almere to deliver structured concept input for this component to the regional workagenda process.",
+        "status": "planning_assumption",
+        "why_before_regional_deadline": "Regional coordination needs time to consolidate municipal input before the 2026-11-15 formal adoption deadline.",
+        "must_surface_in_municipality_outputs": true
+      },
       "local_action_deadline": {
         "date": "2026-05-31",
         "status": "status_matrix_local_action_deadline",
@@ -3580,6 +3666,8 @@
       },
       "almere_submission": {
         "submission_status": "concept_input",
+        "target_delivery_to_region_date": "2026-09-15",
+        "target_delivery_to_region_note": "For Almere and other municipalities, this is the main delivery target for input to the regional process; 15 November is the later regional adoption deadline.",
         "concept_handoff_ready": true,
         "confirmed_position_ready": false,
         "recommended_submission_type": "concept_with_validation_gaps",
@@ -4154,7 +4242,8 @@
         "evidence_limitations": [
           "Generated data layers are not public sources.",
           "Public-source signals do not equal confirmed local policy, finance, ownership or capacity.",
-          "The 2026-09-15 Almere submission target is a planning assumption, not the national formal deadline."
+          "The 2026-09-15 Almere submission target is the main municipality-facing delivery target for sending input to the region, but remains a planning assumption rather than the national formal deadline.",
+          "The 2026-11-15 date is the regional college-adoption deadline; it should not be presented as the main municipality delivery date."
         ]
       },
       "traceability": {
@@ -4179,6 +4268,14 @@
       "d5_or_d6": "D5",
       "component_type": "ontwikkelagenda_1_lopend",
       "required_in_workagenda": true,
+      "municipality_delivery_to_region": {
+        "target_date": "2026-09-15",
+        "date_role": "primary_municipality_delivery_target",
+        "description": "Main target date for Almere to deliver structured concept input for this component to the regional workagenda process.",
+        "status": "planning_assumption",
+        "why_before_regional_deadline": "Regional coordination needs time to consolidate municipal input before the 2026-11-15 formal adoption deadline.",
+        "must_surface_in_municipality_outputs": true
+      },
       "local_action_deadline": {
         "date": "2026-05-31",
         "status": "status_matrix_local_action_deadline",
@@ -4186,6 +4283,8 @@
       },
       "almere_submission": {
         "submission_status": "concept_input",
+        "target_delivery_to_region_date": "2026-09-15",
+        "target_delivery_to_region_note": "For Almere and other municipalities, this is the main delivery target for input to the regional process; 15 November is the later regional adoption deadline.",
         "concept_handoff_ready": true,
         "confirmed_position_ready": false,
         "recommended_submission_type": "concept_with_validation_gaps",
@@ -4710,7 +4809,8 @@
         "evidence_limitations": [
           "Generated data layers are not public sources.",
           "Public-source signals do not equal confirmed local policy, finance, ownership or capacity.",
-          "The 2026-09-15 Almere submission target is a planning assumption, not the national formal deadline."
+          "The 2026-09-15 Almere submission target is the main municipality-facing delivery target for sending input to the region, but remains a planning assumption rather than the national formal deadline.",
+          "The 2026-11-15 date is the regional college-adoption deadline; it should not be presented as the main municipality delivery date."
         ]
       },
       "traceability": {
@@ -4735,6 +4835,14 @@
       "d5_or_d6": "D5",
       "component_type": "ontwikkelagenda_1_lopend",
       "required_in_workagenda": true,
+      "municipality_delivery_to_region": {
+        "target_date": "2026-09-15",
+        "date_role": "primary_municipality_delivery_target",
+        "description": "Main target date for Almere to deliver structured concept input for this component to the regional workagenda process.",
+        "status": "planning_assumption",
+        "why_before_regional_deadline": "Regional coordination needs time to consolidate municipal input before the 2026-11-15 formal adoption deadline.",
+        "must_surface_in_municipality_outputs": true
+      },
       "local_action_deadline": {
         "date": "2026-05-31",
         "status": "status_matrix_local_action_deadline",
@@ -4742,6 +4850,8 @@
       },
       "almere_submission": {
         "submission_status": "concept_input",
+        "target_delivery_to_region_date": "2026-09-15",
+        "target_delivery_to_region_note": "For Almere and other municipalities, this is the main delivery target for input to the regional process; 15 November is the later regional adoption deadline.",
         "concept_handoff_ready": true,
         "confirmed_position_ready": false,
         "recommended_submission_type": "concept_with_validation_gaps",
@@ -5317,7 +5427,8 @@
         "evidence_limitations": [
           "Generated data layers are not public sources.",
           "Public-source signals do not equal confirmed local policy, finance, ownership or capacity.",
-          "The 2026-09-15 Almere submission target is a planning assumption, not the national formal deadline."
+          "The 2026-09-15 Almere submission target is the main municipality-facing delivery target for sending input to the region, but remains a planning assumption rather than the national formal deadline.",
+          "The 2026-11-15 date is the regional college-adoption deadline; it should not be presented as the main municipality delivery date."
         ]
       },
       "traceability": {
@@ -5342,6 +5453,14 @@
       "d5_or_d6": "D5",
       "component_type": "ontwikkelagenda_1_nieuw_conditioneel",
       "required_in_workagenda": false,
+      "municipality_delivery_to_region": {
+        "target_date": "2026-09-15",
+        "date_role": "primary_municipality_delivery_target",
+        "description": "Main target date for Almere to deliver structured concept input for this component to the regional workagenda process.",
+        "status": "planning_assumption",
+        "why_before_regional_deadline": "Regional coordination needs time to consolidate municipal input before the 2026-11-15 formal adoption deadline.",
+        "must_surface_in_municipality_outputs": true
+      },
       "local_action_deadline": {
         "date": "2026-06-15",
         "status": "status_matrix_local_action_deadline",
@@ -5349,6 +5468,8 @@
       },
       "almere_submission": {
         "submission_status": "concept_input",
+        "target_delivery_to_region_date": "2026-09-15",
+        "target_delivery_to_region_note": "For Almere and other municipalities, this is the main delivery target for input to the regional process; 15 November is the later regional adoption deadline.",
         "concept_handoff_ready": true,
         "confirmed_position_ready": false,
         "recommended_submission_type": "concept_with_validation_gaps",
@@ -5661,7 +5782,8 @@
         "evidence_limitations": [
           "Generated data layers are not public sources.",
           "Public-source signals do not equal confirmed local policy, finance, ownership or capacity.",
-          "The 2026-09-15 Almere submission target is a planning assumption, not the national formal deadline."
+          "The 2026-09-15 Almere submission target is the main municipality-facing delivery target for sending input to the region, but remains a planning assumption rather than the national formal deadline.",
+          "The 2026-11-15 date is the regional college-adoption deadline; it should not be presented as the main municipality delivery date."
         ]
       },
       "traceability": {
@@ -5686,6 +5808,14 @@
       "d5_or_d6": "D5",
       "component_type": "optioneel_geen_landelijke_financiering",
       "required_in_workagenda": false,
+      "municipality_delivery_to_region": {
+        "target_date": "2026-09-15",
+        "date_role": "primary_municipality_delivery_target",
+        "description": "Main target date for Almere to deliver structured concept input for this component to the regional workagenda process.",
+        "status": "planning_assumption",
+        "why_before_regional_deadline": "Regional coordination needs time to consolidate municipal input before the 2026-11-15 formal adoption deadline.",
+        "must_surface_in_municipality_outputs": true
+      },
       "local_action_deadline": {
         "date": "2026-06-15",
         "status": "status_matrix_local_action_deadline",
@@ -5693,6 +5823,8 @@
       },
       "almere_submission": {
         "submission_status": "concept_input",
+        "target_delivery_to_region_date": "2026-09-15",
+        "target_delivery_to_region_note": "For Almere and other municipalities, this is the main delivery target for input to the regional process; 15 November is the later regional adoption deadline.",
         "concept_handoff_ready": true,
         "confirmed_position_ready": false,
         "recommended_submission_type": "concept_with_validation_gaps",
@@ -6005,7 +6137,8 @@
         "evidence_limitations": [
           "Generated data layers are not public sources.",
           "Public-source signals do not equal confirmed local policy, finance, ownership or capacity.",
-          "The 2026-09-15 Almere submission target is a planning assumption, not the national formal deadline."
+          "The 2026-09-15 Almere submission target is the main municipality-facing delivery target for sending input to the region, but remains a planning assumption rather than the national formal deadline.",
+          "The 2026-11-15 date is the regional college-adoption deadline; it should not be presented as the main municipality delivery date."
         ]
       },
       "traceability": {

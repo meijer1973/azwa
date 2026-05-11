@@ -50,12 +50,25 @@ class AlmereRegionalWorkagendaInputTests(unittest.TestCase):
         self.assertEqual(output_ids, matrix_ids)
         self.assertEqual(self.layer["summary"]["object_count"], len(matrix_ids))
         self.assertEqual(self.layer["summary"]["confirmed_position_ready_count"], 0)
+        self.assertEqual(self.layer["summary"]["primary_municipality_delivery_target"], "2026-09-15")
+        self.assertIn("main delivery target", self.layer["summary"]["date_priority_note"])
 
     def test_valpreventie_acceptance_shape(self) -> None:
         objects = {item["component_id"]: item for item in self.layer["objects"]}
         valpreventie = objects["valpreventie"]
 
         self.assertEqual(valpreventie["component_id"], "valpreventie")
+        self.assertEqual(
+            valpreventie["municipality_delivery_to_region"]["target_date"],
+            "2026-09-15",
+        )
+        self.assertTrue(
+            valpreventie["municipality_delivery_to_region"]["must_surface_in_municipality_outputs"]
+        )
+        self.assertEqual(
+            valpreventie["almere_submission"]["target_delivery_to_region_date"],
+            "2026-09-15",
+        )
         self.assertTrue(valpreventie["almere_submission"]["concept_handoff_ready"])
         self.assertFalse(valpreventie["almere_submission"]["confirmed_position_ready"])
         self.assertTrue(valpreventie["evidence_package"]["public_evidence"])

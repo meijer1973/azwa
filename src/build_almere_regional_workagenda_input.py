@@ -163,6 +163,9 @@ DO_NOT_CLAIM_STANDARD = [
     "regional dependency resolved",
 ]
 
+MUNICIPAL_DELIVERY_TARGET_DATE = "2026-09-15"
+REGIONAL_ADOPTION_DEADLINE = "2026-11-15"
+
 
 def load_json(path: Path) -> Any:
     return json.loads(path.read_text(encoding="utf-8"))
@@ -191,14 +194,29 @@ def build_process_context() -> dict[str, Any]:
             "role": "prepare regional workagenda with regional partners",
             "source_id": "nat_zorgakkoorden_werkagenda_handvatten_2026",
         },
+        "primary_municipality_delivery_target": {
+            "date": MUNICIPAL_DELIVERY_TARGET_DATE,
+            "description": (
+                "Main municipality-facing target date for Almere to deliver structured input to "
+                "the regional workagenda process."
+            ),
+            "why_it_matters": (
+                "The regional coordinator needs time after municipal delivery to consolidate local "
+                "input before the formal regional adoption deadline."
+            ),
+            "status": "planning_assumption",
+            "source_backing": "internal_planning_or_user_supplied; not national formal deadline",
+            "must_surface_in_municipality_outputs": True,
+        },
         "formal_workagenda_deadline": {
-            "date": "2026-11-15",
+            "date": REGIONAL_ADOPTION_DEADLINE,
             "description": "Regional workagenda adopted by colleges",
             "status": "source_backed",
             "source_id": "nat_zorgakkoorden_werkagenda_handvatten_2026",
+            "primary_audience": "regional coordinator and college adoption process",
         },
         "almere_internal_submission_target": {
-            "date": "2026-09-15",
+            "date": MUNICIPAL_DELIVERY_TARGET_DATE,
             "description": "Target date for Almere to send structured input to the regional workagenda process",
             "status": "planning_assumption",
             "source_backing": "internal_planning_or_user_supplied; not national formal deadline",
@@ -637,6 +655,23 @@ def build_object(
         "d5_or_d6": "D5",
         "component_type": row.get("category"),
         "required_in_workagenda": bool(row.get("required_in_workagenda")),
+        # This is deliberately repeated at object level so municipality-facing
+        # outputs surface the 15 September delivery target before the regional
+        # 15 November adoption deadline.
+        "municipality_delivery_to_region": {
+            "target_date": MUNICIPAL_DELIVERY_TARGET_DATE,
+            "date_role": "primary_municipality_delivery_target",
+            "description": (
+                "Main target date for Almere to deliver structured concept input for this component "
+                "to the regional workagenda process."
+            ),
+            "status": "planning_assumption",
+            "why_before_regional_deadline": (
+                "Regional coordination needs time to consolidate municipal input before the "
+                f"{REGIONAL_ADOPTION_DEADLINE} formal adoption deadline."
+            ),
+            "must_surface_in_municipality_outputs": True,
+        },
         "local_action_deadline": {
             "date": row.get("deadline"),
             "status": "status_matrix_local_action_deadline" if row.get("deadline") else "not_provided",
@@ -644,6 +679,11 @@ def build_object(
         },
         "almere_submission": {
             "submission_status": "concept_input" if ready else "not_ready_for_handoff",
+            "target_delivery_to_region_date": MUNICIPAL_DELIVERY_TARGET_DATE,
+            "target_delivery_to_region_note": (
+                "For Almere and other municipalities, this is the main delivery target for input to "
+                "the regional process; 15 November is the later regional adoption deadline."
+            ),
             "concept_handoff_ready": ready,
             "confirmed_position_ready": confirmed,
             "recommended_submission_type": "confirmed_position"
@@ -692,7 +732,15 @@ def build_object(
             "evidence_limitations": [
                 "Generated data layers are not public sources.",
                 "Public-source signals do not equal confirmed local policy, finance, ownership or capacity.",
-                "The 2026-09-15 Almere submission target is a planning assumption, not the national formal deadline.",
+                (
+                    "The 2026-09-15 Almere submission target is the main municipality-facing delivery "
+                    "target for sending input to the region, but remains a planning assumption rather "
+                    "than the national formal deadline."
+                ),
+                (
+                    "The 2026-11-15 date is the regional college-adoption deadline; it should not be "
+                    "presented as the main municipality delivery date."
+                ),
             ],
         },
         "traceability": {
@@ -716,8 +764,14 @@ def build_summary(objects: list[dict[str, Any]]) -> dict[str, Any]:
             1 for item in objects if item["almere_submission"]["confirmed_position_ready"]
         ),
         "risk_counts": dict(sorted(risk_counts.items())),
-        "formal_workagenda_deadline": "2026-11-15",
-        "almere_internal_submission_target": "2026-09-15",
+        "primary_municipality_delivery_target": MUNICIPAL_DELIVERY_TARGET_DATE,
+        "municipality_delivery_to_region_target": MUNICIPAL_DELIVERY_TARGET_DATE,
+        "almere_internal_submission_target": MUNICIPAL_DELIVERY_TARGET_DATE,
+        "formal_workagenda_deadline": REGIONAL_ADOPTION_DEADLINE,
+        "date_priority_note": (
+            "Municipality-facing outputs should surface 2026-09-15 as the main delivery target for "
+            "Almere input to the region. 2026-11-15 is the later regional adoption deadline."
+        ),
         "status_note": (
             "Objects support concept handoff with visible gaps; they do not make any component a confirmed "
             "Almere position unless confirmed_position_ready is true."

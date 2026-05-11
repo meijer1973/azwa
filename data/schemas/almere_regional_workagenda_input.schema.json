@@ -41,6 +41,7 @@
         "sender",
         "recipient",
         "regional_process_owner",
+        "primary_municipality_delivery_target",
         "formal_workagenda_deadline",
         "almere_internal_submission_target"
       ]
@@ -59,6 +60,7 @@
           "component_id",
           "title",
           "component_type",
+          "municipality_delivery_to_region",
           "almere_submission",
           "almere_policy_input",
           "current_state",
@@ -83,11 +85,23 @@
           "component_type": {
             "type": "string"
           },
+          "municipality_delivery_to_region": {
+            "type": "object",
+            "additionalProperties": true,
+            "required": [
+              "target_date",
+              "date_role",
+              "description",
+              "status",
+              "must_surface_in_municipality_outputs"
+            ]
+          },
           "almere_submission": {
             "type": "object",
             "additionalProperties": true,
             "required": [
               "submission_status",
+              "target_delivery_to_region_date",
               "concept_handoff_ready",
               "confirmed_position_ready",
               "recommended_submission_type",

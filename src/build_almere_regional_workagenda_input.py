@@ -15,6 +15,9 @@ VALIDATION_TICKETS = ROOT / "data" / "workagenda" / "d5_validation_tickets.json"
 OPERATIONAL_REQUIREMENTS = ROOT / "data" / "extracted" / "workagenda_d5_operational_requirements.json"
 NULMETING_CAPACITY = ROOT / "data" / "extracted" / "workagenda_nulmeting_capacity.json"
 LOCAL_SOURCE_STRENGTHENING = ROOT / "data" / "extracted" / "local_source_strengthening_almere.json"
+REGIONAL_ROLES_AND_SPLITS = ROOT / "data" / "curated" / "regional_roles_and_splits_almere_flevoland.json"
+D6_GOVERNANCE_COLLABORATION = ROOT / "data" / "extracted" / "d6_governance_collaboration.json"
+ALMERE_LOCAL_DECISIONS = ROOT / "data" / "extracted" / "municipal" / "almere_local_decisions.json"
 OUTPUT = ROOT / "data" / "workagenda" / "almere_regional_workagenda_input_objects.json"
 
 
@@ -26,6 +29,9 @@ SOURCE_LAYERS = [
     "data/extracted/workagenda_d5_operational_requirements.json",
     "data/extracted/workagenda_nulmeting_capacity.json",
     "data/extracted/local_source_strengthening_almere.json",
+    "data/curated/regional_roles_and_splits_almere_flevoland.json",
+    "data/extracted/d6_governance_collaboration.json",
+    "data/extracted/municipal/almere_local_decisions.json",
     "data/extracted/municipal/almere_d6_responsibility_register.json",
     "data/raw/national/nat_azwa_format_werkagenda_d5_2026.docx",
     "data/site/source_view_models/zorgakkoorden-werkagenda-handvatten.json",
@@ -1424,6 +1430,76 @@ def signal_summary(signals: list[dict[str, Any]], key: str = "statement", limit:
     return compact_list([str(signal.get(key, "")) for signal in signals], limit=limit)
 
 
+def role_by_id(regional_roles: dict[str, Any], role_id: str) -> dict[str, Any] | None:
+    for role in regional_roles.get("regional_roles", []):
+        if role.get("role_id") == role_id:
+            return role
+    return None
+
+
+def role_wordings(regional_roles: dict[str, Any], role_ids: list[str]) -> list[str]:
+    wordings = []
+    for role_id in role_ids:
+        role = role_by_id(regional_roles, role_id)
+        if role and role.get("public_wording"):
+            wordings.append(role["public_wording"])
+    return wordings
+
+
+def role_source_ids(regional_roles: dict[str, Any], role_ids: list[str]) -> list[str]:
+    source_ids: list[str] = []
+    for role_id in role_ids:
+        role = role_by_id(regional_roles, role_id)
+        if role:
+            source_ids.extend(role.get("source_ids", []))
+    return unique_strings(source_ids)
+
+
+def format_field_claim_ids(operational_requirements: dict[str, Any]) -> dict[str, str]:
+    for target in operational_requirements.get("targets", []):
+        claim_ids = target.get("format_field_claim_ids")
+        if claim_ids:
+            return claim_ids
+    return {}
+
+
+def source_ids_from_finance_streams(operational_requirements: dict[str, Any]) -> list[str]:
+    source_ids: list[str] = []
+    finance_model = operational_requirements.get("finance_linking_model", {})
+    for stream in finance_model.get("finance_streams", []):
+        source_ids.extend(stream.get("source_claim_ids", []))
+    return unique_strings(source_ids)
+
+
+def finance_stream_summary(operational_requirements: dict[str, Any]) -> str:
+    finance_model = operational_requirements.get("finance_linking_model", {})
+    fragments = []
+    for stream in finance_model.get("finance_streams", []):
+        label = stream.get("label")
+        status = stream.get("status")
+        if label and status:
+            fragments.append(f"{label}: {status}.")
+        elif label:
+            fragments.append(str(label))
+    return compact_list(fragments, limit=5)
+
+
+def build_repository_context(
+    operational_requirements: dict[str, Any],
+    local_source_strengthening: dict[str, Any],
+    regional_roles: dict[str, Any],
+    d6_governance: dict[str, Any],
+    local_decisions: dict[str, Any],
+) -> dict[str, Any]:
+    return {
+        "operational_requirements": operational_requirements,
+        "local_source_strengthening": local_source_strengthening,
+        "regional_roles": regional_roles,
+        "d6_governance": d6_governance,
+        "local_decisions": local_decisions,
+    }
+
+
 def format_field(
     field_definition: dict[str, Any],
     draft_input: str,
@@ -1677,19 +1753,179 @@ def build_component_format_fields(
     }
 
 
-def build_rpi_alignment() -> dict[str, Any]:
-    return {
-        "format_fields": [
+def build_rpi_alignment(repository_context: dict[str, Any]) -> dict[str, Any]:
+    operational_requirements = repository_context.get("operational_requirements", {})
+    regional_roles = repository_context.get("regional_roles", {})
+    format_claims = format_field_claim_ids(operational_requirements)
+    coordination_role_ids = [
+        "iza_flevoland_formal_mandaatgemeente_almere",
+        "verbindende_coalitie_zorgzaam_flevoland",
+        "netwerkbureau_zorgzaam_flevoland",
+        "zorgzaam_flevoland_regional_movement",
+        "ggd_flevoland_execution_scale",
+    ]
+    cooperation_role_ids = [
+        "verbindende_coalitie_zorgzaam_flevoland",
+        "netwerkbureau_zorgzaam_flevoland",
+        "zorgzaam_flevoland_regional_movement",
+    ]
+    rpi_explanation = compact_list(role_wordings(regional_roles, coordination_role_ids), limit=4)
+    cooperation = compact_list(role_wordings(regional_roles, cooperation_role_ids), limit=3)
+    responsibility = compact_list(
+        role_wordings(
+            regional_roles,
+            [
+                "iza_flevoland_formal_mandaatgemeente_almere",
+                "verbindende_coalitie_zorgzaam_flevoland",
+                "netwerkbureau_zorgzaam_flevoland",
+                "ggd_flevoland_execution_scale",
+            ],
+        ),
+        limit=4,
+    )
+    knowledge_monitoring = compact_list(
+        role_wordings(regional_roles, ["netwerkbureau_zorgzaam_flevoland", "ggd_flevoland_execution_scale"]),
+        limit=2,
+    )
+    if knowledge_monitoring:
+        knowledge_monitoring = (
+            f"{knowledge_monitoring} The D6 governance layer also treats monitoring and accountability "
+            "as explicit responsibility slots that still need actor validation."
+        )
+
+    field_inputs = {
+        "rpi_explanation": {
+            "draft_input": rpi_explanation
+            or "The repository has no usable regional prevention infrastructure description yet.",
+            "status_id": "source_backed_current_information" if rpi_explanation else "validation_needed",
+            "evidence_refs": [
+                format_claims.get("rpi_toelichting", ""),
+                *role_source_ids(regional_roles, coordination_role_ids),
+            ],
+            "validation_or_decision_needed": [
+                "Confirm final RPI wording with the regional coordinator.",
+                "Confirm how mandate municipality, regional table, support bureau and implementation partners relate in the workagenda.",
+            ],
+            "notes": "Repository role evidence can orient Almere input, but the RPI remains a regional consolidation section.",
+        },
+        "regional_health_goals": {
+            "draft_input": (
+                "The actual workagenda format requires regional health goals. Current repository layers contain "
+                "component-level urgency, local Almere health-policy context and regional IZA context, but no "
+                "consolidated regional health-goal decision for this workagenda section."
+            ),
+            "status_id": "validation_needed",
+            "evidence_refs": [
+                format_claims.get("regionale_gezondheidsdoelen", ""),
+                "reg_flevoland_2023_regioplan_iza",
+                "mun_almere_2024_2026_visie_gezondheidsbeleid_beleidstekst",
+            ],
+            "validation_or_decision_needed": [
+                "Confirm which regional health goals are selected for the AZWA workagenda.",
+                "Confirm how Almere's local priorities are translated into the regional goal set.",
+            ],
+            "notes": "A public-source goal signal is not the same as a confirmed regional workagenda goal.",
+        },
+        "financial_resources": {
+            "draft_input": finance_stream_summary(operational_requirements)
+            or "No financial route signals are available in the repository.",
+            "status_id": "finance_controller_validation_needed",
+            "evidence_refs": [
+                format_claims.get("financiele_middelen", ""),
+                *source_ids_from_finance_streams(operational_requirements),
+            ],
+            "validation_or_decision_needed": [
+                "Confirm which stream is actually allocated to each component.",
+                "Confirm continuity, controller check and double-counting guardrails.",
+                "Confirm the split between municipal, regional and insurer/Zvw resources.",
+            ],
+            "notes": "The repository can name possible finance routes; it cannot allocate funds without a source or validation record.",
+        },
+        "regional_cooperation_agreements": {
+            "draft_input": cooperation
+            or "Regional cooperation agreements are not described in a way that is ready for the RPI section.",
+            "status_id": "source_backed_current_information" if cooperation else "validation_needed",
+            "evidence_refs": [
+                format_claims.get("regionale_samenwerkingsafspraken", ""),
+                *role_source_ids(regional_roles, cooperation_role_ids),
+            ],
+            "validation_or_decision_needed": [
+                "Confirm which cooperation agreements are formal enough for the workagenda.",
+                "Confirm reporting line and relationship to colleges and regional governance.",
+            ],
+            "notes": "Current role signals support orientation, not a final governance paragraph.",
+        },
+        "responsibility_distribution": {
+            "draft_input": responsibility
+            or "Responsibility distribution is not ready from repository evidence alone.",
+            "status_id": "source_backed_current_information" if responsibility else "validation_needed",
+            "evidence_refs": role_source_ids(regional_roles, coordination_role_ids),
+            "validation_or_decision_needed": [
+                "Confirm formal owner, coordinator, executor, budget holder and monitoring owner.",
+                "Keep IZA/AZWA-regio, mandaatgemeente, GGD-regio, province and support bureau roles separate.",
+            ],
+            "notes": "The role map prevents actor confusion but does not settle component-level ownership.",
+        },
+        "knowledge_and_monitoring": {
+            "draft_input": knowledge_monitoring
+            or "Regional knowledge and monitoring arrangements are not confirmed in the repository.",
+            "status_id": "source_backed_current_information" if knowledge_monitoring else "validation_needed",
+            "evidence_refs": [
+                format_claims.get("kennis_en_monitoring", ""),
+                *role_source_ids(regional_roles, ["netwerkbureau_zorgzaam_flevoland", "ggd_flevoland_execution_scale"]),
+                "data/extracted/d6_governance_collaboration.json",
+            ],
+            "validation_or_decision_needed": [
+                "Confirm monitoring owner, dashboard/data route, reporting rhythm and learning-cycle use.",
+                "Confirm which indicators belong at RPI level versus component level.",
+            ],
+            "notes": "Monitoring signals are useful for concept input but need owner validation for final text.",
+        },
+    }
+
+    fields = []
+    for field in REGIONAL_PREVENTION_INFRASTRUCTURE_FORMAT_FIELDS:
+        prepared = field_inputs[field["field_id"]]
+        fields.append(
             {
-                **field,
+                **format_field(
+                    field,
+                    prepared["draft_input"],
+                    prepared["status_id"],
+                    [ref for ref in prepared["evidence_refs"] if ref],
+                    prepared["validation_or_decision_needed"],
+                    prepared["notes"],
+                ),
                 "almere_input_role": (
                     "Almere can provide local signals and validation input, but the regional process must "
                     "consolidate this into the final RPI section."
                 ),
-                "information_status": "validation_needed",
             }
-            for field in REGIONAL_PREVENTION_INFRASTRUCTURE_FORMAT_FIELDS
-        ],
+        )
+
+    return {
+        "format_fields": fields,
+        "repository_fill_check": {
+            "checked_repository_layers": [
+                "data/curated/regional_roles_and_splits_almere_flevoland.json",
+                "data/extracted/d6_governance_collaboration.json",
+                "data/extracted/workagenda_d5_operational_requirements.json",
+            ],
+            "fields_with_repository_input": [
+                field["field_id"]
+                for field in fields
+                if field["information_status"] != "validation_needed"
+            ],
+            "fields_still_needing_regional_or_local_validation": [
+                field["field_id"]
+                for field in fields
+                if not field["may_use_as_confirmed_workagenda_text"]
+            ],
+            "deep_research_boundary": (
+                "Deep research can strengthen public evidence for role, monitoring or finance-route signals, "
+                "but it cannot confirm local ownership, allocation, mandate or final RPI wording."
+            ),
+        },
         "local_contribution_needed_by_2026_09_15": [
             "local signals for health goals and priority groups",
             "local finance/controller notes relevant to regional funding agreements",
@@ -1706,6 +1942,7 @@ def build_format_aligned_workagenda_input(
     operational_requirement: dict[str, Any] | None,
     capacity_item: dict[str, Any] | None,
     available_information: dict[str, Any],
+    repository_context: dict[str, Any],
 ) -> dict[str, Any]:
     component_id = row["target_id"]
     context = FORMAT_COMPONENT_CONTEXT.get(
@@ -1730,7 +1967,7 @@ def build_format_aligned_workagenda_input(
         "format_alignment_status": "mapped_to_actual_vng_workagenda_format",
         "format_component_context": context,
         "information_status_model": FORMAT_INFORMATION_STATUS_MODEL,
-        "regional_prevention_infrastructure_alignment": build_rpi_alignment(),
+        "regional_prevention_infrastructure_alignment": build_rpi_alignment(repository_context),
         "leefgebied_context": {
             "leefgebied": context.get("leefgebied"),
             "format_fields": build_leefgebied_fields(row, operational_requirement, available_information),
@@ -1810,6 +2047,7 @@ def build_object(
     operational_requirement: dict[str, Any] | None,
     capacity_item: dict[str, Any] | None,
     source_need: dict[str, Any] | None,
+    repository_context: dict[str, Any],
 ) -> dict[str, Any]:
     component_id = row["target_id"]
     ready = concept_handoff_ready(row)
@@ -1890,6 +2128,7 @@ def build_object(
             operational_requirement,
             capacity_item,
             available_information,
+            repository_context,
         ),
         "gap_summary": gap_summary,
         "decision_requests_for_region": build_decision_requests(row),
@@ -2005,12 +2244,161 @@ def build_summary(objects: list[dict[str, Any]]) -> dict[str, Any]:
     }
 
 
+def collect_format_information_status_counts(objects: list[dict[str, Any]]) -> dict[str, int]:
+    counts: Counter[str] = Counter()
+
+    def walk(value: Any) -> None:
+        if isinstance(value, dict):
+            status = value.get("information_status")
+            if isinstance(status, str):
+                counts[status] += 1
+            for child in value.values():
+                walk(child)
+        elif isinstance(value, list):
+            for child in value:
+                walk(child)
+
+    for item in objects:
+        walk(item.get("format_aligned_workagenda_input", {}))
+    return dict(sorted(counts.items()))
+
+
+def build_deep_research_recommendation(
+    local_source_strengthening: dict[str, Any],
+    local_decisions: dict[str, Any],
+) -> dict[str, Any]:
+    candidate_by_id = index_by(local_source_strengthening.get("candidate_sources", []), "candidate_id")
+    candidate_frequency: Counter[str] = Counter()
+    for need in local_source_strengthening.get("target_source_needs", []):
+        candidate_frequency.update(need.get("candidate_source_ids", []))
+
+    priority_candidates = []
+    for candidate_id, frequency in sorted(candidate_frequency.items()):
+        candidate = candidate_by_id.get(candidate_id)
+        if not candidate:
+            continue
+        repository_status = candidate.get("current_repository_status")
+        verification_status = candidate.get("verification_status")
+        source_url = candidate.get("source_url")
+        if repository_status in {"present", "selected_primary_documents_present", "partially_present_selected_table_books"}:
+            recommendation = "already_available_or_partly_available"
+        elif verification_status == "not_found_in_public_search_2026_04_24":
+            recommendation = "targeted_deep_research_advised_to_find_public_source_or_confirm_absence"
+        elif source_url:
+            recommendation = "repository_source_intake_or_focused_extraction_before_deep_research"
+        else:
+            recommendation = "defer_to_local_validation_or_named_source_search"
+        priority_candidates.append(
+            {
+                "candidate_id": candidate_id,
+                "title": candidate.get("title"),
+                "appears_in_component_needs": frequency,
+                "current_repository_status": repository_status,
+                "intake_status": candidate.get("intake_status"),
+                "recommendation": recommendation,
+                "why_it_matters": candidate.get("why_it_matters"),
+            }
+        )
+
+    targeted_research = [
+        item
+        for item in priority_candidates
+        if item["recommendation"] == "targeted_deep_research_advised_to_find_public_source_or_confirm_absence"
+    ]
+    source_intake = [
+        item
+        for item in priority_candidates
+        if item["recommendation"] == "repository_source_intake_or_focused_extraction_before_deep_research"
+    ]
+    available = [
+        item
+        for item in priority_candidates
+        if item["recommendation"] == "already_available_or_partly_available"
+    ]
+    local_decision_records = local_decisions.get("decisions", [])
+    d5_confirmed_decisions = [
+        decision
+        for decision in local_decision_records
+        if any("D5" in str(scope) for scope in decision.get("scope", []))
+        and decision.get("decision_status") == "source_backed_public_decision"
+    ]
+    return {
+        "general_deep_research_advice": (
+            "Do not send broad deep research agents for fields that require local owner, finance/controller, "
+            "capacity, monitoring or decision validation. Those are human validation tasks."
+        ),
+        "targeted_deep_research_advised": targeted_research,
+        "source_intake_or_focused_extraction_before_deep_research": source_intake,
+        "already_available_or_partly_available_in_repository": available,
+        "human_validation_instead_of_deep_research": [
+            "confirmed component owner/coordinator/executor",
+            "finance/controller allocation and continuity",
+            "capacity, coverage and waiting times",
+            "monitoring owner and reporting rhythm",
+            "formal project objectives, ambition and phasing decisions",
+            "D6 dependency classification and owner",
+        ],
+        "local_decision_records_seen": len(local_decision_records),
+        "confirmed_d5_component_decision_records_seen": len(d5_confirmed_decisions),
+        "decision_boundary": (
+            "The repository currently has a public local decision record for Stevige Lokale Teams/adjacent D6 "
+            "scope, but no source-backed D5 component decision that makes these new format fields confirmed."
+        ),
+    }
+
+
+def build_format_field_check(
+    objects: list[dict[str, Any]],
+    repository_context: dict[str, Any],
+) -> dict[str, Any]:
+    return {
+        "scope": "format_aligned_workagenda_input",
+        "field_status_counts": collect_format_information_status_counts(objects),
+        "repository_fill_result": {
+            "rerun_performed": True,
+            "repository_can_fill_now": [
+                "regional prevention infrastructure orientation: mandate municipality, regional coordination forums, support bureau and GGD scale signals",
+                "financial-route context: possible AZWA/SPUK, Zvw/insurer, doorbraakmiddelen and GALA/SPUK separation signals",
+                "knowledge and monitoring context: Netwerkbureau/Zorgzaam Flevoland and D6 monitoring-responsibility signals",
+                "component current-state urgency and current situation where public indicators, operational sources or implementation signals exist",
+            ],
+            "still_not_fillable_from_repository": [
+                "confirmed regional health goals for the final workagenda",
+                "confirmed component-level ambition and SMART project objectives",
+                "confirmed owner/coordinator/executor and mandate",
+                "validated financial allocation, continuity and controller check",
+                "validated capacity, coverage, waiting time and provider availability",
+                "confirmed monitoring owner, reporting rhythm and learning-cycle agreement",
+                "settled D6 dependency classification and owner",
+            ],
+            "status_boundary": (
+                "Repository evidence can make fields usable for 15 September concept input, but does not make "
+                "them confirmed workagenda positions unless a source-backed decision or validation record exists."
+            ),
+        },
+        "deep_research_recommendation": build_deep_research_recommendation(
+            repository_context.get("local_source_strengthening", {}),
+            repository_context.get("local_decisions", {}),
+        ),
+    }
+
+
 def build_layer() -> dict[str, Any]:
     matrix = load_json(STATUS_MATRIX)
     tickets = load_json(VALIDATION_TICKETS)
     operational_requirements = load_json(OPERATIONAL_REQUIREMENTS)
     nulmeting_capacity = load_json(NULMETING_CAPACITY)
     local_source_strengthening = load_json(LOCAL_SOURCE_STRENGTHENING)
+    regional_roles = load_json(REGIONAL_ROLES_AND_SPLITS)
+    d6_governance = load_json(D6_GOVERNANCE_COLLABORATION)
+    local_decisions = load_json(ALMERE_LOCAL_DECISIONS)
+    repository_context = build_repository_context(
+        operational_requirements,
+        local_source_strengthening,
+        regional_roles,
+        d6_governance,
+        local_decisions,
+    )
     ticket_lookup = {item["ticket_id"]: item for item in tickets["tickets"]}
     tickets_by_component = tickets["tickets_by_component"]
     operational_by_target = index_by(operational_requirements.get("targets", []), "target_id")
@@ -2024,6 +2412,7 @@ def build_layer() -> dict[str, Any]:
             operational_by_target.get(row["target_id"]),
             capacity_by_target.get(row["target_id"]),
             source_need_by_target.get(row["target_id"]),
+            repository_context,
         )
         for row in matrix["rows"]
     ]
@@ -2036,6 +2425,7 @@ def build_layer() -> dict[str, Any]:
         "source_layers": source_layers,
         "process_context": build_process_context(),
         "summary": build_summary(objects),
+        "format_field_check": build_format_field_check(objects, repository_context),
         "objects": objects,
     }
 

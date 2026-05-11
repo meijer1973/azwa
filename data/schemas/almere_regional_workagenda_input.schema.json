@@ -12,6 +12,7 @@
     "source_layers",
     "process_context",
     "summary",
+    "format_field_check",
     "objects"
   ],
   "properties": {
@@ -49,6 +50,16 @@
     "summary": {
       "type": "object",
       "additionalProperties": true
+    },
+    "format_field_check": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": [
+        "scope",
+        "field_status_counts",
+        "repository_fill_result",
+        "deep_research_recommendation"
+      ]
     },
     "objects": {
       "type": "array",

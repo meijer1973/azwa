@@ -42,6 +42,7 @@ class AlmereRegionalWorkagendaInputTests(unittest.TestCase):
         self.assertTrue(DOC_PATH.exists())
         self.assertEqual(self.layer["schema_id"], "ALMERE-REGIONAL-WORKAGENDA-INPUT-V1")
         self.assertEqual(self.layer["status"], "generated_concept_layer")
+        self.assertEqual(self.layer["format_field_check"]["scope"], "format_aligned_workagenda_input")
 
     def test_output_contains_one_object_per_d5_status_matrix_row(self) -> None:
         matrix_ids = [row["target_id"] for row in self.matrix["rows"]]
@@ -55,6 +56,16 @@ class AlmereRegionalWorkagendaInputTests(unittest.TestCase):
         self.assertEqual(self.layer["summary"]["format_aligned_object_count"], len(matrix_ids))
         self.assertEqual(self.layer["summary"]["format_confirmed_field_count"], 0)
         self.assertEqual(self.layer["summary"]["format_source_id"], "nat_azwa_format_werkagenda_d5_2026")
+        self.assertEqual(
+            self.layer["format_field_check"]["field_status_counts"]["source_backed_current_information"],
+            77,
+        )
+        self.assertEqual(
+            self.layer["format_field_check"]["deep_research_recommendation"][
+                "confirmed_d5_component_decision_records_seen"
+            ],
+            0,
+        )
         self.assertEqual(self.layer["summary"]["primary_municipality_delivery_target"], "2026-09-15")
         self.assertIn("main delivery target", self.layer["summary"]["date_priority_note"])
 
@@ -126,6 +137,24 @@ class AlmereRegionalWorkagendaInputTests(unittest.TestCase):
         self.assertTrue(format_input["readiness_summary"]["can_populate_format_as_concept"])
         self.assertFalse(format_input["readiness_summary"]["can_populate_format_as_confirmed"])
 
+        rpi_fields = {
+            field["field_id"]: field
+            for field in format_input["regional_prevention_infrastructure_alignment"]["format_fields"]
+        }
+        self.assertEqual(
+            rpi_fields["rpi_explanation"]["information_status"],
+            "source_backed_current_information",
+        )
+        self.assertIn("mandaatgemeente", rpi_fields["rpi_explanation"]["draft_input_for_15_september"])
+        self.assertEqual(
+            rpi_fields["financial_resources"]["information_status"],
+            "finance_controller_validation_needed",
+        )
+        self.assertEqual(
+            rpi_fields["regional_health_goals"]["information_status"],
+            "validation_needed",
+        )
+
         component_fields = format_input["component_format_fields"]
         self.assertEqual(
             component_fields["current_state"]["urgency"]["information_status"],
@@ -182,8 +211,9 @@ class AlmereRegionalWorkagendaInputTests(unittest.TestCase):
     def test_doc_names_sprint_and_boundary(self) -> None:
         text = DOC_PATH.read_text(encoding="utf-8")
 
-        self.assertIn("Current sprint: Sprint 33.P8", text)
+        self.assertIn("Current sprint: Sprint 33.P9", text)
         self.assertIn("format_aligned_workagenda_input", text)
+        self.assertIn("format_field_check", text)
         self.assertIn("This layer is a preparation and handoff model.", text)
         self.assertIn("not proof that unresolved local items have been decided", text)
 

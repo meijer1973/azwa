@@ -250,7 +250,7 @@ PUBLIC_SOURCE_CANDIDATES = [
         "source_url": "https://zwolle.bestuurlijkeinformatie.nl/Document/View/73c9ebe8-9347-42f0-9980-15a7f54cdca3",
         "repository_status": "ingested_formal_corpus",
         "verification_status": "pdf_downloaded_2026_05_11",
-        "why_it_matters": "Official annex/source for reading 'Flevoland - Almere' as region plus mandaatgemeente, and for SPUK IZA coordination funding context.",
+        "why_it_matters": "Official annex/source for reading the VWS region and mandaatgemeente table as Regio Flevoland plus mandaatgemeente Almere, and for SPUK IZA coordination funding context.",
         "intake_action": "Use as mandate/finance evidence; keep 'Flevoland' and 'Almere' as separate fields and actors.",
     },
     {
@@ -1006,7 +1006,7 @@ COMPONENTS = [
         "required_upgrade": (
             "Validate whether these structures are formal D6 infrastructure, adjacent programme infrastructure or "
             "implementation support, separate PGA transformation funding from D5/D6/AZWA and regular budgets, and "
-            "avoid treating 'Flevoland - Almere' or slash shorthand as a combined actor."
+            "avoid treating any combined Flevoland-and-Almere label as an actor."
         ),
         "owner": "shared programme and regional roles need validation",
         "executors": [

@@ -598,8 +598,8 @@ ANNOTATIONS = {
         "contains_monitoring_evaluation_logic": False,
         "contains_municipal_implications": True,
         "inventory_notes": (
-            "Official VWS financing letter and annex. Treat 'Flevoland - Almere' as Regio Flevoland plus "
-            "mandaatgemeente Almere, not as one actor. Use for financing/mandate context, not local execution ownership."
+            "Official VWS financing letter and annex. Use the region and mandaatgemeente table as "
+            "Regio Flevoland plus mandaatgemeente Almere. Use for financing/mandate context, not local execution ownership."
         ),
     },
     "reg_centrumregeling_sociaal_domein_flevoland": {

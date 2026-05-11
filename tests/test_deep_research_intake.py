@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import re
 import unittest
 from pathlib import Path
 
@@ -314,7 +315,8 @@ class DeepResearchIntakeTests(unittest.TestCase):
         self.assertIn("netwerkbureau_zorgzaam_flevoland", role_ids)
         self.assertIn("province_flevoland_distinct_public_body", role_ids)
         self.assertIn("spuk_annex_flevoland_almere", split_ids)
-        self.assertIn("Flevoland - Almere", roles["editorial_rule"])
+        self.assertNotIn("Flevoland - Almere", roles["editorial_rule"])
+        self.assertIn("combined Flevoland-and-Almere label", roles["editorial_rule"])
 
         almere_role = next(
             role
@@ -322,6 +324,23 @@ class DeepResearchIntakeTests(unittest.TestCase):
             if role["role_id"] == "iza_flevoland_formal_mandaatgemeente_almere"
         )
         self.assertIn("Flevoland en Almere vormen samen een actor.", almere_role["does_not_mean"])
+
+    def test_active_data_does_not_use_combined_flevoland_almere_labels(self) -> None:
+        pattern = re.compile("Flevoland\\s*(?:-|\u2013|/)\\s*Almere|Almere\\s*/\\s*Flevoland")
+        active_data_roots = [
+            REPO_ROOT / "data" / "curated",
+            REPO_ROOT / "data" / "extracted",
+            REPO_ROOT / "data" / "site",
+            REPO_ROOT / "data" / "workagenda",
+        ]
+        hits = []
+        for root in active_data_roots:
+            for path in root.rglob("*"):
+                if path.is_file() and path.suffix.lower() in {".json", ".jsonl", ".csv"}:
+                    text = path.read_text(encoding="utf-8", errors="ignore")
+                    if pattern.search(text):
+                        hits.append(path.relative_to(REPO_ROOT).as_posix())
+        self.assertEqual([], hits)
 
     def test_healthy_school_findings_reach_d6_register(self) -> None:
         register = load_json(REGISTER_PATH)

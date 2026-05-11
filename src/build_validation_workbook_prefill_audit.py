@@ -124,25 +124,31 @@ def first_current_view(rows: list[dict[str, object]], headers: dict[int, str], s
 
 
 def clarify_regional_actor_shorthand(text: str) -> str:
-    return (
-        text.replace(
-            "of Almere/Flevoland een",
-            "of er voor gemeente Almere en de relevante Flevoland-schaal een",
-        )
-        .replace(
-            "of Flevoland/Almere een",
-            "of er voor de relevante Flevoland-schaal en gemeente Almere een",
-        )
-        .replace(
-            "Almere/Flevoland",
-            "gemeente Almere en de relevante Flevoland-schaal",
-        )
-        .replace(
-            "Flevoland/Almere",
-            "de relevante Flevoland-schaal en gemeente Almere",
-        )
-        .replace("een route of plan heeft", "een route of plan is")
+    text = re.sub(
+        r"of\s+Almere\s*/\s*Flevoland\s+een",
+        "of er voor gemeente Almere en de relevante Flevoland-schaal een",
+        text,
+        flags=re.IGNORECASE,
     )
+    text = re.sub(
+        r"of\s+Flevoland\s*/\s*Almere\s+een",
+        "of er voor de relevante Flevoland-schaal en gemeente Almere een",
+        text,
+        flags=re.IGNORECASE,
+    )
+    text = re.sub(
+        r"\bAlmere\s*/\s*Flevoland\b",
+        "gemeente Almere en de relevante Flevoland-schaal",
+        text,
+        flags=re.IGNORECASE,
+    )
+    text = re.sub(
+        r"\bFlevoland\s*/\s*Almere\b",
+        "de relevante Flevoland-schaal en gemeente Almere",
+        text,
+        flags=re.IGNORECASE,
+    )
+    return text.replace("een route of plan heeft", "een route of plan is")
 
 
 def normalized_headers(headers: dict[int, str]) -> set[str]:

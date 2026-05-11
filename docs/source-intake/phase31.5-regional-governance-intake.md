@@ -14,7 +14,7 @@ The deep-research report itself was not added to the source manifest. Selected p
 | `reg_provincie_flevoland_verbindende_coalitie_2024` | Added | Transition from Zorgtafel to Verbindende Coalitie, province context, five-municipality IZA-regio note and Zeewolde split. | Does not make the province the IZA/AZWA actor or mandaatgemeente. |
 | `reg_zonmw_zorgzaam_flevoland_project` | Added | Three subregions, PGA as subregion Zuid example and regional Netwerkbureau. | Project page is useful context, not formal local ownership. |
 | `nat_dusi_spuk_iza_2023_2026` | Added | SPUK IZA mandate-structure, municipal coordination and mandaathouder context. | Does not settle local execution or Verbindende Coalitie/Netwerkbureau roles. |
-| `nat_vws_spuk_iza_brede_spuk_mandaatgemeente_2025` | Added | SPUK IZA/Brede SPUK financing context and region/mandaatgemeente pair for Flevoland and Almere. | `Flevoland - Almere` means two fields, not a combined actor. |
+| `nat_vws_spuk_iza_brede_spuk_mandaatgemeente_2025` | Added | SPUK IZA/Brede SPUK financing context with separate region and mandaatgemeente fields for Flevoland and Almere. | Use as two fields, not as a combined actor label. |
 | `reg_centrumregeling_sociaal_domein_flevoland` | Added | Almere as centrumgemeente for specified social-domain cooperation tasks and mandate mechanics. | Not the same as IZA/AZWA mandaatgemeente or province wording. |
 | `reg_proscoop_zorgzaam_flevoland_netwerkbureau_2024` | Added | Supporting evidence for coordinator/secretary contribution and Netwerkbureau support role. | Provider article; not proof of budget holder or formal owner. |
 | `reg_ggd_flevoland_bestuursrapportage_aug_2024` | Added | GGD advisory and monitoring context around Netwerkbureau Zorgzaam Flevoland. | Does not settle D6 ownership or funding. |
@@ -27,7 +27,7 @@ Use the following wording rules in research and generated outputs:
 
 - `Almere` means gemeente Almere unless a source names a specific Almere programme or organisation.
 - `Flevoland` must be qualified as province, IZA/AZWA-regio, GGD-regio, zorgkantoor/ROAZ context or broader regional wording.
-- `Flevoland - Almere` in SPUK/mandaatgemeente context means regio Flevoland plus gemeente Almere as mandaatgemeente.
+- SPUK/mandaatgemeente tables should be read as two separate fields: regio Flevoland plus gemeente Almere as mandaatgemeente.
 - Verbindende Coalitie Zorgzaam Flevoland is a regional steering/forum actor, not automatically a legal entity or owner.
 - Netwerkbureau Zorgzaam Flevoland is a support-bureau actor, not automatically a mandaatgemeente, owner or budget holder.
 
@@ -48,9 +48,9 @@ Claim extraction surfaced each selected source in `data/extracted/claims/claims_
 
 Higher-layer actor check:
 
-- `data/extracted/d6_governance_collaboration.json` names Verbindende Coalitie Zorgzaam Flevoland and Netwerkbureau Zorgzaam Flevoland and carries the `Flevoland - Almere` actor-separation guardrail.
+- `data/extracted/d6_governance_collaboration.json` names Verbindende Coalitie Zorgzaam Flevoland and Netwerkbureau Zorgzaam Flevoland and carries the actor-separation guardrail.
 - `data/extracted/municipal/almere_d6_responsibility_register.json` includes both actors and all eight new source IDs in the PGA/Zorgzaam/Flevoland interface evidence while keeping decision status `inferred` and `needs_human_review: true`.
 - `data/workagenda/almere_regional_workagenda_input_objects.json` includes the mandaatgemeente distinction and a `regional_coordination_entities` block for Verbindende Coalitie and Netwerkbureau.
 - `data/extracted/claims/current_interpretation.json` does not synthesize these thin regional actors by name; for actor-aware work use the curated role map, D6 governance layer, D6 responsibility register and regional input object rather than relying on the current-interpretation summary alone.
 
-Shorthand search was also run for `Flevoland - Almere`, `Flevoland/Almere` and `Almere/Flevoland`. Active generated data now uses the combined forms only in explicit guardrails, source notes or source-candidate notes that state they are not one actor. One validation-workbook audit sample was rewritten by the audit builder from `Almere/Flevoland` to `gemeente Almere en de relevante Flevoland-schaal`.
+Shorthand search was also run for combined Flevoland-and-Almere labels. Active generated data should not keep those labels as repository wording; use separate fields or named actors instead. One validation-workbook audit sample was rewritten by the audit builder to `gemeente Almere en de relevante Flevoland-schaal`.

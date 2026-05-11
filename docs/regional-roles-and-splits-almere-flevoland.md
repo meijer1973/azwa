@@ -14,7 +14,7 @@ label de uitspraak als reviewpunt.
 | --- | --- | --- | --- |
 | IZA/AZWA-regio Flevoland | Almere doet mee in de Flevolandse IZA/AZWA-route en wordt in nationale financieringsinformatie en externe listings als mandaatgemeente genoemd. | Dronten, Lelystad, Noordoostpolder en Urk. Zeewolde loopt voor het regioplan via Noord-Veluwe. | Bronvast voor deelname en mandaatgemeente-vermelding; praktische taakverdeling vraagt per taak broncontrole. |
 | Provincie Flevoland | De provincie is een afzonderlijk openbaar lichaam en provinciale gebiedslaag. | De provincie overlapt niet automatisch met de IZA/AZWA-regio, omdat Zeewolde in de regioplanroute bij Noord-Veluwe aansluit. | Bronvast als aparte rol en gebiedslaag; niet gebruiken als shorthand voor de IZA/AZWA-regio. |
-| Mandaatgemeente Almere | Almere is de gemeente die voor de Flevolandse IZA/SPUK-route als mandaatgemeente wordt genoemd. De VWS-bijlage leest `Flevoland - Almere` als `regio: Flevoland` plus `mandaatgemeente: Almere`. | De mandaatgemeente-rol betekent niet dat Almere alle regionale taken uitvoert of dat Flevoland en Almere een gecombineerde actor zijn. | Bronvast in nationale SPUK/mandaatgemeente-informatie; aanvullend lokaal mandaatbesluit blijft nuttig voor exacte bestuurlijke reikwijdte. |
+| Mandaatgemeente Almere | Almere is de gemeente die voor de Flevolandse IZA/SPUK-route als mandaatgemeente wordt genoemd. De VWS-bijlage heeft een regio-veld en een mandaatgemeente-veld: regio Flevoland en mandaatgemeente Almere. | De mandaatgemeente-rol betekent niet dat Almere alle regionale taken uitvoert of dat Flevoland en Almere een gecombineerde actor zijn. | Bronvast in nationale SPUK/mandaatgemeente-informatie; aanvullend lokaal mandaatbesluit blijft nuttig voor exacte bestuurlijke reikwijdte. |
 | Verbindende Coalitie Zorgzaam Flevoland | Regionaal bestuurlijk netwerk/platform voor sturing, overzicht en verbinding rond de IZA-opgaven. | Bestuurders van zorg, welzijn, ziekenhuizen, huisartsen, patientenvertegenwoordiging, Zilveren Kruis en gemeenten; geen afzonderlijk openbaar lichaam in de huidige bronbasis. | Bronvast als regionale coalitie/overlegstructuur; mandaat en besluitvormingsbevoegdheid per onderwerp blijven validatiepunten. |
 | Netwerkbureau Zorgzaam Flevoland | Kleine regionale ondersteuningsorganisatie voor samenhang, overzicht, monitoring, leren, afstemming en verbinding. | Ondersteunt de regionale beweging en subregionale initiatieven; Proscoop noemt coordinator/secretarisbijdrage. | Bronvast als ondersteunende actor; host, rapportagelijn, continuiteit en budget moeten per bron/validatie worden bevestigd. |
 | Zorgkantoorregio | Almere valt onder zorgkantoorregio 't Gooi, niet onder zorgkantoorregio Flevoland. | De 't Gooi-indeling wijkt af van de IZA/AZWA-regio Flevoland. | Bronvast in Regiobeeld Flevoland en Zilveren Kruis-regioinformatie. |
@@ -43,13 +43,13 @@ Voor de huidige bronbasis geldt:
 - niet bronvast in de huidige corpus: Lelystad als formele mandaatgemeente voor IZA/AZWA Flevoland;
 - reviewpunt: welke praktische taken eventueel door Lelystad, Flever, GGD Flevoland of andere partners worden uitgevoerd.
 
-## Flevoland - Almere
+## Verboden gecombineerde actorlabels
 
-Lees combinaties zoals `Flevoland - Almere`, `Flevoland/Almere` of `Almere/Flevoland` nooit automatisch als een actor. Controleer welke betekenis de bron bedoelt:
+Gebruik geen gecombineerde Flevoland-en-Almere-labels als actornaam. Controleer welke betekenis de bron bedoelt:
 
 - `Flevoland` kan de provincie, de IZA/AZWA-regio, de GGD-regio, een zorg-/welzijnsnetwerk of een bredere gebiedsaanduiding zijn;
 - `Almere` betekent de gemeente Almere, tenzij de bron expliciet een programma of organisatie met Almere in de naam bedoelt;
-- in SPUK/mandaatgemeente-tabellen betekent `Flevoland - Almere`: regio Flevoland en mandaatgemeente Almere;
+- in SPUK/mandaatgemeente-tabellen gaat het om twee velden: regio Flevoland en mandaatgemeente Almere;
 - in validatievragen is betere taal: `Gemeente Almere en, waar relevant, de IZA/AZWA-regio Flevoland`.
 
 ## Schrijfregels
@@ -58,7 +58,7 @@ Gebruik niet:
 
 - `de regio` zonder nadere duiding als verschillende regionale kaarten relevant zijn;
 - `Flevoland` als shorthand voor alle regionale routes;
-- `Flevoland - Almere` als actornaam;
+- een gecombineerde Flevoland-en-Almere-actornaam;
 - `Almere is mandaatgemeente, dus Almere voert dit uit`;
 - `Lelystad pakt dit op` als feit zonder bron voor de specifieke taak.
 
@@ -84,7 +84,7 @@ Gebruik liever:
 - `reg_provincie_flevoland_verbindende_coalitie_2024`: provinciale mededeling over de overgang van Zorgtafel naar Verbindende Coalitie Zorgzaam Flevoland; benadrukt dat regio Flevoland voor het regioplan uit vijf gemeenten bestaat en dat Zeewolde bij Noord-Oost Veluwe aansluit.
 - `reg_zonmw_zorgzaam_flevoland_project`: projectpagina die het regionale Netwerkbureau, drie subregio's en PGA als subregio Zuid-voorbeeld noemt.
 - `nat_dusi_spuk_iza_2023_2026`: DUS-I-pagina die SPUK IZA koppelt aan mandaatstructuur en coordinatie van gemeenten.
-- `nat_vws_spuk_iza_brede_spuk_mandaatgemeente_2025`: VWS-brief/bijlage met regio/mandaatgemeente-indeling; gebruik `Flevoland - Almere` alleen als regio plus mandaatgemeente.
+- `nat_vws_spuk_iza_brede_spuk_mandaatgemeente_2025`: VWS-brief/bijlage met regio/mandaatgemeente-indeling; gebruik deze bron alleen als regio-plus-mandaatgemeente-bewijs.
 - `reg_centrumregeling_sociaal_domein_flevoland`: lokale regeling die Almere als centrumgemeente aanwijst voor specifieke sociaal-domeintaken; niet gelijkstellen aan IZA/AZWA-mandaat of provincie.
 - `reg_proscoop_zorgzaam_flevoland_netwerkbureau_2024`: Proscoop-artikel dat coordinator/secretarisrol en de ondersteunende functie van het Netwerkbureau beschrijft.
 - `reg_ggd_flevoland_bestuursrapportage_aug_2024`: GGD-bestuursrapportage met advies-/monitoringcontext bij Netwerkbureau Zorgzaam Flevoland.

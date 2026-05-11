@@ -21,7 +21,7 @@
     "nulmeting_target_count": 11
   },
   "regional_guardrail": {
-    "editorial_rule": "Do not use 'Flevoland', 'de regio', 'Flevoland - Almere', or 'mandaatgemeente' as generic shorthand when IZA/AZWA-regio, provincie, GGD-regio, zorgkantoorregio, ROAZ/subregio, Netwerkbureau, Verbindende Coalitie, or practical task ownership matters.",
+    "editorial_rule": "Do not use a combined Flevoland-and-Almere label as an actor. Always name the actual role: province, IZA/AZWA-regio, GGD-regio, zorgkantoorregio, ROAZ/subregion, municipality, mandaatgemeente, Netwerkbureau, Verbindende Coalitie, or practical task owner.",
     "regional_splits": [
       {
         "split_id": "province_flevoland_public_body",
@@ -64,7 +64,7 @@
       {
         "split_id": "spuk_annex_flevoland_almere",
         "region_type": "regio_mandaatgemeente_pair",
-        "label": "Flevoland - Almere in SPUK/mandaatgemeente tables",
+        "label": "SPUK row with region Flevoland and mandaatgemeente Almere",
         "almere_position": "Almere is the mandaatgemeente named for the Flevoland route.",
         "meaning": "Read as two fields: Regio = Flevoland; Mandaatgemeente = Almere.",
         "source_status": "source_backed_pair_not_actor",
@@ -72,7 +72,7 @@
           "nat_vws_spuk_iza_brede_spuk_mandaatgemeente_2025",
           "nat_dusi_spuk_iza_2023_2026"
         ],
-        "agent_warning": "Never turn 'Flevoland - Almere' into one actor. Write 'regio Flevoland met gemeente Almere als mandaatgemeente' when that is the intended meaning."
+        "agent_warning": "Never turn a region-plus-mandate-municipality table row into one actor. Write 'regio Flevoland met gemeente Almere als mandaatgemeente' when that is the intended meaning."
       },
       {
         "split_id": "zorgkantoorregio_t_gooi",

@@ -52,6 +52,9 @@ class AlmereRegionalWorkagendaInputTests(unittest.TestCase):
         self.assertEqual(self.layer["summary"]["confirmed_position_ready_count"], 0)
         self.assertGreaterEqual(self.layer["summary"]["enriched_information_object_count"], len(matrix_ids))
         self.assertGreater(self.layer["summary"]["implementation_progress_signal_count"], 0)
+        self.assertEqual(self.layer["summary"]["format_aligned_object_count"], len(matrix_ids))
+        self.assertEqual(self.layer["summary"]["format_confirmed_field_count"], 0)
+        self.assertEqual(self.layer["summary"]["format_source_id"], "nat_azwa_format_werkagenda_d5_2026")
         self.assertEqual(self.layer["summary"]["primary_municipality_delivery_target"], "2026-09-15")
         self.assertIn("main delivery target", self.layer["summary"]["date_priority_note"])
 
@@ -106,6 +109,46 @@ class AlmereRegionalWorkagendaInputTests(unittest.TestCase):
         self.assertIn("d6_dependency", gap_fields)
         self.assertIn("bestaande uitvoeringsroute", valpreventie["handoff_to_region"]["recommended_wording"])
 
+    def test_valpreventie_maps_to_actual_workagenda_format(self) -> None:
+        objects = {item["component_id"]: item for item in self.layer["objects"]}
+        valpreventie = objects["valpreventie"]
+
+        format_input = valpreventie["format_aligned_workagenda_input"]
+        self.assertEqual(
+            format_input["format_source"]["source_id"],
+            "nat_azwa_format_werkagenda_d5_2026",
+        )
+        self.assertEqual(format_input["format_component_context"]["format_item_id"], "5a")
+        self.assertEqual(
+            format_input["format_component_context"]["leefgebied"],
+            "Vitaal ouder worden/ouderen",
+        )
+        self.assertTrue(format_input["readiness_summary"]["can_populate_format_as_concept"])
+        self.assertFalse(format_input["readiness_summary"]["can_populate_format_as_confirmed"])
+
+        component_fields = format_input["component_format_fields"]
+        self.assertEqual(
+            component_fields["current_state"]["urgency"]["information_status"],
+            "source_backed_current_information",
+        )
+        self.assertEqual(
+            component_fields["current_state"]["current_situation"]["information_status"],
+            "likely_or_indicated",
+        )
+        self.assertEqual(
+            component_fields["gap_project_plan"]["financial_plan"]["information_status"],
+            "finance_controller_validation_needed",
+        )
+        self.assertGreaterEqual(
+            len(component_fields["gap_project_plan"]["milestone_planning"]["milestone_rows"]),
+            3,
+        )
+
+        statuses = {item["status_id"] for item in format_input["information_status_model"]}
+        self.assertIn("confirmed_decision", statuses)
+        self.assertIn("likely_or_indicated", statuses)
+        self.assertIn("local_decision_needed", statuses)
+
     def test_adult_overweight_has_current_information_and_party_signals(self) -> None:
         objects = {item["component_id"]: item for item in self.layer["objects"]}
         adult_overweight = objects["ketenaanpak_overgewicht_obesitas_volwassenen"]
@@ -119,6 +162,9 @@ class AlmereRegionalWorkagendaInputTests(unittest.TestCase):
             any("GLI" in signal["statement"] for signal in available["implementation_progress_signals"])
         )
         self.assertTrue(available["finance_and_resource_signals"])
+        format_context = adult_overweight["format_aligned_workagenda_input"]["format_component_context"]
+        self.assertEqual(format_context["format_item_id"], "4a")
+        self.assertEqual(format_context["leefgebied"], "Leefstijl")
 
     def test_priority_questions_are_limited_and_traceable(self) -> None:
         for item in self.layer["objects"]:
@@ -136,7 +182,8 @@ class AlmereRegionalWorkagendaInputTests(unittest.TestCase):
     def test_doc_names_sprint_and_boundary(self) -> None:
         text = DOC_PATH.read_text(encoding="utf-8")
 
-        self.assertIn("Current sprint: Sprint 33.P7", text)
+        self.assertIn("Current sprint: Sprint 33.P8", text)
+        self.assertIn("format_aligned_workagenda_input", text)
         self.assertIn("This layer is a preparation and handoff model.", text)
         self.assertIn("not proof that unresolved local items have been decided", text)
 

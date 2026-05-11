@@ -67,6 +67,7 @@
           "target_state_for_regional_workagenda",
           "workagenda_delivery_requirements",
           "available_information_for_workagenda",
+          "format_aligned_workagenda_input",
           "gap_summary",
           "validation_needed_before_or_after_submission",
           "risk_assessment",
@@ -140,6 +141,21 @@
               "finance_and_resource_signals",
               "monitoring_and_learning_signals",
               "authority_boundary"
+            ]
+          },
+          "format_aligned_workagenda_input": {
+            "type": "object",
+            "additionalProperties": true,
+            "required": [
+              "format_source",
+              "format_alignment_status",
+              "format_component_context",
+              "information_status_model",
+              "regional_prevention_infrastructure_alignment",
+              "leefgebied_context",
+              "component_format_fields",
+              "readiness_summary",
+              "handoff_boundary"
             ]
           },
           "gap_summary": {

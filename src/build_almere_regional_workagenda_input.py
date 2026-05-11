@@ -27,6 +27,7 @@ SOURCE_LAYERS = [
     "data/extracted/workagenda_nulmeting_capacity.json",
     "data/extracted/local_source_strengthening_almere.json",
     "data/extracted/municipal/almere_d6_responsibility_register.json",
+    "data/raw/national/nat_azwa_format_werkagenda_d5_2026.docx",
     "data/site/source_view_models/zorgakkoorden-werkagenda-handvatten.json",
     "data/site/source_view_models/format-werkagenda-azwa.json",
     "data/site/source_view_models/opdracht-werkagenda-d5-azwa.json",
@@ -212,6 +213,260 @@ WORKAGENDA_REQUIRED_SECTIONS = [
         "what_to_prepare": "municipal delivery by 15 September 2026 and later regional consolidation toward adoption",
     },
 ]
+
+FORMAT_SOURCE_REF = {
+    "source_id": "nat_azwa_format_werkagenda_d5_2026",
+    "title": "Format werkagenda basisfunctionaliteiten AZWA",
+    "source_url": "https://vng.nl/sites/default/files/2026-04/format-voor-de-werkagenda-azwa.docx",
+    "repository_paths": [
+        "data/raw/national/nat_azwa_format_werkagenda_d5_2026.docx",
+        "data/site/source_view_models/format-werkagenda-azwa.json",
+    ],
+    "authority": "national_format_source",
+    "confidence": "high",
+}
+
+FORMAT_INFORMATION_STATUS_MODEL = [
+    {
+        "status_id": "confirmed_decision",
+        "meaning": "May be used as settled workagenda text because a local or regional decision/validation record supports it.",
+        "may_use_for_concept": True,
+        "may_use_as_confirmed_workagenda_text": True,
+    },
+    {
+        "status_id": "source_backed_current_information",
+        "meaning": "Supported by public or source-backed current information, but not itself a local decision.",
+        "may_use_for_concept": True,
+        "may_use_as_confirmed_workagenda_text": False,
+    },
+    {
+        "status_id": "likely_or_indicated",
+        "meaning": "Indicated by current sources, actor hints or implementation signals; needs local confirmation before final use.",
+        "may_use_for_concept": True,
+        "may_use_as_confirmed_workagenda_text": False,
+    },
+    {
+        "status_id": "planning_assumption",
+        "meaning": "Useful planning assumption, such as Almere's 15 September delivery target; not a national formal deadline.",
+        "may_use_for_concept": True,
+        "may_use_as_confirmed_workagenda_text": False,
+    },
+    {
+        "status_id": "validation_needed",
+        "meaning": "Needs stakeholder, owner, capacity, monitoring or D6 validation before final workagenda use.",
+        "may_use_for_concept": True,
+        "may_use_as_confirmed_workagenda_text": False,
+    },
+    {
+        "status_id": "finance_controller_validation_needed",
+        "meaning": "Finance route, continuity, double-counting or controller check still needs validation.",
+        "may_use_for_concept": True,
+        "may_use_as_confirmed_workagenda_text": False,
+    },
+    {
+        "status_id": "local_decision_needed",
+        "meaning": "Requires an Almere or regional scope, phasing, ownership or priority decision.",
+        "may_use_for_concept": True,
+        "may_use_as_confirmed_workagenda_text": False,
+    },
+    {
+        "status_id": "not_available_yet",
+        "meaning": "No usable input found in the current generated layer.",
+        "may_use_for_concept": False,
+        "may_use_as_confirmed_workagenda_text": False,
+    },
+]
+
+REGIONAL_PREVENTION_INFRASTRUCTURE_FORMAT_FIELDS = [
+    {
+        "field_id": "rpi_explanation",
+        "label": "Toelichting op RPI",
+        "format_question": "Omschrijf beknopt hoe de regionale preventie-infrastructuur in de regio is georganiseerd.",
+    },
+    {
+        "field_id": "regional_health_goals",
+        "label": "Regionale gezondheidsdoelen",
+        "format_question": "Omschrijf welke gezamenlijke gezondheidsdoelen in de regio zijn vastgesteld.",
+    },
+    {
+        "field_id": "financial_resources",
+        "label": "Financiële middelen",
+        "format_question": "Omschrijf de financieringsafspraken over de coördinatie en uitvoering.",
+    },
+    {
+        "field_id": "regional_cooperation_agreements",
+        "label": "Regionale samenwerkingsafspraken",
+        "format_question": "Omschrijf welke afspraken er zijn gemaakt omtrent verantwoordelijkheid.",
+    },
+    {
+        "field_id": "responsibility_distribution",
+        "label": "Verantwoordelijkheidsverdeling",
+        "format_question": "Omschrijf hoe samenwerking over domeinen heen en aanspreekbaarheid op rollen is georganiseerd.",
+    },
+    {
+        "field_id": "knowledge_and_monitoring",
+        "label": "Kennis en monitoring",
+        "format_question": "Omschrijf de regionale monitoring van voortgang, digitalisering en de gezamenlijke leer- en datacyclus.",
+    },
+]
+
+LEEFGEBIED_FORMAT_FIELDS = [
+    {
+        "field_id": "health_goals",
+        "label": "Gezondheidsdoelen",
+        "format_question": "Welke concrete regionale gezondheidsdoelen gericht op gezondheid en welzijn heeft de regio voor het leefgebied?",
+    },
+    {
+        "field_id": "scope_and_coherence",
+        "label": "Scope en samenhang",
+        "format_question": "Wat valt er binnen het leefgebied en hoe is samenhang met andere leefgebieden geborgd en benut?",
+    },
+    {
+        "field_id": "organisation_and_roles",
+        "label": "Organisatie en rollen",
+        "format_question": "Hoe zijn verantwoordelijkheid, eigenaarschap en uitvoeringscapaciteit voor het leefgebied geborgd?",
+    },
+]
+
+COMPONENT_FORMAT_FIELDS = [
+    {
+        "field_id": "urgency",
+        "source_stage_label": "IST",
+        "project_vocabulary_group": "current_state",
+        "label": "Urgentie",
+        "format_question": "Wat is er bekend over de urgentie van deze basisfunctionaliteit of aanpak in de regio?",
+    },
+    {
+        "field_id": "current_situation",
+        "source_stage_label": "IST",
+        "project_vocabulary_group": "current_state",
+        "label": "Situatie",
+        "format_question": "In hoeverre is deze basisfunctionaliteit of aanpak al aanwezig in de regio?",
+    },
+    {
+        "field_id": "ambition",
+        "source_stage_label": "SOLL",
+        "project_vocabulary_group": "target_state",
+        "label": "Ambitie",
+        "format_question": "Wat is vastgesteld als regionaal dekkend aanbod en wat is nodig om daartoe te komen?",
+    },
+    {
+        "field_id": "design_choices",
+        "source_stage_label": "SOLL",
+        "project_vocabulary_group": "target_state",
+        "label": "Ontwerp",
+        "format_question": "Welke expliciete keuzes zijn gemaakt in de invulling en welke keuzes moeten nog worden gemaakt?",
+    },
+    {
+        "field_id": "project_objectives",
+        "source_stage_label": "GAP",
+        "project_vocabulary_group": "gap_summary",
+        "label": "Projectdoelstellingen",
+        "format_question": "Omschrijf de SMART-afspraken die zijn gemaakt.",
+    },
+    {
+        "field_id": "financial_plan",
+        "source_stage_label": "GAP",
+        "project_vocabulary_group": "gap_summary",
+        "label": "Financieel plan",
+        "format_question": "Welke financiële middelen worden ingezet voor dit onderdeel?",
+    },
+    {
+        "field_id": "monitoring",
+        "source_stage_label": "GAP",
+        "project_vocabulary_group": "gap_summary",
+        "label": "Monitoring",
+        "format_question": "Hoe worden voortgang, prestaties en risico's gevolgd en gerapporteerd?",
+    },
+    {
+        "field_id": "milestone_planning",
+        "source_stage_label": "GAP",
+        "project_vocabulary_group": "gap_summary",
+        "label": "Mijlpalenplanning",
+        "format_question": "Welke kwartaalactiviteiten, verantwoordelijken en deelresultaten zijn afgesproken?",
+    },
+]
+
+FORMAT_COMPONENT_CONTEXT = {
+    "laagdrempelige_steunpunten": {
+        "format_item_id": "2a",
+        "format_item_title": "Laagdrempelige steunpunten",
+        "leefgebied": "Mentale gezondheid",
+        "component_kind_in_format": "basisfunctionaliteit",
+        "format_match_status": "direct_match",
+    },
+    "sociaal_verwijzen": {
+        "format_item_id": "2b",
+        "format_item_title": "Sociaal verwijzen",
+        "leefgebied": "Mentale gezondheid",
+        "component_kind_in_format": "basisfunctionaliteit",
+        "format_match_status": "direct_match",
+    },
+    "mentale_gezondheidsnetwerken": {
+        "format_item_id": "2c",
+        "format_item_title": "Mentale gezondheidsnetwerken",
+        "leefgebied": "Mentale gezondheid",
+        "component_kind_in_format": "ontwikkelagenda_1_lopend",
+        "format_match_status": "direct_match",
+    },
+    "kansrijke_start": {
+        "format_item_id": "3a",
+        "format_item_title": "Kansrijke Start",
+        "leefgebied": "Kansrijk opgroeien",
+        "component_kind_in_format": "basisfunctionaliteit",
+        "format_match_status": "direct_match",
+    },
+    "nu_niet_zwanger": {
+        "format_item_id": "3a.1",
+        "format_item_title": "Nu Niet Zwanger",
+        "leefgebied": "Kansrijk opgroeien",
+        "component_kind_in_format": "basisfunctionaliteit",
+        "format_match_status": "direct_match",
+    },
+    "integrale_gezinspoli": {
+        "format_item_id": "3a.2",
+        "format_item_title": "Integrale gezinspoli",
+        "leefgebied": "Kansrijk opgroeien",
+        "component_kind_in_format": "basisfunctionaliteit",
+        "format_match_status": "direct_match",
+    },
+    "ketenaanpak_overgewicht_obesitas_kinderen": {
+        "format_item_id": "3b",
+        "format_item_title": "Ketenaanpak overgewicht en obesitas kinderen",
+        "leefgebied": "Kansrijk opgroeien",
+        "component_kind_in_format": "ontwikkelagenda_1_lopend",
+        "format_match_status": "direct_match",
+    },
+    "ketenaanpak_overgewicht_obesitas_volwassenen": {
+        "format_item_id": "4a",
+        "format_item_title": "Ketenaanpak overgewicht en obesitas volwassenen",
+        "leefgebied": "Leefstijl",
+        "component_kind_in_format": "basisfunctionaliteit",
+        "format_match_status": "direct_match",
+    },
+    "valpreventie": {
+        "format_item_id": "5a",
+        "format_item_title": "Valpreventie",
+        "leefgebied": "Vitaal ouder worden/ouderen",
+        "component_kind_in_format": "basisfunctionaliteit",
+        "format_match_status": "direct_match",
+    },
+    "ontwikkelagenda_1_nieuw_beproeven": {
+        "format_item_id": "aggregate",
+        "format_item_title": "Nieuwe onderdelen ontwikkelagenda 1",
+        "leefgebied": "Meerdere leefgebieden",
+        "component_kind_in_format": "aggregate",
+        "format_match_status": "aggregate_for_multiple_optional_format_items",
+        "note": "The VNG format splits this into separate optional items such as rookvrije start, rookvrije thuiszorg, rookvrije wijkaanpak, ketenaanpak dementie and multiproblematiek.",
+    },
+    "ontwikkelagenda_2_overige_initiatieven": {
+        "format_item_id": "outside_core_format",
+        "format_item_title": "Ontwikkelagenda 2 en overige initiatieven",
+        "leefgebied": "Nog te kiezen",
+        "component_kind_in_format": "optional_or_outside_core_format",
+        "format_match_status": "no_direct_vng_format_item",
+    },
+}
 
 CURATED_COMPONENT_ENRICHMENT: dict[str, dict[str, list[dict[str, Any]]]] = {
     "valpreventie": {
@@ -545,6 +800,23 @@ def build_process_context() -> dict[str, Any]:
             "status": "planning_assumption",
             "source_backing": "internal_planning_or_user_supplied; not national formal deadline",
         },
+        "final_workagenda_format_context": {
+            "source": FORMAT_SOURCE_REF,
+            "format_status": "actual_format_for_final_regional_workagenda_input",
+            "format_levels": [
+                "regional_prevention_infrastructure",
+                "leefgebied",
+                "component_current_state_target_state_gap_project_plan",
+            ],
+            "almere_input_role": (
+                "Almere can prepare component-level and local contribution input for this format, "
+                "but the final regional workagenda is consolidated by the regional process."
+            ),
+            "status_boundary": (
+                "A field may contain source-backed or likely/indicated input for the 15 September "
+                "municipal handoff while still being unavailable as confirmed regional workagenda text."
+            ),
+        },
     }
 
 
@@ -865,6 +1137,8 @@ def derived_layers_for(row: dict[str, Any]) -> list[str]:
         "data/extracted/workagenda_nulmeting_capacity.json",
         "data/extracted/local_source_strengthening_almere.json",
         "data/extracted/municipal/almere_d6_responsibility_register.json",
+        "data/raw/national/nat_azwa_format_werkagenda_d5_2026.docx",
+        "data/site/source_view_models/format-werkagenda-azwa.json",
     ]
     if row["target_id"] == "valpreventie":
         layers.extend(VALPREVENTIE_SOURCE_LAYERS)
@@ -1112,6 +1386,373 @@ def build_available_information_for_workagenda(
     }
 
 
+def format_status_detail(status_id: str) -> dict[str, Any]:
+    for item in FORMAT_INFORMATION_STATUS_MODEL:
+        if item["status_id"] == status_id:
+            return item
+    return {
+        "status_id": status_id,
+        "meaning": "Status not defined in the format information status model.",
+        "may_use_for_concept": False,
+        "may_use_as_confirmed_workagenda_text": False,
+    }
+
+
+def compact_list(values: list[str], limit: int = 4) -> str:
+    cleaned = [value for value in values if value]
+    if not cleaned:
+        return ""
+    selected = cleaned[:limit]
+    suffix = "" if len(cleaned) <= limit else f" Plus {len(cleaned) - limit} aanvullende signalen."
+    return " ".join(selected) + suffix
+
+
+def public_indicator_summary(capacity_item: dict[str, Any] | None) -> str:
+    if not capacity_item:
+        return ""
+    indicators = []
+    for indicator in capacity_item.get("public_indicators", [])[:5]:
+        label = indicator.get("label")
+        value = indicator.get("value")
+        unit = indicator.get("unit", "")
+        if label and value is not None:
+            indicators.append(f"{label}: {value}{unit}")
+    return "; ".join(indicators)
+
+
+def signal_summary(signals: list[dict[str, Any]], key: str = "statement", limit: int = 3) -> str:
+    return compact_list([str(signal.get(key, "")) for signal in signals], limit=limit)
+
+
+def format_field(
+    field_definition: dict[str, Any],
+    draft_input: str,
+    status_id: str,
+    evidence_refs: list[str],
+    validation_or_decision_needed: list[str],
+    notes: str = "",
+) -> dict[str, Any]:
+    status = format_status_detail(status_id)
+    return {
+        "field_id": field_definition["field_id"],
+        "label": field_definition["label"],
+        "source_stage_label": field_definition.get("source_stage_label"),
+        "project_vocabulary_group": field_definition.get("project_vocabulary_group"),
+        "format_question": field_definition["format_question"],
+        "draft_input_for_15_september": draft_input,
+        "information_status": status_id,
+        "status_meaning": status["meaning"],
+        "may_use_for_15_september_concept": status["may_use_for_concept"],
+        "may_use_as_confirmed_workagenda_text": status["may_use_as_confirmed_workagenda_text"],
+        "evidence_refs": unique_strings(evidence_refs),
+        "validation_or_decision_needed": validation_or_decision_needed,
+        "notes": notes,
+    }
+
+
+def build_leefgebied_fields(
+    row: dict[str, Any],
+    operational_requirement: dict[str, Any] | None,
+    available_information: dict[str, Any],
+) -> dict[str, Any]:
+    actor_hint_text = ", ".join(
+        signal.get("party_or_role", "")
+        for signal in available_information.get("party_and_role_signals", [])[:6]
+        if signal.get("party_or_role")
+    )
+    operational_direction = available_information.get("operational_direction", {})
+    health_input = compact_list(row.get("public_evidence", []), limit=3)
+    if not health_input:
+        health_input = "No component-specific health-goal input is available yet for this leefgebied."
+    scope_input = operational_direction.get("scale_hint") or "Scope and coherence need to be confirmed for this leefgebied."
+    roles_input = (
+        f"Relevant actor signals for first contact: {actor_hint_text}."
+        if actor_hint_text
+        else "Organisation and roles still need to be mapped for this leefgebied."
+    )
+    return {
+        "health_goals": format_field(
+            LEEFGEBIED_FORMAT_FIELDS[0],
+            health_input,
+            "source_backed_current_information" if row.get("public_evidence") else "validation_needed",
+            row.get("public_evidence", []),
+            ["Translate component evidence into regional leefgebied goals and validate regionally."],
+        ),
+        "scope_and_coherence": format_field(
+            LEEFGEBIED_FORMAT_FIELDS[1],
+            scope_input,
+            "likely_or_indicated" if operational_requirement else "validation_needed",
+            operational_requirement.get("source_document_ids", []) if operational_requirement else [],
+            ["Confirm scope, coherence with other leefgebieden and any D6 prerequisites."],
+        ),
+        "organisation_and_roles": format_field(
+            LEEFGEBIED_FORMAT_FIELDS[2],
+            roles_input,
+            "likely_or_indicated" if actor_hint_text else "validation_needed",
+            [
+                source_id
+                for signal in available_information.get("party_and_role_signals", [])
+                for source_id in signal.get("source_ids", [])
+            ],
+            ["Confirm owner, coordinator, uitvoeringscapaciteit and financier roles for the leefgebied."],
+        ),
+    }
+
+
+def build_milestone_rows(row: dict[str, Any]) -> list[dict[str, Any]]:
+    local_deadline = row.get("deadline")
+    rows = [
+        {
+            "period": "Q2-Q3 2026",
+            "activities": [
+                "Prepare Almere concept input for the actual workagenda format.",
+                "Resolve the priority validation questions needed for first handoff.",
+            ],
+            "responsible": "Gemeente Almere policy owner and relevant validation actors; owner still to confirm",
+            "partial_result": "Concept input with explicit unresolved fields.",
+            "information_status": "planning_assumption",
+        },
+        {
+            "period": "around 2026-09-15",
+            "activities": [
+                "Deliver structured Almere input to the regional workagenda process.",
+            ],
+            "responsible": "Gemeente Almere",
+            "partial_result": "Municipal input available for regional consolidation.",
+            "information_status": "planning_assumption",
+        },
+        {
+            "period": "toward 2026-11-15",
+            "activities": [
+                "Regional process consolidates municipal and partner input.",
+                "Move toward college adoption of the regional workagenda.",
+            ],
+            "responsible": "Regional workagenda process",
+            "partial_result": "Regional workagenda adoption route.",
+            "information_status": "source_backed_current_information",
+        },
+    ]
+    if local_deadline:
+        rows.insert(
+            0,
+            {
+                "period": local_deadline,
+                "activities": ["Component-level local action deadline from the current steering layer."],
+                "responsible": str(row.get("action_owner", "owner still to confirm")),
+                "partial_result": "Local action or validation step.",
+                "information_status": "planning_assumption",
+            },
+        )
+    return rows
+
+
+def build_component_format_fields(
+    row: dict[str, Any],
+    operational_requirement: dict[str, Any] | None,
+    capacity_item: dict[str, Any] | None,
+    available_information: dict[str, Any],
+) -> dict[str, Any]:
+    current_info = available_information.get("source_backed_current_information", [])
+    indicators = public_indicator_summary(capacity_item)
+    implementation = signal_summary(available_information.get("implementation_progress_signals", []))
+    party_signals = signal_summary(available_information.get("party_and_role_signals", []), key="party_or_role")
+    finance_signals = signal_summary(available_information.get("finance_and_resource_signals", []))
+    monitoring_signals = signal_summary(available_information.get("monitoring_and_learning_signals", []))
+    local_needs = available_information.get("local_information_still_needed", [])
+    decisions = available_information.get("decisions_still_needed", [])
+    source_docs = operational_requirement.get("source_document_ids", []) if operational_requirement else []
+    source_claims = operational_requirement.get("source_claim_ids", []) if operational_requirement else []
+
+    urgency_input = compact_list(current_info, limit=3)
+    if indicators:
+        urgency_input = f"{urgency_input} Indicatoren: {indicators}".strip()
+    situation_input = implementation or compact_list(row.get("public_evidence", []), limit=3)
+    ambition_input = (
+        operational_requirement.get("coverage_or_capacity_direction")
+        if operational_requirement
+        else "Ambition for regionally covering offer is not available in the current layer."
+    )
+    design_input = (
+        f"Scale direction: {operational_requirement.get('scale_hint')}. Actor signals: {party_signals}."
+        if operational_requirement
+        else "Design choices and actor roles still need to be prepared."
+    )
+    project_objectives_input = (
+        "SMART project objectives are not yet confirmed. Use current gaps and validation outcomes to turn "
+        "priority, capacity, ownership and phasing into SMART agreements."
+    )
+    financial_input = finance_signals or "No validated financial plan is available yet."
+    monitoring_input = monitoring_signals or "No validated monitoring arrangement is available yet."
+    milestone_input = (
+        "Use the milestone rows to separate Almere's 15 September municipal delivery from the later 15 November "
+        "regional adoption process."
+    )
+
+    return {
+        "current_state": {
+            "urgency": format_field(
+                COMPONENT_FORMAT_FIELDS[0],
+                urgency_input or "Urgency input not available yet.",
+                "source_backed_current_information" if urgency_input else "not_available_yet",
+                [*row.get("public_evidence", []), *(indicator.get("source_document_id", "") for indicator in (capacity_item or {}).get("public_indicators", []))],
+                ["Validate regional interpretation and priority for final workagenda wording."],
+            ),
+            "current_situation": format_field(
+                COMPONENT_FORMAT_FIELDS[1],
+                situation_input or "Current implementation situation not available yet.",
+                "likely_or_indicated" if implementation else "validation_needed",
+                [
+                    source_id
+                    for signal in available_information.get("implementation_progress_signals", [])
+                    for source_id in signal.get("source_ids", [])
+                ],
+                local_needs or ["Confirm local status, coverage, capacity and constraints."],
+            ),
+        },
+        "target_state": {
+            "ambition": format_field(
+                COMPONENT_FORMAT_FIELDS[2],
+                ambition_input,
+                "local_decision_needed",
+                [*source_docs, *source_claims],
+                ["Confirm what Almere and the region treat as regionally covering offer and phasing toward 2030."],
+                "National direction can guide the concept, but local/regional ambition still needs decision or validation.",
+            ),
+            "design_choices": format_field(
+                COMPONENT_FORMAT_FIELDS[3],
+                design_input,
+                "likely_or_indicated" if party_signals else "validation_needed",
+                [
+                    source_id
+                    for signal in available_information.get("party_and_role_signals", [])
+                    for source_id in signal.get("source_ids", [])
+                ],
+                [
+                    "Confirm explicit design choices, owner/coordinator/executor roles and choices still open.",
+                    "Confirm D6 dependency status before final workagenda text.",
+                ],
+            ),
+        },
+        "gap_project_plan": {
+            "project_objectives": format_field(
+                COMPONENT_FORMAT_FIELDS[4],
+                project_objectives_input,
+                "local_decision_needed",
+                [],
+                decisions or ["Decide priorities, phasing and SMART project agreements."],
+            ),
+            "financial_plan": format_field(
+                COMPONENT_FORMAT_FIELDS[5],
+                financial_input,
+                "finance_controller_validation_needed",
+                [
+                    source_id
+                    for signal in available_information.get("finance_and_resource_signals", [])
+                    for source_id in signal.get("source_ids", [])
+                ],
+                ["Validate funding route, continuity, controller check and double-counting guardrails."],
+            ),
+            "monitoring": format_field(
+                COMPONENT_FORMAT_FIELDS[6],
+                monitoring_input,
+                "validation_needed",
+                [
+                    source_id
+                    for signal in available_information.get("monitoring_and_learning_signals", [])
+                    for source_id in signal.get("source_ids", [])
+                ],
+                ["Confirm monitoring owner, indicators, reporting rhythm and learning-cycle use."],
+            ),
+            "milestone_planning": {
+                **format_field(
+                    COMPONENT_FORMAT_FIELDS[7],
+                    milestone_input,
+                    "planning_assumption",
+                    [FORMAT_SOURCE_REF["source_id"], "nat_zorgakkoorden_werkagenda_handvatten_2026"],
+                    ["Confirm component owner, activity planning, quarterly milestones and responsible actors."],
+                ),
+                "milestone_rows": build_milestone_rows(row),
+            },
+        },
+    }
+
+
+def build_rpi_alignment() -> dict[str, Any]:
+    return {
+        "format_fields": [
+            {
+                **field,
+                "almere_input_role": (
+                    "Almere can provide local signals and validation input, but the regional process must "
+                    "consolidate this into the final RPI section."
+                ),
+                "information_status": "validation_needed",
+            }
+            for field in REGIONAL_PREVENTION_INFRASTRUCTURE_FORMAT_FIELDS
+        ],
+        "local_contribution_needed_by_2026_09_15": [
+            "local signals for health goals and priority groups",
+            "local finance/controller notes relevant to regional funding agreements",
+            "local owner/coordinator/executor signals",
+            "local monitoring indicators or data-owner signals",
+            "known D6 dependencies and unresolved regional infrastructure questions",
+        ],
+        "boundary": "The RPI is a regional format section; this generated object only prepares Almere contribution fields.",
+    }
+
+
+def build_format_aligned_workagenda_input(
+    row: dict[str, Any],
+    operational_requirement: dict[str, Any] | None,
+    capacity_item: dict[str, Any] | None,
+    available_information: dict[str, Any],
+) -> dict[str, Any]:
+    component_id = row["target_id"]
+    context = FORMAT_COMPONENT_CONTEXT.get(
+        component_id,
+        {
+            "format_item_id": "unknown",
+            "format_item_title": row.get("title"),
+            "leefgebied": "unknown",
+            "component_kind_in_format": row.get("category"),
+            "format_match_status": "not_mapped",
+        },
+    )
+    component_fields = build_component_format_fields(row, operational_requirement, capacity_item, available_information)
+    confirmed_field_count = sum(
+        1
+        for group in component_fields.values()
+        for value in group.values()
+        if isinstance(value, dict) and value.get("information_status") == "confirmed_decision"
+    )
+    return {
+        "format_source": FORMAT_SOURCE_REF,
+        "format_alignment_status": "mapped_to_actual_vng_workagenda_format",
+        "format_component_context": context,
+        "information_status_model": FORMAT_INFORMATION_STATUS_MODEL,
+        "regional_prevention_infrastructure_alignment": build_rpi_alignment(),
+        "leefgebied_context": {
+            "leefgebied": context.get("leefgebied"),
+            "format_fields": build_leefgebied_fields(row, operational_requirement, available_information),
+            "boundary": "Leefgebied fields are regional consolidation fields; Almere input is a contribution, not the final regional answer.",
+        },
+        "component_format_fields": component_fields,
+        "readiness_summary": {
+            "can_populate_format_as_concept": concept_handoff_ready(row),
+            "can_populate_format_as_confirmed": bool(row.get("ready_for_workagenda_drafting")),
+            "confirmed_field_count": confirmed_field_count,
+            "status": "concept_fields_available_with_explicit_gaps"
+            if concept_handoff_ready(row)
+            else "insufficient_input_for_format",
+            "main_not_confirmed_reasons": unresolved_reasons(row),
+        },
+        "handoff_boundary": (
+            "This section makes the Almere object compatible with the actual workagenda format. "
+            "It is still an Almere concept-input model and must not be treated as the final regional workagenda."
+        ),
+    }
+
+
 def build_risk_assessment(row: dict[str, Any], gaps: list[dict[str, Any]]) -> dict[str, Any]:
     risk = row.get("risk", "onbekend")
     if risk == "rood":
@@ -1244,6 +1885,12 @@ def build_object(
             operational_requirement,
         ),
         "available_information_for_workagenda": available_information,
+        "format_aligned_workagenda_input": build_format_aligned_workagenda_input(
+            row,
+            operational_requirement,
+            capacity_item,
+            available_information,
+        ),
         "gap_summary": gap_summary,
         "decision_requests_for_region": build_decision_requests(row),
         "validation_needed_before_or_after_submission": {
@@ -1334,6 +1981,15 @@ def build_summary(objects: list[dict[str, Any]]) -> dict[str, Any]:
         "party_and_role_signal_count": sum(
             len(item["available_information_for_workagenda"]["party_and_role_signals"]) for item in objects
         ),
+        "format_aligned_object_count": sum(
+            1 for item in objects if item.get("format_aligned_workagenda_input")
+        ),
+        "format_confirmed_field_count": sum(
+            item["format_aligned_workagenda_input"]["readiness_summary"]["confirmed_field_count"]
+            for item in objects
+            if item.get("format_aligned_workagenda_input")
+        ),
+        "format_source_id": FORMAT_SOURCE_REF["source_id"],
         "primary_municipality_delivery_target": MUNICIPAL_DELIVERY_TARGET_DATE,
         "municipality_delivery_to_region_target": MUNICIPAL_DELIVERY_TARGET_DATE,
         "almere_internal_submission_target": MUNICIPAL_DELIVERY_TARGET_DATE,

@@ -2,7 +2,7 @@
 
 ## Summary
 Current sprint: Sprint 30.3 - Beleidsdocumenten en rapporten.
-Generated on: 2026-05-09.
+Generated on: 2026-05-10.
 Manifest: `docs/rapporten/report-status.json`.
 Public-review candidates checked: 2.
 Blocking report-grounding issues found: 0.

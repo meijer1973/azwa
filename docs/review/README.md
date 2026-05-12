@@ -53,6 +53,10 @@ No D6 responsibility-register row may move to `settled` from these notes alone. 
 
 Deep research reports are not sources. Put reports in `docs/dr/`, extract their suggested public sources, ingest selected public sources through the pipeline, and then test whether the findings appear in the top data layers.
 
+## Supplemental Packages
+
+`werkagenda_D5_AZWA_uitlegpakket/` is a human-readable D5 AZWA explanation and pre-contact support package. It may help reviewers understand the workagenda task, but it is not a corpus source, not a validation result and not the active workbook location. The authoritative source files remain in `data/raw/national/`; the active validation workbooks remain at the top level of `docs/review/`.
+
 ## Archive
 
 Archived review documents live under `archive/`. They are kept for provenance and should not be treated as the active review entry point.
